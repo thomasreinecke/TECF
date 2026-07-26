@@ -1,0 +1,2275 @@
+--- PAGE 1 ---
+ORIGINAL ARTICLE
+https://doi.org/10.1007/s41471-023-00154-2
+Schmalenbachs Zeitschrift für betriebswirtschaftliche Forschung (2023) 75:303–343
+Data or Business First?—Manufacturers’
+Transformation Toward Data-driven Business Models
+Bastian Stahl · Björn Häckel · Daniel Leuthe · Christian Ritter
+Received: 16 May 2022 / Accepted: 20 January 2023 / Published online: 15 February 2023
+© The Author(s) 2023
+Abstract Driven by digital technologies, manufacturers aim to tap into data-driven
+business models, in which value is generated from data as a complement to physical
+products. However, this transformation can be complex, as different archetypes of
+data-driven business models require substantially different business and technical
+capabilities. While there are manifold contributions to research on technical ca-
+pability development, an integrated and aligned perspective on both business and
+technology capabilities for distinct data-driven business model archetypes is needed.
+This perspective promisesto enhance research’s understanding of this transformation
+and offers guidance for practitioners. As maturity models have proven to be valu-
+able tools in capability development, we follow a design science approach to develop
+a maturity model for the transformation toward archetypal data-driven business mod-
+els. To provide an integrated perspective on business and technology capabilities,
+the maturity model leverages a layered enterprise architecture model. By applying
+and evaluating in use at two manufacturers, we find two different transformation
+approaches, namely ‘data first’ and ‘business first’. The resulting insights highlight
+Consent for publication This manuscript does not contain personal data. It is therefore not possible
+to draw conclusions about individuals or organizations. All recordings in the context of the data
+collection were made with the consent of the parties involved.
+Availability of data and material The authors confirm that the data supporting the findings of this
+study are available within the article.
+Bastian Stahl · Björn Häckel · Daniel Leuthe · Christian Ritter
+Research Center Finance & Information Management, Augsburg, Germany
+Bastian Stahl · Björn Häckel · Daniel Leuthe
+University of Applied Sciences Augsburg, Augsburg, Germany
+ Bastian Stahl · Björn Häckel · Daniel Leuthe · Christian Ritter
+Branch Business & Information Systems Engineering of the Fraunhofer FIT, Alter
+Postweg 101, 86159 Augsburg, Germany
+E-Mail: bastian.stahl@fim-rc.de
+K
+
+--- PAGE 2 ---
+304 Schmalenbach Journal of Business Research (2023) 75:303–343
+the model’s integrative perspective’s value for research to improve the understand-
+ing of this transformation. For practitioners, the maturity model allows a status quo
+assessment and derives fields of action to develop the capabilities required for the
+aspired data-driven business model.
+Keywords Data-driven business models · Data-driven services · Data analytics ·
+Manufacturing · Enterprise architecture.
+JEL L60 · O14 · O32
+1 Introduction
+In today’s digitally connected world, data has become a valuable asset and has
+been dubbed ‘the new oil’ (Bhageshpur 2019). Digital technologies continuously
+produce increasing amounts of structured and unstructured data driving the trend
+toward big data. Data can be collected, processed, and analyzed to derive valuable
+information, insights, and recommendations (LaValle, et al. 2011; Herden 2020).
+Especially for manufacturers, whose complex physical machines continuously gen-
+erate valuable data while operated, this bears great economic potential (Müller and
+Buliga 2019). For those companies, data-driven business models (DDBMs) are an
+emerging strategic option that can tackle dwindling margins in pure product sales,
+strengthen customer loyalty, help garner competitive advantages, or even tap new
+markets (Voigt et al. 2021; Kowalkowski et al. 2017). In DDBMs, data-driven ser-
+vices make a significant contribution to value creation, delivery, and capture (Kühne
+and Böhmann 2020; Hunke et al. 2019). However, there are very different options
+for configuring data-driven services and physical products in a DDBM to deliver
+enhanced customer value (Hunke, et al. 2021). Research has therefore examined sys-
+tematization approaches for this field, such as taxonomies or archetypes (Davenport
+and Bean 2018; Hartmann et al. 2016). Especially in practice, archetypal DDBMs
+offer a concrete strategic orientation for the transformation towards DDBMs as they
+systematically characterize configurations of business models (Müller and Buliga
+2019). In this context, archetypes depict an aligned set of business model com-
+ponents that help decision-makers to develop a clearer understanding of how an
+aspired DDBM creates, delivers, and captures value (Pieroni et al. 2020; Bergman
+et al. 2022).
+For instance, some manufacturers strive to become a ‘data provider’ by mak-
+ing data (e.g., production data to track performance) accessible and useful to their
+customers. While the manufacturer solely provides the data via defined interfaces,
+customers can then leverage this data to create benchmarks or dashboards. In con-
+trast, others seek to position themselves as a ‘recommendation provider’. In this
+DDBM archetype, manufacturers perform sophisticated data processing and analyt-
+ics to derive actionable recommendations (Zonta et al. 2020; Hunke et al. 2021).
+Hence, DDBMs can vary greatly regarding their technical requirements and value
+proposition for customers. This poses a challenge to manufacturers, as they must de-
+velop capabilities appropriately and aligned to the DDBM archetype to address both
+K
+
+--- PAGE 3 ---
+Schmalenbach Journal of Business Research (2023) 75:303–343 305
+business and technical demands (Hunke et al. 2019; Azkan et al. 2021; Rashed and
+Drews 2021). For instance, manufacturers must develop business capabilities for the
+successful monetization and marketing of their data-driven offering (Baltuttis et al.
+2022; Häckel et al. 2021). New, complementary technological capabilities are also
+needed for data processing and delivery based on proper tooling and infrastructure
+(Frank et al. 2019; Weber et al. 2017). Consequently, especially for incumbent and
+product-centric manufacturers, this implies a tremendous shift in the organizational
+rationale and requires the structured development of new capabilities that are both
+of a business and technological nature (Comuzzi and Patel 2016).
+To guide transformative endeavors and structure capability development, matu-
+rity models (MMs) are valuable artifacts offering guidance for research and practice
+(Mettler 2011; Becker et al. 2009). From a research perspective, MMs represent
+theories of how organizational capabilities develop progressively along an expected,
+desired, or logical maturation path (Pöppelbuß and Röglinger 2011). As such, MMs
+strive to disentangle required capabilities and offer descriptive knowledge (Gregor
+and Hevner 2013). In practice, MMs are useful for assessing an organization’s status
+quo, determining a desired target state, and identifying fields of action (Pöppelbuß
+and Röglinger 2011). Indeed, existing MMs offer valuable contributions to lever-
+age data in the manufacturing sector. Literature reviews of existing MMs in the
+manufacturing context indicate that existing research has extensively investigated
+technological capabilities (Hein-Pensel et al. 2023). Hence, many existing works
+focus on technological topics, such as big data analytics (Comuzzi and Patel 2016)
+or data science (Gökalp et al. 2021). Thus, these models provide tangible capabilities
+needed to leveragedata for value creation, for example, by extractingequipment con-
+dition information (Comuzzi and Patel 2016). In contrast, another research stream
+focuses more on how to capture value from DDBM and therefore sheds light on
+business capabilities (Parvinen et al. 2020; Woroch and Strobel 2021). For instance,
+Woroch and Strobel (2021) point out that DDBMs require dedicated capabilities to
+formulate new value propositions and enable customer co-creation.
+However, research indicates that an integrated, organization-spanning perspective
+on business and technology is needed for successful mastery of DDBM transfor-
+mation, just as demonstrated by Hausladen and Schosser (2020) for the aviation
+sector. Hence, for the manufacturing industry, the understanding of the technical
+and business capabilities for DDBMs is limited (Favoretto et al. 2022; Hein-Pensel
+et al. 2023). While archetypal DDBMs, such as those of Hunke et al. (2021), repre-
+sent desirable digital transformation outcomes for manufacturers and give strategic
+orientation, it remains unclear what technology and business capabilities are needed
+to master them. This shortcoming leaves practitioners without tangible guidance on
+what technical and business capabilities archetypal DDBMs require (Hunke et al.
+2021). Against this background, this paper seeks to address this research need by
+answering the following research question (RQ):
+RQ What capabilities do manufacturers require to transform toward distinct
+archetypal data-driven business models?
+Having proven their worth as artifacts for capability development in the context
+of manufacturing (e.g., Chen et al. (2022), Gökalp et al. (2021) and Sjödin et al.
+K
+
+--- PAGE 4 ---
+306 Schmalenbach Journal of Business Research (2023) 75:303–343
+(2018)), this paper develops an integrated DDBM MM (DDBM3). We use the pro-
+cedure model by Becker et al. (2009) to develop a MM closely aligned with three
+practice-grounded key requirements based on the Design Science Research (DSR)
+paradigm (Hevner et al. 2004; Peffers et al. 2007). To evaluate our model, we use the
+criteria developed by Sonnenberg and vom Brocke (2012). We assess the model’s
+real-world applicability and usefulness by applying the DDBM3 to two incumbent
+manufacturers. We involve focus groups comprised of industry experts to assess
+the manufacturers’ status quo and the target state of their DDBM. We also conduct
+semi-structured interviews to identify actions that led to the assessed status quo and
+investigate the approaches taken by the two manufacturers.
+This paper’s contributions to the discourse on DDBM in the manufacturing sec-
+tor are twofold. Firstly, this work’s central artifact, the developed and evaluated
+DDBM3, provides descriptive knowledge on capabilities required to offer specific
+archetypal DDBMs (Gregor and Hevner 2013). This artifact builds on established
+DDBM archetypes and enterprise architecture models to provide a hitherto untaken
+integrated and aligned perspective on DDBM capabilities. In practice, the DDBM3
+offers guidance when transforming toward a defined DDBM and serves as a diag-
+nostic tool. Secondly, as evident in our application of the DDBM3 for evaluation
+purposes, the DDBM3 provides an integrated lens for examining the DDBM trans-
+formation. In our evaluation, we find that the two manufacturers transform toward
+DDBM differently—by either being more mature in business (‘business first’) or
+in technology capabilities (‘data first’). These initial findings may stimulate fur-
+ther research to leverage the DDBM3 as an investigative lens to examine patterns
+of DDBM transformations and shed light on how manufactures transform toward
+DDBM.
+2 Theoretical Background
+2.1 Data-Driven Business Models and Archetypes in Manufacturing
+In the manufacturing sector, cyber-physical systems and the industrial internet of
+things have led more and more companies to get involved in data collection, anal-
+ysis, and utilization (Häckel et al. 2019; Cui et al. 2020). Manufacturers use data
+internally to improve decision-making and enhance efficiency (Hess et al. 2016;
+LaValle et al. 2011; Sjödin et al. 2018). Furthermore, manufacturers can leverage
+data analytics to create new, data-driven service offerings for their customers by in-
+cluding data as the key resource (Azkan et al. 2021; Hunke et al. 2021). For instance,
+data-based alert systems and predictive maintenance services provide the customer
+with maintenance cost reduction, optimized machine operation, or increased ma-
+chine availability (Hartmann et al. 2016; Bertolini et al. 2021). As a result of these
+new technical opportunities, DDBMs are gaining importance for manufacturers as
+a strategic option for differentiation (Voigt et al. 2021). Nevertheless, the concept
+of the ‘business model’ is not uniformly defined, and literature provides a wide
+range of definitions (e.g., Chesbrough (2002), Johnson et al. (2008), Osterwalder
+and Pigneur (2013)). Osterwalder and Pigneur (2013) highlight the business model
+K
+
+--- PAGE 5 ---
+Schmalenbach Journal of Business Research (2023) 75:303–343 307
+canvas (BMC), which they cite as a popular approach in practice thanks to its con-
+ciseness (Müller and Pfleger 2014). They conceptualize business models using nine
+building blocks (i.e., customer segments and relationships, key partners, resources
+and activities, value propositions and channels, revenue streams and cost structure)
+that are assigned to four overarching categories (i.e., clients, organization, sales,
+and financials) (Kotarba 2018). This conceptualization mainly addresses the out-
+ward-facing elements of a business model and describes external mechanisms such
+as customer offerings and interactions (Jonker and Faber 2021). When evaluated
+through the lens of Porter’s (1985) value chain, it becomes clear that internally-
+directed capabilities are only superficially addressed in the BMC (Joyce and Paquin
+2016). An organization’s inward-facing value creation activities are multi-layered
+and can be subdivided into primary, strategically relevant, and supporting activities
+(Porter 2014). Hence, we follow Teece’s definition of business models as the “design
+or architecture of the value creation, delivery, and capture mechanisms of a firm”
+as it covers both internal and external views (Teece 2010, p. 172). Consequently,
+DDBMs can be defined as business models in which data-driven services contribute
+significantly to value creation, delivery, and capture (Kühne and Böhmann 2020;
+Hunke et al. 2019).
+For the manufacturing industry, the development of DDBMs builds on the ex-
+ploitation of data to deliver additional customer value and enhance the utility of the
+physical product (Lehrer et al. 2018; Burström et al. 2021). However, as there are
+multiple options to enfold business models with data-driven services, Hunke et al.
+(2021) conceptualize four archetypal DDBMs, characterized by their data-driven
+service (i.e., data provider, insight provider, recommendation provider, and digital
+solution provider). These archetypes enable the identification of strategies for real-
+izing DDBMs with distinct value offerings for the customer (Hunke et al. 2021). In
+the first archetype, manufacturers provide customers with (product) data beyond the
+physical product (data provider). The data is only moderately processed, provided
+in a standardized form, and subject to descriptive analytics (Hartmann et al. 2016).
+Offerings include, for example, aggregated reports or dashboards on machine uti-
+lization. The second DDBM archetype is based on delivering data-based insights,
+which are supportive and actionable for the customer (Hunke et al. 2021). In these
+cases, the provider processes the data to meet specific objectives associated with
+a customer’s needs (Hunke et al. 2019). This is achieved by applying diagnostic
+analytics—i.e., highlighting whether or not something has happened and delivering
+insights into why this is the case (Hunke et al. 2021). Examples of use-cases include
+digital alarms triggered when machines or processes malfunction. As a third option,
+manufacturers can offer data-based recommendations. This business model aims to
+provide tailored decision support for customers. Here, the interaction between sup-
+plier and customer increases significantly, and integration into the customer’s value
+creation is facilitated. Predictive maintenance services are an example of this type
+of offering. Finally, manufacturers can act as digital solution providers, opening up
+novel ways of doing business, e.g., by turning into a smart data platform provider
+(Beverungen et al. 2019, 2021). In this context, value is created through unique dig-
+ital information, and the physical product recedes into the background (Beverungen
+et al. 2021). Manufacturers, in order not to end up in an unreflective, technology-
+K
+
+--- PAGE 6 ---
+308 Schmalenbach Journal of Business Research (2023) 75:303–343
+driven ‘catch-all’ approach, must identify and develop capabilities required to master
+their aspired DDBM (Bertolini et al. 2021; Hunke et al. 2021).
+2.2 Structuring the Data-Driven Business Model Transformation
+Many manufacturers are incumbents whose organizational logic is tightly bound
+to the physical product. Consequently, striving toward a specific DDBM archetype
+requires manufacturers to embark on a transformation to develop business and tech-
+nologycapabilities to create, deliver, and capturevalue based on data (Foss and Saebi
+2017; Kotarba 2018). For instance, in the case of a DDBM providing data-based
+insights, manufacturers need capabilities to plan, roll out, and maintain connected
+machinery that collects data and creates a proper use profile (value creation). Next,
+the manufacturer must be capable of storing and processing the obtained data to de-
+rive descriptive, diagnostic, or prescriptive insights about the machinery’s operation.
+These insights must be tailored to the customer’s requirements (value offer) (Sarker
+2021). Finally, the manufacturers need capabilities to make the insights available to
+the customer, for instance, via digital channels, and define a suitable monetization
+strategy to enable a viable business, e.g., pay-per-use (value capture) (Häckel et al.
+2021).
+Consequently, both the outward-facing and primarily business-related capabilities
+of the business model (e.g., customer connections or value proposition) and the tech-
+nology-associated inward-facing capabilities and structures of an organization (e.g.,
+processes or infrastructure) are required to enable DDBMs (Hausladen and Schosser
+2020). Thus, to master any type of DDBM, manufacturers need to transform toward
+an aligned organizational structure that provides the necessary capabilities (Rashed
+and Drews 2021). In this context, enterprise architecture (EA) models are a valuable
+tool for obtaining an integrated view of an organization and for outlining reference
+architectures (Gampfer et al. 2018; Gong and Janssen 2021). The commonly-used
+frameworks for EA—e.g., TOGAF (The Open Group 2018) or RAMI4.0 (Hernández
+et al. 2020)—all involve a hierarchical, multilevel layered structure to comprehen-
+sively cover the organization’s elements (Winter and Fischer 2006). Within this
+layered structure, the outward-facing ‘business model’ represents the top layer, with
+‘(technical) infrastructure’ providing the basis of these models. The existing mod-
+els include various intermediary layers connecting these two edges (Gampfer et al.
+2018)—for example, ‘business processes’ (Šaša and Krisper 2011), ‘people and ap-
+plication systems’ (Pereira and Sousa 2005; Urbach and Röglinger 2019), and ‘data
+and information’ (Gong and Janssen 2021). Their ability to provide a socio-techni-
+cal perspective on organizations (Appelbaum 1997; Baxter and Sommerville 2011)
+means that EA models are suited to outlining referential, aligned architectures that
+enable DDBMs at different organizational levels (Rashed and Drews 2020). In this
+work, we use the EA model according to Urbach and Röglinger (2019) (Fig. 1
+Layered Enterprise Architecture Model (Urbach and Röglinger 2019; Urbach et al.
+2021)), as it combines both technology and business layers. The socio-technical ori-
+entation of this model is particularly suitable for transformative processes associated
+with digitalization (Cleven et al. 2014).
+K
+
+--- PAGE 7 ---
+Schmalenbach Journal of Business Research (2023) 75:303–343 309
+Fig. 1 Layered enterprise architecture model (Urbach and Röglinger 2019; Urbach et al. 2021)
+Within this five-layered EA model, the top ‘business model’ layer includes out-
+ward-facing aspects of DDBMs—for instance, value offer and customer interaction
+(Vanauer et al. 2015; Rashed and Drews 2021). The subsequent intermediate layer
+‘business processes’ relates to processual activities to operationalize the business
+model (Pathak et al. 2021). For example, a DDBM requires the restructuring of
+existing business and IT processes to ensure better internal and external data as-
+similation. The EA layer of ‘people and applications’ depicts human resources,
+associated competencies, and application systems that employees work with (e.g.,
+data scientists, data engineers, or product owners) (Pathak et al. 2021). The ‘dataand
+information’ layer refers to information and data from the organization that is being
+collected, processed, and stored, and refers to how this data is managed (e.g., data
+quality management) (Rashed and Drews 2021). The bottom layer, ‘infrastructure’,
+consists of IT systems, sensory-equipped machinery, and other hardware resources
+based on cyber-physical systems and the industrial internet of things (Pathak et al.
+2021). EA models have proven to be particularly valuable in the implementation of
+DDBMs as the models can be used as reference architectures to highlight organiza-
+tional configurations aligned with certain DDBMs (Rashed and Drews 2020). Yet,
+while EA models provide an integrated perspective on a target state, they are limited
+in their ability to provide insight as to how organizations might move toward such
+a state and what capabilities need to be developed.
+K
+
+--- PAGE 8 ---
+310 Schmalenbach Journal of Business Research (2023) 75:303–343
+2.3 Capability Development and Maturity Models
+MMs have become established managerial tools used to structure the development
+of organizational capabilities (Mettler 2011). MMs map maturity paths by logically
+grading maturity (maturity levels) and describing the distinctive capabilities or at-
+tributes (e.g., in capability dimensions) of each level (Pöppelbuß and Röglinger
+2011). MMs can be used for descriptive (determination of the status quo), pre-
+scriptive (identification of target states), or comparative (e.g., by comparing several
+companies based on a model) purposes (Becker et al. 2009). In practice, MMs are
+instrumental in identifying deficiencies that may hinder the achievement of a ma-
+ture, desired state (Olszak and Mach-Krol 2018). The number of MMs indicates
+a promising approach for structuring capability development, including the DDBM
+domain. Among the many extant MMs are technical frameworks and process models
+for developing data analytics systems. The target groups for these MMs are organi-
+zational units close to technology, such as IT, that focus on capability development
+in technical domains—i.e., the lower EA layers (e.g., Olszak and Mach-Krol (2018),
+Sjödin, et al. (2018)).For example, the Industrial Analytics Maturity Model (IAMM)
+by O’Donovan et al. (2016) provides a clear focus on analytics and technology capa-
+bilities in manufacturing. Other, more comprehensive MMs exist, combining tech-
+nological, organizational, and, to some extent, business perspectives. These models
+are managerial tools for organization-wide transformations. For instance, the big
+data maturity model (BDMM) by Comuzzi and Patel (2016) broadens perspectives
+on organizational issues such as ‘culture’, ‘strategic alignment’, or ‘processes’. This
+approach has also been taken up by Gökalp et al. (2021), for example, and expanded
+to include capability dimensions such as ‘vision and strategy’ and ‘knowledge man-
+agement’. Nevertheless, existing research finds that the development of business-
+related capabilities, such as interaction with the customer or monetization, are a par-
+ticular challenge for established manufacturers (Baltuttis et al. 2022; Schroderus
+et al. 2022; Kotarba 2018). However, providing an integrated perspective on which
+business and technology capabilities are required to offer DDBMs in manufacturing
+remains a gap in existing research (Hunke et al. 2021). Examples from other do-
+mains indicate that integrated business and technology models can be effective tools
+to structure the transformation toward DDBMs, as Hausladen and Schosser (2020)
+demonstrate for the air transport sector. Therefore, this paper seeks to develop an
+integrated MM that guides manufacturers in developing the required capabilities to
+offer an archetypal DDBM.
+3 Research Methodology
+This paper follows the methodological DSR paradigm (Hevner et al. 2004; Gregor
+and Hevner 2013), which aims to design solutions using various artifact forms
+(e.g., constructs, models, or methods) to solve problems grounded in practice (vom
+Brocke et al. 2020). Following Peffers et al. (2007), DSR is implemented as an
+iterative, six-step process that starts with problem definition, defines goals, develops
+and refines a solution, demonstrates or applies this solution, and evaluates whether
+K
+
+--- PAGE 9 ---
+Schmalenbach Journal of Business Research (2023) 75:303–343 311
+the requirements have been met and the problem solved. Finally, the insights gained
+are communicated.
+While this procedure is designed to be applicable in developing various artifact
+types, MMs represent a particular artifact type for which dedicated procedure mod-
+els of the DSR paradigm exist (Mettler 2011). In particular, the procedure model
+of Becker et al. (2009) represents an established methodological approach that pro-
+poses specified DSR activities for the iterative development of MMs (Pöppelbuß
+and Röglinger 2011; Stelzl et al. 2020). For instance, the procedure model includes
+a comparison with existing modelsand the formulation of a developmentstrategy be-
+fore the development of the artifact. In addition, the demonstration phase is enriched
+with a transfer phase, wherein the developed model is prepared for the appropriate
+application in business (e.g., by translating the MM into a software tool). While
+Peffers et al. (2007) and Becker et al. (2009) focus on activities involved in the
+Fig. 2 Research approach
+K
+
+--- PAGE 10 ---
+312 Schmalenbach Journal of Business Research (2023) 75:303–343
+DSR process, other works provide valuable insights into the evaluation of artifacts
+(vom Brocke et al. 2020). Sonnenberg and vom Brocke (2012), for example, provide
+four patterns and associated criteria for evaluating DSR activities (i.e., Eval 1–4)
+and distinguish between ex-ante and ex-post evaluation. Ex-ante evaluation patterns
+aim to justify the problem statement (e.g., the extent of the research need) and the
+validity of design decisions (e.g., the internal consistency of design objectives). By
+contrast, ex-post evaluation challenges the artifact in artificial (e.g., challenging the
+model’s robustness) and naturalistic settings (e.g., the model’s usefulness in a real-
+world demonstration) (Sonnenberg and vom Brocke 2012; vom Brocke et al. 2020).
+In structuring our research, we follow the procedure model by Becker, et al. (2009)
+and use the evaluation patterns developed by Sonnenberg and vom Brocke (2012)
+to ensure the rigorous development of our MM. This paper comprises four main
+phases, each comprising activities and a subsequent evaluation (Fig. 2).
+The first phase in our approach is problem justification and the definition of re-
+quirements. The second phase is comparing existing MMs and selecting a suitable
+development strategy. The third phase comprises iterative model development and
+artificial evaluation. The fourth phase is the application of the model and the accom-
+panying naturalistic evaluation. In the four phases of our research approach, we used
+various research techniques to ground data and, finally, to complete the evaluation
+of the phase (Hausladen and Schosser 2020) (Fig. 3).
+3.1 Phase 1: Problem Justification and Requirement Definition
+In the first phase, we used the existing literature to substantiate the research needs
+and justify the problem statement. Based on the research needs, we developed re-
+quirements tailored to the needs of practitioners from manufacturing companies. We
+conducted semi-structured interviews (Myers and Newman 2007) with eight experts
+from two manufacturers to verify practical relevance from an ex-ante perspective.
+Table 1 presents an overview of the manufacturers and industry experts interviewed.
+The two manufacturers were chosen as a stratified sample (Robinson 2014). Both
+are in the middle of the transformation to a DDBM, with the sales of physical
+machinery being enhanced with data-driven services. Thus, the two companies are
+Table 1 Overview of involved manufacturers and affiliated experts
+Manufacturer 1 – Alpha Manufacturer 2 – Beta
+Industry Machines for the automotive sector Industrial kitchen machines
+Revenue C380M (2020) C844M (2020)
+Employees 1,800 (2020) 2,300 (2019)
+Practitioners
+involved in the
+research process
+(ID & position)
+A1 Director Digital Platformsa,b.c
+A2 Product Manager Digital Solutionsa,b.c
+A3 Data Analytics Specialistb
+A4 Cloud Operations Architectb
+A5 Head of Global Distributiona,c
+B1 Service Director Data and
+Analyticsa,b.c
+B2 IT Managera,b.c
+B3 Business Managera,b.c
+B4 Service Director Global
+Accountsa,b.c
+a
+Interview for problem and requirement definition
+b
+Participant in demonstration focus group
+c
+Interview for transformation paths
+K
+
+--- PAGE 11 ---
+Schmalenbach Journal of Business Research (2023) 75:303–343 313
+Fig. 3 Application of the research approach
+K
+
+--- PAGE 12 ---
+314 Schmalenbach Journal of Business Research (2023) 75:303–343
+comparable in this respect and correspond to the defined user group of DDBMs. Im-
+portantly, however, these two companies used different strategies to approach their
+DDBM, and thus enabled us to familiarize ourselves with different ways of trans-
+forming from a traditional manufacturer business model to a DDBM. In selecting
+the interviewees, we aimed to capture independent expert opinions from business
+and technical areas, as well as the intersection of the two, to ensure broad under-
+standability and real-world relevance. The interviewees have significant knowledge
+of their respective manufacturing companies and play a key role in the transition
+to a DDBM. All interviews in our research approach lasted between 44 to 93min
+and were conducted digitally and transcribed. For our research phase 1, we then
+examined the transcripts in accordance with the criteria established by Sonnenberg
+and vom Brocke (2012) to clarify the problem to be addressed by this paper and
+to determine three reasonable requirements for the development of our artifact (see
+Sect. 4).
+3.2 Phase 2: Comparison of Existing Maturity Models
+The second phase involved identifying existing MMs and examining whether these
+already fulfilled the requirements. To this end, we identified existing works via
+a structured literature review (Webster and Watson 2002; vom Brocke et al. 2015)
+using the Web of Science, known for its high-quality citation data and for cover-
+ing a broad range of disciplines (Zupic and Čater 2015). We used a two-part search
+string for related research publications(Huang et al. 2015). The first part of the string
+addressed the issue of data-related business (“data analytics” OR “data driven*”
+OR “data-driven*” OR “machine learning” OR “big data” OR “artificial intelli-
+gence”). The second part sought articles providing insights on relevant capabilities
+of success factors (“maturity model” OR “capability framework” OR “actionable
+practice*” OR “success factor*”). The initial search yielded 166 papers, which we
+subsequently screened for title, abstract, and full text. We excluded papers that made
+no substantive reference to success factors or capabilities of DDBMs and focused
+on domains or research areas other than business or management (e.g., medicine
+or educational sciences). Thus, we excluded 101 papers based on title screening,
+11 based on abstract screening, and 13 after our analysis of the full paper. The
+search resulted in 41 papers that addressed issues directly relating to our research
+(e.g., papers identifying success factors or key challenges for DDBMs). These pa-
+pers included ten related maturity models. Using forward and backward searches,
+another five models were identified, leading to a final set of 15 related models. We
+used a comparison table to decide whether these works fulfilled the requirements
+derived from Phase 1 (Cuylen et al. 2016). The resulting ten models included in this
+table fulfill at least one of our requirements. Based on this comparison, a develop-
+ment strategy for the MM was selected. This could involve the complete redesign
+of a model, the extension of an existing model, the combination of several models
+to form a new model, or the transfer of structures or content from existing models
+to new areas of application (Becker et al. 2009; Gregor and Hevner 2013). To create
+an integrated model that would cover business and technology aspects not addressed
+in existing models, we decided to develop a new model drawing on valuable struc-
+K
+
+--- PAGE 13 ---
+Schmalenbach Journal of Business Research (2023) 75:303–343 315
+tures from existing models and existing research, such as EA models and DDBM
+archetypes.
+3.3 Phase 3: Model Development and Artificial Evaluation
+In the third phase, the model was iteratively developed. In keeping with Becker
+et al. (2009), we started designing the model’s architecture (i.e., maturity levels and
+capability dimensions) before working on the matrix content. Following the require-
+ments identified in Phase 1, the maturity levels were designed following archetypes
+of business models to cover the rising sophistication of data-driven services and data
+analytics with increasing maturity. For this purpose, we designed five maturity levels
+corresponding with the analytics-based services archetypes of Hunke et al. (2021).
+Subsequently, we developed the capability dimensions of the DDBM. To provide an
+integrated perspective, including business and technology capabilities for DDBMs,
+we drew guidance from the EA model of Urbach and Röglinger (2019) outlined
+in Sect. 2. To identify the capability dimensions of the DDBM3, we deconstructed
+existing models and assigned their capability dimensions to the levels of the EA
+model. Based on this structure, it became clear that existing models comprehen-
+sively covered the technological levels of the EA (i.e., ‘data and information’ and
+‘infrastructure’).
+Hence, we investigated other works which provided a business perspective on
+DDBM. From these models, we extracted further capability dimensions (e.g., ‘value
+proposition’ from Payne et al. (2017) and ‘sales and channel management’ from
+Leiting et al. (2020)). We then developed the matrix content (i.e., the capabilities
+per maturity level). Herein, we used descriptions from existing works or developed
+new descriptions based on guidance from the literature. Overall, the development
+of our model took place over three iterations. In the first iteration, we developed
+the basic structure, which we then compared with existing models. In the second
+iteration, we specified the initial matrix content. In the third iteration, we aligned
+the capabilities horizontally (i.e., to the capability dimensions) and vertically (i.e.,
+to the maturity levels). We completed this third phase of our research approach
+by hosting an academic focus group involving eleven researchers in the field of
+digital transformation. The workshop led us to make final changes—for example, we
+adjusted descriptions to meet evaluation criteria such as completeness and internal
+consistency (Sonnenberg and vom Brocke 2012).
+3.4 Phase 4: Naturalistic Evaluation by Demonstration
+A subsequent fourth phase involved a naturalistic evaluation by applying the model
+to two real-world organizations (Sonnenberg and vom Brocke 2012). We applied
+the model in two focus groups consisting of experts from the two selected man-
+ufacturers (see Table 1) to assess the status quo and target state. As a qualitative
+research method, focus groups are particularly suitable for this purpose as they allow
+mutual inspiration and facilitate discussion among the participants (Tremblay et al.
+2010; Stewart and Shamdasani 2014). A digital whiteboard was employed as a user-
+friendly transfer medium to facilitate an assessment of the company’s status within
+K
+
+--- PAGE 14 ---
+316 Schmalenbach Journal of Business Research (2023) 75:303–343
+the focus group (Becker et al. 2009). The MM was displayed on the whiteboard
+and the focus group participants could give their assessment independently of one
+another in successive rounds (i.e., per capability dimension). To enable sensitivity
+and specificity in their assessments, the participants were allowed to assess the status
+as ‘in-between’ two capabilities. After each capability dimension, the individual as-
+sessments were revealed to all participants. Based on the current state assessment in
+all capability dimensions, particularly weak dimensions were identified, and options
+for improvements were discussed. Finally, the participants reflected on the applica-
+tion of the model to verify whether the model met the practical requirements. This
+evaluation indicated high applicability and utility, as the integrated perspective of
+business and technology supported the identification of shortcomings. The practi-
+tioners thus concluded that the model was highly useful and effective for capturing
+DDBM transformation.
+Based on this, we use our model as an analytical lens to better understand what
+actions (e.g., digitalization projects) the companies had implemented to reach the
+current status quo. We performed semi-structured interviews (Miles and Huberman
+2009)to outline actions taken within the last ten to fifteen yearsto achieve the current
+status quo of DDBMs in each focus area of the MM. Firstly, we asked the interview
+partners to explain their company’s overall DDBM approach. Secondly, we asked
+them to describe initiatives and actions across all organizational layers. Thirdly,
+we pinpointed challenges associated with DDBM development. All interviews were
+digitally recorded and transcribed. In our analysis, we coded the interviews along
+the structure of our MM. This enabled us to identify in each case a company’s
+approach, the actions taken, and the challenges encountered.
+4 Results
+In this section, we present the results of our research, following the guidelines de-
+veloped by Becker et al. (2009). Firstly, we describe the requirements we identified
+as necessary to enable a possible solution. We then present the result of our compar-
+ison between the requirements identified and existing MMs. Next, we present the
+DDBM3 and its artificial evaluation. Finally, we offer insights on the naturalistic
+evaluation of our model and on the transformation of manufacturers toward DDBM.
+4.1 Phase 1: Design Requirements
+As outlined in Sect. 3, we identified requirements for our model using eight in-
+terviews with manufacturing practitioners. Below, we present three key require-
+ments (R) for a MM supporting capability development among manufacturers in the
+transition to DDBMs.
+4.1.1 [R-1] Representation of Business Model Archetypes
+Firstly, as interview partner B1 stated, “[...] a major challenge is to identify a clear
+business modelwithinourtransformation activities.” The guidance offeredby the so-
+K
+
+--- PAGE 15 ---
+Schmalenbach Journal of Business Research (2023) 75:303–343 317
+lution should refer to practice-oriented, clearly defined archetypes of DDBMs. This
+will enable practitioners to identify a target state clearly. As A1 attested, “[...] for
+us, having a clear business model vision is essential.” Moreover, the practitioners
+demanded a continuum from providers of traditional products to providers of digital
+solutions. This range was chosen to fully cover the manufacturing transformation
+of the focus groups’ organizations: While both organizations are currently under-
+going their DDBM transformation, all began as providers of physical products, i.e.,
+machinery. The representation of DDBM archetypes was, thus, identified as strate-
+gically important in that it may help to provide a long-term perspective on how
+the business model could be further developed if competitive pressure continues to
+increase at the product level.
+4.1.2 [R-2] Completeness of EA Coverage
+Secondly, the model should outline capabilities relevant to DDBM, including a busi-
+ness and technology perspective. As outlined by interviewee B3, “[...] to structure
+this [DDBM] transformation, it is essential to have a comprehensive perspective on
+the organization that includesbusiness andtechnology.” Thus, the model should pro-
+vide a comprehensive view of the organization, including the business (e.g., value
+proposition, monetization strategies) and technical (e.g., infrastructure) capabilities.
+This urgency was underpinned by A2 stating that “[...] in previous projects, we of-
+ten looked at either technology or business principles. However, it is becoming clear
+that these perspectives need to be considered jointly so that the entire organization
+remains focused on one objective.”
+4.1.3 [R-3] Completeness of Capability Descriptions
+Thirdly, the MM should clearly describe the capabilities of specific business model
+archetypes. Interview partner A2 stated that “[...] for us it is essential to have a de-
+scription of the capabilities rather than just some keywords.” Clear descriptions en-
+able both the classification of one’s own organization (descriptive) and the identifi-
+cation of future steps for building more mature capabilities in the transition to the
+target state (prescriptive).
+4.2 Phase 2: Feature Comparison
+In keeping with our DSR approach, both our problem statement and design require-
+ments are grounded in practice. Based on the requirements, existing models can be
+identified. Thus, we could determine whether existing research met our requirements
+and, if not, we could derive a development strategy for a MM (Becker et al. 2009).
+Our structured literature review, presented in Sect. 3, initially identified 15 re-
+lated works. We evaluated existing models against the three requirements. For this
+purpose, comparison tables provide a useful means to conduct a feature comparison
+and evaluate whether the requirements have been sufficiently fulfilled by existing
+works (Cuylen et al. 2016; Stelzl et al. 2020). During the screening process, ten
+models were identified that at least partially fulfilled the requirements (Table 2).
+K
+
+--- PAGE 16 ---
+318 Schmalenbach Journal of Business Research (2023) 75:303–343
+Table 2 Comparison with related MMs
+Requirements
+Related work R-1 Representation of
+business model archetypes
+R-2 Completeness
+of EA coverage
+R-3 Completeness of
+capability descriptions
+Chen et al. (2022) – (✔) ✔
+Comuzzi and Patel
+(2016)
+– (✔) ✔
+Ge et al. (2020) – (✔) (✔)
+Gökalp et al.
+(2021)
+– (✔) ✔
+Hausladen and
+Schosser (2020)
+(✔) ✔ ✔
+O’Donovan et al.
+(2016)
+– (✔) ✔
+Olszak and Mach-
+Krol (2018)
+– (✔) ✔
+Retrialisca and
+Chotijah (2020)
+– (✔) ✔
+Sjödin et al.
+(2018)
+– (✔) ✔
+Weber et al. (2017) – (✔) (✔)
+– not fulfilled; (✔) partly fulfilled; ✔ fulfilled
+We excluded five models during the screening process as these either could not be
+classified as MMs (i.e., Grossman (2018), Chen et al. (2017), Frank et al. (2019)),
+did not describe any capabilities related to DDBMs (e.g., Farah (2017)), or focused
+solely on technology rather than providing an integrated perspective on the company
+(e.g., the MLOps MM of John et al. (2021)).
+We found that the remaining ten MMs provided descriptions of their model’s
+capabilities (R-3). Only Ge et al. (2020) and Weber et al. (2017) offered notably
+limited insights on the outlined capabilities (e.g., in the form of a capability index).
+Except for the model of Hausladen and Schosser (2020), the MMs only partially
+fulfilled the requirement for comprehensiveness, i.e., R-2. We examined whether the
+models covered the entire EA (i.e., technical, organizational, and business aspects).
+We found that coverage of business aspects was broadly lacking in the models
+studied. Many papers examined the technical and organizational capabilities for
+value creationrather thanvalue deliveryandcapture.Therefore,the needforbusiness
+model archetypes specified in R-1 was not fully addressed by any model. The model
+by Hausladen and Schosser (2020) offers business model references for airlines, yet
+the potential for generalization is limited, especially for manufacturers.
+Existing models provide valuable descriptions of DDBM capabilities, particularly
+in the technical and organizational domains. However, the business domain remains
+mainly unaddressed and poses a considerable challenge for manufacturers. Against
+this background, it seems reasonable to draw on and combine insights from existing
+models and related models (e.g., EA models and business model archetypes) to
+form a new model, which can be supplemented by elements from business models
+(Becker et al. 2009).
+K
+
+--- PAGE 17 ---
+Schmalenbach Journal of Business Research (2023) 75:303–343 319
+4.3 Phase 3: Description of the Data-Driven Business Model Maturity Model
+In developing our DDBM3, we followed a top-down approach, initially defining
+maturity levels and capability dimensions (Becker et al. 2009). The model was
+developed as a continuous MM, implying that it spans a matrix between capability
+dimensions and increasing maturity levels, the content of which is fully specified
+(Stelzl et al. 2020; van Steenbergen et al. 2010). The matrix content of the DDBM3
+thus describes the minimal archetypical capabilities required by a manufacturer if
+they are to offer a specific DDBM archetype. In the following, the basic structure
+of the DDBM3 is presented (Fig. 4), the maturity levels are defined (Table 3), and
+the capability dimensions are described (Table 4).
+To fulfill R-2, the DDBM3 does not draw on abstract maturity levels. Instead,
+it builds on the DDBM archetypes by Hunke et al. (2021). These archetypes are
+empirically grounded and provide discrete characteristics that increase with maturity
+levels (Table 3). Firstly, the relevance of data-driven services to the overall business
+model increases with maturity. Secondly, the depth of data processing and analytics
+increases with maturity levels. Thirdly, customization of the digital component of
+the value proposition increases. Moreover,we extended the archetypes with an initial
+maturity level—‘product provider’—based on requirement R-2. The DDBM3 thus
+comprises five maturity levels that cover the continuum from ‘product provider’ to
+‘digital solution provider’.
+Next, we defined the capability dimensions of the DDBM3. To provide an inte-
+grated perspective, including business and technology capabilities, we drew on the
+EA model by Urbach and Röglinger (2019) as focus areas. Capability dimensions
+extracted from existing literature were clustered and assigned to these focus areas.
+Overall, the DDBM3 consists of 22 capability dimensions (Table 4).
+In the DDBM3, the focus area ‘business model’ includes capabilities that refer
+to the organization’s market interface. Hence, this focus area includes those com-
+Fig. 4 Structure of the DDBM3
+K
+
+--- PAGE 18 ---
+320 Schmalenbach Journal of Business Research (2023) 75:303–343
+Table 3 Maturity levels of the DDBM3
+Maturity
+Level
+Definition
+Product
+provider
+There is no DDBM and thus no revenue is generated from data (e.g., sales of machinery
+and maintenance activities) (Hunke et al. 2021). Customization is performed at the
+physical product level (Wang et al. 2017)
+Data
+provider
+The DDBM enhances the product by providing processed data to the customer (e.g.,
+data delivery via programming interfaces or simple visualization via dashboards)
+(Hunke et al. 2021; Sarker 2021; Chen et al. 2011). Customization is performed via
+the preparation and aggregation of data through descriptive analytics (Kohtamäki et al.
+2019)
+Insight
+provider
+The DDBM includes the delivery of diagnostic, supportive insights (e.g., alerts, target
+benchmarking) (Hunke et al. 2021; Sarker 2021). Customer-specific, primarily diag-
+nostic insights are provided by leveraging domain knowledge and diagnostic analytics
+(Lehrer et al. 2018; Zhang et al. 2019)
+Recommenda-
+tion
+provider
+The DDBM is created by providing recommendations based on predictive analytics
+(e.g., data-driven root cause analysis, automatic situational recommendations) (Hunke
+et al. 2021; Sarker 2021). Customer-tailored decision support based on comprehensive
+customer integration (Lehrer et al. 2018; Zhang et al. 2019)
+Digital
+solution
+provider
+Data-driven services are key elements of the value proposition and value creation of the
+business model (Hunke et al. 2021). New customers and markets beyond the scope of
+manufacturing can be tapped (e.g., consulting services). Customization is an inherent
+aspect of prescriptive services (Lehrer et al. 2018; Zhang et al. 2019)
+ponents of the business model that are outward-facing and concern the company’s
+interaction with customers. A key element is the ‘value proposition’, i.e., the capa-
+bility to provide a consistent offering, comprising digital and physical components,
+that generates value for the customer (Payne et al. 2017). The value proposition is
+closely related to the DDBM archetypes according to Hunke et al. (2021)—e.g.,
+value generation through customer-specific insights. The ‘customer relations’ refers
+to the degree of (digital) interaction between supplier and customer in the value cre-
+ation process. This capability enables the supplier to tailor the data-driven services
+to the customer’s needs and, hence, enables co-creation (Hunke et al. 2021; Zhang
+et al. 2019). ‘Monetization and pricing’ capabilities enable manufacturers to price
+and successfully monetize the value of data-driven services, e.g., via pay-per-use
+models (Baltuttis et al. 2022; Schüritz et al. 2017). ‘Sales and channel management’
+is an essential capability for the effective distribution of the company’s digital offer-
+ings. It includes the digitalization and adoption of new distribution channels, such
+as digital platforms, that are highly suited for offering DDBMs (Leiting et al. 2020).
+The focus area of ‘business processes’ covers specific processual capabilities
+that enable the creation, delivery, and capture of data-driven services and break
+down the business model into internal activities (Porter 2014). Business processes
+also direct the flow of information and enable alignment between business and IT
+(Harmon 2015; Comuzzi and Patel 2016). The capability to provide ‘strategy and
+vision for data-based business’ refers to management providing a clear strategic
+vision for the transformation toward DDBM. It thus provides strategic alignment
+and includes the management’s provision of dedicated resources (financial, human,
+etc.) for DDBM (Gökalp et al. 2021; Hausladen and Schosser 2020). ‘Data-centric
+process management’ is an organization’s capability to manage processes in such
+K
+
+--- PAGE 19 ---
+Schmalenbach Journal of Business Research (2023) 75:303–343 321
+Table 4 Capability dimensions of the DDBM3
+Focus
+area
+Capability dimension Reference
+Business
+model
+Value proposition Payne et al. (2017)
+Customer relations Hunke et al. (2021), Zhang et al. (2019)
+Monetization & pricing Baltuttis et al. (2022), Schüritz et al. (2017)
+Digital channel management Leiting et al. (2020)
+Business
+processes
+Strategy & vision for data-based
+business
+Gökalp et al. (2021), Hausladen and Schosser
+(2020)
+Data-centric process management Comuzzi and Patel (2016), Malta and Sousa
+(2016), Trčka (2010)
+Knowledge sharing & management Gökalp et al. (2021)
+Product life cycle management Schroderus et al. (2022)
+People &
+applica-
+tions
+Recognition & mindset Comuzzi and Patel (2016), Hausladen and
+Schosser (2020)
+Methods Gökalp et al. (2021), Tsoy and Staples (2021)
+Roles & responsibilities Förster et al. (2022)
+Data analytics competencies Comuzzi and Patel (2016), LaValle et al. (2011)
+Data analytics tooling Comuzzi and Patel (2016), Hausladen and
+Schosser (2020)
+Data &
+informa-
+tion
+Applied forms of analytics Comuzzi and Patel (2016), Gökalp et al. (2021)
+Data management Comuzzi and Patel (2016), Gökalp et al. (2021)
+Data governance & quality Gökalp et al. (2021)
+Horizontal & vertical data integra-
+tion
+Comuzzi and Patel (2016), Gökalp et al. (2021),
+Weber et al. (2017)
+Infrastructure Data analytics software manage-
+ment & operations
+Gökalp et al. (2021), John et al. (2021)
+Data-driven service integration &
+deployment
+Gökalp et al. (2021), John et al. (2021)
+Data architecture & scaling Chen et al. (2022), Hausladen and Schosser
+(2020)
+Cybersecurity & -privacy Chen et al. (2022), Ullah and Ali Babar (2019)
+Cyber-physical systems & connec-
+tivity
+Weber et al. (2017)
+a way that they contribute to the DDBM strategy, are measured and traced based
+on data, and are enhanced through data-driven improvements (Comuzzi and Patel
+2016; Malta and Sousa 2016). Moreover, to enable DDBMs, it is essential to share
+and actively manage domain and IT knowledge within the organization to promote
+inter-organizational exchange (‘knowledge sharing and management’) (Gökalp et al.
+2021). This capability is relevant, as data-driven services require that knowledge
+from the domain is bundled with digital capabilities to provide, for example, data-
+driven recommendations that increase the utility of the physical product (Hausladen
+and Schosser 2020). In addition, manufacturers need to transform their ‘product
+life cycle management’. This capability refers to the planning and management of
+the product’s life cycle, including collecting, storing, and processing data for data-
+driven services (Schroderus et al. 2022).
+K
+
+--- PAGE 20 ---
+322 Schmalenbach Journal of Business Research (2023) 75:303–343
+The focus area ‘people and applications’ comprises cultural aspects, soft and
+hard skills, responsibilities, and analytics tooling for data-driven business models
+at the employee level. This focus area ensures that the organization’s employees
+are empowered to implement DDBMs. ‘Recognition & mindset’ is an essential ca-
+pability referring to a collective understanding among all organizational members
+of the potential and value of data (Hausladen and Schosser 2020; Davenport and
+Bean 2018). This corporate culture ensures that the organizational members embrace
+DDBMs as the desired objective and align their actions accordingly (Comuzzi and
+Patel 2016). In this context, ‘methods’ also have a vital function. This capability
+encompasses leveraging customer-centric, experimental, iterative approaches to re-
+duce uncertainty and enable learning in order to develop data-driven solutions (Tsoy
+and Staples 2021). It also involves rapid prototyping to evaluate the applicability
+and feasibility of a data-driven service (Gökalp et al. 2021). Manufacturers must
+create new ‘roles and responsibilities’ for DDBMs. Intra- and inter-organizational
+professional roles and responsibilities enable the company’s data-driven value cre-
+ation, delivery, and capture (Förster et al. 2022). In addition, it must be ensured
+that the organization is capable of externally acquiring and internally developing
+‘data analytics competencies’ to enable data-driven services (Comuzzi and Patel
+2016; LaValle et al. 2011). Consequently, employees need to be equipped with the
+‘data analytics tooling’ applications. This describes an organization’s capability to
+effectively provide data analytics tooling (i.e., visualization, processing, and mining
+tools) (Hausladen and Schosser 2020; Comuzzi and Patel 2016).
+The focus area ‘data and information’ covers data management, the integra-
+tion of data sources (horizontal and vertical), the establishment of governance and
+quality mechanisms, and the analytics applied to data. One capability dimension is
+the ‘applied forms of analytics’, which deals with methods and models such as de-
+scriptive, diagnostic, or prescriptive analytics, depending on the associated DDBM
+archetype(Gökalpet al. 2021;Schroderuset al. 2022).‘Datamanagement’addresses
+the capability to manage the data analytics life-cycle (i.e., collecting, storing, trans-
+forming, and analyzing data for information extraction). This capability also covers
+levels of access to data at different stages of this life cycle, across the organization
+(Comuzzi and Patel 2016; Hausladen and Schosser 2020). Another vital capability
+in this focus area is the assurance of ‘data governance & quality’. This capability
+includes rights and access management, metadata management, and data cartogra-
+phy (Gökalp et al. 2021). For mature DDBMs, a high level of quality among the
+available data is essential. ‘Horizontal and vertical data integration’, referring to the
+identification and integration of internal and external data types and sources, is also
+an important capability dimension (Comuzzi and Patel 2016). Vertical integration
+refers to the integration of internal data from business units, while horizontal in-
+tegration involves external data sources and domains (e.g., customer data) (Weber
+et al. 2017).
+The focus area ‘infrastructure’ comprises mostly technological enablers that or-
+ganizations need to provide DDBMs. The associated capabilities include the secure
+and scalable operation of software and hardware. The ‘data analytics software man-
+agement & operations’ capability refers to an organization’s capability to adopt and
+integrate data analytics software tools to provide data-driven services. It covers the
+K
+
+--- PAGE 21 ---
+Schmalenbach Journal of Business Research (2023) 75:303–343 323
+installation, operation, and monitoring of software and associated infrastructure. The
+aim is to optimize software availability, speed, and reliability (Gökalp et al. 2021;
+John et al. 2021). Another relevant capability is ‘data-driven service integration
+& deployment’. This relates to the software-based configuration, deployment, and
+maintenance of data-driven services, and their integration into existing infrastructure
+(Gökalp et al. 2021; John et al. 2021). Manufacturers must also be able to adapt their
+data architecture design to handle the volume, velocity, and actuality of existing and
+new data sources (‘data architecture & scaling’) (Hausladen and Schosser 2020;
+Muller and Hart 2016). This includes, for instance, storage capacity, computational
+capacity, as well as sufficient interconnectivity to enable the transfer of data from
+cyber-physical systems to local servers or the cloud. It also includes the capacity
+to feed insights drawn from the cloud/server to machines and onward, to customers
+(Chen et al. 2022). Another relevant capability in the infrastructure area is ‘cyber-
+security & privacy’. This involves applying technical and managerial measures to
+ensure confidentiality, integrity, and availability when processing large volumes of
+data (Ullah and Ali Babar 2019; Chen et al. 2022; Guggenmos et al. 2022). Fi-
+nally, ’cyber-physical systems & connectivity’ is an infrastructure-related capability
+that covers capturing and collecting data via cyber-physical systems. For manufac-
+turers, this involves establishing an accessible machine base—e.g., equipping the
+physical product with sensors, actuators, and connectivity. This capability lays the
+ground for data collection and processing and enables cyber-physical interaction
+with equipment (Weber et al. 2017).
+Based on the structure of the DDBM3, the individual capability manifestations
+were fully defined for each maturity level (see Appendix 1).
+4.4 Phase 4: Insights On Manufacturers’ Transformations to DDBMs
+A particular focus in the DDBM development process is evaluating a model’s prac-
+tical value. For this purpose, the DDBM3 was applied with two manufacturers
+(Table 1). For each of these manufacturers, an interdisciplinary focus group of prac-
+titioners used the model to analyze their company’s status quo and define a target
+state for DDBM development(Fig. 5). The focus group was initially consulted on the
+target state of the current DDBM transformation. The DDBM archetypes presented
+by Hunke et al. (2021) were used for this purpose. Both organizations unanimously
+classified the target state as a ‘recommendation provider’ within the next five years.
+The application of the DDBM3 revealed that both manufacturers’ capabilities
+are among ‘data provider’ and ‘insight provider’ (average values 2.7 and 2.4). In
+addition, we could identify that Alpha held mature capabilities, particularly in the
+upper levels of the model, which are closer to the target state (i.e., strategy, process
+management, knowledge sharing, mindset, and methods). However, the application
+also revealed that some of this manufacturer’s other capabilities—mainly techni-
+cal and data-related—were significantly less developed. These included capabilities
+associated with data quality, analytics tooling, and software management.
+In contrast, Beta’s assessment was less scattered and indicated that most of this
+manufacturer’s capabilities were at the maturity level of an ‘insight provider’. How-
+ever, we observed that Beta did possess some more mature capabilities, mostly
+K
+
+--- PAGE 22 ---
+324 Schmalenbach Journal of Business Research (2023) 75:303–343
+Fig. 5 Application of the DDBM3 at two manufacturers (Alpha and Beta)
+among those on the lower EAs, (e.g., in the area of infrastructure). Consequently, the
+potential for transformation in the manufacturer’s business capabilities was identi-
+fied, including the potential to formulate a suitable value proposition, manage digital
+channels, and share knowledge across the organization. Overall, users in the focus
+groups considered the model to be particularly helpful due to its comprehensiveness,
+enabling the practitioners to identify relevant fields of action within their DDBM
+transformation. It was also confirmed that the DDBM3 meets the identified relevant
+requirements.
+4.5 Findings On Approaches for DDBM Transformation
+In addition to the focus groups on the application of DDBM3, interviews were
+conducted with practitioners to gain insight into the transformation to DDBMs and
+develop an understanding of the reasons for the companies’ status quo. Although
+both companies held roughly similar capability averages across the model, Alpha
+held more substantial business capabilities, whereas Beta held more mature technol-
+K
+
+--- PAGE 23 ---
+Schmalenbach Journal of Business Research (2023) 75:303–343 325
+ogy capabilities. Both Alpha and Beta started their transformation to DDBMs around
+ten years ago and had been implementing variousactions in terms of projects and ini-
+tiatives. To better understand how both companies had reached their status quo, they
+were asked about their overall approach and goals, their actions, and the challenges
+they faced.
+4.6 Alpha—A ‘Business First’ Approach
+In line with observations drawn from the application of the DDBM3, a ‘business
+first’ approach was identified at Alpha. Here, it was mainly the business side, i.e.,
+customers, who initiated the transformation actions, as they demanded data delivery.
+These actions were followed by some measures that developed the maturity of the
+upper levels of the EA (e.g., strategic initiatives and new roles). However, weak-
+nesses remained in the lower EA—e.g., in the data analysis capability or the scaling
+of networked machines.
+Insights On Action Taken for DDBM Transformation “[...] actually, our [busi-
+ness] customers triggered us to provide data-driven services. They clearly demanded
+access to machinery data.This triggered the process of thinking aboutall relevant re-
+quirements to realize this business opportunityandto create more services [...]” (A1).
+Starting from the ‘business model’ area, Alpha’s DDBM transformation began with
+increasing customer demand for access to machine data. The service department ini-
+tiated the provision of data that had, until that point, only been used internally. Next,
+Alpha’s management established a customer-oriented strategic initiative to explore
+DDBM, starting with a clear business perspective and employing associated tools
+and methods (e.g., business model canvas, value proposition design, etc.). Alpha
+then launched new external applications (e.g., digital service portals, end-user apps)
+which were developed to create digital channels for data-driven service provision.
+Alpha subsequently defined new ‘processes’ for developing and operating data-
+driven services and associated roles on the ‘people and applications’ layer. These
+included digital product managers as bridgeheads between technology development
+and business management (A2). However, the acquisition of data analytics compe-
+tencies to match these roles and the provision of appropriate tooling remain a key
+challenge for Alpha, resulting in lower maturity of these capability areas. On the
+‘data and information’ layer, the company did not purposefully gather data to be
+exploited for DDBMs. Yet, the company worked, primarily, with established ‘in-
+frastructure’ not targeted at extensive data practices (e.g., ERP systems) (A5). Thus,
+the company recently started implementing a data lake to provide a single source
+of truth for the different kinds of data and data sources (A1, A2). One primary
+data source is the latest machines equipped with many sensors. In this case, data
+collection is mainly driven by reporting, diagnosis, and maintenance. Even though
+the company now provides every new machine with connectivity, only about 15%
+are fully accessible via connectivity services (A1).
+In sum, the driving force for Alpha was the customer and business model per-
+spective: “[...] the development of digital end customer solutions, in particular, was
+driven by the promising business model[...]” (A2). In turn, Alpha follows a ‘business
+K
+
+--- PAGE 24 ---
+326 Schmalenbach Journal of Business Research (2023) 75:303–343
+first’ approach, with case-by-case project budgeting and clear financial targets (e.g.,
+cost reduction, margin enhancement, and return on investment). Technological ad-
+vances and investments have thus always been aligned with clear business-oriented
+goals.
+Challenges Alpha’s approach was associated with some challenges. The company
+gathered data more as a by-product rather than with a clear intention in data man-
+agement. Existing data sources (e.g., ERP systems) remain untapped due to missing
+analytics tools and a lack of internal data domain knowledge (A5). Another criti-
+cal issue remains the rollout of connected machinery and long lifecycles. With an
+average seven-year period of use, Alpha’s machinery is remarkably reliable and
+durable (A1, A2). However, this results in a slow turnover of the installed base and
+massively hinders the rollout of digital solutions over many sites, hence, limiting
+access to data. Another challenge is that the development of data-driven services is
+mainly undertaken by external partners. This is due to limited internal capabilities
+and resources to implement and deploy the DDBM. The overarching challenge of
+the ‘business first’ approach is that, while solutions can be purposefully designed
+and offered on the business side, a lack of technology-related capabilities slows
+down the transformation.
+4.7 Beta—A ‘Data First’ Approach
+From the assessment of Beta in the DDBM3, we observed that Beta possessed
+more mature capabilities in the technological and data areas of the model. However,
+weaknesses were apparent in the upper EA regarding, for instance, monetization and
+pricing capabilities and knowledge sharing within the organization.
+Insights On Action Taken for DDBM Transformation Starting mainly on the
+‘infrastructure’ layer,Beta was early in enablingmachine connectivitythroughwired
+or wireless communication (MQTT)—one of the first technical initiatives to enable
+DDBMs around the core product. This approach enables machines up to around ten
+years old to be connected digitally, resulting in a potential installed base of around
+80%, if connected by the customer (B1, B4). Moreover, the company initiated the
+build-up of the first data warehouse in 2004 and has since been continuously en-
+hancing its technical capabilities in the ‘data and information’ layer. Additionally,
+Beta profits from the fact that many of its product’s electric components enable
+the measuring of various parameters without additional sensory equipment (B2).
+Regarding the ‘people and applications’ layer, Beta developed a service platform
+and leveraged the know-how of the service partner to identify use cases providing
+efficiency gains. Furthermore, an integrated cloud-based solution has recently been
+introduced to enable the continuous integration and deployment of data-driven ser-
+vices. Building on mature technology capabilities, Beta realized use cases to enable
+digital status and health reports for a service partner maintaining their machines
+(B3). The development of capabilities at the ‘process’ layer was use-case-driven and
+not strategically pushed early on, as was the case with Alpha. After establishing
+a solution for their service partner, the data-driven services expanded toward an end
+K
+
+--- PAGE 25 ---
+Schmalenbach Journal of Business Research (2023) 75:303–343 327
+customer base. “[...] we started withlow-hangingdigital services to enhancethe pro-
+ductivity of our customers and partners. We see such potential in the service domain,
+in particular, andhave the required dataat hand[...]” (B1). Regardingthe ‘business’
+layer, Beta’s customers were less actively demanding data-driven services than Al-
+pha’s customers, and Beta mainly used trials to evaluate digital services—e.g., with
+key accounts. Thanks to market conditions and the fact that they held fewer capabil-
+ities to actively place DDBMs, only about 5% of customers use data-driven services
+(B1).
+Beta’s transformation toward DDBMs has been driven mainly by technical affor-
+dances and a dominant market position, rather than active pressure from the demand
+side or a business-driven initiative.
+Challenges Along the data-driven service development process, Beta’s main chal-
+lenge in data management lies in increasing the market penetration of the connected
+products. While the technical preconditions are mainly mature and the internal sys-
+tems are available, customers need to be persuaded to connect their machines with
+the standard interfaces and use the necessary data-driven services (B4). Dedicated
+value propositions for different customer groups and associated channels and mon-
+etization strategies must be established at the business level (B1). In summary, the
+overarching challenge of the data-first approach is that the market-side realization
+of DDBMs is fraught with uncertainty. While the technological requirements and
+necessary investments for the realization of DDBM have been made, there is much
+uncertainty about the monetization potential of DDBMs. Hence, the key issue here
+is this strategy has not yet been widely validated in business contexts, and techno-
+logical development may occur without the necessary, simultaneous development of
+the business model.
+5 Discussion
+5.1 Theoretical Contribution and Implications
+Many manufacturers strive to leverage the opportunities of digitalization to offer
+data-driven services and transform toward DDBM (Müller and Buliga 2019; Voigt
+et al. 2021). However, this transformation, especially for incumbents, often implies
+the developmentof new capabilities across the organization(Gongand Janssen 2021;
+Comuzzi and Patel 2016). Existing research has already examined this transforma-
+tion, systematizing DDBM, for example, and developing archetypes that differ in
+their logic of value creation and value delivery (Weking et al. 2020). At the same
+time, existing research shows that both technology and business capabilities are
+needed to enable DDBM (Rashed and Drews 2021; Favoretto et al. 2022). However,
+the inquiry as to which capabilities manufacturers need across the organization to
+offer distinct DDBM archetypes remains unanswered (Hunke et al. 2021).
+To fill this research gap and provide practical help for manufacturers, this paper
+follows a DSR approach to develop and evaluate the DDBM3 as a central artifact
+that identifies 22 business and technology capability dimensions in five focus areas
+K
+
+--- PAGE 26 ---
+328 Schmalenbach Journal of Business Research (2023) 75:303–343
+(i.e., business model, business processes, people and applications, data and infor-
+mation, and infrastructure) for archetypal DDBMs. By developing the DDBM3 as
+a continuous MM (van Steenbergen et al. 2010), the relevant business and technol-
+ogy capabilities within each capability dimension are identified for each archetypal
+DDBM of Hunke et al. (2021) (i.e., data provider, insight provider, recommendation
+provider, and digital solution provider). As such, the MM is embedded in both prac-
+tice (i.e., the problem context, requirements, and evaluation context) and research
+(i.e., the knowledge base and the contributions of this study) (Hevner et al. 2004;
+vom Brocke et al. 2020). To design a solution, we build on three strands of research.
+First, we build on the developed DDBM archetypes of Hunke et al. (2021) as focal
+points of our model that allow determining aligned target states of the DDBM trans-
+formation. Second, we use layered EA models to offer an integrated, organization-
+spanning perspective from business to technology capabilities (i.e., business model,
+business processes, people & applications, data & information, and infrastructure)
+(Rashed and Drews 2021). Using the layered EA model of Urbach and Röglinger
+(2019) to structure these capabilities along different enterprise levels, we identify
+the 22 literature-based capability dimensions that are relevant for transforming to
+archetypal DDBM. Third, we identify and analyze existing MMs in the field to
+develop the 110 capabilities of the DDBM3 (Comuzzi and Patel 2016; Gökalp et al.
+2021; Hausladen and Schosser 2020). On the one hand, the model was challenged
+for completeness and internal consistency in artificial evaluation settings. On the
+other hand, through an application at two manufacturers, the model was naturalisti-
+cally evaluated regarding its applicability and effectiveness to understand better the
+DDBM transformation (Sonnenberg and vom Brocke 2012).
+As the DDBM3 strives to enhance the understanding of the required capabilities
+to offer distinct DDBM archetypes, it can be classified as an ‘improvement’ arti-
+fact (Gregor and Hevner 2013). While existing models focus on either business or
+technology capabilities, the DDBM3 offers an integrated and aligned perspective
+on the capabilities of different organizational layers, allowing the model to be more
+suited to address the complex real-world phenomenon of DDBM transformations
+(Baskerville et al. 2018). The model’s continuous design creates a high level of
+descriptive knowledge, as qualitatively described capabilities can be related to the
+DDBM archetypes and EA levels. By this design, the DDBM3 moves beyond the
+conception that follows a ‘more mature capabilities are better’-logic (Hunke et al.
+2021) that was adopted in some MMs (for instance Gökalp et al. (2021)). Rather,
+by providing distinct DDBM archetypes as focal points of the transformation, the
+model creates an awareness that the alignment and matching of these capabilities is
+essential.
+The model and its application offer several implications for research. As demon-
+strated in the model’s application at two manufacturers, the model can serve as an
+‘analytical lens’ that allows an investigation of the progress of the DDBM trans-
+formation across different organizational layers (Pöppelbuß and Röglinger 2011).
+With this tool, research can identify maturation paths and patterns that emerge from
+its application. This may unravel success factors or impediments associated with
+distinct paths of maturation, as demonstrated in the study of Mugge et al. (2020)
+for digital transformation endeavors. This potential becomes initially evident from
+K
+
+--- PAGE 27 ---
+Schmalenbach Journal of Business Research (2023) 75:303–343 329
+the two case study demonstrations of this paper: We find that the two manufacturers
+followed different approaches to tackle DDBMs: While Alpha took a ‘business first’
+approach—i.e., in which business capabilities are more mature than technological
+ones—we observed a ‘data first’ approach at Beta, revealing a greater maturity in
+technological and data-related capabilities. Our findings give rise to existing theories
+that transformations toward DDBM are not accomplished in a uniform and aligned
+manner, which results in different challenges. For instance, Vanauer et al. (2015)
+theorized about how big data projects are initiated. They assume that these projects
+can, on the one hand, be driven from a business perspective (‘business first’), based
+on a business vision and requirements. On the other hand, these projects can be ini-
+tiated by a resource or affordance perspective that builds on existing data and assets
+(‘data first’). Our results suggest that both approaches can occur when a manufac-
+turing company transforms toward DDBM. However, from our initial investigation,
+these approaches were indebted to the prevailing context and history of a company
+rather than a strategic choice.
+5.2 Practical Contribution and Implications
+Aside from its merits for research, the developed DDBM3 also offers value for prac-
+tice. To ensure the model’s practical relevance, a crucial demand of DSR research, it
+was developed in close alignment with practical requirements (Hevner et al. 2004).
+Moreover, with a naturalistic evaluation at two manufacturers, the model’s impact,
+effectiveness, and efficiency were evaluated (Sonnenberg and vom Brocke 2012).
+In the course of our evaluation, we outline the model’s ‘diagnostic’ purposes that
+may assist the management of manufacturers to better understand and structure
+their transformation toward DDBM. On the one hand, the DDBM3 may capture
+the current ‘status quo’ of DDBM transformation and thus gain insights into an
+organization’s strengths and weaknesses from a capability perspective. This allows
+management to understand how mature the company’s capabilities are across the
+22 capability dimensions. On the other hand, a ‘target state’ can be defined based on
+the model’s alignment with DDBM archetypes. In contrast to models using generic
+maturity levels (e.g., Gökalp et al. (2021) use five generic levels from 1= ‘initiated’
+to 5=‘innovating’), the model allows us to characterize target states qualitatively.
+This may stimulate a reflection on which DDBM archetype is to be aimed for and
+to derive which capabilities are typically required for this purpose.
+Moreover, applying the model at two manufacturers allowed us to gain insights
+into the transformation at these two companies and brought along some practical
+implications. As discussed in the research implications section, both companies
+took very different transformation approaches that brought along challenges. The
+challenges of the two companies arose particularly from a misalignment of ca-
+pabilities so that the full potential of DDBM could not be realized at either. We
+draw the implication from this that management should attempt to keep capabil-
+ity divergence to a minimum, as small building blocks of missing capabilities can
+slow down the transformation. An implication of this could be that manufacturers
+should try to adopt both approaches. On the one hand, management may leverage
+‘business first’ perspective to identify valuable, customer-oriented use cases (e.g.,
+K
+
+--- PAGE 28 ---
+330 Schmalenbach Journal of Business Research (2023) 75:303–343
+predictive maintenance or automated supply) (Müller and Buliga 2019; Hunke et al.
+2021). In this context, it is necessary to consider possible monetization models and
+channels for DDBMs at an early stage (Baltuttis et al. 2022). Leadership is called
+upon to develop a clear vision of DDBMs to mobilize the organization and create
+a DDBM culture (Davenport and Bean 2018). Hence, management must establish
+data-driven ‘processes’ early on, yet must still ensure flexibility (Malta and Sousa
+2016). Furthermore, our results indicate that the roles of ‘people and application’
+need to be defined (Förster et al. 2022). However, the challenge of bringing these
+roles to life involves the time-consuming development or acquisition of related com-
+petencies and the provision of associated tooling.
+On the other hand, management may use the ‘data first’ perspective associated
+with technological affordances (Lehrer et al. 2018; Zammuto et al. 2007)—for in-
+stance, by addressing the layer of ‘data and information’ with dedicated investments
+in hardware (e.g., sensors and connectivity) and software (e.g., data warehouse)
+(Pathak et al. 2021). A dedicated strategy and roadmap help identify levers that
+optimize data quality and availability in the long term (Kehrer et al. 2016). Manu-
+facturers can also leverage success factors at the ‘infrastructure’ level by proactively
+equippingtheir machineswith connectivityand sensors and consideringscalable sys-
+tems (Gökalp et al. 2021). This perspective is particularly in line with existing work
+that advises companies not to build up technical debt (Tom et al. 2013).
+5.3 Limitations and Further Research
+Our research has limitations regarding the DDBM3 itself and its evaluation and
+associated findings. We present these limitations in line with Becker et al. (2009)
+procedure model for MM development.
+First, the DDBM3’s generalizability is limited due to its dedicated focus on man-
+ufacturers in the mechanical engineering and machinery sector. We follow the ar-
+gumentation that such machines especially provide promising potentials for DDBM
+due to their technical sophistication and the possibility to continuously deliver data
+while they are being operated (Voigt and M. Müller 2021; Beverungen et al. 2021).
+However, the DDBM archetypes of Hunke et al. (2021) that we build on in this paper
+are of a general nature that may apply to other industries (e.g., the food industry). In
+these contexts, the DDBM archetypes may differ in their configuration and associ-
+ated capabilities, as the technical possibilities of data collection and processing and
+the customer requirements differ. For instance, the focus for data deliveries in the
+food sector may lay on production and supply chain data to enhance transparency
+regarding environmental impact (Astill et al. 2019). This indicates that the gener-
+alizability of the DDBM3 is limited and is particularly tailored to the use cases of
+manufacturers for equipment and machinery.
+Second, a limitation concerning the structure of the DDBM3 is inherent to the
+design decisions and especially to the three key requirements made during the MM
+development. By aligning the DDBM3 with existing data-driven business model
+archetypes and an EA model, the DDBM3 was developed to focus on internal con-
+sistency and comprehensiveness. Therefore, the development logic of the model
+follows a predominantly deductive perspective, such as established focus areas due
+K
+
+--- PAGE 29 ---
+Schmalenbach Journal of Business Research (2023) 75:303–343 331
+to the EA model. In contrast, such models can also be developed from an induc-
+tive perspective, e.g., when ‘actionable practices’ are extracted from empirical data
+(Stelzl et al. 2020). This could encourage future works to provide tools that are less
+of a ‘diagnostic’ character and instead assist in operationalizing the transformation,
+e.g., by offering ‘lessons learned’.
+Third, this paper faces a limitation regarding the generalizability of the impli-
+cations drawn from the naturalistic evaluation of the DDBM3. This demonstration
+aims to exemplify the application of the model to examine the transformation of
+two manufacturers and therefore evaluate the model’s design. In this context, the
+artifact proved to be a helpful tool for the two cases studied to better understand
+and diagnose their transformation status. However, this work is limited regarding the
+generalizability of the two identified transformation paths, i.e., ‘business first’ and
+‘data first’, which have already been outlined conceptually in other work (Vanauer
+et al. 2015). While this reflects the exploratory nature of our work, the evaluation
+decision potentially limits the ability to generally underlying the two transformation
+approaches or even identify new approaches. As a result, the theoretical implications
+regarding the two transformation approaches outline the model’s usefulness as an
+investigative lens but fall short of providing generalizable theories on transforma-
+tion paths. While this limits our work’s merits to the core artifact of DDBM3, it is
+intended to stimulate further research. Further, larger-scale studies can leverage the
+model as an investigative tool to identify patterns in transformation. In this way, the
+identified transformation approaches and theory, i.e., ‘business first’ and ‘data first,
+and the associated actions and challenges could be further empirically substantiated
+and generalized.
+Finally, our work and its limitations lead us to make a call for action. As business,
+environmental, and technical conditions are subject to change (Becker et al. 2009)
+the content of the DDBM3 should be regularly evaluated to ensure its real-world
+fidelity and actuality. To identify such adjustments, new interviews with additional
+manufacturers should be conducted and upcoming publications should be consid-
+ered to keep the DDBM3 up to date. For instance, if future research changes the
+understanding of archetypal business models, the DDBM3’s architectural logic and
+capability descriptions should be scrutinized. Furthermore, due to the alignment with
+existing frameworks, i.e., the EA model, the DDBM3 could be expanded to include
+additional focus areas and capabilities, such as more social-focused capabilities.
+6 Conclusion
+In line with their ongoing digital transformation, many manufacturers strive to of-
+fer DDBM, where data-driven services are essential to the value offering. These
+business models are geared toward creating high customer value and thus represent
+a promising option for creating competitive advantages in hitherto hardware-centric
+business areas. However, especially for incumbent firms, this implies a tremendous
+shift in their organizational logic and the development of new capabilities. Based on
+a DSR approach, this study strives to guide in this transformative endeavor through
+a MM that structures the required capabilities for archetypal DDBM. The model was
+K
+
+--- PAGE 30 ---
+332 Schmalenbach Journal of Business Research (2023) 75:303–343
+built based on existing literature and provides an integrated perspective. The model
+links business and technical capabilities along five organizational levels and presents
+them in 22 capability dimensions. The real-world application of the MM with two
+manufacturers shows its practical value in allowing companies to grasp their current
+capabilities on the different organizationallayers and define their DDBM target state.
+Thus, practitioners better understand their company’s individual transformation path
+and recognize missing capabilities on the way to their archetypal DDBM target.
+While the artifact thus developed provides clear practical added value, it also
+contributes to the scientific discourse. This study answers the research gap of an
+integrated perspective on necessary capabilities at different organizational layers for
+the DDBM transformation of manufacturing companies. The potential of leveraging
+the resulting model as an integrated lens on the transformation path of manufactur-
+ing companies becomes exemplified in the initial application at two manufacturers.
+Thus, the resulting artifact may stimulate future research to better and more com-
+prehensively understand the transformation of manufacturers toward DDBM.
+K
+
+--- PAGE 31 ---
+Schmalenbach Journal of Business Research (2023) 75:303–343 333
+7 Appendix
+Tab. 5 The DDBM3
+Capability
+dimension
+Product provider Data provider Insight provider Recommendation provider Digital solution provider
+Business
+model
+Value proposi-
+tion
+The product generates
+the customer value
+Customer value is gen-
+erated by the product
+and complementary data
+delivery
+Customer value is gener-
+ated by the product and
+derived from customer-
+specific insights
+Customer value is gener-
+ated by the product and
+linked to customer-specific
+recommendations
+Customer value is generated
+by data-driven service(s)
+Customer
+relations
+Product sales and
+machine-related after-
+sales services (e.g.,
+maintenance) are
+the links between
+customer and supplier
+Data deliveries enable
+a continuous connection
+from the supplier to the
+customer
+Customer needs are iden-
+tified systematically to
+provide target-oriented in-
+sights; reciprocal customer
+interaction
+High understanding of the
+customer’s value creation
+integration; data-driven
+customization
+Co-creation within an ecosys-
+tem with customers; cus-
+tomized digital solutions
+Monetization
+& pricing
+Pricing and mon-
+etization logic are
+highly dependent on
+the product and direct
+competition
+Pricing and monetization
+logic are primarily based
+on product; revenue
+models are based on data
+delivery
+Monetization for digital
+insights follows value
+logic; revenue models
+based on insight delivery
+Monetization of individ-
+ual recommendations;
+revenue models based on
+recommendation value
+Monetization strategy is
+based entirely on customer
+value and can be independent
+of physical products
+Digital chan-
+nel manage-
+ment
+No distribution of
+digital offers
+Purpose-specific selection
+of channels for data
+delivery
+Multiple digital channels
+allow the delivery of
+data insights (e.g., web
+services, APIs, messaging
+alerts)
+Permanent integration
+into customer systems;
+consultative sales based on
+digital portfolio offer
+Multiple and interoperable
+digital channels to offer
+digital solutions (e.g., via
+platforms)
+K
+
+--- PAGE 32 ---
+334 Schmalenbach Journal of Business Research (2023) 75:303–343
+Tab. 5 (Continued)
+Capability
+dimension
+Product provider Data provider Insight provider Recommendation provider Digital solution provider
+Business
+pro-
+cesses
+Strategy &
+vision for data-
+based business
+Product-centric strategy
+with associated resource
+allocation
+Offering data to customers
+as an initiative to enhance
+product-centric strategy;
+low planned use of re-
+sources
+Data as a relevant, high-
+value element in product-
+driven strategy; resource
+allocation must be accounted
+for
+Explicit data strategy and
+dedicated resources for cre-
+ating customer individual
+data-driven recommenda-
+tions
+Digital-first strategy and re-
+sources for offering compre-
+hensive data-driven solutions
+Data-centric
+process man-
+agement
+Process management
+can only be improved
+based on internal data,
+low data footprint; prod-
+uct-centric alignment of
+processes
+Initial processes to generate
+and capture data for data-
+driven services
+Processes provide multiple
+data points that allow the ex-
+traction of key information
+and improve processes in
+a data-driven way
+End-to-end data traces and
+active process manage-
+ment to enable data-driven
+optimizations
+Data-driven business process
+management capabilities can be
+offered in digital services
+Knowledge
+sharing &
+management
+Knowledge is anchored
+in product-specific
+domains (e.g., R&D,
+sales)
+Project-based knowledge
+exchange between domain
+and data-analytics experts
+Anchoring knowledge man-
+agement between domain
+and data analytics in prod-
+uct-related business units
+(e.g., service, product man-
+agement)
+Continuous domain and
+data-centric knowledge
+exchange between domain
+and data analytics
+Embedded knowledge pools
+and information are shared
+across the organization
+Product life
+cycle manage-
+ment
+Planning and manage-
+ment of the life cycle
+of the pure physical
+product
+Data access and software
+planning is based on the
+physical product life cycle
+of the latest product genera-
+tion; low interoperability of
+machines in the field
+Digital integration layers
+increase the interoperabil-
+ity of different machine
+generations (e.g., software-
+based)
+Data-driven product engi-
+neering; physical product
+lifecycle is aligned with
+digital services
+Software dominates the logic
+of lifecycle management; con-
+tinuous product development
+and shipment of data-driven
+services
+K
+
+--- PAGE 33 ---
+Schmalenbach Journal of Business Research (2023) 75:303–343 335
+Tab. 5 (Continued)
+Capability
+dimension
+Product provider Data provider Insight provider Recommendation provider Digital solution provider
+People
+&
+appli-
+cations
+Recognition &
+mindset
+Product and quality
+are the focus of action;
+the product shapes the
+cultural identity
+The value of data is subor-
+dinate to that of the product;
+providing data to customers
+is optional
+Data is recognized as
+a strategic asset and comple-
+ments product value
+Data is regarded as a com-
+petitive differentiator of
+the product, which, only in
+combination, unfolds the
+total value
+The corporate culture is
+focused purely on customer
+value and is decoupled from
+physical products; data is re-
+garded as a product
+Methods Agile methods are not
+applied; engineering-
+driven development
+approaches
+Agile methods are only
+locally applied in the IT
+department (e.g., Scrum)
+Agile practices are applied
+at the project level to de-
+velop data-driven insights
+(e.g., Lean Startup)
+Division-wide adoption of
+agile practices; adapting
+the organizational structure
+to roll out agile practices
+widely (e.g., SAFe)
+Holistic adoption of agile
+practices; development cycles
+follow agile methodologies
+(e.g., build-measure-learn)
+Roles & re-
+sponsibilities
+Product-centric role and
+task assignment
+Product-centric roles are
+expanded to include data-
+centric responsibilities (e.g.,
+in product management)
+Role structures and division
+of labor for the development
+of data-driven services
+emerge (e.g., Data Manager
+and Data Scientist)
+Company-wide role struc-
+tures evolve based on the
+company’s experience (e.g.,
+Chief Data Officer, AI Oper-
+ations Manager); Anchoring
+digital role profiles and
+dedicated ownership
+Roles are fully geared to cus-
+tomer value and data-driven
+services; clear organization-
+wide definition of roles and
+ownership, CDOs, and their
+business units are based on
+profit-loss responsibilities
+Data analytics
+competencies
+Product-related, tech-
+nical competencies are
+available and represent
+a key asset
+Analytics skills are needed
+infrequently; external
+acquisition of qualified
+employees
+Increasing demand for
+analytics skills throughout
+the organization; external
+acquisition of talent and
+internal development of
+skills for selected employees
+Analytics skills as a key
+competence with dedicated
+organizational units; Pro-
+viding staff with extensive
+training and development
+The company is attractive for
+employees with excellent data
+analytics skills and enables
+continuous employee develop-
+ment
+Data analytics
+tooling
+Isolated analytics tool-
+ing based on individual,
+product-related appli-
+cation areas (e.g., in
+R&D)
+Analytics tooling (e.g.,
+visualization tools) is
+available to few employees
+and is not provided in
+a standardized way
+Analytics tooling is used
+in some teams on a project
+basis to generate insights
+(e.g., processing and mining
+tools)
+A selection of analytics
+tooling is offered on a large
+scale and in a standardized
+way
+Continuous further develop-
+ment of the analytics tooling
+portfolio and in-house devel-
+opments; Location and device
+independence
+K
+
+--- PAGE 34 ---
+336 Schmalenbach Journal of Business Research (2023) 75:303–343
+Tab. 5 (Continued)
+Capability
+dimension
+Product provider Data provider Insight provider Recommendation provider Digital solution provider
+Data &
+infor-
+mation
+Applied forms
+of analytics
+Data analysis is used for
+internal purposes only;
+If necessary, customers
+build their analysis tools
+Descriptive analytics is used
+for the value creation
+Diagnostic analytics for
+delivering actionable and
+supportive insights
+Predictive analytics to pro-
+vide recommendations and
+tailored decision-support
+Predictive analytics enable new
+ways to conduct business and
+derive unique insights
+Data manage-
+ment
+No structured data col-
+lection and processing;
+Analysis is performed
+in the context of product
+research and develop-
+ment; Data is mostly
+stored locally
+Focus on building
+a database in a repository;
+the majority of data is still
+siloed; No organization-
+wide access
+Data is collected and stored
+systematically; All data
+is centrally stored and
+accessible across many
+business units
+Complete coverage of the
+data analytics life cycle;
+All data is centrally stored
+and accessible across the
+organization
+Data lifecycle with high
+flexibility by leveraging any
+database type; Complete vir-
+tual data organization (digital
+twin); Integrated with external
+stakeholders
+Data gov-
+ernance &
+quality
+No transparency on
+available gathered data
+by the product and
+other business units; No
+data requirements and
+metadata set
+Data quality is mainly de-
+termined by the quality
+of the sensor technology;
+Often raw data with aggre-
+gation stage of the machine;
+Data requirement set but no
+data cartography
+Data quality policies, meta-
+data-management, and
+naming standards (ubiq-
+uitous language) are set
+across many business units
+leading to first manual data
+cartography
+Organization-wide data
+cartography with defined
+data requirements and data
+quality policies; Establish-
+ing usage permissions and
+access roles for external
+stakeholders
+Automated data cartography;
+Data quality as a differenti-
+ating factor; Defined usage
+permissions and access roles
+for external stakeholders
+Horizontal &
+vertical data
+integration
+Internal data around
+the pure product spo-
+radically used within
+each business unit and
+domain
+Only internal product data
+used from single business
+unites without horizontal
+and external data gathering
+Data is integrated horizon-
+tally across many business
+units; External data sources
+are used on an ad-hoc basis
+Well-established and regular
+use of external data sources
+from different domains
+Broad selection of internal and
+external data sources obtain-
+able; Continuous identification
+of data sources to satisfy all
+information needs
+K
+
+--- PAGE 35 ---
+Schmalenbach Journal of Business Research (2023) 75:303–343 337
+Tab. 5 (Continued)
+Capability
+dimension
+Product provider Data provider Insight provider Recommendation provider Digital solution provider
+Infra-
+structure
+Data analyt-
+ics software
+management &
+operations
+Software management
+exists for product-rele-
+vant software; Analytics
+tooling is not managed
+centrally
+Decentralized applications
+whose interoperability
+is strictly limited; Low
+productivity due to lack of
+scale
+The installation and opera-
+tion of analytics software are
+standardized; Optimization
+focuses on the availability of
+data-driven services
+Standardized provision
+of resources for the use
+of analytics tooling; High
+automation and optimization
+of speed and reliability
+Highly scalable and flexible
+provision of analytics tools;
+Optimized operation (e.g., with
+dedicated SLA)
+Data-driven
+service in-
+tegration &
+deployment
+No need to integrate
+and deploy data-driven
+services
+Creation of few, dedicated
+resources to deploy solu-
+tions (e.g., cloud provider);
+Usage of versions control
+Continuous integration,
+deployment, and testing
+(DevOps); Establishment
+of a platform (cloud/on-
+premise/hybrid) across
+different domains
+Unification of development
+and operation of advanced
+analytics (MLOps); Addi-
+tional testing procedures
+such as data and model
+validation
+End-to-end MLOps platform;
+Automated deployment, testing,
+and monitoring workflows (e.g.,
+monitoring by alert)
+Data architec-
+ture & scaling
+Legacy systems and IT
+architecture are designed
+for the operation of the
+product-centric business
+mode
+Data analytics systems are
+built up in isolated cases
+(e.g., Department data
+marts); initial processes for
+data pipelines are running
+(e.g., ETL or ELT)
+Development of an over-
+arching IT architecture
+that allows data analysis
+and standardization with
+low latency (e.g., Hadoop
+cluster)
+Integrated IT architecture is
+established and allows high
+scalability (up and down);
+Introduction of streaming
+technologies for low latency
+Scalable infrastructure that
+can also be integrated into
+other platforms and offers
+high interoperability; Real-
+time streaming pipelines are
+established
+Cybersecurity
+& -privacy
+IT Security for internal
+systems
+Securing the data-delivery
+system; Focus on integrity
+and confidentiality of data
+(e.g., through encryption)
+Data processing and delivery
+must be secured regarding
+integrity and confidentiality;
+Improvement of availabil-
+ity (e.g., through backup
+procedures and disaster
+recovery)
+Confidentiality, availabil-
+ity, and integrity must be
+fulfilled in both internal IT
+and machine operational
+technology
+Security by design as a standard
+in the development of data-
+driven services; Continuous
+formulation and modification of
+technical and nontechnical data
+security provisions
+Cyber-physical
+systems &
+connectivity
+Connectivity of the
+delivered machines is
+not a requirement
+Simple, e.g., basic-param-
+eter connectivity allowing
+access to machine modules;
+Accessibility is restricted to
+a limited share of machines
+operated in the field
+Connectivity to all machine
+modules with access to op-
+erating relevant parameters
+(e.g., in near time); Techni-
+cal integration layer allows
+uniform access to machines
+in the field
+Highly performant connec-
+tivity to all machines in the
+market (e.g., in real-time
+with write-access); Integra-
+tion of data in the machine
+periphery in the field (e.g.,
+logistics)
+Fully connected machine base
+can be continuously supplied
+with software updates and new
+services; integration into digital
+platforms is possible
+K
+
+--- PAGE 36 ---
+338 Schmalenbach Journal of Business Research (2023) 75:303–343
+Funding This research received no specific grant from any funding agency in the public, commercial, or
+not-for-profit sectors.
+Open access funding provided by Schmalenbach-Gesellschaft.
+Declarations
+Conflict of interest B. Stahl, B. Häckel, D. Leuthe and C. Ritter declare that they have no competing
+interests.
+Ethical standards For this article no studies with human participants or animals were performed by any
+of the authors. All studies mentioned were in accordance with the ethical standards indicated in each case.
+Open Access This article is licensed under a Creative Commons Attribution 4.0 International License,
+which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as
+you give appropriate credit to the original author(s) and the source, provide a link to the Creative Com-
+mons licence, and indicate if changes were made. The images or other third party material in this article
+are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line to the
+material. If material is not included in the article’s Creative Commons licence and your intended use is not
+permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly
+from the copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by/4.
+0/.
+References
+Appelbaum, Steven H. 1997. Socio-technical systems theory: an intervention strategy for organizational
+development. Management Decision 35(6):452–463. https://doi.org/10.1108/00251749710173823.
+Astill, Jake, Rozita A. Dara, Malcolm Campbell, Jeffrey M. Farber, Evan D. Fraser, Shayan Sharif, and
+Rickey Y. Yada. 2019. Transparency in food supply chains: A review of enabling technology solu-
+tions. Trends in Food Science & Technology 91:240–247. https://doi.org/10.1016/j.tifs.2019.07.024.
+Azkan, Can, Lennart Iggena, Frederik Möller, and Boris Otto. 2021. Towards design principles for data-
+driven services in industrial environments. In Proceedings of the 54th Hawaii International Confer-
+ence on System Sciences, ed. Tung Bui
+Baltuttis, Dennik, Björn Häckel, Claudius M. Jonas, Anna M. Oberländer, Maximilian Röglinger, and
+Johannes Seyfried. 2022. Conceptualizing and assessing the value of Internet of things solutions.
+Journal of Business Research 140:245–263. https://doi.org/10.1016/j.jbusres.2021.10.063.
+Baskerville, Richard, Abayomi Baiyere, Shirley Gregor, Alan Hevner, and Matti Rossi. 2018. Design sci-
+ence research contributions: Finding a balance between artifact and theory. Journal of the Association
+for Information Systems 19(5):358–376. https://doi.org/10.17705/1jais.00495.
+Baxter, Gordon, and Ian Sommerville. 2011. Socio-technical systems: From design methods to systems
+engineering. Interacting with Computers 23(1):4–17. https://doi.org/10.1016/j.intcom.2010.07.003.
+Becker, Jörg, Ralf Knackstedt, and Jens Pöppelbuß. 2009. Developing maturity models for IT manage-
+ment. Business & Information Systems Engineering 1(3):213–222. https://doi.org/10.1007/s12599-
+009-0044-5.
+Bergman, Rômy, Antragama E. Abbas, Sven Jung, Claudia Werker, and Mark de Reuver. 2022. Busi-
+ness model archetypes for data marketplaces in the automotive industry. Electronic Markets
+32(2):747–765. https://doi.org/10.1007/s12525-022-00547-x.
+Bertolini, Massimo, Davide Mezzogori, Mattia Neroni, and Francesco Zammori. 2021. Machine learn-
+ing for industrial applications: A comprehensive literature review. Expert Systems with Applications
+175:114820. https://doi.org/10.1016/j.eswa.2021.114820.
+Beverungen, Daniel, Oliver Müller, Martin Matzner, Jan Mendling, and Jan vom Brocke. 2019. Concep-
+tualizing smart service systems. Electronic Markets 29(1):7–18. https://doi.org/10.1007/s12525-017-
+0270-5.
+Beverungen, Daniel, Dennis Kundisch, and Nancy Wünderlich. 2021. Transforming into a platform
+provider: strategic options for industrial smart service providers. Journal of Service Management
+32(4):507–532. https://doi.org/10.1108/JOSM-03-2020-0066.
+K
+
+--- PAGE 37 ---
+Schmalenbach Journal of Business Research (2023) 75:303–343 339
+Bhageshpur, Kiran. 2019. Data is the new oil - and that’s a good thing. https://www.forbes.com/sites/
+forbestechcouncil/2019/11/15/data-is-the-new-oil-and-thats-a-good-thing/. Accessed 9 Feb. 2022
+vom Brocke, Jan, Alexander Simons, Kai Riemer, Björn Niehaves, Ralf Plattfaut, and Anne Cleven. 2015.
+Standing on the shoulders of giants: Challenges and recommendations of literature search in infor-
+mation systems research. Communications of the Association for Information Systems https://doi.org/
+10.17705/1CAIS.03709.
+vom Brocke, Jan, Alan Hevner, and Alexander Maedche (eds.). 2020. Design science research. Cases,
+1st edn., Cham: Springer.
+Burström, Thommie, Vinit Parida, Tom Lahti, and Joakim Wincent. 2021. AI-enabled business-model
+innovation and transformation in industrial ecosystems: A framework, model and outline for further
+research. Journal of Business Research 127:85–95. https://doi.org/10.1016/j.jbusres.2021.01.016.
+Chen, Hong-Mei, Roland Schuetz, Rick Kazman, and Florian Matthes. 2017. How Lufthansa capitalized
+on big data for business model renovation. MIS Quarterly Executive 16(1):19–34.
+Chen, Wenting, Caihua Liu, Fei Xing, Guochao Peng, and Xi Yang. 2022. Establishment of a maturity
+model to assess the development of industrial AI in smart manufacturing. Journal of Enterprise In-
+formation Management 35(3):701–728. https://doi.org/10.1108/JEIM-10-2020-0397.
+Chen, Ying, Jeffrey Kreulen, Murray Campbell, and Carl Abrams. 2011. Analytics ecosystem transforma-
+tion: A force for business model innovation. In 2011 annual SRII global conference (SRII 2011): San
+Jose, California, USA, 29 March–2 April 2011, 11–20. Piscataway: IEEE.
+Chesbrough, H. 2002. The role of the business model in capturing value from innovation: evidence
+from Xerox Corporation’s technology spin-off companies. Industrial and Corporate Change
+11(3):529–555. https://doi.org/10.1093/icc/11.3.529.
+Cleven, Anne K., Robert Winter, Felix Wortmann, and Tobias Mettler. 2014. Process management in hos-
+pitals: an empirically grounded maturity model. Business Research 7(2):191–216. https://doi.org/10.
+1007/s40685-014-0012-x.
+Comuzzi, Marco, and Anit Patel. 2016. How organisations leverage Big Data: a maturity model. Industrial
+Management & Data Systems 116(8):1468–1492. https://doi.org/10.1108/IMDS-12-2015-0495.
+Cui, Yesheng, Sami Kara, and Ka C. Chan. 2020. Manufacturing big data ecosystem: A systematic litera-
+ture review. Robotics and Computer-Integrated Manufacturing 62:101861. https://doi.org/10.1016/j.
+rcim.2019.101861.
+Cuylen, Angelica, Lubov Kosch, and Michael H. Breitner. 2016. Development of a maturity model for
+electronic invoice processes. Electronic Markets 26(2):115–127. https://doi.org/10.1007/s12525-
+015-0206-x.
+Davenport, Thomas H., and Randy Bean. 2018. Big companies are embracing analytics, but most still don’t
+have a data-driven culture. Harvard Business Review 6:1–4.
+Farah, Badie. 2017. A value based big data maturity model. Journal of Management Policy and Practice
+18(1):11–18.
+Favoretto, Camila, Glauco H.S. Mendes, Moacir G. Filho, Maicon Gouvea de Oliveira, and Gilberto
+M.D. Ganga. 2022. Digital transformation of business model in manufacturing companies: challenges
+and research agenda. Journal of Business & Industrial Marketing 37(4):748–767. https://doi.org/10.
+1108/JBIM-10-2020-0477.
+Förster, Matthias, Bastian Bansemir, and Angela Roth. 2022. Employee perspectives on value realization
+from data within data-driven business models. Electronic Markets https://doi.org/10.1007/s12525-
+021-00504-0.
+Foss, Nicolai J., and Tina Saebi. 2017. Fifteen years of research on business model innovation. Journal of
+Management 43(1):200–227. https://doi.org/10.1177/0149206316675927.
+Frank, Alejandro G., Lucas S. Dalenogare, and Néstor F. Ayala. 2019. Industry 4.0 technologies: Im-
+plementation patterns in manufacturing companies. International Journal of Production Economics
+210:15–26. https://doi.org/10.1016/j.ijpe.2019.01.004.
+Gampfer, Fabian, Andreas Jürgens, Markus Müller, and Rüdiger Buchkremer. 2018. Past, current and fu-
+ture trends in enterprise architecture—A view beyond the horizon. Computers in Industry 100:70–84.
+https://doi.org/10.1016/j.compind.2018.03.006.
+Ge, Jing, Feng Wang, Hongxia Sun, Liuliu Fu, and Mingwei Sun. 2020. Research on the maturity of big
+data management capability of intelligent manufacturing enterprise. Systems Research and Behav-
+ioral Science 37(4):646–662. https://doi.org/10.1002/sres.2707.
+Gökalp, Mert O., Ebru Gökalp, Kerem Kayabay, Altan Koçyiğit, and P.E. Eren. 2021. Data-driven man-
+ufacturing: An assessment model for data science maturity. Journal of Manufacturing Systems
+60:527–546. https://doi.org/10.1016/j.jmsy.2021.07.011.
+K
+
+--- PAGE 38 ---
+340 Schmalenbach Journal of Business Research (2023) 75:303–343
+Gong, Yiwei, and Marijn Janssen. 2021. Roles and capabilities of enterprise architecture in big data analyt-
+ics technology adoption and implementation. Journal of theoretical and applied electronic commerce
+research 16(1):37–51. https://doi.org/10.4067/S0718-18762021000100104.
+Gregor, Shirley, and Alan R. Hevner. 2013. Positioning and presenting design science research for maxi-
+mum impact. MIS Quarterly 37(2):337–355. https://doi.org/10.25300/misq/2013/37.2.01.
+Grossman, Robert L. 2018. A framework for evaluating the analytic maturity of an organization. Interna-
+tional Journal of Information Management 38(1):45–51. https://doi.org/10.1016/j.ijinfomgt.2017.08.
+005.
+Guggenmos, Florian, Björn Häckel, Philipp Ollig, and Bastian Stahl. 2022. Security first, security by de-
+sign, or security pragmatism – strategic roles of IT security in digitalization projects. Computers &
+Security 118:102747. https://doi.org/10.1016/j.cose.2022.102747.
+Häckel, Björn, Florian Hänsch, Michael Hertel, and Jochen Übelhör. 2019. Assessing IT availability risks
+in smart factory networks. Business Research 12(2):523–558. https://doi.org/10.1007/s40685-018-
+0071-5.
+Häckel, Björn, Philip Karnebogen, and Christian Ritter. 2021. AI-based industrial full-service offerings:
+A model for payment structure selection considering predictive power. Decision Support Systems
+https://doi.org/10.1016/j.dss.2021.113653.
+Harmon, Paul. 2015. The scope and evolution of business process management. In Handbook on business
+process management, Vol. 1, ed. Jan vom Brocke, Michael Rosemann, 37–80. Berlin, Heidelberg:
+Springer.
+Hartmann, Philipp M., Mohamed Zaki, Niels Feldmann, and Andy Neely. 2016. Capturing value from
+big data – a taxonomy of data-driven business models used by start-up firms. International Journal of
+Operations & Production Management 36(10):1382–1406. https://doi.org/10.1108/IJOPM-02-2014-
+0098.
+Hausladen, Iris, and Maximilian Schosser. 2020. Towards a maturity model for big data analytics in airline
+network planning. Journal of Air Transport Management https://doi.org/10.1016/j.jairtraman.2019.
+101721.
+Hein-Pensel, Franziska, Heiner Winkler, Anja Brückner, Mandy Wölke, Iren Jabs, Ines J. Mayan, Amit
+Kirschenbaum, Julia Friedrich, and Christian Zinke-Wehlmann. 2023. Maturity assessment for In-
+dustry 5.0: A review of existing maturity models. Journal of Manufacturing Systems 66:200–210.
+https://doi.org/10.1016/j.jmsy.2022.12.009.
+Herden, Tino T. 2020. Explaining the competitive advantage generated from analytics with the know-
+ledge-based view: the example of logistics and supply chain management. Business Research
+13(1):163–214. https://doi.org/10.1007/s40685-019-00104-x.
+Hernández, Elder, Pedro Senna, Daniela Silva, Rui Rebelo, Ana C. Barros, and César Toscano. 2020.
+Implementing RAMI4.0 in production—A multi-case study. In Progress in digital and physical man-
+ufacturing, ed. Henrique A. Almeida, Joel C. Vasco, 49–56. Cham: Springer.
+Hess, Thomas, Christian Matt, Alexander Benlian, and Florian Wiesböck. 2016. Options for formulating a
+digital transformation strategy. MIS Quarterly Executive 15:123–139.
+Hevner, A.R., S.T. March, J. Park, and S. Ram. 2004. Design science in information systems research. MIS
+Quarterly 28(1):75. https://doi.org/10.2307/25148625.
+Huang, Ying, Jannik Schuehle, Alan L. Porter, and Jan Youtie. 2015. A systematic method to create search
+strategies for emerging technologies based on the Web of Science: illustrated for ‘Big Data’. Scien-
+tometrics 105(3):2005–2022. https://doi.org/10.1007/s11192-015-1638-y.
+Hunke, Fabian, Christian Engel, Ronny Schüritz, and Philipp Ebel. 2019. Understanding the anatomy of
+analytics-based services—A taxonomy to conceptualize the use of data and analytics in services. In
+Proceedings of the 27th European Conference on Information Systems (ECIS).
+Hunke, Fabian, Daniel Heinz, and Gerhard Satzger. 2021. Creating customer value from data: foundations
+and archetypes of analytics-based services. Electronic Markets https://doi.org/10.1007/s12525-021-
+00506-y.
+John, Meenu M., Helena H. Olsson, and Jan Bosch. 2021. Towards MLOps: a framework and maturity
+model. In 2021 47th Euromicro Conference, 1–8.
+Johnson, Mark W., Clayton M. Christensen, and Henning Kagermann. 2008. Reinventing your business
+model. Harvard business review 86(12):57–68.
+Jonker, Jan, and Niels Faber. 2021. Business modelling. In Organizing for sustainability, ed. Jan Jonker,
+Niels Faber, 19–33. Cham: Springer.
+Joyce, Alexandre, and Raymond L. Paquin. 2016. The triple layered business model canvas: A tool to
+design more sustainable business models. Journal of Cleaner Production 135:1474–1486. https://
+doi.org/10.1016/j.jclepro.2016.06.067.
+K
+
+--- PAGE 39 ---
+Schmalenbach Journal of Business Research (2023) 75:303–343 341
+Kehrer, Stefan, Dierk Jugel, and Alfred Zimmermann. 2016. Categorizing requirements for enterprise ar-
+chitecture management in big data literature. In 2016 IEEE 20th International Enterprise Distributed
+Object Computing Workshop (EDOCW). Vienna, Austria, 05.09.2016–09.09.2016, 1–8.
+Kohtamäki, Marko, Vinit Parida, Pejvak Oghazi, Heiko Gebauer, and Tim Baines. 2019. Digital servitiza-
+tion business models in ecosystems: A theory of the firm. Journal of Business Research 104:380–392.
+https://doi.org/10.1016/j.jbusres.2019.06.027.
+Kotarba, Marcin. 2018. Digital transformation of business models. Foundations of Management 10(1):
+123–142. https://doi.org/10.2478/fman-2018-0011.
+Kowalkowski, Christian, Heiko Gebauer, and Rogelio Oliva. 2017. Service growth in product firms:
+Past, present, and future. Industrial Marketing Management 60:82–88. https://doi.org/10.1016/j.
+indmarman.2016.10.015.
+Kühne, Babett, and Tilo Böhmann. 2020. Formative evaluation of data-driven business models—The data
+insight generator. In Proceedings of the 53rd Hawaii International Conference on System Sciences,
+ed. Tung Bui
+LaValle, Steve, Eric Lesser, Rebecca Shockley, Michael S. Hopkins, and Nina Kruschwitz. 2011. Big data,
+analytics and the path from insights to value. MIT sloan management review 52(2):21–32.
+Lehrer, Christiane, Alexander Wieneke, Jan vom Brocke, Reinhard Jung, and Stefan Seidel. 2018. How
+big data Analytics enables service innovation: materiality, affordance, and theindividualization ofser-
+vice. Journal ofManagement Information Systems 35(2):424–460. https://doi.org/10.1080/07421222.
+2018.1451953.
+Leiting, Tobias, Maximilian Schacht, and Jana Frank. 2020. Market launch of smart services. In Smart
+service management: design guidelines and best practices, ed. Maria Maleshkova, Niklas Kühl, and
+Philipp Jussen, 89–105. Cham: Springer.
+Malta, Pedro, and Rui D. Sousa. 2016. Process oriented approaches in enterprise architecture for business-
+IT alignment. Procedia Computer Science 100:888–893. https://doi.org/10.1016/j.procs.2016.09.239.
+Mettler, Tobias. 2011. Maturity assessment models: a design science research approach. International
+Journal of Society Systems Science 3(1/2):81. https://doi.org/10.1504/IJSSS.2011.038934.
+Miles, Matthew B., and A. Michael Huberman. 2009. Qualitative data analysis: An expanded sourcebook,
+2nd edn., Thousand Oaks: SAGE.
+Mugge, Paul, Haroon Abbu, Timothy L. Michaelis, Alexander Kwiatkowski, and Gerhard Gudergan.
+2020. Patterns of digitization. Research-Technology Management 63(2):27–35. https://doi.org/10.
+1080/08956308.2020.1707003.
+Müller, Anna-Luisa, and Regina Pfleger. 2014. Business transformation towards sustainability. Business
+Research 7(2):313–350. https://doi.org/10.1007/s40685-014-0011-y.
+Müller, Julian, and Oana Buliga. 2019. Archetypes for data-driven business models for manufacturing
+companies in Industry 4.0. In International Conference on Information Systems 2019 Special Interest
+Group on Big Data Proceedings, Vol. 2
+Muller, Louis, and Mike Hart. 2016. Updating business intelligence and analytics maturity models for new
+developments. In Decision support systems VI—addressing sustainability and societal challenges:
+2nd International Conference, ICDSST 2016, Plymouth, UK, May 23–25, 2016 Proceedings, Vol.
+250, ed. Shaofeng Liu, Boris Delibašić, and Festus In Oluseyi Oderanti, 137–151. Cham: Springer.
+Myers, Michael D., and Michael Newman. 2007. The qualitative interview in IS research: Examining the
+craft. Information and Organization 17(1):2–26. https://doi.org/10.1016/j.infoandorg.2006.11.001.
+O’Donovan, Peter, Ken Bruton, and Dominic T.J. O’Sullivan. 2016. IAMM: a maturity model for measur-
+ing industrial analytics capabilities in large-scale manufacturing facilities. International Journal of
+Prognostics and Health Management https://doi.org/10.36001/ijphm.2016.v7i4.2466.
+Olszak, Celina M., and Maria Mach-Krol. 2018. A conceptual framework for assessing an organization’s
+readiness to adopt big data. Sustainability 10(10):3734. https://doi.org/10.3390/su10103734.
+Osterwalder, Alexander, and Yves Pigneur. 2013. Business model generation: A handbook for visionaries,
+game changers, and challengers. New York: Wiley & Sons.
+Parvinen, Petri, Essi Pöyry, Robin Gustafsson, Miikka Laitila, and Matti Rossi. 2020. Advancing data
+monetization and the creation of data-based business models. Communications of the Association for
+Information Systems 47(1):25–49. https://doi.org/10.17705/1CAIS.04702.
+Pathak, Sunil, Venkataraghavan Krishnaswamy, and Mayank Sharma. 2021. Big data analytics capabilities:
+a novel integrated fitness framework based on a tool-based content analysis. Enterprise Information
+Systems https://doi.org/10.1080/17517575.2021.1939427.
+Payne, Adrian, Pennie Frow, and Andreas Eggert. 2017. The customer value proposition: evolution, devel-
+opment, and application in marketing. Journal of the Academy of Marketing Science 45(4):467–489.
+https://doi.org/10.1007/s11747-017-0523-z.
+K
+
+--- PAGE 40 ---
+342 Schmalenbach Journal of Business Research (2023) 75:303–343
+Peffers, Ken, Tuure Tuunanen, Marcus A. Rothenberger, and Samir Chatterjee. 2007. A design science
+research methodology for information systemsresearch. Journal ofManagement Information Systems
+24(3):45–77. https://doi.org/10.2753/MIS0742-1222240302.
+Pereira, Carla M., and Pedro Sousa. 2005. Enterprise architecture: business and IT alignment. In Pro-
+ceedings of the 2005 ACM symposium on Applied computing—SAC ‘05. Santa Fe, New Mexico,
+13.03.2005–17.03.2005, ed. Hisham M. Haddad, Andrea Omicini, Roger L. Wainwright, and Lorie
+M. Leibrock, 1344. New York: ACM Press.
+Pieroni, Marina P., Tim C. McAloone, and Daniela C. Pigosso. 2020. From theory to practice: system-
+atising and testing business model archetypes for circular economy. Resources, Conservation and
+Recycling 162:105029. https://doi.org/10.1016/j.resconrec.2020.105029.
+Pöppelbuß, Jens, and Maximilian Röglinger. 2011. What makes a useful maturity model? A framework of
+general design principles for maturity models and its demonstration in business process management.
+In Proceedings of the 19th European Conference on Information Systems (ECIS 2011), 28.
+Porter, Michael E. 1985. Competitive strategy: Techniques for analyzing industries and competitors. New
+York: Free Press.
+Porter, Michael E. 2014. Competitive advantage ofnations: Creating and sustaining superior performance.
+New York: Free Press.
+Rashed, Faisal, and Paul Drews. 2020. Supporting the development and realization of data-driven business
+models with enterprise architecture modeling and management. In Business information systems, Vol.
+389, ed. Witold Abramowicz, Gary Klein, 264–276. Cham: Springer.
+Rashed, Faisal, and Paul Drews. 2021. How does enterprise architecture support the design and realization
+of data-driven business models? An empirical study. In Innovation through information systems, Vol.
+48, ed. Frederik Ahlemann, Reinhard Schütte, and Stefan Stieglitz, 662–677. Cham: Springer.
+Retrialisca, Fitri, and Umi Chotijah. 2020. The maturity measurement of big data adoption in manufac-
+turing companies using the TDWI maturity model. Journal of Information Systems Engineering and
+Business Intelligence 6(1):70. https://doi.org/10.20473/jisebi.6.1.70-78.
+Robinson, Oliver C. 2014. Sampling in Interview-Based Qualitative Research: A Theoretical and Practi-
+cal Guide. Qualitative Research in Psychology 11(1):25–41. https://doi.org/10.1080/14780887.2013.
+801543.
+Sarker, Iqbal H. 2021. Data science and analytics: an overview from data-driven smart computing, deci-
+sion-making and applications perspective. SN Computer Science 2(5):377. https://doi.org/10.1007/
+s42979-021-00765-8.
+Šaša, Ana, and Marjan Krisper. 2011. Enterprise architecture patterns forbusiness process support analysis.
+Journal of Systems and Software 84(9):1480–1506. https://doi.org/10.1016/j.jss.2011.02.043.
+Schroderus, Joonas, Lester A. Lasrado, Karan Menon, and Hannu Kärkkäinen. 2022. Towards a pay-per-X
+maturity model for equipment manufacturing companies. Procedia Computer Science 196:226–234.
+https://doi.org/10.1016/j.procs.2021.12.009.
+Schüritz, Ronny, Stefan Seebacher, and Rebecca Dorner. 2017. Capturing value from data: revenue mod-
+els for data-driven services. In Proceedings of the 50th Hawaii International Conference on System
+Sciences.
+Sjödin, David R., Vinit Parida, Markus Leksell, and Aleksandar Petrovic. 2018. Smart factory implemen-
+tation and process innovation a preliminary maturity model for leveraging digitalization in manu-
+facturing. Research-Technology Management 61(5):22–31. https://doi.org/10.1080/08956308.2018.
+1471277.
+Sonnenberg, Christian, and Jan vom Brocke. 2012. Evaluations in the science of the artificial—Recon-
+sidering the build-evaluate pattern in design science research. In International conference on design
+science research in information systems, Vol. 7286, 381–397. Berlin, Heidelberg: Springer.
+van Steenbergen, Marlies, Rik Bos, Sjaak Brinkkemper, Inge van de Weerd, and Willem Bekkers. 2010.
+The design of focus area maturity models. In Global perspectives on design science research, Vol.
+6105, ed. David Hutchison, Takeo Kanade, Josef Kittler, Jon M. Kleinberg, Friedemann Mattern,
+John C. Mitchell, Moni Naor, Oscar Nierstrasz, C. Pandu Rangan, Bernhard Steffen, Madhu Sudan,
+Demetri Terzopoulos, Doug Tygar, Moshe Y. Vardi, Gerhard Weikum, Robert Winter, J. Leon Zhao,
+and Stephan Aier, 317–332. Berlin, Heidelberg: Springer.
+Stelzl, Katharina, Maximilian Röglinger, and Katrin Wyrtki. 2020. Building an ambidextrous organization:
+a maturity model for organizational ambidexterity. Business Research 13(3):1203–1230. https://doi.
+org/10.1007/s40685-020-00117-x.
+Stewart, David W., and Prem N. Shamdasani. 2014. Focus groups: Theory and practice. Thousand Oaks:
+SAGE.
+K
+
+--- PAGE 41 ---
+Schmalenbach Journal of Business Research (2023) 75:303–343 343
+Teece, David J. 2010. Business models, business strategy and innovation. Long Range Planning
+43(2–3):172–194. https://doi.org/10.1016/j.lrp.2009.07.003.
+The Open Group. The TOGAF® Standard, Version 9.2. Van Haren Publishing, 2018.
+Tom, Edith, Aybüke Aurum, and Richard Vidgen. 2013. An exploration of technical debt. Journal of Sys-
+tems and Software 86(6):1498–1516. https://doi.org/10.1016/j.jss.2012.12.052.
+Trčka, Nikola. 2010. Workflow data footprints. In Business information systems, Vol. 47, ed. Will van der
+Aalst, John Mylopoulos, Norman M. Sadeh, Michael J. Shaw, Clemens Szyperski, Witold Abramow-
+icz, and Robert Tolksdorf, 218–229. Berlin, Heidelberg: Springer.
+Tremblay, Monica C., Alan R. Hevner, and Donald J. Berndt. 2010. Focus groups for artifact refinement
+and evaluation indesign research. Communications ofthe Association forInformation Systems https://
+doi.org/10.17705/1CAIS.02627.
+Tsoy, Mikhail, and D.S. Staples. 2021. What are the critical success factors for agile analytics projects?
+Information Systems Management 38(4):324–341. https://doi.org/10.1080/10580530.2020.1818899.
+Ullah, Faheem, and Muhammad Ali Babar. 2019. Architectural tactics for big data cybersecurity analytics
+systems: a review. Journal of Systems and Software 151:81–118. https://doi.org/10.1016/j.jss.2019.
+01.051.
+Urbach, Nils, and Maximilian Röglinger. 2019. Digitalization cases. Cham: Springer.
+Urbach, Nils, Maximilian Röglinger, Karlheinz Kautz, Rose Alinda Alias, Carol Saunders, and Martin
+Wiener (eds.). 2021. Mastering digital transformation for global business, 1st edn., Digitalization
+cases, Vol. 2. Cham: Springer.
+Vanauer, Martin, Carsten Bohle, and Bernd Hellingrath. 2015. Guiding the introduction of big data in or-
+ganizations: a methodology with business- and data-driven ideation and enterprise architecture man-
+agement-based implementation. In 2015 48th Hawaii International Conference on System Sciences
+(HICSS). HI, USA, 05.01.2015–08.01.2015, 908–917.
+Voigt, Kai-Ingo, and Julian M. Müller (eds.). 2021. Digital business models in industrial ecosystems.
+Cham: Springer.
+Voigt, Kai-Ingo, Fabian Brechtel, Marie-Christin Schmidt, and Johannes Veile. 2021. Industrial data-driven
+business models: towards a goods-service-data continuum. In Digital business models in industrial
+ecosystems, ed. Kai-Ingo Voigt, Julian M. Müller, 137–153. Cham: Springer.
+Wang, Yi, Hai-Shu Ma, Jing-Hui Yang, and Ke -Sheng Wang. 2017. Industry 4.0: a way from mass cus-
+tomization to masspersonalization production. Advances in Manufacturing 5(4):311–320. https://doi.
+org/10.1007/s40436-017-0204-7.
+Weber, Christian, Jan Königsberger, Laura Kassner, and Bernhard Mitschang. 2017. M2DDM—Amaturity
+model for data-driven manufacturing. Procedia CIRP 63:173–178. https://doi.org/10.1016/j.procir.
+2017.03.309.
+Webster, Jane, and Richard T. Watson. 2002. Analyzing the past to prepare for the future: writing a litera-
+ture review. MIS Quarterly 26(2):xiii–xxiii.
+Weking, Jörg, Maria Stöcker, Marek Kowalkiewicz, Markus Böhm, and Helmut Krcmar. 2020. Leveraging
+industry 4.0—A business model pattern framework. International Journal of Production Economics
+225:107588. https://doi.org/10.1016/j.ijpe.2019.107588.
+Winter, Robert, and Ronny Fischer. 2006. Essential Layers, Artifacts, and Dependencies of Enterprise
+Architecture. In 2006 10th IEEE International Enterprise Distributed Object Computing Conference
+Workshops (EDOCW’06). Hong Kong, China, 16.10.2006–20.10.2006, 30.
+Woroch, Robert, and Gero Strobel. 2021. Understanding value creation in digital companies—A taxonomy
+of IoT-enabled business models. ECIS 2021 Research Papers, Vol. 11
+Zammuto, Raymond F., Terri L. Griffith, Ann Majchrzak, Deborah J. Dougherty, and Samer Faraj.
+2007. Information technology and the changing fabric of organization. Organization Science
+18(5):749–762. https://doi.org/10.1287/orsc.1070.0307.
+Zhang, Cheng, Chen Daindi, Fei Tao, and Ang Liu. 2019. Data driven smart customization. Procedia CIRP
+81:564–569. https://doi.org/10.1016/j.procir.2019.03.156.
+Zonta, Tiago, Cristiano A. da Costa, Rodrigo da Rosa Righi, Miromar J. de Lima, Eduardo S. da Trindade,
+and Guann P. Li. 2020. Predictive maintenance in the Industry 4.0: A systematic literature review.
+Computers & Industrial Engineering 150:106889. https://doi.org/10.1016/j.cie.2020.106889.
+Zupic, Ivan, and Tomaž Čater. 2015. Bibliometric methods in management and organization. Organiza-
+tional Research Methods 18(3):429–472. https://doi.org/10.1177/1094428114562629.
+K

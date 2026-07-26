@@ -1,0 +1,2483 @@
+--- PAGE 1 ---
+Special issue: The future of information systems in the enterprise
+Journal of Information Technology
+2026, Vol. 0(0) 1–24
+© Association for Information
+Technology Trust 2026
+Article reuse guidelines:
+sagepub.com/journals-permissions
+DOI: 10.1177/02683962261465434
+Journals.sagepub.com/jinf
+Lost in decentralization? Governing
+emerging technologies within enterprise
+architecture
+Edona Elshan1
+and Bart van den Hooff1
+Abstract
+Enterprise systems governance is undergoing a shift toward decentralization and federation, as platforms and tools
+increasingly empower business users to create and deploy applications outside professional IT. Low-Code Development
+Platforms (LCDPs) represent a prominent instance of this trend, enabling rapid application development while simul­
+taneously introducing challenges for Enterprise Architecture Management (EAM). Through a multiple-case analysis of
+organizations from financial services, healthcare, and manufacturing, we identify three governance challenges organized
+around what is governed (architectural drift), who is governed (role ambiguity and shifting accountability), and how
+governance is enacted (tension between formal and informal control), and show that that organizations address these
+challenges through deliberately composed governance portfolios pairing formal instruments with informal enabling
+practices.Reasoningabductivelyacrosscases,weidentifyfivemechanismsthroughwhichtheseportfoliosproducedurable
+EA outcomes: information symmetry, perceived legitimacy, developer capability, enacted decision-right alignment, and
+secure-by default conditions. Theoretically, we contribute by distinguishing the locus of control (centralized vs decen­
+tralized)fromthemodeofcontrol(formalvsinformal),andbyofferingamechanism-basedexplanationofhowgovernance
+portfolios produce EA outcomes under decentralized development conditions, moving beyond generic prescriptions for
+“balance” toward a concrete account of why specific governance compositions work. Practically, our analysis underscores
+the need to continuously recalibrate governance as decentralized technologies proliferate, requiring increasingly adaptive
+EAM strategies to balance innovation, flexibility, and architectural coherence.
+Keywords
+Enterprise Architecture Management (EAM), IT governance, Low-Code Development Platforms (LCDPs), citizen
+development, end-user development, vibe coding, case study
+Introduction
+Enterprise systems governance is undergoing a structural
+transformation. Across industries, the past decade has seen a
+shift fromcentralized, IT-department-leddevelopment toward
+federated and decentralized models in which business users—
+empowered by an expanding range of digital platforms—
+create, conﬁgure, and deploy applications with diminishing
+dependenceonprofessionalIT.Thistrend,variouslydescribed
+as end-user computing, shadow IT, and, most recently, citizen
+development (Fischer et al., 2017; Maruping and Matook,
+2020), reﬂects a deeper organizational logic: as competitive
+pressures accelerate the demand for digital capability, orga­
+nizations are distributing development authority across busi­
+ness units, power users, and hybrid teams. Enterprise
+Architecture Management (EAM), which has traditionally
+operated from a position of centralized oversight and
+standardization(Tammetal.,2011;WinterandSchelp,2008),
+is thus confronted with a fundamental governance challenge:
+how to maintain architectural coherence, security, and long-
+term IT sustainability in an environment where application
+development is increasingly distributed and user-driven.
+Low-Code Development Platforms (LCDPs) represent
+the most prominent and rapidly diffusing instance of this
+decentralization trend. LCDPs such as Mendix, Out­
+Systems, and Microsoft PowerApp empower business users
+1
+KIN Center for Digital Innovation, Vrije Universiteit Amsterdam,
+Amsterdam, Netherlands
+Corresponding author:
+Edona Elshan, KIN Center for Digital Innovation, Vrije Universiteit
+Amsterdam, De Boelelaan 1105, Amsterdam 1081 HV, Netherlands.
+Email: e.elshan@vu.nl
+
+--- PAGE 2 ---
+and IT professionals to create applications with minimal
+traditional coding (Carroll and Maher, 2023; Maruping and
+Matook, 2020; Novales and Mancha, 2023). Adoption has
+surged dramatically, driven by their promise to accelerate
+digital transformation and reduce reliance on centralized IT
+resources: in a recent study of over 2000 companies, 81%
+reported LCDPs as strategically important and increasingly
+used for success-critical applications (Gonçalves et al.,
+2024). However, as adoption increases, so too do chal­
+lenges related to EAM. Industry cases such as UK’s na­
+tional health services (Dequito, 2024) and American
+COVID-19 tracing and vaccination (Ikeda, 2021) have
+demonstrated signiﬁcant  issues arising from LCDP use,
+including increased security vulnerabilities, uncontrolled
+growth of applications, and architectural drift.
+Atthecoreofthesechallengesliesafundamentaltension
+between the decentralization and ﬂexibility promoted by
+LCDPs and the structured, centralized control mechanisms
+typically emphasized within EAM. This is a tension that is
+primarily related to EA governance, which pertains to the
+development of EA-related decision rights and account­
+abilities, ensuring that EA development is in line with long-
+term objectives and not compromised by opportunistic
+decision making (Ahlemann et al., 2021: 7). While tradi­
+tional, centralized EA governance seeks to ensure pre­
+dictability, coherence and long-term sustainability of the IT
+landscape, LCDPs foster decentralized innovation, accel­
+erating development cycles and empowering a broader set
+of users. Thus, the use of these platforms inherently
+challenges traditional governance approaches oriented to­
+ward predictability and control. This friction raises a
+pressing question: What EA governance challenges emerge
+when organizations adopt LCDPs, and how can EA gov­
+ernance be shaped to mitigate these challenges?
+Prior literature focused extensively on traditional IT
+governance and the theoretical foundations of EAM (Tamm
+et al., 2011), emphasizing the importance and relevance of
+standardized architecture for managing complexity (Boh
+and Yellin, 2006) and ensuring alignment between IT
+initiatives and overarching business goals (Ross et al.,
+2006). What is being overlooked, however, is how these
+established EA governance approaches (such as TOGAF,
+the Zachman Framework, and COBITG) cope with de­
+centralized, end-user-driven platforms like LCDPs. With
+their emphasis on centralized decision-making, standardi­
+zation, and strict architectural control (Kotusev, 2019;
+Winter and Schelp, 2008), these governance structures
+do not explicitly address the governance tensions arising
+from the increased decentralization and democratization
+introduced by LCDPs. At the same time, current research
+around LCDPs focuses mostly on user adoption and the
+changing nature of software development work rather than
+addressing critical EA-related challenges such as archi­
+tectural drift, security vulnerabilities, and the long-term
+sustainability of end-user generated applications within
+IT infrastructures. Thus, there is limited understanding of
+how traditional EA governance must evolve to accom­
+modate for the increasing decentralization of IS
+development.
+This paper directly addresses this gap. We report on a
+multiple-case study conducted across three distinct orga­
+nizational contexts—ﬁnance,  healthcare, and
+manufacturing—using abductive analysis to move itera­
+tivelybetweenempiricalpatternsandtheoreticalconstructs.
+Our analysis identiﬁes three categories of EA governance
+challenge arising from LCDP adoption, organized around
+what is governed (architectural drift), who is governed (role
+ambiguity and shifting accountability), and how gover­
+nance is enacted (tension between formal and informal
+control). We show that organizations address these chal­
+lenges through deliberately composed governance portfo­
+lios pairing formal instruments with informal enabling
+practices and identify ﬁve  causal mechanisms through
+which these portfolios produce durable EA outcomes: in­
+formation symmetry, perceived legitimacy, developer ca­
+pability, enacted decision-right alignment, and secure-by-
+default conditions. Theoretically, we contribute by disen­
+tangling the locus of control (centralized vs decentralized)
+from the mode of control (formal vs informal) and by
+offering a mechanism-based account of why speciﬁc 
+governance compositions work, advancing the ﬁeld beyond
+generic prescriptions for balance. Practically, our ﬁndings 
+offer guidance for organizations navigating the governance
+demands of increasingly decentralized IS development,
+including the emerging challenge of AI-augmented
+development.
+Research background
+The emergence of LCDPs is a recent development in the
+broaderphenomenonofend-usersoftwaredevelopmentand
+increases the challenge that this phenomenon poses for
+enterprise-wide coordination. In this section we will ﬁrst 
+discuss previous research on end-user software develop­
+ment to place LCDPs in this broader context. Next, we will
+discuss the literature on Enterprise Architecture manage­
+ment and governance, to explore what extant research can
+tell us about the challenges that can emerge when tech­
+nologies that facilitate decentralized IS development are
+integrated into organizations’ Enterprise Architectures.
+Low-Code Development Platforms in the context of
+end-user development
+Prior research has both expanded and deepened our un­
+derstanding of EUD. Rivard and Huff (1984, 1985) show
+that user-developed applications (UDAs) provide tangible
+beneﬁts to users, ensuring high user satisfaction. At the
+same time, they also identify risks stemming from users’
+2 Journal of Information Technology 0(0)
+
+--- PAGE 3 ---
+lack of programming expertise. Amoroso and Cheney
+(1991) identify various factors that inﬂuence  the effec­
+tiveness of UDA in terms of the degree to which appli­
+cations achieve their goals from an end user perspective,
+with an important role for users’ attitudes and motivations.
+Blackwell (2017) provides more insight into these moti­
+vations (and how they relate to personality characteristics).
+Liebermanetal.(2006)foundthatempoweringend-usersto
+develop applications not only drives innovation but also
+yields solutions that are ﬁnely tuned to speciﬁc business
+needs, provided that sufﬁcient  support and governance
+mechanisms are in place. Scacchi and Hurley (1995) noted
+that while EUD can increase development agility and re­
+duce costs by leveraging localized expertise, it also intro­
+duceschallenges, particularlyregardingapplicationquality,
+security, and long-term maintainability. Fischer et al.
+(2017) advanced this discussion by emphasizing the fact
+that without robust governance, the decentralized nature of
+end-user development can foster the proliferation of
+shadow IT. Galletta and Heckman (1990) focus on a dif­
+ferent challenge in EUD, addressing the inherent role
+ambiguity and conﬂict  that emerge when users assume
+developer roles.
+Recent developments have brought forth LCDPs, which
+represent both an extension and a complication of the
+traditional EUD paradigm. Waszkowski (2019) deﬁnes 
+LCDPs as suites of tools that enable rapid application
+development with minimal coding, catering to both pro­
+grammers and non-programmers. This approach not only
+simpliﬁes  the development process but also addresses
+dynamic market demands (Sanchis et al., 2019). Histori­
+cally, the evolution of LCDPs can be traced back to the
+advent of Fourth-Generation Languages (4GLs) in the
+1970s and 1980s, and later to tools like Visual Basic in the
+1990s, which introduced higher levels of abstraction in
+application development (Bock and Frank, 2021).
+The allure of LCDPs lies in their promise of accelerated
+software development, ease of use, and the potential for
+grassroots digital transformation (Sanchis et al., 2019; Yan,
+2021). Studies have highlighted signiﬁcant efﬁciency gains
+from using LCDPs; illustrated by the ability to reuse
+components and reduce the need for extensive planning
+(Elshan et al., 2023). For instance, Luo et al. (2021)
+compare the ease of developing applications with LCDPs
+to “building with LEGO bricks,” emphasizing modularity
+and rapid assembly. Moreover, LCDPs address the shortage
+of skilled IT professionals by empowering “citizen de­
+velopers” (as user-developers are commonly referred to in
+the low code/no code world) to contribute directly to ap­
+plication development (Rafi et al., 2022).
+However, the increased accessibility of LCDPs also
+ampliﬁes challenges previously identiﬁed in EUD research.
+The ease with which applications can be created heightens
+the risk of shadow IT, while the proprietary nature of some
+platforms can lead to vendor lock-in and complicate
+integration efforts (Rokis and Kirikova, 2023). Addition­
+ally, while LCDPs empower users, they also raise questions
+about over-empowerment and the potential for systemic
+vulnerabilities if too many applications are developed
+without adequate oversight (Hurlburt, 2021).
+In essence, LCDPs extend the promise of EUD by
+lowering barriers to innovation, but complicate the land­
+scape by raising the tension between decentralized devel­
+opment efforts and enterprise-wide objectives. As
+organizations increasingly adopt LCDP solutions, striking
+the right balance between empowering end-users and
+maintaining centralized control becomes critical. For or­
+ganizations, addressing this balance is key to leveraging the
+full potential of LCDPs while mitigating inherent risks,
+which presents challenges for Enterprise Architecture
+Management, in particular EA governance. In the next
+section, we will outline these challenges as identiﬁed in the
+EA literature.
+LCDP and Enterprise Architecture
+Management challenges
+In the IS literature, Enterprise Architecture (EA) is deﬁned 
+in terms of “the fundamental organization of an enterprise
+as a socio-technical system, along with the principles
+governing its design and development” (Ahlemann et al.,
+2012: 16). An organization’s EA includes all its relevant
+components: from business model and organizational
+structure to business processes, data and technologies. The
+EA provides a high-level deﬁnition of these components, as
+well as their interrelationships (Tamm et al., 2011), fo­
+cusing both on the present and (envisioned) future states of
+the architecture (Lange et al., 2016). Enterprise Architec­
+ture Management (EAM) refers to all management activ­
+ities conducted in an organization to install, maintain and
+purposefully develop an organization’s EA (Aier et al.,
+2011), providing a holistic view on the architecture and
+guiding its development towards enterprise-wide objec­
+tives. The general objectives of EAM can be described in
+terms of four IS-focused “architectural outcomes” (Beese
+et al., 2023a): (1) efﬁciency, the ability to provide all
+necessary IS capabilities with minimal resources; (2)
+ﬂexibility, the ability to quickly adapt the architecture to
+changing conditions or objectives; (3) transparency, the
+ability to understand how an organization’s IS operate; and
+(4) predictability, the ability to predict the effects of
+changes on IS. As we will outline below, end-user
+development—in particular the use of LCDPs—presents
+challenges in relation to each of these outcomes.
+These challenges are related to EAM’s crucial role in
+coordinating local information system development efforts
+(e.g., in business units, or by (groups of) users) in line with
+enterprise-wide strategic objectives (Beese et al., 2023a;
+Sidorova and Kappelman, 2011). The overarching
+Elshan and van den Hooff 3
+
+--- PAGE 4 ---
+challenge for EAM here is enabling the organization to reap
+the beneﬁts of such local development efforts, while at the
+same time avoiding redundancies and inconsistencies (Ajer
+et al., 2021; Beese et al., 2023b). Based on our reading of
+the literature, we identify the following concrete challenges
+for EAM that emerge because of LCDP use in organiza­
+tions. The ﬁrst one (Local vs Enterprise-levelOptimization)
+is at the foundation of the following three (Architectural
+Drift and Technical Debt, Escalating Architectural Com­
+plexity, and Operational and Security Risks), while the ﬁfth 
+one (Erosion of Centralized Governance) is an overarching
+challenge of combining different approaches towards EA
+governance in order to balance end-user development and
+enterprise-level architectural interests.
+Local versus enterprise-level optimization. First, the literature
+shows a fundamental tension between local optimization
+(solving a speciﬁc  unit’s problem quickly) and global
+optimization (improving the effectiveness of the entire
+enterprise in the longer term) (Beese et al., 2023b; Schilling
+et al., 2018, 2019). Local development teams tend to prefer
+specialized IS solutions that ﬁt their speciﬁc needs, at the
+risk of creating application silos that do not align with
+enterprise-wide goals (Boh and Yellin, 2006). Decentral­
+ized software development through LCDPs—where deci­
+sion rights are distributed to local entities, such as end-
+users—enhances this challenge because it empowers
+business units or departments to develop applications that
+prioritize their immediate localized needs over long-term
+enterprise-level interests (Malaurent and Avison, 2016).
+Architectural drift and technical debt. When the balance be­
+tween local and enterprise-level interests is threatened, a
+consequence of LCDP use can be architectural drift: “the
+movementawayfromachosenarchitecturaldirectionbased
+on external inﬂuences” (Perks and Beveridge, 2003: 402).
+In other words, architectural drift refers to a state in which
+the evolution of an architecture diverges from the agreed-
+upon policies and principles. Although this is a well-known
+phenomenonin EAM,LCDPusecanamplifythischallenge
+when the prioritization of citizen developers’ interests over
+the overarching architectural plan leads to compromises,
+errors, lapses, and omissions in the design and im­
+plementation of IS that introduce architectural inconsis­
+tencies and unwarranted dependencies.
+Applications created by end-users frequently lack doc­
+umentation, consistent patterns, or maintainability con­
+siderations (Barricelli et al., 2019). This means that these
+applications can contribute to the organization’s technical
+debt. Technical debt refers to choices made early in the
+development process that are expedient in the short term,
+but that defer various costs (for refactoring, improvement,
+maintenance,etc.)“downtheline,”essentiallymeaningthat
+the same work will cost more to do later than it would in the
+early stages of development (Kruchten et al., 2013).
+Ultimately, this negatively inﬂuences efﬁciency, transpar­
+ency, predictability and ﬂexibility  of the architecture
+(Rinta-Kahila et al., 2023). Citizen developers can perceive
+enterprise standards as an “extra burden” or a cumbersome
+barrier to project progress (Cram et al., 2015; Schilling
+et al., 2018), choosing to bypass these standards at the cost
+of the enterprise-wide perspective and creating misalign­
+ments that must be reconciled later (Gregory et al., 2018).
+Escalating architectural complexity. Prioritizing local inter­
+ests over enterprise-level goals and the resulting archi­
+tectural drift can lead to an overly complex, inﬂexible and
+costly IS landscape (Tamm et al., 2022). Divergence from
+EA artifacts can lead to a rapidly increasing number of
+and diversity in applications, as well as (partial) overlaps
+between them. This can create an unmanageable level of
+complexity, which negatively inﬂuences  each of the
+architectural outcomes (Beese et al., 2023b). Decen­
+tralized software development through LCDPs makes
+this “waning of the initial system architecture” (Schmidt
+and Buxmann, 2011: 170) more likely. When local units
+can rapidly build solutions to address immediate chal­
+lenges or opportunities, this creates high levels of IS
+heterogeneity and redundant systems (Ahlemann et al.,
+2021; Haki et al., 2020). Likewise, at the level of the data
+architecture, decentralized development can lead to in­
+formation silos where incompatible data formats and
+standards are adopted by different units to serve their own
+local applications, rather than integrating these with
+enterprise-level sources (Ajer et al., 2021; Boh and
+Yellin, 2006; Haki and Legner, 2021).
+At the same time, the principle of requisite complexity
+holds that every system should contain a minimum level of
+complexity to deal with requirements stemming from the
+system’s environment (Boisot and McKelvey, 2011). When
+EA principles are maintained too strictly, this may lead to
+restrictions that limit EA complexity to a level that is not in
+line with this principle. This, in turn, may be a reason for
+users to develop applications that do serve their needs in
+terms of meeting complexity, but violate formal EAM
+principles.
+Operational and security risks. Decentralized software de­
+velopment can threaten operational continuity (Van der
+Raadt et al., 2010). Inadequate decisions at the local
+project level can raise costs and complicate the im­
+plementation of necessary changes, potentially threatening
+the viability of the whole organization (Schmidt and
+Buxmann, 2011). Furthermore, the previously identiﬁed 
+challenges in terms of complexity, drift and technical debt
+each negatively inﬂuence  the transparency and predict­
+ability of the architecture, making it very difﬁcult to foresee
+the unintended effects that a change to one component
+might have on related system components (Beese et al.,
+2023a).
+4 Journal of Information Technology 0(0)
+
+--- PAGE 5 ---
+Speciﬁcally,  an increasingly important challenge for
+EAM resulting from the rise of decentralized software
+development concerns security. A fundamental risk here is
+the erosion of compliance, a core EA metaprinciple to
+ensure conformance to both internal standards and external
+regulations (e.g., GDPR, NIS2, and ﬁnancial  reporting
+rules) (Haki and Legner, 2021). Rapid, local development
+often evades formal compliance assessments or architec­
+tural quality gates (Gregory et al., 2018). Furthermore,
+when non-experts build applications, they may inadver­
+tently violate privacy laws, security mandates or other
+guardrails (Ajer et al., 2021). The previously mentioned
+escalation of architectural complexity also presents a se­
+curity risk, as “complexity is the enemy of security”: a
+complex systems landscape means more modules and
+connections (not all of them known or sanctioned), more
+potential software bugs, and on the whole an increased (and
+more difﬁcult to comprehend) attack surface (Schneier and
+Vance, 2025).
+Erosion of centralized top-down governance. Fundamentally,
+increasing decentralization of software development leads
+toanerosionofcentralizedEAgovernance.Ahlemannetal.
+(2021) identify EA Governance as one of four EAM ca­
+pabilities, next to EA modelling, EA planning, and EA
+implementation. This capability focuses on developing EA-
+related decision rights and accountabilities, ensuring that
+EAdevelopmentisinlinewithlong-termobjectivesandnot
+compromisedbyopportunisticdecision-making(Ahlemann
+et al., 2021: 7). EA Governance is a control function aimed
+at steering EAM and facilitating monitoring, reporting and
+escalation.
+The distinction between centralized and decentralized
+approaches towards governance relates to a difference in
+terms of locus of control (where decision-making power
+resides, either in a single person or small group or dis­
+tributed across lower levels). Centralized governance
+means that architectural plans and policies, decision rights
+and accountability structures originate at the senior lead­
+ership level and are imposed on lower levels of the orga­
+nization (Schilling et al., 2018; Weill and Ross, 2004). This
+is traditionally how this control function is shaped, relying
+on coercive mechanisms like standards and principles to
+ensure enterprise-wide alignment (Ahlemann et al., 2021;
+Haki et al., 2020; Schilling et al., 2018). End-user devel­
+opment challenges this reliance because local entities often
+perceive such coercive mechanisms as an unwelcome re­
+striction of their design freedom (Beese et al., 2023b).
+Furthermore, the typical speed of user development (es­
+pecially in the age of LCDPs and AI) makes it difﬁcult to
+enforcecomplianceassessmentsorqualitygatesintendedto
+ensure solutions ﬁt  the long-term target architecture
+(Ahlemann et al., 2021; Boh and Yellin, 2006). Thus, end
+user development would favor a more decentralized ap­
+proach,wherethearchitectureisprimarilyinﬂuenced bythe
+actions and decisions of lower-level agents, aggregating
+upward without being designed from above (De Haes and
+Van Grembergen, 2009; Gregory et al., 2018). This ap­
+proach assumes that effective governance often emerges
+from practice rather than being designed from above
+(Ciborra, 1994, 2000).
+Analyzing EAM challenges: What, who, and how
+The ﬁve EAM challenges we derived from the literature are
+not independent phenomena. Rather, they are manifesta­
+tions of the incompatibility of traditional centralized, top-
+down EA governance with the decentralized, high-velocity
+development enabled by LCDPs. LCDP use does not in­
+herently cause architectural drift, complexity, or security
+risks. The use of these platforms accelerates and ampliﬁes 
+these tensions because they inherently conﬂict  with the
+traditional governance structures in EAM. For instance,
+local optimization happens because citizen developers have
+decision rights, but without corresponding accountability
+structures. Similarly, complexity escalates in the absence of
+governance mechanisms to review and rationalize the
+growing application landscape. As a ﬁnal example, security
+risks increase because governance frameworks were not
+designed to handle non-expert developersworking atspeed.
+Therefore, in our further analysis of these challenges, we
+primarily take the perspective of EA governance, using
+foundational insights from the IT governance literature—
+including its treatment of structural, procedural, and rela­
+tional governance mechanisms (Boh and Yellin, 2006). Our
+guiding principle in this analysis is Tiwana et al.’s (2013)
+distinction among three key dimensions of governance: (1)
+what to govern, (2) who to govern, and (3) how to govern
+(see also Gregory et al., 2018).
+The what dimension refers to the EA-related activities
+and artifacts that must be aligned with organizational
+strategy and objectives. This concerns elements like
+blueprints, guidelines, models, but also the actual appli­
+cations that are developed and managed. The challenge is
+that while the enterprise wants to optimize the “what” for
+synergies and cost reduction, citizen developers tend to
+focus on exploring ﬂexible combinations of technologies to
+meet immediate functional needs. Thus, the “what” be­
+comes a dynamic environment (rather than a static blue­
+print) where EAM must enable decentralized applications,
+and at the same time ensure that they do not undermine
+long-term objectives. The challenges in terms of archi­
+tectural drift and technical debt, escalating complexity, and
+operational and security risks all concern this dimension, as
+these challenges all arise from this general tension between
+local and enterprise-level optimization.
+The who dimension concerns the actors and stakeholders
+that play a role in all EA-related activities. Relevant actors
+are LCDP users, staff in the EA function and the IT
+function, as well as managers and other business
+Elshan and van den Hooff 5
+
+--- PAGE 6 ---
+stakeholders. This dimension is likely to be relevant in all
+challenges identiﬁed, as the activities of these actors con­
+tribute to these challenges. For instance, users developing
+applications that are not in line with architectural principles
+contribute to local over enterprise-level optimization as
+well as architectural drift and technical debt, escalating
+complexity and operational and security risks. Such risk
+increases when the “who” being governed shifts from a
+central, accountable IT unit to empowered but non-
+professional citizen developers. Likewise, the erosion of
+centralized governance relates to the fact that multiple
+actors at different levels of the organization become in­
+volved in EA governance.
+Finally, the how dimension directly concerns the erosion
+of centralized governance. This pertains to the allocation of
+decision rights and controls, and the structural, procedural,
+and relational mechanisms through which governance is
+shaped (Gregory et al., 2018; Tiwana et al., 2013). This is
+where the challenge of ﬁnding  a balance between cen­
+tralized and decentralized control clearly comes to the fore.
+The emergence of LCDPs presents organizations with new
+challenges in balancing centralized and decentralized
+governance. In achieving this balance, it is crucial that low-
+code developers understand the purpose underlying gov­
+ernance. When employees perceive governance as sup­
+portive and not overly constraining, they are less inclined to
+engage in non-compliant behavior such as working around
+the control mechanisms or developingand using ShadowIT
+(Carroll and Maher, 2023). In turn, governance structures
+and mechanisms that address citizen developers’ need for
+autonomy can make governance more effective as they will
+produce more desirable behavior in individual employees
+(Bradley et al., 2012).
+In order to further explore the EA governance
+challenges that result from LCDP use in terms of what,
+who, and how, we conducted an interpretive multiple
+case study, the design of which we will discuss in the
+next section of this paper.
+Research approach
+This study adopts an interpretive multiple-case study
+approach (Klein and Myers, 1999; Walsham, 1995; Yin,
+2018) to examine how organizations integrate LCDPs
+within their EAM practices. Interpretive research suits
+investigations of how social actors in organizations
+make sense of technology-related phenomena in their
+speciﬁc contexts (Walsham, 2006). Rather than aiming
+for generalizability, our interpretive approach focuses
+on theoretical transferability and context-speciﬁc un­
+derstanding. We explicitly acknowledge the role of
+researchers as interpretive agents who engage reﬂex­
+ively with participant narratives and organizational
+contexts (Klein and Myers, 1999).
+Case selection
+We selected three organizations from distinct sectors—
+ﬁnancial,  healthcare, and manufacturing—to capture a
+variety of contextual conditions that inﬂuence  LCDP
+adoption and EAM practices. These sectors differ in reg­
+ulatory environments, organizational complexity, and IT
+governance maturity levels, enabling theoretical compari­
+sons across diverse settings. Selection criteria included
+signiﬁcant experience with LCDPs and clear EAM struc­
+tures, ensuring a rich analysis of interactions between
+centralized architectural governance and decentralized
+LCDP practices.
+Although the study does not seek statistical generaliz­
+ability, we did apply theoretical sampling principles
+(Eisenhardt, 1989) to enrich conceptual insights and deepen
+understanding of LCDP integration challenges. Additional
+cases could provide further insights, but we determined
+saturation based on the emergence of stable theoretical
+constructs across the three contexts.
+The ﬁrst  case organization is a large bank operating
+across various countries in Western Europe, which we refer
+to as FinComp (a pseudonym, as we used for all case or­
+ganizations). In 2017, they embraced Mendix in response to
+various challenges, including the escalating demand for
+tailoredsolutionstomeetcustomerandemployeeneedsand
+increasing shadow IT use among business users. Given the
+regulatory environment in which the bank operates, it
+recognized the imperative to curb shadow IT and identiﬁed 
+Mendix as the optimal future-proof LCDP for its needs.
+The second case organization is a leading medical and
+higher education institution in the Middle East, referred to
+as HealthComp. Their decision to adopt Mendix stemmed
+from a pressing need to expedite application development
+while working with few development resources. The initial
+lighthouse project with Mendix showcased its ability to
+facilitate rapid development, even with a small team of
+developers. With this project, they discovered that Mendix
+possessed greater capabilities than initially perceived,
+opening doors for substantial digital transformation efforts
+on larger projects.
+The third case organization is a prominent global au­
+tomotive and industrial supplier in Germany, referred to as
+ManuCorp. At this company, the adoption of LCDP
+(Mendix) in 2021 was part of a larger digital transformation
+initiative. ManuCorp’s commitment to digital transforma­
+tion, strengthened by unwavering TMT support, propelled
+the widespread integration of Mendix across its operations.
+At the time of our study, over 30 applications had been
+developed, some of which utilized by over a thousand
+employees worldwide.
+Following Yin’s (2018) replication logic, we designed
+the study to enable both literal and theoretical replication.
+Literal replication concerned the recurring presence of
+overarching governance challenge dimensions that
+6 Journal of Information Technology 0(0)
+
+--- PAGE 7 ---
+organizations encounter when governing LCDP use within
+their EA structures: what to govern (the artifact and risk
+landscape), who to govern (the actor conﬁguration), and
+how to govern (the balance of centralized top-down control
+and decentralized bottom-up enablement). These dimen­
+sionswereanticipatedbasedonoursynthesisofpriorEAM/
+EA governance and EUD/LCDP literature. Theoretical
+replication concerned variation in the conﬁguration  of
+governance responses, deﬁned here as portfolios of strategy
+clusters, comprising top-down governance instruments and
+bottom-up enabling practices, that organizations assemble
+differently as contextual boundary conditions vary. We
+operationalized these boundary conditions at the case level
+(regulatory intensity, LCDP maturity, integration com­
+plexity, scale of citizen development, and IT governance
+maturity; Table 1) and used them to structure cross-case
+comparisons of how organizations governed LCDP use in
+EA structures.
+Data collection
+Our main data source consists of 27 semi-structured in­
+terviewsconductedbetweenOctober2023andMarch2024.
+Interviews lasted between 45 and 90 minutes, were audio-
+recorded with participants’ consent, and transcribed ver­
+batim. We purposefully sampled diverse roles (enterprise
+architects, IT managers, professional developers, and citi­
+zen developers) to capture multiple perspectives on LCDP
+integration into EAM. Accordingly, the protocol was
+structured into three thematic blocks (strategic, technical,
+operational) and, within each block, prompts were aligned
+to ourgovernancelens(whatto govern,who togovern,how
+to govern) as well as perceived implications for EAM goals
+(efﬁciency, ﬂexibility, transparency, predictability). Inter­
+view questions were derived from prior literature and pi­
+loted in initial interviews (two per case); minor wording
+reﬁnements followed while retaining these interviews in the
+ﬁnal dataset. Appendix B provides the interview protocol.
+Although a uniﬁed interview protocol was used for con­
+sistencyacrosstheinterviews,wemade minoradaptionsfor
+each organization to address the context-speciﬁc nuances.
+Wetriangulatedtheinterviewdatawithacomprehensive
+review of secondary sources (approximately 7–
+16 documents per case), such as internal documents, ar­
+chitectural frameworks, and implementation plans. We
+compiledthesematerialsintoacasedatabaseand usedthem
+to (i) reconstruct timelines and governance setups, and (ii)
+corroborate and contextualize interview accounts (e.g.,
+documented standards and decision-right allocations).
+Where documents diverged from interview narratives, we
+ﬂagged  the discrepancy and clariﬁed  it via follow-up
+conversations with key informants (Table 2).
+Data analysis
+Within our data analysis we followed a hybrid thematic
+approach, combining template analysis (Crabtree and
+Miller, 1999) with an inductive reﬁnement  (Boyatzis,
+1998). The data analysis was conducted in Atlas.ti. Our
+primary coding unit was a meaning unit, typically a sen­
+tence or short excerpt (often 1–2 sentences, occasionally
+longer where needed for context).
+Phase 1: Template coding. We began with an a priori coding
+template derived from the synthesis of prior literature and
+our EA governance lens distinguishing between what to
+govern (EA activities, artifacts, and applications), who to
+govern (actors, their roles and decision rights), and how to
+govern (centralized and decentralized approaches). We
+applied these codes deductively to all interview transcripts
+and secondary sources within our case database to ensure
+systematic capture of theoretically salient issues (e.g.,
+standards compliance, decision rights, and shadow IT risk).
+Table 3 summarizes the deductive template and examples;
+the full codebook is provided in Appendix C.
+Phase 2: Inductive refinement. We then iteratively expanded
+andreﬁned thecodebookbyintroducingemergentsubcodes
+when data did not ﬁt existing template categories. For in­
+stance, while we began with the concept of “shadow IT,”
+interviews revealed nuances such as varying perceptions of
+“distributed compliance” and unanticipated forms of
+“project ownership” that did not entirely align with our
+initial template. Table 4 provides illustrative examples of
+emergent codes; additional emergent subcodes are docu­
+mented in Appendix C. This abductive process supported
+Table 1. Contextual profile of cases (boundary conditions for theoretical replication).
+Case
+Regulatory
+intensity
+LCDP
+maturity
+Integration
+complexity
+Scale of citizen
+development
+IT governance
+maturity Org. complexity
+FinComp High Low-
+medium
+High Low-medium High Multi-divisional,
+regulated
+HealthComp Medium-high Medium Medium Medium-high Medium Multi-site, clinical
+interfaces
+ManuCorp Medium Medium-
+high
+Medium-high High Medium Global plants, partner
+integrations
+Elshan and van den Hooff 7
+
+--- PAGE 8 ---
+theory elaboration while maintaining traceability to both
+prior concepts and empirical material.
+We then consolidated and reﬁned the codebook by re­
+solving overlaps and clarifying boundaries between closely
+related codes, while retaining case-speciﬁc  subthemes
+captured through inductive reﬁnement. Building on these
+reﬁned codes, we developed within-case summaries and
+case memos that linked governance challenges to observed
+governance mechanisms and supporting evidence.
+Phase 3: Within-case synthesis. For each case, we developed
+structuredcasememosandwithin-casesummariesthatlinked
+(i) governance challenges, (ii) observed governance mecha­
+nisms and practices, and (iii) supporting evidence. In parallel,
+we coded contextual boundary conditions as case-level at­
+tributes (regulatory intensity, LCDP maturity, integration
+complexity, scale of citizen development; Table 1) to enable
+systematic cross-case comparison.
+Phase 4: Cross-case comparison. We compared cases using
+matrices that contrasted governance challenges and
+“how-to-govern” mechanism portfolios across the
+boundary conditions in Table 1. This enabled assessment
+of literal replication across the three challenge domains
+(strategic, technical, operational) and theoretical
+replication in how governance mechanism portfolios
+varied under different contextual conditions. These
+comparisons informed the cross-case strategy clusters
+reported in the Findings section (Table 5).
+Two researchers independently coded an initial subset of
+the data and reconciled differences through negotiated
+agreement, iteratively reﬁning code deﬁnitions in a shared
+codebook and holding calibration meetings. To further
+strengthenrobustness,weassessed inter-coderreliabilityon
+a stratiﬁed subset (two interviews per case; 286 meaning
+units/excerpts) that both researchers coded independently
+using the ﬁnal  codebook. Agreement was substantial
+(Cohen’s k = 0.73; Cohen, 1960; Landis and Koch, 1977).
+Remaining discrepancies were resolved through discussion
+and incorporated as minor reﬁnements  to the codebook
+(Appendix C).
+To ensure interpretive rigor and trustworthiness, we
+adhered to several strategies (Lincoln and Guba, 1985).
+First, we conducted member-checking by sharing prelim­
+inary thematic summaries with key informants to conﬁrm 
+that our interpretations accurately reﬂected  their experi­
+ences. Second, we periodically engaged in peer debrieﬁngs, 
+reviewing segments of coded data and discussing potential
+biases or ambiguities in the coding scheme. Third, we
+maintained a transparent audit trail of coding iterations,
+memos, and analytical decisions in a shared repository,
+Table 2. Overview of interviewees by case.
+Case Interviewee Position/Role Years at Org.
+HealthComp H1 Software Development Specialist 4
+H2 Mendix Developer 4
+H3 Software Engineer 2
+H4 Systems Analyst (IT Dept) 5
+H5 Business Systems Analyst 3
+H6 IT Project Manager 4
+H7 Project Manager (Clinical Operations) 2
+H8 Software Engineer 2
+H9 Clinical Workflow Coordinator 2
+H10 IT Project Manager 4
+ManuCorp M1 Product Owner 5
+M2 Operations IT/Mendix Coordinator 9
+M3 Professional Mendix Developer 2
+M4 Enterprise Architect 6
+M5 Enterprise Architect 4
+M6 Enterprise Architect #3 7
+M7 Senior IT Manager (Digital Solutions) 8
+M8 Lead Solution Architect 8
+M9 Lead Solution Architect 8
+FinComp F1 Product Owner 20
+F2 Platform Owner 4
+F3 Mendix Developer 2
+F4 External Domain Architect 8
+F5 Enterprise Architect 9
+F6 Enterprise Architect 7
+F7 Enterprise Architect 6
+F8 Enterprise Architect 11
+8 Journal of Information Technology 0(0)
+
+--- PAGE 9 ---
+Table 3. Overview of deductive coding (incl. anchors in literature, description, and exemplary quotes).
+Code Description Exemplary quote
+WHAT_Architectural Drift &
+Shadow IT
+Citizen-built apps emerging outside established
+guardrails, expanding shadow IT and driving
+architectural drift, the movement away from a
+chosen architectural direction (Perks and
+Beveridge, 2003)—as local optimization needs
+prevail over enterprise coherence (Beese et al.,
+2023b; Fischer et al., 2017; Gregory et al.,
+2018).
+“We’ve experienced significant challenges with
+shadow IT… Excel and Access… Mendix
+applications followed a similar pattern…”
+WHAT_ Technical Debt &
+Escalating Complexity
+Portfolio growth and heterogeneous
+development practices increasing technical
+debt—expedient short-termchoices thatdefer
+future rework costs (Kruchten et al., 2013)—
+and driving IS landscape complexity that
+negatively influences efficiency, transparency,
+predictability, and flexibility of the architecture
+(Beese et al., 2023b; Rinta-Kahila et al., 2023;
+Tamm et al., 2022).
+“Every additional Mendix app increases
+complexity…” (M6); “Technical debt has
+become a major concern… nobody adequately
+documents their apps.”
+WHAT_Operational & Security
+Risk
+Non-expert development threatening
+operational continuity and eroding compliance
+with internal standards and external
+regulations such as GDPR and NIS2 (Ajer et al.,
+2021; Haki and Legner, 2021; Van der Raadt
+et al., 2010). Architectural complexity further
+expands the security attack surface, as
+“complexity is the enemy of security,” creating
+more modules, connections, and potential
+vulnerabilities (Schmidt and Buxmann, 2011;
+Schneier and Vance, 2025).
+“We discovered significant security
+vulnerabilities because Mendix applications
+were often released without thorough security
+evaluations.”
+WHO_ Role Ambiguity &
+Decision Rights
+Ambiguity inownershipanddecisionrightsacross
+theLCDPlifecycleamongEA/IT,businessunits,
+and citizen developers, creating unclear
+accountability structures that stall decisions
+and invite opportunistic development choices
+(Ahlemann et al., 2021; Gregory et al., 2018;
+Weill and Ross, 2004).
+“There is confusion about who owns governance
+now… where does our responsibility stop, and
+theirs start?”
+WHO_Coordination &
+Stakeholder Function
+Friction between business units, IT, and citizen
+developers over authority and accountability,
+generating coordination costs, rework, and
+resistance to governance requirements (Beese
+et al., 2023b; Galbraith, 1973; Gregory et al.,
+2018).
+“Constant conflicts arise about who has
+authority… IT sees itself responsible… citizen
+developers feel ownership.”
+HOW_Governance Balance
+(Centralized–Decentralized)
+Calibrating governance by pairing codified
+standards, risk tiers, and proportionate gates
+with participatory enablement (peer review,
+communities of practice) so that architectural
+integrity is protected without sacrificing agility.
+When developers perceive governance as
+legitimate and supportive rather than coercive,
+compliance improves and workarounds decline
+(Beese et al., 2023b; Gregory et al., 2018;
+Tiwana et al., 2013).
+“Our refined governance approach combines
+clear, formal standards and periodic
+compliance audits with informal elements like
+peer reviews and developer communities. This
+carefully managed balance maintains
+architectural integrity without hindering
+developers’ agility or creativity.”
+(continued)
+Elshan and van den Hooff 9
+
+--- PAGE 10 ---
+allowing us and other researchers to trace how ﬁnal themes
+emerged from the raw data. Finally, we remained reﬂexive 
+about our own positions as researchers, acknowledging
+subjective inﬂuences that might shape our interpretation of
+organizational actors’ accounts (Klein and Myers, 1999;
+Walsham, 2006).
+Findings
+Across all three organizations, LCDP adoption created a
+recognizable pattern: initial productivity gains were ac­
+companied by governance tensions that existing EAM
+structures were not designed to handle. Characteristically,
+these tensions arose from the decentralization of devel­
+opment authority, as citizen developers claimed production
+capability outside traditional IT boundaries, organizations
+were forced to reconsider how centralized governance
+models could accommodate bottom-up development
+without losing coherence, security, or architectural integ­
+rity. The following section presents these ﬁndings in two
+stages. We ﬁrst trace how each organization encountered
+and responded to governance challenges speciﬁc  to its
+context,whatneededtobegoverned,bywhom,andthrough
+what mechanisms, before turning to a cross-case analysis
+that identiﬁes the shared challenges, strategy clusters, and
+governance practices observed across the cases. The
+analysis is organized around the three governance dimen­
+sions identiﬁed in the literature: What to govern (the artifact
+and risk landscape), Who to govern (the actor conﬁgura­
+tion), and How to govern (the balance of centralized, top-
+down control and decentralized, bottom-up enablement)
+(Gregory et al., 2018; Tiwana et al., 2013).
+Within-case analysis
+LCDP adoption and use at FinComp. FinComp’s adoption of
+Mendix was a direct response to what respondents vividly
+described as an architectural “trauma”: the discovery of
+hundreds of unmanaged, end-user developed applications
+that had accumulated silently across the organization,
+creating serious regulatory exposure and data governance
+failures. Operating under high regulatory intensity and high
+integration complexity, the bank required a solution that
+would consolidate shadow development into a single,
+Table 3. (continued)
+Code Description Exemplary quote
+HOW_Risk-Tiering &
+Proportionate Control
+Proportionate governance that scales assurance
+depth with business and technical risk:
+lightweight checks for prototypes and low-
+impact departmental tools, and deeper, multi-
+party review for enterprise-critical changes,
+with periodic recalibration based on incidents
+and usage signals (Gregory et al., 2018; Tiwana
+et al., 2013; Weill and Ross, 2004).
+“We classify solutions into tiers, prototype,
+departmental, and enterprise-critical, and the
+gates scale with impact. Low-risk items ship
+with a checklist and automated tests; high-risk
+changes go through security and architecture
+review. We revisit tier assignments after
+incidents and adjust the thresholds if needed.”
+Table 4. Examples of emergent codes (incl. description and exemplary quotes).
+Emergent code Description Exemplary quote Maps to
+Distributed
+Compliance
+Indicates that, rather than a single centralized
+compliance approach, different
+departments ended up managing their own
+regulatory checks-challenging the initial
+“shadow IT” concept.
+“In our company, every department managed
+its own compliance checks instead of relying
+solely on central IT – this decentralized
+approach was unexpected but proved
+beneficial.”
+How
+(participation),
+Who (roles)
+Project
+Ownership
+Evolution from the assumption that IT would
+solely own projects to a model where
+business units also assume ownership,
+enhancing innovation and accountability.
+“Initially, we assumed IT would own every
+project, but when business units started
+taking ownership, the outcomes improved
+dramatically.”
+Who
+Reframed Shadow
+IT
+Reflects a nuance where what was initially
+labelled as “shadow IT” is reinterpreted as a
+source of organic, employee-led innovation
+once properly managed.
+“What we once dismissed as shadow IT
+eventually turned into a hub of innovative
+ideas when teams were allowed to develop
+solutions independently.”
+What
+Enhanced
+Stakeholder
+Engagement
+Highlights the emergent need for broad-based
+involvement-bringing non-technical voices
+into the conversation-to foster a more
+collaborative and agile integration process.
+“Engaging non-technical staff early on broke
+down silos and led to a more inclusive, agile
+decision-making process that we hadn’t
+anticipated.”
+Who and How
+10 Journal of Information Technology 0(0)
+
+--- PAGE 11 ---
+auditable environment. Mendix was selected because it met
+requirements for control, visibility and cloud-readiness.
+From the outset, governance emphasized proportionate
+control: every application is registered with minimal doc­
+umentation,aCenterofExcellenceservesasafrontdoorfor
+triage, and standardized templates embed authentication
+and data-handling controls from the start.
+“There’s a bit of a trauma because we had like hundreds of
+unmanaged IT end user developed applications and there were
+huge problems, and our regulators were really telling us: get a
+grip, get control.” (F1).
+What makes FinComp analytically distinctive is its
+governance evolution from strict centralization to a fed­
+erated model. An initial centralized, top-down approach,
+with a central team controlling all development and en­
+forcing formal review boards, created distance from busi­
+ness units and ultimately undermined the ﬂexibility that
+justiﬁed LCDP adoption. The organization responded by
+separating “enabling” from “delivery”: the central team
+retained responsibility for the platform, toolchain, and
+guardrails, while development ownership shifted to
+business-facing teams. This federated approach also
+gradually opened space for citizen developers in a tightly
+regulated capacity, a notable evolution given that citizen
+development had originally been formally prohibited.
+FinComp thus illustrates how governance models must
+adapt iteratively, and how explicit delineation of respon­
+sibilities allows formal control and federated autonomy to
+coexist.
+LCDP adoption and use at HealthComp. HealthComp adopted
+Mendix primarily to address a resource constraint: growing
+demand for specialized clinical applications clashed with a
+persistent developer shortage, forcing departments to rely on
+improvised Excel and scripting tools that introduced security
+and integration risks. The platform was scoped to campus
+Table 5. Cross-case mapping of challenges to strategy clusters, concrete practices, and outcomes.
+Dimension Governance challenge
+Strategy cluster
+[mechanism]
+Governance practices and
+instruments EAM outcomes
+What to
+govern
+Proliferation & shadow
+IT → architectural
+drift
+Visibility & portfolio
+hygiene
+[Information
+symmetry]
+Mandatory app registration;
+ownership & data metadata;
+periodic audits; portfolio
+rationalization (retire duplicates/
+obsoletes)
+↑ transparency (portfolio visibility,
+lineage); ↑ predictability (audit
+readiness, data governance)
+Inconsistent practices →
+technical debt &
+maintainability risk
+Engineering hygiene
+& reusable assets
+[Information
+symmetry]
+Release criteria: docs as gate;
+reference architectures; secure
+templates; planned refactoring
+windows
+↑ efficiency (↓ rework; ↑ reuse
+ratio); ↑ transparency
+(documentation baseline)
+Non-compliant releases
+→ security exposure
+Security-by-design &
+enablement
+[Secure-by-default
+conditions]
+Risk-tiered pre-release checks
+(data classification, secrets, pen-
+test); env separation; developer
+training & checklists
+↑ predictability (↓ critical
+vulnerabilities; ↑ policy-
+conformant releases); ↑
+transparency (security posture)
+Who to
+govern
+Role ambiguity →
+unclear ownership &
+stalled decisions
+Role redefinition &
+RACI
+[Enacted decision-right
+alignment]
+RACI across LCDP lifecycle (ideate
+→ retire); decision rights
+catalog; EA/IT shift gatekeeper
+→ guide
+↑ efficiency (↓ decision latency; ↓
+escalations); ↑ predictability
+(clear accountabilities)
+BU/IT/citizen friction →
+coordination cost &
+rework
+CoE & participatory
+governance
+[Perceived legitimacy +
+decision-right
+alignment]
+CoE as integration hub; central
+intake/triage; participatory
+forums (standards backlog co-
+owned)
+↑ flexibility (co-designed
+governance adapts to change);↑
+efficiency (↓ coordination cost
+& rework)
+Skill & literacy variability
+→ execution risk
+Capability building &
+permissioning
+[Developer capability]
+Tieredcurricula&badginglinkedto
+permission scopes; mentoring;
+enablement assets (patterns,
+connectors)
+↑ efficiency (↑ quality at first
+review); ↑ predictability (↓
+security/QA defects in novice
+apps)
+How to
+govern
+Over/under-
+formalization → lost
+agility or lost control
+Balanced portfolio &
+risk-tiering
+[All five mechanisms]
+Risk tiers mapping to control depth
+(prototype vs. core); lightweight
+gates for low-risk; periodic
+portfolio reviews
+↑ flexibility (↑ cycle time for low-
+risk apps); ↑ efficiency (↑
+conformance for high-risk); ↑ all
+four EAM outcomes
+Weak legitimacy &
+autonomy loss →
+bypass & superficial
+compliance
+Transparent
+communication &
+exemplars
+[Perceived legitimacy]
+Explain the why for each control;
+publish decision logs &
+exemplars; two-way feedback
+(policy revisions)
+↑ flexibility (voluntary compliance
+supports agility); ↑ all four EAM
+outcomes (legitimacy ↓
+workarounds)
+Elshan and van den Hooff 11
+
+--- PAGE 12 ---
+service and non-critical workﬂows,  with mission-critical
+clinical systems retained on traditional pro-code paths
+(i.e., conventionally programmed systems developed by
+professional software engineers). HealthComp’s trajectory is
+analytically distinctive because of a partial reversal: the
+Mendix footprint shrank from roughly 70 to 40% of new
+applications as currency ﬂuctuations inﬂated licensing costs
+anderodedtheplatform’scost-effectivenessrationale,making
+HealthComp a case in which external economic pressures
+forced explicit governance recalibration.
+“We faced a unique combination of increasing demand for
+specialized, department-speciﬁc applications, alongside very
+limited in-house developer capacity. Our main EHR system
+wasn’t designed to manage every specialized or unique
+workﬂow  that individual departments needed. As a result,
+departments often relied on improvised solutions, typically
+using Excel or rudimentary scripting, which posed signiﬁcant 
+security and data integration risks.” (H9).
+Governance at HealthComp evolved through a CoE-led
+participatory model that gradually drew citizen developers
+(e.g., nurse managers and senior administrative coordinators)
+into review and standards discussions. This participatory
+dynamic is the case’s principal analytical contribution: as
+citizendevelopersmovedfrompassiverule-followerstoactive
+co-designers of governance standards, compliance improved
+and resistance diminished. HealthComp demonstrates how
+participatory governance can shift the perceived legitimacy of
+controls from externally imposed requirements to collabora­
+tively developed guidelines, even in a resource-constrained
+and heavily regulated context where overall LCDP adoption
+remained mixed.
+LCDP adoption and use at ManuCorp. ManuCorp’s adoption
+of Mendix in 2021 was simultaneously top-down and bottom-
+up: a corporate “digital acceleration” directive aligned with
+strong demand from business units seeking to replace shop-
+ﬂoor  Excel and paper workﬂows  with digital applications.
+This dual momentum produced the most extensive LCDP
+community among the three cases—over 500 employees
+across corporate IT, operations IT, factory-level teams, and
+regional sites—spanning use cases from small workﬂow re­
+placements to larger supply chain management solutions. The
+breadth and geographic heterogeneity of this community,
+crossing multiple divisions and geographies, made coordi­
+nation the central governance challenge.
+“One of the most signiﬁcant hurdles was aligning the pace of
+innovation inherent in Mendix with our established enterprise
+processes. While Mendix allows for rapid prototyping and
+agile iterations, our legacy systems and internal governance
+models often operate on a slower timeline. This disconnect
+necessitated a delicate balance between speed and
+stability.” (M7).
+ManuCorp’s key analytical contribution is a concrete
+instantiation of multi-tier governance at scale. The orga­
+nization constructed a layered structure combining a central
+competence center for intake and triage, an EA board for
+architectural review of higher-risk designs, and regional
+“Mendix champions” who provided ﬁrst-line support and
+local governance at the plant and country level. This ap­
+proach resolved a coordination problem that neither purely
+centralized nor purely decentralized models could address:
+champions absorbed routine governance friction locally,
+maintained alignment between local practice and enterprise
+standards, and escalated only genuine exceptions. Manu­
+Corp therefore illustrates how decentralized governance
+roles can be institutionalized to sustain architectural co­
+herence as LCDP adoption scales across geographies and
+divisions.
+Cross-case analysis: Challenges and strategies for
+governing LCDPs
+Challenges. The introduction of LCDPs into enterprise
+environments generated governance challenges that cut
+across all three dimensions identiﬁed  in prior literature:
+what is governed, who governs, and how governance is
+enacted (Gregory et al., 2018; Tiwana et al., 2013), Left
+unaddressed, these challenges erode the four architectural
+outcomes of EAM; efﬁciency, ﬂexibility, transparency and
+predictability (Beese et al., 2023a). The following sub-
+sections trace each dimension as it emerged across the
+three cases.
+What to govern: Proliferation, architectural drift, and security
+exposure. Across the three organizations studied, a pre­
+dominant challenge was the widespread proliferation of
+decentralized, citizen-developed applications. Such appli­
+cations frequently emerged outside established governance
+boundaries,generatinganextensivelandscapeofshadowIT
+and leading to signiﬁcant  architectural divergence. A
+Product Owner at FinComp clearly illustrated the seri­
+ousness of this issue:
+“We’ve experienced signiﬁcant  challenges with shadow IT
+previously;peopleoftenbuiltsolutionsusingExcelandAccess
+without our knowledge or control. Mendix applications fol­
+lowed a similar pattern, complicating our ability to ensure
+centralized governance and compliance.” (F1)
+This proliferation intensiﬁed  existing architectural
+complexity and strained governance processes as portfolios
+grew and organizations faced escalating difﬁculties man­
+aging their IT ecosystems. Reﬂecting on this, an enterprise
+architect from ManuCorp succinctly noted:
+“Every additional Mendix app increases complexity, making
+our governance processes increasingly challenging.” (M6)
+12 Journal of Information Technology 0(0)
+
+--- PAGE 13 ---
+Compounding these pressures, heterogeneous and in­
+consistent development practices and inadequate docu­
+mentation drove the accumulation of technical debt,
+impacting long-term maintainability and amplifying oper­
+ational inefﬁciencies.  Describing this challenge from a
+practical standpoint, a systems analyst at HealthComp
+emphasized:
+“Technical debt has become a major concern because nobody
+adequately documents their apps. Eventually, this turns into a
+maintenance nightmare.” (H5)
+Third, security exposure rose as citizen-developed ap­
+plications were deployed and released without fully ad­
+hering to established security standards and protocols. This
+practice substantially increased organizations’ vulnerability
+to security threats.Highlighting the criticalityof theserisks,
+a senior product owner at ManuCorp explained:
+“We discovered signiﬁcant  security vulnerabilities because
+Mendix applications were often released without thorough
+security evaluations.” (M1)
+The question of what to govern was further complicated
+by the breadth and heterogeneity of the application port­
+folios citizen developers assembled. Governance bound­
+aries could not simply be drawn around high-risk systems;
+they had to extend to everyday workﬂow tools that, taken
+together, constituted the bulk of the portfolio. A profes­
+sional developer at ManuCorp described the scope:
+“I think one major example is they have an Excel solution
+currentlyandtheywanttogetridofthatExcelsolutionorpaper
+and pen in the shop ﬂoor. I think that makes up to 80 or 90% of
+the applications our citizen developers are developing. And
+besidethat, wehavesomebigger applications regardingsupply
+chain management and stuff like that.” (M3).
+Who to govern: Role ambiguity, coordination friction, and ca­
+pabilityvariability. Theintroductionandwidespreadadoptionof
+LCDPs also altered organizational stakeholder dynamics by
+elevating citizen developers as inﬂuential  actors alongside
+traditional EA and IT functions. This shift disrupted existing
+role partitions and created ambiguity regarding ownership,
+decision rights and limits of authority. A senior enterprise ar­
+chitectatFinCompillustratedthedepthofthischallengeclearly:
+“There is confusion about who owns governance now. Citizen
+developers create their apps independently, and suddenly, we
+have to decide—where does our responsibility stop, and theirs
+start? It’s becoming a signiﬁcant  source of tension
+internally.” (F8)
+Role ambiguity frequently led to coordination and
+alignment challenges among key stakeholder groups,
+especially between business units, traditional IT depart­
+ments, and the emerging citizen developer community.
+Differences in decision-making authority and ongoing
+conﬂicts over accountability created consistent organiza­
+tional friction. An IT Manager at HealthComp clearly
+described the practical implications of these coordination
+challenges:
+“Constant conﬂicts arise about who has authority over citizen-
+developed applications. Business stakeholders often think it’s
+their call; IT sees itself responsible for infrastructure and risk,
+and citizen developers typically feel ownership over their
+solutions.” (H6)
+Coordination friction also extended to resource alloca­
+tion decisions that spanned functional and ﬁnancial 
+boundaries. At ManuCorp, governance responsibilities cut
+across operations and ﬁnance,  requiring negotiated ar­
+rangements rather than unilateral authority:
+“Finance was alarmed by potential license cost overruns
+while operations wanted to deploy ten new apps across
+factories. We negotiated a partial cost-sharing model: once
+usage hits a threshold, that division covers part of the
+incremental license. Showing how the apps freed up scarce
+developer time helped ease the tension and let operations
+proceed.” (M9).
+Additionally, governance effectiveness suffered due to
+wide variability in citizen developer competence and
+governance literacy. These developers constituted a diverse
+stakeholder group with varied professional backgrounds,
+inconsistent technical proﬁciency, and differing levels of
+understanding regarding governance requirements. Such
+variability increased complexity when organizations at­
+tempted to standardize governance practices, further in­
+tensifyingorganizationalrisks,especiallyrelatedtosecurity
+and regulatory compliance. An EA specialist at ManuCorp
+highlighted this challenge clearly:
+“Citizen developers range widely in their technical skills and
+understanding of governance. Some adapt quickly and become
+effective developers; others continuously struggle, and that
+inconsistency creates risks that are difﬁcult for us to manage
+consistently.” (M4)
+How to govern: Calibrating formal and informal control. A
+central challenge across all three cases was ﬁnding an ef­
+fective balance between centralized, top-down control and
+decentralized, bottom-up enabling approaches. Across all
+examined cases, organizations consistently encountered
+signiﬁcant  challenges in establishing this balance. Ap­
+proachesthatwereeitheroverlycentralizedorinsufﬁciently 
+structured resulted in distinct but equally problematic
+outcomes.
+Elshan and van den Hooff 13
+
+--- PAGE 14 ---
+The studied organizations initially emphasized cen­
+tralized governance instruments such as stringent com­
+pliance requirements, detailed documentation, and
+centralized oversight. However, they quickly realized that
+these rigid control structures undermined the innovation
+and agility promised by LCDPs. Citizen developers,
+whose primary motivation was rapid innovation, often
+perceived top-down governance mandates as overly bu­
+reaucratic and obstructive, leading to frustration and re­
+duced productivity. A domain architect at FinComp
+illustrated this challenge vividly:
+“When our governance became too prescriptive, citizen de­
+velopers felt discouraged. The process grew cumbersome,
+completely eroding the agility we initially sought through
+Mendix. On the other hand, reducing controls excessively led
+to a proliferation of unmanaged, redundant applications, sig­
+niﬁcantly raising complexity and risks.” (F4)
+Conversely, relying too heavily on decentralized,
+bottom-up approaches without sufﬁcient structure cre­
+ated equally signiﬁcant  problems. Such approaches,
+while initially appealing due to the freedom they offered
+developers, frequently led to uncontrolled application
+proliferation. Such uncontrolled growth exacerbated
+architectural drift, dramatically increased technical debt,
+and heightened organizational exposure to security
+threats. A senior Enterprise Architect at ManuCorp
+summarized this unintended consequence clearly:
+“Informal governance seemed attractive initially because it
+gave citizen developers freedom. However, without clearly
+deﬁned  standards or rules, we quickly faced severe issues:
+applications lacked consistency, documentation was ignored,
+and complexity rapidly became unmanageable.” (M9)
+A further challenge was weak legitimacy; when
+communication was neither clear nor supportive, de­
+velopers viewed governance mandates as arbitrary ob­
+stacles rather than necessary guidelines. These
+perceptions fostered resentment, undermined compli­
+ance, and severely diminished the effectiveness of
+governance initiatives. An IT Project Manager at
+HealthComp articulated this issue explicitly:
+“Many developers did not understand the governance re­
+quirements or their importance. To us, governance felt like
+unnecessary bureaucracy rather than meaningful oversight.
+Consequently, compliance became minimal or superﬁcial, and
+developers often bypassed rules altogether.” (H10)
+Relatedly, perceptions of loss of autonomy under top-
+down control structures diminished citizen developers’
+intrinsic motivation, creativity, and overall job satisfaction;
+turning potential innovators into passive participants or
+even active resistors. An IT Manager at ManuCorp de­
+scribed the impact:
+“Developers felt their creativity was curtailed. Instead of in­
+novating, they became passive and disengaged. Governance
+should empower developers, but under our centralized ap­
+proach, this message was not effectively conveyed.” (M7)
+In conclusion, our cross-case analysis identiﬁes LCDP-
+related EA governance challenges that span three inter­
+twined dimensions: what is governed (proliferation, tech­
+nical debt, and security exposure), who is involved (role
+ambiguity, coordination friction, and capability variability),
+and how governance is enacted (balancing centralized, top-
+down control with decentralized, bottom-up enablement,
+and building legitimacy for governance mandates). To­
+gether, these challenges (if left unattended) negatively af­
+fect each of the architectural outcomes identiﬁed  in the
+literature (Beese et al., 2023a): efﬁciency is threatened by
+redundancy and technical debt, ﬂexibility  by over-
+centralization, transparency by shadow IT and portfolio
+opacity, and predictability by security vulnerabilities and
+unchecked architectural drift.
+Strategies. Table 5 provides an overview of the strategic
+responses to these challenges we found across the different
+casestudies,organizedaccordingtothefollowingconcepts:
+- The governance dimension to which the strategic
+response pertains (what, who, or how);
+- The challenge to which the strategy is a response,
+which refers to an outcome of LCDP use that chal­
+lenges traditional centralized governance;
+- The strategy cluster, referring to a collection of
+formal instruments and informal practices that to­
+gether form a strategic response to the challenge;
+- The mechanism that links the strategy cluster to ar­
+chitectural outcomes;
+- The instruments and practices that are part of the
+strategy cluster;
+- The changes in architectural outcomes that are a
+result of the strategic response.
+Across cases, we observed that the effectiveness of
+governance initiatives designed speciﬁcally to manage
+and mitigate challenges resulting from LCDP use did
+not hinge on control alone or enablement alone. Rather,
+effective governance encompassed portfolios in which
+formal structures, rules and gates were deliberately
+paired with informal coaching, participation, and
+community routines. Together, these clusters establish
+the balance that allows organizations to protect archi­
+tectural integrity and regulatory conformity while
+sustaining the speed and local initiative that drive value
+from low-code development.
+14 Journal of Information Technology 0(0)
+
+--- PAGE 15 ---
+Visibility and portfolio hygiene. A ﬁrst  strategy cluster
+focuses on restoring and maintaining visibility over the
+expanding landscape. Organizations introduced formal
+instruments such as mandatory application registration, a
+minimum documentation set that records ownership, data
+classiﬁcation, periodic audits for citizen-developed appli­
+cations, and scheduled portfolio reviews to retire duplicates
+and obsolete solutions. As one developer from FinComp
+described:
+“By enhancing our auditing capabilities and requiring detailed
+documentation for every Mendix application, we substantially
+improved our oversight and reduced governance risks.” (F3)
+These measures were complemented by informal prac­
+tices that made visibility a shared norm rather than a
+compliance burden, including lightweight documentation
+templates and community “show and tell” sessions where
+teams explained what they had built and how others might
+reuse it. By pairing these elements, organizations improved
+the completeness of their inventories and strengthened data
+lineage without impeding local initiative; visibility became
+an enabler of reuse and quality rather than a brake on speed.
+Governance frameworks and pragmatic guardrails. A sec­
+ond cluster centers on the articulation of governance
+frameworks that are speciﬁc to low-code development. The
+formal side of this cluster comprises clear guardrails and
+exception procedures that set expectations for design, in­
+tegration, and release. The informal side comprises co-
+design with business stakeholders and citizen developers,
+and rapid advisory channels that translate rules into
+workable guidance. This pairing ensured that standards
+were both legitimate and usable. Guardrails preserved ar­
+chitectural coherence, while participatory reﬁnement and
+timely advice sustained momentum and reduced resistance
+to governance decisions.
+Security by design and enablement. A third cluster ad­
+dresses the risk posture of the organization. Formal in­
+struments included risk-tiered pre-release checks
+proportionate to data sensitivity and business criticality,
+separation of environments, mandatory security training
+and certiﬁcation  for citizen developers, standardized
+checklists and secure starter templates. Informal practices
+included the routine use of secure defaults, peer coaching
+and walkthroughs that diffused good practice,and proactive
+ﬂagging  of risky patterns during design and review. In
+combination, these elements reduced the critical vulnera­
+bilities and raised adherence to secure conﬁgurations while
+preserving cycle times. Security was not treated as an af­
+terthought but as an integral part of development routines.
+Role redefinition and alignment of decision rights. A fourth
+cluster clariﬁes  who owns what along the low-code
+lifecycle from ideation to retirement. Organizations codi­
+ﬁed  responsibilities through a responsibility—
+accountability approach and formal governance that re­
+deﬁned the role of EA and IT from centralized gatekeepers
+or controllers toward supportive roles that emphasized
+mentorship, collaboration, and facilitation. These formal
+approaches were reinforced by informalmentoring between
+architects and citizen developers and by boundary-spanning
+routines. The combination reduced decision latency and the
+frequency of escalations, because ownership was clear on
+paper and enacted in practice through repeated collabora­
+tion. An Enterprise Architecture Leader at FinComp ex­
+plained the strategic rationale behind this shift:
+“We realized our role could no longer remain purely con­
+trolling. Now, we proactively mentor and support citizen de­
+velopers, providing them guidance rather than only restricting
+them. It’s improved collaboration and made governance feel
+less punitive.” (F7)
+This shift was enacted concretely through structural
+redesign. At FinComp, the organization separated the en­
+abling function from the delivery function, clarifying ac­
+countability while preserving the agility that motivated
+LCDP adoption in the ﬁrst place:
+“We basically havesplit whatwe call‘enabling from delivery’.
+SoI’mcurrentlywith myteamasa centralteamresponsiblefor
+the enabling, so I provide Mendix as a platform, I provide
+CICDtooling,Iprovidestandardguidelines,FinComp-speciﬁc 
+building blocks that you don’t get out of the box (…). And then
+others are realizing the delivery side, so they are focusing on
+just Mendix development and delivering managed
+solutions.” (F1).
+Center of Excellence and participatory governance. A ﬁfth 
+cluster provides the coordination infrastructure for scal­
+ing. Formally, organizations created CoEs that served as
+the hub for intake and triage, stewardship of standards,
+curation of reusable assets, and review of expectations.
+They formally established participatory forums; within
+these forums business units, IT, and citizen developers
+informally co-maintained the standards backlog, surfaced
+frictions early, and co-developed remedies. A Senior
+Manager at HealthComp highlighted the strategic
+importance:
+“Establishing our CoE was critical—it provides clarity,
+training, and governance oversight, which bridges the gap
+between the agility our business users seek and the governance
+discipline IT demands.” (H7)
+Where the CoE model was most effective, it pulled
+citizen developers into governance discussions rather than
+simply subjecting them to governance rules. The effect was
+Elshan and van den Hooff 15
+
+--- PAGE 16 ---
+a shift in the identity of citizen developers within the or­
+ganization, as captured at FinComp:
+“One of the most positive changes we’ve observed is how
+citizen developers have become integral to our governance
+discussions.” (F6).
+Capability building and permissioning linked to compe­
+tence. A sixth cluster develops skills and aligns permission
+scope to demonstrate competence. Formal measures in­
+cluded a rolled-out capability building for citizen devel­
+opers, targeted training and development interventions that
+raised technical proﬁciency and governance literacy and
+improved consistency. In the healthcare sector, establishing
+participatory governance forums signiﬁcantly  improved
+developer attitudes, as a senior IT project manager
+emphasized:
+“Citizen developers were actively included in governance
+meetings and encouraged to share their perspectives. This
+direct involvement substantially improved both compliance
+and commitment, as governance standards shifted from being
+externally imposed rules to collaboratively developed guide­
+lines. Developers began to feel ownership, dramatically re­
+ducing resistance.” (H10)
+Together these instruments and practices improved ﬁrst- 
+time quality, reduced security and quality defects in novice
+applications, and created credible pathways for growth.
+Autonomyincreasedasindividualsandteamsdemonstrated
+proﬁciency, which in turn reinforced the legitimacy of the
+permission model. A Training Coordinator at ManuCorp
+described outcomes:
+“Our training programs have had a tangible impact. Citizen
+developers are now better equipped technically and far more
+aware of their governance responsibilities, transforming them
+from potential risks into valuable, compliant
+contributors.” (M2)
+Balanced portfolio and risk-tiering. A seventh cluster cal­
+ibrates the depth of control to the level of business and
+technical risk. Formally organizations deﬁned  tiers that
+distinguish prototypes, departmental solutions, and
+enterprise-critical applications, with proportionate gates
+that remain lightweight for low-risk work and become more
+thorough for high-risk changes. Informally, teams con­
+ducted retrospectives to reﬁne  thresholds and practices.
+This hybrid approach provided adequate oversight while
+preserving the innovative potential offered by LCDP ini­
+tiatives. A Senior Enterprise Architect at FinComp artic­
+ulated the approach:
+“Our reﬁned  governance approach combines clear, formal
+standards and periodic compliance audits with informal
+elements like peer reviews and developer communities. This
+carefully managed balance maintains architectural integrity
+without hindering developers’ agility or creativity.” (F5)
+Transparent communication and use of exemplars. An
+eighth cluster builds legitimacy and fosters voluntary
+compliance. Formal mechanisms included timely notices of
+policy changes and a single, authoritative repository for
+guardrails and patterns. Informal mechanisms included
+narratives that explain the rationale behind rules, walk­
+throughs of applications that illustrate how to comply
+without sacriﬁcing  usability. An Enterprise Architect at
+ManuCorp explained the impact:
+“We changed our approach to communication by explicitly
+explaining the beneﬁts of governance and framing it positively
+as enabling safe innovation. This transparency signiﬁcantly 
+improved developer attitudes—governance was perceived as
+supportive, which noticeably reduced resistance and encour­
+aged greater collaboration.” (M8)
+A cross-case comparison reveals that all three organi­
+zations converged on these same strategy clusters. How­
+ever, the cases differed in emphasis and conﬁguration. 
+FinComp placed the greatest weight on security-by-design
+and visibility, driven by a regulatory trigger; the discovery
+of hundreds of unmanaged applications that prompted di­
+rect intervention from regulators. HealthComp’s most
+distinctive strategic response was CoE-led participatory
+governance: citizen developers (nurse managers, senior
+administrative coordinators) were drawn into standards
+discussions rather than merely subjected to governance
+rules, producing unusually strong perceived legitimacy and
+voluntary compliance. ManuCorp presented the most
+elaborated risk-tiering system, constructing an explicit
+three-tier architecture (prototype, departmental, enterprise-
+critical) that allowed the organization to match the depth of
+assurance requirements, documentation standards, security
+checks, and architectural review, to the actual risk level of
+each application. Across all three cases, governance ef­
+fectivenessemergedfromadeliberatelycomposedportfolio
+rather than any single control lever, combining formal
+instruments with informal enabling practices. The formal
+instruments supply the clarity, traceability and safeguards
+that support enterprise-level coordination and control. The
+informal elements cultivate capability, legitimacy, and
+shared ownership, which makes adherence durable and
+adaptive. It is the deliberate coupling of both that estab­
+lishes the balance between centralized oversight and de­
+centralized innovation required for low-code development
+to scale in a sustainable manner.
+Mechanisms. The strategy clusters described above, each
+comprising a set of governance instruments and enabling
+practices, do not work in isolation, nor do they produce
+16 Journal of Information Technology 0(0)
+
+--- PAGE 17 ---
+improvements simply by being present. Something must
+connect the activation of a cluster to observable changes in
+organizational behavior and architectural outcomes. We
+refer to these connective processes as mechanisms: the
+causal structures that explain how a governance activity
+reliably generates a particular outcome. Following Hen­
+fridsson and Bygstad (2013: 911), a mechanism is not the
+practice itself but the generative logic through which the
+practice works. For instance, mandatory application reg­
+istration is a practice within the visibility and portfolio
+hygiene cluster; the mechanism it activates is information
+symmetry, the condition in which architects, governance
+boards, and citizen developers share an accurate, current
+picture of the application landscape. It is that condition, not
+the registration act alone, that enables reuse, reduces drift,
+and supports risk-tiering decisions. Across the three cases,
+ourdatarevealﬁve mechanismsthroughwhichtheportfolio
+of strategies translates governance activity into improved
+EAM outcomes.
+First, information symmetry and shared situational
+awareness emerge when mandatory registration, minimal
+documentation standards, and portfolio hygiene are paired
+with coaching and community demonstrations. These in­
+struments and practices make the application landscape
+visible, clarify lineage, and enable reuse, directly ad­
+dressingtheproliferationandopacitychallengesinthewhat
+dimension.
+Second, the perceived legitimacy of governance in­
+creases when guardrails are transparent, proportionate,
+and shaped with user participation, and when a CoE
+provides timely advice and explains the rationale behind
+rules. Under such conditions, rules are experienced as
+reasonable and usable, which reduces resistance and
+workarounds, resolving the legitimacy challenges in the
+how dimension.
+Third, developer capability grows when tiered learning
+pathways and permission scopes are tied to demonstrated
+competence and reinforced by hands-on application and the
+sharing of proven patterns. Capability is a proximal driver
+of ﬁrst-time quality and governs the quality risk associated
+with citizen developer variability in the who dimension.
+Fourth, enacted alignment of decision rights occurs
+when responsibilities across the low-code lifecycle are
+clearly codiﬁed  and put into practice, reducing decision
+latency and the need for escalation. This mechanism di­
+rectly resolves the role ambiguity and coordination friction
+challenges identiﬁed in the who dimension.
+Fifth, secure-by-default development conditions arise
+when risk-tiered checks, environment separation, and
+policy-conformant pipelines are embedded in everyday
+work and supported by secure templates and targeted
+training. These conditions reduce severe vulnerabilities
+without imposing unnecessary delay, directly addressing
+the security and compliance challenges in the what
+dimension.
+The ﬁve mechanisms are not independent but mutually
+reinforcing, elements of a single causal infrastructure.
+Information symmetry creates the shared situational
+awareness that makes legitimate rule-setting possible,
+guardrails experienced as proportionate and transparent
+depend on the visibility that registration and portfolio
+hygiene provide. Legitimacy, in turn, enables capability
+development: citizen developers engage seriously with
+learning pathways and permission structures only when
+governance is perceived as reasonable rather than ob­
+structive. Capability reduces escalation load, which allows
+decision-right alignment to function efﬁciently.  When
+developers can resolve issues at their own tier, the need for
+escalation to architects or governance boards diminishes.
+Finally, information symmetry completes the loop by
+making secure-by-default conditions operational: em­
+bedded pipeline checks and environment separation work
+as intended only when the application landscape is suf­
+ﬁciently visible and documented. It is through these in­
+terdependencies, not through any single instrument or
+practice in isolation, that the strategy portfolio produces
+durable improvements in EA outcomes. A portfolio that
+activates all ﬁve mechanisms simultaneously generates a
+governance dynamic that is qualitatively different from
+one thatrelies on any subset: the mechanisms amplify each
+other, and their joint activation is what distinguishes
+governance that sustains itself over time from governance
+that requires constant manual enforcement. The mecha­
+nisms are thus not merely correlates of governance ef­
+fectiveness but the causal structures through which
+strategy clusters produce EA outcomes and because they
+are mutually reinforcing, activating the full portfolio
+generates a self-sustaining governance dynamic that no
+individual mechanism could achieve in isolation.
+It is important to note that the centralized–
+decentralized and formal–informal dimensions of gov­
+ernance, while related, are analytically distinct. Cen­
+tralized versus decentralized governance concerns the
+locus of control: centralized governance concentrates
+decision-making authority in a single unit or role—such
+as a Chief Architect or central EA ofﬁce—while de­
+centralized governance distributes authority across
+business units, project teams, or individual developers
+(Boh and Yellin, 2006; Gregory et al., 2018). Formal
+versus informal governance, by contrast, concerns the
+mode of control: formal control relies on explicit stan­
+dards, performance evaluation, and hierarchical en­
+forcement, whereas informal control originates from
+intrinsic motivation, self-regulation, and interpersonal
+interaction (Beese et al., 2023b; Ouchi, 1979). These two
+dimensions are orthogonal: a centralized governance
+model may employ informal mechanisms (as when a
+Chief Architect builds norms through coaching rather
+than mandates), and a decentralized model may use
+formal controls (as when distributed business units are
+Elshan and van den Hooff 17
+
+--- PAGE 18 ---
+each required to complete structured risk assessments).
+Our ﬁndings show that organizations responded to LCDP
+governance challenges not by choosing between these
+orientations but by composing portfolios that combined
+centralized instruments with informal enabling
+practices—a conﬁguration  our data suggest is distinc­
+tively effective for governing citizen development.
+Discussion and conclusion
+This study examined how organizations integrate LCDPs
+into established EA and, in doing so, surfaced a set of
+governance challenges that concern what is governed, who
+is governed, and how governance is enacted. When un­
+addressed, these challenges erode core EA outcomes in
+terms of efﬁciency, ﬂexibility, transparency, and predict­
+ability.Ourcases,however,alsorevealedthatorganizations
+can mitigate such effects when they treat governance not as
+a single lever but as a deliberately composed portfolio that
+pairs formal instruments with informal practices. LCDP-
+built applications increasingly reach beyond the enterprise,
+embedding themselves in cross-ﬁrm interfaces, data con­
+tracts, and compliance obligations. This means the gov­
+ernance portfolio cannot remain internally focused:
+visibility, guardrails, role clarity, and secure-by-default
+conditions must be negotiated with external partners, not
+only enforced within the ﬁrm.
+A conceptual model of balanced governance
+We propose a conceptual model (Figure 1) that depicts
+governance as a dynamic sequence in which the use of
+LCDP creates challenges for EAM that (if unresolved) lead
+to negative EAM outcomes. This negative impact on ar­
+chitectural outcomes requires a response from the organi­
+zation in the form of strategy clusters (consisting of formal
+instruments as well as informal practices), which in turn
+mitigate the negative architectural outcomes.
+The sequence is not linear but adaptive: outcomes feed
+back into the portfolio and risk assessment, prompting
+recalibration as conditions change. The portfolio itself is
+formativerather thanreﬂective. Eachconstituentelement—
+whether a formal instrument (e.g., a rule or a structure), or
+anenablement practice,adds adistinct capability; removing
+one alters the character of governance rather than merely
+diminishing its strength. For instance, visibility without
+risk-tiering yields inventories with no prioritization, as­
+surance without legitimacy invites workarounds and ex­
+ceptions, enablement without permissioning elevates
+exposure, and policy-as-code without role clarity produces
+brittle automation. The relevant counterfactual is therefore
+notlessgovernancebutdifferentgovernance,withadistinct
+pattern of risks and behaviors.
+The model is explanatory rather than merely descriptive:
+ittraces thecausalpathfrom governancechallenge,through
+strategy cluster and activating mechanism, to EAM
+outcome—making visible why speciﬁc governance com­
+binations work, rather than simply documenting that they
+do. Challenges about what is governed (architectural drift,
+shadow development, and security exposure) materialize as
+portfolio opacity, loss of lineage, and heightened incident
+likelihood. In our cases, these conditions were durably
+improved only when visibility and portfolio hygiene were
+paired with reusable engineering assets, risk-tiered guard­
+rails, and security enablement embedded in everyday work.
+Challenges about who is governed emerge as citizen
+Figure 1. Balanced governance of LCDP.
+18 Journal of Information Technology 0(0)
+
+--- PAGE 19 ---
+developers emerge and role boundaries with professional
+developers shift. Here the risks are unclear accountability,
+variable quality, and misaligned incentives. These were
+mitigated when responsibilities across the life cycle were
+explicitly redistributed and enacted through a visible hub
+thatofferedadviceandtriage,whenpermissiontobuildwas
+linked to demonstrated competence rather than job title, and
+when exemplars and decision rationales were made
+transparent. Challenges about how governance is enacted
+concern the tension between control and ﬂexibility. Over-
+reliance on formal control suppressed innovation, whereas
+over-reliance on informal enablement fragmented the
+landscape.
+Viewed through this lens, the central insight is not a list
+of practices but a mechanism-based explanation of how
+enterprise architecture governance works under decentral­
+ized development. The model speciﬁes  that governance
+effectiveness arises from complementarities among formal
+instruments and informal practices, from the activation of
+ﬁve mechanisms and from a feedback loop that keeps the
+portfolio adaptive. These features distinguish this explan­
+atory account from traditional, control-centric guidance and
+from generic calls for “balance” by identifying the concrete
+mechanisms through which balance is achieved and
+sustained.
+Future of IS in the enterprise
+Thegovernancechallengesdocumentedinthisstudyarenot
+peculiar to low-code/no-code platforms, nor will their
+resolution conclude the organizational struggle they rep­
+resent. LCDPs are better understood as a recent, high-
+visibility instance of a structural shift in enterprise IS
+that has been underway for decades: the progressive de­
+centralization of software production capability to orga­
+nizational actors who operate outside the boundaries of
+professional IT. This movement originates in end-user
+computing in the 1980s, intensiﬁed  through shadow IT
+and the consumerization of technology, and reached a new
+inﬂection  point with the enterprise adoption of LCDP
+suites. It is now continuing into a qualitatively different
+phase—AI-assisted and, increasingly, agent-driven soft­
+ware generation.
+Generative AI tools are entering the enterprise at scale,
+enabling developers and non-developers alike to produce
+software artifacts at a velocity that was previously un­
+imaginable. Controlled studies report productivity gains of
+55–80% in individual coding tasks (Peng et al., 2023), and
+industrydatasuggestthatthemajorityofdevelopersinlarge
+organizations now accept AI-generated code suggestions
+routinely (Accenture, 2024). The governance implications
+are structurally analogous to those this paper examines:
+dispersed authorship, portfolio opacity, and the erosion of
+centralized oversight. Yet the challenge is qualitatively
+more severe in one critical dimension. Where LCDPs made
+the existence of applications opaque (in terms of who built
+what, where it lives, what it connects to), AI-assisted de­
+velopment makes the logic of applications opaque. Code
+generated by large language models may be syntactically
+sound, pass automated testing pipelines, and satisfy func­
+tional requirements, while no human actor in the organi­
+zation fully comprehends the reasoning or the assumptions
+it embodies. This condition has been conceptualized as
+knowledge debt: the accumulated shortfall in organizational
+understanding that arises when development practices
+optimize for output velocity at the expense of human
+comprehension (Behutiye et al., 2017; see also Beese et al.,
+2023a, 2023b). Whereas traditional technical debt
+(Cunningham, 1992) accumulates as a shortfall in code
+qualityor maintainability, knowledgedebt accumulates as a
+shortfall in organizational understanding of what the code
+does and why—an emergent and largely invisible liability
+that arises not from poor code but from the structural ab­
+sence of comprehension at the moment of creation.
+The implications forenterprise architecture management
+as a governance domain are signiﬁcant. The ﬁve mecha­
+nisms our ﬁndings identify—information symmetry, per­
+ceived legitimacy, developer capability, enacted decision-
+right alignment, and secure-by-default conditions—will not
+become irrelevant as AI enters the development pipeline.
+They will intensify and need to be reconﬁgured.  Infor­
+mation symmetry already demands investment in visibility
+practices, portfolio hygiene, and transparency infrastruc­
+ture; in an AI-augmented context, visibility must extend
+beyondwhatexiststowhetherwhatexistsisunderstoodand
+by whom. Developer capability, correspondingly, can no
+longer be understood primarily in terms of build skill; it
+increasingly requires what Collins and Evans (2007) term
+interactional expertise, the ability to interrogate, audit, and
+critically evaluate artifacts that AI tools produce but hu­
+mans must maintain, explain to regulators, and modify in
+response to failure. Decision-right alignment faces perhaps
+the sharpest reconﬁguration: as AI agents begin not only
+assisting but initiating architectural decisions in enterprise
+IS, who governs the governor becomes a ﬁrst-order EAM
+problem rather than a philosophical afterthought.
+Enterprise architecture management thus faces a dual
+imperativeinthecomingyears:consolidatingthegovernance
+knowledge generated by citizen development waves, as this
+paper attempts to begin, while simultaneously building in­
+stitutionalcapacitytogovernthenextwavebeforeitsopacity
+accumulates to the point of irreversibility. Accenture (2024)
+already estimates the annual cost of technical debt to U.S.
+enterprises at $2.41 trillion, with 41% of executives iden­
+tifying AI as a primary contributor. These ﬁgures predate the
+enterprise adoption of autonomous AI agents at scale. The
+discipline of IS is well positioned to contribute to this
+governance challenge. Doing so, however, will require ex­
+tending the theoretical vocabulary of enterprise governance
+beyond the governing of artifacts and actors toward the
+Elshan and van den Hooff 19
+
+--- PAGE 20 ---
+governingofunderstandingitself,afrontierforwhichneither
+practice nor research currently has adequate instruments.
+The conceptual model and ﬁve governance mechanisms
+developed in this paper represent a starting point for
+meeting that challenge: by specifying the causal structures
+through which governance portfolios produce EA out­
+comes, they offer a vocabulary that can be extended to the
+governance of AI-generated artifacts and to the
+“understand-how” governance gaps that emerging tech­
+nologies continue to create.
+Theoretical contributions
+From a theoretical perspective, our ﬁndings suggest that
+traditional EAM governance approaches, primarily based
+on centralized approaches focusing on formal controls, are
+insufﬁcient to manage the speed and ﬂexibility introduced
+by LCDPs. This aligns with recent work that calls for
+governance models capable of balancing formal control
+with informal, participative mechanisms, in particular, with
+the notion of control mechanism portfolios as “situated
+combination(s) of any number of (…) control mechanisms”
+(Beese et al., 2023b: 95). Effective EA governance requires
+attendingtotwoorthogonaldimensions:thelocusofcontrol
+(centralized vs decentralized) and the mode of control
+(formal vs informal)—dimensions that are conceptually
+distinct yet frequently conﬂated  in the EAM literature
+(Beese et al., 2023b; Boh and Yellin, 2006; Ouchi, 1979).
+Our ﬁndings show that sustainable governance does not
+simply balance these dimensions but rebundles them: the
+ﬁve mechanisms constitute a portfolio in which formal and
+informal complements operate simultaneously across both
+loci, generating outcomes that neither dimension could
+produce alone. Our ﬁndings reﬂect precisely this orthog­
+onality: the governance portfolios we observed pair cen­
+tralizedinstrumentswithinformalenablingpractices,rather
+than treating centralization and formalization as a single
+axis. Our evidence shows that the introduction of LCDPs
+triggers precisely such a recomposition: organizations do
+not abandon control so much as rebundle it, pairing rules,
+structures and risk-tiered assurance checkpoints with en­
+ablement, participation, and community routines. The
+contribution of our work, however, goes beyond endorse­
+ment of “balance.” We specify how balance works. First,
+we conceptualize governance as a formative, adaptive
+portfolio rather than a reﬂective set of levers: removing a
+component alters the nature of governance rather than
+merely weakening it. Second, we identify mechanisms
+through which the portfolio takes effect and we show how
+outcomes feed back to recalibrate the portfolio over time.
+Together, these elements advance portfolio thinking in EA
+from a general call for balance (Beese et al., 2023b) to a
+mechanism-based theory of how complements among
+formal and informal elements generate a durable
+governance.
+The study also contributes to the literature on LCDPs by
+placing governance, rather than adoption or productivity
+alone, at the center of analysis. Prior research has em­
+phasized drivers, productivity gains, or user experiences;
+governance challenges have been comparatively underex­
+plored.CarrollandMaher(2023)previouslyhighlightedthe
+need to balance control with the perceived autonomy of
+low-code developers. We extend this insight by showing
+how organizations accomplish that balance in practice:
+architectural oversight and compliance frameworks are
+coupled with citizen developer enablement and knowledge
+sharing, and permission to build is linked to demonstrated
+competence rather than job title. The result is not a com­
+promise between control and autonomy but a reconﬁgu­
+ration in which autonomy is rendered safe through
+legitimacy, capability, and proportionate guardrails.
+More broadly, the study advances research on EAM by
+clarifying how emergent decentralized technologies re­
+shape governance beyond the familiar top-down versus
+bottom-up dichotomy. Prior work has recognized the value
+of bottom-up approaches alongside hierarchical control
+(e.g., Cammin et al., 2021; Drews et al., 2017; Kotusev
+et al., 2024) yet has not fully addressed how technologies
+that enable user-driven development alter the composition
+and operation of control portfolios. By unpacking the
+challenges that LCDPs create across what, who, and how to
+govern, we explain how such technologies intensify the
+long-standing tension between local systems development
+and enterprise-wide objectives (Beese et al., 2023a;
+Sidorova and Kappelman, 2011) and we specify which
+combinations of mechanisms resolve that tension without
+sacriﬁcing speed. In doing so, we offer technology-agnostic
+guidance that travels to other democratizing, AI-augmented
+settings, where visibility and provenance, perceived legit­
+imacy of guardrails, competence-linked permissioning,
+enacted decision rights, and security embedded as routine
+are likewise decisive for governance effectiveness. By
+specifying the causal structures through which governance
+portfolios produce EA outcomes, the conceptual model also
+offers a starting vocabulary for the “understand how”
+governancechallengethat AI-assisted developmentcreates:
+it establishes the mechanistic logic that future research will
+need to extend as development authority continues to shift
+toward non-human actors.
+Implications for practice
+Practically, the paper argues for treating governance as a
+deliberately composed portfolio rather than a single
+control lever: practitioners should make the application
+landscape visible with a registry and minimal, purpose-
+built documentation that clariﬁes ownership, data sensi­
+tivity, dependencies, and lineage; they should make
+guardrails transparent, proportionate, and co-designed,
+and support their use through a CoE that functions as an
+20 Journal of Information Technology 0(0)
+
+--- PAGE 21 ---
+intake, triage, and enablement hub. Further, they should
+align decision rights across the lifecycle and shift enter­
+prise architects from gatekeepers to guides. Crucially,
+practitioners should make the portfolio adaptive: instru­
+ment a small set of outcome signals, and use them to
+recalibrate tiers and guardrails, retire redundant solutions,
+and adjust roles and routines on a regular cadence. As
+natural-languageandagenticdevelopment(“vibecoding”)
+accelerates change, they should extend visibility to
+provenance (which models, prompts, and datasets pro­
+duced which artefacts under which policies), enforce
+guardrails as policy-as-code at build time and runtime,
+evolve the Center of Excellence into an orchestration hub
+that stewards prompts, patterns, and runtime policies, and
+adopt log-driven alignment testing to detect policy vio­
+lations, bias, and safety regression.
+Limitations and future research
+This study is based on an interpretive, multiple-case
+study centered on organizations adopting low-code de­
+velopment platforms within established enterprise ar­
+chitectures. While the design is well suited to uncover
+mechanisms and conﬁgurations, it limits causal infer­
+ence and generalizability. The cases capture a particular
+maturity window, rely partly on retrospective accounts,
+and are situated in speciﬁc  industries and regulatory
+environments; selection effects, social desirability, and
+platform-maturity differences may therefore shape what
+we observed. Our constructs, especially the balanced
+governance portfolio and its mechanisms, were oper­
+ationalized qualitatively; although we triangulated
+across interviews and artefacts, construct validity and
+boundary conditions warrant further scrutiny. Finally,
+focusing on low-code platforms as the empirical lens
+leaves open how far the model travels to other democ­
+ratizing, AI-augmented technologies.
+Future research should build on these constraints in
+three directions. First, develop and validate measure­
+ment instruments for the portfolio and its mechanisms
+and relate them to outcome indicators such as innovation
+throughput, assurance, architectural health, and efﬁ­
+ciency of governance effort. Multi-method designs that
+combine surveys, portfolio metadata, runtime logs, and
+incident records can support moderated-mediation tests
+and establish when effects strengthen or attenuate (e.g.,
+under different regulatory stringency). Second, future
+research could pursue longitudinal and intervention
+studies to examine adaptation and feedback in the
+portfolio over time. Third, future research may extend
+the model beyond low-code platforms to code copilots,
+foundation-model services, and natural-language “vibe
+coding,” with particular attention to provenance capture,
+observability-led alignment testing for policy violations
+and safety drift, the migration of decision rights in
+mixed-initiative workﬂows, and the emergence of new
+stewardship roles.
+Acknowledgements
+We want to thank the contributions of Ashly Mak for their
+helpful insights and assistance with the data collection in the
+interview phase as well as the organizers and authors of the Pre-
+ICIS Workshop 2024 for their feedback and thoughts.
+ORCID iDs
+Edona Elshan https://orcid.org/0000-0002-4737-2392
+Bart van den Hooff https://orcid.org/0000-0002-8880-3910
+Ethical considerations
+Ethical approval was not required.
+Consent to participate
+Verbal.
+Consent for publication
+Cases anonymized.
+Author contributions
+Both authors contributed equally to this paper.
+Funding
+The authors received no ﬁnancial support for the research, au­
+thorship, and/or publication of this article.
+Declaration of conflicting interests
+The authors declared no potential conﬂicts of interest with respect
+to the research, authorship, and/or publication of this article.
+Supplemental material
+Supplemental material for this article is available online.
+References
+Accenture (2024) Build your Tech and Balance your Debt. Ac­
+centure. https://www.accenture.com/content/dam/accenture/
+final/accenture-com/document-3/Accenture-Build-Your-
+Tech-and-Manage-Your-Debt-2024.pdf
+Ahlemann F, Stettiner E, Messerschmidt M, et al. (eds) (2012)
+Strategic Enterprise Architecture Management: Challenges,
+Best Practices, and Future Developments. Springer Science
+& Business Media.
+Ahlemann F, Legner C and Lux J (2021) A resource-based per­
+spective of value generation through enterprise architecture
+management. Information & Management 58(1): 103266.
+Aier S, Fischer C and Winter R (2011) Construction and
+evaluation of a meta-model for enterprise architecture
+design principles. In: Wirtschaftsinformatik Proceedings
+2011. Paper 51.
+Ajer AKS, Hustad E and Vassilakopoulou P (2021) Enterprise
+architecture operationalization and institutional pluralism:
+Elshan and van den Hooff 21
+
+--- PAGE 22 ---
+the case of the Norwegian hospital sector. Information
+Systems Journal 31(4): 610–645.
+Amoroso DL and Cheney PH (1991) Testing a causal model of
+end-user application effectiveness. Journal of Management
+Information Systems 8(1): 63–89.
+Barricelli BR, Casiraghi E and Fogli D (2019) A survey on end-
+user development: the current state of the art. IEEE Access 7:
+23811–23835.
+Beese J, Aier S, Haki K, et al. (2023a) The impact of enterprise ar­
+chitecture management on information systems architecture
+complexity. European Journal of Information Systems 32(6):
+1070–1090.
+Beese J, Haki K, Schilling F, et al. (2023b) Strategic alignment of
+enterprise architecture management – how portfolios of
+control mechanisms track a decade of enterprise transfor­
+mation at Commerzbank. European Journal of Information
+Systems 32(1): 92–105.
+Behutiye WN, Rodrı́guez P, Oivo M, et al. (2017) Analyzing the
+concept of technical debt in the context of agile software
+development: a systematic literature review. Information and
+Software Technology 82: 139–158.
+BlackwellAF(2017)End-userdevelopers–whataretheylike?In:New
+Perspectives in End-User Development. Springer. pp. 121–135.
+Bock AC and Frank U (2021) Low-code platform. Business &
+Information Systems Engineering 63(6): 733–740.
+Boh WF and Yellin D (2006) Using enterprise architecture
+standards in managing information technology. Journal of
+Management Information Systems 23(3): 163–207.
+Boisot M and McKelvey B (2011) Complexity and
+organization-environment relations: revisiting Ashby’s
+law of requisite variety. In: Allen P, Maguire S and
+McKelvey B (eds) The Sage Handbook of Complexity and
+Management. Sage, pp. 279–298.
+Boyatzis RE (1998) Transforming Qualitative Information:
+Thematic Analysis and Code Development. Sage.
+Bradley RS, Byrd TA, Pridmore J, et al. (2012) An empirical exam­
+ination of antecedents and consequences of IT governance in US
+hospitals. Journal of Information Technology 27(2): 156–177.
+Cammin P, Heilig L and Voß S (2021) Assessing requirements for
+agile enterprise architecture management: a multiple-case
+study. In: Proceedings of the 54th Hawaii International
+Conference on System Sciences, pp. 6007–6016.
+Carroll N and Maher M (2023) How shell fueled digital trans­
+formation by establishing DIY software development. MIS
+Quarterly Executive 22(2): 99–127.
+Carroll N and Maher M (2023) How Shell Fueled Digital
+Transformation by Establishing DIY Software Development.
+MIS Q. Executive 22(2): 3.
+CiborraCU(1994)ThegrassrootsofITandstrategy.In:CiborraC
+and Jelassi T (eds) Strategic Information Systems: A Euro­
+pean Perspective. Wiley.
+Ciborra C (2000) From control to drift: the dynamics of corporate
+information infastructures. OUP Oxford.
+Cohen J (1960) A coefﬁcient of agreement for nominal scales.
+Educational and Psychological Measurement 20(1): 37–46.
+Collins H and Evans R (2007) Rethinking Expertise. University of
+Chicago Press.
+CrabtreeBandMillerW(1999)Atemplateapproachtotextanalysis:
+developing and using codebooks. In: Crabtree B and Miller W
+(eds) Doing Qualitative Research. Sage, pp. 163–177.
+Cram WA, Brohman MK and Gallupe RB (2015) Addressing the
+control challenges of the enterprise architecture process.
+Journal of Information Systems 29(2): 161–182.
+Cunningham W (1992) The WyCash portfolio management
+system. ACM SIGPLAN OOPS Messenger 4(2): 29–30.
+De Haes S and Van Grembergen W (2009) An exploratory study
+into IT governance implementations and its impact on
+business/IT alignment. Information Systems Management
+26(2): 123–137.
+Dequito I (2024) Microsoft Power Pages Misconﬁgurations Ex­
+pose NHS Data. Derived on January. 10th 2025 from: https://
+securitybrief.co.uk/story/microsoft-power-pages-
+misconfigurations-expose-nhs-data
+Drews P, Schirmer I, Horlach B, et al. (2017) Bimodal enterprise
+architecture management: the emergence of a new EAM
+function for a BizDevOps-based fast IT. In: 2017 IEEE 21st
+International Enterprise Distributed Object Computing
+Workshop (EDOCW). IEEE, pp. 57–64.
+Eisenhardt KM (1989) Building theories from case study research.
+Academy of Management Review 14(4): 532–550.
+Elshan E, Dickhaut E and Ebel PA (2023) An investigation of why
+low code platforms provide answers and new challenges. In:
+Proceedings of HICSS.
+Fischer G, Fogli D and Piccinno A (2017) Revisiting and
+broadening the meta-design framework for end-user devel­
+opment. In: New Perspectives in End-User Development.
+Springer International Publishing, pp. 61–97.
+Galbraith JR (1973) Designing Complex Organizations. Addison-
+Wesley.
+Galletta DF and Heckman Jr RL (1990) A role theory perspective
+on end-user development. Information Systems Research
+1(2): 168–187.
+GonçalvesRR,SoniB,MagnússonB,etal.(2024)Low-codeadoption
+as a driver of digital transformation. In: A Comprehensive Market
+Overview of EMEA, the US, and Asia Paciﬁc Regions from a
+Large Scale Survey. Derived on March, 18th 2025 from: https://
+assets.kpmg.com/content/dam/kpmg/pt/pdf/pt-low-code-
+adoption-driver-digital-transformation.pdf
+Gregory RW, Kaganer E, Henfridsson O, et al. (2018) IT con­
+sumerization and the transformation of IT governance. MIS
+Quarterly 42(4): 1225–1253.
+Haki K and Legner C (2021) The mechanics of enterprise ar­
+chitecture principles. Journal of the Association for Infor­
+mation Systems 22(5): 1334–1375.
+Haki K, Beese J, Aier S, et al. (2020) The evolution of information
+systems architecture: an agent-based simulation model. MIS
+Quarterly 44(1): 155–184.
+Henfridsson O and BygstadB (2013) The Generative Mechanisms
+of Digital Infrastructure Evolution1. MIS quarterly 37(3):
+907–931.
+22 Journal of Information Technology 0(0)
+
+--- PAGE 23 ---
+Hurlburt GF (2021) Low-code, no-code, what’s under the hood?
+IT Professional 23(6): 4–7.
+Ikeda S (2021) Microsoft Power Apps Data Leak Fallout:
+38 Million Records Exposed, State and City Governments
+Among Those Breached. Derived on January, 16th
+2025 from: https://www.cpomagazine.com/cyber-security/
+microsoft-power-apps-data-leak-fallout-38-million-records-
+exposed-state-and-city-governments-among-those-breached/
+KleinHKandMyersMD(1999)Asetofprinciplesforconductingand
+evaluating interpretive ﬁeld studies in information systems. MIS
+Quarterly 23(1): 67–93.
+Kotusev S (2019) Enterprise architecture and enterprise archi­
+tecture artifacts: questioning the old concept in light of new
+ﬁndings.  Journal of Information Technology 34(2):
+102–128.
+Kotusev S, Kurnia S, Dilnutt R, et al. (2024) The structuring of
+enterprise architecture functions in organizations. Business
+Information Systems Engineering 66(4): 465–488.
+Kruchten P, Nord RL, Ozkaya I, et al. (2013) Technical debt:
+towards a crisper deﬁnition report on the 4th international
+workshop on managing technical debt. ACM SIGSOFT
+Software Engineering Notes 38(5): 51–54.
+Landis JR and Koch GG (1977) The measurement of observer
+agreement for categorical data. Biometrics 33: 159–174.
+Lange M, Mendling J and Recker J (2016) An empirical analysis
+of the factors and measures of enterprise architecture
+management success. European Journal of Information
+Systems 25(5): 411–431.
+Lieberman H, Paternò F, Klann M, et al. (2006) End-user de­
+velopment: an emerging paradigm. In: End User Develop­
+ment. Springer Netherlands, pp. 1–8.
+Lincoln YS and Guba EG (1985) Naturalistic Inquiry. Sage
+Publications.
+Luo Y, Liang P, Wang C, et al. (2021) Characteristics and
+challenges of low-code development: the practitioners’
+perspective. In: Proceedings of the 15th ACM/IEEE Inter­
+national Symposium on Empirical Software Engineering and
+Measurement (ESEM). Association for Computing Ma­
+chinery, pp. 1–11.
+Malaurent J and Avison D (2016) Reconciling global and local
+needs: a canonical action research project to deal with
+workarounds. Information Systems Journal 26(3): 227–257.
+Maruping LM and Matook S (2020) The evolution of software
+development orchestration: current state and an agenda for
+future research. European Journal of Information Systems
+29(5): 443–457.
+Novales A and Mancha R (2023) Fueling digital transformation
+with citizen developers and low-code development. MIS
+Quarterly Executive 22(3): 221–234.
+Ouchi WG (1979) A conceptual framework for the design of
+organizational control mechanisms. Management Science
+25(9): 833–848.
+Peng S, Kalliamvakou E, Cihon P, et al. (2023) The impact of AI
+on developer productivity: evidence from GitHub Copilot.
+ArXiv Preprint arXiv:2302.06590.
+Perks C and Beveridge T (eds) (2003) Guide to Enterprise IT
+Architecture. Springer New York.
+Raﬁ  S, Akbar MA, Sánchez-Gordón M, et al. (2022) Devops
+practitioners’ perceptions of the low-code trend. In: Pro­
+ceedings of the 16th ACM/IEEE International Symposium on
+Empirical Software Engineering and Measurement. Asso­
+ciation for Computing Machinery, pp. 301–306.
+Rinta-Kahila T, Penttinen E and Lyytinen K (2023) Getting
+trapped in technical debt: sociotechnical analysis of a legacy
+system’s replacement. MIS Quarterly 47(1): 1–32.
+Rivard S and Huff SL (1984) User developed applications:
+evaluation of success from the DP department perspective.
+MIS Quarterly 8(1): 39–50.
+Rivard S and Huff SL (1985) An empirical study of users as
+application developers. Information & Management 8(2):
+89–102.
+RokisKandKirikovaM(2023)Exploringlow-codedevelopment:
+a comprehensive literature review. Complex Systems Infor­
+matics and Modeling Quarterly 36: 68–86.
+Ross JW, Weill P and Robertson DC (2006) Enterprise Archi­
+tecture as Strategy. Creating a Foundation for Business
+Execution. Harvard Business School Press.
+Sanchis R, Garcı́a-Perales Ó, Fraile F, et al. (2019) Low-code as
+enabler of digital transformation in manufacturing industry.
+Applied Sciences 10(1): 12.
+Scacchi W and Hurley D (1995) Understanding software pro­
+ductivity. Software Engineering and Knowledge Engineer­
+ing: Trends for the Next Decade 4: 273–316.
+Schilling R, Aier S and Winter R (2019) Designing an artifact for
+informal control in enterprise architecture management.
+Schilling R, Haki K and Aier S (2018) Dynamics of control
+mechanisms in enterprise architecture management: a
+sensemaking perspective. In: ICIS 2018 Proceedings.
+Schmidt C and Buxmann P (2011) Outcomes and success factors
+of enterprise IT architecture management: empirical insight
+from the international ﬁnancial services industry. European
+Journal of Information Systems 20(2): 168–185. https://doi.
+org/10.1057/ejis.2010.68
+SchneierBandVanceA(2025)Guesteditorial:“complexityisthe
+worst enemy of security”: studying cybersecurity through the
+lens of organizational complexity. MIS Quarterly 49(1):
+205–210.
+Sidorova A and Kappelman LA (2011) Better business-it
+alignment through enterprise architecture: an actor-
+network theory perspective. Journal of Enterprise Ar­
+chitecture 7(1): 39–47.
+Tamm T, Seddon PB, Shanks G, et al. (2011) How does enterprise
+architecture add value to organisations? Communications of
+the Association for Information Systems 28(1): 141–168.
+Tamm T, Seddon PB and Shanks G (2022) How enterprise ar­
+chitecture leads to organisational beneﬁts.  International
+Journal of Information Management 67: 102554.
+Tiwana A, Konsynski B and Venkatraman N (2013) Information
+technology and organizational governance: the IT governance
+cube. Journalof ManagementInformationSystems 30(3):7–12.
+Elshan and van den Hooff 23
+
+--- PAGE 24 ---
+Van der Raadt B, Bonnet M, Schouten S, et al. (2010) The relation
+between EA effectiveness and stakeholder satisfaction.
+Journal of Systems and Software 83(10): 1954–1969.
+WalshamG(1995)InterpretivecasestudiesinISresearch:natureand
+method. European Journal of Information Systems 4(2): 74–81.
+WalshamG (2006)Doinginterpretiveresearch.EuropeanJournal
+of Information Systems 15(3): 320–330.
+Waszkowski R (2019) Low-code platform for automating
+business processes in manufacturing. IFAC-PapersOn­
+Line 52(10): 376–381.
+WeillP andRossJW (2004)IT Governance:How Top Performers
+Manage IT Decision Rights for Superior Results. Harvard
+Business School Press.
+Winter R and Schelp J (2008) Enterprise architecture gover­
+nance: the need for a business-to-IT approach. In: Pro­
+ceedings of the 2008 ACM Symposium on Applied
+Computing. Association for Computing Machinery,
+pp. 548–552.
+Yan Z (2021) The impacts of low/no-code development on
+digital transformation and software development. ArXiv
+Preprint arXiv:2112.14073.
+Yin RK (2018) Case Study Research and Applications: Design
+and Methods. 6th edition. Sage Publications.
+Author biographies
+Edona Elshan is Assistant Professor at the Department
+of Knowledge, Information and Innovation (KIN Center
+for Digital Innovation) at Vrije Universiteit Am­
+sterdam. She holds a PhD in Management from the
+University of St. Gallen (2023). ResearchEdona’s
+research focuses on how organizations navigate digital
+transformation and technological change, with partic­
+ular attention to emerging forms of software develop­
+ment and human-AI collaboration. She investigates how
+organizations can effectively adopt and govern new
+technologies such as low-code and no-code platforms,
+generative AI, and AI-assisted software development,
+while balancing innovation, control, and organizational
+alignment.Her work examines how digital technologies
+reshape collaboration, decision-making, and enterprise
+coordination, especially in contexts where non-expert
+users, citizen developers, and AI systems increasingly
+contribute to software creation and organizational in­
+novation.Industry: Technology, Public Administration,
+Healthcare, Manufacturing, Infrastructure.Sector:
+Public sector, technology, professional services, in­
+dustrial organizations.Application Domain: Digital
+innovation, enterprise architecture, human-AI collab­
+oration, governance, organizational trans­
+formation.Edona’s research speciﬁcally looks at how
+organizations manage tensions between ﬂexibility and
+control, innovation and governance, and bottom-up
+experimentation and enterprise-wide coordination. She
+studies topics such as citizen development, low-code
+platform governance, architectural drift, trust calibra­
+tion in human-AI collaboration, and the organizational
+implications of generative AI and vibe coding. Her work
+is grounded in close engagement with practice and
+draws on qualitative and experimental research
+methods.
+Bart van den Hooff is Professor of Organizational
+Communication and Information Systems. He has a PhD
+(with honors) in Communication from the University of
+Amsterdam. Before coming to the Vrije Universiteit, he
+worked in consultancy (M&I/Partners), at the Delft Uni­
+versity of Technology and the University of Amsterdam.
+His work has been presented at international conferences
+and published in (among others) MIS Quarterly, Journal of
+Strategic Information Systems, Information Systems
+Journal, European Journal of Information Systems, Journal
+of Information Technology, Journal of Computer-Mediated
+Communication, Communication Research, and Human
+Communication Research.ResearchHis research focuses on
+the management of IT for digital innovation. Subjects of
+interest are managing and organizing the IT function, IS
+development and implementation, IS complexity, and
+Business-IT alignment.
+24 Journal of Information Technology 0(0)

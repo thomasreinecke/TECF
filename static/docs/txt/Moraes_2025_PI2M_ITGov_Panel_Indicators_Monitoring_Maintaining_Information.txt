@@ -1,0 +1,844 @@
+--- PAGE 1 ---
+Computer Science and Information Systems 22(3):815–837 https://doi.org/10.2298/CSIS240729017M
+PI2M-ITGov – Panel of Indicators for Monitoring and
+Maintaining the Information Technology Governance:
+Method and Artefacts
+Altino J. Mentzingen Moraes⋆
+and Álvaro Rocha
+Advance, ISEG, University of Lisbon
+Rua Miguel Lupi, nº 20 (Gab. 101)
+1249-078 Lisbon, Portugal
+altino.moraes{@gmail.com, @gestao.gov.br}
+amrrocha@gmail.com
+Abstract. In today’s highly competitive corporate world, effective management of
+Information Technology (IT) resources and the consequent need for structured man-
+agement and governance are essential. Therefore, prior planning of goals, definition
+of effective actions, and monitoring of results (through Indicators) is the way to
+apply effective control. This article presents the method named as PI2M-ITGov -
+Panel of Indicators for Monitoring and Maintaining Information Technology Gov-
+ernance, which covers 12 identified IT Areas and consists of 12 key monitoring
+indicators (KMIs) and their 36 sub-KMIs (3 sub-KMIs for each 12 identified IT
+Areas). This method is the result of many years of IT Governance Models imple-
+mentation expertise of the Authors besides theories presented by both in several
+Technical Congresses participations. The artefacts created are available at the pro-
+vided links. The simulation (through a case study) demonstrated a high level of
+acceptance of the tools as a practical IT Governance alternative.
+Keywords:ITManagement;ITGovernance;AreasofManagementofIT;ITStrate-
+gic Alignment; MM - Maturity Models; KMI - Key Monitoring Indicators; Case
+Study; DSR - Design Science Research.
+1. Introduction
+Organizations can be classified into two distinct domains: 1) Those that utilize informa-
+tion technology (IT) resources for their operations; and 2) Those that serve as providers
+of IT resources. Figure 1 visually illustrates this division, emphasizing the differentiation
+between these two domains.
+In both cases, even the organizations belonging to the second category (IT resources
+providers) have an internal administrative area that functions similarly to companies in
+the first category (IT resources users). This internal administrative area also needs to ef-
+fectively manage its performance and actions to ensure the success of the overall business.
+Consequently, both domains – without exception – make significant investments in
+IT, which are expected to yield tangible results for the business. Whether operating in the
+industrial, commercial, or financial sectors, organizations aim to maintain a competitive
+position in the globalized business environment.
+⋆ Corresponding author
+
+--- PAGE 2 ---
+816 Altino J. Mentzingen Moraes et al.
+Fig.1. Enterprise domains
+To ensure effective monitoring of IT initiatives and their alignment with the organiza-
+tion’s strategic planning, a set of guidelines known as IT governance is implemented.
+Peter Weill [41] is one of the prominent authors in the field of IT governance, empha-
+sizing the importance of IT being perceived as a sustainable area that generates results
+(revenues), rather than merely incurring costs (expenses). According to Weill, IT should
+strongly focus on ‘aligning its initiatives with the business’.
+In the words of Rockart [32]:
+In sum, the load of IT on organizations is heavier than ever before and the man-
+agement of it is more complex.
+In light of this reality, as highlighted by one of the authors [24] in this research, signif-
+icant challenges need to be addressed to effectively implement IT governance and strive
+for high-quality indices. The doctoral thesis presents Figure 2, referred to as the ‘puzzle’
+of the governance process, illustrating these challenges. Overcoming these challenges is
+essential to successfully implement IT governance and achieve desirable quality metrics.
+Consequently, it becomes evident that monitoring IT governance activities requires
+an initial and meticulous planning phase (structuring), followed by effective management
+(administration), and rigorous governance (control) processes.
+To accomplish this objective, a practical approach is to apply the plan, do, check, act
+(PDCA) cycle, initially formulated by the American statistician William Edwards Dem-
+ing. The PDCA cycle is advocated by the author Ruks Rundle [33] and is depicted in
+Figure 3, adapted here to provide a more operational interpretation.
+The problem at hand revolves around how management can effectively apply gov-
+ernance processes, particularly those recommended by IT governance techniques. It is
+crucial to adopt a proactive approach to administration control, rather than a reactive
+one, in order to anticipate and prevent misalignments between the actions of the IT de-
+
+--- PAGE 3 ---
+PI2M-ITGov – Panel of Indicators for Monitoring and Maintaining 817
+Fig.2. Process of governance ‘puzzle’ [24]
+Fig.3. Plan, do, check, act (PDCA) cycle: adapted by authors from Rundle [33]
+
+--- PAGE 4 ---
+818 Altino J. Mentzingen Moraes et al.
+partment and the initial planning. Failure to address these misalignments can result in
+non-compliance with the organization’s expected outcomes.
+To address this challenge, the panel of indicators for monitoring and maintaining in-
+formation technology governance (PI2M-ITGov) method, developed through research
+and presented in this article, aims to fulfill the management’s need in this field. It pro-
+vides a panel of indicators that can measure the degree of alignment between the actions
+implemented by the IT department and the organization’s strategic planning. This enables
+decision-makers to identify and rectify any distortions, thereby guiding the organization
+back to the correct course of action.
+It is important to inform that this article is the result of a deep revision of one first and
+initial proposal presented by Moraes & Rocha [25] in a European IT Congress held in the
+City of Aveiro/Portugal (CISTI’23) – which revision besides other aspects – involved, as
+the main purpose, the build of artefacts.
+Those artefacts were created (such as a spreadsheet, a guideline, forms and other
+tools), in order to make, this first and initial proposal became from theory to practice
+in a real operational environment. Their links are provided and mentioned in the context
+of this paper.
+Additionally, it is also important to note that the PI2M-ITGov method ensures the
+maintenance of confidentiality and privacy of personal data. The method does not handle
+information that possesses sensitive content or characteristics, thereby safeguarding the
+privacy of individuals involved.
+2. Applied Methodology
+This research project is guided by the design science research (DSR) methodology and its
+principles.
+In a broader sense, scientific research involves the practical application of objective
+procedures by researchers to develop experiments and generate new knowledge that inte-
+grates with existing knowledge, as explained by Fontelles [11].
+Within the framework of DSR, the development of artefacts plays a crucial role in pro-
+ducing scientific knowledge from an epistemological perspective, as described in Simon’s
+work ‘The Sciences of the Artificial’ [35].
+According to Peffers et al. [27], any designed entity intended to achieve a goal can
+be considered an artifact. However, the creation of a well-designed artifact and its inves-
+tigation in a specific context are key elements in knowledge production within scientific
+research, as emphasized by Dresch, Lacerda & Antunes Jr. [8].
+This paper adheres to the process flow of DSR as recommended by Wieringa [42],
+with graphical adaptations made by the authors, as depicted in Figure 4.
+The DSR methodology consists of several cycles, including the design cycle (steps 1,
+2, and 3) for conceiving and constructing the solution, and the engineering cycle (steps 3
+and 4) for adapting the solution to real-world applicability.
+In DSR, one of the objectives of research is to contribute to the knowledge base of the
+research area. Therefore, it is crucial for researchers to engage with existing knowledge
+bases to ensure their work provides an original contribution to scientific knowledge, rather
+than solely focusing on technological advancements [15].
+
+--- PAGE 5 ---
+PI2M-ITGov – Panel of Indicators for Monitoring and Maintaining 819
+Fig.4. The design science research flow: adapted by authors from Wieringa [42]
+Following the guidelines of step 1 (problem investigation) in DSR, this research aimed
+todetermineiftherewasasufficientdegreeofrelevancetojustifyitsdevelopment.Thein-
+vestigationsoughttoidentifywhetherotherstudieshadaddressedtheproblemthatneeded
+to be resolved and considered important. The results of this investigation are presented in
+the subsequent section titled ‘problem investigation’.
+Within the context of DSR, artefacts can be classified into four types: models (abstrac-
+tions and representations), methods (algorithms and practices), instantiations (implemen-
+tations and prototypes), and constructs (vocabularies and symbols).
+This research focused on creating artefacts in alignment with the principles of DSR.
+To ensure their effectiveness in practical application, the research underwent three itera-
+tions of the engineering cycle (steps 3 and 4). These iterations aimed to refine the artefacts
+and adapt them to the realities of corporations.
+This clarifies the rationale behind the versioning of the artefacts, which are made
+available in the provided link in Section 3 (‘Solution Validation’). The version indicated
+as V.01c signifies the third revision of the artifact.
+3. Problem Investigation
+As mentioned in Section 1, this research aims to address the need for a tool within IT
+governance that can manage a dashboard to guide the alignment of IT initiatives with
+corporate strategic planning.
+
+--- PAGE 6 ---
+820 Altino J. Mentzingen Moraes et al.
+Following the guidelines of the DSR methodology, the research commenced with step
+1, ‘problem investigation’. This step aimed to determine whether conducting this research
+and allocating effort to this task would contribute to advancing scientific knowledge.
+To assess the existing literature related to the research objectives, a bibliographic
+searchwasconducted.Ninedatabasesweresearched,namelyACM,IEEE,MIT,Research
+Gate, Scholar Google, SciELO, Science Direct, Scopus, and Web of Science (WoS). The
+search keywords used were ‘IT Governance NOT Social NOT Health NOT Education
+AND Performance Indicator AND Spreadsheet AND Guideline’. The exclusion criteria
+of‘NOTSocialNOTHealthNOTEducation’wereappliedtofilteroutarticlesnotdirectly
+linked to the business domain, such as banking/financial, industry, and services.
+Of course, the papers those were focused on these 3 areas (Social, Health and Educa-
+tion) and in their business tools, what means no in its final targets as to support Social,
+Health or Education problems in its main themes, were also considered because, in this
+interpretation, these can be sort as integrating the areas of banking/financial, industry, and
+services as well.
+Additionally, the search was limited to the last decade (2012–2022) to ensure rele-
+vance and up-to-date information.
+The initial search in the ACM database yielded only seven occurrences, which did not
+align with the research focus. Subsequent searches in IEEE, MIT, Research Gate, Scholar
+Google, and SciELO databases resulted in zero occurrences, while Science Direct yielded
+only two occurrences. In response to these limited results, two additional databases, Sco-
+pus and Web of Science, were searched, but no relevant articles were found.
+Detailed information regarding the search results can be found in the ‘1. Problem
+Investigation/Investigação do Problema’ folder accessible via the following link https:
+//drive.google.com/drive/folders/1sFa5845Wcxr7KXQlH9hePXxN
+0WdRKchV?usp=sharing.
+Based on the analysis of these search results, which demonstrated the lack of lit-
+erature on this specific topic, it became evident that the research should proceed. It was
+determined that there was a significant gap that could be filled by concluding this research
+in the planned format. The intention is to generate practical material that can effectively
+assist IT managers in their work and activities.
+4. Solution Design
+Following the principles of the DSR methodology, this research project progressed to
+step 2, ‘solution design’. The objective of this step was to conceptualize and construct the
+architecture required to address the identified research question.
+4.1. The 12 IT Monitoring Areas
+As a way of delimiting the scope of this study – among the various existing possibilities
+– the Theory of Number 12 as described by Tesla 1
+[39] which highlights the significance
+of this ‘magic number’ in various elements of the universe, served as the inspiration for
+the establishment of a quantitative framework for IT work processes.
+1 Nikola Tesla was a Serbian-Croatian scientist who was known for his important discoveries in the field of
+electricity. His work was fundamental in improving the transmission of electrical energy.
+
+--- PAGE 7 ---
+PI2M-ITGov – Panel of Indicators for Monitoring and Maintaining 821
+Since Tesla was one of the most recognized scientists by the Scientific Community in
+studies related to electricity, and was even a direct competitor of Thomas Edison in his
+discoveries, the line of work applied by this research – in the composition of the quantity
+of IT work processes to be studied – followed his “magic number” equal to 12 (instead of
+being applied other value within another focus of reasoning), also because, Tesla related
+his “magic number” to many elements of the universe and not only to elements involved
+with the theme of the electricity.
+Following this line of reasoning, IT work processes were organized into 12 IT man-
+agement areas, which became the focal point for the creation of indicators.
+To determine the 12 IT management areas, in addition to delimiting the scope of this
+study within 12 areas according to Tesla’s Theory (as the initial idea already mentioned
+above), the empirical experience of the Authors (who have each worked in the IT field for
+almost 5 decades) was considered, as well as a criterion based on the identification of IT
+work processes that had published and recognized maturity level assessment models was
+applied.
+These 12 areas, which had corresponding maturity level assessment models, were
+subsequently renamed as IT monitoring areas. For each of these areas, 12 key monitoring
+indicators (KMIs) were created, with 3 sub-KMIs for each one, resulting in a total of 36
+sub-KMIs for the proposed solution (which will be the focus of the following ”4.2. The
+Scope of the 36 Sub-KMIs - Key Monitoring Sub Indicators”).
+To ensure precision in the analysis, three key monitoring sub-indicators (sub-KMIs)
+were developed for each of the 12 IT monitoring areas, leading to a total of 36 sub-KMIs
+within the proposed solution. The data collected to determine the percentages for these 36
+sub-KMIs were derived from aligning the results with the highest maturity levels (ranging
+from 3 to 5) identified in the considered maturity level assessment models.
+Theresearchprocessinvolvedtheapplicationoftechnicalandprofessionalknowledge
+by one of the authors, combined with the principle of empiricism, as described by Locke
+[22]. This approach allowed for an analysis of the data to determine whether the maturity
+level assessment models under investigation could be aligned with an IT management
+area, which in this case is referred to as IT monitoring areas.
+Even when the framework which the maturity level assessment models was based
+could have more than just one IT area focus it was considered, to make possible the
+application of the idea behind this proposed study and its resulted model, its main focus
+(e.g.: CobiT® mentioned in the sequence of this paper).
+Despite the availability of 26 maturity level assessment models, the aim was to main-
+tain the framework within the limit of 12 IT monitoring areas. Detailed descriptions of
+these models can be found in the ‘2. Solution Design/Projeto da Solução’ folder in the
+provided link https://drive.google.com/drive/folders/1sFa5845Wcx
+r7KXQlH9hePXxN0WdRKchV?usp=sharing.
+These findings led to the determination of the 12 IT monitoring areas considered by
+the PI2M-ITGov. It is important to note that the references listed at the end of this work
+provide the foundational understanding for readers. However, additional literature was
+also researched to support the continuation of this study.
+Two significant maturity models identified were ITIL®
+(Information Technology In-
+frastructure Library) by Axelos [3] and ITSCMM©
+(Information Technology Service Ca-
+pability Maturity Model) by Clerc & Niessink [6]. Both of these models pointed towards
+
+--- PAGE 8 ---
+822 Altino J. Mentzingen Moraes et al.
+a set of assessments that could be categorized under a services management area, which
+was subsequently renamed as the services monitoring area.
+Furthermore, the CMMI©
+(Capability Maturity Model Integration) of the SEI®
+[34],
+the Software Engineering Institute, as referenced by [1], and with strong alignment with
+the Technical Standard 15.504 ISO/IEC [18], along with the MR MPS br©
+(Reference
+Model for Improvement of the Brazilian Software Process [Modelo de Referência para
+Melhoria do Processo de Software Brasileiro]) by SOFTEX [36], were also investigated.
+After conducting the research, these models were classified as relevant to the development
+management area, which was then renamed as the development monitoring area.
+The research also investigated the CobiT® (Control Objectives for Information and
+Related Technology Maturity Model) from ISACA [17], referenced by Gartner [12], and
+found that it specifically addresses the management of IT work processes. Similarly, the
+TOGAF©(The Open Group Architecture Framework) from the OPEN GROUP was iden-
+tified as relevant to the same area. Both models were categorized under a business man-
+agement area, which will be renamed as the business monitoring area.
+The exploration of the B-ITa©(Business–IT Alignment Maturity Model) by Tapia,
+Daneva, Eck & Wieringa [38], EAG©(Enterprise Architecture Governance) by CIOIn-
+dex [5], and ITGAP©(IT Governance Assessment Process) by Peterson [28] highlighted
+the need for a governance management area specifically linked to IT. This area will be
+renamed as the governance monitoring area in the context of this research.
+The research also encompassed maturity models such as MMGP©(Project Manage-
+ment Maturity Model) by Prado [30], OPM3©(Organizational Project Management Ma-
+turityModel)fromPMI®[29],PMMM©(ProjectManagementMaturityModel)byKerzner
+[19], and P3M3©(Portfolio, Program, and Project Management Maturity Model) by Ax-
+elos [4]. These models were associated with project management, leading to the identifi-
+cation of a projects management area, which will be renamed as the projects monitoring
+area.
+The investigation revealed a maturity model called OKA©(Organizational Knowl-
+edge Assessment) presented by Fonseca [10], which mentioned the use of a software
+application called SysOKA©(OKA – Organizational Knowledge Assessment System).
+This model was classified as relevant to the knowledge management area, which will be
+renamed as the knowledge monitoring area for the purpose of this work.
+The maturity models SIMM©(Service Integration Maturity Model) by [2] and
+SOAMM©(SOA©Maturity Model) by Sonic [37] were evaluated and identified as rele-
+vant to the integration management area, which will be renamed as the integration moni-
+toring area.
+During the assessment of maturity models, the research identified the requirements
+management area, which will be renamed as the requirements monitoring area, through
+the exploration of the RMM©(Requirements Management Maturity Model) by Heumann
+[14].
+Further analysis of maturity models included the BPMM©
+(Business Process Maturity Model) from OMG [26] and the BPMMM©(Business Pro-
+cess Management Maturity Model) referenced by Tapio Hüffner [16]. These models were
+associated with the processes management area, which will be renamed as the processes
+monitoring area.
+
+--- PAGE 9 ---
+PI2M-ITGov – Panel of Indicators for Monitoring and Maintaining 823
+Additionally, the EFQM©[9], the European Foundation for Quality Management and
+the Six-Sigma©Maturity Model described by Prasad[31], were evaluated and found to
+be relevant to the quality management area. This area will be renamed as the quality
+monitoring area to align with the research terminology.
+Theresearchcontinuedwiththeexplorationoftwomorematuritymodels:theBSIMM©
+(Building Security in Maturity Model) from Synopsys [?] and the ISM3©(Information
+Security Management Maturity Model) from the ISM3 Consortium [7]. Both models
+were classified under the security management area, which will be renamed as the se-
+curity monitoring area.
+Furthermore, three additional maturity models were researched. The first model,
+MMAST©(Automated Software Testing Maturity Model) by Mitchel Krause [20], the
+second model, TMMi©(Test Maturity Model Integration) referenced in the TMMi – Test
+Maturity Model Integration Foundation [40] link, and the third model, TOM©(Test Orga-
+nization Maturity Model) by Systeme Evolutif Ltd. [23], were found to be relevant to the
+tests management area. This area will be renamed as the tests monitoring area.
+As a result of these research activities, Figure 5 was created, presenting the identified
+maturity models that guided the definition of the 12 IT monitoring areas considered by the
+PI2M-ITGov. Additionally, these 12 IT monitoring areas were categorized into 3 IT mon-
+itoring groups for ease of interpretation and application of their activities: the planning
+monitoring group, the execution monitoring group, and the control monitoring group.
+Fig.5. The 12 monitoring areas considered by the PI2M-ITGov
+After conducting the research and evaluating the requirements, it was determined that
+the KMIs applicable to each of the 12 IT monitoring areas would be established in order to
+achieve the highest maturity levels (ranging from 3 to 5) of the maturity level assessment
+models considered.
+4.2. The Scope of the 36 Sub-KMIs - Key Monitoring Sub Indicators
+The GQ(I)M framework, developed by Goethert & Hayes [13], is widely recognized in
+the literature as a valuable approach for constructing indicators. This framework follows a
+
+--- PAGE 10 ---
+824 Altino J. Mentzingen Moraes et al.
+structured process consisting of four components: goal, question, indicator, and measure-
+ment. Figure 6 exemplifies the workflow of this framework, illustrating its step-by-step
+approach to indicator construction.
+Fig.6. GQ(I)M – Goal, question, indicator, and measurement [13]
+During the synthesis process following the research, it was observed that three re-
+quirements were common and essential for attributing the highest maturity levels (rang-
+ing from 3 to 5) of the maturity level assessment models considered. These requirements
+were related to achieving satisfactory performance of activities, complying with schedule
+and budget, and meeting quality requirements.
+These three evaluation criteria also aligned with the proposal put forward by one of the
+authors [3, p. 180–189] of this research in their doctoral thesis. They suggested reducing
+the Likert [21] scale, which typically has five levels of evaluation, to just three levels
+(referred to as the AJMM table) for greater precision in assessment. The three levels of
+evaluation in the AJMM table were defined as: 1st = Ok, 2nd = Ok with Restriction, and
+3rd = Not Ok.
+In accordance with the previously mentioned indicator construction technique and the
+planned approach, the assembly of the three sub-KMIs for each of the 12 IT monitoring
+areaswascarriedoutasfollows:onesub-KMIfortheassessmentofworkresults,onesub-
+KMI for the assessment of delivery commitment, and one sub-KMI for the assessment of
+customer satisfaction.
+The following section presents the content of the three sub-KMIs, which are replicated
+for each of the 12 identified IT monitoring areas. The placeholder ‘???’ will be replaced
+by the monitoring area code ranging from 1 to 12:
+It is apparent that sub-indicator 1, WR, has the least demanding requirements among
+the three sub-indicators. Sub-indicator 2, DC, has moderate requirements, as it establishes
+thatthevolumeofsub-indicator1,WR,hasfulfilleditsrestriction.Ontheotherhand,sub-
+
+--- PAGE 11 ---
+PI2M-ITGov – Panel of Indicators for Monitoring and Maintaining 825
+KMI ?? – 1. WR (work result) = Percentage of work concluded.
+KMI ?? – 2. DC (delivery commitment) = Percentage of work concluded and delivered on
+schedule planned and within the estimated cost.
+KMI ?? – 3. CS (customer satisfaction) = Percentage of work concluded and delivered on
+schedule planned and within the estimated cost,
+which in addition, received the definitive
+acceptance (and not provisional).
+indicator 3, CS, is the most demanding, as it requires the cumulative fulfillment of both
+the volumes of sub-indicator 1, WR, and sub-indicator 2, DC.
+5. Solution Validation
+Following the principles of DSR, the next step, step 3, involves ‘solution validation’. This
+step focuses on planning the implementation of the solution designed in step 2.
+To calculate the sub-KMI, which represents the resulting data as a percentage for the
+KMI %, the following equation can be utilized.
+X
+inspected numbers − m
+
+maximum goal − minimum goal
+2
+
+= ×
+100%
+m
+where:
+P
+= Summationm = Average
+The ‘
+P
+inspected numbers’ data implies that it may be necessary to aggregate indi-
+vidual values for the same area/sector or across multiple areas/sectors if the time unit of
+the maximum goal and minimum goal differs from the volume being inspected for these
+data.
+The maximum goal can be a smaller value than the total of an existing value in prac-
+tical reality, which will be considered as the expected achievement for the KMI, or it can
+even be a larger value than the existing total in the real world.
+Conversely, the minimum goal can be a greater value than the total of an existing value
+in practical reality, which will be considered as the accepted achievement for the KMI, or
+it can even be a smaller value than the existing total in the real world.
+It is important to note that both the maximum goal and the minimum goal should be
+provided as quantitative numerical values rather than percentages. This approach is more
+feasible and simpler for obtaining this data.
+If there are changes in the maximum goal and/or the minimum goal for certain KMIs,
+these changes should be considered simultaneously within the same time period. This
+ensures an equal assessment and allows for comparisons across different scenarios.
+The balance for all KMIs is determined by the arithmetic average of the maximum
+goal and the minimum goal, also known as the maximum–minimum average. This aver-
+age is compared with the ‘inspected numbers’ data, which enables evaluation of the KMI
+
+--- PAGE 12 ---
+826 Altino J. Mentzingen Moraes et al.
+against this criterion for the entire PI2M-ITGov framework. Based on this comparison,
+there are two interpretations: A KMI greater than 0 indicates a positive percentage cal-
+culated above the maximum–minimum Average, while a KMI smaller than 0 indicates a
+negative percentage calculated below the maximum–minimum average.
+The interpretation of the KMI calculated as 0% would be that the data ‘inspected num-
+bers’ remained exactly at the maximum–minimum average, and therefore, there was no
+positive or negative result. As a sample of a hypothetical example, we can say that for a
+maximum goal established as 8 and a minimum goal established as 4, which would result
+in a maximum–minimum average equal to 6: 1) if the data ‘inspected numbers’ were 6
+the KMI would be 0%; 2) if the data ‘inspected numbers’ were 3 the KMI would be –50%
+which demonstrates a negative result, falling halfway below the maximum–minimum av-
+erage; 3) if the data ‘inspected numbers’ were 9 the KMI would be 50% which demon-
+strates a positive result, exceeding the maximum–minimum average by half.
+According to this logic, in the casedescribed in the previous paragraph, the percentage
+of 100% of the KMI would only be calculated when the value of the data ‘inspected
+numbers’ was equal to 12, which is the sum of the maximum goal and the minimum goal.
+Under this same logic, positive percentages greater than 100% can be calculated when the
+value of the data ‘Inspected Numbers’ is greater than 12.
+When the value of the data ‘inspected numbers’ is equal to 0, the KMI percentage
+will be negative and equal to –100%. It is not common or normal for the data ‘inspected
+numbers’ to have a negative value. However, in certain cases where it is necessary to
+account for previous poor results or ‘debit’ them in the current evaluation, this scenario
+could be plausible. In such cases, the KMI will be negative and lower than just 100%.
+In some companies that operate in different industries or sectors, the evaluation and
+score of a specific IT Monitoring Area among the 12 treated areas may be considered
+more important than the values calculated for the other areas. This prioritization can vary
+depending on the nature of the business and the specific needs and goals of the company.
+For instance, a company in the communication sector (such as a newspaper or mag-
+azine) may place greater emphasis on the sub-KMIs focused on knowledge management
+(IT monitoring area code = KMI 6). Conversely, a company in the financial sector (such
+as banks or loan institutions) may prioritize the sub-KMIs focused on security manage-
+ment (IT monitoring area code = KMI 11). Similarly, a company in the manufacturing
+sector (such as a factory or assembly plant) may attach more significance to the sub-KMIs
+focused on project management (IT monitoring area code = KMI 3).
+To account for the varying significance of different KMIs in distinct scenarios, sig-
+nificance weights can be assigned to highlight the importance of one KMI over another
+during the comparison process. Therefore, the final formula used by PI2M-ITGov for cal-
+culating the KMI percentage will be modified to include the application of significance
+weights (represented as the letter ‘W’ in the equation):
+X
+inspected numbers − m
+
+maximum goal − minimum goal
+2
+
+= ×
+100%
+m
+× W2
+or: W3
+]
+
+--- PAGE 13 ---
+PI2M-ITGov – Panel of Indicators for Monitoring and Maintaining 827
+It is important to note that the KMI (final) and its sub-indicators are calculated with
+one decimal place. This precision is necessary because in decision-making processes, the
+decimal place can hold significant information that differentiates similar values.
+A small spreadsheet has been created to simulate this formula and can be accessed in
+the folder ‘3. Solution Validation/Validação da Solução’ in the link https://drive.
+google.com/drive/folders/1sFa5845Wcxr7KXQlH9hePXxN0WdRKchV
+?usp=sharing.
+This spreadsheet allows for the exercise of the hypothetical example mentioned ear-
+lier, with a maximum goal of 8, a minimum goal of 4, and data ‘inspected numbers’ of 6,
+3, and 9, resulting in KMI percentages of 0%, –50%, and 50%, respectively.
+6. Solution Implementation
+Step 4 of the DSR, referred to as ‘solution implementation’, requires exercising the so-
+lution theory and implementing the constructed models (from the prior step 3). This in-
+volves applying and evaluating the created artefacts (spreadsheet and guidelines) in a real
+operational environment.
+To facilitate the assessment of IT governance in a given situation using the PI2M-
+ITGov assessment, two artefacts have been developed and are available for use in the
+folder ‘4. Solution Implementation/Implementação da Solução’ in the link https://
+drive.google.com/drive/folders/1sFa5845Wcxr7KXQlH9hePXxN0W
+dRKchV?usp=sharing.
+These artefacts include the MS®
+Excel spreadsheet entitled ‘PI2M-ITGov - Spread-
+sheet {V.01c}’ Edition= +Scenario= ’ and the accompanying guide-
+lines ‘PI2M-ITGov - Guidelines {V.01c}’. The guidelines provide instructions on how to
+complete the spreadsheet and interpret its results.
+In the same link, you will also find the form for each KMI, which consists of two
+frames. The first frame is used to record the goals established during the evaluation plan-
+ning phase in collaboration with the strategic management department. The second frame
+is used to record the actual data captured in the field during the execution phase of the
+PI2M-ITGov evaluation.
+To facilitate identification, it is suggested to copy the fields ‘Edition’ and ‘Scenario’
+from the spreadsheet’s header to the file name, which will help in organizing and identi-
+fying the content of the spreadsheet in the directory or archive folder.
+The layout of the cells in the MS®-Excel spreadsheet follows the predefined order
+of the 12 IT monitoring areas, divided into the three IT monitoring groups: planning
+monitoring group, execution monitoring group, and control monitoring group.
+The current version of these artefacts, at the time of publication of this article, is
+V.01c, representing the third revision (letter ‘c’) of the first version (number ‘01’). Further
+updates and improvements may be made available in the same link following subsequent
+revisions.
+The previous revisions (letters ‘a’ and ‘b’) were identified during the execution of the
+fifth and final stage of the DSR, which will be presented in the next topic. This stage
+involved a case study conducted over three rounds until reaching the current version in
+the third and final round.
+
+--- PAGE 14 ---
+828 Altino J. Mentzingen Moraes et al.
+Appendix A of this article presents the four main tabs of the MS® Excel spreadsheet.
+The first tab displays the data entry cells, while the other three tabs contain graphs for
+interpreting the results. The ‘INSTRUCTIONS’ tabs, which provide guidance on data
+entry and analysis of status icons, are not displayed.
+It is important to note that the instructions provided in the ‘PI2M-ITGov - Guidelines
+V.01c’ document are based on the results obtained from simulating the implementation of
+this method in a real corporate environment, as described in Section 7, ‘Implementation
+Assessment’.
+Appendix B of this paper showcases the Chronogram (created in MS® Project) used
+to coordinate the execution of step 4 of the DSR. This chronogram is available in the same
+link under the folder ‘4. Solution Implementation/Implementação da Solução’. Although
+it is already filled, it can be copied and reused, as it provides average duration data for the
+tasks that can be replicated.
+7. Implementation Assessment
+In the final step of the DSR, step 5, known as ‘implementation assessment’, the results
+obtained from the previous step 4 were interpreted and examined to determine the utility
+and applicability of the proposed solution from step 3.
+To assess the effectiveness of the solution, a simulation was conducted in a Brazilian
+Government Agency, consisting of three rounds. The outcomes of this simulation were
+utilized in the development of the guidelines, as mentioned earlier, which can be accessed
+through the provided link.
+Theresultsobtainedfromthesimulationarepresentedinthespreadsheettitled‘PIM2-
+GovTI - Spreadsheet V.01c Edition=2021 2nd.Quarter+Scenario=Organizational Restruc-
+turing’availableinthefolder‘5.ImplementationAssessment/AvaliaçãodaImplementação’
+in the link https://drive.google.com/drive/folders/1sFa5845Wcxr7
+KXQlH9hePXxN0WdRKchV?usp=sharing.
+Additionally, in the same link, a form for each KMI (KMI Form) with two frames is
+available where the first frame captures the goals defined during the evaluation planning
+phase in collaboration with the Strategic Management Department, as part of the applica-
+tion of the PI2M-ITGov method. The second frame records the actual data collected in the
+field from the business areas during the execution phase of the PI2M-ITGov evaluation.
+The 3rd. and final round of this simulation, was to evaluate the 2nd. Quarter of the
+assessment year and, in this quarter, this assessment was performed at a time when the
+Company was undergoing Organizational Restructuring.
+There are comments, in the above Spreadsheet, where this scenario was described
+and where is possible to be understood that even with this issue the Method could be
+implemented and retrieve extra-results those were applied to support decision about this
+Organizational Restructuring in progress.
+Following the Chronogram (created in MS® Project) used to coordinate the execution
+of step 4 of the DSR (which is available in the same link under the folder ‘4. Solution
+Implementation/Implementação da Solução’ and presented in the Appendix B) this sim-
+ulation handles the numbers exposed in the Figure 7 when was applied the KMI Form.
+Many interpretations, which led the need of immediate corrective actions, could be
+found analyzing the results in the spreadsheet titled ‘PIM2-GovTI - Spreadsheet V.01c
+
+--- PAGE 15 ---
+PI2M-ITGov – Panel of Indicators for Monitoring and Maintaining 829
+Fig.7. Numbers retrieved from Final Simulation
+Edition=20212nd.Quarter+Scenario=OrganizationalRestructuring’availableinthefolder
+‘5. Implementation Assessment/Avaliação da Implementação’ in the link https://dr
+ive.google.com/drive/folders/1sFa5845Wcxr7KXQlH9hePXxN0WdR
+KchV?usp=sharing.
+Those corrective actions were discussed with the Board of Directors of the Brazilian
+Government Agency, where this simulation and assessment were applied, during the 4th.
+Phase = Evaluation of the Chronogram (created in MS® Project which is available in the
+same link under the folder ‘4. Solution Implementation/Implementação da Solução’ and
+presented in the Appendix B)
+One of the interpretations about the KMI 1 - Processes is that this Processes had a
+high level of Production with 100% in the Sub-KMI 1. WR (work result) but with many
+difficulties to get the values for the Sub-KMI 2. DC (delivery commitment) and 3. CS
+(customer satisfaction), what of course, impacted indeed the analysis that could be made
+by the Strategic Area.
+Other of them is according to KMI 6 - Knowledge which the evaluation shown that
+this Processes had no procedures implemented in this theme, what can be interpreted that
+the Organization in assessment is losing the monitoring of its successful actions to register
+these and reuse as practical and useful feedback.
+Also, could be found that the KMI 11 - Security, even this Process having a very high
+importance for a effective IT Governance, was impossible to be defined and the explana-
+tion for that was: “All 3 Subindicators of this KMI will be evaluated only in the next Time
+Period as this Security Area is in the process of reviewing the Internal Processes.” (as is
+in the comments in the Spreadsheet).
+Regarding the KMI 3 - Projects must be highlighted that its 3 Sub-KMIs, what means
+1. WR (work result), the Sub-KMI 2. DC (delivery commitment) and 3. CS (customer
+satisfaction), had these 3 ones done under the expectations and can be considered as a
+successful Process all concluded.
+
+--- PAGE 16 ---
+830 Altino J. Mentzingen Moraes et al.
+These above interpretations were consistent with the evaluation obtained in the KMI 4
+- Governance where the Sub-KMI 3. CS (customer satisfaction) had a negative value even
+with the follow explanation which can justify this grade but drive to reinterpret this result:
+“The Division Manager justified the very low value of the 3. SC above due to the large
+number of his Customers on vacation or on leave that still could not assess the Degree of
+Satisfaction of the reports delivered.” (as is in the comments in the Spreadsheet).
+Theguidelinesprovidedinthelinkserveasapracticalresourceforunderstandinghow
+the simulation was conducted, in addition to being a tool for applying the PI2M-ITGov
+method.
+As mentioned in the initial summary of this research work, the PI2M-ITGov method
+can be utilized to (1) assess the performance status of an IT area. Furthermore, it can
+also be used to (2) compare the results of suppliers as a means of supporting decision-
+making, particularly in the context of proof of concept (POC) evaluations for contracting
+or renewing commercial agreements.
+The MS® Excel spreadsheet discussed earlier primarily focuses on objective (1) men-
+tioned above. However, to address objective (2) and provide an immediate assessment of
+a POC, the PI2M-ITGov KMIs can be applied in the manner depicted in Figure 8 (for
+evaluating service provider enterprises in the field of systems development, specifically
+as a software factory [FSW]) and Figure 9 (for evaluating service provider enterprises in
+the field of project management, particularly as a project management office [PMO]).
+Fig.8. Example of proof of concept (POC) to build a comparative framework in system
+development
+Fig.9. Example of POC - Proof of Concept to build a Comparative Framework in Project
+Management
+
+--- PAGE 17 ---
+PI2M-ITGov – Panel of Indicators for Monitoring and Maintaining 831
+In both examples, the assessment of sub-indicator 2. DC should focus solely on the
+deadline criterion, excluding the cost criterion. In a POC evaluation, cost evaluation is not
+typically a common factor.
+Furthermore, in both examples, regarding sub-indicator 3. CS, the term ‘customer’
+represents the evaluation committee responsible for applying the final acceptance criteria
+for the POC presented by the assessed supplier.
+For these examples, the maximum goal and minimum goal for the KMIs should be
+the same. Since the POC has a short duration and aims to achieve a specific outcome,
+the maximum goal and minimum goal reflect the singular target value that the evaluated
+supplier must meet.
+8. Future Work
+This article limited its approach in retrieve data and analyzes results from how the IT
+Governance, in a specific Organization, are being conducted – with the target – to gain
+able time to realign deliveries and expectation, based in the status obtained with a precise
+monitoring, before a massive control and auditing are not yet necessary in fact.
+Nevertheless,wecanexpandthisapproachtocomparetheresultobtainedbyaspecific
+Organization with another to sort its ranking, what means, transforming PI2M-ITGov
+Method into a real MM - Maturity Model itself acting in distinct Organizations.
+As a first step, we can think (as an initial idea) of creating a ranking with Gold, Silver
+and Bronze levels, what will drive us to need to define the maximum and minimum range
+grade for each Level according to each 36 sub-KMIs results.
+In the sequence of this new approach implementation, it is necessary to establish cri-
+teria (such as: Capital Amount, Employes Number, Type of Business Finance; Industry;
+Services, Capillarization (Local; National; Intl), and other points) for sorting the Organi-
+zations in Small, Medium and Big sizes, so it will be possible compare different scenarios
+and apply an ”Adjustment Weight” in order to equalize the grades obtained and attributes
+the correct Gold, Silver and Bronze level.
+If this idea will be put in practice, of course, a new article will be built and explaining
+how it was done in details and how to use the new approach of PI2M-ITGov Method as
+a MM - Maturity Model between different Organizations to obtain a unique Pannel of
+Statistics.”
+9. Conclusion
+This research adhered to the principles of a scientific method by following the steps of
+DSR, including the application of a case study consisting of three simulation rounds to
+validate the constructs and artefacts created (guidelines and spreadsheet).
+Based on the evaluation, it can be concluded that the PI2M-ITGov, which is a panel of
+indicators for monitoring and maintaining IT governance, effectively serves as a practical
+tool for executing the necessary procedures in IT management.
+While the PI2M-ITGov was constructed in a structured manner, its continued use
+and feedback from users will likely lead to new versions with added functionalities and
+improvements.
+
+--- PAGE 18 ---
+832 Altino J. Mentzingen Moraes et al.
+The author welcomes and appreciates users who provide feedback and share their
+experiences in using the PI2M-ITGov. This feedback will contribute to enhancing the
+quality of the method.
+It is recommended to periodically check the provided link for any new updates or
+revisions that can be downloaded.
+Furthermore, the author encourages future contacts and assures that any inquiries will
+be handled with care and attention. The author is dedicated to guiding interested indi-
+viduals in implementing the PI2M-ITGov in their organizations and providing necessary
+support to ensure the success of this initiative.
+Acknowledgments. Partial financial support was received from ITMA - Information and Technol-
+ogy Management Association for sponsoring the proofreading revision costs.
+References
+1. Ahern, D.M., Clouse, A., Turner, R.: CMMI Distilled – A Practical Introduction to Integrated
+Process Improvement. 2nd ed. Pearson Education Inc., Boston, Massachusetts, USA (2002)
+2. Arsanjani, A., Holley, K.: The Service Integration Maturity Model: Achieving Flexibility
+in the Transformation to SOA©, Services Computing, IEEE International Conference on,
+p.515, IEEE International Conference on Services Computing (SCC’06), ISBN: 0-7695-2670-
+5. Chicago, Illinois, USA, Sep 18–22 (2006)
+3. Axelos: ITIL® Foundation: ITIL 4 Edition. Axelos Ltd. (2022), https://www.axelos.c
+om/best-practice-solutions/itil
+4. Axelos: P3M3 – Portfolio, Programme and Project Management Maturity Model. Axelos Ltd.
+(2022), https://www.axelos.com/best-practice-solutions/p3m3
+5. CIOIndex: EAG© – Enterprise Architecture Governance. CIOIndex – Global Community For
+Chief Information Officers (2022), https://cio-wiki.org/wiki/Enterprise_Ar
+chitecture_Governance
+6. Clerc, V., Niessink, F.: IT Service CMM, A Pocket Guide. Van Haren Publishing, Holland
+(2005)
+7. Consortium, I.: Information Security Management Maturity Model., chap. ISM3 Consortium
+- Creative Commons Attribution. ISM3 Consortium - Creative Commons Attribution, ISBN:
+978-54-611-9825-2. San Francisco, California, USA (2007)
+8. Dresch, A., Lacerda, D.P., Antunes Jr., J.A.V.: Design Science Research: Research Method for
+Advancing Science and Technology (Método de Pesquisa para Avanço da Ciência e Tecnolo-
+gia). Bookman, Porto Alegre, RS, Brazil (2015)
+9. EFQM©: The Fundamental Concepts of Excellence. European Foundation for Quality Man-
+agement (2022), https://www.onecaribbean.org/wp-content/uploads/Fun
+damental-Concepts-of-EFQM.pdf
+10. Fonseca, A.F.: Organizational Knowledge Assessment Methodology. World Bank Institute,
+Washington, DC, USA (2006)
+11. Fontelles, M.J., Simões, M.G., Farias, S.H., Simões, R.G.: Scientific Research Methodology –
+Guidelines for Elaboration of a Research Protocol. Cercomp, Brazil (2009)
+12. Gartner, G.: CobiT® – Control Objectives for Information and Related Technology. Gartner
+Group (2022), https://www.gartner.com/en/information-technology/gl
+ossary/cobit-control-objectives-for-information-and-related-t
+echnology
+13. Goethert, W., Hayes, W.: Experiences in implementing measurement programs. Technical note,
+Software Engineering Measurement and Analysis Initiative, SEI® – Software Engineering In-
+stitute (2001), CMU/SEI-2001-TN-026, NOV
+
+--- PAGE 19 ---
+PI2M-ITGov – Panel of Indicators for Monitoring and Maintaining 833
+14. Heumann, J.: The Five Levels of Requirements Management Maturity – Rational Software
+(2022), https://pt.slideshare.net/ibmrational/the-five-levels-o
+f-requirements-management-maturity
+15. Hevner, A.: A Three Cycle View of Design Science Research. Scandinavian Journal of Infor-
+mation Systems 19(2), 4 (2007)
+16. Hüffner, T.: The BPM® Maturity Model – Towards A Framework for Assessing the Business
+Process Management Maturity of Organizations. GRIN Verlag, Munich, Germany (2007)
+17. ISACA: CobiT® – Control Objectives for Information and Related Technology. Information
+Systems Audit and Control Association (2022), https://www.isaca.org/resource
+s/cobit
+18. ISO/IEC: 15.504 – Process assessment – Part 5: An Exemplar Software Life Cycle Process
+Assessment Model. International Organization for Standardization (2022), https://www.
+iso.org/standard/60555.html
+19. Kerzner, H.: Using the Project Management Maturity Model: Strategic Planning for Project
+Management, 2nd ed. John Wiley & Sons Inc, New York, NY, USA (2004)
+20. Krause, H.M.: A maturity model for automated software testing. Medical Device & Diagnostic
+Industry Magazine (1994), mDDI Article Index
+21. Likert, R.: A technique for the measurement of attitudes. Archives of Psychology 140, 1–55
+(1932)
+22. Locke, J.: The Works of John Locke: An Essay Concerning Human Understanding. Halcyon
+Classics – Kindle Edition, Jun-23 (2009)
+23. Ltd., S.E.: Test Organization Maturity Questionnaire V2.0. Systeme Evolutif Ltd, Gloucester
+House, 57/59 – Gloucester Place, London, England (2000)
+24. Moraes, A.J.M.: M2A3-GovTI Proposal – Maturity Model for Analysis of the Alignment
+of Activities Related to Governance of Technology of Information in Accordance with the
+Outcome Expectations Planned by the Organization (Proposta do M2A3-GovTI – Modelo
+de Maturidade para Análise do Alinhamento das Atividades relacionadas à Governança da
+Tecnologia da Informação em conformidade com as expectativas de resultado planejadas pela
+Organização). Doctoral thesis, Stricto-Sensu Postgraduate Program in Production Engineering
+Doctorate. UNIP – Paulist University, São Paulo, SP, Brazil (2010)
+25. Moraes, A.J.M., Rocha, M.R.: IT Management: Proposal of the PI2M-ITGov - Panel of Indi-
+cators for Monitoring and Maintaining IT Governance: Research and Model (2023), https:
+//ieeexplore.ieee.org/document/10211818
+26. OMG: BPMM® – Business Process Maturity Model. Object Management Group (2022), ht
+tp://www.omg.org/spec/BPMM/1.0/PDF
+27. Peffers, K., Tuunanen, T., Rothenberger, M.A., Chatterjee, S.: A design science research
+methodology for information systems research. Journal of Management Information Systems
+24(3), 45–77 (2007)
+28. Peterson, R.: Crafting Information Technology Governance. Taylor & Francis Online (2022),
+https://www.tandfonline.com/doi/abs/10.1201/1078/44705.21.4.20
+040901/84183.2
+29. PMI®: OPM3® – Organizational Project Management Maturity Model. Project Management
+Institute (2022), https://www.gartner.com/en/information-technology/
+glossary/cobit-control-objectives-for-information-and-related
+-technology
+30. Prado, D.: MMGP – A Brazilian Model of Project Management Maturity (Um Modelo
+Brasileiro de Maturidade em Gerenciamento de Projetos). Ponto GP (2005), http://po
+ntogp.wordpress.com/2006/05/06/mmgp
+31. Prasad, R.: Maturity Model Describes Stages of Six-Sigma® Evolution. iSixSigma (2010),
+https://www.isixsigma.com/basics/maturity-model-describes-sta
+ges-six-sigma-evolution/
+
+--- PAGE 20 ---
+834 Altino J. Mentzingen Moraes et al.
+32. Rockart, J.F., Earl, M.J., Ross, J.W.: Eight imperatives for the new it organization. Sloan Man-
+agement Review 38(1), 43–55 (Fall 1996)
+33. Rundle, R.: Deming Cycle PDCA – Plan Do Check Act Journal in Daily Life Toyota Way.
+Independently Published (2019)
+34. SEI®: CMMI® – Capability Maturity Model Integration. Software Engineering Institute
+(2022), https://resources.sei.cmu.edu/asset_files/TechnicalRep
+ort/2010_005_001_15287.pdf
+35. Simon, H.A.: The Sciences of the Artificial. 3rd ed. MIT Press, Cambridge, Massachusetts,
+MA, USA (1996)
+36. SOFTEX: MR MPS br®: Reference Model for Brazilian Software Process Improvement
+(Modelo de Referência para Melhoria do Processo de Software Brasileiro). Softex (2022),
+http://www.softex.br/mpsbr/_guias/default.asp/
+37. Sonic: The New SOA® Maturity Model. Sonic Software Corporation, AmberPoint Inc., Bear-
+ingPoint Inc., Systinet Corporation. All rights reserved (2005)
+38. Tapi, R.S., Daneva, M., Eck, P., Wieringa, R.J.: B-ITa – Business-IT Alignment Maturity
+Model. University of Twente (2022), https://research.utwente.nl/en/pub
+lications/towards-a-business-it-alignment-maturity-model-for-c
+ollaborative
+39. Tesla, N.: Map of Multiplication. Unicentro, Paraná, PR, Brazil (2021), https://www3.u
+nicentro.br/petfisica/2017/05/18/o-mapa-da-multiplicacao-de-t
+esla/
+40. TMMi: Test Maturity Model Integration. TMMi Foundation (2023), https://www.tmmi
+.org/tmmi-documents/
+41. Weill, P.: The relationship between investment in information technology and firm perfor-
+mance: A study of the valve manufacturing sector. Information Systems Research 3(4), 307–
+333 (Dec 1992)
+42. Wieringa, R.J.: Design Science Methodology for Information Systems and Software Engineer-
+ing. Springer-Verlag Berlin Heidelberg, Berlin, Germany (2014)
+
+--- PAGE 21 ---
+PI2M-ITGov – Panel of Indicators for Monitoring and Maintaining 835
+Appendix A: MS® Excel Spreadsheet of PI2M-ITGov
+
+--- PAGE 22 ---
+836 Altino J. Mentzingen Moraes et al.
+Appendix B: MS® Project ‘Assessment of the PI2M-ITGov’
+Altino Moraes holds the title of Ph.D. in Production Engineering (with emphasis in In-
+formation Systems), M.Sc. in Information Management, and BCs in Information Tech-
+nology. He also developed Post Doctoral Research with an IT Governance focus. Addi-
+tionally, he has two lato-sensu courses: one MBA in Project Financial Management and
+one Specialization in System Analysis. He is certified in five Technical Certifications ap-
+plied to the IT Area (CobiT, ITIL, PMI, ISTQB, and ABPMP). He is a Researcher at the
+ADVANCE (the ISEG Centre for Advanced Research in Management at the University of
+
+--- PAGE 23 ---
+PI2M-ITGov – Panel of Indicators for Monitoring and Maintaining 837
+Lisbon). He is a member of Scientific Committees in congresses sponsored by IIIS - In-
+ternational Institute of Informatics and Systemics, ITMA - Information and Technology
+Management Association and AISTI - Iberian Association of Information Systems and
+Technologies. He often participates in Conferences related to the IT Area and publishes
+in its Proceedings. Besides, he has been participating in books (as coeditor/coauthors) dis-
+tributed by IGI Global. He is also a Brazilian Government Employee currently allocated
+to MGI - Ministério da Gestão e Inovação (Management and Innovation Ministry).
+Álvaro Rocha holds the title of Honorary Professor, and holds a D.Sc. in Information
+Science, Ph.D. in Information Systems and Technologies, M.Sc. in Information Manage-
+ment, and BCs in Computer Science. He is a Professor of Information Systems at the
+University of Lisbon - ISEG, researcher at the ADVANCE (the ISEG Centre for Ad-
+vanced Research in Management), and a collaborator researcher at both LIACC (Labo-
+ratory of Artificial Intelligence and Computer Science) and CINTESIS (Center for Re-
+search in Health Technologies and Information Systems). His main research interests
+are maturity models, information systems quality, online service quality, requirements
+engineering, intelligent information systems, e-Government, e-Health, and information
+technology in education. He is also Vice-Chair of the IEEE Portugal Section Systems,
+Man, and Cybernetics Society Chapter, and Founder and Editor-in-Chief of two Scopus
+and SCIMago journals: JISEM - Journal of Information Systems Engineering & Man-
+agement; and RISTI - Revista Ibérica de Sistemas e Tecnologias de Informação / Iberian
+Journal of Information Systems and Technologies. Moreover, he has served as Vice-Chair
+of Experts for the European Commission’s Horizon 2020 Program, and as an Expert at
+the COST - intergovernmental framework for European Cooperation in Science and Tech-
+nology, at the European Commission’s Horizon Europe Program, at the Government of
+Italy’s Ministry of Universities and Research, at the Government of Latvia’s Ministry of
+Finance, at the Government of Mexico’s National Council of Science and Technology, at
+the Government of Polish’s National Science Centre, and at the Government of Cyprus’s
+Research and Innovation Foundation.World’s Top 0.05% Scientist, according to Schol-
+arGPS. World’s Top 1% Scientist, according to Stanford University and Elsevier. World’s
+Top 1% Scientist, according to ResearchGate. ISEM’s Book Series Scientific Manager
+at Springer Nature: https://www.springer.com/series/17396. Chair of ITMA - Informa-
+tion and Technology Management Association: http://itmas.org. Founder and Vice-Chair
+of IEEE SMC Portugal Chapter. Invited Full Professor at University of Calabria, Italy.
+Honorary Professor at Amity University, India. Professor of Information Systems, ISEG,
+University of Lisbon, Portugal.
+Received: July 29, 2024; Accepted: January 12, 2025.
+
+--- PAGE 24 ---

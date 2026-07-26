@@ -1,0 +1,448 @@
+--- PAGE 1 ---
+HAL Id: hal-02478782
+https://inria.hal.science/hal-02478782v1
+Submitted on 14 Feb 2020
+HAL is a multi-disciplinary open access archive
+for the deposit and dissemination of scientific re-
+search documents, whether they arepublished or not.
+Thedocumentsmaycomefromteachingandresearch
+institutions in France or abroad, or from public or pri-
+vate research centers.
+L’archiveouvertepluridisciplinaireHAL,estdes-
+tinée au dépôt et à la diffusion de documents scien-
+tifiquesdeniveaurecherche, publiésounon, émanant
+des établissements d’enseignement et de recherche
+français ou étrangers, des laboratoires publics ou
+privés.
+Distributed under a Creative Commons CC BY 4.0 - Attribution - International License
+Value-Added Services, Virtual Enterprises and Data Spaces
+Inspired Enterprise Architecture for Smart Cities
+Sobah Abbas Petersen, Zohreh Pourzolfaghar, Iyas Alloush, Dirk Ahlers, John
+Krogstie, Markus Helfert
+To cite this version:
+Sobah Abbas Petersen, Zohreh Pourzolfaghar, Iyas Alloush, Dirk Ahlers, John Krogstie, et al.. Value-Added
+Services, VirtualEnterprisesandDataSpacesInspiredEnterpriseArchitectureforSmartCities. 20thWorking
+Conference on Virtual Enterprises (PRO-VE), Sep 2019, Turin, Italy. pp.393-402, ⟨10.1007/978-3-030-28464-
+0_34⟩. ⟨hal-02478782⟩
+
+--- PAGE 2 ---
+Value-Added Services, Virtual Enterprises and Data
+Spaces inspired Enterprise Architecture for Smart Cities
+Sobah Abbas Petersen1
+, Zohreh Pourzolfaghar2
+, Iyas Alloush2
+, Dirk Ahlers3,
+John Krogstie1
+and Markus Helfert2
+1
+Dept. of Computer Science, Norwegian University of Science and Technology, Norway
+2
+Lero - The Irish Software Research Centre, School of Computing, Dublin City
+University, Dublin, Ireland
+3
+Dept. of Architecture & Planning, Norwegian University of Science and
+Technology, Norway
+Email: {sap, krogstie, Dirk.ahlers}@ntnu.no;
+{markus.helfert, Zohreh.Pourzolfaghar, iyas.alloush}@dcu.ie
+Abstract. As a part of their digital transformation, municipalities across Europe
+have taken initiatives to support Open Data platforms and provide services
+leveraging on data. This challenges the traditional business driven IT strategy
+promoted by several Enterprise Architecture methodologies, which are
+designed to operate within a single enterprise that has a complete overview of
+its data and ICT systems. We envisage scenarios where public and private
+collaborative networks provide value added services to its citizens by
+leveraging on data. In this paper, we propose an Enterprise Architecture
+Framework for Cities to support them maneuvre smartly within their data space
+to create value added services through a variety of collaborative networks or
+Virtual Enterprises that bridge organisational boundaries. The novel elements of
+this Enterprise Architecture Framework are a DataxChange, the Value-Added
+Services and Virtual Enterprise layers. This work has been conducted within the
+EU H2020 Smart City project +CityxChange.
+Keywords: Data Spaces, Enterprise Architecture Framework, Smart Cities,
+Collaborative Networks, Positive Energy Blocks.
+1 Introduction
+Sustainability and digital transformation and are two of the main driving forces for
+cities and municipalities today. Current Smart City approaches have advanced from
+monitoring various aspects of a city through sensor and other data to providing
+services to its citizens in more collaborative ways [1, 2]. We adopt the view of a smart
+city that integrates people, technology and information to create a sustainable and
+resilient infrastructure that provides high quality services for its citizens [3]. The data
+that is gathered through sensors and/or other sources are central to developing value
+added services for the citizens. We envisage scenarios where public and private
+
+--- PAGE 3 ---
+386 S. A. Petersen
+collaborative networks (CNs) provide value added services to its citizens by
+leveraging on data and systems that bridge different organisations.
+The work reported in this paper is motivated the EU H2020 project +CityxChange,
+which focuses on Positive Energy Blocks (PEBs) to reduce emissions in cities and
+communities towards reaching the Paris Climate Goals [4]. Taking a broad
+perspective of cities and communities in the light of UN's Sustainable Development
+Goals (SDG); in particular SDGs 7, 11 and 13 (Affordable Clean Energy, Sustainable
+Cities and Societies and Climate action respectively), there is a need to engage
+citizens and to develop a portfolio of value added services that will enable citizens to
+increase their awareness about environmental sustainability and to help them make
+better choices. Furthermore, cities are motivated to engage their private businesses
+and other stakeholders in novel and innovative partnerships to provide value added
+services to the citizens.
+One of challenges faced by cities and service providers is the lack of access to
+relevant data or indeed an overview of available data and relevant actors. Enterprise
+Architecture (EA) used initially in the business world to bridge between the business
+needs and the ICT strategy of a company has been used in Smart City contexts to
+bridge the needs of a city with ICT, resulting in a number of Smart City Enterprise
+Architecture Frameworks (EAFs). Our review of several EAFs from Smart City
+projects show that while several of them identify the need for services, the emphasis
+on the role of data is not so evident. We argue that the role of data must be a central
+component of a Smart City EAF, to support the drive for digital transformation as
+well as the effective use of available data.
+In this paper, we propose a layered EAF for +CityxChange and Smart Cities in
+general where a DataxChange lies at the heart of the EAF. The DataxChange bridges
+the technology layers and the higher layers of the architecture, such as the business
+collaborations and value added services. The proposed architecture builds upon
+existing work, and complements them by emphasising the novel elements, which are
+the DataxChange, the Value-Added Services and the Virtual Enterprise (VE) layers to
+support CNs.
+This paper is structured as follows: Section 2 describes the +CityxChange project;
+Section 3 describes our vision for a Smart City EAF; Section 4 describes the
++CityxChange EAF to realise such a vision; Section 5 illustrates how value added
+services can be supported by EAF; Section 6 gives an overview of related work and
+Section 7 summarises the paper and provides an outline of the future work.
+2 +CityxChange Project
+The background and motivation for this paper is the EU H2020 funded +CityxChange
+project [5] that aims to develop PEBs in smart cities and communities as part of
+emission reductions to reach the Paris Climate Goals [4]. It is a Lighthouse project,
+where Trondheim, Norway, and Limerick, Ireland, are the lighthouse cities, and five
+follower cities showcase replication. The consortium of 32 partners include
+universities, municipalities, utility and infrastructure providers and other private
+
+--- PAGE 4 ---
+Value-Added Services, Virtual Enterprises and Data Spaces for Smart Cities 387
+entrepreneurs. It follows an integrative approach with a strong focus on city
+integration, open innovation and replicability. The approach combines:
+• Integrated Planning and Design of cities;
+• Creation and Enabling of a Common Energy Market;
+• A CommunityxChange with all stakeholders of the city to create connected
+and engaged communities.
+The project focuses on the technical solutions as well as the interactions and
+integration between buildings, users, cities and the energy system. It also focuses on
+the implications and impact on city planning, city systems, energy trading, citizen
+involvement, policies and regulations, data and digitalisation and socio-economic
+issues. A Positive Energy Blocks (PEB) is defined by the EU as several buildings that
+actively manage their energy consumption and the energy flow between them and the
+wider energy system1
+. They achieve an annual positive energy balance through use,
+optimization and integration of advanced materials, energy reduction, local renewable
+energy production and storage, smart energy grids, demand-response, energy
+management of electricity, heating and cooling, user involvement. PEBs or Positive
+Energy Districts (PEDs) are designed as an integral part of the district energy system.
+They should be intrinsically scalable up to positive energy districts and cities and are
+well embedded in the spatial, economic, technical, environmental and social contexts.
+New forms of integrated spatial, social, political, economic, regulatory, legal and
+technological innovations are envisaged to deliver citizen observatories, innovation
+playgrounds and regulatory sandboxes linked to Urban Living Labs. Municipalities
+will develop Bold City Visions to engage civil society, local authorities, industry and
+Research and Technology Organisations to scale up from PEBs to PEDs or Positive
+Energy Cities, supported by a distributed and modular energy system architecture.
+The ICT related challenges faced by the +CityxChange project include the lack of
+a means or forum for discovering existing and available data and services and indeed
+accessing and retrieving relevant data from available data sources [6], for use in
+developing value added services. ICT is envisaged to play a central role as an enabler
+for innovative value added services, stimulating new collaborations and in achieving
+PEBs and scaling up to the district and city levels. Similarly, ICT will provide support
+for the replication of solutions from the Lighthouse cities to the follower cities [4, 6].
+3 Vision
+Our vision for an EAF to support the +CityxChange project and Smart Cities in
+general is driven by the need and availability of data and systems and the central role
+that data plays in today's cities and how the data could be leveraged to provide value-
+added services to the citizens. Many Smart City concepts are inherently multi-
+disciplinary and need the collaboration of various stakeholders from different
+domains, including cities and citizens [7]. New and innovative value added services
+could be provided by diverse constellations of CNs or VEs, which are a group of
+1
+https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-
+details/lc-sc3-scc-1-2018-2019-2020
+
+--- PAGE 5 ---
+388 S. A. Petersen
+partners that collaborate to achieve a specific goal [8]. Our vision will address some
+of the shortcoming of existing EAFs to meet the needs of smart cities.
+We believe that data can play a central role in bridging the technology aspects to
+the strategic and business aspects of an enterprise, such as the business collaborations
+and value added services. The central role of data and its value to an organisation has
+been discussed in many contexts, such as Industry 4.0 [9]. The need for supporting
+collaborative data analysis and processing and enhancing collaboration support
+among the data owners, data scientists and indeed service providers have received
+attention [10]. Examples of leveraging on data in the context of smart cities have
+appeared recently in the literature; in Helsinki, the city has been considered as a
+Living Lab and the data that is collected has been used to develop services as mobile
+applications [11]. The need for easy discovery of existing and available data and
+services and indeed accessing and retrieving relevant data is increasing and is one of
+the main challenges in the +CityxChange project. Thus, an EAF that supports an
+overview of data and the meta-data related will be an important asset to the creation
+and operation of value-added services in a smart city. If the stakeholders of a smart
+city have an overview of data that is potentially accessible and available for them to
+leverage on, the potential of value added services for the citizens can be enhanced.
+CNs and VEs have long been discussed as means and drivers for value creation
+[12]. More recently, they have been discussed as an important mechanism in the
+context of leveraging on the vast amounts of data that are available in many contexts;
+e.g. [13]. Bringing these concepts to the heart of an EAF is essential in supporting the
+creation of innovative and value added services in the context of smart cities. This can
+facilitate the integration of services vertically within a city such as technological
+support, data processing as well as operational services, and connecting them to a
+clearly identified value to the city and citizens. Similarly, it can ensure the integration
+of the processes horizontally across the value chain around data, such as the data
+owners, processors and data consumers. Furthermore, this can support empowerment
+not only of the citizens, but provide opportunities for project partners to collaborate in
+new and innovative CNs, VEs and business models.
+4 +CityxChange Enterprise Architecture Framework
+Based on the literature and the smart city EAFs developed in relevant EU projects,
+such as the Smart City project SmartEnCity [2] and the standardisation efforts in
+ESPRESSO [1], we propose a layered EAF for the +CityxChange project, as
+illustrated in Figure 1. The main driver for the EA is the "service-based ecosystem",
+identified as an objective for the EA in the +CityxChange project [6]. The scenarios
+envisaged for the project span many application domains (or silos) such as energy,
+transport, IoT, built environment and governance. An example of a value added
+service considered in the project that spans several application domains is eMobility
+as a service, across energy, transport and urban planning domain.
+Several horizontal layers are defined in the EAF to support value added services,
+which utilise data and are provided by collaborations among two or more enterprises;
+i.e. by a VE. The thinking behind the layered approach is that each layer supports the
+
+--- PAGE 6 ---
+Value-Added Services, Virtual Enterprises and Data Spaces for Smart Cities 389
+layer above it. Thus, the value-added services are supported by one or more
+businesses or a VE, which are supported by one or many applications, which use data
+from the +CityxChange DataxChange layer. The +CityxChange DataxChange is
+supported by technologies and finally, the data is obtained from data sources.
+Figure 1 +CityxChange Enterprise Architecture Framework
+The +CityxChange DataxChange is at the heart of the EAF, where this layer
+provides an overview of all available data and systems and relevant information about
+the data that is required for creating value added services. Relevant information about
+the data will include the owner of the data, how the data may be accessed and the
+conditions and criteria that may be necessary to access or use the data. The
+DataXchange plays a central role is providing a comprehensive overview of the
+available data, providing the support that the various service providers need. Indeed, it
+should provide information about the relevant and potential collaboration partners that
+could participate in providing value added services to citizens, leveraging the data.
+The DataXchange provides a means to bridge the lower levels of the EAF, such as
+supporting technologies, and the higher levels of the EAF, such as the value added
+services. Furthermore, this layer will also serve as a common “platform” for the lower
+layers to facilitate access to data for the higher layers. Together with the Business
+Layer, this layer is designed to support concepts such as data markets and data as a
+commodity in the near future.
+The highest layer of the EA is the context layer, which drives the services and the
+business context. Value added services are created to meet the needs of the citizens or
+to affect and change their behaviour to meet the strategy of the city or some business
+actor. The Value added Service layer is below the Context layer, which both offers
+services to and uses data and applications from the different application domains and
+involves one or more actors. The Application and Data Processing Layer describes the
+different applications that support the services. Applications may support processing
+or analytics of data that are relevant for the service or other purposes such as
+searching and navigating the information space, visualisation of information or other.
+Two layers are defined below the DataXchange: Technologies layer and Data
+Sources layer. The Technologies layer describes the different technologies that
+
+--- PAGE 7 ---
+390 S. A. Petersen
+support the DataXchange and the higher layers of the EAF. Technologies include
+hardware (e.g. servers and sensors, metering devices), applications such as databases
+and infrastructure, e.g. for micro payments. As data is obtained from a variety of
+sources such as IoT, sensors or local renewable energy production such solar panels
+mounted on private property, the origin of the data is essential for data governance;
+for ensuring the quality of the data, fostering trust among the users of the data, for
+supporting transparency and integrity of data, and for adhering to regulatory
+frameworks such as GDPR. Thus the Data sources layer is important to identify the
+sources that provide the data.
+Related to the horizontal layers, we have two perspectives: (i) Stakeholder
+perspective to highlight the different stakeholders, their roles and perspectives; and
+(ii) Data perspective to address the specific principles and guidelines that are relevant
+in data-rich environments. These perspectives apply to all or most levels of the EAF
+as shown in Figure 1. A number of high level principles were identified for the
++CityxChange EAF in [6]. These perspectives provide a means of structuring and
+contextualising guidelines and principles for using the +CityxChange EAF. A detailed
+description of principles and guidelines are provided in [14].
+4.1 Stakeholder Perspectives
+The +CityxChange project has a citizen focussed approach with several tasks
+dedicated to citizen engagement. Similarly, the service-based ecosystem and the
+participation of several public and private entities call for close attention to the
+diverse stakeholders that are a part of the city-wide or +CityxChange-wide EA space.
+Stakeholders describe the various entities involved in the city-wide EA space, which
+include citizens, service providers and consumers, who develop service to create
+added value. Stakeholders also include data owners, providers, processors and
+consumers of data, public authorities, private enterprises, researchers and various
+communities (e.g. a local housing complex).
+Privacy and Trust describes the relevant principles and guidelines that need to be
+followed not only to respect and protect the privacy of individual people and
+organisations, but also support a network of trust among the various stakeholders of
+the +CityxChange DataxChange and value added services. Given the focus on
+stakeholders and the protection of individuals through the recent EU GDRP
+regulations, we have chosen to separate privacy and trust from data security (although
+they are dependent on one another). An EAF for a smart city spans beyond
+organisational boundaries and consequently the potential of sharing privacy-related
+data among stakeholders and data processors from a number of different prganisations
+can be envisaged. Thus, the need to increase awareness of privacy-related issues and
+designing to ensure privacy and trust and compliance to regulations, in particular with
+respect to the use of stored data for multiple purposes, increases.
+Policies and regulations describe the regulatory stakeholders that are involved in
+the project, the influencers and stakeholders and services that are affected by the
+specific policies and regulations. Ownership and access describe the relationships
+between the stakeholders and the entities that will be represented in the layers of the
+
+--- PAGE 8 ---
+Value-Added Services, Virtual Enterprises and Data Spaces for Smart Cities 391
+EAF. The scenarios envisaged in the project highlight that the relationships between
+the data and other entities or the ownership or accessibility models for data elements
+are not simple, uniform or trivial.
+4.2 Data Perspectives
+The +CityxChange project envisages value added services that leverage on data and
+system integration that is available through the +CityxChange DataxChange or indeed
+Open Data. Thus, there is a data perspective related to all layers of the EAF, from the
+data sources to the value added services. This raises a need to address the data
+perspectives.
+Interoperability addresses how entities, through all the layers in the EAF, could be
+brought together in a cohesive way to provide the value added services.
+Interoperability applies to all the levels of the EAF.
+Data security and risk assessment apply to all the layers of the EAF to ensure that
+the data is handled in a secure and reliable manner. The security of data is not a static
+state; i.e. data that is secure at any time may not be secure at a future time, and thus
+requires regular assessments of risks and threats to the security of the data.
+Data Governance ensures proper data management and ownership processes and
+data quality and encompasses people, organisations and processes. Data governance
+ensures that data is consistent, available and useable.
+5 Value Added Services
+One or more value added services (example services A, B and X) could be created by
+using the data available from the +CityxChange DataxChange, as shown in Figure 2.
+Figure 2 Value added Services as an instance in the +CityxChange EAF
+Each of the services are likely delivered by collaboration among one or more
+organisations; any organisation may participate in the delivery of one or more
+services and participate in one or more VEs. For example, the municipality of a
+
+--- PAGE 9 ---
+392 S. A. Petersen
+specific city may be a part of a VE that provides both the Services A and B. Similarly,
+the same municipality may also play a role in Service X, perhaps different to that for
+the Services A and B. This simple example illustrates that several elements
+(data/services) from the DataxChange may be used by one or more services.
+Based on the scenarios envisaged for the +CityxChange project and the visions of
+the Lighthouse cities that have been shared and integrated so far, we see the need to
+support such value added services and the need to share data and the ability to
+incorporate new data that is generated through the value added services. The
++CityxChange DataxChange is designed to facilitate such activities.
+6 Related Work
+EA concerns the overall ICT landscape and alignment of the business strategy and its
+ICT implementation. Several EAFs have been proposed for Smart Cities. Based on
+the leading EAF in the industry [15], The Open Group's EA, TOGAF [16], several
+Smart City EAFs are based on a multi-tier or layered approach proposed; e.g. [1, 17-
+20]. The notion of services is identified explicitly in some of the EAFs [1, 2, 19, 21].
+The service layer identifies the business and the stakeholder perspectives, often
+considered as services offered by municipalities or the cities.
+Of particular interest to our work is the Intelligent Data Spaces Reference
+Architecture Model (IDS-RAM), proposed by the German Fraunhofer Institute and
+the International Data Spaces Initiative [9]. They describe an Industrial Data Space as
+a "virtual data space leveraging existing standards and technologies as well as
+accepted governance models for the data economy, to facilitate the secure and
+standardized exchange and easy linkage of data in a trusted business ecosystem".
+Similar to other EAFs, IDS-RAM also takes a layered approach. However, a few
+things distinguish it from the other frameworks and methodologies; e.g. it focuses on
+the Industrial Data Space and it takes a data-centric approach and thus supports both
+top-down and bottom-up approaches. A framework which describes foundation and
+principles for Information Technology in smarter cities is proposed in [22]. It
+incorporates instrumented data from sensors, Integration of data and intelligent
+inclusion of complex analytics, modelling and optimization, and visualization in
+operational business processes.
+7 Summary and Future Work
+An EAF to support a service-based ecosystem for the +CitxChange project is
+proposed, which supports the creation of value added services that leverage available
+data and services/systems. The novel elements of this Enterprise Architecture are the
+DataxChange, the Value-Added Services and the Virtual Enterprise layers. A
+DataxChange is at the heart of this architecture, which we argue is an essential part of
+a Smart City EAF, and which will bring together all available data and relevant
+information about the data to support the creation of value added services, by
+collaborative networks of partners from public private and research sectors. The
+
+--- PAGE 10 ---
+Value-Added Services, Virtual Enterprises and Data Spaces for Smart Cities 393
+DataXchange layer provides a bridge between the lower levels of the EAF, such as
+supporting technologies and data sources, and the higher levels of the EAF, such as
+the value added services.
+The proposed architecture is work in progress and we are working on refining this
+EAF by applying it to describe the different services that will be developed in the
+project. Furthermore, this EAF is envisaged as a support in reaching out to the
+partners who will participate in the VEs providing the value added services, and in
+driving the dialogue in the iterative definitions of the value added services. As such, it
+can also support many of the collaborative relationships within a complex project and
+provide additional technical frameworks and collaboration spaces, based on a joint
+understanding of the ICT relationships and networks within the project. These should
+also support easier communication, information access, and knowledge finding and
+sharing within the project. Our next steps are to describe a few scenarios and services
+using this EAF and facilitate the service description process, while refining the EAF
+based on the feedback.
+Acknowledgements
++CityxChange is a smart city project under the Smart Cities and Communities topic
+that is funded by the European Union's Horizon 2020 Research and Innovation
+programme under Grant Agreement No. 824260. The authors would like to thank the
+project partners from Trondheim Municipality, Limerick City Council and the
+participants of work packages 1 and 2 as well as the whole project team.
+References
+[1] ESPRESSO project (systEmic Standardization apPRoach to Empower Smart citieS and
+cOmmunities)), Deliverable D4.2 – Definition of Smart City Reference Architecture.
+2016.
+[2] SmartEnCity, Deliverable 6.3: Data Model Architecture Implementation. 2017.
+[3] N. Villanueva-Rosales, R.L. Cheu, A. Gates, N. Rivera, O. Mondragon, S. Cabrera, and C.
+Ferregut, A collaborative, interdisciplinary initiative for a smart cities innovation
+network, in EEE First International Smart Cities Conference (ISC2). 2015, IEEE:
+Guadalajara, Mexico. p. 25-28 Oct.
+[4] United Nations Climate Change. What is the Paris Agreement? [cited 2019 20 May];
+Available from: https://unfccc.int/process-and-meetings/the-paris-agreement/what-is-
+the-paris-agreement.
+[5] +CityXChange. Positive Energy Blocks. 2019 [cited 2019 19 May]; Available from:
+http://cityxchange.eu/.
+[6] D. Ahlers, L.W.M. Wienhofen, S.A. Petersen, and M. Anvaari, A Smart City Ecosystem
+enabling Open Innovation, in 19th International Conference Innovations for
+Community Services (I4CS). 2019: Wolfsburg, Germany.
+[7] D. Ahlers, P. Driscoll, E. Löfström, J. Krogstie, and A. Wyckmans, Understanding Smart
+Cities as Social Machines, in Workshop on the Theory and Practice of Social Machines
+@ WWW2016, IW3C2, 2016. 2016.
+
+--- PAGE 11 ---
+394 S. A. Petersen
+[8] S.A. Petersen, Virtual Enterprise Formation and Partner Selection: An Analysis Using Case
+Studies. International Journal of Networking and Virtual Organisations, 2007 4(2): p.
+201-215.
+[9] B. Otto, S. Lohmann, S. Steinbuß, and A. Teuscher, IDS Reference Architecture Model,
+Industrial Data Space, Veriosn 2.0. 2018, International Data Spaces Association &
+Fraunhofer.
+[10] K. Park, M.C. Nguyen, and H. Won, Web-based collaborative big data analytics on big
+data as a service platform, in 17th International Conference on Advanced
+Communication Technology (ICACT). 2015 IEEE.
+[11] H. Hielkem and P. Hongisto, Developing the Helsinki Smart City: The Role of
+Competitions for Open Data Applications. Journal of the Knowledge Economy, 2013.
+4(2): p. 190–204.
+[12] L. Camarinha-Matos and H. Afsarmanesh, COLLABORATIVE NETWORKS- Value
+creation in a knowledge society, in: Knowledge Enterprise: Intelligent Strategies in
+Product Design, Manufacturing, and Management. PROLAMAT 2006, K. Wang, G.L.
+Kovacs, W. M., and F. M., Editors. 2006, Springer: Boston, MA.
+[13] L. Camarinha-Matos, R. Fornasiero, and H. Afsarmanesh, Collaborative Networks as a
+Core Enabler of Industry 4.0, in: Collaboration in a Data-Rich World. PRO-VE 2017,
+L. Camarinha-Matos, R. Fornasiero, and H. Afsarmanesh, Editors. 2017, Springer,
+Cham. p. 3-17.
+[14] S.A. Petersen, I. Alloush, Z. Pourzolfaghar, and M. Helfert, +CityxChange - D1.2 Report
+on the Architecture for the ICT Ecosystem - Initial Version. 2019.
+[15] B.H. Cameron and E. McMillan, Analyzing the current trends in Enterprise Architecture
+Frameworks. Journal of Enterprise Architecture, 2013. 9(1): p. 60-71.
+[16] The Open Group, The Open Group Architecture Framework TOGAF Version 9.1. 2011.
+[17] C. Harrison and I.A. Donnelly, A Theory of Smart Citie, in Proceedings of the 55th Annual
+Meeting of the ISSS-2011. 2011: Hull.
+[18] IEC International Electrotechnical Commission. ISO/IEC JTC 1 Information technology,
+WG11 on Smart Cities. 2019 [cited 2019 29 April]; Available from:
+https://www.iec.ch/dyn/www/f?p=103:14:34897880612264::::FSP_ORG_ID,FSP_LAN
+G_ID:12973,25.
+[19] Z. Pourzolfaghar, V. Bastidas, and M. Helfert, Standardisation of Enterprise Architecture
+Development for Smart Cities. Journal of Knowledge Economy (under publication),
+2019.
+[20] R. Winter and R. Fischer, Essential Layers, Artifacts, and Dependencies of Enterprise
+Architecture. Journal of Enterprise Architecture, 2007.
+[21] D. Ferguson, J. Sairamesh, and S. Feldman, Open Frameworks for Information Cities.
+Communications of ACM, 2004. 47(2): p. 45-49.
+[22] C. Harrison, B. Eckman, R. Hamilton, P. Hartswick, J. Kalagnanam, Paraszczak, and P.
+Williams, Foundations for Smarter cities. IBM J. RES. & DEV, 2010. 54(4): p. 1-16.

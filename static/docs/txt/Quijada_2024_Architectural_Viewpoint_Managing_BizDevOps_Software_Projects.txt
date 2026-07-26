@@ -1,0 +1,751 @@
+--- PAGE 1 ---
+An Architectural Viewpoint for Managing BizDevOps Software
+Projects
+Guillermo Fuentes-Quijada1 a
+, Francisco Ruiz-González1 b
+and Angélica Caro2 c
+1Institute of Technology and Information Systems, University of Castilla-La Mancha, Ciudad Real, Spain
+2Computer Science and Information Technologies Department, University of Bío-Bío, Chillán, Chile
+Keywords: Enterprise Architecture, IT-Business Alignment, Software Development, BizDevOps, Viewpoint.
+Abstract: BizDevOps extends the DevOps approach by integrating a business cycle that encompasses stakeholders
+beyond the realm of information technology, aiming to support the alignment between IT and business while
+also fulfilling organizational objectives. This approach could be augmented with the use of enterprise
+architecture descriptions and customized architectural viewpoints, which facilitate the analysis,
+communication, and management of team-specific concerns. This study introduces BizDevOps-VP,
+proposing a viewpoint designed to enhance communication and decision-making within BizDevOps teams,
+focusing on their concerns, with the goal of supporting IT/business alignment without compromising agility.
+1 INTRODUCTION
+Numerous innovative software (SW) development
+approaches have been proposed to address the ever-
+evolving requirements of organizations (Gokarna &
+Singh, 2021). Many of these approaches emphasize
+fostering communication and collaboration between
+Information Techonologies (IT) and business teams.
+Among these methodologies, one noteworthy
+approach is BizDevOps, which comprises three
+seamlessly integrated cycles: business, development,
+and operations cycle. These cycles collectively aimto
+implement an organization's software requirements
+effectively (Gruhn & Schäfer, 2015). BizDevOps has
+evolved from the well-established DevOps
+methodology, which primarily focuses on aligning
+software development and operations teams to
+optimize software production and delivery processes
+(Hart & Burke, 2020; IEEE, 2021). However,
+BizDevOps takes a step further by introducing a third
+cycle that incorporates the business perspective into
+SW development (Gruhn & Schäfer, 2015). The
+primary goal of this approach, coupled with its
+dedicated business cycle, is to enhance the
+participation of business units in IT processes,
+facilitating better alignment with the dynamic needs
+a https://orcid.org/0000-0002-0798-5186
+b
+https://orcid.org/0000-0002-4923-7848
+c
+https://orcid.org/0000-0002-2066-7131
+of organizations (Sanjurjo, Pedreira, Garcia, &
+Piattini, 2020). Achieving alignment between IT and
+business is a substantial challenge in the realms of IT
+management, a point underscored by Kappelman,
+Johnson, Torres, Maurer, and McLean (2019).
+However, BizDevOps does not account for a
+favorable handling of agility in the business cycle, as
+is done in the development and operations cycles.
+This can create a bottleneck in the software
+development lifecycle and lead to a loss of overall
+agility. This problem is detrimental to the
+organization as it misses out on the benefits that
+agility brings in DevOps. Some of these benefits
+include early error detection, improved team
+communication, reduced resource consumption
+(time, money), and enhanced software quality (Raj &
+Sinha, 2020).
+On the other hand, descriptions of Enterprise
+Architectures (EAs) allow for controlling and sharing
+the knowledge and concerns of different stakeholders
+in anorganization,whichcanbeimportantinmedium
+or high complexity software engineering projects
+(Pérez-Castillo, Ruiz, Piattini, & Ebert, 2019). An
+enterprise architecture is a set of principles, methods,
+and models used in designing and implementing the
+organizational structure, business processes,
+Fuentes-Quijada, G., Ruiz-González, F. and Caro, A.
+An Architectural Viewpoint for Managing BizDevOps Software Projects.
+DOI: 10.5220/0012538000003690
+Paper published under CC license (CC BY-NC-ND 4.0)
+In Proceedings of the 26th International Conference on Enterprise Information Systems (ICEIS 2024) - Volume 2, pages 643-650
+ISBN: 978-989-758-692-7; ISSN: 2184-4992
+Proceedings Copyright © 2024 by SCITEPRESS – Science and Technology Publications, Lda.
+643
+
+--- PAGE 2 ---
+information systems, and IT infrastructure of a
+company (Lankhorst, 2017). The descriptions of EAs
+can be represented through models based on different
+viewpoints, which enable managing concerns in
+various contexts and for different stakeholders
+(Pérez‐Castillo, Caivano, Ruiz, & Piattini, 2021).
+In Fuentes-Quijada, Ruiz-Gonzalez, and Caro
+(2023), it is indicated that a viewpoint (VP) could be
+a very useful artifact since they allow the analysis and
+sharing of concerns and interests of each type of
+stakeholder, thus promoting alignment between
+IT/Business and establishing a standardized
+communication approach within BizDevOps teams.
+This type of artifact has already been successfully
+used to support software development approaches
+like DevOps, in which the concerns of the DevOps
+team are analyzed and shared through a viewpoint
+(Pérez-Castillo et al., 2019).
+The motivation of this effort is guided by the
+following research question:
+“Could a viewpoint prove beneficial in managing
+software projects that employ BizDevOps?”
+To address this question, we have employed the
+Design Science Research (DSR) Methodology
+(Hevner & Chatterjee, 2010) and the ArchiMate
+"Viewpoint mechanism" (The Open Group, 2022) to
+design, develop, and initially evaluate a viewpoint
+aimed at enhancing the communication of concerns,
+needs, and requirements within the BizDevOps team.
+This viewpoint is called BizDevOps-VP (Viewpoint
+for managing BizDevOps SW projects). This artifact
+is specifically designed to facilitate the management
+of SWprojects within the BizDevOps approach while
+ensuring alignment between IT and the business, all
+without compromising agility throughout the process.
+The structure of this paper is as follows: Section 2
+details the background to this work. Section 3 details
+the viewpoint specification. Section 4, present an
+initial validation of the viewpoint. Finally, Section 5
+outlines the conclusions and future work.
+2 BACKGROUD
+The following section presents the key concepts
+addressed in this study.
+2.1 BizDevOps
+The concept of BizDevOps represents the active and
+joint participation of business, development and
+operations roles (see Figure 1) for the purpose of
+developing software (Gruhn & Schäfer, 2015).
+BizDevOps is a natural extension that
+organizations using DevOps as a software
+development approach can undertake. This extension
+includes activities aimed at facilitating IT/business
+alignment and involvement of business stakeholders.
+Figure 1: BizDevOps cycles from (Fuentes-Quijada et al.,
+2023).
+2.2 Viewpoint
+The ISO 42010 standard (ISO/IEC/IEEE, 2022)
+establishes that a viewpoint is a set of agreements for
+constructing, interpreting, using, and analyzing an
+architectural view, with a focus on the concerns of a
+stakeholder.
+In terms of ISO 42010 standard, Archimate is an
+Architecture Description Framework (ADF) used to
+describe, analyze, and communicate many of the
+concerns of enterprise architectures as they change
+over time (ISO/IEC/IEEE, 2022). This standard
+provides us with a set of entities and relationships
+along with their corresponding icons for representing
+architecture descriptions (The Open Group, 2022).
+Considering the above, the generic concepts of
+viewpoint and view from the ISO 42010 standard are
+realized in Archimate as follows:
+ An Archimate viewpoint is a relevant subset of
+the entities and relationships defined in the
+Archimate metamodel.
+ An Archimate view is a set of one or more
+models representing a portion of an architecture,
+using the concepts and relationships of the
+corresponding viewpoint.
+ArchiMate provides a mechanism, which is
+aligned with the ISO 42010 standard (ISO/IEC/IEEE,
+2022), for specifying a viewpoint. This mechanism
+requires the specification of the following elements.
+(The Open Group, 2022):
+ Stakeholders: it should be established for which
+stakeholders the viewpoint is specified.
+ Concerns: the concerns or concerns that are
+intended to be communicated through the
+viewpoint should be identified.
+ICEIS 2024 - 26th International Conference on Enterprise Information Systems
+644
+
+--- PAGE 3 ---
+ Purpose: The establishment of the viewpoint's
+purpose is crucial, and ArchiMate categorizes
+them into three distinct types: (Design) Design
+viewpoints support architects and designers in the
+design process from initial sketching to detailed
+design; (Decide) Decision-support viewpoints
+assist managersinthedecision-makingprocessby
+providing information on cross-domain
+architectural relationships; and, (Inform)
+Informative viewpoints help inform any
+stakeholder about Enterprise Architecture to
+achieve understanding, obtain commitment, and
+persuade opponents.
+ Scope: the scope of the viewpoint should be
+established. In ArchiMate, this corresponds to the
+layers and aspects to be used, and in standard ISO
+42010, it relates to the perspectives of
+stakeholders and aspects.
+ Elements: The notation elements that are part of
+the viewpoint should be detailed.
+3 BizDevOps-VP
+In this section, a specific viewpoint is defined to
+communicate the concerns of the BizDevOps team.
+3.1 Concerns
+The concerns of this viewpoint focus on managing
+software development projects with BizDevOps
+while aligning IT with the business objectives and
+attempting to preserve the agility of the software
+development process intact.
+3.2 Rationale
+The viewpoints delineated within the ArchiMate
+specification range from being excessively broad, as
+detailed in the document (available online1) that we
+have compiled, where the scope of each viewpoint
+described by this standard is elaborated in terms of
+ArchiMate elements. Considering this and the
+concern outlined in the previous subsection, we
+maintain that a specialized viewpoint could prove
+beneficial for the BizDevOps team.
+3.3 Scope
+Considering the above subsection, the scope of this
+viewpoint is solely the management of SW
+1
+https://alarcos.esi.uclm.es/bizdevops-ea/?page_id=215
+development projects; therefore, governance aspects
+such as the organization's strategy are not considered.
+To mitigate stakeholder distraction from
+ArchiMate's broad notation in enterprise architecture
+modeling, we employed a top-down strategy to
+establish the BizDevOps-VP scope. This approach
+facilitates precise refinement of architectural
+components. By initially identifying stakeholder
+viewpoints and then detailing specific aspects, we
+align with ArchiMate's structured layers and facets.
+This ensures our application is both focused and
+impactful, faithfully adhering to its original purpose.
+This is detailed graphically shown in Figure 2.
+Figure 2: Stakeholder Perspective and Aspect compliance
+in ArchiMate 3.2, adapted from (ISO/IEC/IEEE, 2022; The
+Open Group, 2022).
+Considering the stakeholders and concerns for
+BizDevOps-VP, the following decisions have been
+derived regarding the ArchiMate layers:
+ Strategy: This layer is used to model the
+organization's strategic direction and choices
+concerning their impact on architecture. This
+layer can be used to express how the company
+intends to create value for its stakeholders, the
+capabilities it needs, and the resources required to
+support these capabilities (The Open Group,
+2022). Considering the above and that the scope
+of this viewpoint is solely SW project
+management, the ability to communicate the
+company's capabilities and how it creates value is
+not useful for this viewpoint. Therefore, this layer
+is excluded.
+ Business: this layer is used to model the
+operational organization of a company
+independently of technology. It also allows
+representing business services offered to
+customers, which materialize in the organization
+through business processes carried out by
+An Architectural Viewpoint for Managing BizDevOps Software Projects
+645
+
+--- PAGE 4 ---
+business actors (The Open Group, 2022).
+Considering that this viewpoint encompasses
+business roles, it's highly beneficial for them to
+have the ability to communicate their concerns,
+for instance, regarding business services and
+processes that IT elements need to support. This
+layer should be included in the viewpoint.
+ Application: this layer is used to model
+application services that support the business and
+the applications that materialize them, as well as
+to describe the structure, behavior, and interaction
+of the company's applications (The Open Group,
+2022). The concern of this viewpoint is the
+management of SW development projects with
+BizDevOps, and such software can be represented
+through this layer. Additionally, this viewpoint's
+concern considers the need for aligning
+IT/Business and maintaining agility during the
+process. Therefore, both elements from this layer
+and the business layer should be visible. For this
+reason, it is necessary to include this layer in the
+viewpoint.
+ Technology: this layer is used to model both IT
+and operational technologies. This includes
+technologies such as processing, storage, and
+communication supporting the application and
+business layers. It also allows modeling physical
+or tangible elements like facilities, equipment,
+materials, and distribution networks (The Open
+Group, 2022). The BizDevOps team may also
+consider IT operations roles; therefore, it is
+appropriate to include this layer. Furthermore, as
+indicated, it allows modeling technologies
+supporting the application and business layers,
+which could be essential for maintaining agility or
+achieving alignment. However, physical elements
+that canbemodeled arenotpartof theBizDevOps
+team's concern. Taking all of this into account, the
+technology layer is included, excluding physical
+layer components.
+ Migration and Implementation: this layer is
+used to model elements that support the
+implementation and migration of architectures.
+This includes modeling implementation programs
+and projects to support program, portfolio, and
+project (The Open Group, 2022). Considering the
+focus of this layer and the objective of this
+viewpoint being the management of SW
+development projects and not the implementation
+and/or migration of architectures, this layer is
+excluded.
+Based on the previous analysis, the layers that are
+useful for this viewpoint are: Business, Application,
+and Technology. Now, let's identify the aspects that
+are useful for the BizDevOps-VP objective. This
+analysis is carried out considering the order in which
+the aspects are presented in Figure 2.
+ Passive Structure: This aspect is used to model
+objects upon which behavior is performed;
+typically, these are information objects in the
+business layer and data objects in the application
+layer, but they can also be used to represent
+physical objects (The Open Group, 2022). The
+elements of this aspect could be useful to express
+the "what" regarding the concerns of the
+BizDevOps team. Therefore, this aspect is
+included.
+ Behavior: This aspect is used to model elements
+that describe behavior (processes, functions,
+events, and services) performed by actors (The
+Open Group, 2022). These elements could be of
+great utility for the viewpoint when describing the
+"how" related to the concerns of the BizDevOps
+team. This aspect is included in the viewpoint.
+ Active Structure: This aspect is used to model
+structural elements (business actors, application
+components, and devices that exhibit real
+behavior; in other words, the 'subjects' of activity)
+(The Open Group, 2022). The elements of this
+aspect could be very useful to establish "who" or
+"what" performs some behavior in the context of
+software project management. This aspect is
+included in the viewpoint.
+ Motivation: This aspect is used to model the
+motivations or reasons that guide the design or
+change of an Enterprise Architecture (The Open
+Group, 2022). The elements of the motivation
+aspect could be useful when establishing the
+"why" of the concerns of the BizDevOps team.
+Additionally, it could be useful when
+communicating the drivers and objectives related
+to IT/Business alignment, thus facilitating the
+understanding of the BizDevOps team.
+3.4 Element Selection
+The analysis presented below delves deeper, down to
+the level of the elements that ArchiMate includes in
+each layer-aspect combination. Below are the
+elements that were not selected because they are not
+relevant to the purpose of the BizDevOps-VP and
+may degrade the team's ability to facilitate
+BizDevOps communication.
+In Table 1, the not selected elements are presented
+along with their corresponding layer and aspect,
+along with the justification for that decision.
+ICEIS 2024 - 26th International Conference on Enterprise Information Systems
+646
+
+--- PAGE 5 ---
+Table 1: Justification for not selecting ArchiMate elements.
+Layer Aspect Element Justification
+Business
+Passive
+Structure
+Representation
+The audience for this VP should not have the need to model representations
+of a business object.
+Behavior
+Business
+Interaction
+The interactions that occur in thebusiness layer are not of interest to the entire
+audience of this VP and it could be confusing for IT stakeholders.
+Business Event
+The events that occur in the business layer are not of interest to the entire
+audience of this VP and it could be confusing for IT stakeholders.
+Active
+Structure
+Business Actor
+For audience of this VP, it is not of interest to know which specific actor can
+carry out an activity.
+Business
+Collaboration
+Business collaborations can be confusing for stakeholders outside the
+business area. Therefore, this element would not be useful for the VP.
+Application
+Behavior
+Application
+Function
+The behaviors that an application component may describe are not of interest
+to the entire audience of this VP because they are specific to IT stakeholders
+Application
+Interaction
+The collective behaviors of an application may not be of interest to the entire
+audience of this VP because they are specific to the IT area's analysis.
+Application
+Process
+The sequence of behaviors that describe an application is not of interest to the
+entire audience of this VP because it is specific to the IT area's analysis.
+Application
+Event
+The change of state of an application is not of interest to the entire audience
+of this VP because it is specific to the analysis of the IT area.
+Active
+Structure
+Application
+Collaboration
+The aggregation of elements in the active structure of the application layer to
+represent collective behavior is of interest only to the IT audience of this VP.
+Technology
+Passive
+Structure
+Artifact
+The representation of data artifacts used or produced in a SW development
+process is of interest only to the IT audience of this VP.
+Behavior
+Technology
+Function
+The representation of behaviors specific to the active structure of the
+technology layer is of interest only to the IT audience of this VP.
+Technology
+Process
+The representation of a sequence of behaviors in the technology layer is of
+interest only to the IT audience of this VP.
+Technology
+Interaction
+The collective behavior of elements in the active structure of the technology
+layer is of interest only to the IT audience of this VP.
+Technology
+Event
+A change of state in the technology layer is not of interest to the entire
+audience of this viewpoint because it is specific to the analysis of the IT area.
+Active
+Structure
+Node
+The representation of computational and/or physical resources in the
+technology layer is of interest only to the IT audience of this VP.
+Device
+The representation of physical IT resources in the technology is of interest
+only to the IT audience of this VP.
+System
+Software
+The representation of software systems in the technology layer is not of
+interest to the entire audience of this viewpoint because it is specific to the
+analysis of the IT area.
+Technology
+Collaboration
+The representation of collective behavior in the technology layer is not of
+interest to the entire audience of this viewpoint because it is specific to the
+analysis of the IT area rather than the business area.
+Technology
+Interface
+The access points to the technological layer services are of interest only to the
+IT audience of this VP.
+Path
+The links between elements of the active structure in the technological layer
+are not of interest to the entire audience of this viewpoint.
+Communication
+Network
+The connection structure of elements in the technology layer is not of interest
+to the entire audience of this viewpoint.
+Generic
+Motivation
+Outcome
+The outcome of a certain situation is not of interest to represent because the
+BizDevOps approach is a cyclic approach, and there is no final state.
+Value
+The relative value of a concept is not useful to represent in this viewpoint
+because it has no utility in the SW project management process with
+BizDevOps.
+An Architectural Viewpoint for Managing BizDevOps Software Projects
+647
+
+--- PAGE 6 ---
+3.5 Viewpoint Specification
+Considering the specification requirements set by the
+‘Viewpoint Mechanism’ of ArchiMate 3.2 (The Open
+Group, 2022), BizDevOps-VP is detailed in Table 2.
+Table 2: BizDevOps-VP Specification.
+Elements Specification
+Stakeholders
+The BizDevOps team, composed of the
+following roles: Product Owner, Agility
+Manager (or ‘SCRUM Master’ if
+following SCRUM), and Other DevOps
+roles5.
+Concerns
+Managing a software project with
+BizDevOps while aligning IT/Business
+attempting to preserve the agility.
+Purpose
+Decide: The BizDevOps team needs to
+make decisions based on this
+perspective to align, maintain agility,
+and manage projects effectively.
+Inform: The BizDevOps team aims to
+ensure clear communication of software
+project management among all
+members.
+Scope
+In summary, it is multi-layered and
+multi-aspect, and in detail: (i) layers:
+Business, Application, and Technology
+(excluding the physical layer), and (ii)
+aspects: Passive and Active Structure,
+Behavior, and Motivation.
+Element
+The elements for this viewpoint are:
+Business Layer: Business Object,
+Contract, Product, Business Role,
+Business Interface, Business Process,
+Business Function, Business Service
+Application Layer: Data Object,
+Application Component, Application
+Service.
+Technology Layer: Technology
+Service
+Motivation Aspect: Assessment,
+Constraint, Driver, Goal, Meaning,
+Principle, Requirement, Stakeholder
+Location
+Grouping
+4 VALIDATION
+To validate the applicability of the viewpoint, we
+have chosen one case study from the company Arnia
+Software6, and we have conducted a proof of concept.
+5
+As developers, testers, designers, operations managers,
+among others (ISACA, 2020).
+4.1 Case Study: Prepaid Card
+The selected case study7 is related to the finances of
+an organization and require a software solution.
+The company needed to implement an efficient
+way to manage corporate expenses through prepaid
+cards. The company developed a versatile product
+accessible through web and mobile interfaces, backed
+by a unified set of RESTful web services. This
+developed system was required to ensure high
+availability, zero downtime during maintenance and
+updates, and compliance with PCI DSS standards.
+Key features of the solution include issuing
+prepaid cards, tracking and reporting on transactions,
+configuring and managing expense limits, enabling
+monitoring and approval by accounting departments,
+secure PCI-compliant storage of credit card
+information, and comprehensive transaction and
+balance management, including authorization
+acceptance and decline, as well as payments and
+virtual card capabilities.
+From the outset of each project, the company
+leverages the benefits of Scrum and Kanban
+methodologies. Development team, based at the
+company's headquarters, consists of six members:
+three backend developers, one frontend developer,
+and two quality assurance specialists. The company
+maintain close collaboration with the Customer
+Service team and the infrastructure team, which
+includes project managers, sales, marketing experts,
+and specialized designers. The company Arnia
+Software approaches all projects with agility and
+flexibility, conducting daily Scrum meetings with
+sprints and delivering demonstrations every two
+weeks.
+The architecture of the solution implemented by
+the company follows a client-server model with
+multiple clients, including a Single Page Application
+(SPA) for web browsers developed in Angular, as
+well as mobile applications for iOS and Android. The
+backend acts as a server and provides REST services
+written in Java 7 using the vert.x framework. The
+back office is kept completely isolated with separate
+frontend and backend components, accessible
+through a dedicated VPN. The solution was designed
+as a Software as a Service (SaaS) platform and
+supports multiple organizations within the same
+application cluster. The technologies used in the
+frontend include Angular, Grunt, and Bootstrap.
+Development tools encompass Jira, Jenkins, Github,
+and Ansible.
+6
+https://www.arnia.com/about-us/
+7
+https://www.arnia.com/case-studies/banking-finance/
+ICEIS 2024 - 26th International Conference on Enterprise Information Systems
+648
+
+--- PAGE 7 ---
+Figure 3: Result of Proof of Concept for the applicability of BizDevOps-VP to the case study.
+4.2 Proof of Concept: Using
+BizDevOps-VP
+An EA model has been created using BizDevOps-VP
+applied to the case study. The results can be seen in
+Figure 3. Using the components comprising
+BizDevOps-VP, we successfully captured all
+pertinent aspects of the case study. Certain elements
+within the application layer, as described in the case
+study, were intentionally excluded from the modeling
+to avoid potential distractions for non-IT team
+members. Nevertheless, fostering familiarity among
+business-oriented team members with IT concepts is
+a valuable goal. To illustrate, we included models of
+Back-end and Front-end services to emphasize the
+presence of software-related elements offering
+internal services.
+The modeled case study currently employs an
+agile methodology based on Scrum and DevOps, as it
+has proven challenging to secure a real-world case
+where BizDevOps is already in practice. However,
+we contend that this is not a hindrance, given that
+BizDevOps is essentially an organic extension of
+DevOps, incorporating a business cycle. This
+presents an opportunity for us to validate its
+applicability.
+By leveraging this model, we are confident that it
+will enhance communication among team members
+involved in business, development, and operations.
+This benefit arises from the adoption of a
+comprehensive notation, filled with elements that
+enable a thorough description of the critical aspects
+they need to consider when managing the project.
+Figure 3 illustrates an architectural view using the
+specifiedviewpoint,whichemphasizesitspotentialto
+strengthen the software project management process.
+Thispotentialisevidentinhowthedevelopmentteam
+can model and visualize internal agreements,
+constraints, and requirements within the team.
+Additionally, they can outline the services provided
+by various areas (business, development, and
+operations), understand the project's goals, and
+identify the involved stakeholders. Such an approach
+greatlyfacilitatesacomprehensiveunderstanding and
+management of the project, aligning the multifaceted
+aspects and the teams involved.
+With the extensive descriptive capabilities of
+BizDevOps-VP, the team can amass information and
+make informed decisions regarding software project
+management, and likewise, effectively communicate
+their concerns.
+In turn, the BizDevOps team can graphically
+illustrate how software services and components
+correspond with business requirements. This
+approach could considerably simplify the process of
+aligning IT with business strategies.
+An Architectural Viewpoint for Managing BizDevOps Software Projects
+649
+
+--- PAGE 8 ---
+5 CONCLUSIONS AND FUTURE
+WORK
+In this study, we introduce BizDevOps-VP, which is
+potentially beneficial for the management of software
+projects. BizDevOps-VP is promising in improving
+communication and decision-making within project
+teams, effectively fulfilling its designated goals.
+Our proposal aims to support individuals
+responsible for overseeing BizDevOps initiatives
+who may not have prior experience with enterprise
+architecture practices. By utilizing architectural
+models with standardized notations, such as
+ArchiMate, we can improve comprehension of all
+facets that influence SW development with this
+approach.
+We posit that BizDevOps-VP can assist in two
+crucial areas: (i) managing the inherent complexity
+associated with transitioning from DevOps to
+BizDevOps, and (ii) ensuring the proper balance
+between DevOps agility and alignment of software
+with thebusiness. In this context, theproofofconcept
+represents an initial step demonstrating the feasibility
+of our proposal. However, we think it's crucial to
+thoroughly validate our work. In the future, we plan
+to carry out detailed case studies in different
+organizations and survey field experts.
+ACKNOWLEDGEMENTS
+This work has been supported by the OASSIS project
+(PID2021-122554OB-C31, funded by MCIN / AEI /
+10.13039/501100011033 / FEDER, EU), Grant
+PRE2019-087303, funded by MCIN/AEI/
+10.13039/501100011033, and by “ESF Investing in
+your future”.
+REFERENCES
+Fuentes-Quijada, G., Ruiz-Gonzalez, F.,& Caro,A. (2023).
+Towards Agile IT/Business Alignment at BizDevOps.
+Paper presented at the Proceedings of the 25th
+International Conference on Enterprise Information
+Systems - Volume 2: ICEIS.
+Gokarna, M., & Singh, R. (2021). DevOps: A Historical
+Review and Future Works. Paper presented at the
+International Conference on Computing,
+Communication, and Intelligent Systems (ICCCIS),
+Greater Noida, India.
+Gruhn, V., & Schäfer, C. (2015). BizDevOps: Because
+DevOps is Not the End of the Story. Paper presented at
+the Intelligent Software Methodologies, Tools and
+Techniques. SoMeT 2015. Communications in
+Computer and Information Science.
+Hart, M., & Burke, J. (2020). An Exploratory Study on the
+DevOps IT Alignment Model. Interdisciplinary
+Journal of Information, Knowledge, and Management,
+15, 127-154. doi:10.28945/4595
+Hevner, A., & Chatterjee, S. (2010). Design Science
+Research in Information Systems. In A. Hevner & S.
+Chatterjee (Eds.), Design Research in Information
+Systems: Theory and Practice (pp. 9-22). Boston, MA:
+Springer US.
+IEEE. (2021). IEEE 2675: 2021 IEEE Standard for
+DevOps. IEEE Standard for DevOps. Retrieved from
+https://standards.ieee.org/standard/2675-2021.html
+ISACA. (2020). COBIT Focus Area: DevOps. In ISACA
+(Ed.), (pp. 156).
+ISO/IEC/IEEE. (2022). International Standard for
+Software, systems and enterprise--Architecture
+description. ISO/IEC/IEEE 42010:2022(E), 1-74.
+doi:10.1109/IEEESTD.2022.9938446
+Kappelman, L., Johnson, V., Torres, R., Maurer, C., &
+McLean, E. (2019). A study of information systems
+issues, practices, and leadership in Europe. European
+Journal of Information Systems, 28(1), 26-42.
+doi:10.1080/0960085X.2018.1497929
+Lankhorst, M. (2017). Enterprise Architecture at Work (4
+ed.). Berlin, Heidelberg: Springer Berlin Heidelberg.
+Pérez-Castillo, R., Ruiz, F., Piattini, M., &Ebert,C. (2019).
+Enterprise Architecture. IEEE Software, 36(4), 12-19.
+doi:10.1109/MS.2019.2909329
+Pérez Castillo, R., Caivano, D., Ruiz, F., & Piattini, M.
+(2021).ArchiRev—Reverseengineeringofinformation
+systems toward ArchiMate models. An industrial case
+study. Journal of Software: Evolution and Process,
+33(2), e2314-e2314. doi:10.1002/smr.2314
+Raj, P., & Sinha, P. (2020). Project Management In Era Of
+Agile And Devops Methodlogies. International
+Journal of Scientific & Technology Research, 9, 1-1.
+Sanjurjo, E., Pedreira, O., Garcia, F., & Piattini, M. (2020).
+Process Reference Model for BizDevOps. Paper
+presented at the 15th Iberian Conference on
+Information Systems and Technologies (CISTI),
+Seville, Spain.
+The Open Group. (2022). ArchiMate® 3.2 Specification.
+Retrieved from https://pubs.opengroup.org/archite
+cture/archimate32-doc/
+ICEIS 2024 - 26th International Conference on Enterprise Information Systems
+650

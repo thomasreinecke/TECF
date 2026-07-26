@@ -1,0 +1,378 @@
+--- PAGE 1 ---
+ScienceDirect
+Available online at www.sciencedirect.com
+Procedia Computer Science 138 (2018) 409–416
+1877-0509 © 2018 The Authors. Published by Elsevier Ltd.
+This is an open access article under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0/)
+Selection and peer-review under responsibility of the scientific committee of the CENTERIS - International Conference on ENTERprise
+Information Systems / ProjMAN - International Conference on Project MANagement / HCist - International Conference on Health and
+Social Care Information Systems and Technologies.
+10.1016/j.procs.2018.10.058
+Available online at www.sciencedirect.com
+ScienceDirect
+Procedia Computer Science 00 (2018) 000–000
+www.elsevier.com/locate/procedia
+1877-0509 © 2018 The Authors. Published by Elsevier Ltd.
+This is an open access article under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0/)
+Selection and peer-review under responsibility of the scientific committee of the CENTERIS - International Conference on ENTERprise
+Information Systems / ProjMAN - International Conference on Project MANagement / HCist - International Conference on Health and Social
+Care Information Systems and Technologies.
+CENTERIS - International Conference on ENTERprise Information Systems /
+ProjMAN - International Conference on Project MANagement / HCist - International
+Conference on Health and Social Care Information Systems and Technologies,
+CENTERIS/ProjMAN/HCist 2018
+A Label is not enough – Approach for an Enterprise Architecture
+Role Description Framework
+Barbara Thönssen barbara.thoenssen@fhnw.ch,
+Mark von Dewitz mark@vondewitz.ch*
+University of Applied Sciences of Northwestern Switzerland, Riggenbachstrasse 16, 4600 Olten, Switzerland
+von Dewitz Consulting, Ackerstrasse 11, 4800 Zofingen, Switzerland
+Abstract
+Enterprise architecture management is the linchpin of digital transformation. Implementation requires clear tasks, roles and skills.
+Although different frameworks, such as TOGAF and SFIA, provide help for this, none is suitable to completely cover the needs in
+practice. In our approach we have tried to close this gap by adding SFIA to TOGAF. The assignment was recorded in the form of
+an Excel table. Based on the Excel table, a role fat sheet - which we have also developed - can then be filled automatically. This
+allows companies to describe roles, such as the Enterprise Architecture Manager, in a way that they are consistent, comparable and
+complete. We have demonstrated the benefits of our approach in three use cases. For our research we applied Design Science
+Research methodology. The evaluation was carried out with the help of a focus group, which also critically assessed interim results
+of our work. We can saythat with our approach we have satisfactorilysolved a practical problemand with the extension ofTOGAF
+by SFIA we have contributed to closing the existing gap in the classification of terms that are relevant for Enterprise Architecture
+management.
+Translated with www.DeepL.com/Translator
+© 2018 The Authors. Published by Elsevier Ltd.
+This is an open access article under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0/)
+*
+Corresponding author. Tel.: +0-000-000-0000 ; fax: +0-000-000-0000 .
+E-mail address: mark@vondewitz.ch
+Available online at www.sciencedirect.com
+ScienceDirect
+Procedia Computer Science 00 (2018) 000–000
+www.elsevier.com/locate/procedia
+1877-0509 © 2018 The Authors. Published by Elsevier Ltd.
+This is an open access article under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0/)
+Selection and peer-review under responsibility of the scientific committee of the CENTERIS - International Conference on ENTERprise
+Information Systems / ProjMAN - International Conference on Project MANagement / HCist - International Conference on Health and Social
+Care Information Systems and Technologies.
+CENTERIS - International Conference on ENTERprise Information Systems /
+ProjMAN - International Conference on Project MANagement / HCist - International
+Conference on Health and Social Care Information Systems and Technologies,
+CENTERIS/ProjMAN/HCist 2018
+A Label is not enough – Approach for an Enterprise Architecture
+Role Description Framework
+Barbara Thönssen barbara.thoenssen@fhnw.ch,
+Mark von Dewitz mark@vondewitz.ch*
+University of Applied Sciences of Northwestern Switzerland, Riggenbachstrasse 16, 4600 Olten, Switzerland
+von Dewitz Consulting, Ackerstrasse 11, 4800 Zofingen, Switzerland
+Abstract
+Enterprise architecture management is the linchpin of digital transformation. Implementation requires clear tasks, roles and skills.
+Although different frameworks, such as TOGAF and SFIA, provide help for this, none is suitable to completely cover the needs in
+practice. In our approach we have tried to close this gap by adding SFIA to TOGAF. The assignment was recorded in the form of
+an Excel table. Based on the Excel table, a role fat sheet - which we have also developed - can then be filled automatically. This
+allows companies to describe roles, such as the Enterprise Architecture Manager, in a way that they are consistent, comparable and
+complete. We have demonstrated the benefits of our approach in three use cases. For our research we applied Design Science
+Research methodology. The evaluation was carried out with the help of a focus group, which also critically assessed interim results
+of our work. We can saythat with our approach we have satisfactorilysolved a practical problemand with the extension ofTOGAF
+by SFIA we have contributed to closing the existing gap in the classification of terms that are relevant for Enterprise Architecture
+management.
+Translated with www.DeepL.com/Translator
+© 2018 The Authors. Published by Elsevier Ltd.
+This is an open access article under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0/)
+*
+Corresponding author. Tel.: +0-000-000-0000 ; fax: +0-000-000-0000 .
+E-mail address: mark@vondewitz.ch
+© 2018 TheAuthors. Published by Elsevier Ltd.
+This is an open access article under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0/)
+Selection and peer-review under responsibility of the scientific committee of the CENTERIS - International Conference on
+ENTERpriseInformationSystems/ProjMAN-InternationalConferenceonProjectMANagement/HCist-InternationalConference
+on Health and Social Care Information Systems and Technologies.
+
+--- PAGE 2 ---
+410 Barbara Thönssen et al. / Procedia Computer Science 138 (2018) 409–416
+Thönssen, von Dewitz / Procedia Computer Science 00 (2018) 000–000 2
+Selection and peer-review under responsibility of the scientific committee of the CENTERIS - International Conference on
+ENTERprise Information Systems / ProjMAN - International Conference on Project MANagement / HCist - International
+Conference on Health and Social Care Information Systems and Technologies.
+Keywords: Enterprise Architecture; TOGAF; SFIA; Skill; Framework
+1. Introduction
+Searching at the Swiss job market† for ‘Enterprise Architect’ lists 156 hits. Checking the details reveals that there
+is no common understandingof what Enterprise Architecture is, whichroles belongto it [1]. Companies have different
+understandings ofthe Enterprise Architecture practice. This is partiallybased on the fact, that the role ofthe Enterprise
+Architect has and is evolving over time [2]. This unclear understanding persists, even though the well-established
+enterprise architecture standard TOGAF 9.1 [1] provides classifications of roles (e.g. enterprise architecture manager)
+needed to perform Enterprise Architecture. Within this standard, The Open Group has explicitly recognized this issue
+by stating: «Enterprise Architecture and Enterprise Architect are widely used but poorly defined terms in industry
+today. Theyare used to denote a varietyof practices and skills applied in a wide varietyof architecture domains. There
+is a need for better classification to enable more implicit understanding of what type of architecture/architect is being
+described» [1]. Thus, companies and organizations struggle to find qualified staff in the domain of Enterprise
+Architecture [3] because the requirements for the vacancies might be imprecise or homespun and potential applicants
+or job seekers have no references to describe their skills and position.
+To our knowledge no approach exists that describes Enterprise Architecture roles with an explicit linkage to the
+aspects tasks, responsibilities, skills and skill levels. While TOGAF 9.1 provides an Architecture Skills Framework,
+this framework appears to lack comprehensiveness in multiple areas.
+In search of improvement possibilities, we considered the skills framework SFIA 6 [4] (Skills Framework for the
+Information Age) was chosen to provide input and address the identified lacks of TOGAF’s Architecture Skills
+Framework. Therefore, we will show how the Architecture Skills Framework of TOGAF 9.1 can be enhanced by
+SFIA 6 to provide comprehensive and commonly acceptable descriptions of roles in the Enterprise Architecture
+domain. Furthermore, an EA Role Fact Sheet is developed that allows to uniquely describe a role in order to exploit
+the improvements made to TOGAF’s Architecture Skills Framework and thus help organizations in thoroughly
+defining their Enterprise Architecture roles.
+For our work we applied Design Science Research (DSR) [5] and the developed artefacts are the Extended
+Architecture Skills Framework (EASF) and the aforementioned EA Role Fact Sheet for roles descriptions (EARF).
+The paper is structured as follows: In section 2 we will introduce the business problem in depth by describing three
+use case scenarios. Section 3 will give an overview on related work and elaborate the research gap. In section 4 we
+will briefly introduce how DSR was applied, followed by section 5 in which we detail our approach. In section 6
+evaluation of our approach is discussed. We close our paper in section 6 with the conclusion and future work.
+2. Use Case Scenarios
+Derived from the general situation described in the introduction, this section provides three use cases to give more
+detailed evidence of the problem our research addresses.
+2.1. Casting of Enterprise Architecture Roles (UC1)
+The recruitment of personnel is part of the responsibility of the Human Resources department within an
+organization. The fact that Enterprise Architecture has and still is evolving and is more of a set of multi-dimensional
+†
+Indeed Employment Website. URL: Job https://www.indeed.ch/Enterpris e-Architect-Jobs (14.2.2018)
+
+--- PAGE 3 ---
+Barbara Thönssen et al. / Procedia Computer Science 138 (2018) 409–416 411
+Thönssen, von Dewitz / Procedia Computer Science 00 (2018) 000–000 3
+functional roles than a single role [2], can pose a challenge potential candidates and the HR representative recruiting
+them. It is therefore important to make the role description very clear [6][7]. The business department wanting to
+recruit candidates in the domain of Enterprise Architecture must thoroughly describe the skills, tasks and
+responsibilities of the role being staffed. Apart from being comprehensive, the role description must also be easily
+understandable bythe HR department and maybe other stakeholders. Especially when frequentlyrecruiting Enterprise
+Architecture staff in different business departments, a consistent structure of the role descriptions appears to be
+important. This can support the comparability between role descriptions and therefore lead to a consistent evaluation
+of candidate profiles.
+2.2. Standardizing Skill Descriptions (UC2)
+Another use case fortheEASF fromthe domainofHumanResourcesispeopledevelopment. Overtime,employees
+develop their skills and gain experience. In a time in which change becomes the only constant, it is important to keep
+track of employees’ professional development. Hence, skill profiles should be continuously extended by somehow
+standardized description in order to support searchability and comparability. If the EASF is used to define
+requirements that must be met to fill an open position, eligible candidates may be identified more easily.
+2.3. Developing Enterprise Architecture Capability (UC3)
+A core concept of the TOGAF 9.1 standard is the Architecture Development Cycle. This cycle contains a
+preliminary phase, which describes the steps to be taken to develop an Architecture Capability desired by the
+organization. One step to be taken within this phase is «Define and establish enterprise architecture team and
+organization» [1]. The EASF can support this step in several ways. First of all, it can be used to define required skills,
+tasks to be performed and responsibilities to be taken to reach the desired Architecture Capability. When this has been
+defined, the organization can look for roles and employees that are able to contribute towards covering these skills,
+tasks and responsibilities as described in UC2. While it may be difficult to achieve the desired Architecture Capability
+without recruiting additional staff or hiring consultants – at least contemporarily - promoting existing employees can
+both reduce costs and bring in long-term know-how and experience from within the organization. Having a clear
+vision what skills, tasks and responsibilities can be covered the EASF can be used to identify gaps and develop a
+training plan.
+While none of these use cases (UC1-UC3) can be adequately addressed with the existing possibilities, like the
+TOGAF 9.1 standard, we show in section 5.4, how the EASF supports these use cases.
+3. Related Work
+This chapter provides an overview on related work and summarises important sources of the EASF.
+3.1. TOGAF Architecture Skills Framework
+As a part of its Architecture Capability Framework, TOGAF provides an Architecture Skills Framework. The
+Architecture Capability Framework is one of eight parts of the TOGAF 9.1 standard. It defines a set of roles and
+attributes several sets of skills to these roles while classifying proficiency levels for each attribution (for an example
+refer to Fig. 1). The numbers within the cells represent the proficiency level required by the roles in the respective
+row applied to the respective skill.
+As mentioned in the introduction, we identified several lacks within TOGAF’s Architecture Skills Framework.
+While the framework provides nine roles, only one role is described specifically. The other roles are described in a
+generic characterization. Another aspect of TOGAF’s Architecture Skills Framework presenting a lack is the fact, that
+all of the tasks are assigned to all of the nine roles of the framework in matrices. This implies, that every role must at
+least have a basic level in all presented skills. Fig. 1 provides an example of the mapping between the roles and skills
+provided by TOGAF’s Architecture Skills Framework.
+
+--- PAGE 4 ---
+412 Barbara Thönssen et al. / Procedia Computer Science 138 (2018) 409–416
+Thönssen, von Dewitz / Procedia Computer Science 00 (2018) 000–000 4
+Fig. 1 Skill mapping from within TOGAF’s Architecture Skills Framework [1]
+Also, TOGAF’s Architecture Skills Framework does not provide descriptions to the presented skills. This makes
+it difficult to understand, why the roles have different skill levels and which implications this has on these roles.
+3.2. Skills Framework for the Information Age (SFIA 6)
+The SFIA framework was established in 2000 and has been regularly updated and developed since then. It has
+become «the globally accepted common language for the skills and competencies required in the digital world» [8].
+SFIA 6 provides 6 categories, 13 sub-categories, 97 skills and a total 362 skill levels. SFIA 6 defines responsibility
+with the four aspects Autonomy, Influence, Complexity and Business skills.
+3.3. SFIA – c-CF Comparison & Review Mapping
+SFIA has been used in other research to extend the framework e-CF (European Competency Framework) through
+a comparisonand mappingbySeward [9].This mappingdoes however have a rather different scope. Bothframeworks
+describe skills and competences without putting these into the scope of roles. Unlike SFIA or e-CF, TOGAF defines
+skills and roles. Seward encountered the problem of mismatching levels and overlaps while mapping the
+aforementioned frameworks, which makes a clear comparison very difficult [9]. Another finding raised by Seward is
+the fact, that the mapping between frameworks requires a considerable amount of interpretation. Similar to Seward,
+we also encountered the problem of mismatching levels and overlaps during our research.
+3.4. Enterprise Architecture Career Path Development
+The Federation of Enterprise Architecture Professional Organization (FEAPO) defines architectural roles
+commonly recognized in organizations within its Guide to Careers in Enterprise Architecture [10][11]. FEAPO takes
+a similar approach to defining EA roles by defining competencies, competency groups, roles and levels. These levels
+are applied to competencies for the different roles. The aspects of tasks and responsibilities are however not explicitly
+addressed. FEAPO also consideredTOGAF byemployingthe model ofthe Enterprise Architecture domains Business,
+Applications, Information, Technology. However, the domain Security was added to this model, since FEAPO deems
+TOGAF’s model to not consider this aspect sufficiently. SFIA was also considered by FEAPO by using the skill level
+scale of SFIA containing seven skill levels. The naming and definition of the skills defined by FEAPO deviate from
+the skills defined within SFIA. It would require additional work and analyses to identify overlaps, similarities and
+differences between the skills defined by FEAPO and those defined by SFIA.
+3.5. The Changing Role of the Enterprise Architect
+Gøtze argues that there are different types of Enterprise Architects with quite different roles [12]. The author
+mentions the three types Boundary-Focused Architect, Dialogic Architects and Enterprising Architects. The
+Boundary-Focused Architects transmit, translate and transform knowledge across boundaries. These boundaries may
+be between business silos, customer and vendor or between the classic business and IT boundary. The Dialogic
+
+--- PAGE 5 ---
+Barbara Thönssen et al. / Procedia Computer Science 138 (2018) 409–416 413
+Thönssen, von Dewitz / Procedia Computer Science 00 (2018) 000–000 5
+Architects come to play in organizations, in which the boundaries have melted down and the collaboration is more
+pragmatic. In these organizations the Dialogic Architects should assess and review market offers when it comes to
+new technologies or applications. They are responsible for promoting social collaboration by working with social
+initiative leaders and condense the results of this into a strategic roadmap. Finally, the Enterprising Architects are
+focused on gaining a holistic view of the organization, while explicitly not only considering technological aspects but
+also human interaction, motivation and perception. The author argues, that the Enterprising Architects should achieve
+this by bringing together «analytical mastery of architects and the intuitive originality of designers» in a mix of the
+disciplines Enterprise Architecture and Design Thinking [12]. The author does however state, that the discipline of
+Enterprise Architecture is evolving and the role of the Enterprise Architect is changing with it.
+3.6. Role of the Enterprise Architect in the context of Business IT-Alignment
+Wagner and Moshtaf [13] highlight the role ofthe Enterprise Architect inthe context of the Business-IT-Alignment
+and IT-Governance processes. The authors state that «the Enterprise Architect is responsible for maintaining the
+Enterprise Architecture that describes essential components of a business and their interrelationships» [13]. The
+authors also state, that implementation of Enterprise Architecture is an endless, complex and interdisciplinaryprocess.
+Therefore, organizations require highly skilled Enterprise Architects with various competencies. The research of
+Wagner and Moshtaf has yielded a list of competencies, which were mentioned most frequently during their data
+collection. Namely, these competencies are: Broad Work Experience, Business Process Design, Business Strategy,
+Systems, Communication, Openness, Project Management, Technical Acumen, Design / Architecture Development IT
+Strategy and Relationship Management. Similar to Gøtze the authors also state that the role of the Enterprise Architect
+is changing.
+4. Research Method
+The Design Science Research [14][5] was applied to develop the EASF. For our work, we identified three research
+questions. Research question 1 asks: «Which tasks do roles within enterprise architecture perform?» research question
+2: «Which responsibilities are contained within enterprise architecture roles?» and research question 3: «Which skills
+are required to carry out the tasks and responsibilities of the roles defined within enterprise architecture?».
+Fig. 2 provides an overview of the research phases and lists research questions addressed in the different phases as
+well as the methods and techniques, which were used to achieve the results.
+Fig. 2 Design science research phases based on Kuechler et al. [15] and Hevner er al. [5].
+5. EASF and EARF
+Result of our work is the Extended Architecture Skills Framework (EASF) and an Enterprise Architecture Role
+Fact Sheet (EARF). The EASF, which is basically a mapping between TOGAF and SFIA (described in section 5.1) is
+recorded in an Excel workbook. The EARF is a template that provides the possibility to automatically generate a role
+description based on this Excel workbook.
+Several steps were taken to create the EASF and the EARF. This describes the approach and the delivery items.
+
+--- PAGE 6 ---
+414 Barbara Thönssen et al. / Procedia Computer Science 138 (2018) 409–416
+Thönssen, von Dewitz / Procedia Computer Science 00 (2018) 000–000 6
+5.1. Mapping between TOGAF and SFIA
+The first step to the EASF was to create a mapping between TOGAF and SFIA. This step consisted of considering
+skills defined by TOGAF and searching for a corresponding skill in SFIA. Due to the fact, that the Architecture Skills
+Framework does not provide descriptions on what the mentioned skills include, this comparison mainly focused on
+finding skills with identical or similar designations and analyzing the skill descriptions of SFIA. While some skills
+designations such as Project Management exist in both frameworks, this is not the case for all skills defined by
+TOGAF. The goal of this step was to find and match a skill in SFIA for every skill defined by TOGAF. The second
+part consisted of mapping the skill levels of TOGAF and SFIA. Since the frameworks utilize different scales for the
+skill levels, this had to be done individually for every skill. This mapping was performed for the skills within the
+category Enterprise Architecture Skills defined in TOGAF, as the goal of the mapping was to provide a proof of
+concept on how the mapping between TOGAF and SFIA can be achieved (see Fig. 3).
+Fig. 3 Schematic illustration of the mapping between TOGAF and SFIA
+This mapping posed an intermediary result and was reviewed by an expert involved in the development of SFIA
+and member of the SFIA council (refer to chapter 5.5 for more information on the evaluation).
+The skill level descriptions in SFIA resemble, what a role should be able to perform at a given skill level [16].
+Based on this fact, these skill level descriptions were used to describe the tasks of the roles defined by TOGAF.
+Apart from skills and skill levels, SFIA defines levels of responsibility. TOGAF generically describes
+responsibilities of an Architect. Unlike the skills within TOGAF, these responsibilities are not mapped to the roles but
+are limited to the previously mentioned generic descriptions. Again, a proof of concept was conducted to demonstrate,
+how responsibilities of TOGAF and SFIA can be mapped. This proof of concept included the analysis of the
+genericallydescribed responsibilities within TOGAF and mapping suitable levels of responsibility of SFIA consisting
+of the categories Autonomy, Influence, Complexity and Business Skills. This mapping was performed by the role
+Enterprise Architecture Manager defined by TOGAF. This proof of concept was also reviewed by the same expert as
+in the previous mapping. Fig. 4 summarizes the previously described mappings.
+Fig. 4 Mappings created between TOGAF and SFIA
+
+--- PAGE 7 ---
+Barbara Thönssen et al. / Procedia Computer Science 138 (2018) 409–416 415
+Thönssen, von Dewitz / Procedia Computer Science 00 (2018) 000–000 7
+5.2. Excel workbook of the EASF
+The Excel Workbook of the EASF contains the mapping detailed in the previous section 5.1. It can be used for a
+variety of purposes. Firstly, it supports the automated creation of the EA Role Fact Sheets. Then, it provides a broad
+range from customization opportunities. This ranges from creating additional organization specific roles, modifying
+the roles defined by TOGAF to specific needs of an organization to customizing the underlying mapping to modify
+multiple roles at once.
+5.3. EA Role Fact Sheet (EARF)
+The EA Role Fact Sheet provides an automated possibility to generate a document-based report of the role
+descriptions, which can be shared easily. It is based on the Excel workbook and therefore the EASF. The EARF
+contains the role designation with possible synonymous role designations, a general description, an introduction, as
+well as responsibilities, required skills and tasks. The EARF can be created for the roles defined by TOGAF and also
+for custom roles created by users.
+5.4. Improved Use Cases with EASF and EARF
+By creating the EASF, the use cases described in chapter 2 can be improved in a structured manner.
+UC1 Casting Enterprise Architecture Roles: The EARF provides a comprehensive and yet compact role
+descriptionina document format, that canbe used inthe process ofcastingEA roles. It provides a simple and effective
+way for the recruiting business department to describe their requirements towards candidates in terms of skills, tasks
+and responsibilities.
+UC2 Standardizing Skill Descriptions: Due to the fact that EASF is based on TOGAF and SFIA, it provides a
+broad range of definitions on skills, tasks and responsibilities. EASF can therefore be used to describe many roles
+within an organization in the field of Enterprise Architecture. EASF therefore enables organizations to describe their
+EA roles in a standardized way, which enhances comparability and increases the quality of the role descriptions. In
+addition to that, the role descriptions can be adapted to changes both in the environment but also towards the
+developing skills and experience of the EA staff.
+UC3 Developing Enterprise Architecture Capability: EASF can be used to define necessary skills, tasks and
+responsibilities to achieve a desired Architecture Capability. In a second step, these skills, tasks and responsibilities
+can be matched by promoting employees into EA roles. Whatever skills, tasks and responsibilities can’t be covered
+with internal resources can be staffed by recruiting competent staff (described in UC1) or hiring the right consultants.
+5.5. Evaluation
+The evaluation of the EASF and the accompanying Excel Workbook as well as the EARF were evaluated at three
+different occasions. Firstly, the lacks identified within TOGAF’s Architecture Skills Framework were evaluated in
+interviews early on during the research process. These interviews were conducted with experts from the fields of
+Enterprise Architecture and Recruiting. The findings gained fromthese interviews were used to design the EASF. The
+second step in the evaluation consisted of an expert review. The skill mapping between TOGAF and SFIA was
+reviewed by an expert involved in the development of SFIA. The EA Role Fact Sheet was evaluated for its usefulness
+in a focus group workshop. The participants of the focus group were experts from the field of Enterprise Architecture.
+6. Conclusion and Future Work
+As shown up to our knowledge no approach exists that describes Enterprise Architecture roles with an explicit
+linkage to the aspects tasks, responsibilities, skills and skill levels.
+The lacks we identified within TOGAF’s Architecture Skills Framework are now addressed by EASF. Thanks to
+the extension of TOGAF with SFIA, there are now detailed descriptions on skills, skill levels, tasks and
+responsibilities. Therefore, we were able to deepen the definitions of TOGAF point out the implications of the skills
+
+--- PAGE 8 ---
+416 Barbara Thönssen et al. / Procedia Computer Science 138 (2018) 409–416
+Thönssen, von Dewitz / Procedia Computer Science 00 (2018) 000–000 8
+and skill levels to the different roles defined by TOGAF. On the other hand, we were able to point out, which
+combination of skills in SFIA are required for roles in the field of Enterprise Architecture. This provides a use case
+for the framework SFIA itself, which itself does not list or describe roles.
+However, the EASF has been created without considering specific industries or organizations. Based on this fact
+the EASF can be applied to organizations of different industries. Further research could verify this and thus enhance
+the relevance and applicability of the EASF.
+During the focus group workshop (see section 5.5), we found out that the roles, skills and skill levels assigned to
+these roles defined byTOGAF’s Architecture Skills Frameworkmaynot be applicableinall contexts. Further research
+verifying this could provide more insights and potentially suggest improvements to TOGAF’s Architecture Skills
+Framework.
+Apart from extending TOGAF’s Architecture Skills Framework with SFIA 6, the use of additional skills
+frameworks could complement and improve the EASF. An example of an additional framework that could be used
+for this is e-CF.
+References
+[1] The Open Group, TOGAF Version 9.1. 2013.
+[2] C. Strano and Q. Rehmani, “The role of the enterprise architect,” Inf. Syst. E-bus. Manag., vol. 5, no. 4, pp.
+379–396, 2007.
+[3] C. Martens, “Enterprise Architect | CIO,” 2007. [Online]. Available:
+https://www.cio.com/article/2438311/enterprise-architecture/enterprise-architect.html. [Accessed: 21-Apr-
+2018].
+[4] SFIA Foundation, “SFIA 6. The complete reference guide,” p. 85, 2015.
+[5] A. R. Hevner, S. T. March, J. Park, and S. Ram, “Design Science in Information Systems Research,” MIS
+Q., vol. 28, no. 1, pp. 75–105, 2004.
+[6] P. Rabinowitz, “Chapter 10. Hiring and Training Key Staff of Community Organizations | Section 2.
+Preparing Job Descriptions and Selection Criteria | Main Section | Community Tool Box.” [Online].
+Available: https://ctb.ku.edu/en/table-of-contents/structure/hiring-and-training/job-descriptions/main.
+[Accessed: 25-Apr-2018].
+[7] K. Tyler, “Job Worth Doing: Update Descriptions.” [Online]. Available: https://www.shrm.org/hr-
+today/news/hr-magazine/pages/0113-job-descriptions.aspx. [Accessed: 25-Apr-2018].
+[8] SFIA Foundation, “About SFIA,” 2017. [Online]. Available: https://www.sfia-online.org/en/reference-
+guide. [Accessed: 25-May-2017].
+[9] I. Seward, “SFIA – e-CF Comparison & Mapping Review,” pp. 1–24, 2016.
+[10] Federation of Enterprise Architecture Professional Organizations, “Guide to Careers in Enterprise
+Architecture - v0.21,” Unpublished, 2015. [Online]. Available:
+http://feapo.org/Collaboration/sites/default/files/Guide to Careers in Enterprise Architecture - v0.21.docx.
+[11] Federation of Enterprise Architecture Professional Organizations, “Enterprise Architecture Career Path
+Development,” Unpublished, 2015. [Online]. Available:
+http://feapo.org/Collaboration/sites/default/files/Career Path Research_V5.docx.
+[12] J. Gøtze, “The changing role of the enterprise architect,” Proc. - IEEE Int. Enterp. Distrib. Object Comput.
+Work. EDOC, pp. 319–326, 2013.
+[13] H. T. Wagner and J. Meshtaf, “Individual IT roles in business - IT alignment and IT governance,” Proc.
+Annu. Hawaii Int. Conf. Syst. Sci., vol. 2016–March, pp. 4920–4929, 2016.
+[14] V. Vaishnavi and B. Kuechler, “Design Science Research in Information Systems Overview of Design
+Science Research,” Ais, p. 45, 2004.
+[15] B. Kuechler and V. Vaishnavi, “Theory development in design science research: anatomy of a research
+project,” European Journal of Information Systems, vol. 17, no. 5. pp. 489–504, 2008.
+[16] I. Seward, “Personal correspondance with co-author of SFIA.” 2017.

@@ -1,0 +1,2187 @@
+--- PAGE 1 ---
+Complex Systems Informatics and Modeling Quarterly (CSIMQ)
+eISSN: 2255-9922
+Published online by RTU Press, https://csimq-journals.rtu.lv
+Article 220, Issue 40, September/October 2024, Pages 58–93
+https://doi.org/10.7250/csimq.2024-40.03
+Process for Leveraging Enterprise Architecture in Information
+Systems Strategic Planning:A Case of Developing a Strategy and
+Master Plan for a National Integrated Health Laboratory
+Information Management System in Uganda
+Agnes Nakakawa1*
+, Daniel Kasule2
+, Michael Kasusse1
+, Gaspard Guma2
+,
+Steven Aisu2
+, Patrick A. Ogwok2
+, and Hakim Sendagire3
+1
+Collegeof ComputingandInformationSciences,MakerereUniversity,P.O.Box7062,
+Kampala,Uganda
+2
+DepartmentofDiagnosticsand LaboratoryServices,MinistryofHealth,P.O.Box7272,
+Kampala,Uganda
+3
+CollegeofHealthSciences,MakerereUniversity,P.O.Box7062,Kampala,Uganda
+anakakawa@cit.ac.ug, kasuled@gmail.com, lkasussem@yahoo.com,
+gumagaspard@gmail.com, nyondodu@gmail.com, pakagwa@gmail.com,
+hakimsendagire@gmail.com
+Abstract. Effective alignment of institutional processes with digital technologies is
+imperative for enterprises, including those in healthcare. Unfortunately, in the context of
+health laboratories, the scope and complexity of existing digital health interventions has
+not allowed incorporation of all data and information needs for all core functions of the
+laboratory subsector. Besides, several operational and management issues still hinder the
+effective management of information on laboratory services at the health facility, sub-
+national, and national levels in low-income countries such as Uganda. Although
+approaches that support implementation of digital health interventions exist, there is still
+limited technical guidance on the strategic planning and implementation of complex
+systems such as a nation-wide integrated Health Laboratory Information Management
+System (HLIMS). Therefore, this article demonstrates how the strategic planning process
+of such systems can be strengthened by adopting the thinking pattern of enterprise
+architecture, as a holistic approach for aligning business processes with digital
+technologies. It specifically presents a process for leveraging Enterprise Architecture in
+Information Systems Strategic Planning (EAISSP). The process was instantiated in
+Uganda’s health laboratory subsector, by using it to formulate an architecture-oriented
+information systems strategy; and the strategy then guided the design of a master plan for
+a national integrated HLIMS and its implementation plan. Although EAISSP was tested
+in the context of the laboratory subsector, it can be contextualized to support other efforts
+like developing a national e-health strategy or information systems strategy of an
+enterprise in another sector.
+Keywords: Enterprise Architecture, Information Systems Strategic Planning, Laboratory
+Information Management System.
+*
+Corresponding author
+©2024 AgnesNakakawa, Daniel Kasule, Michael Kasusse, Gaspard Guma, Steven Aisu, Patrick A.Ogwok, and HakimSendagire.
+This is an open access article licensed under the Creative Commons Attribution License
+(http://creativecommons.org/licenses/by/4.0).
+Reference: A. Nakakawa, D. Kasule, M. Kasusse, G. Guma, S. Aisu, P. A. Ogwok, and H. Sendagire, “Process for Leveraging
+EnterpriseArchitecturein Information SystemsStrategicPlanning:ACaseof Developing aStrategy and Master Plan for aNational
+Integrated Health Laboratory Information Management System in Uganda,” Complex Systems Informatics and Modeling
+Quarterly, CSIMQ, no. 40, pp. 58–93, 2024. Available: https://doi.org/10.7250/csimq.2024-40.03
+Additional information. Authors ORCID iD: A. Nakakawa – https://orcid.org/0000-0003-0891-4707, M. Kasusse –
+https://orcid.org/0009-0007-6626-696X, G. Guma – https://orcid.org/0009-0003-7110-8473, and S. Aisu – https://orcid.org/0009-
+0008-6442-6023. PII S225599222400220X. Article received: 17 November 2023. Accepted: 15 July 2024. Available online: 31
+October 2024.
+
+--- PAGE 2 ---
+59
+1 Introduction
+For enterprises to survive in the rapidly changing business and technology environments in which
+they operate, the issue of aligning their business processes with digital technologies is no longer
+optional [1]. This also applies to health sector enterprises because the reliability and sustainability
+of healthcare services largely depend on the availability of quality information that can guide
+planning and decision-making. To obtain such information, the health sector needs to effectively
+manage data and information from all its service delivery lines. However, this article focuses on
+means of effectively managing data and information from the service delivery line of clinical or
+health laboratories and diagnostic services, which is herein referred to as laboratory information.
+Laboratory information covers data and information across the full spectrum of laboratory
+services, ranging from diagnostic services offered at facility-level laboratories and referral or
+specialized testing services to coordination and regulation services at subnational and national
+levels.
+Several efforts towards improving the quality of laboratory information are reported at an
+international level (e.g., [2]–[9]) and at a country, e.g., Uganda, level (e.g., [10]–[13]). Yet, the
+quality of health laboratory services is still affected by several issues [11], [12] that could be
+avoided if laboratory information was effectively managed and proactively used. This is because
+the process of strategic planning and implementation of holistic laboratory information
+management systems that accommodate all data and information needs of the laboratory subsector
+has not yet been given adequate attention. This can be attributed to twomajor issues. First, existing
+efforts in developing Laboratory Information Systems (LIS) intentionally focus on supporting
+primary functions that directly deliver services to clients in a health laboratory and are silent about
+capabilities that can support the coordination and regulation of laboratory services at subnational
+and national levels. Second, the scope and complexity of existing digital health solutions has not
+allowed comprehensive exploration and incorporation of data and information needs that
+constitute the full portfolio of health laboratory services and laboratory information management.
+To address these issues, there is a need to prioritize the alignment of all processes in the
+subsector of health laboratories with digital technologies, including Information and
+Communication Technologies (ICTs). This involves devising laboratory information management
+solutions that can be categorized into two types, i.e.: a) those that can be deployed at a health
+facility level to generate diagnostic information for supporting healthcare decisions; and b) those
+that can be deployed at a health facility level and subnational level as well as national level to
+support coordination and regulation of laboratory services. However, existing digital health
+interventions incorporate the capabilities of the former to some extent but hardly incorporate
+capabilitiesofthelatter. This prevents healthlaboratories fromeffectively andefficiently fulfilling
+their essential role of providing quality information for proactive and evidence-based healthcare.
+To fulfil this role, the above two categories of laboratory information management solutions need
+to be perceived as critical intertwined sub-systems that constitute a broader system – a national
+integrated Health Laboratory Information Management System (HLIMS). However, there is
+almost no explicit technical guidance to inform the strategic planning and implementation of a
+complex and inter-organizational information system, such as the national integrated HLIMS.
+A rational approach like enterprise architecture can be leveraged to support the effective
+alignment of laboratory service delivery processes with digital technologies during the strategic
+planning and implementation of a national integrated HLIMS. The success of enterprise
+architecture in business-IT alignment stems from holistically assessing an enterprise's baseline
+aspects to provide insights into the potential impact of baseline aspects on the desired context [1],
+[14]. Thus, enterprise architecture can be perceived as a holistic reasoning instrument for
+streamlining business and ICT alignment and supporting rational thinking towards integrating
+information systems in a particular context. However, the low adoption of enterprise architecture
+in aligning healthcare and digital technologies can be attributed to: (1) the limited awareness and
+involvement of strategic managers in architecture efforts and (2) the lack of adequate knowledge
+
+--- PAGE 3 ---
+60
+on enterprise architectures, which implies the need for experts in enterprise architecture to avail
+free resources to increase awareness [15]. This underpins the need for technical guidance on the
+process of adopting an enterprise architecture approach in e-health strategic planning and
+information systems strategic planning in general. Thus, this article addresses this need by
+providing explicit guidance on how enterprise architecture can be adopted to support information
+systems strategic planning. Specifically, it answers the research question: What should constitute
+a process for leveraging enterprise architecture in information systems strategic planning? This
+is answered by presenting a process for leveraging Enterprise Architecture in Information Systems
+Strategic Planning (EAISSP), as shown in Figure 1.
+Figure 1. Research Gap and Significance of EAISSP
+The EAISSP process was evaluated by using it to inform the formulation of an architecture-
+oriented HLIMS strategy for Uganda’s health laboratory subsector, which was used to guide the
+design of a master plan or enterprise architecture for a national integrated HLIMS and a
+corresponding implementation plan.
+The article is organized as follows. Section 2 outlines the research method used. Section 3
+discusses related work and prevailing challenges in aligning healthcare with ICTs. Section 4
+presents the design of EAISSP. Section 5 discusses its evaluation. Section 6 concludes the article.
+2 Research Method
+EAISSP was developed using the Action Research method because it strongly promotes
+the comprehensive involvement of subjects or stakeholders in the research. From [16], Action
+Research requires the researcher to closely engage the subjects of the research to (1) Perform
+Diagnosis, which involves investigating and understanding issues that shape a specific problem
+context; (2) Perform Action Planning, which entails devising an appropriate course of action as a
+countermeasure to address issues in the problem context; (3) Perform Action Taking, which
+involves the actual implementation or operationalization of the devised course of action to address
+theproblem context; (4)Evaluatethecourseof action, whichentails assessingresults derivedfrom
+implementing the course of action; and (5) Specify Learning accrued from the action, which
+involves reflecting on lessons learned from the intervention undertaken in the problem context. In
+this research, these stages were executed as follows:
+• Diagnosis Stage involved investigating challenges faced in aligning healthcare and ICTs and
+identifying gaps in existing approaches for developing laboratory information systems, e-
+health solutions, e-health strategies, and other approaches. This was done by reviewing
+existing literature, as elaborated in Section 3.
+
+--- PAGE 4 ---
+61
+• Action Planning Stage involved designing EAISSP to ensure that it addresses the identified
+gaps. This was achieved by mutually adopting four approaches that were purposively selected,
+i.e., two strategic planning approaches and two enterprise architecture approaches. These
+approaches are elaborated in Section 4.
+• Action Taking Stage involved instantiating EAISSP by using it, in collaboration with key
+stakeholders, to guide the development of an HLIMS strategy and initiate its implementation
+by designing a master plan for a national integrated HLIMS in Uganda. This is elaborated in
+Section 5.
+• Evaluation and Specifying Lessons Learned Stage involved eliciting stakeholder feedback on
+the undertaken effort, reflecting on findings from the above stages, and specifying lessons
+learned and their implications. This is elaborated in Section 5.
+3 Review of Literature on Existing Approaches and Challenges
+Literature review efforts are broadly categorized into two types – systematic reviews and
+traditional narrative reviews [17]–[19]. A systematic literature review involves undertaking and
+describing the methodical and replicable procedure that is used to search all existing articles and
+reports on aspecific topic ofinterest, evaluate identifiedarticles, summarize orsynthesize findings
+from the reviewed articles, and condense or use findings to yield new results or knowledge on a
+specific topic [20], [19], [17]. A traditional narrative review involves providing a descriptive
+summary or overview or synthesis of evidence from existing articles on a particular topic or theme
+and appraising contents of the articles with respect to the topic or theme of interest [17]–[19]. The
+decision on which type of review to conduct depends on the goal and the scope or focus area of
+the required review, which have to be determined by a researcher [21].
+The goal of the review in this research was to execute the diagnosis stage of Action Research,
+by using findings from existing literature to clarify the research gap specified in Section 1 (see
+Figure 1). Specifically, the review aimed at determining the extent to which existing approaches
+for developing laboratory information systems and digital health interventions, can guide the
+process of using an enterprise architecture-oriented perspective when formulating a complex
+information systems strategy of an enterprise (such as the HLIMS strategy). Thus, the scope of the
+review herein did not require summarizing or synthesizing insights or findings from existing
+approaches but required one to demonstrate the gap that each existing study was not addressing in
+thecontextofenrichinginformationsystemsstrategicplanning.Thisimpliesthatthereviewherein
+did not require a systematic review approach. Thus, a narrative review was conducted. The
+narrative review included 35 peer-reviewed articles and technical reports developed by
+international professional bodies or regulatory bodies. Accordingly, Sections 3.1 and 3.2 give an
+overview of existing approaches and best practices for planning and implementing Laboratory
+Information Management Systems (LIMSs), e-health solutions, e-healthstrategies,andothertypes
+of systems. Section 3.3 gives an overview of issues in aligning healthcare and ICTs and
+requirements for the desired solution.
+3.1 Existing Approaches for Planning and Implementing LIMSs
+On LIMS implementations, two themes of existing studies were prioritized, i.e.: (A) Instances of
+LIMSs and other electronic systems that support operations in a health laboratory and (B)
+Approaches and best practices for planning and implementing LIMSs. Efforts under theme A were
+reviewed to determine the functionality scope of existing instances of LIMSs, and determine
+whether attempts have been made to develop a national integrated HLIMS that covers the full
+scope of core functions offered by the health laboratory subsector. Efforts under theme B were
+reviewed to determine the scope of existing technical or methodical guidance in developing a
+national integrated HLIMS. Insights from reviewed efforts under themes A and B are summarized
+below.
+
+--- PAGE 5 ---
+62
+Under theme A on instances of LIMSs and other laboratory support systems, the following
+efforts were reviewed. First, several LIMSs exist to support the provision of various types of
+testing services in a health laboratory; and specialized LIMSs exist to support specialized and
+reference testing services in a health laboratory, such as C4G BLIS [8], [22], OpenLabs [9]; and
+LACENlaboratoryinformation system [23],[24]. Second,systems for supporting otherlaboratory
+processes include the Reqscan solution, which supports the storage and retrieval of paper-based
+laboratory requisition forms [25], and a system that supports an interpretation of laboratory test
+results to patients and retrieves diagnosis-related information from a laboratory test report [26]. In
+addition, guidelines exist for integrating a LIMS with other health information technologies in
+order to increase utilization of laboratory test results among physicians [27]. However, reviewed
+efforts in this theme concentrate on internal operations of a laboratory, and are silent about inter-
+laboratory operations and coordination as well as regulation of health laboratory services. In
+addition, the efforts hardly provide technical guidance on how to leverage a LIMS at a specific
+site or multiple sites, in a way that allows seamless information exchanges with other solutions
+within and across laboratories at subnational and national levels.
+Under theme B on approaches and best practices for planning and implementing LIMSs, the
+following efforts were reviewed. Sepulveda and Young [6] articulate specifications of desired
+functionalities of a LIMS that leverages Artificial Intelligence to manage information at the health
+facility level proactively, optimize service delivery in a clinical laboratory, and improve clinical
+care. A catalog exists of data and information needs that LIMS implementation efforts should
+consider in a health laboratory [28]. APHL [7] provides a description of core laboratory business
+processes, requirements, and essential elements of a LIMS for managing electronic laboratory
+information in a health laboratory and guidelines for implementing LIMS projects. A set of
+indicators exists that should constitute an intelligent dashboard, which addresses the challenges in
+managing operations in a clinical laboratory [29]. Insights from these efforts are relevant in the
+articulation of requirements and functionalities of a national integrated HLIMS. However, the
+scope or intention of these efforts did not entail providing explicit technical guidance on how
+specific requirements and functionalities can be operationalized. This implies that if a national
+integrated HLIMS is to adopt insights articulatedin theaboveefforts,there is aneedto first design
+an architectural blueprint of capabilities that can deliver specific requirements and functionalities
+and a roadmap for implementing such an architectural blueprint in a low-income country. Yet,
+there is only implicit guidance on how this can be done during the strategic planning of a national
+integrated HLIMS and no guidance on how to ensure that service delivery processes in the
+laboratory subsector are coherently aligned with ICTs. This is due to the lack of customized
+methodological details or thinking patterns that can be followed to guide the strategic planning of
+an integrated HLIMS that accommodates the data needs of all core functions in the laboratory
+subsector.
+The review under theme B further considered the best practices in implementing LIMS, and the
+following were observed. Guidance exists in the form of factors for managing the logical selection
+of a LIMS – the profile and performance of a LIMS vendor, portability of a LIMS, provisions for
+customizing a LIMS, clear specifications of a LIMS, and LIMS scores on issues of reliability and
+security [30]. Sinard et al. [31] present guidelines for deploying an electronic health record that
+incorporates a LIMS module and a specialized LIMS solution or an integrated LIMS solution that
+serves several laboratory departments. Furthermore, Alves et al. [23] present a contextualized
+evaluation model (based on ISO/IEC 25010 standard) and a questionnaire that end users can use
+to assess the quality of a LIMS. Moreover, evidence exists on how LIMS implementation impacts
+the turnaround time of laboratory tests [32] and how prioritizing the reliability of ICT solutions
+that constitute a LIMS significantly improves laboratory performance and reveals the value of
+LIMS adoption [33]. The establishment of a nationally integrated HLIMS can greatly benefit from
+the mutual adoption of insights from these best practices by rationally determining when and how
+a specific best practice can be applied. However, a clearly defined approach that can guide the
+
+--- PAGE 6 ---
+63
+mutual adoption of insights from these best practices during the strategic planning of a national
+integrated HLIMS is not available.
+Furthermore, APHL [34] provides a project management framework for supporting resource
+management during implementation and maintenance of a LIMS at a one or multiple clinical
+laboratory sites. However, the use of only the project management approach (without enterprise
+architecture), insufficiently enables one to ensure that project outputs fully subscribe to enterprise
+goals and stakeholder concerns [14], [1].
+Despite the existing innovations under themes A and B above, several data and information
+needs for effective delivery of laboratory services are still not met due to two reasons. First,
+without detailed and accurate transaction-level data on laboratory services, it is difficult to: (1)
+Minimize errors in monthly aggregates or reporting of facility-level service statistics, (2) Conduct
+root-cause analysis geared towards addressing specific problems in laboratory service delivery,
+(3) Conduct effective monitoring and evaluation of laboratory service delivery initiatives; and (4)
+Performquality forecasts on required resources. Second,thelackoftimely,complete,andaccurate
+data on program performance and program implementation gaps can hinder evidence-based
+planning and decision-making. These gaps underlined the need to develop a national integrated
+HLIMS for Uganda that can improve service delivery at the facility level and coordination as well
+as regulation of services at the subnational and national levels. Unfortunately, existing efforts
+under themes A and B can insufficiently provide the technical guidance into the strategic planning
+and implementation of such a complex solution. Thus, there is the need for a method that can
+guide the formulation of a holistic HLIMS strategy through (1) adapting existing LIMS
+requirements and functionalities (under theme A) to the contextual needs of health laboratories in
+a low-income country and (2) mutually adopting existing best practices (under theme B). Section
+3.2 discusses the extent to which existing approaches for developing e-health strategies and
+solutions address this need.
+3.2 Existing Approaches for Developing e-Health Strategies and Solutions
+On e-health advancement, three themes of existing studies were prioritized, i.e.: (1) Cases of e-
+health strategy development efforts, (2) Approaches and success factors for developing e-health
+strategies and e-health solutions,and (3)Effortson developingenterprisearchitectures for e-health
+implementations and other types of systems. Insights from reviewed efforts under themes (1) to
+(3) are summarized below.
+Under theme (1) on cases of national e-health strategy development efforts, instances
+include Kenya's e-Health Strategy, Uganda's e-Health Strategy, Tanzania's e-Health Strategy, and
+e-health strategies of other African countries [35]. However, the incorporation of digital solutions
+for supporting laboratory processes in existing national e-health strategies is limited to only key
+processes that deliver laboratory testing and results management services. Herein, it is assumed
+that the wide scope of health sector functions scarcely gives room for the detailed exploration and
+inclusion of all core functions in the laboratory subsector. Moreover, the above e-health strategy
+documents recommend the development of an enterprise architecture for integrating e-health
+solutions. However, they scarcely provide details on how enterprise architecture can be used to
+support the planning, alignment, and scheduling of various e-health initiatives into long-term,
+medium-term, or short-term projects that can be coherently implemented. This indicates that there
+isstillonlyimplicitguidanceonhow theenterprisearchitectureapproachcanbeleveragedduring
+information systems strategic planning in organizations, including healthcare organizations.
+Under theme (2) on approaches and success factors for developing e-health solutions and
+strategies, reviewed efforts include the following. WHO [36] presents a framework that specifies
+seven components that should constituteanational e-healthfunctionandencourages countries also
+to consider developing an e-health enterprise architecture to obtain a comprehensive national e-
+healthstrategyandimplementationguide.However,foranationale-healthenterprisearchitecture
+to be developed, there is a need for explicit technical guidance on how to incorporate the
+
+--- PAGE 7 ---
+64
+enterprise architecture development methodology at the stage of formulating and aligning
+strategic actions during information systems strategic planning. Indeed, the mutual adoption of
+enterprise architecture at the strategy formulation stage yields a detailed strategy definition [14],
+[1], which has no ambiguities that can mislead the strategy implementation teams. Unfortunately,
+explicit technical guidance on how this can be realized is scarcely available.
+In addition, WHO [37] provides a comprehensive taxonomy of digital health interventions,
+however, the mention of laboratory services therein is limited to only a laboratory and diagnostics
+information system for managing laboratory tests and results and confirmation of suspected cases
+in disease surveillance. Other support functions in a health laboratory and coordination and
+regulation of services across a nationwide laboratory network are scarcely incorporated in the
+taxonomyofdigitalhealthinterventions.Anenrichedtaxonomywouldhelpinguidingthestrategic
+planning and coherent implementation of all digital interventions that can support directory of
+services offered by the health laboratory subsector. However, explicit guidance scarcely exists on
+how to derive a holistic taxonomy of digital interventions that should constitute a national
+integrated HLIMS and strategically plan its realization.
+Moreover, WHO [38] provides a guideline that specifies a set of 9 categories of priority digital
+interventions that are critical in strengthening healthcare, and clearly articulates 18 aspects that are
+beyond its scope, two of which are: (a) digital interventions for health laboratory services; and (b)
+mechanisms for enabling data exchange and interoperability across digital health solutions. WHO
+[38] also articulates the need for an approach that enables stakeholders to implement instances of
+the different categories of digital health interventions in a unified way that allows coherent and
+integrated operations instead of parallel or project-specific operations. The value envisioned from
+all digital health interventions in the guideline can be achieved if: (a) the information-centric role
+of health laboratory services in specific digital health interventions is recognized and realized and
+(b) all specified digital health interventions are implemented in a coherent way by adopting
+enterprise architecture. However, explicit guidance scarcely exists on how that can be handled
+during information systems strategic planning, let alone how to derive a holistic taxonomy of
+digital interventions that should constitute a national integrated HLIMS and strategically plan for
+its realization. Further, WHO [39] presents various operational and sustainability issues that are
+associated with the implementation of ‘siloed’ digital health interventions, and gives insights into
+the establishment of an enterprise architecture for an integrated digital health platform. However,
+the incorporation of laboratory data and information needs in this effort was also limited to only
+capabilities of managing laboratory test requests and results in a health facility level LIMS. Also,
+detailed technical guidance is scarcely provided on how the establishment of the enterprise
+architecture for an integrated digital health platform can be incorporated in information systems
+strategic planning.
+On coherent implementations of solutions, Huang et al. [40] also present technical insights into
+why the interoperability needs of e-health implementations ought to be prioritized, deliberated,
+and accommodated at the inception stage of an initiative. Also, empirical evidence exists on how
+the lack of proper alignment of business strategies of healthcare organizations with IT strategies
+significantly affects the performance of those organizations [41]. However, it is still methodically
+implicit how and when insights from these studies can be mutually adopted with other guidelines
+listed above (and approaches for aligning institutional processes with ICTs) so as to formulate a
+clear strategy for establishing a national integrated HLIMS.
+Under theme (3) on developing enterprise architectures for e-health implementations, reviewed
+efforts include the following. Adenuga et al. [42] present a formal model of requirements for
+successfully implementing e-health solutions and constraints for the vertical and horizontal
+integration of healthcare and ICT management to achieve interoperability. However, the model
+does not go into the thinking pattern that stakeholders must undergo when formulating strategic
+actions toward achieving requirements and constraints for developing interoperable e-health
+implementations. Mwanyika et al. [43] present a method that supports documentation of process
+workflows and system requirements, which inform the technical design of a health information
+
+--- PAGE 8 ---
+65
+system. Mwanyika [44] discusses the role of enterprise architecture in developing e-health
+solutionsthatconstituteane-healthstrategy.However,thecontextinwhichenterprisearchitecture
+is used in these efforts is at the solution development level (i.e., when the enterprise architecture
+approach is used to develop an e-health solution architecture that guides the implementation of
+specific information systems solutions). Such a context differs from the problem context that this
+research attempts to address (i.e., when enterprise architecture development needs to be treated
+as an integral part of the overarching information systems strategic planning framework of an
+enterprise). Moreover, Stansfield et al. [45] discuss (a) the relevance of pursuing an architecture-
+driven mindset in strengthening health information systems, (b) how an enterprise architecture for
+health information systems can support knowledge sharing on e-health implementations among
+stakeholders, and (c) critical questions that should be addressed when developing an enterprise
+architecture for a national health information system. Insights from this effort scarcely go into
+detail on how to promote the realization of the enterprise architecture for the national health
+information system by integrating it into the strategic planning framework of the health sector.
+In addition, Verbeke et al. [46] articulate how the development of a national e-health enterprise
+architecture for Burundi enabled them to identify solutions that could be implemented to address
+various issues and coherently specify required actions for advancing the country’s e-health
+initiatives in a 10-year strategy. Le Pape et al. [47] also describe their experiences in undertaking
+a four-phased procedure to develop an enterprise architecture for strengthening health information
+systems in Morocco and how the resultant enterprise architecture was used to formulate an 11-
+year e-health strategy for the country. First, the inclusion of electronic capabilities for health
+laboratory services in these efforts is limited to the laboratory testing and imaging functions.
+Second, these efforts demonstrate a context where an enterprise architecture is first designed, and
+thereafter it is used to guide the formulation of strategic actions associated with its
+implementation. Third, these efforts articulate their achievements and provide an overview of the
+procedures undertaken but scarcely go into detailed activities that constituted their procedures.
+Such details would enable other countries to adapt their procedures to specific country contexts.
+Fourth, the e-health national enterprise architectures (developed in these efforts) and e-health
+solution architectures (developed in the above efforts) are designed to suit the contextual needs of
+specific countries and cannot be simply adopted and used in contexts of other countries. These
+issues emphasize the need for an elaborate description of how to formulatean information systems
+strategy in contexts where an enterprise architecture does not exist or is already existing.
+On developing enterprise architectures for guiding implementations of other types of systems,
+reviewed efforts includethefollowing. Astriand Gaol [48] give anoverview onhow the enterprise
+architecture planning framework guided the development of an enterprise architecture for
+implementing an integrated information system in an enterprise and present deliverables from the
+initiative. Riku and Setyohadi [49] also describe how the enterprise architecture planning
+framework guided the development of an enterprise architecture and its implementation plan in an
+enterprise and present deliverables from the initiative. Efforts in these studies aim at describing
+deliverables from enterprise architecture development initiatives in specific enterprises, but not
+demonstrating how the formulation of strategic actions during information systems strategic
+planning can be enriched by using an enterprise architecture-oriented approach. The former
+scenario focuses on architecture development but not its general integration with the strategic
+planning framework of an enterprise. Yet, in the latter scenario, enterprise architecture and
+information systems strategic planning are treated as complementary approaches for effective
+business-IT alignment, where an enterprise architecture and its implementation (as well as its
+maintenance) are envisioned as some of the scheduled strategic actions and target outputs of an
+information systems strategy. Thus, explicit guidance is needed on how one can devise a long-
+term information systems strategy that accommodates three critical pillars in business-IT
+alignment, i.e., (a) creating an enterprise architecture for aligning institutional processes with
+digital technologies, (b)using thearchitectureto providestrategicdirectionofinformation systems
+development and implementation efforts in that enterprise, and (c) maintaining the architecture to
+
+--- PAGE 9 ---
+66
+ensure that it appropriately supports the strategic drives of an enterprise. Hence this is the
+motivation to design EAISSP.
+3.3 Challenges in Healthcare-ICT Alignment and Required Interventions
+Literaturewas also reviewed on thethemeofissues hindering the effectivealignmentofhealthcare
+and ICTs. Since the laboratory subsector is a critical pillar in healthcare, it was perceived that
+efforts to align laboratory service delivery with digital technologies are susceptible to challenges
+affecting healthcare-ICT alignment. Thus, Table 1 presents a summary of challenges derived from
+existing literature on issues hindering the effective alignment of healthcare and ICTs and their
+implications on the requirements for EAISSP. The challenges are coded as Cx in column 1, and
+the required interventions to address the challenges are specified in column 2 (with codes Rx).
+Table 1. Challenges from Literature on Healthcare-ICT alignment and Required Interventions
+Challenges in Healthcare-ICT Alignment
+(from reviewed literature)
+Required Interventions to Address the Challenges
+C1. Unclear specifications on the scope and
+architecture of aligning healthcare and ICTs and
+the scope of automating business processes [50].
+• C1.1. Some countries lack a strategic plan for
+implementing e-health solutions [42].
+• R1. Provide guidance on how to formulate an information
+systems strategy that accommodates all stages in business-
+IT alignment in a complex organizational setting (such as
+the laboratory subsector), i.e., (a) deliberating and defining
+requirements or specifications of an enterprise architecture
+or master plan, (b) designing the enterprise architecture, (c)
+implementing it, and (d) maintaining it.
+• R2. Provide guidance on when to schedule, and how to
+execute, the task of deliberating and specifying the scope of
+the enterprise architecture development effort with key
+stakeholdersofacomplexorganizationalsetting(suchasthe
+laboratory subsector).
+• C1.2. Limited understanding of how the
+customization and effectiveness of ICT solutions
+influence service delivery outcomes and results
+[50].
+• R3 Provide guidance on when to schedule, and how to
+execute, the task of developing a value proposition or cost-
+benefits analysis scorecard for an enterprise architecture of
+a complex organizational setting (such as the laboratory
+subsector).
+o The value proposition is envisioned to show how
+the alignment of the laboratory subsector with ICTs
+may seem expensive in the short run; yet it is one of
+the effective ways of reducing operational costs of
+data and information management in the long run.
+• C1.3. High costs (in terms of time, finances, and
+effort) for starting e-health implementations and
+sustaining them (by ensuring that target users
+learn to use them, periodically evaluating them,
+and upgrade them), yet return on investment is
+unpredictable [42], [30].
+• C1.4. It is difficult to find and recruit
+experienced ICT personnel who possesses an
+adequate and balanced skillset that is required to
+manage the implementation of e-health solutions
+effectively [42], [50] in a integrated way.
+• R4. Provide guidance on when to schedule, and how to
+execute, the task of developing, operationalizing, and
+maintaining guidelines for continuous training and skilling
+of all human resources to increase capacity for effective
+management and use of data and information in a complex
+organizational setting (such as the laboratory subsector).
+• C1.5. Privacy, confidentiality, and security
+concerns that are associated with e-health
+solutions raise the risk of interception of patient
+information by unauthorized individuals and
+effects thereof [42].
+• R5. Provide guidance on when to schedule, and how to
+execute, the task of designing and implementing a security
+architecture for a complex organizational setting (such as
+the laboratory subsector)
+
+--- PAGE 10 ---
+67
+Table 1. Continued
+Challenges in Healthcare-ICT Alignment
+(from reviewed literature)
+Required Interventions to Address the Challenges
+• C1.6. Lack of adequate technical support for
+integration and interoperability of e-health
+solutions and laboratory information systems, so
+as to enable exchange of clinical data between
+laboratories and other departments in healthcare
+institutions [42].
+• R6. Provide guidance on when to schedule, and how to
+execute, the taskofdevising and establishing an architecture
+governance framework for overseeing aspects of integration
+and interoperability during the development of an enterprise
+architecture for a complex organizational setting (such as
+the laboratory subsector).
+• R7. Provide guidance on when to schedule, and how to
+execute, the task of designing and implementing an
+application architecture for a complex organizational setting
+(such as the laboratory subsector).
+o The application architecture isenvisioned to guide the
+transition from existing isolated solutions to a
+national integrated solution that supports information
+sharing and reuse in the laboratory subsector.
+• R8. Provide guidance on when to schedule, and how to
+execute, the task of designing and implementing a
+technology architecture for a complex organizational setting
+(such as the laboratory subsector).
+• C1.7. Replication of systems and discrepancies
+in reporting due to the existence of information
+silos at institutional, provincial, and national
+levels of government; and within departments
+and programs of health service delivery [42].
+• C1.8. Absence of detailed or appropriate designs
+of e-health implementations [42], which results
+in systems that do not fully address concerns and
+needs of key stakeholders.
+• C1.9. Unclear criteria for prioritizing ICT
+projectswithrespecttoprocessandpatientneeds
+[50].
+C2. Limited organizational governance and low
+involvement of all departments or stakeholder
+groups in strategic planning [50].
+• R9. Provide guidance on when to schedule, and how to
+execute, the task of devising and implementing a
+stakeholder map and corresponding communication plan for
+the enterprise architecture development effort in a complex
+organizational setting (such as the laboratory subsector).
+• C2.1. Unclear specification and demarcation of
+roles in decision-making when implementing
+ICT projects leading to a lack of mutual
+understanding of the roles of each department
+and inter-linkages across departments [50].
+• C2.2. Weak governance mechanisms to ensure
+compliance with standards and procedures for
+appropriate management and use of patient-
+based information and aggregate information
+[42].
+• C2.3. Limited availability of IT-business liaison
+to coordinate departmental tasks [50].
+C3. Limitations in communication with and
+among stakeholders, and inadequate knowledge
+sharing to prevent miscommunication during e-
+health implementations [50].
+• C3.1. It is difficult to overcome conflicting
+priorities and views across departments [50].
+• R10. Provide guidance on when to schedule, and how to
+execute, the task of conducting a tradeoff analysis of
+architecture views across domains so as to address
+conflicting concerns and needs of stakeholder groups during
+the enterprise architecture development effort in a complex
+organizational setting (such as the laboratory subsector).
+• C3.2. Absence of a mechanism that enables
+learning from previous experiences [50].
+• R11. Provide guidance on when to schedule, and how to
+execute, the task of periodically evaluating the performance
+of the enterprise architecture for a complex organizational
+setting (such as the laboratory subsector), processing
+feedback, devising control measures and change
+management strategies, and maintaining the enterprise
+architecture.
+• C3.3. Low readiness to face implied changes
+from e-health implementations and a lack of a
+management style that can promote acceptance
+of change and increase readiness [50].
+In a broader context beyond e-health, Azevedo et al [51] argue that institutional strategic plans can initiate and
+shape or inform enterprise architecture development and recommend that:
+• R12. Enterprise architecture development approaches need to be extended to provide adequate support for (a)
+planning of scenarios in a specific context and generation of corresponding strategies; (b) generating and
+elaborating enterprise strategies; and (c) aligning enterprise strategies with enterprise architecture and aligning
+the mission, vision, goals, and objectives with enterprise architecture elements.
+
+--- PAGE 11 ---
+68
+To rationally address challenges and requirements in reflected in Table 1, there is a need for a
+holistic intervention that mutually leverages the strengths of existing approaches. This is because
+none of the existing approaches can serve as a ‘silver bullet’ that explicitly specifies all
+mechanisms that are needed to address the above issues, guide the formulation of a complex
+information systems strategy (such as the national integrated HLIMS strategy), and support
+coherent implementation of such a strategy. Thus, this research was motivated to address
+requirements R1 to R12 (in Table 1) by exploring ways through which information systems
+strategic planning approaches and enterprise architecture approaches can be mutually adopted to
+reduce the complexity of long-term business-IT alignment efforts.
+Design Decisions Taken to Address Requirements R1 to R12 in Table 1. Two major design
+perspectives were considered when deriving EAISSP as elaborated below. The first perspective
+focused on adopting strategic planning approaches to provide (a) a rational way of structuring the
+formulation of a complex and long-term information systems strategy and (b) a list of internal and
+external business and technology aspects that should be investigated and deliberated during the
+formulation of the information systems strategy. Thus, the scheduling aspect specified in
+requirements R1 to R12 (in Table 1) was addressed by adopting strategic planning approaches.
+Such approaches can inform the scheduling and alignment of activities that constitute the
+designing, implementation, and maintenance phases of its enterprise architecture. The second
+perspective focused on adopting enterprise architecture approaches to invoke an architecture-
+oriented thinking pattern that helps to investigate and specify the critical business and technology
+aspects that should be aligned in a complex and long-term information systems strategy. Thus, the
+technical aspects required to realize R1 to R12 (in Table 1) were addressed by adopting enterprise
+architecture approaches. These approaches provide technical guidance towards ensuring that
+deliverables of architecture development activities are used as enablers for delivering the
+enterprise mission, vision, goals, objectives, and strategic actions. Section 4 describes how these
+two design perspectives were operationalized.
+4 The Design of EAISSP
+Following the adoption of the Action Research approach (as specified in Section 2) and the
+findings from the diagnosis stage (in Section 3), this Section describes how the action planning
+stage of the research was conducted. Section 4.1 specifies approaches that were adapted to address
+issues and requirements identified in the diagnosis stage and Section 4.2 presents the structural
+composition of EAISSP as the desired solution.
+4.1 Approaches Adopted to Address Requirements
+To holistically realize requirements coded R1 to R11 in Table 1 (Section 3.3), four classical
+approaches were mutually adopted. These include (1) the Planning Framework for Strategy [52],
+[53]; (2) the Strategic Alignment Model [54]; (3) the Architecture Development Method of The
+Open Group Architecture Framework – TOGAF ADM [55], [56]; and (4) the Enterprise
+ArchitectureCapability Maturity Model –EACMM [57].Thefirsttwoapproaches areinformation
+systems strategic planning approaches and the last two are enterprise architecture approaches.
+These were mutually adopted to derive a process, coined herein as EAISSP (as introduced in
+Section 1). The purpose of EAISSP is to guide the development of an architecture-oriented
+information systems strategythat can deliverthelong-term goal ofeffective business-ITalignment
+in a complex organizational setting. As indicated in preceding sections, the setting of interest
+herein is the context of the health laboratory subsector in Uganda, which required the formulation
+of an HLIMS strategy that involved (a) designing a master plan or enterprise architecture for
+guiding decision-making in the establishment of a national integrated HLIMS and (b) designing
+and operationalizing its implementation plan and maintenance plan to allow continuous evaluation
+and improvement. For such a long-term and complex initiative to be achieved in a coherent way,
+
+--- PAGE 12 ---
+69
+there was a need to adopt the above 4 approaches to support rational thinking among stakeholders.
+The adopted approaches are defined below, their selection is justified, and highlights are given on
+how each of them shaped the design of EAISSP.
+Adoption of the Planning Framework for Strategy. The Planning Framework for Strategy in
+[52], [53] articulates three major phases of strategic planning that guide stakeholders to specify
+the strategic direction of an enterprise (i.e., strategic analysis, strategic choice, and strategy
+implementation) and provide a basis against which institutional performance and growth is
+assessed. Thus, it was adopted herein to guide the clustering and scheduling of activities that need
+to be executed during strategy formulation so as to address issues and requirements specified in
+Section 3.3. Specifically, this framework was adopted to guide the scheduling of when particular
+guidelines of enterprise architecture development and aspects from other (strategic planning)
+approaches can be coherently deliberated during the formulation of an information systems
+strategy. To constitute EAISSP, activities that make up the three phases of the Planning
+Framework for Strategy were regrouped into six clusters or steps as shown in Figure 2. This is
+elaborated in Section 4.2.
+Adoption of the Strategic Alignment Model. The Strategic Alignment Model articulates four
+domains of strategic choice in an enterprise – organizational infrastructure and processes, business
+strategy, IT infrastructure and processes, and IT strategy [54]. Particular elements that constitute
+these domains are specified in Appendix 1. This model was adopted herein to give insights into
+the critical domains (and their corresponding elements) that need to be considered during strategy
+formulation. In constituting EAISSP, these four domains were adopted to elaborate elements that
+need to be scanned in an enterprise's internal and external environments. This is elaborated in
+Sections 4.2.1 to 4.2.3.
+Adoption of TOGAF Architecture Development Method. TOGAF is an open standard that
+guides the development of an enterprise architecture as a business-IT alignment instrument across
+public and private sector agencies [55], [56]. Since, among the existing architecture frameworks,
+it is TOGAF ADM that provides a detailed procedure for developing an enterprise architecture
+[56], it was adopted herein. In constituting EAISSP, three perspectives were taken. First, the
+guidelines of enterprise architecture development were used to enrich or elaborate specific
+activities of information systems strategic planning that constitute The Planning Framework for
+Strategy. Second, the activities of information systems strategic planning were used to guide
+scheduling of the execution or realization of specific architecture development guidelines. These
+two perspectives are elaborated in Sections 4.2.4 and 4.2.5. Third, how architecture development
+guidelines are adopted and implemented varies across agencies, depending on their architecture
+maturity levels. Architecture maturity is the extent to which business-IT alignment in a particular
+institution is embraced and practiced. Thus, there was a need to adopt an additional mechanism
+that enables stakeholders to assess the maturity of business-IT alignment during information
+systems strategic planning. Hence the adoption of EACMM as specified below.
+Adoption ofEnterpriseArchitectureCapabilityMaturityModel. EACMM is abest practice
+that is being used to guide process improvement in several enterprise contexts, because it guides
+assessments that help to specify the baseline and target states of an enterprise, the role of ICTs in
+realizing the target state, the corresponding strengths and weaknesses, and the roadmap to the
+desired state [57]. Thus, EACMM was adopted herein to provide insights into how progress during
+the planning and implementation of a complex information systems strategy (such as the HLIMS
+strategy) can be directed, monitored, evaluated, and continuously improved. EACMM has three
+elements – the enterprise architecture capability maturity model; the itemized description of
+characteristics at different maturity levels, as specified in the capability model; and the maturity
+model scorecard [57]. Thus, adopting EACMM helps obtain an instrument that enables
+stakeholders to ensure that an information systems strategy is formulated comprehensively,
+allowing its elements to be implemented and monitored in an incremental and integrated manner.
+This is elaborated in sections 4.2.1 to 4.2.5.
+
+--- PAGE 13 ---
+70
+4.2 Structural Composition of EAISSP
+EAISSP is a process that invokes an enterprise architecture-oriented thinking pattern during the
+formulation of an information systems strategy to coherently accommodate core aspects in the
+planning, implementation, and evaluation phases of a complex business-IT alignment initiative.
+EAISSP comprises 6 steps, coded as S1 to S6. The design of EAISSP, as presented in Figure 2,
+shows these steps and the relationships between them. Steps S1 to S6 address requirements R1 and
+R10 (specified in Table 1 in Section 3.3), Step S4 addresses requirements R2 and R3 (in Table 1),
+Step S5 addresses requirement R11 (in Table 1), and Steps S4 and S5 jointly address requirements
+R4 to R10 (in Table 1).
+Figure 2. Structural Composition of EAISSP
+Each step in Figure 2 comprises several tasks (coded as Tx) which are presented in Appendices
+1 to 6. The execution of each task involves answering questions (coded as Qx), that enable
+stakeholders to think and generate responses that can be rationally deliberated and harmonized
+(see Appendices 1 to 6). Thus, three key elements shape the design of EAISSP, i.e., Steps of the
+process (S1 to S6), their corresponding Tasks (Tx), and underlying Question prompts for each task
+(Qx). These elements enable EAISSP to serve as a guide that addresses the gap of limited technical
+guidance on how to leverage enterprise architecture during the planning or formulation of an
+information systems strategy. Sections 4.2.1 to 4.2.6 elaborate steps S1 to S6 of EAISSP, and
+Appendices 1 to 6 present their corresponding tasks (Tx) and question prompts (Qx).
+4.2.1 Scan Enterprise Environment and Assess its Architecture Maturity (S1)
+Step S1 in Figure 2 involves scanning the internal and external environment of the business and
+IT domains of the enterprise and determining its architecture maturity level. This was derived by
+S1. Scan the Internal & External Environment
+of the Business & IT Domains of an
+enterprise; & Assess its Architecture Maturity
+Level Start
+S2. Derive the Mission, Vision, Goals, &
+Objectives of the Information Systems
+function of the Enterprise; & Determine the
+Role of Enterprise Architecture in Realizing
+them
+S3. Generate, Evaluate, and Select a Set of
+Strategic Actions that need to be undertaken
+by the Information Systems function so as to
+Achieve its Goals and Objectives; and its
+Business Strategy
+If Architecture
+Maturity Level of the
+Enterprise is 2 to 5
+If Architecture
+Maturity Level of the
+Enterprise is 0 to 1
+S4. Elaborate and Synthesize the Selected
+Set of Strategic Actions to be undertaken, by
+Adapting Tasks Involved in Creating an
+Enterprise Architecture
+S5. Elaborate and Synthesize the Selected
+Set of Strategic Actions to be undertaken, by
+Adapting Tasks Involved in Implementing &
+Maintaining an Enterprise Architecture
+End
+S6. Allocate & Specify Resources for
+Executing Activities Specified to Deliver the
+Synthesized Set of Actions that Constitute the
+Information Systems Strategy
+
+--- PAGE 14 ---
+71
+mutually adopting the following concepts from three approaches (whose selection is justified in
+Section 4.1).
+The first concept is the strategic analysis phase of the Planning Framework for Strategy in [52],
+[53], which involves scanning the business environment to understand its occurrences and their
+possible impact, its stakeholders and their socio-cultural contexts, its internal capabilities and their
+strengths and weaknesses, the potential economic and competitive changes, and their possible
+effects in terms of opportunities and threats. These aspects informed the formulation of tasks T1.1
+to T1.7in Appendix 2. However,thecritical components anddimensions (that needto beassessed)
+in the internal and external environments of the enterprise were not explicitly articulated. To
+address them, the Strategic Alignment Model was also adopted as elaborated below.
+Thus, the second concept is on the critical dimensions of business-IT alignment in the internal
+and external environments of an enterprise, as articulated in the Strategic Alignment Model.
+According to Henderson and Venkatraman [54], the internal and external environments of the
+business and IT domains of an enterprise have 4 components or parameters and each of them has
+3 dimensions (as demonstrated in Appendix 1). Thus, the components and their dimensions were
+adopted in step S1 to specify the scope of what should be assessed in the internal and external
+environments of an enterprise during the formulation of an information systems strategy.
+The third concept is on the checklist for assessing the architecture maturity of an enterprise,
+which is one of the core components of EACMM (as introduced in Section 4.1). EACMM enables
+stakeholders to determine the extent to which enterprise architecture has been practiced in an
+organization, as a basis for specifying additional efforts that can be undertaken to advance the
+practice [57]. Thus, task T1.5 in Appendix 2 prompts that the baseline architecture maturity level
+of the enterprise is assessed during the internal and external situational analysis so as to ensure
+holistic assessment and efficient utilization of resources. Results from the architecture maturity
+assessment are used as input for steps S4 and S5 of EAISSP. Appendix 2 also shows how the
+above three concepts were adapted to derive questions that key stakeholders need to investigate
+and deliberate during execution of tasks T1.1 to T1.7 in step S1 of EAISSP.
+4.2.2 Derive Mission, Vision, Goals, and Objectives of the IS Function (S2)
+Step S2 in Figure 2 involves using an existing business or corporate strategy of an enterprise as a
+basis for (a) deriving the mission, vision, goals, and objectives of an Information Systems (IS)
+function in an enterprise so as it can effectively align the business domain and IT domain of an
+enterprise and (b) determining the role of enterprise architecture in realizing them.
+From the Strategic Alignment Model [54], goals and objectives of business-IT alignment are
+derived from findings of the internal and external environmental assessment of the business and
+IT domains of the enterprise (see Appendix 1). In addition, Venkatraman et. al [58] indicate that
+alignment of the business and IT domains of an organization can be guided by four perspectives,
+i.e., (a) Strategy Execution perspective, where aspects of the business strategy influence decision
+making on the organization infrastructure and processes and the IT infrastructure and processes of
+anenterprise; (b)TechnologyPotentialperspective,whereaspectsofthebusinessstrategyareused
+as the basis of formulating the IT strategy and deriving the requirements and specifications of the
+IT infrastructure and processes; (c) Competitive Potential perspective, where aspects of the
+business strategy are formulated basing on the extent to which emerging ICTs can influence the
+business scope, distinctive competencies, and business governance; and (d) Service Level
+perspective, where the effective use of IT resources is prioritized (instead of the business strategy),
+so as to enable the organization to swiftly respond to the rapidly changing customer demands.
+Based on the above insights, step S2of EAISSP considers perspectives (a) and (b) – the strategy
+execution perspective and technology potential perspective. Thus, step S2 uses the enterprise’s
+business mission, vision, goals, objectives, and business strategy as a basis to acquire insights into
+how to formulate the mission, vision, goals, and objectives of the IS function. The derived goals
+and objectives can be further assessed with respect to the goals of enterprise architecture as an
+
+--- PAGE 15 ---
+72
+instrument for business-IT alignment. Enterprise architecture explicitly defines the tactical and
+operational components or building blocks that can deliver specific objectives and goals of the IS
+function [14], [56]. Thus, assessing the goals and objectives of the IS function and goals of
+enterprise architecture helps to determine which aspects of the latter will help to achieve which
+aspects of the former. This assessment then informs the prioritization of goals and strategic actions
+or choices that constitute an information systems strategy. Appendix 3 shows that step S2 of
+EAISSP comprises tasks T2.1 to T2.3, and provides corresponding questions that need to be
+investigated and answered during the execution of these tasks.
+4.2.3 Derive Strategic Actions for Achieving Objectives of the IS Function (S3)
+Step S3 in Figure 2 involves generating possible strategic actions for the IT domain of the
+enterprise, evaluating them, and selectingappropriatestrategic actions towardsachievingthe goals
+and objectives of the IS function and the business strategy of the enterprise. This is adapted from
+the strategic choice phase of the Planning Framework for Strategy, which, according to [52] and
+[53], involves generating possible alternatives of strategic actions for achieving goals and
+objectives, evaluating the alternatives, and selecting the most appropriate strategic actions.
+Moreover, to generate the strategic actions the following two thinking patterns can be undertaken.
+The first thinking pattern is derived from the two adopted perspectives of business-IT alignment
+that are mentioned in Section 4.2.3 (i.e., the strategy execution perspective and technology
+potential perspective). In this pattern, these perspectives were adapted to derive question prompts
+that guide stakeholders to generate strategic actions from features of elements that constitute the
+business strategy. This is done basing on findings from the internal and external environmental
+assessment in step S1 of EAISSP (see Appendix 4 – task T3.1 and its question prompts).
+The second thinking pattern is derived from the three major roles of IT in an enterprise.
+According to Henderson and Venkatraman [54], IT in an enterprise serves 3 roles, i.e., (a)
+Administration role, where IT rationalizes and automates business processes that constitute the
+accounting and control capabilities of an enterprise; (b) Operations role, where IT rationalizes and
+automatesall non-administrativebusiness processes in anenterprise to supporttheimplementation
+of the chosen business strategy of the enterprise; and (c) Competitive role, where IT is not
+leveraged to yield operational efficiency, but to enable an enterprise to transform its structure and
+processes in ways that can enable it to acquire unique sources of competitive advantages in the
+market place. In this pattern, these 3 roles of IT were adapted to derive question prompts that guide
+stakeholders to generate and evaluate possible strategic actions on how ICTs can be leveraged to
+achieve the administrative role, operations role, and competitive role of IT in an enterprise (see
+Appendix 4 – task T3.2 and its question prompts).
+Ultimately, these two thinking patterns are expected to yield strategic actions towards achieving
+the strategic goals and objectives of the IS function and to support the realization of the strategic
+actions that constitute the business strategy of the enterprise. Besides, step S3 assumes that an
+enterprise has already formulated its business strategy, thus tasks and question prompts in
+Appendix 4 focus on providing guidance towards formulating the information systems strategy.
+However, if there is no existing business strategy of the enterprise, tasks T1.3 and T1.4 in step S1
+(see Appendix 2) provide insights into how to define elements of the business strategy that are
+critical in formulating the information systems strategy.
+Reason for the parallel diversion triggered by step S3 of Figure 2. After specifying the set
+of strategic actions that are envisioned to achieve the goals and objectives of the IS function, the
+coherent implementation of the selected set of strategic actions can be planned by adopting an
+enterprise architecture approach to strategy formulation and strategy execution. This is because
+enterprise architecture is an instrument that helps an organization formulate and assess the impact
+of a given strategy before implementing or executing it [1]. However, how an enterprise
+architecture thinking pattern can be adopted during the formulation of an information systems
+strategy of an enterprise depends on the architecture maturity level of that enterprise. This is
+
+--- PAGE 16 ---
+73
+because the architecture maturity level informs stakeholders whether to adopt the architecture
+thinking pattern through (a) creating an enterprise architecture or (b) improving an existing
+enterprisearchitecture,or (c)implementinganexisting enterprisearchitecture,or (d)maintaining
+an already implemented enterprise architecture. Text Box 1 shows the different levels of
+architecture maturity.
+Figure 2 shows that, after step S3, a diversion is made to either step S4 or step S5, depending
+on the architecture maturity level of an enterprise. This implies that EAISSP is designed to guide
+the formulation of an information systems strategy in the following two contexts. Context A is
+when an enterprise has no enterprise architecture and solutions are being implemented in project-
+specific modes (i.e., enterprises are at maturity level 0 or 1 as defined in Text Box 1). Context B
+is when an enterprise has an enterprise architecture (i.e., enterprises are at maturity levels 2 to 5 as
+defined in Text Box 1). Thus, based on findings from step S1 (see Appendix 2 – task T1.5), after
+stepS3inFigure2,anenterprisewithanarchitecturematuritylevelintherangeof0and1executes
+step S4; and an enterprise at an architecture maturity level in the range of 2 to 5 executes step S5.
+Steps S4 and S5 are elaborated in sections 4.2.4 and 4.2.5, respectively.
+Text Box 1. Architecture Maturity Levels. According to USDoC [57], the six maturity levels of an enterprise
+architecture capability include:
+• Level 0 – None, where there is no enterprise architecture and no effort towards developing one;
+• Level 1 – Initial, where efforts of adopting the enterprise architecture practice are at unit-level or localized and
+not planned institution-wide;
+• Level 2 – Under Development, where the enterprise architecture practice is adopted and recognized, and several
+efforts are ongoing to implement specific components of the enterprise architecture;
+• Level 3 – Defined, where an enterprise architecture has detailed documentation and fully developed domain
+architectures or a technical reference model and components of the architecture have been or are acquired in
+compliance with the architecture;
+• Level 4 – Managed and Measured, where the established enterprise architecture has quality metrics that are used
+to track its performance and the practice of architecture-based thinking in solution acquisition has become a
+culture;
+• Level 5 – Optimizing, where an enterprise establishes a feedback mechanism geared towards improving the
+architecture and adopts a uniform culture of not endorsing any unplanned IT acquisition efforts and optimizing
+or continuously assessing and improving its architecture.
+4.2.4 Elaborate Strategic Actions for Agency at Architecture Maturity Levels 0 – 1 (S4)
+Steps S4 and S5 of Figure 2 involve elaborating each strategic action for the IS function by
+specifying how it can be implemented by defining activities that must be executed to achieve its
+intentions or the enterprise objectives and goals. This is adapted from the strategy implementation
+phase of the Planning Framework for Strategy, which, according to [52] and [53], involves
+devising means for operationalizing the selected strategic actions by defining short-term, medium-
+term, and long-term activities that will help to achieve the underlying intentions of the set of
+strategic actions and the enterprise objectives and goals.
+To derive means of operationalizing the selected set of strategic actions for the IS function, step
+S4 prompts an enterprise whose architecture maturity level is in the range of 0 to 1 to elaborate
+strategic actions by adopting an enterprise architecture approach. This is motivated by the four
+major purposes of enterprise architecture, as specified in Text Box 2.
+Text Box 2. Major Purposes of an Enterprise Architecture. From Op’t Land et al. [1], an enterprise architecture
+enables stakeholders to:
+a) Elaborate on strategic action and assess its potential impact on an enterprise prior to implementing the strategic
+action;
+b) Specify business and ICT requirements that are associated with a given strategic action;
+c) Inform or guide stakeholder deliberations and decision-making on a planned strategic action and/or during an
+ongoing business transformation or strategic action that is being implemented;
+d) Inform (potential) service providers or vendors about enterprise solutions that constitute the target state of the
+enterprise and contract them to contribute to the target state by building specific solutions as specified in the
+architecture.
+
+--- PAGE 17 ---
+74
+Purposes (a) and (b) in Text Box 2 are vital for an enterprise whose architecture maturity level
+is in the range of 0 to 1. However, for enterprise architecture to deliver these benefits, it must first
+be created. Thus, step S4 involves identifying activities that are executed when creating or
+designing an enterprise architecture, determining which of the architecture creation activities are
+critical for achieving the selected and elaborated set of strategic actions, and documenting as well
+as scheduling the activities as initiatives towards delivering the selected set of actions that are
+envisioned to deliver the enterprise architecture.
+Accordingly, to identify activities involved in creating enterprise architecture, TOGAF ADM
+guidelines for creating or designing an enterprise architecture were adopted to elaborate the
+selected set of strategic actions toward realizing the specified goals and objectives of the IS
+function. Specifically, the architecture-oriented thinking pattern was invoked to derive or
+formulate short-term, medium-term, and long-term activities that can be executed coherently to
+deliver an information systems strategy. Thus, TOGAF ADM guidelines from the preliminary
+phase up to phase D (including requirements management phase) were adopted to define the short-
+term activities of EAISSP in step S4, while guidelines in phases E to H (including requirements
+management phase) were adopted to define the medium-term and long-term activities of EAISSP
+in step S4. The long-term activities of step S4 also involve the continuous assessment of the
+architecture maturity of the enterprise. This is because the enterprise architecture capability
+maturity model provides a roadmap for undertaking and annually assessing the enterprise
+architecture development process to ensure that it transforms an institution from operating ad hoc
+and immature business-IT alignment practices to operating disciplined and mature practices [57].
+Appendix 5 shows how these concepts were adapted to derive tasks of step S4 and the
+corresponding question prompts.
+4.2.5 Elaborate Strategic Actions for Agency at Architecture Maturity Levels 2 – 5 (S5)
+As introduced in Section 4.2.4, step S5 in Figure 2 prompts an enterprise whose architecture
+maturity level is in the range of 2 to 5 to elaborate and synthesize the selected strategic actions by
+adapting tasks involved in implementing and maintaining an enterprise architecture. This is
+because such an enterprise can use its existing architecture (or deliverables of an ongoing
+architecture effort) as a basis to derive means of operationalizing the selected set of strategic
+actions. Such means are derived by defining tasks that adopt TOGAF ADM guidelines in phases
+E to H. This implies that tasks in step S5 include activities that involve implementing existing
+architectural designs; maintaining an up to date architecture implementation plan (i.e., architecture
+migration and transition plan, implementation governance plan, and maintenance plan);
+continuously assessing the performance of an implemented architecture; and maintaining an
+existing enterprise architecture with respect to dynamically changing business needs. Moreover,
+these activities require stakeholders to explore ways through which existing solutions in an
+enterprise architecture can be optimized, identify innovative options of implementing and
+maintaining the existing architecture, or identify avenues of acquiring or implementing solutions
+prescribed in the existing architecture.
+The execution of step S5 is informed by the four purposes of enterprise architecture that are
+specified in Text Box 2 (in Section 4.3.4). From Text Box 2, it can be deduced that purposes (c)
+and (d) apply to an enterprise whose architecture maturity level is 2; and purposes (a) to (d) apply
+to an enterprise whose architecture maturity level is in the range of 3 to 5. However, for an
+architecture to deliver these purposes or benefits to the enterprise, it needs to be either
+implementing or developing its enterprise architecture (if its architecture maturity level is 2), or
+monitoring and maintaining its enterprise architecture (if its architecture maturity level is in the
+range 3 to 5). This implies that step S5 involves two parallel tasks, coded as T5.1 and T5.2 below
+(and in Appendix 6).
+Task T5.1 involves identifying activities that are executed when implementing an enterprise
+architecture, determining which of the architecture implementation activities are critical for
+
+--- PAGE 18 ---
+75
+achieving the selected and elaborated set of strategic actions, and scheduling the activities as
+initiatives towards delivering the selected set of strategic actions (that are envisioned to enable
+achievement of the goals and objectives of the IS function). Also, task T5.2 involves identifying
+activities that are executed when monitoring and maintaining an enterprise architecture,
+determining which of the architecture monitoring and maintenance activities are critical for
+achieving the selected and elaborated set of strategic actions, and scheduling the activities as
+initiatives towards delivering the selected set of strategic actions (that are envisioned to enable
+achievement of the goals and objectives of the IS function).
+To support tasks T5.1 and T5.2, TOGAF ADM guidelines for implementing, monitoring, and
+maintaininganenterprisearchitecturewereadoptedtoelaboratetheselectedsetofstrategicactions
+toward realizing the specified goals and objectives of the IS function. Basing on TOGAF ADM
+guidelines, architecture artifacts that inform the elaboration of strategic actions in step S5 are the
+existing enterprise architecture, transition and migration plan for the enterprise architecture,
+implementation governance plan for the enterprise architecture, change management framework
+for the enterprise architecture, and monitoring and evaluation plan for the enterprise architecture.
+Accordingly, TOGAF ADM guidelines for phases E to G (including requirements management
+phase) were adopted to define the short-term activities of EAISSP in sub-pathway T5.1, while
+guidelines for phase H and phases A to G (including requirements management phase) were
+adopted to define the medium-term and long-term activities of EAISSP in task T5.1. In addition,
+TOGAF ADM guidelines for phase H (including requirements management phase) were adopted
+to define the short-term activities of EAISSP in task T5.2, while guidelines for phases A to G
+(including requirements management phase) were adopted to define the medium-term and long-
+term activities of EAISSP in task T5.2. The long-term activities of tasks T5.1 and T5.2, in step S5,
+also involve the continuous assessment of the architecture maturity level of the enterprise (due to
+the justification given in Section 4.2.4). Appendix 6 presents the tasks of step S5 and the
+corresponding question prompts.
+4.2.6 Allocate and Specify Resources for Realizing Strategic Actions (S6)
+Step S6 of Figure 2 focuses on prompting stakeholders to allocate and specify resources for
+executing the architecture-oriented activities (derived in Sections 4.2.4 and 4.2.5) envisioned to
+deliver the selected set of strategic actions that constitute the information systems strategy. This is
+defined by adapting the strategy implementation phase of the Planning Framework for Strategy,
+which, according to [52] and [53], involves allocating required resources for delivering the
+specified set of activities (short-term, medium-term, and long-term activities), to achieve the
+intentions of the priority set of strategic actions and the enterprise objectives and goals. Step S6
+also involves specifying key performance indicators of architecture-oriented activities that are
+defined to deliver each strategic action. Moreover, data on the key performance indicators can
+inform subsequent rounds of information systems strategic planning in a specific enterprise.
+Appendix 7 presents tasks in step S6 and the corresponding question prompts.
+5 Application and Evaluation of EAISSP
+In the context of the Action Research method as adopted and justified in Section 2, details of what
+transpired in the diagnosis and action planning stages are presented in Sections 3 and 4,
+respectively. From the diagnosis stage (in Sections 1 and 3), the core problem was the lack of an
+effective and efficient mechanism for generating quality data on service delivery from various
+health laboratories at the facility level and quality data on the coordination and regulation of
+laboratory services at national and subnational levels. Thus, the required intervention was
+establishing a national integrated HLIMS that supports service delivery operations in health
+laboratories across the country and effective coordination and regulation of laboratory services
+across the health laboratory network in Uganda. However, this was perceived as a complex long-
+
+--- PAGE 19 ---
+76
+term intervention, which required the formulation of an enterprise architecture-oriented HLIMS
+strategy that incorporates 3 levels: (a) the creation or design of a master plan for a national
+integrated HLIMS, (b) the implementation of the master plan by using it to guide the building and
+deploymentofdigitalsolutionsprescribedinthemasterplan, and(c)themaintenanceofthemaster
+plan and the corresponding solutions.
+Accordingly, the action planning stage (in Section 4) involved devising EAISSP and
+customizing it to the context of the health laboratory subsector so that it could guide the
+formulation of an HLIMS strategy. Section 5.1 gives an overview of what transpired in the action
+taking stage and evaluation stage of this research, and Section 5.2 highlights lessons learned from
+this research.
+5.1 Setup of the Action Taking Stage and Evaluation Stage of this Research
+The action taking stage involved using EAISSP in the health laboratory subsector to guide the
+intervention of formulating the HLIMS strategy and executing the initial phase of its
+implementation (by developing a master plan for a national integrated HLIMS). The intervention
+was set up as specified below:
+a)Objectives of the Intervention. The intervention had to fulfill two objectives. The first
+objective was to execute the steps of EAISSP to formulate an enterprise architecture-oriented
+HLIMS strategy that addresses the core problem in the laboratory subsector (as specified
+above). The second objective was to implement the first phase of the HLIMS strategy by
+creating a master plan for the national integrated HLIMS.
+b)Key Deliverables. The intervention yielded an explicit HLIMS strategy, a master plan or
+enterprise architecture for a national integrated HLIMS, and its implementation plan.
+c)Stakeholder Engagement. Key stakeholder groups were engaged in the execution of specific
+tasks in EAISSP using three modes, i.e., one-off mode, discrete mode, and continuous mode.
+This was achieved in two ways. First, a Technical Working Group was constituted to
+spearhead the entire initiative, and it included representatives of key stakeholder groups who
+had to be engaged in a continuous mode. Second, a catalog or inventory of subject matter
+experts was created to include representatives of key stakeholder groups who had to be
+engaged using any of the above three modes, depending on their roles in executing specific
+tasks of the customized EAISSP. In addition, the selection of specific key stakeholders from
+the catalog of subject matter experts and their engagement was purposively done depending
+on the availability and commitment of a particular stakeholder.
+d)Techniques used to Contextualize the Execution of EAISSP in the Health Laboratory
+Subsector. First, a multidisciplinary technical working group was constituted and assigned the
+responsibility of spearheading the execution of tasks in EAISSP, to achieve the above two
+objectives of the intervention. Second, interviews were conducted with various (purposively
+selected) coordinators or managers of programs or projects that support service delivery in the
+health laboratory subsector to support the execution of specific tasks in EAISSP. Third,
+technical stakeholder engagement workshops were conducted (involving purposively selected
+representatives of various actors at national and subnational levels of the health laboratory
+subsector) to support the execution of specific tasks in EAISSP and validate output obtained
+from completed tasks. Fourth, stakeholder dissemination workshops were conducted, aiming
+at sharing deliverables, showing the progress of the intervention, and eliciting feedback on
+obtained outputs.
+e)Pre and post stakeholder engagements activities. Before engaging key stakeholders, there was
+need to customize tasks and question prompts of EAISSP to the context of the health
+laboratory subsector. After stakeholder engagements workshops, stakeholder responses on
+specific outputs and deliverables as well as the EAISSP process were compiled, synthesized,
+and used to generate refined outputs.
+
+--- PAGE 20 ---
+77
+The evaluate and specify learning stages of this research involved selecting a sample of 20
+stakeholders from only stakeholders who were engaged in a continuous mode and prompting them
+to evaluate EAISSP. The sampling of evaluators was done purposefully, and the selection criterion
+was the observed level of commitment of a particular stakeholder who supported the execution of
+EAISSP tasks in a continuous mode. Stakeholders who were engaged in a continuous mode but
+withalowlevelofcommitmentinexecutingEAISSPactivitieswerenotengagedintheevaluation.
+This kind of classification and prioritization of evaluators was done for tworeasons. First, EAISSP
+is a lengthy process, which can only be appreciated by stakeholders who are committed to
+effectively executing each taskbecause the output ofeachtask is an input foranothertask. Second,
+the intertwined nature of EAISSP tasks and activities and their effectiveness can be comprehended
+and assessed by stakeholders who are engaged in a continuous mode, instead of those who are
+engaged in a one-off mode or discrete mode.
+Stakeholders who participated in the evaluation were responsible for (a) Reviewing specific
+thematic areas in EAISSP deliverables, (b) Participating in bilateral structured walkthrough
+sessions that discussed EAISSP deliverables, and (c) Providing feedback on EAISSP using a self-
+administered evaluation questionnaire. Findings from the evaluation and lessons learned are
+summarized in section 5.2.
+5.2 Evaluation Findings and Lessons Learned
+This section presents evaluation feedback on only EAISSP as a process, but not deliverables that
+were obtained when it was used in the health laboratory subsector. This is because feedback on
+the understandability and feasibility of specific deliverables (that were obtained when executing
+EAISSP) was used to continuously refine the deliverables, which are beyond the scope of this
+article. The evaluation questionnaire comprised (a) four closed questions that required
+stakeholders to respond to a specific attribute of the EAISSP process, using a Likert scale of 1 to
+5 (where 1 represented strongly disagree and 5 represented strongly agree), and (b) three open
+ended questions that prompted stakeholders to share their opinions on the steps and tasks that
+constitute EAISSP, the understandability and feasibility of EAISSP, and the strengths and
+weaknesses of EAISSP. Responses to the closed questions were processed using Microsoft Excel,
+and findings indicate that:
+a)At least 75% of the evaluators were satisfied with the final outputs and deliverables generated
+when EAISSP was used in the health laboratory subsector to guide the formulation of the
+HLIMS strategy and initiate execution of the strategy by designing a master plan for
+establishing a national integrated HLIMS.
+b)At least 86% of the evaluators were satisfied with how the entire process of the architecture-
+oriented strategic planning for the national integrated HLIMS was conducted.
+c)At least 86% of the evaluators understood why some of their views were adopted in the final
+outputs or deliverables of the initiative.
+d)All evaluators (100%) understood why views of some officers had not been adopted in the
+final outputs or deliverables of the initiative.
+Stakeholder responses to the open-ended questions were processed using content or thematic
+analysis, and key findings are summarized in Table 2 (see column 1). In column 2 of Table 2,
+implications of stakeholder comments are coded as Fx, because they are treated as additional
+features for incorporating in EAISSP to improve its design and usability.
+Insights F1 to F3 in Table 2 point to the need to amend EAISSP with an explicit user guide, so
+as to ensure that its tasks are properly executed. Efforts are currently ongoing to extend EAISSP
+to contain features F1 to F3. Besides the above insights for improving EAISSP, the stakeholders
+appreciated the interactive nature of tasks that constitute EAISSP, and the mode in which its
+various tasks and corresponding activities were executed. This is derived from direct quotations
+of some evaluators, which included the following excerpts: “The approach of sourcing human
+resourcefromdifferentbackgroundsandspecializationsandgroupingthemtoaccomplishspecific
+
+--- PAGE 21 ---
+78
+tasks was very good… Discussions in small groups were very good… Group work enabled
+coverage of large volume of work… Assigning work to smaller groups allowed more material to
+be reviewed… Group discussions allowed people to share their views… Group-based work
+encouraged good teamwork, enabled better thinking and understanding of concepts, and allowed
+active and open participation of all members… Grouping created enough time for discussing
+matters.” Some stakeholders further commented that “the process was interactive, it involved
+participants or stakeholders from various specialties or thematic areas… Several stakeholders
+with high levels of expertise gathered for the exercise”.
+Table 2. Qualitative Feedback on Gaps Identified in EAISSP
+Evaluator Comments on Design Gaps in
+EAISSP (coded as Gx)
+Implications or Additional Features for improving the
+Design of EAISSP (coded as Fx)
+• G1. “Some activities require more time than the
+time that was allocated, and this limited
+comprehensive discussion of some aspects…
+Allocating more time allows to ensure that all
+key stakeholders participate and yields
+exhaustive discussions”
+• F1. EAISSP needs to be amended with a user guide or
+implementation guide that explicitly provides the
+recommended ways of executing its tasks. The user guide of
+EAISSP will need to include operational details such as
+guidance on techniques to use in task execution and ample
+time to allocate to specific tasks in EAISSP.
+• G2. To reach out to a wide range of individuals
+in a given stakeholder category, it would be
+helpful to send out a questionnaire to each
+stakeholder group (e.g., facility-level staff) to
+comment or give their input into critical issues
+about the HLIMS strategy or its implementation
+roadmap.
+• F1.1. The proposed user guide for EAISSP will need to
+ensurethatresolutionsaboutastrategyoritsimplementation
+roadmap are cataloged and disseminated to stakeholders in
+specific categories to elicit additional views (from a wider
+audience) on their technical and financial feasibility.
+• G3. Instructions about executing particular tasks
+and activities need to be documented (with
+examples) and shared to avoid all possible forms
+of misinterpretation among stakeholders.
+• F1.2. The proposed user guide for EAISSP will need to
+ensure that instructions for executing each task are clearly
+documented and instantiated with real-life examples so as to
+ensure mutual understanding among stakeholders.
+• G4. Some categories of stakeholders should
+have participated fully in all sessions to ensure
+that they holistically understand issues and
+aspects to support their implementation. In other
+words, some stakeholders who were engaged in
+the discrete mode should have been engaged in
+the continuous mode.
+• F1.3. The proposed user guide for EAISSP should prompt
+users to ensure that the criteria for determining engagement
+modes of key stakeholder groups in a particular context are
+validated by the technical working group responsible for
+formulating the architecture-oriented information systems
+strategy.
+• G5. “Sometimes people would agree from a
+theoretical point of view rather than practical”.
+• F1.4. the proposed user guide for EAISSP should prompt
+users to ensure that representatives of key stakeholders are
+individuals who have been involved in the delivery of
+routine laboratory services and/or in the coordination or
+regulation of laboratory services at a specific level.
+• G6. In some scenarios, “objectives of the
+sponsor were used to override the significance
+or relevance of the technical submissions to
+some extent”.
+• F2. Need to explore ways of strengthening negotiations
+between donors and beneficiaries during execution of
+EAISSP tasks to devise strategic actions that yield
+sustainable but not donor-dependent initiatives.
+• G7. When generating and assessing potential
+strategic actions for delivering the IS strategy,
+the international standards and national policies
+should be considered with respect to contextual
+issues faced by health laboratories in the country
+(so as to balance objectivity and compliance).
+• F3. The proposed user guide for EAISSP should prompt
+stakeholders to ensure that the existing standards and
+policies in the business, data, applications, technology, and
+security domains of an enterprise are specified; so that their
+key elements are considered when formulating and
+elaborating strategic actions for the IS function.
+6 Conclusion
+Existing e-health implementation efforts scarcely address the data and information needs of all
+core functions of the health laboratory subsector in Uganda. Existing approaches for implementing
+digital health interventions to a limited extent provide detailed technical guidance on how to
+
+--- PAGE 22 ---
+79
+develop a digital health strategy that leverages enterprise architecture to: (a) ensure that data and
+information needs of all core functions in healthcare service delivery are coherently realized and
+(b) effectively address prevailing challenges in aligning healthcare and ICTs. Also, existing
+information planning approaches only focus on strategy development aspects and scarcely provide
+insights into how the strategy planning and strategy implementation processes can be enriched by
+aspects from enterprise architecture development approaches. Thus, the realization of digital
+transformation in the health laboratory subsector was hindered by the lack of explicit technical
+guidance on aligning processes that deliver all core functions of the health laboratory subsector
+with digital technologies. Accordingly, a process enabling enterprises to leverage enterprise
+architecture during information systems strategic planning (EAISSP) was devised and instantiated
+in Uganda’s health laboratory subsector to address the business-IT alignment issues therein. This
+was achieved by mutually adopting insights from two strategic planning approaches (i.e., the
+Planning Framework for Strategy and the Strategic Alignment Model) and two enterprise
+architecture approaches (i.e., TOGAF ADM and the Enterprise Architecture Capability Maturity
+Model).
+EAISSP was instantiated in Uganda’s health laboratory subsector by (a) using it to formulate an
+enterprise architecture-oriented strategy for establishing a national integrated HLIMS and (b)
+using the strategy to guide the development of a master plan or enterprise architecture for the
+national integrated HLIMS and the corresponding architecture implementation plan. In a broader
+context, EAISSP provides technical guidance on how to leverage enterprise architecture during
+the information strategic planning process in two institutional contexts. The first context is an
+institution at architecture maturity level 0 or 1 (e.g., the case of the health laboratory subsector).
+The second context is an institution at the architecture maturity level in the range of 2 to 5 (i.e.,
+whose architecture is being implemented, is established, or is due for maintenance). EAISSP was
+evaluated by a sample of 20 stakeholders who were continuously engaged in executing its tasks.
+Evaluationfindings(a)revealitsmajorstrength as anapproachthatcanprovidetechnicalguidance
+in architecture-oriented information systems strategic planning and (b) highlight the need to
+improve its usability by providing a user guide containing illustrative scenarios, which clarify
+concepts and examples of expected responses to avoid misinterpretations. Accordingly, efforts are
+ongoing to extend EAISSP by providing a comprehensive user guide that specifies techniques and
+templates that can be used to effectively execute its tasks and activities. Future efforts will involve
+instantiating EAISSP in other enterprise settings.
+Acknowledgment
+The authors acknowledge Uganda’s Ministry of Health and its development partners, as well as
+implementing partners, for providing the financial and administrative support that enabled the
+instantiation of EAISSP in the health laboratory subsector. The authors also acknowledge the
+various categories of stakeholders who participated in this effort. The authors also appreciate the
+anonymous reviewers of the earlier version of this article for their comments that helped improve
+the article’s quality.
+References
+[1] M. Op’t Land, E. Proper, M. Waage, J. Cloo, and C. Steghuis, Enterprise Architecture: Creating Value by
+Informed Governance. Springer Science &Business Media, 2009.Available:https://doi.org/10.1007/978-3-540-
+85232-2
+[2] P. Olver, M. K. Bohn, and K. Adeli, “Central Role of Laboratory Medicine in Public Health and Patient Care,”
+Clinical Chemistry and Laboratory Medicine, vol. 61, no. 4, pp. 666–673, 2023. Available:
+https://doi.org/10.1515/cclm-2022-1075
+
+--- PAGE 23 ---
+80
+[3] Association of Public Health Laboratories (APHL), “The Core Functions of Public Health Laboratories,”
+Technical Report, 2014. Available: https://www.aphl.org/Pages/reportsbriefsresults.aspx. Accessed on July 15,
+2023.
+[4] M. L. Wilson, S. Gradus, and S. J. Zimmerman, “The Role of Local Public Health Laboratories,” Public Health
+Reports, vol. 125, no. 2, pp. 118–122, 2010. Available: https://doi.org/10.1177/00333549101250S215
+[5] World Health Organization Regional Office for Africa (WHO), “Stepwise Laboratory Quality Improvement
+Process Towards Accreditation (SLIPTA) Checklist Version 2:2015 for Clinical and Public Health
+Laboratories,” 2015. Available: https://iris.who.int/handle/10665/204423
+[6] J. L. Sepulveda, and D. S. Young, “The Ideal Laboratory Information System,” Archives of Pathology and
+Laboratory Medicine, vol. 137, no. 8, pp. 1129–1140. 2013. Available: https://doi.org/10.5858/arpa.2012-0362-
+RA
+[7] Association of Public Health Laboratories (APHL), “Requirements for Public Health Laboratory Information
+Management Systems,” Technical Report, 2003. Available:
+https://www.aphl.org/Pages/reportsbriefsresults.aspx (accessed 15.07.2023)
+[8] C4G (Computing for Good at the Georgia Institute of Technology, Centers for Disease Control and Prevention
+and Ministries of Health of several countries in Africa), “C4G Basic Laboratory Information System: C4G BLIS
+v3.8.1,” 2023. Available: http://blis.cc.gatech.edu/. Accessed on Aug. 01, 2023.
+[9] G. Boran, R. O’Moore, W. Grimson, M. Peters, A. Hasman, T. Groth, and F. van Merode, “A New Clinical
+Laboratory Information System Architecture from the Openlabs Project Offering Advanced Services for
+Laboratory Staff and Users,” Clinica Chimica Acta, vol. 248, no. 1, pp. 19–30. 1996. Available:
+https://doi.org/10.1016/0009-8981(95)06263-7
+[10] M. Matovu, E. Musiime, P. Olak, M. Mulindwa, E. Namisango, and K. Songwe, “Impact of Accreditation on
+Health Care Services Performance in Kiryandongo District, Uganda: A Longitudinal Study,” BMC Health
+Services Research, vol. 22, article 174, 2022. Available: https://doi.org/10.1186/s12913-022-07603-4
+[11] Ministry of Health, Department of Diagnostics and Laboratory Services (MOH-DDLS), “Uganda National
+HealthLaboratoryServicesStrategicPlan2020–2025,”Kampala,MinistryofHealth,DepartmentofDiagnostics
+and Laboratory Services, 2020.
+[12] Ministry of Health, Department of Diagnostics and Laboratory Services (MOH-DDLS), “Uganda National
+Health Laboratory Services Policy II 2016,” Kampala, Ministry of Health, Department of Diagnostics and
+Laboratory Services, 2016.
+[13] C. Kiyaga, H. Sendagire, E. Joseph, I. McConnell, J. Grosz, V. Narayan, G. Esiru, P. Elyanu, Z. Akol, W.
+Kirungi, J. Musinguzi, and A. Opio, “Uganda’s New National Laboratory Sample Transport System: A
+Successful Model for Improving Access to Diagnostic Services for Early Infant HIV Diagnosis and Other
+Programs,” PLoS ONE, vol. 9, no. 1, 2014. Available: https://doi.org/10.1371/annotation/58b80505-5c73-428a-
+b8ae-69f7c6f2080c
+[14] M. Lankhorst et al., Enterprise Architecture at Work: Modelling, Communication and Analysis. 4th edition,
+Springer, 2017. Available: https://doi.org/10.1007/978-3-662-53933-0
+[15] J. Jonnagaddala, G. N. Guo, S. Batongbacal, A. Marcelo, and S. T. Liaw, “Adoption of Enterprise Architecture
+for Healthcare in AeHIN Member Countries,” BMJ Health & Care Informatics, vol. 27, no. 1, 2020. Available:
+https://doi.org/10.1136/bmjhci-2020-100136
+[16] G. Susman and R. Evered, “An Assessment of the Scientific Merits of Action Research,” Administrative Science
+Quarterly, vol. 23, no. 4, pp. 582–603, 1978. Available: https://doi.org/10.2307/2392581
+[17] H. Noble and J. Smith, “Reviewing the Literature: Choosing a Review Design,” Evidence-Based Nursing,
+vol. 21, no. 2, pp. 39–41, 2018. Available: https://doi.org/10.1136/eb-2018-102895
+[18] M. Hammersley, “Systematic or Unsystematic: Is that the Question? Some Reflections on the Science, Art, and
+Politics of Reviewing Research Evidence,” Public Health Evidence: Tackling Health Inequalities, A. Killoran,
+C. Swann, and M. P. Kelly, Eds., Oxford University Press, 2006. Available: https://oro.open.ac.uk/17167/
+[19] M. J. Grant and A. Booth, “A Typology of Reviews: An Analysis of 14 Review Types And Associated
+Methodologies,” Health Information and Libraries Journal, vol. 26, no. 2, pp. 91–108. 2009. Available:
+https://doi.org/10.1111/j.1471-1842.2009.00848.x
+[20] A. P. Siddaway, A. M. Wood, and L. V. Hedges, “How to Do A Systematic Review: A Best Practice Guide for
+Conducting and Reporting Narrative Reviews, Meta-Analyses, and Meta-Syntheses,” Annual Review of
+Psychology, vol. 70, pp. 747–770, 2019. Available: https://doi.org/10.1146/annurev-psych-010418-102803
+
+--- PAGE 24 ---
+81
+[21] J. V. Brocke, A. Simons, B. Niehaves, B. Niehaves, K. Reimer, R. Plattfaut, and A. Cleven, “Reconstructing the
+Giant: On the Importance of Rigour in Documenting the Literature Search Process,” ECIS 2009 Proceedings,
+pp. 2206–2217, 2009. Available: https://aisel.aisnet.org/ecis2009/161/
+[22] S. Vempala, N. Chopra, A. Rajagopal, J. Nkengasong, and S. Akuro, “C4G BLIS: Health Care Delivery via
+Iterative Collaborative Design in Resource-constrained Settings,” ICTD’16: Proceedings of the Eighth
+International Conference on Information and Communication Technologies and Development, pp. 1–11, 2016.
+Available: https://doi.org/10.1145/2909609.2909657
+[23] J. M. Alves, A. Savaris, C. G. von Wangenheim, and A. von Wangenheim, “Software Quality Evaluation of the
+Laboratory Information System Used in the Santa Catarina State Integrated Telemedicine and Telehealth
+System,” in Proc. the 29th International Symposium on Computer-Based Medical Systems, CBMS2016, IEEE,
+pp. 76–81, 2016. Available: https://doi.org/10.1109/CBMS.2016.51
+[24] J. M. Alves, C. G. von Wangenheim, A. Savaris, and A. vonWangenheim, “Identifying and Evaluating Usability
+Heuristics Applicable to Clinical Laboratory Systems,” in Proc. the 27th International Symposium on Computer-
+Based Medical Systems, CBMS2014, IEEE, pp. 529–530, 2014. Available:
+https://doi.org/10.1109/CBMS.2014.123
+[25] E. Bach and D. T. Holmes, “Reqscan: An Open Source Solution for Laboratory Requisition Scanning, Archiving
+and Retrieval,” Journal of Pathology Informatics, vol. 6, no. 1, 2015. Available: https://doi.org/10.4103/2153-
+3539.150256
+[26] G. Kopanitsa and I. Semenov, “Patient Facing Decision Support System for Interpretation of Laboratory Test
+Results,” BMC Medical Informatics and Decision Making, vol. 18, no. 68, pp. 1–13, 2018. Available:
+https://doi.org/10.1186/s12911-018-0648-0
+[27] H. A. Aziz and H. M. Alshekhabobakr, “Health Informatics Tools to Improve Utilization of Laboratory Tests,”
+Laboratory Medicine, vol. 48, no. 2, pp. e30–e35, 2017. Available: https://doi.org/10.1093/labmed/lmw066
+[28] R. Kammergruber and J. Durner, “Laboratory Information System and Necessary Improvements in Function and
+Programming,” Journal of Laboratory Medicine, vol. 42, no. 6, pp. 277–287, 2018. Available:
+https://doi.org/10.1515/labmed-2018-0038
+[29] Z. Azadmanjir, M. Torabi, R. Safdari, M. Bayat, and F. Golmahi, “A Map for Clinical Laboratories Management
+Indicators in the Intelligent Dashboard,” Acta Informatica Medica, vol. 23, no. 4, pp. 210–214, 2015. Available:
+https://doi.org/10.5455/aim.2015.23.210-214
+[30] B. Tagger, “An Introduction and Guide to Successfully Implementing a Laboratory Information Management
+System,” Computer Science Department, University of Wales, Aberystwyth, Ceredigion, Wales, 2011.
+Available: http://www0.cs.ucl.ac.uk/staff/B.Tagger/LimsPaper.pdf. Accessed on July 15, 2023.
+[31] J. H. Sinard, W. J. Castellani, M. L. Wilkerson, and W. H. Henricks, “Stand-alone Laboratory Information
+Systems versus Laboratory Modules Incorporated in the Electronic Health Record,” Archives of Pathology and
+Laboratory Medicine, vol. 139, no. 3, pp. 311–318, 2015. Available: https://doi.org/10.5858/arpa.2013-0711-
+SO
+[32] R. Zawawi and T. Justinia, “Laboratory Information Systems and Analytical Turnaround Time,” Global Journal
+of Research and Review, vol. 4, no. 1, 2017. Available: https://doi.org/10.21767/2393-8854.10005
+[33] A. Bieńkowska and K. Tworek, “IT Reliability and the Results of Accredited Laboratories Functioning in
+Poland,” Przegląd Elektrotechniczny, vol. 95, no. 1, pp. 21–24, 2019. Available:
+https://doi.org/10.15199/48.2019.01.06
+[34] Association of Public Health Laboratories (APHL), “LIS Project Management: A Guidebook for International
+Implementations,” 2017. Available: https://www.aphl.org/Pages/reportsbriefsresults.aspx. Accessed on July 15,
+2023.
+[35] ICTWorks, “ICTWorks Directory: Every African Country’s National eHealth Strategy or Digital Health Policy,”
+2020.Available:https://www.ictworks.org/african-national-ehealth-strategy-policy/.Accessed onOct.15,2023.
+[36] World Health Organization and International Telecommunication Union (WHO-ITU), “National eHealth
+strategy toolkit,” 2012. Available: https://www.who.int/publications/i/item/national-ehealth-strategy-toolkit.
+Accessed on Aug. 05, 2023.
+[37] World Health Organization (WHO), “Classification of Digital Health Interventions v1. 0: A Shared Language to
+Describe the Uses of Digital Technology For Health,” 2018. Available:
+https://iris.who.int/handle/10665/260480. Accessed on Aug. 05, 2023.
+
+--- PAGE 25 ---
+82
+[38] World Health Organization (WHO), “WHO Guideline: Recommendations on Digital Interventions for Health
+System Strengthening: Web Supplement 2: Summary of Findings and GRADE Tables,” 2019. Available:
+https://iris.who.int/handle/10665/324998. Accessed on Aug. 05, 2023.
+[39] World Health Organization (WHO), “Digital Health Platform Handbook: Building A Digital Information
+Infrastructure (Infostructure) For Health,” 2020. Available: https://iris.who.int/handle/10665/337449. Accessed
+on Aug. 05, 2023.
+[40] F. Huang, S. Blaschke, and H. Lucas, “Beyond Pilotitis: Taking Digital Health Interventions to the National
+Level in China and Uganda,” Globalization and Health, vol. 13, pp. 1–11, 2017. Available:
+https://doi.org/10.1186/s12992-017-0275-z
+[41] Z. G. Zacharia, D. S. Preston, C. W. Autry, and C. W. Lamb, “IT Alignment with Business Strategies in
+Healthcare Organizations: An Empirical Analysis,” Journal of International Technology and Information
+Management, vol. 18, no. 3, article 13, 2009. Available: https://doi.org/10.58729/1941-6679.1138
+[42] O. A. Adenuga, R. M. Kekwaletswe, and A. Coleman, “eHealth Integration and Interoperability Issues: Towards
+a Solution Through Enterprise Architecture,” Health Information Science and Systems, vol. 3, pp. 1–8, 2015.
+Available: https://doi.org/10.1186/s13755-015-0009-7
+[43] H. B. Mwanyika, D. Lubinski, R. Anderson, K. Chester, M. Makame, M. Steele, and D. de Savigny, “Rational
+Systems Design for Health Information Systems in Low-Income Countries: An Enterprise Architecture
+Approach,” Journal of Enterprise Architecture, vol. 7, no. 4, pp. 60–69, 2011. Available:
+https://www.rti.org/publication/rational-systems-design-health-information-systems-low-income-countries-
+enterprise-architecture
+[44] H. B. Mwanyika, “Developing Integrated Health Information Systems in Low Income Countries: An Enterprise
+Architecture Approach,” Doctoral Dissertation, Basel, University of Basel, 2014.
+[45] S. Stansfield, N. Orobaton, D. Lubinski, S. Uggowitzer, and H. Mwanyika, “The Case for a National Health
+Information System Architecture; A Missing Link to Guiding National Development And Implementation,” in
+Proc. Making the e-Health Connection – Global Partnerships – Local Solutions, 2008. Available:
+https://depts.washington.edu/edgh/his-elearning/resources/case_for_his.pdf. Accessed on July 15, 2023.
+[46] F. Verbeke, S. Kaze, L. Ajeneza, L. Nkurunziza, G. Sindatuma, A. Hassan, S. Van Bastelaere, and E. Mugisho,
+“Implementing Burundi’s National e-Health Enterprise Architecture: Past, Present and Future,” Journal of
+Health Informatics in Africa, vol. 4, no. 1, 2017. Available: https://doi.org/10.12856/JHIA-2017-v4-i1-178
+[47] M. A. Le Pape, J. C. N Suárez, A. Mhayi, D.Haazen, and E. Özaltin, “Developing an HMIS Architecture
+Framework to Support a National Health Care Ehealth Strategy Reform: A Case Study from Morocco,” Health
+Systems & Reform, vol. 3, no. 1, pp. 56–67, 2017. Available: https://doi.org/10.1080/23288604.2017.1265041
+[48] L. Y. Astri and F. L. Gaol, “Information System Strategic Planning with Enterprise Architecture Planning,”
+International Journal of Communication and Information Technology, vol. 7, no. 1, pp. 23–27, 2013. Available:
+https://doi.org/10.21512/commit.v7i1.580
+[49] M. O. Riku and D. B. Setyohadi, “Strategic Plan With Enterprise Architecture Planning For Applying
+Information System at PT. Bestonindo Central Lestari,” in Proc. the 5th International Conference on Cyber and
+IT Service Management, CITSM2017, IEEE, pp. 1–6, 2017. Available:
+https://doi.org/10.1109/CITSM.2017.8089274
+[50] S. Alsharif, N. Benslimane, M. Khalifa, C. Price, “Healthcare IT Strategic Alignment: Challenges and
+Recommendations,” Studies Health Technology and Informatics, vol. 251, pp. 207–210, 2018. Available:
+https://pubmed.ncbi.nlm.nih.gov/29968639/
+[51] C. L. Azevedo, M. van Sinderen, L. F. Pires, and J. P. A. Almeida, “Aligning Enterprise Architecture With
+Strategic Planning,” Advanced Information Systems Engineering Workshops, CAiSE 2015. Lecture Notes in
+BusinessInformation Processing, Springer, vol.215, pp. 426–437,2015. Available: https://doi.org/10.1007/978-
+3-319-19243-7_39
+[52] G. Johnson and K. Scholes, Exploring Corporate Strategy. 3rd edition, Prentice-Hall, 1993.
+[53] K. Scholes, G. Johnson, and R. Whittington, Exploring Corporate Strategy. 8th edition, Pearson College Div,
+2008.
+[54] J. C. Henderson and N. Venkatraman, “Strategic Alignment: A Model for Organizational transformation via
+InformationTechnology,” CISRWP No. 217. Sloan WP No.3223-90.CenterforInformation Systems Research,
+Sloan School of Management, Massachusetts Institute of Technology, 1990. Available:
+https://dspace.mit.edu/bitstream/handle/1721.1/49184/strategicalignme90hend.pdf
+
+--- PAGE 26 ---
+83
+[55] The Open Group Architecture Forum (TOGAF), “The TOGAF Standard 10th Edition,” 2022. Available:
+https://pubs.opengroup.org/togaf-standard/. Accessed on Nov 5, 2023.
+[56] The Open Group Architecture Forum (TOGAF), “The TOGAF Standard 9.2,” 2018. Available:
+https://pubs.opengroup.org/architecture/togaf9-doc/arch/index.html. Accessed on Jan. 5, 2023.
+[57] United States Department of Commerce (USDoC), “Enterprise Architecture Capability Maturity Model,”
+Version 1.2. 2007. Available: https://eapad.dk/resource/department-of-commerce-it-architecture-capability-
+maturity-model/
+[58] N. Venkatraman, J. C. Henderson, and S. Oldach, “Continuous Strategic Alignment: Exploiting Information
+Technology Capabilities for Competitive Success,” European Management Journal, vol. 11, no. 2, pp. 139–149,
+1993. Available: https://doi.org/10.1016/0263-2373(93)90037-I
+
+--- PAGE 27 ---
+84
+Appendices
+Appendix 1. Adopted parameters and dimensions of the internal and external environments of an
+organization’s business and IT domains by the Strategic Alignment Model (Based on Henderson and
+Venkatraman†
+).
+External Environment of the Business
+Domain
+External Environment of the IT Domain
+Business Strategy articulates:
+• EB1. Business scope – choices on product-
+market offerings of the enterprise;
+• EB2. Distinctive competences – attributes ofan
+enterprise strategy (e.g., pricing, quality, value
+added service, and superior distribution
+channels) that enable it to have a distinctive
+comparative advantage over its competitors;
+• EB3. Business governance – choices of
+structural mechanisms (e.g., strategic alliances,
+joint ventures, and licensing) that organize the
+business operations in a way that recognizes the
+continuum between markets and hierarchy.
+IT Strategy articulates:
+• ET1. Technology scope – types and ranges of IT systems &
+capabilities that are potentially available to the enterprise;
+• ET2. Systemic competences – distinctive attributes of IT
+systems (e.g., higher system reliability, interconnectivity,
+and flexibility) that positively contribute to the creation of
+new business strategies or better support for the existing
+business strategy;
+• ET3. IT governance – choices of structural mechanisms
+(e.g., joint ventures, long-term contracts, equity
+partnerships, and joint R&D) that enable the enterprise to
+obtain the required IT capabilities; and strategic choices on
+developing partnerships to exploit IT capabilities &
+services.
+Internal Environment of the Business
+Domain
+Internal Environment of the IT Domain
+Organization Infrastructure & Processes
+comprises:
+• IB1. Administrative infrastructure –
+organizational structure, roles of actors, and
+reporting relationships;
+• IB2. Business Processes – workflows and the
+associated information flows in executing key
+activities;
+• IB3. Business Skills – capabilities of
+individuals and the enterprise to execute tasks
+that support a business strategy.
+Information Systems Infrastructure & Processes
+comprises:
+• IT1. ICT infrastructure – the architecture showing choices
+of applications, data, and technology configurations for the
+enterprise;
+• IT2. ICT Processes – the work processes for managing and
+operating the IT infrastructure (i.e., developing, monitoring,
+controlling, and maintaining systems);
+• IT3. ICT Skills – choices of knowledge and capabilities
+required to effectively manage the IT infrastructure of an
+enterprise.
+[1] †
+J. C. Henderson and N. Venkatraman, “Strategic Alignment: A Model for Organizational transformation via Information
+Technology,” CISR WP No. 217. Sloan WP No. 3223-90. Center for Information Systems Research, Sloan School of
+Management, Massachusetts Institute of Technology, 1990. Available:
+https://dspace.mit.edu/bitstream/handle/1721.1/49184/strategicalignme90hend.pdf
+
+--- PAGE 28 ---
+85
+Appendix 2. Tasks and Guiding Questions in Step S1 of EAISSP
+S1. Scan Internal and External Environment of the Business and IT Domains of the Enterprise and
+Determine its Architecture Maturity Level
+Tasks to execute in S1 Guiding questions for deliberation in S1
+T1.1. Determine key
+stakeholders of the
+enterprise and
+understand their
+expectations and socio-
+cultural settings.
+Q1.1.1. Who are the key stakeholders of the enterprise?
+Q1.1.2. What social and cultural factors characterize the business or operational
+environment of key stakeholders?
+Q1.1.3. What are the concerns or issues and expectations or needs of the various key
+stakeholder groups of the enterprise?
+T1.2. Investigate and
+assess strengths and
+weaknesses of the
+business domain and IT
+domain of the enterprise
+(i.e., the strengths and
+weaknesses aspects in
+SWOT analysis).
+Q1.2.1. Which features characterize the following three internal dimensions or
+elements of the business domain of the enterprise:
+a) Administrative infrastructure – Management and operational structure of all key
+stakeholders of the enterprise and corresponding responsibilities?
+b) Business Processes – Institutional processes and corresponding information
+exchanges that constitute the primary and support functions of the enterprise?
+c) Business capabilities and skillsets – Institutional capabilities or resources (physical,
+financial, social capital, and information or knowledge resources) and individual or
+human resource skillsets that are critical in delivering the service portfolio of the
+enterprise?
+Q1.2.2. Which features characterize the following three internal dimensions or
+elements of the IT domain of the enterprise:
+a) IT infrastructure – the architecture of the existing and planned data, applications,
+technology, and security capabilities of the enterprise?
+b) IT service management processes – the processes for managing (developing,
+operating, monitoring, controlling, and maintaining) the existing and planned IT
+infrastructure or systems of the enterprise?
+c) Institutional IT capabilities and individual IT skills – the acquired and the planned
+capabilities and skillsets that are needed to effectively and efficiently deliver the IT
+service portfolio of the enterprise?
+Q1.2.3. What are the strengths and weaknesses that are associated with the features that
+characterize elements of the business domain and IT domain of the enterprise (as listed
+in Q1.2.1 and Q1.2.2)?
+T1.3. Investigate and
+assess opportunities and
+threats associated with
+the potential business
+strategy and IT strategy
+of the enterprise (i.e., the
+opportunities and threats
+aspects in SWOT
+analysis).
+Q1.3.1. Which features can characterize the following three external dimensions or
+elements of the business strategy of the enterprise:
+a) Business scope or service and product portfolio of the enterprise – range of
+services or products that the enterprise can choose to offer, so as to appropriately
+serve the size and demands of its target clientele or market?
+b) Distinctive competences or performance attributes of the enterprise – management
+and operational performance attributes that the enterprise can prioritize or pursue,
+so as to uniquely provide its products or services in ways that can enable it to have
+a competitive advantage?
+c) Business governance approach or model of the enterprise – management,
+operational, and quality assurance mechanisms (or modes of working) that the
+enterprise can establish to: effectively and/or efficiently execute its business or
+institutional processes; creatively leverage its partnerships; and ensure that its
+operations comply with the governing policies, regulations, and laws?
+Q1.3.2. Which features can characterize the following three external dimensions or
+elements of the IT strategy of the enterprise:
+a) Technology scope or IT services portfolio of the enterprise – range of IT systems
+or capabilities that the enterprise can leverage, so as to support realization of its
+business strategy (or to gain a competitive advantage, or to improve its service
+delivery, or to improve its customer experiences)?
+b) Systemic competencies or quality attributes of IT services of the enterprise –
+quality attributes of IT systems or capabilities that the enterprise can prioritize or
+pursue, so as to gain a competitive advantage (or to improve its service delivery, or
+to improve its customer experience)?
+c) IT governance approach/model of the enterprise – IT management, operational, and
+quality assurance mechanisms (or modes of working) that the enterprise can
+establish, so as to ensure that its IT operations comply with the values, principles,
+policies, regulations, and laws that govern enterprise operations?
+
+--- PAGE 29 ---
+86
+S1. Scan Internal and External Environment of the Business and IT Domains of the Enterprise and
+Determine its Architecture Maturity Level
+Tasks to execute in S1 Guiding questions for deliberation in S1
+Q1.3.3. What are the pros (opportunities) and cons (threats) that are associated with
+the potential features that can characterize the business strategy and IT strategy of the
+enterprise (as listed in Q1.3.1 and Q1.3.2)?
+T1.4. Assess anticipated
+changes in the business
+and IT environments in
+which the enterprise
+operates; and determine
+their potential effects
+(i.e., PESTEL analysis
+aspects and analysis of
+competitive forces of an
+enterprise).
+Q1.4.1. What are the anticipated changes in the Political, Economic, Social,
+Technological, Environmental, Legal, and Competitive contexts within which the
+business and IT domains of the enterprise operate?
+Q1.4.2. What are the effects of the above envisioned changes (in Q1.4.1) on the
+following business dimensions or elements of the enterprise?
+a) Business strategy of the enterprise:
+i. Business scope or service and product portfolio of the enterprise?
+ii. Distinctive management and operational competences or performance
+attributes of the enterprise?
+iii. Business or institutional governance approach/model of the enterprise?
+b) Business domain of the enterprise:
+i. Administrative infrastructure?
+ii. Business Processes?
+iii. Business capabilities and skillsets?
+Q1.4.3. What are the effects of the envisioned changes (in Q1.4.1 and Q1.4.2) on the
+following IT dimensions or elements of the enterprise?
+a) IT strategy of the enterprise:
+i. Technology scope or portfolio of IT systems or capabilities of the
+enterprise?
+ii. Systemic competences or design and functionality quality attributes of the
+IT services of the enterprise?
+iii. IT governance approach/model of the enterprise?
+b) IT domain of the enterprise:
+i. Existing IT infrastructure?
+ii. Existing IT service management processes?
+iii. Institutional IT capabilities and individual IT skills?
+Q1.4.4. What are the pros (opportunities) and cons (threats) that are associated with the
+envisioned effects or changes (in Q1.4.1 to Q1.4.3) on the business and IT
+environments of the enterprise?
+T1.5. Assess the
+architecture capability
+maturity level of the
+enterprise.
+Q1.5. Using the enterprise architecture maturity assessment checklist and scorecard by
+USDoC(2007),constituteateam toassessanddeterminethearchitecturematuritylevel
+of enterprise.
+T1.6. Assess and
+prioritize core problems
+and required business
+and technology
+interventions in the
+enterprise (using
+findings from tasks T1.1
+to T1.5).
+Q1.6.1. Which problems are the root causes of other identified problems in the
+enterprise, what are the timelines within which they should be addressed, and what are
+their implied priorities?
+Q1.6.2. What are the implied priorities of business and technology interventions that
+should be undertaken to address the root causes of the problems?
+T1.7. Undertake a
+benchmarking
+investigation on best
+practices associated with
+elements that constitute
+tasks T1.3, T1.4, & T1.6.
+Q1.7.1. What measures or best practices do other enterprises use to embrace specific
+types of business opportunities; and to manage threats as identified in task T1.3?
+Q1.7.2. What measures or best practices do other enterprises use to respond to the
+specific Political, Economic, Social, Technological, Environmental, Legal, and
+Competitive factors as identified in task T1.4?
+Q1.7.3. What measures or best practices do other enterprises use to address specific
+types of problematic issues as identified in task T1.6?
+
+--- PAGE 30 ---
+87
+Appendix 3. Tasks and Guiding Questions in Step S2 of EAISSP
+S2. Derive Mission, Vision, Goals, and Objectives of the Information Systems Function of the
+Enterprise; and Determine the Role of Enterprise Architecture in Realizing them
+Tasks to execute in S2 Guiding questions for deliberation in S2
+T2.1. Derive the
+mission and vision of
+the IS function of the
+enterprise.
+Q2.1. Based on findings from tasks T1.3 and T1.4 (in Appendix 2), which of the
+potential features of the business scope (i.e., service and product portfolio and market
+size of the enterprise) and technology scope (i.e., IT services portfolio of the enterprise)
+need to be adopted and prioritized in the formulation of the mission statement and vision
+statement of the IS function of the enterprise?
+T2.2. Derive the goals
+and specific objectives
+of the IS function of the
+enterprise.
+Q2.2.1. Based on the vision (in task T2.1) and findings from tasks T1.3 and T1.4, which
+of the potential features of the distinctive competencies of the business domain (i.e.,
+managerial and operational performance attributes) need to be adopted and prioritized
+in the formulation of goals and specific objectives of the IS function of the enterprise?
+Q2.2.2. Based on the vision (in task T2.1) and findings from tasks T1.3 and T1.4, which
+of the potential features of the systemic competencies of IT services (i.e., quality
+attributes of IT systems or capabilities) need to be adopted and prioritized in the
+formulation of goals and specific objectives of the IS function of the enterprise?
+T2.3. Determine the role
+of enterprise
+architecture in realizing
+the goals and objectives
+of the IS function of the
+enterprise.
+Q2.3.1. Based on the finding from task T2.2, what is the role of Enterprise Architecture
+in realizing the specified goals and objectives of the IS function?
+Q2.3.2. Which benefits or goals of Enterprise Architecture need to be adopted in order
+to achieve the specified goals and objectives of the IS function?
+
+--- PAGE 31 ---
+88
+Appendix 4. Tasks and Guiding Questions in Step S3 of EAISSP
+S3. Generate, Evaluate, and Select a Set of Strategic Actions to be undertaken by the Information
+Systems function so as to Achieve its Goals and Objectives
+Tasks to execute in S3 Guiding questions for deliberation in S3
+T3.1. Determine an
+appropriate set of strategic
+actions that need to be
+undertaken by the IS function
+if it is to achieve its specified
+goals and objectives.
+Q3.1.1. Based on findings from tasks T1.3 and T1.4 (in Appendix 2), which of
+the potential features of the business governance model or approach need to be
+adopted as drivers when generating strategic actions for achieving the goals and
+objectives of the IS function of the enterprise (that are specified in task T2.2 in
+Appendix 3)?
+Q3.1.2. Based on findings from tasks T1.3 and T1.4, which of the potential
+features of the IT governance model or approach need to be adopted as drivers
+when generating strategic actions for achieving the goals and objectives of the IS
+function of the enterprise?
+Q3.1.3. Based on findings from tasks T1.3 and T1.4, which potential features of
+the business scope (i.e., service and product portfolio and market size) and
+technology scope (i.e., IT services portfolio) need to be adopted as drivers when
+generating strategic actions for achieving the goals and objectives of the IS
+function of the enterprise?
+Q3.1.4. Based on findings from tasks T1.3 and T1.4, which potential features of
+the distinctive competencies (i.e., managerial and operational performance
+attributes) and systemic competencies of IT services (i.e., quality attributes of IT
+systems or capabilities) need to be adopted as drivers when generating strategic
+actions for achieving the goals and objectives of the IS function of the enterprise?
+T3.2. Determine an
+appropriate set of strategic
+actions that the IS function
+needs to undertake to support
+the realization of the business
+strategy of the enterprise.
+Q3.2.1. For the set of strategic actions that constitute the business strategy of the
+enterprise, what strategic actions need to be undertaken by the IS function to
+support their realization?
+Q3.2.2. For the defined set of strategic actions that constitute the business
+strategy:
+a) How can IT be skillfully adopted to enhance the administrative capabilities of
+the enterprise (i.e., to strengthen the accounting and control capabilities or
+functions of the enterprise)?
+b) How can IT be adopted to enhance operational efficiency (i.e., to support
+effective and efficient execution of the operational processes that deliver the
+chosen business strategy of the enterprise)?
+c) How can IT be adopted to enable the enterprise to gain a competitive
+advantage (i.e., to enable it to restructure its setup and re-engineer its service
+delivery processes in ways that enable it to acquire a competitive advantage)?
+T3.3. Determine the role of
+enterprise architecture in
+realizing the selected set of
+strategic actions to be
+undertaken by the Information
+Systems function of the
+enterprise.
+Q3.3.1. Based on findings from tasks T3.1 and T3.2 (the selected set of strategic
+actions), which specific actions will require the adoption of Enterprise
+Architecture to achieve them effectively? OR what is the role of Enterprise
+Architecture in realizing the selected set of strategic actions in tasks T3.1 and
+T3.2?
+Q3.3.2. Which benefits or goals of Enterprise Architecture need to be prioritized
+in order to achieve the desired distinctive competencies (i.e., managerial and
+operational performance attributes) and systemic competencies of IT services
+(i.e., quality attributes of IT systems or capabilities) of the enterprise?
+
+--- PAGE 32 ---
+89
+Appendix 5. Tasks and Guiding Questions in Step S4 of EAISSP
+S4. Elaborate and Synthesize the Selected Set of Strategic Actions to be undertaken, by Adapting Tasks
+Involved in Creating an Enterprise Architecture
+Tasks to execute in S4 Guiding questions for deliberation in S4
+T4.1. Determine the
+priority of each action in
+the selected set of
+strategic actions for
+realizing the goals and
+objectives of the IS
+function of an enterprise
+that is at architecture
+maturity level 0 or 1.
+Q4.1.1. Based on findings from assessing the enterprise architecture maturity level (in
+task T1.5 in Appendix 2), if the enterprise is at an architecture maturity level in the range
+of 0 to 1, determine which specific strategic actions are prerequisites for realizing other
+strategic actions in the selected set of actions? OR what is the urgency of specific
+strategic actions, given the context of the business and IT environments of the enterprise
+(based on findings from tasks T1.3, T1.4, and T1.6 in Appendix 2)?
+Q4.1.2. From the sequencing of strategic actions in Q4.1.1, what is the priority of each
+strategic action in the selected set of actions?
+T4.2. Scope the
+architecture
+development effort of
+the enterprise,
+depending on the
+required architecture
+deliverables for
+realizing the prioritized
+set of strategic actions.
+Q4.2. Based on findings from task T4.1 and required resources to realize the IS strategy
+(i.e., the time period within which the IS function should deliver its goals and objectives,
+existing financial resources, personnel skills, and existing information assets):
+a) Which business capabilities and technology capabilities need to be considered, in
+order to achieve the prioritized set of strategic actions within available means?
+b) Which architecture domains should be considered, in order to achieve the prioritized
+set of strategic actions within available means?
+c) Which level of detail of the enterprise architecture is appropriate, in order to achieve
+the prioritized set of strategic actions within available means?
+T4.3. Determine which
+elements of an
+enterprise architecture
+have to be developed, so
+astoenabletheeffective
+and efficient delivery of
+the prioritized set of
+strategic actions for
+achieving the goals and
+objectives of the IS
+function.
+Q4.3. Given the prioritized set of strategic actions (from task T4.1) and the scope (from
+task T4.2), which specific strategic actions will be realized by developing which
+elements of an enterprise architecture? OR, which specific strategic actions (from the
+prioritized set of actions in T4.1) will be realized by developing which of the following
+architecture outputs or deliverables:
+a) Stakeholder and requirements management framework?
+b) Architecture principles?
+c) Architecture vision?
+d) Architecture governance framework or its components?
+e) Baseline and/or target segment architectures?
+f) Baseline and/or target domain architectures (i.e., business, data, application,
+technology, and security architectures)?
+g) Enterprise architecture implementation roadmap (or transition and migration plan)?
+T4.4. Elaborate on each
+strategic action in the
+prioritized set of actions
+by:
+(i) specifying
+architecture creation
+activities that are
+associated with
+creating the required
+architecture
+deliverables (as
+specified in task
+T4.3);
+(ii) indicating whether
+they will be executed
+as short-term,
+medium-term, and
+long-term activities
+towards realizing
+each strategic action
+(depending on the
+available timelines
+for achieving the
+goals and objectives
+of the IS function).
+Q4.4.1. Schedule the following as short-term activities towards achieving the particular
+prioritized strategic actions (with respect to choices in tasks T4.3, T4.2, and T4.1):
+a) Developing a stakeholder and requirements management framework for the
+architecture.
+b) Developing an architecture governance framework.
+c) Developing architecture principles for the five domains of business-IT alignment.
+d) Developing the architecture vision.
+Q4.4.2. Schedule the following as medium-term activities towards achieving particular
+prioritized strategic actions (with respect to choices in tasks T4.3, T4.2, and T4.1):
+a) Developing detailed baseline and/or target segment architectures that cover
+particular business functions.
+b) Developing detailed baseline and/or target domain architectures (i.e., business, data,
+application, technology, and security architectures) of the enterprise.
+c) Conducting tradeoff analysis of architecture views across all architecture domains,
+so as to address conflicting stakeholder views.
+Q4.4.3. Schedule the following as long-term activities towards achieving particular
+prioritized strategic actions (with respect to choices in tasks T4.3, T4.2, and T4.1):
+a) Identifying or deriving work packages that are associated with implementing the
+designed target domain architectures (i.e., business, data, application, technology,
+and security architectures) or target segment architectures that cover particular
+business functions or capabilities of the enterprise.
+b) Creating or deriving solution projects for implementing the architecture by aligning
+or synthesizing the above work packages into projects and prioritizing them.
+c) Developing an architecture implementation roadmap (or transition and migration
+plan) that articulates solution projects (and their constituent work packages) that
+
+--- PAGE 33 ---
+90
+S4. Elaborate and Synthesize the Selected Set of Strategic Actions to be undertaken, by Adapting Tasks
+Involved in Creating an Enterprise Architecture
+Tasks to execute in S4 Guiding questions for deliberation in S4
+will deliver the prescribed solutions or components of the created enterprise
+architecture.
+d) Operationalizing (implementing and deploying or establishing) specific solution
+projects (and their constituent work packages) for delivering particular solutions as
+articulated in the architecture implementation roadmap.
+e) Developing and operationalizing an architecture implementation governance
+framework.
+f) Developing and operationalizing an architecture change management framework
+and a corresponding architecture monitoring and evaluation framework (for periodic
+assessment of architecture performance and the architecture maturity level of the
+enterprise to ensure continuous improvement), and maintenance plan.
+g) Continuously updating the stakeholder and requirements management framework
+for the architecture.
+
+--- PAGE 34 ---
+91
+Appendix 6. Tasks and Guiding Questions in Step S5 of EAISSP
+S5. Elaborate and Synthesize the Selected Set of Strategic Actions to be undertaken, by Adapting Tasks
+Involved in Implementing & Maintaining an Enterprise Architecture
+Tasks to execute in S5 Guiding questions for deliberation in S5
+T5.1. Elaborate and synthesize the
+selected set of strategic actions for
+an enterprise at architecture
+maturity level 2
+Based on findings from assessing the architecture maturity level of the
+enterprise (in task T1.5 in Appendix 2): if the enterprise is at architecture
+maturity level 2, execute Q5.1.1.1 to Q5.1.4.2
+T5.1.1. Determine the priority of
+each action listed in the selected set
+of strategic actions for realizing the
+goals and objectives of the IS
+function of an enterprise at
+architecture maturity level 2.
+Q5.1.1.1. Which specific strategic actions are prerequisites for realizing other
+strategic actions in the selected set of actions? OR what is the urgency of
+specific strategic actions, given the context of the business and IT
+environments of the enterprise (based on findings from tasks T1.3, T1.4, and
+T1.6 in Appendix 2)?
+Q5.1.1.2. From the sequencing of strategic actions in Q5.1.1.1, what is the
+priority of each strategic action in the selected set of actions?
+T5.1.2. Determine which solution
+projects (and corresponding work
+packages) in the existing
+architecture transition and
+migration plan of an enterprise
+have to be implemented so as to
+enable the effective and efficient
+delivery of the prioritized set of
+strategic actions for achieving the
+goals and objectives of the IS
+function.
+Q5.1.2. Given the prioritized set of strategic actions for realizing the goals and
+objectives of the IS function (from task T5.1.1), which specific strategic
+actions will be realized by developing which of the following architecture
+outputs or deliverables:
+a) Specific solution projects (and constituent work packages) that are
+responsible for delivering particular solutions or components in the
+existing architecture implementation roadmap?
+b) An up-to-date design of the enterprise architecture or specific segment
+architectures or specific domain architectures?
+c) An up-to-date architecture implementation roadmap?
+d) An architecture implementation governance framework or its
+components?
+T5.1.3. Prioritize the identified
+solutions or components of the
+enterprise architecture or its
+implementation plan that will
+enable the enterprise to achieve its
+prioritized set of strategic actions.
+Q5.1.3. What are the priorities of the identified solution projects (and
+constituent work packages as specified in task T5.1.2) that will enable the
+enterprise to achieve the prioritized set of strategic actions?
+T5.1.4. Elaborate each strategic
+action in the prioritized set of
+actions by:
+(i) specifying architecture
+implementation activities that
+are associated with delivering
+outputs of the required
+prioritized projects (from task
+T5.1.2); and
+(ii) indicating whether the
+activities are to be executed as
+short-term, medium-term, or
+long-term activities toward
+realizing each strategic action
+(depending on the timelines
+specified for achieving the
+goals and objectives of the IS
+function).
+Q5.1.4.1. Schedule the following as short-term activities towards achieving
+particularprioritized strategicactions (as specified intasks T5.1.2and T5.1.3),
+i.e.:
+a) Establishing or creating or updating the architecture implementation
+governance framework.
+b) Creating or updating an architecture implementation roadmap (or
+transition and migration plan) that articulates the scheduled solution
+projects (and constituent work packages) that are responsible for
+delivering particular solutions or components as prescribed in the created
+enterprise architecture.
+c) Developing and evaluating contracts of internal and external service
+providers who will implement particular solution projects as articulated in
+the existing architecture implementation plan.
+d) Updating the stakeholder and requirements management framework.
+Q5.1.4.2. Schedule the following as medium-term or long-term activities
+towards achieving particular prioritized strategic actions, i.e.:
+a) Operationalizing (implementing and deploying or establishing) specific
+solution projects (and their constituent work packages) for delivering
+particular solutions as articulated in the architecture implementation
+roadmap.
+b) Developing or updating an architecture change management framework,
+and a corresponding architecture monitoring and evaluation framework
+(which guides periodic assessment of architecture performance and the
+architecture maturity level to ensure continuous improvement).
+c) Developing or updating an architecture maintenance plan.
+d) Updating the stakeholder and requirements management framework for
+the architecture.
+
+--- PAGE 35 ---
+92
+S5. Elaborate and Synthesize the Selected Set of Strategic Actions to be undertaken, by Adapting Tasks
+Involved in Implementing & Maintaining an Enterprise Architecture
+Tasks to execute in S5 Guiding questions for deliberation in S5
+T5.2. Elaborate and synthesize the
+selected set of strategic actions for
+an enterprise at an architecture
+maturity level in the range of 3 to
+5
+Based on findings from assessing the architecture maturity level of the
+enterprise (in task T1.5 in Appendix 2), if the enterprise is at an architecture
+maturity level in the range of 3 to 5, execute Q5.2.1.1 to Q5.2.4.2
+T5.2.1. Determine the priority of
+each action in the selected set of
+strategic actions for realizing the
+goals and objectives of the IS
+function of an enterprise at an
+architecture maturity level in the
+range of 3 to 5.
+Q5.2.1.1. Which specific strategic actions are prerequisites for realizing other
+strategic actions in the selected set of actions? OR what is the urgency of
+specific strategic actions, given the context of the business and IT
+environments of the enterprise (based on findings from tasks T1.3, T1.4, and
+T1.6 in Appendix 2)?
+Q5.2.1.2. From the sequencing of strategic actions in Q5.2.1.1, what is the
+priority of each strategic action in the selected set of actions?
+T5.2.2. Determine which
+components or solutions in the
+existing implemented enterprise
+architecture need to be
+reconsidered (e.g., monitored,
+reviewed, upgraded, replaced,
+integrated, optimized, specialized,
+or improved) so as to enable
+effective and efficient delivery of
+the prioritized set of strategic
+actions for achieving the goals and
+objectives of the IS function.
+Q5.2.2. Given the prioritized set of strategic actions for realizing the goals and
+objectives of the IS function (from task T5.2.1), which specific strategic
+actions will be realized by which of the following architecture outputs or
+deliverables:
+a) A specification of measures and metrics for monitoring performance of
+particular components or solutions in the implemented enterprise
+architecture?
+b) An upgrade or replacement, or integration of technologies for designing or
+implementing specific components or solutions in the implemented
+enterprise architecture?
+c) An upgrade, or replacement, integration, optimization, or specialization of
+specific components or solutions in the implemented enterprise
+architecture (so as to respond to the dynamics in the business and
+technology environments of the enterprise)?
+d) An up-to-date design of the enterprise architecture?
+T5.2.3. Prioritize identified
+solutions or components of the
+implemented architecture that are
+to be reconsidered in order to
+enable the enterprise to achieve its
+prioritized set of strategic actions.
+Q5.2.3. What are the priorities of the identified solutions or components of the
+implemented architecture (architecture outputs or deliverables specified in
+task T5.2.2) that are to be reconsidered in order to enable the enterprise to
+achieve the prioritized set of strategic actions?
+T5.2.4. Elaborate each strategic
+action in the prioritized set of
+actions by:
+(i) specifying architecture
+maintenance activities that are
+associated with realizing the
+prioritized set of solutions or
+components of the architecture
+that are to be reconsidered (from
+task T5.2.2);
+(ii) indicating whether they are to
+be executed as short-term,
+medium-term, or long-term
+activities towards realizing each
+strategic action (depending on
+the timelines specified for
+achieving the goals and
+objectives of the IS function).
+Q5.2.4.1. Schedule the following as short-term activities towards achieving
+particularprioritized strategicactions (as specified intasks T5.2.2and T5.2.3),
+i.e.:
+a) Devising measures and metrics for continuous monitoring of the
+performance of components or solutions in the existing implemented
+enterprise architecture, and a corresponding architecture monitoring and
+evaluation framework.
+b) Continuous assessment of technologies used in designing and
+implementing components or solutions in the implemented enterprise
+architecture.
+c) Determining which specific solutions or components of the implemented
+enterprise architecture need to be reconsidered (i.e., upgraded, replaced or
+integrated, or optimized, or extended to enable delivery of specialized
+services for specific market segments).
+d) Constituting or updating a catalog of solution projects (and their
+constituent work packages) that will be responsible for maintaining
+specific solutions or components of the existing enterprise architecture
+that need reconsidering.
+e) Developing or updating an architecture maintenance plan.
+f) Devising or updating architecture change management framework.
+g) Updating the stakeholder and requirements management framework.
+h) Developing and evaluating contracts of internal and external service
+providers who will implement particular solution maintenance projects
+(and their constituent work packages) as articulated in the architecture
+maintenance plan.
+
+--- PAGE 36 ---
+93
+S5. Elaborate and Synthesize the Selected Set of Strategic Actions to be undertaken, by Adapting Tasks
+Involved in Implementing & Maintaining an Enterprise Architecture
+Tasks to execute in S5 Guiding questions for deliberation in S5
+Q5.2.4.2. Schedule the following as medium-term or long-term activities
+towards achieving particular prioritized strategic actions, i.e.:
+a) Updating architectural designs of specific solutions in the existing
+implemented enterprise architecture (that need to be upgraded, replaced or
+integrated, or optimized).
+b) Updating, replacing or integrating, or optimizing existing solutions or
+components in the existing implemented enterprise architecture.
+c) Periodic assessment of the performance of components or solutions in the
+existing implemented enterprise architecture and the architecture maturity
+level of the enterprise to ensure continuous improvement.
+d) Updating the stakeholder and requirements management framework for
+the architecture.
+e) Updating the design of the enterprise architecture and the architecture
+change management framework.
+Appendix 7. Tasks and Guiding Questions in Step S6 of EAISSP
+S6. Allocate and Specify Resources for Executing Activities Specified to Deliver the Synthesized Set of
+Actions that Constitute the Information Systems Strategy
+Tasks to execute in S6 Guiding questions for deliberation in S6
+T6.1. Determine Key Performance
+Indicators (KPIs) for each activity
+specified to deliver the prioritized
+set of strategic actions.
+Q6.1.1. For each activity specified to deliver the prioritized set of strategic
+actions, what are the activity/process indicators, output indicators, and value
+addition or outcome or impact indicators?
+Q6.1.2. From the indicator listing in Q6.1.1, what are the KPIs for each activity
+specified to deliver the prioritized set of strategic actions?
+T6.2. Determine target outputs for
+each activity specified to deliver
+the prioritized set of strategic
+actions.
+Q6.2. For each activity specified to deliver the prioritized set of strategic
+actions, what are the target outputs with respect to each KPI?
+T6.3. Allocate time, financial,
+human, and social resources
+required to execute activities
+specified to deliver the prioritized
+set of strategic actions.
+Q6.3. Depending on the priorities of the selected set of strategic actions and the
+logical sequencing of architecture development activities that are defined to
+realize the set of strategic actions, specify the following:
+a) Time periods within which the short-term, medium-term, and long-term
+activities can be executed.
+b) Stakeholder entities or groups responsible for executing and supporting the
+execution of the scheduled activities.
+c) Budget required to accomplish the scheduled activities and expected
+source of finances for facilitating activity execution.

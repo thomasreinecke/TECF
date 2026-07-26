@@ -1,0 +1,1472 @@
+--- PAGE 1 ---
+(IJACSA) International Journal of Advanced Computer Science and Applications,
+Vol. 12, No. 6, 2021
+341 | P a g e
+www.ijacsa.thesai.org
+Law Architecture for Regulatory-Compliant Public
+Enterprise Model: A Focus on Healthcare Reform in
+Egypt
+Alsayed Abdelwahed Mohamed1
+, A.Abdo3
+Faculty of Computers and Artificial Intelligence
+Helwan University, Egypt1, 3
+Faculty of Computing, Arab Open University in Egypt3
+Nashwa El-bendary2
+Arab Academy for Science, Technology, and Maritime
+Transport, College of Computing & Information
+Technology, Aswan - Egypt
+Abstract—Public business operations are governed by a set of
+legal sources, which regulate their implementation under
+administrative laws that are increasingly influencing software
+system design and development. Enterprise Architecture (EA) is
+a critical approach for driving business and Information Systems
+(IS) transformation in the public sector. On the other hand, EA
+frameworks lack representation schemas that support law
+models. Understanding of the law Architecture in the
+government domain is required for EA work and is thus the first
+architecture activity that must be completed. As EA approaches
+for Law compliance reviews are performed by legal experts,
+there is a gap between law experts and technical system
+architects. To cover these gaps, this paper proposes a novel
+framework for analyzing the administrative laws, extracting the
+legal policies and legal rules, identify their relationships with
+other EA domains, and identifying the law compliance
+requirements. Moreover, the integration of our proposed law
+architecture framework with existing EA frameworks to reach a
+law-compliant public enterprise model is identified. Finally, the
+applicability of the proposed framework is shown and validated
+through a case study. Moreover, subject matter experts of the
+legal domain also evaluated the extracted legal policies and rules
+during the implementation of our proposed framework.
+Keywords—Law architecture; regulatory compliance;
+requirements engineering; enterprise architecture; law ontology;
+TOGAF
+I. INTRODUCTION
+Administrative laws are the law acts that regulate the
+operations of government agencies. The branch of law governs
+administrative agencies' development and operation.
+Administrative law, commonly known as (regulatory law),
+includes the rules and regulations that an administrative body
+promulgates and enforces. Administrative laws are compulsory
+for the institutional domain and are a benchmark for officials
+and architects in government and government digital
+transformation initiatives. Enterprise architecture (EA) is the
+method of aligning an authority’s business with information
+technology, including the convergence of business procedures,
+Information Systems (IS), technology, and people[1]. EA has
+been in progress and deployment for the past years[2].
+However, most authorities continue to have issues with EA
+practices; EA practice is not a simple task. Despite a large
+number of current EA frameworks, public authorities have
+been unable to translate EA solutions to meet their needs [3].
+In the study [1], the Gartner Group stated that a big
+percentage of EA implementations fail in the world because
+they start with modeling rather than defining business
+requirements first where the business requirements must meet
+the needs of IS. The business needs of the public agencies
+should comply with laws. Regulatory or law compliance
+management is a general concept that encompasses all
+practices and procedures used to ensure that a public authority
+adheres to all legal rules mandated by local or international
+laws. These laws are typically outlined in a natural language
+text that is difficult to comprehend for non-legal professionals.
+Existing laws pose a different set of problems. New digital
+transformation solutions may not be properly tested until they
+are put into operation and laws are developed to fix previous
+issues caused because of business and social shifts. To
+overcome the law compliance problem, several research
+studies have been conducted. Some researchers propose a law
+ontology approaches as a solution for law compliance. Some
+other researchers proposed regulatory compliance frameworks
+with the business process [4]. Moreover, other studies were
+conducted to regulatory compliance for requirements
+engineering [5] [6] [7] Enterprise architecture frameworks are
+used to guide the creation of enterprise models in terms of
+three domains namely business architecture, IS architecture,
+and technology architecture. Thus, extending the enterprise
+model to represent the policies identified by law can be
+obtained by defining the law architecture (our proposed
+framework) and integrating it with other enterprise architecture
+domains, as illustrated below in Fig. 1.
+Fig. 1. Public Enterprise Model View after Integrating the Proposed
+Framework with EA Frameworks.
+
+--- PAGE 2 ---
+(IJACSA) International Journal of Advanced Computer Science and Applications,
+Vol. 12, No. 6, 2021
+342 | P a g e
+www.ijacsa.thesai.org
+Knowledge of the law Architecture in the government
+domain is a prerequisite for architecture work. The law
+Architecture is also often necessary as a means of defining the
+governance layer and regulatory compliance requirements of
+following EA activities for all enterprise model domains.
+Many emerging approaches to e-Government architecture,
+on the other hand, do not take legal sources into account. There
+is no formal structure for e-Government enterprise model
+enforcement with legal sources in these approaches.
+Compliance with regulatory issues and e-Government business
+models is a critical problem for governments. Thus, this study
+proposes a novel framework to address the following
+questions:
+ How to manage compliance with laws across all
+enterprise model domains; business, IS, and
+Technology?
+ How to design Government IS that complies with
+administrative laws?
+ How to transfer laws policies into a machine-readable
+format?
+In the next section, we present a state-of-the-art review of
+the related works. a detailed description for the proposed law
+architecture framework components and method including the
+integration with EA frameworks will be presented in Section
+III. Section IV presents the applicability of the proposed
+framework to real-life cases; the case study of the Egyptian
+Universal Health Insurance program is demonstrated. Finally,
+in Section V, a brief analysis of the obtained conclusions and
+future work are discussed.
+II. STATE OF THE ART
+Law compliance or regulatory compliance is a concept of
+acting in accordance with established laws, regulations, etc. In
+order to judge that a public authority is following the given
+legal rules or not, compliance auditing is conducted.
+TABLE I. COMPARISON OF SURVEYED STATE-OF-THE-ART OF REGULATORY COMPLIANCE
+Study
+Extraction of
+legal rules
+Ontology
+represent-
+ation
+Integration with
+enterprise model
+Meta-model
+Requirements
+engineering for
+SW
+Legal modeling
+Business process compliance
+Jörg Becker,2015
+[1]
+√ √ √
+Christina
+Stratigaki ,2016
+[2]
+√ √ √
+Noel Peter,2017
+[3]
+√
+Selja Seppala
+,2017 [4]
+√ √ √
+Hashmi
+Mustafa,2018 [5]
+√ √
+Cesare Bartolini
+,2019 [6]
+√ √ √ √ √
+Raimundas M. ,
+2020 [7]
+√ √
+Tobias Seyffarth,
+2021 [8]
+√ √
+Law Ontology
+Mirna El
+Ghosh,2017 [9]
+√ √
+Monica
+Palmirani,2018
+[10]
+√ √ √
+Galina
+Kurcheeva,2019
+[11]
+√ √ √
+Valentina Leone,
+2020 [12]
+√ √
+Requirements Engineering
+Ftemeh
+Zarrabi,2015 [13]
+√ √ √
+Ana Zalazar,2017
+[14]
+√
+Sushant
+Agarwal,2018
+[15]
+√ √ √
+Mahmood
+Alsaadi,2019 [16]
+√ √
+Michael
+Felderer,2020 [17]
+√
+The proposed framework √ √ √ √ √ √
+
+--- PAGE 3 ---
+(IJACSA) International Journal of Advanced Computer Science and Applications,
+Vol. 12, No. 6, 2021
+343 | P a g e
+www.ijacsa.thesai.org
+A compliance review is an important activity of compliance
+auditing which depends on the extraction of regulatory
+compliance requirement from administrative laws. There have
+been an increasing number of research challenges to automate
+regulatory requirements extraction from legal acts.
+Administrative laws, which drive the development of
+regulatory compliance solutions, are generally available as
+natural language text documents (semi-structured format), and
+understanding them is performed by legal domain expertise.
+Testing a given business model for enforcement is,
+unsurprisingly, a manual process performed by accredited
+domain experts. Moreover, effective regulatory compliance
+requires good knowledge of the enterprise model of public
+authority by the legal auditors and a good knowledge of the
+compliance framework by the enterprise architects. This makes
+the close collaboration of legal auditors with enterprise
+architects a necessity. The challenge of automated compliance
+checking can be seen as extending an enterprise model to
+include concepts defined by the regulatory compliance
+framework and enabling the needed automation in checking an
+enterprise model against the policies defined in a regulatory
+compliance framework.
+This is because most legal acts are written in natural
+language, which a conventional computer system cannot
+understand. A legal ontology is a theory that describes the
+concepts that exist in the legal acts and how they are
+connected. Many kinds of research have been undertaken to
+develop ontological representations for legal documents to
+achieve law compliance [8] [9] [10] [11]. on other hand, a big
+number of studies exist for achieving law compliance through
+linking laws policies with Business Process Models (BPM)
+[12] [13] [14] [15] [16] [17] [18] [19]. Moreover, Regulatory
+compliance is a well-studied area in software requirements
+engineering, including research on how to model, check,
+analyze, extract, and validate compliance of software different
+requirements engineering techniques for achieving software
+compliance as discussed in [20] [21] [22] [23] [24] the below
+Table I outlines the comparison between different approaches
+for achieving regulatory compliance. Based on the comparison
+Table I, we argue that this literature survey could not found any
+contribution that addresses the topic of how to integrate law
+compliance solutions with the enterprise model.
+III. PROPOSED FRAMEWORK
+The proposed Law Architecture Framework (LAF)
+provides the baseline for mapping various legal policies related
+to regulatory requirements to business process, stakeholders,
+capabilities, IS, data concepts, and technology architecture.
+Regulatory compliance planning and subsequent deployment
+projects require mapping and tracking the evolution of the
+following artifacts of law architecture:
+ Legal policies tied to business capabilities.
+ Legal rules tied to business processes.
+ Legal policies and rules tied to data concepts.
+ Legal policies and rules tied to Information systems.
+ Legal policies and rules tied to Technology.
+The law architecture framework is a goal-oriented, law-
+driven framework aimed to define compliance requirements
+through which a particular public enterprise and its related
+information systems can comply with a given administrative
+law. We define the law architecture as a holistic representation,
+multidimensional views of legal policies and their derived legal
+rules, and identifying their relationships with the business,
+data, information systems, and technology domains, in addition
+to identifying the requirements of compliance with these rules
+and policies. Law architecture requires a complete framework
+to guide its development and practice. We argue that the effort
+required to accomplish the law architecture activities should be
+performed by a team that has both bits of knowledge of
+technology and law domains, a team with the following key
+roles:
+ Law Architect is an information and communications
+technology professional that is responsible for
+analyzing administrative laws and extracting from them
+the regulatory compliance requirements of business, IS,
+and technology architectures. The law architect must be
+reasonably knowledgeable of the administrative laws
+and public sector domains to be familiar with public
+sector services and the operational environment.
+ Legal Counsel: According to the BIZBOK Guide [25]"
+A Legal Counsel is a person who is legally qualified
+and licensed to represent an organization in a legal
+matter, such as lawsuits, policy formations, contract
+negotiation, and patent activities". A legal counsel
+regularly works in legal departments of the public
+authorities and is considered the subject matter expert
+during the law architecture cycle. The legal council is
+responsible for the analysis, and validation of extracted
+policies and rules. The objectives of the law
+architecture framework can be summarized as follows:
+ To align laws and regulations with business and IT
+Systems.
+ To identify and model legal policies and rules and
+linking them with the enterprise model domains
+namely; business architecture, information systems, and
+technology architecture.
+ To identify the relationship between legal rules and
+other architecture domains.
+ To identify the regulatory compliance criteria with the
+legal rules.
+ To manage any suggested law amendments and assess
+their impact on the enterprise model.
+ To develop the appropriate viewpoints, models, and
+matrixes that enable the demonstration of how the legal
+policies are addressed in the business, IS, and
+technology architectures.
+As shown in Fig. 2, the law architecture framework
+consists of the following components:
+
+--- PAGE 4 ---
+(IJACSA) International Journal of Advanced Computer Science and Applications,
+Vol. 12, No. 6, 2021
+344 | P a g e
+www.ijacsa.thesai.org
+Fig. 2. Components of the Proposed Law Architecture Framework.
+ Law-Architecture-Development-Method (LADM):
+describes a set of guidelines and activities for
+developing a law Architecture.
+ Law Architecture Meta-model: defines a formal
+structure of core concepts and their relationships to
+ensure consistency within the law architecture.
+ Asset Repository: outlines different taxonomies and
+guidelines to categorize and store the inputs and outputs
+of law-architecture effort such as laws catalogs.
+ EA framework integration: describes the ability to
+integrate the law architecture framework with other
+enterprise architecture frameworks.
+ Law Ontology: defines an ontological and semantic
+representation of the law architecture Meta-model for
+getting a machine-understandable model that is enabled
+easily for automation and model analysis.
+ Regulatory Compliance Management: defines different
+approaches for checking a public enterprise model
+against the legal policies and rules defined within the
+LADM.
+The details of some selected components of the proposed
+framework are detailed as follow:
+A. Law-Architecture-Development-Method (LADM)
+The LADM is the product of the continuous efforts of law
+architects and legal counsels. It describes a method for
+modeling and managing the compliance requirements of laws
+that govern the public enterprise and forms the core of the Law
+architecture framework. It describes the steps, guidelines, and
+tools to analyze, extract, and model the legal policies and rules
+from administrative laws. Moreover, it guides the definition of
+the correlation between extracted legal policies and rules with
+other public enterprise model domains, to align the public
+authority and its IT systems with the law.
+Fig. 3 depicts the phases of the proposed LADM which
+consists of the following:
+ Law Architecture Initiation.
+ Phase (A): legal Policy Mapping.
+ Phase (B): Legal Rule Mapping.
+ Phase (C): Definition of legal Policies/ Business
+architecture correlation.
+ Phase (D): Definition of legal Policies / IS architecture
+correlation.
+ Phase (E): Definition of Legal Policies / Technology
+architecture correlation.
+ Management of Suggested Law amendments.
+The level of detail addressed in Law Architecture will
+depend on the scope and objectives of the overall law-
+architecture effort. The key steps in details of the LADM
+include the following:
+1) Law architecture initiation: The Objectives of this
+phase include initiating the law Architecture Capability
+planned by the public authority, defining the law Architecture
+Principles, and Identifying the set of administrative laws that
+applies to the business performed by a public organization
+which is related to the IT systems' Scope. The LADM is a
+generic approach that can be used by a broad range of public
+bodies and, if necessary, in combination with a wide range of
+EA frameworks. The recommended steps within the initiation
+phase are as follows:
+a) Determine the Scope of the Public Agency Impacted:
+Identify the public entity core units that would be most
+affected or gain the most benefit from the law architecture
+work.
+b) Define and Establish the Law Architecture Team:
+The required team members that will develop the law
+architecture should be identified.
+c) Define Law Architecture Principles: A principle is an
+agreed-upon fact that can guide one’s analysis and reasoning.
+Core principles that apply to law architecture, in general, are:
+Fig. 3. Law-Architecture-Development-Method (LADM) Phases.
+
+--- PAGE 5 ---
+(IJACSA) International Journal of Advanced Computer Science and Applications,
+Vol. 12, No. 6, 2021
+345 | P a g e
+www.ijacsa.thesai.org
+ Legal policies are accessible and shared.
+ Common Vocabulary and legal policy Definitions.
+ Law architecture’s scope is defined by a set of laws
+applied to the public authority.
+ The law architecture process is iterative.
+ Law architecture artifacts are reusable especially those
+extracted from domain-specific laws.
+d) Develop Law Catalogs: Catalogs form the raw legal
+documents for the development of models and views and
+represent a key artifact for driving the law architecture
+activities. The following catalogs should be developed:
+ Project-Related Acts Catalog.
+ Domain-Related Acts Catalog.
+ Legal Policy catalog.
+ Suggested Amendments Catalog.
+ Ontology Representation.
+ Suggested Amendments Catalog.
+ Regulatory Compliance Requirements.
+ Approved Amendments Catalog.
+ Suggested Amendments Catalog.
+ Compliance Requirements Catalog.
+2) Phase (A) Perform legal policy mapping: The
+objectives of this phase are analyzing architecture scope
+impacted acts and extract the legal policies representations,
+Reviewing extracted policies with different legal experts and
+ensuring their correctness and consistency, and finally
+updating the legal policy catalog. Administrative laws define
+the legal limits for public authority by enforcing requirements
+that specify which actions are legal and which must be
+prohibited during the conduct of daily operations. A legal
+policy is a statement or set of statements that describe the
+course of events and how a specific action should be carried
+out. A policy is defined to achieves a business goal. A legal
+policy has a subject, who is the stakeholder(s) who is/are
+responsible for carrying out the policy's actions. A legal policy
+requires a business capability to be executed, a business
+capability is defined as a set of resources and activities that
+integrate to deliver a value to an internal or external
+stakeholder (target). Legal Policy mapping is the core of law
+architecture and an excellent starting point. Describe the
+policies and legal rules associated with the law articles, the
+main idea in the law architecture is that legal policies define
+decisions on whether a state of the business activity is allowed
+or not. The extraction of legal policies and rules is a
+hardworking and time-consuming activity and is
+recommended to be carried out by legal architects (or business
+analysts) with the help of legal counsels. To extract the legal
+policies the architects must look for important information by
+scanning the legal articles and try to answer the following
+questions:
+ Why was the article written? The answer to this
+question identifies the objectives that the policy intends
+to achieve.
+ What rules/actions intended by the policy? And what
+are the required capabilities required to achieve these
+rules?
+ Who responsible for executing these rules/actions and
+who will be affected by them?
+ When are these rules/actions allowed to be performed?
+ Where these rules/actions are applicable? By answering
+when and where questions the event and scope of the
+legal policy can be identified.
+A legal Policy can be classified as follow:
+a) Business Function: Identified by article(s) that
+defines a course of business activities that should be
+performed in a predefined manner to achieve some business
+outcomes.
+b) Organization Unit: Mapped by an article(s) that
+define an organizational structure and responsibilities.
+c) Technical Function: Mapped by an article(s) that
+directly describe an IT resource or system.
+Legal Policy Mapping Approaches include the following:
+a)Top-Down Approach: The top-down approach to policy
+mapping is performed by scanning and analyzing the
+administrative law starting from the first article until the last
+article. For each article try to answer the five whys’ questions
+listed above to extract the Legal policies essential to regulate
+the operation and services provided by the public enterprise.
+b) Goal-Oriented Approach: the legal councils identify
+the main objectives of each administrative law, and for each
+goal, the team scans the law and extracts the related policies.
+3) Phase (B) Perform legal rules mapping: The objectives
+of this phase are analyzing legal policies and laws then extract
+the intended legal rule, reviewing and validating extracted
+legal rules with different legal experts and ensuring their
+correctness and consistency, and finally, update the legal rule
+catalog. To perform legal rule mapping properly the following
+concepts should be considered:
+ A legal rule is derived from one or many legal policies,
+in other words, many legal rules can be sequentially
+implemented to achieve a certain legal policy. A legal
+rule is also has a business goal and has a scope. A legal
+rule requires input data to process and has an input
+event that triggers the execution of the legal rule.
+ A legal rule contains an action that is implemented in a
+business process usually in a form of a business
+decision.
+ A constraint is an assertion that, by one of its properties
+or a relationship to another concept, such as as a role in
+
+--- PAGE 6 ---
+(IJACSA) International Journal of Advanced Computer Science and Applications,
+Vol. 12, No. 6, 2021
+346 | P a g e
+www.ijacsa.thesai.org
+an activity, restricts or reduces the potential
+representation for a concept. For example, the statement
+“a beneficiary who under-poverty-line” constrains the
+set of all possible beneficiaries to the possibly smaller
+set of only those beneficiaries who are under the
+poverty line.
+ A stakeholder is an entity afforded rights and/or
+obligations by the law.
+ A right refers to one or more actions that deliver a
+defined stakeholder a certain value or benefit. If a
+stakeholder is not obligated to perform an action or to
+receive an action value, called an anti-obligation.
+ An obligation refers to one or more actions that are
+required to be undertaken by a certain stakeholder.
+ An anti-right refers to one or more actions that are not
+permitted to be performed by a certain stakeholder.
+ A rule’s action is either a right, obligation or anti-right
+per our above definitions.
+4) Phase (C) Identify the correlation between extracted
+policies and business architecture: Legal policies represent
+the governance layer that organizes the business functions,
+therefore linking legal policies with their related capabilities,
+processes, organization units, and stakeholder will simplify
+the alignment of these business objects with laws and will
+result in a law-compliant Information system when these
+business artifacts mapped to IS. In other words, will help the
+administrative entity to deliver the right service to the right
+citizen at the right time. Moreover, will enhance the efficiency
+and transparency of the public institutions. The correlation
+between legal policies and business architecture can be
+illustrated through the analysis of the legal policies catalog
+and developing the following matrixes:
+ Legal policy Mapping to Business Capabilities
+describes.
+ Legal Rule Mapping to Business Process.
+ Legal policy Mapping to Organization Structure.
+ Legal Rule Mapping to Stakeholder.
+5) Phase (D) Identify the correlation between extracted
+policies and Information Systems(IS) architecture:
+Information systems designed to support business processes in
+public authorities must conform to the relevant legal acts and
+regulations. The correlations between business architecture
+and legal policies should be transferred into technical system
+requirements and IS should be designed to comply with these
+requirements. IS architecture is consists of data architecture
+and application architecture. After identifying the business
+regulatory compliance requirements through phase (C), the
+following steps should be performed in this phase to design, a
+law-compliant IS in a later detailed IS architecture definition
+cycle using any EA frameworks. Typical dimensions of the
+correlations between extracted legal policies and IS
+architecture include the following:
+a) Define Data Concepts:
+ Extract data concepts from the legal rules.
+ Extract the data modalities from the constrains.
+ Classify the data concepts (internal or external).
+b) Define Role/Application Function Matrix:
+ Each participant stakeholder with the legal rules should
+be mapped to an application role.
+ Each action assigned to a legal rule should be mapped
+to an application function.
+c) Define Application Interaction Matrix:
+ Stakeholders and data concepts defined in the legal rule
+catalog should be classified into internal or external (of
+the scope of the public authority).
+ Each external concept defines a possible integration
+requirement with external systems.
+6) Phase (E) Identify the correlation between extracted
+policies and technology architecture: Technology
+Architecture consists of software and hardware assets that are
+used to implement and realize information system solutions,
+legal policies, and rules that have a direct impact on
+technology architecture. The correlation between legal
+policies and technology architecture can be identified as
+follow:
+a) Availability of the Systems: Based on the scope and
+type of services identified by legal policies the availability of
+the systems can be identified for example the availability of
+health services should be 24/7, the technology services should
+grantee the operation of the systems 24 Hours in 7 days each
+week. The availability of some other public services mandated
+by law could be only within the official working hours or for a
+certain time like examination systems or submission of tax
+declaration requests.
+b) Data Archiving and Retention Plans: Data retention
+refers to the storage of transaction data for a certain time. The
+primary objective in government data retention is traffic
+analysis and judicial arbitration. Each country has its data
+retention policies and plans that are defined in its
+administrative laws.
+c) Network and Communications: Based application
+interaction matrix defined in phase D, the requirement of
+communication lines between the public authority and eternal
+entities should be identified, the detailed specifications of
+these lines can be identified later in the detailed technology
+architecture cycle of EA practice. The scope of the legal
+policy also can identify the locations where the required IS
+should be accessed, thus also implies communication lines
+requirements.
+d) Security Requirements: The access rights for data
+assets can be defined based on the Roles/ application function
+matrix developed in Phase C.
+
+--- PAGE 7 ---
+(IJACSA) International Journal of Advanced Computer Science and Applications,
+Vol. 12, No. 6, 2021
+347 | P a g e
+www.ijacsa.thesai.org
+7) Phase (F) Collect and communicate the suggested law
+amendments: The object of proposing new law amendments is
+to improve the effectiveness, efficiency, and fairness of the
+administrative processes. Architecture practice implemented
+in Law, business, data, IS and technology phases may propose
+new procedures designed to afford more time for this function.
+It is hoped that delays and costs will be reduced and that new
+prestige will be provided for those who make the decisions.
+Suggested Law amendments should be handled as follow:
+a) Build the Suggested amendments Catalog.
+b) Update the Catalog with any suggested law
+amendments during architecture phases (Law, Business, data,
+IS, and Technology).
+c) Prioritize Law amendments and assess their impact.
+d) Communicate the amendments to the relevant
+Stakeholders.
+B. Law Architecture Meta-Model
+In the previous section, a method to create and manage the
+law architecture artifacts within the government enterprise was
+defined. At each step, a discussion of architectural work and
+artifacts was presented such as the legal policy map and legal
+rule map. The content Meta-model provided here defines a
+formal structure for the core concepts of the law architecture
+and their relationships to ensure consistency within the law
+architecture and to guide the implementation of the law
+architecture within a public enterprise. Fig. 4 depicts the
+proposed law architecture Meta-model.
+C. Integrating Law Architecture with EA Frameworks
+In the context of digital transformation in the public sector,
+the integration between law architecture and EA frameworks is
+a natural architectural alignment of two related disciplines.
+Law architecture represents the mapping of legal policies and
+rules related to IT architecture while EA provides a guiding
+framework for business and IT architecture alignment.
+According to the Federation of Enterprise Architecture
+Professional Organizations, EA “represents the holistic
+planning, analysis, design, and implementation for the
+development and execution of strategy by applying principles
+and practices to guide organizations through the integration
+and interoperation of all other architecture domains”[26]. Most
+EA approaches do agree on the foundational domains, which
+include:
+ Business Architecture.
+ Information Systems (Application- Data) Architecture.
+ Technical Architecture.
+For each architectural domain, there is an associated set of
+Law related concerns, each set can be described by law
+architecture models that define the legal rules governing that
+domain. Integrating Law architecture with EA offers the
+following benefits:
+ Brings a robust, Law-centric focus to the practice of EA
+in the public sector.
+ Integrates all aspects of law compliance through all
+layers of the IT solution.
+ Facilitates the adoption and implementation of new law
+amendments in public enterprises.
+Fig. 4. Law Architecture Meta-Model.
+
+--- PAGE 8 ---
+(IJACSA) International Journal of Advanced Computer Science and Applications,
+Vol. 12, No. 6, 2021
+348 | P a g e
+www.ijacsa.thesai.org
+TOGAF [27] is an architecture framework. TOGAF that is
+widely used by many EA practitioners within the public sector
+was selected here to demonstrate the capability of our proposed
+framework to integrate with EA frameworks. At the core of the
+TOGAF framework is the architecture development method
+(ADM) that “provides the methods and tools for assisting in
+the acceptance, production, use, and maintenance of enterprise
+architecture. It is based on an iterative process model supported
+by best practices and a re-usable set of existing architecture
+assets” [20]. The proposed law Architecture Framework (LAF)
+here, has a Law-architecture-development-method (LADM)
+that provides the methods for assisting in the production and
+maintenance of law architecture. The ADM of the TOGAF can
+be adapted to integrate with the LADM of our proposed LAF.
+Fig. 5 depicts the ADM in a larger form and Fig. 6
+illustrates how TOGAF'ADM can be integrated with LADM.
+The Suggested ADM Adaptation to be integrated with the
+proposed LADM can be listed as follow:
+1) After the architecture vision (Phase A) of the ADM:
+Then the LADM should be initiated and completed according
+to the detailed description listed above.
+2) After the end of the LADM: Then the TOGAF Business
+architecture phase should be performed.
+3) The result from LADM Phase (A): Should be added as
+an input to the TOGAF Business architecture phase.
+4) One of the objectives of the TOGAF business
+architecture phase is to develop the target business
+architecture, the target business architecture may have any
+suggested business process engineering that is based on some
+law amendments suggestions, these amendments should be
+linked with LADM’ Phase (F), Collect and Communicate the
+suggested Law amendments .
+5) After the completion of the TOGAF business
+architecture phase, the information systems architecture phase
+should be initiated by adding the result from the LADM phase
+(D) to the inputs of that phase of the ADM.
+6) One of the objectives of the TOGAF IS architecture
+phase is to develop the target IS architecture, the target IS
+architecture may have any suggested IS improvements is
+based on some law amendments suggestions, these
+amendments should be linked with LADM Phase (F).
+7) After the completion of the TOGAF IS architecture
+phase, the technology architecture phase should be initiated by
+adding the result from LADM’ Phase (E) to the inputs of the
+phase.
+8) Any suggested technology improvements that require
+some law amendments suggestions, should be linked with
+LADM’ Phase (F)
+9) The TOGAF ADM phases will be completed then as
+defined in TOGAF Standard.
+Fig. 5. ADM Process of the TOGAF Framework.
+Fig. 6. Adapting the TOGAF' ADM to Integrate with LADM.
+
+--- PAGE 9 ---
+(IJACSA) International Journal of Advanced Computer Science and Applications,
+Vol. 12, No. 6, 2021
+349 | P a g e
+www.ijacsa.thesai.org
+IV. HEALTHCARE REFORM IN EGYPT THROUGH THE LENS
+OF THE LAW ARCHITECTURE: A CASE STUDY
+A. Universal Health Insurance (UHI) Law at a Glance
+The Egyptian Parliament endorsed a fresh law on universal
+health coverage that was formally promulgated on January 11,
+2018, by the President. The Universal Health Insurance Law
+(2/2018) is regarded as an unprecedented effort to control the
+healthcare industry in Egypt, expanding the extensive
+protection of healthcare to every industry of culture. Healthcare
+was dealt with on a case-by-case ground before this law. The
+27 governorates of Egypt will be split into six regional fields
+when applying the fresh law, and the law will then be
+implemented gradually over the next 15 years. Existing laws
+and regulations in the health insurance sector will stay in effect
+during the transformation era. Subscription to the new health
+insurance scheme will be compulsory for all Egyptians living
+in the Arab Republic of Egypt and free for Egyptians employed
+or remaining onboard with their relatives. Fees are laid by
+revenue and extra financing sources to include tariffs on the
+tobacco industry and other extra regions. The state has
+dedicated to offering the strategy to about 25 percent of the
+population who are unable to afford it free of cost.
+B. Defining the UHI Law Architecture based on the LADM
+The Ministry of Health has formed a technical committee
+including representatives from the Ministry of
+Communications and Information Technology (MCIT), the
+Ministry of Finance, and a consortium of experienced
+international and local experts. The mandate of this committee
+was to explore how to realize the objectives of the UHI law,
+study each use case defined in the law, and define the technical
+specification of the required systems. As the corresponding
+author of this manuscript was one of the enterprise architecture
+team assigned by MCIT to achieve the technical design and
+architecture of the required systems. The architecture team
+depended on analyzing the UHI law as the prime source of
+information in identifying the high-level system requirements.
+By following the steps and guidelines of the LADM proposed
+above and illustrated in Fig. 2, the team analyzed the UHI
+available laws and identified the law architecture of the UHI
+program before performing a detailed enterprise architecture
+activity, the extracted law architecture models resulted from
+this exercise cand be illustrated as follow:
+1) Law architecture initiation: During this phase, the law
+architecture work will follow the principles identified in
+section (III), and Table II represents the Project-Specific Acts
+Catalog that stores the core administrative laws related to the
+UHI project.
+2) Phase (A) Perform legal policy mapping: The UHI law
+was analyzed, and 10 legal policies and 23 related legal rules
+were extracted as shown in Table III. To understand the main
+elements in the legal policy and their relationships to each
+other the legal policy model was suggested. For example,
+article (41) identified three important legal policies as shown
+in Fig. 7.
+TABLE II. UHI PROJECT-SPECIFIC ACTS CATALOG
+# Act No. Subject
+Issuing
+Date
+Issuing
+Authority
+1
+No.2 of
+2018
+The universal health insurance
+system law
+Jan. 2008
+The
+Parliament
+2
+Bylaw-
+No.909
+of 2018
+The executive regulations of the
+universal health insurance system
+law promulgated by law No. 2 of
+2018
+May.2008 The Prime
+Minister
+3
+No.707
+of 2018
+Setting criteria for targeting those
+below the poverty line in applying
+the provisions of the Universal
+Health Insurance Law
+April
+2018
+The Prime
+Minister
+4
+No.2257
+of 2020
+Devolution of some medical
+assets in the governorates of Port
+Said and Luxor to the Public
+Health Care Authority in
+preparation for their inclusion in
+the Universal health insurance
+system
+Nov.
+2020
+The Prime
+Minister
+5
+No.2273
+of 2020
+Determinants of patients with
+chronic diseases and tumors and
+controls for their exemption from
+Universal health insurance
+premiums
+Nov.
+2020
+The Prime
+Minister
+Fig. 7. Model of Premium Collection Management Policy.
+3) Phase (B) Perform legal rule mapping: The legal
+policy catalog listed below in Table III was analyzed versus
+the UHI law to extract and model the related legal rules, Fig. 8
+represents a sample legal rule model that represents “Premium
+Collection for Social Insured Beneficiaries”. Each extracted
+legal rule was modeled to provide a visualized artifact that can
+be easily understood by different business and IT
+stakeholders.
+PRODUCT
+Article(41)
+Article
+PRINCIPLE
+Primmum Collection
+Management
+LegalPolicy
+drives
+has
+requires
+Collection Management
+Capability
+has
+WORKPACKAGE
+BusinessFunction
+Type
+GOAL
+Achieving the financial
+sustainability
+Goal
+REQUIREMENT
+Premium Collection for
+under-poverty line
+beneficiaries
+Legal Rule REQUIREMENT
+Premium Collection for
+Non-social insured
+beneficiaries
+Legal Rule
+implies
+Implies
+implies
+REQUIREMENT
+Premium Collection for
+social insured
+beneficiaries
+Legal Rule
+
+--- PAGE 10 ---
+(IJACSA) International Journal of Advanced Computer Science and Applications,
+Vol. 12, No. 6, 2021
+350 | P a g e
+www.ijacsa.thesai.org
+TABLE III. LEGAL POLICY CATALOG OF THE UHI PROJECT
+Policy
+ID
+Policy Name Type
+Ref.
+Article
+Req. capability Goal Legal Rules
+LP_01
+Premium
+Collection
+Management
+Business
+Function
+41
+Collection
+Management
+Collection of Financial
+resources required to
+achieve financial
+sustainability
+ Premium Collection for social insured beneficiaries
+ Premium Collection for under-poverty line beneficiaries
+ Premium Collection for Non-social insured beneficiaries
+LP_02
+Premium
+calculation
+Business
+Function
+41
+Collection
+Management
+Collection of Financial
+resources required to
+achieve financial
+sustainability
+ Premium calculation for public employees
+ Premium calculation for private-sector employees
+ Premium calculation for Self Employed
+ Premium calculation for pensioner
+ premium calculation for pension entitled
+ premium calculation for beneficiaries under the poverty line
+LP_03
+Board of
+Directors
+structure of
+UHI
+authority
+organization
+structure
+5
+Program
+Management
+Defining the structure
+and responsibility of
+the authority
+management
+ UHI authority board of directors
+ Duration of the board
+LP_05
+Disability
+injuries
+policy
+Business
+Function
+13
+Beneficiary
+management
+Defining the process of
+issuing a disability
+certificate
+ disability certificate issuing responsibility
+ disability certificate notification responsibility
+LP_06
+Co-payment
+policy
+Business
+Function
+table
+(3)
+ Health Service
+Management
+ Collection
+Management
+Define the
+beneficiaries’
+contributions for
+health services
+ co-payment value for home visits
+ co-payment value for medicine
+ co-payment value for scans
+ co-payment value for medical tests
+ co-payment value for inpatient services
+LP_07
+Military
+recruits
+handling
+policy
+53
+Beneficiary
+management
+Managing the services
+for the military people
+ Military recruits handling procedures
+LP_08
+UHI website
+and Database
+Technical
+Function
+57 -
+bylaw
+IT Management
+Building a website and
+DB for UHI Authority
+ building a website and defining access rights
+LP_09
+National
+Social
+Insurance
+Authority
+responsibility
+Technical
+Function
+57 -
+bylaw
+IT Management
+Feeding the authority's
+database with the
+necessary data for all
+those subject to the
+registered social
+insurance laws and
+their families.
+ feeding the authority's database with social insured people
+and their families
+LP_10
+work injuries
+policy
+Business
+Function
+12
+Beneficiary
+Management
+Regulate the work
+injury treatment
+process
+ work injury notification procedures work injury treatment
+TABLE IV. LEGAL POLICY / CAPABILITIES MATRIX
+Policy Name Business capability
+Premium Collection Management Collection Management
+Premium calculation Collection Management
+Board of Directors structure of UHI authority Program Management
+Disability injuries policy Beneficiary management
+Co-payment policy Service Management
+Military recruits handling policy Beneficiary Management
+UHI website and Database IT Management
+National Social Insurance Authority
+responsibility
+IT Management
+1) Phase (C) identify the correlation between legal
+policies business architecture:
+a) Develop legal Policy/Capabilities Matrix: Table IV.
+depicts legal policy/capabilities matrix.
+b) Legal Rule/Business Process Matrix: Table V depicts
+legal rule/business process matrix.
+TABLE V. LEGAL RULE / BUSINESS PROCESS MATRIX
+Legal Rule Business Process
+Premium Collection for social insured
+beneficiaries
+Manage accounts receivable
+Funds
+disability certificate issuing responsibility Authorize Medical Service
+co-payment value for home visits Manage Rate setting
+Military recruits handling procedures Manage Treatment plan
+Feeding the authority's database with social
+insured people and their families
+Manage Integration with
+external entities
+work injury notification procedures Manage Treatment plan
+
+--- PAGE 11 ---
+(IJACSA) International Journal of Advanced Computer Science and Applications,
+Vol. 12, No. 6, 2021
+351 | P a g e
+www.ijacsa.thesai.org
+Fig. 8. Legal Rule Mode: Premium Collection for Social Insured
+Beneficiaries.
+c) Stakeholder Mapping: By analyzing the legal policy
+and rules catalogs several system use cases can be identified in
+terms of obligations and rights as illustrated in the below
+Fig. 9.
+Fig. 9. A Legal Use Case Diagram of the UHI Project.
+2) Phase (D) Legal Policy/Information systems
+Correlation:
+a) Data Concepts Extracted from the Law: By
+analyzing the legal policy and rules catalogs the data concept
+catalog that is related to the IS was created, the most important
+data concept related to our extracted above policies is the
+beneficiary, and by analyzing the legal rule's actions and
+constraints we deducted that the beneficiary data should be
+segmented based on the following features shown in Fig. 10.
+b) Application Interaction Matrix: By classifying the
+data concepts as internal or external to the UHI authority, the
+external data concepts define an integration requirement.
+Moreover, analyzing the actions related to the legal rules can
+also identify integration requirements. Following these
+procedures, the following integration requirements were
+identified as below in Fig. 11 and Table VI:
+Fig. 10. Beneficiary Segmentation Features.
+Fig. 11. Application Interaction Diagram.
+REQUIREMENT
+PremiumCollection for
+social insured
+beneficiaries
+Legal Rule
+ACTOR
+NationalSocial
+InsuranceAuthority
+Performedby
+WORKPACKAGE
+Subject
+Type
+has
+CONSTRAINT
+Beneficiary is
+pensioner orsubject
+totheSocial
+InsuranceLaw
+EVENT
+Monthlyschedule
+PROCESS
+MonthlyPremium
+transfer
+Triggeredby
+operatedon
+Restrictedby
+ACTOR
+benficiary
+WORKPACKAGE
+target
+Type
+WORKPACKAGE
+obligation
+Modality
+Appliedon
+OBJECTIVE
+*Calculatepremium
+*Transferpremiumamounts
+toUHIAuthority
+Action
+fires
+WORKPACKAGE
+internal
+Modality
+Modifiedby
+filteredby
+PHYSICAL DATA
+COMPONENT
+DatasetofSocial
+insuredbeneficiaries
+InputData
+PHYSICAL DATA
+COMPONENT
+Moneysettlements
+transferredtoUHI
+output Data
+input
+output
+WORKPACKAGE
+internal
+Modality
+WORKPACKAGE
+external
+Modality
+WORKPACKAGE
+external
+Modality
+Modifiedby
+Modifiedby
+Modifiedby
+
+--- PAGE 12 ---
+(IJACSA) International Journal of Advanced Computer Science and Applications,
+Vol. 12, No. 6, 2021
+352 | P a g e
+www.ijacsa.thesai.org
+TABLE VI. APPLICATION INTERACTION MATRIX
+#
+Target System
+(External Systems)
+Integration Reasons
+1
+Social Insurance
+Authority
+• Update UHI DB with Social Insured
+• Transfer Premiums for Social Insured
+2
+Ministry of
+Education • Update UHI DB with Students
+3 Ministry of Health
+• Updated UHI DB with Dishabilles people
+4 Tax Authority • Transfer of money deducted from taxes under
+the UHI Law
+5
+Ministry of Interior
+• Validate Beneficiary National ID
+• Update the Beneficiary Family
+• Updated the beneficiary address
+• Transfer amounts deducted from traffic license
+• Update with worker abroad people
+6 Ministry of Defense • Update with military services registered
+7
+Agricultural
+Associations
+• Update UHI system with farmers and their
+families
+8
+Ministry of Social
+Solidarity
+• Update UHI System with under-poverty-line
+people and their families
+3) Phase (E) Legal Policy / Technology architecture
+correlation: The following technology requirements were
+extracted based on the legal policy catalog and the regulatory
+compliance requirements catalog was updated as following
+Table VII:
+TABLE VII. SAMPLE OF REGULATORY REQUIRMENTS CATALOG
+# Requirement Type Rational
+Architecture
+Domain
+1
+The system and
+servers should operate
+at 24/7 uptime.
+availability
+The system
+provides
+healthcare
+services
+Technology
+2
+all changes to a
+financial database
+must be recorded in a
+trace file with before
+and after values
+Audit
+Tracing
+Enable financial
+transactions
+tracing
+Technology
+3
+All communications
+between the UHI
+system and Social
+Insurance System
+Communic-
+ation
+Respond to
+system
+integration
+requirements
+Technology
+4
+Keep a record of all
+transactions for 5
+years
+Data
+Retention
+Mandated by law Technology
+V. DISCUSSION
+As presented above, in the introduced case study, the UHI
+law was the prime source of information that the technical
+committee depended on for extracting the high-level
+specifications of the digital transformation solution required for
+the UHI program. EA frameworks lack a detailed methodology
+for analyzing and modeling laws, thus our proposed law
+architecture framework suits these types of problems where the
+core business processes and services are highly regulated by
+laws. The law architecture framework offers the ability to
+visualize what decoupling and divesting laws and how it
+impacts various aspects of the public ecosystem. This was
+illustrated through the use case as the legal policies and rules
+were extracted from the UHI law, in addition to the
+relationship between these rules and business capabilities,
+processes, IS, data concepts, and technical specifications based
+on the proposed LADM that represents the heart of the
+proposed law architecture framework. The application of the
+proposed framework supported the UHI program in extracting
+the regulatory compliance requirements from the law and
+supported the design of regulatory-compliant system.
+Law architecture does not stand alone in a public
+enterprise. Several complementary or ancillary frameworks or
+disciplines may exist within a public enterprise. Each of these
+frameworks may have its focus. The success and maturity of
+law architecture are influenced by its ability to integrate and
+align with each of these disciplines and frameworks. Another
+limitation in our proposed framework is the LADM proposed
+for extracting the legal rules and policies and their correlations
+with other artifacts in the public enterprise model is a manual
+task. This is because ambiguity exists in the laws that require
+the investigation and validation of legal experts.
+VI. CONCLUSIONS
+In recent years, there have been various contributions to
+deal with law compliance problem, None of the previously
+surveyed work in the state of the art section takes an (i) generic
+approach to law compliance management, (ii) seeks to
+integrate with EA frameworks, (iii) allows declarative
+modeling of policies and rules while separating these two
+concepts and, (iv) introduces a new concept and formal
+definition for the law architecture and, (v) supports for
+traceability by a set of links to establish between legal policies
+and enterprise models. Our claim through this work is that our
+proposed framework allows for achieving these goals and
+overcomes these limitations:
+ Domain-independence: a solution to the problem of IS
+requirements engineering to comply with all applicable
+administrative laws.
+ Domain-variability: a solution that takes into account
+the variability of possible legal policies and rules
+applied in different public sector services.
+ Flexible-integration: a solution that takes into
+consideration the integration with other EA frameworks
+to achieve a law-compliant public enterprise model.
+ Machine-readable: a solution that can be easily
+translated into an ontology model.
+ Knowledge-gap: a solution that covers the knowledge
+gap between the technical architects and the legal
+experts.
+Finally, the applicability of our proposed framework is
+shown and validated through a case study. Subject matter
+experts of the legal domain also evaluated the extracted legal
+policies and rules during the implementation of the case study.
+
+--- PAGE 13 ---
+(IJACSA) International Journal of Advanced Computer Science and Applications,
+Vol. 12, No. 6, 2021
+353 | P a g e
+www.ijacsa.thesai.org
+VII.FUTURE WORK
+In this paper, we did not cover all components of the
+proposed law architecture framework, future work will include
+a detailed description of other framework components such as
+compliance management and ontology representation of the
+framework metamodel. Moreover, the capability of our
+framework to integrate with other EA frameworks will be
+investigated.
+ACKNOWLEDGMENT
+The activities described in our case study were supervised
+by Dr. Khaled El-Attar, Vice Minister - The Egyptian Ministry
+of Communications and Information Technology, as part of the
+Universal Health Insurance program implementation. We also
+dedicate this work to the deceased Prof. Hawaf Abdel-Hakim
+for his kindness, help, and assistance.
+REFERENCES
+[1] N. A. A. Bakar, S. Harihodin, and N. Kama, “Assessment of Enterprise
+Architecture Implementation Capability and Priority in Public Sector
+Agency,” in Procedia Computer Science, 2016, vol. 100, pp. 198–206,
+doi: 10.1016/j.procs.2016.09.141.
+[2] G. L. Richardson, B. M. Jackson, and G. W. Dickson, “A principles-
+based enterprise architecture: Lessons from Texaco and Star Enterprise,”
+MIS Quarterly: Management Information Systems, vol. 14, no. 4, pp.
+385–402, 1990, doi: 10.2307/249787.
+[3] B. van der Raadt, M. Bonnet, S. Schouten, and H. van Vliet, “The
+relation between EA effectiveness and stakeholder satisfaction,” Journal
+of Systems and Software, vol. 83, no. 10, pp. 1954–1969, Oct. 2010, doi:
+10.1016/j.jss.2010.05.076.
+[4] A. Elgammal and O. Turetken, “Lifecycle Business Process Compliance
+Management: A Semantically-Enabled Framework,” in 2015
+International Conference on Cloud Computing, ICCC 2015, Jul. 2015,
+pp. 1–8, doi: 10.1109/CLOUDCOMP.2015.7149646.
+[5] M. Ochodek and S. Kopczyńska, “Perceived importance of agile
+requirements engineering practices – A survey,” Journal of Systems and
+Software, vol. 143, pp. 29–43, Sep. 2018, doi:
+10.1016/j.jss.2018.05.012.
+[6] S. D. Ringmann, H. Langweg, and M. Waldvogel, “Requirements for
+legally compliant software based on the GDPR,” in Lecture Notes in
+Computer Science (including subseries Lecture Notes in Artificial
+Intelligence and Lecture Notes in Bioinformatics), 2018, vol. 11230
+LNCS, pp. 258–276, doi: 10.1007/978-3-030-02671-4_15.
+[7] A. M. Mustapha, O. T. Arogundade, A. Abayomi-Alli, O. J. Adeniran,
+K. Adesemowo, and C. Y. Alonge, “A Systematic Method for
+Extracting and Analyzing Cloud-Based Compliance Requirements,” in
+2020 International Conference in Mathematics, Computer Engineering
+and Computer Science, ICMCECS 2020, Mar. 2020, pp. 1–7, doi:
+10.1109/ICMCECS47690.2020.240839.
+[8] M. el Ghosh, H. Naja, H. Abdulrab, and M. Khalil, “Ontology learning
+process as a bottom-up strategy for building domain-specific ontology
+from legal texts,” in ICAART 2017 - Proceedings of the 9th
+International Conference on Agents and Artificial Intelligence, Feb.
+2017, vol. 2, pp. 473–480, doi: 10.5220/0006188004730480.
+[9] G. Kurcheeva, M. Rakhvalova, D. Rakhvalova, and M. Bakaev, “Mining
+and indexing of legal natural language texts with domain and task
+ontology,” in Communications in Computer and Information Science,
+Nov. 2019, vol. 947, pp. 123–137, doi: 10.1007/978-3-030-13283-5_10.
+[10] M. Palmirani, M. Martoni, A. Rossi, C. Bartolini, and L. Robaldo,
+“PrOnto: Privacy ontology for legal reasoning,” in Lecture Notes in
+Computer Science (including subseries Lecture Notes in Artificial
+Intelligence and Lecture Notes in Bioinformatics), Sep. 2018, vol. 11032
+LNCS, pp. 139–152, doi: 10.1007/978-3-319-98349-3_11.
+[11] V. Leone, L. di Caro, and S. Villata, “Taking stock of legal ontologies: a
+feature-based comparative analysis,” Artificial Intelligence and Law,
+vol. 28, no. 2, pp. 207–235, Jun. 2020, doi: 10.1007/s10506-019-09252-
+1.
+[12] J. Becker, J. vom Brocke, M. Heddier, and S. Seidel, “In Search of
+Information Systems (Grand) Challenges: A Community of Inquirers
+Perspective,” Business and Information Systems Engineering, vol. 57,
+no. 6, pp. 377–390, Dec. 2015, doi: 10.1007/s12599-015-0394-0.
+[13] C. Stratigaki, M. Nikolaidou, P. Loucopoulos, and D. Anagnostopoulos,
+“Business process elicitation from regulatory compliance documents:
+An E-government case study,” in Proceedings - CBI 2016: 18th IEEE
+Conference on Business Informatics, Dec. 2016, vol. 2, pp. 8–13, doi:
+10.1109/CBI.2016.43.
+[14] N. Peter Mrope, G. Simiyu Namusonge, and M. Amuhaya Iravo, “Does
+Compliance with Rules Ensure Better Performance? An Assessment of
+The Effect of Compliance with Procurement Legal and Regulatory
+Framework on Performance of Public Procurement in Tanzania,”
+European Journal of Logistics, Purchasing and Supply Chain
+Management, vol. 5, no. 1, pp. 40–50, 2017.
+[15] S. Seppälä, M. Ceci, H. Huang, L. O’Brien, and T. Butler, “SmaRT
+Visualisation of Legal Rules for Compliance,” undefined, pp. 73–85,
+2017.
+[16] M. Hashmi and G. Governatori, “Norms modeling constructs of business
+process compliance management frameworks: a conceptual evaluation,”
+Artificial Intelligence and Law, vol. 26, no. 3, pp. 251–305, Sep. 2018,
+doi: 10.1007/s10506-017-9215-8.
+[17] C. Bartolini, A. Calabró, and E. Marchetti, “Enhancing business process
+modelling with data protection compliance: An ontology-based
+proposal,” in ICISSP 2019 - Proceedings of the 5th International
+Conference on Information Systems Security and Privacy, 2019, pp.
+421–428, doi: 10.5220/0007392304210428.
+[18] R. Matulevičius, J. Tom, K. Kala, and E. Sing, “A Method for Managing
+GDPR Compliance in Business Processes,” in Lecture Notes in Business
+Information Processing, Jun. 2020, vol. 386 LNBIP, pp. 100–112, doi:
+10.1007/978-3-030-58135-0_9.
+[19] T. Seyffarth and S. Kuehnel, “Maintaining business process compliance
+despite changes: a decision support approach based on process
+adaptations,” 2021, doi: 10.1080/12460125.2020.1861920.
+[20] A. S. Zalazar, L. Ballejos, and S. Rodriguez, “Analyzing requirements
+engineering for cloud computing,” in Requirements Engineering for
+Service and Cloud Computing, Springer International Publishing, 2017,
+pp. 45–64.
+[21] S. Agarwal, S. Steyskal, F. Antunovic, and S. Kirrane, “Legislative
+compliance assessment: Framework, model and GDPR instantiation,” in
+Lecture Notes in Computer Science (including subseries Lecture Notes
+in Artificial Intelligence and Lecture Notes in Bioinformatics), Jun.
+2018, vol. 11079 LNCS, pp. 131–149, doi: 10.1007/978-3-030-02547-
+2_8.
+[22] M. Alsaadi, A. Lisitsa, and M. Qasaimeh, “Minimizing the ambiguities
+in medical devices regulations based on software requirement
+engineering techniques,” in ACM International Conference Proceeding
+Series, Dec. 2019, pp. 1–5, doi: 10.1145/3368691.3368709.
+[23] F. Jorshari and R. H. Tawil, “A High-Level Scheme for an Ontology-
+Based Compliance Framework in Software Development,” 2015 IEEE
+17th International Conference on High Performance Computing and
+Communications, 2015 IEEE 7th International Symposium on
+Cyberspace Safety and Security, and 2015 IEEE 12th International
+Conference on Embedded Software and Systems, pp. 1479–1487, 2015.
+[24] M. Usman, M. Felderer, M. Unterkalmsteiner, E. Klotins, D. Mendez,
+and E. Alégroth, “Compliance Requirements in Large-Scale Software
+Development: An Industrial Case Study,” in Lecture Notes in Computer
+Science (including subseries Lecture Notes in Artificial Intelligence and
+Lecture Notes in Bioinformatics), 2020, vol. 12562 LNCS, pp. 385–401,
+doi: 10.1007/978-3-030-64148-1_24.
+[25] Business Architecture Guild, A Guide to the Business Architecture Body
+of Knowledge (BIZBOK Guide)., Version 6.5. 2018.
+[26] “The Federation of Enterprise Architecture Professional Organizations
+(FEAPO).” https://feapo.org/ (accessed May 24, 2021).
+[27] OMG: The Open Group, The Open Group Architecture Framework
+(TOGAF), Version 9.2. 2018.

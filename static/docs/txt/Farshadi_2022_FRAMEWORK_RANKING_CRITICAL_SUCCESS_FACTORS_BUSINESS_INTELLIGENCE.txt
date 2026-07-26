@@ -1,0 +1,1751 @@
+--- PAGE 1 ---
+Volume 17, 2022
+Accepting Editor Dimitar Grozdanov Christozov│ Received: August 14, 2022│ Revised: October 8, October
+25, 2022 │ Accepted: October 27, 2022.
+Cite as: Farshadi, R., Nazemi, E., & Abdolvand, N. (2022). A framework for ranking critical success factors of
+business intelligence based on enterprise architecture and maturity model. Interdisciplinary Journal of Information,
+Knowledge, and Management, 17, 543-575. https://doi.org/10.28945/5032
+(CC BY-NC 4.0) This article is licensed to you under a Creative Commons Attribution-NonCommercial 4.0 International
+License. When you copy and redistribute this paper in full or in part, you need to provide proper attribution to it to ensure
+that others can later locate this work (and to ensure that others do not accuse you of plagiarism). You may (and we encour-
+age you to) adapt, remix, transform, and build upon the material for any non-commercial purposes. This license does not
+permit you to use this material for commercial purposes.
+AFRAMEWORK FOR RANKING CRITICAL SUCCESS
+FACTORS OF BUSINESS INTELLIGENCE BASED ON
+ENTERPRISE ARCHITECTURE AND MATURITY MODEL
+Ramina Farshadi Faculty of Computer Science and
+Computer Engineering, Shahid
+Beheshti University, Tehran, Iran
+farshadiramina@gmail.com
+Eslam Nazemi* Faculty of Computer Science and
+Computer Engineering, Shahid
+Beheshti University, Tehran, Iran
+nazemi@sbu.ac.ir
+Neda Abdolvand Department of Management, Faculty
+of Social Sciences and Economics,
+Alzahra University, Tehran, Iran
+n.abdolvand@alzahra.ac.ir
+* Corresponding author
+ABSTRACT
+Aim/Purpose The aim of this study is to identify Critical Success Factors (CSF) of Business
+Intelligence (BI) and provide a framework to classify CSF into layers or per-
+spectives using an enterprise architecture approach, then rank CSF within each
+perspective and evaluate the importance of each perspective at different BI ma-
+turity levels as well.
+Background Although the implementation of the BI project has a significant impact on cre-
+ating analytical and competitive capabilities, the lack of evaluation of CSF holis-
+tically is still a challenge. Moreover, the BI maturity level of the organization has
+not been considered in the BI implementation project. Identifying BI critical
+success factors and their importance can help the project team to move to a
+higher maturity level in the organization.
+Methodology First, a list of distinct CSF is identified through a literature review. Second, a
+framework is provided for categorizing these CSF using enterprise architecture.
+Interviewing is the research method used to evaluate the importance of CSF
+and framework layers with two questionnaires among experts. The first ques-
+tionnaire was done by Analytical Hierarchy Process (AHP), a quantitative
+method of decision-making to calculate the weight of the CSF according to the
+
+--- PAGE 2 ---
+A Framework For Ranking Critical Success Factors of BI
+544
+importance of CSF in each of the framework layers. The second one was con-
+ducted to evaluate framework layers at different BI maturity levels using a Likert
+scale.
+Contribution This paper contributes to the implementation of BI projects by identifying a
+comprehensive list of CSF in the form of a holistic multi-layered framework
+and ranking the importance of CSF and layers at BI maturity levels.
+Findings The most important CSF in BI implementation projects include senior manage-
+ment support, process identification, data quality, analytics quality, hardware
+quality, security standards, scope management, documentation, project team
+skills, and customer needs transformation, which received the highest scores in
+framework layers. In addition, it was observed that as the organization moves to
+higher levels of maturity, the average importance of strategic business and secu-
+rity perspectives or layers increases. But the average importance of data, appli-
+cations, infrastructure, and network, the project management layers in the pro-
+posed framework is the same regardless of the level of business intelligence
+maturity.
+Recommendations
+for Practitioners
+The results of this paper can be used by academicians and practitioners to im-
+prove BI project implementation through understanding a comprehensive list
+of CSF and their importance. This awareness causes us to focus on the most
+important CSF and have better planning to reach higher levels of maturity ac-
+cording to the maturity level of the organization.
+Future Research For future research, the interaction of critical success factors of business intelli-
+gence and framework layers can be examined with different methods.
+Keywords business intelligence, critical success factor, maturity model, enterprise architec-
+ture
+INTRODUCTION
+Implementing information technology in senior management is a power acquisition strategy when it
+leads to data analysis and making decisions (Niño et al., 2020). Business intelligence (BI) helps
+managers make more analytical and data-driven decisions. Due to the impact that BI has on the per-
+formance management of the organization, it has been highly considered by researchers (Zaied et al.,
+2018). BI is the intelligent extraction, integration, aggregation, and multidimensional analysis of data
+to find patterns from different information sources (Adjie Eryadi & Nizar Hidayanto, 2020) to im-
+prove decision-making and get a competitive advantage.
+The BI market grew 7.3% in 2017, generating revenue of up to $18.3 billion (Ain et al., 2019). It was
+predicted to reach $26.88 billion by 2021 (Moscoso-Zea et al., 2019). Because of the value that BI
+provides, a lot of investment is made in its implementation. However, more than 70% of BI projects
+do not deliver the expected returns (Ain et al., 2019). Implementing BI is not just a simple task of
+buying a set of software and hardware; it requires proper infrastructure and resources over time
+(Olszak & Ziemba, 2012).
+According to Işık et al. (2013), BI success is described as the positive advantages organizations get
+through the use of their BI. To succeed in BI projects, it is necessary to identify all critical success
+factors (CSF) of BI (El-Adaileh & Foster, 2019; Pham et al., 2016; Yeoh & Popovič, 2016), ranking
+the CSF (Zaied et al., 2018), and determining the current state of the BI maturity of the organiza-
+tion (Tavallaei et al., 2015). According to Olszak and Ziemba (2012, p. 136), “CSF can be perceived
+as a set of tasks and procedures that should be addressed in order to ensure business intelligence sys-
+tems accomplishment.”. In fact, identifying the CSF of BI is a way to reduce the complexity of im-
+plementing BI projects and decrease their failure rate. Several studies (Halim et al., 2020; Olszak &
+
+--- PAGE 3 ---
+Farshadi, Nazemi, & Abdolvand
+545
+Ziemba, 2012; Subagja et al., 2020; Yeoh & Popovič, 2016; Zaied et al., 2018) have investigated the
+CSF of implementing BI. However, existing research about CSF in implementing BI projects has not
+been well analyzed yet and only a few researchers have identified all aspects of BI success factors
+without considering the importance of CSF (Ain et al., 2019; El-Adaileh & Foster, 2019). The key to
+the successful implementation of BI is not only based on identifying CSF; ranking CSF from the
+right perspective also plays a significant role in BI implementation. For example, data quality and sen-
+ior management support are considered the most important CSF. But comparing them together does
+not help much. On the other hand, all CSF might not have equal importance at different BI maturity
+levels in each organization. So, considering the current level of BI maturity of organizations is neces-
+sary.
+To meet these challenges, a framework with a multi-layered structure can be used to categorize CSF
+based on layers to reduce complexity. One of the frameworks which can be successful in new tech-
+nologies such as BI is Enterprise Architecture (EA) (Office of Management and Budget, 2012). Ac-
+cording to the Federation of Enterprise Architecture Professional Organizations (n.d.), EA is “a
+well-defined practice for conducting enterprise analysis, design, planning, and implementation, using
+a holistic approach at all times, for the successful development and execution of strategy”. EA solves
+some main challenges in a large number of organizations (Moscoso-Zea et al., 2019). EA with its
+structured thinking covers all aspects of the organization in the form of perspectives or layers. Effec-
+tive information management, response to change, aligning between business and information tech-
+nology, and providing a comprehensive view are the main aims of EA.
+There is currently no comprehensive framework with separate layers or perspectives to evaluate all BI
+success factors. To address this gap, a framework is needed to classify all CSF into independent per-
+spectives or layers and rank them based on the perspective to which they belong. In addition, the ac-
+tions needed for BI project success are different based on the level of BI maturity in each organiza-
+tion. Therefore, the importance of framework layers should be measured at different BI maturity lev-
+els to know whether their importance is the same at all BI maturity levels or not. In this paper, the
+new research scenario for the success of BI projects pursues three goals. The first goal is to propose
+a framework to categorize all identified CSF in different layers or perspectives using EA. The second
+goal is to rank the importance of CSF within each perspective of the framework by the AHP
+method. The third goal is to evaluate the importance of framework perspectives at different BI ma-
+turity levels using the Likert scale method.
+LITERATURE REVIEW
+BUSINESS INTELLIGENCE (BI)
+There are several definitions of BI. According to Elbashir et al. (2008), BI systems help organiza-
+tional decision-making by providing data analysis and analytical reporting that improve the perfor-
+mance of business processes. The BI platform has four important components. The first component
+is input sources where data is collected from various sources. The second component is data acquisi-
+tion, which includes the process of Extracting, Transforming, and Loading data (ETL) into a single
+repository. The third component is the data warehouse where the reliable data source and the infor-
+mation obtained from the ETL are stored. The fourth component is the data reporting and analysis
+tools (Niño et al., 2020).
+Although the implementation of BI has many advantages, the high complexity and a large number of
+users make implementation difficult. Consequently, the failure rate in BI projects increases (Pham et
+al., 2016; Villamarín-García, 2020). For this reason, many researchers have identified BI CSF to help
+them decrease the rate of failure. Various categories have also been proposed for identified CSF
+based on different perspectives (Ain et al., 2019; DeLone & McLean, 2003; Sangar & Iahad, 2013;
+Subagja et al., 2020; Yeoh & Koronios, 2010; Zaied et al., 2018). For example, in Subagja et al.’s
+
+--- PAGE 4 ---
+A Framework For Ranking Critical Success Factors of BI
+546
+(2020) study, the key success factors are classified into two categories: technological and organiza-
+tional. In Sangar and Iahad’s (2013) study, key success factors were divided into three categories be-
+fore implementation, during implementation, and after implementation of the BI project. In the arti-
+cle by Yeoh and Koronios (2010), success factors were classified into three categories: organizational,
+process, and technology. In Zaied et al.’s (2018) article, environmental factors were also added to or-
+ganizational, process, and technology. In the study of Halim et al. (2020), CSF was categorized into
+three categories: people, process, and technology.
+In previous research, the provided models were taken from people’s minds and they did not cover all
+the main elements of the organization. There is a need for a structured framework to cover various
+dimensions of the organization. Besides, the level of BI maturity should be considered in the ranking
+CSF because not all factors are necessarily of the same importance at all levels of maturity.
+BUSINESS INTELLIGENCE MATURITY
+Although understanding CSF contributes to BI project success, the actions needed are different
+based on the level of BI maturity in each organization. Therefore, identifying and categorizing the
+CSF is not enough for the success of the BI project alone. Many managers do not know how to use
+BI properly and their investments lead to failure. To prevent these failures, the project capital should
+be evaluated and compared to similar systems in other companies to measure and control its eco-
+nomic value (Niño et al., 2020). In addition, by assessing the current BI maturity level of the organi-
+zation, it is possible to plan to reach the next stage of development and a higher level of maturity.
+For this purpose, the BI maturity model can be used to identify the strengths and weaknesses of the
+organization in general or a specific function (Gudfinnsson et al., 2015). In the Davenport maturity
+model (Davenport et al., 2010), success factors are measured by five components of Data, Enter-
+prise, Leadership, Target, and Analysts (DELTA), so the absence of each component is an obstacle
+to success.
+The Davenport maturity model has five levels:
+Level 1: Maturity (analytical disability): Data is unstable and of poor quality. There is no compre-
+hensive data warehouse and no interest or attitude toward analysis.
+Level 2: Maturity (local analysis): Analytical activities remain at the local or local level. Business
+units collect only the basic data needed in their field, and analysts take analytical actions in their
+field.
+Level 3: Maturity (analytical passion): Top executives’ interest in the analysis is formed. Data is
+viewed more strategically as organizational resources rather than unit resources. The task of
+leadership is to articulate perspectives that transform business analysis.
+Level 4: Maturity (analytical companies): Long-term perspectives on analytics are developed for
+core business units. Access to functional-level data is replaced by enterprise data warehousing.
+At this level, leadership is supported.
+Level 5: Maturity (analytical competitors): Organizations have a strong focus on leveraging their
+industry-unique data. Level 5 maturity companies have well-defined policies regarding the pri-
+vacy of customer and employee information. They do not carelessly lose information due to
+saboteurs and mistakes and do not disclose or sell information without permission. Decisions
+are made based on facts and analysis. Leadership is motivated by continuous review and analysis.
+Organizations are classified into different levels of BI maturity depending on the infrastructure they
+have. Therefore, in assessing the importance of BI CSF, we must consider the level of maturity of
+the organization to avoid wasting resources on unnecessary or highly ideal metrics. So there is a need
+
+--- PAGE 5 ---
+Farshadi, Nazemi, & Abdolvand
+547
+for a comprehensive framework for ranking CSF to measure success factors individually in perspec-
+tives and as a group of perspectives at maturity levels. The EA framework helps to reduce the com-
+plexity of BI implementation by dividing the whole organization into layers or perspectives.
+ENTERPRISE ARCHITECTURE
+According to Liao and Wang (2021), Enterprise Architecture creates a complete view of the organi-
+zation to control its complexity and it guides the organization toward the desired business vision and
+results. Enterprise Architecture (EA) is a map that combines methods and techniques that provide a
+complete view of the organization through models, frameworks, constraints, principles, and guide-
+lines (Moscoso-Zea et al., 2019). It can be used to manage information systems in alignment with
+business activities (Gampfer et al., 2018). In fact, EA fills the gap between the current situation and
+the desired situation through its transition plan. EA is usually known by its frameworks. There are
+four leading EA frameworks including Zachman, TOGAF, FEA, and Gartner.
+The Zachman framework, which is known as the first EA framework, was developed by John Zach-
+man in the 1980s. It is depicted as a two-dimensional classification for architectural descriptions and
+also it is a basic structure for EA. Zackman’s framework only covers architecture and does not in-
+clude a strategic planning methodology (Rouhani et al., 2015), and also so many elements (30 cells)
+are explained in detail that causes complexity.
+Gartner, an IT consulting organization, developed the Gartner Enterprise Architecture Method
+which includes the Gartner EA process model and the Gartner EA framework. The Gartner EA
+process model is iterative and focuses on future architecture, development process, and adequate EA
+concepts. The Gartner EA framework shows the relationship between business architecture, infor-
+mation architecture, and technical architecture. Gartner follows a top-down strategy to translate busi-
+ness strategy into a set of instructions to be used by the organization (De Vires, 2010).
+Gartner also developed Enterprise Information Management (EIM) which includes vision, strategy,
+metrics, governance, organization and rules, information life cycle, and infrastructure dimensions.
+But there is little guidance about this model.
+The Open Group Architecture Framework (TOGAF) was developed by the Open Group in the mid-
+1990s. It has current architecture and future architecture and also it provides steps and sub-steps re-
+quired to develop architecture. It uses the iterative architecture development method with top-down
+architecture and has more focus on IT development (De Vires, 2010). TOGAF provides broad docu-
+ments about its method and process but accessing and employing them is time-consuming and it is
+not easy to use (Rouhani et al., 2015).
+The Federal Enterprise Architecture Framework (FEAF) was created for the US federal government
+at the end of the 1990s. It has current architecture and future architecture. It covers the top-down
+and bottom-up layers together while other frameworks, like Togaf and Gartner, start only with the
+top-down architecture (De Vires, 2010).
+FEAF contains appropriate guidance for structuring enterprise architecture, while TOGAF is more
+oriented toward IT architecture. FEAF was improved and renamed to Common Approach to Federal
+Enterprise Architecture (Common FEAF) in 2012 (Office of Management and Budget, 2012). Com-
+mon FEAF which is based on FEAF contains principles for using EA to contribute to organizations
+decreasing waste and duplication, increasing shared services and interaction, and closing performance
+gaps. Its concepts are simple and have comprehensive artifacts. It has abstract architecture layers to
+create a logical separation between different dimensions or perspectives. Common FEAF has various
+levels of scope and it has also six reference models (Office of Management and Budget, 2012):
+
+--- PAGE 6 ---
+A Framework For Ranking Critical Success Factors of BI
+548
+Performance Reference Model (PRM): used to support architectural analysis and reporting in
+the strategy sub-architecture view of the overall EA.
+Business Reference Model (BRM): used to support architectural analysis and reporting in the
+business services sub-architecture view.
+Data Reference Model (DRM): used to support the foundation for the overall EA with a focus
+on information that is available for sharing and re-use and information gaps.
+Application Reference Model (ARM): used to support architectural analysis and reporting in the
+applications sub-architecture view.
+Infrastructure Reference Model (IRM): used to support architectural analysis and reporting in
+the host infrastructure sub-architecture view.
+Security Reference Model (SRM): used to support architectural analysis and reporting in the
+host infrastructure sub-architecture view of the overall EA. It focuses on information security
+and privacy.
+EA is useful for new technologies that improve resource optimization, such as BI, cloud computing,
+mobile technologies, and social media (Office of Management and Budget, 2012). BI projects are
+facing high complexity, a large user community, and constant changes. To reduce these challenges and
+complexities, a structured enterprise architecture should be used. Common FEAF provides this op-
+portunity for the success of BI projects with its guidance and comprehensive approach.
+PROPOSED FRAMEWORK
+In this study, the scattered CSF of many BI projects were collected and analyzed. These factors re-
+quired a comprehensive and standardized approach to classification. For this purpose, a framework
+was designed to classify the scattered factors of BI success, which is derived from the Common Fed-
+eral Enterprise Architecture Framework (Common FEAF) (Office of Management and Budget,
+2012). It is easy to use and learn and has abstract architecture layers which create a logical separation
+between different layers or perspectives. Its concepts are simple and comprehensive and can be used
+as complete guidance (Office of Management and Budget, 2012). These are the reasons for choosing
+this framework to classify the BI critical success factors. As shown in Figure 1, the proposed frame-
+work consists of ten layers or perspectives which are divided into primary perspectives (horizontal
+elements) and supportive perspectives (vertical elements). The primary perspectives include perspec-
+tives such as strategy, business, data, applications, networks, and infrastructure. The supportive per-
+spectives include layers such as security, project management, configuration and standardization, hu-
+man capital management, and environmental.
+In Table 1, a mapping of the proposed model with Common FEAF is done, which is the result of
+the definitions of the views of the Common FEAF (Office of Management and Budget, 2012) and
+interviews with experts.
+
+--- PAGE 7 ---
+Farshadi, Nazemi, & Abdolvand
+549
+Figure 1. Proposed framework
+Table 1. A map of the proposed framework classification
+with the Common FEAF (Office of Management and Budget, 2012)
+Related framework part Framework layers
+Strategic plans Strategy
+Business activities Business
+Data and information Data
+System and application Application
+Network & Infrastructure Network & Infrastructure
+Security/privacy Security
+Program/project management Project management
+Configuration/asset management Standards/Configuration management
+Standards/configuration management
+Human capital management( Office of Man-
+agement and Budget, 2013)
+Human capital management
+Capital planning/portfolio management Environment
+In the following, ten layers of the proposed framework are described.
+PRIMARY PERSPECTIVES
+A primary perspective includes the main layers of the framework from the Strategy layer on top to
+the network and infrastructure at the bottom. These layers are introduced below:
+
+--- PAGE 8 ---
+A Framework For Ranking Critical Success Factors of BI
+550
+Strategy layer
+In this layer, a clear relationship is established between the BI project and the goals and strategies of
+the organization. The project is economically justified in terms of business value. Systems and busi-
+ness needs as well as user expectations are well-identified.
+Business layer
+This layer emphasizes the goals of each business unit, identifying business processes, reviewing how
+the organization’s activities are performed and performing them in a new way, and managing the
+business performance.
+Data layer
+The data and information quality include accuracy, precision, relevance, compatibility, comprehen-
+siveness, updates, and speed of access to information. In fact, data is a significant asset in an organi-
+zation to improve making decisions.
+Application layer
+Most BI systems’ data warehouses and their number of users increase over time. For this reason, BI
+applications must be scalable, flexible, and integrated to meet new needs. On the other hand, user in-
+terfaces have a great impact on system acceptance and effective understanding of data and reports.
+Network and infrastructure layer
+The hardware platform is the main infrastructure in the BI system and plays an important role in sys-
+tem operation. The selected hardware must meet BI requirements. Online analytical processing server
+quality and communication networks, such as fiber optic networks and Ethernet networks also con-
+tribute to the success of the project.
+SUPPORTIVE PERSPECTIVES
+The vertical elements or supportive perspectives cover all layers of the primary perspectives. Further-
+more, supportive perspectives not only belong to BI projects and can be used in other information
+systems.
+Security layer
+Compliance with security standards includes information accuracy, confidentiality, unauthorized ac-
+cess, and security of hardware equipment. It also should prevent data loss. Security must be ensured
+at all levels of the framework to have accurate information and protect customer privacy as well.
+Standards/configuration management layer
+Change can occur at any phase of the BI implementation. Configuration management is used to doc-
+ument, report, and control any changes in the implementation. In addition, standards are also used
+against changes for better management. Standards may relate to data naming and metadata. Metadata
+is the meaning and concept of information entities that constitute the policies and standards of busi-
+ness data (Moss & Atre, 2003). Metadata can be defined as data about data or information about data
+(Chuah & Wong, 2012) to understand the process of implementing BI better.
+Human capital management layer
+This perspective includes users and the project team who are involved in the project and have differ-
+ent roles, responsibilities, and skills.
+
+--- PAGE 9 ---
+Farshadi, Nazemi, & Abdolvand
+551
+Project management layer
+In previous research, project management has been highly suggested as a CSF in BI projects. In this
+study, the project management body of knowledge standard (Project Management Institute, 2013),
+which is one of the most famous standards in project management, is used to understand items bet-
+ter. It covers scope management, cost management, time management, communication manage-
+ment, and procurement management. Procurement management controls contracts with a foreign
+organization and receives the necessary deliverables. With the coordination of this part, there will be
+less delay in the construction phase. It has been mentioned in recent articles as vendor selection
+(Adjie Eryadi & Nizar Hidayanto, 2020; Zaied et al., 2018).
+Environment layer
+In Arnott’s (2008) study, factors such as economic, political, social, and cultural contexts, in addition
+to the factors affecting data warehousing and data quality were also identified as effective in the suc-
+cess and failure of projects that are outside the organization. On the other hand, the arrival of new
+technologies such as the Internet of Things can also change the expectations of the system.
+CLASSIFICATION BI CRITICAL SUCCESS FACTORS
+In Table 2, 38 distinct CSF were extracted from previous literature reviews and placed in the relevant
+perspectives according to the definitions of the various layers of Common FEAF (Office of Man-
+agement and Budget, 2012) and specialists’ opinions.
+Table 2. Classification CSF of business intelligence based on EA
+(Office of Management and Budget, 2012)
+Short description References CSF Layers
+Business problems and needs must be
+identified (Eder & Koch, 2018).
+(Arnott, 2008; Eder &
+Koch, 2018; Olszak &
+Ziemba, 2012)
+Business need
+identification
+Strategy
+User expectations depend on the users’
+technology experience to some extent
+for better adaptation of the business in-
+telligence system, these expectations
+should be known (Gaardboe & Jonasen,
+2018).
+(Adjie Eryadi & Nizar
+Hidayanto, 2020; Gaardboe
+& Jonasen, 2018; Olszak &
+Ziemba, 2012)
+User expectations
+identification
+Implementing a BI system needs a clear
+strategic business vision and also an ef-
+fect on the adoption and outcome of
+the BI system (Zaied et al., 2018).
+(Adjie Eryadi & Nizar
+Hidayanto, 2020; Ain et al.,
+2019; Arnott, 2008; El-
+Adaileh & Foster, 2019;
+Olszak & Ziemba, 2012;
+Yeoh & Koronios, 2010;
+Zaied et al., 2018)
+Goals and strate-
+gies
+definition clearly
+Senior management support can vary
+depending on the level of support in
+promotion, support in using the infor-
+mation system, financial support, and
+guarantee in resource allocation (El-
+Adaileh & Foster, 2019).
+(Adjie Eryadi & Nizar
+Hidayanto, 2020; Eder &
+Koch, 2018; El-Adaileh &
+Foster, 2019; Fedouaki et
+al., 2013; Villamarín-García
+& Diaz Pinzon, 2017; Yeoh
+& Popovič, 2016)
+Senior manage-
+ment support
+Coordination and integration between
+business goals and activities and infor-
+mation technology.
+(Adjie Eryadi & Nizar
+Hidayanto, 2020; Pham et
+al., 2016)
+Alignment of
+business and in-
+formation tech-
+nology
+
+--- PAGE 10 ---
+A Framework For Ranking Critical Success Factors of BI
+552
+Short description References CSF Layers
+Business goals and activities are well-de-
+fined.
+(Ain et al., 2019; Fedouaki
+et al., 2013; Pham et al.,
+2016; Villamarín-García &
+Diaz Pinzon, 2017)
+Clear definition
+of the goals of
+each business
+unit
+Business
+Common definitions of what is required
+of the system must be agreed upon by
+both the business and technical groups
+(Nguyen et al., 2018).
+(Adjie Eryadi & Nizar
+Hidayanto, 2020; Fedouaki
+et al., 2013; Nguyen et al.,
+2018; Villamarín-García &
+Diaz Pinzon, 2017)
+Well-defined
+business process
+Business performance management is a
+component or methodology that is used
+to measure the performance of an or-
+ganization in general (Chuah & Wong,
+2012).
+(Pham et al., 2016; Popovič
+et al., 2010)
+Business
+performance
+management
+Makes fundamental changes and re-
+placements from the current state to-
+ward the desired state.
+(Popovič et al., 2010) Business process
+reengineering
+Refers to accuracy, completeness, rele-
+vance, consistency, and usefulness (Yeoh
+& Popovič, 2016).
+(Adjie Eryadi & Nizar
+Hidayanto, 2020; Fedouaki
+et al., 2013; Gudfinnsson et
+al., 2015; Olszak & Ziemba,
+2012; Yeoh & Popovič,
+2016)
+Data quality Data
+Users can access valid information at
+any time in different ways.
+(Ain et al., 2019;
+Gudfinnsson et al., 2015;
+Popovič et al., 2012)
+Quality of data
+access
+The choice of data warehouse plays an
+important role in the ability of pro-
+cessing and information sharing. It can
+be used as enabling strategic change or
+just as a source to support activities
+(Ariyachandra & Watson, 2010).
+(Ariyachandra & Watson,
+2010; Ranjbarfard &
+Hatami, 2020)
+Data architecture
+compatibility
+with the needs of
+the organization
+The higher the quality of the analysis,
+the more satisfied the customer will be.
+(Davenport & Harris, 2007;
+Eder & Koch, 2018;
+Popovič et al., 2012)
+Analysis quality Application
+The system adapts quickly to new re-
+quirements and the new process adds
+easily to the data warehouse to meet the
+needs of future plans (Işık et al., 2013).
+(Adjie Eryadi & Nizar
+Hidayanto, 2020; Fedouaki
+et al., 2013; Işık et al., 2013)
+Flexibility
+The ability of the system to perform
+well even with an increased volume of
+users, complexities, and a large number
+of demands.
+(Adjie Eryadi & Nizar
+Hidayanto, 2020;
+Ariyachandra & Watson,
+2006; Yeoh & Popovič,
+2016)
+Scalability
+A successful business intelligence system
+should develop periodically to convert to
+an effective application (Arnott, 2008)
+(Arnott, 2008; Gudfinnsson
+et al., 2015; Pham et al.,
+2016)
+Evolutionary de-
+velopment
+The higher the graphic and reporting
+standards and the easier it is for the user
+to use the system, the more they will
+want to use the system.
+(Ain et al., 2019; Olszak &
+Ziemba, 2012; Sangar &
+Iahad, 2013)
+Ease of use of
+the system
+
+--- PAGE 11 ---
+Farshadi, Nazemi, & Abdolvand
+553
+Short description References CSF Layers
+The method assists the organizations to
+identify, select, organize, distribute and
+transfer essential information and expe-
+rience of experts’ expertise (Chuah &
+Wong, 2012).
+(Chuah & Wong, 2012) Integration of
+business intelli-
+gence with
+knowledge man-
+agement
+The ability to communicate between dif-
+ferent systems and applications and data
+with each other, both physically and
+functionally (Işık et al., 2013).
+(Fedouaki et al., 2013; Işık
+et al., 2013; Olszak &
+Ziemba, 2012; Yeoh &
+Popovič, 2016)
+Integration of
+business intelli-
+gence with other
+information sys-
+tems
+Ability to provide information to users
+at an appropriate level of accuracy and
+timeliness (El-Adaileh & Foster, 2019).
+(Adjie Eryadi & Nizar
+Hidayanto, 2020; El-Adaileh
+& Foster, 2019; Villamarín-
+García & Diaz Pinzon,
+2017)
+Network
+infrastructure and
+communications
+Network
+and infra-
+structure
+Hardware infrastructure deals with large
+amounts of data so high-quality hard-
+ware is one of the main factors in build-
+ing the right tools for making decisions
+in uncertainty (Trieu, 2016).
+(Eder & Koch, 2018; Trieu,
+2016)
+Hardware quality
+Information security must be considered
+in any strategic goal or activity that de-
+pends on accurate information (Office
+of Management and Budget, 2012).
+(Ain et al., 2019; Eder &
+Koch, 2018; El-Adaileh &
+Foster, 2019; Office of
+Management and Budget,
+2012)
+Security standard Security
+Standards may relate to data naming and
+metadata. Metadata is the meaning and
+concept of information entities that
+constitute the policies and standards of
+business data (Moss & Atre, 2003).
+(Chuah & Wong, 2012;
+Eder & Koch, 2018; Moss
+& Atre, 2003; Wieder &
+Ossimitz, 2013)
+Data standards,
+metadata, plat-
+form
+Standard/
+configura-
+tion man-
+agement
+Change management control and report
+all changes in requirements, strategy,
+business objectives, project priorities,
+and improvements during the project.
+(Eder & Koch, 2018; El-
+Adaileh & Foster, 2019;
+Olszak & Ziemba, 2012;
+Yeoh & Koronios, 2010)
+Change
+management
+With the participation of users, their
+needs and expectations are better under-
+stood. So, the resistance to using new in-
+formation technology is reduced (Zaied
+et al., 2018).
+(El-Adaileh & Foster, 2019;
+Zaied et al., 2018)
+User
+involvement
+Human
+capital
+management
+A person who has high passion and
+knowledge of the business processes of
+the organization and also has a good
+knowledge of technological innovations
+(Yeoh & Koronios, 2010).
+(Adjie Eryadi & Nizar
+Hidayanto, 2020; Pham et
+al., 2016; Yeoh & Koronios,
+2010)
+Team leadership
+A team of IT and business analysts who
+identify business intelligence strategies
+and bridge the gap between project de-
+velopers and actual business intelligence
+system users (Niño et al., 2020).
+(Niño et al., 2020;
+Villamarín-García & Diaz
+Pinzon, 2017)
+BICC team
+A balance between in-team and individ-
+ual technical skills and the ability to skill-
+(El-Adaileh & Foster, 2019;
+Fedouaki et al., 2013;
+Villamarín-García & Diaz
+Project team
+skills
+
+--- PAGE 12 ---
+A Framework For Ranking Critical Success Factors of BI
+554
+Short description References CSF Layers
+fully perform tasks in a way that inter-
+acts well with other users (El-Adaileh &
+Foster, 2019).
+Pinzon, 2017; Yeoh &
+Koronios, 2010)
+Training can be done at all levels from
+top to down to better understand the
+performance and operational procedures
+of business intelligence (Zaied et al.,
+2018).
+(Adjie Eryadi & Nizar
+Hidayanto, 2020; Eder &
+Koch, 2018; Zaied et al.,
+2018)
+User training and
+motivation
+In scope management, project hypothe-
+ses and constraints are reviewed and ob-
+jectives are prioritized. The initial plan is
+determined based on the budgeting of
+activities, time and resources required.
+(Arnott, 2008; Eder &
+Koch, 2018; Pham et al.,
+2016)
+Scope manage-
+ment
+Project
+management
+Time management has processes that in-
+clude defining activities, sequencing ac-
+tivities, estimating the duration of activi-
+ties based on project scope and available
+resources, as well as preparing a schedule
+for project milestones, and controlling
+the schedule.
+(Olszak & Ziemba, 2012;
+Pham et al., 2016)
+Time manage-
+ment
+Communication management meets the
+information needs of the project and
+stakeholders, both within the organiza-
+tion and outside the organization (Pro-
+ject Management Institute, 2013)
+(Eder & Koch, 2018) Communication
+management
+Risk in the organization is inevitable;
+people, technology, and processes are in-
+volved, so risk management is essential
+for the success of the organization.
+(Işık et al., 2013) Risk management
+Procurement management provides the
+necessary processes to purchase or ob-
+tain the desired products and services
+and results outside the project team
+(Project Management Institute, 2013).
+(Adjie Eryadi & Nizar
+Hidayanto, 2020; Zaied et
+al., 2018)
+Procedure
+management
+Cost management includes cost estima-
+tion, cost balancing, budgeting, and cost
+control in a project.
+(Arnott, 2008; Olszak &
+Ziemba, 2012)
+Cost manage-
+ment
+Powerful political institutions by setting
+different rules can have different effects.
+(Arnott, 2008; Office of
+Management and Budget,
+2012; Villamarín-García,
+2020)
+Power and poli-
+tics
+Environ-
+ment
+Organizational culture is described as a
+pattern of shared values and beliefs
+which help people provide behavioral
+norms in the organization (Zaied et al.,
+2018).
+(Arnott, 2008; Eder &
+Koch, 2018; Villamarín-
+García & Diaz Pinzon,
+2017; Zaied et al., 2018)
+Organizational
+culture
+The stress that an organization feels
+from its competitors in the industry in
+order to seek a new way to increase its
+efficiency and profitability (Zaied et al.,
+2018).
+(Adjie Eryadi & Nizar
+Hidayanto, 2020; Ain et al.,
+2019; Arnott, 2008; Zaied et
+al., 2018)
+Competitive pres-
+sure
+
+--- PAGE 13 ---
+Farshadi, Nazemi, & Abdolvand
+555
+RESEARCH METHODOLOGY
+RESEARCH PURPOSE
+The purpose of this research is to provide a framework, which has a multi-layered structure, to clas-
+sify BI CSF into various layers or perspectives based on enterprise architecture, then rank CSF within
+each perspective and evaluate the importance of each perspective at BI maturity levels as well.
+RESEARCH FRAMEWORK
+This research provides a framework to classify identified CSFs into ten layers: Strategy, Business,
+Data, Application, Network & Infrastructure, Privacy, Standard/Configuration Management, Human
+Capital Management, Project Management, and Environment. The classification is based on the defi-
+nitions of common FEAF (Office of Management and Budget, 2012) and the expert opinions of
+those who were interviewed. Each layer contains a number of CSF that are ranked by interview and
+questionnaire.
+The importance of each layer framework is also evaluated at different BI maturity levels through an-
+other questionnaire. Most BI maturity models are qualitative and emphasize only specific aspects of
+BI such as business or technical points (Niño et al., 2020). In addition, there is little detail and guide-
+lines in their documentation. However, the Davenport et al. (2010) maturity model is chosen as the
+complete model which covers more views of an organization (data, enterprise, leadership, target, and
+analysts). It is used to examine the importance of the ten layers of the framework at BI maturity lev-
+els. For this comparison, a five-point Likert Scale (very low, low, medium, high, and very high) is
+used.
+RESEARCH PROCESS
+The theoretical concepts of BI, the CSF of the BI project, and the BI maturity model were exam-
+ined. In addition, an overview of EA frameworks was provided. A list of distinct CSF is identified
+through the literature review. A framework is then provided for categorizing the CSF using common
+FEAF (Office of Management and Budget, 2012). The Davenport BI maturity model is used for
+evaluating the importance of framework layers at different BI maturity levels as well. The interview is
+the research method used to map identified CSF to the proposed framework layers and evaluate the
+importance of CSF and framework layers with two questionnaires among experts. The first question-
+naire was done by Analytical Hierarchy Process (AHP), which was developed by T. L. Saaty (1980),
+and it is one of the most successful methods of multi-criteria decision-making.
+AHP is a powerful method that can divide complex decision problems into a simple hierarchy of in-
+terrelated elements. It is mostly used to calculate the weights or importance of factors to set priori-
+ties. Data is gathered by pairwise comparisons of elements in each level in this method. For examin-
+ing the importance of each attribute, the attributes of all categories have to be compared (within
+their own category). The common way of making the comparison is to ask the interviewed group to
+provide a rate. wAB, regarding the importance of an attribute; A, in comparison to the importance
+of another attribute of the same category; B, the rate of the importance of attribute B over A, is in-
+versed (and is given by 1/wAB) and also the possibility of potential inconsistencies has to be ana-
+lyzed because of transitive property (Salmeron & Herrero, 2005).
+The problem is formulated in a way that the criteria of the framework are ten independent layers
+(which include Strategy, Business, Data, Application, Network and Infrastructure, Privacy, Project
+Management, Human Capital Management, Standard/Configuration Management, and Environ-
+ment) and the sub-criteria are CSF mapped to each layer. In the first questionnaire, a point scale (1, 3,
+5, 7, 9) is used in order to compare each CSF (see Appendix A for more detail). The data from the
+first questionnaire were gathered among 18 experts who set the priorities for CSF. Local ranking and
+
+--- PAGE 14 ---
+A Framework For Ranking Critical Success Factors of BI
+556
+incompatibility rate are determined for each comparison between CSF, which is given in Table 5. The
+incompatibility rate of all tables is less than 0.1, so the questionnaire has good reliability (R. W. Saaty,
+1987).
+The second survey questionnaire was done for evaluating framework layers at BI maturity levels by
+the Likert scale (see Appendix B). Most interviews were conducted in person and a small number
+were conducted via email. The interview included open and closed questions. Open-ended questions
+were used to examine framework layers and map CSF to the appropriate layer of the framework
+(with definitions of common FEAF). Closed questions were used for ranking CSF in each frame-
+work layer and also ranking layers at different BI maturity levels. Fourteen questionnaires were com-
+pletely answered by BI and EA specialists. Experts were purposefully chosen based on their
+knowledge of BI and EA. They consist of university professors of IT and management, IT manag-
+ers, and specialists working on BI and EA projects. The selection criteria were that they should have
+appropriate knowledge of BI and enterprise architecture with a Master’s or Ph.D. degree. They also
+have more than two years of working experience in EA or BI (described in Table 3). Although some
+of them are in the field of ICT, they also have a significant role in enterprise architecture implemen-
+tation projects and BI development.
+Table 3. Expert characteristics
+The second questionnaire is designed to evaluate the importance of separate perspectives of the
+framework differs at different maturity levels using the Likert scale method (at five different maturity
+levels, from one to five). The maturity model used is derived from the Davenport maturity model in
+which there are five components of measuring success factors (data, enterprise, leadership, target,
+and analysts) and five levels of maturity (maturity 1 (analytical disability), maturity 2 (local analysis),
+maturity 3 (analytical passion), maturity 4 (analytical companies), and maturity 5 (analytical competi-
+tors)).
+The reliability of this questionnaire is also calculated from Cronbach’s alpha coefficient, the reliability
+of which is 0.89, which is higher than 0.7, so the questionnaire has good reliability. As shown in Fig-
+ure 2 and Figure 3, the average importance of the primary perspective and supportive perspective is
+increasing at different rates at maturity levels of one to five.
+Experts in the first questionnaire (18 persons)
+Education BI experience EA experience Work unit
+PhD 10 Between 2 and 4 years 5 Between 2 and 4 years 11 ICT 10
+Master 8 Between 4 and 8 years 7 Between 4 and 8 years 4 Strategy planning 5
+More than 10 years 6 More than 10 years 3 Business development 3
+Experts in the second questionnaire (14 persons)
+Education BI experience EA experience Work unit
+PhD 6 Between 2 and 4 years 5 Between 2 and 4 years 11 ICT 10
+Master 8 Between 4 and 8 years 5 Between 4 and 8 years 1 Strategy planning 2
+More than 10 years 4 More than 10 years 2 Business development 2
+
+--- PAGE 15 ---
+Farshadi, Nazemi, & Abdolvand
+557
+Figure 2. Comparison of the average importance of
+the primary perspective of success at different maturity levels
+Figure 3. Comparison of the average importance of
+the supportive perspective of success at different maturity levels
+0
+0.5
+1
+1.5
+2
+2.5
+3
+3.5
+4
+4.5
+5
+1 2 3 4 5
+Average value
+BI maturity level
+Strategy
+Business
+Data
+Applications
+Network & Infrastructure
+0
+1
+2
+3
+4
+5
+6
+1 2 3 4 5
+Average value
+BI maturity level
+Security
+Standards & Configuration Managemenet
+Human Capital Management
+Project Management
+Environment
+
+--- PAGE 16 ---
+A Framework For Ranking Critical Success Factors of BI
+558
+However, just by considering the mean, it cannot be stated with certainty that because the mean
+shows a higher number at one level of maturity than at another level of maturity, it is necessarily
+more important. Therefore, the analysis of variance (ANOVA) test was used to determine whether
+there is a significant difference between the levels of maturity in terms of importance. First, the nor-
+mality of the data was confirmed by the Kolmogorov-Smirnov test and then two hypotheses were
+formulated as follows:
+Hypothesis 0: The average importance of each framework layer is same at different maturity
+levels and there is no significant difference between maturity levels.
+Research Hypothesis: The average importance of each framework layer is not the same at differ-
+ent maturity levels.
+In this test, when the uncertainty coefficient exceeds 0.05, the assumption of significance in maturity
+is accepted. However, if the uncertainty coefficient is less than 0.05, the perspective is not equally
+important at different maturities. As shown in Table 4, Sig is 0.000 and it is less than 0.05. So, the im-
+portance of strategy layers varies at the BI maturity level. For example, in Table 4 of the ANOVA
+strategy test, the strategy layer has an uncertainty coefficient where Sig is 0.000 and less than 0.05. So,
+the importance of the strategy layer varies at the BI maturity level. To detect maturity groups that are
+not of equal importance, the Tukey pair comparison test is used. Each subset has an uncertainty co-
+efficient higher than 0.05.
+Table 5 of the Tukey test of strategy, matures in which the average importance of the strategy is dif-
+ferentiated including three subsets (level 1, level 2) (level 2, level 3) (level 3, level 4, level 5). As can be
+seen in Table 5, in subset 1, the average importance of the strategy layer at maturity one is equal to
+the average effect of the strategy layer at maturity two. In subset 2, the average importance of the
+strategy at maturity two and maturity three is equal. In subset 3 the average importance of strategy in
+maturity three, maturity four, and maturity five are also equal. Similarly, Tables 6 to 19 can be inter-
+preted, where maturity levels with the same average importance are shown.
+Table 4. Anova strategy test
+Strategy Sum of squares df Mean square F Sig
+Between Groups 55.857 4 13.964 12.980 .000
+Within Groups 69.929 65 1.076
+Total 125.786 69
+Table 5. Tukey strategy test
+V1 N
+Subset for alpha = 0.05
+1 2 3
+level1 14 1.86
+level2 14 2.50 2.50
+level3 14 3.57 3.57
+level4 14 3.93
+level5 14 4.21
+Sig .614 .127 .614
+
+--- PAGE 17 ---
+Farshadi, Nazemi, & Abdolvand
+559
+Table 6. ANOVA business test
+Business Sum of squares df Mean square F Sig
+Between Groups 33.057 4 8.264 9.556 .000
+Within Groups 56.214 65 .865
+Total 89.271 69
+Table 7. Tukey business test
+V1 N
+Subset for alpha = 0.05
+1 2 3
+level1 14 2.50
+level2 14 3.07 3.07
+level3 14 3.71 3.71
+level4 14 4.14 4.14
+level5 14 4.36
+Sig .622 .066 .507
+Table 8. ANOVA data test
+Data Sum of squares df Mean square F Sig
+Between Groups 5.657 4 1.414 1.136 .347
+Within Groups 80.929 65 1.245
+Total 86.586 69
+Table 9. ANOVA application test
+Application Sum of squares df Mean square F Sig
+Between Groups 2.657 4 .664 .488 .744
+Within Groups 88.429 65 1.360
+Total 91.086 69
+Table 10. ANOVA network and infrastructure test
+Network and In-
+frastructure
+Sum of squares
+df Mean square F Sig
+Between Groups 4.086 4 1.021 .950 .441
+Within Groups 69.857 65 1.075
+Total 73.943 69
+
+--- PAGE 18 ---
+A Framework For Ranking Critical Success Factors of BI
+560
+Table 11. ANOVA security test
+Security Sum of squares df Mean square F Sig
+Between Groups 89.657 4 22.414 43.214 .000
+Within Groups 33.714 65 .519
+Total 123.371 69
+Table 12. Tukey security test
+V1 N
+Subset for alpha = 0.05
+1 2 3 4
+level1 14 1.6429
+level2 14 2.5000 2.5000
+level3 14 3.2143 3.2143
+level4 14 4.0714 4.0714
+level5 14 4.8571
+Sig .053 .156 .053 .093
+Table 13. ANOVA standard/configuration management test
+Standard/configura-
+tion management
+Sum of squares
+df Mean square F Sig
+Between Groups 38.657 4 9.664 7.440 .000
+Within Groups 84.429 65 1.299
+Total 123.086 69
+Table 14. Tukey standard/configuration management test
+V1 N
+Subset for alpha = 0.05
+1 2 3
+level1 14 1.7857
+level2 14 2.2857 2.2857
+level3 14 3.0714 3.0714 3.0714
+level4 14 3.5714 3.5714
+level5 14 3.7143
+Sig .076 .076 .695
+
+--- PAGE 19 ---
+Farshadi, Nazemi, & Abdolvand
+561
+Table 15. ANOVA human capital management test
+Human capital man-
+agement
+Sum of squares
+df Mean square F Sig
+Between Groups 18.657 4 4.664 4.202 .004
+Within Groups 72.143 65 1.110
+Total 90.800 69
+Table 16. Tukey human capital management test
+V1 N
+Subset for alpha = 0.05
+1 2
+level1 14 2.8571
+level2 14 3.2857 3.2857
+level3 14 3.5000 3.5000
+level4 14 4.1429
+level5 14 4.2143
+Sig .628 .258
+Table 17. ANOVA project management test
+Project management Sum of squares df Mean square F Sig
+Between Groups 8.086 4 2.021 1.301 .279
+Within Groups 101.000 65 1.554
+Total 109.086 69
+Table 18. ANOVA environment test
+Environment Sum of squares df Mean square F Sig
+Between Groups 17.629 4 4.407 3.041 .023
+Within Groups 94.214 65 1.449
+Total 111.843 69
+Table 19. Tukey environment test
+V1 N
+Subset for alpha = 0.05
+1 2
+level1 14 2.5000
+level2 14 3.0714 3.0714
+level3 14 3.2143 3.2143
+level4 14 3.5714 3.5714
+level5 14 4.0000
+Sig .249 .393
+
+--- PAGE 20 ---
+A Framework For Ranking Critical Success Factors of BI
+562
+RESULTS
+IDENTIFIED CRITICAL SUCCESS FACTORS OF BI
+First, all framework perspectives (layers) and CSF presented in each perspective were discussed by
+experts. The human capital management perspective is considered an independent perspective and it
+was borrowed from Office of Management and Budget (2013). The project management perspective
+was also divided into different parts (Cost Management, Scope Management, Time Management,
+Procedure Management, Risk Management, and Communication Management), which are derived
+from the PMBOK standard (Project Management Institute, 2013). After confirmation of all perspec-
+tives (Strategy, Business, Data, Application, Network & Infrastructure, Privacy, Standard/Configura-
+tion Management, Human Capital Management, Project Management, and Environment) in the
+framework, CSFs were mapped to each perspective based on the definition of Office of Manage-
+ment and Budget (2012) and expert opinions. Four new CSF (privacy, transformation of customer
+needs, emergence of new technologies, and documentation) were added to the previous CSF. Privacy
+was added to the security perspective, the transformation of customer needs and the emergence of
+new technologies were added to the environment perspective, and documentation was added to the
+configuration management perspective as well. They are all in the Common FEAF (Office of Man-
+agement and Budget, 2012) which is approved by experts as CSF in BI projects. Finally, 42 CSF as
+shown in Table 20 were categorized into ten layers according to the previous literature review, defini-
+tions of perspectives of Common FEAF, and the opinion of experts.
+Table 20. Critical success factors of BI
+Context Layer CSF
+Primary
+Perspective
+Strategy - Senior management support
+- Define goals and strategies clearly
+- Identify business needs
+- Identify user expectations
+- Alignment of business and information technology
+Business - Identify processes
+- Clear definition of the goals of each business unit
+- Business performance management
+- Business process reengineering
+Data - Data quality
+- Data architecture compatibility with the needs of the organization
+- Quality of data access
+Application - Analysis quality
+- Integration of business intelligence with other information systems
+- Integration of business intelligence with knowledge management
+- Ease of use of the system
+- Flexibility
+- Scalability
+- Evolutionary system development
+Network & Infra-
+structure
+- Hardware quality
+- Network infrastructure and communications
+Supportive
+Perspective
+Security - Security standard
+- Privacy
+Standards/Configu-
+ration management
+- Data standards, metadata, platform
+- Change management
+- Documentation
+
+--- PAGE 21 ---
+Farshadi, Nazemi, & Abdolvand
+563
+Context Layer CSF
+Human capital man-
+agement
+- Project team skills
+- User involvement
+- Team leadership
+- User training and motivation
+- BICC team
+Project management - Cost management
+- Scope management
+- Time Management
+- Procedure Management
+- Risk management
+- Communication management
+Environment - Organizational Culture
+- Power and politics
+- Competitive pressure
+- Transformation of customer needs
+- Emergence of new technologies
+RANKINGCRITICAL SUCCESS FACTORS OF BI
+In Table 21, the identified CSF of BI projects is shown in order of importance. In the primary per-
+spectives, the support of senior managers with a relatively high difference was identified as the most
+important factor in the strategy perspective for the successful implementation of BI. In the business
+layer, the most important factor is the identifying processes, which is followed by the goals of each
+professional unit with a slight difference, and shows the close relationship between the two. Data
+quality plays a significant role in a data layer and is considered the main foundation of BI projects. In
+the applications layer, the quality of analysis received the highest score, which proved that the most
+important expectation from BI is the quality of analysis and reports that the system provides to sen-
+ior, middle and operational managers to decide. Then the quality of the hardware became the most
+important factor in the main perspective.
+From the supportive perspectives, security standards, documentation, project team skills, scope man-
+agement, and evolving customer needs are identified as the most important criteria in each layer. But
+the importance of layers or perspectives of the framework may not be equal at all levels of BI ma-
+turity level. So the relationship between the BI maturity level and the importance of each layer of the
+framework should be measured.
+Table 21. Ranking of BI critical success factors
+Rank Weight CSF in order of importance Layers
+1 0.332 Senior management support Strategy (incompati-
+bility rate 0.01)
+2 0.272 Define goals and strategies clearly
+3 0.218 Identify business needs
+4 0.108 Identify user expectations
+5 0.070 Alignment business and information technology
+1 0.394 Identify processes Business (incompati-
+bility rate 0.02)
+2 0.379 Clear definition of the goals of each business unit
+3 0.128 Business performance management
+4 0.099 Business process reengineering
+
+--- PAGE 22 ---
+A Framework For Ranking Critical Success Factors of BI
+564
+Rank Weight CSF in order of importance Layers
+1 0.471 Data quality Data (incompatibil-
+ity rate 0.01)
+2 0.362 Data architecture compatibility with the needs of
+the organization
+3 0.1671 Quality of data access
+1 0.218 Analysis quality Application (incom-
+patibility rate 0.01)
+2 0.151 Integration of business intelligence with other in-
+formation systems
+3 0.144 Integration of business intelligence with
+knowledge management
+4 0.134 Ease of use of the system
+5 0.127 Flexibility
+6 0.120 Scalability
+7 0.106 Evolutionary system development
+1 0.524 Hardware quality Network and Infra-
+structure (incompat-
+ibility rate 0.0)
+2 0.476 Network infrastructure and communications
+1 0.569 Security standard Security (incompati-
+bility rate 0.0)
+2 0.439 Privacy
+1 0.447 Documentation Standards/Configu-
+ration management
+(incompatibility rate
+0.01)
+2 0.303 Data standards, metadata, platform
+3 0.250 Change management
+1 0.340 Project team skills Human Capital
+Management (in-
+compatibility
+rate 0.02)
+2 0.246 Team leadership
+3 0.226 User training and motivation
+4 0.134 User involvement
+5 0.053 BICC team
+1 0.318 Scope management Project management
+(incompatibility rate
+0.01)
+2 0.168 Time Management
+3 0.162 Cost management
+4 0.144 Communication management
+5 0.121 supply Management
+6 0.088 Risk management
+1 0.399 Transformation of customer needs Environment (in-
+compatibility rate
+0.01)
+2 0.185 Power and politics
+3 0.179 Competitive pressure
+4 0.149 Organizational Culture
+5 0.088 Emergence of new technologies
+
+--- PAGE 23 ---
+Farshadi, Nazemi, & Abdolvand
+565
+RANKINGFRAMEWORKLAYERS AT DIFFERENT BI MATURITY LEVELS
+The results of ANOVA and Tukey tests about the level of maturity of BI and the importance of
+each layer can be summarized according to Figure 4 and Figure 5. In Figure 4, the importance of
+perspectives such as data, applications, and network infrastructure is the same regardless of the level
+of BI maturity, which is shown as a horizontal line on the axis of the level of intelligence maturity.
+But the importance of strategy and business perspectives was divided into three different subsets. As
+shown in Figure 4, the importance of maturity one and two is the same in terms of strategy and
+business which is shown as a horizontal line. The importance of maturity three, four, and five are the
+same as well; maturity levels one, two, and five made significant differences in the importance of
+strategy and business perspectives, which are shown in steps. In general, the higher the level of ma-
+turity of BI, the more important the business perspective and the strategic perspective. In addition,
+more investment in these perspectives is also needed to jump to a higher level of maturity to achieve
+greater profitability.
+Figure 4. Comparison of the importance of primary perspective at BI maturity levels
+As shown in Figure 5, the importance of the project management perspective at all maturity levels
+one to five is equal. Environment perspective and Human Capital Management were categorized into
+only two subcategories, and the difference in their importance is only at level 5 maturity and level 1
+maturity. The importance of the security perspective includes four different subsets of significance at
+maturity levels and increases exponentially from maturity one to maturity five. This shows the great
+importance of security at high levels of BI maturity. From the point of view of configuration man-
+agement and standards, the importance of maturities one, four, and five are different.
+
+--- PAGE 24 ---
+A Framework For Ranking Critical Success Factors of BI
+566
+Figure 5. Comparison of the importance of supportive perspective at BI maturity levels
+DISCUSSION
+Identifying the CSF of the BI project plays a significant role in the success of the BI project (Ain et
+al., 2019; DeLone & McLean, 2003; El-Adaileh & Foster, 2019; Halim et al., 2020; Olszak & Ziemba,
+2012; Pham et al., 2016; Yeoh & Koronios, 2010; Yeoh & Popovič, 2016). There are many classifica-
+tions of CSF in previous studies. For example, Yeoh and Koronios (2010) classified CSF into three
+categories: organizational, process, and technology. Subagja et al. (2020) classified CSF into two cate-
+gories: technical and organizational. Halim et al. (2020) categorized CSF into three categories: people,
+process, and technology. Adjie Eryadi and Nizar Hidayanto (2020) classified BI project CSF into four
+different dimensions: organization, process, technology, and environment. Some authors only re-
+viewed a list of CSF, while others discussed the importance of CSF in their categories in general
+without regard to the maturity level of the organization.
+A review of the literature on CSF of BI reveals that many scattered factors require proper coherence
+and structure. An enterprise architecture framework was used for categorizing the CSF. The experts
+who implemented enterprise architecture and BI projects were interviewed to rank CSF. Their expe-
+rience and expertise were used in categorizing and ranking these factors. The most important identi-
+fied CSF are consistent with earlier studies such as “management support and team skills” (El-
+Adaileh & Foster, 2019), and “management support and data quality” (Eder & Koch, 2018). Besides,
+some factors like project management, change management, and information technology infrastruc-
+ture were described generally as critical success factors which decompose into layers in this study, and
+‘scope management, documentation, and hardware quality’ get the most weight in their layers respec-
+tively. In addition, ‘identify processes, analysis quality, security standards, and transformation of cus-
+tomer needs, are also identified as the most CSF in this study.
+Despite some prior studies suggesting the technology category has a higher or lower priority than the
+organizational category in the success of BI projects, this study shows that, as the organization
+moves to higher levels of maturity, the average importance of strategy, business, and security per-
+spectives increases. But the average importance of data, applications, infrastructure and network, and
+
+--- PAGE 25 ---
+Farshadi, Nazemi, & Abdolvand
+567
+project management perspectives is equal regardless of the level of BI maturity. Therefore, the ac-
+tions needed for each organization are strongly related to the maturity level of the organization and
+are not equal for every organization.
+CONCLUSION
+Despite the great benefits of BI, BI projects bring many challenges that can cause failure. BI projects
+are implemented on a large scale now and there is a need for a holistic approach to implementing
+them. Besides, different classifications have been made for critical success factors but they were lim-
+ited and not described in detail. To address this gap, a comprehensive list of BI success factors was
+reviewed and a framework was provided based on enterprise architecture to categorize all identified
+CSF in different layers of the framework and then rank them. Enterprise architecture, with its holis-
+tic approach, covers all dimensions of the organization and contributes to reducing complexities
+through its instructions and guidance.
+This study shows 42 distinct critical success factors for BI projects and provides a holistic multi-lay-
+ered framework to classify and rank CSF based on the enterprise architecture approach. The most
+important CSF in the ten layers of the framework include: from a strategy perspective “senior man-
+agement support,” from a business perspective “process identification,” from a data perspective
+“data quality,” from an application perspective “analytics quality,” from an infrastructure and network
+perspective “hardware quality,” from a security perspective “security standards,” from a project man-
+agement perspective “scope management,” from a configuration management perspective “docu-
+mentation,” from a human resource management perspective “project team skills,” and from an envi-
+ronment perspective “customer needs transformation” received the highest scores in framework lay-
+ers or perspectives.
+Although both understanding CSF and their importance contribute to BI project success, the actions
+needed are strongly related to the maturity level of the organization and are not equal for every or-
+ganization. The result of this study shows that the higher the level of maturity of the organization,
+the greater the importance of layers such as strategy, business, and security. Support of senior man-
+agers, well-defined processes, and security standards are identified as the most important CSF in
+these layers which should be considered more in more mature organizations. But the average im-
+portance of data, applications, infrastructure and network, and the project management perspective
+is equal regardless of the level of BI maturity.
+A comprehensive list of CSF and their ranking in separate layers of the framework can help to better
+implement BI projects and also decrease the failure rate of BI project implementation. For future re-
+search, the interaction of critical success factors of BI can be examined with different methods.
+REFERENCES
+Adjie Eryadi, R., & Nizar Hidayanto, A. (2020). Critical success factors for business intelligence implementation
+in an enterprise resource planning system environment using DEMATEL: A case study at a cement manu-
+facture company in Indonesia. Journal of Information Technology Management, 12(1), 67-85.
+https://doi.org/10.22059/jitm.2020.296055.2460
+Ain, N., Vaia, G., DeLone, W. H., & Waheed, M. (2019). Two decades of research on business intelligence sys-
+tem adoption, utilization and success – A systematic literature review. Decision Support Systems, 125, 113113.
+https://doi.org/10.1016/j.dss.2019.113113
+Ariyachandra, T., & Watson, H. J. (2006). Which data warehouse architecture is most successful? Business Intelli-
+gence Journal, 11(1), 4. https://www.academia.edu/26530161/Which_Data_Warehouse_Architec-
+ture_Is_Most_Successful
+Ariyachandra, T., & Watson, H. J. (2010). Key organizational factors in data warehouse architecture selection.
+Decision Support Systems, 49(2), 200-212. https://doi.org/10.1016/j.dss.2010.02.006
+
+--- PAGE 26 ---
+A Framework For Ranking Critical Success Factors of BI
+568
+Arnott, D. (2008, December). Success factors for data warehouse and business intelligence systems. Proceedings
+of the 19th
+Australasian Conference on Information Systems, Christchurch, 55-65.
+https://aisel.aisnet.org/acis2008/16
+Chuah, M.-H., & Wong, K.-L. (2012). A framework for accessing an enterprise business intelligence maturity
+model (EBI2M): Delphi study approach. African Journal of Business Management, 6(23), 6880-6889.
+https://doi.org/10.5897/AJBM11.2819
+Davenport, T. H., & Harris, J. G. (2007). The architecture of business intelligence. In Competing on analytics: The
+new science of winning. Harvard Business Review Press.
+Davenport, T. H., Harris, J. G., & Morison, R. (2010). Analytics at work: Smarter decisions, better results. Harvard
+Business Press.
+DeLone, W. H., & McLean, E. R. (2003). The DeLone and McLean model of information systems success: A
+ten-year update. Journal of Management Information Systems, 19(4), 9-30.
+https://doi.org/10.1080/07421222.2003.11045748
+De Vires, M. (2010). A framework for understanding and comparing enterprise architecture models. Management
+Dynamics: Journal of the Southern African Institute for Management Scientists, 19(2), 17-29. https://hdl.han-
+dle.net/10520/EJC69760
+Eder, F., & Koch, S. (2018). Critical success factors for the implementation of business intelligence systems.
+International Journal of Business Intelligence Research, 9(2), 27-46. https://doi.org/10.4018/IJBIR.2018070102
+El-Adaileh, N. A., & Foster, S. (2019). Successful business intelligence implementation: A systematic literature
+review. Journal of Work-Applied Management, 11(2), 121-132. https://doi.org/10.1108/JWAM-0027-2019-09
+Elbashir, M. Z., Collier, P. A., & Davern, M. J. (2008). Measuring the effects of business intelligence systems:
+The relationship between business process and organizational performance. International Journal of Account-
+ing Information Systems, 9(3), 135-153. https://doi.org/10.1016/j.accinf.2008.03.001
+Federation of Enterprise Architecture Professional Organizations. (n.d.). Common perspectives on enterprise architec-
+ture. http://feapo.org/wp-content/uploads/2018/10/Common-Perspectives-on-Enterprise-Architecture-
+Final-1-copy.pdf
+Fedouaki, F., Okar, C., & Alami, S. E. (2013). A maturity model for business intelligence system project in small
+and medium-sized enterprises: An empirical investigation. International Journal of Computer Science Issues,
+10(6), 61-69. https://www.researchgate.net/publication/316170624_A_maturity_model_for_Business_In-
+telligence_System_project_in_Small_and_Medium-sized_Enterprises_an_empirical_investigation
+Gaardboe, R., & Jonasen, T. S. (2018). Business intelligence success factors: A literature review. Journal of Infor-
+mation Technology Management, 29(1), 1-15. http://jitm.ubalt.edu/XXIX-1/article1.pdf
+Gampfer, F., Jürgens, A., Müller, M., & Buchkremer, R. (2018). Past, current and future trends in enterprise ar-
+chitecture – A view beyond the horizon. Computers In Industry 100, 70-84. https://doi.org/10.1016/j.com-
+pind.2018.03.006
+Gudfinnsson, K., Strand, M., & Berndtsson, M. (2015). Analyzing business intelligence maturity. Journal of Deci-
+sion Systems, 24(1), 37-54. https://doi.org/10.1080/12460125.2015.994287
+Halim, S., Mubarokah, I., & Hidayanto, A. N. (2020, November). Rank Critical Success Factors (CSFs) of Data
+Warehouse and Business Intelligence (DW/BI) implementation in banking sector using Analytical Hierar-
+chy Process (AHP). Proceedings of the International Conference on Informatics, Multimedia, Cber and Information Sys-
+tem, Jakarta, Indonesia, 313-318. https://doi.org/10.1109/ICIMCIS51567.2020.9354331
+Işık, Ö., Jones, M. C., & Sidorova, A. (2013). Business intelligence success: The roles of BI capabilities and de-
+cision environments. Information & Management, 50(1), 13-23. https://doi.org/10.1016/j.im.2012.12.001
+Liao, M. H., & Wang, C. T. (2021). Using enterprise architecture to integrate lean manufacturing, digitalization,
+and sustainability: A lean enterprise case study in the chemical industry. Sustainability, 13(9), 4851.
+https://doi.org/10.3390/su13094851
+
+--- PAGE 27 ---
+Farshadi, Nazemi, & Abdolvand
+569
+Moscoso-Zea, O., Castro, J., Paredes-Gualtor, J., & Lujan-Mora, S. (2019). A hybrid infrastructure of enterprise
+architecture and business intelligence & analytics for knowledge management in education. IEEE Access, 7,
+38778-38788. https://doi.org/10.1109/ACCESS.2019.2906343
+Moss, L. T., & Atre, S. (2003). Business intelligence roadmap: The complete project lifecycle for decision-support applications.
+Addison-Wesley Professional.
+Nguyen, Q., Meredith, R., & Burstein, F. (2018). A comparative study of critical success factors for general and
+healthcare business intelligence systems. Proceedings of the Australasian Conference on Information Systems. Uni-
+versity of Technology Sydney ePress. https://doi.org/10.5130/acis2018.cb
+Niño, H. A. C., Niño, J. P. C., & Ortega, R. M. (2020). Business intelligence governance framework in a univer-
+sity: Universidad de la Costa case study. International Journal of Information Management, 50, 405-412.
+https://doi.org/10.1016/j.ijinfomgt.2018.11.012
+Office of Management and Budget. (2012). The common approach to federal enterprise architecture.
+https://obamawhitehouse.archives.gov/sites/default/files/omb/assets/egov_docs/common_ap-
+proach_to_federal_ea.pdf
+Office of Management and Budget. (2013). Federal enterprise architecture framework: Version 2.
+https://obamawhitehouse.archives.gov/sites/default/files/omb/assets/egov_docs/fea_v2.pdf
+Olszak, C. M., & Ziemba, E. (2012). Critical success factors for implementing business intelligence systems in
+small and medium enterprises on the example of upper Silesia, Poland. Interdisciplinary Journal of Information,
+Knowledge, and Management, 7(2), 129-150. https://doi.org/10.28945/1584
+Pham, Q. T., Mai, T. K., Misra, S., Crawford, B., & Soto, R. (2016). Critical success factors for implementing
+business intelligence system: Empirical study in Vietnam. Proceedings of the International Conference on Computa-
+tional Science and its Applications (pp. 567-584). Springer. https://doi.org/9-42092-319-3-978/10.1007_43
+Popovič, A., Hackney, R., Coelho, P. S., & Jaclik, J. (2012). Towards business intelligence systems success: Ef-
+fects of maturity and culture on analytical decision making. Decision Support Systems, 54(1), 729-739.
+https://doi.org/10.1016/j.dss.2012.08.017
+Popovič, A., Turk, T., & Jaklič, J. (2010). Conceptual model of business value of business intelligence sys-
+tems. Management: Journal of Contemporary Management Issues, 15(1), 5-30. https://hrcak.srce.hr/file/81743
+Project Management Institute. (2013). A guide to the project management body of Knowledge (PMBOK® Guide) – Fifth
+Edition. https://doi.org/10.1002/pmj.21345
+Ranjbarfard, M., & Hatami, Z. (2020). Critical success factors for implementing business intelligence projects
+(A BI implementation methodology perspective). Interdisciplinary Journal of Information, Knowledge, and Man-
+agement, 15, 175-202. https://doi.org/10.28945/4607
+Rouhani, B. D., Mahrin, M. N., Nikpay, F., Najafabadi, M. K., & Nikfard, P. (2015). A framework for evaluation
+of enterprise architecture implementation methodology. International Journal of Social, Education, Economics
+and Management Engineering, 9, 1-6. https://www.researchgate.net/publication/279851948_A_Frame-
+work_for_Evaluation_of_Enterprise_Architecture_Implementation_Methodologies
+Saaty, R. W. (1987). The analytic hierarchy process – What it is and how it is used. Mathematical Modelling, 9(3-5),
+161-176. https://doi.org/10.1016/0270-0255(87)90473-8
+Saaty, T. L. (1980). The analytical hierarchy process: Planning, priority, resource allocation. McGraw Hill.
+Salmeron, J. L., & Herrero, I. (2005). An AHP-based methodology to rank critical success factors of executive
+information systems. Computer Standards & Interfaces, 28, 1-12. https://doi.org/10.1016/j.csi.2004.09.002
+Sangar, A. B., & Iahad, N. B. A. (2013). Critical factors that affect the success of business intelligence systems
+(BIS) implementation in an organization. International Journal of Scientific and Technology Research, 2(2) ,14-16.
+http://www.ijstr.org/paper-references.php?ref=IJSTR-0213-5814
+Subagja, U., Hermanto, A. S., & Wang, G. (2020). Measuring success factors for business intelligence: Manage-
+ment perspective. International Journal of Science and Applied Information Technology, 9(6), 31-33.
+https://doi.org/10.30534/ijsait/2020/03962020
+
+--- PAGE 28 ---
+A Framework For Ranking Critical Success Factors of BI
+570
+Tavallaei, R., Shokohyar, S., Moosvi, S. M., & Sarfi, Z. (2015). Assessing the evaluation models of business in-
+telligence maturity and presenting an optimized model. International Journal of Management, Accounting and
+Economics, 2(9), 1005-1019. https://son.ir/wp-content/uploads/2018/08/345_final.pdf
+Trieu, V. H. (2016). Getting value from business intelligence systems: A review and research agenda. Decision
+Support Systems, 93, 111-124. https://doi.org/10.1016/j.dss.2016.09.019
+Villamarín-García, J. M. (2020). Contributions from organisational collaboration to business intelligence solu-
+tions success. International Journal of Business Information Systems, 33(1), 103-131.
+https://doi.org/10.1504/ijbis.2020.104806
+Villamarín-García, J. M., & Diaz Pinzon, B. H. (2017). Key success factors to business intelligence solution im-
+plementation. Journal of Intelligence Studies in Business, 7(1), 48-69. https://doi.org/10.37380/jisib.v7i1.215
+Wieder, B., & Ossimitz, M. (2013, September). Managing business intelligence for success: Factors and mecha-
+nisms. Proceedings of the International Conference on Management and Information Systems, 819-833.
+http://www.icmis.net/icmis13/icmis13cd/pdf/T3162-done.pdf
+Yeoh, W., & Koronios, A. (2010). Critical success factors for business intelligence systems. Journal of Computer
+Information Systems, 50(3), 23-32. http://hdl.handle.net/10536/DRO/DU:30033043
+Yeoh, W., & Popovič, A. (2016). Extending the understanding of critical success factors for implementing busi-
+ness intelligence systems. Journal of the Association for Information Science and Technology, 67(1), 134 - 147 .
+https://doi.org/10.1002/asi.23366
+Zaied, A. N. H., Grida, M. O., & Hussein, G. S. (2018). Evaluation of critical success factors for business intel-
+ligence systems using fuzzy AHP. Journal of Theoretical and Applied Information Technology, 96(19), 6406- 6422.
+https://www.researchgate.net/publication/346394873
+APPENDIX A
+First Survey Questionnaire
+Personal information
+Age Educational level Work experience and knowledge Field of study
+Pairwise comparison scale for AHP preferences, numerical rating, verbal judgments of preferences. If
+an element in a row has greater or equal importance than the element in the column, use the following
+table:
+Equal preference Slightly more
+important
+More important Very important Absolutely more
+important
+1 3 5 7 9
+But if the element in the column is more important than the element in the row, use the inverse of the
+mentioned procedure, which means employing the following table:
+Slightly more important More important Very important Absolutely more important
+1/3 1/5 1/7 1/9
+
+--- PAGE 29 ---
+Farshadi, Nazemi, & Abdolvand
+571
+Strategy
+Business
+needs
+identification
+User
+expectations
+identification
+Goals and
+strategies
+definitions clear
+Senior
+management
+support
+Alignment of
+business and
+information
+technology
+Business needs
+identification
+User expecta-
+tions identifica-
+tion
+Goals and strate-
+gies definitions
+clear
+Senior manage-
+ment support
+Alignment of
+business and in-
+formation tech-
+nology
+Business
+Clear definition of the
+goals of each business
+unit
+Business
+performance
+management
+Well-defined
+business process
+Business process
+reengineering
+Clear definition
+of the goals of
+each business
+unit
+Business
+performance
+management
+Well-defined
+business process
+Business process
+reengineering
+Data Data quality Quality of data access
+Data architecture com-
+patibility with the needs
+of the organization
+Data quality
+Quality of data access
+Data architecture com-
+patibility with the needs
+of the organization
+
+--- PAGE 30 ---
+A Framework For Ranking Critical Success Factors of BI
+572
+Application
+Analysis
+quality
+Scala-
+bility
+Flexibility
+Evolu-
+tionary
+develop-
+ment
+Ease of
+use of
+the
+system
+Integration of
+business intelli-
+gence with
+knowledge
+management
+Integration of
+business intelli-
+gence with other
+information sys-
+tems
+Analysis quality
+Scalability
+Flexibility
+Evolutionary
+development
+Ease of use of
+the system
+Integration of
+business intelli-
+gence with
+knowledge
+management
+Integration of
+business intelli-
+gence with
+other infor-
+mation systems
+Network and infrastructure
+Network infrastructure and
+communications
+Hardware quality
+Network infrastructure and
+communications
+Hardware quality
+Security Privacy Security standards
+Privacy
+Security standards
+Standards and
+configuration management
+Change management
+Data standards, metadata,
+platform
+Documentation
+Change management
+Data standards, metadata,
+platform
+Documentation
+
+--- PAGE 31 ---
+Farshadi, Nazemi, & Abdolvand
+573
+Human resource
+management
+User
+involvement
+Team
+leadership
+BICC team
+Project team
+skills
+User training
+and motivation
+User involvement
+Team leadership
+BICC team
+Project team skills
+User training and
+motivation
+Project
+management
+Scope
+manage-
+ment
+Time
+manage-
+ment
+Communica-
+tion manage-
+ment
+Risk
+management
+Procedure
+manage-
+ment
+Cost
+manage-
+ment
+Scope management
+Time management
+Communication
+management
+Risk management
+Procedure manage-
+ment
+Cost management
+Environment
+Power and
+politics
+Organizational
+culture
+Competitive
+pressure
+Transformation
+of customer
+needs
+Emergence
+of new
+technologies
+Power and politics
+Organizational
+culture
+Competitive pres-
+sure
+Transformation of
+customer needs
+Emergence of
+new technologies
+
+--- PAGE 32 ---
+A Framework For Ranking Critical Success Factors of BI
+574
+APPENDIX B
+Second survey questionnaire
+Please rate the effectiveness of each of the categories at different levels of maturity (Davenport BI
+maturity model) in integers for the range of 1 to 5.
+1 – Very Low 2 – Low 3 – Moderate 4 – High 5 – Very Much
+Layers
+Analytical
+disability
+Local
+analysis
+Analytical
+passion
+Analytical
+companies
+Analytical
+competitors
+Strategy
+Business
+Data
+Application
+Network and infrastructure
+Security
+Standards and configuration
+management
+Project management
+Human resource management
+Environment
+AUTHORS
+Ramina Farshadi has graduated from Shahid Beheshti University with a
+Master of Information Technology Engineering - Enterprise Architec-
+ture. She is interested in the field of business intelligence and enterprise
+architecture.
+Eslam Nazemi was born in Sarab, Iran, in 1954. He gained a BSc degree
+in Applied Mathematics and Operational Research from the School of
+Planning and Computer Application, Tehran, Iran, in 1977, an MSc de-
+gree in both System Engineering and Economics in 1987 and 1996, and a
+Ph.D. in Industrial Engineering and Information Technology in 2005. He
+was a faculty member in 1978 in the School of Planning and Computer
+Applications and then from 1986 to the present, he has been in the Com-
+puter Engineering Faculty at Shahid Beheshti University (SBU), Tehran,
+Iran. He was the Deputy of Graduate and Education Affairs, Manager of
+Informatics Development of Education at SBU and now is the Manager
+of the Electronic Education Center at SBU. He is an Associate Professor
+in the Computer Engineering and IT Department. His main fields of research are self-software engi-
+neering, large-scale software development, and self-adaptive software quality. He has authored and
+co-authored more than 100 papers in journals and conferences and has authored 10 books on mathe-
+matics, project management, software engineering, software quality, and game theory.
+
+--- PAGE 33 ---
+Farshadi, Nazemi, & Abdolvand
+575
+Neda Abdolvand is an associate professor in Alzahra University. She
+holds her Ph.D. and MS in information technology from Tarbiat Modares
+University and a post-graduate certificate in information systems from
+Melbourne University. She has been a member of the Association for In-
+formation Systems since 2009. She is interested in research in the field of
+information systems and technology, business intelligence, and big data
+analytics.

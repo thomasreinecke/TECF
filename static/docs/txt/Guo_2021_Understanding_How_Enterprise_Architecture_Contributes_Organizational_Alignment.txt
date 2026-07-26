@@ -1,0 +1,728 @@
+--- PAGE 1 ---
+HAL Id: hal-03648160
+https://inria.hal.science/hal-03648160v1
+Submitted on 21 Apr 2022
+HAL is a multi-disciplinary open access archive
+for the deposit and dissemination of scientific re-
+search documents, whether they arepublished or not.
+Thedocumentsmaycomefromteachingandresearch
+institutions in France or abroad, or from public or pri-
+vate research centers.
+L’archiveouvertepluridisciplinaireHAL,estdes-
+tinée au dépôt et à la diffusion de documents scien-
+tifiquesdeniveaurecherche, publiésounon, émanant
+des établissements d’enseignement et de recherche
+français ou étrangers, des laboratoires publics ou
+privés.
+Distributed under a Creative Commons CC BY 4.0 - Attribution - International License
+Understanding How Enterprise Architecture Contributes to
+Organizational Alignment
+Hong Guo, Jingyue Li, Shang Gao, Darja Smite
+To cite this version:
+Hong Guo, Jingyue Li, Shang Gao, Darja Smite. Understanding How Enterprise Architecture Contributes to
+Organizational Alignment. 20th Conference on e-Business, e-Services and e-Society (I3E), Sep 2021, Galway,
+Ireland. pp.383-396, ⟨10.1007/978-3-030-85447-8_33⟩. ⟨hal-03648160⟩
+
+--- PAGE 2 ---
+This document is the original author manuscript of a paper submitted to an IFIP
+conference proceedings or other IFIP publication by Springer Nature. As such, there
+may be some differences in the official published version of the paper. Such
+differences, if any, are usually due to reformatting during preparation for publication or
+minor corrections made by the author(s) during final proofreading of the publication
+manuscript.
+
+--- PAGE 3 ---
+Understanding How Enterprise Architecture Contributes
+to Organizational Alignment
+Hong Guo1,2[0000-0003-3608-0981]
+, Jingyue Li2[0000-0002-7958-391X]
+, Shang Gao3[0000-0002-3722-
+6797]
+and Darja Smite2,4[0000-0003-1744-3118]
+1
+Anhui University, No. 111 Jiulong Road, Hefei, China
+2
+Norwegian University of Science and Technology, Trondheim, Norway
+{hong.guo, darja.smite, jingyue.li}@ntnu.no
+3
+Örebro University, Örebro, Sweden
+shang.gao@oru.se
+4
+Blekinge Institute of Technology, Karlskrona, Sweden
+darja.smite@bth.se
+Abstract. Alignment is one of the most important benefits that Enterprise Archi-
+tecture (EA) could bring to organizations. However, it is still unclear what mech-
+anism EA uses to help organizations achieve alignment. Related research is very
+scattered, making it difficult to accumulate relevant knowledge and experiences,
+and thus, the more successful EA application is hindered. To address this issue,
+the present research examines essential requirements of alignment and mecha-
+nisms with which underlying EA deliverable models impact organizations. By
+doing so, we proposed a conceptual framework explaining how EA modeling
+activities contribute to organizational alignment. We demonstrated the use of this
+framework with three use cases. The results show that EA could help organiza-
+tions achieve alignment in quite different ways, and our proposed framework
+helped us examine and understand the mechanisms. We expect this research
+could establish an essential common understanding of how EA enables organi-
+zational alignment, thereby facilitating academia to move forward in this field.
+Keywords: Alignment, Enterprise Architecture, EA, Model Quality.
+1 Introduction
+Empirical studies showed that Enterprise Architecture (EA) brought various benefits to
+organizations. However, the application of EA does not always succeed and also faces
+multiple challenges such as its complexity, heavy workload demand, and poor user ac-
+ceptance [1]. This motivated researchers to examine the mechanism of how to achieve
+EA benefits. Among all these benefits, alignment is one of the most important benefits
+that EA could bring to organizations, directly or indirectly [2]. Some benefits are di-
+rectly referred to as strategy alignment, business-IT alignment, and partner alignment
+[2]. Other benefits, such as agility, are thought to be relied on alignment significantly
+[3]. We limited our focus on organizational alignment (so called alignment in this pa-
+per), covering all such relation compliance in an organizational context. To our
+
+--- PAGE 4 ---
+2
+knowledge, there is little consensus about how EA brings organizational alignment.
+Relevant researches are very scattered [4], fragmented, and lacks explanatory theories
+[5], making it difficult to accumulate relevant knowledge and experience.
+This problem motivated the present research. In this research, we examined the na-
+ture of organizational alignment requirements, EA primary deliverables, and EA mech-
+anisms to impact organizations. The result shows alignment focuses on the compliance
+ofrelationsamongorganizationalcomponents.Alignmentshallbeachieved with acon-
+tinuous process. The result also shows that EA deliverable models provide the capabil-
+ity to represent and realize the compliance of relations among organizational compo-
+nents through a series of modeling activities. And such activities could be included in
+the continuous process of aligning.
+To understand how different modeling activities contribute to alignment goals, sep-
+arately and as a whole, we proposed a framework named EA-AIR. In this framework,
+we decompose thealignmentprocess intoparts wheredifferent modelingactivities con-
+tribute to and identify key factors of such activities that impact alignment goals. This
+article also demonstrates how to use the framework to analyze EA’s contributions to
+organizational alignment with three use cases.
+The remainder of the paper is structured as follows. Section 2 introduces relevant
+background knowledge. Section 3 proposes a conceptual framework based on existing
+theories. In Section 4, we present three use cases where EA plays different organiza-
+tional roles. We demonstrate how to use the proposed framework to analyze the mech-
+anism EA contributes to organizational alignment in each case. Then, we discuss how
+to use this framework to better apply EA for alignment goals in Section 5. Lastly, we
+conclude the paper in Section 6.
+2 Background
+This section introduces some background knowledge about organizational alignment
+and EA. Because EA is generally delivered as (graphical) models, we also present rel-
+evant knowledge about different modeling activities and factors that make good mod-
+els. Based on such knowledge, we summarize possible explanations on why and how
+EA contributes to alignment achievement.
+2.1 Organizational Alignment
+Alignment in dictionaries is defined as "the act of aligning or state of being aligned
+[6]", "arrangement in a straight line or in correct relative positions [7]", and "the proper
+positioning or state of adjustment of parts (as of a mechanical or electronic device) in
+relation to each other [6]".
+When alignment is used in organizational contexts, it is defined as "the continuous
+process, involving management and design sub-processes, of consciously and coher-
+ently interrelating all components of the business-IT relationship in order to contribute
+to the organization's performance over time [8]". Typically, organizational alignment
+
+--- PAGE 5 ---
+3
+is often referred to but not limited to Strategy Alignment [9, 10], Business-IT Align-
+ment [8, 11, 12], and Partner Alignment [2]. Literally, their focuses differ a little bit on
+relations that are primarily considered and strive to achieve. For instance, Strategy
+alignment indicates that organizations' resources shall be appropriately arranged to re-
+alize strategies. Business-IT alignment cares about whether business and IT compo-
+nents have supported each other.
+To summarize, organizational alignment is in general about the compliance of rela-
+tions among organization components. It is about a status that needs to be achieved by
+a continuous process involving a series of activities.
+2.2 Enterprise Architecture
+EA is generally defined as "The fundamental organization of a system, embodied in its
+components, their relationships to each other and the environment, and the principles
+governing its design and evolution [13] ". Here, an enterprise is viewed as a "system"
+[13].
+EA is usually delivered as a set of abstract graphics covering the enterprise's high-
+level content across areas such as strategy, business, information, and technology. We
+call these abstractions EA artifacts or EA models as they are usually in graphical forms.
+To summarize, EA is usuallydelivered as a set of graphical artifacts named EA mod-
+els. Such models could represent organizational components and their relations in-
+volved in an alignment goal. They could reflect and influence reality (e.g., realizing the
+alignment goal) by means of a series of modeling activities.
+2.3 Models
+Models are generally defined as "explicit representations of some portions of reality
+as perceived by some actor [14]". However, models can also influence reality if they
+are active [15]. This means when a model is changed, the way some actors perceive
+reality (reflected by the model) is also changed. Actors in this context include users and
+software components.
+Model activation is the process by which a model affects reality. Model activation
+involves actors interpreting the model and, to some extent adjusting their behavior ac-
+cordingly. This process can be automatic, manual, or interactive. We define a model to
+be interactive if it is interactively activated.
+An interactive model entails coevolution of the model and its domain. The process
+of updating an interactive model is called articulation. The interplay of articulation
+and activation reflects the mutual constitution of interactive models and the social real-
+ity.
+Researchers pursued to define what makes a good model as it is crucial to influence
+the reality that the model reflects [16]. In [16], the authors distinguished between goals
+and means by separating what to achieve in modeling from how to achieve. The notion
+of feasibility was introduced to make goals more realistic. A framework summarizing
+modelqualitygoals andmeanswas proposed (hereafter calledthe SEQUALframework
+
+--- PAGE 6 ---
+4
+[17]). The SEQUAL framework was closely linked to linguistic concepts as it was rec-
+ognized that modeling is essentially making statements in some language. Its initial
+version [16] considered three quality levels: syntactic, semantic, and pragmatic quality.
+The framework was later extended [17] [18] to include more quality aspects such as
+physical quality and empirical quality. It was also revised [15] to make it more appro-
+priate for active models.
+2.4 EA and Organizational Alignment
+BasedonourunderstandingofEA(models)andorganizationalalignment asintroduced
+above,weidentifiedsomefactswhichexplained whyEAcouldfacilitateorganizational
+alignment.
+• Organizational alignment is about the compliance of relations among fundamental
+components of an organization. EA can represent such relations as well as compo-
+nents involved in the relations.
+• Organizational alignment often involves statuses of both "as is" and "to-be." EA
+can represent such with descriptive and prescriptive models.
+• Organizational alignment takes place in reality. EA Models can influence reality by
+facilitating (human and technical) actors to learn new knowledge and take action.
+• Organizational alignment is achieved through a continuous process. EA model can
+evolve and continuously interact with reality utilizing articulation and activation.
+Such modeling activities can be embedded in such an aligning process.
+• How well models actually influence reality highly depends on the model quality.
+Based on these facts, we aim to construct an explanatory theory to systematically un-
+derstanding mechanisms of EA-enabled alignment.
+3 The EA-AIR Conceptual Framework
+We define Alignment Insights and Recommendations (AIR) as descriptive and pre-
+scriptive information relevant to alignment relations. Such information can be gener-
+ated fromdatacollectedaccordingtothealignmentcontextand convertedtoknowledge
+after interpretation of people or tools.
+We think EA contributes to organizational alignment, primarily by representing AIR
+(entailed by developing EA deliverable models) and realizing AIR (entailed by activat-
+ing EA deliverable models). Therefore, we name the proposed framework as EA-AIR
+because it helps us decompose the alignment process and examine relevant activity as-
+pects that might impact the EA models delivered.
+We pursue using the EA-AIR framework to explain the mechanism of EA-enabled
+alignment, namely, how different EA activities, separately and as a whole, help organ-
+izations achieve alignment goals and the key influencing factors.
+We describe how we derived the EA-AIR framework and formalize it in this section.
+
+--- PAGE 7 ---
+5
+3.1 Deriving the EA-AIR framework
+As explained in Section 2, we assume that it is possible to decompose the overall align-
+ment process into parts where different (EA) modeling activities can contribute. We
+also think it is possible to identify key aspects that impact the quality of delivered (EA)
+models. By examining the decomposed parts of the alignment process and key aspects
+of involved modeling activities, we can better analyze, at a smaller granularity, how
+alignment goals are achieved through EA.
+First, we decompose the alignment process into five parts where different modeling
+activities could contribute. As shown in Table 1, we could observe how various mod-
+eling activities, separately and accumulatively, help organizations achieve alignment
+goals. Notably, in the first three parts (colored in light blue in Table 1), EA activities
+are primarily leveraged to represent AIR and thus more restricted to (paper or elec-
+tronic) models themselves. While in the last two parts, EA activities are more about
+realizing AIR and therefore take place in reality.
+Table 1. Mapping EA modeling activities to alignment achieving process.
+Alignment
+process
+Alignment
+Scoping
+(AS)
+Alignment
+Embodiment
+(AE)
+Alignment
+Augmentation
+(AA)
+Alignment
+Realization
+(AR)
+Alignment
+Maintenance
+(AM)
+(EA) model-
+ling activities
+Model concep-
+tualization
+Model exter-
+nalization
+Model compu-
+tation
+Model activation Model evolu-
+tion
+Second, we identify key aspects of modeling activities in each part, which significantly
+impact the quality of delivered models. This work was done in two steps:
+• Step 1: observing which model quality goals [15] can be decided in relevant model-
+ing activities.
+• Step 2: identifying aspects (means) that could impact the quality goals according to
+[15, 17], specializing the aspects considering the alignment context, and compensat-
+ing with new aspects to activities that are not discussed in [15, 17], according to
+common knowledge.
+Regarding step 1, we cover five main model quality described in [15, 17]: physical
+quality, syntactic quality, semantic quality, empirical quality, and pragmatic quality.
+There are more quality aspects described in [15, 17]. We do not include them, namely
+organization quality, perceived semantic quality, and social quality, for two reasons.
+First, these three aspects are more about how models fit with the environment (organi-
+zations and stakeholders) than models themselves. Second, according to [15], such as-
+pects are unavailable for a formal inspection.
+Regarding step 2, firstly, we identify some modeling aspects that could contribute to
+a specific modeling quality according to the SEQUAL framework [15]. For instance,
+as defined in [16], feasible completeness is one of the main goals/aspects relevant to
+semantic quality. Secondly, we further consider these identified aspects and specialize
+
+--- PAGE 8 ---
+6
+them in the alignment context. For instance, feasible completeness means that compo-
+nents and relations among them relevant to the alignment goal have been completely
+covered. In other words, this is about the scoping of EA. We further identify three di-
+mensions that could define this scope: domain, abstraction level, and timeline. Thirdly,
+for some parts that no model quality is directly related to, we think about general solu-
+tions according to our best knowledge and make abstractions to summarize them as
+aspects. For instance, for alignment maintenance, a general solution is to evaluate the
+models by organizing regularmeetings to collect feedbacks,adjusting, and starting new
+cycles. Thus, we propose evaluation and cycle as two aspects in this part. Results of
+Step 1 and 2 are appended to Table 1, as shown in the third and fourth rows of Table 2.
+Table 2. Model qualities and modeling aspects relevant to modeling activities.
+Alignment
+process
+Alignment
+Scoping
+(AS)
+Alignment
+Embodiment
+(AE)
+Alignment
+Augmentation
+(AA)
+Alignment Real-
+ization
+(AR)
+Alignment
+Maintenance
+(AM)
+Modeling ac-
+tivities
+Model con-
+ceptualiza-
+tion
+Model externali-
+zation
+Model compu-
+tation
+Model activation Model evolu-
+tion
+Model quali-
+ties
+Semantic
+quality
+Syntactic quality,
+physical quality,
+empirical quality
+Pragmatic
+quality (as gen-
+eral models)
+Pragmatic quality
+(as active mod-
+els)
+Modeling as-
+pects
+• Domain
+• Abstrac-
+tion level
+• Timeline
+• Intensity
+• Medium
+• Repository
+• Leveraging
+computa-
+tion
+• Enabling
+learning
+• Enabling ac-
+tions
+• Automatic
+activation
+• Evaluation
+• Cycles
+3.2 Formalizing the EA-AIR framework
+To make Table 2 easy to use, we simplified it by hiding the two middle rows and use
+the remainder (bolded parts of Table 2) to formalize the proposed framework, as pre-
+sented in Table 3. Each part and aspect in the framework are formally defined as below.
+Alignment Scoping (AS): this is to define the scope of alignment, namely, which
+components shall be identified/created, and which relations shall be identified/estab-
+lished. We identified three dimensions where alignment might cover. The first dimen-
+sion is the domain, such as business domain, data domain, application domain, and
+service domain. The second dimension is the abstraction level, such as vision, strategy,
+capability, solution. The third dimension is about time, like "as is" and "to-be."
+Alignment Embodiment (AE): this explicitly represents alignment (i.e., relations and
+relevant components). Three aspects are included here. The first aspect is the intensity
+indicating how intense the alignment relations are presented (e.g., explicit, based on
+taxonomies, formally defined with meta-model, verified by tools). The second aspect
+is the medium. It aims to represent which medium is used for the externalization, such
+
+--- PAGE 9 ---
+7
+as physical medium and electronic medium. The third aspect describes how the model
+artifacts are stored, by using a single digital repository, for instance.
+Alignment Augmentation (AA): this is to augment and enhance the alignment rela-
+tions by calculating them. The augmentation might include static analysis, dynamic
+simulation, and prediction by leveraging various computation techniques. AA is the
+place where more added value could be explored and attached to original models.
+Alignment Realization (AR): in this part, EA models are used to influence reality.
+Three aspects are included in this part. The first two aspects describe how models ena-
+ble humanusers to learnor take actions (i.e., manual modelactivation). The third aspect
+illustrates how to use tools to trigger automatic model activation.
+Alignment Maintenance (AM): this is to maintain/ continuously approach the align-
+ment status. Often, it is conducted in terms of periodically evaluating and restarting the
+whole cycle.
+Table 3. Formalization of the EA-AIR conceptual framework.
+Alignment
+Scoping
+(AS)
+Alignment
+Embodiment
+(AE)
+Alignment
+Augmentation
+(AA)
+Alignment
+Realization
+(AR)
+Alignment
+Maintenance
+(AM)
+• Domain
+• Abstraction level
+• Timeline
+• Intensity
+• Medium
+• Repository
+• Leveraging
+computation
+• Enabling learning
+• Enabling actions
+• Automatic activation
+• Evaluation
+• Cycles
+4 Case studies
+According to [19], there are typically three schools of thought regarding EA, namely
+Enterprise IT Architecting, Enterprise Integrating, and Enterprise Ecological Adapta-
+tion. The scope and purpose of EA differ a lot for these three thoughts, as summarized
+in the three right columns of Table 4 [19]. To demonstrate how to use our proposed
+framework, we chose representative studies for each type as our cases (as shown in
+Table 4). In these empirical studies, comprehensive descriptions about applying EA to
+achieve alignment goals can be found.
+In the following sub-sections, we analyze how EA has contributed to achieving
+alignmentintypicalcasesofeachofthethreeschoolsbasedontheEA-AIRframework.
+We also tentatively quantified the results by giving each part of these three cases' align-
+ment process a score. According to the author’s preliminary assessment, an integer
+score between 0 and 3 is given, depending on the extent to which EA is fully utilized
+in each case according to our proposed framework. By doing so, we compared the re-
+sults for the three cases in a visualized way. The three cases are summarized as:
+Case 1 is about one of the largest insurance companies in the world [20]. The com-
+pany introduced agile methods on a larger scale in 2016, ran ten large-scale agile de-
+velopment programs with more than 5,000 employees, and decided to initiate the sec-
+ond wave of the transformation by applying agile methods across the enterprise. The
+EA team was tasked with the alignment of the running large-scale agile development
+programs, particularly about the technologies and standards used.
+
+--- PAGE 10 ---
+8
+Case 2 [21] describes a case of leveraging advanced EA Management (EAM) tools
+to implement the EU's General Data Protection Regulation (GDPR). GDPR is drawing
+increasing attention [22], andaccordingto our previous research [23], it might be avery
+typical scenario where EA and EAM tools can play an important role. Industry/com-
+mercial tools are often less observed by academia, although their importance has been
+recognized [24-26]. We did not find scientific studies where such a case is reported.
+We analyzed a customer story reported by a leading EAM tool vendor on their official
+website, therefore [21]. Kommunal Landspensjonskasse (KLP), which is Norway's
+largest pensions and life insurance company, has used a leading EAM tool, namely
+ABACUS, since 2016. To comply with GDPR, the company reconsidered the way they
+capture, manage, and process personal data and fully understood how the data manage-
+ment is aligned to contribute to their level of compliance and effectively produce regu-
+latory documents.
+Case 3 [27] described a smart city case where data was collected from an organiza-
+tion and a municipality in Norway. In this case, two major EA artifacts were modeled
+in the language of ArchiMate [28]. One artifact illustrated how individual enterprises
+were aligned/ collaborated to create and provide services. The other one depicted how
+business could be aligned and mapped with IT strategies.
+Table 4. Cases for different schools of EA thoughts.
+Case EA School Scope Purpose
+C1 Enterprise IT
+Architecting
+All compo-
+nents of the
+enterprise IT
+assets
+Effectively execute and operate the overall enterprise strategy for
+maintaining a competitive advantage by aligning the business and
+IT strategies such that the proper IT capabilities are developed to
+support current and future business needs
+C2 Enterprise
+Integrating
+All facets of
+the enter-
+prise
+Effectively implement the overall enterprise strategy by designing
+the various enterprise facets to maximize coherency between them
+and minimize contradictions
+C3 Enterprise
+Ecological
+Adaptation
+The enter-
+prise and its
+environment
+Help the organization innovate and adapt by designing the various
+enterprise facets to maximize organizational learning throughout
+the enterprise and encourage system-in-environment coevolution
+4.1 Case 1: EA for Large-Scale Agile Development Environment
+We analyze how EA contributed to the alignment goal according to our proposed
+framework for this case. First, EA was scoped as architectural principles, guidelines,
+and Key Performance Indicators (KPIs). Second, the EA artifacts seemed to be pre-
+sented in an initial and direct way. Third, there seemed not to be any computation aug-
+mented. Fourth, efforts were put on EAM initiatives which complemented the enforce-
+ment-centric view of traditional EAM by an influence-centric view. They were exerted
+by normative and mimetic pressures to enforce principles without encountering agile
+teams' resistance. Voting on the adoption, refinement, or rejection of EA artifacts also
+facilitated the learning and actions. Fifth, the articulation of EA and continuous inter-
+actions between EA and the domain was conducted. Web applications have supported
+
+--- PAGE 11 ---
+9
+automated testing and an overview of which guidelines (EA artifact) were applied by
+which teams. Feedbackonusing guidelines was collected forguideline adjustment. The
+result is summarized in Table 5.
+Table 5. Scoring alignment levels for Case 1.
+AS: 1 AE: 0 AA: 0 AR: 2 AM: 2
+Abstraction level: high-
+level; Domain: architecture
+principles, guidelines, and
+KPIs to align organizational-
+wide goals and implementa-
+tions
+NA NA Enabling actions: voting
+on adoption of EA,norma-
+tive&mimeticpressuresto
+facilitate the application of
+EA
+Evaluation: collecting
+feedback to change EA,
+automated testing, an
+overview of the appli-
+ance
+4.2 Case 2: Leveraging EA Tools to Implement GDPR
+According to the EA-AIR framework, the first aspect is about the alignment scope. To
+comply with the GDPR, comprehensive data needs to be analyzed in broad scope, in-
+cluding personal data, systems, applications, and business priorities. Second, with the
+advanced commercial tool's support, data can be managed based on well-defined meta
+models and maintained in asingle digital repository. Data canbe imported from various
+applications or collected by inviting corresponding stakeholders to input. Third, Avo-
+lution [29], as one of the leading EAM tools, provided KLP multiple computation sup-
+port.Suchsupportsinclude keepingdatauptodatewhencontentischanged andprovid-
+ingan "auto-generatedmulti-pagereportwhichdetailsthecompany'ssystemsandcom-
+pliance." Fourth, learning new knowledge was facilitated. As said in [21], "visualize
+this analysis, helping people understand." "Day-to-day, this information vault allows
+them to generate a picture of the technology, an understanding of what each system
+does and what part of the portfolio it fits into." In addition, collaboration was enabled
+through inviting data collection and triggering communications. Fifth, the team runs a
+full ABACUS report monthly as part of the company's evidence of compliance. The
+result is summarized in Table 6.
+Table 6. Scoring alignment levels for Case 2.
+AS: 3 AE: 3 AA: 3 AR: 1 AM: 1
+Domain, abstrac-
+tion level, timeline:
+comprehensive data
+collected in a broad
+scope
+Intensity: well-defined
+meta-models; Reposi-
+tory: a single digital re-
+pository, inviting data
+collection, data integra-
+tion
+Leveraging
+computation:
+Keeping data
+up to date, au-
+tomatic report
+generation
+Enable learning: eve-
+ryday information
+vault, rich visualiza-
+tion; Enabling ac-
+tions: triggering com-
+munications
+Evaluation, cy-
+cles: running
+full report
+monthly
+
+--- PAGE 12 ---
+10
+4.3 Case 3: EA in a Smart Cities Project
+According to the framework, first, two types of EA artifacts were developed and ap-
+plied. One artifact covered high-level enterprise collaboration relations, and the other
+one described how business is aligned with IT strategies. Second, EA artifacts were
+modeled in well-defined language, namely ArchiMate. Third, no information was
+found about if computation was applied to the EA artifacts. Forth, the EA models were
+prepared for each session of a focus group, and it was ensured that all vital issues were
+discussed. Fifth, after each session, the discussion results were presented in models,
+refined, and confirmed. The analysis is summarized in Table 7.
+Table 7. Scoring alignment levels for Case 3.
+AS: 2 AE: 2 AA: 0 AR: 1 AM:1
+Domain, abstraction level:how
+enterprises collaborate to pro-
+vide services, how business is
+aligned with IT strategies
+Intensity: well de-
+fined meta-models/
+modeling languages
+NA Enabling learning,
+enable actions: en-
+suring all issues are
+discussed based on
+models
+Evaluation/cycles:
+multiple sessions,
+refining &confirm-
+ing models
+4.4 Comparing the Three Cases
+The results are compared and visualized in Figure 1. As shown in the figure, these three
+cases present pretty different EA ways to help organizations achieve alignment. While
+Case 2 focuses more on representing AIR formally and comprehensively by leveraging
+powerful tools and computations (technical aspects), Case 1 paid more attention to re-
+alizing AIR (social aspects). Case 3 comparatively employed a more balanced way to
+achieve alignment.
+Fig. 1. Comparing the three cases by tentatively quantifying the results.
+
+--- PAGE 13 ---
+11
+5 Discussions
+We discuss how to apply our proposed framework to use EA better in contributing to
+organizations' various alignment goals.
+"Just enough" AIR: EA shouldbe customized to provide "just enough" AIR in a "just
+enough" way. EA could provide AIR with different scope, intensity, medium, calcula-
+tion, and other capabilities. The cost of EA is different accordingly. Considering the
+ever-existed Return on Investment (ROI) pressure in organizations [30], EA should
+strive to balance and provide cost-effective AIR. Therefore, EA should focus on users'
+needs andbe "just enough" (lightweight, eliminatingwastes, but withoutcompromising
+necessary quality). To achieve this goal, analyzing each EA artifact (with small granu-
+larity) and each modeling aspect (as indicated by the EA-AIR framework), instead of
+analyzing EA as a whole, might be needed.
+Between AIR and the reality: Organizations should complement EA with other re-
+sources to use AIR to achieve the best alignment. As a set of models, EA strives to
+provide the best insights and (learning and acting) recommendations according to or-
+ganizations' specific scenarios and requirements to achieve alignment. Organizations
+should think about how to make better use of them. This imply not only direct efforts
+in AR part of the EA-AIR framework, but also some indirect efforts related to other
+parts, such as trainings and governance policies.
+Use AIR continuously: Anorganizational environment mightbe changing due tovar-
+ious reasons. Besides, when EA users learn and act according to AIR, they gain differ-
+ent knowledge and change domains (organizational components and environment).The
+new knowledge and the changed domain, in turn, might indicate not only changes in
+the facts on which AIR is based but also changes in AIR requirements. Therefore, AIR
+often requires to be continuously adapted and applied to keep its effectiveness (AM).
+Leverage AIR for organizational agility: It is increasingly important for organiza-
+tions to keep agile [3]. On the one hand, organizations need AIR to do the right things
+in the right way so that to keep lean (eliminating waste without compromising quality)
+and responding to changes. On the other hand, as one component of an organization,
+EA by itself should be agile. That also indicates why "just enough" and "continuous"
+AIR is important.
+Evaluation and Improvement: The proposed EA-AIR framework could be used for
+systematically evaluate how well EA has been leveraged for alignment goals, but also
+could be used for further analyzing how to improve relevant efforts.
+6 Conclusion
+This article examined notable theories of EA modeling and alignment and proposed a
+framework named EA-AIR explaining how EA helps organizations achieve alignment.
+We employed three cases to demonstrate how to use the framework. The result shows
+that, in these three cases, EA used quite different mechanismsto help achieve the align-
+ment goals, and our proposed framework helped us examine and understand the mech-
+anisms. This indicates that our proposed framework can classify and structure relevant
+
+--- PAGE 14 ---
+12
+studies about applying EA for (achieving, measuring, and maintaining) organizational
+alignment. By doing so, a common understanding of how EA enables alignment could
+be gained for academia to move forward in this field. With such a picture and relevant
+knowledge in mind, we expect organizations to leverage EA-relevant techniques and
+methods systematically and intentionally to achieve alignment effectively and effi-
+ciently.
+The main limitation of the present research is the lack of further validation of the
+proposed framework. By far, we have only applied it to three cases which might be
+representative but far from sufficient. The proposed modeling aspects also need to be
+further enumerated to be more inclusive and exhaustive. In addition, it is not clear
+enough how organizations could benefit from this framework concretely and practi-
+cally. Thus, we plan to review relevant works systematically to validate and enhance
+the framework. We also plan to apply the framework in real projects. In this way, we
+will investigate how to deliver feasibly good methods for specific alignment and organ-
+izational context based on the proposed framework.
+Acknowledgments
+This research is financially supported by The European Research Consortium for In-
+formatics and Mathematics (ERCIM) (https://www.ercim.eu/). This work has been par-
+tially supported by NFR 295920 IDUN.
+Reference
+1. Guo, H., J. Li, and S. Gao. Understanding challenges of applying enterprise architecture in
+public sectors: A technology acceptance perspective. in 2019 IEEE 23rd International
+Enterprise Distributed Object Computing Workshop (EDOCW). 2019. IEEE.
+2. Niemi, E., Enterprise architecture benefits: Perceptions from literature and practice.
+Tietotekniikan tutkimusinstituutin julkaisuja, 1236-1615; 18, 2008.
+3. Tallon, P.P. and A. Pinsonneault, Competing perspectives on the link between strategic
+information technology alignment and organizational agility: insights from a mediation
+model. MIS quarterly, 2011: p. 463-486.
+4. Zhang, M., H. Chen, and A. Luo, A systematic review of business-IT alignment research
+with enterprise architecture. IEEE Access, 2018. 6: p. 18933-18944.
+5. Foorthuis, R., et al., A theory building study of enterprise architecture practices and benefits.
+Information Systems Frontiers, 2016. 18(3): p. 541-564.
+6. Merriam-Webster. Alignment. 2021; Available from: https://www.merriam-
+webster.com/dictionary/alignment.
+7. Oxfordify. Alignment. 2021; Available from:
+https://www.oxfordify.com/meaning/alignment.
+8. Maes, R., et al., Redefiningbusiness-IT alignmentthrough aunified framework. Universiteit
+Van Amsterdam/Cap Gemini White Paper, 2000.
+9. Gregor, S., D. Hart, and N. Martin, Enterprise architectures: enablers of business strategy
+and IS/IT alignment in government. Information Technology & People, 2007.
+
+--- PAGE 15 ---
+13
+10. Henderson, J.C. and H. Venkatraman, Strategic alignment: Leveraging information
+technology for transforming organizations. IBM systems journal, 1999. 38(2.3): p. 472-484.
+11. Luftman, J. and T. Brier, Achieving and sustaining business-IT alignment. California
+management review, 1999. 42(1): p. 109-122.
+12. Luftman, J. and R. Kempaiah, An Update on Business-IT Alignment:" A Line" Has Been
+Drawn. MIS Quarterly Executive, 2007. 6(3).
+13. ISO/IEC/IEEE, ISO / IEC / IEEE 42020：2019. 2019.
+14. Wegner, P. and D. Goldin, Interaction as a Framework for Modeling. Conceptual Modeling,
+1999: p. 243-257.
+15. Krogstie,J., G. Sindre, andH. Jørgensen, Processmodels representingknowledgefor action:
+a revised quality framework. European Journal of Information Systems, 2006. 15(1): p. 91-
+102.
+16. Lindland, O.I., G. Sindre, and A. Solvberg, Understanding quality in conceptual modeling.
+IEEE Software, 1994. 11(2): p. 42.
+17. Krogstie, J., O.I. Lindland, and G. Sindre, Defining quality aspects for conceptual models,
+in Information System Concepts. 1995, Springer. p. 216-231.
+18. Krogstie, J. and H.D. Jørgensen. Quality of interactive models. in International Conference
+on Conceptual Modeling. 2002. Springer.
+19. Lapalme, J., Three schools of thought on enterprise architecture. IT professional, 2011.
+14(6): p. 37-43.
+20. Uludag, Ö., S. Nägele, and M. Hauder, Establishing architecture guidelines in large-scale
+agile development through institutional pressures: A single-case study. 2019.
+21. Avolution. Marshalling data. 2021; Available from:
+https://www.avolutionsoftware.com/use-cases/data-privacy-security-enterprise-
+architecture/.
+22. Rozehnal, P. and V. Novák, The Core of Enterprise Architecture as a Management Tool:
+GDPR Implementation Case Study. 2018.
+23. Guo, H., et al., Agile Enterprise Architecture by Leveraging Use Cases., in Proceedings of
+the 16th International Conference on Evaluation of Novel Approaches to Software
+Engineering - MDI4SE. 2021, SciTePress.
+24. Nowakowski,E.,M. Häusler,andR. Breu. AnalysisofEnterpriseArchitecture Tool Support
+for Industry 4.0 Transformation Planning. in 2018 IEEE 22nd International Enterprise
+Distributed Object Computing Workshop (EDOCW). 2018. IEEE.
+25. Korhonen, J.J., et al. Adaptive enterprise architecture for the future: Towards a
+reconceptualization of EA. in 2016 IEEE 18th Conference on Business Informatics (CBI).
+2016. IEEE.
+26. Naranjo, D., M.E. Sánchez, and J. Villalobos, Evaluating the capabilities of Enterprise
+Architecture modeling tools for Visual Analysis. J. Object Technol., 2015. 14(1): p. 3:1-32.
+27. Anthony, B., S.A. Petersen, and M. Helfert. Digital Transformation of Virtual Enterprises
+for Providing Collaborative Services in Smart Cities. in Working Conference on Virtual
+Enterprises. 2020. Springer.
+28. The Open Group, ARCHIMATE® 3.1 SPECIFICATION.
+29. Avolution. Avolution. 2021; Available from: https://www.avolutionsoftware.com/.
+30. Guo, H., et al., Boost the Potential of EA: Essential Practices, in Proceedings of the 23rd
+International Conference on Enterprise Information Systems - Volume 2: ICEIS. 2021. p.
+735-742.

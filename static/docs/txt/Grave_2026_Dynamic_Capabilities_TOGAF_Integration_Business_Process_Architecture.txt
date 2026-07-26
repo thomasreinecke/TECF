@@ -1,0 +1,585 @@
+--- PAGE 1 ---
+Open Universiteit
+www.ou.nl
+Dynamic Capabilities and TOGAF Integration
+Citation for published version (APA):
+Grave, F., Baans, R., & van de Wetering, R. (2025). Dynamic Capabilities and TOGAF Integration: A Business
+Process Architecture Method for Strategic Renewal. In A. Achilleos, S. Forti, G. A. Papadopoulos, & I. Pappas
+(Eds.), Pervasive Digital Services for People’s Well-Being, Inclusion and Sustainable Development: 24th IFIP
+WG 6.11 Conference on e-Business, e-Services and e-Society, I3E 2025 Limassol, Cyprus, September 9–11,
+2025, Proceedings (pp. 174-187). Springer. https://doi.org/10.1007/978-3-032-06164-5_13
+DOI:
+10.1007/978-3-032-06164-5_13
+Document status and date:
+Published: 28/09/2025
+Document Version:
+Publisher's PDF, also known as Version of record
+Document license:
+Taverne
+Please check the document version of this publication:
+• A submitted manuscript is the version of the article upon submission and before peer-review. There can be important differences between
+the submitted version and the official published version of record. People interested in the research are advised to contact the author for the
+final version of the publication, or visit the DOI to the publisher's website.
+• The final author version and the galley proof are versions of the publication after peer review.
+• The final published version features the final layout of the paper including the volume, issue and page numbers.
+Link to publication
+General rights
+Copyright and moral rights for the publications made accessible in the public portal are retained by the authors and/or other copyright owners
+and it is a condition of accessing publications that users recognise and abide by the legal requirements associated with these rights.
+• Users may download and print one copy of any publication from the public portal for the purpose of private study or research.
+• You may not further distribute the material or use it for any profit-making activity or commercial gain
+• You may freely distribute the URL identifying the publication in the public portal.
+If the publication is distributed under the terms of Article 25fa of the Dutch Copyright Act, indicated by the “Taverne” license above, please
+follow below link for the End User Agreement:
+https://www.ou.nl/taverne-agreement
+Take down policy
+If you believe that this document breaches copyright please contact us at:
+pure-support@ou.nl
+providing details and we will investigate your claim.
+Downloaded from https://research.ou.nl/ on date: 06 Jul. 2026
+
+--- PAGE 2 ---
+Dynamic Capabilities and TOGAF Integration:
+A Business Process Architecture Method
+for Strategic Renewal
+Frank Grave(B) , Remco Baans, and Rogier van de Wetering
+Open Universiteit, Valkenburgerweg 177, 6419 AT Heerlen, The Netherlands
+frank.grave@ou.nl
+Abstract. Designingprocessesthatalignwithstrategicgoalshasbecomeincreas-
+ingly challenging in today’s fast-paced business environment. Business Process
+Architecture (BPA) plays a vital role in achieving this strategic alignment and
+ensuring that processes are coherent both in design and implementation. To tackle
+thesechallenges,companiescanutilizetheirdynamiccapabilitiestoadapttorapid
+changes. One well-known method for enterprise architecture that includes BPA
+development is The Open Group Architecture Framework (TOGAF). We applied
+design science research to integrate dynamic capabilities theory with the TOGAF
+framework. We developed and evaluated a BPA method suitable for strategic
+renewal in unpredictable environments. As a result, we have created and evalu-
+ated a BPA development method that provides practical guidance for applying
+dynamic capabilities theory in a real-world business context.
+Keywords: Business Process Architecture · TOGAF · Dynamic Capabilities ·
+Design Science Research
+1 Introduction
+Static business process architecture (BPA) models struggle to adapt to fast-paced and
+turbulent business environments. Within the Open Group Architecture Framework
+(TOGAF), BPA is a core deliverable of the Architecture Development Method (ADM)
+[1]. Yet TOGAF’s prescribed Business Architecture phase offers only high-level guid-
+ance on process catalogues and value-stream mappings, without prescribing how to
+embedmanagerialroutinesforongoingreconfigurationofprocessesinresponsetoenvi-
+ronmental change [2, 3]. As a result, firms relying on TOGAF risk strategic misalign-
+ment, stalled digital transformation (DT) initiatives, and loss of competitive advantage
+in volatile contexts.
+Modern DT imperatives—spurred by Artificial Intelligence, the Internet of Things,
+and cloud—require continuous reconfiguration of technology, data, processes, and peo-
+ple to capture emergent opportunities [2, 3]. In particular, new architecture archetypes,
+such as platform and ecosystem architectures, demand a high degree of co-creation [4].
+Enterprise architecture (EA) artifacts, especially a high-level BPA, play a pivotal role
+© IFIP International Federation for Information Processing 2026
+Published by Springer Nature Switzerland AG 2026
+A. Achilleos et al. (Eds.): I3E 2025, LNCS 16079, pp. 174–187, 2026.
+https://doi.org/10.1007/978-3-032-06164-5_13
+
+--- PAGE 3 ---
+Dynamic Capabilities and TOGAF Integration 175
+in linking strategy to execution by tracing value streams, process dependencies, and
+performance metrics across organizational layers [5]. However, extant EA-based BPA
+methods remain largely static, treating processes as fixed assets rather than dynamic
+routines.
+Strategicmanagementresearchhighlightsthatdynamiccapabilities—thefirm’sabil-
+ity to integrate, build, and reconfigure competences in the face of rapid change—are
+crucial for sustaining an advantage amid digital disruption [6, 7]. Although TOGAF
+provides a structured ADM, it does not reconcile its static artifact templates with the
+iterativesensing–seizing–transformingcyclescentraltodynamiccapabilitiestheory[8].
+Moreover, reviews of Business Architecture practice note that TOGAF’s ADM outputs
+vary widely—architects frequently adapt or omit process-reconfiguration steps to fit
+local governance or legacy constraints [9, 10], which undermines repeatability and the
+institutionalization of strategic renewal routines. Therefore, a theory-based, TOGAF-
+compliant BPA method that explicitly operationalizes dynamic capabilities and accom-
+modates emergent, co-created architectures is absent from both practice guides and the
+literature [10].
+To address this gap, we adopt a Design Science Research (DSR) paradigm [11–14]
+to engineer and evaluate a BPA development method that remains faithful to TOGAF’s
+ADM structure and integrates dynamic capabilities constructs (sensing, seizing, trans-
+forming)intoprocess-architecture artifacts.Wereportoniterativedesignandevaluation
+cycles conducted at a large Dutch government organization with over 12,000 employ-
+ees and a budget exceeding e1 billion per year in 2024, which has institutionalized
+TOGAF as its EA standard. Our contribution is twofold: a practical, artifact-centred
+method for dynamic BPA development, and theoretical insights into how EA practices
+canberetooledtosupportdynamiccapabilitiesinturbulentenvironments.Therefore,our
+research question is: “How can a TOGAF ADM-compliant BPA method be developed
+that (1) embeds dynamic-capabilities routines for sensing, seizing, and transforming,
+and (2) supports emergent, co-created architectures?”.
+Therestofthispaperisorganizedasfollows.Section2reviewsdynamiccapabilities
+theory,BPA,andTOGAF,pointingoutshortcomingsinprocessreconfigurationsupport.
+Section 3 provides an overview of our DSR approach. Section 4 outlines the method
+requirements and the artifact itself. Section 5 presents the evaluation results from two
+focus group sessions and discusses both theoretical and practical implications.
+2 Related Work
+Dynamic capabilities theory represents a mid-range strategic management framework
+that elucidates how organizations intentionally adapt, integrate, and reconfigure both
+internal and external competencies in response to rapidly changing environments.
+Teece’s [6] foundational work characterizes dynamic capabilities as comprising three
+clusters of micro foundations: (1) sensing opportunities and threats; (2) seizing oppor-
+tunities through strategic investment and design; and (3) transforming the organization
+by recombining assets and structures. Eisenhardt and Martin [7] refine this perspec-
+tive by describing dynamic capabilities as specific, identifiable processes (e.g., product
+development, partnering) whose effectiveness is context-dependent and aimed at facili-
+tating rapid adaptation. Helfat and Peteraf [15] further highlight the evolutionary nature
+
+--- PAGE 4 ---
+176 F. Grave et al.
+of capabilities, emphasizing the critical roles of managerial cognition and governance
+in the development of capabilities. In the context of EA, including BPA, it is more
+appropriate to refer to a mobilizing capability rather than a seizing capability, as stated
+by Van de Wetering [16]. Mobilizing is essential for businesses as it involves engag-
+inginenterprise-wideactivitiesthatfosterinformationsharingandcollaborationamong
+stakeholders.Thisapproachnotonlyenhancesteamworkwithintheorganizationbutalso
+equips the firm to swiftly adapt its resources and assets in response to changing mar-
+ket conditions. By prioritizing mobilization, companies can drive innovation, enhance
+operational efficiency, and maintain a competitive edge in their respective industries.
+By anchoring BPA development within the framework of dynamic capabilities the-
+ory, we can transcend static “blueprint” models and incorporate process routines that
+iteratively cycle through sensing, mobilizing, and transforming phases. This alignment
+enables BPA artifacts not only to depict current (“as-is”) and desired (“to-be”) process
+landscapes, but also to prescribe methodologies for organizations to continuously renew
+and adapt their processes in response to environmental cues.
+TOGAF’s ADM designates Phase B (Business Architecture) specifically for delin-
+eatingprocesscatalogs,value-streammaps,andorganizationalroles[1].Typicaloutputs
+from this phase include: (1) Baseline business architecture, which documents current
+processes and value streams, (2) Target business architecture: future-state processes and
+value propositions, (3) Gap analysis: identification of discrepancies between baseline
+and target states, and (4) Opportunities and solutions: a roadmap of initiatives to bridge
+identified gaps.
+However, while these deliverables provide a high-level overview, they lack explicit
+guidance for embedding continuous process reconfiguration routines. In practice, archi-
+tects may adapt or bypass certain steps or neglect outputs due to constraints posed by,
+e.g., legacy systems or local governance, leading to inconsistent artifacts that fail to
+institutionalize iterative renewal [17].
+For instance, Kotusev [17] noted, in one of his case studies, that the organization in
+question utilized five EA-related processes—namely, needs assessment, project evalua-
+tion, project prioritization, project design, and project execution—rather than adhering
+to the typical ADM outlined by TOGAF. Grave et al. [9] observe that the actual applica-
+tion of EA artifacts varies from case to case and does not consistently follow the specific
+outputs outlined by TOGAF. Consequently, although TOGAF offers a solid framework
+for BPA, its methodical steps, surrounding the process as well as the accompanying
+EA artifacts, remain inadequately defined to support dynamic, capability-driven process
+architectures.
+Theintegrationofaformaltheory,specifically,dynamiccapabilities,intotheTOGAF
+framework aims to address a significant gap in the existing literature. Much of the
+previous research tends to discuss the relationship between dynamic capabilities and
+BPA incompletely. For instance, Grave et al. [9] developed a strategic planning process
+predicated on dynamic capabilities, which establishes connections between EA artifacts
+andthedimensionsofsensing,mobilizing,andtransformingcapabilities.However,their
+analysis neglects to account for BPA artifacts, focusing instead on, for example, a high-
+level operational concept artifact that does not directly pertain to the BPA framework.
+
+--- PAGE 5 ---
+Dynamic Capabilities and TOGAF Integration 177
+Furthermore, it is evident that BPA methodologies, as a whole, are characterized
+by a lack of established best practices and structured specifications. Dijkman et al. [18]
+conducted a survey involving 39 practitioners within the BPA domain, supplemented by
+four empirical case studies analyzing real-world process architectures. They concluded
+thatthereisnobestpracticeinthisarea,andtheirsampledidnotshowastrongpreference
+for “one particular approach to business process architecture” (p. 155). In a similar vein,
+Gonzalez-LopezandBustos[19]identifiedadiversearrayofBPAdevelopmentmethods,
+highlighting the absence of structured specifications for these methodologies.
+This discourse highlights the need for a more cohesive theoretical framework within
+BPA practices, underscoring the potential of dynamic capabilities to provide the nec-
+essary structure and clarity. By explicitly adopting Teece’s dynamic-capabilities theory
+as our foundational framework, we can (a) delineate precise micro foundations to be
+integrated within BPA artifacts, (b) systematically map each TOGAF ADM step to
+corresponding sensing, mobilizing, or transforming activities, and (c) ensure that the
+resulting artifacts support a dynamic approach to process architecture development that
+is responsive to environmental changes.
+3 Research Methodology
+This study employs a DSR paradigm to develop and evaluate a BPA methodology com-
+pliant with TOGAF, integrating dynamic capabilities while supporting new architecture
+archetypes. We adapted Österle et al.‘s [14] four-step DSR process: (1) Analysis, (2)
+Design, (3) Evaluation, and (4) Communication. During the design phase, we con-
+ducted a literature review following Okoli and Schabram’s guidelines [20], tailored to a
+single-researcher protocol by omitting the training of multiple coders.
+We adopted a requirements-driven mapping approach, following Lapouchnian et al.
+[21] to ensure rigorous alignment of each requirement with specific components of the
+artifact. We renamed Österle et al.’s [14] fourth step from ‘Diffusion’ to ‘Communica-
+tion’,reflectingtheemphasisonanactive,two-wayprocessthatincorporatestheoretical
+rigor, stakeholder feedback, and ethical transparency, as proposed by Hevner et al. [11]
+and Peffers et al. [13]. This shift ensures that artifacts are accessible and impactful.
+Additionally, we position our study within the context of design-oriented information
+systems research (DOIS), employing a four-step process enhanced by insights from rel-
+evant literature [22]. This process was implemented as described by [14] and further
+enhanced with insights from [13], as illustrated in Fig. 1.
+Fig. 1. DSOIprocessfordevelopingaBPAmethodtooperationalizedynamiccapabilitieswithin
+an enterprise, based on TOGAF [11, 13, 14, 22].
+
+--- PAGE 6 ---
+178 F. Grave et al.
+Sections 1 and 2 highlighted that “The TOGAF business process architecture devel-
+opment approach lacks alignment with EA-driven dynamic capabilities, creating uncer-
+tainty about its effectiveness for strategic renewal in volatile environments”. The next
+step is to create the artifact by gathering requirements for the BPA development method,
+ensuringitalignswithTOGAFandexistingresearchonEA-drivendynamiccapabilities.
+We filtered search results from the literature review using keywords such as “business
+process management”, “architecture”, and “dynamic capabilities”. Our search spanned
+academicdatabases,includingtheACMDigitalLibrary,IEEEDigitalLibrary,Springer-
+Link,andGoogleScholar.Fromthisprocess,wederivedfunctionalrequirementsthrough
+a two-stage literature review.
+We eliminated duplicates and selected only peer-reviewed articles published in
+English since 2016. This timeframe strategically enhances relevance and rigor, ensuring
+our selection is grounded in the most authoritative and impactful scholarship. Conse-
+quently, this approach informs our design, enabling us to address contemporary chal-
+lenges effectively. Additionally, the screening stage evaluated 50 articles for each query,
+resulting in a final corpus of 42 articles that informed our nine functional requirements.
+To evaluate our artifact, we organized two focus group sessions in April 2024, each
+lasting 90 min, withfour business representatives in group 1 and four architects in group
+2. The participants included various roles to ensure diverse perspectives on sensing,
+mobilizing, and transforming capabilities. The sessions were facilitated by a researcher
+andreviewedbyanexternalEAexperttominimizebias.Thestructuredsessionsincluded
+an introduction, a practical exercise, and guided discussions focused on the correctness
+and completeness of the BPA methodology, as well as soliciting participant feedback
+for improvements. Table 1 provides an overview of the participants in the focus groups.
+Post-session feedback was thoroughly analyzed to refine the artifact within a single-
+pass design cycle, allowing for iterative refinement.
+4 Functional Requirements and Artifact Development
+In this section, we focus on which BPA development method can effectively address the
+explicated problem and identify the essential functional requirements for this artifact
+that are pertinent to the stakeholders.
+In this research, we have chosen to model the development method using ArchiMate
+[23], as it is widely recognized as the predominant architectural modeling language.
+Given that architects are the primary stakeholders, this choice is the most appropriate.
+Consequently, our first requirement (R1) specifies that the BPA development method
+must be modeled using ArchiMate. For illustration purposes, Fout! Verwijzingsbron
+niet gevonden. Fout! Verwijzingsbron niet gevonden shows a process architecture view
+[18] of sensing opportunities and threats in the BPA development method in ArchiMate.
+Based on the specific context of our research, we have formulated two require-
+ments: (R2) the BPA development method must encompass all relevant deliverables of
+TOGAFonBPA,and(R3)theBPAdevelopmentmethodmustbeexplicitlylinkedtothe
+sensing,mobilizing, andtransformingcapabilitiesfromEA-driven dynamic capabilities
+theory [24]. Therefore, we included the following deliverables: (1) Business Interac-
+tion Matrix (identifies interactions among value streams and organizational units), (2)
+
+--- PAGE 7 ---
+Dynamic Capabilities and TOGAF Integration 179
+Table 1. Composition of the two focus groups convened to evaluate the business process
+architecture development method (N = 8).
+Participant ID Focus group Role
+B1 Business representatives Information manager
+B2 Business representatives Information manager
+B3 Business representatives Information analyst
+B4 Business representatives Product owner
+A1 Architect Domain architect
+A2 Architect Enterprise architect
+A3 Architect Lead enterprise architect
+A4 Architect Business architect
+Business Capability Catalog (enumerates and defines capabilities relevant to sensing,
+mobilizing,andtransforming),(3)BusinessCapabilityMap(visualizeshigh-levelcapa-
+bility groupings), (4) Process Flow Diagram (depicts process steps, input/output flows,
+and controls), and (5) Process Matrix (a specialized artifact for process lifecycle and
+version management, addressing a gap in TOGAF’s conventional output).
+We delineate five critical artifacts (with the first four derived from TOGAF 9.2
+Business Architecture artifacts and the fifth introduced to fulfill process lifecycle and
+versioning requirements). This refinement aims to avoid implying an exhaustive list of
+TOGAFoutputswhilefocusingonthoseessentialforadynamiccapability-alignedBPA.
+Notably, [19, 25, 26] underscore the significance of delineating business processes
+as part of the Business Architecture, emphasizing the identification of both the inputs
+and outputs of each business process (R4). This distinction enables the definition of
+detailed outputs for each process step (R5), which in turn influences the precision and
+effectiveness of business operations [25–27].
+[26] emphasize the importance of process controls by providing each specified pro-
+cesswithnecessarycontrolmechanismsandmonitoringmechanisms(R6).Thesemech-
+anisms facilitate the integration of controls into business processes, ensuring efficient
+execution, quality assurance, and continuous business process improvements [19, 25,
+26, 28, 29].
+[18]and[29]emphasizethesignificanceofeffectivebusinessprocesslifecycleman-
+agement (R7). The artifact should encompass functionalities for managing the entire
+process from design to execution, including support for version control and change
+management [18] (R8). These requirements facilitate streamlined process development,
+implementation, and continuous optimization that are aligned with business objectives.
+As highlighted in the research by [18], the design of the BPA should be guided by
+the specific goals of the organization. Aligning the architecture with strategic goals as
+a structuring principle ensures the consistency, efficiency, and reusability of processes
+[16, 19, 28] (R9). This integrated design not only contributes to the quality of business
+processes but also underscores the effectiveness of our BPA method. In the BPA devel-
+opmentmethod,threekeybusinessprocesseswereidentified(sensingtheorganizational
+
+--- PAGE 8 ---
+180 F. Grave et al.
+environment, mobilizing resources, transforming business processes) and broken down
+intoindividualsteps,utilizingbusinessobjectstovisualizetheinformationflowbetween
+them. This approach enhances efficiency and organization in process execution, provid-
+ing a systematic framework for understanding interactions and information exchanges.
+Table 2 provides an overview of the requirements for the BPA development method.
+Table 2. The BPA development method requirements overview
+Requirement number Requirement description Source
+1 The BPA development method
+must be modeled utilizing
+standardized modeling
+languages (e.g., ArchiMate®).
+[19, 27–29]
+2 The BPA development method
+must encompass all relevant
+deliverables of TOGAF on BPA.
+Follow from the problem statement
+3 The BPA development method
+must be explicitly linked to the
+sensing, mobilizing, and
+transforming capabilities from
+EA-driven dynamic capabilities
+theory.
+4 Business process inputs and
+outputs must be defined.
+[19, 25, 26]
+5 Business process steps must be
+defined.
+[25–27]
+6 Business processes must be
+designed, including monitoring
+and control mechanisms.
+[19, 25, 26, 28, 29]
+7 Business processes must be
+designed including its lifecycle
+management.
+[18]
+8 Business processes must be
+designed, including version
+management.
+[18, 27, 29]
+9 Business processes must be
+related to strategic goals.
+[16, 19, 28]
+
+--- PAGE 9 ---
+Dynamic Capabilities and TOGAF Integration 181
+In the BPA development method, three key business processes were identified and
+brokendownintoindividualsteps,utilizingbusinessobjectstovisualizetheinformation
+flow between them. This approach enhances efficiency and organization in process exe-
+cution,providingasystematicframeworkforunderstandinginteractionsandinformation
+exchanges.
+In the literature on dynamic capabilities, the concepts of sensing, mobilizing, and
+transforming are not just generic categories but are supported by specific manage-
+rial routines, such as scanning, bricolage, and reconfiguration. Therefore, establishing
+these links in the BPA artifacts is essential for creating an adaptive and responsive
+organizational structure in response to rapidly changing market conditions.
+5 Discussion and Conclusion
+ThisstudypresentsarefinedBPAdevelopmentmethod,groundedinTOGAF’sADMand
+enrichedwithdynamiccapabilitiestheory,andreflectsonitsdesigniterations,theoretical
+contributions,practicalvalue,andfutureresearchdirections.Wefirstsummarizethekey
+enhancementsthatdistinguishourapproach,thendiscusshowthesefulfillbothscholarly
+and practical needs, and finally outline the limitations and avenues for further inquiry.
+5.1 Changes from Literature Review to Final BPA Development Method
+In developing the BPA method, we began with process steps identified in the literature
+review and then refined them through iterative feedback. Significant changes were made
+to ensure the method would effectively build dynamic capabilities in a real organiza-
+tional context. For example, the initial literature-based framework lacked an explicit
+step for continuous sensing of environmental changes, a capability crucial for agility.
+In the final version, we introduced a dedicated step for scanning and updating strategic
+assumptions,reflectingthedynamiccapabilitiesperspectiveofsensingopportunitiesand
+threats. We also reordered certain steps to better align with the TOGAF ADM sequence.
+Specifically, steps related to defining the target architecture and planning migrations
+were moved later in the process, after a thorough gap analysis, to align with TOGAF’s
+proven logic. Another key change was the addition of feedback loops: the final method
+emphasizes iteration, whereas the initial concept was more linear. This means that after
+implementing portions of the architecture, the process can loop back to reassess strategy
+or capabilities, embodying the transforming aspect of dynamic capabilities (continu-
+ous renewal). Additionally, stakeholder input was given a more prominent role – for
+instance, the final method includes workshops with business owners to validate archi-
+tecture outputs, a practice not stressed in the literature review version. These changes
+wereguidedbyfocus-groupevaluationswithpractitioners,ensuringthemethodevolved
+from a theoretical construct into a practically applicable approach. The result is a BPA
+development method that remains grounded in EA best practices (via TOGAF) while
+explicitly incorporating dynamic capability-building activities.
+
+--- PAGE 10 ---
+182 F. Grave et al.
+ThefocusgroupsplayedacriticalroleinshapingthefinalmethodologyforBusiness
+Process Analysis (BPA) development. Initially, the vision was excluded as an input
+for identifying opportunities within the process of sensing opportunities and threats.
+However, feedback from the focus groups prompted a reconsideration of this omission,
+leading to the inclusion of the vision as a vital component.
+Additionally, a notable modification to the original design involved incorporating
+SAFe (Scaled Agile Framework) terminology, which aligns with the practices of the
+case organization. For instance, the initial iteration of the methodology included a step
+titled “design potential solution options”. The insights gathered during the focus group
+discussions indicated that it would be more effective to replace this with process steps
+focused on creating the epic and architecture statement. This adjustment ensures that
+the methodology is more closely aligned with both the actual practices and intended
+objectives of the process.
+Our method incorporates three key changes to integrate dynamic capabilities into
+TOGAF EA practices, as identified through literature review and focus group sessions:
+1. Continuous environmental sensing: We incorporated an explicit “Sensing” routine
+at the outset of each cycle, formalizing environmental scanning, stakeholder inter-
+views, and assumption validation. This step operationalizes Teece’s [6] first micro-
+foundation—sensing opportunities and threats —ensuring that BPAs remain attuned
+to real-time shifts in technology, regulation, and market conditions.
+2. Iterativefeedbackloops:WhereastraditionalADMtreatsPhaseB(BusinessArchi-
+tecture) as a largely linear endeavor [1], our design interleaves “Mobilizing” and
+“Transforming”sub-phaseswithineachmajorstage.Gapanalysesnowtriggerimme-
+diate design sprints and validation workshops, so that strategic objectives, capability
+maps,andprocessflowsarecontinuouslyrevisitedandrefined.Thiscyclicalstructure
+embeds organizational learning and rapid adaptation into the core of the method.
+3. Governance-oriented version control: To address TOGAF’s limited guidance on
+lifecycle management, we added a “Process Matrix” artifact. This tabular tool cap-
+tures version histories, decision rationales, and governance checkpoints. By link-
+ing each process element to strategic drivers and dynamic capabilities activities, the
+matrix ensures traceability and supports both compliance audits and future renewal
+initiatives.
+TheseenhancementsmaintainTOGAFcompliance—retainingallrequisitecatalogs,
+maps, and deliverables—while explicitly fostering the sensing, mobilizing, and trans-
+forming routines central to dynamic-capabilities theory. Stakeholder workshops, espe-
+cially those involving business owners, ensure that models accurately reflect both strate-
+gicintentandoperationalrealities.AlltemplateswereoptimizedforArchiMate,striking
+a balance between rigor and the lightweight flexibility required in legacy-constrained
+environments.Figure2,Fig.3,andFig.4showtheprocessarchitectureview[18]ofsens-
+ing opportunities and threats, mobilizing business and IT resources, and transforming
+business processes in the BPA development method.
+5.2 Theoretical Contributions
+First, this research bridges a critical gap in EA scholarship by demonstrating how
+TOGAF-based BPA methods can systematically embed dynamic capabilities. Where
+
+--- PAGE 11 ---
+Dynamic Capabilities and TOGAF Integration 183
+Fig. 2. Sensingopportunitiesandthreatsprocessinthedynamic-capabilitiesandTOGAF-aligned
+BPA development method
+prior frameworks detail “what” artifacts to produce, our method explains “how” to inte-
+grate sensing, seizing, and transforming micro-foundations directly into architecture
+development.
+Second,bytranslatingabstractdynamic-capabilitiesconstructsintoconcretemethod
+steps and ArchiMate artifacts, we contribute a tangible mechanism for operationalizing
+agility. This advances dynamic-capabilities literature beyond descriptive case studies,
+offering a repeatable design-science artifact that can be tested, extended, and formalized
+as a nascent theory of agile EA.
+
+--- PAGE 12 ---
+184 F. Grave et al.
+Fig. 3. Mobilizing business and IT resources process in the dynamic-capabilities and TOGAF-
+aligned BPA development method
+Third, our work exemplifies a practitioner-informed, single-cycle DSR approach,
+demonstrating how focus group feedback can convert theory into usable method ele-
+ments without compromising academic rigor. The resulting design principles—strate-
+gic alignment, stakeholder co-creation, iteration, and governance—constitute mid-level
+theory for future EA method research.
+5.3 Practical Implications
+Forenterprisearchitects,consultants,andbusinessanalysts—particularlyinlargepublic-
+sector or regulated organizations—the proposed BPA method offers:
+• Structured agility: A clear, phase-based roadmap that aligns process artifacts with
+strategic goals and embeds checkpoints for sensing new information.
+
+--- PAGE 13 ---
+Dynamic Capabilities and TOGAF Integration 185
+Fig. 4. Transforming business processes in the dynamic-capabilities and TOGAF-aligned BPA
+development method
+• Governed renewal: A Process Matrix that captures version histories, decision
+rationales, and compliance criteria, facilitating transparent audits and continuous
+improvement.
+• Stakeholder engagement: Built-in workshops and validation exercises to co-create
+architectures with business owners, increasing buy-in and reducing rework.
+• Standards compatibility: Full alignment with TOGAF 9.2, enabling reuse of existing
+artifacts and tool investments without extensive retraining.
+In our government-organization case, adoption of this method reduced modeling
+ambiguities, accelerated consensus-building sessions, and positioned the EA practice as
+a proactive enabler of DT rather than a static documentation exercise.
+5.4 Limitations and Future Research
+This research acknowledges significant limitations. The BPA method has only been
+tested in two focus group sessions with domain experts, making the current evaluation
+exploratoryandqualitative,withoutcomparativebenchmarkingagainstapproachessuch
+as the TOGAF ADM method. Therefore, we should exercise caution in asserting the
+method’s effectiveness.
+Additionally, the study’s findings are limited in generalizability, as it was con-
+ducted within a government organization with specific regulatory requirements. While
+
+--- PAGE 14 ---
+186 F. Grave et al.
+the method may adapt to different contexts, empirical evidence is lacking, and various
+industries may face unique challenges.
+The method primarily addresses agility in sensing and responding to change, while
+other dynamic capabilities, such as learning and networking, receive less emphasis.
+Future versions could benefit from incorporating elements such as open innovation and
+stakeholder engagement.
+The lack of longitudinal data is another shortcoming, as we have not observed the
+method’s long-term impact on organizational agility and transformation.
+Future research should pilot the BPA method in various organizations to evaluate
+outcomes such as architectural change speed and stakeholder satisfaction. Comparative
+studies with traditional methods could reveal differences in adaptability and perfor-
+mance. Additionally, integrating tools such as intelligent automation and AI into EA is
+an area for improvement.
+Theoretically, further investigation into EA-driven dynamic capabilities is needed.
+Our findings suggest that framing EA development as a dynamic capability is beneficial
+and can lead to hypotheses that link our methods to improved innovation and agility,
+which may be tested through surveys or case studies.
+5.5 Concluding Remarks
+By weaving dynamic-capabilities theory into a TOGAF-aligned BPA method, this
+research offers both a robust theoretical framework and a pragmatic toolkit for con-
+tinuous strategic renewal. The method’s structured yet adaptable approach empowers
+organizations to sense market changes, mobilize resources around emerging opportuni-
+ties,andtransformtheirBPAsinrapid,governedcycles.Withfurtherempiricalvalidation
+and technological augmentation, it promises to reshape how EA drives organizational
+agility in volatile environments.
+Disclosure of Interests. The authors have no competing interests to declare that are relevant to
+the content of this article.
+References
+1. The Open Group. Togaf® Version 9.2 (2018)
+2. Abraham, R., Aier, S., Winter, R.: Two speeds of EAM—a dynamic capabilities perspective.
+In: Aier, S., Ekstedt, M., Matthes, F., Proper, E., Sanz, J.L. (eds.) Trends in Enterprise Archi-
+tecture Research and Practice-Driven Research on Enterprise Transformation, pp. 111–128.
+Springer, Heidelberg (2012)
+3. Kotusev, S.: Enterprise architecture: a reconceptualization is needed. Pac. Asia J.Assoc. Inf.
+Syst. 10 (2018)
+4. Ross, J.W., Beath, C.M., Mocker, M.: Designed for Digital: How to Architect Your Business
+for Sustained Success. The MIT Press, Cambridge (2019)
+5. Ross, J.W., Weill, P., Robertson, D.: Enterprise Architecture as Strategy: Creating a
+Foundation for Business Execution. Harvard Business School Press, Boston (2006)
+6. Teece, D.J.: Explicating dynamic capabilities: the nature and microfoundations of (sustain-
+able) enterprise performance. Strateg. Manag. J. 28, 1319–1350 (2007)
+
+--- PAGE 15 ---
+Dynamic Capabilities and TOGAF Integration 187
+7. Eisenhardt, K.M., Martin, J.A.: Dynamic capabilities: what are they? Strateg. Manag. J. 21,
+1105–1121 (2000)
+8. Van de Wetering R (2020) Dynamic enterprise architecture capabilities and organizational
+benefits: an empirical mediation study. Proceedings of the 28th European Conference on
+Information Systems (ECIS)
+9. Grave, F., van de Wetering, R., Kusters, R.J.: Enterprise architecture artifacts facilitating
+digitaltransformations’strategyplanningprocess:asystematicliteraturereviewandmultiple
+case study. IADIS Int. J. Comput. Sci. Inf. Syst. 16, 46–62 (2021)
+10. Kotusev, S.: Enterprise architecture and enterprise architecture artifacts: questioning the old
+concept in light of new findings. J. Inf. Technol. 34, 102–128 (2019)
+11. Hevner,A.R.,March,S.T.,Park,J.,Ram,S.:Designscienceininformationsystemsresearch.
+MIS Q. 28, 75–105 (2004)
+12. Johannesson, P., Perjons, E.: An Introduction to Design Science, 2nd edn. (2021). https://doi.
+org/10.1007/978-3-030-78132-3
+13. Peffers, K., Tuunanen, T., Rothenberger, M.A., Chatterjee, S.: A design science research
+methodology for information systems research. J. Manag. Inf. Syst. 24, 45–77 (2007)
+14. Österle,H.,etal.:Memorandumondesign-orientedinformationsystemsresearch.Eur.J.Inf.
+Syst. 20, 7–10 (2011)
+15. Helfat, C.E., Peteraf, M.A.: Understanding dynamic capabilities: progress along a develop-
+mental path. Strateg. Organ. 7, 91–102 (2009)
+16. Van de Wetering, R.: Enterprise architecture resources, dynamic capabilities, and their
+pathways to operational value. In: ICIS 2019 Proceedings (2019)
+17. Kotusev, S.: TOGAF-based enterprise architecture practice: an exploratory case study.
+Commun. Assoc. Inf. Syst. 43, 321–359 (2018)
+18. Dijkman, R., Vanderfeesten, I., Reijers, H.A.: Business process architectures: overview,
+comparison and framework. Enterp. Inf. Syst. 10, 129–158 (2016)
+19. Gonzalez-Lopez, F., Bustos, G.: Business process architecture design methodologies – a
+literature review. Bus. Process. Manag. J. 25, 1317–1334 (2019)
+20. Okoli, C., Schabram, K.: A guide to conducting a systematic literature review of information
+systems research (2010)
+21. Lapouchnian,A.,Yu,Y.,Mylopoulos,J.:Requirements-drivendesignandconfigurationman-
+agement of business processes. In: Alonso, G., Dadam, P., Rosemann, M. (eds.) Business
+Process Management, pp. 246–261. Springer, Heidelberg (2007)
+22. Peffers, K., Tuunanen, T., Niehaves, B.: Design science research genres: introduction to the
+specialissueonexemplarsandcriteriaforapplicabledesignscienceresearch.Eur.J.Inf.Syst.
+27, 129–139 (2018)
+23. TheOpenGroup.TheOpenGroupStandardArchiMate®3.2Specification.TheOpenGroup,
+Reading, Berkshire, United Kingdom (2022)
+24. Van de Wetering, R.: Understanding the impact of enterprise architecture driven dynamic
+capabilities on agility: a variance and fsQCA study. Pac. Asia J. Assoc. Inf. Syst. 13, 32–68
+(2021)
+25. Brown,C.:WhyandhowtoemploytheSIPOCmodel.J.Bus.Contin.Emer.Plan.12,198–210
+(2019)
+26. Zelt,S.,Schmiedel,T.,vomBrocke,J.:Understandingthenatureofprocesses:aninformation-
+processing perspective. Bus. Process. Manag. J. 24, 67–88 (2018)
+27. Goel,K.,Bandara,W.,Gable,G.:Conceptualizingbusinessprocessstandardization:areview
+and synthesis. Schmalenbach J. Bus. Res. 75, 195–237 (2023)
+28. Poels, G., Ruiz, F., García, F.: An experience in modelling business process architecture,
+pp. 119–126 (2019)
+29. Ardzevičiūtė, D., Skersys, T., Kvedaras, E.: Evaluation of business process management
+systems. In: IVUS 2017 International Conference on Information Technology (2017)

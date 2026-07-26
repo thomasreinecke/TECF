@@ -1,0 +1,412 @@
+--- PAGE 1 ---
+ScienceDirect
+Available online at www.sciencedirect.com
+Procedia Computer Science 219 (2023) 462–470
+1877-0509 © 2023 TheAuthors. Published by Elsevier B.V.
+This is an open access article under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0)
+Peer-review under responsibility of the scientific committee of the CENTERIS – International Conference on ENTERprise
+Information Systems / ProjMAN - International Conference on Project MANagement / HCist - International Conference
+on Health and Social Care Information Systems and Technologies 2022
+10.1016/j.procs.2023.01.313
+© 2023 TheAuthors. Published by Elsevier B.V.
+This is an open access article under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0)
+Peer-reviewunderresponsibilityofthescientificcommitteeoftheCENTERIS–InternationalConferenceonENTERpriseInformation
+Systems / ProjMAN - International Conference on Project MANagement / HCist - International Conference on Health and Social Care
+Information Systems and Technologies 2022
+Available online at www.sciencedirect.com
+ScienceDirect
+Procedia Computer Science 00 (2022) 000–000
+www.elsevier.com/locate/procedia
+1877-0509 © 2022 The Authors. Published by ELSEVIER B.V.
+This is an open access article under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0)
+Peer-review under responsibility of the scientific committee of the CENTERIS – International Conference on ENTERprise Information Systems /
+ProjMAN - International Conference on Project MANagement / HCist - International Conference on Health and Social Care Information Systems
+and Technologies 2022
+CENTERIS – International Conference on ENTERprise Information Systems / ProjMAN –
+International Conference on Project MANagement / HCist – International Conference on Health
+and Social Care Information Systems and Technologies 2022
+Proposal of a sensing model in an Adaptive Enterprise Architecture
+Wissal Daoudia,
+*, Karim Doumib
+, Laila Kjiria
+a
+ENSIAS, Mohamed V University, Rabat, Morocco.
+b
+FSJES, Mohamed V University, Rabat, Morocco.
+Abstract
+Nowadays, enterprises are evolving in an interconnected ecosystem mainly characterized by turbulence. They undergo
+unprecedented acceleration in transformations to survive in this highly dynamic and competitive landscape. This disrupts the
+osmosis between the various intertwined levels of abstraction of the organisation (Strategy, Business, and Information System).
+Enterprise Architecture and Adaptive Enterprise Architecture, especially, are used to catalyse successive changes and to ensure
+scalability over time. In this context, it is compulsory for companies to sense the change proactively or reactively in early stages
+to respond to uncertainty. They need to build their knowledge by continuously absorbing information and data from internal and
+external sources. Thus, a sensing model must be devised to face enterprise needs. In this paper we propose a meta-model that
+formalizes the sensing capability to make smooth adaptation. We also present a model that supports adequate future enterprise
+architecture adoption.
+© 2022 The Authors. Published by ELSEVIER B.V.
+This is an open access article under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0)
+Peer-review under responsibility of the scientific committee of the CENTERIS – International Conference on ENTERprise
+Information Systems / ProjMAN - International Conference on Project MANagement / HCist - International Conference on
+Health and Social Care Information Systems and Technologies 2022
+Keywords: adaptation; enterprise architecture; knowledge; sensing enterprise.
+* Corresponding author.
+E-mail address: daoudi.wsl@gmail.com
+Available online at www.sciencedirect.com
+ScienceDirect
+Procedia Computer Science 00 (2022) 000–000
+www.elsevier.com/locate/procedia
+1877-0509 © 2022 The Authors. Published by ELSEVIER B.V.
+This is an open access article under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0)
+Peer-review under responsibility of the scientific committee of the CENTERIS – International Conference on ENTERprise Information Systems /
+ProjMAN - International Conference on Project MANagement / HCist - International Conference on Health and Social Care Information Systems
+and Technologies 2022
+CENTERIS – International Conference on ENTERprise Information Systems / ProjMAN –
+International Conference on Project MANagement / HCist – International Conference on Health
+and Social Care Information Systems and Technologies 2022
+Proposal of a sensing model in an Adaptive Enterprise Architecture
+Wissal Daoudia,
+*, Karim Doumib
+, Laila Kjiria
+a
+ENSIAS, Mohamed V University, Rabat, Morocco.
+b
+FSJES, Mohamed V University, Rabat, Morocco.
+Abstract
+Nowadays, enterprises are evolving in an interconnected ecosystem mainly characterized by turbulence. They undergo
+unprecedented acceleration in transformations to survive in this highly dynamic and competitive landscape. This disrupts the
+osmosis between the various intertwined levels of abstraction of the organisation (Strategy, Business, and Information System).
+Enterprise Architecture and Adaptive Enterprise Architecture, especially, are used to catalyse successive changes and to ensure
+scalability over time. In this context, it is compulsory for companies to sense the change proactively or reactively in early stages
+to respond to uncertainty. They need to build their knowledge by continuously absorbing information and data from internal and
+external sources. Thus, a sensing model must be devised to face enterprise needs. In this paper we propose a meta-model that
+formalizes the sensing capability to make smooth adaptation. We also present a model that supports adequate future enterprise
+architecture adoption.
+© 2022 The Authors. Published by ELSEVIER B.V.
+This is an open access article under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0)
+Peer-review under responsibility of the scientific committee of the CENTERIS – International Conference on ENTERprise
+Information Systems / ProjMAN - International Conference on Project MANagement / HCist - International Conference on
+Health and Social Care Information Systems and Technologies 2022
+Keywords: adaptation; enterprise architecture; knowledge; sensing enterprise.
+* Corresponding author.
+E-mail address: daoudi.wsl@gmail.com
+
+--- PAGE 2 ---
+Wissal Daoudi et al. / Procedia Computer Science 219 (2023) 462–470 463
+2 Wissal Daoudi et al. / Procedia Computer Science 00 (2019) 000–000
+1. Introduction
+Technology and new strategic trends emerge continuously and rapidly in current world. Market uncertainties and
+global socio-economic issues tear up many plans and disrupt established ways of conducting the business. Evolving
+in these highly dynamic environments, many firms are not equipped with necessary models and competencies to face
+the new challenges [1]. Thus, to survive they need to adapt to turbulence. They are forced to undergo changes that,
+sometimes, can impact various levels of abstraction from strategy, business to information system. As the impact is
+multi-level, Enterprise Architecture is highly concerned.
+In this context, Adaptive Enterprise Architecture was proposed to support adaptability requirements [2]. One of
+its essential pillars is the sense and response of changes. It enables a continuous sensing at all levels of abstraction by
+putting data in the center of the enterprise. The data can be captured from different internal and external sources.
+Then, thanks to the enterprise absorptive capacity, organizations take value decisions based on the information
+perceived and build their knowledge accordingly [3]. Over the literature, the research on the sensing enterprise in
+relation with Adaptive Enterprise Architecture is not overly developed.
+Our objective is the modeling of the sensing capability in an adaptive enterprise architecture context to ensure self
+and context awareness for the enterprise. We suggest a meta-model that formalizes the sensing capability and
+integrates it in an adaptive enterprise architecture model. Most importantly it helps assess the absorptive capacity of
+the enterprise to balance the investment and the outcome while ensuring the competitive edge.
+In this article, we start by presenting, in section 2, the literature on sensing enterprise with regards to adaptive
+enterprise architecture. Section 3 focuses on the knowledge enablement for an enterprise to sense and detect sources
+of change proactively/reactively. In section 4 we suggest a meta-model that is used to formalize the sensing
+capability in an enterprise, and we present a model of its integration within an adaptive enterprise architecture
+context. Then, section 5 presents an illustrative example of the proposed model and meta-model. Finally, we
+conclude our work and describe the future perspectives.
+2. Related work
+2.1. Enterprise Architecture
+Enterprise Architecture was made popular in the late eighties and there is a lack of consensus on its definition [4].
+It gives a holistic view on the enterprise sub-systems and their interactions. It allows moving from a current state
+(As-Is) to a Future State (To-Be) and catalyzes closing the gaps between them. There are various layers considered
+in an EA (Strategy Architecture, Business Process Architecture, Application Architecture, and Technical
+Architecture)[5]. It offers a coherent set of principles, models, and methods to design and realize these views [4].
+Investments, risks and processes are assessed in a 360° way increasing efficiency and return on investment and
+reducing waste of resources. One of the most used definitions of Enterprise Architecture is ISO/IEC/IEEE
+42010:2011 standard: “The fundamental organization of a system, embodied in its components, their relationships to
+each other and the environment, and the principles governing its design and evolution” [4]. Many Enterprise
+Architecture Frameworks are present in the literature and the industry [6]. Some of the most used ones are: Zachman
+framework and The Open Group Architecture Framework (TOGAF). However, those Frameworks are not agile
+[7,8]. This makes it a pain point in nowadays highly dynamic environment. Thus, an Agile or Adaptive Enterprise
+Architecture is needed. In the following we will share some adaptive enterprise architecture approaches and how
+they handle the specificities of nowadays context.
+2.2. Adaptive Enterprise Architecture
+Based on [9], an enterprise architecture is considered adaptive when it can sense and react to change
+appropriately, adapts to expected or unexpected changes at any time taking into consideration rapid change, reduces
+waste and cost without compromising on quality and focuses on enterprise fitness, improvement, transformation and
+innovation. In [10], we suggested a definition of an Adaptive Enterprise Architecture approach based on the selected
+criteria summarized in: Multi-level of dynamics, sensing of change, complexity of change management, handling
+
+--- PAGE 3 ---
+464 Wissal Daoudi et al. / Procedia Computer Science 219 (2023) 462–470
+Wissal Daoudi et al. / Procedia Computer Science 00 (2019) 000–000 3
+unforeseen changes, explicit management of adaptability trade-offs, adaptation process and evaluation of adaptation.
+Some contributions of adaptive enterprise architecture are the Adaptive EA framework (known as the Gill
+framework). Gill proposal is a meta-framework that supports continuous adaptation. It uses concepts from system of
+systems (SoS) and service science approach [7]. On top of it, the authors, in [11], proposed an integration of
+TOGAF existing Framework with an adaptation cycle. The adaptive EA cycle in the proposed model begins with the
+Context Phase, the Defining Phase, the assessment / architecture review, Rationalization Phase and Realization
+Phase. Moreover, in [12], we proposed an adaptive enterprise architecture approach that inherits some of the agile
+principles coming from Agile Software development. It is based on iterations (Elementary transition) or small EA
+projects. This approach ensures adaptation horizontally at each layer and vertically between the various layers. In
+the above one important criterion in Adaptive Enterprise Architecture is the sensing part. In the following we will
+present related work to the sensing enterprise.
+2.3. Sensing Enterprise
+Among the criteria used to define an Adaptive Enterprise Architecture [2], we highlighted the “sensing” criterion.
+It is the ability to detect proactively or reactively the need for change at internal and external levels. Besides
+capturing selective information, the Sensing Enterprise needs also to integrate decentralized intelligence into its
+decision-making process [13]. The Sensing Enterprise is described as: “an enterprise making use of the sensing
+possibilities provided by interconnected 'environments', anticipating future decisions by using multi-dimensional
+information captured through physical and virtual objects and providing added value information to enhance its
+global context awareness” [13].
+In response to digital transformation, the authors, in [1], proposed a vision statement, defined and designed a
+Sensing, Smart and Sustainable (S^3) Enterprise. They considered the sensing part as described above. By “Smart”,
+they refer to the ability to create and use knowledge in favour of new opportunities. Finally, “Sustainability” refers
+to all social, environmental, economic and ethical concerns for an enterprise. They considered the S^3 enterprise as
+a complex adaptive system and proposed a model-based and service-oriented enterprise architecture. In
+interconnected environments, as described in the Internet of Things vision, a Sensing Enterprise would benefit from
+the concepts of sensors with mobile technology and distributed intelligence to open up to new development areas
+[14]. This would support analysis and decision-making. In fact, acting as a radar making use of the “Things” as
+sensors and private area networks (PANs), a Sensing Enterprise would be gather a big amount of unstructured data
+that can be converted into useful information for the business and then Knowledge [13]. In fact, data is the fuel of
+enterprises in current world [15]. Also, according to the DIKW reference model published by [16] in the domain of
+Knowledge Management data converts into information, which converts into knowledge, which converts in wisdom.
+We consider that the sensing elements that an enterprise gathers are in the form of data or information. Those
+constitute the building blocks of the enterprise knowledge that allows constant innovations and competitive edge
+maintenance.
+3. Knowledge Enablers
+Based on the definitions, previously, presented, we consider that a sensing enterprise is self-aware of its
+components internally and context-aware of what is happening in its environment externally. Internally, when an
+enterprise knows its capabilities, resources, and weaknesses, it can self-criticize and turn pain points into
+opportunities. Externally, the enterprise has this ability to capture and analyze the ecosystem where it evolves which
+supports its innovation, competitive advantage, and prediction of future situations. It encompasses business, social,
+economic, ethical, and environmental dimensions.
+To allow a concrete comprehension of our proposed model to for a sensing enterprise, we propose a case study of
+a medium company (ABC) that provides and sells a large portfolio of IT solutions through Business-to-Business
+channel. It targets its local and national market. In its initial state, (ABC) is acting reactively on a top-down basis,
+following the enterprise architect and the management guidance. It doesn’t have any structured model to analyzing
+inputs from employees, existing processes, tools… Decisions on business and information systems transformations
+
+--- PAGE 4 ---
+Wissal Daoudi et al. / Procedia Computer Science 219 (2023) 462–470 465
+4 Wissal Daoudi et al. / Procedia Computer Science 00 (2019) 000–000
+are top-down and are based on management knowledge. Before presenting our proposed model, we will analyze
+what enables knowledge in an enterprise.
+“Knowledge enablers” (KE) are components dependent or independent of the enterprise that allow the enterprise
+to build its knowledge and adapt accordingly after assessing the risks and the gains. Knowledge enablers can be
+categorized based on their sources: internal and external [17,18].
+External Knowledge enablers exist outside the boundaries of the enterprise. First, we consider customer’s
+cooperation which gives an outside of the box interpretation of the product and/ or the service offered by the
+enterprise. There is, as well, inter-firm collaboration where business partners or competitors can exchange on
+technical knowledge, market requirements, and trends. Another external KE is partnerships with public, semi-public,
+and private institutions which allows the enterprise to get updates on the market, technologies theoretically and
+industrially. We consider, as well, suppliers and manufacturer’s cooperation. They are continuously interfacing with
+the supply chain having insights regarding availabilities of raw materials and environmental events impacting them.
+They are, also, the first ones to scale up technologies and elaborated products. Moreover, Internet Of Things and
+interconnected sensors relay data about end users and channel users’ behavior in a near real time manner [19]. We
+consider, as well, Information and Communication Technologies (ICT) intelligence solutions which have the ability
+of capturing a huge amount of unstructured data from the cyberspace and possess high computational abilities [20].
+They support foresight in an enterprise. Finally, E-Communities enable knowledge externally through Internet as a
+channel to engage discussions and interactions about a common matter of interest. Even more, large communities
+can propose services about specific topics creating what is called crowdsourcing for a targeted enterprise.
+Regarding internal Knowledge enablers, firms acquire internal knowledge through internal Research and
+Development where an enterprise initiates innovation discussions between the dedicated teams. It also pushes them
+innovate and share their knowledge with their peers and their managers through programs and incentives [21]. It can
+also be enabled by employee’s knowledge as they are the ones to note limitations and areas of improvements daily
+in enterprise resources. Their experience within or coming from outside the enterprise is valuable as it brings various
+insights. Another internal enabler is the continuous improvements in processes and systems that generate historical
+data and pinpoints weaknesses and strengths. We also note in nowadays digital environments ICT Solutions as
+knowledge enablers as they contain a big amount of unstructured data and metadata that can be turned into
+knowledge through analytics helping companies to make right decisions in the right time (internal knowledge
+management tools, libraries, wikis, customer relationship management tools, portals, log files, files, emails…) [22].
+Finally, we mention embedded sensors in products that allow the monitoring of the systems and their health checks.
+This leads to near real time valuable information about the products themselves without the need to be near the
+machines or to run fastidious diagnosis.
+Moreover, another categorization of the knowledge enablers is related to the nature of those sources [18]. They
+can be Technocratic related to Information Systems and Information and Communications Technologies (ICT) or
+Behavioral related to interactions among individuals as knowledge creators and holders. We summarize in Table 1
+the categories and the various Knowledge Enablers that we consider in our paper.
+Table 1. Knowledge enablers categorization.
+Knowledge
+Enablers
+Behavioral /Socio cultural Technocratic /Techno structural
+Internal Proprietary Research and Development activities
+Employees Knowledge
+Continuous improvements in processes
+ICT Solutions
+Embedded sensors
+Continuous improvements in systems
+External Customer’s cooperation
+Inter-firm collaboration
+Partnerships with public, semi-public, and private institutions
+Suppliers & Manufacturers cooperation
+Internet Of Things and Interconnected sensors
+ICT intelligence solutions
+E-Communities
+In our paper, we consider that in current VUCA (volatile, uncertain, complex, and ambiguous) world, each
+enterprise needs to have a unique position resulting from the synergy created by the combination of its resources
+
+--- PAGE 5 ---
+466 Wissal Daoudi et al. / Procedia Computer Science 219 (2023) 462–470
+Wissal Daoudi et al. / Procedia Computer Science 00 (2019) 000–000 5
+and capacities and the external factors detected. In fact, the current context is highly dynamic leading to a very
+quick time to obsolescence for many kinds of knowledge. Also, the scanning and analysis of each captured data
+can be highly expensive without any certain outcome. The best strategy is to find its own equilibrium between its
+resources, investments, risks, and external and internal knowledge enablers without imitating competitors. We
+would say that in current context the absorptive capacity as described by [23] as “the ability of a firm to
+recognize the value of new, external information, assimilate it, and apply it to commercial ends.” It is not a
+straightforward approach. It needs to be monitored, filtered and decisions need to be taken quickly, continuously,
+and efficiently.
+Initially in (ABC) we conclude that the there is a lack of analysis of technocratic/techno structural
+knowledge enablers. Data are gathered and logs are existent but analyses are barely performed. Behavioral/Socio
+cultural enablers are used implicitly without a formal process.
+4. Proposed model of sensing in an Adaptive Enterprise Architecture
+4.1. Meta-model of the sensing layer
+The meta-model suggested shows the need of the integration of a sensing layer to the current layer EA model.
+This layer allows the continuous listening of the enterprise to the environment externally and a sensing of internal
+events. To ensure the validation of the sense and respond criteria in adaptive enterprise architecture [2], a deeper
+insight into the core concepts of this layer is required. A meta-model of the sensing layer is presented in Fig.1. We
+provide below its various components.
+Fig. 1. Metamodel of the sensing layer.
+
+--- PAGE 6 ---
+Wissal Daoudi et al. / Procedia Computer Science 219 (2023) 462–470 467
+6 Wissal Daoudi et al. / Procedia Computer Science 00 (2019) 000–000
+First, we cite the Collector that is a centralized interface between strategy, business and information system
+layers, and the sensing layer. It gathers all the inputs like keywords, pain points, topics, innovation proposals and
+suggestions of improvements, coming from internal knowledge enablers. Internal Knowledge Enablers to not
+interact directly with the collector but transits through their respective representative who plays a filtering role.
+Second is the Scout which is a continuous observer or listener that can access the outside of the company looking
+for knowledge enablers. It also gathers internal data, information, and knowledge. The scout can be a technological
+system or organizational (person or group of people). Third is the Bucket that gathers inputs from external
+knowledge enablers and from the collector directly. It contains data and information that were cleaned from
+duplicates and errors. It adds attributes ranks to highlight the importance of some elements. Fourth we present the
+Pre-processing engine which allows a categorization of inputs depending on the trigger layer and pre-processes the
+elements in the bucket to redirect them to the strategy layer for assessment and prioritization. The representative of
+the strategy layer is the Enterprise Architect. The sensing layer interacts with Knowledge Enablers, Stakeholders
+which are individuals or groups that affect the enterprise somehow and Architecture components that can be
+components of the strategy, business, or information system layer. Finally, change catalysts are constituted of
+diverse change initiators for Enterprise Architecture projects or specific layer projects. Their attributes are triggers,
+needs, goals, impacts, risks, and resources.
+4.2. Proposed Model
+In our previous research [12], we highlighted the importance of an Adaptive Enterprise Architecture that takes
+into consideration a sense and response in a lightweight manner. Fig.2. presents the proposed model based on
+previous formal meta-model of the sensing layer.
+Fig. 2. Model of the sensing layer.
+The sensing layer is fed by data from strategy, business, and information system (Application/Technical) layers.
+It then turns this data to information to give it to strategy layer. All the changes in an enterprise architecture lead to a
+
+--- PAGE 7 ---
+468 Wissal Daoudi et al. / Procedia Computer Science 219 (2023) 462–470
+Wissal Daoudi et al. / Procedia Computer Science 00 (2019) 000–000 7
+decision that needs to be Top Down even if the trigger is related to a specific business or information system topic.
+The data gathered is then extracted in the collector into keywords that allow the Scout to search for information
+related to those keywords. The collector is also constituted of suggestions coming from the business and information
+system stakeholders gathered during their horizontal alignments. It is also fed by data from the different systems and
+sensors. The scout then comes into play. The results are then fed into a bucket categorized depending on the layer
+that it impacts the most and redirected for assessment in the strategy layer. Once the EA project identified and
+prioritized, it is an input to our approach described in [12]. We also summarizes our Adaptive Enterprise
+Architecture Approach into a lifecycle: Preparation, validation, tracking, and adoption of the new enterprise
+architecture (incremental change). It leads to changes at different levels that are feeding again the sensing layer with
+new elements identified at each layer. The evolving aspect of each architecture component is then modeled by inputs
+coming from the new architecture and outputs to sense what is externally happening. This allows the components to
+be communicative components and ensure dynamic proactive collaboration at runtime. Using this approach, they
+have insights about context awareness and are dynamically configurable to attain WYSIWYG (What You Sense is
+What You Get) at design-time. The idea is not to absorb all new trends but to be rather a listener of its own and of
+the market so that it increases context and self-awareness, pinpoints the elements to be improved and discusses the
+strategies against the market. The below model shows the sensing layer and highlights the sensing process. The red
+arrows model inputs coming from and feeding two types of elements: architectural components or process phases.
+5. Illustrative example integrating the proposed model
+In our previous example, we integrated the sensing layer in “ABC” enterprise architecture. The company
+collected data and information streams from the external and internal spaces continuously feeding its centralized
+bucket. It decided that on quarterly basis the Enterprise Architect assesses the bucket content and identifies the
+needs for EA projects. In recent years, the Information System owner continuously fed the collector with “Cloud
+Solutions” and the external scout as well detected this Information System technology. It climbed the ranks and was
+positioned recently as a hot suggestion. Last two quarters a new signal from internal and external knowledge
+enablers highlighted that a new player started its activities in the country. This new company intersects with ABC
+portfolio on some solutions. It offers approximately the same products but in the form of cloud solutions. Being in
+an investment mode, they did activate aggressive plans. The fear of losing market share, big labels, and competitive
+advantage was felt on long term strategies. By adapting to the current situation and not adopting blindly the concept,
+the enterprise architect assessed “Cloud Solutions” as impacting the whole enterprise architecture and not only the
+Information System layer. The illustrative example is summarized in Fig.3. where the implemented process is
+highlighted in red, and the green elements are related to the chosen “Cloud” architecture.
+Fig. 3. Proposal model of sensing for an illustrative example.
+
+--- PAGE 8 ---
+Wissal Daoudi et al. / Procedia Computer Science 219 (2023) 462–470 469
+8 Wissal Daoudi et al. / Procedia Computer Science 00 (2019) 000–000
+(ABC) Enterprise Architect focused on “Cloud Solutions”. He prioritized it and formulated two Adaptive
+Enterprise Architecture projects: The acquisition of the new player and the integration of “Cloud Offerings” in their
+current model. He ran an impact analysis using the method in [12] simulating the two scenarios, highlighting the
+competitive advantages, goals, impacted business process and Information System (IS) components, risks, and
+supporting resources. After alignment with management and the committee of owners (Strategy, business, and
+information system) during a preparation meeting, they decided to go with a hybrid mode of offerings on some
+specific solutions as pilots. The adoption of this decision led to the implementation of a new EA through the
+adaptive enterprise architecture approach. While the new EA is being built, the layers views are updated, and they
+feed the collector continuously.
+6. Conclusion
+In current highly dynamic environments, enterprises face many disruptive changes that need to be undergone to
+keep the competitive advantage and avoid abrupt failures. Those changes impact various levels of abstraction
+(Strategy, business, and information system). Their proactive detection and right assessment versus the enterprise
+strategy are pivotal in bringing value and ensuring sustainability. More than ever, the need to build knowledge about
+self and context awareness is required. The Covid-19 pandemic accelerated this urge.
+In this paper we explored the literature regarding sensing enterprise in relation with adaptive enterprise
+architecture. We deeply analyzed the sources of knowledge inside and outside the boundaries of an organisation.
+They constitute the fuel of the strategic planning. Then we proposed our approach to integrate the sensing capability
+in the enterprise architecture. We presented a formal meta-model and integrated it into a model. Finally, we
+concluded with an illustrative example to materialize the model.
+In future work, we target to deep dive into the multi-dimensional prioritisation indicators of new enterprise
+architectures. We also aim to propose a prototype that aggregates sensed data from various knowledge enablers and
+supports predictions and foresight of the most adequate enterprise architecture to adopt.
+References
+[1] Weichhart, G., Molina, A., Chen, D., Whitman, L. E., and Vernadat, F. (2016) “Challenges and Current Developments for Sensing,
+Smart and Sustainable Enterprise Systems,” Computers in Industry, 79, pp. 34–46.
+[2] Wissal, D., Karim, D., and Laila, K. (2020) “Adaptive Enterprise Architecture: Initiatives and Criteria,” 7th International Conference
+on Control, Decision and Information Technologies, CoDIT 2020, 1, pp. 557–562.
+[3] Bjorvatn, T., and Wald, A. (2018) “Project Complexity and Team-Level Absorptive Capacity as Drivers of Project Management
+Performance,” International Journal of Project Management, 36(6), pp. 876–888.
+[4] Gampfer, F., Jürgens, A., Müller, M., and Buchkremer, R. (2018) “Past, Current and Future Trends in Enterprise Architecture—A
+View beyond the Horizon,” Computers in Industry, 100, pp. 70–84.
+[5] Winter, R., and Fischer, R. (2006) “Essential Layers, Artifacts, and Dependencies of Enterprise Architecture,” Proceedings - 2006 10th
+IEEE International Enterprise Distributed Object Computing Conference Workshops, EDOCW2006, pp. 30–38.
+[6] Gong, Y., and Janssen, M. (2019) “The Value of and Myths about Enterprise Architecture,” International Journal of Information
+Management, 46, pp. 1–9.
+[7] Gill, A. Q., Smith, S., Beydoun, G., and Sugumaran, V. (2014) “Agile Enterprise Architecture: A Case of a Cloud Technology-Enabled
+Government Enterprise Transformation,” Proceedings - Pacific Asia Conference on Information Systems, PACIS 2014.
+[8] Masuda, Y., Shirasaka, S., and Yamamoto, S. (2016) “Integrating Mobile IT/Cloud into Enterprise Architecture: A Comparative
+Analysis,” Pacific Asia Conference on Information Systems, PACIS 2016 - Proceedings.
+[9] Korhonen, J. J., Lapalme, J., McDavid, D., and Gill, A. Q. (2016) “Adaptive Enterprise Architecture for the Future: Towards a
+Reconceptualization of EA,” Proceedings - CBI 2016: 18th IEEE Conference on Business Informatics, 1, pp. 272–281.
+[10] Daoudi, W., Doumi, K., and Kjiri, L. (2020) “Adaptive Enterprise Architecture: Towards a Model,” on Information Systems and
+
+--- PAGE 9 ---
+470 Wissal Daoudi et al. / Procedia Computer Science 219 (2023) 462–470
+Wissal Daoudi et al. / Procedia Computer Science 00 (2019) 000–000 9
+Technologies- ACM International Conference Proceeding Series.
+[11] Masuda, Y., Shirasaka, S., Yamamoto, S., and Hardjono, T. (2017) “An Adaptive Enterprise Architecture Framework and
+Implementation: Towards Global Enterprises in the Era of Cloud/Mobile IT/Digital IT,” International Journal of Enterprise Information
+Systems, 13(3), pp. 1–22.
+[12] Daoudi, W., Doumi, K., and Kjiri, L. (2020) “An Approach for Adaptive Enterprise Architecture,” ICEIS 2020 - Proceedings of the
+22nd International Conference on Enterprise Information Systems, 2, pp. 738–745.
+[13] Santucci, G., Martinez, C., and Vlad-Câlcic, D. (2012) “The Sensing Enterprise,” Proceedings of FInES Aalborg Workshop,
+(September 2012), pp. 1–14.
+[14] Vargas, A., Cuenca, L., Boza, A., Sacala, I., and Moisescu, M. (2016) “Towards the Development of the Framework for Inter Sensing
+Enterprise Architecture,” Journal of Intelligent Manufacturing, 27(1), pp. 55–72.
+[15] McKinsey & Company (2016) “The Age of Analytics: Competing in a Data-Driven World,” (December).
+[16] Ackoff, R. (1989) “From Data to Wisdom,” Journal of Applied Systems Analysis, 16, pp. 3–9.
+[17] Prodan, I., and Svetina, A. (2008) “How Internal and External Sources of Knowledge Contribute to Firms’ Innovation Performance,”
+Managing Global Transitions.
+[18] Bernal-Torres, C., Thoene, U., and Giraldo, J. (2016) “Sources, Availability and Uses of Knowledge in Enterprises in Bogotá,
+Colombia,” Intangible Capital, 12(2), pp. 733–754.
+[19] Rot, A., and Sobińska, M. (2018) “The Potential of the Internet of Things in Knowledge Management System,” Position Papers of the
+2018 Federated Conference on Computer Science and Information Systems, 16, pp. 63–68.
+[20] Łobaziewicz, M. (2017) “The Role of ICT Solutions in the Intelligent Enterprise Performance,” Lecture Notes in Business Information
+Processing, 277, pp. 120–136.
+[21] Cuervo-Cazurra, A., Nieto, M. J., and Rodríguez, A. (2018) “The Impact of R&D Sources on New Product Development: Sources of
+Funds and the Diversity versus Control of Knowledge Debate,” Long Range Planning, 51(5), pp. 649–665.
+[22] Tavera Romero, C. A., Ortiz, J. H., Khalaf, O. I., and Prado, A. R. (2021) “Business Intelligence: Business Evolution after Industry
+4.0,” Sustainability (Switzerland), 13(18).
+[23] Cohen, W. M., and Levinthal, D. A. (1990) “Absorptive Capacity: A New Perspective on Learning and Innovation,” Administrative
+Science Quarterly, 35(1), p. 128.

@@ -1,0 +1,1752 @@
+--- PAGE 1 ---
+Governing complexity in sustainable innovation ecosystems: An empirical
+analysis for AI-enabled enterprise architecture
+Martin Lnenicka*
+, Dominik Palla , Petra Poulova
+University of Hradec Kralove, Faculty of Informatics and Management, Hradec Kralove, Czech Republic
+A R T I C L E I N F O
+Keywords:
+Artificial intelligence
+Enterprise architecture
+Sustainable innovation ecosystems
+Socio-technical systems
+Complex adaptive systems
+Mixed-methods research
+A B S T R A C T
+The integration of Artificial Intelligence (AI) into Enterprise Architecture (EA) offers transformative potential for
+advancing Sustainable Innovation Ecosystems (SIEs). However, AI's velocity often clashes with traditional, rigid
+governance. Using a sequential mixed-methods design – a systematic literature review followed by interviews
+with ten industry experts – this study maps AI's strategic impact across the EA-IE landscape. Our findings reveal
+that AI's value is primarily concentrated at the Business and Data layers, where it reconfigures ecosystem actors
+and processes. We uncover an EA paradox: while practitioners eschew formal frameworks as too rigid, they rely
+on architectural principles as dynamic capabilities to manage structural inertia. Theoretically, we advance from
+descriptive findings to causal mechanisms by proposing three testable propositions that explain how organiza­
+tions can balance architectural stability with the agility required for AI adoption. Practically, the study offers a
+diagnostic tool for aligning AI adoption with organizational resilience. We conclude by outlining a roadmap for
+future research that utilizes dynamic multi-agent simulations to explore adaptive governance strategies for AI-
+enabled SIEs. This study contributes a localized, empirically grounded perspective on governing AI within
+complex adaptive systems, reframing EA as a flexible, human-centric coordination tool for innovation.
+1. Introduction
+The conceptualization of an Innovation Ecosystem (IE) has matured
+into dynamic networks of interconnected actors, resources, and pro­
+cesses organized across distinct functional layers to achieve broader
+sustainability goals (Granstrand and Holgersson, 2020; Jacobides et al.,
+2018; Neto et al., 2024; Oh et al., 2016; Oliveira-Duarte et al., 2021).
+Value creation and innovation within these ecosystems are driven by the
+horizontal flow of interactions and resource exchange between these
+elements (Carrara and Freisinger, 2024). The integration of technolog­
+ical advancements, particularly Artificial Intelligence (AI), into inno­
+vation processes, combined with the intentional design and cultivation
+of IEs, is increasingly recognized as a critical determinant of achieving
+desired outcomes (Aldoseri et al., 2024; Huang et al., 2025; Obreja et al.,
+2024; Secundo et al., 2025). Contemporary research increasingly em­
+phasizes the role of IEs in fostering sustainable entrepreneurship and
+development (Bakry et al., 2024, 2025; Bărbulescu et al., 2021; Leitão
+et al., 2018). This shift reflects a paradigm change, where sustainability
+considerations are integral to ecosystem analysis, leading to the emer­
+gence of a term Sustainable IE (SIE) (Liu and Stephens, 2019; Pham and
+Vu, 2022; Sultana and Turkina, 2023). A prerequisite for the sustainable
+development of these ecosystems is their resilience, which we concep­
+tualize not merely as recovery, but as the system's capacity to absorb
+shocks, adaptively reorganize, and transform its core functions in
+response to emergent shifts in technology or market dynamics (Bakhtiar
+et al., 2026; Bakry et al., 2024). In this study, this resilience is assessed
+qualitatively through the experts' evaluations of organizational readi­
+ness, adaptive governance strategies, and socio-technical capacity.
+In contrast to the horizontally oriented, collaborative nature of SIEs,
+Enterprise Architecture (EA) offers a distinct, vertically layered
+approach. EA, in this context, can be defined as a structured represen­
+tation of an organization (or ecosystem) that aligns business strategy
+with IT infrastructure, organized into vertical layers, e.g., business,
+application, data, technology (Gampfer et al., 2018), to ensure coher­
+ence and efficiency (Kotusev et al., 2022). This vertical alignment is
+primarily aimed at ensuring internal coherence, operational efficiency,
+and the agility required for organizations to adapt their operations
+effectively to evolving market dynamics (Hoogervorst, 2004; Tamm
+et al., 2022). The necessity for a robust and well-defined EA framework
+becomes particularly pronounced when considering the unique
+* Corresponding author.
+E-mail addresses: martin.lnenicka@uhk.cz (M. Lnenicka), dominik.palla@uhk.cz (D. Palla), petra.poulova@uhk.cz (P. Poulova).
+Contents lists available at ScienceDirect
+Technovation
+journal homepage: www.elsevier.com/locate/technovation
+https://doi.org/10.1016/j.technovation.2026.103583
+Received 3 November 2025; Received in revised form 1 April 2026; Accepted 5 May 2026
+Technovation 155 (2026) 103583
+Available online 9 May 2026
+0166-4972/© 2026 The Authors. Published by Elsevier Ltd. This is an open access article under the CC BY license (http://creativecommons.org/licenses/by/4.0/).
+
+--- PAGE 2 ---
+characteristics of SIEs, which inherently rely on intricate horizontal
+collaborative value creation and extensive interactions with external
+stakeholders (Alghamdi, 2024b; Gampfer et al., 2018; García-Escallón
+et al., 2021; Nardello et al., 2015; Neto et al., 2024). Drawing upon the
+established understanding of EA's role in supporting innovation
+(Nardello et al., 2015), its application to SIEs necessitates a specific
+emphasis on enabling and fostering sustainability across all architec­
+tural layers.
+AI is now widely acknowledged as playing an indispensable role in
+ensuring the long-term vitality and dynamism of SIEs (Chatterjee et al.,
+2020; Sultana et al., 2023; Zimmermann et al., 2021). Kamalabai et al.
+(2024) emphasize the growing expectation for EA to be central in the
+sustainable incorporation of AI systems and in leading organizational
+transformation efforts. Consequently, AI's pervasive influence on
+contemporary innovation (Huang et al., 2025; Mariani et al., 2023;
+Secundo et al., 2025; Sun et al., 2022) and sustainable development
+(Goralski and Tan, 2020; Jankovic and Curovic, 2023; Leal Filho et al.,
+2023; Sipola et al., 2023) makes its strategic integration within EA and
+SIEs crucial. The structure of EA, with its distinct business, application,
+data, and technology layers, provides a well-defined pathway for the
+structured adoption and scalable implementation of AI-driven processes
+across the various interconnected elements of SIEs. While existing
+research has explored the significance and multifaceted impacts of AI
+and AI-driven processes within the realm of SIEs (Huang et al., 2025;
+Secundo et al., 2025; Sultana et al., 2023; Sun et al., 2022; Zimmermann
+et al., 2021), and other studies have examined the transformative in­
+fluence of AI on EA and its respective frameworks (Afriliana et al., 2022;
+Bakar et al., 2024; Chen and Zhao, 2024; Denni-Fiberesima, 2024; Guo
+and Gao, 2024; Rittelmeyer and Sandkuhl, 2021), a research gap persists
+in the extant literature.
+Specifically, there is a lack of comprehensive research that system­
+atically merges the horizontal layers inherent to SIEs with the vertical
+layers' characteristic of EA into a cohesive, multidimensional analytical
+framework. Furthermore, the existing body of knowledge has yet to fully
+explore the potential of AI-driven processes to enhance the dynamics of
+these combined dimensions, thereby fostering both sustainable devel­
+opment and accelerated innovation within these complex adaptive
+systems. Successfully deploying AI at scale across an organization de­
+mands arobust strategyand governance.EA offers structure,ensuring AI
+initiatives are strategically integrated with business objectives, pre­
+venting fragmented implementation. Therefore, this study develops and
+empirically grounds a multidimensional framework to address this gap.
+This framework explicitly integrates EA's vertical layers with SIEs' hor­
+izontal dimensions. It treats EA artifacts (e.g., modular architectures and
+governance principles) as boundary objects that align diverse stake­
+holders across business, technology, and sustainability domains. Our
+primary aim is to explore how AI can be integrated across the vertical
+layers of EA and the horizontal layers of the SIE to enhance organiza­
+tional resilience and advance sustainable innovation. In addressing the
+complexity of these systems, we explicitly clarify that our study ap­
+proaches governance from the perspective of the focal actor (the en­
+terprise) operating within the broader complex adaptive system (the
+ecosystem). We posit that while no single actor controls the entire SIE,
+the focal enterprise utilizes EA as an internal governance mechanism to
+adapt to, and influence, the external complexity of the ecosystem. To
+guide our inquiry, this research is structured around the following
+Research Questions (RQ).
+RQ1: How do industry experts perceive the strategic importance of
+AI at the different intersections of EA layers and SIE components?
+RQ2: What are the practical strategies, socio-technical barriers, and
+governance approaches that organizations are currently employing
+to integrate AI into their EA?
+RQ3: How can these empirical insights be synthesized into a cohe­
+sive framework to help organizations assess and enhance the resil­
+ience of their AI-enabled SIEs?
+To answer these questions, we employ a sequential mixed-methods
+research design. The initial phase consists of a Systematic Literature
+Review (SLR) to synthesize existing knowledge and identify founda­
+tional concepts at the nexus of AI, EA, and SIEs. The insights from the
+SLR inform the second phase: an empirical study involving 10 senior
+industry experts with diverse backgrounds in technology, business, and
+sustainability. This phase utilized a structured protocol that gathered
+quantitative data via a matrix-based survey to assess the strategic
+importance of AI and was supplemented with in-depth, semi-structured
+interviews to explore real-world integration strategies, challenges, and
+best practices.
+Our analysis yields several findings that inform both theory and
+practice. Quantitatively, we find a strong consensus that AI's strategic
+value is overwhelmingly perceived to be at the Business and Data layers,
+rather than the foundational technology layers. Crucially, we identify a
+lexicon gap, suggesting that while practitioners may lack familiarity
+with formal EA terminology (explicit knowledge), they demonstrate a
+high degree of tacit architectural thinking developed through opera­
+tional experience. Qualitatively, our study uncovers an EA paradox,
+wherein practitioners value architectural principles (e.g., governance,
+modularity) but largely eschew formal EA frameworks as too rigid for
+the pace of AI. We theorize this paradox as a strategic transition from
+governance by rules to governance by principles, serving as a dynamic
+capability to navigate the tension between AI agility and structural
+inertia.
+Furthermore, the most significant barriers to adoption were consis­
+tently identified as socio-technical, specifically, the human elements of
+skills, culture, and resistance to change, rather than purely technological
+challenges. These findings have several implications. Theoretically, they
+contribute to a more nuanced, socio-technical understanding of gover­
+nance in complex adaptive systems by operationalizing the EA-IE
+intersection through three formal, testable propositions (P1, P2, P3)
+that define the framework's boundary conditions. Practically, they
+provide actionable guidance for managers on where to focus AI efforts
+and highlight the importance of investing in human and organizational
+capabilities. Finally, this research moves beyond conceptual models by
+providing a formalized roadmapfor future research. We proposea multi-
+agent simulation grounded in Belief-Desire-Intention (BDI) logic and the
+Overview, Design concepts, and Details (ODD) protocol to examine the
+emergent behaviors of these AI-enabled SIEs.
+The remainder of this paper is structured as follows. Section 2 re­
+views the literature on the core concepts, establishing the theoretical
+foundation for our study. Section 3 provides a detailed account of our
+mixed-methods research design, including participant selection, the
+data collection protocol, and the analysis strategy. Section 4 presents the
+integrated quantitative and qualitative results derived from our expert
+study. Section 5 discusses the theoretical and practical implications of
+these findings, outlines the study's limitations, and proposes a forward-
+looking research agenda. Finally, Section 6 offers concluding remarks.
+2. Research background
+2.1. Innovation ecosystems and sustainable processes
+The conceptualization of innovation has moved well beyond linear,
+firm-centric models, evolving toward the recognition of SIEs as complex
+adaptive systems that are fundamental for economic progress and value
+creation (Granstrand and Holgersson, 2020; Jacobides et al., 2018). IEs
+are characterized by interdependent actors, heterogeneous resources,
+and non-linear interactions, where novelty arises not from isolated
+agents but from the synergistic interplay of diverse participants (Oh
+et al., 2016; Pushpananthan and Elmquist, 2022). Adopting an
+ecosystem lens allows researchers to account for the systemic dynamics
+and co-evolutionary processes that underpin innovation (Baldwin et al.,
+2024). Within this systemic view, we specifically focus on the focal actor
+perspective. We conceptualize the enterprise not as a passive element,
+M. Lnenicka et al. Technovation 155 (2026) 103583
+2
+
+--- PAGE 3 ---
+but as an adaptive agent that uses EA to navigate and influence the
+broader complex adaptive system. This perspective has stimulated
+increasing scholarly efforts to deconstruct the complexity of ecosystems,
+whether through identifying the specific roles and activities of actors
+(Carrara and Freisinger, 2024; Dedehayir et al., 2018), mapping rela­
+tional and structural configurations (Panetti et al., 2020), or developing
+strategies that align innovation initiatives with the distinct architecture
+of ecosystems (Adner, 2006). In parallel, the notion of innovation plat­
+forms has gained traction as an essential mechanism for enabling
+collaboration and knowledge exchange, thereby reinforcing the inter­
+connectedness of ecosystem thinking (Dedehayir et al., 2018; Han et al.,
+2022; Jacobides et al., 2018).
+A pivotal evolution in this literature has been the integration of
+sustainability as a defining dimension of IEs, giving rise to the notion of
+SIEs. This reconceptualization recognizes that ecosystems are increas­
+ingly expected to deliver not only economic value but also social in­
+clusion and environmental responsibility (Bakry et al., 2024, 2025; Liu
+and Stephens, 2019). This shift toward Sustainable Development Goals
+(SDGs) introduces governance tensions between multinational orches­
+trators’ competitive interests and collective benefits (Nylund et al.,
+2021). Intermediaries are crucial for reconciling these competing logics
+through cross-sectoral partnerships and governance mechanisms that
+prevent fragmentation (Leitão et al., 2018; Oliveira-Duarte et al., 2021;
+Sultana and Turkina, 2023).
+Digital transformation and circular economy principles further
+accelerate the transition toward sustainable production models (Alka
+et al., 2024; Liao et al., 2024). However, the complexity of these systems
+necessitates sophisticated analytical approaches; consequently, scholars
+have modeled ecosystem evolution (Neto et al., 2024; Paasi et al., 2023)
+and applied frameworks like panarchy to explain adaptive cycles of
+renewal (Boyer, 2020). Within this context, resilience is a defining
+attribute of viability, driving the development of novel measurement
+frameworks (Bakhtiar et al., 2026). Collectively, this research highlights
+that governing SIEs requires addressing complexity through structured
+frameworks that steer innovation toward competitiveness and inclusive,
+environmentally responsible development (Baldwin et al., 2024; Leitão
+et al., 2018; Nylund et al., 2021; Oliveira-Duarte et al., 2021).
+2.2. Enterprise architecture and sustainable processes
+EA has evolved from a purely technical alignment tool into a
+comprehensive management approach capable of orchestrating
+enterprise-wide sustainable transformation (Gampfer et al., 2018;
+Kotusev and Kurnia, 2021). Its capacity to provide integrated perspec­
+tives on socio-technical systems allows organizations to embed sus­
+tainability into core operations, enhancing coherence and minimizing
+redundancy (Kotusev and Kurnia, 2021; Lapalme, 2012). EA provides
+structured methodologies to realize strategic benefits and balance eco­
+nomic objectives with social imperatives (Shanks et al., 2018; Tamm
+et al., 2022). Sustainability is now a central dimension of this trans­
+formation (Alghamdi, 2024b), supported by specialized frameworks
+such as Green EA and sustainable government models that align digital
+transformation with environmental goals (Alghamdi, 2024b; Liu and
+Stephens, 2019; Thirasakthana and Kiattisin, 2021; Vandevenne et al.,
+2023).
+In addition to high-level frameworks, EA offers concrete tools and
+techniques that facilitate sustainable innovation. The use of architecture
+patterns, for instance, provides reusable design solutions to recurring
+sustainability challenges, such as energy-efficient IT infrastructures or
+circular supply chain processes (Alghamdi, 2024b; García-Escallón
+et al., 2021; Vandevenne et al., 2023). EA artifacts, ranging from
+capability maps to system models, function as boundary objects that
+bridge the communication gaps among stakeholders with divergent
+priorities and vocabularies, such as business strategists, IT architects,
+and sustainability officers (Kotusev et al., 2022, 2023). These artifacts
+are critical for fostering shared understanding and coordinated action,
+which are prerequisites for implementing complex, cross-functional
+sustainability initiatives.
+EA's role extends across diverse contexts, from integrating systems
+engineering in supply chain management (Nuerk and Dařena, 2023) to
+enabling Small and Medium-sized Enterprises (SMEs) with limited re­
+sources to participate in SIEs through parsimonious digitalization
+models (Pham and Vu, 2022). These applications demonstrate that EA's
+value for sustainable innovation is accessible to both large corporations
+and smaller actors. Furthermore, the evolution of EA toward intelligent
+digital systems (Gampfer et al., 2018; Zimmermann et al., 2020) and the
+integration of emerging technologies like AI, Internet of Things, and
+analytics (Afriliana et al., 2022; Aldoseri et al., 2024; Mariani et al.,
+2023) expands its strategic relevance (Tamm et al., 2022). By enhancing
+real-time monitoring and adaptive decision-making, EA serves as both a
+blueprint for digital transformation and a critical enabler of the struc­
+tural integrity, agility, and transparency (Hoogervorst, 2004; Tamm
+et al., 2022) required to navigate modern enterprise complexities
+(Mariani et al., 2023; Nardello et al., 2015).
+2.3. Artificial intelligence and innovation ecosystems
+AI introduces a transformative layer to SIEs, fundamentally reshap­
+ing value creation processes, inter-actor relationships, and the structural
+logic of ecosystems (Secundo et al., 2025). AI-enabled ecosystems differ
+from traditional digital ecosystems through their rapid, data-driven in­
+teractions and new modes of collaboration that span industries and
+organizational boundaries (Arenal et al., 2020; Stahl, 2022). Unlike
+earlier technologies, AI augments human intelligence, fostering a
+co-evolution of capabilities that enhances creativity and green value
+creation (Huang et al., 2025; Obreja et al., 2024; Salminen et al., 2024).
+Strategically, AI-powered innovation rests on three pillars: intelligent
+automation, data-driven decision-making, and ecosystem-level collab­
+oration (Aldoseri et al., 2024). These pillars restructure value chains and
+produce distinct global development pathways depending on local
+governance choices (Chen et al., 2023).
+AI also expands the toolkit for managing complexity in SIEs. Intel­
+ligent platforms and services enable open innovation, foster knowledge
+exchange, and scale experimentation (Corrales-Garay et al., 2024;
+Zimmermann et al., 2021). Such platforms have been shown to catalyze
+sustainable growth (Barile et al., 2026) while also lowering barriers for
+smaller actors, as tailored frameworks allow micro, small, and
+medium-sized enterprises to participate in AI-enabled IEs (Qu and Kim,
+2025). This democratization of AI access is critical for broadening
+innovation participation and ensuring inclusivity within digitalized
+ecosystems. However, this acceleration necessitates governance frame­
+works to ensure fairness, accountability, and transparency (Minkkinen
+et al., 2023; Stahl, 2022; Sun et al., 2022). Ultimately, AI is a catalyst for
+next-generation ecosystems, capable of driving sustainable trans­
+formation if steered by responsible and inclusive governance
+frameworks.
+2.4. Artificial intelligence and enterprise architecture
+Addressing the complexity of AI within SIEs requires structured
+governance and integration mechanisms, a role for which EA is uniquely
+positioned (Sipola et al., 2023; Stahl, 2022). The imperative is no longer
+simply to adopt AI technologies, but to embed them sustainably into the
+organizational core, ensuring that they reinforce long-term strategic
+objectives rather than remain isolated pilots (Kamalabai et al., 2024;
+Raisch and Krakowski, 2021). However, this integration challenges
+traditional EA practices, demanding a shift toward more adaptive, dy­
+namic, and intelligent architectures (Chatterjee et al.,2020; Kotusev and
+Kurnia, 2021) capable of supporting rapid change and continuous
+learning (Rittelmeyer and Sandkuhl, 2021; Zimmermann et al., 2020).
+By acting as a bridge between strategic intent and operational reality, EA
+translates sustainability-oriented AI strategies into resilient practices,
+M. Lnenicka et al. Technovation 155 (2026) 103583
+3
+
+--- PAGE 4 ---
+aided by diagnostic maturity models that identify capability gaps and
+pathways toward AI readiness (Klingenstein et al., 2025).
+Practical frameworks further demonstrate how EA supports AI inte­
+gration. For example, TOGAF-based methods offer structured guidance
+for embedding AI into enterprise processes (Fitriani et al., 2023), while
+EA models serve as blueprints for AI solution development, ensuring
+alignment with organizational structures and workflows (Kotusev et al.,
+2023; Sandkuhl and Rittelmeyer, 2021; Tamm et al., 2022). Empirical
+studies confirm EA's efficacy in navigating technical and organizational
+adoption challenges across industrial contexts (Bakar et al., 2024; Kim
+et al., 2020; Matharoo, 2025; Sipola et al., 2023), especially in balancing
+the innovation potential of generative AI with operational risks (Mariani
+et al., 2023; Raisch and Krakowski, 2021).
+Looking ahead, the relationship between EA and AI is likely to
+become increasingly symbiotic.AI itself may beleveragedto enhanceEA
+practice, for instance through multi-agent systems (Lea et al., 2005) that
+generate adaptive architectural designs (Chen and Zhao, 2024) or
+AI-powered tools that augment EA modeling and decision support (An
+et al., 2023; Guo and Gao, 2024; Hughes et al., 2025). As EA evolves into
+an intelligent discipline capable of orchestrating entire service ecosys­
+tems (Minkkinen et al., 2023; Secundo et al., 2025; Zimmermann et al.,
+2023), it may shift from human-led toward machine-assisted gover­
+nance (Yablonsky, 2021). Ultimately, this synthesis repositions EA as a
+strategic capability providing the rigor and adaptive intelligence
+necessary for enterprises to act as resilient agents within broader
+AI-enabled SIEs (Barile et al., 2026; Chen and Zhao, 2024; Stahl, 2022;
+Vinuesa et al., 2020).
+3. Research methodology
+This study is framed by the EA-IE governance matrix (Fig. 1), which
+conceptualizes the SIE as a complex adaptive system. In this model, the
+focal enterprise acts as an adaptive agent that utilizes the vertical layers
+of EA (Business, Application, Data, Technology) to maintain structural
+core stability. This internal order is balanced against the emergent
+environment of the IE (Actors, Resources, Processes), which is driven by
+the macro-pressures of AI and Sustainability.
+The 12 intersections of the matrix represent socio-technical gover­
+nance interfaces systematically derived from the synthesis of our SLR.
+Specifically, we cross-referenced the foundational vertical layers of EA
+with the horizontal, collaborative dimensions of IEs identified in the
+literature to map the core socio-technical tensions. To ensure theoretical
+transparency, each interface was configured based on established
+theoretical anchors: the Business layer intersections (e.g., strategy
+alignment, circular model integration) are grounded in ecosystem
+orchestration and value co-creation theory (Adner, 2006; Jacobides
+et al., 2018); the Application and Data layer intersections (e.g., platform
+governance, data sovereignty, sharing) reflect digital platform gover­
+nance and the role of architecture as a boundary object across IEs
+(Kotusev et al., 2023; Paasi et al., 2023); and the Technology layer in­
+tersections (e.g., green compute, interoperability standards) align with
+modular systems and sustainable infrastructure research (Tilson et al.,
+2010; Zimmermann et al., 2023). These 12 points provide the opera­
+tional definitions for how adaptive resilience – defined as the capacity to
+transform internal structures while maintaining ecosystem alignment –
+is executed. For instance, the intersection of Technology and Processes
+operationalizes interoperability standards as a requirement for
+cross-organizational AI functionality, while the Business-Actor interface
+Fig. 1. The EA-IE governance matrix. Source: own processing.
+M. Lnenicka et al. Technovation 155 (2026) 103583
+4
+
+--- PAGE 5 ---
+defines ecosystem strategy alignment as the mechanism for governing
+shared sustainability goals. By systematically mapping EA capabilities to
+IE requirements, the matrix moves from a visualization device to an
+analytical framework for identifying socio-technical friction points.
+To address our RQs, we adopted a sequential mixed-methods
+research design, beginning with the SLR to establish the theoretical
+foundation, followed by an empirical study to develop and validate our
+proposed framework. This approach allows for a comprehensive inves­
+tigation, grounding theoretical development in both existing literature
+and contemporary professional practice.
+3.1. Systematic literature review
+The first phase of our research involved the SLR. We followed the
+rigorous, multi-stage process advocated for management and informa­
+tion systems research (Kitchenham et al., 2009; Tranfield et al., 2003),
+ensuring our procedure is transparent and replicable, in line with the
+PRISMA 2020 statement principles (Page et al., 2021). The SLR was
+guided by the aim of providing the theoretical foundation for our RQs.
+Specifically, it addressed two key objectives: 1) to synthesize how the
+concepts of AI, EA, and SIE are conceptualized and empirically linked in
+existing literature, thereby informing RQ1 on the perceived strategic
+importance of AI at the intersections of EA layers and SIE components;
+and 2) to identify the mechanisms through which AI-driven processes
+influence the relationship between the structural layers of EA and the
+collaborative elements of SIEs, directly contributing to RQ2 and framing
+the development of the cohesive framework proposed in RQ3.
+We conducted a comprehensive search in June 2025 across two
+primary academic databases, Scopus and Web of Science (WoS), selected
+for their extensive coverage of high-quality, peer-reviewed literature in
+technology, management, and sustainability sciences. To mitigate pub­
+lication bias and capture relevant grey literature, such as influential
+working papers and reports, our search was supplemented by a struc­
+tured query of Google Scholar (Haddaway et al., 2015). The search
+query was constructed around four conceptual pillars identified from
+our preliminary investigation. The following search string was applied
+to the abstract field to maintain a focused yet comprehensive scope:
+((“innovation ecosystem”) AND (sustainable OR sustainability)) OR
+((“enterprise architecture” OR “enterprise architecture framework”) AND
+(sustainable OR sustainability)) OR ((“innovation ecosystem”) AND (AI OR
+“artificial intelligence”)) OR ((“enterprise architecture” OR “enterprise
+architecture framework”) AND (AI OR “artificial intelligence”)).
+The initial search yielded 1100 results from Scopus, 449 from WoS,
+and the first 997 contextually relevant results from Google Scholar. After
+automatic and manual removal of duplicates, 658 unique records
+remained. The study selection proceeded in two stages, conducted
+independently by two authors to ensure reliability. First, we screened
+the titles and abstracts based on predefined inclusion and exclusion
+criteria. To maintain interdisciplinary validity and ensure rigorous
+quality appraisal, we applied a three-tiered quality assessment frame­
+work to each candidate study: (1) source reliability, requiring that the
+study be published in a peer-reviewed journal or full conference pro­
+ceeding indexed in major academic databases (Scopus, WoS) with a
+preference for journals ranked in the Q1/Q2 tiers; (2) methodological
+transparency, excluding studies that failed to provide a clear description
+of their research design, data collection, or theoretical derivation; and
+(3) theoretical depth, prioritizing studies that offered novel conceptual
+extensions of the AI-EA-SIE intersection. By explicitly excluding non-
+peer-reviewed materials, extended abstracts, and editorials, we
+ensured that the 12 governance interfaces identified in our conceptual
+framework (Fig. 1) were derived from high-impact, theoretically
+grounded evidence.
+This led to the exclusion of 587 articles that were non-relevant to the
+objectives (n = 354), lacked sufficient detail for evaluation (n = 175), or
+only reused existing frameworks without novel contribution (n = 58).
+Any disagreements between the two reviewers were resolved in
+consensus meetings, with a third author acting as an arbitrator when
+necessary. This process resulted in a final corpus of 71 studies deemed
+highly relevant for full-text analysis and synthesis. These studies were
+then categorized to structure our analysis: 1) IEs and sustainable pro­
+cesses (n = 24), 2) EA and sustainable processes (n = 17), 3) AI and IEs
+(n = 14), and 4) AI and EA (n = 16).
+3.2. Empirical framework development and validation
+3.2.1. Research design and rationale
+To address our RQs, we adopted a sequential explanatory mixed-
+methods design (Creswell and Plano Clark, 2018). This approach is
+well-suited for complex socio-technical inquiries, as it allows for an
+initial quantitative exploration of broad patterns, followed by an
+in-depth qualitative investigation to explain and enrich those findings
+(Yin, 2017). The rationale for this two-phase design is grounded in the
+need to first systematically map what architectural intersections are
+perceived as most critical for AI integration (the quantitative phase) and
+then to understand why and how these intersections are being addressed
+in practice, including the associated strategies, challenges, and future
+implications (the qualitative phase). The quantitative component is not
+intended for statistical generalization; its purpose is descriptive and
+heuristic. It serves to identify and prioritize the perceived importance of
+the governance interfaces shown in Fig. 1, thereby providing a struc­
+tured starting point for the subsequent qualitative interviews.
+The initial quantitative phase provides a structured, comparable
+dataset on the perceived strategic importance of AI, while the subse­
+quent qualitative phase offers the rich, contextual narrative needed to
+interpret these ratings and explore emergent themes. By integrating
+these two data types, this study aims to produce a more comprehensive
+understanding than could be achieved through a single method alone,
+thereby enhancing the validity and practical relevance of our findings.
+3.2.2. Participant selection and sample characteristics
+Given the nature of the research topic, we employed a non-
+probabilistic purposive sampling strategy, specifically targeting senior
+industry leaders through expert sampling (Patton,2015). We established
+rigorous selection criteria to ensure the participants' deep knowledge
+and relevant experience (Okoli and Pawlowski, 2004). Nominees were
+required to: 1) hold a senior executive or strategic role (e.g., CEO, CIO,
+Founder, Director); 2) possess a minimum of five years of practical
+experience in managing digital transformation, AI adoption, or enter­
+prise strategy; and 3) have active engagement in technology-driven
+innovation. Crucially, to ensure relevance to the SIE context, a supple­
+mentary criterion required that all nominees had actively participated in
+projects with explicit Environmental, Social, and Governance (ESG) or
+circular economy components within the last three years. This ensured
+that their strategic insights were grounded in the practical realities of
+sustainable innovation, regardless of their primary job title.
+Our final sample comprised 10 senior industry experts, intentionally
+selected to provide a heterogeneous and holistic perspective on the
+research problem. This small-sample, expert-centric approach is well-
+established in technology management research, where the goal is
+deep, reliable assessment from highly knowledgeable sources rather
+than statistical population representation. The focus is on the legitimacy
+of the experts' assessmentto retrieve and analyze information, noton the
+statistical power of the sample (Delbecq et al., 1975; Okoli and Paw­
+lowski, 2004). While the sample size is limited for statistical inference,
+the selection followed purposive sampling criteria to ensure theoretical
+saturation among highly specialized practitioners.
+The sample's credibility is underscored by a substantial depth of
+experience, with a mean work experience of 11.9 years, ranging from 5
+to 20 years. The professional roles represented a rich blend of strategic,
+technical, and market-facing responsibilities, including: 1) strategic &
+executive leadership: CEOs/founders (n = 4), a chief innovation officer,
+and an operations director and 2) technical & market expertise: a
+M. Lnenicka et al. Technovation 155 (2026) 103583
+5
+
+--- PAGE 6 ---
+systems analyst & designer, a product & sales manager, and a market &
+business analyst with a specialization in the circular economy. This di­
+versity of roles was mirrored in the sectoral representation, with experts
+drawn from a wide array of industries, including technology startups,
+enterprise consulting, manufacturing, financial services, digital retail,
+and investment management. While this sectoral diversity introduces
+variation, it was methodologically intentional. By sampling across the
+ecosystem spectrum (from agile startups to regulated enterprises) we
+aimed to identify universal architectural patterns that persist despite
+contextual differences. This intentional heterogeneity was sought to
+ensure our findings were not confined to a single industry view but
+rather reflected a multi-faceted understanding of the challenges and
+opportunities, thereby enhancing the external validity of our qualitative
+conclusions (Patton, 2015). This approach facilitates analytical gener­
+alization, allowing us to move from specific expert observations to a
+theoretically generative model applicable to the broader phenomenon of
+AI-enabled SIE governance.
+3.2.3. Data collection protocol and procedure
+Data were collected between May and July 2025 using a compre­
+hensive, semi-structured protocol designed to systematically capture
+both quantitative and qualitative data. The protocol was administered
+through a mix of in-person meetings, online video/audio interviews, and
+online surveys to accommodate the demanding schedules of the senior
+expert participants. The protocol was structured into four distinct parts
+to ensure a logical flow and consistency across all data collection modes.
+● Part 1: This initial section gathered demographic and professional
+information, including job title, expertise, and years of experience,
+after obtaining informed consent.
+● Part 2: Question 1 (Q1) was developed to calibrate each expert's
+background, this part used a 5-point Likert-type scale (from “no
+knowledge” to “expert”) for participants to self-assess their famil­
+iarity with the study's four core concepts. This served as both a
+contextual primer and a validation of their expertise.
+● Part 3: This section formed the core quantitative component of the
+study using Question 2 (Q2). Participants were asked to evaluate the
+importance of AI integration on a 6-point Likert scale (from “not at
+all important” to “very important”) across a 4 × 3 matrix. The matrix
+mapped the vertical layers of EA (Business, Application, Data,
+Technology) against the horizontal components of an IE (Actors,
+Resources, Processes). The purpose was to systematically map the
+perceived strategic importance of AI across the architectural
+landscape.
+● Part 4: The final and most extensive part of the protocol consisted of
+open-ended questions (Q3, Q4, Q5, Q6, and Q7) designed to elicit
+rich, narrative responses. These questions were organized into five
+thematic areas to explore the “why” and “how” behind the quanti­
+tative ratings:
+1. AI's role in sustainable innovation (current applications, impact
+on competitive advantage, alignment with sustainability).
+2. AI-EA integration strategies and challenges (current strategies,
+framework usage, management of technical/organizational
+hurdles).
+3. Organizational readiness and resilience (assessment factors,
+measures to enhance adaptability).
+4. Key adoption barriers (primary obstacles, specific ethical and
+governance challenges).
+5. Future perspectives and recommendations (best practices, pre­
+dictions for the evolution of EA and IEs).
+3.2.4. Data analysis strategy
+To systematically analyze the collected data, we employed a parallel
+analysis approach, with quantitative and qualitative data first examined
+separately and later integrated during the final interpretation stage. This
+approach is consistent with the sequential explanatory mixed-methods
+design (Creswell and Plano Clark, 2018) and ensures that both strands
+of data retain their integrity before being synthesized into a holistic
+interpretation aligned with our RQs.
+The quantitative data were analyzed using Python and appropriate
+statistical libraries to compute mean scores, standard deviations, and
+visualizations. This allowed us to identify EA-IE intersections with the
+highest and lowest perceived strategic importance, assess levels of
+consensus and divergence among experts, and map patterns relevant to
+RQ1. We explicitly note that these results are not inferential: descriptive
+statistics merely summarize our sample and cannot be generalized to a
+larger population.
+The qualitative data, consisting of transcribed open-ended responses
+and interview transcripts, were analyzed using reflexive thematic
+analysis, following the six-phase process outlined by Braun and Clarke
+(2022) and Braun et al. (2014). This process involved: 1) data famil­
+iarization through iterative reading; 2) systematic, line-by-line coding of
+the dataset; 3) generating candidate themes from the codes; 4) review­
+ing and refining the themes against the coded extracts and full dataset;
+5) defining and naming final themes; and 6) producing an analytic
+narrative supported by rich, illustrative quotations. This analysis was
+particularly central for addressing RQ2, as it provided insights into the
+socio-technical barriers, governance approaches, and practical strate­
+gies for AI integration into EA. In the final integration stage, qualitative
+insights were systematically compared with and used to elaborate on the
+quantitative patterns, producing a cohesive, multi-layered interpreta­
+tion of the findings (Fetters et al., 2013). For example, where quanti­
+tative results highlighted the Business Layer–Actors intersection as
+highly important, qualitative narratives explained why this is the case,
+detailing how AI augments human capabilities, supports
+decision-making, and reshapes roles within IEs. This explanatory inte­
+gration also informed the synthesis of a multidimensional framework
+(RQ3), combining the quantitative prioritization of strategic layers with
+the qualitative identification of enablers and barriers.
+To enhance credibility and trustworthiness, we employed researcher
+triangulation implemented through a negotiated agreement approach
+(Campbell et al., 2013). Two researchers independently coded the raw
+data to minimize subjective bias. Subsequently, a series of consensus
+meetings were held to compare coding structures, debate divergent in­
+terpretations, and refine thematic definitions. This iterative process
+continued until 100% agreement was reached on the final themes. We
+prioritized this dialogic consensus over statistical metrics (such as
+inter-coder reliability scores), aligning with the interpretivist philoso­
+phy of reflexive thematic analysis advocated by Braun and Clarke
+(2022). The combination of quantitative rigor and qualitative depth thus
+enabled a robust and contextually grounded interpretation of the data.
+4. Results
+4.1. Quantitative assessment: prioritizing AI's strategic focus
+Across the ten expert protocols, reported familiarity was highest with
+IEs (mean = 4.0 on a 1–5 scale) and AI (mean = 3.6). Sustainability also
+scored relatively high (mean = 3.4), reflecting its established role in
+innovation-oriented practices. In contrast, EA exhibited lower famil­
+iarity (mean = 2.9), suggesting that while experts are confident in
+conceptual and technological aspects of innovation, their knowledge of
+structured EA frameworks is less developed. The heatmap visualization
+displayed in Fig. 2 illustrates these differences across experts, with the
+most consistent expertise observed in IEs and AI, and greater variation in
+Sustainability and EA familiarity. When mapped onto the EA-IE gover­
+nance matrix (Fig. 1), this pattern indicates that AI and sustainability are
+already embedded in expert practice, whereas EA remains a potential
+area for skill development in bridging these perspectives and IEs.
+However, it should be noted that given the exploratory nature of this
+study and the small expert sample (n = 10), the following quantitative
+metrics (means and standard deviations) are presented solely for
+M. Lnenicka et al. Technovation 155 (2026) 103583
+6
+
+--- PAGE 7 ---
+descriptive purposes to identify heuristic patterns and relative prioriti­
+zation. These metrics should be interpreted as ordinal indicators of
+consensus within this specific panel, not as generalizable parameters.
+While standard deviations suggest variations in opinion, these fluctua­
+tions are utilized in Section 4.3 as starting points for qualitative elabo­
+ration rather than as measures of statistical error.
+The aggregated evaluations of AI's importance across the in­
+tersections of EA and IEs layers show a strong consensus that AI is most
+valuable at the Business layer, particularly for actors (mean = 5.4 on a
+1–6 scale) and processes (mean = 5.5). High ratings were also recorded
+for data processes (mean = 5.0), underscoring the centrality of robust
+data infrastructures in enabling AI-driven transformation. The applica­
+tion and technology layers received lower but still positive ratings
+(means ranging from 3.8 to 4.6), indicating that these are perceived
+more as enabling conditions rather than primary sources of strategic
+impact. Standard deviations of around 0.5–1.3 across cells suggest
+moderate variation, with consultants and managers placing greater
+emphasis on business-level impacts, while technology-focused practi­
+tioners rated applications and infrastructure more highly. The heatmap
+displayed in Fig. 3 makes these patterns clear, showing concentrations of
+higher importance scores in Business- and Data-related intersections.
+Specifically, the highest importance scores align with the ecosystem
+strategy alignment (Business-Actors), circular business model integra­
+tion (Business-Processes), and cross-organizational data pipelines (Data-
+Processes) interfaces defined in Fig. 1. This quantitative prioritization
+validates the framework's structure by highlighting where the focal
+actor perceives the most significant strategic impact.
+4.2. Qualitative insights: thematic analysis of expert interviews
+A thematic analysis of the qualitative data revealed four primary,
+interconnected themes that encapsulate the current state, challenges,
+and future trajectory of integrating AI into EA for SIEs.
+Theme 1. AI's evolving role as a catalyst for sustainable innovation
+The interviews clearly indicate that AI's role in innovation is un­
+dergoing a significant and rapid evolution, moving beyond its initial
+application in narrow, back-end functions to become a central and
+strategic driver of business value. Experts described a clear trajectory
+from using machine learning for basic data processing and process
+optimization to leveraging sophisticated AI, particularly Generative AI,
+for high-value strategic activities. This includes competitive analysis,
+simulating and evaluating new development models, and accelerating
+the design of new products. This shift marks a transition from AI as a tool
+for efficiency to AI as a platform for creativity and strategic foresight.
+The tangible benefits are significant, with experts reporting increased
+sales through recommendation engines, reduced operational costs via
+predictive analytics, and enhanced agility to react to market changes.
+For some, AI has become the very core of their business model, enabling
+them to disrupt traditional industries like consulting by offering scal­
+able, AI-driven solutions that deliver value faster than incumbent
+competitors.
+The integrationof these innovationefforts with sustainabilitygoals is
+a growing priority, though the maturity of this integration varies. The
+most prevalent approach is leveraging AI for operational efficiency, a
+direct contribution to environmental sustainability. This includes opti­
+mizing logistics, reducing the energy intensity of production processes,
+minimizing computational waste, and even powering data centers with
+renewable energy. A more advanced, strategic approach involves using
+AI as a tool to design and enable sustainable solutions. Examples include
+monitoring carbonfootprints, improving supply chaintransparency,and
+designing more durable, circular products. This demonstrates an
+Fig. 2. Familiarity with core concepts of the study. Source: own processing.
+Fig. 3. Importance of AI integration into IEs and EA. Source: own processing.
+M. Lnenicka et al. Technovation 155 (2026) 103583
+7
+
+--- PAGE 8 ---
+understanding of AI's potential to drive systemic change beyond mere
+internal optimization. This transition to strategic foresight is oper­
+ationalized through the sustainable resource mobilization strategies
+(Business-Resources) interface, where AI facilitates the allocation of
+ecosystem assets to meet both innovation and sustainability targets.
+However, the experts, particularly those with a background in the
+circular economy, highlighted a critical sustainability paradox. They
+explicitly warned that AI is not inherently green; rather, the massive
+computational power required for training large models creates a sig­
+nificant carbon footprint. One expert described this as a potential
+rebound effect, where the environmental cost of the digital solution
+could exceed the efficiency gains it generates. Consequently, re­
+spondents emphasized that Green AI practices (such as optimizing code
+for energy efficiency and selecting renewable-powered data centers)
+must be treated as a prerequisite, not an afterthought. Without this
+careful strategic oversight, AI adoption risks compromising the very
+sustainability goals it aims to advance.
+Theme 2. EA-AI integration paradox: principles over frameworks
+A striking and consistent theme that emerged from the interviews
+was a paradox concerning the role of formal EA frameworks. While a
+minority of experts, often from more structured or regulated industries,
+reported the active use of established frameworks like TOGAF or
+Zachman toguide theirAIintegration, theclear majority statedthat they
+do not use formal frameworks at all. Instead, they rely on lightweight
+variants, loose references, or simply a set of guiding architectural prin­
+ciples. This suggests a widespread perception that traditional, heavy­
+weight EA methodologies are too rigid and bureaucratic to keep pace
+with the rapid, iterative nature of AI development. Specifically, this
+transition towards principle-based governance is most pronounced in
+highly agile environments where the demand for rapid AI deployment
+outpaces traditional bureaucratic cycles. However, as the experts
+implicitly warned, if these guiding principles are not firmly established,
+this pursuit of agility can inadvertently lead to the proliferation of
+“shadow AI” where decentralized teams adopt unsanctioned AI tools,
+bypassing official governance structures entirely.
+However, despite this explicit move away from formal frameworks,
+the experts' descriptions of their integration strategies revealed a strong,
+implicit adherence to core architectural principles. This shared archi­
+tectural thinking consistently involves a structured, phased approach: 1)
+starting with business value – the first step is almost always identifying
+specific business capabilities or pain points where AI can add measur­
+able value, this ensures that AI initiatives are strategically aligned and
+not technologically driven; 2) phased and iterative rollouts – experts
+universally advocated for starting with small-scale pilot projects to
+prove value, learn from failures, and build organizational momentum
+before attempting to scale, and 3) prioritizing a robust foundation –
+there was a clear recognition that successful AI depends on a solid
+technical foundation, with an emphasis on robust data pipelines, API-
+first or modular architectures, and the use of scalable cloud services.
+This paradox suggests that in the context of AI, the practical value of EA
+lies less in its formal proceduralism and more in its underlying discipline
+as a way of thinking – a cognitive tool for managing complexity,
+ensuring strategic alignment, and governing change in a fast-moving
+environment. Consequently, navigating this paradox requires robust
+mechanisms specifically at the Data-Process interface, ensuring that
+automated AI workflows are governed by flexible principles rather than
+rigid procedural rules. This architectural thinking effectively functions
+as the governance mechanism for the matrix defined in Fig. 1. Even in
+the absence of formal frameworks, experts are intuitively managing
+specific interfaces, such as automated compliance and co-creation
+workflows (Application-Processes), to ensure that rapid AI iterations
+do not compromise the EA's.
+Theme 3. Overcoming socio-technical barriers to adoption
+The experts were unanimous in their assessment that the most
+significant and difficult barriers to AI adoption are not purely technical
+but are deeply socio-technical. The human element was consistently
+identified as the single most critical challenge. This includes overcoming
+employee fear and resistance to change, which can slow down or derail
+projects, as well as addressing the persistent talent and skills gap that
+makes it difficult to find qualified experts who can bridge the divide
+between technology and business domains. Additionally, a critical
+operational risk was identified regarding the entry of sensitive corporate
+data into public AI assistants, a practice that has forced several organi­
+zations to deactivate AI tools, thereby stifling the very innovation they
+were intended to support. To navigate these human challenges, experts
+emphasized the importance of early and continuous stakeholder
+engagement, communication to demystify AI, and extensive training
+programs that focus not only on technical skills but also on adapting
+workflows and understanding ethical implications. This socio-technical
+tension explicitly highlights the critical importance of the Business-
+Actor interface within our framework, where strategic AI alignment
+must directly address human capital and organizational culture rather
+than just technological deployment. The risk highlights a breakdown at
+the data sovereignty and ethical governance (Data-Actors) and data
+sharing agreements and APIs (Data-Resources) interfaces. The qualita­
+tive insights suggest that socio-technical barriers are most acute when
+the governance interfaces intended to protect data integrity are
+bypassed by emergent AI usage patterns.
+The second major category of barriers is centered on data and
+governance. Poor data quality, fragmented data silos, and the difficulty
+of integrating with legacy systems were cited as foundational technical
+obstacles that can cripple AI initiatives before they even begin. Along­
+side this, establishing an effective AI governance framework was seen as
+essential but highly complex. This includes managing several ethical
+challenges such as algorithmic bias, ensuring transparency and
+explainability (black box problem), and navigating complex regulatory
+landscapes. The lackof clear accountability for AI-driven errors creates a
+governance vacuum that can lead to legal and reputational damage for
+the focal enterprise within its broader ecosystem.
+To build the necessary organizational readiness and resilience, ex­
+perts recommended a holistic approach. This begins with a compre­
+hensive assessment of readiness across multiple dimensions: data,
+technology, skills, culture, and financial capacity. The most effective
+resilience measures identified were practical and iterative, such as using
+phased rollouts to minimize disruption, establishing robust monitoring
+and feedback loops, and, most importantly, embedding human-in-the-
+loop designs for critical processes. These measures serve to strengthen
+the interoperability standards (Technology-Processes) and platform
+governance roles (Application-Actors) interfaces, ensuring that the
+technology layer effectively supports the human actors in the SIEs. This
+latter point was seen as crucial for maintaining human oversight,
+building trust, and ensuring that AI serves as an augmentation of, rather
+than a replacement for, human intelligence.
+Theme 4. The future trajectory: towards an AI-mediated EA
+Looking to the future, the experts shared a compelling and highly
+aligned vision of how AI will fundamentally reshape both EA and SIEs.
+The consensus is that AI will trigger a paradigm shift in EA, transforming
+it from its current perception as a static, fragmented, and slow function
+into a living, learning function that is dynamic and operates in real-time.
+In this future vision, AI will continuously ingest data from across the
+enterprise to enrich and update EA repository, effectively turning it into
+a dynamic operating system for change or a real-time strategic dash­
+board. Generative AI is expected to automate many of the time-
+consuming, low-value tasks currently performed by architects, freeing
+them to focus on higher-level strategic thinking.
+This technological shift will inevitably lead to a profound evolution
+in the role of the enterprise architect. The architect of the future will be
+less of a creator of static blueprints and more of a curator of AI insights
+or an architect as a prompt engineer who designs, governs, and fine-
+M. Lnenicka et al. Technovation 155 (2026) 103583
+8
+
+--- PAGE 9 ---
+tunes intelligent and self-optimizing systems. This new role will be
+focused on fostering a culture of innovation and ensuring that the
+intelligent systems being designed are human-centric and ethically
+sound. Finally, this transformation is expected to democratize archi­
+tectural insights. AI-powered tools, such as natural language interfaces
+and advanced visualization tools, will enable non-technical stakeholders
+to interact with and understand complex architectural information,
+making architecture a shared language of the enterprise. On a broader
+scale, AI is predicted to reshape SIEs by enabling hyper-personalization,
+blurring traditional industry boundaries by fostering new cross-sector
+collaborations, and creating AI-mediated marketplaces where com­
+panies and their intelligent agents collaborate to create value. By
+conceptualizing these dynamics through the Application-Resource
+interface, focal enterprises can better orchestrate shared AI capabil­
+ities and digital assets across the broader IE. This future trajectory im­
+plies a move toward self-optimizing interfaces, where intersections like
+sustainable infrastructure provisioning (Technology-Resources) and
+shared AI tooling and knowledge repositories (Application-Resources)
+become dynamic and autonomous, requiring enterprise architects to
+shift from manual design to the curation of these interfaces.
+4.3. Integrating quantitative and qualitative findings
+The integration of findings follows a convergent mixed-methods
+design, where qualitative narratives are used to unpack the descriptive
+patterns identified in the heatmaps. By mapping findings onto the EA-IE
+governance matrix, we see that the areas of highest quantitative
+importance (the Business and Data layers) are also the zones of highest
+qualitative complexity. Quantitatively, experts rated the Business and
+Data layers as the most strategically important for AI integration, while
+the Application and Technology layers received lower scores, indicating
+their perception as enablers rather than direct value drivers. However,
+the moderate standard deviations across these layers suggest that indi­
+vidual expert variation is significant. Qualitative insights reveal that this
+variation is not random but contingent on the specific sectoral context of
+the expert. These patterns align with the notion that AI's greatest impact
+occurs at the interface of organizational strategy and operational pro­
+cesses, where it shapes decision-making, actor collaboration, and inno­
+vation performance. This convergence between numeric ratings and
+expert perspectives underscores a collective understanding of AI as a
+strategic rather than a purely technical phenomenon.
+Qualitative insights enrich these findings by contextualizing why
+such patterns emerge and refining the average view provided by the
+means. Across interviews, experts consistently described the Business
+and Data layers as translational zones, where AI bridges human exper­
+tise with machine intelligence. In the context of our framework, these
+translational zones represent the ecosystem strategy alignment and data
+sovereignty and ethical governance interfaces. For instance, one
+respondent explained that “AI helps translate business intent into execut­
+able workflows far faster than any framework could”. Another emphasized
+that “our architecture evolves daily – AI forces us to rethink design on the
+fly”. These reflections explain why the Business layer received the
+highest consensus: there is a universal strategic urgency to leverage AI
+for process agility. These reflections illustrate how AI operates as a dy­
+namic coordination mechanism across enterprise layers, aligning with
+socio-technical perspectives that view innovation as co-produced
+through human and technological interactions. Conversely, the rela­
+tively lower importance and higher disagreement attributed to the
+Technology layer reflects a sector-specific divide: digital-native experts
+viewed infrastructure as a commodity (leading to lower scores), whereas
+experts from manufacturing sectors viewed it as a high-risk bottleneck
+(leading to higher scores and increased variance).
+Synthesizing both datasets reveals a layered complementarity that
+enhances interpretive validity. The quantitative trends identify where
+AI's influence is concentrated, while the qualitative narratives explain
+how these intersections materialize in practice. This integration exposes
+the EA paradox – the tension between maintaining structural consis­
+tency and embracing adaptive flexibility. As reflected in the experts'
+statements, the 12 governance interfaces defined in Fig. 1 serve as
+boundary objects that enable communication and coherence across
+functional, data, and technological domains. By operationalizing EA as a
+set of adaptive interfaces rather than a static blueprint, the focal actor
+can successfully bridge the gap between its internal structural core and
+the external emergent AI-enabled SIEs.
+5. Discussion and limitations
+The findings of this study provide insights into the intersection of AI,
+EA, and SIEs. Our results highlight three main dynamics: 1) a pro­
+nounced strategic prioritization of AI at the Business and Data layers; 2)
+the reliance on architectural principles without consistent use of formal
+EA frameworks; and 3) the persistent predominance of human and
+organizational barriers over technical challenges. These empirical pat­
+terns validate the analytical utility of the EA-IE governance matrix,
+particularly regarding the EA's role in providing the structural core
+needed to manage ecosystem emergence. The qualitative data suggests
+that isolated pilots often fail because they lack grounding in the auto­
+mated compliance and co-creation interface, leading to a disconnect
+between AI capability and ecosystem workflows. Furthermore, the
+quantitative assessment indicates that the data sharing agreements and
+APIs nexus is a primary predictor of an enterprise's resilience within the
+SIE. This supports the complex adaptive systems view that these specific
+governance interfaces, such as green compute access and identity
+management and circular business model integration, are vital for
+agentic adaptation, allowing enterprises to balance internal stability
+with the chaotic potential of AI-driven innovation.
+Together, these findings reveal a misalignment between the future
+vision of EA as a dynamic, AI-augmented discipline and the current
+fragmented practices in organizations. This gap resonates with earlier
+observations that organizations often struggle to fully capture AI's
+transformative potential because of inertia in governance, skills, and
+cultural readiness (Goralski and Tan, 2020; Leal Filho et al., 2023;
+Murire, 2024; Tuncer and Varoglu, 2025). In particular, the reliance on
+architectural thinking without formal frameworks underscores the
+enduring tension between flexibility and standardization in digital
+transformation (Afriliana et al., 2022; Kotusev and Kurnia, 2021).
+However, it is imperative to balance this optimism with a recognition
+of AI's externalities, revealing what we characterize as the EA Paradox.
+Our analysis reveals a critical sustainability tension: while AI optimizes
+resource efficiency in the ecosystem (through sustainable resource
+mobilization strategies), its own computational demands generate a
+significant carbon footprint, potentially offsetting environmental gains.
+Furthermore, experts highlighted socio-technical risks, specifically
+algorithmic bias and the black box nature of automated decisions, which
+can undermine trust and social inclusivity among ecosystem actors. This
+emphasizes the need for robust data sovereignty and ethical governance
+at the Data-Actors intersection. Therefore, governing AI-enabled SIEs
+requires a dual focus – leveraging AI for innovation while actively
+monitoring and mitigating its environmental and ethical liabilities
+through the defined matrix interfaces.
+Our results extend prior work that has highlighted the socio-
+technical nature of AI adoption, where organizational culture, trust,
+and governance are often more decisive than technical capabilities
+(Denni-Fiberesima, 2024; Secundo et al., 2025; Zimmermann et al.,
+2023). By emphasizing human-centric barriers, our study adds empirical
+weight to the notion that technology affordances are only realized when
+coupled with managerial courage and adaptive capabilities (Chatterjee
+et al., 2020). The experts’ vision of a living EA also reflects the growing
+trend toward digital architectures that are not static repositories but
+adaptive, evolving systems (Boyer, 2020; Jacobides et al., 2018). Such a
+vision resonates with emerging industry perspectives that position
+AI-enabled EA as a catalyst for enterprise transformation, functioning as
+M. Lnenicka et al. Technovation 155 (2026) 103583
+9
+
+--- PAGE 10 ---
+a continuously adaptive system, enriched by real-time data, to enhance
+agility, resilience, and sustainable growth (Alghamdi, 2024a; Chen and
+Zhao, 2024; Zhang and Wei, 2025; Zimmermann et al., 2020).
+5.1. Theoretical and practical implications
+Theoretically, our findings contribute to the complex systems
+perspective. The empirical evidence of a socio-technical system, where
+human and organizational factors are the primary barriers, reinforces
+that a purely technical view of AI integration is insufficient. Our dis­
+covery of the EA integration paradox – whereby practitioners apply
+architectural principles without formally adopting frameworks – sup­
+ports theories of EA as a social practice and a cognitive tool for man­
+aging complexity (Kotusev and Kurnia, 2021). EA artifacts and
+principles, in this light, function as boundary objects that facilitate
+communication and shared understanding across diverse stakeholder
+groups (Kotusev et al., 2023). This pattern resonates with the duality
+identified in digital transformation research, where organizations must
+balance standardization for control and flexibility for innovation (Tilson
+et al., 2010; Volkoff and Strong, 2013). Hence, rather than rejecting EA,
+practitioners reinterpret it as a flexible governance language adaptable
+to rapid AI-driven change.
+This paradox can be theoretically explained through the lens of
+organizational agility versus structural inertia. While formal EA frame­
+works provide necessary stability, they often introduce structural inertia
+that conflicts with the high-velocity requirements of AI innovation.
+Consequently, organizations adopt a governance by principles approach
+as a dynamic capability. This mechanism allows them to maintain
+architectural coherence through shared cognitive heuristics – what we
+term architectural thinking – while bypassing the bureaucratic rigidity
+of heavy-weight frameworks. To operationalize this mechanism, directly
+emerging from the experts' qualitative accounts of balancing AI velocity
+with structural stability (Theme 2), we propose three testable
+propositions.
+Proposition 1. The adoption of formal EA frameworks is negatively
+correlated with AI implementation speed in high-velocity industries, but
+architectural principles (as weighted heuristics) positively correlate with long-
+term system resilience. This transition primarily occurs within highly agile
+organizations facing extreme AI velocity. However, as our empirical data
+suggests, if these principles are not firmly established, organizations face a
+severe risk of “shadow AI”, where decentralized units adopt unsanctioned AI
+tools, bypassing architectural oversight and data sovereignty.
+Proposition 2. Reflecting the expert insights from Theme 2 and Theme 3,
+the EA Paradox is most prevalent in SMEs and agile-native firms, where
+resource constraints and the need for speed necessitate a decoupling of
+governance from formal structure.
+Proposition 3. As AI maturity moves from isolated pilots to ecosystem
+orchestration, the reliance on tacit architectural thinking remains high, but
+the need for explicit data-layer standardization increases to manage cross-
+actor interoperability.
+This shift effectively decouples governance from formal structure,
+enabling the agility required for rapid AI experimentation without
+sacrificing long-term system integrity. These propositions provide a
+roadmap for testing the relationship between organizational size, in­
+dustry maturity, and AI type within the EA-IE governance matrix.
+Theoretically, our framework extends the complex adaptive systems
+perspective by operationalizing how intelligent agents (human and non-
+human) interact within architectural boundaries to produce emergent,
+adaptive organizational behaviors. This reinforces the validity of
+analyzing the complex adaptive system from a focal-actor standpoint,
+demonstrating that EA serves as a crucial internal governance mecha­
+nism for survival and co-evolution within external ecosystem
+complexity. This finding also empirically validates the need for EA to
+evolve beyond rigid structures toward a more dynamic capability
+(Gampfer et al., 2018), which is essential for governing the emergent
+and unpredictable nature of IEs (Jacobides et al., 2018; Boyer, 2020).
+Furthermore, the human-centric challenges we identified resonate with
+strategic management theories on IT affordance, which posit that the
+value of technology is not inherent but is actualized through human
+agency, knowledge, and even courage (Chatterjee et al., 2020). Finally,
+the findings contribute to sustainability-oriented innovation research by
+demonstrating how AI can be mobilized not only for operational effi­
+ciency but also for strategic circularity and green value creation (Nylund
+et al., 2021; Huang et al., 2025).
+Practically, our results suggest several takeaways. First, organiza­
+tions should focus their AI integration efforts on the Business and Data
+layers, where the perceived strategic value is highest (Adner, 2006).
+Second, managers must recognize that the critical success factors for AI
+adoption lie in governance, culture, and capability-building, requiring
+significant investment in change management, upskilling, and data
+governance (Jankovic and Curovic, 2023; Murire, 2024; Tuncer and
+Varoglu, 2025). Third, adopting human-in-the-loop approaches pro­
+vides a dual benefit: safeguarding trust and resilience while enabling
+human-AI co-creation (Salminen et al., 2024; Zimmermann et al., 2023).
+Finally, the finding that architectural principles can be successfully
+applied without formal frameworks suggests that organizations can
+benefit from cultivating a culture of structured, strategic thinking
+without the bureaucratic overhead of rigid methodologies, a point
+particularly relevant for SMEs and SIE participants operating under
+resource constraints.
+5.2. Future research directions
+Building directly on our empirical findings, specifically the need to
+navigate the EA paradox (Theme 2) and overcome socio-technical
+workforce barriers (Theme 3), and the work of Chen and Zhao (2024)
+and Li et al. (2024), we propose a future research agenda centered on
+developing a multi-agent simulation framework for SIEs. Because our
+exploratory empirical study (n = 10) revealed that static EA frameworks
+struggle to capture the rapid, non-linear evolution of AI, we recognize
+that dynamic modeling is the necessary next methodological step.
+Therefore, rather than presenting a disconnected conceptual exercise,
+we explicitly scope our future research agenda around multi-agent sys­
+tems as a direct response to our findings. These systems are uniquely
+well-suited to studying the emergent behaviors and adaptive capacities
+of the complex ecosystems identified by our experts (Paasi et al., 2023),
+reflecting the transformative role of AI (Secundo et al., 2025). To move
+from a conceptual model to a formal representation, we define each
+agent (Ai) as a tuple {Si, Ac, Ri}, where Si represents the agent's internal
+state, Ac denotes the action space, and Ri is the reward function. This
+framework allows the SIE to be modeled as a complex adaptive system
+where diverse agents interact under evolving environmental conditions
+and governance constraints.
+To advance this modeling endeavor, we recommend designing
+diverse, stakeholder-informed agent profiles that capture both technical
+and strategic roles across the ecosystem. Examples include: 1) a business
+strategist agent guided by market foresight and value co-creation logic,
+as highlighted by Sun et al. (2022); 2) a sustainability officer agent
+optimizing ESG and circularity trade-offs based on the principles in Alka
+et al. (2024) and Bakry et al. (2024); 3) a chief architect agent tasked
+with governance, security, and ethical oversight, drawing on Bakar et al.
+(2024) and Minkkinen et al. (2023); and 4) an employee agent repre­
+senting the human workforce, whose decision logic includes digital
+skills, change resistance, and internal motivation, informed by Chat­
+terjee et al. (2020). We propose using the BDI architecture for agent
+design (Georgeff et al., 1999). In this logic, each agent optimizes a
+distinct utility function: the business strategist maximizes Return on
+Investment (ROI) subject to market volatility, while the sustainability
+officer maximizes an ESG score subject to operational budget
+constraints.
+M. Lnenicka et al. Technovation 155 (2026) 103583
+10
+
+--- PAGE 11 ---
+Emerging literature on AI-driven intelligent agents provides a strong
+foundation for such an agenda. Intelligent agents are increasingly used
+to model sustainability challenges, such as a manufacturing system (Kim
+et al., 2020), and to simulate organizational governance and
+decision-making in complex systems (An et al., 2023; Hughes et al.,
+2025; Liang et al., 2022). Incorporating these insights can make agent
+profiles more realistic and adaptive, allowing them to learn and evolve
+with their environments, rather than merely executing fixed rules.
+We further propose adapting the five simulation scenarios developed
+by Chen and Zhao (2024) to reflect the distinctive challenges and
+resilience demands of SIEs. To ensure methodological rigor and repro­
+ducibility, researchers should implement these scenarios using the ODD
+protocol (Grimm et al., 2020). These include: 1) sustainable business
+model transformation, such as simulating shifts toward circular or
+regenerative models; 2) green value chain restructuring, exploring the
+environmental and coordination costs of different sourcing strategies; 3)
+data chain analysis for ESG transparency and reporting; 4) composable
+and modular digital architecture, emphasizing agility and scalability;
+and 5) green infrastructure upgrading, including low-carbon IT,
+renewable integration, and edge computing solutions, see Vandevenne
+et al. (2023). By simulating these scenarios in an agent-based environ­
+ment, researchers could analyze how architectural rules, decision logics,
+and emergent interactions influence outcomes such as system resilience,
+innovation diffusion, and sustainability performance under conditions
+of external volatility.
+A particularly valuable application of such simulations lies in testing
+alternative governance paradigms. The interaction rules should be
+governed by the EA Paradox principle observed in our empirics. Spe­
+cifically, modeling governance not as rigid constraints (hard rules), but
+as weighted penalty functions (principles) that influence, rather than
+dictate, agent behavior. For instance, simulations could compare rules-
+based, principle-based, and hybrid governance principles, evaluating
+their relative effectiveness in promoting innovation, sustainability, and
+adaptive recovery (Bakhtiar et al., 2026). Agent-based models also offer
+a controlled environment to introduce external shocks, such as climate
+events, regulatory shifts, or geopolitical disruptions, and to observe how
+different governance logics shape recovery trajectories. In this way,
+future research could not only extend the methodological repertoire of
+EA and sustainability studies but also provide practical decision-support
+tools for policymakers and organizations navigating the uncertainties of
+AI-enabled transformation.
+We provide a conceptual outline for this framework in Fig. 4.
+Grounded in our empirical identification of diverse stakeholder tensions
+(Theme 3), this model would simulate the interactions of these hetero­
+geneous actors (e.g., strategists, employees), each with unique goals and
+behaviors. These agents would operate within a simulated environment
+subjected to external shocks. The agents' interactions would be governed
+by a set of governance rules and principles. Researchers could then
+measure the emergent outcomes (e.g., ecosystem resilience, innovation
+rate, sustainability score) to test hypotheses, such as: Does principle-
+based governance lead to higher resilience than rules-based gover­
+nance in the face-of market shocks? This multi-agent system model
+would provide a virtual laboratory to make the complex, socio-technical
+governance of AI-enabled SIEs actionable and testable.
+Operationalizing the model would require integrating insights from
+AI readiness and maturity models with digital twin architectures that
+support data exchange between simulated and real environments.
+Future research could employ hybrid methodologies – combining
+computational simulations with case studies – to calibrate and validate
+agent behaviors. For instance, by using real enterprise data, researchers
+could test how specific governance mechanisms influence innovation
+rates, ESG performance, and system resilience.
+Theoretically, the model contributes to the understanding of socio-
+technical governance by linking micro-level agent behavior to macro-
+level ecosystem adaptation. It operationalizes the complex systems
+view of SIEs and provides a tool to explore emergence, feedback, and
+self-organization within AI-driven architectures. Practically, it offers
+decision-makers a low-risk experimental space to evaluate trade-offs
+between efficiency, compliance, and sustainability before implement­
+ing large-scale digital transformation strategies.
+5.3. Limitations
+This study's findings should be considered in light of its limitations.
+The primary limitation is the small, purposive sample size of ten experts.
+While this qualitative approach yielded rich, in-depth data consistent
+with an exploratory study (Patton, 2015), the results are illustrative and
+not statistically generalizable. Specifically, the quantitative metrics re­
+ported (means and standard deviations) should be interpreted strictly as
+descriptive heuristics for identifying consensus patterns within this
+expert group, rather than as inferential statistics applicable to the
+broader population. The use of a 6-point Likert scale was intended to
+force a choice and reveal strategic concentrations. However, these re­
+sults provide ordinal data suitable for prioritization and comparison, not
+for high-inference claims about absolute strategic concentration. The
+insights therefore represent analytical generalization – depth of under­
+standing within expert contexts – rather than statistical generalization to
+all enterprises (Yin, 2017). Future research should aim to validate these
+findings through large-scale surveys or through comparative, in-depth
+case studies of specific AI ecosystems, like the analyses conducted by
+Arenal et al. (2020) in China or Sultana et al. (2023) in Montreal, to
+provide deeper contextual understanding. Moreover, the study captured
+perspectives at a single point in time, while both AI technologies and
+governance frameworks evolve rapidly. Longitudinal studies would be
+valuable to capture how organizational strategies adapt as AI and sus­
+tainability pressures intensify.
+Second, the study's contextual boundedness may affect trans­
+ferability. All participants operated within European innovation eco­
+systems characterized by strong regulatory and sustainability
+frameworks. This geographic focus serves as a leading-edge context
+Fig. 4. Conceptual architecture of the proposed multi-agent system. Source:
+own processing.
+While the diagram illustrates agent roles and high-level interactions, the formal
+decision logic (based on the BDI framework and utility optimization) and
+governance protocols are detailed in the accompanying text of this section.
+Operationalizing this model requires a discrete-event simulation approach
+where agent interactions are processed in time-steps (T), and agent success is
+measured by ecosystem fitness – a weighted sum of sustainability scores and
+innovation rates.
+M. Lnenicka et al. Technovation 155 (2026) 103583
+11
+
+--- PAGE 12 ---
+given Europe's advanced regulatory landscape (e.g., CSRD and AI Act),
+providing a preview of governance challenges likely to emerge globally.
+However, it introduces a boundary to the findings' immediate trans­
+ferability. In other contexts, especially emerging economies or less
+digitally mature organizations, the role of EA and AI integration may
+differ. Researchers should therefore treat the proposed framework as a
+conceptual template adaptable to diverse settings, contingent on local
+governance structures, digital maturity, and sustainability priorities. We
+acknowledge that this specific selection may introduce an inherent bias
+toward high-maturity sustainability views, which should be considered
+when interpreting the scope of the EA-IE governance matrix.
+Third, the uneven distribution of knowledge and expertise among
+participants revealed a structural challenge. Several experts reported
+only basic or working knowledge of EA, despite holding advanced
+expertise in IEs, AI, or sustainability. This imbalance reinforces prior
+observations that EA often remains siloed within IT functions and is not
+well embedded across organizational domains (Lapalme, 2012; Niemi
+and Pekkola, 2017). However, it is crucial to distinguish between the
+explicit knowledge of formal frameworks (e.g., TOGAF specifications),
+which this question measured, and the tacit architectural knowledge
+derived from years of strategic leadership. Our qualitative analysis
+confirms that while experts may lack fluency in academic EA termi­
+nology, they demonstrate a high proficiency in architectural thinking –
+the ability to govern complex socio-technical systems. Therefore, the
+low self-reported familiarity reflects a gap in lexicon, not in competence,
+preserving the validity of their strategic insights. Similarly, differences
+in sustainability orientation (e.g., corporate ESG focus vs. product
+innovation focus) could shape how value was conceptualized. To miti­
+gate this, triangulation between quantitative and qualitative data was
+used to ensure thematic consistency, yet these biases remain an inherent
+limitation.
+Fourth, the responses underscore organizational resistance and
+human factors as major barriers. Multiple experts cited employee fear of
+job loss, skill gaps, and cultural resistance to AI adoption. This resonates
+with broader literature on digital transformation, which identifies
+workforce anxieties and change fatigue as critical inhibitors (Raisch and
+Krakowski, 2021; Trenerry et al., 2021). Moreover, experts acknowl­
+edged that even when AI delivers measurable efficiency gains, sustain­
+ing adoption requires continuous communication, training, and building
+trust around fairness and transparency. Without such measures, AI risks
+amplifying inequalities between employees who can adapt quickly and
+those who struggle with digital upskilling.
+Fifth, a recurring theme is the fragility of data governance and
+quality. Experts repeatedly described siloed, inconsistent, or messy data
+as a bottleneck, with significant implications for the reliability of AI
+insights. This echoes existing concerns that poor data stewardship not
+only reduces AI's value creation potential but also amplifies ethical and
+legal risks around bias, privacy, and accountability (Gebru et al., 2021;
+Stahl, 2022). Particularly concerning is that several organizations
+admitted to bypassing formal EA frameworks, instead relying on light­
+weight or ad-hoc principles. While this may enhanceagility, it also raises
+the danger of fragmented governance and shadow AI deployments,
+which could compromise long-term resilience. This lack of formalization
+suggests that future research should focus on the governance vacuum
+created when agile AI initiatives bypass the EA of the enterprise.
+Sixth, there are sustainability paradoxes. While some organizations
+reported success in using AI to optimize energy efficiency and resource
+utilization, others expressed concern over the carbon footprint of AI
+infrastructures and the misalignment of AI deployments with climate
+goals. One expert explicitly noted the difficulty of reconciling AI's
+growing energy demands with organizational sustainability targets. This
+contradiction reflects a broader tension in literature, where AI is
+simultaneously positioned as a tool for green innovation and as a
+contributor to digital environmental burdens (Huang et al., 2025; Van­
+devenne et al., 2023; Vinuesa et al., 2020).
+Seventh, the findings point to governance and accountability gaps.
+Several participants stressed the lack of clarity regarding responsibility
+for AI-driven errors, compliance with evolving regulations, and the
+ethical implications of automated decision-making. This aligns with
+calls for more robust governance frameworks in AI-enabled enterprises,
+particularly to manage explainability and accountability (Floridi and
+Cowls, 2022). The fact that many organizations adopt lightweight ver­
+sions of TOGAF or Zachman, rather than comprehensive governance
+models, suggests a pragmatic but potentially risky trade-off between
+speed and accountability.
+6. Conclusions
+This research explored the challenge of integrating AI into enter­
+prises through the lens of EA to foster SIEs, a challenge of growing ur­
+gency for modern organizations. Guided by three RQs, the study
+develops and empirically grounds a formal, multidimensional frame­
+work that advances both theoretical and practical understanding by
+moving from descriptive observations to testable mechanisms.
+With respect to RQ1, our findings reveal a clear consensus among
+experts that AI's strategic value lies primarily at the business and data
+layers, where it directly shapes actors, processes, and data flows. Criti­
+cally, our analysis identifies a lexicon gap: while experts may report
+moderate familiarity with formal EA frameworks (explicit knowledge),
+they demonstrate a high level of tacit architectural thinking proficiency.
+This distinction validates the expert assessments by prioritizing proce­
+dural competence in managing complex digital transformations over
+terminological fluency. This reflects a recognition that while technology
+and infrastructure are essential enablers, the transformative power of AI
+emerges when it intersects with business strategy and innovation
+practices.
+In response to RQ2, the results show that organizations are pursuing
+pragmatic integration strategies that emphasize architectural principles,
+such as modularity, governance, and alignment with business value,
+while often bypassing formal EA frameworks viewed as too rigid. We
+theorize this EA Paradox as a strategic adaptation through the lens of
+dynamic capabilities, where organizations transition from governance
+by rules to governance by principles to overcome structural inertia. At
+the same time, practitioners face persistent socio-technical barriers:
+human resistance, cultural inertia, skills gaps, and data governance is­
+sues consistently overshadow purely technical challenges. This un­
+derscores that successful integration depends as much on organizational
+readiness and human-centric governance as on technological capability.
+Regarding RQ3, the synthesis of quantitative and qualitative insights
+culminates in a cohesive framework operationalized through three
+testable propositions (P1, P2, P3). These propositions define the bound­
+ary conditions of the EA Paradox by accounting for organizational size,
+industry velocity, and AI type (exploratory vs. exploitative). This
+framework highlights both where AI delivers the most strategic impact
+and which socio-technical factors must be managed to ensure sustain­
+able innovation.
+Taken together, the study contributes in two key ways. First, it
+bridges high-level theories of SIEs with the granular realities of
+enterprise-level AI integration, offering a socio-technical perspective on
+governance in complex adaptive systems. Unlike existing models, our
+framework explicitly integrates the vertical EA layers with the hori­
+zontal SIE dimensions, treating EA principles and artifacts as boundary
+objects that align diverse stakeholders. Second, it provides a foundation
+for future research by formalizing a multi-agent simulation roadmap. By
+adopting the BDI logic and the ODD protocol, we provide a mathemat­
+ically grounded path for examining the dynamic interplay of stakeholder
+roles, architectural principles, and emergent system behaviors. Looking
+ahead, these insights suggest that organizations must prepare for a
+paradigm shift: AI is poised to transform EA from a static discipline into
+a living, adaptive function that continuously evolves with real-time
+data. This transition will redefine the role of enterprise architects as
+curators of AI-driven insights and stewards of ethical, human-centered
+M. Lnenicka et al. Technovation 155 (2026) 103583
+12
+
+--- PAGE 13 ---
+innovation. Ultimately, architecting intelligent service ecosystems is not
+only about securing competitive advantage but about equipping soci­
+eties with the resilience and creativity needed to address systemic,
+global challenges.
+Declaration of generative AI and AI-assisted technologies in the
+writing process
+During the preparation of this manuscript, the authors employed
+ChatGPT-5o to assist with improving readability and language clarity.
+Following this use, the authors thoroughly reviewed and edited the text
+to ensure accuracy and integrity and take full responsibility for the
+content of the final manuscript.
+CRediT authorship contribution statement
+Martin Lnenicka: Conceptualization, Data curation, Formal anal­
+ysis, Investigation, Methodology, Supervision, Validation, Visualization,
+Writing – original draft, Writing – review & editing. Dominik Palla:
+Conceptualization, Data curation, Investigation, Visualization, Writing –
+original draft, Writing – review & editing. Petra Poulova: Conceptu­
+alization, Investigation, Methodology, Writing – original draft.
+Conflict of interest
+The authors declare that they have no conflict of interest.
+Acknowledgements
+The authors acknowledge funding from the Excellence project run at
+the Faculty of Informatics and Management, University of Hradec Kra­
+love, Czech Republic.
+Data availability
+Data will be made available on request.
+References
+Adner, R., 2006. Match your innovation strategy to your innovation ecosystem. Harv.
+Bus. Rev. 84 (4), 98–107.
+Afriliana, N., Gaol, F.L., Supangkat, S.H., Ranti, B., 2022. Intelligent Digital Enterprise
+Architecture: perspectives, trends, and technologies. In: 2022 International
+Conference on ICT for Smart Society (ICISS). IEEE, pp. 1–5. https://doi.org/
+10.1109/ICISS55894.2022.9915159.
+Aldoseri, A., Al-Khalifa, K.N., Hamouda, A.M., 2024. AI-powered innovation in digital
+transformation: key pillars and industry impact. Sustainability 16 (5), 1790. https://
+doi.org/10.3390/su16051790.
+Alghamdi, H., 2024a. Assessing the impact of enterprise architecture on digital
+transformation success: a global perspective. Sustainability 16 (20), 8865. https://
+doi.org/10.3390/su16208865.
+Alghamdi, H., 2024b. Sustainability in enterprise architecture: from optional to essential.
+Eur. J. Sustain. Dev. 13 (3). https://doi.org/10.14207/ejsd.2024.v13n3p357,
+357–357.
+Alka, T.A., Raman, R., Suresh, M., 2024. Research trends in innovation ecosystem and
+circular economy. Discov. Sustain 5 (1), 323. https://doi.org/10.1007/s43621-024-
+00535-5.
+An, L., Grimm, V., Bai, Y., Sullivan, A., Turner II, B.L., Malleson, N., et al., 2023.
+Modeling agent decision and behavior in the light of data science and artificial
+intelligence. Environ. Model. Software 166, 105713. https://doi.org/10.1016/j.
+envsoft.2023.105713.
+Arenal, A., Armuna, C., Feijoo, C., Ramos, S., Xu, Z., Moreno, A., 2020. Innovation
+ecosystems theory revisited: the case of artificial intelligence in China. Telecommun.
+Policy 44 (6), 101960. https://doi.org/10.1016/j.telpol.2020.101960.
+Bakar, N.A.A., Suib, A.H., Othman, A., Amdan, A.A., Hassan, M.A.A., Hussein, S.S., 2024.
+Artificial Intelligence in enterprise architecture: innovations, integration challenges,
+and ethics. In: International Conference on Innovation & Entrepreneurship in
+Computing, Engineering & Science Education (Invent 2024). Atlantis Press,
+pp. 578–588. https://doi.org/10.2991/978-94-6463-589-8_54.
+Bakhtiar, A., Ghazinoory, S., Nasri, S., Sarabadani, A., 2026. A metaphorical framework
+for measuring the resilience of innovation ecosystems: a systematic review. Int. J.
+Innovat. Sci. 18 (2), 359–385. https://doi.org/10.1108/IJIS-05-2024-0116.
+Bakry, D., Daim, T., Alzahrani, S., Dabic, M., Yesilada, B., 2025. Exploring innovation
+ecosystems to facilitate the adoption of sustainable entrepreneurship: looking
+beyond the Western world. J. Small Bus. Manag. 63 (1), 337–387. https://doi.org/
+10.1080/00472778.2024.2319782.
+Bakry, D.S., Daim, T., Dabic, M., Yesilada, B., 2024. An evaluation of the effectiveness of
+innovation ecosystems in facilitating the adoption of sustainable entrepreneurship.
+J. Small Bus. Manag. 62 (2), 763–789. https://doi.org/10.1080/
+00472778.2022.2088775.
+Baldwin, C.Y., Bogers, M.L., Kapoor, R., West, J., 2024. Focusing the ecosystem lens on
+innovation studies. Res. Pol. 53 (3), 104949. https://doi.org/10.1016/j.
+respol.2023.104949.
+Barile, D., Secundo, G., Del Vecchio, P., 2026. An artificial intelligence-based innovation
+ecosystem enabling open innovation and sustainable growth: evidence from a case
+study. Innovation 28 (1), 14–36. https://doi.org/10.1080/
+14479338.2025.2514468.
+Boyer, J., 2020. Toward an evolutionary and sustainability perspective of the innovation
+ecosystem: revisiting the panarchy model. Sustainability 12 (8), 3232. https://doi.
+org/10.3390/su12083232.
+Braun, V., Clarke, V., Rance, N., 2014. How to use thematic analysis with interview data.
+In: The Counselling & Psychotherapy Research Handbook. Sage, London,
+pp. 183–197. https://doi.org/10.4135/9781473909847.n13.
+Braun, V., Clarke, V., 2022. Conceptual and design thinking for thematic analysis. Qual.
+Psychol. 9 (1), 3–26. https://doi.org/10.1037/qup0000196.
+Bărbulescu, O., Nicolau, C., Munteanu, D., 2021. Within the entrepreneurship ecosystem:
+is innovation clusters' strategic approach boosting businesses' sustainable
+development? Sustainability 13 (21), 11762. https://doi.org/10.3390/
+su132111762.
+Campbell, J.L., Quincy, C., Osserman, J., Pedersen, O.K., 2013. Coding in-depth
+semistructured interviews: problems of unitization and intercoder reliability and
+agreement. Socio. Methods Res. 42 (3), 294–320. https://doi.org/10.1177/
+0049124113500475.
+Carrara, F., Freisinger, E., 2024. Actors' activities, and interactions in innovation
+ecosystems: a systematic literature review and typology. Int. J. Innovat. Manag. 28
+(03n04), 2430002. https://doi.org/10.1142/S1363919624300022.
+Chatterjee, S., Moody, G., Lowry, P.B., Chakraborty, S., Hardin, A., 2020. Information
+technology and organizational innovation: harmonious information technology
+affordance and courage-based actualization. J. Strateg. Inf. Syst. 29 (1), 101596.
+https://doi.org/10.1016/j.jsis.2020.101596.
+Chen, Y., Chen, Y., Guo, Y., 2023. Dynamic capabilities for value creation from AI
+innovation ecosystem: a comparison between IFLYTKE and Amazon. Int. J. Knowl.
+Manag. Stud. 14 (2), 212–236. https://doi.org/10.1504/IJKMS.2023.130031.
+Chen, J., Zhao, L., 2024. AI-driven innovation in enterprise architecture: a multi-agent
+system approach to adaptive design. In: Proceedings of the 2024 8th International
+Conference on Electronic Information Technology and Computer Engineering. ACM,
+pp. 768–774. https://doi.org/10.1145/3711129.3711261.
+Corrales-Garay, D., Rodríguez-Sánchez, J.L., Montero-Navarro, A., 2024. Co-creating
+value with artificial intelligence: a bibliometric approach to the use of AI in open
+innovation ecosystems. IEEE Access 12, 56860–56871. https://doi.org/10.1109/
+ACCESS.2024.3391054.
+Creswell, J.W., Plano Clark, V.L., 2018. Designing and Conducting Mixed Methods
+Research, third ed. Sage.
+Dedehayir, O., Mäkinen, S.J., Ortt, J.R., 2018. Roles during innovation ecosystem
+genesis: a literature review. Technol. Forecast. Soc. Change 136, 18–29. https://doi.
+org/10.1016/j.techfore.2016.11.028.
+Delbecq, A.L., Van de Ven, A.H., Gustafson, D.H., 1975. Group Techniques for Program
+Planning: a Guide to Nominal Group and Delphi Processes. Scott: Foresman & Co.
+Denni-Fiberesima, D., 2024. Navigating the generative AI-enabled enterprise
+architecture landscape: critical success factors for AI adoption and strategic
+integration. In: International Conference on Business and Technology. Springer,
+pp. 210–222. https://doi.org/10.1007/978-3-031-67434-1_20.
+Fetters, M.D., Curry, L.A., Creswell, J.W., 2013. Achieving integration in mixed methods
+designs—principles and practices. Health Serv. Res. 48 (6pt2), 2134–2156. https://
+doi.org/10.1111/1475-6773.12117.
+Fitriani, L., Khodra, M.L., Surendro, K., 2023. TOGAF-based enterprise architecture
+framework for utilizing artificial intelligence. In: 2023 International Conference on
+Computer, Control, Informatics and its Applications (IC3INA). IEEE, pp. 90–95.
+https://doi.org/10.1109/IC3INA60834.2023.10285801.
+Floridi, L., Cowls, J., 2022. A unified framework of five principles for AI in society. In:
+Machine Learning and the City: Applications in Architecture and Urban Design. John
+Wiley & Sons, pp. 535–545. https://doi.org/10.1002/9781119815075.ch45.
+Gampfer, F., Jürgens, A., Müller, M., Buchkremer, R., 2018. Past, current and future
+trends in enterprise architecture—a view beyond the horizon. Comput. Ind. 100,
+70–84. https://doi.org/10.1016/j.compind.2018.03.006.
+García-Escallón, R., Aldea, A., van Sinderen, M., 2021. On enterprise architecture
+patterns: a tool for sustainable transformation. In: International Conference on
+Enterprise Information Systems (ICEIS 2020). Springer, pp. 858–882. https://doi.
+org/10.1007/978-3-030-75418-1_39.
+Gebru, T., Morgenstern, J., Vecchione, B., Vaughan, J.W., Wallach, H., et al., 2021.
+Datasheets for datasets. Commun. ACM 64 (12), 86–92. https://doi.org/10.1145/
+3458723.
+Georgeff, M., Pell, B., Pollack, M., Tambe, M., Wooldridge, M., 1999. The belief-desire-
+intention model of agency. In: Intelligent, Agents V. (Ed.), Agents Theories,
+Architectures, and Languages. ATAL 1998. Lecture Notes in Computer Science, 1555.
+Springer, pp. 1–10. https://doi.org/10.1007/3-540-49057-4_1.
+Goralski, M.A., Tan, T.K., 2020. Artificial intelligence and sustainable development. Int.
+J. Manag. Educ. 18 (1), 100330. https://doi.org/10.1016/j.ijme.2019.100330.
+M. Lnenicka et al. Technovation 155 (2026) 103583
+13
+
+--- PAGE 14 ---
+Granstrand, O., Holgersson, M., 2020. Innovation ecosystems: a conceptual review and a
+new definition. Technovation 90–91, 102098. https://doi.org/10.1016/j.
+technovation.2019.102098.
+Grimm, V., Railsback, S.F., Vincenot, C.E., Berger, U., Gallagher, C., et al., 2020. The
+ODD protocol for describing agent-based and other simulation models: a second
+update to improve clarity, replication, and structural realism. J. Artif. Soc. Soc.
+Simulat. 23 (2), 7. https://doi.org/10.18564/jasss.4259.
+Guo, H., Gao, S., 2024. AI application in enterprise architecture: from the perspective of
+tools. In: 24th International Conference on Electronic Business, ICEB 2024, 24,
+pp. 615–621.
+Haddaway, N.R., Collins, A.M., Coughlin, D., Kirk, S., 2015. The role of Google Scholar in
+evidence reviews and its applicability to grey literature searching. PLoS One 10 (9),
+e0138237. https://doi.org/10.1371/journal.pone.0138237.
+Han, J., Zhou, H., Lowik, S., de Weerd-Nederhof, P., 2022. Enhancing the understanding
+of ecosystems under innovation management context: aggregating conceptual
+boundaries of ecosystems. Ind. Mark. Manag. 106, 112–138. https://doi.org/
+10.1016/j.indmarman.2022.08.008.
+Hoogervorst, J., 2004. Enterprise architecture: enabling integration, agility and change.
+Int. J. Cooper. Inf. Syst. 13 (3), 213–233. https://doi.org/10.1142/
+S021884300400095X.
+Huang, L., Chin, T., Papa, A., Pisano, P., 2025. Artificial intelligence augmenting human
+intelligence for manufacturing firms to create green value: towards a technology
+adoption perspective. Technol. Forecast. Soc. Change 213, 124013. https://doi.org/
+10.1016/j.techfore.2025.124013.
+Hughes, L., Dwivedi, Y.K., Malik, T., Shawosh, M., Albashrawi, M.A., et al., 2025. AI
+agents and agentic systems: a multi-expert analysis. J. Comput. Inf. Syst. 65 (4),
+489–517. https://doi.org/10.1080/08874417.2025.2483832.
+Jacobides, M.G., Cennamo, C., Gawer, A., 2018. Towards a theory of ecosystems. Strateg.
+Manag. J. 39 (8), 2255–2276. https://doi.org/10.1002/smj.2904.
+Jankovic, S.D., Curovic, D.M., 2023. Strategic integration of artificial intelligence for
+sustainable businesses: implications for data management and human user
+engagement in the digital era. Sustainability 15 (21), 15208. https://doi.org/
+10.3390/su152115208.
+Kamalabai, N.E., Donoghue, I., Hannola, L., 2024. Sustainable enterprise architecture: a
+critical imperative for substantiating artificial intelligence. In: 2024 Portland
+International Conference on Management of Engineering and Technology (PICMET).
+IEEE, pp. 1–12. https://doi.org/10.23919/PICMET64035.2024.10653061.
+Kim, Y.G., Lee, S., Son, J., Bae, H., Do Chung, B., 2020. Multi-agent system and
+reinforcement learning approach for distributed intelligence in a flexible smart
+manufacturing system. J. Manuf. Syst. 57, 440–450. https://doi.org/10.1016/j.
+jmsy.2020.11.004.
+Kitchenham, B., Brereton, O.P., Budgen, D., Turner, M., Bailey, J., Linkman, S., 2009.
+Systematic literature reviews in software engineering–a systematic literature review.
+Inf. Software Technol. 51 (1), 7–15. https://doi.org/10.1016/j.infsof.2008.09.009.
+Klingenstein, F., Kessler, S., Hoeltl, M., Daume, P., Fischer, M., 2025. A maturity model
+to assess and enhance the AI readiness of an enterprise architecture. In: AMCIS 2025
+Proceedings, p. 27.
+Kotusev, S., Kurnia, S., Dilnutt, R., 2022. The practical roles of enterprise architecture
+artifacts: a classification and relationship. Inf. Software Technol. 147, 106897.
+https://doi.org/10.1016/j.infsof.2022.106897.
+Kotusev, S., Kurnia, S., Dilnutt, R., 2023. Enterprise architecture artifacts as boundary
+objects: an empirical analysis. Inf. Software Technol. 155, 107108. https://doi.org/
+10.1016/j.infsof.2022.107108.
+Kotusev, S., Kurnia, S., 2021. The theoretical basis of enterprise architecture: a critical
+review and taxonomy of relevant theories. J. Inf. Technol. 36 (3), 275–315. https://
+doi.org/10.1177/0268396220977873.
+Lapalme, J., 2012. Three schools of thought on enterprise architecture. IT Prof. 14 (6),
+37–43. https://doi.org/10.1109/MITP.2011.109.
+Lea, B.R., Gupta, M.C., Yu, W.B., 2005. A prototype multi-agent ERP system: an
+integrated architecture and a conceptual framework. Technovation 25 (4), 433–441.
+https://doi.org/10.1016/S0166-4972(03)00153-6.
+Leal Filho, W., Yang, P., Eustachio, J.H.P.P., Azul, A.M., Gellers, J.C., et al., 2023.
+Deploying digitalisation and artificial intelligence in sustainable development
+research. Environ. Dev. Sustain. 25 (6), 4957–4988. https://doi.org/10.1007/
+s10668-022-02252-3.
+Leitão, J., Alves, H., Krueger, N., Park, J., 2018. Entrepreneurial, Innovative and
+Sustainable Ecosystems. Springer, Cham. https://doi.org/10.1007/978-3-319-
+71014-3.
+Li, X., Wang, S., Zeng, S., Wu, Y., Yang, Y., 2024. A survey on LLM-based multi-agent
+systems: workflow, infrastructure, and challenges. Vicinagearth 1 (1), 9. https://doi.
+org/10.1007/s44336-024-00009-2.
+Liang, X., Luo, L., Hu, S., Li, Y., 2022. Mapping the knowledge frontiers and evolution of
+decision making based on agent-based modeling. Knowl.-Based Syst. 250, 108982.
+https://doi.org/10.1016/j.knosys.2022.108982.
+Liao, H.T., Pan, C.L., Wu, Z., 2024. Digital transformation and innovation and business
+ecosystems: a bibliometric analysis for conceptual insights and collaborative
+practices for ecosystem innovation. Int. J. Innovat. Stud. 8 (4), 406–431. https://doi.
+org/10.1016/j.ijis.2024.04.003.
+Liu, Z., Stephens, V., 2019. Exploring innovation ecosystem from the perspective of
+sustainability: towards a conceptual framework. J Open Innov. Technol. Mark.
+Complex. 5 (3), 48. https://doi.org/10.3390/joitmc5030048.
+Mariani, M.M., Machado, I., Magrelli, V., Dwivedi, Y.K., 2023. Artificial intelligence in
+innovation research: a systematic review, conceptual framework, and future
+research directions. Technovation 122, 102623. https://doi.org/10.1016/j.
+technovation.2022.102623.
+Matharoo, S., 2025. Role of enterprise architecture in adoption of AI in enterprises. Int. J.
+Technol. Manag. Humanit. 11 (4), 16–25. https://doi.org/10.21590/ijtmh.11.04.03.
+Minkkinen, M., Zimmer, M.P., Mäntymäki, M., 2023. Co-shaping an ecosystem for
+responsible AI: five types of expectation work in response to a technological frame.
+Inf. Syst. Front. 25 (1), 103–121. https://doi.org/10.1007/s10796-022-10269-2.
+Murire, O.T., 2024. Artificial intelligence and its role in shaping organizational work
+practices and culture. Adm. Sci. 14 (12), 316. https://doi.org/10.3390/
+admsci14120316.
+Nardello, M., Lapalme, J., Toppenberg, G., Gøtze, J., 2015. How does enterprise
+architecture support innovation?. In: 2015 International Conference on Enterprise
+Systems (ES). IEEE, pp. 192–199. https://doi.org/10.1109/ES.2015.26.
+Neto, J.R., Figueiredo, C., Gabriel, B.C., Valente, R., 2024. Factors for innovation
+ecosystem frameworks: comprehensive organizational aspects for evolution.
+Technol. Forecast. Soc. Change 203, 123383. https://doi.org/10.1016/j.
+techfore.2024.123383.
+Niemi, E., Pekkola, S., 2017. Using enterprise architecture artefacts in an organisation.
+Enterp. Inf. Syst. 11 (3), 313–338. https://doi.org/10.1080/
+17517575.2015.1048831.
+Nuerk, J., Dařena, F., 2023. Activating supply chain business models' value potentials
+through systems engineering. Syst. Eng. 26 (5), 660–674. https://doi.org/10.1002/
+sys.21676.
+Nylund, P.A., Brem, A., Agarwal, N., 2021. Innovation ecosystems for meeting
+sustainable development goals: the evolving roles of multinational enterprises.
+J. Clean. Prod. 281, 125329. https://doi.org/10.1016/j.jclepro.2020.125329.
+Obreja, D.M., Rughiniş, R., Rosner, D., 2024. Mapping the conceptual structure of
+innovation in artificial intelligence research: a bibliometric analysis and systematic
+literature review. J. Innov. Knowl. 9 (1), 100465. https://doi.org/10.1016/j.
+jik.2024.100465.
+Oh, D.S., Phillips, F., Park, S., Lee, E., 2016. Innovation ecosystems: a critical
+examination. Technovation 54, 1–6. https://doi.org/10.1016/j.
+technovation.2016.02.004.
+Okoli, C., Pawlowski, S.D., 2004. The Delphi method as a research tool: an example,
+design considerations and applications. Inf. Manag. 42 (1), 15–29. https://doi.org/
+10.1016/j.im.2003.11.002.
+Oliveira-Duarte, L., Reis, D.A., Fleury, A.L., Vasques, R.A., Fonseca Filho, H., et al., 2021.
+Innovation ecosystem framework directed to sustainable development goal# 17
+partnerships implementation. Sustain. Dev. 29 (5), 1018–1036. https://doi.org/
+10.1002/sd.2191.
+Paasi, J., Wiman, H., Apilo, T., Valkokari, K., 2023. Modeling the dynamics of innovation
+ecosystems. Int. J. Innovat. Stud. 7 (2), 142–158. https://doi.org/10.1016/j.
+ijis.2022.12.002.
+Page, M.J., McKenzie, J.E., Bossuyt, P.M., et al., 2021. The PRISMA 2020 statement: an
+updated guideline for reporting systematic reviews. Br. Med. J. 372, 71. https://doi.
+org/10.1136/bmj.n71.
+Panetti, E., Parmentola, A., Ferretti, M., Reynolds, E.B., 2020. Exploring the relational
+dimension in a smart innovation ecosystem: a comprehensive framework to define
+the network structure and the network portfolio. J. Technol. Tran. 45 (6),
+1775–1796. https://doi.org/10.1007/s10961-019-09735-y.
+Patton, M.Q., 2015. Qualitative Research & Evaluation Methods, fourth ed. Sage.
+Pham, Q.H., Vu, K.P., 2022. Digitalization in small and medium enterprise: a
+parsimonious model of digitalization of accounting information for sustainable
+innovation ecosystem value generation. Asia Pac. J. Innov. Entrep. 16 (1), 2–37.
+https://doi.org/10.1108/APJIE-02-2022-0013.
+Pushpananthan, G., Elmquist, M., 2022. Joining forces to create value: the emergence of
+an innovation ecosystem. Technovation 115, 102453. https://doi.org/10.1016/j.
+technovation.2021.102453.
+Qu, C., Kim, E., 2025. Artificial-intelligence-enabled innovation ecosystems: a novel
+triple-layer framework for micro, small, and medium-sized enterprises in the Chinese
+apparel-manufacturing industry. Sustainability 17 (11), 5019. https://doi.org/
+10.3390/su17115019.
+Raisch, S., Krakowski, S., 2021. Artificial intelligence and management: the
+automation–augmentation paradox. Acad. Manag. Rev. 46 (1), 192–210. https://doi.
+org/10.5465/amr.2018.0072.
+Rittelmeyer, J.D., Sandkuhl, K., 2021. Effects of artificial intelligence on enterprise
+architectures - a structured literature review. In: 2021 IEEE 25th International
+Enterprise Distributed Object Computing Workshop (EDOCW). IEEE, pp. 130–137.
+https://doi.org/10.1109/EDOCW52865.2021.00042.
+Salminen, V., Pyykkönen, M., Salminen, C., 2024. Co-evolution of interaction of human
+intelligence and artificial intelligence in the innovation process. In: 2024 IEEE
+International Conference on Engineering, Technology, and Innovation (ICE/ITMC).
+IEEE, pp. 1–6. https://doi.org/10.1109/ICE/ITMC61926.2024.10794332.
+Sandkuhl, K., Rittelmeyer, J.D., 2021. Use of EA models in organizational AI solution
+development. In: Enterprise Engineering Working Conference. Springer,
+pp. 149–166. https://doi.org/10.1007/978-3-031-11520-2_10.
+Secundo, G., Spilotro, C., Gast, J., Corvello, V., 2025. The transformative power of
+artificial intelligence within innovation ecosystems: a review and a conceptual
+framework. Rev. Manag. Sci. 19, 2697–2728. https://doi.org/10.1007/s11846-024-
+00828-z.
+Shanks, G., Gloet, M., Someh, I.A., Frampton, K., Tamm, T., 2018. Achieving benefits
+with enterprise architecture. J. Strateg. Inf. Syst. 27 (2), 139–156. https://doi.org/
+10.1016/j.jsis.2018.03.001.
+Sipola, J., Saunila, M., Ukko, J., 2023. Adopting artificial intelligence in sustainable
+business. J. Clean. Prod. 426, 139197. https://doi.org/10.1016/j.
+jclepro.2023.139197.
+M. Lnenicka et al. Technovation 155 (2026) 103583
+14
+
+--- PAGE 15 ---
+Stahl, B.C., 2022. Responsible innovation ecosystems: ethical implications of the
+application of the ecosystem concept to artificial intelligence. Int. J. Inf. Manag. 62,
+102441. https://doi.org/10.1016/j.ijinfomgt.2021.102441.
+Sultana, N., Turkina, E., Cohendet, P., 2023. The mechanisms underlying the emergence
+of innovation ecosystems: the case of the AI ecosystem in Montreal. Eur. Plan. Stud.
+31 (7), 1443–1465. https://doi.org/10.1080/09654313.2023.2185502.
+Sultana, N., Turkina, E., 2023. Collaboration for sustainable innovation ecosystem: the
+role of intermediaries. Sustainability 15 (10), 7754. https://doi.org/10.3390/
+su15107754.
+Sun, Y., Xu, X., Yu, H., Wang, H., 2022. Impact of value co-creation in the artificial
+intelligence innovation ecosystem on competitive advantage and innovation
+intelligibility. Syst. Res. Behav. Sci. 39 (3), 474–488. https://doi.org/10.1002/
+sres.2860.
+Tamm, T., Seddon, P.B., Shanks, G., 2022. How enterprise architecture leads to
+organisational benefits. Int. J. Inf. Manag. 67, 102554. https://doi.org/10.1016/j.
+ijinfomgt.2022.102554.
+Thirasakthana, M., Kiattisin, S., 2021. Sustainable government enterprise architecture
+framework. Sustainability 13 (2), 879. https://doi.org/10.3390/su13020879.
+Tilson, D., Lyytinen, K., Sørensen, C., 2010. Digital infrastructures: the missing IS
+research agenda. Research commentary. Inf. Syst. Res. 21 (4), 748–759. https://doi.
+org/10.1287/isre.1100.0318.
+Tranfield, D., Denyer, D., Smart, P., 2003. Towards a methodology for developing
+evidence-informed management knowledge by means of systematic review. Br. J.
+Manag. 14 (3), 207–222. https://doi.org/10.1111/1467-8551.00375.
+Trenerry, B., Chng, S., Wang, Y., Suhaila, Z.S., Lim, S.S., et al., 2021. Preparing
+workplaces for digital transformation: an integrative review and framework of multi-
+level factors. Front. Psychol. 12, 620766. https://doi.org/10.3389/
+fpsyg.2021.620766.
+Tuncer, T.T., Varoglu, A.K., 2025. Empowering organizations with AI: strategies,
+challenges, and future directions. In: Sustainability, Circular Economy, and
+Transformation in Organizations. IGI Global, pp. 31–58. https://doi.org/10.4018/
+979-8-3373-2523-1.ch002.
+Vandevenne, N., Van Riel, J., Poels, G., 2023. Green enterprise architecture (GREAN)—
+Leveraging EA for environmentally sustainable digital transformation. Sustainability
+15 (19), 14342. https://doi.org/10.3390/su151914342.
+Vinuesa, R., Azizpour, H., Leite, I., Balaam, M., Dignum, V., et al., 2020. The role of
+artificial intelligence in achieving the sustainable development goals. Nat. Commun.
+11 (1), 233. https://doi.org/10.1038/s41467-019-14108-y.
+Volkoff, O., Strong, D.M., 2013. Critical realism and affordances: theorizing IT-associated
+organizational change processes. MIS Q. 37 (3), 819–834. https://doi.org/
+10.25300/MISQ/2013/37.3.07.
+Yablonsky, S., 2021. AI-driven platform enterprise maturity: from human led to machine
+governed. Kybernetes 50 (10), 2753–2789. https://doi.org/10.1108/K-06-2020-
+0384.
+Yin, R.K., 2017. Case Study Research and Applications: Design and Methods. Sage.
+Zhang, X., Wei, Y., 2025. The impact mechanism of AI technology on enterprise
+innovation resilience. Sustainability 17 (11), 5169. https://doi.org/10.3390/
+su17115169.
+Zimmermann, A., Schmidt, R., Alt, R., Masuda, Y., Chehri, A., 2023. Digital strategy and
+architecture for human-centered intelligent systems. In: International KES
+Conference on Human Centred Intelligent Systems. Springer, pp. 33–42. https://doi.
+org/10.1007/978-981-99-3424-9_4.
+Zimmermann, A., Schmidt, R., Jugel, D., Möhring, M., 2020. Evolution of enterprise
+architecture for intelligent digital systems. In: Research Challenges in Information
+Science. Springer, pp. 145–153. https://doi.org/10.1007/978-3-030-50316-1_9.
+Zimmermann, A., Schmidt, R., Sandkuhl, K., Jugel, D., et al., 2021. Conceptualizing
+artificial intelligence-based service ecosystems. In: International Conference on.
+Applied Human Factors and Ergonomics. Springer, pp. 377–384. https://doi.org/
+10.1007/978-3-030-80840-2_43.
+M. Lnenicka et al. Technovation 155 (2026) 103583
+15

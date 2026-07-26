@@ -1,0 +1,554 @@
+--- PAGE 1 ---
+ScienceDirect
+Available online at www.sciencedirect.com
+Procedia CIRP 130 (2024) 736–742
+2212-8271 © 2024 The Authors. Published by Elsevier B.V.
+This is an open access article under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0)
+Peer-review under responsibility of the scientific committee of the 57th CIRP Conference on Manufacturing Systems 2024 (CMS 2024)
+10.1016/j.procir.2024.10.157
+Guiding The Transformation To A Digital Factory Twin: Towards An
+Enterprise-Architecture-Management-based Approach With The Help Of A
+Capability Map
+Jonas Licka*
+, Julian Wellera
+, Jonathan Brocka
+, Shantanu Pathakb
+, Jan-Philipp Disselkampa
+,
+Arno Kühna
+, Roman Dumitrescua, b
+a
+Fraunhofer Institute of Mechatronic Systems Design, Zukunftsmeile 1, 33102 Paderborn, Germany
+b
+University of Paderborn –Heinz Nixdorf Institute, Fürstenallee 11, 33102 Paderborn, Germany
+* Corresponding author. Tel.: +49 5251 5465-331; E-mail address: jonas.lick@iem.fraunhofer.de
+Abstract
+The Digital Factory Twin (DFT) is becoming more important in today's manufacturing world, but many companies are struggling to plan for its
+successful implementation. As part of an Enterprise Architecture Management (EAM) approach to help systematically implement a DFT this
+paper proposes a Capability Map. The Capability Map is developed for one subarea of a DFT, the smart factory (SF) operations. We start by
+analyzing existing papers which describe business capabilities of SF operations based on the research method of a Structured Literature Review
+(SLR) toderivegenericbusinesscapabilities.Theidentifiedlistof capabilities thanisused asstartingpointforgrouping capabilitiesanddesigning
+a hierarchical structured Capability Map. The map is validated with industry experts and gives a starting point for possible relevant business
+capabilities that needs to be accomplished in a DFT transformation initiative. The overall research methodology of our paper orientates on the
+proposed method for developing generic Capability Maps according to VAN RIEL.
+57th CIRP Conference on Manufacturing Systems 2024 (CMS 2024)
+Keywords: digital twin; digital factory twin; smart factory operations; smart factory; enterprise architecture; enterprise architecture management; capability map;
+capability-based planning
+1. Introduction
+In today's rapidly evolving manufacturing landscape, the
+Digital Factory Twin(DFT)has emerged as aconcept withhigh
+potential at the intersection of factory planning, operations, and
+production management. A lot of data is generated in factories,
+and the DFT is a promising tool for extracting and using useful
+information from it [1]. The DFT can display and connect the
+right information in the right context of the factory. However,
+despite its potential benefits, the successful implementation of
+a DFT remains a challenge for many companies [2, 3, 4].
+The DFT connects the data of a factories physical systems
+into a system of connected IT applications, encapsulating the
+entire lifecycle of a factory, from conceptualization to
+operations and retirement [5, 6]. By mirroring real-world
+factory processes in a virtual environment, the DFT enables
+companies to simulate, analyze, and optimize operations [2]. It
+integrates data from various sources, including IoT sensors,
+production systems, and factory planning systems [3, 7]. By
+doing so, a DFT can offer a holistic view of factory planning
+and factory operations and facilitating informed decision-
+making [8].
+To successfully introduce a DFT in a company a digital
+transformation initiative will be started in most cases, due to the
+amount of involved business processes, IT systems and data
+sources [8]. To deal with the complexity of digital
+transformation initiatives, capability maps (CMs) areavaluable
+tool to guide organizations through the process [9, 10, 11]. By
+© 2024 TheAuthors. Published by Elsevier B.V.
+This is an open access article under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0)
+Peer-review under responsibility of the scientific committee of the 57th CIRP Conference on Manufacturing Systems 2024 (CMS 2024)
+
+--- PAGE 2 ---
+Jonas Lick et al. / Procedia CIRP 130 (2024) 736–742 737
+systematically describing the capabilities required to achieve
+strategic objectives, CMs provide clarity, alignment, and
+direction to transformation initiatives. In the context of the
+DFT, a well-defined CM serves as a resource, guiding
+organizations towards the successful implementation of their
+DFT initiative [9, 10, 12].
+This paper proposes an EAM-based approach to guide the
+transformation towards a DFT with the help of a CM. In this
+paper, we describe our results based on one of the three sub-
+areas of a DFT described before (factory planning, production
+management & factory operations) - the area of SF operations.
+We begin by analyzing the current state of research and related
+work in Section 2. In Section 3, we outline our research design.
+Section 4 presents our proposed SF operations CM, followed
+by Section 5, which details the procedure model for utilizing
+this map in DFT transformation initiatives. Finally, in Section
+6, we conclude with a discussion of our results and future work.
+2. State of research and related work
+A digital twin (DT) is a digital representation of a real system
+which sufficiently meet the requirements of a set of use cases
+[13, 14, 15]. For the system factory the DFT combines factory
+planning, factory operations and factory operations
+management [8]. In this section we provide an overview of
+maturity models and frameworks regarding DTs and SFs.
+Based on that we present the EAM-based methodology of
+capability-basedplanning (CBP) as a suitable way of managing
+digital transformation initiatives.
+Maturity Models and Frameworks for DTs and SFs
+The Digital Twin Consortium developed the DT Periodic
+Capability Table, which outlines the essential capabilities
+required for effective DT implementation [16]. While the table
+provides a comprehensive foundation, its generic nature
+necessitates further refinement to tailor it to specific domains,
+such as SF operations.
+Capability maturity models offer a structured framework for
+assessing an organization's capabilities and progress along a
+continuum. In the context of DTs and SFs, various maturity
+models have been proposed, each emphasizing different
+dimensions of maturity, such as technological infrastructure,
+data integration, and organizational culture [17, 18]. SUSANTO
+ET AL. [19] highlight that although publications on maturity
+models in manufacturing have increased steadily, but most
+models are more descriptive in nature than prescriptive, with
+less than 15 percent offering detailed suggestions.
+FrameworksforSFsarticulateoverarchinggoals,principles,
+and strategies for structuring and realizing SFs. Examples
+include frameworks developed by academic institutions,
+industry consortia, and standards bodies [20, 21, 22]. For
+example, the SF Navigator framework developed by BUDDE ET
+AL. [23] provides a structured breakdown of relevant areas in a
+SF: Smart Assets, Smart Products, Smart Manufacturing,
+Smart Supply Chain and Solution Ecosystems. Smart Assets
+describe areas such as intelligent condition monitoring and
+consumption monitoring. Smart Products focus on the
+interactions with product development and the production of
+intelligent technical systems. The Smart Manufacturing area
+describes components in relation to manufacturing processes.
+The Smart Supply Chain section describes logistical
+capabilities in the context of a smart factory. The Solution
+Ecosystem area focuses on components related to cross-
+organizational production ecosystems.
+Capability-based Planning Methodologies
+CBP, such as outlined in The Open Group Architecture
+Framework (TOGAF), offer structured approaches to aligning
+business capabilities needed to achieve business goals [24]. It
+involves defining strategic goals, identifying relevant
+capabilities, and assessing their importance [10]. CBP also
+includes analyzing capability maturity and defining a roadmap
+for capability development. Each capability can be assessed
+from different perspectives according to TOGAF – e.g. people
+dimension (training & know-how, awareness, etc.), process
+dimension (business processes) and material dimension
+(infrastructure, devices, material, etc.) [24].
+In summary various frameworks, models, and
+methodologies provide structuring approaches for the field of
+SFs, a standardized description of necessary business
+capabilities, that are enabled by a SF and the connection of
+these to the overarching technology of a DFT is missing. The
+EAM-based methodology CBP is a suitable approach
+managing digital transformation initiatives like a DFT.
+Currently, there is no known CM for a DFT, that is providing
+basis for CBP.
+3. Research Design
+Our research design is based on van Riel's methodology for
+developing generic CMs, as articulated in "A Method for
+Developing Generic Capability Maps: A Design Science Study
+in the Professional Sport Industry." [25]. This framework
+provides a structured approach to CM development,
+comprising the following key steps. Our instantiation can be
+found in Fig 1.
+1. Domain Definition
+The first step involves defining the scope and boundaries of
+the domain under consideration. In our case, we focus on SF
+operations, within the broader context of DFTs.
+
+--- PAGE 3 ---
+738 Jonas Lick et al. / Procedia CIRP 130 (2024) 736–742
+Fig. 1. Research Design for the SF operations CM Design based on Van Riel et al. [25] & Freitag [26] combined with an SLR according to Xiao/Watson [27].
+2. Domain Understanding
+We proceed to analyze the domain of SF through a
+structured literature review (SLR) according to Xiao/Watson
+[27]. By synthesizing existing research, frameworks, and
+modelsrelatedto SFoperations,weaimtoidentify theessential
+business capabilities required for effective SF and DFT
+implementation.
+3. Initial Map Design
+Building upon the insights from the SLR, we develop an
+initial CM that hierarchically structures the identified business
+capabilities.
+4. Stability Criteria Definition
+To ensure the robustness and validity of the CM, we define
+a stability criterion against which the map will beevaluated and
+refined. This criterion is, that no changes in the top two levels
+of the CM occur after validation.
+5. Case Study Validation
+The next step was validating the CM through a case study
+with an industry partner, a European manufacturing company
+with more than 6.000 employees. During this case study we
+validated the contents and structure of the CM. We iteratively
+refined the map based on insights gained from the validation
+process.
+6. Documented Design Process
+Throughout the development of the CM, we maintain
+documentation of the design process, ensuring transparency,
+repeatability, and traceability by documenting key changes in
+the map.
+
+--- PAGE 4 ---
+Jonas Lick et al. / Procedia CIRP 130 (2024) 736–742 739
+Fig. 2. Developed CM for SF operations on level one and level two capabilities, with machine vision as an example level three capability.
+4. Proposed Smart Factory Capability Map
+Table 1 shows an excerpt of the results of the conducted
+SLR. From 1.383 identified sources, 76 business capabilities
+were derived. Sources were found in the scopus database with
+the following search string:
+"capabilities"and("smart production"OR"manufacturing"
+OR "factory" OR "operational" OR "smart manufacturing" OR
+"Industry 4.0")
+Table 1. Examples for the identified SF Capabilities.
+Capability Description Source
+Machine vision Integrating machine vision with
+edge cloud computing ensures
+fast data processing, essential for
+[28]
+the dynamic environment of an
+adaptive production system.
+Modularity Modularity in hardware and
+software allows for the flexible
+rearrangement and
+reconfiguration of manufacturing
+systems
+[29]
+… … …
+Mass customization The capability to integrate
+Additive Manufacturing with
+ERP platforms is vital for
+enabling on-demand
+manufacturing capabilities within
+a smart factory.
+[30]
+In Fig 2. our developed capability map is shown. The
+capabilitiesaregrouped intothefivetop-levelgroupsdescribed
+
+--- PAGE 5 ---
+740 Jonas Lick et al. / Procedia CIRP 130 (2024) 736–742
+below. The top-level capabilities are structured with inspiration
+to the Smart Factory Framework proposed by BUDDE ET AL. in
+the Smart Factory Navigator [23].
+The CM comprises five overarching capability groups, the
+element solution ecosystem is not part of it. The sub-
+capabilities of each top-level capability group are the
+following:
+1. Smart Assets: This group encompasses capabilities
+related to the digitization, monitoring, and management
+of physical assets within the factory environment.
+Key capabilities include asset tracking, condition
+monitoring, predictive maintenance, and digital
+twinning of physical assets. This capability-group has
+four level two capability-groups, ranging from asset
+monitoring (intelligent or prescriptive) to consumption
+monitoring of the asset and monitoring of its
+environment.
+2. Smart Working: Smart Working focuses on
+capabilities related to workforce optimization,
+collaboration, and empowerment within the SF context.
+This includes capabilities such as workforce
+scheduling, skills management, augmented reality-
+based guidance, and remote collaboration tools. The
+level two capability-groups describing scheduling of
+the workforce and its skills, remote collaboration,
+intelligent workforce augmentation and assistance and
+management of workforce conditions.
+3. Smart Manufacturing: Smart Manufacturing
+encompasses capabilities related to the digitization and
+optimization of manufacturing processes and
+operations.
+This includes capabilities such as real-time production
+monitoring, quality management, adaptive production
+scheduling, and flexible automation. Level two
+capability-groups are the intelligent monitoring of
+production status and analysis of the manufacturing
+processes, as well as intelligent resource management
+and dynamic adaptability of production systems and an
+intelligent continuous improvement.
+4. Smart Supply Chain: This group focuses on
+capabilities related to the integration, visibility, and
+optimizationofthesupplychain andlogisticswithinthe
+SF ecosystem. Key capabilities include demand
+forecasting, supplier collaboration, inventory
+optimization, and logistics management. On level two
+capability-groups can be found from intelligent route
+planning to material tracking, to automatic processing
+of deliveries, an intelligent selection of serving strategy
+and dynamic storage location allocation.
+5. Smart Products: Smart Products encompass
+capabilities related to the integration of intelligence and
+connectivity into physical products manufactured
+withintheSF.Thisincludescapabilitiessuchasproduct
+lifecycle management, product customization, and
+remote product monitoring. The capability-group has
+the following level two capability-groups: intelligent
+quality inspection, dynamic workpiece routing and
+intelligent connection to production systems.
+In designing the CM, we adhere to the following principles
+to ensure clarity, coherence, and usability:
+▪ Hierarchical Structure: The CM follows a
+hierarchical structure, with capability groups at the
+top level and sub-capabilities nested within each
+group. This hierarchical arrangement facilitates
+navigation and understanding of the relationships
+between different capabilities.
+▪ Limited Sub-capabilities per Group: To
+maintain clarity and focus, each capability group
+accommodates a maximum of five sub-
+capabilities. This constraint encourages
+prioritization and ensures that the CM remains
+concise and manageable.
+▪ Minimum Sub-capabilities per Group: Within
+each group, we ensure a minimum of two sub-
+capabilities to provide sufficient granularity and
+coverage of the capabilities within that domain.
+This ensures that the CM captures the diverse
+aspects of SF operations effectively.
+Each of the level two capability-groups have sub-
+capabilities that describe concrete capabilities, that can be
+utilized in business processes. An example for this would be
+the capability automatic optical tracking of AGVs as part of the
+level two group Intelligent route planning as part of the top-
+level capability group Smart Supply Chain.
+During the design process and the case-study with our
+industry partner a few changes occurred. An excerpt of the
+documented changes can be found in Table 2.
+Table 2. Changes made in Design Cycle with Industry Partner.
+Level Action Capability
+label
+Level 2 Parent
+capability
+Level 1
+Parent
+capability
+Three Addition Predictive
+maintenance
+for AGVs
+1.2 Prescriptive Asset
+Monitoring /
+Predictive
+Maintenance
+1.0 Smart
+Assets
+Two Addition Dynamic
+storage
+location
+allocation
+- 4.0 Smart
+Supply
+Chain
+… … … … …
+Two Review Intelligent
+Workforce
+Scheduling
+- 2.0 Smart
+Working
+5. Proposed Procedure Model to work with the CM
+In this section, we outline a systematic procedure model for
+using the SF operations CM in the context of DFT
+implementation. Our procedure model is grounded in CBP
+principles and tailored to the process of aligning capabilities
+with strategic objectives and IT implementation.
+
+--- PAGE 6 ---
+Jonas Lick et al. / Procedia CIRP 130 (2024) 736–742 741
+1. Define Strategic Objectives
+The first step in our procedure model is to define strategic
+objectives for the DFT initiative. These objectives should align
+with broader organizational goals in the operations context and
+reflect the desired outcomes of the DFT implementation.
+2. Identify Requisite Capabilities
+Based on the defined strategic objectives, organizations
+identify the capabilities required to achieve these objectives.
+These capabilities are drawn from the SF operations CM,
+serving as a comprehensive repository of capabilities.
+3. Assess Strategic Relevance
+Once the requisite capabilities are identified, organizations
+assess the strategic relevance of each capability in the context
+of their specific objectives and priorities. This assessment may
+involve evaluating factors such as business impact, alignment
+with organizational strategy, and feasibility of implementation.
+4. Conduct Fit-Gap Analysis
+Next, organizations conduct a fit-gap analysis to identify
+any misalignments between existing capabilities and the
+desired state outlined by the strategic objectives. This analysis
+entails assessing two perspectives: (a) identifying capabilities
+that are currently lacking and need to be developed, and (b)
+identifying capabilities that require enhancement to meet the
+desired level of maturity.
+5. Plan Capability Realization
+Based on the findings of the fit-gap analysis, organizations
+developaroadmap forcapabilityrealization,outliningthesteps
+and milestones required to bridge the identified gaps and
+achieve the desired state. This roadmap serves as a strategic
+guide,informingresource allocation, investment decisions, and
+prioritization of initiatives.
+6. Conclusion and outlook
+The scientific contribution of our research is, that we
+presented a structured approach to guiding the digital
+transformation initiatives for the DFT technology, leveraging
+CBP principles. Through an SLR and methodological
+framework based on VAN RIEL [25], we have developed a
+comprehensive SF operations CM tailored to the needs of DFT
+implementation. Our proposed methodology offers a
+systematic approach to leveraging this CM, enabling
+organizations to align capabilities with strategic objectives and
+realize the vision of a DFT. Infurtherresearch we will continue
+to refine the CM and complement with the two additional sub-
+areas of a DFT: factory planning and production management.
+By systematically identifying, prioritizing, and
+roadmapping the capabilities, we make sure to align business
+and IT stakeholders and make sure, that the potentials of the
+DFT technology are properly leveraged to help with reaching
+strategic objectives in manufacturing companies’ operations
+domain.
+While our research helps with SF operations as part of a
+DFT, there remain several aspects for future research and
+exploration:
+▪ Extension to other Domains: Our CM approach
+has focused primarily on SF operations. Future
+research should explore extending this approach to
+other domains within the DFT technology, such as
+factory planning and production management.
+▪ Integration of Supply-Side Capabilities: Our
+methodology currently emphasizes capabilities on
+the demand side of the business. Future research
+could explore the integration of supply-side
+capabilities from IT side, that can satisfy the
+business demand,such as those necessary to enable
+DTs and Prescriptive Analytics, e.g. those
+described inthe DTPeriodic Capability Table[16].
+▪ Empirical Validation: While we have outlined a
+framework for developing and utilizing the SF
+operations CM and validated it with one industry
+partner, further empirical validation through real-
+world case studies and implementations will
+provide valuable insights into its effectiveness and
+practical applicability.
+In conclusion, our paper has presented a systematic
+approach to guiding the transformation towards a DFT,
+leveraging CM methodologies within an EAM framework. By
+developing a comprehensive SF operations CM and proposing
+a methodology for its utilization, we aim to provide
+organizations with the tools, insights, and guidance needed to
+navigate the complexities of DFT implementation and realize
+the full potential of Industry 4.0.
+Acknowledgements
+This work is part of the research project
+"Datenfabrik.NRW". The project is funded by the Ministry of
+Economic Affairs, Industry, Climate Action and Energy
+(MWIDE) of the State of North Rhine-Westphalia and
+managed by the Project Management Jülich (PtJ). The authors
+are responsible for the content of this publication.
+Declaration of Generative AI and AI-assisted technologies
+in the writing process
+Statement: During the preparation of this work the authors
+used ChatGPT and DeepL to enhance language and readability.
+After using this tools and services, the authors reviewed and
+edited the content as needed and takes full responsibility for the
+content of the publication.
+References
+[1] Cieply, J.; Disselkamp, J.-P.; Kattenstroth, F.; Trienens, M.; Rasor, R.;
+Kühn, A.; Dumitrescu, R.: Digital Factory Twin: A Practioner-Driven
+Approach for for Integrated Planning of the Enterprise Architecture. CIRP
+Design Conference 2024, No. in Press, 2024
+[2] Lim, K. Y. H., Pai Z., and Chun-Hsien Ch.; A state-of-the-art survey of
+Digital Twin: techniques, engineering product lifecycle management and
+business innovation perspectives.; Journal of Intelligent Manufacturing
+31; 2020; p. 1313-1337.
+[3] Stoll, O., West, S., Gaiardelli, P., Harrison, D., Corcoran, F. J.; The
+successful commercialization of a digital twin in an industrial product
+service system.; IFIP International Conference on Advances in Production
+Management Systems. Cham: Springer International Publishing, 2020; p.
+275-282
+
+--- PAGE 7 ---
+742 Jonas Lick et al. / Procedia CIRP 130 (2024) 736–742
+[4] Riedelsheimer, T., Lünnemann, P., Wehking, S., Dorfhuber, L.; Digital
+twin readiness assessment - Eine Studie zum Digitalen Zwilling in der
+fertigenden Industrie; 2020.
+[5] Kattenstroth, F.; Disselkamp, J.-P.; Lick, J.; Dumitrescu, R.: Challenges
+in the implementation of simulation models for the digital factory twin - a
+systematic literature review. CIRP Design Conference 2024, No. in Press,
+2024
+[6] Disselkamp, J.-P.; Grothe, R.; Lick, J.; Schütte, B.; Brüne, S.; Schröder,
+L.; Dumitrescu, R.: Towards The Digital Factory Twin - Design Guide
+For Creating A 3D Factory Model. DESIGN 2024, No. in Press, 2024
+[7] Disselkamp, J.-P.; Cieply, J.; Dyck, F.; Grothe, R.; Anacker, H.;
+Dumitrescu, R.: Integrated product and production development - a
+systematic literature review. Procedia CIRP, Vol. 119, 2023, S. 716-721
+[8] Cieply, J., Disselkamp, J. P., Dyck, F., Alturk, W., Kühn, A., Dumitrescu,
+R.; A systematic literature review on the Digital Twin of the factory in the
+context of the product and factory lifecycle.; Procedia CIRP 119; 2023; p.
+834-840.
+[9] Cieply, J., Wegel, A., Kühn, A.; Methoden für die Gestaltung der
+Unternehmensarchitektur produzierender Unternehmen – EAM als
+Enabler für die Konzipierung übertragbarer KI-Lösungen.; IM 391; 2023;
+p. 37-42. Online: https://doi.org/10.30844/IM_23-1_37-42
+[10] Van Riel, J., Poels, G., Viaene, S.; Exploring Capability Mapping as a
+Tool for Digital Transformation: Insights from a Case Study.
+In International Conference on Business Process Modeling, Development
+and Support Cham: Springer Nature Switzerland.; 2023; pp. 243-255
+[11] Teichert, R.; Digital transformation maturity: A systematic review of
+literature.; Acta universitatis agriculturae et silviculturae mendelianae
+brunensis.; 2019
+[12] Aldea, A., Iacob, M. E., Van Hillegersberg, J., Quartel, D., Franken, H.;
+Capability-based planning with ArchiMate-Linking motivation to
+implementation.; In International Conference on Enterprise Information
+Systems (Vol. 2), SciTePress.; 2015; pp. 352-359
+[13] Industrial Internet Consortium, IIC vocabulary, https://hub.
+iiconsortium.org/vocabulary; 2022; (Accessed on 04/17/2024).
+[14] Grieves, M.; PLM Initiatives [Powerpoint Slides].; Product Lifecycle
+Management Special Meeting; 2002.
+[15] Rasor, R,, Göllner, D., Bernijazov; Towards collaborative life cycle
+specification of digital twins in manufacturing value chains.; Procedia
+CIRP 98; 2021; p. 229-234.
+[16] Digital Twin Consortium; The Digital Twin Capabilities Periodic Table.;
+2022; (Accessed on 04/17/2024).
+[17] Rüb, J., & Bahemia, H; A review of the literature on smart factory
+implementation; In 2019 IEEE international conference on engineering,
+technology and innovation (ICE/ITMC, IEEE); 2019; p. 1-9
+[18] Davis, J., Edgar, T., Graybill, R., Korambath, P., Schott, B., Swink, D.,
+Wang, J., Wetzel, J.; Smart manufacturing. Annual review of chemical and
+biomolecular engineering, 6; 2015; p. 141-160.
+[19] Susanto, A. H., Simatupang, T., Wasesa, M.; Industry 4.0 Maturity
+Models to Support Smart Manufacturing Transformation: A Systematic
+Literature Review. Jurnal RESTI (Rekayasa Sistem dan Teknologi
+Informasi), 7(2); 2023; p. 334-344.
+[20] Chen, B., Wan, J., Shu, L., Li, P., Mukherjee, M., Yin, B; Smart factory
+of industry 4.0: Key technologies, application case, and challenges. IEEE
+Access, 6; 2017; p. 6505-6519.
+[21] Wang, S., Wan, J., Li, D., & Zhang, C.; Implementing smart factory of
+industrie 4.0: an outlook; International journal of distributed sensor
+networks, 12(1); 2016; p. 3159805
+[22] Rößler, M. P., & Haschemi, M.; Smart Factory Assessment (SFA).;
+Zeitschrift für wirtschaftlichen Fabrikbetrieb, 112(10); 2017; p. 699-703
+[23] Budde, L., Hänggi, R., Friedli, T., Rüedy, A.; Smart Factory Navigator.
+In Smart Factory Navigator: Identifying and Implementing the Most
+Beneficial Use Cases for Your Company - 44 Use Cases That Will Drive
+Your Operational Performance and Digital Service Business; Cham:
+Springer International Publishing; 2022; p. 7-31
+[24] The Open Group Architecture Framework, Version 9.2; Section 28:
+Capability-Based Planning.; 2018; (Accessed on 04/17/2024).
+[25] Van Riel, J., Poels, G.; A Method for Developing Generic Capability
+Maps: A Design Science Study in the Professional Sport Industry.
+Business & Information Systems Engineering, 65(4); 2023; p. 403-424.
+[26] Freitag, A.; Applying business capabilities in a corporate buyer M&A
+process. Springer.; 2014
+[27] Xiao, Y., Watson, M.; Guidance on conducting a systematic literature
+review; Journal of planning education and research 39.1; 2019; p. 93-112
+[28] Sachs, J., Landernäs, K.; Review of 5G capabilities for smart
+manufacturing. In 2021 17th International Symposium on Wireless
+Communication Systems (ISWCS, IEEE); 2021; p. 1-6
+[29] Morgan, J., Halton, M., Qiao, Y., Breslin, J. G.; Industry 4.0 smart
+reconfigurable manufacturing machines, Journal of Manufacturing
+Systems, 59; 2021; p. 481-506
+[30] Haricha, K., Khiat, A., Issaoui, Y., Bahnasse, A., Ouajji, H.; Recent
+technological progress to empower smart manufacturing: Review and
+potential guidelines., IEEE Access.; 2023

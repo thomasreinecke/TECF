@@ -1,0 +1,2490 @@
+--- PAGE 1 ---
+Open Universiteit
+www.ou.nl
+The Structuring of Enterprise Architecture Functions in
+Organizations
+Citation for published version (APA):
+Kotusev, S., Kurnia, S., Dilnutt, R., & van de Wetering, R. (2024). The Structuring of Enterprise Architecture
+Functions in Organizations: Towards a Systematic Theory. Business and Information Systems Engineering,
+66(4), 465-488. https://doi.org/10.1007/s12599-023-00845-4
+DOI:
+10.1007/s12599-023-00845-4
+Document status and date:
+Published: 01/08/2024
+Document Version:
+Publisher's PDF, also known as Version of record
+Document license:
+Taverne
+Please check the document version of this publication:
+• A submitted manuscript is the version of the article upon submission and before peer-review. There can be important differences between
+the submitted version and the official published version of record. People interested in the research are advised to contact the author for the
+final version of the publication, or visit the DOI to the publisher's website.
+• The final author version and the galley proof are versions of the publication after peer review.
+• The final published version features the final layout of the paper including the volume, issue and page numbers.
+Link to publication
+General rights
+Copyright and moral rights for the publications made accessible in the public portal are retained by the authors and/or other copyright owners
+and it is a condition of accessing publications that users recognise and abide by the legal requirements associated with these rights.
+• Users may download and print one copy of any publication from the public portal for the purpose of private study or research.
+• You may not further distribute the material or use it for any profit-making activity or commercial gain
+• You may freely distribute the URL identifying the publication in the public portal.
+If the publication is distributed under the terms of Article 25fa of the Dutch Copyright Act, indicated by the “Taverne” license above, please
+follow below link for the End User Agreement:
+https://www.ou.nl/taverne-agreement
+Take down policy
+If you believe that this document breaches copyright please contact us at:
+pure-support@ou.nl
+providing details and we will investigate your claim.
+Downloaded from https://research.ou.nl/ on date: 06 Jul. 2026
+
+--- PAGE 2 ---
+RESEARCH PAPER
+The Structuring of Enterprise Architecture Functions
+in Organizations
+Towards a Systematic Theory
+Svyatoslav Kotusev • Sherah Kurnia • Rod Dilnutt • Rogier van de Wetering
+Received: 9 December 2021/Accepted: 17 October 2023/Published online: 21 December 2023
+ The Author(s), under exclusive licence to Springer Fachmedien Wiesbaden GmbH 2023
+Abstract Enterprise architecture (EA) practice is a com-
+plex set of organizational activities enabling well-coordi-
+nated business and IT planning. Organizationally, EA
+practices are implemented by specialized EA functions,
+which have existed in many companies in some or the other
+form for decades. However, the problem of structuring EA
+functions according to the specific needs of organizations
+received almost no attention in the literature. To address
+this gap, 47 organizations and their EA functions were
+analyzed. Using the grounded theory method, the study
+develops a comprehensive theoretical model explaining the
+dependence between the relevant properties of organiza-
+tions and the structures of their EA functions, including the
+appropriate numbers of architects, their specialization and
+structural alignment. This study offers arguably the first
+full-fledged theory on the structuring of EA functions and
+also addresses multiple practical questions that are likely to
+be asked by IT leaders willing to establish EA functions in
+their organizations.
+Keywords Enterprise architecture  Enterprise architecture
+functions  Architects  Architecture positions  Operating
+model  Grounded theory
+1 Introduction
+Enterprise architecture (EA) is a collection of special
+documents, typically called artifacts, describing various
+aspects of an organization from an integrated business and
+IT perspective (Kotusev 2019; Niemi and Pekkola 2017).
+An EA practice is a multifaceted organizational activity
+that implies using EA artifacts to facilitate joint business
+and IT planning and eventually improve business and IT
+alignment (Ahlemann et al. 2012a, b; Kotusev 2021).
+Adopting EA practices also helps organizations cope with
+complexity (Beese et al. 2022), boosts their IT capabilities
+(Ahlemann et al. 2021) and provides many other direct and
+indirect benefits (Niemi and Pekkola 2020).
+Organizationally, EA practices are implemented by
+dedicated EA functions, which drive all EA-related plan-
+ning processes and control mechanisms (Beese et al. 2023;
+Hobbs et al. 2012). EA functions may employ architects of
+various denominations most popular of which include chief
+architects, enterprise architects, domain architects and
+solution architects (FEAPO 2018; van der Raadt and van
+Vliet 2008). The structure of EA functions may also vary
+depending on the organizations they are serving (Hobbs
+et al. 2012; Hornford et al. 2022).
+Specialized organizational functions responsible for
+joint business and IT planning, commonly known today as
+EA functions, have existed in organizations for decades.
+For instance, the first architecture functions were estab-
+lished in large organizations a very long time ago, around
+the late 1960s (McLean and Soden 1977). However,
+Accepted after two revisions by Hans-Georg Fill.
+S. Kotusev (&)
+Graduate School of Business, HSE University, Moscow, Russia
+e-mail: kotusev@kotusev.com
+S. Kurnia  R. Dilnutt
+University of Melbourne, Melbourne, Australia
+e-mail: sherahk@unimelb.edu.au
+R. Dilnutt
+e-mail: rpd@unimelb.edu.au
+R. van de Wetering
+Open University of the Netherlands, Amsterdam, The
+Netherlands
+e-mail: rogier.vandewetering@ou.nl
+123
+Bus Inf Syst Eng 66(4):465–488 (2024)
+https://doi.org/10.1007/s12599-023-00845-4
+
+--- PAGE 3 ---
+academic research on EA functions has been rather scarce
+and many questions relevant to EA functions in organiza-
+tions still remain largely unexplored. From a practical point
+of view, even the basic questions like ‘‘how many archi-
+tects does an organization need?’’ have no substantiated
+answers, not to speak of more advanced ones, e.g. ‘‘how
+exactly should the EA function be structured?’’. Theoreti-
+cally, these and similar questions are essential for under-
+standing the institutionalization and operationalization of
+EA practices in organizations (Ajer et al. 2021b; Kohansal
+and Haki 2021a).
+Generally, limited academic and industry literature on
+EA functions either prescribes simplistic universal refer-
+ence models allegedly applicable to all organizations
+despite the potential order-of-magnitude differences in
+their size and structure (Behara and Paradkar 2015;
+TOGAF 2018; van der Raadt et al. 2008), or discusses
+some discrete archetypes of EA functions often substanti-
+ated only by anecdotal evidence (FEAPO 2018; Hobbs
+et al. 2012; Niemann 2006). Therefore, the problem of
+structuring EA functions in organizations remains under-
+studied. Even though EA functions seemingly exist in
+about two-thirds of large organizations (Alaeddini et al.
+2017; Ambler 2010; Preisker et al. 2023), the available EA
+literature offers no consistent theories explaining various
+aspects of their structuring.
+To address this gap, in this study we focus on the
+problem of structuring EA functions in organizations.
+Specifically, our research question can be formulated as
+follows: ‘‘What properties of organizations determine the
+structure of their EA functions, how and why?’’ As a result
+of our research, we aim to develop a systematic theory
+explaining the dependence between the relevant properties
+of organizations (e.g. size, industry sector and business
+diversity) and various aspects of their EA functions (e.g.
+size, architecture positions and their specific structure).
+This paper continues as follows: (1) we discuss the
+notion of EA, the practice of using EA, EA functions in
+organizations and then formulate our research question, (2)
+we describe the research design, data collection and anal-
+ysis procedures, (3) we introduce the identified concepts
+relevant to structuring EA functions, (4) we describe the-
+oretical propositions explaining the relationships between
+the concepts and present the resulting theoretical model,
+(5) we discuss our findings in light of the existing literature,
+(6) we describe the contribution of our findings to theory
+and practice, and (7) we conclude the paper.
+2 Literature Review
+As part of our literature review, we discuss the notion of
+EA and its domains, the practice of using EA and its
+activities, EA functions in organizations and their structure,
+and then explain the motivation and research question of
+this study.
+2.1 Enterprise Architecture
+Enterprise architecture (EA) is generally a very complex
+concept having multiple different meanings. For example,
+recently Saint-Louis et al. (2019) identified 160 diverse
+definitions of the term ‘‘enterprise architecture’’ used in the
+literature. Early sources tend to understand EA primarily as
+a comprehensive blueprint, or a set of blueprints, defining
+the relationship between business and IT (Richardson et al.
+1990; Spewak and Hill 1992; Zachman 1997). Later
+sources more often understand EA broader as an entire
+process (Lapkin et al. 2008), practice (FEAPO 2013) or
+discipline (Gartner 2013) of joint business and IT planning.
+For the purposes of this paper, we define EA in a way
+aligned with its original meaning as some explicit
+descriptions (Richardson et al. 1990; Spewak and Hill
+1992), but adjusted to the actual empirical realities as ‘‘a
+collection of special documents (EA artifacts) describing
+various aspects of an organization from an integrated
+business and IT perspective intended to bridge the com-
+munication gap between business and IT stakeholders,
+facilitate information systems planning and thereby
+improve business and IT alignment’’ (Kotusev 2019,
+p. 112). Conceptually, EA artifacts can be viewed, first of
+all, as boundary objects between different communities of
+practice where the representatives of these communities
+inscribe their interests (Abraham et al. 2015; Kotusev and
+Kurnia 2021; Kotusev et al. 2023b) and also as powerful
+instruments of knowledge management (Kotusev et al.
+2023a).
+Most EA artifacts used in practice represent graphical
+models providing different views of organizations and their
+IT landscapes. These artifacts can be created using various
+techniques and approaches to enterprise modeling (Sand-
+kuhl et al. 2018), e.g. business capability modeling
+(Kotusev and Alwadain 2023) and variability modeling
+(Rurua et al. 2019). They can also leverage specialized
+modeling languages and notations. For instance, popular
+EA-specific languages include newer ArchiMate (Lan-
+khorst 2017; Wierda 2017) and older ARIS (Scheer 1992;
+Scheer et al. 2006). Other formal languages that can be
+used for creating EA models include business process-
+oriented BPMN (Silver 2012; White and Miers 2008) and
+system architecture-oriented UML (Fowler 2003; Holt and
+Perry 2010). However, EA artifacts can take other, non-
+graphical forms as well. For example, such EA artifacts as
+principles, policies and guidelines are purely textual and do
+not use any visual modeling approaches (Haki and Legner
+2021; Kotusev 2021). Similarly, asset inventories and
+123
+466 S. Kotusev et al.: The Structuring of Enterprise Architecture Functions, Bus Inf Syst Eng 66(4):465–488 (2024)
+
+--- PAGE 4 ---
+technology inventories use simple tabular formats and
+cannot benefit from any enterprise modeling techniques
+either EA on a Page (2022).
+EA and its artifacts describe different domains of
+organizations relevant from the perspective of business and
+IT alignment. These domains typically include business,
+applications, data, infrastructure and often some other
+domains, like integration and security (Behara and Parad-
+kar 2015; Kotusev 2021; Niemi and Pekkola 2017; Winter
+and Fischer 2006).
+2.2 Enterprise Architecture Practice
+An EA practice, often also called EA management (EAM),
+is a multifaceted organizational activity that implies using
+EA artifacts to facilitate decision-making and improve
+business and IT alignment (Fallmyr and Bygstad 2014;
+Kotusev 2017a; Rahimi et al. 2017). Besides various EA
+artifacts, an EA practice involves many other diverse ele-
+ments including communication processes, governance
+bodies, approval procedures, measurement techniques,
+modeling languages, specialized and general-purpose
+software tools (Ahlemann et al. 2012a, b; Kotusev 2021).
+Theoretically, an EA practice represents a social practice of
+cross-community interaction and collective decision-mak-
+ing empowered by EA artifacts as material boundary
+objects (Dale and Scheepers 2020; Kotusev and Kurnia
+2021).
+An EA practice is an overarching endeavor that per-
+meates various alignment processes at different levels of
+the organizational hierarchy (Kotusev 2020a). For exam-
+ple, Kotusev (2021) shows that an EA practice includes
+three different but interrelated processes: (1) strategic
+planning, where the desired future course of action for the
+organization is determined, (2) initiative delivery, where
+the preferred implementation options for specific IT ini-
+tiatives are determined and then the respective solutions are
+delivered, and (3) technology optimization, where the
+existing IT landscape is analyzed and various technical
+rationalization suggestions are formulated. Similarly,
+Ahlemann et al. (2012a) argue that EA practices are closely
+interrelated with three key organizational processes: (1)
+strategic planning (Radeke et al. 2012), (2) project life
+cycle (Lux et al. 2012) and (3) operations and monitoring
+(Legner et al. 2012).
+Other authors also discuss various organizational activ-
+ities related to or integrated with an EA practice, including
+strategic planning (Azevedo et al. 2015; Blomqvist et al.
+2015; Parker and Brooks 2008; Simon et al. 2014), port-
+folio management (Lankhorst et al. 2010; Makiya 2008;
+Quartel et al. 2012; Riempp and Gieffers-Ankel 2007) and
+implementation of IT systems (Armour and Kaisler 2001;
+Dale 2013; Foorthuis et al. 2012, 2016). Kurnia et al.
+(2021b) articulate eight distinct activity areas constituting
+an EA practice: business capability modeling, roadmapping
+and portfolio planning, IT asset management, opportunity
+assessment, project governance, communication and coor-
+dination, consulting and mentoring, audit of mergers and
+acquisitions. Generally, an EA practice implies defining an
+organization-wide strategic direction, then shaping a more
+itemized investment portfolio and finally delivering all
+planned initiatives in an optimal manner (Ahlemann et al.
+2012a, b; Kotusev 2021; Ross et al. 2006).
+Importantly, EA practices are always organization-
+specific in their details and contingent on various factors
+that determine their optimal setup in different circum-
+stances (Aier et al. 2011; Buckl et al. 2012; Haki et al.
+2012; Leppanen et al. 2007; Park et al. 2013; Riege and
+Aier 2008; Saha et al. 2009). For instance, Park et al.
+(2013) identify four key design factors influencing their
+configuration: centralization, modularity, standardization
+and open platform. Leppanen et al. (2007) present a more
+comprehensive contingency framework for EA practices.
+Saha et al. (2009) articulates four design models of EA
+practices: technology standardization, technology differ-
+entiation, business standardization and business differen-
+tiation. Aier et al. (2011) identify three distinct clusters of
+approaches to EA: active balanced, business-oriented and
+passive IT-oriented. Haki et al. (2012) distinguish four
+different archetypes of EA practices: modeling-driven,
+strategic IS, governance and architecture paradigm.
+2.3 Enterprise Architecture Functions in Organizations
+The EA function is an organizational function responsible
+for implementing an EA practice by driving all the EA-
+related activities (Hobbs et al. 2012; van der Raadt and van
+Vliet 2008) and establishing appropriate control mecha-
+nisms over downstream IT projects (Beese et al. 2023;
+Schilling et al. 2018). EA functions typically report to
+CIOs or other equivalent senior IT leaders, e.g. CTOs, IT
+directors or vice presidents of technology (Aziz and Obitz
+2007; Carr and Else 2018; Manwani and Bossert 2016).
+EA functions imply certain architecture positions and
+employ architects of various denominations to fill these
+positions, e.g. chief architects, enterprise architects,
+domain architects and solution architects (van der Raadt
+and van Vliet 2008). However, there is no single standard
+classification of architecture positions and different orga-
+nizations often establish their own unique positions for
+architects under peculiar titles that may be inconsistent
+even within the boundaries of the same organization
+(FEAPO 2018; Wierda 2017; Woods and Rozanski 2012).
+As Woods and Rozanski (2012, p. 1) point out, ‘‘There is
+little consensus in the academic community or amongst
+practitioners as to the responsibilities of the many different
+123
+S. Kotusev et al.: The Structuring of Enterprise Architecture Functions, Bus Inf Syst Eng 66(4):465–488 (2024) 467
+
+--- PAGE 5 ---
+types of architect we encounter – or indeed, what they
+should even be called’’. EA functions also host specialized
+architecture governance bodies consisting of architects and
+responsible for making significant EA-related planning
+decisions and granting approvals, e.g. enterprise architec-
+ture council and architecture review board (Hobbs et al.
+2012).
+Some sources offer rather elaborate reference models for
+organizing EA functions (Behara and Paradkar 2015;
+Bolton 2003; TOGAF 2018; van der Raadt et al. 2008). For
+instance, Bolton (2003) defines specific architecture posi-
+tions, governance committees, their responsibilities and
+reporting structures to be established in organizations as
+part of EA practices. Likewise, van der Raadt and van Vliet
+(2008) describe EA functions in terms of concrete archi-
+tecture roles, governance bodies, their duties and cooper-
+ation patterns. In the same vein, TOGAF (2018) presents a
+fairly sophisticated reference model for EA functions
+addressing most of its key aspects. Longepe (2003),
+Schekkerman (2008) and van’t Wout et al. (2010) also
+provide detailed suggestions as to what exactly actors and
+bodies should be involved in EA practices.
+Other sources, however, acknowledge that the structure
+of EA functions can vary depending on the organizations
+they are serving (Boar 1999; Carbone 2004; FEAPO 2018;
+Hobbs et al. 2012; Hornford et al. 2022; Niemann 2006;
+Turner et al. 2009). For example, Niemann (2006) distin-
+guishes four general types of EA functions reflecting dif-
+ferent degrees of power distribution between the central IT
+unit and its subunits: centralized, diversified, distributed
+and decentralized. Hobbs et al. (2012) identifies four dis-
+tinct models of EA functions: centralized model, decen-
+tralized model, centers of excellence model and hybrid (or
+federated) model. Hornford et al. (2022) provide three
+variants for positioning the EA capability in organizations:
+function-centric, IT-centric and strategy-centric. FEAPO
+(2018) articulates four patterns of architecture team struc-
+tures: organizing by project, organizing by domain, orga-
+nizing by strategy and organizing by segment. Lastly,
+Turner et al. (2009) describe three postures of EA functions
+observed in different organizations: architecture as a lia-
+bility, architecture as an asset and architecture as a service.
+2.4 Research Motivation and Question
+Although the problem of structuring EA functions in
+organizations received some attention in the existing EA
+literature, the respective publications arguably do not offer
+a systematic, evidence-based view of the subject and pro-
+vide only inconclusive answers to many important ques-
+tions about EA functions. For instance, Kotusev (2017b)
+identified 44 publications relevant to EA functions in the
+body of EA literature. However, most of the available
+publications on EA functions are of semi-academic or non-
+academic origin.1
+Furthermore, many of them are non-
+empirical in nature. These publications either contain
+general speculative discussions of EA functions and their
+roles (Hausman and Cook 2010; Shah and Kourdi 2007), or
+offer purely prescriptive ‘‘how-to’’ recommendations of
+unverified empirical validity promoted by industry gurus
+(Boar 1999; Carbone 2004; Longepe 2003; Niemann 2006;
+Schekkerman 2008; van’t Wout et al. 2010).
+More importantly, many publications on EA functions
+provide certain universal suggestions or reference models
+of EA functions allegedly suitable for all organizations
+(Behara and Paradkar 2015; Bolton 2003; TOGAF 2018;
+van der Raadt et al. 2008). However, because EA is prac-
+ticed in organizations of disparate sizes, structures and
+industries (Gregor et al. 2007; Hungerford et al. 2009;
+Tamm et al. 2015; Toppenberg et al. 2015; Venkatesh et al.
+2007), any one-size-fits-all prescriptions regarding the
+single ‘‘right’’ design of the EA function can be viewed
+only skeptically.
+Although some publications on the subject recognize the
+existence of different archetypes of EA functions (FEAPO
+2018; Hobbs et al. 2012; Hornford et al. 2022; Niemann
+2006; Turner et al. 2009), the classifications for EA func-
+tions and architecture positions that they propose weakly
+correlate with each other and, thus, do not provide a con-
+sistent and systematic view on the problem of structuring
+EA functions. At the same time, in-depth descriptive case
+studies of EA practices in diverse organizations (Gerber
+et al. 2007; Kotusev 2018; Kotusev et al. 2016; Murer et al.
+2011; Rees 2011; Smith and Watson 2015; Smith et al.
+2012) demonstrate significantly different configurations of
+EA functions that arguably cannot be reduced to a few
+simple conceptual patterns or evident generalities.
+To summarize, the existing EA literature essentially
+provides only some speculative discussions of EA func-
+tions, various anecdotal prescriptions for establishing the
+‘‘proper’’ EA function, separate case studies of real EA
+functions and a few largely inconsistent taxonomies for EA
+functions. Consequently, it would be fair to say that pre-
+sently a consistent theory explaining the structuring of EA
+functions in different organizations is missing. In other
+words, the available literature does not offer an evidence-
+based explanation of the dependence of the structure of EA
+functions on the properties of organizations.
+EA has been adopted by the majority of large organi-
+zations a rather long time ago (Ambler 2010). As van der
+1
+In fact, by 2023, we are not aware of any single article in a
+reputable academic journal that addresses specifically the problem of
+structuring EA functions in organizations. For this reason, our
+literature review on EA functions relies heavily on semi-academic
+publications, practitioner books and other grey literature as the only
+available sources of information.
+123
+468 S. Kotusev et al.: The Structuring of Enterprise Architecture Functions, Bus Inf Syst Eng 66(4):465–488 (2024)
+
+--- PAGE 6 ---
+Raadt et al. (2007, p. 1) put it, ‘‘Almost every self-re-
+specting organization (private or public) of considerable
+size has at least one, but often various, architecture func-
+tions’’. Bente et al. (2012, p. 279) concur with this obser-
+vation: ‘‘There is hardly any large company in the world
+that does not have an EA team, whatever it is called in the
+respective organization’’.2
+Nevertheless, many practical
+questions related to EA functions that can be considered
+elementary are still obscure. How many architects does an
+organization need? What positions should they occupy?
+How exactly should its EA function be structured? These
+and similar basic questions, surprisingly, remain without
+any definite answers in the EA literature. At the same time,
+clearly defined architecture roles, their responsibilities and
+hierarchy are a must for the effective institutionalization of
+EA practices in the organizational organism (Ajer et al.
+2021b; Dang and Pekkola 2020; Kohansal and Haki 2021a;
+Weiss et al. 2013). Accordingly, the general research
+question of this study can be formulated as follows: ‘‘What
+properties of organizations determine the structure of their
+EA functions, how and why?’’ (The structuring of archi-
+tecture governance bodies is out of the scope of this
+research).
+3 Research Design
+The problem of structuring EA functions remains an
+insufficiently studied area of the EA discipline. Except for
+certain general suggestions (e.g. more complex companies
+require more complex EA functions), the current literature
+arguably does not offer well-developed theories that can be
+used to guide the research on EA functions. For this reason,
+the grounded theory approach (Charmaz 2006; Glaser and
+Strauss 1967; Strauss and Corbin 1998) is adopted in this
+study to build a theory explaining the structuring of EA
+functions from scratch. Since this study requires collecting
+and analyzing qualitative data (e.g. the roles of architects
+and their responsibilities) as well as quantitative data (e.g.
+the size of organizations and their EA functions measured
+in some or the other way) to answer its research question,
+the grounded theory analysis conducted as part of this
+study embraces both types of data (Walsh 2015).
+3.1 Data Collection
+Basically, source data for this research was collected by
+interviewing EA practitioners from multiple organizations
+and clarifying the structures of EA functions established
+within these organizations. This data was accumulated
+gradually from a series of in-depth studies of different
+aspects of an EA practice carried out by the authors
+during the period from 2014 to 2021 (Kotusev and Kurnia
+2019; Kotusev et al. 2020, 2022, 2015; Kurnia et al.
+2020, 2021a, b), which included a mix of (1) compre-
+hensive case studies with several interviews and docu-
+mentation analysis, (2) ‘‘mini-case studies’’ with only one
+or a few interviews and possibly some documentation
+analysis and (3) individual interviews with EA
+practitioners.
+Overall, our dataset comprises 96 one-hour interviews
+with the representatives of 44 Australian and 3 New
+Zealand organizations, or 47 organizations in total. From
+the standpoint of EA functions, these organizations range
+from almost the smallest possible ones with only two
+architects to very large ones employing more than two
+hundred architects. Our dataset, thus, covers nearly the full
+size spectrum of EA functions, except for extremely large
+organizations with hundreds of architects, whereas small
+organizations with less than 20–30 IT staff typically do not
+have dedicated EA functions.
+For our studies, organizations were selected based pri-
+marily on theoretical sampling considerations (Glaser and
+Strauss 1967; Strauss and Corbin 1998) with the intention
+to embrace the broadest possible spectrum of configura-
+tions in terms of size, industry and structure. In those
+organizations where more than one interviewee partici-
+pated in our studies, these interviewees were also selected
+through theoretical sampling intended to cover different
+levels of architecture positions, e.g. enterprise, domain and
+solution.
+All the interviews with EA practitioners were guided by
+semi-structured interview protocols that included stan-
+dardized questions covering various quantitative and
+qualitative aspects of organizations, their EA functions and
+respective architecture positions. Specifically, in the
+beginning of the interviews, all participants were asked to
+estimate the total number of employees working in their
+organizations, the number of their IT staff and the total
+number of all architects working in their EA functions.3
+The interviewees were also asked to outline the high-level
+business structure of their organizations. Then, the partic-
+ipants were asked to list the specific positions for architects
+existing in their organizations, report the exact number of
+architects occupying these positions and describe their
+roles and responsibilities in the context of their EA
+2
+Recent surveys by Capgemini Invent reveal that EA exists as an
+established corporate function in about 68% (Karmann et al. 2019),
+67% (Preisker et al. 2020), 61% (Preisker et al. 2022) and 73%
+(Preisker et al. 2023) of large organizations across the globe.
+3
+In difficult cases, we intended to find out the effective numbers of
+full-time equivalent (FTE) people actually doing the work taking into
+account various part-timers, temporary contractors and external
+outsourcers.
+123
+S. Kotusev et al.: The Structuring of Enterprise Architecture Functions, Bus Inf Syst Eng 66(4):465–488 (2024) 469
+
+--- PAGE 7 ---
+practices. Finally, the participants were asked various in-
+depth questions intended to clarify different aspects of their
+work deemed relevant to our studies, e.g. zones of
+responsibility, activities, stakeholders and artifacts.
+Thereby, for every organization, we reached a saturated
+view of its EA function, including its size, structure and
+composition, existing architecture roles, their organiza-
+tional scopes and concrete responsibilities.
+After the interviews, the information collected from the
+interviewees was complemented with the annual revenues
+of their organizations (the vast majority of them were
+public organizations with detailed official reports openly
+available on their websites on the Internet) and the
+employee numbers provided by the interviewees were
+double-checked accordingly. These efforts resulted in a
+considerable dataset covering multiple diverse organiza-
+tions and including the following information for each
+organization: (1) total employee headcount, (2) the number
+of IT staff, (3) annual revenue, (4) basic business structure,
+(5) the total number of architects, (6) the list of architecture
+positions with their brief descriptions and (7) the number of
+architects for each position. The full list of organizations
+included in our dataset with their basic properties is pro-
+vided in Table 1.
+Hence, our final dataset consisted of 47 organizations
+with complete, consistent and reliable information on their
+essential parameters and the parameters of their EA func-
+tions. This dataset was taken as an empirical basis for this
+study.
+3.2 Data Analysis
+The dataset described above was subjected to the regular
+grounded theory analysis procedures (Corbin and Strauss
+1990; Strauss and Corbin 1998). Because this dataset was
+gathered as a result of multiple successive data collection
+efforts, as mentioned earlier, our data analysis alternated
+with data collection, especially at the later stages of this
+research. This approach provided a certain degree of par-
+allelism in data collection and analysis implied by groun-
+ded theory (Corbin and Strauss 1990; Strauss and Corbin
+1998).
+One of the notable specifics of this study is that the
+accumulated dataset included both qualitative and quanti-
+tative data, and the analysis was intended to uncover
+potential relationships between them. The qualitative part
+of the dataset included primarily the interview transcripts
+with the descriptions of the business structure of the
+studied organizations as well as the descriptions of the
+structures and compositions of their EA functions. The
+quantitative part of the dataset included all numerical
+information on the studied organizations and their EA
+functions, i.e. numbers of employees, IT staff and archi-
+tects of different denominations.
+It is important to notice that grounded theory as an
+analytical approach is principally indifferent to the nature
+of source data (Glaser and Strauss 1967). It can be used to
+analyze quantitative data combined with qualitative data as
+part of mixed-methods studies (Walsh 2015), or even to
+analyze purely quantitative data (Glaser 2008), and is
+actually applied for this purpose in IS research (Miranda
+et al. 2015). At the same time, this study should not be
+considered a mixed-methods study (Agerfalk 2013; Kaplan
+and Duchon 1988; Venkatesh et al. 2013) since it does not
+leverage any quantitative data collection techniques (e.g.
+structured surveys), but rather as a purely qualitative study
+partially based on quantitative data.
+Qualitative data in this study has been analyzed via
+standard grounded theory coding procedures: open coding,
+axial coding and selective coding (Corbin and Strauss
+1990; Strauss and Corbin 1998). As part of these proce-
+dures, fragments of the interview transcripts describing the
+business structures of organizations, the structures of their
+EA functions and the responsibilities of different archi-
+tecture positions have been coded to identify relevant
+concepts and understand their relationships. Importantly,
+most of the respective codes and concepts are already well-
+known from the existing EA literature and do not provide
+any novel insights on their own; it is only the relationships
+between these concepts and quantitative characteristics of
+organizations that represent new theoretical findings.
+Illustrative samples of the applied coding procedures with
+original quotes, identified codes and resulting concepts are
+shown in Table 2.
+Quantitative data in this study has been analyzed by
+calculating simple proportions and correlations between
+various parameters of organizations and their EA functions
+(e.g. the ratio of architects among employees, the depen-
+dence between the number of architects and revenue, etc.)
+and relating these values to the concepts identified in the
+qualitative data. The primary goal of these quantitative
+procedures was to identify principal conceptual relation-
+ships existing between the numbers and structures, rather
+than achieving statistical rigor or mathematical exactness.
+As noted by Miranda et al. (2015, p. A3), ‘‘With quanti-
+tative grounded theory, the benchmark is novelty and
+coherence of insights rather than statistical rigor’’. Glaser
+and Strauss (1967) argued that significance tests are not
+necessary for quantitative grounded theory:
+‘‘Testing the statistical significance of an association
+between indices presents a strong barrier to the
+generation of theory while doing nothing to help it,
+since the resulting accuracy [...] is not crucial. These
+tests direct attention away from theoretically
+123
+470 S. Kotusev et al.: The Structuring of Enterprise Architecture Functions, Bus Inf Syst Eng 66(4):465–488 (2024)
+
+--- PAGE 8 ---
+interesting relationships that are not of sufficient
+magnitude to be statistically significant’’ (Glaser and
+Strauss 1967, p. 200)
+The application of the grounded theory procedures
+described above allows to construct a sound theoretical
+model explaining general regularities observed in EA
+functions of various organizations across the industry.
+Table 1 List of organizations constituting the dataset of this study
+# Industry sector Number of interviews Annual revenuea
+Staff (total) IT staff (total) Architects (total) Architects (solution)
+1 Banking 7 17,300 (2020) 40,000 3000 120 100
+2 Banking 5 17,600 (2020) 40,000 5500 235 200
+3 Banking 1 1500 (2020) 7000 500 24 12
+4 Delivery 6 7500 (2020) 32,000 900 65 40
+5 Delivery 1 880 (2019) 7600 500 21 15
+6 Diversified 1 690 (2020) 2600 120 5 3
+7 Education 9 1370 (2019) 8000 500 20 16
+8 Education 2 790 (2020) 5000 200 4 3
+9 Education 1 1250 (2020) 5000 250 14 10
+10 Education 3 2400 (2020) 9500 400 28 20
+11 Education 2 980 (2020) 3500 200 4 3
+12 Education 1 390 (2020) 4500 130 9 8
+13 Energy 2 14,700 (2019) 6000 575 39 28
+14 Energy 2 2000 (2020) 1100 200 9 7
+15 Energy 1 12,900 (2018) 3700 500 30 20
+16 Finance 1 190 (2020) 250 40 3 2
+17 Finance 1 1400 (2019) 7000 800 7 4
+18 Finance 1 1150 (2020) 400 200 8 7
+19 Finance 1 110 (2020) 400 150 6 5
+20 Government 1 N/A 2500 100 5 4
+21 Government 1 N/A 2500 400 17 12
+22 Government 2 N/A 8500 600 14 10
+23 Government 2 N/A 10,000 250 8 3
+24 Government 1 N/A 1500 110 10 5
+25 Government 2 N/A 1750 800 30 20
+26 Government 1 N/A 2500 30 2 1
+27 Healthcare 1 1140 (2020) 3500 150 9 8
+28 Healthcare 1 2100 (2018) 20,600 150 2 1
+29 Healthcare 1 1270 (2020) 14,500 210 7 6
+30 Insurance 2 18,900 (2021) 17,000 1800 60 45
+31 Insurance 1 8800 (2020) 10,000 550 25 20
+32 Insurance 1 5300 (2019) 5000 1250 14 9
+33 Marketing 1 640 (2020) 2500 600 28 20
+34 Mining 2 3000 (2020) 3800 250 11 4
+35 Public Services 1 N/A 2100 60 4 2
+36 Public Services 2 N/A 17,000 350 18 12
+37 Public Services 1 N/A 200 50 5 2
+38 Public Services 1 N/A 9000 400 17 14
+39 Retail 4 38,200 (2019) 110,000 2000 25 20
+40 Retail 2 2900 (2019) 14,000 300 7 3
+41 Telecom 7 2800 (2019) 6000 2000 80 56
+42 Telecom 5 21,600 (2021) 35,000 4000 182 150
+43 Transport 1 2900 (2021) 2000 300 18 13
+44 Transport 1 950 (2020) 2200 75 3 2
+45 Utilities 1 2000 (2020) 1000 150 6 1
+46 Utilities 1 730 (2020) 2000 100 12 8
+47 Utilities 1 2950 (2021) 4000 500 27 22
+a
+All numbers are provided in millions of Australian dollars (AUD)
+123
+S. Kotusev et al.: The Structuring of Enterprise Architecture Functions, Bus Inf Syst Eng 66(4):465–488 (2024) 471
+
+--- PAGE 9 ---
+4 Theoretical Concepts
+As this study addresses the structuring of EA functions in
+organizations, it naturally deals with two focal entities:
+organizations and EA functions. Each of these entities has
+a number of salient properties of varying sophistication that
+turned out relevant in the context of this research. In total,
+our analysis has identified 16 properties important for
+understanding the patterns of structuring of EA functions.
+Some of these properties are rather trivial, atheoretical and
+do not require special definitions, some properties are long
+well known from classical organization theory (Bedeian
+and Wren 2001; Shafritz et al. 2015), while others are
+highly EA-specific and come from the specialized literature
+on EA functions reviewed earlier. For the purposes of
+theory building, these properties of organizations and EA
+functions represent substantive concepts that provide the
+necessary basis for theorizing and allow formulating
+specific theoretical propositions explaining logical rela-
+tionships between them.
+4.1 Relevant Properties of Organizations
+The properties of organizations relevant to this study
+include revenue, size, IT size, industry, business diversifi-
+cation, operating model and geographical distribution.
+4.1.1 Revenue (Trivial)
+Revenue is the total amount of income generated by the
+organization during a financial year from the sale of its
+goods and services to the market. Annual revenue is used
+nearly universally in the business and EA literature for
+characterizing the scale of organizations.
+4.1.2 Size (Trivial)
+Size is the total number of people employed by the orga-
+nization. Similarly to revenue, size is ubiquitously used in
+the management literature as a simple and intuitive indi-
+cator of the scale of organizations.
+4.1.3 IT Size (Trivial)
+IT size is the total number of IT specialists employed by
+the organization. Unlike size and revenue, IT size is not
+used particularly often as a measure for characterizing the
+scale of organizations.
+4.1.4 Industry (Trivial)
+Industry is the type of business activities that the organi-
+zation fulfills. Industry affiliation is considered important
+as a contextual factor in IS research (Chiasson and
+Davidson 2005) and has diverse effects on organizations
+from the standpoint of their management (Qu et al. 2011),
+operations (Mendelson and Pillai 1999) and performance
+(Powell 1996).
+4.1.5 Business Diversification (General)
+Business diversification is the extent to which the organi-
+zation is diversified in terms of its products, services and
+markets (Ansoff 1958; Chandler 1962). Pursuing diversi-
+fication strategy requires a multidivisional organizational
+structure with relatively autonomous business units
+(Chandler 1962; Pitts 1977) and renders complex effects on
+corporate performance and profitability (Palepu 1985;
+Rumelt 1982).
+Table 2 Illustrative samples of the applied coding procedures
+Interviewee quote Identified code (s) Resulting concept (s)
+‘‘[In our EA function] we have an alignment to those [EA] domains [1].
+Conceptually, we have an enterprise architect in infrastructure [2],
+one in applications [3], one in data and integration [4] and one
+in business [5]’’ (Organization #7)
+[1] Domains
+[2] Infrastructure EA
+[3] Application EA
+[4] Data EA
+[5] Business EA
+Domain alignment,
+domain-based positions
+‘‘There are a number of chief architects [1] that are aligned
+to the lines of business [2]. […] They all have one or two principal architects [3]
+reporting to them and then there is a big pool of solution architects [4]
+who work on projects [5]’’ (Organization #4)
+[1] Chief architects
+[2] Lines of business
+[3] Principal architects
+[4] Solution architects
+[5] Project work
+Business area alignment,
+business area-based positions,
+three-tier hierarchy, solution-level work
+‘‘[Our organization] has an enterprise architecture team [1],
+a solution architecture team [2] and they also have a number
+of application architects that are narrow domain-specific architects,
+but they are not considered a part of the inner architecture team […].
+[We have] approximately 15 architects [3] where there are two enterprise [4],
+dozen solution [5] and the boss [manager of architecture] [6]’’ (Organization #39)
+[1] Enterprise architects
+[2] Solution Architects
+[3] Number of architects
+[4] Number of EAs
+[5] Number of SAs
+[6] Architecture manager
+No Alignment, Generic
+Positions, Two-Tier Hierarchy
+123
+472 S. Kotusev et al.: The Structuring of Enterprise Architecture Functions, Bus Inf Syst Eng 66(4):465–488 (2024)
+
+--- PAGE 10 ---
+4.1.6 Operating Model (General)
+Operating model is the necessary level of process stan-
+dardization and data integration between the business units
+that determines the most fundamental requirements to the
+enterprise-wide IT platform (Ross et al. 2006; Weill and
+Ross 2009). Generally, the factors of differentiation and
+integration of business operations have long been recog-
+nized as critical for organizational design (Galbraith 1973;
+Lawrence and Lorsch 1967a, b) as well as for the design of
+corporate IT infrastructure (Gunton 1989; van Rensselaer
+1985).
+4.1.7 Geographical Distribution (General)
+Geographical distribution is the extent to which the orga-
+nizational units are dispersed geographically over different
+regions, countries or continents (Bartlett and Ghoshal
+2002; Ghoshal and Bartlett 1990). For territorially dis-
+tributed organizations, the internal differentiation of their
+units and the physical distance between them complicate
+routine subsidiary-headquarters communication (Ghoshal
+et al. 1994; Ghoshal and Nohria 1989).
+4.2 Relevant Properties of EA Functions
+The properties of EA functions relevant to this study
+include size, job scope, horizontal specialization, vertical
+specialization, domain alignment, business area alignment,
+spatial alignment, enterprise-level work and solution-level
+work.
+4.2.1 Size (Trivial)
+Size is the total number of architects employed by the EA
+function. The headcount of architects represents essentially
+the only natural, intuitively understandable and easily
+measurable indicator of the scale of EA functions.
+4.2.2 Job Scope (General)4
+Job scope is the circle of responsibilities and decisional
+autonomy assigned to specific organizational positions.
+The scope of duties is delineated by those decisions made
+by individuals at their own discretion versus those deci-
+sions imposed on them by the organization (Simon
+1944, 1947).
+4.2.3 Horizontal Specialization (General)
+Horizontal specialization is the extent to which different
+organizational positions are separated based on their areas
+of proficiency (Barnard 1938; March and Simon 1958;
+Simon 1947). From an economic point of view, horizontal
+specialization in organizations is equivalent to the well-
+known principle of the division of labor (Weber 1947).
+4.2.4 Vertical Specialization (General)
+Vertical specialization is the extent to which different
+organizational positions are separated based on their levels
+in the administrative hierarchy (Simon 1944, 1947). Ver-
+tical specialization is not as widely discussed as horizontal
+one, but is necessary for ensuring coordination, account-
+ability and expertise in decision-making (Simon
+1944, 1947).
+4.2.5 Domain Alignment (EA-Specific)
+Domain alignment is the extent to which architecture
+positions in EA functions are aligned with different layers
+of the stack of EA domains, e.g. business, applications,
+data, integration, infrastructure and security (Behara and
+Paradkar 2015; Kotusev 2021; Winter and Fischer 2006).
+Alignment with EA domains represents a ‘‘standard’’
+approach to organizing architects promoted, for instance,
+by TOGAF (2018).
+4.2.6 Business Area Alignment (EA-Specific)
+Business area alignment is the extent to which architecture
+positions in EA functions are aligned with different busi-
+ness areas, e.g. lines of business, business divisions,
+functions or capabilities. Aligning architects with business
+areas is distinguished as one of the possible ways of
+organizing EA teams by FEAPO (2018) and clearly
+observed in some organizations (Smith et al. 2012).
+4.2.7 Spatial Alignment (EA-Specific)
+Spatial alignment is the extent to which architecture posi-
+tions in EA functions are co-located with different geo-
+graphical units, e.g. the head office and foreign subsidiary
+branches. The idea of aligning architects with physical
+business locations is embodied in all sorts of distributed,
+federated and decentralized models of organizing EA
+teams (Hobbs et al. 2012; Niemann 2006). Basically, the
+alignment of architecture positions with different EA
+domains, business areas and geographies represents one of
+the EA-specific manifestations of horizontal specialization
+discussed earlier.
+4
+This property and the next properties of horizontal and vertical
+specializations are certainly applicable to organizations as well,
+but in the context of this study they are relevant only to EA functions.
+123
+S. Kotusev et al.: The Structuring of Enterprise Architecture Functions, Bus Inf Syst Eng 66(4):465–488 (2024) 473
+
+--- PAGE 11 ---
+4.2.8 Enterprise-Level Work (EA-Specific)
+Enterprise-level work is the relative volume of work per-
+formed by architects for defining the global strategic
+direction for business and IT, above individual change
+initiatives (Ahlemann et al. 2012a, b; Kotusev 2021; Kur-
+nia et al. 2021a). This work includes, for example, devel-
+oping core diagrams, modeling business capabilities,
+defining target states, roadmapping and project portfolio
+planning (Kotusev 2021; Kurnia et al. 2021b; Ross et al.
+2006).
+4.2.9 Solution-Level Work (EA-Specific)
+Solution-level work is the relative volume of work per-
+formed by architects for defining the structure of separate
+IT initiatives in a way consistent with the global direction
+(Ahlemann et al. 2012a, b; Kotusev 2021; Kurnia et al.
+2021a). This work includes, for example, presenting pos-
+sible initiative implementation options, helping with busi-
+ness cases, developing conceptual solution overviews and
+then detailed technical solution designs (Beijer and de
+Klerk 2010; Kotusev 2021). Basically, the division of
+architectural work into enterprise and solution levels rep-
+resents one of the EA-specific manifestations of vertical
+specialization discussed earlier.
+5 Theoretical Propositions
+The grounded theory procedures resulted in 14 theoretical
+propositions explaining the relationships between the 16
+properties of organizations and EA functions introduced
+above. Based on the nature of related concepts, these
+propositions can be grouped into three broad categories:
+volume, specialization and alignment.
+5.1 Volume Propositions
+Volume propositions represent a group of related theoret-
+ical propositions addressing the aggregate volume of
+architectural work required by organizations. In particular,
+these propositions explain the size of EA functions in terms
+of the overall number of architects working for organiza-
+tions as well as the proportions of enterprise- and solution-
+level architectural work performed by them.
+5.1.1 Sizing of Enterprise Architecture Functions
+The size of EA functions evidently correlates with the scale
+of organizations, i.e. larger organizations tend to employ
+more architects. Among all the typical parameters of
+organizations characterizing their scale, the best
+determining factor of the size of their EA functions turned
+out to be their IT size, i.e. the number of their IT staff.
+Specifically, the collected ‘‘statistics’’ demonstrates a
+rather clear and straightforward linear dependence between
+the number of architects and the total number of employees
+related to IT.5
+On average, in organizations from our
+dataset, architects constituted around 4–5% of their IT
+workforce,6
+or about one architect for every 20–25 IT
+specialists (see Table 1). This conclusion can be summa-
+rized into the following theoretical proposition:
+Proposition 1.1: The size of the EA function grows pro-
+portionally with the IT size of the organization.7
+At the same time, other ‘‘usual suspects’’ often used in
+the literature for characterizing the scale of organizations
+actually do not determine the size of EA functions with any
+acceptable precision. For instance, both the size and
+5
+Mathematically, the correlation coefficient between the numbers of
+architects and IT staff was * 0.96, though it is important to realize
+that this study focuses on conceptual accuracy, rather than on
+numerical precision, as explained earlier, and therefore this and all
+other numbers in this study should be considered primarily as subjects
+for qualitative interpretation.
+6
+The precise ratio of architects was * 4.74%. Our calculations also
+show that the relative numbers of architects in organizations correlate
+with the years of data collection from 2014 to 2021 with a coefficient
+of * 0.05, which might possibly indicate a weak trend towards the
+increasing prevalence of architects across the industry over time.
+7
+This proposition is not as obvious as it seems because the
+previously available evidence was contradictory and inconclusive.
+For example, ‘‘Forrester found that 84 percent of companies it
+surveyed had centralized enterprise architecture groups of fewer than
+10 people, regardless of company size’’ (Koch 2005, p. 40), whereas
+Obitz and Babu (2009, p. 14) made a rather different observation:
+‘‘While large firms do tend to have larger enterprise architecture
+teams, they do not grow proportionally with the size of the IT
+department or the company size’’. Keller (2005, p. 9) referred to
+META Group’s estimate of the size of EA teams of ‘‘5–7 people’’ as
+well as to industry benchmarks assessing their size ‘‘between 0.5%
+and 1% of IT staff’’. Reese (2008, p. 166) argued that the size of EA
+functions depends primarily on their role: ‘‘The architecture depart-
+ment can be sized appropriately with an understanding of the overall
+role enterprise architecture plays within the broader scope of I/T. If
+enterprise architecture also runs the project management office
+(PMO) for I/T, then the department is likely to be as large as fifty or
+more resources. In the case where the PMO resides outside of
+architecture, the architecture staffing level is normally between fifteen
+and thirty people’’. By contrast, Preisker et al. (2023, p. 12) reported
+that the number of architects depends chiefly on the landscape
+complexity: ‘‘Surprisingly, the need for a specific number of
+architects isn’t directly proportional to the organization’s size.
+Instead, it is determined by the complexity of the holistic architecture,
+including elements like business model artifacts, the spectrum of
+applications in use, and the array of technological components
+deployed’’.
+123
+474 S. Kotusev et al.: The Structuring of Enterprise Architecture Functions, Bus Inf Syst Eng 66(4):465–488 (2024)
+
+--- PAGE 12 ---
+revenue of organizations turned out to be only loosely
+related to the size of their EA functions,8
+seemingly due to
+the lack of their direct connection with the realm of IT.9
+These conclusions can be summarized into the following
+theoretical propositions:
+Proposition 1.2: The size of the EA function does not
+depend directly on the size of the organization.
+Proposition 1.3: The size of the EA function does not
+depend directly on the revenue of the organization.10
+5.1.2 Proportions of Architectural Work
+Evidence from the collected dataset indicates that the
+proportions of both enterprise-level work and solution-
+level work within the overall volume of necessary archi-
+tectural work stay constant and do not depend on the size of
+EA functions or any other factors. In large companies,
+these proportions are manifested explicitly in the numbers
+of employed solution and non-solution architects (see
+Table 1), while in small organizations they are manifested
+more implicitly in the descriptions of how architects
+actually allocate their time between different activities, e.g.
+‘‘I am an enterprise architect, but I am heavily involved in
+projects as well’’ (the separation of responsibilities
+between architects is discussed later in the subsequent
+propositions).
+In terms of their relative volume, enterprise-level plan-
+ning seemingly constitutes around one-fourth of all
+architectural work, while the remaining three-quarters of
+architectural work represent solution-level activities. For
+example, for organizations from our dataset employing 20
+or more architects (where the responsibilities of architects
+were clearly delineated, as explained later), the ratio of
+solution architects to non-solution architects was about
+three to one (see Table 1),11
+while in smaller organizations
+the descriptions of responsibilities similar to ‘‘I am 80%
+solution and 20% enterprise architect’’ were very common.
+These conclusions can be summarized into the following
+theoretical propositions:
+Proposition 1.4: The proportion of necessary enterprise-
+level work stays constant and does not depend on the size
+of the EA function.
+Proposition 1.5: The proportion of necessary solution-
+level work stays constant and does not depend on the size
+of the EA function.
+5.2 Specialization Propositions
+Specialization propositions represent a group of related
+theoretical propositions addressing the occupational spe-
+cialization of architects in EA functions required by
+organizations. In particular, these propositions explain the
+formal specialization of architecture positions as well as
+the informal division of responsibilities between architects.
+5.2.1 Vertical Specialization of Architecture Positions
+The available evidence suggests that larger EA functions
+require higher vertical specialization of architects mani-
+fested in a greater number of tiers in the hierarchy of their
+architecture positions. Put it simply, the more architects an
+organization employs, the more tiers of architecture posi-
+tions it is likely to have. Small organizations typically
+employ only one or a few peer architects focusing essen-
+tially on an entire organization, i.e. they have only one tier
+of architecture positions (Organizations #11, #14, #26 and
+#28). By contrast, large organizations may have a multitier
+hierarchy of architects linked with subordination relation-
+ships, where higher-level architects cover broader organi-
+zational scopes and vice versa. For example, in one of the
+largest organizations included in our dataset (Organization
+#41) four distinct tiers of architecture positions can be
+articulated: solution tier (focus on separate IT solutions),
+program tier (focus on change programs consisting of
+multiple related IT solutions), business area/domain tier
+(focus on broad organizational areas that may have multi-
+ple change programs) and corporate tier (focus on the
+8
+Specifically, the correlation coefficients between the numbers of
+architects and the total staff headcount and annual revenue were
+only * 0.44 and * 0.56 respectively, where non-commercial orga-
+nizations to which the notion of revenue is inapplicable were
+excluded from the corresponding calculations. Besides that, as the
+adoption of IT by organizations increases over time and their relative
+IT spendings are constantly growing (Kappelman et al. 2021),
+companies with the same revenue in different time epochs are likely
+to have different volumes of IT estate, making the use of revenue as a
+reliable measure in a broad time context highly problematic.
+9
+Other potential candidate indicators for characterizing the size of
+organizations would be their overall budgets and IT budgets, where IT
+budgets seem especially promising as a size measure in the EA
+context. However, budgets are often not widely publicized or even
+kept secret and, thus, can be difficult to know or estimate. Moreover,
+because of the order-of-magnitude differences in IT salary levels
+between different countries, the use of budgets as a universal measure
+in the global context is highly problematic. At the same time, various
+financial indicators of size, like market value, do not characterize
+organizations from an operating point of view and cannot be relied
+upon.
+10
+These propositions are also not that obvious. In fact, most EA
+surveys (BiZZdesign 2023; Obitz and Babu 2009; Preisker et al.
+2020; Schneider et al. 2015) and many case studies (Labusch et al.
+2018; Mocker et al. 2015; Smith et al. 2012; Venkatesh et al. 2007)
+quantitatively characterize organizations exclusively in terms of their
+number of employees and annual revenue, as if these measures are
+informative about their EA practices.
+11
+The precise average fraction of solution architects in architecture
+teams was * 73.4%
+123
+S. Kotusev et al.: The Structuring of Enterprise Architecture Functions, Bus Inf Syst Eng 66(4):465–488 (2024) 475
+
+--- PAGE 13 ---
+whole company with all its areas). Quantitatively, it can be
+speculated that in hierarchies with a constant span of
+control at each tier, the necessary number of tiers can be
+estimated as a logarithm of the total number of people
+included in the hierarchy. This conclusion can be sum-
+marized into the following theoretical proposition:
+Proposition 2.1: Larger EA functions require higher
+vertical specialization of architecture positions in terms of
+their hierarchical tiers.
+5.2.2 Horizontal Specialization of Architecture Positions
+Larger EA functions also require higher horizontal spe-
+cialization of architects manifested in a greater number of
+distinct architecture positions at one hierarchical tier. Put it
+simply, the more architects an organization employs, the
+more architecture positions at the same tier it is likely to
+have. At the one extreme, the smallest organizations from
+our dataset (Organizations #11, #14, #26 and #28)
+employed only one denomination of architects acting lar-
+gely as ‘‘jacks-of-all-trades’’ across all business areas and
+EA domains. At the opposite extreme, the largest organi-
+zations from our sample (Organizations #1, #2, #4, #30,
+#41 and #42) had, at the middle tiers of the hierarchy, many
+specialized architecture positions focusing on different
+business areas (e.g. digital channels, customer management
+and payments processing) and technology domains (e.g.
+cloud, servers, storage and networks). This conclusion can
+be summarized into the following theoretical proposition:
+Proposition 2.2: Larger EA functions require higher
+horizontal specialization of architecture positions in terms
+of their subject areas.
+5.2.3 Division of Responsibilities Between Architects
+Larger EA functions imply narrower job scopes for their
+architects as measured by their circle of concerns. In other
+words, the more architects an organization employs, the
+more clearly delineated their responsibilities are (impor-
+tantly, the formal existence of different architecture posi-
+tions in EA functions is not always equivalent to the actual
+separation of duties as their practical activities can over-
+lap). For example, some of the studied organizations
+employed only a single permanent architect who combined
+all architectural responsibilities in one role, i.e. personally
+accomplished all enterprise- and solution-level planning
+(Organizations #26 and #28). In other small organizations,
+EA functions included one or a few enterprise architects
+and a team of subordinate solution architects, but their
+responsibilities largely overlapped, i.e. enterprise architects
+were also involved in IT projects and solution architects
+contributed to global planning efforts (Organizations #6,
+#16, #19, #20, #29 and #35). Or, enterprise-level planning
+was fulfilled collectively by solution architects (Organiza-
+tions #11 and #14):
+We have no people with a formal title of enterprise
+architect and this is a conscious choice, although to
+some extent our solution architects have a dual role
+of what enterprise architects would do as well in
+other organizations. This is why not a lot of the work
+that I do has to do with future initiatives rather than
+the actual delivery of current systems, but there is a
+planning component (Organization #11)
+By contrast, in large EA functions, architects had much
+more clearly defined zones of responsibility. In these EA
+functions, solution architects focused only on specific IT
+solutions, while other architects had non-overlapping
+organizational scopes and focused only on planning their
+own segments with little or no involvement in other areas
+or solutions (though, collaborating when necessary). This
+conclusion can be summarized into the following theoret-
+ical proposition:
+Proposition 2.3: Larger EA functions require narrower
+job scopes for architects in terms of their areas of
+responsibility.
+5.3 Alignment Propositions
+Alignment propositions represent a group of related theo-
+retical propositions addressing the structural alignment of
+architects in EA functions required by organizations. In
+particular, these propositions explain the alignment of
+architecture positions with business areas, EA domains,
+requirements of the operating model, business geography
+and industry specifics.
+5.3.1 Possibility of Alignment
+The available evidence indicates that meaningful alignment
+of architecture positions in EA functions with the specific
+needs of organizations is achieved specifically through
+their horizontal specialization. In other words, it is the
+horizontal specialization of architects in terms of their
+subject areas that provides the foundation for any reason-
+able forms of their structural alignment. For example, in
+the studied organizations, the subject areas of different
+architecture positions partly ‘‘mirrored’’ the structure of the
+business, e.g. different lines of business, core business
+functions or capabilities. At the same time, hierarchical
+tiers of architecture positions ensuing from their vertical
+specialization did not demonstrate any noteworthy features
+that can be attributed to the business structure, like pro-
+nounced differences in the span of control at different
+123
+476 S. Kotusev et al.: The Structuring of Enterprise Architecture Functions, Bus Inf Syst Eng 66(4):465–488 (2024)
+
+--- PAGE 14 ---
+hierarchical tiers (Mintzberg 1983). This conclusion can be
+summarized into the following theoretical proposition:
+Proposition 3.1: Structural alignment of architecture
+positions with the needs of organizations is enabled
+specifically by their horizontal specialization.
+5.3.2 Alignment with Business Areas
+EA functions of organizations with more diversified busi-
+ness activities tend to align their architecture positions
+more with different business areas (this and the following
+propositions refer mainly to positions based specifically on
+horizontal specialization, as per Proposition 2.2). Put it
+simply, the greater the diversity of the business, the
+stronger the business alignment of architects is required to
+cope with this diversity. For example, relatively simple
+organizations with a single core line of business from our
+dataset (e.g. universities and some public service organi-
+zations with a narrow focus) had little or no business area-
+specific architecture positions (Organizations #7, #9, #21,
+#22, #24 and #36). The entire scope of their business
+operations and underlying information systems was typi-
+cally covered by a single or a few closely collaborating
+architects. On the contrary, larger organizations with
+diversified business operations (Organizations #2, #4, #5,
+#13, #15, #30, #31, #41, #43 and #45), and especially
+companies with several disparate lines of business,
+employed specialized architects focusing on different
+business areas, e.g. retail architects and wholesale
+architects:
+[Our company] is separated along different lines of
+business. There is [line of business A] and [line of
+business B], there is [line of business C] and [line of
+business D]. They operate effectively as separate
+lines of business. There are four or five different lines
+of business and there is a couple of shared functions.
+[...] There are enterprise architects of which I am
+one. There are five of us and each one looks after a
+line of business within the organization. So, I look
+after [line of business C], someone else looks after
+[line of business A], etc. (Organization #31)
+Higher conceptual complexity of the business naturally
+requires dedicated professionals deeply immersed in its
+intricacies. Concentrating their efforts on specific business
+areas allows architects to better understand the specifics of
+these areas:
+[The most critical success factor for an architect is]
+understanding the business. You have to understand
+the business. [...] As I said, we have line-of-business
+architects who are specifically there for this reason:
+they are aligned with the business. They stay close to
+the business and they are always in touch with what
+is going on (Organization #15)
+Diversified business, thus, demands specialized archi-
+tects with a pointed focus on its different areas. This
+conclusion can be summarized into the following theoret-
+ical proposition:
+Proposition 3.2: Architecture positions in EA functions
+of more diversified organizations are more aligned with
+different business areas.
+5.3.3 Alignment with EA Domains
+EA functions of organizations with less diversified business
+activities tend to align their architecture positions more
+with different organization-wide EA domains. Put it sim-
+ply, the simpler the business, the more the domain align-
+ment of architects is beneficial for its global optimization.
+For example, the structures of most EA functions in
+organizations with a single dominant line of business from
+our dataset (e.g. universities and some public service
+organizations with a narrow focus) were closely aligned
+with the traditional EA domain model (Organizations #7,
+#9, #21, #22, #24 and #36), i.e. they usually employed
+business architects, application architects, data architects,
+infrastructure architects and often also integration archi-
+tects and security architects responsible for rationalizing
+the respective EA domains across the entire organization:
+We have a principal architect who is the manager,
+principal enterprise architect. And then we have a
+domain architect for security, a domain architect for
+information, a domain architect for business, a
+domain architect for integration and infrastructure
+and a domain architect for application. So, six of
+those (Organization #36)
+By contrast, organizations with diversified business
+operations (e.g. consisting of disparate business functions
+or lines of business) employed fewer domain architects
+(Organizations #2, #4, #5, #13, #15, #30, #31, #41, #43 and
+#45) and when these architects were present, they focused
+predominantly on purely technical EA domains unrelated
+to specific business functionality, most typically on inte-
+gration, infrastructure or security (this issue is elaborated
+further in the next proposition). This conclusion can be
+summarized into the following theoretical proposition:
+Proposition 3.3: Architecture positions in EA functions
+of less diversified organizations are more aligned with
+different EA domains.
+123
+S. Kotusev et al.: The Structuring of Enterprise Architecture Functions, Bus Inf Syst Eng 66(4):465–488 (2024) 477
+
+--- PAGE 15 ---
+5.3.4 Alignment with Operating Models
+The structure of EA functions in organizations aligns with
+their operating models. An operating model in this context
+is understood specifically in the way defined by Ross et al.
+(2006, p. 25) as ‘‘the necessary level of business process
+integration and standardization for delivering goods and
+services to customers’’. Ross et al. (2006) distinguish four
+different operating models: diversification (implies low
+process standardization and integration across different
+business units), coordination (implies low process stan-
+dardization, but high process integration), replication (im-
+plies high process standardization, but low process
+integration) and unification (implies high process stan-
+dardization and integration across different business units).
+These two dimensions of operating models – standardiza-
+tion and integration – essentially define the structure of EA
+functions in terms of necessary architecture positions.
+Namely, business process standardization across differ-
+ent business units clearly relates to the presence of spe-
+cialized architects focusing on different business areas, as
+suggested by Proposition 3.1 described earlier. On the one
+hand, organizations operating according to the models that
+imply low process standardization (i.e. diversification and
+coordination) require dedicated architects to serve their
+individual business units (often independent lines of busi-
+ness and interrelated business functions respectively). On
+the other hand, companies implementing the operating
+models with high process standardization (i.e. replication
+and unification) may not need such architects and instead
+employ only ‘‘general’’ business and application architects
+embracing all their business activities. Similarly, organi-
+zations with operating models that imply high data inte-
+gration (i.e. coordination and unification) are likely to
+benefit from employing specialized data architects to define
+common information models and exchange formats for all
+their business units.
+For example, Organization #4 runs several lines of
+business with disparate processes, i.e. has low process
+standardization across its business units. At the same time,
+these lines of business share much information, particularly
+customer data, and market their services under a common
+brand, i.e. have high data integration between each other:
+We are trying to position [our company’s title] as the
+brand in the market. We use the concept of [our title]
+as a brand and we want all products to be branded
+[the same]. So, regardless of whether they are a [line
+of business A] product or a [line of business B]
+product or a [line of business C] product, we want
+customers to interact with [us] through [the same]
+brand (Organization #4)
+Consequently, Organization #4 implements the coordi-
+nation operating model with low process standardization,
+but high data integration. Accordingly, its EA function has
+a mixed structure where dedicated architects concentrate
+on different lines of business in terms of their processes
+and applications, but architects for data and integration
+serve all lines of business, which exactly reflects the
+standardization and integration requirements of the adopted
+operating model:
+It is a bit of a hybrid structure. [Each line of busi-
+ness] has a chief architect and, under these chief
+architects, there are sometimes one or two principal
+architects. [...] There are also five enterprise archi-
+tects that are looking at very top-level, true enter-
+prise-wide domains like customer, like information
+management, like infrastructure and so on (Organi-
+zation #4)
+Only organization-wide infrastructure architects can
+arguably be beneficial to all organizations as the infras-
+tructure domain relates neither to process standardization
+nor to data integration requirements, though in entirely
+decentralized companies business units may even need to
+deploy completely different IT infrastructure. Hence,
+organizations with more ‘‘consolidated’’ (i.e. more highly
+standardized and integrated) operating models may need
+more domain architects to focus on EA domains whose
+‘‘contents’’ are common to all their business units, as
+suggested by Proposition 3.2 described earlier. Put it sim-
+ply, an operating model with its standardization and inte-
+gration requirements defines which EA domains should be
+planned globally by the respective domain architects and
+which EA domains should be planned locally in business
+units by architects knowledgeable in the specific activities
+of these units. This conclusion can be summarized into the
+following theoretical proposition:
+Proposition 3.4: Architecture positions in EA functions
+are aligned with the process standardization and integra-
+tion requirements of the adopted operating models.
+5.3.5 Alignment with Business Geographies
+Decentralized and geographically distributed organizations
+(e.g. doing diverse or independent businesses in different
+countries) tend to have distributed EA functions aligned
+spatially with their business geography. However, their EA
+functions still gravitate more to their corporate head offi-
+ces, being less diffused geographically than the organiza-
+tions themselves. For example, all multinational companies
+from our sample (Organizations #1, #2, #30 and #34)
+hosted their core EA teams at their headquarters, though
+some individual architects or local architecture teams were
+123
+478 S. Kotusev et al.: The Structuring of Enterprise Architecture Functions, Bus Inf Syst Eng 66(4):465–488 (2024)
+
+--- PAGE 16 ---
+often also present at their major overseas locations. One of
+these companies (Organization #1) tried operating with
+physically dispersed EA functions in the past, but found it
+problematic and moved to a more co-located model:
+Before, each one of [our business units] had its own
+architecture unit. [...] And there also was the enter-
+prise architecture group here [at the head office]. But
+we always had challenges like they want to do their
+own thing, they want to do their own thing, that guy
+buys different technology to this guy here. So, what
+we have done is pulled all these guys out and now we
+are all sitting here. [...] What we are trying to do is
+align with the bank’s strategy. So, from the strategy
+standpoint, I think we are better organized, but from
+the delivery standpoint we may not be (Organization
+#1)
+EA functions are more strategic than operational func-
+tions and much of architectural planning in organizations is
+strongly linked to their strategic business planning. For this
+reason, architects, and especially those responsible for
+enterprise-level planning, are usually co-located with key
+business decision-makers, in the proximity of top-level
+corporate officers accountable for overarching long-range
+planning.12
+Placing senior architects together also helps
+leverage global synergies in technology-related choices.
+And yet, because of the need to make local architectural
+decisions in different points of presence, a certain degree of
+the geographical distribution of EA functions is required.
+This conclusion can be summarized into the following
+theoretical proposition:
+Proposition 3.5: EA functions of geographically dis-
+tributed organizations are aligned spatially with the busi-
+ness geography, but gravitate towards their head offices.
+5.3.6 Industry Influence on Structure
+The available evidence suggests that the industry in which
+organizations operate actually does not influence the
+structure of their EA functions in any particular fashion.
+Among all organizations analyzed in this study represent-
+ing very diverse industry sectors (see Table 1), no articu-
+late industry-specific patterns of structuring EA functions
+were identified. Although the impact of industry was
+noticeable in some other aspects of their EA practices (e.g.
+planning horizon and stakeholder rotation), the structure of
+their EA functions proved to be industry-neutral. This
+conclusion can be summarized into the following last
+theoretical proposition:
+Proposition 3.6: The structure of the EA function does
+not depend directly on the industry of the organization.
+5.4 Integrative Theoretical Model
+The 16 relevant properties of organizations and EA func-
+tions and the 14 theoretical propositions explaining the
+relationships between them described above can be unified
+into a comprehensive theoretical model explaining the
+structuring of EA functions in organizations. For better
+clarity, all the properties can be classified into (1) deter-
+minative/dependent variables that either influence or are
+influenced by other variables and (2) inert/independent
+variables that, contrary to intuition, actually do not interact
+with other variables. The resulting theoretical model
+demonstrating the identified relationships between the
+properties of organizations and EA functions is presented
+in Fig. 1.
+6 Discussion of Findings
+The findings of this study in the form of 14 theoretical
+propositions and the integrative theoretical model (see
+Fig. 1) can be put in the context of the existing EA liter-
+ature, though the current theoretical base on EA functions
+and their structuring is rather scarce and inconclusive.
+Some theoretical propositions articulated in this study
+rather clearly relate to the previous observations made in
+the literature, while other propositions enter a completely
+new ‘‘territory’’ unexplored earlier, at least to the best of
+the authors’ knowledge.
+6.1 Number of Architects
+Propositions 1.1, 1.2 and 1.3 suggest that the size of EA
+functions in terms of the number of architects correlates
+directly with the total number of IT staff, but only weakly
+relates to other common measures of the organizational
+scale, i.e. the overall number of employees and annual
+revenue. Intuitively, the dependence between the size of
+organizations and their EA functions is perfectly sensible
+(though, no earlier academic studies clearly articulated this
+dependence and characterized it in quantitative terms).
+However, the fact that such popular measures as annual
+revenue and the number of employees proved to be poor
+predictors for the number of architects arguably requires a
+detailed explanation. Previously, a number of surveys
+(Kappelman et al. 2018, 2017, 2020, 2019; Weill and
+Woerner 2010; Weill et al. 2009) demonstrated that
+12
+As Mintzberg (2009, p. 28) wittily notices, ‘‘We can talk all we
+like about a global world, but most organizations – even the most
+international of corporations – tend to remain rather local at their
+headquarters’’.
+123
+S. Kotusev et al.: The Structuring of Enterprise Architecture Functions, Bus Inf Syst Eng 66(4):465–488 (2024) 479
+
+--- PAGE 17 ---
+organizations operating in different industries vary greatly
+from the perspective of their IT spendings. Specifically, the
+IT budgets of companies in some industry sectors represent
+a much higher percentage of their annual revenues than the
+IT budgets of companies from other sectors. For example,
+the survey of Weill et al. (2009) shows that organizations
+in the finance and services industries spend about 7.4% and
+6.8% of their annual revenues on IT respectively, while
+companies in the mining and manufacturing industries
+spend on IT only 2.0% and 1.8% of their revenues. Weill
+and Woerner (2010) even explicitly distinguish between
+digital industries (banking, financial services, media, IT
+software, IT services and telecom), which, according to
+their survey, spend on average 7.2% of their revenues on
+IT, and non-digital industries (all other industries), which
+spend only around 3.3% on IT.
+The subsequent yearly surveys of the Society for
+Information Management (SIM) provide a very similar
+picture. For instance, the survey of Kappelman et al. (2017)
+shows that organizations in the consulting, education and
+IT services industries spend 13.4%, 8.9% and 8.8% of their
+revenues on IT, while those in the retail, consumer goods
+and energy industries spend only 2.3%, 1.8% and 1.6%.
+The survey of Kappelman et al. (2018) shows that IT ser-
+vices, non-for-profit and financial organizations spend
+15.9%, 11.6% and 9.7% of their revenues on IT, while
+those in the energy, construction and retail industry sectors
+spend only 1.9%, 1.6% and 1.4%. The survey of Kappel-
+man et al. (2019) shows that organizations in the finance,
+IT services and education industries spend 10.8%, 9.9%
+and 9.8% of their revenues on IT, while those in the
+energy, manufacturing and automotive industries spend
+only 1.8%, 1.8% and 1.2%. Finally, the survey of Kap-
+pelman et al. (2020) shows that companies in such indus-
+tries as IT services and consulting, financial services,
+insurance and banking, IT hardware and software spend
+from 8.7 to 17.7% of their revenues on IT, while those in
+the manufacturing, food services, hospitality, leisure,
+tourism and energy industry sectors spend only from 1.6 to
+1.8%. Therefore, organizations in the finance, professional
+Fig. 1 An integrative theoretical model explaining the structuring of EA functions
+123
+480 S. Kotusev et al.: The Structuring of Enterprise Architecture Functions, Bus Inf Syst Eng 66(4):465–488 (2024)
+
+--- PAGE 18 ---
+services and education industries consistently lead the
+ranks of heavy IT investors (relative to their revenues),
+while companies in the manufacturing, retail and energy
+industries consistently lag behind, and the difference
+between their IT expenditures as the percentage of their
+revenues may be fivefold or even higher. In light of these
+statistics, it may not be surprising that the annual revenue
+itself barely determines the scale of the corporate IT
+landscape. Although the available statistics relate only to
+revenue, the same conclusions can arguably be safely
+generalized to other financial indicators as well (e.g. total
+assets) due to their evident industry specificity.
+The ratio of IT staff to the total number of employees is
+also highly industry-specific. Although no relevant industry
+statistics are known to the authors, for the organizations
+from our dataset the percentage of IT staff varied
+from * 2% or less in retail, healthcare and some public
+service organizations to * 20% or more (up to 50% in the
+most extreme case) in financial companies and some gov-
+ernmental agencies. Therefore, it is also not surprising that
+the total number of employees cannot be taken as a reliable
+measure of the size of the IT landscape either.
+6.2 Specialization of Architecture Positions
+The findings of this study, and specifically Propositions 2.1
+and 2.2, suggest that the diversity of architecture positions
+existing in organizations is proportional to the size of their
+EA functions. Although this fact naturally follows from the
+‘‘famous’’ principle of the division of labor (Barnard 1938;
+March and Simon 1958; Simon 1947; Weber 1947), it is
+largely ignored in the current EA literature. On the one
+hand, it is not uncommon to see rather sophisticated ref-
+erence models of EA functions proposed in the literature
+that define a concrete number of levels of architecture
+(most often three, enterprise level, domain level and solu-
+tion level, e.g. van Steenbergen and Brinkkemper (2009))
+and specific positions for architects corresponding to these
+levels (Behara and Paradkar 2015; TOGAF 2018; van der
+Raadt et al. 2008), as if these models can be applied to all
+organizations regardless of the number of architects they
+employ.
+On the other hand, the existing EA literature arguably
+does not acknowledge the fact that the responsibilities of
+different types of architects often significantly overlap. For
+example, the available EA literature (FEAPO 2018; Strano
+and Rehmani 2007; van der Raadt and van Vliet 2008)
+often articulates a strict border between different archi-
+tecture positions clearly outlining the circle of their
+responsibilities, e.g. the difference between enterprise
+architects and solution architects. However, in practice,
+many architects devote roughly equal portions of their time
+to enterprise- and solution-level planning activities and,
+thus, cannot be related to any pure ‘‘archetype’’ of archi-
+tects described in the literature.
+Generally, the extant literature on architecture positions
+arguably provides an overly simplistic view of the subject
+with concrete position specifications and their precisely
+delineated scopes often in a one-size-fits-all manner,
+whereas the reality is rather different and actually implies a
+continuum of complexity ranging from lonely ‘‘jack-of-all-
+trades’’ architects responsible for all aspects of planning to
+very sophisticated multilevel functions with several distinct
+architecture positions and their numerous subcategories.
+6.3 Structure of Enterprise Architecture Functions
+The findings of this study, and specifically Propositions
+3.2, 3.3 and 3.4, suggest that the structure of EA functions
+in organizations can vary, depends on the degree of busi-
+ness diversification and is largely determined by the
+operating models adopted by organizations. The available
+EA literature, at first sight, provides contradictory recom-
+mendations regarding the structure of EA functions. Some
+of the existing EA publications prescribe the ‘‘classical’’
+domain-based structure for all EA functions (Behara and
+Paradkar 2015; TOGAF 2018), while other publications
+(Hobbs et al. 2012; Niemann 2006) distinguish different
+levels of decentralization of EA functions across the
+business units. Our conclusions help resolve this apparent
+discrepancy and indicate that both these options can actu-
+ally be viable depending on the circumstances and orga-
+nizational specifics. Namely, the domain-based structure of
+EA functions can be efficient for relatively simple, single-
+activity organizations, while decentralized EA functions
+are more appropriate for complex organizations with
+diverse business activities.
+Moreover, our conclusions regarding the relationship
+between the structure of EA functions and the operating
+models further enhance our understanding of EA functions
+and allow switching from discussing the centralization or
+decentralization of EA functions to the centralization or
+decentralization of specific EA domains. This new per-
+spective explains when and why some EA domains should
+be centralized but others decentralized as well as the
+prevalence of hybrid structures of EA functions in most
+large organizations, where architects focused on business
+processes and underlying applications tend to be decen-
+tralized, but infrastructure architects are more often cen-
+tralized. Although the frequent alignment of architects
+either with specific business areas or with separate tech-
+nical EA domains is recognized by some authors (van
+Steenbergen and Brinkkemper 2009; Woods and Rozanski
+2012), these authors do not explain what factors influence
+this alignment.
+123
+S. Kotusev et al.: The Structuring of Enterprise Architecture Functions, Bus Inf Syst Eng 66(4):465–488 (2024) 481
+
+--- PAGE 19 ---
+Our conclusions on the need for centralization/decen-
+tralization of different EA domains in different operating
+models are also congruent with the conclusions of Weill
+and Ross (2008) regarding the IT governance mechanisms
+necessary for different operating models. Overall, thinking
+about separate EA domains instead of entire EA functions
+from the perspective of architecture teams and their com-
+position offers a much more detailed and fine-grained view
+of EA functions.
+Also, as per Proposition 3.6, the structure of EA func-
+tions does not depend on the industry of organizations.
+Together with the previous observation of Kotusev (2019)
+that the sets of utilized EA artifacts are also industry-in-
+dependent, this proposition furthers the view that the
+general mechanisms of EA practices are universal and
+industry-neutral.
+6.4 Other Case Studies of Enterprise Architecture
+Functions
+The existing EA literature provides a limited number of
+case studies of organizations with EA practices that
+describe, among other aspects, their EA functions (Gerber
+et al. 2007; Murer et al. 2011; Rees 2011; Smith et al.
+2012). These descriptions illustrate and confirm many of
+the theoretical propositions formulated in this study.
+For example, Gerber et al. (2007) describe the EA
+practice in a large bank with diverse business activities. As
+a large, complex and diversified organization, it has a
+sophisticated three-level EA function that combines the
+decentralization of functional EA domains (i.e. business
+and applications) to accommodate the business complexity
+and the centralization of supporting EA domains:
+Our approach is to establish a hierarchy of business-
+aligned Enterprise Architects and functional and
+non-functional domains. The functional domains (e.g.
+Cash Management, Loans Management) cover the IT
+landscape from a business point of view, whereas the
+non-functional domains deal with overlapping con-
+cerns such as security or integration. On the next
+level, projects build new business solutions (Gerber
+et al. 2007, p. 24)
+Rees (2011) describes the EA practice in the Western
+Australia Police. As a medium-sized organization having
+essentially a single ‘‘line of business’’, it has a centralized
+two-level EA function aligned structurally to the typical
+EA domains, i.e. business, application, information and
+technology.
+Murer et al. (2011) also describe the EA practice in a
+large bank with diverse business activities and geography
+of operations. As a large, complex and diversified organi-
+zation, it has an elaborate multilevel EA function that is
+strongly aligned with different business areas and geogra-
+phies, though with the centralized planning of
+infrastructure.
+Finally, Smith et al. (2012) describe the EA practice in a
+rather large insurance company having five separate lines
+of business. Unsurprisingly, its EA function is also split
+into five semi-independent teams according to the business
+boundaries and consists of architects closely aligned with
+the respective lines of business:
+[The company] has a federated business structure
+with both enterprise and line of business (LOB)
+functions. Each of its five LOBs has its own CIO who
+reports jointly to [the global CIO]. Similarly, [the]
+EA function is also federated, with both enterprise
+and LOB components (Smith et al. 2012, p. 76)
+These case study reports highly correlate with the find-
+ings of our study on the structuring of EA functions and
+more or less clearly support all the theoretical propositions
+related to the specialization and alignment of architecture
+positions.
+7 Contribution of this Study
+The developed theory explaining the structuring of EA
+functions in organizations (see Fig. 1) provides both a
+theoretical and practical contribution to the EA literature.
+7.1 Theoretical Contribution
+This study makes a significant theoretical contribution to
+the EA literature by providing arguably the first available
+full-fledged theory explaining the dependence between the
+properties of organizations and the structure of their EA
+functions. Specifically, the developed theory represents
+theory for explanation and prediction that says ‘‘what is,
+how, why, when, where, and what will be’’ and ‘‘has both
+testable propositions and causal explanations’’ (Gregor
+2006, p. 620). On the one hand, all the formulated theo-
+retical propositions can be easily converted into
+testable statements that can be confirmed or rejected sta-
+tistically, for example, through structured surveys. On the
+other hand, for each theoretical proposition, some logical
+explanation of the underlying mechanisms substantiating
+the proposition has been provided (however, for some
+propositions, such as 1.1, 2.1, 2.2 and 3.1, these mecha-
+nisms are fairly transparent, largely self-evident or follow
+straight from broader organization theory).
+Surprisingly, the question of how to organize the EA
+function, which is nowadays faced essentially by all
+medium and large organizations, has not been addressed
+appropriately in the EA discipline. For instance, the
+123
+482 S. Kotusev et al.: The Structuring of Enterprise Architecture Functions, Bus Inf Syst Eng 66(4):465–488 (2024)
+
+--- PAGE 20 ---
+existing literature on EA functions, for the most part, offers
+either prescriptive one-size-fits-all reference models of EA
+functions that do not take into account possible differences
+between organizations (Behara and Paradkar 2015;
+TOGAF 2018; van der Raadt et al. 2008), or only some
+unsystematic ideas on how EA functions in different
+organizations might look like, often based only on anec-
+dotal evidence (FEAPO 2018; Hobbs et al. 2012; Hornford
+et al. 2022; Niemann 2006; Turner et al. 2009).
+The theory on the structuring of EA functions developed
+in this study addresses this gap, connects numerous ‘‘dots’’
+together and organizes various haphazard observations on
+the suitable structure of EA functions into a consistent
+logical picture. As opposed to some discrete archetypes of
+EA functions prevalent in the extant literature, our model
+presents a continuous view of the subject and explains the
+relationship between the relevant properties of organiza-
+tions and the appropriate design parameters of EA func-
+tions that may need to be adjusted to meet the specific
+needs of organizations. Furthermore, the resulting theory
+arguably addresses all aspects of EA functions important
+from the perspective of their structure including the num-
+ber of architects, the diversity of their positions and the
+shape of the function.
+Besides that, our findings contribute to the current EA
+institutionalization and operationalization discourse (Ajer
+et al. 2021b; Dang 2021; Dang and Pekkola 2020;
+Kohansal and Haki 2021a; Weiss et al. 2013). Given the
+benefits of institutionalization (Ajer et al. 2021a; Brosius
+et al. 2018; Weiss et al. 2013), as well as the dangers of de-
+institutionalization (Kohansal and Haki 2021a, b), this
+issue can be regarded as one of the central issues of the EA
+discipline. At the same time, the institutionalization and
+operationalization of EA practices in organizations are
+unthinkable without establishing consistent architecture
+roles and clearly defining their responsibilities, so that EA-
+related planning processes and control mechanisms
+become an integral part of a routine, widely accepted way
+of getting things done (Beese et al. 2023; Schilling et al.
+2018). In this light, our study explains what EA functions
+adequate for the needs of specific organizations may look
+like to enable the effective institutionalization of respective
+activities in their decision-making organisms.
+7.2 Practical Contribution
+This study also offers an evident practical contribution to
+the EA discipline. In particular, it answers many essential
+questions that will inevitably be asked by any IT leaders
+willing to establish an EA practice in their organizations.
+How many architects do we need to hire? How many of
+them should be solution architects? How exactly do we
+need to structure the EA function? Do we need to align
+architects to our business divisions or EA domains? Do we
+need to have a more sophisticated, hybrid structure? All
+these questions currently have no substantiated answers in
+the available EA literature. The findings of our study either
+answer these questions directly, or at least provide some
+empirically substantiated foundation and conceptual
+framework for thinking based on which these answers can
+be derived from the specific needs of an organization.
+Moreover, the findings of this study allow formulating
+the following simple three-step method for designing EA
+functions in organizations: sizing, structuring and fine-
+tuning. First, organizations should roughly estimate the
+necessary size of their EA functions. It can be easily done
+by dividing the total number of their IT staff by 20–25
+(taking 4–5% as an approximate average number of
+architects) and then assuming that three-fourths of this
+number will be solution architects and the remaining one-
+fourth will be non-solution architects focusing on broader
+organizational scopes. Second, organizations should define
+the appropriate structure of their EA functions. For this
+purpose, organizations should determine their operating
+models and then, based on the respective process stan-
+dardization and integration requirements, understand which
+EA domains should be planned centrally and which busi-
+ness units require dedicated architects to focus on their
+unit-specific processes. This understanding will guide the
+allocation of non-solution architects to different business
+and domain areas of organizations corresponding to their
+genuine business needs. Third, organizations should try
+operating with the newly designed EA functions and fine-
+tune the functions based on the actual experience to
+accommodate the practical realities. A more detailed
+description of this method is provided by Kotusev (2020b).
+8 Conclusion
+This study aimed to address the existing gap in the EA
+literature related to an insufficient understanding of EA
+functions in organizations. In particular, the existing EA
+literature does not provide meaningful answers even to
+relatively basic questions relevant to EA functions, e.g.
+how many architects organizations should employ, what
+positions they should occupy and how exactly the function
+should be structured. To address this gap, we collected
+relevant quantitative and qualitative information on 47
+organizations and their EA functions and then analyzed this
+information via the grounded theory method to uncover
+consistent generalities and develop a comprehensive theory
+explaining the structuring of EA functions in organizations.
+The resulting theory is arguably the first theory related
+to the structuring of EA functions that can be found in the
+available EA literature. Our theory explains various
+123
+S. Kotusev et al.: The Structuring of Enterprise Architecture Functions, Bus Inf Syst Eng 66(4):465–488 (2024) 483
+
+--- PAGE 21 ---
+dependencies between some parameters of organizations,
+most importantly their size and business structure, and
+relevant parameters and design options of EA functions,
+e.g. the number of architects, specifics of their positions,
+centralization and decentralization of architects focusing
+on different EA domains. We believe that the theory
+developed in our study currently represents the only
+existing full-fledged theory on the subject. Our theory also
+makes an important practical contribution by providing
+empirically substantiated answers to many questions that
+are likely to be asked by most, if not all, IT leaders
+responsible for establishing EA practices in organizations.
+Arguably the most significant limitation of our study
+that needs to be acknowledged relates to the inherent
+subjectivity associated with the use of the grounded theory
+method as an approach to data analysis. For instance,
+Strauss and Corbin (1998, p. 43) argue that ‘‘a state of
+complete objectivity is impossible and that in every piece
+of research […] there is an element of subjectivity’’ and
+‘‘we emphasize that it is not possible to be completely free
+of bias’’ (Strauss and Corbin 1998, p. 97). For this reason,
+we consider a certain degree of subjectivity in our data
+interpretation as the most considerable risk to the validity
+of our findings.
+On the whole, theoretical propositions formulated in our
+study seem to be industry-neutral and generalizable to
+other organizations with EA functions (Lee and Baskerville
+2003; Seddon and Scheepers 2012). However, because the
+vast majority of organizations included in our dataset are
+Australian, our findings and propositions can potentially be
+biased by certain ‘‘fashions’’ in structuring EA functions
+prevalent in the Australian industry. Needless to say, all the
+resulting propositions have yet to be validated statistically
+on larger samples.
+In our study, we identified a number of general regu-
+larities explaining the structures of EA functions in many
+diverse organizations. However, far from all aspects of EA
+functions can be considered fully understood. For example,
+although the number of architects in organizations seems to
+be roughly proportional to their total IT headcount, possi-
+ble factors determining the magnitude of positive or neg-
+ative deviations of this number from a certain industry-
+average ratio (e.g. the volume of investments in new IT
+projects, the percent of the IT budget spent on ‘‘keeping the
+lights on’’, maturity, innovativeness, etc.) still remain
+rather unclear and represent important directions for future
+research. Or, the questions related to measuring the orga-
+nizational scope that a single architect can comfortably
+handle also remain rather shadowy. We believe these and
+other similar questions represent promising directions for
+future research on EA functions in organizations.
+References
+Abraham R, Aier S, Winter R (2015) Crossing the line: overcoming
+knowledge boundaries in enterprise transformation. Bus Inf Syst
+Eng 57(1):3–13
+Agerfalk PJ (2013) Embracing diversity through mixed methods
+research. Eur J Inf Syst 22(3):251–256
+Ahlemann F, El Arbi F (2012a) An EAM navigator. In: Ahlemann F
+et al (eds) Strategic enterprise architecture management: chal-
+lenges, best practices, and future developments. Springer,
+Heidelberg, pp 35–53
+Ahlemann F, Stettiner E, Messerschmidt M, Legner C (eds) (2012b)
+Strategic enterprise architecture management: challenges, best
+practices, and future developments. Springer, Heidelberg
+Ahlemann F, Legner C, Lux J (2021) A resource-based perspective of
+value generation through enterprise architecture management.
+Inf Manag 58(1):1–17
+Aier S, Gleichauf B, Winter R (2011) Understanding enterprise
+architecture management design – An empirical analysis. In:
+Bernstein A, Schwabe G (eds) Proceedings of the 9th interna-
+tional conference on Wirtschaftsinformatik, Zurich, Switzerland:
+Association for Information Systems pp 645–654
+Ajer AKS, Hustad E, Vassilakopoulou P (2021b) Enterprise archi-
+tecture operationalization and institutional pluralism: the case of
+the Norwegian hospital sector. Inf Syst J 31(4):610–645
+Ajer AK, Hustad E, Vassilakopoulou P, Olsen DH (2021a) Strength-
+ening the use of enterprise architecture: an institutional work
+perspective. In: Matook S et al (eds) Proceedings of the 29th
+European conference on information systems, Marrakech
+Alaeddini M, Asgari H, Gharibi A, Rad MR (2017) Leveraging
+business-IT alignment through enterprise architecture - an
+empirical study to estimate the extents. Inf Technol Manag
+18(1):55–82
+Ambler SW (2010) Enterprise architecture: reality over rhetoric. Dr.
+Dobb’s J. https://web.archive.org/web/20201020205941/http://
+www.drdobbs.com/architecture-and-design/enterprise-architec
+ture-reality-over-rhe/224600174
+Ansoff HI (1958) A model for diversification. Manag Sci
+4(4):392–414
+Armour FJ, Kaisler SH (2001) Enterprise architecture: agile transition
+and implementation. IT Prof 3(6):30–37
+Azevedo CL, Almeida JPA, van Sinderen M, Pires LF (2015)
+Towards capturing strategic planning in EA. In: Halle S, Mayer
+W (eds) Proceedings of the 19th IEEE international enterprise
+distributed object computing conference, Adelaide. IEEE,
+pp 159–168
+Aziz S, Obitz T (2007) Infosys enterprise architecture survey 2007.
+Infosys, Bangalore
+Barnard CI (1938) The functions of the executive. Harvard University
+Press, Cambridge
+Bartlett CA, Ghoshal S (2002) Managing across borders: the
+transnational solution, 2nd edn. Harvard Business School Press,
+Boston
+Bedeian AG, Wren DA (2001) The most influential management
+books of the 20th century. Organ Dyn 3(29):221–225
+Beese J, Aier S, Haki K, Winter R (2022) The impact of enterprise
+architecture management on information systems architecture
+complexity. Eur J Inf Syst. https://doi.org/10.1080/0960085X.
+2022.2103045
+Beese J, Haki K, Schilling R, Kraus M, Aier S, Winter R (2023)
+Strategic alignment of enterprise architecture management –
+how portfolios of control mechanisms track a decade of
+enterprise transformation at Commerzbank. Eur J Inf Syst
+32(1):92–105
+123
+484 S. Kotusev et al.: The Structuring of Enterprise Architecture Functions, Bus Inf Syst Eng 66(4):465–488 (2024)
+
+--- PAGE 22 ---
+Behara GK, Paradkar SS (2015) Enterprise architecture: a practi-
+tioner’s handbook. Meghan-Kiffer, Tampa
+Beijer P, de Klerk T (2010) IT architecture: essential practice for IT
+business solutions. Lulu.com, Raleigh
+Bente S, Bombosch U, Langade S (2012) Collaborative enterprise
+architecture: enriching EA with lean, agile, and enterprise 2.0
+practices. Morgan Kaufmann, Waltham
+BiZZdesign (2023) State of enterprise architecture, BiZZdesign,
+Enschede
+Blomqvist S, Halen M, Helenius M (2015) Connecting enterprise
+architecture with strategic planning processes: case study of a
+large Nordic finance organization. In: Kornyshova E (ed)
+Proceedings of the 17th IEEE conference on business informat-
+ics, Lisbon. IEEE, pp 43–50
+Boar BH (1999) Constructing blueprints for enterprise IT architec-
+tures. Wiley, New York
+Bolton P (2003) Governing enterprise architecture: lessons learned
+from implementing federal government EAs. Cutter IT J
+16(7):11–19
+Brosius M, Aier S, Haki K, Winter R (2018) Enterprise architecture
+assimilation: an institutional perspective. In: Baskerville R,
+Nickerson R (eds) Proceedings of the 39th international confer-
+ence on information systems, San Francisco. AIS, pp 1–17
+Buckl S, Matthes F, Schweda CM (2012) Designing enterprise
+architecture management functions – the interplay of organiza-
+tional contexts and methods. In: Aier S, Ekstedt M, Matthes F,
+Proper E, Sanz JL (eds) Proceedings of the 7th Trends in
+enterprise architecture research workshop, Barcelona. Springer,
+pp 236–252
+Carbone JA (2004) IT architecture toolkit. Prentice Hall, Upper
+Saddle River
+Carr D, Else S (2018) State of enterprise architecture survey: results
+and findings. Enterp Arch Prof J 6(1):1–17
+Chandler AD (1962) Strategy and structure: chapters in the history of
+the industrial enterprise. MIT Press, Cambridge
+Charmaz K (2006) Constructing Grounded Theory: a practical guide
+through qualitative analysis. Sage, London
+Chiasson MW, Davidson E (2005) Taking industry seriously in
+information systems research. MIS Q 29(4):591–605
+Corbin JM, Strauss A (1990) Grounded Theory research: procedures,
+canons, and evaluative criteria. Qual Soc 13(1):3–21
+Dale M (2013) Enterprise architecture implementation governance:
+managing meaning and action. J Enterp Arch 9(1):77–88
+Dale M, Scheepers H (2020) Enterprise architecture implementation
+as interpersonal connection: building support and commitment.
+Inf Syst J 30(1):150–184
+Dang D (2021) Institutional logics and their influence on enterprise
+architecture adoption. J Comp Inf Syst 61(1):42–52
+Dang D, Pekkola S (2020) Institutional perspectives on the process of
+enterprise architecture adoption. Inf Syst Front 22(6):1433–1445
+EA on a Page (2022) Enterprise architecture on a page (v2.0). http://
+eaonapage.com: SK Publishing
+Fallmyr T, Bygstad B (2014) Enterprise architecture practice and
+organizational agility: an exploratory study. In: Sprague RH (ed)
+Proceedings of the 47th Hawaii international conference on
+system sciences, Big Island. IEEE, pp 3788–3797
+FEAPO (2013) A common perspective on enterprise architecture. The
+Federation of Enterprise Architecture Professional Organizations
+(FEAPO), University Park
+FEAPO (2018) The guide to careers in enterprise architecture. The
+Federation of Enterprise Architecture Professional Organizations
+(FEAPO), University Park
+Foorthuis R, Hofman F, Brinkkemper S, Bos R (2012) Compliance
+assessments of projects adhering to enterprise architecture.
+J Database Manag 23(2):44–71
+Foorthuis R, van Steenbergen M, Brinkkemper S, Bruls WA (2016) A
+theory building study of enterprise architecture practices and
+benefits. Inf Syst Front 18(3):541–564
+Fowler M (2003) UML distilled: a brief guide to the Standard Object
+Modeling Language, 3rd edn. Addison-Wesley Professional,
+Boston
+Galbraith JR (1973) Designing complex organizations. Addison-
+Wesley, Reading
+Gartner (2013) Gartner glossary: enterprise architecture (EA). Gart-
+ner. https://www.gartner.com/en/information-technology/glos
+sary/enterprise-architecture-ea. Accessed 7 Nov 2023
+Gerber S, Meyer U, Richert C (2007) EA model as central part of the
+transformation into a more flexible and powerful organisation.
+In: Reichert M et al (eds) Proceedings of the 2nd international
+workshop on enterprise modelling and information systems
+architectures, St. Goar. Gesellschaft für Informatik, pp 23–32
+Ghoshal S, Bartlett CA (1990) The multinational corporation as an
+interorganizational network. Acad Manag Rev 15(4):603–626
+Ghoshal S, Nohria N (1989) Internal differentiation within multina-
+tional corporations. Strateg Manag J 10(4):323–337
+Ghoshal S, Korine H, Szulanski G (1994) Interunit communication in
+multinational corporations. Manag Sci 40(1):96–110
+Glaser BG (2008) Doing quantitative grounded theory. Sociology
+Press, Mill Valley
+Glaser BG, Strauss AL (1967) The discovery of grounded theory:
+strategies for qualitative research. Aldine, Chicago
+Gregor S (2006) The nature of theory in information systems. MIS Q
+30(3):611–642
+Gregor S, Hart D, Martin N (2007) Enterprise architectures: enablers
+of business strategy and IS/IT alignment in government. Inf
+Technol People 20(2):96–120
+Gunton T (1989) Infrastructure: building a framework for corporate
+information handling. Prentice Hall, New York
+Haki MK, Legner C, Ahlemann F (2012) Beyond EA frameworks:
+towards an understanding of the adoption of enterprise architec-
+ture management. In: Pries-Heje J et al (eds) Proceedings of the
+20th European conference on information systems, Barcelona.
+Association for Information Systems, pp 1–12
+Haki K, Legner C (2021) The mechanics of enterprise architecture
+principles. J Assoc Inf Syst 22(5):1334–1375
+Hausman KK, Cook SL (2010) IT architecture for dummies. Wiley,
+Hoboken
+Hobbs G (2012) EAM governance and organisation. In: Ahlemann F
+et al (eds) Strategic enterprise architecture management: chal-
+lenges, best practices, and future developments. Springer,
+Heidelberg, pp 81–110
+Holt J, Perry S (2010) Modelling enterprise architectures. The
+Institution of Engineering and Technology, Stevenage
+Hornford, D, Hornford N, Sabesan S, Scotch S, Street K, Toder S
+(2022) TOGAF series guide: the TOGAF leader’s guide to
+establishing and evolving an EA capability (#G184). The Open
+Group, Reading
+Hungerford P (2009) The evolving role of enterprise architecture
+within Syngenta. In: Doucet G et al (eds) Coherency manage-
+ment: architecting the enterprise for alignment, agility and
+assurance. AuthorHouse, Bloomington, pp 307–328
+Kaplan B, Duchon D (1988) Combining qualitative and quantitative
+methods in information systems research: a case study. MIS Q
+12(4):571–586
+Kappelman L, McLean E, Johnson V, Torres R, Nguyen Q, Maurer C,
+Snyder M (2017) The 2016 SIM IT issues and trends study. MIS
+Q Exec 16(1):47–80
+Kappelman L, McLean E, Johnson V, Torres R, Nguyen Q, Maurer C,
+David A (2018) The 2017 SIM IT issues and trends study. MIS Q
+Exec 17(1):53–88
+123
+S. Kotusev et al.: The Structuring of Enterprise Architecture Functions, Bus Inf Syst Eng 66(4):465–488 (2024) 485
+
+--- PAGE 23 ---
+Kappelman L, Torres R, McLean E, Maurer C, Johnson V, Kim K
+(2019) The 2018 SIM IT issues and trends study. MIS Q Exec
+18(1):7
+Kappelman L, McLean E, Johnson VL, Torres R, Maurer C, Snyder
+M, Guerra K, Kim K (2020) The 2019 SIM IT issues and trends
+study. MIS Q Exec 19(1):69–104
+Kappelman L, McLean ER, Johnson VL, Torres R, Maurer C, Kim K,
+Guerra K, Snyder M (2021) The 2020 SIM IT issues and trends
+study. MIS Q Exec 20(1):69–107
+Karmann G, Preisker N, Hell DN, Assmann J (2019) Digital
+architecture management study 2019. Capgemini Invent, Paris
+Keller W (2005) Germania versus the timeless way of building: a few
+episodes on how to sell enterprise IT architecture to your peers
+and bosses. Objectarchitects, Munich
+Koch C (2005) A new blueprint for the enterprise. CIO Mag
+18(10):38–46
+Kohansal MA, Haki K (2021a) Enterprise architecture’s ups and
+downs over time: a case of de- and re-institutionalization. In:
+Kankanhalli A et al (eds) Proceedings of the 42nd international
+conference on information systems, Austin. Association for
+Information Systems
+Kohansal MA, Haki K (2021b) How enterprise architecture loses
+momentum: a case of delegitimization. In: Kankanhalli A et al
+(eds) Proceedings of the 42nd international conference on
+information systems, Austin. Association for Information
+Systems
+Kotusev S (2017a) Conceptual model of enterprise architecture
+management. Int J Coop Inf Syst 26(3):1–36
+Kotusev S (2017b) Enterprise architecture: what did we study? Int J
+Coop Inf Syst 26(4):1–84
+Kotusev S (2018) TOGAF-based enterprise architecture practice: an
+exploratory case study. Commun Assoc Inf Syst 43(1):321–359
+Kotusev S (2019) Enterprise architecture and enterprise architecture
+artifacts: questioning the old concept in light of new findings.
+J Inf Technol 34(2):102–128
+Kotusev S (2020a) The hard side of business and IT alignment. IT
+Prof 22(1):47–55
+Kotusev S (2020b) Sizing, structuring, and fine-tuning your EA
+function. Cutter Consort Exec Update 23(1):1–8
+Kotusev S (2021) The practice of enterprise architecture: a modern
+approach to business and IT alignment, 2nd edn. SK Publishing,
+Melbourne
+Kotusev S, Alwadain A (2023) Modeling business capabilities in
+enterprise architecture practice: the case of business capability
+models. Inf Syst Manag. https://doi.org/10.1080/10580530.2023.
+2231635
+Kotusev S, Kurnia S (2021) The theoretical basis of enterprise
+architecture: a critical review and taxonomy of relevant theories.
+J Inf Technol 36(3):275–315
+Kotusev S, Singh M, Storey I (2016) Enterprise architecture practice
+in retail: problems and solutions. J Enterp Arch 12(3):28–39
+Kotusev S, Kurnia S, Dilnutt R (2022) The practical roles of
+enterprise architecture artifacts: a classification and relationship.
+Inf Softw Technol 147(1):1–22
+Kotusev S, Kurnia S, Dilnutt R (2023a) Enterprise architecture
+artefacts as instruments for knowledge management: a theoret-
+ical interpretation. Knowl Manag Res Pract 21(3):594–606
+Kotusev S, Kurnia S, Dilnutt R (2023b) Enterprise architecture
+artifacts as boundary objects: an empirical analysis. Inf Softw
+Technol 155(1):1–18
+Kotusev S, Kurnia S (2019) The problem of engagement in enterprise
+architecture practice: an exploratory case study. In: Boh WF et al
+(eds) Proceedings of the 40th international conference on
+information systems, Munich. Association for Information
+Systems
+Kotusev S, Singh M, Storey I (2015) Investigating the usage of
+enterprise architecture artifacts. In: Becker J et al (eds)
+Proceedings of the 23rd European conference on information
+systems, Munster. Association for Information Systems
+Kotusev S, Kurnia S, Dilnutt R (2020) Roles of different artifacts in
+enterprise architecture practice: an exploratory study. In: Kara-
+hanna E et al (eds) Proceedings of the 41st international
+conference on information systems, Hyderabad. Association for
+Information Systems
+Kurnia S, Kotusev S, Shanks G, Dilnutt R, Milton S (2021a)
+Stakeholder engagement in enterprise architecture practice: what
+inhibitors are there? Inf Softw Technol 134(1):1–23
+Kurnia S, Kotusev S, Shanks G, Dilnutt R, Taylor P, Milton S (2021b)
+Enterprise architecture practice under a magnifying glass:
+linking artifacts, activities, benefits, and blockers. Commun
+Assoc Inf Syst 49(1):668–698
+Kurnia S, Kotusev S, Dilnutt R, Taylor P, Shanks G, Milton S (2020)
+Artifacts, activities, benefits and blockers: exploring enterprise
+architecture practice in depth. In: Bui TX (ed) Proceedings of the
+53rd Hawaii international conference on system sciences, Maui.
+University of Hawaii at Manoa, pp 5583–5592
+Labusch N, Aier S, Winter R (2018) A major transformation at a
+global insurance company. In: Proper HA et al (eds) Architec-
+tural coordination of enterprise transformation, Cham. Springer
+Lankhorst M (2017) Enterprise architecture at work: modelling,
+communication and analysis, 4th edn. Springer, Heidelberg
+Lankhorst MM, Quartel DA, Steen MW (2010) Architecture-based IT
+portfolio valuation. In: Harmsen F et al (eds) Proceedings of the
+2nd working conference on practice-driven research on enter-
+prise Transformation, Delft. Springer, pp 78–106
+Lapkin A, Allega P, Burke B, Burton B, Bittler RS, Handler RA,
+James GA, Robertson B, Newman D, Weiss D, Buchanan R,
+Gall N (2008) Gartner clarifies the definition of the term
+’Enterprise Architecture’’’ (#G00156559). Gartner, Stamford
+Lawrence PR, Lorsch JW (1967a) Differentiation and integration in
+complex organizations. Admin Sci Q 12(1):1–47
+Lawrence PR, Lorsch JW (1967b) Organization and environment:
+managing differentiation and integration. Harvard Business
+School Press, Boston
+Lee AS, Baskerville RL (2003) Generalizing generalizability in
+information systems research. Inf Syst Res 14(3):221–243
+Legner C, Lohe J (2012) Embedding EAM into operation and
+monitoring. In: Ahlemann F et al (eds) Strategic enterprise
+architecture management: challenges, best practices, and future
+developments. Springer, Heidelberg, pp 169–199
+Leppanen M, Valtonen K, Pulkkinen M (2007) Towards a contin-
+gency framework for engineering an enterprise architecture
+planning method. In: Tiainen T et al (eds) Proceedings of the
+30th information systems research seminar in Scandinavia,
+Tampere. University of Tampere
+Longepe C (2003) The enterprise architecture IT project: the
+urbanisation paradigm. Kogan Page Science, London
+Lux J, Ahlemann F (2012) Embedding EAM into the project life
+cycle. In: Ahlemann F et al (eds) Strategic enterprise architecture
+management: challenges, best practices, and future develop-
+ments. Springer, Heidelberg, pp 141–168
+Makiya G (2008) Integrating enterprise architecture and IT portfolio
+management processes. J Enterp Arch 4(1):27–40
+Manwani S, Bossert O (2016) EA survey findings: the challenges and
+responses for enterprise architects in the digital age. J Enterp
+Arch 12(3):6–9
+March JG, Simon HA (1958) Organizations. Wiley, New York
+McLean ER, Soden JV (1977) Strategic planning for MIS. Wiley,
+New York
+Mendelson H, Pillai RR (1999) Industry clockspeed: measurement
+and operational implications. Manuf Serv Oper Manag 1(1):1–20
+123
+486 S. Kotusev et al.: The Structuring of Enterprise Architecture Functions, Bus Inf Syst Eng 66(4):465–488 (2024)
+
+--- PAGE 24 ---
+Mintzberg H (1983) Structure in fives: designing effective organiza-
+tions. Prentice Hall, Englewood Cliffs
+Mintzberg H (2009) Managing. Berrett-Koehler, San Francisco
+Miranda SM, Kim I, Summers JD (2015) Jamming with social media:
+how cognitive structuring of organizing vision facets affects IT
+innovation diffusion. MIS Q 39(3):591–614
+Mocker M, Ross JW, Hopkins C (2015) How USAA architected its
+business for life event integration. MIS Q Exec 14(4):137–150
+Murer S, Bonati B, Furrer FJ (2011) Managed evolution: a strategy
+for very large information systems. Springer, Heidelberg
+Niemann KD (2006) From enterprise architecture to IT governance:
+elements of effective IT management. Vieweg, Wiesbaden
+Niemi E, Pekkola S (2017) Using enterprise architecture artefacts in
+an organisation. Enterp Inf Syst 11(3):313–338
+Niemi E, Pekkola S (2020) The benefits of enterprise architecture in
+organizational transformation. Bus Inf Syst Eng 62(6):585–597
+Obitz T, Babu M (2009) Infosys enterprise architecture survey
+2008/2009. Infosys, Bangalore
+Palepu K (1985) Diversification strategy, profit performance and the
+entropy measure. Strateg Manag J 6(3):239–255
+Park Y, Lee G, Lee Z (2013) EA configurations: interplay of EA
+design factors, strategy types, and environments. In: Baskerville
+R, Chau M (eds) Proceedings of the 34th international confer-
+ence on information systems, Milan. Association for Information
+Systems
+Parker T, Brooks T (2008) Which comes first, strategy or architec-
+ture? J Enterp Arch 4(4):46–57
+Pitts RA (1977) Strategies and structures for diversification. Acad
+Manag J 20(2):197–208
+Powell TC (1996) How much does industry matter? An alternative
+empirical test. Strateg Manag J 17(4):323–334
+Preisker N, Klassen H, Hell DN, Assmann J, Kanngiesser L (2020)
+Enterprise architecture as success factor in digital transforma-
+tions: digital architecture study 2020. Capgemini Invent, Paris
+Preisker N, Haffner A, Effmert M, Maiwald M, Koster P, Hegering H
+(2022) How scaling technologies challenge digital architecture:
+digital architecture study 2022. Capgemini Invent, Paris
+Preisker N, Zeeb S, Reimann G, Peters P, Koster P, Hegering H, Koch
+S, Kunz C (2023) Why digital architects are hard to find but
+create the impact you need! Digital architecture study 2023
+(How the role of digital architects and their organizational
+function changes). Capgemini Invent, Paris
+Qu WG, Pinsoneault A, Oh W (2011) Influence of industry
+characteristics on information technology outsourcing. J Manag
+Inf Syst 27(4):99–128
+Quartel D, Steen MW, Lankhorst MM (2012) Application and project
+portfolio valuation using enterprise architecture and business
+requirements modelling. Enterp Inf Syst 6(2):189–213
+van der Raadt B, Slot R, van Vliet H (2007) Experience report:
+assessing a global financial services company on its enterprise
+architecture effectiveness using NAOMI. In: Sprague RH (ed)
+Proceedings of the 40th Hawaii international conference on
+system sciences, Big Island. IEEE, pp 1–10
+van der Raadt B, Schouten S, van Vliet H (2008) Stakeholder
+perception of enterprise architecture. In: Morrison R et al (eds)
+Proceedings of the 2nd European conference on software
+architecture, Paphos. Springer, pp 19–34
+Radeke F, Legner C (2012) Embedding EAM into strategic planning.
+In: Ahlemann F et al (eds) Strategic enterprise architecture
+management: challenges, best practices, and future develop-
+ments. Springer, Heidelberg, pp 111–139
+Rahimi F, Gotze J, Moller C (2017) Enterprise architecture manage-
+ment: toward a taxonomy of applications. Commun Assoc Inf
+Syst 40(1):120–166
+Rees A (2011) Establishing enterprise architecture at WA Police.
+J Enterp Arch 7(3):49–56
+Reese RJ (2008) I/T architecture in action: bridging business and I/T
+strategies. Xlibris, Bloomington
+Richardson GL, Jackson BM, Dickson GW (1990) A principles-based
+enterprise architecture: lessons from Texaco and star enterprise.
+MIS Q 14(4):385–403
+Riege C, Aier S (2008) A contingency approach to enterprise
+architecture method engineering. In: Feuerlicht G, Lamersdorf
+W (eds) Proceedings of the 3rd trends in enterprise architecture
+research workshop, Sydney. Springer, pp 388–399
+Riempp G, Gieffers-Ankel S (2007) Application portfolio manage-
+ment: a decision-oriented view of enterprise architecture. Inf
+Syst e-Bus Manag 5(4):359–378
+Ross JW, Weill P, Robertson DC (2006) Enterprise architecture as
+strategy: creating a foundation for business execution. Harvard
+Business School Press, Boston
+Rumelt RP (1982) Diversification strategy and profitability. Strateg
+Manag J 3(4):359–369
+Rurua N, Eshuis R, Razavian M (2019) Representing variability in
+enterprise architecture: a case study. Bus Inf Syst Eng
+61(2):215–227
+Saha P (2009) The four design models of enterprise architecture. In:
+Doucet G et al (eds) Coherency management: architecting the
+enterprise for alignment, agility and assurance. AuthorHouse,
+Bloomington, pp 51–76
+Saint-Louis P, Morency MC, Lapalme J (2019) Examination of
+explicit definitions of enterprise architecture. Int J Eng Bus
+Manag 11(1):1–18
+Sandkuhl K, Fill H-G, Hoppenbrouwers S, Krogstie J, Matthes F,
+Opdahl A, Schwabe G, Uludag O, Winter R (2018) From expert
+discipline to common practice: a vision and research agenda for
+extending the reach of enterprise modeling. Bus Inf Syst Eng
+60(1):69–80
+Scheer A-W (1992) Architecture of integrated information systems:
+foundations of enterprise modelling. Springer, Heidelberg
+Scheer A-W, Schneider K (2006) ARIS – Architecture of integrated
+information systems. In: Bernus P et al (eds) Handbook on
+architectures of information systems, 2nd edn. Springer, Heidel-
+berg, pp 605–623
+Schekkerman J (2008) Enterprise architecture good practices guide:
+how to manage the enterprise architecture practice. Trafford,
+Victoria
+Schilling RD, Haki K, Aier S (2018) Dynamics of control mecha-
+nisms in enterprise architecture management: a sensemaking
+perspective. In: Baskerville R, Nickerson R (eds) Proceedings of
+the 39th international conference on information systems, San
+Francisco. Association for Information Systems
+Schneider AW, Gschwendtner A, Matthes F (2015) IT architecture
+standardization survey. Software Engineering for Business
+Information Systems (SEBIS), Technical University of Munich.
+https://wwwmatthes.in.tum.de/file/1chfmskh90vun/Sebis-Public-
+Website/Publications/Standardization%20Report.pdf. Accessed
+7 Nov 2023
+Seddon PB, Scheepers R (2012) Towards the improved treatment of
+generalization of knowledge claims in IS research: drawing
+general conclusions from samples. Eur J Inf Syst 21(1):6–21
+Shafritz JM, Ott JS, Jang YS (2015) Classics of organization theory,
+8th edn. Cengage Learning, Boston
+Shah H, Kourdi ME (2007) Frameworks for enterprise architecture.
+IT Prof 9(5):36–41
+Silver B (2012) BPMN method and style: with BPMN implementer’s
+guide. Cody-Cassidy, Aptos
+Simon HA (1944) Decision-making and administrative organization.
+Publ Admin Rev 4(1):16–30
+Simon HA (1947) Administrative behavior: a study of decision-
+making processes in administrative organization. Macmillan,
+New York
+123
+S. Kotusev et al.: The Structuring of Enterprise Architecture Functions, Bus Inf Syst Eng 66(4):465–488 (2024) 487
+
+--- PAGE 25 ---
+Simon D, Fischbach K, Schoder D (2014) Enterprise architecture
+management and its role in corporate strategic management. Inf
+Syst e-Bus Manag 12(1):5–42
+Smith HA, Watson RT (2015) The jewel in the crown – enterprise
+architecture at Chubb. MIS Q Exec 14(4):195–209
+Smith HA, Watson RT, Sullivan P (2012) Delivering an effective
+enterprise architecture at Chubb Insurance. MIS Q Exec
+11(2):75–85
+Spewak SH, Hill SC (1992) Enterprise architecture planning:
+developing a blueprint for data, applications and technology.
+Wiley, New York
+van Steenbergen M, Brinkkemper S (2009) The architectural
+dilemma: division of work versus knowledge integration. In:
+Weigand H et al (eds) Proceedings of the 21st international
+conference on advanced information systems engineering work-
+shops. Amsterdam. Citeseer, pp 46–60
+Strano C, Rehmani Q (2007) The role of the enterprise architect. Inf
+Syst e-Bus Manag 5(4):379–396
+Strauss AL, Corbin JM (1998) Basics of qualitative research:
+techniques and procedures for developing Grounded Theory,
+2nd edn. Sage, Thousand Oaks
+Tamm T, Seddon PB, Shanks G, Reynolds P, Frampton KM (2015)
+How an Australian retailer enabled business transformation
+through enterprise architecture. MIS Q Exec 14(4):181–193
+TOGAF (2018) The TOGAF standard version 9.2’’ (#C182). The
+Open Group, Reading
+Toppenberg G, Henningsson S, Shanks G (2015) How cisco systems
+used enterprise architecture capability to sustain acquisition-
+based growth. MIS Q Exec 14(4):151–168
+Turner P, Gotze J, Bernus P (2009) Architecting the firm – coherency
+and consistency in managing the enterprise. In: Meersman R et al
+(eds) On the Move to Meaningful Internet Systems: OTM 2009
+Workshops. Springer, Heidelberg, pp 162–171
+van der Raadt B, van Vliet H (2008) Designing the enterprise
+architecture function. In: Becker S et al (eds) Quality of software
+architectures Models and architectures. Springer, Heidelberg,
+pp 103–118
+van Rensselaer C (1985) Global, shared, local: at Hewlett-Packard,
+information systems come in three flavors. Datamation
+31(6):105–114
+Van’t Wout J, Waage M, Hartman H, Stahlecker M, Hofman A
+(2010) The integrated architecture framework explained: why,
+what, how. Springer, Heidelberg
+Venkatesh V, Bala H, Venkatraman S, Bates J (2007) Enterprise
+architecture maturity: the story of the Veterans Health Admin-
+istration. MIS Q Exec 6(2):79–90
+Venkatesh V, Brown SA, Bala H (2013) Bridging the qualitative-
+quantitative divide: guidelines for conducting mixed methods
+research in information systems. MIS Q 37(1):21–54
+Walsh I (2015) Using quantitative data in mixed-design Grounded
+Theory studies: an enhanced path to formal Grounded Theory in
+information systems. Eur J Inf Syst 24(5):531–557
+Weber M (1947) The theory of social and economic organization.
+Free Press & Falcon’s Wing Press, Glencoe
+Weill P, Ross JW (2008) Implementing your operating model via IT
+governance. Center for Information Systems Research (CISR)
+MIT Sloan School of Management, Cambridge
+Weill P, Ross JW (2009) IT savvy: what top executives must know to
+go from pain to gain. Harvard Business School Press, Boston
+Weill P, Woerner SL (2010) What’s next: learning from the most
+digital industries. Center for Information Systems Research
+(CISR) MIT Sloan School of Management, Cambridge
+Weill P, Woerner SL, McDonald M (2009) Managing the IT portfolio
+(update circa 2009) infrastructure dwindling in the downturn.
+Center for Information Systems Research (CISR) MIT Sloan
+School of Management, Cambridge
+Weiss S, Aier S, Winter R (2013) Institutionalization and the
+effectiveness of enterprise architecture management. In: Basker-
+ville R, Chau M (eds) Proceedings of the 34th international
+conference on information systems, Milan. Association for
+Information Systems
+White SA, Miers D (2008) BPMN modeling and reference guide:
+understanding and using BPMN. Future Strategies, Lighthouse
+Point
+Wierda G (2017) Mastering ArchiMate (edn III): a serious introduc-
+tion to the ArchiMate enterprise architecture modeling language.
+R&A, Amsterdam
+Winter R, Fischer R (2006) Essential layers, artifacts, and dependen-
+cies of enterprise architecture. In: Vallecillo A (ed) Proceedings
+of the 10th IEEE international enterprise distributed object
+computing conference workshops, Hong Kong. IEEE, pp 30–37
+Woods E, Rozanski N (2012) Relating enterprise, application, and
+infrastructure architects. In: Mistrik I et al (eds) Aligning
+enterprise, system, and software architectures. Business Science
+Reference, Hershey
+Zachman JA (1997) Enterprise architecture: the issue of the century.
+Database Progr Des 10(3):44–53
+Springer Nature or its licensor (e.g. a society or other partner) holds
+exclusive rights to this article under a publishing agreement with the
+author(s) or other rightsholder(s); author self-archiving of the
+accepted manuscript version of this article is solely governed by the
+terms of such publishing agreement and applicable law.
+123
+488 S. Kotusev et al.: The Structuring of Enterprise Architecture Functions, Bus Inf Syst Eng 66(4):465–488 (2024)

@@ -1,0 +1,643 @@
+--- PAGE 1 ---
+Available online at www.sciencedirect.com
+2212-8271 © 2017 TheAuthors. Published by Elsevier B.V. This is an open access article under the CC BY-NC-ND license
+(http://creativecommons.org/licenses/by-nc-nd/4.0/).
+Peer-review under responsibility of the scientific committee of the 11th CIRP Conference on Intelligent Computation in Manufacturing Engineering
+doi:10.1016/j.procir.2017.12.257
+Procedia CIRP 67 (2018) 540 – 545
+ScienceDirect
+11th CIRP Conference on Intelligent Computation in Manufacturing Engineering - CIRP ICME '17
+Enterprise architectures for the digital transformation
+in small and medium-sized enterprises
+David Goerziga,
+*, Thomas Bauernhansla,b
+a
+Institute of Industrial Manufacturing and Management (IFF), University of Stuttgart, Nobelstrasse 12, 70569 Stuttgart, Germany
+b
+Fraunhofer Institute for Manufacturing Engineering and Automation IPA, Nobelstrasse 12, 70569 Stuttgart, Germany
+* Corresponding author. Tel.: +49-711-970-1995 ; E-mail address: david.goerzig@iff.uni-stuttgart.de
+Abstract
+The transformation towards smart connected factories causes enormous changes in mechanical engineering industry starting from the
+development of cyber-physical production systems up to their application in production. Enterprise architectures already offer suitable methods
+to support the alignment of the internal IT landscape. New demands like customer involvement, iterative development and increased business-
+orientation arising with these digitized products require new approaches and methods. This paper presents the foundation and the first steps
+aiming at the development of a method for the holistic planning of the digital transformation in small and medium-sized mechanical
+engineering enterprises.
+© 2017 The Authors. Published by Elsevier B.V.
+Selection and peer-review under responsibility of the International Scientific Committee of “11th CIRP ICME Conference".
+Keywords: Digital transformation; Digitization; Industry 4.0; Enterprise architectures
+1. Introduction
+Currently, customers increasingly strive for maximization
+of personalized value. This becomes particularly obvious in
+the demand for individualized products and the increasing
+influence of customers on the development and the production
+processes [1]. Factories can only meet this challenge by the
+application of digital technologies. In Germany, the term
+Industrie 4.0 represents the aspired target state. Through
+improvements in information, communication and automation
+technology live information is available over life cycles of
+products, processes and factories. Production systems,
+products and humans are closely networked. Moreover, the
+resulting big data is used for holistic optimization. [2, 3, 4]
+This special situation gives rise to opportunities and risks for
+mechanical engineering enterprises. Based on customer data
+there are numerous new possibilities for product and process
+improvements including the optimization of the machining
+process or spare part forecasting services. At the same time,
+they are confronted with new demands. Customers not just
+want to buy a physical machine but service systems,
+consisting of hard- and software, that offer additional value in
+their unique context [1, 4, 5]. Examples are context-based
+features and information for machine operators that support
+manufacturing to adapt rapidly changing customer needs. To
+realize such use cases a close collaboration of manufacturers
+and mechanical engineering enterprise is required. Through
+this development, IT is not any longer just a technological
+tool to improve the efficiency of internal processes. By
+becoming an essential part of the value creation it grows up to
+a new source of competitive advantage and thus takes a
+transformative role [5]. The required extension of products by
+digital components to the point of cyber-physical systems and
+their integration into service systems leads enterprises in
+mechanical engineering into a fundamental change process –
+the digital transformation. Besides mechanics and electronics
+they now need to develop digital capabilities and implement
+them into fast-changing, cross-company processes and
+structures. Especially for small and medium-sized enterprises
+(SMEs) this is an enormous challenge [6].
+With the help of business model appraoches, many
+enterprises already started to design digital value creation
+concepts. But these means are very limited when it comes to
+deriving and implementing processes and IT services. In
+contrast to existing IT-based products, the new service logic
+requires a holistic process view. To take full advantage of the
+© 2017 TheAuthors. Published by Elsevier B.V. This is an open access article under the CC BY-NC-ND license
+(http://creativecommons.org/licenses/by-nc-nd/4.0/).
+Peer-review under responsibility of the scientific committee of the 11th CIRP Conference on Intelligent Computation in Manufacturing Engineering
+
+--- PAGE 2 ---
+541 David Goerzig and Thomas Bauernhansl / Procedia CIRP 67 (2018) 540 – 545
+digital opportunities adequate models, methods and tools are
+needed [4, 7]. With enterprise architectures (EA) information
+systems literature already offers a well-proven solution for
+this challenge [8, 9]. The aim of this paper is to examine if
+this approach is appropriate for digital transformation in
+SMEs of mechanical engineering. Therefore, digital
+transformation and EA are defined. Afterwards, strengths and
+weaknesses of EA in the context of digital transformation in
+SMEs are analyzed. In addition, this paper presents the first
+steps for the development of a method for the holistic
+planning of the digital transformation in small and medium-
+sized mechanical engineering enterprises.
+2. Digital Transformation in Small and Medium-sized
+Enterprises
+The following section outlines the state of the art in the
+field of digital transformation in SMEs. First, a closer look at
+the definition of digital transformation is required. In change
+management, the term transformation is used to describe the
+extent of strategic change. Whereas in a realignment there is
+just a slight change in the way an enterprise operates, in a
+transformation it changes its paradigms of doing things. [10]
+As shown in figure 1 in enterprise transformation literature
+the term is defined as a fundamental change during which
+enterprises reinvent themselves. This contains a change of the
+context in which the enterprise is active. The context includes
+the way of operation and the previous sources of success.
+Moreover, the enterprise substantially alters its relationships
+with its key constituencies like customers, suppliers or
+employees. The initial point of transformation is a radical
+change in the economic or market context. This can lead
+either to an experienced or an expected value deficiency and
+thereby influence the speed of change. [11, 12] On this basis it
+can be distinguished between an evolutionary transformation
+in incremental steps and a revolutionary transformation by a
+big bang. The speed of change depends in most cases on
+whether the enterprise is forced to or changes proactively.
+[10] Result of a transformation is a conscious and sustainable
+change in business performance [11]. It may lead to new
+value propositions as products and services, different ways of
+interaction with the customer in terms of delivery and
+provision of offers and new organizational forms to provide
+these offers to the customer [12].
+Fig. 1. Process of enterprise transformation.
+The term digital covers gathering, storing, processing,
+providing and using information electronically with the help
+of information technology (IT). Through ever lower costs and
+the increasing pervasion of IT nowadays large information
+volumes can be shared worldwide at minimum costs. [3, 5,
+13] The internet of things brings this development to the next
+level. By sensing and analyzing the context of the customer,
+this approach enable enterprises to get a deep insight into the
+customer motivations and create by this personalized
+customer value. [3, 5] One of the consequences is an
+enhancement of the relationship between provider and
+customer. Through the close networking of customers and
+providers digitization blurs the differences between them and
+enables cooperative value generation, also referred to as co-
+creation. Products evolve into services which are aiming at
+maximum value for both. [5, 14] Simultaneously digital
+technologies enable a fundamental reshaping of business
+towards cross-functional, modular and distributed processes
+[14]. This development increases business agility and
+empowers enterprises to act in turbulent environments like
+ecosystems. Ecosystems are self-containing and self-adjusting
+systems of loosely coupled actors that jointly create value.
+The basis of their relationship are institutional logics from
+which a set of rules and principles is derived. The importance
+of traditional, linear value chains decreases. [5, 15] A basic
+instrument to leverage the advantages of ecosystems are
+platforms. These modular structures facilitate the interaction
+between the actors. Platforms support the installation of rules
+for exchange and modular architectures. [5, 14] In summary,
+digital technologies become essential part of the value
+creation. For mechanical engineering enterprises as well as for
+new market actors this development offers chances to create
+new competitive advantages. Moreover digitization offers a
+possibility to fulfill the existing customer demands for a
+highly flexible supply of individual products. By reason of
+these significant changes the digitization can be seen as the
+initial point for a new wave of transformations.
+At the moment, there is no common definition for the
+digital transformation. The following literature sources give a
+hint on the current discussion. Schallmo points out the
+networking of the value chain for improved decision-making.
+He defines digital transformation as the connection of actors
+over the value chain and the application of new technologies.
+In his view digital transformation demands capabilities for the
+gathering, the exchange, processing and analysis of data. The
+aim is to support decision processes and to initiate activities.
+Digital transformation influences enterprises, business
+models, processes, relationships and products to improve the
+performance and scale of the enterprise. [16] According to
+Matt et al. digital transformation involves the application of
+digital technologies with the aim of a change of key business
+operations, products, processes, organizational structures and
+management concepts. The authors describe manifold benefits
+like increased sales and productivity as well as innovations in
+value creation and customer interaction. [7] Nandico
+describes digital transformation as a change of an enterprise
+with the aim to provide new or enhanced products, services or
+both to the customer. A key enabler for this new offering or
+enhancement is the application of information technology.
+Thereby, enterprises try to create new business models,
+customer experience or operating models. [8] Whereas Matt et
+al. see the impact of digital transformation rather broad,
+
+--- PAGE 3 ---
+542 David Goerzig and Thomas Bauernhansl / Procedia CIRP 67 (2018) 540 – 545
+Nandico concentrates on service innovation.
+In this paper, digital transformation is defined as a
+fundamental change process in enterprises initiated by new
+competitive advantages through the evolution of IT into an
+essential part of the value creation. To unlock these new
+potentials enterprises evolve their products into services and
+start to operate together with their customers in co-creation
+aiming at value maximization. Important enabler are context-
+sensitive systems that help to adapt the services to the
+individual and situational requirements of customers. In order
+to be capable of offering these digitized services enterprises
+have to think in modular, cross-functional and distributed
+business processes that allow them the integration into
+ecosystems. Result of the change is the ability to create
+personalized customer value at costs of mass production.
+Figure 2 summarizes the definition based on figure 1.
+Hereby, several requirements for planning and
+development tools arise. Since it aims for the realization of
+innovative forms of value creation, an approach should be
+able to integrate ecosystems and platforms. Secondly, in order
+to create customer-oriented and context-based solutions, the
+approach should allow the analysis and documentation of the
+close interaction with the customer and a quick adaption of
+the necessary processes to changing market contexts. Because
+a digital transformation is a fundamental change process an
+approach should help enterprises to create a clear
+transformation strategy and to provide a clear vision of the
+future state to get the commitment of all stakeholders.
+SMEs have special characteristics that influence the
+process of digital transformation and thus lead to
+requirements concerning the supporting tools. SMEs are very
+limited in their resources. On the one hand, their employees
+mostly do not have the required skills. Furthermore, they are
+tied to day-to-day business and are therefore not available for
+the development of new solutions. On the other hand, SMEs
+have only limited financial resources. Thus they cannot afford
+expensive external support. For digital transformation
+methods, this means that they should have very little demands
+for IT-capabilities and be very time-efficient. Moreover, it
+should be possible to apply them with a minimum of external
+support. Because of the financial shortage, SMEs are
+dependent on the success of the realized projects. Therefore,
+the expected returns of every project must exceed their costs
+and risks. A method for digital transformation should offer a
+good cost-benefit ratio. Since in SMEs the important decision
+are made by the CEO, he should be involved in the decision-
+making process. Another demand of SMEs is a clear
+description of how the results shall be realized. [6]
+Enterprises in mechanical engineering are characterized by
+the development and system integration of long-lasting capital
+goods which are sold in a business-to-business relationship.
+The enterprises have a strong focus on product and
+technology innovation. [15] Currently, software services play
+a tangential role. They are mostly used to raise margins or to
+offer additional value to the customer. Software development
+and networking of machines are still a challenge for the
+branch. Thus, tools for digital transformation in mechanical
+engineering enterprises should be easy to use and understand
+in order to involve all relevant stakeholders. Additionally,
+they need to draw a clear picture of the transformation process
+and the expected results.
+Fig. 2. Elements of digital transformation.
+3. Embedding Enterprise Architectures in the Digital
+Transformation
+The initial point of digital transformation is a digital
+business strategy. This is an organizational strategy that aims
+to create differential value by applying digital resources in
+formulation and execution. It goes far beyond traditional IT
+strategy which considers IT as a tool for improvement of
+business processes. It contains scope, scale and speed of
+digital business strategy as well as sources of business value
+creation and capture. [14] Since the digital transformation is a
+complex process for implementation, more details are
+required. That is why a business model is derived from the
+digital business strategy. In the past businesses operated in a
+relatively stable environment with limited operative
+possibilities. For business managers, it was possible to derive
+processes directly from strategy. With increasing digitization
+the situation becomes more complex. The application of IT-
+based processes not only expanded the possibilities of doing
+things, the things themselves also got more complex. [17]
+That is why new methods, models and tools are needed which
+help to put the strategy into action. Matt et al. propose the
+development of a digital transformation strategy. It contains
+essential decisions on technology, structure, financials and
+value creation. [7] This approach helps to detail important
+issues of digital business strategy but is still on an abstract
+level. With business models, there is an approach that helps
+enterprises to make strategy more explicit. [17] A business
+model describes how organizations create value. It contains
+activities and resources that create customer value and,
+therefore, lead to revenues. [18] Business models are made for
+the elaboration of value generation, but they are not suitable
+for planning the implementatio of processes and services. [17]
+Thus, another approach is needed to design and implement
+processes and synchronize IT activities. In information
+systems research many authors claim the application of EA
+for implementation of business transformation. [9] The
+question is if they are also useful for digital transformation.
+EA can be comprised as a complete description of an
+enterprise. It describes the essential business artifacts and
+their relationship. Therefore, EA contains a set of principles,
+methods and models that help enterprises to design and realize
+its organizational structure as well as the fitting business
+processes, information systems and infrastructure. [19, 20, 21]
+The central aim of EA is creating transparency by
+documenting the actual situation. Thus, it aims at giving an
+enterprise the control over its complexity, processes and
+information systems. Additional aims are data demand and
+interface analysis. Secondly, by providing an overview of the
+essentials of the enterprise, EA helps to control and conserve
+its most stable parts. As a third task, EA supports enterprises
+
+--- PAGE 4 ---
+543 David Goerzig and Thomas Bauernhansl / Procedia CIRP 67 (2018) 540 – 545
+to transfer strategy to daily processes. The fourth aim for EA
+is that it can be understood by all involved stakeholders. A
+fifth aim is that EA supports holistic optimization and
+identification of simplification. [19, 20]
+Besides this very general characterization of EA and its
+tasks, there are many different definitions and EA frameworks
+with different scopes and focuses. Important distinguishing
+features are the supported enterprise layers. There are five
+possible layers. In the strategic layer, an EA defines for
+example products, interaction with suppliers and customers.
+In the organizational layer, the architect elaborates business
+processes, information flows and roles. The integration layer
+considers applications, services and interfaces. Whereas the
+software layer defines data structures and software
+components, the IT infrastructure layer works out hardware
+and network components as well as software platforms. Most
+EA approaches focus on organizational, integration and
+software layer. First well-known approaches were the
+Zachman framework and ARIS. Today, TOGAF is the most
+common framework. [20]
+4. Criticism on Enterprise Architectures as an Instrument
+for Digital Transformation
+At first sight, EA could be a great support for digital
+transformation in SMEs of mechanical engineering. But
+currently, this approach is not very common in business
+transformation. In the literature, the development of the
+application of EA for business transformation is discussed
+only in a few publications. Especially in SMEs it is unknown
+and not used. Although there are enterprises which already
+align strategy and processes, they do not use EA. [6, 22]
+There are several possible reasons for this situation.
+An important aim of EA is to bring people of different
+fields together and to create solutions that are understood by
+all of them. Though this is a very important concern in major
+changes, in practice there is a wide gap between business
+transformation and EA. Because of their origin in different
+disciplines, each approach uses different languages,
+description techniques and tools. Business transformation has
+a stronger focus on processes. Although EA has the word
+enterprise in its name it is strongly rooted in IT. Strategy and
+processes are only considered marginally and with an IT-
+focus. Thus, the application of EA is mostly limited to IT
+departments. Publications argue that EA is thus to abstract.
+That is why there is often a lack of management support. [19,
+22]
+In SMEs EA frameworks are not understood. TOGAF, for
+example, creates a complete view of an enterprise. But the
+approach is also very difficult to implement. It needs an
+extensive training and certification for use. EA frameworks
+are extensive and complex and difficult to handle. Although
+this challenge is widely known there are only a few
+approaches in literature to cope with this. Even the official
+TOGAF documentation points out that a reduction of the
+framework is recommended. But there is no information given
+which parts should be eliminated for the application in SMEs.
+Despite this situation, the application of EA in SMEs is barely
+noticed in research. [6, 20]
+Besides these hurdles in business transformation, new
+challenges arise with digital transformation. Due to
+digitization, a short time-to-market and the inclusion of
+customers into the development processes of the fast-
+changing service systems become highly important. EA, in
+contrast, follows the traditional waterfall approach of
+developing detailed and completed architectures and
+implement them afterwards. In this view, information systems
+are quite stable. During this process, there is no space for
+quick adaptions and iterative development. The focus on
+detailed planning leads to a conflict with newer agile
+approaches. [8] These approaches base upon an incremental
+development and a high involvement of customers. This leads
+to less effort, increased velocity and an excellent customer
+satisfaction. [23] Additionally to the changes in the
+development approach also the system boundaries of EA are
+realigned. With digital transformation, there is a fundamental
+change in business processes and organizational structures.
+This entails a strong business orientation and creates a
+demand for deep integration of digital strategies and business
+models. Currently, there is a rather neglected integration and a
+concentration on the integration of applications and
+infrastructure. Through the use of standardized platforms,
+these challenges recede into background. At the same time,
+the borders between market actors get fuzzy or in some
+aspects even disappear. Digitized products gather customer
+data and adapt to the context. To cope with this situation IT
+frameworks need to think in a service-oriented way and
+unlock the potentials of ecosystems and platforms. Only in
+this way it is possible to create individual, customer-oriented
+solutions. Up to now, EA frameworks are not capable of this.
+[8, 22] EA is used to plan and maintain the current state of
+stable internal information systems. There are only limited
+ways for doing things. In the future, there will be a large
+demand for the agile development of target states. Moreover,
+the transformation process itself becomes more important,
+especially when it comes to the development of smart
+products, processes and services. This all creates new tasks
+for EA in the life cycles of applications. [20, 22] Table 1
+compares the features of EA with the most important
+challenges of digital transformation.
+In summary, EA is a very strong approach for
+development, maintenance and documentation of information
+systems. It offers a wide variety of tools and models and has
+proven its effectiveness in many projects. But while topics
+like digital transformation are hyped, EA becomes less
+important. The main objection is that EA is too complex and
+deeply rooted in IT. That is why this approach is not
+understood by business and also not by SMEs of mechanical
+engineering. But especially major change processes need a
+clear that is understood by all. Another point of criticism is
+that EA offers an extensive and inflexible way of planning.
+But currently, agile methods change the way software is
+planned and developed. Through the digital transformation,
+new hurdles like a stronger customer integration and
+ecosystems arise. Needed are approaches that look closer at
+customer needs and offer an iterative development. Therefore,
+lightweight planning tools with a strong business focus, which
+can be understood by each stakeholder, have to be developed.
+
+--- PAGE 5 ---
+544 David Goerzig and Thomas Bauernhansl / Procedia CIRP 67 (2018) 540 – 545
+Table 1. Features of enterprise architectures compared to the new challenges
+of digital transformation.
+Enterprise architecture Digital transformation
+Driver IT-focus Business-focus
+Target groups IT-architects,
+IT-experts
+Management,
+specialized staff,
+IT-architects, …
+Subject Stable information
+systems
+Fast changing
+service systems
+Development
+approach
+Waterfall approach Agile approaches
+Focused
+vertical
+hierarchy
+levels
+Organizational layer,
+integration layer,
+software layer,
+infrastructure layer
+Strategic layer
+business model layer
+organizational layer
+integration layer
+Value stream Information systems for
+stable value chains and
+customer needs
+Ecosystems and context-
+sensitive value creation
+Life cycle
+phases
+Development,
+maintenance,
+documentation
+Agile development,
+usage, maintenance
+documentation
+5. Approach for Digital Transformation in Small and
+Medium-sized Enterprises
+The previous analysis shows that EA offers a high
+potential for the implementation of digital transformation. But
+concurrently there are also weaknesses in existing approaches.
+Especially an involvement of business could not be achieved.
+Moreover, there are new challenges for EA. With the
+development of the last years, an agile development of
+business gets more importance. Additionally, the ecosystems
+and smart products become part of the architecture. In this
+paper, we present the first steps for a new EA approach for
+digital transformation in SMEs. As previously analyzed, an
+approach for realization of digital transformation has to be
+much more agile and therefore nearer to the customer. That is
+why agile development methods are the basis of the
+developed approach.
+As shown in figure 3, the approach is divided into a macro
+and a micro cycle. The macro cycle defines the architecture of
+the entire SME. In the micro cycle single functions are
+implemented and tested. Besides the incrementally developed
+macro and micro cycle there are two quite stable fields which
+help to conserve the digital strategy of an enterprise. The
+digital business strategy is the initial point of the approach. It
+contains basic decisions concerning speed, scale and scope of
+the digital technology application in the enterprise. As
+described by Matt et al. it is essential to derive a
+transformation strategy out of the digital business strategy.
+Here, technological and organizational principles for the
+implementation are defined. In contrast to Matt et al., in this
+approach value creation and financial aspects are not
+considered as stable enough and are, therefore, defined in the
+business model.
+The first step of the macro cycle is to derive the business
+model from the digital business strategy. As described earlier,
+the business model contains information like value
+proposition, customer segments or revenue streams. The
+second step is to elaborate an ideal architecture. The aim of
+this step is to detail the business model in a very rough way.
+The ideal architecture contains descriptions of the main
+processes, main IT services and information that is needed for
+realization. An important feature is that there are no
+restrictions. The target of the ideal architecture is to give the
+architect room for new ideas without considering legacy
+systems or strategic restrictions. Afterwards, the real
+architecture is derived from the ideal architecture. In this step,
+the transformation strategy and the current architecture are
+considered. Since the fundamental change during a digital
+transformation should be realized incrementally, there are
+always legacy systems and interfaces that have to be taken
+into account. Nevertheless, the architect should not continue
+to use legacy systems at any price. The architecture backlog
+follows similar ideas as the product backlog in the scrum
+approach. Based on the differences between current and real
+architecture, user stories are defined in the architecture
+backlog. These user stories are capsuled service systems with
+defined interfaces. A defined set of user stories can run
+through the micro cycle independently from other user stories.
+They describe the users, the desired functionality and the
+benefit. There are no details about used software or hardware.
+The aim of this is to create free space for the development
+team. Within the backlog, user stories are prioritized.
+Moreover, it is defined which user stories are built by the
+enterprise and which are provided by partners within the
+ecosystem. Services that are part of the core competence or
+are not available on the market are developed single-
+handedly.
+After running through the macro cycle the micro cycle can
+be started for the first time. This cycle begins with choosing
+the prioritized user stories from the backlog. The amount
+depends on the speed of change an enterprise aims for. Next
+step is the built or the service selection phase. During the built
+phase, the developers implement the user stories in a sprint.
+But in most cases the selection of services off the shelf is the
+better choice. Especially when a service is not part of the core
+competence and is already available on the used platform, an
+internal development should be avoided. After
+implementation or purchase, each user story is tested. Testing
+can be realized either together with a test customer or in a
+testbed as provided by different organizations (e.g. research
+institutes, universities …). In Germany, the I4KMU project
+offers SMEs help when it comes to testing of I4.0-relevant
+technologies. They are supported to find a fitting test
+environment. [24] Next step is the review. There are three
+possible decisions. The first possibility is that the user story is
+marked as done. Then the teams start with the next user story.
+The second possibility is that adaptions are required and the
+micro cycle has to start again. The third possibility is that
+there are findings that have an impact on the whole
+architecture. Then the macro cycle starts again. With the first
+pass of the macro cycle, the architecture is still very rough.
+With every pass, there are more details. The macro cycle
+should always give enough space for decisions in the micro
+cycle.
+
+--- PAGE 6 ---
+545 David Goerzig and Thomas Bauernhansl / Procedia CIRP 67 (2018) 540 – 545
+Fig. 3. Agile enterprise architecture for digital transformation.
+6. Conclusion and Outlook
+In this paper, we analyzed the content of the digital
+transformation. Furthermore, we took a closer look at possible
+methods and tools for the implementation of product ideas
+with a special focus on process implementation. Thereby we
+found that currently used approaches are not sufficient for
+SMEs in mechanical engineering. Main challenges are the
+high complexity of the approaches and the infeasibility for the
+fast development of new solutions. That is why we presented
+a new lightweight, agile approach.
+Next steps planned for the development of this approach
+are the detailed definition of the single steps and their
+integration with each other and with the digital business and
+digital transformation strategy. Here, one challenge is to
+identify and test a suitable SME-oriented notation for
+modeling the business processes, services landscape and
+ecosystems. Another task is to optimize the cycles and test
+their comprehensibility in SMEs. It is planned to validate this
+in several projects with SMEs of mechanical engineering.
+References
+[1] Bauernhansl T, Hörcher G, Röhm M, Bressner M. Neupositionierung
+einer nationalen Technologieplattform: Strategien für die deutsche
+Produktionsforschung. Zeitschrift für wirtschaftlichen Fabrikbetrieb 2017;
+112:7-11.
+[2] Kagermann H. Chancen von Industrie 4.0 nutzen. In: Vogel-Heuser B,
+Bauernhansl T, ten Hompel M, editors. Handbuch Industrie 4.0 Bd.4.
+Allgemeine Grundlagen. 3rd ed. Berlin, Heidelberg: Springer; 2017. p.
+235-46.
+[3] Lemke C, Brenner W. Einführung in die Wirtschaftsinformatik:
+Verstehen des digitalen Zeitalters. Berlin: Springer Gabler; 2015.
+[4] Böhmann T, Leimeister JM, Möslein K. Service-Systems-Engineering.
+Wirtschaftsinformatik 2014; 56:83–90.
+[5] Lusch RF, Nambisan S. Service Innovation: A service-dominant logic
+perspective. MIS Quarterly. 2015; 39:155–75.
+[6] Bernaert M, Poels G, Snoeck M, de Backer M. Enterprise Architecture
+for Small and Medium-Sized Enterprises: A Starting Point for Bringing
+EA to SMEs, Based on Adoption Models. In: Devos J, van Landeghem H,
+Deschoolmeester D, editors. Information Systems for Small and Medium-
+sized Enterprises. Berlin, Heidelberg: Springer; 2014. p. 67–96.
+[7] Matt C, Hess T, Benlian A. Digital Transformation Strategies. Bus Inf
+Syst Eng 2015; 57:339–43.
+[8] Nandico OF. A Framework to Support Digital Transformation. In: El-
+Sheikh E, Zimmermann A, Jain LC, editors. Emerging Trends in the
+Evolution of Service-Oriented and Enterprise Architectures. Cham:
+Springer; 2016. p. 113-38.
+[9] Gardner D, Fehskens L, Naidu M, Rouse WB, Ross JW. Point-
+Counterpoint: Enterprise Architecture and Enterprise Transformation as
+Related but Distinct Concepts. Journal of Enterprise Transformation
+2012; 2:283–94.
+[10] Balogun J. Strategic change. Management Quarterly 2001; 10:2–11.
+[11] Purchase V, Parry G, Valerdi R, Nightingale D, Mills J. Enterprise
+Transformation. Why Are We Interested, What Is It, and What Are the
+Challenges? Journal of Enterprise Transformation. 2011; 1:14–33.
+[12] Rouse WB. A theory of enterprise transformation. Syst. Engin. 2005;
+8:279–95.
+[13] Tapscott D. The digital economy: Promise and peril in the age of
+networked intelligence. New York: McGraw-Hill; 1996.
+[14] Bharadwaj A, El Sawy OA, Pavlou PA, Venkatraman N. Digital
+Business Strategy. Towards a Next Generation of Insights. MIS Quarterly
+2013; 37:471–82.
+[15] Paulus-Rohmer D, Schatton H, Bauernhansl T. Ecosystems, Strategy and
+Business Models in the age of Digitization - How the Manufacturing
+Industry is Going to Change its Logic. Procedia CIRP. 2016; 57:8–13.
+[16] Schallmo D. Jetzt digital transformieren. Wiesbaden: Springer; 2016.
+[17] Al-Debei MM, El-Haddadeh R, Avison D. Defining the Business Model
+in the New World of Digital Business. Proceedings of the Fourteenth
+Americas Conference on Information Systems. 2008; 14:1551-72.
+[18] Osterwalder A, Pigneur, Y. Business Model Generation: A Handbook for
+Visionaries, Game Changers, and Challengers. New York: Wiley; 2011.
+[19] Lankhorst M. Enterprise Architecture at Work. Modelling,
+Communication and Analysis. 3rd ed. Berlin Heidelberg: Springer; 2013.
+[20] Aier S, Riege C, Winter R. Unternehmensarchitektur –
+Literaturüberblick und Stand der Praxis. Wirtsch. Inform. 2008; 50:292–
+304.
+[21] Schekkerman J. How to survive in the jungle of enterprise architecture
+frameworks. Creating or choosing an enterprise architecture framework.
+3rd ed. Victoria: Trafford; 2006.
+[22] Aier S, Weiss S, Winter R, Rytz B. Untangling EA's Long Path of
+Becoming a Partner for Business Transformation. The Case of Swiss
+Federal Railways. IEEE 20th International EDOCW. 2016; 20:91-7.
+[23] Rubin KS. Essential Scrum. A practical guide to the most popular agile
+process. Upper Saddle River, NJ: Addison-Wesley; 2012.
+[24] Issa, A.; Lucke, D.; Bauernhansl, T.: Mobilizing SMEs towards Industrie
+4.0-enabled Smart Products. Procedia CIRP. 2017; 58.

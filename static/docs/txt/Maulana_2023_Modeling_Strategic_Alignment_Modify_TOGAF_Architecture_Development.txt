@@ -1,0 +1,685 @@
+--- PAGE 1 ---
+Vol.13 (2023) No. 1
+ISSN: 2088-5334
+Modeling of Strategic Alignment to Modify TOGAF Architecture
+Development Method Based on Business Strategy Model
+Yoppy Mirza Maulanaa,b,*
+, Zafril Rizal M Azmib
+, Ruzaini Abdullah Arshahb
+a
+Department of Information System, Universitas Dinamika, Raya Kedung Baruk 98, Surabaya, 60298, Indonesia
+b
+Department of Computing, Universiti Malaysia Pahang, 26600 Pekan, Pahang, 26660, Malaysia
+Corresponding author: *
+yoppy@dinamika.ac.id
+Abstract— Strategic alignment is generally seen as an important driver for optimizing business performance. Strategic alignment is
+aligning internal resource capabilities and external opportunities for superior performance. To realize the suitability of Business and
+IT strategies, a framework is needed, namely Enterprise Architecture (EA). One of the frameworks for EA is The Open Group
+Architecture Framework (TOGAF). TOGAF is a method for developing and managing the Enterprise Architecture life cycle called
+Architectural Development Method (ADM). This ADM integrates elements of the TOGAF standard inresponding tothe organization's
+business, and IT needs. In this paper, researchers will contribute to formulating a strategic alignment model to modify the existing
+strategic alignment in TOGAF ADM based on the business strategy model. In this business model strategy, there are two things: the
+analysis of businessstrategychoicesandtheBalanced Score Card (BSC) strategymap. Analysis of businessstrategychoices usesSWOT
+analysis as a business strategy determination based on internal and external business environment analysis. Second, the BSC strategy
+map is a process of mapping business strategies into the BSC strategy map, which includes four perspectives: financial, customer,
+internal business processes, and learning and growth perspectives. This model was tested at the University Dinamika, and the results
+have a good alignment rate of 95%. For further research, this model can be tested in various organizations, such as universities and
+public and private organizations.
+Keywords— Enterprise architecture; strategic alignment; business strategy; TOGAF ADM.
+Manuscript received 28 Oct. 2021; revised 20 Jul. 2022; accepted 18 Sep. 2022. Date of publication 28 Feb. 2023.
+IJASEIT is licensed under a Creative Commons Attribution-Share Alike 4.0 International License.
+I. INTRODUCTION
+In general, business-ITalignment(BITA)istheapplication
+of IT support to businesses in the organization [1], [2]. BITA,
+or strategic alignment, is generally viewed as a desirable and
+important factor and driver for optimizing organization
+performance [1], maximizing IT investment [3], and ensuring
+IT services arealigned with business objectives and processes
+[4]. Strategic alignment is the alignment of internal resource
+capabilities and external opportunities for organizational
+performance [5], [6]. Strategic Alignment can be achieved
+and maintained through Enterprise Architecture (EA) [6], [7].
+EA is a set of structured plans that integrate business and
+IT by analyzing conditions from the past, present, and future
+[7]–[10]. Several organizations propose EA frameworks to
+describe EA in a unified and compatible way [7] because EA
+represents the main enterprise elements of objectives,
+business strategy, business processes, information systems,
+andIT[11]. Oneoftheframeworksfor EAisTheOpenGroup
+Architecture Framework (TOGAF) [7], [12].
+TOGAF is a method used in developing and managing the
+EAlifecycle[13], [14].Themethodused byTOGAFiscalled
+the Architecture Development Method (ADM) or known as
+TOGAF ADM [15], [16]. TOGAF is a framework that has
+better concepts, processes, and models than others [17].
+TOGAF is a standard that can be accepted by various types of
+companies because it is practical and precise [16]. According
+toRouhanietal[17],TOGAFalsoprovides better governance
+and repositories than others. However, TOGAF focuses more
+on IT development and lacks detail in terms of alignment
+between business and IT strategies [17].
+Based on the lack of detail on TOGAF in business and IT
+alignment and in general, the problem of the EA framework
+is the integration between strategy and IT [18], the researcher
+conducted a literature study related to TOGAF modification,
+but therehas been noresearch related to strategyalignment in
+TOGAF. Researchers focus more on implementing TOGAF
+ADM as IT governance or blueprints and modifying TOGAF
+ADM for the Application of technologies such as cloud
+computing and IoT. Therefore, the research question is how
+180
+
+--- PAGE 2 ---
+to create a strategic alignment model to modify TOGAF
+ADM. In order to answer the research question, a strategic
+alignment model was made in TOGAF ADM based on a
+business strategy model known as EA modeling techniques
+[18]. Developing a strategic alignment model in TOGAF
+ADM based on a business strategy model is the contribution
+of researchers in modifying strategic alignment in TOGAF
+ADM.
+According to Kitsios and Kamariotou [18], in the last five
+years related to EA modeling techniques, researchers have
+optimized business strategies using Archimate, which is an
+open and independent architectural modeling language.
+Kitsios and Kamariotou [18] suggested that EA modeling
+should be carried out by analyzing the business environment,
+value chains, SWOT analysis, and business strategy
+assessment, such as the Application of key performance
+indicator (KPI)and balanced scorecard (BSC)models [12]. In
+this study, the EA modeling techniques used were business
+environment analysis and BSC strategy maps.
+II. MATERIALS AND METHOD
+In this study, journals and proceedings were used as
+literature sources. This literature framework has several
+stages, namely; 1) Study of Business-IT Alignment through
+EA; 2) Comparative study of enterprise architecture
+framework; 3) ADM TOGAF Study; 4) Study of business
+strategy models; 5) Study of business and IT alignment
+assessment through EA
+A. Business-IT Alignment through EA
+EA is a useful approach for achieving and maintaining
+BITA. EA is a method that describes a complex organization.
+An EAisa structuredandalignedset ofplansrepresentingthe
+integration of the business and IT landscapes of past, present,
+and future conditions. EArepresents thebasic organization of
+an enterprise, consisting of its suppliers, customers, and
+partners, and it also contains the principles that guide its
+design and development. EA is a discipline whose goal is to
+more effectively align an organization's strategy with its
+resources and processes [7], [13].
+B. EA framework comparison
+The literature comparing EA frameworks includes
+concepts, models, and processes. The concept generally
+discusses the alignment between business and IT, the
+importance of repositories, and governance. The model is a
+designrelated totheconcept, which includesnotation, syntax,
+and semantics. The process is a series of processes from the
+EA life cycle [17]. Based on the comparison framework in
+these three aspects, TOGAF has the best value in all aspects,
+but TOGAF focuses more on IT development and cannot
+provide proper alignment between business and IT [17].
+C. The Open Group Architecture Development Method
+(TOGAF ADM)
+The Open Group first introduced TOGAF in 1995, one of
+the EA frameworks, and in 2018 it was updated to TOGAF
+version 9.2 [16]. TOGAF is a detailed framework and set of
+tools in EA development used to design, build and evaluate.
+TOGAF is the industry standard for architectural
+development methods and basic resources that can be freely
+used by organizations wishing to develop enterprise
+architectures for use within organizations. TOGAF is a
+method for developing and managing the Enterprise
+Architecture life cycle called the Architectural Development
+Method (ADM) and is the core of the TOGAF standard [16].
+This ADM integrates elements of the TOGAF standard in
+responding to the organization's business, and IT needs.
+ADM consists of the steps needed to build enterprise
+architecture. In this research, the modifications are at the
+vision, business, and information system architecture stages.
+ArchitectureVision defines theorganization's scope, business
+strategy, and goals, identifies stakeholders and creates an
+architecture vision. The Business Architecture describes how
+the company operates to achieve business objectives and
+responds to the strategic drivers defined in the architecture
+vision. Information System Architecture explains how the
+company's Information System Architecture enables the
+Business Architecture and Architecture Vision [15].
+D. Business Strategy Model
+In this business model strategy, there are two things: the
+business environment analysis and the BSC strategy map.
+First, this business environment analysis includes internaland
+external analysis. The internal analysis implemented value
+chain theory and a resource-based view. The value chain
+emphasizes adding value to the company from the extraction
+of raw materials to the final product [19]. Resource-Based
+View (RBV) theory is about the heterogeneity of company
+resources [20]. The external analysis uses porter's five forces
+theory, which is used to factor opportunities and threats [21].
+SWOT analysis (strengths, weaknesses, opportunities, and
+threats) is a strategic planning tool to assess the internal
+capabilities (strengths and weaknesses) of the organization
+and the external situation facing the organization (threats and
+opportunities) [22]. Second, the BSC strategy map is used to
+present its strategic objectives and evaluate the company's
+characteristics [23]. The process is by putting business
+strategy into four perspectives from the company's strategic
+objectives, including financial, customer, internal business
+processes, and learning and growth perspectives [18].
+E. Business and IT alignment assessment through EA
+Based on Bakar, Harihodin, and Kama [24], 17 EA
+assessment models focus on Business-Alignment, namely
+Information System Architecture (ISA) Evaluation and
+IS/Business Alignment Assessment. The IS/Business
+Alignment Assessment is based on three dimensions derived
+from the Enterprise Architecture component: Business
+Architecture, Information Architecture, and Application
+Architecture. Information Architecture or Data Architecture
+is the main data in supporting the business. Application
+Architecture defines the applications required for data
+management and business support [25].
+In this approach, the way to measure the alignment is as
+follows; 1) Alignment between Business Process (BP) (part
+of Business Architecture) and Information (part of
+Information Architecture); 2) Alignment between BP (part of
+Business Architecture) and Application (part of Application
+Architecture); 3) Alignment between Application (part of
+Application Architecture) and information (part of
+Information Architecture) [25].
+181
+
+--- PAGE 3 ---
+The alignment formula between Business Architectureand
+Information Architecture is as follows:
+AlinAN_AI = (nEcP/ ntE + nPE/ntP + nErP/ ntE)/3 with
+the following explanation; 1) nEcP represents the number of
+entities created by only one business process (Rule 1.1); 2)
+nPE represents the number of processes that create, update
+and/or delete (CUD) at least one entity (Rule 1.2); 3) nErP
+represents the number of entities that are read (R) by at least
+oneprocess (Rule1.3);4)ntE,number oftotal entities;5)ntP,
+number of total processes [25].
+Thefollowingis Alignmentbetween Business Architecture
+and Application Architecture as follows;
+AlinAN_AA = ((1- (nASwBP/ntS))+(1-(nBPwAS/ntP))/2)
+with the following explanation; 1) nASwBP represents the
+number of application systems without any business process
+associated (Rule 2.2 negation); 2) nBPwAS represents the
+number of business process without any support by an
+application system (Rule 2.1 negation); 3) ntS, number of
+total application systems; 4) ntP, number of total processes
+[25].
+The following Alignment between Application
+Architecture and Information Architecture as follows;
+AlinAA_AI = ((1-(nEMA/ntE))+(1-(nGM/nGM+nGA))/2)
+with the following explanation; 1) nEMA represents the
+number of entities managed by more than one application
+system (Rule 3.1 negation); 2)nGM represents thenumber of
+cases managed manually (Rule 3.2 negation); 3) nGA
+representsthenumber ofcases managed automaticallyamong
+application systems; 4) ntE, number of total entities.
+F. Research method
+A research method is a science that studies how research is
+carried out scientifically and systematically in solving
+research problems. The stages of the research methodology
+on modeling strategic alignment to modify TOGAF ADM
+based on the business strategy model, as shown in Figure 1.
+Fig. 1 Research Method
+1) Preliminary Phase: In this phase, there are two
+processes were conducted; first, conducting a literature
+review related to the modification or use of TOGAF ADM,
+and second, determiningresearch problems and research gaps
+regarding the modification of TOGAF ADM
+2) Development Phase: In this phase, two processes were
+conducted; first, designing a conceptual framework on
+strategicalignment modeling to modifyTOGAF based on the
+business strategy model [18]. Second, develop a model of
+strategic alignment to modify TOGAF ADM based on the
+business strategy model [18].
+3) Final Phase: At this stage, testing and assessment of
+the strategic alignment model on TOGAF ADM are carried
+out with the following steps; 1) This model was piloted at
+University Dinamika as a case study; 2). This model was
+evaluated using IS/Business Alignment Assessment [25].
+III.RESULT AND DISCUSSION
+A. Preliminary Phase
+At this stage, the authors are conducting a literature study
+related to the modification or use of TOGAF ADM research.
+There are 13 types of relevant literature from 2019 to 2021.
+This literature study resulted in two classifications of using
+EA as governance planning and IT Blueprints based on
+TOGAF ADM [13], [26]–[31] and modifications of TOGAF
+ADM related to technologies such as cloud computing, IoT
+[32]–[36]. Based on the literature study, none focused on
+researching strategic alignment, and this paper aims to create
+a strategic alignment model to modify TOGAF ADM.
+Based on the literature study, none of them focused on
+researching strategic alignment. At the same time, strategic
+alignment objectives are important in optimizing business
+performance [5]. Problems arise when strategic alignment is
+not right and the organization cannot maximize the return on
+IT investment [1]. Therefore, this paper aims to create a
+strategic alignment model to modify TOGAF ADM.
+B. Development Phase
+The first step is to design a conceptual framework as
+proposed in Figure2andisthebasis for developingastrategic
+alignment model to modify TOGAF ADM.
+Fig. 2 Conceptual Framework Strategic Alignment Model to Modify
+TOGAF ADM
+The second step in the strategic analysis phase is carried
+out based on internal and external analysis. Strategic analysis
+is the process of formulating internal and external analysis to
+determine the organization's proper business strategy. The
+theoryused in thestrategicanalysis is SWOT [22]. Thestages
+of strategy analysis are as follows; (1) Formulate the results
+of Strengths and Weaknesses based on the Resource-Based
+Display and Value Chain in the IFAS column, (2) Formulate
+the results of Opportunities and Threats based on the Five
+Porter Strengths, in theEFAS column, (3) Giveweightstothe
+IFAS and EFAS columns, (4) Calculate the IFAS and EFAS
+182
+
+--- PAGE 4 ---
+ratings, (5) Multiplytheweights andratings ofeach IFAS and
+EFAS, (6) Calculate thetotal score from the multiplication of
+weights and ratings on IFAS and EFAS, (7) Determine the X
+and Y points as business strategy coordinates, (8) Develop a
+SWOT matrix, to determinetheright business strategyfor the
+organization.
+The organizational goal-setting stage is based on the
+business strategy. Furthermore, strategy mapping is prepared
+by grouping organizational goals in 4 BSC perspectives and
+mapping them into business services and business functions
+and processes. The strategic analysis step to the preparation
+of organizational goals is the stage in modifying the
+components of the existing business strategy in the vision
+architecture and mapping it to the business architecture, as
+shown in Figure 2, namely the strategic alignment model.
+C. Final Phase
+In this final stage, theimplementation and evaluation ofthe
+strategic alignment model in TOGAF are carried out. This
+model is then implemented with a casestudyat theUniversity
+Dinamika. The first step is to conduct a strategic analysis
+phase based on the internal and external analysis used to
+determine the right business strategy for the organization, the
+results of which can be seen in Figure 3.
+Fig. 3 Business Strategy Coordinates
+After it is stated that the University Dinamika strategy is
+aggressive, thenext step istodescribethestrategythrough the
+SWOT Matrix so that a strategy can be produced for the
+University Dinamika, as shown in Table 1.
+TABLE I
+SWOT MATRIX
+Strength Weaknesses
+Opportunities Increase the
+professionalism of
+lecturers, SNPT-based
+curriculum, KKNI-
+based Graduate
+Competencies, quality
+lecture processes,
+paperless education
+management, and
+Increase
+educational
+efficiency,
+institutional quality,
+number of
+collaborations,
+qualifications, and
+competencies of
+human resources
+and laboratories for
+Strength Weaknesses
+automation in dealing
+with existing threats.
+lectures in the face
+of existing threats.
+Threats Increase lecturer
+professionalism,
+SNPT-based
+curriculum, KKNI-
+based Graduate
+Competence, quality
+lecture processes,
+Paperless education
+management, and
+automation in
+responding to
+opportunities such as
+the AEC,
+Globalization, Grants
+and collaboration,
+creative industries,
+smart and green
+campus, and CSR.
+Increase
+educational
+efficiency,
+institutional quality,
+number of
+collaborations,
+qualifications and
+competencies of
+human resources
+and laboratories for
+lectures in response
+to opportunities
+such as the AEC,
+Globalization,
+Grants and
+cooperation,
+creative industries,
+smart and green
+campus, and CSR.
+The next stage is strategic mapping, which maps business
+goals into four balanced scorecard perspectives, as shown in
+Figure 4. Next is the mapping of business goals and business
+processes, as in Table 2. Strategic mapping is a part of the
+architecture vision and business architecture in scope
+enterprise architecture. Furthermore, business process
+mapping with information and application architecture is
+carried out, as shown in Table 3.
+Fig. 4 Strategy Map
+TABLE II
+MAPPING OF OBJECTIVE AND BUSINESS FUNCTION/PROCESS
+Objective Business Function/Process
+Education Management Education Management
+System SNPT-based curriculum
+Competencies based on KKNI
+Educational Efficiency Rate Education efficiency
+evaluation process
+Quality lectures Lecturer performance
+evaluation
+HR qualifications and
+competencies
+HR Administration
+Smart and green campus Customer Innovation
+Management
+183
+
+--- PAGE 5 ---
+Objective Business Function/Process
+Corporate Social
+Responsibility (CSR)
+Administration CSR
+Paperless and automated
+Educational and Financial
+processes
+Administration and New
+Student Registration
+Study Planning
+Administration
+Lecture Administration
+Examination and Assessment
+Administration
+Judiciary Administration
+Administration of Academic
+Activity
+Announcements
+Student Scholarship Letter
+Issuance
+Academic Letter Request
+Facilities and infrastructure Administration for Facilities
+and Infrastructure
+Institutional quality, Grants,
+and cooperation
+Institutional Administration
+Sources of financing Strategic and Operational
+Financial
+Laboratory for study Laboratory administration
+TABLE III
+MAPPING OF BUSINESS PROCESSES AND INFORMATION ARCHITECTURE, AND
+APPLICATION ARCHITECTURE
+Business
+Function/Process
+Information
+Architecture
+Application
+Architecture
+Education Management
+System
+Education Management
+System and Academic
+Information
+e-Education
+Management
+Education efficiency
+evaluation process
+Academic Information
+Lecturer performance
+evaluation
+Lecturer Information
+and Academic
+Information
+HR Administration HR Information
+Management
+e-HR
+Customer Innovation
+Management
+Customer Innovation
+Information
+e-CRM
+Administration CSR Community information e-CSR
+Administration and New
+Student Registration
+Academic Information e-Academic
+Management
+Study Planning
+Administration
+Academic Information
+Lecturer Administration Academic Information
+Examination and
+Assessment
+Administration
+Academic Information
+Judiciary Administration Academic Information
+Administration of
+Academic Activity
+Academic Information
+Announcements Academic Information
+Student Scholarship
+Letter Issuance
+Academic Services e-Academic
+Services
+Academic Letter Request Academic Services
+Administration for
+Facilities and
+Infrastructure
+Facilities and
+Infrastructure
+Information
+e- Facilities
+and
+Infrastructure
+Laboratory
+administration
+Facilities and
+Infrastructure
+Information
+Institutional
+Administration
+Memorandum of
+Understanding
+-
+Strategic and
+Operational Financial
+Financial Information e-Financial
+Thefinal stageafterimplementation istheevaluation ofthe
+strategic alignment model. This evaluation uses IS/Business
+Alignment [25]. There are three stages in determining
+business and IT alignment, namely:
+1) Formulating alignment between Business Architecture
+and Information Architecture:
+AlinAN_AI = (nEcP/ntE + nPE/ntP + nErP/ ntE)/3 (1)
+The calculation is as follows ((7/12)+(19/12)+(10/12))/3 =
+1 = 100%, so the alignment of Business Architecture and
+Information Architecture is 100%, which are represented in
+Table 3.
+2) Formulating alignment between Business Architecture
+and Application Architecture:
+AlinAN_AA=((1-(nASwBP/ntS))+(1-(nBPwAS/ntP))/2)(2)
+The calculation is as follows (1-(0/8)+1-(1/19))/2 = 0.97 =
+97%, so the alignment of Business Architecture and
+Application Architecture is 97%, which is represented in
+Table 3.
+3) Formulating alignment between Application
+Architecture and Information Architecture:
+AlinAA_AI =(1-(nEMA/ntE)+1-(nGM/nGM +nGA)))/2)(3)
+The calculation is as follows (1-(2/12)+ 1-(1/(1+9)))/2 =
+0,87 = 87%, so thealignment of Application Architectureand
+Information Architecture is 87%, which is represented in
+Table 3. Based on the IS/Business Alignment evaluation of
+the TOGAF ADM strategic alignment model with the
+UniversityDinamikacasestudy, ityielded anaverageof95%.
+IV.CONCLUSION
+This paper presents a new model of strategic alignment to
+modify the TOGAF ADM business strategy, which is at the
+vision and business architecture stages. The level of
+alignmentin thestrategicalignmentmodelreachesan average
+of 95%, so it can be used as an additional TOGAF ADM to
+achieve business alignment and IT strategy. In the future, the
+strategic alignment model in TOGAF ADM can be used to
+develop enterprisearchitecturein organizations or companies.
+ACKNOWLEDGMENT
+The authors thank University Dinamika for providing
+financial support.
+REFERENCES
+[1] S. Q. Njanka, G. Sandula, and R. Colomo-Palacios, “IT-Business
+alignment: A systematicliteraturereview,” ProcediaComput.Sci., vol.
+181, no. 2020, pp. 333–340, 2021, doi: 10.1016/j.procs.2021.01.154.
+[2] M. Zhang, H. Chen, and A. Luo, “A Systematic Review of Business-
+IT Alignment Research With Enterprise Architecture,” IEEE Access,
+vol. 6, pp. 18933–18944, 2018, doi: 10.1109/ACCESS.2018.2819185.
+[3] C. H. Primasari, “Strategy for achieving IT-business alignment in
+gaming industry in Indonesia,” Procedia Comput. Sci., vol. 197, no.
+2021, pp. 469–476, 2021, doi: 10.1016/j.procs.2021.12.163.
+[4] F. Maciá Pérez, J. V. Berna Martinez, and I. Lorenzo Fonseca,
+“Strategic IT alignment Projects. Towards Good Governance,”
+Comput. Stand. Interfaces, vol. 76, no. October 2020, 2021, doi:
+10.1016/j.csi.2021.103514.
+[5] K. Hiekkanen, M. Helenius, J. J. Korhonen, andE. Patricio, “Aligning
+Alignment with Strategic Context : A Literature Review,” Springer,
+Berlin, Heidelb., vol. 205, 2013, doi: doi.org/10.1007/978-3-642-
+37317-6_8.
+184
+
+--- PAGE 6 ---
+[6] A. Alwadain, “How enterprise architecture creates business value: A
+theoretical model,” 2019 Int. Conf. Adv. Comput. Sci. Inf. Syst.
+ICACSIS 2019, pp. 319–324, 2019, doi:
+10.1109/ICACSIS47736.2019.8979818.
+[7] L. Menglong, Y. Shuanghui, Z. Mengmeng, C. Tao, C. Honghui, and
+Z. Xiaoxue, “A coevolutionary framework of business-IT alignment
+via the lens of enterprise architecture,” J. Syst. Eng. Electron., vol. 31,
+no. 5, pp. 983–995, 2020, doi: 10.23919/JSEE.2020.000073.
+[8] B. Yoonet al., “A Study on EA based IT Governance,” Int. Conf. Adv.
+Commun. Technol. ICACT, vol. 2019-Febru, pp. 686–691, 2019, doi:
+10.23919/ICACT.2019.8701962.
+[9] D. Dumitriu and M. A. M. Popescu, “Enterprise architecture
+framework design in IT management,” Procedia Manuf., vol. 46, pp.
+932–940, 2020, doi: 10.1016/j.promfg.2020.05.011.
+[10] Y. Gong and M. Janssen, “The value of and myths about enterprise
+architecture,”Int. J. Inf. Manage., vol. 46, no.July2017, pp.1–9,2019,
+doi: 10.1016/j.ijinfomgt.2018.11.006.
+[11] E. Kornyshova and J. Barrios, “Industry 4.0 impact propagation on
+enterprise architecture models,” Procedia Comput. Sci., vol. 176, pp.
+2497–2506, 2020, doi: 10.1016/j.procs.2020.09.326.
+[12] A. S. Girsang and A. Abimanyu, “Adm togaf,” vol. 5, no. 3, pp. 305–
+321, 2021.
+[13] M. L. Pasiak and A. W. Rahardjo Emanuel, “Enterprise Architecture
+Planning(EAP) UsingTOGAF-ADM at Fuel Supplier,” Int. Conf. Inf.
+Commun. Technol. Syst., pp. 73–77, 2021, doi:
+10.1109/icts52701.2021.9608396.
+[14] D.Gonçalves, L. Ferreira, andN. Campos,“Enterprisearchitecture for
+high flexible and agile company in automotive industry,” Procedia
+Comput. Sci., vol. 181, no. 2019, pp. 1077–1082, 2021, doi:
+10.1016/j.procs.2021.01.303.
+[15] The Open Group, “The TOGAF® Standard, Version 9.2,” Open Gr.,
+p. 504, 2018.
+[16] K. V. deOliveira, E. C. Fernandes, andM. Borsato, “ATOGAF-based
+Framework for the Development of Sustainable Product-Service
+Systems,” Procedia Manuf., vol. 55, pp. 274–281, 2021, doi:
+10.1016/j.promfg.2021.10.039.
+[17] B. D. Rouhani, M. N. ri Mahrin, F. Nikpay, and P. Nikfard, “A
+comparison enterprise architecture implementation methodologies,”
+Proc. - 2013 Int. Conf. Informatics Creat. Multimedia, ICICM 2013,
+pp. 1–6, 2013, doi: 10.1109/ICICM.2013.9.
+[18] F. Kitsios and M. Kamariotou, “Business strategy modelling based on
+enterprise architecture: a state oftheart review,” Bus. Process Manag.
+J., vol. 25, no. 4, pp. 606–624, 2019, doi: 10.1108/BPMJ-05-2017-
+0122.
+[19] M. de F. Vieira Crespo, J. M. A. Gomes, and R. Oliveira da Silva,
+“Value chain of the mangrove crab (Ucides cordatus): A case study of
+the Parnaíba Delta, Northeast Brazil,” Mar. Policy, vol. 131, no. June,
+2021, doi: 10.1016/j.marpol.2021.104642.
+[20] E. Battisti, N. Nirino, E. Leonidou, and A. Thrassou, “Corporate
+venture capital and CSR performance: An extended resource based
+view’s perspective,” J. Bus. Res., vol. 139, no. October 2021, pp.
+1058–1066, 2022, doi: 10.1016/j.jbusres.2021.10.054.
+[21] H. Sukarman, F. Fitri, and A. Christiany, “Application model of small-
+scale hotel room rates prediction in south jakarta using business
+analytics,” Proc. 2021 Int. Conf. Inf. Manag. Technol. ICIMTech 2021,
+no. August, pp. 526–530, 2021, doi:
+10.1109/ICIMTech53080.2021.9535063.
+[22] L. C. Cheng, K. Chen, M. C. Lee, and K. M. Li, “User-Defined SWOT
+analysis – A change mining perspective on user-generated content,”
+Inf. Process. Manag., vol. 58, no. 5, p. 102613, 2021, doi:
+10.1016/j.ipm.2021.102613.
+[23] C. H. Yang and K. C. Lee, “Developing a strategy map for forensic
+accounting with fraud risk management: An integrated balanced
+scorecard-based decision model,” Eval. Program Plann., vol. 80, no.
+December 2019, p. 101780, 2020, doi:
+10.1016/j.evalprogplan.2020.101780.
+[24] N. A. A. Bakar, S. Harihodin, and N. Kama, “A Systematic Review of
+EnterpriseArchitectureAssessmentModels,” Appl. Mech.Mater., vol.
+735, no. February 2018, pp. 339–343, 2015, doi:
+10.4028/www.scientific.net/amm.735.339.
+[25] A. Vasconcelos, C. M. Pereira, P. Sousa, andJ. Tribolet, “Open issues
+on information system architecture research domain: The vision,”
+ICEIS 2004 - Proc. Sixth Int. Conf. Enterp. Inf. Syst., no. January, pp.
+273–282, 2004, doi: 10.5220/0002640702730282.
+[26] A. A. Gebayew, Chernet; Arman, “Modify TOGAF ADM for
+Government Enterprise Architecture,” 2019 IEEE 5th Int. Conf. Wirel.
+Telemat., 2019.
+[27] A. Guntara, A. Saeppani, I. Fadil, and F. Supriadi, “Enterprise
+Information System Planning Using TOGAF Architecture
+Development Method on XYZ College,” 2020 8th Int. Conf. Cyber IT
+Serv. Manag. CITSM 2020, 2020, doi:
+10.1109/CITSM50537.2020.9268798.
+[28] I. Rerung, R. R., Wahvuni, A., & Susrini, “Blueprint ofSmart Campus
+System UsingTOGAF ADM,” 2020 6thInt. Conf. Comput. Eng. Des.,
+p. (pp. 1-5), 2020.
+[29] Y. U. Chandra and S. Harso Supangkat, “Smart Community Model
+using TOGAF to Help Higher Education Students on Internship
+Program,” 7th Int. Conf. ICT Smart Soc. AIoT Smart Soc. ICISS 2020
+- Proceeding,pp. 1–6,2020,doi: 10.1109/ICISS50791.2020.9307551.
+[30] Inayatulloh, “Proposed IT Governance for Hospital Based on TOGAF
+Framework,”Int.Conf. Inf. Manag.Technol.,no. August, pp.476–480,
+2021.
+[31] E. Kornyshova and J. Barrios, “Process-oriented knowledge
+representation of the requirement management phase of TOGAF-
+ADM: An empirical evaluation,” Procedia Comput. Sci., vol. 192, pp.
+2239–2248, 2021, doi: 10.1016/j.procs.2021.08.237.
+[32] N. Anggraini, Binariswanto, and N. Legowo, “Cloud computing
+adoption strategic planning using ROCCA and TOGAF 9.2: A study
+in government agency,” Procedia Comput. Sci., vol. 161, pp. 1316–
+1324, 2019, doi: 10.1016/j.procs.2019.11.247.
+[33] Y. Osadhani, A. Maulana, D. Rizkiputra, E. R. Kaburuan, and
+Sfenrianto, “Enterprise Architectural Design Based on Cloud
+Computing using TOGAF (Case Study: PT. TELIN),” ICSECC 2019
+- Int. Conf. Sustain. Eng. Creat. Comput. New Idea, New Innov. Proc.,
+pp. 111–115, 2019, doi: 10.1109/ICSECC.2019.8907072.
+[34] J. A. Camatti, G. M. Rabelo, M. Borsato, and M. Pellicciari,
+“Comparative study of open IoT architectures with TOGAF for
+industry implementation,” Procedia Manuf., vol. 51, pp. 1132–1137,
+2020, doi: 10.1016/j.promfg.2020.10.159.
+[35] D. Utomo, Suzanna, and M. Wijaya, “Tailoring TOGAF architectural
+development method to cloudadoption strategy,” Proc. 2020 Int. Conf.
+Inf. Manag. Technol. ICIMTech 2020, no. August, pp. 159–164, 2020,
+doi: 10.1109/ICIMTech50083.2020.9211164.
+[36] D. Utomo, Suzanna, and M. Wijaya, “Applying TOGAF-based cloud
+adoption framework,” Proc. 2021 Int. Conf. Inf. Manag. Technol.
+ICIMTech 2021, no. August, pp. 314–319, 2021, doi:
+10.1109/ICIMTech53080.2021.9534965.
+185

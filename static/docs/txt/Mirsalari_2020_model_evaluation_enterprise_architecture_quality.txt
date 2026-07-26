@@ -1,0 +1,1250 @@
+--- PAGE 1 ---
+Contents lists available at ScienceDirect
+Evaluation and Program Planning
+journal homepage: www.elsevier.com/locate/evalprogplan
+A model for evaluation of enterprise architecture quality
+Seyedeh Reyhaneh Mirsalaria
+, Mina Ranjbarfardb,
+*
+a
+Master of Science in Information Technology Management from Department of Management, Faculty of Social Sciences and Economics, Alzahra University, Tehran, Iran
+b
+Assistant Professor of Information Technology Management, Department of Management, Faculty of Social Sciences and Economics, Alzahra University, Tehran, Iran
+A R T I C L E I N F O
+Keywords:
+Enterprise architecture
+Enterprise architecture measurement
+Enterprise architecture quality attributes
+Enterprise architecture evaluation
+A B S T R A C T
+Today, most organizations use an enterprise architecture (EA) approach as a tool to increase the power of
+management on the organization's information technology. Enterprise architecture is a set of processes that helps
+an organization to translate its vision into an eﬀective change in the organization's scope by providing a clear
+understanding of its current state. The purpose of this research is to identify EA quality attributes and its eva-
+luation indicators in the organization. This study was conducted by using mixed method, including qualitative
+and quantitative parts. In the qualitative section, a variety of EA evaluation indicators were identiﬁed by a
+systematic literature review (SLR) approach, then in the quantitative section the survey data were collected by a
+questionnaire prepared based on the qualitative part and then exploratory factor analysis (EFA) and con-
+ﬁrmatory factor analysis (CFA) were performed. This research presents an EA evaluation model that has seven
+main quality attributes including alignment and integrity, quality of EA products and services, security, main-
+tainability and portability, reliability, reusability and scalability, and 30 indicators that address all aspects of
+enterprise architecture. Through this model, organizations can evaluate the quality of implemented EA or AS-IS
+status of EA and take steps to improve it.
+1. Introductions
+Nowadays, the importance of organizational ﬂexibility against ex-
+ternal pressures, such as change in business, mission and organizational
+structure, rapid technological changes and the distribution of organi-
+zations in the geographic scope is inevitable. Enterprise architecture
+(EA) not only aﬀects the internal resources and components of the or-
+ganization, such as IT elements, processes, or even employees (Anaya
+and Ortiz, 2005; Rood, 1994; Ross et al., 2006; Zachman, 1997); but
+also oversees outsourcing (Alaeddini and Salekfard, 2013; Hope, 2015).
+A high-level enterprise architecture (meta-architecture) includes in-
+formation technology systems of enterprise (including hardware and
+software) and their relationships, and their related processes, functions,
+groups, and individuals. From a functional view, an enterprise archi-
+tecture describes how the elements of the information technology can
+work together as a whole, with groups and individuals in the organi-
+zation (Buchanan, 2001; Tamm, Seddon, Shanks, & Reynolds, 2011).
+Indeed, EA is a holistic and integrated viewpoint from all aspects of the
+organization's business (Carvalho & Sousa, 2014; Gong & Janssen,
+2019;), hence many organizations have invested in this area in order to
+comprehend and realize their business or are allocating resources and
+investing in EA projects (Tamm et al., 2011). Therefore, it is required to
+have indicators and identiﬁcation factors to recognize and evaluate
+enterprise architecture for reducing the risk of the EA implementation
+projects and preventing the waste of ﬁnancial and time resources
+(Bernus et al., 2016; Gong & Janssen, 2019). Another considerable
+reason for evaluating EA is to have a clear understanding of EA value
+that is related to the required communication for aligning diﬀerent
+stakeholders. A positive perception of EA value is very important to
+ensure the continuous commitment of EA stakeholders (Foorthuis, Van
+Steenbergen, Brinkkemper, & Bruls, 2016; Gong & Janssen, 2019;
+Robertson, Peko, & Sundaram, 2018; Van der Raadt & Bonnet, 2010).
+Evaluation of enterprise architecture is deﬁned as the process of de-
+termining the beneﬁts, feasibility and value of EA artifacts (Österlind
+et al., 2013). EA evaluation has grown into an important topic for en-
+terprises that need to organize large portfolios of their projects and
+adapt IT to their business processes over time (Neimi & Pekkola, 2013).
+Evaluation leads to engender information that assists with making
+judgments and decisions on a program, service, policy or ISs integra-
+tion, and then guiding decision makers to take practical actions
+(Nikpay, Ahmad, & Kia, 2017).
+https://doi.org/10.1016/j.evalprogplan.2020.101853
+Received 16 March 2019; Received in revised form 23 November 2019; Accepted 30 July 2020
+⁎
+Corresponding author.
+E-mail addresses: Reyhaneh.mirsalari3168@gmail.com (S.R. Mirsalari), m.ranjbarfard@alzahra.ac.ir (M. Ranjbarfard).
+Evaluation and Program Planning 83 (2020) 101853
+Available online 09 August 2020
+0149-7189/ © 2020 Published by Elsevier Ltd.
+T
+
+--- PAGE 2 ---
+1.1. Motivation for this research
+Evaluation generates qualitative (descriptive) and quantitative
+(numeric) information. Generating quantitative information by using
+metrics is commonly referred to as measurement (Hämäläinen, 2008).
+Descriptive and numeric information can be used to complement each
+other. The problem of evaluating EA has been extensively considered in
+the literature. Up to now several eﬀorts in EA research have targeted
+the identiﬁcation of EA indices; and numerous enterprise architecture
+evaluation models and methods have been proposed (Buchanan, 2001;
+Gammelgård, Ekstedt, & Närman, 2007; Gunther, 2014; Khayami,
+2011; Klein & Gagliardi, 2010; Lakhrouit, Baina, & Benali, 2014; Neimi
+& Pekkola, 2013; Nikpay, Ahmad, Kia et al., 2017). But there are some
+defects, some methods have just focused on evaluating an implemented
+EA (Buchanan, 2001; Morganwalp & Sage, 2011; Nikpay, Ahmad, Kia
+et al., 2017) or the most of the proposed measures are qualitative
+(Gammelgård et al., 2007; Lakhrouit et al., 2014; Neimi & Pekkola,
+2013). The researchers generally acknowledged the diﬃculty of asses-
+sing the impact of EA (Gunther, 2014). Moreover, an important point to
+be noted is that, given that an enterprise architecture is associated with
+four layers including business, information, application, and infra-
+structure layers (Klein & Gagliardi, 2010; Nikpay, Ahmad, Rouhani, &
+Mahrin, 2017; Razavi & Aliee, 2009; Rouhani, Mahrin, Nikpay, Nikfard,
+& Najafabadi, 2015), so an appropriate evaluation requires a compre-
+hensive evaluation, which addresses all layers of EA. However, a great
+majority of the existing EA evaluation models are related to the appli-
+cation and informationlayers and a tiny minority of them consider the
+business and infrastructure layers (Bernard, 2012; Gammelgård et al.,
+2007; Giachetti, 2012; Zandi & Tavana, 2012). Also, some of them are
+attained by means of multiple practical EA implementation projects and
+there is no appropriate theoretical and scientiﬁc foundation behind
+them (Nikpay, Ahmad, Kia et al., 2017). Evaluation and measurement
+concepts and practices are advanced in diverse domains (e.g. program
+management, software engineering, quality management). Evaluation
+and measurement mean diﬀerent things to diﬀerent people in diﬀerent
+contexts. It appears that there is no general evaluation theory
+(Hämäläinen, 2008). "Regular evaluation of the eﬀectiveness of the
+enterprise architecture program is crucial to understand the net eﬀect
+of the varied and complex architecture process on the environment and
+to provide recommendations for continuous improvement (Leganza,
+2003)". As a result, the aim of this research is to recognize EA quality
+indicators in order to measure all layers of EA and provide a model for
+EA quality evaluation in the organization.
+1.2. Study goals and contributions
+The main objective of this study is to develop an EA evaluation
+model for analyzing EA that facilitates the rational decision making
+about information systems and enterprise architecture in an organiza-
+tion. This research undertook two sections accordingly: qualitative and
+quantitative sections. The ﬁrst section provides the foundation (EA
+quality indicators) through a systematic literature review (SLR) and
+interviews with EA experts. The second section focuses on developing a
+model for evaluating EA implementation based on the foundation and
+information from SLR, data analyzing, and EA experts’ points of view.
+In fact, in the qualitative part, EA evaluation indicators have been
+identiﬁed through literature review and then classiﬁed, second a
+quantitative analysis has been done using the statistical analysis
+methods in order to create a validated model for EA evaluation.
+1.3. Structure of the paper
+The remainder of this paper is divided into the following parts: re-
+lated works are described in Section 2; the research methodology is
+presented in Section 3; the proposed EA evaluation model, discussion
+and also future research are given in Sections 4 and 5. Finally the
+conclusions from this study are expressed in Section 6.
+2. Related works
+"Enterprise architecture is the representation of the structure and
+behavior of an enterprise’s IT landscape in relation to its business en-
+vironment. It reﬂects the current and future use of IT in the enterprise
+and provides a roadmap to reach a future state (Bente, Bombosch, &
+Langade, 2012)". Yet, there is no single agreed deﬁnition of EA ac-
+cording to the literature review (Robertson et al., 2018) and all of EA
+research approve that EA is an integrated and holistic vision of the
+enterprise’s IT resources that is embodied in its elements (people,
+processes, applications, and so on) and their relationships to each other
+and the environment, and also the principles guiding its design and
+evolution (Carvalho & Sousa, 2014; Fallmyr & Bygstad, 2014; Gong &
+Janssen, 2019; Ross, Weill, & Robertson, 2006; Saat, Winter, Franke,
+Lagerstroem, & Ekstedt, 2011; Shah & ElKourdi, 2007; Zachman, 1997).
+Currently, many organizations are dynamically developing their EA
+processes that indicates the importance of the EA evaluation concept in
+practice. In addition, it does not seem to be completely clear how to
+evaluate EA. Describing and evaluating EA, be it quantitatively or
+qualitatively, can be challenging and this diﬃculty is recognized by
+both practitioners and researchers, however, many eﬀorts have been
+made in this regard. According to the literature, EA evaluation usually
+deals with several diﬀerent approaches and a variety of methods are
+being developed for evaluation of EA programs (Hämäläinen, 2008),
+For example, the EA maturity models (Lakhrouit et al., 2014; Van der
+Raadt & Bonnet, 2010; Ylimäki, 2006, 2007), EA quality attributes
+(Gammelgård et al., 2007; Khayami, 2011; Klein & Gagliardi, 2010;
+Närman, Johnson, & Nordstrom, 2007; Neimi & Pekkola, 2013), EA
+eﬀectiveness assessment (Buchanan, 2001; Hope, 2015; Morganwalp &
+Sage, 2011; Rouhani, Nikpay, & Mohamaddoust, 2014),and Enterprise
+architecture evaluation process (Nikpay, Ahmad, Kia et al., 2017).
+2.1. EA quality attributes
+In the context of EA products and services, quality is deﬁned as the
+degree to which EA products and services meet EA stakeholder's needs.
+These stakeholders include individuals and groups, ranging from top
+management and architects to project managers and business users both
+inside and outside of an organization (Neimi & Pekkola, 2013). Some
+EA research focused on the EA quality attributes to evaluate EA quality.
+Simonsson et al. (2005) presented EA Evaluation indicators in a one-
+level model, and used measurable criteria. Their model is simply
+quantiﬁable and has some indicators, including quality of data, IT-
+business alignment, accuracy of data, accessibility of data, eﬃciency,
+scalability, system complexity, modiﬁability, and architectural changes.
+This method compares some proposed EA solutions for an organization.
+Gammelgård et al. (2007) also presented an EA evaluation model. In
+their model, functional and non-functional quality attributes are clas-
+siﬁed into two categories. Functional attributes are measured based on
+the reference models for each industry. Non-functional attributes are
+measured based on a completed questionnaire. The qualitative attri-
+butes of their model include the following characteristics: availability
+and reliability, data quality, information security, interoperability,
+modiﬁability, performance and usability. Regarding the goal of en-
+terprise architecture, Khayami (2011) tried to give a model for deﬁning
+a good enterprise architecture that can be used for evaluation. He
+suggested eight quality attributes of EA including alignment, con-
+vergence, maintainability, integrity, reliability, eﬃciency, security, and
+usability. In the Neimi & Pekkola (2013) research, the quality attributes
+of EA products and services were identiﬁed and deﬁned. They identiﬁed
+a set of ten quality attributes including clarity and conciseness, gran-
+ularity, uniformity and cohesion, availability, correctness, and useful-
+ness that are related to EA products, and also availability and timing,
+awareness, activeness, and usefulness that are related to EA services,
+S.R. Mirsalari and M. Ranjbarfard Evaluation and Program Planning 83 (2020) 101853
+2
+
+--- PAGE 3 ---
+which then were compared against the literature for validation. These
+attributes can also be utilized as a basis for developing comprehensive
+measures of EA quality. Lakhrouit et al. (2014) also suggested a model
+that can be adjusted to the requirements of diverse companies by
+adapting the evaluation items, the indicators and the evaluation ele-
+ments. The deﬁnite indicators are based on the characteristics of a good
+enterprise architecture and its organization in a quality model. This
+model can be used for analysis of weak and strong points of an en-
+terprise architecture and includes: agility, interoperability, maintain-
+ability, reusability, reliability, testability, scalability, security, align-
+ment with business, use of an architectural method, development of
+architecture, and use of architecture indicators.
+2.2. Software architecture analysis
+An enterprise architecture linked with four layers including busi-
+ness, information, application, and infrastructure layers, so EA mea-
+surement indicators should be related to each of the four mentioned
+layers (Hämäläinen, 2008; Niemi, Ylimäki, & Hämäläinen, 2008).
+Software architecture (SA) has been proposed as an important approach
+for managing software system (Saat et al., 2011) that has a place in
+application layers of EA. In fact, SA emphases on one area of enterprise
+architecture describing more detailed structural decisions, especially
+concerning technical structure of information systems (Hämäläinen,
+2008). SA shows information about all dimensions of EA in more details
+from the perspective of information systems. Therefore, it has sig-
+niﬁcantly narrower scope than EA. It deﬁnes the components of a
+system, their interrelationships, external connections, and crucial
+principles of development (Bass, Clements, & Kazman, 1998). As a re-
+sult, SA evaluation must be considered in an EA evaluation.
+Based on the ISO 9126 standard, the quality attributes of an IT-
+system containing performance or eﬃciency, interoperability, avail-
+ability, security, usability, accuracy, maintainability, and suitability.
+These quality attributes have also been mentioned in the book titled
+enterprise architecture –models and analyses for information systems
+decision making (Johnson & Ekstedt, 2007). Närman et al. (2007)
+identiﬁed a system quality analysis framework in the form of an ex-
+tended inﬂuence diagrams. This framework has aﬀorded a roadmap for
+analyzing the system quality that can illustrate some EA attributes in
+the application layer and also includes the following attributes: se-
+curity, eﬃciency, reliability, usability, interoperability, maintain-
+ability, suitability, and accuracy.
+2.3. EA eﬀectiveness assessment
+The EA eﬀectiveness is accomplished when developed EA artefacts
+inside the enterprise meet the individual goals of stakeholders, EA
+function eﬀectiveness is: "The degree to which organizational objectives
+are attained through the outputs of the EA function" (Morganwalp &
+Sage, 2011). The most of existing EA assessment approaches focus on
+determining the eﬃciency of the EA delivery functions. They emphasize
+on the EA processes, the quality of the EA products, the knowledge,
+skills, and the architects' experiences (Van der Raadt & Bonnet, 2010).
+Buchanan (2001) recommends the EA quality must be measured by
+three dimensions including ﬁnancial eﬃciency, business eﬀectiveness,
+and architecture process. He provides a list of ﬁnancial eﬃciency and
+business eﬀectiveness beneﬁts that should be comprehended when an
+organization's EA is of high quality. Morganwalp and Sage (2011)
+summarized several author’s perspectives on how to measure the ef-
+fectiveness of EA based on the three measurement dimensions and
+corresponding beneﬁts of Buchanan's research (Buchanan, 2001). They
+formulated 12 qualitative objectives with 58 indicators to be reached by
+any EA framework and EA development process. 11 of 12 objectives (47
+of 58 indicators) appeared to be positively inﬂuenced by the EA fra-
+meworks and the development processes. Bonnet (2009) designed and
+veriﬁed an initial conceptual model and an initial EA measurement
+model to guide the organizations for assessing the eﬀectiveness of an
+EA. According to their model, agility and alignment are two main
+measures of EA and each of them has several indicators. The indicators
+of agility including external change monitoring, ﬂexibility, quality and
+customization, speed, and initiation of change. The indicators of
+alignment including internal monitoring, governance, partnership,
+conformance and integration, readiness for change, and also commu-
+nication and understanding.
+Pruijt, Slot, Plessius, Bos, and Brinkkemper (2012) presented a
+novel instrument to evaluate how well an EA management function is
+able to realize its goals, the Enterprise Architecture Realization Scor-
+ecard (EARS). Based on their instrument, during the assessment of an
+EA goal, ﬁve types of results are investigated and discussed in inter-
+views with relevant stakeholders which delivered during the EA reali-
+zation process. The stakeholders' arguments are assembled and trans-
+lated to the scores by means of some indicators. For each result, three
+aspects are scored: product, acceptance and scope. The scores are re-
+corded at a scorecard and subsequently, totals at result level and goal
+level can be calculated. Finally, an assessment report with a scorecard,
+strengths and weaknesses of the EA realization process is prepared.
+2.4. Enterprise architecture evaluation process
+Nikpay, Ahmad, Kia et al. (2017) declared there is a dearth of
+models to enable EA evaluation eﬀectiveness by considering the entire
+EA, and the motivation of the EA evaluation studies rely on certain
+types of quality factors, alignment, metrics, and understanding of EA
+evaluation. Nikpay, Ahmad, Kia et al. (2017), Nikpay, Ahmad, Rouhani
+et al. (2017) developed a hybrid evaluation method for EA im-
+plementation in order to evaluate all aspects of EA through three phases
+consequently: preparation, development, and evaluation. The ﬁrst
+phase provides the foundation of the hybrid method through a sys-
+tematic literature review and interviews with EA practitioners and also
+some factors that eﬀect on EA implementation evaluation. The second
+phase emphases on developing a hybrid method for evaluating EA
+implementation. In the last phase, the proposed method is validated
+using a case study and the expert reviews. Their suggested method
+comprises two criteria for evaluating EA implementation, that are
+functionality and eﬀectiveness. This method embraces three categories
+of practices counting initiation, controlling and sustainability and sev-
+eral questions as indicators that describe each practice. The hybrid
+method supports the EA project lifecycle including design, management
+(development), and maintenance that provides step-by-step guidelines
+for enterprise architecture implementation.
+2.5. EA maturity evaluation
+Ylimäki (2007) proposed a generic EA evaluation model that is
+based on the combination of the potential critical success factors (CSFs)
+of EA and the maturity stages. Critical success factors including as-
+sessment and evaluation, business driven approach, commitment,
+communication and common language, development methodology and
+tool support, EA models and artifacts, governance, IT investment and
+acquisition strategies, organizational culture, project and program
+management, scope and purpose, skilled team, and training and edu-
+cation. Based on the combination of these factors, the key questions are
+allocated to each CSF and the maturity levels to evaluate the stage of
+each CSF.
+3. Research methodology
+This study is an exploratory mixed method research. In the mixed
+method research, usually a measurement instrument is developed
+through qualitative research, then the main aspects of the study’s
+variables are determined by collecting and analyzing quantitative data.
+In abstract, to identify indicators of EA quality, the following steps were
+S.R. Mirsalari and M. Ranjbarfard Evaluation and Program Planning 83 (2020) 101853
+3
+
+--- PAGE 4 ---
+carried out:
+3.1. Qualitative section (SLR)
+Given that, this paper used the exploratory mixed method, so in the
+ﬁrst step, preceding research related to EA evaluation were studied. SLR
+approach has been chosen as research method in order to conduct this
+section. This study used the guidelines that were proposed by
+Kitchenham and Charters (2007). According to Kitchenham and
+Charters (2007), a systematic literature review process is involved in
+three consecutive stages: planning, execution, and result analysis; In
+this section, we focus on the planning stage which includes deﬁning the
+research objectives and the way the review is carried out.
+3.1.1. Review design
+This section describes the foundation of this review by deﬁning SLR
+research questions and search keywords.
+3.1.1.1. SLR research questions. The EA evaluation is not a new
+problem. Over the years, diﬀerent approaches, methods and models
+have been proposed for that. This research intends to identify indicators
+that evaluate EA quality. The SLR research question that we expected to
+answer in this research is as follows:
+RQ1. What are the EA quality indicators for evaluating an im-
+plemented EA?
+In this study, the word 'indicator' refers to a variable that deﬁne and
+evaluate the quality of an implemented EA in the organization and the
+word ‘factor’ refers to the quality attribute of an implemented EA and
+includes some indicators which is mentioned in section 3.2.5.
+3.1.1.2. Search process. We focus on searching in scientiﬁc databases
+rather than in speciﬁc books or technical reports, as we assumed that
+the major research results in books and reports are also usually
+described in scientiﬁc papers. The following sources have been
+selected to execute the SLR search process:
+- Science Direct – Elsevier (http://www.elsevier.com).
+- Springer Link (http://www.springerlink.com).
+- ACM Digital Library (https://dl.acm.org/).
+- IEEE Xplore (http://www.ieee.org/web/publications/xplore/).
+- Sage Journals (https://journals.sagepub.com).
+- Google Scholar (www.scholar.google.com).
+The following search keywords were used to ﬁnd relevant studies in
+paper’s title, keywords, and abstract: "Enterprise Architecture
+Evaluation" or "Enterprise Architecture Measurement" or "Enterprise
+Architecture Measurement Indicators" or "Enterprise Architecture
+Attributes" or "Enterprise Architecture Quality Attributes" or "Software
+Architecture Quality Attributes" or "Software Architecture
+Measurement Indicators" or "Software Architecture Evaluation" or
+"Software Architecture Measurement".
+Despite the two concepts of software architecture and enterprise
+architecture are diﬀerent, one of the four main layers of EA is the
+software architecture. Therefore, the EA evaluation involves the SA
+evaluation. In addition, there are a lot of research that are related to the
+SA evaluation. So, the motivation for searching keywords such as
+Software Architecture Quality Attributes, Software Architecture
+Measurement Indicators, Software Architecture Evaluation, Software
+Architecture Measurement can identify the SA quality attributes that
+can be seen as the EA quality attributes.
+3.1.2. Review conduction
+This section deﬁnes the review protocol for conducting the SLR. The
+SLR review protocol refers to the structure and rules of conducting the
+review.
+3.1.2.1. Inclusion and exclusion criteria. The goal of setting up criteria is
+to discover all related studies of this research. We have focused on full
+papers in English from peer-reviewed journals, conferences, workshops
+and also master and doctoral theses. We did not set a lower boundary
+on the year of publication because we intended to include all relevant
+studies that were stored in databases over the years. We excepted
+studies that do not explicitly relate to EA evaluation, SA evaluation, EA
+quality attributes and SA quality attributes. Furthermore, when several
+duplicated articles of a study exist in diﬀerent versions that appear as
+books, journal papers, conference and workshop papers, the most
+complete version of the study was included. A summary of the
+inclusion and exclusion criteria are:
+Inclusion criteria:
+- English peer-reviewed studies that answer to the research questions
+- Studies that focus on EA evaluation or EA measurement
+- Studies that focus on SA analysis and/or SA quality analysis
+- Studies that focus on EA quality attributes and/or SA quality attri-
+butes
+Exclusion criteria:
+- Studies are not in English
+- Studies that are not related to the research questions
+- Duplicated studies
+3.1.2.2. Study selection. Once the relevant primary studies have been
+identiﬁed, they need to be assessed for their actual relevance. In this
+regard, the selection of studies is performed through the following
+processes:
+- Search in databases to identify relevant studies using the search
+keywords.
+- Exclude studies based on the exclusion criteria.
+- Exclude irrelevant studies based on analysis of their titles and ab-
+stracts.
+- Evaluating the selected studies based on full text read.
+- Re-evaluating the results in random.
+- Obtain primary studies.
+3.1.2.3. Quality assessment. To guide the clariﬁcation of the ﬁndings in
+the included studies, and control the strength of inferences, we used the
+following quality criteria for appraising the selected studies.
+- The data analysis of the study is precise and based on evidence or
+theoretical reasoning instead of non-justiﬁed statements.
+- The study has a description of the context in which the research was
+carried out.
+- The purposes of the study are supported by the design and execution
+of research.
+To make certain our conﬁdence in the credibility of a particular
+identiﬁed study and its relevance for data synthesis in the review, all
+the included studies met each of the three criteria.
+3.1.2.4. Synthesis. Table 1 shows the numbers of papers found per
+source based on the keywords search in selected database. Second
+column shows the result of an initial screening of papers found in each
+source. Candidate column shows the numbers of papers which selected
+after removal of exclusion criteria. Selected column shows the number
+of papers from each source which selected after the end of the inclusion
+process. Table 2 shows the numbers of selected studies based on their
+type and Table 3 shows the citations of selected papers. In Table 3, cited
+column are obtained from Google Scholar.
+S.R. Mirsalari and M. Ranjbarfard Evaluation and Program Planning 83 (2020) 101853
+4
+
+--- PAGE 5 ---
+3.1.3. Results
+When the primary studies were attained, the extraction data based
+on the deﬁned extraction form could be done. The purpose of extraction
+data from selected primary studies was to answer the deﬁned research
+questions.
+3.1.3.1. Findings on RQs. This section provides the answers of RQs
+based on the selected primary studies.
+RQ1. What are the EA quality indicators for evaluating an im-
+plemented EA?
+In order to answer this question, we analyzed the data. Table S4
+(Appendix B in Supplementary Material) represents the identiﬁed EA
+quality indicators. As a result, 95 EA indicators were identiﬁed based on
+data that extracted from primary studies. It seems that some of in-
+dicators have ability to cover other indicators by their meaning. So they
+were aggregated and categorized and after re-examination and removal
+of some of indicators that were overlapping with each other as well as
+the combination of some indicators, under the supervision of EA ex-
+perts, 9 main quality attributes of EA were obtained (Appendix C in
+Supplementary Material) including alignment, quality of EA products
+and services, security, scalability, reusability, reliability, maintain-
+ability, integrity and portability which contain 35 indicators in total.
+Alignment attribute is addressed by 17 papers. It expresses the im-
+portance of alignment in eﬀective EA implementation. Also, integration
+and reliability attributes were addressed by 14 papers, so are important
+in the second priority.
+3.2. Quantitative section (statistical analysis)
+The objective of the quantitative sections was validating the iden-
+tiﬁed EA quality attributes and their indicators by EA experts` opinions
+through a statistical analysis that led a more precise model for evalu-
+ating an implemented EA.
+3.2.1. Data collection
+In order to validating the identiﬁed EA quality indicators, the ex-
+perts 'opinions were collected using a ﬁve-point Likert-type ques-
+tionnaire that was ranged from (1) "strongly disagree" to (5) "strongly
+agree". Questions of this questionnaire were prepared directly by Table
+S5 (Appendix C in Supplementary Material). The questionnaire was
+distributed to respondents after reviewing the factual and content va-
+lidity by EA experts and EA professors.
+The statistical society of this research was the chief enterprise ar-
+chitects of organizations that were members of the Enterprise
+Architecture and Information Technology Association in Iran. EA pro-
+ject was implemented in all of their organizations. There were nearly
+300 organizations. So, we asked the chief enterprise architects to re-
+spond to the questionnaire. Although, based on Morgan's table, 169
+experts had to be considered as sample, 189 questionnaires were sent
+and 168 questionnaires were answered (The rate of replication was
+0.888). Finally, data was analyzed by exploratory and conﬁrmatory
+factor analysis.
+3.2.2. Descriptive data analysis
+In order to get acquainted with the respondents, their demographic
+variables, such as: gender, education, their awareness of enterprise
+architecture, the EA implementation experience or the strategic IT
+planning experience based on EA were detailed. The results indicated
+that 13.7 % of the respondents were of female group and 86.3 % were
+male. The education level of 13.7 % of the respondents was doctorate,
+63.7 % of master, 22 % of bachelor and 0.6 % associate. The re-
+spondents' awareness level of EA was 11.9 % of very high, 40.5 % high,
+43.5 % moderate and 4.2 % low. 65 % of respondents had the EA im-
+plementation experience or the strategic IT planning experience based
+on EA and 34.5 % had no experience.
+Before performing factor analysis, the reliability of the measure-
+ment tool was obtained using Cronbach's alpha coeﬃcient equal to
+0.89, which was acceptable.
+3.2.3. Exploratory factor analysis (EFA)
+In EFA, the explorer has no expectations of the number or nature of
+the variables and as the title suggests, is exploratory in nature. It allows
+the researcher to explore the main dimensions of the variables to gen-
+erate a theory, or model from a relatively large set of latent constructs
+often represented by a set of items. EFA also helps to reduce the large
+volume of variables to a limited number of factors, which, due to a
+common source of variance, explain the covariance of that variable
+(Williams, Brown, & Andrys, 2010).
+Questions of the questionnaire must be correlated to a certain ex-
+tent, and excessive correlation prevents the extraction of independent
+factors. On the other hand, if the correlation between the questions goes
+down to a certain extent, the unity matrix will be found. In this study,
+Bartlett’s test of sphericity was used to investigate this issue. The sig-
+niﬁcance of the Bartlett’s test indicates correlation to the extent that the
+factor analysis can be continued. And Kaiser-Meyer-Olkin (KMO) test
+examines whether the questions can be categorized into a smaller set of
+factors. If KMO test value is closer to one, it indicates the usefulness of
+the factor analysis on the data. However, if the value of this test is less
+than 0.5, the exploratory factor analysis cannot be used properly
+(Williams et al., 2010).
+A Bartlett’s test of sphericity and a KMO test were performed. As
+seen results in Table 4, the KMO index is equal to 0.915, which
+Table 1
+Studies retrieved through search engines.
+Source Papers Found Candidate Selected
+ACM Digital Library 15 7 2
+IEEE Xplore 105 16 4
+SAGE Journals 4 2 1
+Science Direct – Elsevier 31 4 3
+Springer Link 17 6 3
+Google Scholar 53 33 7
+Total 225 68 20
+Table 2
+Numbers of selected studies per type.
+Study Count Percentage
+Journal paper 15 75
+Conferences Proceeding and workshop 3 15
+Book 1 5
+Master thesis 1 5
+Table 3
+Selected papers citation.
+# Cited # Cited # Cited # Cited
+S1 11 S6 9 S11 15 S16 39
+S2 6 S7 73 S12 84 S17 94
+S3 23 S8 32 S13 13 S18 353
+S4 2 S9 4 S14 6 S19 26
+S5 12 S10 35 S15 65 S20 3
+Table 4
+The result of KMO and Bartlett's test.
+KMO Test Bartlett’s test of
+sphericity
+The degrees of
+freedom (DF)
+The signiﬁcance level
+(Sig)
+0.915 3434.655 595 0.00
+S.R. Mirsalari and M. Ranjbarfard Evaluation and Program Planning 83 (2020) 101853
+5
+
+--- PAGE 6 ---
+indicates the suitability of sampling and the number of data is suitable
+for the factor analysis. Also, the signiﬁcance level of Bartlett’s test of
+sphericity was less than 0.05 (p = 0.00), which indicates the correla-
+tion matrix is suitable for the data factor analysis.
+Exploratory factor analysis on 35 indicators of research was per-
+formed by the principal component analysis (PCA) method with the
+vertical rotation, the Varimax technique and the vertical period, the
+seven main factors (quality attributes) were extracted with the eigen-
+value that is higher than one and also is consistent with the gravel
+graph that is presented by the software (Fig. 1). The extracted factors
+account 65.159 percent of the variance of EA factors totally, which is
+somewhat acceptable.
+As shown in Table 5, for each of the seven factors, the degree of
+explained variance and also the items that are related to each factor
+including the load factors, the eigenvalue, and Cronbach's alpha coef-
+ﬁcient have been obtained. The quadrant is extracted with a special
+value above 1. To examine the internal consistency, Cronbach's alpha
+coeﬃcient was used that as shown in Table 5 for all seven factors ex-
+ceeded 0.7, which is acceptable. In addition, Table 5 shows the corre-
+lations among variables with the mean and the standard deviation.
+Based on the perceptions of the respondents, the results show that all
+bivariate relationships between the variables were statistically sig-
+niﬁcant.
+A remarkable point in the exploratory analysis of EA subsets is the
+Fig. 1. Scree Plot of EA questionnaire.
+Table 5
+Speciﬁcations of the extracted factors from the EA questionnaire.
+Percentage of the variance The eigenvalue Questions The factor load The standard
+deviation
+The mean Cronbach alpha coeﬃcient Factors
+12.795 13.801 7 0.722 0.83 3.26 0.873 Quality of EA products and services
+8 0.655
+9 0.711
+10 0.78
+11 0.715
+10.729 1.986 27 0.744 0.87 3.2 0.874 Maintainability and portability
+28 0.79
+33 0.603
+34 0.588
+35 0.706
+8.862 1.817 29 0.424 0.72 3.73 0.818 Scalability
+30 0.432
+31 0.68
+32 0.489
+8.615 1.744 12 0.645 0.7 3.87 0.784 Security
+13 0.803
+14 0.674
+22 0.593
+8.201 1.29 1 0.578 0.73 3.57 0.802 Alignment and integrity
+2 0.609
+3 0.714
+6 0.549
+25 0.517
+8 1.144 20 0.81 0.72 3.43 0.808 Reliability
+21 0.779
+23 0.595
+24 0.565
+7.956 1.023 15 0.703 0.74 3.7 0.808 Reusability
+16 0.684
+17 0.635
+S.R. Mirsalari and M. Ranjbarfard Evaluation and Program Planning 83 (2020) 101853
+6
+
+--- PAGE 7 ---
+removal of questions 4,5,19,18 and 26. Question 18 has a factor load of
+less than 0.4, so this question has been removed. four questions
+(4,5,19,26) have been loaded with unrelated factors, but according to
+the experts’ opinion, they have been removed due to the lack of
+common conceptual mean.
+3.2.4. Research hypotheses
+Alignment and integrity: "alignment can be deﬁned as managing
+and utilizing IT in an organization in order to respond to business
+needs, achieve business goals and acquire competitive advantages
+(Alaeddini, 2017)". Enterprise integration is the process of certifying
+the interaction between enterprise entities (such as enterprise systems)
+to achieve domain objectives (Nikpay, Ahmad, Rouhani et al., 2017).
+Hypothesis 1. enterprise architecture is eﬀective on alignment and
+integrity.
+Maintainability and portability: EA maintainability is deﬁned as
+the ease which EA components can be modiﬁed to correct faults, im-
+prove performance or other attributes, or adapt to a changed environ-
+ment (Razavi & Aliee, 2009). EA portability is the capability of the
+software product to be transferred from one environment to another.
+The environment may include organizational, hardware or software
+environment (Losavio, Chirinos, Matteo, Levy, & Ramdane-Cherif,
+2004)
+Hypothesis 2. enterprise architecture is eﬀective on maintainability
+and portability.
+Reliability: reliability is the ability of a system to keep operating
+over time without failure. Some factors having an impact on system
+reliability are the currency of data backup, the level of hardware re-
+dundancy, and the quality of the IT organization (Närman et al., 2007).
+Hypothesis 3. enterprise Architecture is eﬀective on reliability.
+Reusability: EA reusability displays the extent of hardware com-
+ponents (infrastructure subassemblies, common client platforms for
+well-deﬁned), types of users (servers run as multiple instances of a
+single image), software components (system software components,
+middleware components, business-speciﬁc components, application
+components and variants, architecture technical domains) and methods
+(architecture analyses and process model, object-oriented business and
+software engineering methods, system and software test methods, en-
+gineering tool methods) are usable (Morganwalp & Sage, 2011).
+Hypothesis 4. enterprise architecture is eﬀective on reusability.
+Scalability: EA scalability is the ability to grow/shrink the capa-
+city/performance of a system according to the demand of the en-
+vironment where it operates (Simonsson et al., 2005).
+Hypothesis 5. enterprise architecture is eﬀective on scalability.
+Security: the issue of protection of information and application
+systems from unauthorized access, use, disclosure, disruption, mod-
+iﬁcation and destruction in order to provide conﬁdentiality, integrity
+and availability (Khayami, 2011).
+Hypothesis 6. enterprise architecture is eﬀective on security.
+The quality of EA products and services: the quality of EA pro-
+ducts and services is deﬁned as a set of a product or service char-
+acteristics that have an eﬀect on its ability to satisfy customer needs
+(Neimi & Pekkola, 2013).
+Hypothesis 7. enterprise architecture is eﬀective on the quality of EA
+products and services.
+3.2.5. Conﬁrmatory factor analysis (CFA)
+In statistics, conﬁrmatory factor analysis is a special form of factor
+analysis that is used to test whether measures of a construct are
+consistent with a researcher's understanding of the nature of that con-
+struct (or factor). In the second-order conﬁrmatory factor model, each
+of the factors which is determined by the observed variables are in-
+ﬂuenced by other latent variables at a higher level. Consequently, in
+addition to investigate the relationship between observable variables
+and factors, the relationship between latent variables and factors is also
+examined (Chin, Marcolin, & Newsted, 1996). In this study all factors
+(quality attributes) including alignment and integrity, the quality of EA
+products and services, security, maintainability and portability, reusa-
+bility and scalability measure EA (as a latent variable). Measurement
+and structural models are commonly used for CFA and the researchers
+must obey the requirement needed to achieve the true model. In this
+section, the ﬁtness of the measurement and structural model are sur-
+veyed by using SmartPLS.
+3.2.5.1. Evaluation of measurement model. A measurement model must
+be assessed with the reliability and validity. The reliability is evaluated
+through three ways: evaluation of factors loading, Cronbach's alpha
+coeﬃcient and composite reliability. A suitable factor loading values is
+greater than 0.4. Unlike, the value of Cronbach`s alpha coeﬃcient
+greater than 0.70 indicate that the measurement model is reliable
+(Nunnally, 1978). The composite reliability can vary between 0 and 1
+and its values larger than 0.6 are frequently judged as acceptable (e.g.,
+Bagozzi and Yi, 1988). As results in Table 6, according to the three
+mentioned values, we conclude that the reliability value of the model is
+acceptable.
+For assessing the validity of the used instrument, this study focused
+on the convergent and discriminant validity (Hulland, 1999, p. 199).
+For the convergent validity, researchers need to examine the average
+variance extracted (AVE). According to Fornell and Larcker (1981), an
+AVE value of 0.50 and higher indicates a suﬃcient degree of the con-
+vergent validity, meaning that the latent variable (constructs) explains
+more than half of its indicator’s variances. They also postulate that a
+latent construct shares more variance with assigned indicators than
+with another latent variable in the structural model.
+The discriminant validity test indicates that how variance of the
+indicators is able to explain variance in the construct. The discriminant
+validity value is obtained from the square root of AVE value. The di-
+agonal values are the square root of AVE while other values are the
+correlation between the respective constructs (Afthanorhan, 2013). As
+results indicate in Table 6, the convergent validity values of the model
+are acceptable. The discriminant validity test of research model states
+that each of variables interacts more with their questions than with
+questions of other variables; in other words, the discriminant validity
+value of the model is appropriate.
+Kolmogorov–Smirnov test is used for evaluating the normality of the
+research data. It was found that the distribution of all research variables
+data does not follow the normal statistical distribution except enterprise
+architecture variable. Spearman's rank correlation coeﬃcient was used
+to measure the correlation between enterprise architecture variable and
+the other variables (7 identiﬁed factors), the correlation signiﬁcance
+levels between all variables were less than 0.05 that indicate a positive
+signiﬁcant correlation between all the variables.
+3.2.5.2. Evaluation of structural model. The hypotheses were tested by
+evaluating the structural model through estimating the path coeﬃcients
+and the R2
+value. The bootstrap resampling method of PLS was used to
+determine the signiﬁcance of the path coeﬃcients. R2
+coeﬃcient is
+related to the latent (dependent) variables of the model and indicates
+the eﬀect of an exogenous variable on an endogenous variable, and the
+three values including 0.19, 0.33 and 0.67 are considered as the
+criterion for the weak, moderate and strong values (Chin et al., 1996).
+According to the Table 7, values of R2
+coeﬃcient are strong which
+specify research model has strong predictive power. The result of the
+structural model assessment is presented in Table 7. Based on the re-
+sults, the ﬁt of the overall model was acceptable.
+S.R. Mirsalari and M. Ranjbarfard Evaluation and Program Planning 83 (2020) 101853
+7
+
+--- PAGE 8 ---
+3.2.6. Model validation
+A global criterion of goodness of ﬁt (i.e., GoF index) has been pro-
+posed by Tenenhaus, Amato, and Esposito (2004). The intent is to ac-
+count for the PLS model performance and validation at both the mea-
+surement model and the structural model with a focus on overall
+prediction performance of the model. The GoF index is obtained as the
+geometric mean of the average communality index and the average R2
+value. Three values of 0.01, 0.25 and 0.36 were reported as weak,
+moderate and strong values for GOF. the GOF criterion was equivalent
+to 0.715, which indicates a strong ﬁtness of the overall research model.
+3.2.7. EA quality attributes ranking
+In order to rank EA quality attributes and its indicators, after
+identifying seven EA quality attributes and its indicators, ten EA experts
+were asked to determine importance of each indicators by a ques-
+tionnaire and collected data were surveyed through TOPSIS1
+method.
+Base on TOPSIS method the basic principle is that the chosen alter-
+native should have the shortest distance from the ideal solution and the
+farthest distance from the negative-ideal solution. The best alternative
+is one that has a higher value, because it is closer to a positive ideal
+solution (Jahanshahloo, Lotﬁ, & Izadikhah, 2006). The closeness coef-
+ﬁcient and rank of the EA quality attributes are shown in Table 8, As
+results indicate " The quality of EA products and services" is the most
+important and " Security” is the least important EA quality attribute. In
+addition, the closeness coeﬃcient and rank of the indicators are shown
+in Table 9.
+4. Research ﬁndings
+The deﬁnition of evaluation indicators in the context of EA is
+broader than software or service-oriented architecture evaluation. In
+EA evaluation ﬁeld, indicators can be deﬁned from diﬀerent points of
+view, namely business view, information view, application view and
+infrastructure view. Regarding this fact and the ﬁndings of two quali-
+tative and quantitative parts, in this paper we proposed EA evaluation
+model that include 7 quality attributes and 30 indicators as shown in
+Fig. 2.
+5. Discussion and future work
+The lack of attention to achieve a holistic model for evaluating an
+implemented EA can lead to insuﬃcient and inaccurate analysis of EA
+performance quality. EA evaluations research often did not consider the
+enterprise architecture itself, but rather measure elements that are re-
+lated to EA (Andersen et al., 2014). For example, services (Närman,
+Holm, Ekstedt, & Honeth, 2013), applications (Närman, Holm, Höök,
+Honeth, & Johnson, 2012), processes, enterprise systems (Lagerström,
+Johnson, & Ekstedt, 2010), architectural candidates (Razavi, Aliee, &
+Tafreshi, 2009; Razavi, Aliee, & Badie, 2010), beneﬁts (Plessius, Slot, &
+Pruijt, 2012) or projects (Quartel, Steen, & Lankhorst, 2012). Moreover,
+enterprise architecture evaluation methods, metrics and models are
+more established on the level of SA rather than EA (Niemi et al., 2008).
+Table 6
+Results of reliability and convergent validity.
+Variables Question icon Factor loading T values Cronbach alpha coeﬃcient The composite reliability AVE
+Alignment and integrity EA1 0.753 17.19 0.8 0.8 0.559
+EA2 0.792 21.44
+EA25 0.796 24
+EA3 0.716 15.5
+EA6 0.678 12.04
+Quality of EA products and services EA10 0.84 37.3 0.87 0.9 0.664
+EA11 0.807 26.57
+EA7 0.791 21.86
+EA8 0.846 32.55
+EA9 0.79 19.2
+Reusability EA15 0.821 24 0.8 0.86 0.722
+EA16 0.863 27.16
+EA17 0.865 48.36
+Security EA12 0.76 21.28 0.78 0.88 0.607
+EA13 0.782 18.35
+EA14 0.806 23.69
+EA22 0.769 17.92
+Scalability EA29 0.827 24.83 0.81 0.87 0.636
+EA30 0.809 20.58
+EA31 0.765 18.64
+EA32 0.827 28.9
+Reliability EA20 0.817 19.93 0.82 0.88 0.652
+EA21 0.8 17.16
+EA23 0.76 19.86
+EA24 0.813 27.7
+Maintainability and portability EA27 0.779 19.17 0.87 0.9 0.665
+EA28 0.79 18.59
+EA33 0.837 29.9
+EA34 0.825 32.28
+EA35 0.845 33.04
+Enterprise Architecture – – – 0.93 0.94 0.608
+Table 7
+Tests of hypotheses and results of R2
+criteria.
+Variables R2
+Related
+Hypotheses
+T- value Path
+Coeﬃcient
+Alignment and integrity 0.64 H1 22.659 0.800
+Maintainability and
+portability
+0.65 H2 26.515 0.810
+Reliability 0.47 H3 12.696 0.696
+Reusability 0.6 H4 21.591 0.777
+Scalability 0.74 H5 44.086 0.862
+Security 0.55 H6 22.853 0.748
+Quality of EA products and
+services
+0.57 H7 16.796 0.757
+1
+Technique for Order-Preference by Similarity to Ideal Solution
+S.R. Mirsalari and M. Ranjbarfard Evaluation and Program Planning 83 (2020) 101853
+8
+
+--- PAGE 9 ---
+Up to now, the majority of existing EA evaluation approaches have this
+limitation and there is a deﬁnite need for more accurate and objective
+measures for diﬀerent aspects of an implemented EA. For example,
+Närman et al. (2007) presented a meta model for analyzing enterprise
+system quality that is multi-level and deﬁnite in SA domain, some of
+quality attributes (EA product & service quality, scalability, and port-
+ability) are not considered in their model. The proposed model of the
+present research has completely investigated quality attributes.
+Gammelgård et al. (2007) also proposed a one-level quality model in
+the form of a questionnaire that its indicators are very qualitative and
+make evaluation diﬃcult. Furthermore, their model suggests to use the
+business model of each industry for aligning their IT and business, so if
+there is a business model for an industry, this model can be a powerful
+tool, but in the absence of a business model, their model does not
+evaluate EA suitably. In addition, their model is more deﬁned in SA
+domain. Lim, Lee, and Park (2009) determined more EA quality attri-
+butes by focusing on all aspects of EA and presented a comparative
+analysis of EA frameworks based on EA quality attributes. It can be
+helpful to select a suitable EA Framework, which meets the quality
+requirements but it is diﬃcult to consider their deﬁned attributes as EA
+indicators for evaluating an implemented EA, because the identiﬁed
+indicators are very qualitative. Simonsson et al. (2005) presented EA
+indicators in a one-level model did not consider some attributes (EA
+product & service quality, reliability, integrity). In Addition, the in-
+dicators are small in number. The proposed model of this paper covers
+Simonson et al. model and propounds more aspects of EA to evaluate.
+Neimi & Pekkola (2013) cleared 10 quality attributes for EA products
+and services and sub-factors for further validating of EA in diverse or-
+ganizations with diﬀerent EA products and EA services. Their work
+presents a large extent of the EA quality criteria. But problematically, it
+only presents the nonfunctional features of EA products, services and
+processes that comprises the overall quality of EA, neglecting the aspect
+of implemented EA.
+Another important point to be noted is that, the deﬁnition of quality
+attributes and indicators in the context of EA is broader than the con-
+text of SA. In fact, since an enterprise architecture is associated to four
+layers of business, information, application, and infrastructure in the
+organization, EA indicators should be allied with all four mentioned
+Table 8
+The Closeness Coeﬃcient and Rank of EA quality attributes.
+Rank The closeness coeﬃcient EA quality attributes
+1 0/71 The quality of EA products and services
+2 0/66 Alignment and integrity
+3 0/57 Scalability
+4 0/56 Reusability
+5 0/41 Reliability
+6 0/36 Maintainability and portability
+7 0/14 Security
+Table 9
+The Closeness Coeﬃcient and Rank of EA quality indicators.
+Rank The closeness coeﬃcient EA quality indicators
+1 0/8102 EA process is top-down, business strategic-driven, and future- oriented.
+2 0/7328 EA processes and EA outcomes are in line with business objectives.
+3 0/6869 Process models and architectural analysis methods, such as the business reference models, etc. are reusable.
+4 0/6844 EA products are useful and used by their users/stakeholders.
+5 0/6559 EA services (providing guidance on EA and assistance in implementing development projects) are practical and used by the recipients of these
+services.
+6 0/6322 Business processes can be expanded in order to respond to business changes and work growth.
+7 0/5661 Available information in information system have accuracy.
+8 0/5555 Organizational software is capable to co-exist with other independent software in a common environment, sharing common resources.
+9 0/5518 The information that are provided by EA products is correct, up-to-date and complete.
+10 0/5332 The EA team is active and eager to solve organization's problems (through EA).
+11 0/5073 Modifying software systems and their related components does not have an unacceptable eﬀect on the organization; in fact, it is not risky to
+modify them.
+12 0/4951 Organization's information and communication technologies and organization`s application is developed based on the business strategies and
+act in realizing the organizational goals.
+13 0/4814 EA products (documentation, models, reports, etc.) have high quality (transparent, clear, summary, consistent, accessible and based on a valid
+framework).
+14 0/481 The organization`s hardware components, such as, network structure, network protocols, servers, etc. are reusable.
+15 0/474 The software systems can be expanded in order to respond to business changes and work growth (it's easy to add a module or a function to the
+system.).
+16 0/4654 The type of data and information in the organization can be expanded, and enterprise systems can easily support diﬀerent types of data and
+information.
+17 0/4502 These systems can be rebooted if organizational systems fail.
+18 0/4368 Modifying data components including data entities, physical structure of data, data dictionary, and existing documents does not have an
+unacceptable eﬀect on the organization, in fact, it is not risky to modify them.
+19 0/4341 Network structures, network protocols, and software and hardware infrastructures can be developed or reduced in order to respond to business
+changes and work growth.
+20 0/4258 Organization`s systems provide user-wanted services without incurring mistakes.
+21 0/4185 The ratio of operating business service's times over the entire time of performing organizational operations is high
+22 0/4147 The organization`s software components, such as, application systems, middleware, etc. are decomposable and reusable.
+23 0/3757 The ratio of operating software service's times over the entire time of performing organizational operations is high
+24 0/3746 Organization`s software covers all functions of the organization and business processes and address their requirements.
+25 0/3502 Organization software can be adapted to diﬀerent speciﬁed environments using only their own functionality (for performing in another
+environment, there is no need to change software).
+26 0/3232 Despite the data retrieval mechanisms, the lost data can be recovered.
+27 0/2851 The rate of the lost data and the unreachable information required by the organization is low.
+28 0/2816 Existing information systems can easily communicate with other software systems and exchange information in an accurate, eﬃcient, and
+consistent manner with quality (timeliness, consistent, integrity).
+29 0/2561 Organizational software is capable to be used in place of another speciﬁed software product for the same purpose in the same environment.
+30 0/237 The rules and performance of the organizational security systems do not allow access, use, disclosure, disassembly, alteration and destruction
+of information and information systems to non-authorized users.
+S.R. Mirsalari and M. Ranjbarfard Evaluation and Program Planning 83 (2020) 101853
+9
+
+--- PAGE 10 ---
+layers (Razavi & Aliee, 2009). The current paper has tried to identify
+and design indicators for all EA layers in order to obtain a more com-
+prehensive evaluation of EA. EA evaluation hybrid method proposed by
+Nikpay, Ahmad, Kia et al. (2017) considers all aspects of an enterprise
+and supports the initiation, control, and sustainability of EA projects.
+Monitoring and governing EA implementation is fulﬁlled by their
+method. According to each EA implementation steps, they identiﬁed EA
+evaluation metrics. In fact, these metrics can be considered as the ef-
+fectiveness requirements of the EA project lifecycle. Their approach is
+entirely diﬀerent from this research's attitude. The main focus of this
+paper is evaluating an implemented EA through indicators, which de-
+scribe the quality attributes of EA.
+Overall, the diverse papers had paid attention to EA evaluation in
+three diﬀerent ways: measurements, methods and models. Some papers
+recognized the existing measurements for EA evaluation or developed
+their own measurements (Andersen et al., 2014). On the other hand, a
+smaller number of contributions of selected studied employed a quan-
+titative, empirical research approach to EA evaluation, but in this re-
+search a quantitative validation of research models by conﬁrmatory
+factor analysis (CFA) led to more accurate classiﬁcation of EA evalua-
+tion indicators that had not been done in previous studies. In addition,
+the EA attributes were ranked by TOPSIS method that can help to en-
+terprise architects prioritize an attribute for improving.
+The existing EA evaluation models have various aims and focus.
+Faced with this diversity and complexity, practitioners and evaluators
+may often ﬁnd it diﬃcult to select a model. The presented model of this
+paper is holistic and usable for assessing the status of EA quality either
+for pre implementation or post implementation. It can help to ﬁnd how
+EA implementation had been successful. The related questionnaire of
+model can be served as a checklist guide for evaluating the quality of an
+implemented EA project and discovering ways to promote it. Also, it
+can be served as a guide for studying the EA As-Is status of an organi-
+zation even before implementing an EA project. It is easy to learn and
+use and also applicable for all types of organizations. Moreover, the
+results of this research are useful for academics and practitioners in
+employing EA projects and also extending research on EA im-
+plementation evaluation.
+5.1. Future work
+This study contributes to EA research by providing a set of EA
+quality attribute to evaluate and improve it in organizations. In order to
+continue this research, the presented evaluation indicators can be
+combined with EA frameworks or be expanded and developed.
+Allocating weight and signiﬁcance for indicators and each of the eva-
+luation quality attribute using multi-criteria analysis or other methods
+can be included in the future research agenda. In addition, by ranking
+each of the quality attribute and indicators and identifying some levels
+or by deﬁning a range for each of them in organization, a maturity
+model for the EA quality can be developed which can be considered as a
+separate research. This research can be done using more data from
+various industries. Also, measuring EA for a particular industry based
+on the model of this paper, can be considered as a research topic in the
+future, for the reason that some organizations in diﬀerent industries
+implement a speciﬁc enterprise architecture framework related to their
+industry and follow their industry rules and policies.
+6. Conclusion
+Measurement and evaluation capabilities and skills are seen as es-
+sential for enterprise architecture and its adaptation. Development of
+these capabilities and skills is a current concern of many architecture
+group and architects in companies. Evaluation of EA generates in-
+formation, which supports planning, improving, marketing (showing
+value), Organizing and enterprise architecture managing in an organi-
+zation. It generates information to support decision making on en-
+terprise- wide information system issues through the analysis of the
+enterprise architecture models too. By exploring the existing evaluation
+models, it was realized that there is no comprehensive, structured and
+validated model for evaluating EA status or success of EA im-
+plementation, which consider all layers of EA. In this paper we in-
+vestigated the question of What are the EA quality indicators for eval-
+uating an implemented EA. Through a careful review of EA evaluation
+literature and related academic theory and also performing a statistical
+analysis, this study has proposed a model for evaluating EA, which can
+be used as a checklist in the form of a questionnaire including EA
+Fig. 2. EA evaluation model.
+S.R. Mirsalari and M. Ranjbarfard Evaluation and Program Planning 83 (2020) 101853
+10
+
+--- PAGE 11 ---
+quality attributes and its indicators. In this model, EA has seven main
+quality attributes including alignment and integrity, quality of EA
+products and services, maintainability and portability, scalability, se-
+curity, reliability, and reusability that were ranked by TOPSIS method
+and results showed “quality of EA products and services” is the most
+important EA quality attribute. These seven main attributes of EA are
+measured by 30 indicators altogether that can be used as a guide for
+studying the EA As-Is status of an organization.
+Declaration of Competing Interests
+The authors declare that they have no known competing ﬁnancial
+interests or personal relationships that could have appeared to inﬂu-
+ence the work reported in this paper.
+CRediT authorship contribution statement
+Seyedeh Reyhaneh Mirsalari: Conceptualization, Software,
+Methodology, Formal analysis, Investigation, Writing - original draft,
+Writing - review & editing. Mina Ranjbarfard: Conceptualization,
+Validation, Methodology, Formal analysis, Writing - review & editing,
+Project administration, Supervision.
+Appendix A. Supplementary data
+Supplementary material related to this article can be found, in the
+online version, at doi:https://doi.org/10.1016/j.evalprogplan.2020.
+101853.
+References
+Afthanorhan, W. M. A. B. W. (2013). A comparison of partial least square structural
+equation modeling (PLS-SEM) and covariance based structural equation modeling
+(CB-SEM) for conﬁrmatory factor analysis. International Journal Engineering and
+Science Innovative Technologies (IJESIT), 2(5), 8.
+Alaeddini, M. (2017). Leveraging business-IT alignment through enterprise architecture –
+An empirical study to estimate the extents. Information Technology Management,
+18(1), 55–82.
+Alaeddini, M., & Salekfard, S. (2013). Investigating the role of an enterprise architecture
+project in the business-IT alignment in Iran. Information Systems Frontiers, 15(1),
+67–88.
+Anaya, V., & Ortiz, A. (2005). How enterprise architectures can support integration.
+Proceedings of the First International Workshop on Interoperability of Heterogeneous
+Information Systems.
+Andersen, P., & Carugati, A. (2014). Enterprise architecture evaluation: A systematic
+literature review. In L. Mola, A. Carugati, A. Kokkinaki, & N. Pouloudi (Eds.).
+Proceedings of the 8th Mediterranean Conference on Information Systems..
+Bagozzi, R. P., & Yi, Y. (1988). On the evaluation of structural equation models. Journal of
+the Academy of Marketing Science, 16(1), 74–94.
+Bass, L., Clements, P., & Kazman, R. (1998). Software architecture in practice. Reading, MA:
+Addison Wesley Longman/Software Engineering Institute.
+Bente, S., Bombosch, U., & Langade, S. (2012). Collaborative enterprise architecture:
+Enriching EA with lean, agile, and enterprise 2.0 practices. Waltham, MA: Morgan
+Kaufmann.
+Bernard, S. A. (2012). An introduction to enterprise architecture (3rd ed.). AuthorHouse.
+Bernus, P., Goranson, T., Gøtze, J., Jensen-Waud, A., Kandjani, H., Molina, A., ... Turner,
+P. (2016). Enterprise engineering and management at the crossroads. Computers in
+Industry, 79, 87–102.
+Bonnet, M. (2009). Measuring the eﬀectiveness of enterprise architecture
+implementationMaster thesis. Delft University of Technology.
+Buchanan, R. (2001). Assessing enterprise architecture program value: Part 2: META
+GroupReport. Stamford CT.
+Carvalho, J., & Sousa, R. D. (2014). Enterprise architecture as enabler of organizational
+agility. Twentieth Americas Conference on Information Systems.
+Chin, W. W., Marcolin, B. L., & Newsted, P. R. (1996). A partial least squares latent
+variable modeling approach for measuring interaction eﬀects: Results from a monte
+carlo simulation study and voice mail emotion/adoption study. In J. I. DeGross, S.
+Jarvenpaa, & A. Srinivasan (Eds.). Proceedings of the Seventeenth International
+Conference on Information Systems (pp. 21–41). .
+Fallmyr, T., & Bygstad, B. (2014). Enterprise architecture practice and organizational
+agility. Hawaii International Conference on System Science, 3788–3797.
+Foorthuis, R., Van Steenbergen, M., Brinkkemper, S., & Bruls, W. A. G. (2016). A theory
+building study of enterprise architecture practices and beneﬁts. Information Systems
+Frontiers, 18(3), 541–564.
+Fornell, C., & Larcker, D. F. (1981). Evaluating structural equation models with un-
+observable variables and measurement errors. Journal of Marketing Research, 18,
+39–50.
+Gammelgård, M., Ekstedt, M., & Närman, p. (2007). Architecture scenario analysis –
+Estimating the credibility of the results. Seventeenth Annual International Symposium of
+the International Council on Systems Engineering.
+Giachetti, R. E. (2012). A ﬂexible approach to realize an enterprise architecture. Procedia
+Computer Science, 8, 147–152.
+Gong, Y., & Janssen, M. (2019). The value of and myths about enterprise architecture.
+International Journal of Information Management, 46, 1–9.
+Gunther, R. W. (2014). Measuring enterprise architecture eﬀectiveness. Leiden University:
+Leiden University.
+Hämäläinen, N. (2008). Evaluation and measurement in enterprise and software architecture
+management. Ph.D. dissertationJyväskylä, Finland: University of Jyväskylä.
+Hope, T. L. (2015). The critical success factors of enterprise architectureThesis. Sydney:
+University of technology. https://opus.lib.uts.edu.au/handle/10453/38961.
+Hulland, J. (1999). Use of partial least squares (PLS) in strategic management research: A
+review of four recent studies. Strategic Management Journal, 20(4), 195–204.
+Jahanshahloo, G. R., Lotﬁ, F. H., & Izadikhah, M. (2006). An algorithmic method to ex-
+tend TOPSIS for decision-making problems with interval data. Applied Mathematics
+and Computation, 175, 1375–1384.
+Johnson, P., & Ekstedt, M. (2007). Enterprise architecture: Models and analyses for in-
+formation systems decision making. Lund, Sweden: Studentlitteratur.
+Khayami, R. (2011). Qualitative characteristics of enterprise architecture. Procedia
+Computer Science, 3, 1277–1282.
+Kitchenham, B. A., & Charters, S. (2007). Guidelines for performing systematic literature
+reviews in software engineering. 10.
+Klein, J., & Gagliardi, M. (2010). A workshop on analysis and evaluation of enterprise ar-
+chitectures. Software Engineering Institute p. 429.
+Lagerström, R., Johnson, P., & Ekstedt, M. (2010). Architecture analysis of enterprise
+systems modiﬁability – A metamodel for software change cost. Software Quality
+Journal, 18(4), 437.
+Lakhrouit, J., Baina, K., & Benali, K. H. (2014). Model and application architecture in-
+dicators of evaluation the enterprise architecture. Advances in Intelligent Systems and
+Computing, 276(2), 63–71.
+Leganza, G. (2003). IT Trends 2003. Midyear Update: Enterprise Architecture. Report Giga
+Group.
+Lim, N., Lee, T., & Park, S. (2009). A comparative analysis of enterprise architecture
+frameworks based on EA quality attributes. 10th ACIS International Conference on
+Software Engineering, Artiﬁcial Intelligences, Networking and Parallel/Distributed
+Computing.
+Losavio, F., Chirinos, L., Matteo, A., Levy, N., & Ramdane-Cherif, A. (2004). ISO quality
+standards for measuring architectures. The Journal of Systems and Software, 72,
+209–223.
+Morganwalp, M., & Sage, A. (2011). Enterprise architecture measures of eﬀectiveness. Int.
+J. Technology, Policy and Management, 4(1), 81–93.
+Närman, P., Johnson, P., & Nordstrom, L. (2007). Enterprise architecture: A framework
+supporting system quality analysis. Proceedings of the 11th International EDOC
+Conference, 130–141.
+Närman, P., Holm, H., Ekstedt, M., & Honeth, N. (2013). Using enterprise architecture
+analysis and interview data to estimate service response Time. The Journal of Strategic
+Information Systems, 22(1), 70–85.
+Närman, P., Holm, H., Höök, D., Honeth, N., & Johnson, P. (2012). Using enterprise
+architecture and technology adoption models to predict application usage. The
+Journal of Systems and Software, 85(8), 1953–1967.
+Neimi, E., & Pekkola, S. (2013). Enterprise architecture quality attributes: A case study.
+46th Hawaii International Conference on System Sciences.
+Niemi, E., Ylimäki, T., & Hämäläinen, N. (2008). Evaluation of enterprise and software
+architectures : Critical issues, metrics and practices, AISA Project 2005-2008.
+Tietotekniikan tutkimusinstituutin julkaisuja, 18, 1236–1615.
+Nikpay, F., Ahmad, R., & Kia, C. Y. (2017). A hybrid method for evaluating enterprise
+architecture Implementation. Evaluation and Program Planning, 60, 1–16.
+Nikpay, F., Ahmad, R. B., Rouhani, D. B., & Mahrin, N. M. (2017). An eﬀective enterprise
+architecture implementation methodology. Information Systems and E-Business
+Management, 1–36.
+Nunnally, J. C. (1978). Psychometric theory (2nd ed.). New York: McGraw-Hill Book
+Company.
+Österlind, M., Johnson, P., Karnati, K., Lagerström, R., & Välja, M. (2013). Enterprise
+architecture evaluation using utility theory. In Proceedings of 17th IEEE International
+Enterprise Distributed Object Computing Workshop, 347–351.
+Plessius, H., Slot, R., & Pruijt, L. (2012). On the categorization and measurability of en-
+terprise architecture beneﬁts with the enterprise architecture value framework.
+Trends in Enterprise Architecture Research and Practice-Driven Research on Enterprise
+Transformation (pp. 79–92).
+Pruijt, L., Slot, R., Plessius, H., Bos, R., & Brinkkemper, S. (2012). The enterprise archi-
+tecture realization scorecard: A result oriented assessment instrument. Proceedings of
+the 7th Trends in Enterprise Architecture Research Workshop, 300–318.
+Quartel, D., Steen, M. W. A., & Lankhorst, M. M. (2012). Application and project portfolio
+valuation using enterprise architecture and business requirements modelling.
+Enterprise Information Systems, 6(2), 189–213.
+Razavi, D. M., & Aliee, F. S. (2009). Characterization of enterprise architecture quality
+attributes. Proceedings of the EDOC 2009 Conference Workshop on Advances in Quality
+of Service Management Workshop (AquSerM09) (pp. 131–137).
+Razavi, D. M., Aliee, F. S., & Tafreshi, A. E. S. (2009). A fuzzy AHP based approach
+towards enterprise architecture evaluation. Proceedings of the European Conference on
+Information Management & Evaluation.
+Razavi, D. M., Aliee, F. S., & Badie, K. (2010). An AHP-based approach toward enterprise
+architecture analysis based on enterprise architecture quality attributes. Knowledge
+S.R. Mirsalari and M. Ranjbarfard Evaluation and Program Planning 83 (2020) 101853
+11
+
+--- PAGE 12 ---
+and Information Systems, 28(2), 449–472.
+Robertson, E., Peko, G., & Sundaram, D. (2018). Enterprise architecture maturity: A
+crucial link in business and IT alignment. PACIS 2018 Proceedings, 308.
+Rood, M. A. (1994). Enterprise architecture: Deﬁnition, content and utility. Proceedings of
+the IEEE Third Workshop on Enabling Technologies: Infrastructure for Collaborative
+Enterprises.
+Ross, J. W., Weill, P., & Robertson, D. C. (2006). Enterprise architecture as strategy: Creating
+a foundation for business execution. Boston, MA: Harvard Business School Press.
+Rouhani, B. D., Nikpay, F., & Mohamaddoust (2014). Critical success factors of enterprise
+architecture implementation. International Journal of Computer & Information
+Technologies (IJOCIT), 2(1), 331–340.
+Rouhani, B. D., Mahrin, N. M., Nikpay, F., Nikfard, P., & Najafabadi, M. K. (2015). Factors
+that aﬀect the eﬀectiveness of enterprise architecture implementation methodology.
+World Academy of Science, Engineering and Technology International Journal of
+Economics and Management Engineering, 9(1), 19–25.
+Saat, J., Winter, R., Franke, U., Lagerstroem, R., & Ekstedt, M. (2011). Analysis of it/
+business alignment situations as a precondition for the design and engineering of
+situated it/business alignment solutions. In: Proc. Hawaii International Conference on
+System Sciences (HICSS-44).
+Shah, H., & ElKourdi, M. (2007). Frameworks for enterprise architecture. IT Professional,
+IEEE Computer Society, 9(5), 36–41.
+Simonsson, M., Lindström, A., Johnson, P., Nordström, L., Grundbäck, J., & Wijnbladh, O.
+(2005). Scenario-based evaluation of enterprise - A top-down approach for chief in-
+formation oﬃcer decision making. Proceedings of the Seventh International Conference
+on Enterprise Information Systems ICEIS (pp. 130–137). (1).
+Tamm, T., Seddon, P. B., Shanks, G., & Reynolds, P. (2011). How does enterprise archi-
+tecture add value to organisations? Communications of the Association for Information
+Systems, 28, 141–168.
+Tenenhaus, M., Amato, S., & Esposito, V. V. (2004). A global goodness-of-ﬁt index for PLS
+structural equation modelling. Proceedings of the XLII SIS Scientiﬁc Meeting, 739–742.
+Van der Raadt, B., & Bonnet, M. (2010). The relation between EA eﬀectiveness and sta-
+keholder satisfaction. The Journal of Systems and Software, 83(10), 1954–1969.
+Williams, B., Brown, T., & Andrys, O. (2010). Exploratory factor analysis: A ﬁve-step
+guide for novices. Australasian Journal of Paramedicine, 8(3), 1–13.
+Ylimäki, T. (2006). Potential critical success factors for enterprise architecture. Journal of
+Enterprise Architecture, 2(4), 29–40.
+Ylimäki, T. (2007). Towards a generic evaluation model for enterprise architecture. The
+Journal of Enterprise Architecture, 3(3), 9–16.
+Zachman, J. A. (1997). Enterprise architecture: The issue of the century. Database program-
+ming and design.
+Zandi, F., & Tavana, M. (2012). A fuzzy group multi-criteria enterprise architecture fra-
+mework selection model. Expert Systems With Applications, 39(1), 1165–1173.
+S.R. Mirsalari and M. Ranjbarfard Evaluation and Program Planning 83 (2020) 101853
+12

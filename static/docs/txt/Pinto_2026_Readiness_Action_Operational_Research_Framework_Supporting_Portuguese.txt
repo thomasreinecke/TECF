@@ -1,0 +1,740 @@
+--- PAGE 1 ---
+From Readiness to Action: An Operational Research Framework
+Supporting Portuguese SME Digital Transformation
+Rui Pinto a
+and Gil Gonçalves b
+SYSTEC-ARISE, Faculdade de Engenharia, Universidade do Porto, Porto, Portugal
+Keywords: Decision-Support System, Maturity Assessment Model, Resource Allocation Prioritization, Digital
+Transformation Strategy, Empirical Validation.
+Abstract: Small and Medium-Sized Enterprises (SMEs) play a critical role in economic growth, yet struggle to adopt
+digital transformation due to limited resources, lack of expertise, and operational constraints. Existing matu-
+rity models are either too generic or fail to provide actionable guidance tailored to SMEs. This paper proposes
+a structured self-assessment framework that evaluates digital maturity across seven dimensions and generates
+practical technological and strategic recommendations. The framework was developed using a design-science
+research approach combining a systematic literature review with empirical data collected from SMEs through
+a quantitative survey and iterative user testing. The resulting tool enables SMEs to assess readiness, prioritize
+initiatives, and align digitalization strategy with operational goals. Validation results show that SMEs score
+higher in digital culture and openness to transformation but remain significantly underdeveloped in data an-
+alytics, cybersecurity, and Industry 4.0 technologies. Feedback from pilot usage confirms the framework’s
+usability and relevance, with 87% of respondents stating it supports decision-making. The proposed frame-
+work bridges the gap between theory and practice and contributes a practical, replicable artifact for guiding
+SME digital transformation.
+1 INTRODUCTION
+Small and Medium-Sized Enterprises (SMEs) rep-
+resent more than 95% of active companies in the
+European economy (Pourmorshed and Durst, 2022)
+and are responsible for the majority of employment
+and value creation (Akpan et al., 2024; Khatami
+et al., 2024). Despite their socioeconomic rele-
+vance, SMEs struggle to remain competitive in in-
+creasingly digitalized markets, where efficiency, real-
+time decision-making, and adaptability are decisive
+differentiators (Ghobakhloo and Fathi, 2019; Zhang
+et al., 2022). Digital transformation (Romero and
+Mammadov, 2025), understood as the strategic in-
+tegration of digital technologies into business pro-
+cesses, organizational models, and value creation, has
+therefore become essential for competitiveness and
+long-term survival (Birkel and Wehrle, 2024; Inan,
+2024; Tung, 2024).
+However, SMEs face deeper challenges than large
+enterprises when engaging in digital transforma-
+a https://orcid.org/0000-0002-0345-1208
+b https://orcid.org/0000-0001-7757-7308
+tion (Christofi et al., 2024; Volf et al., 2024). Lim-
+ited financial and human resources, operational in-
+ertia, lack of digital skills, and uncertainty about re-
+turn on investment often lead to delayed or unsuccess-
+ful transformation initiatives (Kwarteng et al., 2021;
+Azevedo and Almeida, 2021). Existing digital matu-
+rity models in the literature provide good conceptual
+guidance. Still, they are frequently generic, complex,
+or focused on large corporations, offering little op-
+erational support to SMEs that need clear prioritiza-
+tion and actionable roadmaps. For decision-makers
+in SMEs, the critical question is not whether to digi-
+talize, but where to start, what to prioritize, and how
+to allocate limited resources effectively.
+From a decision-analysis perspective, digital
+transformation constitutes a decision problem under
+constraints: SMEs must evaluate their current digital
+readiness, identify capability gaps, and make struc-
+tured investment decisions that optimize operational
+performance and minimize risk (Romero and Mam-
+madov, 2025; Li et al., 2023). This opens space for
+decision-support artifacts that quantify digital matu-
+rity and translate it into actionable recommendations
+aligned with business priorities (Chen et al., 2022;
+430
+Pinto, R. and Gonçalves, G.
+From Readiness to Action: An Operational Research Framework Supporting Portuguese SME Digital Transformation.
+DOI: 10.5220/0014418800004055
+Paper published under CC license (CC BY-NC-ND 4.0)
+In Proceedings of the 15th International Conference on Operations Research and Enterprise Systems (ICORES 2026), pages 430-437
+ISBN: 978-989-758-799-3; ISSN: 2184-4372
+Proceedings Copyright © 2026 by SCITEPRESS – Science and Technology Publications, Lda.
+
+--- PAGE 2 ---
+Ranjan, 2024; Tiwari, 2024).
+To address this gap, this paper proposes a self-
+assessment framework for SME digital maturity that
+supports decision-makers in evaluating their current
+state and selecting relevant technological and organi-
+zational initiatives. The framework assesses maturity
+across seven key dimensions while providing person-
+alized recommendations in each one: Digital Strategy
+&Leadership; Operations&Automation; Data&An-
+alytics; Customer Experience & Engagement; Infras-
+tructure & Cybersecurity; Industry 4.0 & Advanced
+Technologies; Digital Culture & Skills. The frame-
+work was developed through an iterative, evidence-
+based process that combined a comprehensive litera-
+ture review, a quantitative survey of SMEs, and suc-
+cessive validation cycles with users.
+The main contributions of this paper are:
+• A structured digital maturity framework and
+decision-support tool tailored to SMEs and
+aligned with their constraints and strategic needs.
+• Empirical insights on SME digital readiness,
+based on survey data and framework usage.
+• A methodology to operationalize digital transfor-
+mation, turning abstract maturity concepts into
+concrete technological and managerial actions.
+The remainder of this paper is organized as follows.
+Section 2 briefly reviews related work and exist-
+ing digital maturity models. Section 3 presents the
+methodology used to design and validate the frame-
+work. Section 4 describes the framework and its ar-
+chitecture. Section 5 presents validation results and
+feedback collected from SMEs. Section 6 discusses
+implications for decision-making and digital invest-
+mentprioritization. Section7concludesthepaperand
+outlines future work.
+2 BACKGROUND & RELATED
+WORK
+Digital transformation has emerged as a strategic im-
+perative for organizations seeking to improve oper-
+ational efficiency, responsiveness, and competitive-
+ness (Qi et al., 2023). While large enterprises of-
+ten lead digital adoption, SMEs face a fundamen-
+tallydifferentreality: limitedresources, lackofexper-
+tise, andshort-termoperationalpressuresmakedigital
+transformation a constrained decision problem rather
+than a strategic open-end exploration. Understanding
+SME-specific barriers and identifying mechanisms
+that support structured decision-making is therefore
+essential.
+2.1 Digital Transformation in SMEs
+Digital transformation involves the integration of dig-
+ital technologies to improve business models, pro-
+cesses, customer experience, and internal capabili-
+ties (Alam et al., 2022; Tung, 2024). In SMEs, the
+process is shaped by three core constraints: (1) lim-
+ited resources (financial, human, technological); (2)
+lack of internal digital skills or knowledge; and (3)
+organizational inertia and resistance to change.
+Although SMEs generally acknowledge the im-
+portance of digital transformation, many initiatives
+fail due to insufficient planning, lack of strategic
+alignment, or inability to measure readiness. Unlike
+larger organizations, SMEs rarely possess dedicated
+innovationteamsortransformationmanagers, making
+it difficult to assess where to start and how to priori-
+tize investments (Volf et al., 2024; Teng et al., 2022).
+At the same time, digital transformation of-
+fers relevant benefits to SMEs, including efficiency
+gains through automation, cost reduction, better cus-
+tomer interaction, and access to data-driven decision-
+making. Emerging technologies — such as cloud
+platforms (Ray, 2016), Internet of Things (IoT) (Lima
+and Pinto, 2025; Sobin, 2020), data analytics (Duan
+and Da Xu, 2024), cybersecurity (Dritsas and Trigka,
+2025), and Artificial Intelligence (AI) (Zha et al.,
+2025) — can increase productivity and support scal-
+ability. Yet adoption often occurs opportunistically,
+driven by urgency instead of strategy, resulting in iso-
+lated tools that fail to produce long-term value.
+2.2 Existing Digital Maturity Models
+Several digital maturity models exist in the literature
+to support organizations in assessing readiness and
+structuring transformation initiatives (Karadağ et al.,
+2024; Tiwari, 2024). Most models follow a staged
+progression (e.g., initial; developing; optimized) and
+evaluate dimensions such as strategy, culture, pro-
+cesses, technology, or customer focus (AlMulhim,
+2021; Ranjan, 2024). However, three clear limitations
+emerge when analyzing existing maturity models:
+• Models are generic or designed for large enter-
+prises: They often fail to capture SME-specific
+constraints such as limited investment capacity,
+lack of dedicated IT staff, and lower baseline dig-
+ital readiness.
+• Models provide assessment but not guidance:
+Most frameworks allow SMEs to identify their
+maturity level, but do not offer concrete recom-
+mendationsorprioritizationstrategiesfortechnol-
+ogy adoption.
+From Readiness to Action: An Operational Research Framework Supporting Portuguese SME Digital Transformation
+431
+
+--- PAGE 3 ---
+• Frameworks are static and conceptual: Many
+models remain theoretical, lacking actionable rec-
+ommendations or validation through real-world
+implementation in SME environments.
+Most maturity frameworks answer the question
+”Where are we?” but not ”What should we do next?”.
+From a decision-analysis perspective, maturity as-
+sessment should also support resource prioritization
+under constraints, linking identified gaps to concrete
+actions rather than providing measurement alone.
+2.3 Research Gap
+The key gap identified in the literature is the absence
+of a decision-support maturity framework tailored to
+SMEs that: (1) captures current digital readiness; (2)
+prioritizes actions considering resource constraints;
+(3) links assessment results to recommended tech-
+nological and organizational actions; (4) is validated
+through real usage rather than remaining conceptual.
+While prior work has produced models for digital
+maturity assessment, none provide a practical, data-
+driven, and dynamically generated set of transforma-
+tion paths that SMEs can immediately apply.
+This research addresses this gap by proposing a
+self-assessment digital maturity framework that not
+only evaluates readiness across seven dimensions but
+alsogeneratesactionablerecommendationstosupport
+decision-making and prioritization—turning maturity
+assessment into a transformation enabler.
+3 METHODOLOGY
+This research followed a structured and iterative ap-
+proach combining literature analysis, empirical data
+collection, and framework development to design a
+practical self-assessment tool for SME digital trans-
+formation. An in-depth literature review identi-
+fied key barriers, drivers, and limitations of exist-
+ing maturity models, particularly their lack of ac-
+tionable decision-support for SMEs, which informed
+the conceptual foundation of the framework. These
+findings were complemented by empirical data col-
+lected through a structured online survey distributed
+to SMEs across manufacturing, consulting, and tech-
+nology sectors, capturing perceptions of digital readi-
+ness, benefits, and obstacles. Descriptive statistical
+analysis revealed recurring maturity gaps that guided
+the definition of seven maturity dimensions, diagnos-
+tic indicators, and recommendation logic. The re-
+sulting framework was refined through iterative user
+feedback to ensure clarity, usability, and practical rel-
+evance, yielding a validated operational tool aligned
+with SMEs’ decision-making needs.
+As the second step of the methodology, empirical
+data were collected to identify digital maturity gaps
+and contextualize the findings from the literature. A
+structured survey entitled ”Digital Transformation in
+Companies” was conducted among Portuguese SMEs
+from manufacturing, consulting, and technology sec-
+tors, targeting current practices, perceived barriers
+and drivers, and organizational readiness for digital
+transformation. The questionnaire covered company
+characterization, technology adoption, barriers and
+motivations, and workforce development.
+A total of 53 valid responses were obtained, pre-
+dominantly from micro and small enterprises, reflect-
+ing the national business structure. Descriptive sta-
+tistical analysis revealed that although most SMEs
+recognize the strategic importance of digital transfor-
+mation, implementation remains uneven and concen-
+trated in foundational technologies. More than 70%
+of respondents reported adopting at least one digital
+solution—such as cloud computing, ERP/MES sys-
+tems, or digital communication tools—whereas fewer
+than 25% had implemented advanced technologies
+such as IoT, artificial intelligence, or robotics, high-
+lighting a clear maturity gap between basic digitaliza-
+tion and transformative adoption (Figure 1a).
+The analysis further identified financial con-
+straints (62%), shortage of qualified personnel (57%),
+and resistance to change (48%) as the most significant
+barriers to digital transformation (Figure 1b). In con-
+trast, competitiveness, efficiency improvement, and
+customer satisfaction emerged as the primary drivers,
+with competitiveness cited by nearly half of the re-
+spondents. Workforce development also revealed a
+critical gap, as 68% of SMEs acknowledged the need
+for continuous upskilling, yet only 40% had imple-
+mented structured training programs. Finally, while
+public and European funding programs were recog-
+nized as relevant enablers, limited awareness of avail-
+able incentives persisted.
+Overall, these empirical findings exposed consis-
+tent digital maturity gaps across technology adop-
+tion, skills, and resource availability, reinforcing the
+need for a structured assessment framework capable
+of supporting SMEs in evaluating readiness and pri-
+oritizing transformation actions.
+4 FRAMEWORK DESCRIPTION
+The proposed framework enables SMEs to evaluate
+their digital maturity, visualize strengths and weak-
+nesses, and obtain actionable recommendations for
+ICORES 2026 - 15th International Conference on Operations Research and Enterprise Systems
+432
+
+--- PAGE 4 ---
+(a) Technologies currently used by SMEs. Most organiza-
+tions have adopted basic tools, e.g., cloud, ERP/MES, in-
+steadofadvancedtechnologiessuchasIoT,AI,androbotics.
+(b) Main apprehensions toward digital transformation, high-
+lighting financial constraints, lack of qualified personnel,
+and resistance to change as the most frequent barriers.
+Figure 1: Survey results summarizing technology adoption and barriers to digital transformation among participating SMEs.
+investment and improvement decisions. It combines
+a structured self-assessment with automated scor-
+ing and personalized feedback, supporting SMEs in
+defining data-driven digital transformation priorities.
+4.1 Framework Overview
+The framework consists of three core modules: (1)
+Assessment Module – presents a structured question-
+naire measuring digital readiness across seven dimen-
+sions; (2) Analytics Engine – calculates and visual-
+izes maturity scores through automatic aggregation of
+user responses; (3) Recommendation Module – gener-
+ates customized strategic and technological guidance
+based on detected maturity gaps. The interface was
+implemented in a web-based environment that auto-
+matically stores and processes user responses. The
+modular design allows easy adaptation to different
+sectors and organizational sizes while remaining ac-
+cessible to non-technical users.
+The framework evaluates SME digital maturity
+across seven interrelated dimensions that capture
+strategic, operational, technological, and human en-
+ablers of digital transformation. Each dimension is
+assessed using weighted indicators scored on a five-
+point Likert scale and normalized to a 0–100 range.
+Table 1 summarizes the evaluated dimensions and
+their respective focus areas, providing a concise and
+comprehensive representation of the digital maturity
+model, namely Digital Strategy & Leadership, Op-
+erations & Automation, Data & Analytics, Customer
+Experience & Engagement, Infrastructure & Cyber-
+security, Industry 4.0 & Advanced Technologies, and
+Digital Culture & Skills.
+In the current implementation, all dimensions are
+equally weighted to ensure transparency and inter-
+pretability for SMEs; adaptive weighting and sensi-
+tivity analysis are left for future work.
+4.2 Maturity Scores &
+Recommendation Logic
+For each dimension j, the individual indicators i are
+scored by the user on a scale from 1 to 5. The Dig-
+ital Maturity Score for Dimension Mdj is given by
+Eq. (1), where: nj is the total number of questions
+in dimension j; Sqi is the score obtained for question i
+in dimension j; and Smaxqi is the maximum possible
+score for question i in dimension j. The multiplica-
+tion factor 100 converts the result to a 0–100 scale.
+Mdj =
+∑
+nj
+i=1 Sqi
+∑
+nj
+i=1 Smaxqi
+×100 (1)
+The Overall Digital Maturity (ODM) of the enter-
+prise, represented in Eq. (2), aggregates all seven di-
+mension scores, where Nd is the total number of dig-
+ital maturity dimensions (in this framework, Nd = 7),
+and Mdj is the normalized digital maturity score for
+dimension j.
+ODM =
+1
+Nd
+Nd
+∑
+j=1
+Mdj (2)
+Scores are categorized into three maturity lev-
+els: Initial (0–40%), Developing (41–70%), and Ad-
+vanced (71–100%).
+After assessment, the framework delivers action-
+able guidance. For each dimension where Md < Td,
+with Td being the target threshold corresponding to
+each maturity level, the system generates context-
+specific recommendations across three categories:
+• Strategic Actions: establish a digital roadmap,
+define measurable KPIs, or appoint a digital trans-
+formation lead.
+• Organizational Actions: implement digital-
+skills training, promote change-management ini-
+tiatives, and enhance internal communication.
+From Readiness to Action: An Operational Research Framework Supporting Portuguese SME Digital Transformation
+433
+
+--- PAGE 5 ---
+Table 1: Digital maturity dimensions and evaluation focus. Abbreviations: DSL – Digital Strategy & Leadership; OA –
+Operations & Automation; DA – Data & Analytics; CEE – Customer Experience & Engagement; IC – Infrastructure &
+Cybersecurity; I4AT – Industry 4.0 & Advanced Technologies; DCS – Digital Culture & Skills.
+Dimension Description and Evaluation Focus
+DSL Defined digital vision, leadership commitment, budget allocation, and alignment between digital
+initiatives and business goals.
+OA Level of process digitalization, use of ERP/MES systems, automation of workflows, and data
+integration across departments.
+DA Capability to collect, store, analyze, and exploit data for decision-making, forecasting, and per-
+formance monitoring.
+CEE Use of digital channels for sales, marketing, after-sales support, and customer feedback mecha-
+nisms.
+IC Robustness of IT infrastructure, adoption of cloud solutions, data protection mechanisms, and
+cybersecurity practices.
+I4AT Implementation of emerging technologies such as IoT, AI, robotics, or additive manufacturing.
+DCS Workforce digital literacy, openness to innovation, participation in training programs, and lead-
+ership support for change.
+• Technological Actions: adopt ERP/MES or
+CRM systems, migrate to cloud computing, inte-
+grate IoT devices, or deploy cybersecurity mea-
+sures.
+The recommendation engine applies a rule-based
+mapping between maturity thresholds and predefined
+strategic, organizational, and technological actions
+derived from the literature. This mechanism trans-
+forms the tool from a diagnostic model into an adap-
+tive decision-support system that guides SMEs on
+”what to do next” rather than only ”where they stand”.
+4.3 Visualization and Feedback
+Upon completion, users receive an interactive report
+displaying a radar chart summarizing all dimension
+scores and a bar chart comparing overall and domain-
+specific maturity. Figure 2 illustrates an example of
+the framework’s results page, showing maturity per-
+centages and corresponding recommendations.
+An integrated feedback option enables partici-
+pants to evaluate the clarity, usefulness, and perceived
+accuracy of results. This feedback is continuously
+incorporated to refine question phrasing, weighting
+factors, and recommendation rules, ensuring that the
+framework evolves with SME needs.
+5 RESULTS & VALIDATION
+Empirical validation of the proposed framework is
+presented, based on post-assessment responses col-
+lected after SMEs experimented with the tool. The
+objectives were to characterize the digital matu-
+rity profiles of participating SMEs and to evaluate
+the framework’s perceived usefulness, usability, and
+decision-support value. A total of 19 SMEs from
+manufacturing, energy, consulting, and technology
+sectors completed the assessment and feedback pro-
+cess.
+5.1 Descriptive Statistics
+The participating SMEs exhibit an intermediate level
+of digital readiness, with an average Overall Digital
+Maturity (ODM) of 58.3%. As summarized in Ta-
+ble 2, higher maturity levels are observed in organiza-
+tional and customer-facing dimensions, while lower
+scores persist in data-related, cybersecurity, and ad-
+vanced technology domains. These results indicate
+that although most SMEs have initiated their digital
+transformation journey, significant gaps remain in an-
+alytical and technological capabilities. Lower matu-
+rity scores in data analytics and cybersecurity consis-
+tently co-occur with reported skill shortages and in-
+vestment constraints, reinforcing the link between ca-
+pability gaps and structural barriers.
+5.2 Barriers and Drivers
+The analysis revealed consistent patterns linking ma-
+turity gaps to structural constraints. Financial limita-
+tions, shortage of qualified personnel, uncertainty re-
+garding return on investment, and cybersecurity con-
+cerns emerged as the most significant barriers to digi-
+tal transformation. Conversely, competitiveness, effi-
+ciency improvement, customer satisfaction, and lead-
+ership commitment were identified as the primary
+drivers. These findings reinforce that digital transfor-
+mation success depends on both technological adop-
+tion and organizational readiness.
+ICORES 2026 - 15th International Conference on Operations Research and Enterprise Systems
+434
+
+--- PAGE 6 ---
+(a) Results page showing the general and domain-related
+digital maturity percentage.
+(b) Technological recommendations by domain.
+Figure 2: Example of the framework results page showing general and domain-specific maturity levels and recommendations.
+Table 2: Average maturity scores per dimension. Abbre-
+viations: DSL – Digital Strategy & Leadership; OA – Op-
+erations & Automation; DA – Data & Analytics; CEE –
+Customer Experience & Engagement; IC – Infrastructure &
+Cybersecurity; I4AT – Industry 4.0 & Advanced Technolo-
+gies; DCS – Digital Culture & Skills.
+Dimension Average Score
+DSL 42%
+OA 36%
+DA 23%
+CEE 50%
+IC 20%
+I4AT 24%
+DCS 61%
+ODM 58.3%
+5.3 Participant Feedback
+Content validity was ensured through literature
+grounding, construct validity through dimension con-
+sistency, and usability through iterative user feedback
+duringpilotusage. Userfeedbackconfirmstheframe-
+work’s practical relevance and ease of use. As shown
+in Table 3, participants reported high satisfaction lev-
+els, particularly regarding usability and clarity of re-
+sults.
+Qualitative feedback highlighted that the radar
+andbarvisualizationsfacilitatedinterpretationandin-
+ternal discussion, while the automatically generated
+Table 3: Average participant feedback ratings (5-point Lik-
+ert scale).
+Evaluation Aspect Mean Rating
+Ease of use 5
+Clarity of questions 4
+Relevance of recommendations 3
+Visual presentation of results 4
+Overall satisfaction 5
+recommendationswereperceivedasclearanddirectly
+applicable. Suggestions for future improvements in-
+cluded sector-specific examples and adaptive thresh-
+olds, supporting the framework’s role as a practical
+and evolvable decision-support tool.
+6 DISCUSSION
+The results indicate that digital transformation in
+SMEs is characterized by uneven progress across do-
+mains and persistent structural constraints. While cul-
+tural readiness and leadership commitment are rela-
+tively mature, analytical and technological capabili-
+ties remain limited. These asymmetries confirm that
+digital transformation should be viewed as a multi-
+dimensional decision problem, requiring SMEs to
+balanceinvestmentpriorities, capabilitydevelopment,
+and risk under resource constraints.
+From Readiness to Action: An Operational Research Framework Supporting Portuguese SME Digital Transformation
+435
+
+--- PAGE 7 ---
+From a managerial perspective, the proposed
+framework supports structured decision-making by
+quantifying digital maturity and linking identified
+gaps to actionable recommendations. This enables
+decision-makers to prioritize high-impact initiatives,
+allocate scarce financial and human resources more
+effectively, and benchmark progress over time. The
+visual maturity reports further facilitate communi-
+cation between technical and non-technical stake-
+holders, translating abstract transformation goals into
+measurable and interpretable objectives.
+From an academic standpoint, the framework con-
+ceptualizes digital maturity as a multi-criteria de-
+cision problem, where each dimension represents
+an organizational capability and the overall maturity
+score (Eq. 2) serves as a weighted aggregation mea-
+sure. This structure aligns naturally with decision-
+analysisapproaches, providingafoundationforfuture
+methodological extensions.
+In particular, the framework could be extended
+through: (i) optimization models recommending re-
+source allocation across maturity dimensions; (ii) pre-
+dictive analytics linking maturity improvements to
+business performance indicators; and (iii) simula-
+tion models for evaluating alternative transformation
+pathways under budget constraints. Such extensions
+would strengthen the quantitative decision-analytic
+foundations of digital-transformation research and
+support more robust strategic planning.
+6.1 Study Limitations
+Despite its contributions, this study has limitations.
+The sample size is relatively small and geographically
+concentrated, which may limit generalizability. As
+the framework relies on self-assessment data, results
+may be affected by perceptual bias. Moreover, the
+cross-sectional design prevents analysis of maturity
+evolution over time and its impact on performance.
+Finally, thecurrentrecommendationlogicisheuristic;
+future work could enhance adaptability and person-
+alization through machine-learning or optimization-
+based methods.
+Acknowledging these limitations provides clear
+directions for future research aimed at refining and
+scaling the framework across diverse industrial and
+geographical contexts.
+7 CONCLUSION & FUTURE
+WORK
+This paper presented a digital-transformation self-
+assessment framework tailored to the context of
+SMEs. The framework enables organizations to eval-
+uate digital maturity across seven strategic dimen-
+sions and provides data-driven recommendations to
+support efficiency, competitiveness, and technology
+adoption. By integrating structured self-assessment,
+automated scoring, and tailored guidance, it trans-
+forms maturity evaluation into a practical decision-
+support process.
+Empirical validation with participating SMEs in-
+dicates that most organizations are at intermediate
+stages of digitalization, with stronger performance in
+cultural and strategic dimensions and persistent gaps
+in data analytics, cybersecurity, and advanced tech-
+nologies. User feedback confirmed the framework’s
+usability and relevance, supporting its effectiveness
+for prioritizing digital initiatives under resource con-
+straints.
+From an academic perspective, the framework
+conceptualizes digital maturity as a multi-criteria de-
+cision problem and provides a quantitative basis for
+future methodological extensions. Future work will
+focus on longitudinal assessments to track maturity
+evolution, the integration of data-driven and machine-
+learning-based recommendation mechanisms, and the
+development of sector-specific modules. Linking
+the framework with policy dashboards and open-data
+platforms may further enable large-scale monitoring
+of digital maturity trends and support evidence-based
+digitalization strategies.
+Overall, the proposed framework offers a concise
+and actionable contribution to SME digital transfor-
+mation by supporting informed decision-making and
+continuous improvement while establishing a foun-
+dation for more advanced quantitative and decision-
+analytic extensions.
+ACKNOWLEDGEMENTS
+The authors gratefully acknowledge the support pro-
+vided by the Foundation for Science and Technol-
+ogy (FCT/MCTES) within the scope of the Associ-
+ated Laboratory ARISE (LA/P/0112/2020), the R&D
+Unit SYSTEC through Base (UIDB/00147/2020) and
+Programmatic (UIDP/00147/2020) funds.
+REFERENCES
+Akpan, I. J., Effiom, L., and Akpanobong, A. C. (2024).
+Towards developing a knowledge base for small busi-
+ness survival techniques during covid-19 and sustain-
+ablegrowthstrategiesforthepost-pandemicera. Jour-
+nal ofSmall Business & Entrepreneurship, 36(6):921–
+943.
+ICORES 2026 - 15th International Conference on Operations Research and Enterprise Systems
+436
+
+--- PAGE 8 ---
+Alam, K., Ali, M. A., Erdiaw-Kwasie, M., Shahiduzzaman,
+M., Velayutham, E., Murray, P. A., and Wiesner, R.
+(2022). Impact of icts on innovation and performance
+of firms: Do start-ups, regional proximity and skills
+matter? Sustainability, 14(10).
+AlMulhim, A. F. (2021). Smart supply chain and firm per-
+formance: the role of digital technologies. Business
+Process Management Journal, 27(5):1353–1372.
+Azevedo, A. and Almeida, A. H. (2021). Grasp the chal-
+lenge of digital transition in smes—a training course
+geared towards decision-makers. Education Sciences,
+11(4).
+Birkel, H. and Wehrle, M. (2024). Small- and medium-
+sized companies tackling the digital transformation
+of supply chain processes: Insights from a multi-
+ple case study in the german manufacturing indus-
+try. IEEE Transactions on Engineering Management,
+71:13711–13726.
+Chen, Q., Zhang, W., Jin, N., Wang, X., and Dai, P.
+(2022). Digital transformation evaluation for small-
+and medium-sized manufacturing enterprises using
+the fuzzy synthetic method dematel-anp. Sustainabil-
+ity, 14(20).
+Christofi, M., Khan, H., Zahoor, N., Hadjielias, E., and
+Tarba, S. (2024). Digital transformation of smes: The
+role of entrepreneurial persistence and market sensing
+dynamic capability. IEEE Transactions on Engineer-
+ing Management, 71:13598–13615.
+Dritsas, E. and Trigka, M. (2025). A survey on cybersecu-
+rity in iot. Future Internet, 17(1).
+Duan, L. and Da Xu, L. (2024). Data analytics in indus-
+try 4.0: A survey. Information Systems Frontiers,
+26(6):2287–2303.
+Ghobakhloo, M. and Fathi, M. (2019). Corporate survival
+in industry 4.0 era: the enabling role of lean-digitized
+manufacturing. Journal of Manufacturing Technology
+Management, 31(1):1–30.
+Inan, G. G. (2024). Building digital capabilities in manufac-
+turing smes. In Thürer, M., Riedel, R., von Cieminski,
+G., and Romero, D., editors, Advances in Production
+Management Systems. Production Management Sys-
+tems for Volatile, Uncertain, Complex, and Ambigu-
+ous Environments, pages 135–147, Cham. Springer
+Nature Switzerland.
+Karadağ, H., Şahin, F., Karamollaoğlu, N., and Saunila, M.
+(2024). Disentangling the dynamic digital capabil-
+ity, digital transformation, and organizational perfor-
+mance relationships in smes: a configurational analy-
+sis based on fsqca. Information Technology and Man-
+agement.
+Khatami, F., De Bernardi, P., Vilamová, Š., Cagno, E., and
+Ricciardi, F. (2024). Innovation ecosystem for smart
+product: empirical quantification of its key dimen-
+sions in smes of 21 european countries. Review of
+Managerial Science, 18(9):2723–2748.
+Kwarteng, M. A., Jibril, A. B., Nwaiwu, F., Pilı́k, M.,
+and Chovancova, M. (2021). The prospects of
+internet-based channel orientation for the competi-
+tiveness of service companies on the domestic mar-
+ket. International Journal of Information Manage-
+ment, 58:102223.
+Li, F., Long, J., and Zhao, W. (2023). Mining braces of
+innovation linking to digital transformation grounded
+in toe framework. Sustainability, 15(1).
+Lima, B. and Pinto, R. (2025). Current challenges and fu-
+ture perspectives in testing iot systems: A comprehen-
+sive review. IEEE Sensors Reviews, pages 1–27.
+Pourmorshed, S. and Durst, S. (2022). The usefulness
+of the digitalization integration framework for devel-
+oping digital supply chains in smes. Sustainability,
+14(21).
+Qi, P., Xu, C., and Wang, Q. (2023). What determines the
+digital transformation of srdi enterprises?—a study of
+the toe framework-based configuration. Sustainabil-
+ity, 15(18).
+Ranjan, P. (2024). Unraveling the mystery of the link be-
+tween digital orientation and innovation performance:
+The interplay of digital business capability and envi-
+ronmental dynamism. Technovation, 131:102966.
+Ray, P. P. (2016). A survey of iot cloud platforms. Future
+Computing and Informatics Journal, 1(1):35–46.
+Romero, I. and Mammadov, H. (2025). Digital trans-
+formation of small and medium-sized enterprises as
+an innovation process: A holistic study of its de-
+terminants. Journal of the Knowledge Economy,
+16(2):8496–8523.
+Sobin, C. C. (2020). A survey on architecture, protocols and
+challenges in iot. Wireless Personal Communications,
+112(3):1383–1429.
+Teng, X., Wu, Z., and Yang, F. (2022). Research on the
+relationship between digital transformation and per-
+formance of smes. Sustainability, 14(10).
+Tiwari, P. A. (2024). Role of top management commit-
+ment and information technology investment in dig-
+ital transformation. In Mirzazadeh, A., Molamo-
+hamadi, Z., Erdebilli, B., Babaee Tirkolaee, E., and
+Weber, G.-W., editors, Science, Engineering Manage-
+ment and Information Technology, pages 299–322,
+Cham. Springer Nature Switzerland.
+Tung, C. M. (2024). Digital transformation for textile small
+and medium-sized enterprises: A case study based on
+dynamic capability perspective. In Silva, F. J. G.,
+Ferreira, L. P., Sá, J. C., Pereira, M. T., and Pinto,
+C. M. A., editors, Flexible Automation and Intelli-
+gent Manufacturing: Establishing Bridges for More
+Sustainable Manufacturing Systems, pages 646–653,
+Cham. Springer Nature Switzerland.
+Volf, L., Dohnal, G., Beranek, L., and Kyncl, J. (2024).
+Navigating the fourth industrial revolution: Sbri -
+a comprehensive digital maturity assessment tool
+and road to industry 4.0 for small manufacturing
+enterprises. Manufacturing Technology Journal,
+24(4):668–680.
+Zha, D., Bhat, Z. P., Lai, K.-H., Yang, F., Jiang, Z., Zhong,
+S., and Hu, X. (2025). Data-centric artificial intelli-
+gence: A survey. ACM Comput. Surv., 57(5).
+Zhang, X., Xu, Y., and Ma, L. (2022). Research on success-
+ful factors and influencing mechanism of the digital
+transformation in smes. Sustainability, 14(5).
+From Readiness to Action: An Operational Research Framework Supporting Portuguese SME Digital Transformation
+437

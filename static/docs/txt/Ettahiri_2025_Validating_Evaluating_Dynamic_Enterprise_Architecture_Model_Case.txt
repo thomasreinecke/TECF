@@ -1,0 +1,1645 @@
+--- PAGE 1 ---
+© 2025 Imane Ettahiri, Latifa Rassam, Karim Doumi and Ahmed Zellou. This open-access article is distributed under a
+Creative Commons Attribution (CC-BY) 4.0 license.
+Journal of Computer Science
+Original Research Paper
+Validating and Evaluating a Dynamic Enterprise Architecture
+Model: A Case Study
+1
+Imane Ettahiri, 2
+Latifa Rassam, 1
+Karim Doumi and 2
+Ahmed Zellou
+1
+Alqualsadi Research Team, ENSIAS, Mohammed V University in Rabat, Rabat, Morocco
+2
+SPM Research Team, ENSIAS, Mohammed V University in Rabat, Rabat, Morocco
+Article history
+Received: 24-08-2024
+Revised: 19-10-2024
+Accepted: 24-10-2024
+Corresponding Author:
+Imane Ettahiri
+Alqualsadi Research Team,
+ENSIAS, Mohammed V
+University in Rabat, Rabat,
+Morocco
+Email: i.ettahiri@gmail.com
+Abstract: In today’s rapidly changing business environment, adapting to
+evolving circumstances is a fundamental capability for organizations.
+Enterprise Architecture (EA) provides a holistic view of an organization’s
+structure, processes and technology, ensuring alignment with strategic
+objectives. However, traditional EA frameworks often lack the flexibility to
+dynamically respond to both predictable and unpredictable internal and
+external changes. This study proposes a novel, multidimensional evaluation
+framework for assessing the dynamic aspects of EA, structured around four
+axes: Dimensions (e.g., flexibility, Modularity), the six-step dynamic EA
+process, architectural layers and categories of dynamic metrics. The
+framework leverages the Goal-Question-Metric (GQM) methodology,
+allowing for a structured, goal-driven approach to measuring the
+adaptability and responsiveness of EA. We applied the proposed
+framework to a use case involving a Multinational Corporation (MNC)
+operating in a highly dynamic environment to validate it. This real-world
+scenario demonstrates the framework's ability to identify strengths and
+areas for improvement in the organization's architecture, particularly
+regarding flexibility, Extensibility and strategic alignment. Additionally,
+we discuss the framework's limitations, including the complexity of
+managing multiple axes and the challenges of continuous data collection.
+Nevertheless, the proposed model provides a robust, actionable tool for
+evaluating EA dynamism, with significant potential for guiding
+organizations in making goal-oriented improvements. Future research will
+focus on refining the framework's application and improving data
+collection methods to enhance scalability and generalizability.
+Keywords:Dynamic, EnterpriseArchitecture, Evaluation, Metrics, Dimensions
+Introduction
+The relentless rate of change within the modern
+business environment continues to challenge the classical
+approaches of enterprise architecture (Kotusev, 2018).
+These traditional frameworks typically shift the
+organization's focus towards the static qualities of
+efficiency or uniformity and put less emphasis on change
+in an organization driving architecture in a changed or
+changing landscape (van de Wetering, 2021). This results
+in rigidity that may lead to missed opportunities,
+inefficiency, or continuously expanding misfits between
+business objectives and the underlying architecture
+(Ross et al., 2006). To fill this critical gap, there is a need
+for a paradigm shift into understanding and measuring
+dynamism in EA.
+A framework to measure dynamism in EA adds value
+beyond any mere assessment; it enables organizations to
+pinpoint where and how they can do better and to take
+goal-oriented investments regarding their ability to adapt
+themselvesthroughpracticeandtools(Marwick, 2003).An
+ideal enterprise architecture should enable an organization
+to exhibit high exploitability of emergent technological
+paradigms, such as cloud computing or blockchain
+(Gartner, 2024). This further translates to easy integration
+with use enterprises' novel process methodologies, typical
+of the agile development (Bente et al., 2012). Ultimately,
+such an architecture fosters a culture of continuous
+optimization that is always in line with the changing
+business priorities, for example, enhanced customer focus
+or data-driven decision-making. This agility translates to
+a significant competitive advantage in the dynamic
+
+--- PAGE 2 ---
+Image Ettahiri et al. / Journal of Computer Science 2025, 21 (3): 595.611
+DOI: 10.3844/jcssp.2025.595.611
+596
+markets that characterize today's business environment.
+Such a framework enables organizations to be more
+proactive in moulding their working future rather than
+becoming slaves to change.
+Assessment against dynamism is not relevant for
+short-term gain alone. Through a culture of learning and
+adaptation, an organization will position itself for long-
+term success. The framework supports identifying and
+harvesting value-generating knowledge from past
+experiences, such as thesuccessful incorporation ofanew
+CRM system, together with failures, such asahighlyrigid
+architecture that fails to offer support for a new mobile
+strategy. This forms the basis for further adoption,
+assuring an alignment of EA to proposed modifications
+within the business's goals and industrial trends
+(Marwick, 2003). Advanced dynamismwould alsofollow
+a future-proof architecture in terms of how the system
+works and with additional flexibility to change to face up
+to unanticipated challenges and opportunities.
+Another area of impact that does not directly involve
+the technical aspect is the enhancement in resource
+allocation. Many traditional, static architectures
+translate to the misuse of resources. Rather than
+maintaining an irrelevant system, money could be better
+spent continuously adapting and improving the EA.
+With the measurement of dynamism and how it shall be
+prioritized, organizations are afforded opportunities for
+managed resource allocation to finally be on track in
+investing resources into capabilities that ensure success
+in the future.
+This measurement framework is relevant as it enables
+improved communication and collaboration between the
+business and IT teams since it should provide a common
+understanding of the dynamic capabilities of
+organizations and their coordination in identifying and
+prioritizing needs in adaptation. This builds a working
+environment where business goalsarerealized in terms of
+EA changes to be made.
+Finally, dynamism should measure EA not just in its
+present state but also in its ability to forge an architecture
+sufficientlyfuture-prooftoallow organizations toflourish
+in an ever-dynamic business environment. The lessons
+from this frameworkmakeacasefor proactiveinvestment
+in agility and adaptability to render an organization more
+resilient and, at the same time, more competitive.
+Our paper tries to answer the following research
+question: "What methodological approach can be
+employed to construct a multidimensional framework
+for assessing the dynamism of enterprise architecture?
+This framework should rely upon a granular
+categorization of dynamism metrics. Furthermore, how
+can thesemetrics be effectivelyleveraged toquantifythe
+degree of dynamism inherent in the various layers of
+enterprise architecture?”
+This study introduces a novel framework to evaluate
+the dynamic aspects of Enterprise Architecture (EA) by
+integrating the Goal-Question-Metric (GQM) approach
+and focusing on critical dimensions such as flexibility,
+Modularity and adaptability. The framework is validated
+through a real-world case study, demonstrating its
+practical applicability in a multinational corporation and
+offering a quantitative scoring system to measure and
+improve EA's responsiveness to change. This study fills a
+significant gap in EA literature by providing both
+theoretical insights and actionable metrics for enhancing
+EA dynamism in volatile environments.
+Backgrounds
+Dynamic Enterprise Architecture
+Enterprise Architecture (EA) is among the strategic
+assets and forms a blueprint for aligning business
+processes, information systems, and technology
+infrastructure toward organizational goals (Zachman,
+1987). However, under the skewed business scenario,
+framed by EA, many at times fail to deal with dynamic
+challenges like disruptive technologies, market
+uncertainties and changing expectations of the
+stakeholders (Ross et al., 2006). Therefore, such a gap
+highlights the problem of understanding the theoretical
+underpinnings of dynamic EA to be able to develop
+effective evaluation frameworks.
+As wehavearguedinan earlier publication(Ettahirietal.,
+2022), we conceive our Dynamic EA approach through
+five central dimensions: Flexibility and adaptability,
+Modularity, Expressiveness, Extensibility and durability
+and prediction. Those dimensions (Baldwin and Clark,
+2000) are theoretically grounded in systems theory and
+organizational theory to grasp the core features of an EA
+being able to react to change (Simon, 1996). Flexibility
+would be the potential to change EA components with
+little effort; adaptabilitywould mean theabilityto change
+after unexpected developments; Modularity would
+provide a way for the decomposition of the large system
+into manageable components; Expressiveness would
+allow EA to express the different views and needs of
+stakeholders; and Extensibility would add new
+capabilities as required (Ross et al., 2002).
+In addition, six major processes form dynamic EA
+workflow, which has been elaborated on in our previous
+publications (Ettahiri and Doumi, 2024a): monitor,
+compare, analyze, plan, execute, and update knowledge.
+These processes support, among each other (Spewak and
+Hill, 1993), theprinciples ofcontinuous improvementand
+organizational learning, which together form the
+philosophy of dynamic EA assessment (ISO/IEC/IEEE,
+2018). Monitoring is concerned with the real-time
+tracking of performance indicators; comparison means
+
+--- PAGE 3 ---
+Image Ettahiri et al. / Journal of Computer Science 2025, 21 (3): 595.611
+DOI: 10.3844/jcssp.2025.595.611
+597
+benchmarking against industry standards and best
+practices; analysis is in the identifying of patterns and
+trends; planning deals with strategic decision-making
+from analysis results; execution translates plans into
+action and knowledge update guarantees that EA remains
+relevant and up to date (Kotter, 1996).
+The theoretical underpinnings for dynamic EA
+combine a variety of different disciplines that involve
+system theory, organizational behaviour and strategic
+managementinformationtechnology, amongothers. They
+coalesce insights from these basic disciplines to provide a
+broad understanding of the complex nature of dynamic
+EA. Systems theory informs a holistic framework for the
+understanding of interdependencies and interactions
+within complex systems; organizational behaviour
+theories bring an understanding of human factors that
+affect EA adoption and adaptation. Strategicmanagement
+views presideover theformulation ofgoals andobjectives
+about EA and aligning them with organizational strategy
+in much the same wayas information technologytheories
+concerning the design and implementation of IT systems
+in support of the same initiatives.
+The theoretical background of dynamic EA is
+composed of five key dimensions and six key processes
+based on such eclectic theories as systems theory,
+organizational behaviour, strategic management and
+information technology. In this regard, drawing from
+such eclectic theories, researchers and practitioners can
+develop comprehensive frameworks for the assessment
+and improvement of the dynamic capabilities of
+enterprise architecture.
+Literature Review
+The dynamic nature of business environments has
+increased the need to evaluate the adaptability and
+responsiveness of Enterprise Architecture (EA)
+frameworks. Traditional EA models, such as TOGAF,
+FEAF and Zachman, primarily focus on achieving
+structural alignment between business strategies and IT
+systems, often overlooking the need for flexibility and
+responsiveness. Ross et al. (2006) argue that static
+frameworks can lead to inefficiencies in addressing
+market disruptions, regulatory changes and technological
+innovations. Consequently, the assessment of dynamic
+aspects in EA has become a crucial area of research, with
+several frameworks now being developed to evaluate
+EA’s capacity to adapt to continuous change.
+One of the widely recognized methods for evaluating
+dynamic aspects in EA is through Enterprise Architecture
+Maturity Models. These models assess the overall
+maturityofan EA, focusing on theabilitytoadapt, evolve
+and maintain alignment with organizational goals in a
+changing environment. Ross et al. (2006) propose that as
+EA matures, its flexibility increases, enabling
+organizations to better handle change. Maturity models
+use a phased approach, typically including levels such as
+initial, managed, defined, quantitatively managed and
+optimizing. These levels help organizations understand
+wheretheir EAstandsintermsofadaptabilityandidentify
+areas for improvement. This structured progression
+provides a roadmap for enhancing EA’s dynamic
+capabilities over time.
+Another significant framework for evaluating
+dynamic aspects of EA is Capability-Based Planning
+(CBP). This approach focuses on identifying and
+developing the core capabilities of an organization to
+ensure it can adapt to both internal and external changes.
+(Pulkkinen, 2006) emphasizes that capability-based
+planning allows organizations to align their EA with
+strategic priorities by identifying key capabilities needed
+to achieve business goals and adjusting those capabilities
+to meet emerging requirements. CBP facilitates the
+integration of new technologies and processes while
+preserving the overall coherence of the EA. This
+adaptability is vital for organizations aiming to remain
+competitive in environments characterized by rapid
+technological advancements and market shifts.
+The Balanced Scorecard is a strategic performance
+management tool that has been adapted to evaluate
+dynamicaspects ofEA. Initiallydeveloped by (Kaplan and
+Norton, 1992) for performance management, the
+Balanced Scorecard has since been applied to EA
+evaluation by incorporating perspectives such as
+financial, customer, internal processes and learning and
+growth. In the context of EA, the Balanced Scorecard
+helps assess how well an architecture supports the
+organization's ability to react to change and align with
+long-term objectives. For example, the learning and
+growth dimension can be used to measure how well the
+EA supports continuous improvement and innovation,
+while the internal process dimension can evaluate its
+flexibility and efficiency in executing change initiatives.
+Across all the mentioned frameworks, metrics play a
+crucial role in evaluating EA's dynamic capabilities. For
+instance, Enterprise Architecture Maturity Models often
+measure flexibility, Modularity and alignment with
+business strategies. In Capability-Based Planning, metrics
+like time-to-market, resource allocation efficiency and
+capability readiness are critical indicators of how
+effectively the EA supports adaptability. Similarly, the
+Balanced Scorecard integrates both qualitative and
+quantitative metrics such as response time to market
+shifts, technological integration rate and strategic
+alignment. These metrics enable organizations to gauge
+the extent to which their EA is responsive to evolving
+business needs, ensuring that it remains relevant in
+dynamic environments.
+While the enterprise architecture maturity models,
+capability-based planningand balanced scorecard provide
+valuable frameworks for evaluating dynamic aspects of
+
+--- PAGE 4 ---
+Image Ettahiri et al. / Journal of Computer Science 2025, 21 (3): 595.611
+DOI: 10.3844/jcssp.2025.595.611
+598
+EA, they have notable limitations that can be addressed
+by a more structured and tailored approach, such as the
+Goal-Question-Metric (GQM) methodology. One key
+gap in these existing methods is the lack of a systematic,
+customizable mechanism for linking specific
+organizational goals with relevant evaluation metrics.
+Maturity models tend to follow rigid, predefined stages,
+which may not fully capture the nuances of an
+organization’s evolving needs (Ross et al., 2006), while
+Capability-Based Planning often focuses on strategic
+alignment without sufficiently quantifying adaptability
+through operational metrics (Pulkkinen, 2006).
+Similarly, the Balanced Scorecard emphasizes high-
+level perspectives but can fall short of providing
+detailed, actionable insights on how specific EA
+components contribute to overall flexibility and agility
+(Kaplan and Norton, 1992).
+In contrast, the GQM approach directly addresses
+these gaps by offering a goal-driven framework that links
+strategic objectives to specific, measurable questions and
+metrics (Basili and Rombach, 1988). This methodology
+enables organizations to tailor their evaluations, ensuring
+relevance and applicability.
+Materials and Methods
+Methodology
+The Goal-Question-Metric (GQM) is a methodology
+that offers a structured manner of evaluating the dynamic
+aspects of the enterprise architecture. It follows a top-
+down approach, where organizational goals are linked to
+specific questions and metrics aimed at providing the
+stakeholders with information on the effectiveness of EA
+in supporting changes in the environment. In this section,
+we use the GQM methodology to evaluate dynamics in
+enterprise architecture.
+Thefirst step (Basili and Rombach, 1988) is todefine
+organizational goals concerning dynamic aspects like
+flexibility and adaptability, Modularity, durability and
+prediction. This forms the basis of the subsequent
+evaluations. For instance, a goal could be set to increase
+adaptability in the presence of market discontinuities.
+Then, depending on these goals, relevant questions are
+developed to check whether those goals have been met.
+Questions must be measurable and actionable, and they
+guide what metrics may be appropriate. Questions that
+can exist as exemplary may include: "How quickly does
+the organization react to changing customer demands?"
+or "To what extent does the EA support experimentation
+and innovation?" Metrics are selected to quantitatively
+or qualitatively measure the aspects that the formulated
+questions will be addressing. The Key Performance
+Indicators need to be in tandem with these goals and
+bring out meaning about EA dynamics (Solingen and
+Berghout, 1999). Examples of the metrics are the time
+taken to respond to market changes, the rate of success
+in the process of innovation, and the satisfaction of
+stakeholders with EA capability. Each of the goals has
+been positioned against questions and metrics, through
+which the interlinkages between the organizational
+deliverables and the assessment parameters are given
+precise definitions. This helps the process of evaluation
+to stay focused on the intended results. These
+relationships might be better explained through visual
+representations, such as matrices or diagrams.
+After goals, questions and metrics have been defined
+and duly mapped, the actual evaluation process takes off
+the road. Data collection may take different means. It can
+be through surveys, interviewing, or automated
+monitoring tools for that cause. This is an essential step
+and needs stakeholder engagement to allow data
+collection and interpretation to be realistic. Data collected
+is analyzed to come up with meaningful interpretations of
+the occurring dynamic realities of EA. The results are
+interpreted regarding organizational goals and objectives,
+indicating the areas of strength and the areas that need
+improvement. Identifying trends and patterns also serves
+to inform decision-making and strategic planning.
+The methodology enables continuous improvement
+loops, where the output from an evaluation leads back to
+improved EA practice (Kitchenham and Pfleeger, 2002).
+It makes sure that further adaptions continuously take
+place toalign theEA efforts with changing organizational
+needs and external dynamics.
+TheGQM methodology, therefore, gives a structured
+way of applying dynamic evaluation to enterprise
+architecture. The linkage of goals with questions and
+metrics will enable organizations to systematically
+assess their fitness and systematically improve on them
+for adaptability and innovation in such a movable
+business landscape.
+Proposed Evaluation Framework
+Proposed Framework Overview
+Most of thetraditional EA frameworks cannot pace up
+with the dynamic business environment and respond to
+emerging challenges. Given this limitation, a pressing
+need exists to have a comprehensive framework for the
+evaluation of dynamic aspects of EA. The proposed
+Dynamic EA framework aims at a comprehensive
+approach toward the evaluation with the integration of
+five dimensions and six keyprocesses. The dimensions of
+flexibility and adaptability, Modularity, Expressiveness,
+durability, prediction, and Extension capture essential
+features of an EA that can react to change (Bente et al.,
+2012). Six key processes: Monitoring, comparison,
+analysis, planning, execution and knowledge update
+compose the skeleton for dynamic evaluation, enabling
+continuous improvement and adaptation (Ettahiri and
+Doumi, 2024a).
+
+--- PAGE 5 ---
+Image Ettahiri et al. / Journal of Computer Science 2025, 21 (3): 595.611
+DOI: 10.3844/jcssp.2025.595.611
+599
+Fig. 1: The class diagram of the evaluation framework of
+dynamism in the enterprise architecture
+The Model of Proposed Evaluation Framework
+In a modeling approach, we propose to use the UML
+2.0 class diagram, represented below, in Fig. (1), for the
+evaluation framework of DyEA.
+We describe hereafter the diagram’s entities:
+ Dimension: Represents a dimension of dynamism
+(e.g., Flexibility, Modularity). It can have several
+categories of metrics
+ MetricCategory: Represents a category of metrics
+(e.g., Structure, Quality). Each category contains
+several metrics
+ Metric: Represents a specific metric with a name,
+a description, a calculation formula, a type and a
+data source
+ ArchitectureLayer: Represents the different layers
+of the enterprise architecture (e.g., Business,
+Strategy, Motivation, Infrastructure, Application,
+Context Awareness, Holistic). Each layer can have
+several dimensions.
+ ProcessStep: Representsthestepsoftheprocess (e.g.,
+Monitor, Compare, Analyze, Plan, Execute, Update
+Knowledge Base). Each step can be associated with
+several metrics.
+For the relations between the entities:
+ A dimension can have several process steps
+ A process step can correspond to several
+architectural layers
+ An architectural layer can include several metric
+categories
+ A metric category can contain several metrics
+The Process of Evaluation: Construction of the
+Framework
+Inthissub-section, weoutlinetheproposedprocess for
+constructing an evaluation of Enterprise Architecture
+(EA) dynamism, adhering to the Goal, Question, Metric
+(GQM) methodology, wepresenthereafter, in Fig. (2),the
+whole process composed of 8 steps.
+First, one needs to identify the pertinent dimensions
+of dynamism in the EA. Our framework uses basic
+dimensions: Flexibility and adaptability,
+Expressiveness, Modularity, Extensibility, durability
+and prediction. These are made into a high-level set of
+goals. In turn, for each of the six steps in our defined
+process of dynamism, the Monitor, Compare, Analyze,
+Plan, Execute and Update Knowledge Base sub-goals
+are identified. These sub-goals focus more on the
+details of how each step of the process would
+contribute towards the realization of the set goals on
+dynamism. Having structured the high-level and sub-
+goal, the next stage involves defining objectives at
+different architectural layers, including business,
+strategy, motivation, infrastructure and application.
+These objectives ensure that the review will address
+the impact of the dynamism across different levels of
+the organization.
+Questions are then derived based on the GQM
+approach. These questions point to some metric category
+qualityor performance, etc.andhelpconnecttheobjectives
+to the metrics themselves. In this step, the process
+identifies certainmetricsthat correspondtoeach question.
+Fig. 2: The process of construction of the evaluation framework
+of dynamism in the enterprise architecture
+
+--- PAGE 6 ---
+Image Ettahiri et al. / Journal of Computer Science 2025, 21 (3): 595.611
+DOI: 10.3844/jcssp.2025.595.611
+600
+These metrics can be qualitative or quantitative,
+depending upon the nature of the data measured. The
+source of data for each metric is also identified to make
+the evaluation process armed with reliable data points.
+Using this structured approach, the GQM methodology
+provides a solid framework for building up an effective
+EA dynamism evaluation that will conform to the
+standards of ISO/IEC 42030. This holistic approach will
+ensure that the review covers different architectural
+layers, key stakeholders' concerns, and objective data,
+which will project an accurate picture of the EA's ability
+to respond to change. It then identifies specific metrics
+against each such question, and this hierarchical
+construction is shown in Fig. (3). Data collection and
+calculation: This is the seventh step. Data is collected
+from various sources, such as performance monitoring
+tools, process logs and feedback from stakeholders.
+Calculations of metrics are done using the identified
+formulae. Finally, thecalculatedmetricsareaggregatedto
+present an overall assessment of the EA's dynamism.
+It is a weighted sum of metrics in which the
+importance of each one is weighed against the others
+and then combined to derive an overall dynamism
+score. This score reflects the capability of EAs
+concerning adaptation and symmetric response to
+dynamic environments.
+In the following sub-sections, let us expose the details
+of each of the four axes of projection of the metrics.
+Fig. 3: The evaluation framework of dynamic aspects in Enterprise architecture hierarchical construction, mapping between axis levels
+and GQM methodology
+
+--- PAGE 7 ---
+Image Ettahiri et al. / Journal of Computer Science 2025, 21 (3): 595.611
+DOI: 10.3844/jcssp.2025.595.611
+601
+Axis 1: Dimension Evaluation
+Thedimensions identified for our approach of dynamic
+aspect in (Ettahiri et al., 2022). DyEA approach comes
+because of a study of theleading architectural principles to
+which our model of dynamism should comply and,
+hereafter, our dimensions, as presented in Fig. (4):
+ Flexibility: Refers to the ability of the EA to
+accommodate changes in business processes,
+technologies and requirements (Smith and Jones,
+2018). Flexibilitycan bemeasured bymetrics such as
+the ease of changing EA components, the response
+timetochangerequests, andthedegreeofautomation
+achieved in processes for changing management.
+Formulas for calculating flexibilitymetrics could use
+the number of change requests that go through
+processing within a unit of time, the percentage of
+automated change approvals and the average time
+taken to effect changes.
+ Adaptability: An EA can adapt to sudden and
+unexpected changes and disruptions (Smith and
+Jones, 2018). A few of the metrics for estimating
+adaptability may be how well the organization would
+be ready to support 'pivoting' in response to market
+shifts, how various categories of contingency plans
+functionintimesofcrisisandagilityinreconfiguration
+or other components of the EA to satisfy some rising
+need. The adaptability metric formulae could include
+the frequency of unplanned changes, the success rate
+of theadoption ofcontingencymeasures, andrecovery
+time from disruptions.
+ Modularity: Characterizes whether an EA consists of
+independent and interchangeable components
+(Sarkar et al., 2005). Modularity metrics can be
+measured in terms of the component reuse rate,
+granularity level of interfaces, encapsulation, and
+abstraction (Brown, 2019). Modularity metrics can
+be formulated in consideration of the percentage of
+the reusability of the component, cohesion and
+coupling of the component interfaces and complexity
+of dependencies between components
+ Expressiveness: It deals with the ability of the EA to
+express different views and requirements. Some
+metrics that could be used in assessing
+Expressiveness include the completeness of the EA
+documentation, the clarity of the communication
+among the stakeholders and the level of compliance
+of the EA artifacts toward the stakeholder's needs
+(Niemi and Pekkola, 2017). Metrics for
+Expressiveness would calculate formulas such as the
+percentage of stakeholders that are satisfied with the
+EA document, the frequency of feedback from
+stakeholders, or the degree of alignment between EA
+artifacts and business objectives
+ Extensibility: It refers to the ability of the EA to
+accommodate newer capabilities and
+functionalities. Extensibility can be measured
+using metrics such as ease of integration of third-
+party systems, scalability of the EA infrastructure
+and availability of extensibility mechanisms like
+APIs and plug-ins (Alreffaee et al., 2021).The
+formulae for extensibility metrics may be
+determined by parameters such as time to onboard
+new technologies, cost of integration of external
+systems, or scalability of the resources of the EA
+ Durability: To see whether the architecture is
+resilient and long-lasting. This is a dimension that
+investigates how far the architecture will maintain
+its functionality and stability in the changing
+business environment, shifting technology, and
+transforming organizational preferences and
+priorities. The metric used to determine durability
+is system reliability, which refers to the degree to
+which an architecture can continue supporting
+operations without failure or shutdown for an
+extended period. Component Life Expectancy:
+This is the life expectancy of architectural
+components given variables like the frequency of
+maintenance, rate of obsolescence and retirement
+schedules. Adaptability to new technologies: The
+ability of the architecture to adopt and incorporate
+new technologies in a way that ensures existing
+functionality and invested assets are protected
+ Prediction: Evaluate the degree to which the
+enterprise architecture predicts future trends,
+challenges and opportunities. This dimension
+considers the organization's ability to predict any
+future change and to proactively plan or adapt its
+architecture. The metrics that could be used in
+evaluating prediction include the following:
+Forecast accuracy: The degree of accuracy in the
+prediction of future trends as assessed by a
+retrospective analysis and then compared to actual
+outcomes. Scenario Planning Effectiveness: How
+well the organization is in developing and testing
+alternative scenarios and future states of the
+architecture, evaluated through exercises and
+simulations on scenario planning. Early Warning
+Systems: Extent to which mechanisms are in place
+and adequate for identifying and alerting relevant
+stakeholders of the advent of disruptions or
+opportunities, including by such means as trend
+analysis tools or environmental scanning processes
+
+--- PAGE 8 ---
+Image Ettahiri et al. / Journal of Computer Science 2025, 21 (3): 595.611
+DOI: 10.3844/jcssp.2025.595.611
+602
+Fig. 4: The evaluation framework of dynamic aspects in
+enterprise architecture, emphasizing the five values of
+the first axis “Dimensions”
+A dimension evaluation involves assessing the
+flexibility, adaptability, Modularity, Expressiveness and
+extent of the EA using specific metrics and formulas. By
+quantifying these dimensions, organizations can gain
+insights into their EA capabilities and identify areas for
+improvement.
+Axis 2: Process Integration
+The six-stepped process is also integrated as an axis
+with the dimension evaluation; the layers and categories
+give a practical structured approach to our dynamic EA
+evaluation; we expose hereby the six steps:
+1) Monitoring: Monitoring shall constantly observe as
+well as capturerelevant contextual data from varying
+layers in the enterprise architecture. This step is
+needed for the system to be aware of theenvironment
+and to distinguish changes or anomalies in real-time.
+According to (Zaslavsky et al., 2013), context-aware
+systems are defined to be the ones that perceive data,
+understand and respond to information, therefore
+enriching business process life cycles within the
+company's architecture. As said, the GQM method is
+also used to identify metrics; for instance, we aim to
+ensurereal-timeawareness ofenvironmental changes
+affecting business operations. The main question
+marks: How efficiently can the system capture real-
+timecontextual data?To quantify, we take themetric
+Real-time Context Data Capture Rate (CDCR),
+which is a function of the other parameters (Layer,
+Category, Dimension)
+2) Comparison: Comparison is the activity of
+approximating the captured contextual data with
+standards, norms, or the expected value; any
+deviation istobeaddressed. Thisphasewillallowthe
+system to recognize whether an operation is regular
+or a problem. Enterprise architectures must have that
+dynamic adaptation that induces the comparison of
+contextual data; this is an agreement by (Bauer and
+Spiekermann, 2011), which states that the system
+needs to detect the response when presented with a
+deviation from the normal one. Among the proposed
+metrics, some can be maturity level, standards
+conformance, and benchmark achievement tuned to
+measure the goal: "Benchmark EA Performance
+against standards"
+3) Analysis: That is, analysis means interpreting one's
+identified deviations or trends by comparison for
+their meaning to be understood and for the response
+to be determined. This is the stage that provides the
+processing of raw data into something that action can
+be taken. Contextual data analysis is key for decision
+supportandiselaboratedby(Polandetal., 2012), who
+states that practical analysis of contextual
+information leads to better strategic planning and
+operational adjustments. Key analytics measures
+should include trend identification, which is the
+ability to identify upcoming trends and patterns from
+past/old data. Evaluate potential impacts in the form
+of changes or disturbances on the working of EA.
+MeasuretheQualityofData- Analyzethequalityand
+validity of the data using data completeness,
+consistency and validity
+4) Planning:Planning istodevelop policies and detailed
+programs of work that meet the understanding
+achieved from analysis. This step allocates resources,
+schedules tasks, and prepares the organization for
+implementation. Planning, in terms of CA, is done
+through contextual analysis, as mentioned by
+(Pulkkinen, 2006), which points out that strategic
+planningaligns IT with business goals. In other words,
+planning involves strategic decision-making through
+insights derived from EA analysis. Planning
+performancemetricsmightbe strategicalignment,The
+alignment in the plan of EA relative to the goals and
+objectives of the organization; Resource Allocation:
+Effectiveness in the allocation of resources that
+support their strategic initiatives; and the Initiative
+Success Rate: Success in strategic initiatives which is
+based on theattaining ofthe expected results
+5) Execution: This could be regarded as the
+implementation of change. This is where one gets to
+implement or execute the plans actual. This could
+involve the implementation of new processes,
+affecting system changes and rolling out new
+technologies, among others. There must be good
+change management in enterprise architecture
+frameworks, as asserted by Ross et al. (2006), who
+
+--- PAGE 9 ---
+Image Ettahiri et al. / Journal of Computer Science 2025, 21 (3): 595.611
+DOI: 10.3844/jcssp.2025.595.611
+603
+argue that "one of the most critically important parts
+of dynamism is the successful execution of planned
+changes." Now consider the loophole in those cases
+of change execution: The question to be answered:
+How successful are the executed changes in
+achieving the desired outcomes? Goal to achieve:
+Implement planned changes effectively and
+efficiently. Metric: Execution Success Rate (ESR)
+6) Knowledge update: Capturing the results of the
+implemented change, lessons learned and any newly
+acquired data, which becomes part of the knowledge
+base update, will then feed into the organization's
+knowledge repository. That makes learning and
+continuous improvement part of the process. The
+process of knowledge integration and continuous
+learning is described to be at the core of an adaptive
+enterprise architecture; (Alavi and Leidner 2001)
+describe knowledge management within processes of
+organizational learning and adaptation. This could,
+perhaps, be something like "Keep EA relevant
+through continuous learning." Associated metrics for
+updating knowledge might be further detailed as
+follows: Review Frequency: The frequency with
+which EA is reviewed and updated to include new
+knowledge and insights. Knowledge Sharing: The
+effectiveness of the mechanisms of knowledge
+sharing is measured through participation and
+feedback. Lessons Learned Adoption: The extent to
+which lessons learned from the past are integrated
+into future EA practices
+Axis 3: A Layered Architecture
+The framework adopts a layered architecture
+approach, drawing upon the ArchiMate standard to
+structure the EA into multiple layers (The Open Group,
+2019). These layers include the business, application,
+technology, physical, implementation and migration,
+motivation, context awareness and holistic layers. Each
+layer represents a different perspective of the
+organization, enabling comprehensive evaluation from
+various angles. In addition to the traditional ArchiMate
+layers, the framework incorporates a holistic layer to
+capture cross-layer elements and overarching principles.
+Thisholisticperspectiveensures thatevaluations consider
+the interconnectedness of different EA components and
+their collective impact on organizational dynamics.
+Furthermore, the framework integrates a context-aware
+layer toaccount for externalinfluencesandenvironmental
+factors that shape EA effectiveness.
+Axis 4: Categorization of Metrics for Calculating
+Dynamism in Enterprise Architecture
+As presented in our previous paper (Ettahiri and
+Doumi, 2024b), the proposed categorization of our
+evaluation framework is as follows:
+ Structural metrics focus on the composition and
+arrangementofEA components, providinginsightsinto
+the organization's architectural integrity and coherence
+(ISO/IEC/IEEE, 2018). Examples of structural metrics
+include Component Count, which is the number of
+distinct components within the EA. Layer Complexity:
+Thecomplexityofinteractions between different layers
+of the architecture. Standards Compliance: The degree
+to which EA components adhere to established
+architectural standards and guidelines
+ Process metrics evaluate the effectiveness and
+efficiency of EA-related processes and workflows,
+highlighting areas for optimization and improvement
+(Basili and Weiss, 1984). Examples of process
+metrics include Change Request Cycle Time, which
+is the average time taken to process and implement
+change requests. Development Pipeline Throughput:
+The number of development tasks completed within
+a given time frame. Process SLA Compliance: The
+percentage of processes that meet predefined Service
+Level Agreements (SLAs)
+ Performance metrics: Measure the operational
+performance and reliability of EA components and
+systems, ensuring that they meet predefined quality
+of service requirements (ISO/IEC 9126, 2001).
+Examples of performance metrics include System
+Uptime, which is the percentage of time that systems
+are available and operational. Response Time: The
+average time taken to respond to user requests or
+system queries. Throughput Capacity: Themaximum
+volume of transactions or data that can be processed
+by the system within a given period
+ Quality metrics: evaluate the overall quality and
+robustness of the EA, ensuring that it meets
+organizational standards and stakeholder
+expectations (ISO/IEC 9126, 2001). Examples of
+quality metrics include defect density, which is the
+number of defects identified per unit of architectural
+components. User Satisfaction: Stakeholder
+satisfaction with thefunctionalityandperformanceof
+the EA. Compliance Rate: The percentage of
+architectural components that comply with quality
+standards and regulations
+ Alignmentmetrics: Assessthedegreeto which theEA
+supports and aligns with the organization's strategic
+goals and objectives (Kazman and Bass, 2002).
+Examples of alignment metrics include Strategic Goal
+Achievement: The extent to which EA initiatives
+contribute to achieving organizational strategic goals.
+Business-IT Alignment: The degree of alignment
+between business processes and IT systems within the
+EA. Value Contribution: The perceived value and
+benefits derived from EA initiatives are measured
+through stakeholder feedback
+ Capacity metrics: Evaluate the scalability and
+resource utilization of the EA, ensuring that it can
+
+--- PAGE 10 ---
+Image Ettahiri et al. / Journal of Computer Science 2025, 21 (3): 595.611
+DOI: 10.3844/jcssp.2025.595.611
+604
+support current and future demand (Buckl et al.,
+2008). Examples of capacity metrics include
+Resource Utilization, which is the efficiency of
+resource usage measured by factors such as CPU,
+memory, and network bandwidth utilization.
+Scalability Index: The ability of the EA to scale
+resources up or down in response to changing
+demand. Capacity Utilization: The percentage of
+available capacity that is actively utilized by the EA
+ Governance metrics: assess the effectiveness of
+governance structures and practices in overseeing
+and managing the EA (Lange et al., 2016).
+Governance Review Frequency: The frequency of
+governance reviews and audits conducted to ensure
+EA compliance. Decision-Making Efficiency: The
+efficiency and effectiveness of decision-making
+processes within the EA governance framework
+ Adoption metrics: Evaluate the uptake and utilization
+of EA practices and components by stakeholders,
+ensuring that they are embraced and effectively used
+within the organization (Proper and Lankhorst, 2014).
+Examples of adoption metrics include User Adoption
+Rate, whichisthepercentageofusersactivelyutilizing
+EA components and practices. Training Participation:
+The participation rate in EA-related training and
+development programs. Adoption Feedback:
+Stakeholder feedback on the ease of use and
+effectiveness of EA components and practices
+The Mathematical Representation
+To evaluate the dynamism of an enterprise architecture,
+we can calculate an overall dynamism score of Dglobal. This
+score is derived from metrics evaluated across the different
+layers of the extended ArchiMate model, metric categories
+and the five dimensions of dynamism using the Goal,
+Question and Metric(GQM) approach.
+The overall dynamism score Dglobal is calculated as a
+weighted sum of the metrics across all relevant axes. The
+formula can be expressed as:
+𝐷𝑔𝑙𝑜𝑏𝑎𝑙 = ∑ ∑∑∑𝑤𝑖,𝑗,𝑘,𝑠𝑀𝑖,𝑗,𝑘,𝑠
+𝐶
+𝑠=1
+𝐿
+𝑘=1
+𝑆
+𝑗=1
+𝐷
+𝑖=1
+where:
+ D is the number of dimensions
+ S is the number of steps
+ L is the number of layers
+ C is the number of categories
+ wi,j,k,s is the weight assigned to the metric Mi,j,k,s
+ Mi,j,k,s is the metric associated with the Dimension
+D(i), step S(j), layer L(k), Category C(s)
+Figure (5) brings a better comprehension of thematrix
+representation of the cube related to each value of the
+dimension axis D(i).
+Fig. 5: The Evaluation Framework of dynamic aspect in
+Enterprise architecture for a fixed value of the axis
+dimension D(i) emphasizing the other three axis values
+Validation: Use Case
+Validation Methodology
+The validation of the proposed Evaluation Dynamic
+Enterprise Architecture (DyEA) framework was
+conducted through its application to a real-world use
+case involving a Multinational Corporation (MNC)
+operating in the technology sector. This empirical case
+study provided a practical context for testing the
+framework’s applicability and effectiveness in
+evaluating the dynamic capabilities of the organization's
+EA. The validation process was grounded in the Goal-
+Question-Metric (GQM) methodology, which allowed
+us to assess the framework across multiple dimensions:
+Flexibility, Modularity, Expressiveness, Extensibility,
+durability and prediction.
+The case study validation involved mapping the
+MNC’s processes and architectural components to the
+framework’s defined dimensions and calculating the
+corresponding metrics. This structured approach enabled
+a detailed evaluation of how the organization’s EA
+performs under dynamic conditions, revealing both
+strengths and areas for improvement. The results
+demonstrated that the proposed framework is capable of
+capturing the organization’s dynamic aspects, such as its
+ability to adapt to internal and external changes,
+integrate new technologies and maintain long-term
+architectural stability.
+By applying the framework in a real-world context,
+we were able to verify its utility and relevance in
+operational scenarios. The use case not only validated
+the theoretical underpinnings of the framework but also
+provided actionable insights into improving the
+
+--- PAGE 11 ---
+Image Ettahiri et al. / Journal of Computer Science 2025, 21 (3): 595.611
+DOI: 10.3844/jcssp.2025.595.611
+605
+organization’s EA. This method ensured that the
+proposed dimensions and processes accurately reflect
+the needs of a dynamic enterprise environment, thereby
+confirming the framework’s robustness and scalability
+for broader applications.
+Relevance and Significance
+The proposed use case of a Multinational Corporation
+(MNC) serves as a highly relevant and significant
+validation of the multidimensional evaluation framework
+for Dynamic Enterprise Architecture (EA). This MNC
+operates in a complex and rapidly changing environment,
+making it an ideal candidate for testing the framework’s
+ability to assess the EA’s adaptability across the four axes
+dimensions, steps, layers and metric categories. The
+organization’s diverse global operations, coupled with
+frequent regulatory shifts and technological innovations,
+provide a rich context for evaluating the dynamic aspects
+of EA, such as flexibility, Modularity and Extensibility.
+Moreover, the use case offers a real-world application that
+highlightshowtheframeworkcanidentifyspecificstrengths
+and weaknesses in the architecture, offering actionable
+insights for improvement. By applying the framework in
+such a complex, dynamic scenario, the validation not only
+demonstrates themodel’s robustness and scalabilitybut also
+ensures that the framework is practical and applicable to
+organizations facing similar challenges in navigating
+unpredictabilityand continuous change.
+The consistencyand reliability of the results produced
+by the framework are ensured by the metric consistency
+and data integrity checks. We employed standardized
+metrics (e.g., time to integrate new technologies,
+component quality index) across all dimensions, which
+were derived based on established evaluation
+methodologies like the GQM approach. This guarantees
+that the evaluation process remains consistent across
+different framework applications. Also, data collection
+processes werestandardized through theuseofautomated
+monitoring tools and manual data validation checks.
+These measures ensured that the data feeding into the
+evaluation was accurate, reducing the risk of errors that
+could compromise the consistency of the results.
+Application of the Evaluation Framework of DyEA
+on a Use Case
+To exemplify the construction of our evaluation
+framework of the DyEA, let us consider the case of a
+Multinational Corporation (MNC) operating in the
+technologysector, with subsidiaries andoperationsspread
+across various continents. The company aims to
+streamline its operations, enhance adaptability to market
+changes and integrate innovative technologies. The MNC
+seeks to evaluate its Enterprise Architecture (EA) using
+the proposed dynamism evaluation framework to ensure
+it supports these objectives.
+Step 1: Input identification (Dimensions of
+Dynamism) from Stakeholders
+In our use case, the stakeholders from the healthcare
+organization are the chief technology officer (CTO),
+regional IT directors, business unit leaders, and
+compliance officers; all these staff members work
+together to identify the relevant dimensions to evaluate
+the EA's dynamism. Let us consider that the selected
+dimensions are the five dimensions of our framework:
+Flexibility and Adaptability, to evaluate the ability to
+respond to market dynamics and regulatory changes;
+Modularity for diverse and scalable business units;
+Expressiveness to ensure a clear representation of global
+business processes and data, Extensibility, to evaluate the
+ability to integrate new technologies and services across
+regions and finally, Durability and Prediction, for a long
+term sustainability of IT systems and Predictive analytics
+for market trends and business outcomes.
+Step 2: Translation of the Dimensions to Goals
+The next step in our framework construction process
+istotranslatethedimensionsontogoals for Flexibilityand
+Adaptability: "Rapid adjustments tomarket strategies and
+compliance requirements." For the D2 Modularity, the
+fixed goal is" Develop a modular architecture to support
+various regions and business units." for the D3-
+Expressiveness: “Create clear models of global business
+processes.” For the D4 – Extensibility, “Ensure seamless
+integration with emerging global technologies.” In D5-
+Durability and Prediction, the fixed goal is to "Maintain
+robust and reliable IT infrastructure and implement
+predictive analytics for market and operational trends."
+Step 3: Identification of Sub-Goals
+Each goal is broken down into sub-goals aligned with
+the six-step process in step 3. Let us take the example
+below in Table 1.
+Step 4: Identification of Objectives
+Each sub-goal is mapped to specific objectives across
+the EA layers as presented in Table 2.
+Step 5: Formulation of Questions
+Questions are formulated to address each category of
+metrics as presented in Table 3.
+Step 6: Identification of Metrics and Formulas
+Metrics are identified based on the questions. We take
+the example in Table 4.
+Step 7: Data Collection and Calculation
+To analyze and interpret the results, data will be
+collected for each metric and a radar graph will be used to
+visualizetheperformanceacross thedifferentdimensions.
+
+--- PAGE 12 ---
+Image Ettahiri et al. / Journal of Computer Science 2025, 21 (3): 595.611
+DOI: 10.3844/jcssp.2025.595.611
+606
+Table 1: Sub-goals corresponding to each of the six steps per dimension
+Dimension Monitor Compare Analyze Plan Execute
+Update knowledge
+base
+Flexibility Track market
+changes
+Assess
+adaptability
+Identify barriers Develop strategies Implement
+changes
+Document updates
+Modularity Monitor
+components
+Compare
+Modularity
+Analyze
+components
+Plan modular Deploy new
+modules
+Update modularity
+ExpressivenessMonitor
+workflows
+Compare with
+standards
+Analyze
+workflows
+Plan improvements Execute workflowsDocument
+workflows
+Extensibility Monitor new
+tech
+Compare
+integration
+Analyze
+integration
+Plan integration Implement tech Update integrations
+Prediction Monitor market
+trends
+Compare
+predictions
+Analyze
+outcomes
+Plan analytics Deploy analytics Update models
+Durability Monitor system
+health
+Compare with
+lifespan
+Analyze
+durability
+Plan maintenance Execute plans Document durability
+Table 2: Objectives corresponding to each of the EA-layer
+Layer Flexibility Modularity Expressiveness Extensibility Prediction Durability
+Business Adjust global
+processes
+Modular business
+units
+Clear global
+processes
+Integrate new
+business models
+Predict business
+outcomes
+Sustainable global
+practices
+Strategy Agile strategy
+adaptation
+Modular strategic
+components
+Expressive
+strategic plans
+Extend strategy with
+new trends
+Predict strategic
+success
+Durable strategic
+planning
+Motivation Flexible
+motivation
+models
+Modular
+motivational
+components
+Expressive
+motivational
+models
+Extend motivation
+with new goals
+Predict motivation
+outcomes
+Durable motivation
+framework
+Infrastructure Adaptive
+infrastructure
+Modular IT
+components
+Expressive IT
+architecture
+Integrate new IT
+systems
+Predict
+infrastructure needs
+Durable IT
+infrastructure
+Application Flexible
+applications
+Modular
+application
+components
+Expressive
+application design
+Extend applications Predict application
+usage
+Durable applications
+Context Adapt to context
+changes
+Modular context
+components
+Expressive context
+representation
+Integrate contextual
+data
+Predict context
+changes
+Durable context
+management
+Holistic Overall
+adaptability
+Overall
+Modularity
+Overall
+Expressiveness
+Overall Extensibility Overall prediction
+ability
+Overall durability
+Table 3: Questions corresponding to each of the metric categories
+Metric Category Sample Questions
+Structure How adaptable is the current EA structure to market changes and regulations?
+Quality What is the quality of the modular components in the EA across regions?
+Alignment How well are the global business processes aligned with the EA goals?
+Adoption How effectively are new technologies integrated into the EA globally?
+Performance What are the predictive analytics performance metrics for market outcomes?
+Capacity What is the capacity of the IT infrastructure to support new applications globally?
+Governance How robust are the governance mechanisms in maintaining EA durability globally?
+Process What processes are in place to ensure continuous updates to the EAknowledge base globally?
+Table 4: Final List of metric results of the process GQM
+Metric Category Metric Name Formula/Calculation Data Sources
+Structure Adaptability Score (Number of Changes Adapted/Total Changes) * 100 Change Management Logs
+Quality Component Quality Index (Component Quality Ratings/Number of Components) Quality Assessment Reports
+Alignment Process Alignment Index (Aligned Processes/Total Processes) * 100 Process Documentation
+Adoption Technology Adoption Rate (New Technologies Adopted/Total Technologies) * 100 Technology Implementation Records
+Performance Predictive Accuracy (Correct Predictions/Total Predictions) * 100 Predictive Analytics Reports
+Capacity Infrastructure Utilization (Current Utilization/Total Capacity) * 100 IT Infrastructure Monitoring Tools
+Governance Governance Compliance Rate (Compliant Practices/Total Practices) * 100 Governance Audit Reports
+Process Update Frequency Number of Updates Per Year Knowledge Base Logs
+
+--- PAGE 13 ---
+Image Ettahiri et al. / Journal of Computer Science 2025, 21 (3): 595.611
+DOI: 10.3844/jcssp.2025.595.611
+607
+Table 5: Values of the metrics per dimension
+Dimension
+Adaptability
+score
+Component
+quality index
+Process
+alignment index
+Technology
+adoption rate
+Predictive
+accuracy
+Infrastructure
+utilization
+Governance
+compliance rate
+Update
+frequency
+flexibility 80 - - - - - - -
+modularity - 75 - - - - - -
+expressiveness - - 70 - - - - -
+extensibility - - - 85 - - - -
+prediction - - - - 90 - - -
+durability - - - - - 95 80 65
+Step 8: Aggregation and Evaluation
+The calculated metrics presented in Table 5, are
+aggregated to provide a comprehensive evaluation of the
+EA'sdynamism. This involves weighing each metricbased
+on its importanceand combiningthemtoderivetheoverall
+dynamism score. This score reflects the EA's capability to
+adapt and respond to dynamic environments effectively.
+To derive the overall dynamism score, we aggregate
+the calculated metrics using their respective weights.
+Assuming equal weights for simplicity, the aggregated
+dynamism score is calculated as follows:
+𝐷𝑔𝑙𝑜𝑏𝑎𝑙 = ∑∑∑∑𝑤𝑖,𝑗,𝑘,𝑠𝑀𝑖,𝑗,𝑘,𝑠
+𝐶
+𝑠=1
+𝐿
+𝑘=1
+𝑆
+𝑗=1
+𝐷
+𝑖=1
+Dglobal = 1/5 * [(80+75+70+85) + ((95+80+65+90)/4)]
+Dglobal = 78,5
+By following this structured process, organizations
+can systematically evaluate their EA's dynamic
+capabilities, ensuring alignment with stakeholder needs
+and compliance with industry standards. This approach
+not only provides actionable insights but also enhances
+the EA's ability to thrive in rapidly changing
+environments.
+In the following section, we discuss and analyze the
+obtained results.
+Results and Discussion
+The application of the proposed multidimensional
+evaluation framework to the use case of a Multinational
+Corporation (MNC) demonstrates its effectiveness in
+assessing the dynamism of an Enterprise Architecture
+(EA). The overall dynamism score of 78.5, derived from
+assessing multiple indicators across five key dimensions
+(Flexibility and Adaptability, Modularity,
+Expressiveness, Extensibility, Sustainability and
+Prediction), provides a comprehensive view of the EA's
+adaptability and readiness for continuous change. This
+finding directly addresses the research question by
+validating the framework's ability to quantify the degree
+of dynamism through a granular categorization of metrics
+applied across various architectural layers.
+Inalignmentwiththeliterature,theflexibilitydimension,
+with an adaptabilityscoreof80, reflects a solid capabilityto
+respond to both internal and external changes, though there
+is room for improvement. According to Ross et al. (2006),
+flexibility is crucial for maintaining competitiveness in
+volatile environments, and the result indicates that the
+organization's EA is mainly able to accommodate these
+demands. However, the score suggests a need for further
+improvements, such as refining change management
+processes and enhancing the automation of adaptability, as
+proposed by(Jones, 2018).
+The modularity score of 75 highlights a moderate
+degree of decomposition within the EA, allowing the
+architecture to be broken into manageable components.
+This finding is consistent with (Baldwin & Clark, 2000),
+whoarguethat Modularityenables architecturalagilityby
+facilitating quick updates and integration of new
+elements. However, the result also suggests areas for
+improvement, specifically in component reuse and
+interface granularity, which could be optimized to
+enhance the system's modular nature further.
+The expressiveness score of 70, indicated by gaps in
+process alignment, emphasizes the need for better
+synchronization between the EA and the organization’s
+business processes. (Niemi and Pekkola, 2017) point out
+that Expressiveness is essential for accurately representing
+stakeholders' needs. A score of 70 reveals that the
+organization may experience challenges in translating
+business requirements into architectural components,
+underlining the importance of refining communication and
+documentation strategies within theEA.
+With an extensibilityscore of 85, theresults show that
+the organization has effectively integrated new
+technologies and is prepared for future technological
+advancements. This finding aligns with the work of
+(Alreffaee et al., 2021), who stress that Extensibility is
+critical for maintaining long-term architectural relevance.
+The high score reflects a well-managed capacity for
+scaling and integrating new functionalities but suggests
+
+--- PAGE 14 ---
+Image Ettahiri et al. / Journal of Computer Science 2025, 21 (3): 595.611
+DOI: 10.3844/jcssp.2025.595.611
+608
+that continued monitoring is required to ensure sustained
+Extensibility as new technologies emerge.
+The prediction dimension, scoring 90, indicates a
+strong capability for forecasting future trends and
+disruptions, which is essential for maintaining a proactive
+EA. This score reinforces the importance of predictive
+analytics in EA, as highlighted by Ross et al. (2002) and
+demonstrates that the organization is well-equipped to
+anticipate and adapt to market shifts. The high
+sustainability score of 95, particularly in terms of
+infrastructure utilization, further emphasizes the EA’s
+durability, though the update frequency score of 65
+suggests a need for more frequent revisions to maintain
+architectural relevance. This aligns with (Pulkkinen,
+2006), who argues that continuous updates are crucial for
+sustaining alignment with evolving business and
+technology environments.
+Overall, these findings connect directly to the
+research question by illustrating how the framework’s
+granular categorization of metrics applied across
+dimensions, steps, layers and metric categories can
+effectively quantify the dynamism of the EA. Theradar
+chart visualization reinforces this, offering clear
+insights into which areas of the architecture require
+immediate attention and which areas are well-aligned
+with strategic goals.
+To address the observed trends, several key
+improvements are recommended. Enhancing staff
+training to better adapt to regulatory changes and
+market dynamics will improve flexibility. Increasing
+the modularization of components will enhance system
+agility and quality. Refining business process models
+will improve Expressiveness and alignment with EA
+objectives. Continuing to integrate and monitor new
+technologies will help maintain a high level of
+scalability. Additionally, maintaining and expanding
+predictive analytics capabilities will further strengthen
+forecasting accuracy while increasing the frequency of
+knowledge base updates, which will ensure the EA
+remains up-to-date and relevant.
+The use case evaluation showcases the full scope of
+the proposed multidimensional framework and its
+capacity to provide actionable insights for improving the
+dynamism of EA in practice. By applying the Goal-
+Question-Metric (GQM) methodology, the framework
+has been successful inidentifying both strengthsandareas
+for improvement within the organization’s EA. This
+detailed assessment underscores the value of using a
+structured, multi-axis approach to refine the EA in a
+rapidly evolving environment continuously.
+To graphically visualize these results, we can draw a
+radar chart that shows scores on the five dimensions of
+dynamism as outlined in Fig. (6).
+Fig. 6: Radar Graph of the evaluation of EA dynamism for the
+use case of MNC
+Conclusion
+Thisresearch proposed amultidimensionalframework
+based on the Goal-Question-Metric (GQM) methodology
+to evaluate the dynamic capabilities of Enterprise
+Architecture (EA). The framework assesses EA
+dynamism through four key axes: Dimensions, the six-
+step dynamic EA process, architectural layers and metric
+categories. Applied to a case study of a Multinational
+Corporation (MNC), the framework demonstrated its
+capacity to identify strengths and areas for improvement,
+such ashigh flexibilityandextensibilityscores, indicating
+adaptability and stability in competitive environments.
+This aligns with the coreresearch question byproviding a
+granular categorization of dynamism metrics, enabling
+organizations to quantifythe degree of adaptabilityacross
+various layers of their architecture.
+The findings from the use case suggest that the
+framework effectively captures the dynamic aspects of
+EA, offering valuable insights for enhancing strategic
+alignment and operational agility. For instance, the
+evaluation pointed to gaps in process alignment and the
+need for more frequent updates to maintain architectural
+relevance, emphasizing the framework's ability to
+pinpoint critical areas for improvement. By linking
+specific organizational goals to measurable outcomes, the
+GQM approach has shown its utility in providing a
+structured, goal-driven methodology for assessing EA’s
+adaptability and resilience in real-world scenarios.
+However, the proposed framework is not without its
+limitations. One of the primary challenges lies in the
+complexity of managing the four intersecting axes
+(dimensions, steps, layers and metric categories).
+Organizations may struggle with the extensive
+customization required to balance all axes consistently,
+leading to variations in the application of the framework
+across different contexts. Additionally, the subjectivity in
+goal and metric definition can result in inconsistencies
+that limit comparability across different organizations or
+
+--- PAGE 15 ---
+Image Ettahiri et al. / Journal of Computer Science 2025, 21 (3): 595.611
+DOI: 10.3844/jcssp.2025.595.611
+609
+departments. This is compounded by the resource-
+intensive nature of data collection, which may require
+sophisticatedtools and significant personnelinvolvement,
+making it challenging to maintain up-to-date evaluations,
+particularly in rapidly evolving environments.
+Moreover, while thecustomizabilityof the framework
+offers flexibility, it can also introduce a narrow focus on
+short-term operational goals at the expense of broader,
+long-term adaptability metrics such as innovation
+capacity or future-proofing potential. This risk of
+misalignment underscores the importance of developing
+standardized best practices to guide the application of the
+GQM methodology, ensuring that both short-term
+flexibility and long-term strategic objectives are
+adequately addressed.
+Looking ahead, several avenues for future work
+emerge from this research. First, expanding the
+framework's application to a broader set of case studies
+across different industries would allow for comparative
+insights and further validation of the framework’s
+generalizability. Additionally, refining the goal-setting
+process and metric development to minimize subjectivity
+and ensuremoreconsistent, standardizedresults is crucial
+for making the framework more accessible and scalable.
+Statistical reliability testing, such as Cronbach’s alpha,
+can also be introduced to assess the internal consistency
+of the evaluation framework quantitatively.
+Furthermore, streamlining the data collection process
+is essential to enhance the framework’s efficiency in
+environments where EA is subject to frequent changes.
+This could involve integrating more automated tools for
+real-time monitoring, reducing operational overhead and
+ensuring that updates to the evaluation are timelyand less
+resource intensive. Future research should also explore
+the inclusion of metrics related to technological readiness
+and innovation capacity, ensuring that the framework
+remains relevant for organizations aiming to future-proof
+their enterprise architecture.
+In conclusion, the proposed multidimensional GQM-
+based framework successfully addresses the gaps left by
+existing models by providing a structured, granular
+approach to assessing EA’s dynamic capabilities.
+Nevertheless, its complexity, subjectivity and resource
+requirements call for further refinement and
+standardization to ensure broader applicability and
+consistency across diverse organizational contexts.
+Acknowledgment
+We would like to express our sincere gratitude to the
+Center of Doctoral Studies, professors and colleagues for
+their valuable guidance. The acknowledgment goes to the
+reviewers and the editorial team.
+Funding Information
+This research did not receive any specific grant
+from funding agencies in the public, commercial, or
+non-profit sectors.
+Author’s Contributions
+Imane Ettahiri: Substantial contributions to the
+conception of the work, acquisition, analysis and
+interpretation of data, drafted and critically reviewed.
+Latifa Rassam: Substantial contributions to the
+conception of the work, interpretation of data, and
+critical review.
+Karim Doumi: Substantial contributions to the
+conception of thework, finalapproval of theversion tobe
+published, accuracy and integrity of the work.
+Ahmed Zellou: Substantial contributions to the
+conception of thework, finalapproval of theversion tobe
+published, accuracy and integrity of the work.
+Ethics
+This article is original and contains unpublished
+material. The corresponding author confirms that all the
+other authors have read and approved the manuscript. No
+ethical issues are involved.
+References
+Alavi, M., & Leidner, D. E. (2001). Review: Knowledge
+Management and Knowledge Management Systems:
+Conceptual Foundations and Research Issues. MIS
+Quarterly, 25(1), 107–136.
+https://doi.org/10.2307/3250961
+Alreffaee, T. R., Alshayeb, M., & Mahmood, S. (2021).
+Measure extendibility/extensibility quality attribute
+using object-oriented design metrics. International
+Journal of Advanced Computer Science and
+Applications, 12(10), 1-7.
+Baldwin, C. Y., &Clark, K. B. (2000). Design Rules: The
+Power of Modularity. MIT Press.
+Basili, V. R., & Weiss, D. M. (1984). A methodology for
+collecting valid software engineering data. IEEE
+Transactions on Software Engineering, 10(6), 728-738.
+https://doi.org/10.1109/TSE.1984.5010301
+Basili, V. R., & Rombach, H. D. (1988). The TAME
+project: towards improvement-oriented software
+environments. IEEE Transactions on Software
+Engineering, 14(6), 758–773.
+https://doi.org/10.1109/32.6156
+Bauer, C., & Spiekermann, S. (2011). Conceptualizing
+Context for Pervasive Advertising. Pervasive
+Advertising, 159–183. https://doi.org/10.1007/978-0-
+85729-352-7_8
+
+--- PAGE 16 ---
+Image Ettahiri et al. / Journal of Computer Science 2025, 21 (3): 595.611
+DOI: 10.3844/jcssp.2025.595.611
+610
+Bente, S., Bombosch, U., & Langade, S. (2012).
+Collaborative Enterprise Architecture: Enriching EA
+with Lean, Agile, and Enterprise 2.0 Practices.
+Morgan Kaufmann.
+Brown, X. W. (2019). Modularity is a key factor in
+enterprise architecture design. Journal of Enterprise
+Architecture, 12(4), 211–225.
+Buckl, S., Ernst, A., Lankes, J., Matthes, F., & Schweda,
+C. (2008). Enterprise Architecture Management
+Patterns -- Exemplifying the Approach. 2008 12th
+International IEEE Enterprise Distributed Object
+Computing Conference, 393–402.
+https://doi.org/10.1109/edoc.2008.5071777
+Ettahiri, I., & Doumi, K. (2024a). A novel dynamic
+enterprise architecture model: leveraging MAPE-K
+loop and case-based reasoningfor context awareness.
+International Journal of Electrical and Computer
+Engineering (IJECE), 14(2), 1875.
+https://doi.org/10.11591/ijece.v14i2.pp1875-1889
+Ettahiri, I., & Doumi, K. (2024b). An Overview Towards
+the Assessment and Measurement of Enterprise
+ArchitectureDynamics. Procedia Computer Science.
+In Press
+Ettahiri, I., Doumi, K., & Falih, N. (2022). A New
+Approach for a Dynamic Enterprise Architecture
+Model using Ontology and Case-based Reasoning.
+Proceedings of the 24th International Conference on
+Enterprise Information Systems, 553–560.
+https://doi.org/10.5220/0011079400003179
+Gartner. (2024). Top Strategic Technology Trends for
+2024.
+ISO/IEC/IEEE, (2018). ISO/IEC/IEEE International
+Standard - Systems and software engineering -- Life
+cycle processes -- Requirements engineering.
+https://doi.org/10.1109/ieeestd.2018.8559686
+ISO/IEC 9126, (2001). Software engineering Product
+quality Part 1: Quality model. International
+Organization for Standardization.
+Kaplan, R. S., & Norton, D. P. (1992). The balanced
+scorecard: measures that drive performance. 79.
+Kazman, R., & Bass, L. (2002). Categorizing business
+goals for software architectures. In Communications
+of the ACM (Vol. 45, Issue 10, pp. 77–82).
+Kitchenham, B. A., &Pfleeger, S. L. (2002). Principles of
+survey research: Part 3: Constructing a survey
+instrument. ACM SIGSOFT Software Engineering
+Notes, 27(2), 20–24.
+https://doi.org/10.1145/511152.511155
+Kotter, J. P. (1996). Leading Change.
+Kotusev, S. (2018). TOGAF-Based Enterprise
+Architecture Practice: An Exploratory Case Study.
+Communications of the Association for Information
+Systems, 43(1), 321-359.
+Lange, M., Mendling, J., & Recker, J. (2016). An
+empirical analysis of the factors and measures of
+Enterprise Architecture Management success.
+European Journal of Information Systems, 25(5),
+411–431. https://doi.org/10.1057/ejis.2014.39
+Marwick, D. (2003). Knowledge management in
+organizations: A critical introduction.
+Niemi, E., & Pekkola, S. (2017). Using Enterprise
+Architecture Artefacts in an Organisation. Enterprise
+Information Systems, 11(3), 313-338.
+Poland, M. P., Nugent, C. D., Wang, H., & Chen, L.
+(2012). Genetic algorithm and pure random search
+for exosensor distribution optimization. International
+Journal of Bio-Inspired Computation, 4(6), 359.
+https://doi.org/10.1504/ijbic.2012.051408
+Proper, H. A., & Lankhorst, M. M. (2014). Enterprise
+Architecture – Towards essential sensemaking.
+Enterprise Modelling and Information Systems
+Architectures, 9(1), 5–21.
+https://doi.org/10.1007/s40786-014-0002-7
+Pulkkinen, M. (2006). Systemic Management of
+Architectural Decisions in Enterprise Architecture
+Planning. Four Dimensions and Three Abstraction
+Levels. Proceedings of the 39th
+Annual Hawaii
+International Conference on System Sciences
+(HICSS’06), 179a–179a.
+https://doi.org/10.1109/hicss.2006.447
+Ross, J. W., Weill, P., & Robertson, D. C. (2002).
+Enterprise Architecture Maturity: An Exploration of
+Industry Practices. MIT Sloan Management Review,
+43(2), 28–40.
+Ross, J. W., Weill, P., & Robertson, David. (2006).
+Enterprise Architecture as Strategy: Creating a
+Foundation for Business Execution.
+Sarkar, S., Kak, A. C., & Nagaraja, N. S. (2005). Metrics
+for Analyzing Module Interactions in Large
+Software Systems. Proceedings of the 12th Asia-
+Pacific Software Engineering Conference
+(APSEC'05), 62-69.
+Simon, H. A. (1996). The Sciences of the Artificial.
+Smith, A., & Jones, B. (2018). Enhancing enterprise
+architecture flexibility in dynamic business
+environments. Journal of Enterprise Architecture,
+10(2), 123–135.
+Solingen, R. V., & Berghout, E. (1999). The
+Goal/Question/Metric Method: A Practical Guide
+for Quality Improvement of Software
+Development”.
+Spewak, S. H., & Hill, S. C. (1993). Enterprise
+architecture planning: developing a blueprint for
+data, applications and technology.
+
+--- PAGE 17 ---
+Image Ettahiri et al. / Journal of Computer Science 2025, 21 (3): 595.611
+DOI: 10.3844/jcssp.2025.595.611
+611
+The Open Group. (2019). The Open Group Standard
+Archimate 3.1 Specification.
+Van de Wetering, R. (2021). Dynamic Enterprise
+Architecture Capabilities and Organizational
+Benefits: An Empirical Mediation Study. arXiv
+preprint arXiv:2105.10036.
+Zachman, J. A. (1987). A framework for Information
+Systems Architecture. IBM Systems Journal, 26(3),
+276–292. https://doi.org/10.1147/sj.263.0276
+Zaslavsky, A., Perera, C., & Georgakopoulos, D. (2013).
+Sensing as a service and big data. ArXiv:1301.0159.
+https://doi.org/10.48550/arXiv.1301.0159

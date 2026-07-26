@@ -1,0 +1,1387 @@
+--- PAGE 1 ---
+
+
+Citation: Levstek, A.; Pucihar, A.;
+Hovelja, T. Towards an Adaptive
+Strategic IT Governance Model for
+SMEs. J. Theor. Appl. Electron.
+Commer. Res. 2022, 17, 230–252.
+https://doi.org/10.3390/
+jtaer17010012
+Academic Editor:
+Eduardo Álvarez-Miranda
+Received: 30 October 2021
+Accepted: 17 January 2022
+Published: 24 January 2022
+Publisher’s Note: MDPI stays neutral
+with regard to jurisdictional claims in
+published maps and institutional affil-
+iations.
+Copyright: © 2022 by the authors.
+Licensee MDPI, Basel, Switzerland.
+This article is an open access article
+distributed under the terms and
+conditions of the Creative Commons
+Attribution (CC BY) license (https://
+creativecommons.org/licenses/by/
+4.0/).
+Article
+Towards an Adaptive Strategic IT Governance Model for SMEs
+Aleš Levstek 1,*, Andreja Pucihar 1 and Tomaž Hovelja 2
+1 Faculty of Organizational Sciences, University of Maribor, 4000 Kranj, Slovenia; Andreja.Pucihar@um.si
+2 Faculty of Computer and Information Science, University of Ljubljana, 1000 Ljubljana, Slovenia;
+Tomaz.Hovelja@fri.uni-lj.si
+* Correspondence: levsteka@gmail.com; Tel.: +386-(0)51699040
+Abstract: Information technology (IT) can have a direct and indirect impact on business performance.
+New technologies change the risks at the strategic and governing levels of an enterprise. In the
+age of digitalization, we need to develop new understandings and approaches to governance and
+management. The most established IT governance (ITG) models, such as COBIT, ITIL and CMMI, are
+universal, one-size-fits-all models that are not in line with contingency theory and are predominantly
+designed for large multinational enterprises. They are too cumbersome and cost-intensive for small
+and medium enterprises (SMEs) to use effectively. Therefore, there is a need to develop more
+efficient models that are contingency-based and easier to implement than existing models and thus
+adaptable to the actual needs of the business. This paper presents an empirical evaluation of key ITG
+mechanisms from the literature that clearly shows that several are not universally but situationally
+necessary, thus demonstrating the need for new contingency-based ITG models.
+Keywords: IT governance; IT governance mechanisms; IT governance models; contingency IT
+governance model
+1. Introduction
+Rapid technological development dictates rapid changes and adjustments in enter-
+prises at all levels, requiring new strategies and approaches to corporate governance and IT
+governance (ITG) [1]. In the beginning, the role of information technology (IT) was mainly
+to automate business processes, while today it is perceived as the main driver for the value
+creation of an enterprise [2]. However, without effective ITG, it can also negatively affect
+and reduce business value [2]. One of the critical factors for efficient and successful use
+of IT in enterprises is ITG [3]. Previous research has shown the positive impact of ITG
+on business operations. Effective governance adds value to IT projects and reduces IT
+and project risks [4], allowing control over IT functions [4]. Even more, an enterprise’s
+competitive advantage and differentiation depend on effective ITG [5].
+Although ITG is the subject of much discussion among researchers and practitioners, it
+remains a poorly understood area that is constantly changing and becoming more complex.
+After more than 30 years of ITG research, there are still many new themes [6]. For example,
+the literature often states that ITG is a part of corporate governance. Unfortunately, in
+practice, ITG is often the weakest part of corporate governance [2]. The main reasons for
+this are lack of awareness and insufficient knowledge about IT among top management, in
+addition to a lack of commitment to the acquisition of knowledge in this area [2,7–10].
+Another problem is that previous ITG research has mainly focused on management
+rather than governance [1,11]. The boundary between management and governance is
+determined by governance itself and is not clearly defined. In contrast, little research has
+been conducted on the role of supervisory functions (supervisory board, audit committee,
+etc.) in ITG [2,8]. It is clear that the supervisory function has a significant impact on the
+efficiency of ITG and thus on business performance [2]. The supervisory role is excluded
+J. Theor. Appl. Electron. Commer. Res. 2022, 17, 230–252. https://doi.org/10.3390/jtaer17010012 https://www.mdpi.com/journal/jtaer
+
+--- PAGE 2 ---
+J. Theor. Appl. Electron. Commer. Res. 2022, 17 231
+from the day-to-day operations of the enterprise. However, it must provide control over
+the management, business plans, enterprise guidance, and management support.
+Enterprises have several frameworks to choose from and do not know which are the
+most suitable for their purpose. A growing number of ITG and related frameworks have
+been developed to help enterprises deal with the various components of ITG, including
+COBIT, PMMM, PMBOK, ITIL, CMMI, Prince2, ISO 9000, ISO 17799, Balanced Scorecard, 6
+Sigma, CGEIT, Lean IT, OPBOK, BABOK, AGILE and others [12–15]. All these frameworks
+represent the standards, guidelines and tools that make up the ITG models.
+Current ITG models are too universal, one-size-fits-all administrative nightmares [16–18]
+and were predominantly designed with large corporations in mind [19]. The most used
+frameworks to support ITG implementation in enterprises are the Information Technology
+Infrastructure Library (ITIL) and the Control Objectives for Information Technologies (CO-
+BIT). ITIL is a complex framework with many dependencies between processes that make
+it difficult to implement by enterprises. Furthermore, COBIT is too general and requires
+deep expert knowledge for its implementation [20,21]. However, many frameworks are
+similar and have much more in common than it seems at first glance. We have noticed
+that frameworks overlap with each other, something which hugely increases the effort of
+enterprises because some IT areas may need to use more than one framework to complete
+their tasks concisely and coherently.
+Although enterprises are aware of the importance of ITG, the use of any of the well-
+known ITG models is still low [22–24], especially for small and medium enterprises
+(SMEs) [25]. SMEs represent 99% of all enterprises in Europe [26]. These enterprises
+contribute to socio-economic development by employing most of the workforce and en-
+couraging flexibility and innovation to new market demands [27]. Given their importance,
+it is crucial that their IT investment also deliver the expected business value while associ-
+ated risks are managed [25]. Researchers such as Bergeron and Croteau [28,29], and Devos,
+Landeghem and Deschoolmeester [30] emphasize that SMEs cannot be treated similarly to
+large enterprises. We need to consider significant differences from economic, cultural, and
+management perspectives [26,31].
+Most ITG theories and frameworks are criticized for being intended for large enter-
+prises rather than SMEs. This is because they do not consider the specific characteristics
+of SMEs that distinguish them from larger enterprises [32], especially in terms of their
+organizational structures, financial and IT resources and IT management structures [33].
+For example, the decision-making structures of SMEs tend to be flat, informal and cen-
+tralized [25]. Furthermore, time can also be an issue for these enterprises as owners and
+managers are regularly overloaded with other business priorities [25]. Financial and IT-
+related resource limitations are much more significant in SMEs. As a result, they spend
+much less on IT [33] and have difficulty finding capable IT employees [34]. In addition,
+SME employees are more likely to be hired for their business skills to ensure core business
+survival and not necessarily for their technology skills. Therefore, SME employees may not
+be aware of the potential benefits and costs [25].
+In addition, there is no clear definition in the literature of the most appropriate ap-
+proach for implementing ITG in the enterprise. There are also no models based on the
+contingency approach. Following the contingency approach in management [35–37], we
+believe that a contingency approach is also needed in the field of implementing ITG. The
+contingency approach attempts to understand the interrelationships within and between
+organizational subsystems and between the organizational system as a whole and its envi-
+ronments. It emphasizes the multivariate nature of enterprises and attempts to interpret
+and understand how they operate under varying conditions [38,39].
+The existing literature insists on universal ITG models that are too robust and complex
+for implementation in SMEs. As SMEs represent 99% of all enterprises in the EU, create
+around 100 million jobs, and contribute more than half of Europe’s GDP, they play a key role
+in adding value in every sector of the European economy [40]. As the role of IT increases in
+
+--- PAGE 3 ---
+J. Theor. Appl. Electron. Commer. Res. 2022, 17 232
+every enterprise to remain or to gain competitive advantage, there is a need to investigate
+which ITG models would be more suitable for SMEs.
+Moreover, there is no clear answer to the need for a contingency approach in ITG
+implementation. Therefore, our study aims to investigate whether current approaches to
+implementing ITG mechanisms expected from current ITG models are suitable for SMEs.
+In this study, we focus on two research questions. The first question relates to identifying
+strategic level ITG mechanisms—(RQ1): What are the strategic level ITG mechanisms? The
+second research question relates to investigating whether the key ITG mechanisms are all
+universal or whether some are situational so that their importance changes during a time of
+implementation and use—(RQ2): Are the key ITG mechanisms all universal? To answer these
+questions, we first conducted an in-depth literature review and defined ITG mechanisms
+at a strategic level. Then, to validate the existing theory and assess the universality of the
+identified ITG mechanisms at the strategic level, we conducted a case study in a medium-
+sized enterprise in the insurance industry. As part of the case study, five interviews were
+conducted with managers at the strategic level of the enterprise: president of the supervisory
+board (SUB), president of the audit committee (ACO), top management member, responsible for IT
+(TOM), chief information officer (CIO) and chief business officer (CBO). The study confirmed
+that half of 30 identified ITG mechanisms at the strategic level can be considered situation
+based. Since these results are based on a single case study, they cannot be generalized.
+However, the results expose a serious limitation of current universal one-size-fits all ITG
+models, where the situational relevance of ITG mechanisms is mostly ignored. Thus, our
+results present a strong case for researchers to move beyond non-situational ITG models
+and develop new adaptive strategic ITG models based on a situational approach.
+After the introduction, we present the methodology, where the literature review
+protocol and case study design are presented. This is followed by a detailed presentation
+of the case study and the results of five interviews. After this, we discuss research results
+and relate them to existing literature. The last part of the article presents the conclusions,
+limitations and recommendations for future research.
+2. Materials and Methods
+Our research is exploratory and theory testing because research in the ITG field
+and its contingency factors is in the early stages. Exploratory research often builds on
+secondary research, “such as reviewing available literature and/or data or qualitative
+approaches such as informal discussions with customers, employees, the management or
+in-depth interviews, focus projective group methods, case studies or pilot studies” [41]. The
+methodology for answering two research questions can be divided as follows. In the first
+part, which refers to the definition of ITG mechanisms at the strategic level, we used a depth
+literature review. The literature review results are a list of ITG mechanisms recognized in
+the literature as mechanisms of the strategic level. To answer the second research question
+referring to the suitability of current approaches in implementing universal mechanisms:
+Are the critical ITG mechanisms all universal? a case study with semi-structured interviews
+was undertaken by five members of strategic management in the medium-sized enterprise
+from the insurance industry.
+2.1. Literature Review
+To identify ITG mechanisms, we conducted an extensive, in-depth literature review. A
+review of previous, relevant literature is an essential feature of any scientific research. An
+effective review establishes a foundation for advanced knowledge and facilitates theory
+development, closes areas where substantial research exists, and uncovers areas where
+research is needed [42]. A literature review is defined as “the use of ideas in the literature to
+justify the particular approach to the topic, the selection of methods, and the demonstration
+that this research contributes something new” [43]. To begin a literature review, it is
+recommended to start with the conceptualization of the topic and a definition of key terms
+to derive meaningful search terms. Using these terms, we began examining journal articles
+
+--- PAGE 4 ---
+J. Theor. Appl. Electron. Commer. Res. 2022, 17 233
+and some of the most prominent communities, such as the OECD, ITGI, IEEE, ISACA, and
+publications in conference proceedings. For an initial set of databases, we used the list
+of journals indexed in Journal Citation Reports. We also searched the Web of Science for
+articles with the highest number of citations, which formed the basis for identifying relevant
+databases, journals, and conference proceedings. We searched for the following terms: “IT
+Governance”, “IT Governance models”, “Contingency IT Governance model”, and “IT
+Governance mechanisms”. After collecting the initial set of publications, we read the titles
+and abstracts of these publications and excluded those unrelated to the ITG domain. To
+develop a list of relevant ITG mechanisms, we selected mechanisms that were repeated in
+at least three articles. We limited ourselves only to mechanisms that are recognized in the
+literature as strategic-level mechanisms.
+2.2. Identification of Strategic ITG Mechanisms
+Governance is a concept that can be used in many contexts and is now a well-known
+term in business. It is focused on the role of boards of directors in representing and
+protecting the interests of shareholders [44,45] and addresses the proper management
+of enterprises [46]. While governance developments have primarily been driven by the
+need for the transparency of enterprise risks and the protection of shareholder value, the
+pervasive use of IT has created a critical dependency on IT that calls for a specific focus
+on ITG. Boards and executive management need to extend governance to IT and provide
+leadership, organizational structures and processes that ensure that the enterprise’s IT
+sustains and extends its strategies and objectives [14].
+The literature more frequently addresses enterprises governed through a one-tier
+corporate governance system, where one governing body (the board) performs the function
+of direction and supervision. In literature, this level of governance is referred to as “board-
+level” in terms of board-level ITG or board-level ITG mechanisms. However, in the two-tier
+system of corporate governance, which is often present in the European-continental area,
+supervision is separated from the corporate direction. The supervisory role is performed by
+the supervisory board, which supervises the board of directors entrusted with the direction.
+In this case, the name “board level” might lead us to misunderstand which levels are
+included in this denomination. To find a denomination appropriate for the one-tier and
+two-tier corporate governance systems, we decided to use the name “strategic level”, which
+covers both the supervisory bodies and the direction bodies. It is generally accepted that
+the definition of “strategic level” in this article is the same as that of “board level”, which
+in the literature deals with enterprises managed under a one-tier governance system.
+SeveralauthorsarguethatenterprisesshouldimplementITGoverITmechanisms[47,48].
+ITG can be deployed using various structures, processes and relational mechanisms [49]
+that encourage behaviors consistent with the organization’s mission, strategy, values,
+norms, and culture [50]. In the literature, several authors have presented approaches to
+implement ITG through mechanisms, but few researchers attempt to describe and fully
+explain ITG mechanisms. Moreover, there is no consensus on all existing ITG mechanisms.
+Forexample, WeillandRose[48]mentioncommunicationmechanisms, whileGrembergenand
+De Haes [51] use rational mechanisms for the same type of ITG mechanisms. In the literature
+review, we highlight three of the more influential studies in the field and their attempts to
+identify key ITG mechanisms. The first study was conducted by Weill and Rose [48] of the
+Massachusetts Institute of Technology. Their research team took five years to investigate
+300 enterprises in more than 20 countries and established a framework for analyzing ITG
+known as the CISR Pattern. Their research addressed enterprises in different industries
+and sought to understand how the style of governance used by strategic management
+affects significant IT decisions. The second approach was provided by Grembergen and De
+Haes [51]. Their research lists necessary ITG mechanisms by defining a minimum set of
+mechanisms to support ITG. Their research also addresses the difficulty of implementing
+an individual mechanism and the effectiveness of those mechanisms. However, their study
+was mostly conducted in Belgian financial services enterprises employing between 100
+
+--- PAGE 5 ---
+J. Theor. Appl. Electron. Commer. Res. 2022, 17 234
+and 1000 employees. Third study was conducted by Almeida, Pereira and Da Silva [52].
+They analyzed more than 50 case studies to extract the ITG mechanisms used in the
+enterprises. We listed all relevant ITG mechanisms at the strategic level based on an
+extensive literature review, described them and provided the main references. We included
+only those mechanisms for which there are at least three references. In preparing the
+final list of mechanisms, we made some adjustments. For example, we decided to use
+the term relational mechanisms used by Grembergen and De Haes [51] instead of the term
+communication mechanisms used by Weill and Rose [48]. We used those names and terms
+that are more common in the literature. In contrast, a mechanism was classified at the
+strategic level if it was mentioned in the literature as a mechanism at the strategic level,
+regardless of the iteration number.
+ITG structures enable IT to transparently provide added business value, clearly de-
+fined competencies and responsibilities while managing risks and considering business
+needs [53]. The structures define the roles, accountabilities, and responsibilities within
+the organization for all IT-related issues. They include the enterprise’s organization, the
+role of IT, the existence of clearly defined roles, competencies and responsibilities, and
+various committees. When setting up the ITG, it is essential to define and formalize roles,
+competencies, and responsibilities. Defining roles does not only mean writing them down
+but performing them. All ITG stakeholders must have defined roles. One of the essen-
+tial structural mechanisms is the strategic ITG committee, which operates at the strategic
+level of the enterprise. The committee consists of top management, B-1 managers and
+managers and experts responsible for decision-making in the enterprise [48,54,55]. The
+structural mechanisms derived from the literature review and defined as strategic level
+ITG mechanisms are shown in Table 1.
+Table 1. Strategic ITG structural mechanisms.
+Structural Mechanisms Definition Literature
+Strategic ITG committee
+The Strategic ITG committee is situated at an executive level.
+It is responsible for supervising and assisting management
+in strategic issues and the strategic direction of IT.
+[48,51,52,56–59].
+Integration of governance
+Unambiguous definitions of roles, responsibilities and
+competencies are a crucial prerequisite for an effective ITG,
+which is the responsibility of top management.
+[48,49,51,52,57,60].
+IT competencies at the top
+management level
+Members of the top management must have appropriate IT
+competencies, consisting of knowledge and experience in
+ITG, which enables them to direct and manage IT on the
+strategic level.
+[48,51,52,57,61].
+IT investment committee
+The IT investment committee is responsible for evaluating
+and approving significant IT investments. Other strategic
+committees may also cover the activities of this committee.
+[48,51,52,59,61,62].
+IT organizational structure
+The possibility of effective ITG also depends on the
+organizational structure, how the IT function is organized
+and where the IT decision-making authority is located in
+the organization.
+[35,48,49,51,52,61–64].
+IT audit committee
+The IT audit committee is an independent body at the level
+of corporate governance, which is responsible for
+identifying and managing IT risks on a strategic level.
+[48,51,52,57,65].
+ITG processes with their inputs, outputs, roles, and responsibilities determined by the
+definition of each process, define the ITG [66]. Processes usually evolve from structural
+mechanisms. By coordinating between the IT and the business, the enterprise must design
+the ITG processes, which are an integral part of the corporate governance [55]. When
+business and IT goals are aligned, it is essential to ensure successful and efficient ITG
+processes. Established ITG systems contain a diverse set of general IT governance and man-
+
+--- PAGE 6 ---
+J. Theor. Appl. Electron. Commer. Res. 2022, 17 235
+agement processes. Depending on the strategy and goals, the enterprise can develop the
+processes that will significantly impact IT support and business strategy. It is necessary to
+identify the owners of the processes and define each individual process’s scope and control
+objectives. With the interconnection of individual processes, it is required to determine the
+inputs and outputs of each process, as well as competencies and responsibilities, such as a
+responsibility assignment matrix [67]. The process mechanisms derived from a literature
+review and defined as strategic level ITG processes are shown in Table 2.
+Table 2. Strategic ITG process mechanisms.
+Process Mechanisms Definition Literature
+Financial reporting and control
+Financial reporting and control is an essential ITG process
+related to monitoring the financial plan, reviewing costs,
+and investments and project costs.
+[48,50–52,57,68].
+Project reporting and
+benefits management
+Formal monitoring of IT business value improves
+knowledge and understanding of how IT can create
+business value. In addition, monitoring completed projects
+determine whether the planned business goals have
+been achieved.
+[48,51,52,57,69].
+Architectural exception process
+Technology standards are critical to IT and business
+efficiency, though occasional exceptions are not only
+appropriate but necessary. Enterprises use the exception
+process to meet unique business needs and gauge when
+existing standards are becoming obsolete.
+[6,48,51,52,70].
+ITG assurance and self-assessment
+Regular self-assessment and external verification of the ITG
+system should be an integral part of effective ITG.
+[52,57,59,71].
+Strategic information system planning
+Strategic information system planning is aligning an
+enterprise’s business strategy with an IT strategy to achieve
+key business goals. It represents one of the essential
+activities of strategic management.
+[48,49,51,52,55–57,69].
+IT portfolio management
+Portfolio management is an answer to the following
+question: “How can we maximize the business value from
+IT investments”? Portfolio management manages IT as a
+portfolio of assets similar to a financial portfolio and strives
+to improve the portfolio’s performance by balancing risk
+and return.
+[51,52,57,60,62,72].
+IT risk management
+IT risk management must ensure the protection of IT
+resources, disaster recovery and business continuity.
+Therefore, top management must understand and identify
+IT risks and thus ensure that critical risks are under control.
+[6,48,52,53,65].
+IT performance measurement
+IT performance measurement (e.g., IT balanced scorecard) is
+essential in the domains of Business Contribution, User
+Orientation, Operational Excellence and Future Orientation.
+[49,51,60].
+Resource management
+IT resource management is an essential process for IT that
+needs to be appropriately managed to achieve business
+performance and efficiency and ensure the proper allocation
+of IT resources.
+[6,51,52,73].
+Business/IT alignment
+Business/IT alignment is one of the fundamental goals of
+ITG. Alignment is a complex concept that can be evaluated
+through one of the alignment models, e.g., the Strategic
+Alignment Model.
+[48,51,52,56,60,65].
+
+--- PAGE 7 ---
+J. Theor. Appl. Electron. Commer. Res. 2022, 17 236
+Table 2. Cont.
+Process Mechanisms Definition Literature
+Compliance management
+Business development and regulatory regulations are
+increasing, especially in the financial industry. As a result,
+compliance management (e.g., GDPR, Solvency, Basel, IDD,
+etc.) is becoming more widespread and burdensome for
+enterprises. Still, at the same time, it is developing
+compliance management in enterprises.
+[6,51,52,71,74,75].
+Digital transformation
+Digital management includes all those corporate
+mechanisms that enable the coordinated operation and
+sharing of resources throughout the enterprise. Digital
+transformation requires a balanced top-down and
+bottom-up approach.
+[52,69,76,77].
+Improvement and
+innovation management
+The widespread use of IT and information systems create
+many opportunities for innovation and improvement in
+corporate governance. IT has become a valuable tool and
+resource in all senses of modern business strategy.
+[52,73,78,79].
+Investment management
+Determining how much money to invest in IT is crucial and
+distributing it between maintenance, services, human
+resources, and new projects. However, both the lack and
+excess of IT investment can jeopardize its operations.
+[50,52,55,60,73,80].
+Outsourcing management
+Whatever the risks, outsourcing IT services is an
+opportunity for a company to increase its capacity and
+optimize costs. For this reason, outsourcing IT services is a
+crucial element of ITG.
+[52,53,71,81].
+ITG relational mechanisms represent cooperation and communication between IT and
+business. Appropriate communication and knowledge sharing, combined with learning
+and teaching, are essential [48,54,55]. Relationships are a crucial mechanism for ITG to
+achieve and maintain alignment between IT and the business, even when appropriate
+structures and processes are in place. The maturity of relationships in the enterprise is
+related to the degree to which the enterprise has managed to establish channels to ensure
+the flow of information and disseminate the principles of ITG. Enterprises with good
+relations between IT and the business have shown suitable communication mechanisms
+that encourage IT and the business side’s cooperation. Nothing is more effective than a
+constructive dialogue between employees. Encouraging direct communication between
+IT and the business can be implemented through various mechanisms. Both horizontal
+and vertical communication within an enterprise is necessary to maximize efficiency. This
+is especially true for top management, where information sharing is crucial. The relation
+mechanisms derived from a literature review and defined as relationships at the strategic
+level of ITG are shown in Table 3.
+Table 3. Strategic ITG relational mechanisms.
+Relational Mechanisms Definition Literature
+Active principal participation
+This mechanism provides for the owner’s active
+involvement in the governance process. It is more
+pronounced in the case of a one-tier corporate government
+system, where owners mostly take on the role of
+non-executive directors.
+[48,52,56,60,64].
+IT leadership
+The Chief Information Officer in the enterprise must present
+the enterprise’s mission, vision, and strategy in a way that
+all IT stakeholders understand. In this context, IT leadership
+represents coordination throughout the enterprise at
+all levels.
+[48,54,57,59,68].
+
+--- PAGE 8 ---
+J. Theor. Appl. Electron. Commer. Res. 2022, 17 237
+Table 3. Cont.
+Relational Mechanisms Definition Literature
+ITG awareness campaigns
+The campaigns aim to raise the awareness of all employees
+in the company about ITG. Working with management staff
+clinging to standard (current) approaches are essential to
+understanding the ITG.
+[48,54,57].
+Senior management announcements
+Notices from top management explaining an enterprise’s
+priorities usually receive considerable attention.
+Commitment to strategic goals helps all employees to focus
+their attention on strategic objectives.
+[48,52,61,82].
+Partnership rewards and incentives
+Companies ensure that employees follow the enterprise’s
+strategy through financial rewards and employee
+promotions that help the company achieve strategic goals.
+[48,51,52,60,64,82].
+Shared understanding of
+business/IT objectives
+A unified understanding of business goals between IT and
+the business side is the ability of employees to understand
+and cooperate in achieving common goals and in respecting
+each other’s contribution and opinion.
+[48,51,52,56,60,63,64].
+Corporate internal communication
+addressing on a regular basis
+It is necessary to establish regular internal communication
+about the IT activities of all employees in the enterprise.
+Best monthly, where information on IT activities and their
+impact on the business page is prepared.
+[48,52,57,59,62,63].
+Knowledge management on ITG
+In the knowledge management of ITG knowledge in the
+enterprise, systems for the exchange and distribution of ITG
+knowledge are essential.
+[48,52,57,59].
+Executive/senior management give a
+good example
+The enterprise’s management, including the top
+management, treats IT management as a partner and
+supports standards, policies, and norms through
+their actions.
+[41,48,54,57].
+2.3. Case Study Design
+A case study is a method of intensive research with which we analyze and describe
+in detail the subject of research in time and its natural environment or space. The method
+is helpful for both theory testing and the development of new theories and is often used
+for studies in business environments [83]. The case study provides an in-depth contextual
+analysis of cases and relationships between them [84]. It is suitable for new research fields or
+cases where existing theories are inadequate or incomplete [85]. It is useful when we want
+the research conclusions to be descriptive rather than causal, when internal comparability
+is more important than external representativeness, and when we are more interested in
+the causal mechanisms than in the causal effects [86].
+Like any other research method, the case study has its weaknesses and limitations,
+which we have primarily considered when carrying out the research itself. Compared
+with other methods, the most frequent criticism of the case study is the provision of rigor
+and objectivity [87–90]. To increase validity and reliability, we relied on the techniques
+recommended by Yin [90]. In carrying out the case study, we relied on existing and verified
+theories and used the concept of matching samples to evaluate the mechanisms themselves.
+As a disadvantage, generalization is also exposed due to restriction to one or a lesser
+number of research cases [84,88–91]. Our goal is not to validate a new theory but to test an
+existing one. If we can show that the existing theory is not valid for one case, we will be
+setting guidelines that are good enough for continuing our research, based on the second
+established theory (contingency theory), which can be used to develop an adaptive ITG
+model through future research.
+According to the research subject, we decided to carry out a case study of an enterprise
+that is part of a financial insurance group in SE Europe. The interviewees, who participated
+in the research, come from one enterprise in the Adria region’s leading insurance and
+
+--- PAGE 9 ---
+J. Theor. Appl. Electron. Commer. Res. 2022, 17 238
+financial group, one of the leading enterprises in south-eastern Europe. The group operates
+in seven markets in six countries, and through partnerships, with foreign insurance and
+reinsurance companies, it works in a broader international environment. The enterprise
+that was the subject of the survey employs 765 people, generating an annual premium
+of EUR 58 million. The enterprise has a history of operations dating back to 1972 and
+has a rich tradition. The enterprise is recognized as a leading provider of innovative and
+comprehensive insurance products and asset management in its environment.
+For research purposes, a semi-structured interview was used, which we conducted at
+the different levels in the enterprise. The interviews were conducted at the strategic level
+of management: (1) supervisory level: the interview included the president of the supervisory
+board (SUB) and the president of the audit committee (ACO); (2) top management level: the
+interview included the top management member (TOM), who is responsible for IT. The
+interview also included the Chief Information Officer (CIO) and the Chief Business Officer (CBO)
+as representatives of business management. Basic information about the interviewees is
+shown in Figure 1. Interviews were conducted with all crucial supervisory board and
+top management members that represent key interest groups in the enterprise’s strategic
+decision-making levels.
+JTAER 2022, 17, FOR PEER REVIEW 9
+For research purposes, a semi-structured interview was used, which we conducted
+at the different levels in the enterprise. The interviews were conducted at the strategic
+level of management: (1) supervisory level: the interview included the president of the super-
+visory board (SUB) and the president of the audit committee (ACO); (2) top management level:
+the interview included the top management member (TOM), who is responsible for IT. The
+interview also included the Chief Information Officer (CIO) and the Chief Business Officer
+(CBO) as representatives of business management. Basic information about the interview-
+ees is shown in Figure 1. Interviews were conducted with all crucial supervisory board
+and top management members that represent key interest groups in the enterprise’s stra-
+tegic decision-making levels.
+Figure 1. Personal information of interviewees.
+The case study aims to answer the second research question (RQ2): Are the key ITG
+mechanisms all universal? The implementation of the research itself follows the methodol-
+ogy of the case study by Yin [90]. The survey protocol was adapted to the researcher’s
+ability to conduct the survey and systematic data retrieval, which is the basis for the im-
+plementation of the interview. All five participants were presented with mechanisms
+stemming from the first research question and were discussed in the interview. As part of
+the interview, we aimed to verify whether all the ITG mechanisms were present from the
+very beginning of the ITG and whether they were important all the time since the ITG was
+implemented. We were also interested in the method and approach of the enterprise to
+the implementation of the mechanisms and the most established IT governance (ITG)
+models, such as COBIT, ITIL and CMMI.
+Apart from demographic questions, the interview consisted of substantive questions:
+(1) Which of the presented ITG mechanisms do you consider important? Has their mean-
+ing changedover time? If yes, how? To also detect important mechanisms from some time
+ago, we also asked the question: (2) Have other mechanisms been important in the past?
+Which ones? Why are they no longer important? To assist with the study protocol, a da-
+tabase in MS Excel format was created containing all the essential elements, code lists and
+instructions for conducting interviews and storing and recording notes during the inter-
+view. In addition to the data collected by the interviews, the database also contains sum-
+maries and transcripts of individual statements, sent documentation, a video or audio re-
+cording of the interview, a signed statement by the interviewee to participate in the re-
+search and data processing, and other collected documentation about the case in question.
+We prepared an e-mail template for the interview invitation, which was sent to all inter-
+viewees. In addition to the content of the e-mail, which briefly described the purpose and
+objectives of the interview and the course of the interview, the e-mail contained the fol-
+lowing attachments: descriptions of the mechanisms that were the subject of the inter-
+views and an accession statement for participation in the research and permission for data
+processing using a questionnaire. Before drafting the final questionnaire, we conducted a
+pilot interview with one of the interviewees, which was the basis for adapting the ques-
+tionnaire approach and the order of the questions. A total of 5 interviews were conducted.
+Figure 1. Personal information of interviewees.
+The case study aims to answer the second research question (RQ2): Are the key ITG
+mechanisms all universal? The implementation of the research itself follows the methodology
+of the case study by Yin [90]. The survey protocol was adapted to the researcher’s ability to
+conduct the survey and systematic data retrieval, which is the basis for the implementation
+of the interview. All five participants were presented with mechanisms stemming from the
+first research question and were discussed in the interview. As part of the interview, we
+aimed to verify whether all the ITG mechanisms were present from the very beginning of
+the ITG and whether they were important all the time since the ITG was implemented. We
+were also interested in the method and approach of the enterprise to the implementation
+of the mechanisms and the most established IT governance (ITG) models, such as COBIT,
+ITIL and CMMI.
+Apart from demographic questions, the interview consisted of substantive questions:
+(1) Which of the presented ITG mechanisms do you consider important? Has their meaning
+changed over time? If yes, how? To also detect important mechanisms from some time ago,
+we also asked the question: (2) Have other mechanisms been important in the past? Which
+ones? Whyaretheynolongerimportant? Toassistwiththestudyprotocol, adatabaseinMS
+Excel format was created containing all the essential elements, code lists and instructions for
+conducting interviews and storing and recording notes during the interview. In addition to
+the data collected by the interviews, the database also contains summaries and transcripts
+of individual statements, sent documentation, a video or audio recording of the interview, a
+signed statement by the interviewee to participate in the research and data processing, and
+other collected documentation about the case in question. We prepared an e-mail template
+for the interview invitation, which was sent to all interviewees. In addition to the content
+of the e-mail, which briefly described the purpose and objectives of the interview and the
+course of the interview, the e-mail contained the following attachments: descriptions of
+the mechanisms that were the subject of the interviews and an accession statement for
+
+--- PAGE 10 ---
+J. Theor. Appl. Electron. Commer. Res. 2022, 17 239
+participation in the research and permission for data processing using a questionnaire.
+Before drafting the final questionnaire, we conducted a pilot interview with one of the
+interviewees, which was the basis for adapting the questionnaire approach and the order
+of the questions. A total of 5 interviews were conducted. On average, the interview lasted
+1.2 h. The number of interviews conducted to make qualitative research credible varies
+from one author to another. All authors point out that the only objective criterion is data
+saturation, where data are repeated and do not contribute to new knowledge [92–94], which
+was also considered in the interviews.
+The evaluation of the mechanisms was carried out in such a way that we recorded the
+opinion of our interviewees on the questions raised about the mechanisms, their impor-
+tance, the dependence of importance on time and other factors, their interconnection and
+their meaning. We then analyzed the frequencies (repeated answers) for the mechanisms
+they consider permanently important or situationally important. The mechanisms that the
+interviewees have identified as being permanently substantial have been described as uni-
+versal mechanisms. The mechanisms, which in most cases are considered to be of particular
+situational or recurrent importance, have been described as situational mechanisms. The
+basis of the analysis is the number of sample matching repetitions on which the importance
+of each mechanism as universal or situational can be determined. Our study is exploratory
+and based on a case study where we used interviews. In the interviews, we followed the
+case study methodology proposed by Yin [90]. We systematically asked all interviewees
+about each ITG mechanism from three different perspectives: which mechanisms were
+significant at the beginning, which are essential now, and how has the importance changed
+over time? If the statement for a particular mechanism is repeated in four (4) out of five (5)
+roles of the interviewees included in the survey, the result was accepted as a satisfactory
+validation of the importance of the mechanism.
+3. Results
+The results of the research can be roughly divided into two parts. The first part of the
+results refers to the literature review and the first research question, which requires the
+definition of ITG mechanisms at the strategic level. The result of the in-depth literature
+reviewisalistofITGmechanisms, whicharerecognizedintheliteratureasITGmechanisms
+of the strategic level and are the basis for performing qualitative research. The second part of
+the results comes from qualitative research and is based on the case study or interviews.
+3.1. Case Study
+In the case study analysis, we limited ourselves to the mechanisms that the intervie-
+wees considered to be situation specific. Their importance depends on the specific situation
+and is not consistently present within the ITG. The following is a summary of the situational
+mechanisms as seen by the interviewees.
+The president of the supervisory board (SUB) is also the executive director of the group
+management area of the parent enterprise. He performs supervisory functions in several
+enterprises and has many years of experience in corporate governance. He is an economist
+by education and started his career in the financial industry in sales. He is very familiar
+with the enterprise’s operations and is aware of the importance of IT, which has a significant
+influence on the enterprise’s strategy. As for structural mechanisms, he pointed to three
+situational mechanisms: integration of governance, IT competencies at the top management level
+and IT organizational structures. The integration of governance is essential when it is necessary
+to define the responsibilities and accountabilities for IT issues in the enterprise. He believes
+that to establish an efficient ITG at the enterprise, the top management needs a certain
+level of knowledge about ITG. If these competencies are not at a sufficient level, there
+will also be no adequate support. He sees IT organizational structures as important when
+ITG building starts, but not otherwise. The integration of governance and IT organizational
+structures are thus important at the beginning of ITG building and depend directly on
+the compatibility of the mechanisms with the existing structures. He highlighted the
+
+--- PAGE 11 ---
+J. Theor. Appl. Electron. Commer. Res. 2022, 17 240
+process mechanisms as situational: financial reporting and control, strategic information system
+planning, digital transformation, and project reporting and benefits management. He sees strategic
+information system planning as a mechanism that is important periodically and as such
+depends on the enterprise’s strategic planning cycle or enterprise strategy and its maturity.
+He sees digital transformation as an external situational mechanism. The financial industry
+introduces novelties when they are verified on the market, and the appropriate legislative
+and regulatory bases must be in place to do so. He sees project reporting and benefits
+management and financial reporting and control as control mechanisms that only become
+noticeable in mature periods when we want to raise the maturity of management. He does
+not see any sense in implementing control mechanisms if there are no management bases
+in place that allow this. In relational mechanisms, he considers the following mechanism
+situational: knowledge management on ITG, which is important in the enterprise from two
+aspects. Firstly, at the beginning of ITG building (establishment) and in situations where
+knowledge about ITG is at a low level, the enterprise needs to acquire basic knowledge
+about ITG and its placement, and then secondly when it is necessary to raise the maturity of
+the ITG. Related to the question about implementing best practices, models, and standards
+such as COBIT, ITIL and CMMI, he answered that they are certainly an important tool, but
+cautioned to not use them as a cooking recipe and using their ITG mechanisms without
+a deep understanding for what reasons they should be applied. He described a bad
+experience he had in the past when the company blindly followed the implementation of a
+project management model without the appropriate knowledge and expertise.
+Thepresidentoftheauditcommittee(ACO)isaformermemberoftheexecutiveboardwho
+has a lot of experience in supervision and top management since he has held this function
+in several enterprises. He had previously encountered the area of ITG as the president
+of the management board, but today he is looking at this area from the viewpoint of the
+audit committee management. In the past, as a representative of top management, he was
+actively involved in the design of ITG mechanisms, which are intended for development
+management, so that he has rich experience in this field. In the case of structural mechanisms,
+he defined as situational the following mechanisms: integration of governance, IT competencies
+at the top management level, IT organizational structure and IT audit committee. Integration
+of governance is important when the enterprise does not know who is competent and
+responsible for IT issues, or what is necessary. IT organizational structure is important when
+needed to position IT at the same level as other business functions. At the beginning of the
+establishment of the ITG and later, to increase the level of maturity and implement new
+mechanisms, management support and a certain level of knowledge are required, which
+he sees in the role of the IT competencies at the top management level mechanism. In the case
+of the IT audit committee, he believes that, in a situation where the committee has to deal
+with IT issues, it needs at least one member who understands IT and can explain it to the
+other members. In process mechanisms, he defined as situational the following: financial
+reporting and control, project reporting and benefits management, IT performance management,
+digital transformation, investment management and outsourcing management. He thinks that
+financial reporting and control are feasible and essential when the financial service and other
+business areas support this, requiring a specific enterprise processes maturity. Project
+reporting and benefits management does not make sense if the enterprise does not have
+appropriate structures, such as project management at a proper level of maturity. In later
+periods, especially considering the rising maturity of the ITG, IT performance management is
+noticeable when the enterprise wants to closely monitor specific performance indicators,
+which are primarily intended to raise service maturity. Digital transformation is an essential
+mechanism in certain situations where the enterprise follows market changes, which must
+be supported by regulations in the financial industry. Regarding investment management, he
+thinks that the importance of this mechanism arises in a situation where an enterprise fails
+to provide sufficient resources for development or needs to be managed more efficiently. He
+thinks that the outsourcing management mechanism is essential when an enterprise decides
+to outsource a particular service. Some conditions regarding service quality and economic
+
+--- PAGE 12 ---
+J. Theor. Appl. Electron. Commer. Res. 2022, 17 241
+effects must be met. Finally, he points out knowledge management on ITG in the context
+of the relational mechanisms as a mechanism that occurs in certain situations. He agrees
+that knowledge must be managed appropriately, especially in specific situations at the
+beginning of deployment and raising maturity. In the absence of the necessary knowledge
+on ITG, especially in the case of high complexity and low maturity, it will be challenging to
+identify the required benefits of ITG implementation, which is crucial to the success of ITG
+implementation. He is non-committal in connection with the question about implementing
+best practices, models, and standards such as COBIT, ITIL and CMMI models. He believes
+that the company must first understand what issues it wants to solve and only then start
+with the implementation of standard models. he presented an unsuccessful example of
+implementing a data model into a data warehouse. He states if a company cannot calculate
+what it wants in Excel, models cannot help it either.
+The top management member (TOM), who oversees IT in the enterprise, is one of the
+group’s younger representatives of top management with several years of experience in
+similar jobs. He is a representative of the younger generation of top management, who has
+a great understanding of the support and role of IT in the enterprise, which is also reflected
+in the success of the enterprise itself, the role of IT in the enterprise and the business-IT
+alignment. Within the framework of the structural mechanisms, he defined the integration of
+governance and IT organizational structure as distinctly situational. He believes that if the
+enterprise does not know who is responsible for what, this should be done immediately
+at the beginning of the ITG implementation. This also applies to the IT organizational
+structure. Suppose IT is not organizationally positioned at the same level as the other
+business areas, which depends to a large extent on the strategy of the enterprise, in that case
+one cannot expect harmonized business operations and IT governance. In the field of process
+mechanisms, he defines the following as situational: financial reporting and control, strategic
+information system planning, digital transformation, and outsourcing management. If financial
+planning and control are to be carried out at a more in-depth level, such as activity-based
+costing, this must be followed by the whole enterprise. Otherwise, it does not make any
+sense. He sees strategic information system planning as a steering mechanism through which
+business areas are coordinated. Once a year, the enterprise checks strategic orientations,
+which are then passed to operational levels, where communication or information flow
+plays a key role. He believes that digital transformation has a significant impact on the
+long-term strategy of the enterprise, but to be effective, several factors need to be met. The
+internal maturity of processes and the enterprise is essential, as well as the market and
+regulations. He sees the outsourcing management mechanism in IT as an opportunity to shift
+existing resources from “technology” to “business”. This mechanism also requires a certain
+maturity and an appropriate staff rejuvenation. This is particularly true in the IT sector
+and is closely linked to the enterprise’s strategy. In the context of the relational mechanisms,
+he has not highlighted any mechanism as being particularly situation specific. To the
+question of implementing best practices, models, and standards such as the COBIT, ITIL
+and CMMI models, he believes that, for SMEs, these are most suitable in a form tailored to
+their actual needs and capabilities. The latter is also evident in the current implementation
+of mechanisms that each enterprise in the group has implemented according to their needs
+and abilities.
+The Chief Information Officer (CIO) is one of the group’s most successful and valued IT
+managers. In this role, he has also worked in other enterprises operating on international
+markets, so he has rich experience at the ITG level in related enterprises. He represents
+the younger generation of IT managers, who are more focused on business informatics
+and less on information technology. He understands the ITG as connecting business parts
+and IT, which he considers necessary. Within the framework of the structural mechanisms,
+he pointed out the integration of governance and the IT audit committee as situation specific.
+The integration of governance is initially necessary if the enterprise does not know who is
+responsible for making decisions relating to IT, primarily from a business perspective. In
+the event of difficulties in addressing audit recommendations, it is necessary to provide
+
+--- PAGE 13 ---
+J. Theor. Appl. Electron. Commer. Res. 2022, 17 242
+separate thematic meetings of the audit committee for IT purposes. In the context of process
+mechanisms, he defines as situational the following mechanisms: project reporting and benefits
+management, strategic information system planning, digital transformation, and outsourcing
+management. He believes project reporting and benefits management is essential when the
+enterprise wants to raise the maturity of the ITG to a higher level. Appropriate structures,
+such as the project office, maturity of other processes, and adequate financial reporting and
+supervision are prerequisites. He sees the strategic information system planning mechanism as
+adirectionthatfocusesonstrategicprojects, whichhelpsITmakepriorities. Themechanism
+is periodically noticeable in the framework of the annual planning and updating of the
+enterprise strategy in a situation where the views of the business parts are different from the
+IT view. The digital transformation mechanism is important in a situation where an enterprise
+is opting for digitization, which can be internally or externally motivated. This requires
+certain conditions to be met, such as processes maturity, availability of resources, financial
+aspect, and appropriate regulation. He sees the outsourcing management mechanism as
+important and useful, especially in situations where the enterprise wants to shift its IT
+resources to business areas rather than technology. This requires certain conditions to be
+met, such as cost, maturity of processes and services in the enterprise, and regulation. The
+outsourced services must be provided to the enterprise with the same or better availability
+at a lower price. Within the framework of relational mechanisms, he defines knowledge
+management on ITG as a situational mechanism. He sees the importance of this mechanism
+primarily at the beginning of ITG implementation when all stakeholders in the enterprise
+need to have reached a certain common level of understanding if the ITG implementation
+is to be successful. Of the most popular COBIT, ITIL and CMMI models, in his opinion
+the enterprise has the most experience in implementing ITIL. Implementing processes in
+the enterprise takes place gradually, tailored and as needed. The greatest limits are the
+available knowledge and the required resources. The implementation of processes should,
+in his opinion, begin with the emergence of actual needs or an audit recommendation,
+where he highlights as an example the implementation of an incident management process.
+The Chief Business Officer (CBO) has many years of experience in business management
+and is responsible for business development in the enterprise. In this role, he has also
+worked in an international environment. He is an experienced manager who has an
+extensive overview of the events in his immediate and more comprehensive surroundings,
+both in business and personally. He monitors the global micro and macro-economic picture
+and operates at the country’s level in forums and associations that have a significant impact
+on the development of the financial sector in the country. Within the framework of the
+structural mechanisms, he pointed out the integration of governance, the IT organizational
+structure and the IT audit committee as situation specific. For an efficient ITG, IT must be
+appropriately placed in the organizational structure of the enterprise. Responsibilities and
+accountabilities at all levels of the enterprise also need to be adequately defined. Both
+mechanisms are therefore required at the beginning of ITG establishment and in situations
+where it is necessary to regulate the role and responsibilities of IT in the enterprise. If
+IT audit recommendations are continuously extended within the audit committee and
+pose risks to the enterprise’s business, separate IT-related discussions should be provided.
+In the context of process mechanisms, he defines as situational the following mechanisms:
+financial reporting and control, project reporting and benefits management, strategic information
+system planning, digital transformation and outsourcing management. Financial reporting and
+control are carried out in all enterprises according to accounting standards, and from
+the IT point of view gives a macro perspective. Suppose an enterprise wishes to raise
+maturity in later periods of the ITG, in that case it may establish a more in-depth level
+of financial reporting, which the whole enterprise must follow. Similarly, project reporting
+and benefits management only makes sense when the enterprise has the necessary structures
+and processes to support project management. He agrees that strategic information system
+planning is an important mechanism but emphasizes that implementation is more important
+from his point of view. He says itis important for the enterprise to set up a “compass”
+
+--- PAGE 14 ---
+J. Theor. Appl. Electron. Commer. Res. 2022, 17 243
+but even more critical to reach the goal. As the planning cycle happens once a year, this
+mechanism is considered important at certain times and in a situation where the enterprise
+sees that it is not achieving its strategic objectives. He believes that digital transformation
+is undoubtedly a process whose importance will grow. Enterprises must monitor the
+progress of digitization in their surroundings, follow trends and build the necessary skills
+for transformation once the conditions are created. A little part of the business is currently
+going through digital channels, but they are preparing for when the conditions are created
+to raise the importance of this mechanism. In outsourcing management, he sees a strictly
+regulated mechanism that applies especially to enterprises in the financial industry. For
+enterprises to start outsourcing services that support their core activities, the suppliers, the
+market, and the regulation must evolve accordingly. Regarding the relational mechanisms,
+he defines knowledge management on ITG as a situational mechanism. The management
+and business parts must be aware of the limitations arising from IT. It is important to be
+aware that it is not possible to get everything immediately. In these situations, knowledge,
+competencies, and an appropriate flow of information are of crucial importance. When
+asked about his opinion on the implementation of best practices, models, and standards
+such as the COBIT, ITIL and CMMI models, he emphasized the benefits of being familiar
+with such models. However, in his opinion, their implementation must be situational,
+which requires a certain maturity from the company. As he says, financial reporting on
+projects is irrelevant if the company does not effectively manage project management.
+Large generic models are in his opinion not suitable for SME companies.
+3.2. Universal and Situational ITG Mechanisms
+Figure 2 shows the replication of the interviewees’ opinions on the importance of
+the mechanisms, expressed as situational or universal. In the first part of the table, we
+have marked the mechanisms that interviewees believe in most cases to be situation-
+specific and have described them as situational mechanisms. The second part of the table
+contains mechanisms that interviewees consider to be of universal importance or that their
+importance is continuously present within the ITG. We have described these mechanisms
+as universal mechanisms. If the assessment of the importance of each mechanism is repeated
+in four (4) out of five (5) roles, this is considered to be a satisfactory validation of the
+mechanism evaluation. According to the results of the qualitative analysis, the interviewees
+described half of the mechanisms as situational and the other half as universal.
+From a research perspective, we focused on situational mechanisms that interviewees
+identified as important at different time periods of the ITG and whose importance depends on
+certain situations. Based on a qualitative analysis, half of the considered mechanisms can
+be defined as situational mechanisms. Of these, we can confirm situational importance for
+eight of them, as it is repeated in four out of five roles. In all five roles, the integration of
+governance and digital transformation mechanisms are repeated. In four out of five roles, the
+following mechanisms are repeated: IT organizational structure, financial reporting and control,
+project reporting and benefits management, outsourcing management and Knowledge management
+on ITG. The importance of these mechanisms can be broadly classified into four groups:
+(1) mechanismsthatareimportantatthebeginningofITGimplementation; (2) mechanisms
+that are important after ITG implementation to raise maturity; (3) mechanisms whose im-
+portance depends on external factors; and (4) mechanisms whose importance depends on
+other mechanisms and is performed periodically or occasionally, such as annual planning.
+The interviewees have identified the following mechanisms as needed at the beginning
+of ITG in the enterprise: integration of governance and IT organizational structure. Defining
+responsibilities and accountabilities by placing IT properly in the organizational structure
+of the enterprise is a prerequisite for ITG to be developed in the enterprise. They believe
+that it is impossible to talk about the ITG if the enterprise does not know who is competent
+and responsible for the information-technology or information-business part. The integra-
+tion of governance is closely linked to the IT organizational structure. They believe that it is
+impossible to achieve harmonization, which is the fundamental task of the ITG if the IT
+
+--- PAGE 15 ---
+J. Theor. Appl. Electron. Commer. Res. 2022, 17 244
+part is not an equal partner to the business part. When the powers, responsibilities and
+organizational aspects are clearly defined at the beginning of ITG implementation, the
+importance of both mechanisms is no longer at the forefront. In the later period of the ITG,
+both mechanisms are no longer as important as they are at the beginning. Compatibility
+with the enterprise’s existing structures and strategy, which defines IT’s role, has an impact
+on both mechanisms. This group can also include knowledge management on ITG, which
+helps to establish a unified view of ITG and raise the necessary competencies, both of which
+undoubtedly contribute to the success of ITG implementation in the enterprise. The latter
+is also important during the period of raising the maturity of the ITG, where the interviewees
+also include financial reporting and control and project reporting and benefits management. The
+interviewees consider that the importance of both mechanisms is noticeable at a time when
+the ITG is being structured, and there are discussions about the raising of ITG maturity. The
+implementation of these mechanisms has no effect until the conditions are created. For ex-
+ample, if there is no project management in the enterprise, it is difficult to talk about project
+control. Both mechanisms are thus directly influenced by the organizational structure
+and maturity of the enterprise, which is expressed through the maturity of the individual
+processes. Among the mechanisms for which interviewees believe their importance depends
+on external factors, they have identified digital transformation and outsourcing management. For
+both mechanisms, certain conditions must be established so that their implementation is
+reasonable. digital transformation in this part is understood as a mechanism that influences
+the transformation of the business. The financial industry is conservative and introduces
+innovations when they are verified on the market. The digitalization of the business is
+also subject to appropriate regulation, which often lags when compared to technological
+developments, thus posing a major obstacle to digitalization. Outsourcing primary busi-
+ness services are also subject to a conservative approach, and interviewees say that at least
+two conditions have to be met. Service availability and price must be appropriate, where
+shorter development cycles are expected than the current ones.
+Interviewees indicated that half of the universal mechanisms considered were of
+constant importance throughout the various ITG periods. Of these, we can confirm the
+universal importance for eight of them, as the importance was repeated in four out of five
+roles. In all five roles the following mechanisms are repeated: strategic ITG committee, IT risk
+management, resource management, business/IT alignment, partnerships rewards and incentives,
+shared understanding of business/IT objectives and executive/senior management give the good
+example. In four out of five roles, only one mechanism is repeated, IT leadership. The
+Strategic ITG committee was identified by interviewees as an umbrella mechanism which
+forms the basis of the ITG and guides the development and implementation of the ITG
+in the enterprise. They agree that in the case of process mechanisms, the mission of ITG
+is expressed through the mechanism business/IT alignment, which must be permanently
+present in the ITG. This includes IT risk management and resource management. The interviews
+have repeatedly pointed out that there is no business process that does not depend on IT,
+so when we talk about IT risks, we are talking about business risks, which is sufficient
+reason to manage them. The opinions of the interviewees were also unified when referring
+to resources. At present, resources present a significant challenge, especially in the field
+of IT. Resources are always lower than business needs and therefore need to be managed
+efficiently. In terms of relational mechanisms, all interviewees agreed that they form the basis
+for building on informal relations, enabling formal structures and processes to function.
+TheypointedouttheITLeadershipmechanism, whichallowsITtoberaisedtotheequivalent
+level of other business areas. The common view is that any good work done deserves
+a reward, which is the role of the partnership rewards and incentives mechanism. A shared
+understanding of business/IT objectives is seen as a mechanism that enables the process of
+harmonization between IT and business. As was repeatedly exposed in the interviews,
+the most challenging issues are solved by informal communication. Last but not least,
+executive/senior management give good example is indispensable in medium-sized enterprise
+environments. Regarding the direct question about the implementation of best practices,
+
+--- PAGE 16 ---
+J. Theor. Appl. Electron. Commer. Res. 2022, 17 245
+models, and standards such as the COBIT, ITIL and CMMI models, all interviewees were
+reserved. Their opinion is that there are not enough resources to spend on the stock.
+Therefore, the implementation of mechanisms depends on the situation according to the
+actual needs and the enterprise’s capabilities.
+JTAER 2022, 17, FOR PEER REVIEW 15
+Figure 2. Situational and universal ITG mechanisms.
+From a research perspective, we focused on situational mechanisms that interviewees
+identified as important at different time periods of the ITG and whose importance depends on
+certain situations. Based on a qualitative analysis, half of the considered mechanisms can
+be defined as situational mechanisms. Of these, we can confirm situational importance for
+eight of them, as it is repeated in four out of five roles. In all five roles, the integration of
+governance and digital transformation mechanisms are repeated. In four out of five roles, the
+following mechanisms are repeated: IT organizational structure, financial reporting and con-
+trol, project reporting and benefits management, outsourcing management and Knowledge man-
+agement on ITG. The importance of these mechanisms can be broadly classified into four
+groups: (1) mechanisms that are important at the beginning of ITG implementation; (2)
+mechanisms that are important after ITG implementation to raise maturity; (3) mecha-
+nisms whose importance depends on external factors; and (4) mechanisms whose im-
+portance depends on other mechanisms and is performed periodically or occasionally,
+such as annual planning. The interviewees have identified the following mechanisms as
+needed at the beginning of ITG in the enterprise: integration of governance and IT organizational
+structure. Defining responsibilities and accountabilities by placing IT properly in the or-
+ganizational structure of the enterprise is a prerequisite for ITG to be developed in the
+enterprise. They believe that it is impossible to talk about the ITG if the enterprise does
+Figure 2. Situational and universal ITG mechanisms.
+4. Discussion
+There is no clear definition in the literature of the most appropriate approach for
+implementing ITG mechanisms in SMEs. The adoption of all well-known ITG models are
+still low [22–24], especially in SMEs [25]. Major well-known models are also not based
+on the contingency approach. Therefore, the aim of our study was to investigate whether
+the current ITG models are suitable for SMEs. We also aimed to verify whether there is a
+clear need for the development of ITG models based on a situational approach. Since these
+results are based on a single case study, they cannot be generalized. However, the results of
+our study provide an important foundation for future research as they confirm the need to
+develop an adaptive strategic ITG model based on a situational approach.
+With the literature review, we have defined the key mechanisms of the ITG at the
+strategic level, and with the case study, we have examined whether all mechanisms are
+universal and important in all situations. Based on response replication, the interviewees
+defined half of the mechanisms as mechanisms whose implementation and importance
+
+--- PAGE 17 ---
+J. Theor. Appl. Electron. Commer. Res. 2022, 17 246
+depend on a particular situation. The implementation of certain mechanisms is necessary
+at the very beginning of ITG implementation (such as integration of governance and IT organi-
+zational structure), and later their importance decreases. Certain mechanisms are important
+in a situation where an enterprise wants to raise the maturity of the ITG (such as financial
+reporting and control and project reporting and benefits management) and are not relevant at
+the very beginning of ITG implementation. Some mechanisms (such as digital transforma-
+tion and outsourcing management) have proven to be important in situations influenced by
+external factors such as competition, the arrival of new technologies, regulation, etc. In
+some cases, the interviewees connected the importance of the mechanisms with internal
+factors or other mechanisms and processes in the enterprise, which can be performed
+either permanently or periodically (such as strategic information system planning). Based on
+the replication of responses repeated in four out of five roles, we can confirm with great
+certainty that the implementation of eight out of thirty mechanisms is situation based and
+requires a situation-based approach.
+The research results of our study provide an important theoretical contribution. Based on
+response replication, we can conclude that the implementation of ITG mechanisms is not
+universal but the appropriate ITG mechanisms for implementation need to be selected on
+a situational basis. The current ITG models, which expect a universal approach to imple-
+mentation of ITG mechanisms, are unsuitable for SMEs and other enterprises with limited
+resources. All interviewees echoed such a position through their views on implementation
+of best practices, models, and standards such as the COBIT, ITIL and CMMI models. The
+presented interviews show a clear need for new ITG models which are based on contingency
+theory. Our study showed that certain specific mechanisms are clearly situational, and their
+importance is expressed by the impact or occurrence of certain contingency factors, or their
+importance occurs periodically. The theoretical contribution of the research underlines the
+need for further research towards the development of an adaptive model of strategic ITG
+based on contingency theory.
+The practical contribution of the research is intended for corporate management as
+a guide for the implementation of ITG mechanisms. Literature often states that each
+implementation of ITG in an enterprise is a particular example and that if something works
+in one enterprise, it does not necessarily work in another. However, it does not answer
+how the implementation of the mechanisms should be carried out to ensure success. The
+direction of the practical contribution of the research is that top management should not
+blindly follow the extensive and comprehensive ITG models. Still, it should critically and
+situationally assess which of the mechanisms they need at a given moment. With the
+contingency approach, they increase the efficiency and effectiveness of implementation and
+respond directly to the enterprise’s needs for ITG at a given moment.
+The literature review has revealed different approaches to the implementation of ITG
+mechanisms. With the publication of his research in 2004 [48], Weill laid the foundations for
+modern ITG. In a study that lasted five years, he researched ITG in more than 300 companies
+and presented various ITG patterns. The research was designed to understand how various
+areas of ITG are managed (in this case, IT principles, IT architecture, IT infrastructure,
+business applications needs and IT investment and prioritization). The research shows
+different management styles (from a more decentralized to a more centralized style), which
+helps top management identify what IT decisions need to be adopted in the enterprise and
+who needs to adopt them. Another approach is observed in the studies of Van Grembergen
+and de Haes [95], which define different approaches and strategies for implementing ITG
+into enterprises. A comprehensive survey of Belgian enterprises in the financial industry
+presented the “minimum baseline of ITG practices” that enterprises should implement.
+There are also several academic frameworks in the literature. Selig [12] presented an
+academic framework based on available standards, frameworks and best practices in which
+he sets guidelines and best practices for implementation into the enterprise. Dahlberg and
+Lahdelma [53] presented the ITG model, whose implementation is based on different levels
+of maturity of ITG. Almeida, Pereira and Da Silva [96,97] highlighted the contingency
+
+--- PAGE 18 ---
+J. Theor. Appl. Electron. Commer. Res. 2022, 17 247
+factors that impact ITG. Other authors [2,13,98,99] also discuss the impact of contingency
+factors on ITG. However, these cases are mostly limited to the influence of one factor
+or the overall influence on ITG. Researchers, such as Bartenschlager and Goeken [100],
+explored the impact of business/IT alignment on ITG and proposed models for alignment.
+Luftman [63] proposed a model for strategic alignment, which he sees as the basic mission
+of ITG. Van Grembergen [51] also addressed the implementation of ITG from various
+aspects, from strategic approaches to a minimum set of mechanisms. In cooperation with
+Rowlands and de Haes [101], they discussed the impact of organizational culture and
+the competencies of top management on the success of ITG implementation. Most of the
+time, these studies focus on the impact of an individual contingency factor and do not
+address the impact of all factors on all ITG mechanisms. However, these studies have
+a common discovery that each implementation is specific and that certain approaches
+that work in one enterprise do not necessarily work in another [64]. Different enterprises
+need different mechanisms and approaches to the implementation of ITG mechanisms [67].
+Various studies focusing on the range of mechanisms enterprises need as a “minimal
+baseline of ITG mechanisms” have highlighted different mechanisms, these include Van
+Grembergen and de Haes [41], Pereira [102], and Almeida and da Silva [97] who all show
+that the minimum set of mechanisms varies between different enterprises, something
+which indirectly supports our discovery of the importance of a situational approach. In
+our study, we divided ITG mechanisms into mechanisms that are distinctly situational, and
+universal mechanisms, which means that they are present in almost all situations. Certain
+mechanisms that we have identified as universal (such as strategic ITG committee, IT risk
+management, resource management, etc.) correspond to mechanisms that other authors define
+as minimum necessary mechanisms. The proposed concept of a contingency approach thus
+builds on existing models and fills a gap that provides an answer as to why each ITG
+implementation in enterprises is different and why enterprises need different mechanisms.
+5. Conclusions
+There is no single approach to implementing ITG mechanisms that would meet an
+individual enterprise’s specific situations [49]. ITG implementation is influenced by ex-
+ternal and internal contingency factors [103]. Nevertheless, the literature fails to clearly
+identify these factors and their impact on ITG models and ITG implementation [104]. Most
+frameworks state that there is no single best IT organizational structure or governance
+arrangement because IT needs to respond to the unique environments within which it
+exists [6,105], but does not specify the factors that can influence each ITG implementa-
+tion [52]. Existing ITG models are primarily intended for large enterprises and, as such, are
+not suitable for SMEs. Considering their relevance, it is crucial that their IT investment also
+deliver the expected business value while associated risks are managed [25]. Moreover,
+some of the most used and well-known frameworks are complex, too general, lacking a
+theoretical foundation from a scientific viewpoint [102] and overlapping, which was also
+confirmed by our research.
+As there are no clear guidelines in the existing literature, our research was intended
+to examine the importance of a contingency approach in implementing ITG mechanisms
+and whether there is a clear need to develop a new model based on the contingency
+approach. In our article, we answered two research questions. In the first part of the article,
+based on the literature review, we answered the first research question (RQ1): What are the
+strategic level ITG mechanisms? The answer to RQ1 is a list of ITG mechanisms recognized
+in the literature as ITG mechanisms at the strategic level. In selecting mechanisms, we
+have limited ourselves to mechanisms that appear in the literature review in at least
+three articles. The list of ITG mechanisms at the strategic level provides the basis for a
+case study that answers the second research question (RQ2): Are the key ITG mechanisms
+all universal? In our research, we were interested to know whether all mechanisms were
+important in all situations and whether there was a clear need for new ITG models based on
+contingency theory. Based on the replication of interviewees’ answers, it can be concluded
+
+--- PAGE 19 ---
+J. Theor. Appl. Electron. Commer. Res. 2022, 17 248
+that in the enterprise under consideration, some mechanisms are clearly situation based,
+and some are universal. The exploratory ITG model, which shows all the mechanisms
+that the interviewees predominantly see as situational or universal are shown in Figure 3.
+With these findings, we question the existing theory of exclusively universal ITG models
+and set guidelines for further development of an adaptive strategic ITG model based on
+contingency theory.
+JTAER 2022, 17, FOR PEER REVIEW 20
+Figure 3. Exploratory ITG model with situational and universal ITG mechanisms.
+However, implementing ITG is not easy as its definition and roles are not yet fully
+clarified. Therefore, determining the suitable ITG model and mechanisms remains a com-
+plex challenge. ITG must be an integral part of corporate governance and evolve in paral-
+lel to it. While there is no single right way for enterprises to address ITG improvements,
+it is necessary to continue research and handle all the questions regarding ITG mecha-
+nisms, such as which mechanisms affect ITG and how they are interconnected. Based on
+our research, we believe that by recognizing and incorporating contingency theory
+through ITG mechanisms, contingency factors, user needs and business objectives, signif-
+icantly more appropriate and effective ITG models can be developed and implemented in
+place of the currently dominant models. Based on the problems in practice and the prob-
+lems identified in the literature, and the result of our previous research, our final goal is
+to develop an adaptive strategic ITG model based on contingency theory to fill the gap in
+both practice and literature. This paper has set directions on one case study that will form
+the basis for further research.
+Author Contributions: Conceptualization, A.L., A.P. and T.H.; methodology, A.L., A.P. and T.H.;
+validation, A.L., A.P. and T.H.; formal analysis, A.L.; investigation, A.L. and T.H.; resources, A.L.
+and T.H.; data curation, A.L.; writing—original draft preparation, A.L. and T.H.; writing—review
+and editing, A.L., A.P. and T.H.; visualization, A.L. All authors have read and agreed to the pub-
+lished version of the manuscript.
+Funding: This research was supported by the Slovenian Research Agency; Program No. P5-0018—
+Decision Support Systems in Digital Business.
+Institutional Review Board Statement: Not applicable.
+Informed Consent Statement: Informed consent was obtained from all subjects involved in the
+study.
+Figure 3. Exploratory ITG model with situational and universal ITG mechanisms.
+Our study also has limitations, which highlight opportunities for further research.
+Because research in the field of ITG and its contingency factors is in the early stages, our
+research is exploratory and theory testing. The purpose of our research was to test the
+existing theory. Therefore, in this step of our research journey, we limited ourselves to
+a single case study. Further research towards an adaptive strategic ITG model for SMEs
+should use a more extensive and more diverse sample of SMEs to provide possibilities for
+generalization of results. Future research could widen the range of individuals surveyed
+in the enterprise at the strategic level and the tactical and operational levels, if necessary.
+Different roles in the enterprise may reflect different perceptions and practices of ITG
+mechanisms. Moreover, a cross-national study could provide insights regarding cultural
+differences in adoption decisions and exploitation practices. Additionally, quantitative
+research could be applied to evaluate and generalize the findings of this research. Finally,
+future research should explore the relationship between ITG mechanisms and contingency
+factors and the impact on individual mechanisms.
+However, implementing ITG is not easy as its definition and roles are not yet fully
+clarified. Therefore, determining the suitable ITG model and mechanisms remains a
+complex challenge. ITG must be an integral part of corporate governance and evolve in
+paralleltoit. WhilethereisnosinglerightwayforenterprisestoaddressITGimprovements,
+it is necessary to continue research and handle all the questions regarding ITG mechanisms,
+such as which mechanisms affect ITG and how they are interconnected. Based on our
+research, we believe that by recognizing and incorporating contingency theory through ITG
+
+--- PAGE 20 ---
+J. Theor. Appl. Electron. Commer. Res. 2022, 17 249
+mechanisms, contingency factors, user needs and business objectives, significantly more
+appropriate and effective ITG models can be developed and implemented in place of the
+currently dominant models. Based on the problems in practice and the problems identified
+in the literature, and the result of our previous research, our final goal is to develop an
+adaptive strategic ITG model based on contingency theory to fill the gap in both practice
+and literature. This paper has set directions on one case study that will form the basis for
+further research.
+Author Contributions: Conceptualization, A.L., A.P. and T.H.; methodology, A.L., A.P. and T.H.;
+validation, A.L., A.P. and T.H.; formal analysis, A.L.; investigation, A.L. and T.H.; resources, A.L. and
+T.H.; data curation, A.L.; writing—original draft preparation, A.L. and T.H.; writing—review and
+editing, A.L., A.P. and T.H.; visualization, A.L. All authors have read and agreed to the published
+version of the manuscript.
+Funding: This research was supported by the Slovenian Research Agency; Program No. P5-0018—
+Decision Support Systems in Digital Business.
+Institutional Review Board Statement: Not applicable.
+Informed Consent Statement: Informed consent was obtained from all subjects involved in the study.
+Data Availability Statement: Not applicable.
+Conflicts of Interest: The authors declare no conflict of interest.
+References
+1. Valentine, E.; de Haes, S.; Timbrell, G. The board’s role in the governance of enterprise information and technology. In The
+Handbook of Board Governance: A Comprehensive Guide for Public, Private and Not-for-Profit Board Members; Leblanc, R., Ed.; Wiley
+Online Library: Hoboken, NJ, USA, 2016; pp. 574–596.
+2. Turel, O.; Liu, P.; Bart, C. Board-level information technology governance effects on organizational performance: The roles of
+strategic alignment and authoritarian governance style. Inf. Syst. Manag. 2017, 34, 117–136. [CrossRef]
+3. Rusu, L.; Gianluigi, V. Information Technology Governance in Public Organizations, 1st ed.; Springer: Cham, Switzerland, 2017.
+4. de Haes, S.; Huygh, T.; Joshi, A. Exploring the contemporary state of information technology governance transparency in Belgian
+firms. Inf. Syst. Manag. 2017, 34, 20–37. [CrossRef]
+5. Huygh, T.; de Haes, S. Exploring the research domain of IT governance in the SME context. Int. J. It/Bus. Alignment Gov. 2016, 7,
+20–35. [CrossRef]
+6. Lunardi, G.L.; Macada, A.C.G.; Becker, J.L.; van Grembergen, W. Antecedents of IT governance effectiveness: An empirical
+examination in Brazilian firms. J. Inf. Syst. 2017, 31, 41–57. [CrossRef]
+7. Nolan, R.; McFarlan, F.W. Information technology and the board of directors. Harv. Bus. Rev. 2005, 83, 96.
+8. Turel, O.; Bart, C. Board-level IT governance and organizational performance. Eur. J. Inf. Syst. 2014, 23, 223–239. [CrossRef]
+9. Jewer, J.; Mckay, K.N. Antecedents and consequences of board IT governance: Institutional and strategic choice perspectives. J.
+Assoc. Inf. Syst. 2012, 13, 581–617. [CrossRef]
+10. Hovelja, T. Organisational effects on Information Technology productivity in enterprises: The case of Slovenia. Econ. Bus. Rev.
+Cent. South-Eastern Eur. 2008, 10, 243.
+11. Tiwana, A.; Konsynski, B.; Venkatraman, N. Special issue: Information technology and organizational governance: The IT
+governance cube. J. Manag. Inf. Syst. 2013, 30, 4–7. [CrossRef]
+12. Selig, G.J. IT governance—An integrated framework and roadmap: How to plan, deploy and sustain for improved effectiveness.
+J. Int. Technol. Inf. Manag. 2016, 25, 55–77.
+13. Pereira, R.; da Silva, M.M. Towards an Integrated IT Governance and IT Management Framework. In Proceedings of the 2012
+IEEE 16th International Enterprise Distributed Object Computing Conference (EDOC), Beijing, China, 10–14 September 2012;
+pp. 191–200.
+14. de Haes, S.; van Grembergen, W.; Debreceny, R.S. COBIT 5 and enterprise governance of information technology: Building blocks
+and research opportunities. J. Inf. Syst. 2013, 27, 307–324. [CrossRef]
+15. Ridley, G.; Young, J.; Carroll, P. COBIT and its utilization: A framework from the literature. In Proceedings of the 37th Annual
+Hawaii International Conference on System Sciences, Big Island, HI, USA, 5–8 January 2004; pp. 1–8.
+16. Kam, H.-J.; Katerattanakul, P.; Hong, S. It Governance Framework: One Size Fits All? In AMCIS 2016 Proceedings; No. Reis 1997;
+Association for Information Systems (AIS): San Diego, CA, USA, 2016; pp. 1–10.
+17. Bianchi, I.S.; Sousa, R.; Pereira, R.; Haes, S. The Influence of Culture in IT Governance Implementation: A Higher Education
+Multi Case Study. Int. J. Hum. Cap. Inf. Technol. Prof. 2019, 10, 55–68. [CrossRef]
+18. Asgarkhani, M.; Cater-Steel, A.; Toleman, M.; Ally, M. Failed IT projects: Is poor IT governance to blame? In Proceedings of the
+Australasian Conference on Information Systems, Hobart, Australia, 4–6 December 2017; pp. 1–9.
+
+--- PAGE 21 ---
+J. Theor. Appl. Electron. Commer. Res. 2022, 17 250
+19. Bianchi, I.S.; Sousa, R.D.; Pereira, R. IT governance Mechanisms at Universities: An Exploratory Study. In Proceedings of the
+Twenty-third Americas Conference on Information Systems, Boston, MA, USA, 10–12 August 2017; pp. 1–11.
+20. Almeida, R.; Lourinho, R.; da Silva, M.M.; Pereira, R. A model for assessing COBIT 5 and ISO 27001 simultaneously. In
+Proceedings of the 2018 IEEE 20th Conference on Business Informatics (CBI), Vienna, Austria, 11–14 July 2018; pp. 60–69.
+21. Radovanović, D.; Radojević, T.; Lučić, D.; Šarac, M. IT audit in accordance with Cobit standard. In Proceedings of the 33rd
+International Convention MIPRO, Opatija, Croatia, 24–28 May 2010; pp. 1137–1141.
+22. Winniford, M.A.; Conger, S.; Erickson-Harris, L. Confusion in the ranks: IT service management practice and terminology. Inf.
+Syst. Manag. 2009, 26, 153–163. [CrossRef]
+23. Debreceny, R.S.; Gray, G.L. IT governance and process maturity: A multinational field study. J. Inf. Syst. 2013, 27, 157–188.
+[CrossRef]
+24. Kolar, A.; Groznik, A. Standards, best practices and codes of ethics impact on IT service quality—The case of Slovenian IT
+departments. Econ. Bus. Rev. 2017, 19, 51–72. [CrossRef]
+25. Silva, D.; da Silva, M.M.; Pereira, R. Baseline mechanisms for enterprise governance of IT in SMEs. In Proceedings of the 2018
+IEEE 20th Conference on Business Informatics (CBI), Vienna, Austria, 11–14 July 2008; Volume 2, pp. 32–41.
+26. OECD. The Digital Transformation of SMEs; OECD Publishing: Paris, France, 2021.
+27. Pucihar, A.; Lenart, G.; Marolt, M.; Maletič, D.; Borštnar, M.K. Business model innovation: Insights from a multiple case study of
+Slovenian SMEs. Organizacija 2016, 49, 161–171.
+28. Bergeron, F.; Croteau, A. A Framework for Research on Information Technology Governance in SMEs. In Start-Ups and SMEs:
+Concepts, Methodologies, Tools, and Applications; Khosrow-Pour, M., Ed.; IGI Global: Hershey, PA, USA, 2020; pp. 1567–1588.
+29. Bergeron, F.; Croteau, A.-M.; Uwizeyemungu, S.; Raymond, L. IT Governance Framework Applied to SMEs. Int. J. It/Bus.
+Alignment Gov. 2015, 6, 33–49. [CrossRef]
+30. Devos, J.; van Landeghem, H.; Deschoolmeester, D. Rethinking IT governance for SMEs. Ind. Manag. Data Syst. 2012, 112, 206–223.
+[CrossRef]
+31. Devos, J.; van Landeghem, H.; Deschoolmeester, D. IT governance in SMEs: Trust or control? In Information Systems—Creativity
+and Innovation in Small and Medium-Sized Enterprises; IFIP Advances in Information and Communication Technology; Springer:
+Berlin/Heidelberg, Germany, 2009; Volume 301, pp. 135–149.
+32. Bergeron, F.; Croteau, A.M.; Uwizeyemungu, S.; Raymond, L. IT governance theories and the reality of SMEs: Bridging the
+gap. In Proceedings of the 2015 48th Hawaii International Conference on System Sciences, Kauai, HI, USA, 5–8 January 2015;
+pp. 4544–4553.
+33. Huang, R.; Zmud, R.W.; Price, R.L. IT Governance Practices in Small and Medium-Sized Enterprises: Recommendations from an
+Empirical Study. Ifip Int. Fed. Inf. Process. 2009, 301, 158–179.
+34. Thong, J.Y.L. An integrated model of information systems adoption in small businesses. J. Manag. Inf. Syst. 1999, 15, 187–214.
+[CrossRef]
+35. Sambamurthy, V.; Zmud, R.W. Arrangements for information technology governance: A theory of multiple contingencies. MIS Q.
+1999, 23, 261–290. [CrossRef]
+36. Oehmichen, J.; Schrapp, S.; Wolff, M. Who needs experts most? B oard industry expertise and strategic change—A contingency
+perspective. Strateg. Manag. J. 2017, 38, 645–656. [CrossRef]
+37. Müller, R.; Zhai, L.; Wang, A. Governance and governmentality in projects: Profiles and relationships with success. Int. J. Proj.
+Manag. 2017, 35, 378–392. [CrossRef]
+38. Kast, F.E.; Rosenzweig, J.E. Contingency Views of Organization and Management; Science Research Associates: Chicago, IL, USA, 1973.
+39. Weill, P.; Olson, M.H. An assessment of the contingency theory of management information systems. J. Manag. Inf. Syst. 1989, 6,
+59–86. [CrossRef]
+40. European Commission; Executive Agency for Small and Medium-sized Enterprises; Lonkeu, O.; Jessie, W.; Bormans, J.; Pedersen,
+B.; Mühlschlegel, T.; Braun, H.; Thomas, C.; Jonathan, S.; et al. Annual Report on European SMEs 2018/2019: Research & Development
+and Innovation by SMEs; Publications Office: Luxembourg, 2020. [CrossRef]
+41. de Haes, S.; van Grembergen, W. An exploratory study into the design of an IT governance minimum baseline through Delphi
+research. Commun. Assoc. Inf. Syst. 2008, 22, 443–459. [CrossRef]
+42. Webster, J.; Watson, R.T. Analyzing the past to prepare for the future: Writing a literature review. MIS Q. 2002, 26, xiii–xxiii.
+43. Nakano, D.; Muniz, J., Jr. Writing the literature review for empirical papers. Production 2018, 28, xiii–xxiii. [CrossRef]
+44. Fama, E.F.; Jensen, M.C. Separation of ownership and control. J. Law Econ. 1983, 26, 301–325. [CrossRef]
+45. Kooper, M.N.; Maes, R.; Lindgreen, E.E.O.R. On the governance of information: Introducing a new concept of governance to
+support the management of information. Int. J. Inf. Manag. 2011, 31, 195–200. [CrossRef]
+46. Spafford, G. The Benefits of Standard IT Governance Frameworks. Available online: https://www.datamation.com/networks/
+the-benefits-of-standard-it-governance-frameworks/ (accessed on 21 June 2021).
+47. de Haes, S.; van Grembergen, W. An exploratory study into IT governance implementations and its impact on business/IT
+alignment. Inf. Syst. Manag. 2009, 26, 123–137. [CrossRef]
+48. Weill, P.; Ross, J.W. IT Governance: How Top Performers Manage IT Decisions Rights for Superior Results, 1st ed.; Harvard Business
+Press: Boston, MA, USA, 2004.
+49. de Haes, S.; van Grembergen, W. IT governance and its mechanisms. Inf. Syst. Control J. 2004, 1, 1–14.
+
+--- PAGE 22 ---
+J. Theor. Appl. Electron. Commer. Res. 2022, 17 251
+50. Weill, P. Don’t just lead, govern: How top-performing firms govern IT. MIS Q. Exec. 2004, 8, 1–21.
+51. van Grembergen, W.; de Haes, S. Implementing Information Technology Governance; IGI Publisher: New York, NY, USA, 2008.
+52. Pereira, R.; da Silva, M.M. A Literature Review: Guidelines and Contingency Factors for IT Governance. Eur. Mediterr. Middle
+East. Conf. Inf. Syst. 2012, 2012, 342–360.
+53. Dahlberg, T.; Lahdelma, P. IT governance maturity and IT outsourcing degree: An exploratory study. In Proceedings of the
+Annual Hawaii International Conference on System Sciences, Big Island, HI, USA, 3–6 January 2007.
+54. de Haes, S.; van Grembergen, W. Analysing the relationship between IT governance and business/IT alignment maturity. In
+Proceedings of the Annual Hawaii International Conference on System Sciences, Big Island, HI, USA, 7–10 January 2008.
+55. Webb, P.; Pollard, C.; Ridley, G. Attempting to define IT governance: Wisdom or folly? In Proceedings of the 39th Annual Hawaii
+International Conference on System Sciences, Kauai, HI, USA, 4–7 January 2006; Volume 8.
+56. van Grembergen, W.; de Haes, S.; Guldentops, E. Structures, Processes and Relational Mechanisms for It Governance; IGI Global:
+Hershey, PA, USA, 2004; pp. 1–36.
+57. de Haes, S.; van Grembergen, W. Enterprise Governance of Information Technology: Achieving Strategic Alignment and Value; Springer:
+Berlin/Heidelberg, Germany, 2009.
+58. IT Governance Institute. Board Briefing for IT Governance, 2nd ed.; ISACA: Rolling Meadows, IL, USA, 2003.
+59. Broadbent, M. Understanding IT governance. CIO Can. 2003, 11, 4.
+60. Lunardi, G.L.; Becker, J.L.; Maçada, A.C.G. The financial impact of IT governance mechanisms’ adoption: An empirical analysis
+with Brazilian firms. In Proceedings of the 42nd Hawaii International Conference on System Sciences, Big Island, HI, USA, 5–8
+January 2009; pp. 1–10.
+61. Weill, P.; Ross, J.W. IT Governance on One Page; Massachusetts Institute of Technology: Cambridge, MA, USA, 2004.
+62. Craig, S. IT Governance Framework—Best Practices; Forrester Research: Cambridge, MA, USA, 2005; pp. 1–17.
+63. Luftman, J. Assessing business-IT alignment maturity. Commun. Assoc. Inf. Syst. 2000, 4, 14. [CrossRef]
+64. Peterson, R. Integration strategies and tactics for information technology governance. In Strategies for Information Technology
+Governance; van Grembergen, W., Ed.; IGI Publishing: Hershey, PA, USA, 2004; pp. 37–81.
+65. Spremić, M. IT governance mechanisms in managing IT business value. Corp. Gov. 2009, 6, 906–915.
+66. Short, J.; Gerrard, M. IT Governance Must Be Driven by Corporate Governance; Gartner, Inc.: Stamford, CT, USA, 2009; pp. 1–7.
+67. van Grembergen, W.; de Haes, S.; Thorp, J. Implementing Information Technology Governance: Models, Practices and Cases; IGI
+Publisher: Hershey, PA, USA, 2007.
+68. Herz, T.; Hamel, F.; Uebernickel, F.; Brenner, W. IT governance mechanisms in multisourcing—A business group perspective.
+In Proceedings of the 2012 45th Hawaii International Conference on System Sciences, Maui, HI, USA, 4–7 January 2012;
+pp. 5033–5042.
+69. Symons, C. IT Strategy Maps: A Tool for Strategic Alignment; Forrester Research Inc.: Cambridge, UK, 2005.
+70. Weill, P.; Ross, J.W. A matrixed approach to designing IT governance. MIT Sloan Manag. Rev. 2005, 46, 26–34.
+71. Jacobson, D.D.RevisitingITgovernanceinthelightofinstitutionaltheory. InProceedingsofthe42ndAnnualHawaiiInternational
+Conference on System Sciences, HICSS, Waikoloa, HI, USA, 5–8 January 2009.
+72. Broadbent, M. CIO futures—Lead with effective governance. In Proceedings of the ICA 36th Conference, Singapore, 22–24
+October 2002; pp. 1–11.
+73. Maidin, S.S.; Arshad, N.H. IT governance practices model in IT project approval and implementation in Malaysian public sector.
+In Proceedings of the ICEIE 2010—2010 International Conference on Electronics and Information Engineering, Kyoto, Japan, 1–3
+August 2010; Volume 1.
+74. Gerrard, M. Defining IT governance: The Gartner IT governance demand/supply model; Gartner, Inc.: Stamford, CT, USA, 2010; pp. 1–8.
+75. Simonsson, M.; Johnson, P. Defining IT governance—A consolidation of literature. In Proceedings of the 18th Conference on
+Advanced Information Systems Engineering, Luxembourg, 5–9 June 2006; Volume 6, pp. 1–19.
+76. Delone, W.; Migliorati, D.; Vaia, G. Digital IT governance. In CIOs and the Digital Transformation; Springer International Publishing:
+Cham, Switzerland, 2018; pp. 205–230.
+77. Ross, J.; Sebastian, I.; Beath, C.; Scantlebury, S.; Mocker, M.; Fonstad, N.; Kagan, M.; Moloney, K. Designing Digital Organizations;
+Massachusetts Institute of Technology: Cambridge, MA, USA, 2016.
+78. Silva, E.; Chaix, Y. Business and IT governance alignment simulation essay on a business process and IT service model. In
+Proceedings of the Annual Hawaii International Conference on System Sciences, Big Island, HI, USA, 7–10 January 2008.
+79. Simonsson, M.; Johnson, P. The IT organization modeling and assessment tool: Correlating IT governance maturity with the
+effect of IT. In Proceedings of the 41st Annual Hawaii International Conference on System Sciences, Waikoloa, HI, USA, 7–10
+January 2008.
+80. Dahlberg, T.; Kivijärvi, H. An integrated framework for IT governance and the development and validation of an assessment
+instrument. In Proceedings of the 39th Hawaii International Conference on System Sciences, Kauai, HI, USA, 4–7 January 2006;
+pp. 1–10.
+81. Shpilberg, D.; Berez, S.; Puryear, R.; Shah, S. Avoiding the alignment trap in information technology. MIT Sloan Manag. Rev. 2007,
+49, 51–58.
+82. Montazemi, A.R.; Pittaway, J.J. Getting Them to Think Outside the Circle: Corporate Governance, CEOs’ External Advice Networks, and
+Firm Performance; Academy of Management: Briarcliff Manor, NY, USA, 2012; Volume 51.
+
+--- PAGE 23 ---
+J. Theor. Appl. Electron. Commer. Res. 2022, 17 252
+83. Hevner, A.R.; March, S.T.; Park, J.; Ram, S. Design Science in Information Systems research. Des. Sci. IS Res. MIS Q. 2004, 28,
+75–105. [CrossRef]
+84. Gable, G.G. Integrating case study and survey research methods: An example in information systems. Eur. J. Inf. Syst. 1994, 3,
+112–126. [CrossRef]
+85. Eisenhardt, K.M. Building theories from case study research. Acad. Manag. Rev. 1989, 14, 532–550. [CrossRef]
+86. Gerring, J. What is a case study and what is it good for? Am. Polit. Sci. Rev. 2004, 98, 341–354. [CrossRef]
+87. Das, R.K.; Singha, A. Case study as a research method. Glob. Res. Methodol. J. 2011, 3, 1–6.
+88. Noor, K.B.M. Case study: A strategic research methodology. Am. J. Appl. Sci. 2008, 5, 1602–1604. [CrossRef]
+89. Rowley, J. Using case studies in research. Manag. Res. News 2002, 25, 16–27. [CrossRef]
+90. Yin, R.K. Case Study Research and Applications, Design and Methods, 6th ed.; SAGE Publications: Los Angeles, CA, USA; London,
+UK; New Delhi, India; Singapore; Washington, DC, USA; Melbourne, Australia, 2011.
+91. Thomas, G. How to Do Your Research Project: A Guide for Students, 3rd ed.; Sage: London, UK, 2017.
+92. Grady, M.P. Qualitative and Action Research: A Practitioner Handbook; Phi Delta Kappa International: Arlington, VA, USA, 1998.
+93. Mason, M. Sample size and saturation in PhD studies using qualitative interviews. Forum Qualitative Sozialforschung/Forum Qual.
+Soc. Res. 2010, 11. [CrossRef]
+94. Baker, S.E.; Edwards, R.; Doidge, M. How Many Qualitative Interviews Is Enough?: Expert Voices and Early Career Reflections on
+Sampling and Cases in Qualitative Research; National Centre for Research Methods: Southampton, UK, 2012.
+95. de Haes, S.; van Grembergen, W. Practices in IT governance and business/IT alignment. Inf. Syst. Control J. 2008, 2, 1–6.
+96. Almeida, R.; Pereira, R.; Mira da Silva, M. IT Governance Mechanisms: A Literature Review. In Exploring Services Science; Falcão e
+Cunha, J., Snene, M., Nóvoa, H., Eds.; IESS 2013. Lecture Notes in Business Information Processing; Springer: Berlin/Heidelberg,
+Germany, 2013; Volume 143. [CrossRef]
+97. Almeida, R.; Pereira, R.; da Silva, M.M. IT governance mechanisms patterns. In Proceedings of the Advanced Information
+Systems Engineering Workshops, Valencia, Spain, 17–21 June 2013; Volume 148, pp. 156–161.
+98. Wu, S.P.-J.; Straub, D.W.; Liang, T.-P. How Information Technology Governance Mechanisms and Strategic Alignment Influence
+Organizational Performance: Insights from a Matched Survey of Business and IT Managers. Manag. Inf. Syst. Q. 2015, 39, 497–518.
+[CrossRef]
+99. Opitz, N.; Krüp, H.; Kolbe, L.M. How to Govern your Green IT?-Validating a Contingency Theory Based Governance Model.
+PACIS 2014 Proceedings. Pacific Asia Conference on Information Systems: Virtual Conference. 2014. Available online: https:
+//aisel.aisnet.org/pacis2014/333 (accessed on 21 June 2021).
+100. Bartenschlager, J.; Goeken, M. Designing artifacts of IT strategy for achieving business/IT alignment. In AMCIS 2009 Proceedings;
+Association for Information Systems (AIS): San Francisco, CA, USA, 2009; p. 494.
+101. Rowlands, B.; de Haes, S.; van Grembergen, W. Exploring and Developing an IT Governance Culture Framework. In Proceedings
+of the International Conference on Information Systems, Auckland, New Zealand, 14–17 December 2014; pp. 1–9.
+102. Bianchi, I.S.; Pereira, R.; Sousa, R.; Hillegersberg, J. Baseline Mechanisms for IT Governance at Universities. In Proceedings of the
+European Conference on Information Systems (ECIS) 2017, Guimarães, Portugal, 5–10 June 2017; pp. 1551–1567.
+103. Pereira, R.; Almeida, R.; da Silva, M.M. IT governance patterns in the portuguese financial industry. In Proceedings of the 2014
+47th Hawaii International Conference on System Sciences, Waikoloa, HI, USA, 6–9 January 2014; pp. 4386–4395.
+104. Levstek, A.; Hovelja, T.; Pucihar, A. IT governance mechanisms and contingency factors: Towards an adaptive IT governance
+model. Organizacija 2018, 51, 286–310. [CrossRef]
+105. IT Governance Institute. COBIT 5; ISACA, IT Governance Institute: Rolling Meadows, IL, USA, 2012.

@@ -1,0 +1,1580 @@
+--- PAGE 1 ---
+European Journal of Information Systems
+ISSN: 0960-085X (Print) 1476-9344 (Online) Journal homepage: www.tandfonline.com/journals/tjis20
+Strategic alignment of enterprise architecture
+management – how portfolios of control
+mechanisms track a decade of enterprise
+transformation at Commerzbank
+Jannis Beese, Kazem Haki, Raphael Schilling, Martin Kraus, Stephan Aier &
+Robert Winter
+To cite this article: Jannis Beese, Kazem Haki, Raphael Schilling, Martin Kraus, Stephan
+Aier & Robert Winter (2023) Strategic alignment of enterprise architecture management
+– how portfolios of control mechanisms track a decade of enterprise transformation
+at Commerzbank, European Journal of Information Systems, 32:1, 92-105, DOI:
+10.1080/0960085X.2022.2085200
+To link to this article: https://doi.org/10.1080/0960085X.2022.2085200
+© 2022 The Author(s). Published by Informa
+UK Limited, trading as Taylor & Francis
+Group.
+Published online: 08 Jul 2022.
+Submit your article to this journal Article views: 7415
+View related articles View Crossmark data
+Citing articles: 13 View citing articles
+Full Terms & Conditions of access and use can be found at
+https://www.tandfonline.com/action/journalInformation?journalCode=tjis20
+
+--- PAGE 2 ---
+Strategic alignment of enterprise architecture management – how portfolios
+of control mechanisms track a decade of enterprise transformation at
+Commerzbank
+Jannis Beesea
+, Kazem Haki a,b
+, Raphael Schillingc
+, Martin Krausd
+, Stephan Aiera
+and Robert Wintera
+a
+Instituteof Information Management, University of St Gallen, St Gallen, Switzerland; b
+Geneva School of Business Administration (HES-SO,
+HEG Genève); c
+Migros-Genossenschafts-Bund, Zurich, Switzerland; d
+Commerzbank AG, Frankfurt am Main, Germany
+ABSTRACT
+Enterprise architecture management (EAM) is commonly employed by large organisa­
+tions to coordinate local information system development efforts in line with organisa­
+tion-wide strategic objectives while simultaneously avoiding redundancies and
+inconsistencies. Even though EAM tools and processes have become increasingly mature
+over the past decade, many organisations still struggle to generate impact from their
+EAM initiatives. To this end, we describe how enterprise architects at Commerzbank,
+a major international bank, employed a control mechanism portfolio perspective to
+more effectively anchor EAM within the organisation. This approach allows to purpose­
+fully combine a wide range of different formal and informal EAM control mechanisms,
+thereby going beyond the formal, top-down driven mechanisms predominantly dis­
+cussed in EAM literature. Furthermore, such EAM control mechanism portfolios provide
+an effective means to purposefully realign EAM in reaction to major strategic shifts. The
+application of this perspective is demonstrated by tracing the evolution of EAM at
+Commerzbank for more than a decade (2008 to 2018) through a turbulent and challen­
+ging competitive environment, resulting in several major strategic realignments that
+required corresponding adjustments in EAM. We believe that such consciously designed
+and diversified EAM control mechanism portfolios also provide a useful means for other
+large organisations to more effectively conduct EAM.
+ARTICLE HISTORY
+Received 15 September 2020
+Accepted 24 May 2022
+KEYWORDS
+Enterprise architecture
+management; control
+theory; control mechanism
+portfolio; episodic change
+1. Introduction
+Modern organisations extensively rely on intercon­
+nected information systems (IS) to support their core
+business processes. Continuously changing competitive
+environments and business requirements necessitate
+the development of new IS as well as frequent changes
+to existing systems. While such adaptations are inevi­
+table, they also have the potential to create conflicts
+among involved stakeholders with diverging perspec­
+tives on IS development (M. K. Haki et al., 2016). Local
+businessentities,suchasprojectteams,tendtoadvocate
+for specialised IS solutions that fit their specific needs
+and individual preferences. In contrast, global business
+entities, such as strategic initiatives, aim to improve the
+overall efficiency and effectiveness of the entire set of IS
+in the organisation from an overarching, organisation-
+wide perspective (Malaurent & Avison, 2016).
+Enterprise Architecture Management (EAM)
+addressestheseconflictsbytryingtoalignlocalandglobal
+perspectives on IS development (Boh & Yellin, 2006;
+Richardson et al., 1990; Zachman, 1987). Enterprise
+Architecture (EA) thereby refers to the actual and
+envisioned IS architecture of an organisation, covering
+all IS components as well any interdependencies (ISO/
+IEC/IEEE, 2011). EAM, in turn, encompasses all related
+processes,methods,andtoolsthatareusedtodesignand
+purposefully guide the evolution of EA (K. Haki et al.,
+2020; Simon et al., 2013). Notwithstanding significant
+advances in theseareas –including established andcom­
+prehensive EAM frameworks (e.g., The Open Group,
+2018) – and despite considerable efforts in organisations
+toadoptandimplementEAM,manyEAMinitiativesstill
+fail (Löhe & Legner, 2014) and organisations are witnes­
+singrisinglevelsofIScomplexityintheirEA(Beeseetal.,
+2016;Mocker,2009).Consequently,therestillisaneedto
+betterunderstandhowEAMcanbeeffectivelyconducted
+in large organisations.
+To this end, we provide a first-hand report andreflec­
+tion on the development of EAM at Commerzbank,
+a large European financial service provider, from 2008
+to 2018. During this period, Commerzbank was facing
+a turbulent and challenging competitive environment –
+including the 2008 financial crisis, the takeover of
+a major competitor, and multiple technological
+CONTACT Jannis Beese jannis.beese@unisg.ch; Kazem Haki kazem.haki@hesge.ch Geneva School of Business Administration (HES-SO, HEG
+Genève) St Gallen, Switzerland
+Submission for the Special Issue on Clinical Research from Information Systems Practice
+This article has been corrected with minor changes. These changes do not impact the academic content of the article.
+EUROPEAN JOURNAL OF INFORMATION SYSTEMS
+2023, VOL. 32, NO. 1, 92–105
+https://doi.org/10.1080/0960085X.2022.2085200
+© 2022 The Author(s). Published by Informa UK Limited, trading as Taylor & Francis Group.
+This is an Open Access article distributed under the terms of the Creative Commons Attribution-NonCommercial-NoDerivatives License (http://creativecommons.org/licenses/by-
+nc-nd/4.0/), which permits non-commercial re-use, distribution, and reproduction in any medium, provided the original work is properly cited, and is not altered, transformed, or
+built upon in any way. The terms on which this article has been published allow the posting of the Accepted Manuscript in a repository by the author(s) or with their consent.
+EMPIRICAL RESEARCH
+
+--- PAGE 3 ---
+reorientations – resulting in four major strategic realign­
+ments that necessitated corresponding adjustments in
+EAM. Thus, we can observe multiple different
+approaches to EAM within the same organisation at
+different points in time. These shifts, often driven by
+a perceived inadequacy of established EAM practices in
+novel circumstances, highlight the need for a situated
+and more nuanced approach to EAM that adequately
+reflects the emerged organisational context, thereby
+going beyond simple best-practices.
+In order to generalise the insights gained within
+Commerzbank, we suggest to conceptualise EAM as
+a control function that aims to align local IS develop­
+ment projects with global organisation-wide objectives
+(Cram et al., 2016b). Control thereby refers to a dyadic
+process, in which a controller tries to regulate or adjust
+the behaviour of a controlee (Choudhury & Sabherwal,
+2003). Since the effectiveness of control mechanisms
+depends on the specific circumstances under which
+they are employed, successful EAM requires to use
+various control mechanisms – potentially in combina­
+tion – which need to be adapted to accommodate
+changes in the organisational context (Kirsch, 1997).
+From this perspective, EAM can therefore be construed
+as a situated portfolio of control mechanisms, i.e.,
+a context-dependent set of means to align individual
+behaviour with organisation-wide objectives.
+OuranalysisofCommerzbank’sEAMjourneyempha­
+sises the need for organisations to frequently review and
+revise the control mechanism portfolio employed by their
+EAM to be aligned with a continuously changing context.
+Accordingly,weproposeasituatedapproachtoEAMthat
+constantly re-evaluates EAM structures and activities
+according to evolving opportunities and constraints
+(Feldman et al., 2016). The proposed EAM control
+mechanism portfolio perspective thereby offers a broader
+understanding of control and its underlying mechanisms,
+allowing organisations to draw upon a wide range of
+different control mechanisms. Our findings further sug­
+gestthat,dependingonthegivensituationandthecurrent
+organisational culture, different types of control mechan­
+isms can be emphasised, but the overall EAM control
+mechanism portfolio should be balanced and aligned
+with the organisation’s strategic initiatives and with the
+priorities of the top management.
+In the following, we first introduce the key concepts
+of EAM and control theory, then present our case
+analysis and results, and finally conclude with
+a discussion of the key findings.
+2. Enterprise architecture management and
+control theory
+Over the last decade, major changes in customer beha­
+viour (e.g., the ubiquity of online banking) along with
+significant technological (e.g., big data and machine
+learning) and regulatory advances, require that financial
+service providers, such as Commerzbank, continuously
+adapttheirIStofit newrequirements.Akeychallengein
+such a turbulent environment is to guide the develop­
+ment of the overall IS architecture towards organisation-
+wide objectives (K. Haki et al., 2020; Vessey & Ward,
+2013). EAM aims to address this challenge by building
+on a long tradition of established frameworks (Scheer &
+Schneider, 2005; The Open Group, 2018; Zachman,
+1987) and related tools (e.g., Jonkers et al., 2006; Ross,
+2006),allowingtoanalyseISdevelopmentfromanarchi­
+tectural perspective that considers all relevant entities
+within the organisation as well as their interrelations.
+After gaining traction both in research and practice
+during the early 2000s (Ross et al., 2006), EAM frame­
+works (e.g., The Open Group, 2017) have reached
+mature stages and are now commonly employed by
+large organisations (Rahimi et al., 2017), which rely on
+comprehensive modelling languages (Lankhorst et al.,
+2004) and related methods (Robert et al., 2019).
+A survey conducted in 2011 (i.e., towards the beginning
+of our engagement with Commerzbank) by Ross and
+Quaadgras (2012) already reports that most organisa­
+tions have reached a high level of EAM maturity, sup­
+porting the development of increasingly robust
+technology and process platforms. However, Ross and
+Quaadgras (2012) also highlight that high levels of EAM
+maturity do not correlate with the achievement of corre­
+sponding business objectives in their study. They argue,
+essentially, that EAM might become more mature and
+formalised without generating a valuable impact within
+an organisation (Ross & Quaadgras, 2012).
+This observation sparked a number of subsequent
+investigations on how to more effectively, in terms of
+impact, control IS development from an overarching
+perspective (K. Haki et al., 2020; Winter, 2014),
+which also motivated our prolonged engagement
+within Commerzbank. One hypothesis is that the
+limited impact of EAM might be due to a too narrow
+focus on top-down formalised modes of control to
+spread EAM within an organisation (Brown &
+Grant, 2005; K. Haki et al., 2020; Schilling et al.,
+2019). For example, enterprise architects usually
+aim to develop a future target architecture by con­
+trasting the current state of IS in the organisation
+with the organisation’s strategy and future business
+objectives (Boh & Yellin, 2006). Such a target archi­
+tecture is then often propagated and enforced
+throughout the organisation in a straightforward,
+centralised, top-down manner (Boh & Yellin, 2006).
+In this case, however, the actors in local project
+teams tend to perceive EAM primarily as an unwel­
+come restriction of their individual design freedom,
+which might lead to low levels of acceptance and
+impact (Brosius & Aier, 2016). Consequently,
+approaches to EAM that are solely grounded in
+a centralised and deterministic understanding of
+control may not be entirely suitable to manage
+EUROPEAN JOURNAL OF INFORMATION SYSTEMS 93
+
+--- PAGE 4 ---
+complex socio-technical systems, such as large orga­
+nisations that are manoeuvring through turbulent
+changes in their organisational environment
+(Ciborra et al., 2000).
+2.1. Control theory
+In the following, we introduce several concepts from
+control theory that originate from general sociology
+(e.g., Nye, 1958), but have since been frequently applied
+in management research (e.g., Tannenbaum, 2019) and
+more recently in studies of IS development (e.g., Wiener
+et al., 2016). In line with Cram et al. (2016b) and Wiener
+et al. (2016), we argue that – similar to their investiga­
+tions of IS development efforts – control theory offers
+a practical way to better understand how and why dif­
+ferent control mechanisms function more or less effec­
+tively in EAM in large organisations. Consequently, the
+general ideas introduced in the following – in particular,
+different modes of control and control mechanism portfo­
+lios(Kirsch,1997;Wieneret al.,2016)– enableustotake
+a more comprehensive perspective in our subsequent
+analysis of Commerzbank’s EAM journey.
+Furthermore, these concepts also gained traction within
+Commerzbank during our prolonged engagement (see
+Appendix A for the details) and were adopted by the
+EAM teamto critically reflectandpurposefullyadapt the
+prevalentEAMapproachesintheorganisationovertime.
+CentraltoourapplicationofcontroltheorytoEAMis
+thedifferentiationbetweendifferentformalandinformal
+modes of control (Kirsch, 1997; Ouchi, 1979). Formal
+modes of control are characterised by the existence of
+some sort of explicit performance evaluation and incen­
+tive system (Eisenhardt, 1985). In contrast, informal
+modes of control are grounded in a person’s intrinsic
+motivation and in interpersonal interactions, relying on
+the self-regulation dynamics that implicitly govern the
+behaviour of people within their social context. Control
+theory typically distinguishes between three different
+formal modes of control (input control, behaviour con­
+trol, and outcome control) and two informal modes of
+control (self-control and clan control; Choudhury &
+Sabherwal, 2003; Kirsch, 1997; Wiener et al., 2016).
+Related literature not only describes how these different
+modesofcontroloperate,butalsoprovidesgeneralsitua­
+tional considerations of contextual factors that are
+expectedtoimpacttheefficacyofagivenmodeofcontrol
+(see, Table 1 for an overview).
+Regardingthe formal modesof control, inputcontrol
+refers to control that is enacted by the controller (such
+as high-level managers) through the allocation of
+resources to the controlee (such as employees in an IS
+development project) and by monitoring to which
+extent the controlee utilises the allotted resources
+(Wiener et al., 2016). This includes human, financial,
+and material resources, as well as related organisational
+structures and processes (e.g., recruitment criteria and
+access to trainings). Effectively exerting input control
+thus depends on the existence of limited yet desirable
+resources – which ideally are related to the targeted
+outcomes – and on appropriate organisational struc­
+tures to manage and supervise this allocation.
+In behaviour control the controller monitors and
+rewards (or sanctions) the extent to which the controlee
+follows defined rules, procedures, and processes (e.g.,
+architecture principles or development methodologies).
+Related organisational processes include regular status
+meetings and reports (Cram et al., 2016b; Wiener et al.,
+2016). In order to effectively enact behaviour control,
+appropriate behaviours must both be known and obser­
+vable, which may be difficult in situations where the
+controller only has a limited capacity to oversee the
+actual execution of tasks (Kirsch, 1997). Furthermore,
+correspondingincentivestructurestorewardcompliance
+(or punish non-compliance) are required (Wiener et al.,
+2016).
+Table 1. Classification of control mechanisms in control
+theory.
+Control
+mechanism
+Description and
+operation Situational considerations
+Formal modes of control
+Input
+control
+(IC)
+Control through
+allocating
+● Human resources,
+● Financial
+resources,
+● Material resources
+and
+● Corresponding
+organisational
+arrangements.
+Resources must be limited,
+desirable and ideally related
+to the targeted goals.
+Appropriate structures to
+allocate resources are
+required.
+Behaviour
+control
+(BC)
+Control through
+establishing
+● Processes that gov­
+ern individual
+actions,
+● Rules to guide indi­
+vidual actions,
+● Mechanisms to
+observe compli­
+ance and
+● Reward systems
+for compliance.
+Incentives to reward compliance
+are necessary.
+Appropriate behaviours must
+be known and observable.
+Outcome
+control
+(OC)
+Control through
+establishing
+● Specific desired
+outcomes and
+● Processes to mea­
+sure and promote
+outcomes.
+Outcomes must be measurable
+and in line with objectives.
+Incentives to reward
+compliance are necessary.
+Informal modes of control
+Clan
+control
+(CC)
+Control through the
+institution of
+● Shared norms,
+values, and beliefs,
+● Reflective activ­
+ities, and
+● Strong interperso­
+nal social ties.
+Effects may be delayed and only
+arise over time.
+Works even without clear
+target outcomes and
+processes.
+Self-control
+(SC)
+Control through
+fostering
+individuals’
+● Intrinsic motiva­
+tion and
+● Personal
+standards.
+Employees must feel
+autonomous in their work.
+Difficult to influence directly.
+94 J. BEESE ET AL.
+
+--- PAGE 5 ---
+A controller exerts output control by defining and
+evaluating interim or final outputs (e.g., project mile­
+stones or design documents) that the controlee needs
+to deliver and by monitoring the extent to which these
+outputs are achieved (Wiener et al., 2016). Effective
+enactment of output control requires a set of measur­
+able outputs that accurately represent the targeted
+objectives as well as corresponding incentive struc­
+tures to reward compliance (Wiener et al., 2016).
+Regarding the informal modes of control, clan control
+refers to behavioural changes of the controlee due to
+shared norms and values within a peer group (e.g.,
+a shared architectural vision and related goals).
+Controllers, who are often outside the peer group, can
+promote and reinforce desired behaviour through speci­
+fic ceremonies and rituals (e.g., by publicly praising/
+criticising observed actions) as well as by strengthening
+social ties through activities (e.g., team events) and orga­
+nisational structures (e.g., allowing for break-room dis­
+cussions and activities; Kirsch, 1997). Clan control thus
+represents a more indirect approach, requiring to care­
+fully introduce norms, values, and beliefs into a social
+peergroupovertime,butworkseveninsituationswhere
+clear targets and related activities are not yet known
+(Cram et al., 2016b; Kirsch, 1997).
+Finally, self-control concerns the intrinsic motivation
+of individuals to achieve personal goals and adhere to
+their own standards (such as senior architects, who con­
+tinuously strive to redefine and improve existing pro­
+cesses). Consequently, effective use of self-control
+requiresthatindividualsfeelempoweredandencouraged
+toautonomouslyworktowardstheirgoals(Kirsch,1997).
+2.2. Evolution of an EAM control mechanism
+portfolio over time
+Building on the preceding discussion of different types
+of control mechanisms, we use the term EAM control
+mechanism portfolio to refer to a situated combination
+of any number of such control mechanisms. The port­
+folio concept is intended to imply that the overall
+effectiveness of all employed control mechanisms
+depends on the portfolio’s internal consistency and
+on whether the control mechanisms are both appro­
+priate for the given context and in line with organisa­
+tional objectives (Busby & Collins, 2014; Haki et al.,
+2016). Consequently, changing circumstances and
+objectives require organisations to be in
+a continuously ongoing process of re-evaluating and
+adjusting their portfolio in response (Cardinal et al.,
+2004; Cram et al., 2016a; Wiener et al., 2016). From
+this perspective, EAM activities can be conceptualised
+as an ongoing organisational process that guides
+a dynamic reconfiguration of EAM control mechan­
+ism portfolios (i.e., purposefully altering the overall
+setup of control mechanisms related to EAM in an
+organisation in a particular way), which may include
+different control mechanisms relating to different
+modes of control at different points in time.
+In our analysis, we distinguish three distinct epi­
+sodes at Commerzbank, referring to periods of rela­
+tive stability that are separated by “episodic changes”.
+Such episodic changes are infrequent, discontinuous,
+and intentional changes to the overall organisation,
+which simultaneously impact a significant number of
+components (e.g., business processes, organisational
+structures, and information systems) in fundamental
+ways (Pettigrew et al., 2001; Weick & Quinn, 1999).
+While we acknowledge the importance of under­
+standing the ongoing, evolving, and cumulative
+changes to the EAM control mechanism portfolios
+within the individual episodes in more detail, we
+deliberately focus our investigation on the adjust­
+ments that are made during episodic changes.
+Lacking a solid literature base that investigates
+EAM from a control mechanism portfolio perspec­
+tive, the major reconfigurations that happen during
+episodic changes provide a promising starting point
+to not only describe changes in EAM control
+mechanism portfolios over time, but also understand
+how and why these changes were made.
+In line with extant literature on organisational
+change, we find episodic changes to be driven by
+major environmental jolts (such as the 2008 financial
+crisis) or series of cumulative changes, which in turn
+lead to an overall major misalignment between the
+organisation and external requirements (Pettigrew
+et al., 2001). In response, the overall strategy of the
+organisation shifts, which leads to significant changes
+in diverse areas, such as organisational structures,
+established practices, and the overall workforce as
+well as senior management. These strategic shifts and
+the resultant organisational changes then necessitate
+a re-evaluation and purposeful reconfiguration of the
+EAM control mechanism portfolios and its constitu­
+ent control mechanisms, which must be realigned with
+the overall strategy and adapted to fit the emerged
+organisational context. This leads to fundamental
+changes for all control mechanism types between epi­
+sodes (IC1 → IC2 → IC3, ...; see, Figure 1).
+3. Case description and method
+Commerzbank AG is a major international bank
+headquartered in Frankfurt, Germany, and operating
+in more than 50 countries worldwide. In 2019,
+towards the end of our data collection,
+Commerzbank comprised 48ʹ512 employees who
+managed approximately 463.6 billion € in assets and
+generated an operating profit of 1.25 billion €
+(Commerzbank, 2020). Over the last decade,
+Commerzbank – and the financial services industry
+in general – experienced fundamental changes in
+EUROPEAN JOURNAL OF INFORMATION SYSTEMS 95
+
+--- PAGE 6 ---
+terms of customer behaviour, market structure, and
+regulation. As a result, Commerzbank went through
+several fundamental organisational restructurings and
+considerable changes in its business and technology
+strategy over the last decade. This encouraged us to
+share our experience at Commerzbank, since the digi­
+tal strategy of Commerzbank – and consequently the
+portfolio of EAM control mechanisms – went through
+significant changes over time. Throughout this pro­
+cess, we managed to dynamically readjust the portfolio
+of EAM control mechanisms to effectively achieve
+desired EAM outcomes in very different circum­
+stances, which could be of interest for other large
+organisations.
+This research paper is the result of a long-lasting
+collaboration between Commerzbank’s EAM team
+and a research group (see Appendix A). Starting with
+first discussions in 2008, this collaboration intensified
+in 2011, when we began to discuss different ways to
+better anchor EAM within the overall organisation in
+two tri-annual competence centres and through addi­
+tional related workshops, exchanges of best practices,
+joint participation at conferences, and training ses­
+sions. When reviewing the evolution of the EAM
+function within Commerzbank over time, we noticed
+that the EAM control mechanism portfolio concept
+(including the different types of control mechanisms)
+was increasingly perceived to be helpful to guide EAM
+activities in reaction to changing circumstances. For
+example, the EAM control mechanism portfolio con­
+cept was adopted by Commerzbank’s EAM team in
+meetings and presentations to review EAM activities
+and plan future changes. Consequently, in 2017, we set
+out together to gather rich qualitative data that allows
+us to retrace and explain shifts in the organisational
+context and corresponding changes to the EAM con­
+trol mechanism portfolio over time (Pettigrew, 1992).
+The methodological details of our approach, including
+the interview process as well as the coding and analysis
+procedures, are described in Appendix B. An overview
+of the overall process is provided in Figure 2.
+In this process, we could on the one hand build on
+data created and collected through our direct colla­
+boration. This comprises, for example, a total of 218
+sets of notes, presentations, and workshop results
+from regular competence centre meetings between
+2011 and 2018 along with notes from irregular meet­
+ings between senior researchers and senior executives,
+joint contributions to conferences, and strategy and
+alignment documents that were shared during
+ongoing discussions within our group. Furthermore,
+we collected all publicly available shareholder commu­
+nication between 2011 and 2018, including all annual
+reports and additional communication, e.g., in reac­
+tion to major takeovers or the financial crisis. All
+documents were initially collected, grouped by type,
+put into chronological order and then manually
+reviewed by the author team.
+Building on this vast set of data, we wanted to
+complement our own impressions with an external
+perspective of additional stakeholders outside of the
+EAM department at Commerzbank, ensuring to cap­
+ture the view of both IT and business functions within
+the overall organisation. This led to an additional
+tranche of data collection that took place between
+July and October 2017, comprising a set of ten semi-
+structured interviews with multiple stakeholders from
+both business and IT and on different hierarchical
+levels (top management and operational levels).
+Questions were aimed at discovering major turning
+points that led to adjustments in the EAM approach
+and the portfolio of control mechanisms as well as
+discovering misalignments between the perspectives
+of different EAM stakeholders, which are likely to
+trigger readjustment processes. Furthermore, we
+were interested in discovering different formal and
+Figure 1. EAM as a dynamic reconfiguration of control mechanism portfolios.
+96 J. BEESE ET AL.
+
+--- PAGE 7 ---
+informal modes of control as well as identifying mea­
+sures of success, as indicators of the effectiveness of
+control mechanisms.
+The obtained interview data was iteratively
+coded (starting with codes for the different types
+of control mechanisms derived from literature),
+structured, and mapped against the timeline from
+2008–2018. We then went back to our original data
+and triangulated the coded interviews with the
+information obtained through our direct collabora­
+tion as well as the publicly available shareholder
+communications. In combination, the rich data col­
+lected during our prolonged engagement with
+Commerzbank’s EAM department and the external
+interview data from other stakeholders within the
+organisation allows us to accurately trace and
+explain the complex organisational dynamics
+(Pettigrew, 1997; Vom Brocke et al., 2021) that
+commonly underly the development of EAM in
+large organisations.
+Following a dynamic (vs. static) perspective and
+to systematically analyse the evolution of EAM at
+Commerzbank, we relied on process theory, which
+is frequently employed to examine how organisa­
+tional phenomena emerge over time (Markus &
+Robey, 1988; Mohr, 1982; Pettigrew, 1997; Van de
+Ven & Huber, 1990). Process studies analyse three
+main components, namely antecedents, turning-
+point episodes, and outcomes. Antecedents, which
+trigger a turning-point episode, consist of external
+(e.g., business ecosystem, technological) and inter­
+nal (e.g., organisational culture) contextual factors.
+In turn, outcomes are the results of each turning-
+point episode. As such, a process represents
+a sequence of collective episodes unfolding over
+time (Pettigrew, 1997). In the context of our
+inquiry at Commerzbank, each episode corresponds
+to a major change in Commerzbank’s approach to
+EAM. Therefore, next to the constituent constructs
+of control theory (Table 1), we included the con­
+structs of process theory in a coding scheme that
+helped us analyse (1) the chain of events that col­
+lectively brought about the most recent EAM
+control mechanism portfolio, (2) the antecedents
+that brought about the emergence of various EAM
+control mechanism portfolios over time, and (3)
+the outcomes of establishing various EAM control
+mechanism portfolios over time.
+4. Evolution of the EAM control mechanism
+portfolio at Commerzbank
+The EAM control mechanism portfolio concept was
+used both to proactively develop EAM within
+Commerzbank and to retrospectively describe and
+evaluate past EAM activities in our analysis. Using
+this lens, we find that the strategic development of
+Commerzbank over the last decade can be roughly
+grouped into three distinct episodes (see, Figure 3).
+In the following, we use [IC], [BC], ... to mark obser­
+vations relating to Input Control, Behavioural
+Control, etc.
+Following process theory, this section presents the
+major turning-point episodes in the evolution of EAM
+at Commerzbank along with each episode’s corre­
+sponding antecedents, the resultant EAM control
+mechanism portfolio, and outcomes.
+Episode I (2008–2011). Antecedents: Prior to
+2008, Commerzbank was operating in a rather stable
+environment and generating good returns. Local orga­
+nisational entities experienced a relatively low level of
+formal control and were comparatively free in making
+use of their IT budgets. EAM was perceived as an
+“ivory tower”: While enterprise architects described
+themselves to be “a central staff function defining the
+future of the company’s IT architecture”, others per­
+ceived EAM to be a “cumbersome” governance func­
+tion, whose impact was perceived as being limited to
+the “definition of the Java version that has to be used”.
+Then, towards the end of 2008, the financial crisis
+hit Commerzbank in full force, causing a drop in the
+operating profit from 2ʹ513 million € in 2007 to
+a deficit of 378 million € in 2008 and a deficit of
+2ʹ270 million € in 2009 (Commerzbank, 2009a).
+Furthermore, on August 31st
+, 2008, Commerzbank
+Figure 2. Overview of data collection and analysis process (also see, Table 3 in Appendix A).
+EUROPEAN JOURNAL OF INFORMATION SYSTEMS 97
+
+--- PAGE 8 ---
+had announced to acquire Dresdner Bank, a major
+competitor, and the merger was legally completed in
+May 2009 (Commerzbank, 2009c).
+ResultantEAMcontrolmechanism portfolio:Both
+events, the financial crisis and the takeover of Dresdner
+Bank,causedastrategicshiftintheorganisationwithan
+emphasis on “focus, optimization, downsizing” [OC],
+which became central in the strategic Roadmap 2012
+ofCommerzbank(Commerzbank,2009b).Considering
+the circumstances (a clear target, but high environmen­
+tal uncertainty, financial pressures, and scarce
+resources), rigid resource allocation and control
+mechanisms [IC] were deemed to be most effective,
+which could take effect immediately to direct involved
+stakeholders towards a top-down defined target archi­
+tecture. Consequently, a new architectural task force
+was staffed [IC] to develop architectural blueprints for
+the target landscape [OC], the execution of which was
+overseen by management [BC] and tracked through
+implementation roadmaps [BC]. Furthermore, archi­
+tects were directly assigned to the core modules of the
+merger project to supervise the integration efforts and
+to ensure that ongoing activities are in line with the
+overall architectural vision [BC].
+Regarding informal control, there was a tacit agree­
+mentbetweenallinvolvedstakeholdersin2008and2009
+(while the merger was not fully completed, and the
+financial crisis was still in full force) to mitigate risks as
+muchaspossibleandtofocusonensuringthestabilityof
+the IS [IC]. In this setting, EAM managed to position
+itselfasawelcomeenablerofstabilityintheorganisation,
+who could provide guidance and accountability on the
+way forward [IC].
+Outcomes: Overall, the chosen EAM approach was
+successfulinthesensethatthecombinedCommerzbank/
+Dresdner Bank was one of the very few banks that com­
+pleted a major merger during the financial crisis and
+managed to get rid of duplicate IS in a comparatively
+short period of time. This outcome greatly strengthened
+the perceived value of overarching target architectures
+and EAM in general at Commerzbank.
+Episode II (2012–2016). Antecedents: Following
+the successful completion of the merger project and
+the end of the Roadmap 2012 strategy, Commerzbank
+had once again become profitable at the end of episode
+I (Commerzbank, 2012a). A strategic shift at
+Commerzbank regarding EAM was marked by the
+appointment of a new CIO in 2012, who declared
+a strong belief in the strategic value of EAM.
+Aside from personnel and organisational changes,
+management in Commerzbank had also noticed
+a significant backlog of necessary adjustments and
+updates in their core IT infrastructure, including central
+components such as customer master data systems and
+online banking platforms. Consequently, after years of
+focusing the merger, a need to catch up with deferred
+investments in the modernisation of the IT platform
+triggered a series of large strategic transformation pro­
+jects. The official communication at the Commerzbank
+Investor’s Day in 2012 (Commerzbank, 2012b) high­
+lights both the successful completion of the integration
+of Dresdner Bank and the effective cost management
+during the previous years, as well as the new strategic
+focus on a “strong investment commitment in core infra­
+structure” that would enable the bank to remain compe­
+titive in the future.
+Figure 3. Evolution of EAM control mechanism portfolios over time.
+98 J. BEESE ET AL.
+
+--- PAGE 9 ---
+Resultant EAM control mechanism portfolio: The
+newly appointed CIA extended the mandate of the new
+head of enterprise architecture to include formerly
+decentrally organised domain architects [IC] in order
+to ensure clear responsibilities and an increased visibi­
+lity of EAM in the organisation. Consequently, during
+this episode, the chief enterprise architect emphasised
+the architects’ role to build a connection between busi­
+ness and IT sides through intensified networking activ­
+ities [CC]. Based on initial experiences from new
+implementation projects, the architecture team con­
+cluded that effective guidance could not simply be
+enforced by just designing blueprints of a future target
+architecture [OC], but that relevant stakeholders from
+business and IT need to be actively involved in these
+architectural discussions [BC]. Initially, it was agreed
+that project managers must regularly consult with the
+EAM team [BC], while simultaneously striving for
+a more active engagement of architects in IT projects
+[BC] through new allocation processes [IC].
+During phase II, projects were actively and volun­
+tarily requesting support from the EAMteam [SC] and
+architectural topics were discussed by a variety of
+stakeholders [CC]. The increased demand for EAM
+was further strengthened by a stronger regulatory
+oversight, which mandated regular quality checks on
+documentation, project structure, and software devel­
+opment processes for banks [OC], helping to track
+progress even during the initial discussions without
+clearly established target pictures.
+Architectural discussions were also organisationally
+anchored in a variety of committees [BC], in which the
+architects reiterated their message that a better inte­
+gration of the various IS components in the bank
+would allow for the creation of new business offerings.
+This active participation of both business and IT man­
+agement in the committees ensured a joint discussion
+process towards commonly supported and agreed
+architectural target pictures over time [CC].
+Outcomes: Experiences from initial projects in com­
+bination with the large investments to rebuild
+Commerzbank’s digital core started to create
+a significant demand for EAM in the organisation. This
+is a major shift in the mode of operation of the EAM
+team, as previously IT project teams often perceived
+architecturalinvolvementtobeeitheranannoyingexter­
+nal restriction of design freedom or, during the merger
+with Dresdner Bank, a management-mandated impera­
+tive. Overall, EAM was perceived to be a major contri­
+butor to the successful completion of several major
+transformation projects that helped to modernise the
+core IT infrastructure of Commerzbank during phase II.
+Episode III (2016–2018). Antecedents: While the
+efforts to modernise the core IT infrastructure of
+Commerzbank showed positive results after several
+major transformation projects were concluded, manage­
+ment was not convinced that the organisation was
+adequately set up to make full use of the newly acquired
+technological capabilities. Therefore, in September 2016,
+Commerzbank publicly announced its new
+“Commerzbank 4.0” strategy (Commerzbank, 2016),
+focussingongrowth,digitaltransformation,andincreased
+efficiency to address comparatively low revenue margins.
+Building on this new strategy, Commerzbank set out to
+“transform from a financial service provider into a digital
+technology company”, with the aim to automate all the
+relevant core processes and focus on the creation of new
+innovative financial service offerings.
+Resultant EAM control mechanism portfolio:
+Building on the successes of the previous periods, the
+EAM function was given a priority to support the corre­
+sponding technological transformation in all application
+domains [OC] and a major extension of the EAM head­
+countwasapproved[IC],toalsocounteracttheobserved
+capacity shortcomings during the previous period. The
+new strategy, which also highlighted the importance of
+architecture for the overall organisation [SC], resulted in
+non-architectscriticallyreflectingontheirrolewithinthe
+bank and on how the overall strategic goal to become
+a technology company can best be achieved [SC]. Many
+stakeholders looked for guidance from the EAM team to
+close this “abstraction gap” [CC]. As part of this process,
+architects as well as representatives from top manage­
+ment and business experts from several domains were
+brought together to jointly discuss architectural concepts
+[CC]. At the same time, architects continued to be
+involved in major strategic design decisions during the
+early stages of new IT projects with the responsibility to
+ensure the fit of the individual solutions with the overall
+enterprisearchitecture[BC].However,despitetheoverall
+increased capacity of the architecture team, architects
+were still lacking time to align and plan among them­
+selves due to the increased demand for general guidance
+as well as their concrete contributions in projects.
+Consequently, standardised roles [IC] and formal pro­
+cesses handling, for example, escalations of architectural
+agreements, were reintroduced over time [IC].
+Outcomes: In the wake of rebuilding the core IT
+infrastructure during the previous years, the wider
+organisation now showed increased appreciation for
+IT, which was perceived more as a business enabler
+and core capability of a financial services provider at
+the end of episode III, rather than a mere cost factor.
+This allowed EAM to not only support infrastructure
+projects, but also to engage with bottom-up innova­
+tion initiatives, which aimed to find creative ways to
+use new technologies within Commerzbank.
+Outlook (since 2018): During 2018 it became clear
+that delivery of new IT functionality in the current orga­
+nisational model of Commerzbank was not able to keep
+up with customer demand for digital services. As
+a reaction, Commerzbank decided to transform the pre­
+vious IT department into an agile product-centric orga­
+nisation with joint business and technical expertise. As
+EUROPEAN JOURNAL OF INFORMATION SYSTEMS 99
+
+--- PAGE 10 ---
+a part of this strategic reorganisation, the EAM depart­
+ment was restructured to be part of a new executive area
+responsible for digital transformation. Consequently, the
+mode of operation of EAM in Commerzbank is again
+expected to change considerably, moving architects out
+of the individual development projects to focus less on
+direct engagement and more on strategic topics.
+Summary: On a high level, the changes in the EAM
+control mechanism portfolio over time indicate a shift
+from mostly formal control mechanisms in episode I –
+when resources are scarce as the overall organisation is
+navigating through a financial crisis – towards increas­
+ingly emphasising informal control during the later
+episodes, when renewal and innovation considered
+key outcomes. In the following, we discuss this devel­
+opment on a more general level, arguing first that the
+specific EAM control mechanism portfolios with differ­
+ent emphases are appropriate for the given circum­
+stances in each episode and that organisations in
+general must adapt their portfolios to newly emerging
+circumstances. Second, we highlight the importance to
+have an overall balanced portfolio that, despite allowing
+for certain emphases, makes use of a variety of formal
+and informal control mechanisms in the long run.
+5. Discussion
+This article reports on the development of the EAM
+function at Commerzbank over more than a decade
+with the aim to explain the dynamic reconfigurations of
+the employed EAM control mechanism portfolios.
+Following the journey of EAM at Commerzbank
+through the 2008 financial crisis and the takeover of
+Dresdner Bank (episode I, 2008–2011), the development
+ofanewtechnologicalcore(episodeII,2012−2016)and
+the strategic reorientation towards the Commerzbank
+4.0 strategy (episode III, 2016–2018), we find the EAM
+control mechanism portfolio to comprise very different
+controlmechanismsatdifferentpointsintime,reflecting
+a situated response to major strategic shifts (Choudhury
+& Sabherwal, 2003; Gregory et al., 2013). The employed
+modes of control thereby result from considerations of
+theinvolvedstakeholdersonwhatis mosteffectiveinthe
+given context (Wiener et al., 2016). Over time, this con­
+textisexpectedtoevolve,mostnotablyduringinfrequent
+periodsofdiscontinuousandintentionalepisodicchange
+(Farjoun, 2010; Weick & Quinn, 1999). Accordingly, we
+argue that EAM should not be conceptualised as a linear
+process with clearly defined steps and constant goals.
+Instead, more attention should be devoted to developing
+a situated EAM that considers a broad range of control
+mechanisms to effectively reach a large part of the
+organisation.
+SuchasituatedapproachtoEAMessentiallyconsiders
+EAM tobearoutinised practice (Feldman& Orlikowski,
+2011), i.e., a constantly ongoing re-evaluation of EAM
+structures and activities, which contribute to both stabi­
+lity and change, in line with evolving opportunities and
+constraints within the organisation and in the overall
+environment (Feldman et al., 2016). The proposed
+EAM control mechanism portfolio perspective thereby
+offers a broader understanding of control and its under­
+lying mechanisms, which goes beyond the formal, top-
+down driven mechanisms predominantly discussed in
+EAM literature. It allows to deconstruct EAM activities
+and structures, which typically constitute complex over­
+arching organisational arrangements, into specific
+instances of general modes of control. This additional
+level of abstraction then allows to trace the overall devel­
+opment of EAM in the organisation over time through
+a process approach. Such process-based theory develop­
+ment can provide additional detail (compared to var­
+iance-based approaches) on the antecedents and
+underlying mechanisms of complex change processes,
+as made evident by our detailed explanations of the
+observed shifts in Commerzbank’s EAM control
+mechanism portfolio between two episodes.
+We draw from our analysis that major shifts in the
+approach to EAM, captured through the overall port­
+folio of EAM control mechanisms, often follow new
+opportunities or major changes in the surrounding
+constraints within which an organisation operates.
+Consequently, the transition between two episodes in
+our case was generally preceded by the realisation that
+certain assumptions no longer hold true or by unco­
+vering entirely new paths of action, for example, in the
+form of previously not envisioned types of technology.
+The EAM control mechanism portfolio perspective
+provided an effective means for Commerzbank to
+continuously readjust their EAM in reaction to such
+changing circumstances, allowing to match the EAM
+control mechanism portfolio with the overall situa­
+tion, strategy, and top-level management priorities.
+Episode I provides a good example of a scarcity and
+crisis situation that is well-suited for emphasising for­
+mal modes of control. Limited resources enable
+a strict, top-down driven focus on integration and
+cost reduction, which is facilitated by a clear relation
+between input control mechanisms and the targeted
+goals. Furthermore, there was a clear need for the
+control mechanisms to become effective almost imme­
+diately. This contrasts with the episode III, in which
+the severe financial constraints were lessened, and the
+focus shifted to fostering innovation in new technolo­
+gies. In this situation, without clear a priori outcomes,
+various informal modes of control that allow for slack
+and support employee empowerment as well as social
+exchange proved to be more effective.
+In general, we found that behavioural and output
+control work best when there are clear goals and pro­
+cedurestoestablishadequatecontrolstructures.Incon­
+trast, informal modes of control are well-suited for
+handling turbulent situations with a large degree of
+100 J. BEESE ET AL.
+
+--- PAGE 11 ---
+uncertainty regarding targeted outcomes as well as how
+to get there, since they can be implemented even in the
+absence of clear targets and roadmaps.
+Despite these situational considerations, our findings
+suggest that EAM, similar to, for example, business pro­
+cess management (BPM; Mendling et al., 2020), needs to
+balance several critical aspects in the long run. These
+include, for example, balancing short-term and long
+term goals as well as local project needs and global
+organisational targets (Brosius et al., 2018), which in
+turn requires to establish structures and practices that
+(re-)enforce compliance while still allowing for positive
+devianceinunforeseensituations(Mendlingetal.,2020).
+Essentially, we argue that enterprise architects need to
+findabalancebetweenactivelyenforcingclearstructures,
+architectural blueprints, roadmaps, and principles on the
+one hand, and purposefully allowing an open exchange
+of ideas, values, and beliefs on the other hand (K. Haki
+et al., 2020).
+This notion of “balance” is clearly visible in our
+analysis of Commerzbank’s EAM journey. We found
+that formal control is often quicker to take effect
+compared to informal control, which may take
+a long time to achieve noticeable impacts in the overall
+organisation. However, even though it may be advisa­
+ble to emphasise formal control in scarcity and crisis
+situations (such as the beginning of episode I), it is still
+important to adequately position EAM in the overall
+organisation in terms ofinformal control, forexample,
+by highlighting its potential to provide some degree of
+safety and stability. While not as immediately effective
+as direct formal control, taking on conscious efforts to
+establish such informal modes of control in the orga­
+nisation has led to an increased appreciation of EAM
+over time, even during challenging times. Similarly,
+even in situations that are well-suited for informal
+control, resource use and allocation should still be
+monitored and controlled. For example, in the begin­
+ning of episode II, when the development of the new
+target architecture was just starting, progress could
+already be tracked by considering intermediate arte­
+facts, such as documentation (output control) or
+adherence to best practices (behavioural control).
+Table 2 summarises the practical insights that we
+draw from our case with regard to specific situational
+considerations while still aiming for an overall
+balanced EAM control mechanism portfolio.
+Within Commerzbank, the EAM team employed this
+perspective to reflect on and continuously readjust how
+EAM should operate in the organisation. The concept of
+control mechanism portfolios allowed to derive thor­
+ough explanations for the effectiveness (or inefficacy) of
+specific structures and activities in a given organisational
+setting, which enabled the involved stakeholders to con­
+tinuouslyadapttheirEAMapproachtomatchconstantly
+evolving constraints and opportunities.
+In this paper, we traced the development EAM at
+Commerzbank for more than a decade and through
+three distinct episodes. Even though our analysis is
+limited to a single organisation, over time we have
+demonstrated the applicability of this approach to
+three very different situations. Regarding projectability
+of our findings, we want to highlight two aspects: First,
+we expect there to be a critical threshold regarding the
+Table 2. Key practical insights and related observations.
+Theme Practical insight Explanation
+Portfolio must match the situation,
+strategy, and top-level priorities
+In scarcity and crisis situations, input
+control is highly effective
+● Limited and desirable resources enable input control
+● Clear relation between control mechanisms and goals
+● Can be quickly established with impact
+Innovation can effectively be supported
+through informal control
+● Supported by allowing for slack
+● Employees must feel empowered to think on their own
+● Further strengthened through social exchanges and knowl­
+edge sharing
+Behavioural and output control
+requires clear goals and procedures
+● Goals must be clear and measurable
+● Procedures must be suitable to reach goals
+● Supervision must be possible and socially accepted
+Uncertainties can effectively be
+managed through informal control
+● In case of unclear uncertainties and turbulences, social
+exchange facilitates alignment
+● Social pressures to perform well are independent of external
+objective goal formulations
+Portfolio must be balanced in the long
+term
+Formal control is often faster to
+implement than informal control
+● Formal control can be established with a direct and immedi­
+ate impact
+● Informal control takes time to function effectively
+● Long-term benefits of informal control are crucial
+In scarcity and crisis situations, safety
+and stability is valued
+● Even in crisis situations, informal control can be effective by
+positioning the controller as a stabilising element
+● In contrast, emphasise freedom and opportunity to support
+innovation
+Uncertain goals can be tracked by
+formal intermediate artefacts
+● In the absence of clear goals, intermediate artefacts (docu­
+mentation, best practices) can be tracked
+● Allows for a high-level management perspective in uncertain
+times
+Support informal control through
+formal roles and allocation processes
+● Effectively exerting informal control can be very time
+consuming
+● Counteract excessive use of resources through complemen­
+tary formal roles and allocation processes
+EUROPEAN JOURNAL OF INFORMATION SYSTEMS 101
+
+--- PAGE 12 ---
+size and overall complexity of an organisation for cer­
+tain issues with EAM to arise. For example, the discus­
+sion of balancing local and global perspectives in EAM
+only arises in large organisations (Brosius et al., 2018).
+Second, Commerzbank, as any other large international
+bank, is operating within an environment that forced
+fundamental strategic shifts in the organisation, leading
+to multiple distinct episodes of EAM between 2008–
+2018. Consequently, we believe our findings to apply to
+otherlargeorganisationsinindustriesthatwereaffected
+by major strategic disruptions (e.g., energy and utili­
+ties), but not in other industries (e.g., logistics).
+Disclosure statement
+No potential conflict of interest was reported by the
+author(s).
+Funding
+This work was supported by the Schweizerischer
+Nationalfonds zur Förderung der Wissenschaftlichen
+Forschung [247310].
+ORCID
+Kazem Haki http://orcid.org/0000-0002-8807-0147
+References
+Aier, S., Labusch, N., & Pähler, P. (2015). Implementing archi­
+tectural thinking: A case study at commerzbank Ag.
+Proceedings of the CAiSE 2015 Workshops, Stockholm,
+Sweden, Lecture Notes in Business Information Processing,
+215, Cham: Springer.
+Beese, J., Aier, S., Haki, K., & Aleatrati Khosroshahi, P.
+(2016). Drivers and effects of information systems
+architecture complexity: A mixed-methods study.
+24th European Conference on Information Systems
+(ECIS), Istanbul, Turkey, Association for Information
+Systems.
+Boh, W. F., & Yellin, D. (2006). Using enterprise archi­
+tecture standards in managing information
+technology. Journal of Management Information
+Systems, 23(3), 163–207. https://doi.org/10.2753/
+MIS0742-1222230307
+Brosius, M., & Aier, S. (2016). The impact of enterprise
+architecture management on design decisions in is change
+projects. In V. Nissen, D. Stelzer, S. Straßburger, &
+D. Fischer (Eds.), Multikonferenz Wirtschaftsinformatik
+(Vol. 2016, pp. 1405–1416). Univ.-Verl.
+Brosius, M., Aier, S., Haki, K., & Winter, R. (2018). Enterprise
+architecture assimilation: An institutional perspective.
+Proceedings of the 39th International Conference on
+Information Systems (ICIS 2018), San Francisco, USA,
+Association for Information Systems.
+Brown,A.E.,&Grant,G.G.(2005).Framingtheframeworks:
+A review of it governance research. Communications of the
+Association for Information Systems, 15(1), 696–712.
+https://doi.org/10.17705/1CAIS.01538
+Busby, J. S., & Collins, A. M. (2014). Organizational sense­
+making about risk controls: The case of offshore hydro­
+carbons production. Risk Analysis, 34(9), 1738–1752.
+https://doi.org/10.1111/risa.12198
+Cardinal, L. B., Sitkin, S. B., & Long, C. P. (2004). Balancing
+and rebalancing in the creation and evolution of organi­
+zational control. Organization Science, 15(4), 411–431.
+https://doi.org/10.1287/orsc.1040.0084
+Choudhury, V., & Sabherwal, R. (2003). Portfolios of con­
+trol in outsourced software development projects.
+Information System Research, 14(3), 291–314. https://
+doi.org/10.1287/isre.14.3.291.16563
+Ciborra, C. U., Braa, K., Cordella, A., Dahlom, B., Failla, A.,
+Hanseth, O., Hepso, V., Ljungberg, J., Monteiro, E., &
+Simon, K. (2000). From control to drift: the dynamics of
+corporate information infastructures. Oxford University
+Press.
+Commerzbank. (2009a). Annual report 2008.
+Commerzbank. (2009b). Commerzbank Roadmap 2012.
+Commerzbank. (2009c). Press release: Dresdner bank
+merged into commerzbank.
+Commerzbank. (2012a). Annual Report 2011
+Commerzbank. (2012b). Group services: From integration
+to operational excellence. Investors’ Day 2012
+Commerzbank. (2016). Commerzbank to increase profit­
+ability through focus and digitalisation.
+Commerzbank. (2020). Annual Report 2019.
+Cram, W. A., Brohman, M. K., & Gallupe, R. B. (2016a).
+Hitting a moving target: A process model of information
+systems control change. Information Systems Journal, 26
+(3), 195–226. https://doi.org/10.1111/isj.12059
+Cram, W. A., Brohman, M. K., & Gallupe, R. B. (2016b).
+Information systems control: A review and framework
+for emerging information systems processes. Journal of
+the Association for Information Systems, 17(4), 216–266.
+https://doi.org/10.17705/1jais.00427
+Eisenhardt, K. M. (1985). Control: organizational and eco­
+nomic approaches. Management Science, 31(2), 134–149.
+https://doi.org/10.1287/mnsc.31.2.134
+Eisenhardt, K. M. (1989). Building theories from case-study
+research. Academy of Management Review, 14(4),
+532–550. https://doi.org/10.2307/258557
+Farjoun, M. (2010). beyond dualism: stability and change as
+a duality. Academy of Management Review, 35(2) , 202–
+225. https://doi.org/10.5465/amr.35.2.zok202
+Feldman, M. S., & Orlikowski, W. J. (2011). Theorizing
+practice and practicing theory. Organization Science, 22
+(5), 1240–1253. https://doi.org/10.1287/orsc.1100.0612
+Feldman, M. S., Pentland, B. T., D’Adderio, L., & Lazaric, N.
+(2016). Beyond routines as things: Introduction to the
+special issue on routine dynamics. Informs, 3 ,505–513.
+https://doi.org/10.1287/orsc.2016.1070
+Gregory, R. W., Beck, R., & Keil, M. (2013). Control balan­
+cing in information systems development offshoring
+projects. MIS Quarterly, 37(4), 1211–1232. https://doi.
+org/10.25300/MISQ/2013/37.4.10
+Haki, M. K., Aier, S., & Winter, R. (2016). A stakeholder per­
+spective to study enterprisewide is initiatives. 24thEuropean
+ConferenceonInformationSystems(ECIS),Istanbul,Turkey,
+Association for Information Systems.
+Haki, K., Beese, J., Aier, S., & Winter, R. (2020). The evolu­
+tion of information systems architecture: An agent-based
+simulation model. MIS Quarterly, 44(1), 155–184. https://
+doi.org/10.25300/MISQ/2020/14494
+ISO/IEC/IEEE. (2011). Systems and software engineering—
+architecture description (ISO/IEC/IEEE Std 42010:2011).
+ISO/IEC and IEEE Computer Society.
+102 J. BEESE ET AL.
+
+--- PAGE 13 ---
+Jonkers, H., Lankhorst, M., ter Doest, H., Arbab, F.,
+Bosma, H., & Wieringa, R. (2006). Enterprise architec­
+ture: Management tool and blueprint for the
+organisation. Information Systems Frontiers, 8(2), 63–66.
+https://doi.org/10.1007/s10796-006-7970-2
+Kirsch, L. J. (1997). Portfolios of control modes and is
+project management. Information Systems Research, 8
+(3), 215–239. https://doi.org/10.1287/isre.8.3.215
+Lagerström, R., MacCormack, A., Dreyfus, D., &
+Baldwin, C. (2019). A methodology for operationalizing
+enterprise it architecture and evaluating its modifiability.
+Complex Systems Informatics and Modeling Quarterly, 19
+,75–98. doi:10.7250/csimq.2019-19.05.
+Lankhorst, M., van Buuren, R., van Leeuwen, D.,
+Jonkers, H., & ter Doest, H. (2004). Enterprise architec­
+ture modelling - the issue of integration. Advanced
+Engineering Informatics, 18(4), 205–216. https://doi.org/
+10.1016/j.aei.2005.01.005
+Löhe, J., & Legner, C. (2014). Overcoming Implementation
+challenges in enterprise architecture management: A design
+theory for architecture-driven it management (Adrima).
+Information Systems and E-Business Management, 12(1),
+101–137. https://doi.org/10.1007/s10257-012-0211-y
+Malaurent, J., & Avison, D. (2016). Reconciling global and
+local needs: A canonical action research project to deal
+with workarounds. Information Systems Journal, 26(3),
+227–257. https://doi.org/10.1111/isj.12074
+Markus, M. L., & Robey, D. (1988). Information technology
+and organizational change - causal structure in theory
+and research. Management Science, 34(5), 583–598.
+https://doi.org/10.1287/mnsc.34.5.583
+Mendling, J., Pentland, B. T., & Recker, J. (2020). Building
+a complementary agenda for business process management
+and digital innovation (pp. 208–219). Taylor & Francis.
+Mocker, M. (2009). What Is complex about 273 applications?
+Untangling application architecture complexity in a case of
+European investment banking,” 42nd Hawaii International
+Conference on System Sciences (HICSS 2009), Big Island,
+USA. IEEE Computer Society.
+Mohr, L. B. (ed.). (1982). Explaining organizational beha­
+vior. Jossey-Bass.
+Nye, F. I. (1958). Family relationships and delinquent beha­
+vior. John Wiley.
+Ouchi, W. G. (1979). A conceptual framework for the design
+of organizational control mechanisms. Management
+Science, 25(9), 833–848. https://doi.org/10.1287/mnsc.
+25.9.833
+Pettigrew, A. M. (1992). The character and significance
+of strategy process research. Strategic Management
+Journal, 13(S2), 5–16. https://doi.org/10.1002/smj.
+4250130903
+Pettigrew, A. M. (1997). What is a processual analysis?
+Scandinavian Journal of Management, 13(4), 337–348.
+https://doi.org/10.1016/S0956-5221(97)00020-1
+Pettigrew, A. M., Woodman, R. W., & Cameron, K. S.
+(2001). studying organizational change and development:
+challenges for future research. The Academy of
+Management Journal, 44(4), 697–713. https://doi.org/10.
+5465/3069411
+Rahimi, F., Gøtze, J., & Møller, C. (2017). Enterprise archi­
+tecture management: toward a taxonomy of applications.
+Communications of the Association for Information
+Systems, 40(1), 120–166. https://doi.org/10.17705/
+1CAIS.04007
+Richardson, G. L., Jackson, B. M., & Dickson, G. W. (1990).
+A principles-based enterprise architecture: Lessons from
+texaco and star enterprise. MIS Quarterly, 14(4), 385–403.
+https://doi.org/10.2307/249787
+Ross, J. W., Weill, P., & Robertson, D. C. (2006). enterprise
+architecture as strategy. creating a foundation for business
+execution. Harvard Business School Press.
+Ross, J. W. (2006). Maturity matters: how firms generate
+value from enterprise architecture. Center for
+Information Systems Research Sloan School of
+Management Massachusetts Institute of Technology.
+Ross, J. W., & Quaadgras, A. (2012). enterprise architecture is
+not just for architects. Center for Information Systems
+Research Sloan School of Management Massachusetts
+Institute of Technology.
+Scheer, A.-W., & Schneider, K. (2005). Aris - architec­
+ture of integrated information systems. In P. Bernus,
+K. Mertins, & G. Schmidt (Eds.), Handbook on archi­
+tectures of information systems (pp. 605–623).
+Springer.
+Schilling, R. D., Aier, S., & Winter, R. (2019). “Designing an
+artifact for informal control in enterprise architecture
+management. Proceedings of the 40th International
+Conference on Information Systems (ICIS 2019). Munich,
+Germany. Association for Information Systems.
+Simon, D., Fischbach, K., & Schoder, D. (2013). An explora­
+tion of enterprise architecture research. Communications
+of the Association for Information Systems, 32(1), 1–72.
+https://doi.org/10.17705/1CAIS.03201
+Tannenbaum, A. S. (1962). Control in organizations:
+Individual adjustment and organizational performance.
+Administrative Science Quarterly, 7(2), 236–257. https://
+doi.org/10.2307/2390857
+The Open Group, The Open Group (2017). Archimate®
+3.0.1 specification.
+The Open Group. (2018). the open group architecture frame­
+work (Togaf) Version 9.2. Van Haren Publishing.
+Van de Ven, A. H., & Huber, G. P. (1990). Longitudinal field
+research methods for studying processes of organiza­
+tional change. Organization Science, 1(3), 213–219.
+https://doi.org/10.1287/orsc.1.3.213
+Vessey, I.,& Ward,K. (2013).The dynamicsofsustainableis
+alignment: The case for is adaptivity. Journal of the
+Association for Information Systems, 14(6), 283–311.
+https://doi.org/10.17705/1jais.00336
+Vom Brocke, J., van der Aalst, W., Grisold, T., Kremser, W.,
+Mendling, J., Pentland, B., Recker, J., Roeglinger, M.,
+Rosemann, M., & Weber, B. (2021 (Elsevier)). Process
+science: The interdisciplinary study of continuous change.
+Available at SSRN 3916817.
+Weick, K. E., & Quinn, R. E. (1999). Organizational change
+and development. Annual Review of Psychology, 50(1),
+361–386. https://doi.org/10.1146/annurev.psych.50.1.
+361
+Wiener, M., Mähring, M., Remus, U., & Saunders, C.
+(2016). Control configuration and control enactment
+in information systems projects - review and expanded
+theoretical framework. MIS Quarterly, 40(3), 741–774.
+https://doi.org/10.25300/MISQ/2016/40.3.11
+Winter, R. (2014). Architectural thinking. Business &
+Information Systems Engineering, 6(6), 361–364. https://
+doi.org/10.1007/s12599-014-0352-2
+Zachman, J. A. (1987). A framework for information sys­
+tems architecture. IBM Systems Journal, 26(3), 276–292.
+https://doi.org/10.1147/sj.263.0276
+EUROPEAN JOURNAL OF INFORMATION SYSTEMS 103
+
+--- PAGE 14 ---
+Appendix A: Details of the cooperation with
+Commerzbank
+This research project originates from a long-term col­
+laboration between corporate enterprise architects of
+Commerzbank AG and the University of St.Gallen, dat­
+ing back to first discussions in 2008. Regular meetings
+between Commerzbank’s senior enterprise architects
+and university researchers consequently led to the
+founding of two different competence centres (the
+Competence Centre Corporate Intelligence – CC CI, and
+the Competence Centre on Business Intelligence in the
+Banking Community – BI BC) in 2011, focussing on
+enterprise architecture and data management and ana­
+lytics respectively. Each competence centre organised
+three two-day workshops each year, in which the cur­
+rent topics from practice and new academic insights
+were discussed. Over time, several focus areas emerged
+(i.e., work and research streams that spanned multiple
+workshops with additional engagements in between),
+including joint efforts to increase the impact of enter­
+prise architecture management (EAM) within
+Commerzbank. See, Table 3 for an overview of these
+engagements.
+Martin Kraus, the fourth author of this paper, played
+a key role in this engagement. From 2009 to 2019 Martin
+Kraus was leading the enterprise architecture team for the
+corporate centre functions, i.e., the risk, finance, and com­
+pliance areas of Commerzbank. During our prolonged col­
+laboration, he not only ensured that we could directly
+observe critical developments and that the relevant collea­
+gues from Commerzbank engaged with our team during
+joint workshops and discussions, but also that the generated
+ideas and results would find their way back into the EAM
+community within Commerzbank. He also actively contrib­
+uted to writing this paper.
+Initial discussions and solution approaches in 2012
+were sparked by the, at that time, novel report by Ross
+and Quaadgras (2012), highlighting that overly forma­
+lised EAM often fails to achieve the desired results.
+Consequently, we were looking for different ways to
+broaden our perspective on how to best institutionalise
+EAM in an organisation, going beyond the formal, top-
+down driven mechanisms predominantly discussed both
+within Commerzbank and in EAM literature. Over time,
+driven by both academic research and feedback from
+practice, the idea of the “EAM control mechanism port­
+folios” emerged and found its way into discussions,
+slides, and strategic plans. Having noticed that this idea
+had become ingrained in the EAM department, we
+decided in 2017 to conduct a series of interviews and
+to review old documents, with the aim to formalise the
+EAM control mechanism portfolio concept by recon­
+structing how it had been historically applied within
+Commerzbank. Again, this was a joint effort, in which
+we relied on the existing collaboration structures (e.g.,
+the two competence centres and our direct contacts) to
+identify suitable interviewees and relevant documents
+and to analyse, organise, and review our results. See
+Appendix B for the methodological details.
+Table 3. Overview of related engagements between Commerzbank and the author team.
+Competence centre workshops Other events and engagements
+Expert communities, in which senior subject matter experts, management,
+and academics jointly discuss current challenges and opportunities.
+Competence Centre Corporate Intelligence (CC CI):
+Focus on architectural coordination and enterprise-wide perspectives on
+IS
+6. CC CI WS, 02./03.12.2013
+7. CC CI WS, 31.03./01.04.2014
+8. CC CI WS, 16./17.06.2014
+9. CC CI WS, 13./14.10.2014
+10. CC CI WS, 11./12.02.2015
+11. CC CI WS, 11./12.05.2015
+12. CC CI WS, 19./20.10.2015
+13. CC CI WS, 29.02./01.03.2016
+Business Intelligence Banking Community (BI BC) – later renamed to
+Data Management and Analytics Community in Banking (DMAC):
+Focus on architectural thinking and enterprise-wide perspectives on
+data
+01. Workshop BI BC, 28./29.03.2012
+02. Workshop BI BC, 14./15.01.2013
+03. Workshop BI BC, 07./08.07.2014
+04. Workshop BI BC, 01./02.12.2014
+05. Workshop BI BC, 27./28.04.2015
+06. Workshop BI BC, 03./04.09.2015
+07. Workshop BI BC, 05./06.11.2015
+08. Workshop BI BC, 11./12.04.2016
+09. Workshop BI BC, 29./30.06.2016
+10. Workshop BI BC, 10./11.10.2016
+11. Workshop BI BC, 23./24.02.2017
+12. Workshop BI BC, 26./27.06.2017
+13. Workshop BI BC, 06./07.11.2017
+14. Workshop BI BC, 26./27.02.2018
+15. Workshop BI BC, 18./19.06.2018
+16. Workshop BI BC, 03./04.12.2018
+17. Workshop BI BC, 18./19.03.2019
+19. Workshop DMAC, 04./05.11.2019
+Joint conference paper:
+Implementing Architectural Thinking: A Case Study at Commerzbank AG
+(Aier et al., 2015)
+Public events
+08.06.2015: The authors hosted the 42. St. Galler Anwenderforum (an EA
+practitioner conference), where Commerzbank reported on their current
+EAM approach.
+29.10.2018: Martin Kraus, head of Commerzbank’s Architecture
+Corporate Centre (the fourth author), presented Commerzbank’s
+approach to Data Architecture Management.
+Other workshops
+11.09.2014: The authors held an EAM workshop at Commerzbank in
+Frankfurt
+28.11.2014: The authors held a presentation and a workshop on EAM at
+Commerzbank’s Architecture Day
+03.04.2019: The fifth author held an EAM workshop at Commerzbank in
+Frankfurt
+104 J. BEESE ET AL.
+
+--- PAGE 15 ---
+Appendix B: Methodological details
+This appendix provides the details of our methodological
+approach, including the overall procedure, the interviews
+(primary data),othersecondary data, andour codingprocess.
+Interview procedure and document acquisition
+Regarding interviewee selection, while working closely
+with the core EAM team, we also ensured to interview other
+stakeholders inside Commerzbank to understand the outside
+perceptionofEAMactivitieswithinthebankovertime.Thus,
+we specifically focussed on employees with long tenure from
+both businessand ITfunctions ondifferent hierarchicallevels
+(top management and operational levels), enabling us to
+reconstruct how and why adjustments to the EAM control
+mechanism portfolio were made during each episode and
+how these changes were perceived in the overall organisation.
+The final ten interview candidates were chosen from four
+distinct areas (see, Table 4): Business global (strategic per­
+spective on the operations of the organisation), business local
+(local operations), IT global (strategic perspective on the
+overall IT function), and IT local (local business support).
+All interviews were conducted by two researchers who led
+through the interview with the help of a previously devel­
+oped interview guideline (covering the different types of
+control mechanisms and the development and perception
+of EAM activities over time). All ten interviews lasted
+between 51 and 79 minutes (see, Table 4), and were
+recorded, transcribed, and subsequently coded.
+In addition to the interviews, we also collected internal
+presentations of past joint workshops from the two compe­
+tence centres (totalling 218 PowerPoint presentations from
+2011–2018) and publicly available reports, including strategy
+documents released to shareholders and all annual reports
+between 2008 and 2018. These documents were not fully
+coded, but only skimmed through after the interview coding
+to provide additional context to the findings and to comple­
+ment the overall story with documentation that can be refer­
+enced and publicly accessed.
+Coding procedure
+We employed a coding scheme based on the different
+control mechanisms shown in Table B1, following the
+recommendation of Eisenhardt (1989). Additionally, we
+also coded perceived major environmental jolts and misa­
+lignments, as well as corresponding interpretations of stra­
+tegic consequences and reactions in terms of EAM portfolio
+adjustments, focussing on why these adjustments were
+deemed to be effective and appropriate. The final coding
+guideline included specific definitions and examples for
+each code to guide the coding process.
+We then coded the documents in a partially top-down
+(i.e., starting with codes for the different control mechan­
+isms) and partially bottom-up fashion (i.e., allowing for
+new codes to capture a control mechanism’s effectiveness
+or major turning points). In this process, we first high­
+lighted all relevant occurrences of a code in the transcripts
+and added a short descriptive summary for each occur­
+rence. After this initial round of coding, results were
+discussed among the authors to achieve a sufficiently
+high level of reliability and agreement on the categorisa­
+tion of data. Then we proceeded to structure and group
+the resulting codes (leading to the identification of the
+different episodes), and finally went back to the tran­
+scripts as well as the additional presentation slides and
+public documents to gather further contextual informa­
+tion and to position the codes along the timeline from
+2008 to 2018. This allowed us to analyse how the envir­
+onmental jolts and strategic shifts were interpreted by the
+involved stakeholders and how these interpretations
+resulted in changes to the EAM control mechanism port­
+folio over time for each episode.
+Table B1. Overview of codes for the control mechanisms.
+Control
+mechanism Code
+Input control Allocation of human resources [IC-1]
+Allocation of financial resources [IC-2]
+Allocation of material resources [IC-3]
+Organizational arrangements for allocating
+resources [IC-4]
+Behaviour
+control
+Processes to govern individual actions [BC-1]
+Rules to guide individual actions [BC-2]
+Mechanisms to observe compliance [BC-3]
+Systems to reward compliance with rules/processes
+[BC-4]
+Outcome control Specific desired outcomes [OC-1]
+Processes to measure and promote outcomes [OC-2]
+Clan control Shared norms, values, and beliefs [CC-1]
+Reflective activities [CC-2]
+Interpersonal social ties [CC-3]
+Self-control Intrinsic motivation [SC-1]
+Personal and professional standards [SC-2]
+Table 4. Profiles of interviewees.
+Organisational level # Role Tenure (years working at Commerzbank) Duration of the interview in minutes
+Business Global 1 Divisional board member 5 57
+2 Division manager 12 54
+Local 3 Programme manager 13 55
+4 Department head 18 52
+IT Global 5 Enterprise architect 23 79
+6 Enterprise architect 15 58
+Local 7 Representative of «agile community» 17 59
+8 Head of development resources 7 76
+9 Delivery manager 17 51
+10 Project lead 7 64
+EUROPEAN JOURNAL OF INFORMATION SYSTEMS 105

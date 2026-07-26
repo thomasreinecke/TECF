@@ -1,0 +1,769 @@
+--- PAGE 1 ---
+Overcoming Standard Lock-in in C-ITS through Profile-Driven
+Governance
+Tanja Pavleska1 a
+, Massimiliano Masi2 b
+, Giovanni Paolo Sellitto3 c
+and Helder Aranha4 d
+1Jozef Stefan Institute, Jamova 39, Ljubljana, Slovenia
+2Independent Researcher, Florence, Italy
+3Independent Researcher, Rome, Italy
+4Independent Researcher, Lisbon, Portugal
+Keywords: C-ITS, Interoperability, Standard Lock-in, Enterprise Architecture, Governance.
+Abstract: This paper introduces a methodology to support automated governance in complex, standards-based system
+architectures. In many critical sectors, long-term interoperability is hindered by the absence of governance
+frameworks that span the lifecycle of evolving standards. Static compliance alone often leads to standard
+lock-in, increased management overhead, and fragmentation across stakeholders. To address this, we propose
+an architecture-driven approach inspired by practices from domains such as healthcare, energy, and Indus-
+try 4.0. The methodology builds on the IHE architectural model, which enables modular system design and
+embeds governance rules directly into machine-readable architectural specifications. By organizing systems
+into interoperable building blocks with well-defined interfaces, the approach isolates changes and facilitates
+automated verification of compliance. The methodology is demonstrated through a proof-of-concept use case
+in the Cooperative Intelligent Transport Systems (C-ITS) sector, illustrating its applicability to real-world,
+multi-stakeholder environments. This method offers a scalable and sustainable path for maintaining interoper-
+ability over time, reducing reliance on manual coordination and enabling consistent policy enforcement across
+diverse systems and vendors.
+1 INTRODUCTION
+From the early days of the Information and Commu-
+nication Technology (ICT), one of the main problems
+hampering system evolution has been vendor lock-in
+(Farber, 2012). This occurs when organizations be-
+come dependent on particular technology providers
+for software, hardware, or services, making switching
+prohibitively costly or technically challenging. Over
+time, such dependency constrains the ability of sys-
+tems to evolve, adapt to new technologies, and re-
+main economically sustainable, particularly in critical
+infrastructures where long-term resilience and trans-
+parency are essential. Vendor lock-in is often rein-
+forced by proprietary solutions, such as non-standard
+data formats or undocumented APIs, which hinder in-
+teroperability and migration (Abhishek and Siwach,
+a https://orcid.org/0009-0007-3967-2911
+b https://orcid.org/0000-0003-4737-7107
+c https://orcid.org/0000-0002-8497-8748
+d https://orcid.org/0000-0002-9502-1597
+2025).
+Open standards offer a well-established mitigation
+strategy by enabling interoperability across hetero-
+geneous systems. Combined with modular architec-
+tures and Reference Architectures (RAs), they sup-
+port the development of systems composed of in-
+teroperable building blocks with well-defined inter-
+faces, facilitating maintainability and evolution (Hei-
+del et al., 2019). However, standards themselves
+evolve over time through updates, enhancements, and
+revisions. When stakeholders adopt these changes
+at different paces, fragmentation emerges, increas-
+ing coordination effort and potentially leading to a
+new form of lock-in driven by compatibility con-
+straints. While modularity and encapsulation can
+mitigate some of these effects, they are insufficient
+on their own to guarantee long-term interoperabil-
+ity (Dinh-Tuan et al., 2025).
+To address this challenge, architectures must be
+complemented by governance mechanisms capable of
+managing the lifecycle of evolving standards and pre-
+venting fragmentation (Cao and Iansiti, 2023). In this
+Pavleska, T., Masi, M., Sellitto, G. P. and Aranha, H.
+Overcoming Standard Lock-in in C-ITS through Profile-Driven Governance.
+DOI: 10.5220/0015092600004030
+Paper published under CC license (CC BY-NC-ND 4.0)
+In Proceedings of the 12th International Conference on Vehicle Technology and Intelligent Transport Systems (VEHITS 2026), pages 531-538
+ISBN: 978-989-758-831-0; ISSN: 2184-495X
+Proceedings Copyright © 2026 by SCITEPRESS – Science and Technology Publications, Lda.
+531
+
+--- PAGE 2 ---
+paper, we propose an approach that embeds gover-
+nance principles directly into system architecture, en-
+abling automated verification of interoperability and
+compliance requirements. The methodology builds
+on the architectural model of Integrating the Health-
+care Enterprise (IHE)1, which structures systems into
+interoperable building blocks and expresses gover-
+nance rules in machine-readable specifications.
+We demonstrate the applicability of this approach
+through a proof-of-concept in the Cooperative Intel-
+ligent Transport Systems (C-ITS) domain, a com-
+plex multi-stakeholder environment characterized by
+heterogeneous standards and evolving technologies.
+The proposed method supports scalable and sustain-
+able interoperability by reducing dependency on dis-
+tributed coordination and enabling consistent policy
+enforcement across systems and vendors.
+2 METHODOLOGY
+The methodology proposed in this paper addresses
+standard lock-in by embedding governance principles
+directly into the system architecture.2 It introduces
+a domain-driven approach in which interoperability
+is achieved through the definition of INTEGRATION
+PROFILES that structure and constrain the use of stan-
+dards.3 Building on the IHE architectural model,
+the methodology enables the specification of inter-
+operable building blocks and their interactions in a
+machine-readable form, supporting automated verifi-
+cation of compliance and governance rules. The ap-
+proach is illustrated through its application to the C-
+ITS domain.
+2.1 IHE Technical Framework
+Integrating the Healthcare Enterprise (IHE) promotes
+the coordinated use of existing standards to achieve
+interoperability across heterogeneous systems (ITI
+Technical Committee, 2019). It features an ar-
+chitectural model that includes functional compo-
+nents, known as ACTORS, and specifies their interac-
+tions through standardized TRANSACTIONS, grouped
+into functional units called INTEGRATION PROFILES.
+These profiles represent reusable functional units that
+address specific interoperability requirements. They
+1https://www.ihe.net/
+2A comprehensive implementation of our methodol-
+ogy providing a practical resource for secure deployment
+of RSUs is made openly available and can be accessed on
+Github (Masi, 2020).
+3We use SMALL CAPS typeface to denote IHE original
+concepts.
+can be of different types: CONTENT profiles, ad-
+dressing semantic interoperability challenges; IN-
+FRASTRUCTURAL profiles, targeting syntactic hur-
+dles; and security profiles, specifically tailored to ad-
+dress cyber-physical security and safety concerns.
+A key strength of IHE lies in its ability to
+express system architectures in a structured and
+machine-readable form. Solution architectures are
+derived through the rule-based composition of pro-
+files, thereby enabling consistent implementation and
+the systematic verification of compliance with inter-
+operability and governance requirements. In addi-
+tion, IHE promotes implementation conformance ver-
+ification through supervised events, Connectathons,
+where vendors test interoperability in practice, foster-
+ing transparency and ecosystem-wide alignment. In
+this study, we adopt the core IHE concepts - profiles,
+domains, and conformance verification - as the foun-
+dation for a governance-aware architectural frame-
+work that supports automated compliance and long-
+term interoperability.
+2.2 How the IHE Process Works
+The IHE governance model is based on three core
+principles: selection of relevant standards, defini-
+tion of integration profiles that constrain their use,
+and validation through interoperability testing. Build-
+ing on this foundation, our methodology defines a
+governance-aware architectural process in which pro-
+files are used as the primary mechanism to structure
+systems and manage standards evolution.
+The process begins with the identification of a do-
+main use case. A profile is then created that addresses
+the use case. Profiles are defined by selecting and
+constraining existing standards, specifying ACTORS,
+TRANSACTIONS, and optional variations. Depen-
+dencies between profiles are expressed as GROUPING
+RULES; profiles may be composed by choice or to sat-
+isfy such dependencies, as reusable building blocks,
+to build solution architectures. Interoperability is rig-
+orously validated at CONNECTATHONS, where candi-
+date solutions are required to successfully interoper-
+ate with at least three independent vendor implemen-
+tations. Successfulresultsarepublishedas INTEGRA-
+TION STATEMENTS, which stakeholders can use in
+procurement and for system design.
+To support a smooth and sustainable evolution
+over time, the methodology introduces CHANGE PRO-
+POSALS, in which proponents define the rationale for
+a change in a profile (IHE, 2020a). Change proposals
+may introduce new work items (e.g., new profiles) or
+evolve existing standards, while preserving backward
+compatibility. This ensures that system architectures
+VEHITS 2026 - 12th International Conference on Vehicle Technology and Intelligent Transport Systems
+532
+
+--- PAGE 3 ---
+can evolve without disrupting interoperability.
+By structuring systems around profiles and for-
+malizing their relationships, this approach embeds
+governance directly into the architecture, enabling
+fast compliance verification and ensuring long-term
+sustainability across heterogeneous, evolving stan-
+dards ecosystems.
+2.3 The Rationale for C-ITS as an IHE
+Domain
+The Cooperative Intelligent Transport Systems (C-
+ITS) domain provides a relevant and challenging con-
+text for applying governance-aware architectures, as
+it relies on a complex ecosystem of interoperating
+componentsandmultiplestandardizationbodies(e.g.,
+ETSI, ISO, IEEE). While standards enable interop-
+erability, their independent evolution and heteroge-
+neous adoption across stakeholders introduce frag-
+mentation, increasing coordination effort and risking
+compatibility issues across systems and regions.
+Existing standardization efforts have addressed
+interoperability at the technical level, but gover-
+nance over the lifecycle of evolving standards re-
+mains limited. In particular, maintaining backward
+and forward compatibility, aligning security require-
+ments, and ensuring consistent implementation across
+vendors present significant challenges. These is-
+sues are further amplified by the integration of di-
+verse communication schemes - vehicle-to-vehicle
+(V2V), infrastructure-to-vehicle (I2V), and vehicle-
+to-infrastructure (V2I) - and the coexistence of re-
+gional and global standards.
+By introducing C-ITS as an IHE domain, we pro-
+vide a structured framework to manage these chal-
+lenges through the definition of INTEGRATION PRO-
+FILES and governance rules. This approach enables
+the systematic organization of standards, supports
+consistent policy enforcement, and facilitates interop-
+erability over time, reducing fragmentation and im-
+proving the sustainability of C-ITS deployments.
+2.4 Introducing C-ITS as a New IHE
+Domain
+To create a new domain, the initial step involves
+defining a set of profiles, each encapsulating specific
+functionalities pertinent to Vehicle-to-Infrastructure
+(V2I) and Infrastructure-to-Vehicle (I2V) communi-
+cation. These profiles encompass various communi-
+cation protocols already established in C-ITS. Pro-
+files are organized into a TECHNICAL FRAMEWORK,
+consisting of two volumes: VOLUME 1 provides an
+overview of USE CASE(s), ACTORS, and TRANSAC-
+TIONS, whereas VOLUME 2 specifies the underlying
+TRANSACTIONS and standards (IHE, 2019). Subse-
+quently, a set of TEST ASSERTIONS is formulated to
+facilitate the creation of hypothetical CONNECT-A-
+THON events, pivotal for the definition of the neces-
+sary quality assurance measures. Domains serve as
+structured communities in which technical and busi-
+ness stakeholders convene to exchange insights and
+prioritize information sharing, as presented in Sec-
+tion 4. For the effective implementation of the C-ITS
+domain, the establishment of TECHNICAL and PLAN-
+NING COMMITTEES is of critical importance. The
+TECHNICAL COMMITTEE is tasked with developing
+and documenting solutions, primarily INTEGRATION
+PROFILES. Conversely, the PLANNING COMMITTEE
+is responsible for long-term strategic planning, sus-
+tainability initiatives, and overseeing deployment ac-
+tivities, such as testing and educational events (IHE,
+2020b).
+3 USE CASE: DEPLOYMENT OF
+A V2I INFRASTRUCTURE
+Assuming the architectural guidelines and gover-
+nance structure described in the previous section are
+in place, we will show how to apply them in a real-
+istic C-ITS business use case. We shall proceed into
+characterizing the use case, identifying new profiles
+and building a solution architecture.
+3.1 Characterization
+Figure 1 illustrates a common deployment scenario
+for C-ITS stations: vehicles communicate with Road
+Side Units (RSUs) using the Exchange of ITS-S Mes-
+sages (EIM) and Road Works Warning (RWW) or
+Sharing of Kinematic Data (SKD) schemes. In turn,
+RSUs relay this information to the backend systems
+using the RSU-to-Backend (R2B) protocols.
+We will focus on representative C-ITS use cases
+such as Road Works Warning (RWW) and Shar-
+ing of Kinematic Data (SKD). These use cases in-
+volve the exchange of data structures, facilitated ei-
+ther through Dedicated Short-Range Communication
+(DSRC) (ETSI, 2012) or via 5G (ETSI, 2012), as
+indicated by the red arrows in Figure 1. However,
+this dual approach creates interoperability challenges,
+which our methodology aims to resolve.
+Notably, we will address the lack of consistency
+in both syntactic and semantic communication with
+backend services, as denoted by the blue arrows in
+Figure 1. To ensure a comprehensive approach to
+Overcoming Standard Lock-in in C-ITS through Profile-Driven Governance
+533
+
+--- PAGE 4 ---
+Figure 1: The deployment of the new IHE C-ITS domain.
+security, we also establish a baseline security profile
+(ATNA) that serves as a fundamental requirement for
+all subsequent profiles, aligning with the principle of
+security-by-design.
+3.2 Profile Selection
+Following the guidelines outlined by IHE for the cre-
+ation of new domains and to foster consistency in
+standardization procedures within the realm of C-ITS,
+we devise the following profiles essential for the ap-
+plication of our methodology:
+• Audit Trail and Node Authentication (ATNA),
+defining the security environment within which
+the ITS-S (Intelligent Transport Systems - Sta-
+tions) operate4.
+• Exchange of ITS-S Messages (EIM), the proto-
+col for message exchange over DSRC, offering an
+alternative option for “5G sharing”;
+• Road Works Warning (RWW), designed to
+specify the data elements of the Decentralized En-
+vironmental Notification Message (DENM) and
+relevant infrastructural considerations, such as
+firewall configurations to prevent the transmission
+of potentially malicious messages;
+• Share Kinematic Data (SKD), delineating the
+structure of Cooperative Awareness Messages
+(CAM) and the associated infrastructure require-
+ments for sharing vehicle kinematic data; and
+• RSU-to-Backend communication (R2B), estab-
+lishing an ASN.1 structure for facilitating mes-
+sage exchange between Road Side Units (RSUs)
+and IT backend systems.
+4We assume the same security measures for both 5G
+and DSRC
+ATNA
+R2B EIM
+RWW SKD
+Figure 2: Profile dependencies in the C-ITS domain.
+Message creation takes place within a controlled
+environment, typically the operator’s internal IT in-
+frastructure, where data remains restricted. Con-
+versely, during transmission, messages are dissemi-
+nated publicly as part of the Decentralized Environ-
+mental Notification Message (DENM) standard. This
+distinction leads to different security requirements
+across the message lifecycle. Accordingly, we define
+the security goals as follows: Confidentiality, for the
+creation phase, and Availability, for the transmission
+phase.
+During the architectural analysis, it emerges that
+queueing mechanisms are not covered by any existing
+profile within the C-ITS domain. To address this gap,
+affecting the Availability security goal, we introduce
+a temporary profile, denoted as π′, and reassess the
+architecture once more. This addition is found not
+to affect other stakeholder concerns, while ensuring
+that all necessary cyber-security countermeasures are
+explicitly captured. In the resulting architecture, TLS
+is enforced through the ATNA profile, while queueing
+mechanisms are included via π′. The final solution
+architecture is thus defined as <RWW, EIM, ATNA,
+π′ >, completing the methodology.
+4 PROFILE SPECIFICATIONS
+FOR C-ITS DOMAIN
+This section outlines the structure of the integration
+profiles defined for the C-ITS domain. Following
+the IHE framework, profiles are specified using a
+standardized template that captures their functional
+role, interactions, and dependencies. For brevity, we
+present only the essential elements required to illus-
+trate the approach, while full specifications follow the
+IHEtechnicalframeworkstructure(Volumes1and2).
+4.1 Volume 1: Integration Profiles
+Integration profiles define interoperable building
+blocks by specifying actors, transactions, use cases,
+and grouping rules.
+The Audit Trail and Node Authentication
+(ATNA) profile establishes the security foundation
+of the system, enabling authenticated and integrity-
+VEHITS 2026 - 12th International Conference on Vehicle Technology and Intelligent Transport Systems
+534
+
+--- PAGE 5 ---
+protectedcommunication between components. It de-
+fines secure channels and audit mechanisms that en-
+sure accountability across interactions. The profile
+has been designed taking into account the risks and
+attacks described in (ENISA, 2019). The specific in-
+teractions (transactions) within ATNA are shown in
+Figure 3.
+Figure 3: ATNA: actors and transactions.
+The Exchange of ITS-S Messages (EIM) profile
+facilitates data exchange between the RSUs and the
+OBUs. The overall architecture is defined in (ETSI,
+2010), specifyingthecommunicationframeworkused
+by the CAM (ETSI, 2011) and DENM (ETSI, 2014)
+services. It supports communication over DSRC and
+optionally 5G, while remaining agnostic to message
+content. The transactions within EIM are shown in
+Figure 4.
+Figure 4: EIM: actors and transactions.
+The Road Works Warning (RWW) profile, de-
+scribed in (ISO, 2016), specifies the values of the no-
+tification message sent by the infrastructure aimed at
+minimize the impact on the traffic due to road works.
+The transactions within RWW are shown in Figure 5.
+Figure 5: EIM: actors and transactions.
+The Share Kinematic Data (SKD) profile, con-
+ceivedby(ETSI,2011)andfurtherdetailedinISO/TS
+18234, is aimed at sharing the kinematics of the ve-
+hicle (e.g., speed, curvature) with the road infrastruc-
+ture. Each vehicle uses SKD at a frequency of 10 Hz.
+SKD’s transactions are shown in Figure 6.
+Both the RWW and the SKD profiles address
+content-level interoperability by specifying the struc-
+ture and semantics of exchanged data.
+The RSU-to-Backend (R2B) profile enables
+communication between roadside infrastructure and
+backend systems, supporting reliable integration with
+Figure 6: SKD: actors and transactions.
+operator platforms. Due to the high data generation
+rate of profiles such as SKD (e.g., 10 Hz per vehicle),
+backend communication must handle significant data
+volumes while ensuring message reliability. This in-
+troduces both scalability and robustness requirements
+for the underlying communication mechanisms.
+To address these challenges, various technologies
+can be considered, including streaming and queuing
+solutions such as Apache Kafka or JMS. In this work,
+we adopt the CEF eDelivery building block (CEF,
+2020), which provides a standardized and interoper-
+able approach to reliable message exchange, aligning
+with the governance and compliance objectives of the
+proposed architecture. The specific transactions of
+R2B are shown in Figure 7.
+Figure 7: R2B: actors and transactions.
+Table 1 consolidates the specification of the in-
+tegration profiles, capturing their roles, interactions,
+and dependencies, and illustrating how governance is
+enforced across architectural layers.
+4.2 Volume 2: Transactions
+This section summarizes the transaction-level specifi-
+cations of the integration profiles introduced in 4.1.
+While Volume 1 defines the functional structure of
+profiles, Volume 2 formalizes their operational be-
+havior by specifying the underlying standards and the
+transactions that govern interactions between actors.
+These transactions ensure that interoperability is not
+only structurally defined but also consistently imple-
+mented through standardized communication proto-
+cols and data formats.
+Each transaction is grounded in widely adopted
+standards, enabling compatibility across heteroge-
+neous systems while supporting security, reliability,
+and scalability requirements. Table 2 presents the rel-
+evant standards and their corresponding transactions,
+providing a compact overview of how communication
+is realized within the proposed architecture.
+This representation highlights how each profile
+leverages established or emerging standards to ensure
+interoperable communication across different layers
+of the architecture.
+Overcoming Standard Lock-in in C-ITS through Profile-Driven Governance
+535
+
+--- PAGE 6 ---
+Table 1: Summary of C-ITS Integration Profiles.
+Profile Actors Transactions Use Cases Grouping Rules
+ATNA ARR, AC, SN, SA C-ITS-01, C-ITS-02 Secure communication
+and audit logging
+Mandatory; defines en-
+cryption and audit trail
+EIM Sending ITS-S, Receiv-
+ing ITS-S
+C-ITS-03, C-ITS-04 ITS message exchange Requires content profiles
+(RWW, SKD); with
+ATNA ensures security
+RWW Content Creator, Con-
+sumer
+C-ITS-05 Road works notification Requirestransportprofile
+(e.g., EIM)
+SKD Content Creator, Con-
+sumer
+C-ITS-06 Vehicle kinematic data
+sharing
+Combined with transport
+and security profiles
+R2B RSU, Backend C-ITS-07 RSU–backend communi-
+cation
+Mandatory with ATNA
+Table 2: Underlying standards and transactions for C-ITS integration profiles.
+Profile Transaction Underlying Standards Description
+ATNA
+C-ITS-01 (Audit
+Logging)
+Syslog protocol (Gerhards,
+2009; Miao, 2009); RFC 3881-
+inspired audit format
+Defines the recording and transmission of audit events.
+Each log entry captures key information (“who, what,
+when, where, how”), ensuring traceability and accountabil-
+ity across system components.
+C-ITS-02 (Node
+Authentication)
+TLS v1.2+; ETSI TS 102 940
+v1.3.1
+Establishes secure communication channels between nodes.
+It ensures confidentiality and integrity via TLS, or message-
+level security through digital signatures in V2X communi-
+cations.
+EIM
+C-ITS-03 (Mes-
+sage Exchange –
+DSRC)
+ETSI EN 302 663 (ETSI, 2012) Defines message exchange over DSRC, enabling direct
+communication between ITS stations using standardized
+access-layer protocols.
+C-ITS-04 (Mes-
+sage Exchange –
+5G)
+Emerging 5G standards, e.g.,
+5GAA (5GAA, 2021)
+Supports message exchange over cellular networks, provid-
+ing an alternative communication path with extended cov-
+erage and flexibility, subject to ongoing standardization.
+RWW C-ITS-05 (Road
+Works Informa-
+tion)
+ETSI DENM basic ser-
+vice (ETSI, 2014); ISO/TS
+21219 (ISO, 2016)
+Specifies the structure and semantics of road hazard noti-
+fications, enabling consistent dissemination of road works
+information across vehicles and infrastructure.
+SKD C-ITS-06 (Kine-
+matic Data Shar-
+ing)
+ETSI TS 102 637-2
+(CAM) (ETSI, 2011)
+Defines the format and exchange of vehicle kinematic data,
+such as speed and position, supporting real-time situational
+awareness and traffic management.
+R2B C-ITS-07 (Back-
+end Communica-
+tion)
+CEF eDelivery (CEF, 2020)
+(ebMS3.0-based)
+Enables reliable and secure message exchange between
+RSUs and backend systems, supporting asynchronous com-
+munication, message queuing, delivery guarantees.
+4.3 A Connect-a-Thon
+A key element of the proposed methodology is the
+ability to verify interoperability and governance re-
+quirements in a systematic and reproducible man-
+ner. Within the IHE framework, this is achieved
+throughConnectathonevents, whereimplementations
+are tested against predefined test assertions derived
+from integration profiles. Test assertions formalize
+the requirements specified in the profiles by translat-
+ing them into verifiable conditions, following estab-
+lished guidelines (OASIS, 2013; S. Bradner, 1997).
+Each assertion defines a normative source (e.g., a pro-
+file or transaction), a prescription level (e.g., manda-
+tory or optional), and a specific execution context.
+For example, a requirement from the ATNA profile
+may state that messages exchanged in V2I and I2V
+communications must be signed according to ETSI
+TS 102 940 v1.3.1. Such requirements are expressed
+as assertions that can be evaluated during testing.
+In our methodology, these validation mechanisms
+play a central role by operationalizing the governance
+rules embedded in the architecture. Since profiles
+encode both interoperability and security constraints,
+conformance testing ensures that implementations ad-
+here to the intended architectural behavior across ven-
+dors and deployments. This enables automated or
+semi-automated verification of compliance, reducing
+reliance on manual coordination and supporting con-
+sistent enforcement of policies. The use of standard-
+ized testing frameworks, such as those promoted by
+the European Commission (CEN, 2020), ensures in-
+teroperability not only at the system level but also
+across testing environments. By integrating confor-
+VEHITS 2026 - 12th International Conference on Vehicle Technology and Intelligent Transport Systems
+536
+
+--- PAGE 7 ---
+mancevalidationintothearchitecturalframework, the
+methodology closes the loop between specification
+and implementation, ensuring that governance is not
+only defined but also effectively enforced throughout
+the system lifecycle.
+5 RELATED WORK
+Ensuring compliance of C-ITS systems with stan-
+dards is a critical requirement, typically verified
+through independent audits. However, existing stud-
+ies highlight significant shortcomings and inconsis-
+tencies in current standards, indicating the need for
+more robust and coherent approaches to interoper-
+ability and security (Takahito Yoshizawa et al., 2022;
+Brian Fabrgue, 2023). Governance approaches based
+on Enterprise Architecture (EA) have been widely ap-
+plied in critical sectors. Frameworks such as TO-
+GAF (The Open Group, 2020), Zachman (Gerber
+et al., 2020), and SAIF (HL7, 2020) provide struc-
+tured methods to support sustainability and interop-
+erability. Despite these efforts, standard lock-in re-
+mains a persistent issue, largely due to the lack of
+harmonized security architectures and lifecycle gov-
+ernance mechanisms. This increases the complexity
+of securing C-ITS deployments and calls for scalable
+solutions capable of managing evolving standards and
+heterogeneous implementations.
+Recent works on cellular V2X technologies and
+architectural approaches further highlight the increas-
+ing complexity of integrating heterogeneous com-
+munication paradigms and standards, particularly as
+3GPP-basedsolutionsevolvetosupportdiversesafety
+and traffic efficiency applications (Soto et al., 2022;
+Singh et al., 2019). These studies emphasize the chal-
+lenges related to interoperability and standard align-
+ment, reinforcing the need for governance-driven ar-
+chitectural approaches. In addition, C-ITS use cases
+have been extensively studied (C-ITS Platform, 2016;
+Lu et al., 2018; Santa et al., 2014). ETSI clas-
+sifies them into four application classes and multi-
+ple applications, identifying a broad set of scenar-
+ios for deployment (ETSI, 2018). More recently, C-
+Roads has refined this classification by organizing
+use cases into service-oriented groupings to improve
+clarity and deployment alignment (C-Roads, 2020).
+These efforts provide a comprehensive foundation of
+use cases but do not address the governance and life-
+cycle challenges associated with evolving standards,
+which are the primary focus of this work. Closely
+related to our work is Integrating the Energy System
+(IES) project (Gottschalk et al., 2018; Franzl et al.,
+2019), which addresses interoperability in Smart Grid
+systems using an IHE-based approach. While shar-
+ing a similar foundation, our work extends this direc-
+tion by embedding governance directly into the archi-
+tecture and enabling automated definition of security
+countermeasures along the asset lifecycle.
+6 CONCLUSIONS
+The methodology proposed in this paper offers a path
+to designing interoperable and sustainable systems.
+A key objective is to reduce both the risks of ven-
+dor lock-in and standard lock-in by promoting the use
+of modular and open security standards. By viewing
+standards as governed architectural assets, we reduce
+manual coordination, improve resilience, and support
+system evolution. The IHE model demonstrates that
+structured governance enables automation, promotes
+vendor neutrality, and strengthens multi-stakeholder
+collaboration principles we now adapt for C-ITS.
+The framework supports the verification of compli-
+ance with standards and governance policies, help-
+ing to ensure interoperability, architectural flexibil-
+ity, and long-term sustainability. By encoding confor-
+mance rules into machine-readable specifications, the
+methodology enables automated compliance checks
+and systematic governance. Standards are no longer
+merely referenced; they are made operational within
+the architecture, facilitating interoperability and long-
+term sustainability across different C-ITS actors.
+REFERENCES
+5GAA(2021). MECforAutomotiveinMulti-OperatorSce-
+narios. Technical report, 5GAA.
+Abhishek and Siwach, V. (2025). Evaluating vendor lock-
+in and service availability risks in multi-cloud deploy-
+ments. International Journal of Innovative Research
+in Technology (IJIRT), 12(1):835. IJIRT 180346.
+BrianFabrgue, A.B.(2023). PrivacyandSecurityConcerns
+in the Smart City. Multidisciplinary Digital Publish-
+ing Institute.
+C-ITS Platform (2016). Final report. Technical report.
+C-Roads (2020). Common C-ITS Service and Use Case
+Definitions. Technical report, C-ROADS Platform.
+Cao, R. and Iansiti, M. (2023). Data governance, interoper-
+ability and standardization: Organizational adaptation
+toprivacy regulation. InProceedingsofthe14th Scan-
+dinavian Conference on Information Systems (SCIS
+2023). AIS Electronic Library (AISeL).
+CEF (2020). eDelivery - Exchange data and documents se-
+curely and reliably.
+CEN (2020). Global eBusiness Interoperability Testbed
+methodologies (WS/GITB).
+Overcoming Standard Lock-in in C-ITS through Profile-Driven Governance
+537
+
+--- PAGE 8 ---
+Dinh-Tuan, H. et al. (2025). Craci: A cloud-native refer-
+ence architecture for the industrial compute contin-
+uum. arXiv preprint arXiv:2509.07498.
+ENISA (2019). Good practices for security of smart cars.
+Technical report, ENISA.
+ETSI (2010). ETSI EN 392 665 V1.1.1, Intelligent Trans-
+port Systems (ITS); security; communications archi-
+tecture. Technical report, ETSI.
+ETSI (2011). ETSI TS 102 637-2, Intelligent Transport
+Systems (ITS); Vehicular Communications; Basic Set
+of Applications; Part 2: Specifications of Cooperative
+Awareness Basic Service. Technical report, ETSI.
+ETSI (2012). ETSI EN 302 663, Intelligent Transport Sys-
+tems (ITS); Access layer specification for Intelligent
+Transport Systems operating in the 5 GHz frequency
+band. Technical report, ETSI.
+ETSI (2014). ETSI EN 302 637-3, Intelligent Transport
+Systems (ITS); Vehicular Communications; Basic Set
+of Applications; Part 3: Specifications of Decentral-
+ized Environmental Notification Basic Service. Tech-
+nical report, ETSI.
+ETSI (2018). ETSI TS 102 940 V1.3.1, Intelligent Trans-
+portSystems(ITS);Security; ITScommunicationsse-
+curity architecture and security management. Techni-
+cal report, ETSI.
+Farber, D. (2012). Vendor lock-in, standards, and the cloud.
+IEEE Computer, 45(7):88–91.
+Franzl, G., Gottschalk, M., and Pasteka, R. (2019). The IES
+Cookbook - Enabling interoperability the IES way -
+Edition 0.8. Technical report, IES Austria.
+Gerber, A., le Roux, P., Kearney, C., and van der Merwe, A.
+(2020). The Zachman Framework for Enterprise Ar-
+chitecture: An Explanatory IS Theory. In Hattingh,
+M., Matthee, M., Smuts, H., Pappas, I., Dwivedi,
+Y. K., and Mäntymäki, M., editors, Responsible De-
+sign, Implementation and Use of Information and
+Communication Technology, pages 383–396, Cham.
+Springer International Publishing.
+Gerhards, R. (2009). RFC: The syslog protocol. Technical
+report, IETF.
+Gottschalk, M., Franzl, G., Frohner, M., Pasteka, R., and
+Uslar, M. (2018). From Integration Profiles to Inter-
+operability Testing for Smart Energy Systems at Con-
+nectathon Energy.
+Heidel, R., Hoffmeister, M., Hankel, M., and Döbrich, U.
+(2019). The Reference Architecture Model RAMI 4.0
+and the Industrie 4.0 component. VDE Verlag, Berlin,
+Germany.
+HL7 (2020). SAIF Architecture Program.
+IHE (2019). IHE Technical Frameworks General Introduc-
+tion. Technical report, IHE.
+IHE (2020a). Change Proposals Process.
+IHE (2020b). Domains.
+ISO (2016). ISO/TS 21219-15:2016,Intelligent Trans-
+port Systems — Traffic and travel information (TTI)
+via transport protocol experts group, generation 2
+(TPEG2) — Part 15: Traffic event compact (TPEG2-
+TEC). Technical report, ISO.
+ITI Technical Committee (2019). IHE IT Infrastructure
+(ITI) Technical Framework, Volume 1. Technical re-
+port, IHE.
+Lu, M., Turetken, O., Adalı, O., Castells, J., Blokpoel, R.,
+and Grefen, P. (2018). C-ITS (cooperative intelligent
+transport systems) deployment in europe-challenges
+and key findings. In 25th ITS World Congress.
+Masi, M. (2020). Formalisation of the IHE process.
+Miao, F. e. a. (2009). Transport Layer Secu-
+rity (TLS) Transport Mapping for Syslog,
+url=”https://tools.ietf.org/html/rfc5425.
+OASIS (2013). OASIS Test Assertions guidelines. Techni-
+cal report, OASIS.
+S. Bradner (1997). Key words for use in RFCs to Indicate
+Requirement Levels. Technical report, IETF.
+Santa, J., Pereniguez-Garcia, F., Moragón, A., and
+Skarmeta, A. (2014). Experimental evaluation of
+CAM and DENM messaging services in Vehicular
+Communications. Transportation Research Part C:
+Emerging Technologies, 46:98–120.
+Singh, P. K., Nandi, S. K., and Nandi, S. (2019). A tu-
+torial survey on vehicular communication state of the
+art, and future research directions. Vehicular Commu-
+nications, 18:100164.
+Soto, I., Calderon, M., Amador, O., and Urueña, M. (2022).
+Asurveyonroadsafetyandtrafficefficiencyvehicular
+applications based on c-v2x technologies. Vehicular
+Communications, 33:100428.
+Takahito Yoshizawa, D. S., Mehlberg, J. T., Delbruel, S.,
+Taherkordi, A., Hughes, D., and Preneel, B. (2022). A
+Survey of Security and Privacy Issues in V2X Com-
+munication Systems. Association for Computing Ma-
+chinery.
+The Open Group (2020). TOGAF® standard, version 9.2.
+VEHITS 2026 - 12th International Conference on Vehicle Technology and Intelligent Transport Systems
+538

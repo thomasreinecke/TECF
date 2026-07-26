@@ -1,0 +1,1295 @@
+--- PAGE 1 ---
+Complex Systems Informatics and Modeling Quarterly (CSIMQ)
+eISSN: 2255-9922
+Published online by RTU Press, https://csimq-journals.rtu.lv
+Article 148, Issue 26, March/April 2021, Pages 1–25
+https://doi.org/10.7250/csimq.2021-26.01
+Product-IT Inclusive EnterpriseArchitecture Management:
+AnApproach Based on Ecosystems, Customer Journey
+and Data-Driven Business Opportunities
+Julia Kaidalova*1,3
+, Kurt Sandkuhl1,2
+, and Ulf Seigerroth1
+1
+Jönköping University, Box 1026, 55111 Jönköping, Sweden
+2
+University of Rostock, Albert-Einstein-Str. 22, 18059 Rostock, Germany
+3
+Husqvarna Group AB Group, Drottninggatan 12, 56182 Huskvarna, Sweden
+julia.a.kaidalova@Husqvarnagroup.com, kurt.sandkuhl@uni-rostock.de,
+ulf.seigerroth@ju.se
+Abstract. Products have evolved from being solely composed of mechanical
+and electrical parts to complex systems that are connected to the Internet and
+form the basis for new kinds of functionalities and services. Such smart
+connected products include a substantial amount of software and information
+technology which can be called the “product-IT”. Enterprise architecture (EA)
+management is an established function in enterprises providing methods and
+tools for a systematic alignment of business and IT in an organization.
+However, EA models capture the details of business, information and
+technology architecture of an enterprise (i.e., the enterprise-IT) but usually do
+not include the product-IT. When value creation and delivery in an enterprise’s
+business model also includes the product-IT, a product-IT inclusive view on EA
+urgently is required. The focus of this article is the methodical support for
+integration of product-IT and enterprise-IT using enterprise architectures. The
+main contributions in this article are the conceptual expansion of EA
+management to become product-IT inclusive that is manifested in a proposal for
+an extended EA meta-model, and an approach and method components to
+handle product-IT inclusive EAM.
+Keywords: Product-IT, Enterprise-IT, Enterprise Architecture, Customer
+Journey, Ecosystem.
+1 Introduction
+Information technology (IT) is changing products. Products have evolved from being solely
+composed of mechanical and electrical parts to complex systems of hardware, sensors, data
+*
+Corresponding author
+© 2021 Julia Kaidalova, Kurt Sandkuhl, and Ulf Seigerroth. This is an open access article licensed under the Creative Commons
+Attribution License (http://creativecommons.org/licenses/by/4.0).
+Reference: J. Kaidalova, K. Sandkuhl, and U. Seigerroth, “Product-IT Inclusive Enterprise Architecture Management: An
+Approach Based on Ecosystems, Customer Journey and Data-Driven Business Opportunities,” Complex Systems Informatics and
+Modeling Quarterly, CSIMQ, no. 26, pp. 1–25, 2021. Available: https://doi.org/10.7250/csimq.2021-26.01
+Additional information. Author ORCID iD: J. Kaidalova – https://orcid.org/0000-0002-9507-0647, K. Sandkuhl –
+https://orcid.org/0000-0002-7431-8412, and U. Seigerroth – https://orcid.org/0000-0002-5881-0669. PII S225599222100148X.
+Received: 5 January 2021. Accepted: 15 April 2021. Available online: 30 April 2021.
+
+--- PAGE 2 ---
+2
+storage, microprocessors, software, and connectivity components. Porter and Heppelmann [1]
+refer to such new products as smart, connected products. Smart, connected products have opened
+a new era of competition and business value creation. Three core elements of smart, connected
+products are (1) physical components, (2) “smart” components, and (3) connectivity components
+[1]. Physical components include mechanical and electrical parts, for instance, engine, batteries
+and tires in a car. Smart components contain the sensors, microprocessors, data storage, controls,
+software, an embedded operating system and enhanced user interface. In a car, smart
+components include the engine control unit, antilock braking system, rain-sensing windshields
+with automated wipers, and touch screen displays. In many products, software replaces some
+hardware components or enables a single physical device to perform at a variety of levels.
+Connectivity components include the ports, antennae, and protocols enabling wired or wireless
+connections with the product. Smart components increase the capabilities and value of the
+physical components, whereas connectivity increases the capabilities and value of the smart
+components and enables some of the smart components to exist outside the physical product
+itself. Connectivity of smart products sets the foundation for development of huge range of value
+adding services that are connected to the product. Particularly, product becomes accessible by
+various components of Product Cloud: smart product applications (services) for monitoring and
+control; the data regarding the product operation can be stored and analyzed in Product Data
+Database to reveal new insights; the application platform enables the rapid creation of smart,
+connected business applications using data access, visualization, and run-time tools [1].
+Together, smart components, connectivity components and product cloud shape the digital
+character of the traditional physical product and form a product-IT, which significantly increase
+the value of the product.
+Examples of transforming from traditional physical product to smart, connected products can
+be observed in many manufacturing sectors and considered as manifestation of an ongoing
+digital transformation (DT) [2] (cf. Section 2.1). Enterprises can be affected by DT in various
+ways, including changes in organizational structure, business processes, information systems,
+and infrastructure, which together form an Enterprise Architecture (EA). Existing EA
+frameworks usually define a number of domains or layers that EA includes. TOGAF, for
+instance, suggests considering layers such as Business, Data, Applications and Technical
+Architectural domains (cf, Section 2.1). Enterprise Architecture Management (EAM) is a
+discipline that is traditionally used to address mutual alignment between these domains by taking
+the embracing view on the overall EA [3] (cf. Section 2.1).
+The detailed specifications (models) that represent EA layers and elements are crucial for
+efficient and structured transformation efforts [4]. EA roadmap and principles can be used as
+practical instruments for conformity checks and ensures compliance of changed business
+capabilities [5]. This points out the relevance of EA in the context of DT, including the
+representation, modeling and management mechanisms and means of methodological support
+available in EA field. However, for digital transformation EA has to be revised and redefined to
+account for the broader scope of IT components and resources that DT is addressing – the
+combination of enterprise-IT and product-IT. Therefore, it is required to redefine EA for the
+context of DT, where product-IT is included into EA consideration and modeling.
+The purpose of this article is to suggest a suitable way for integration of product-IT and
+enterprise-IT within EA, which currently lacks suitable methodological support. The main
+contributions in this article are two folded, (1) expansion of established EAM to become
+product-IT inclusive, and (2) to suggest an approach and method components to handle product-
+IT inclusive EAM.
+The outline of this article is as follows. In the next section we present the background for this
+article in terms of the current state of EAM, digitalization and digital transformation. In
+Section 3 we present our stance in Design Science Research (DSR) with a case study approach.
+In Section 4 we describe the empirical work and method requirements for a product-IT inclusive
+EAM. Section 5 presents our proposal for product-IT inclusive EAM together with suggested
+
+--- PAGE 3 ---
+3
+method components. Section 6 is dedicated to the validation of our approach presented in
+Section 5. Section 7 summarizes the results.
+2 Background
+2.1 Enterprise Architecture Management
+In general, an EA captures and structures all relevant components for describing an enterprise,
+including the processes used for development of the EA as such [6]. EAM provides an approach
+for a systematic development of an enterprise’s architecture in line with its goals by performing
+planning, transforming, and monitoring functions. The reasons for applying EAM are manifold,
+such as supporting the alignment of IT to business goals or the reduction of complexity.
+Organizations have traditionally deployed EAM to help understand, plan, develop, and manage
+their IT components and resources, i.e., enterprise-IT [5], [7]. By providing a holistic view on
+business capability elements and their relationships, EAM facilitates translating strategic
+objectives into business capabilities and concrete changes in business processes, governance
+structure, and IT components and resources enabling those capabilities and, thus, organizational
+objectives [4], [5], [8].
+The approach for product-IT inclusive EAM presented in this article constitutes a refinement
+of specific EAM phases and EA modeling languages. More concrete, the approach can be
+integrated into TOGAF, an EAM approach widely used in industrial practice, and ArchiMate,
+the modeling language of TOGAF. The remaining part of this section provides an overview to
+TOGAF and ArchiMate. The refinements that were made to TOGAF and ArchiMate are then the
+subject of Section 5.
+The Open Group Architecture Framework (TOGAF) was developed by members of The Open
+Group Architecture Forum and provides a detailed description of the phases of IT architecture
+development. TOGAF offers assistance in the creation of an enterprise architecture by the
+description of predefined components, the so-called building blocks, and a well-elaborated
+method, the architecture development method (ADM) [9]. Furthermore, TOGAF is available to
+any organization that wants to develop an enterprise architecture for its own use. According to
+TOGAF the enterprise architecture is divided into four partial architectures [10]:
+• Business Architecture defines the business strategy, governance, organization and the most
+important business processes.
+• Data Architecture describes the structure of logical and physical data elements and data
+management resources in the organization.
+• Application Architecture defines a design for the individually used application system and
+its relationship to the core business processes of the organization.
+• Technology Architecture describes the software and hardware functions required to support
+the development of business, data and application services. This includes IT infrastructure,
+middleware, networks, communication, processing, and standards.
+The core of the TOGAF framework is the Architecture Development Method. ADM consists
+of nine phases that are used to develop an enterprise architecture. This development process is
+cyclical. For each phase, goals, procedure, required input, activities and results are described
+[10]. ADM is used iteratively throughout the entire development process. Furthermore, it can be
+used both between the individual phases and within each phase. ADM describes the viewpoints,
+techniques and the reference model, but it is not a formal modeling language and does not
+provide a notation [11]. For this reason, ArchiMate is used together with TOGAF.
+ArchiMate is a formal modeling language, including graphical notation [12]. TOGAF and
+ArchiMate overlap in the use of viewpoints and the concept of an underlying common repository
+of architectural artifacts and models. The ArchiMate modeling language was developed to
+provide a uniform representation of for architecture descriptions. It provides an integrated
+
+--- PAGE 4 ---
+4
+architecture approach that describes and visualizes the different architecture domains and their
+underlying relationships and dependencies. ArchiMate defines three layers as follows [12]:
+• Business Layer represents business services offered to customers, which are realized in the
+organization through business processes executed by business actors.
+• Application Layer represents application services that support the business and the
+applications they implement.
+• Technology Layer represents the Technology Services, such as processing, storage and
+communication services required to run the applications, and the computer and
+communication hardware and system software that implement these services. Physical
+elements are included in this layer for modeling physical devices, materials, and distribution
+networks.
+In addition to these layers, the “ArchiMate Core Framework” also defines additional aspects
+as follows [12]:
+• The Active Structure Aspect represents the structural elements. (e.g., business actors,
+application components and devices that indicate the actual behavior, i.e., the “subjects” of
+the activity)
+• The Behavior Aspect represents the behavior (e.g., processes, functions, events and services)
+that is executed by the actors. Furthermore, structure items are assigned to behavioral
+elements to show who or what displays the behavior.
+• Passive Structure Aspect represents the objects on which behavior is executed. These are
+usually information objects in the business layer and data objects in the application layer.
+Furthermore, they can also be used to represent physical objects.
+2.2 Digital Transformation
+Information technology (IT) is changing our view of products. Products have evolved from being
+solely composed of mechanical and electrical parts to complex systems of hardware, sensors,
+data storage, microprocessors, software, and connectivity components. Porter and Heppelmann
+[1] refer to such new products as smart, connected products. Smart, connected products have
+opened a new era of competition and business value creation. Three core elements of smart,
+connected products are (1) physical components, (2) “smart” components, and (3) connectivity
+components [1]. Several scholars propose to see digitalization as a phenomenon occurring in
+different “phases” or “waves” over the last decades, the most visible being:
+• Digitization: is usually regarded as the first step towards digital transformation. Digitization
+refers to the fundamental change transforming analogue resources into a digital format [13].
+Digitization also imply fragmented automation of isolated operational procedures through
+the use of digital technologies [1], [13].
+• Digitalization: is an intermediate phase in digital transformation. This phase usually
+acknowledges the concept of being data driven. This means to use and analyze existing data
+and to utilize this for smarter operations and enhanced products. Enhanced products and
+services mean that digital technologies are used to provide smarter products with bundled
+services to enhance the value proposition to customers.
+• Digital transformation: In scientific literature, digital transformation often is discussed in the
+general context of digitalization and considered as the most complex digitalization phase
+[14]. The focus here is on the disruptive social and economic consequences which, due to
+the potential of digital technologies to substantially change markets, lead to new
+technological application potentials and the resulting changes in economic structures,
+qualification requirements for employees and working life in general [15], [1]. In digital
+transformation the concept of data driven is fully utilized. This means to capture data in real-
+
+--- PAGE 5 ---
+5
+time throughout the value chain and to continuously utilize this data to adapt and to develop
+different aspects of the value chain.
+More concrete, [16] proposed to distinguish in digital transformation between transformation
+of the value proposition and the value creation when analyzing and planning digital
+transformation. These two “dimensions” can be divided into different steps of digitalization
+which form the prerequisite for the next step, see Figure 1 below.
+Figure 1. Dimensions of digital transformation and their steps
+The main objective with this article is to contribute to a specific support for transformation of
+products/services and operations by proposing an approach and method components for product-
+IT inclusive EAM.
+3 Research Approach
+The work presented in this article is the result of a research project following the design science
+research (DSR) paradigm as proposed by [17]. DSR considers that a practical problem can be
+addressed with the help of an artifact – an object made by humans with the intention to address
+the problem [18]. Artifacts can be physical objects (a car, a lawn mower), drawings or blueprints,
+means of methodological support (principles of agile software development, a method for
+designing a database). The commonality between different types of artifacts is that they aim to
+support people encountering a problem, which is as an undesirable state of affairs or a gap
+between the current state and a desirable state [18]. An artifact for solving a problem can be
+described by the function – what can artifact do for its users; the structure – the components the
+artifact consists of and how they are related; the environment – the external surroundings and
+conditions in which the artifact will operate; the effects – how the use of the artifact will change
+its environment [18].
+In this article the problem entails the industrial challenges related to the integration of product-
+IT with enterprise-IT in the context of EA, which had to be identified and described in a
+structured manner first. Two industrial case studies showed that the architecture of product-IT
+had similar layers as known from traditional EA for enterprise-IT with substantial commonalities
+in terms of functionally similar or equivalent services or structures. Thus, integration of product-
+IT and enterprise-IT into a common EA was desirable in order to avoid duplication and
+competing architectures. However, major challenges were a missing joint management of
+product-IT and enterprise-IT due to a lack of methodological support and conceptual integration.
+
+--- PAGE 6 ---
+6
+The identified challenges defined the problem space in detail and pointed out the need for the
+new methodological support in the EA field, which allowed to outline the requirements for the
+product-IT inclusive EA method. These requirements outlined the function of an artifact that
+could address the described problem. Afterwards, a suitable structure of the planned artifact was
+designed, and the method for product-IT inclusive EA was generated. The resulting Method for
+product-IT inclusive EAM is the central artifact of the study.
+Some aspects of the DSR project have been subject of previous publications and will not be
+repeated in this work. As summarized in Table 1, problem investigation, definition of
+requirements, and the design and development cycle were covered before. The focus of this
+article is on core components of the resulting artifact, the method for product-IT inclusive EAM,
+and the validation of this artifact. To ease the understanding of the method and the motivation for
+its design and development, Section 4 summarizes the case study and the resulting requirements.
+Section 5 describes the method components and the validation.
+Table 1. DSR phases and their research methods and results
+DSR phase according
+to [18]
+Research Methods applied Resulting publications
+Problem investigation Literature analysis for investigating the
+knowledge base;
+Case study for exploring the problem at hand
+[19] and [20]
+Define requirements Case study analysis [21]
+Summary in Section 4 of this article
+Design and
+development
+(iterative and incremental development) first version: [21]
+final version: Section 5 of this article
+Demonstration Second case study [22]
+Evaluation Expert interviews Section 6 of this article
+Communication (writing scientific publications) [19], [20], [21], [22], and this article
+4 Previous Work
+4.1 Case Study
+The empirical base for this article is from a research project conducted together with Husqvarna
+Group AB. This project has served as the main empirical source for the expansion of established
+EAM to become product-IT inclusive, and as a base to develop an approach and method
+components to handle product-IT inclusive EAM [22].
+Husqvarna Group AB has been and is in the process of transferring their physical products
+stepwise into smart connected products and at the same time changes and aligns its internal
+structures, accordingly, especially concerning EA and EAM.
+Husqvarna Group AB is a world-leading producer of outdoor power products such as robotic
+lawn mowers, garden tractors, watering systems, etc. It is multinational and offers products and
+services for both the private and industrial market. Husqvarna Group AB is heavily engaged in
+digital transformation where they have embraced many of the opportunities that comes through
+digitalization.
+Many of the Husqvarna Group AB products for professional customers do not only have built-
+in electronics or embedded systems but also networking and communication capabilities. The
+built-in IT is in many cases used for controlling the different mechatronic components of the
+product and for collecting information when the product is in use, either about performance
+parameters or used product features, or about the environment of the product. The networking
+features are used for communicating usage statistics, license information or location information
+(if anti-theft features are activated) to either the product owner or the back-office of the
+
+--- PAGE 7 ---
+7
+manufacturer. Other functions are software upgrades and functionality add-ons implemented by
+configuration changes (e.g., for optimizing energy consumption).
+A typical scenario from a customer perspective is as follows: Different Husqvarna Group AB
+products are installed for supporting maintenance of the garden, all of them equipped with
+wireless communication. Among them is (1) a fleet of robotic mowers and (2) a lawn watering
+system. The robotic mowers and the watering system communicate with each other to
+synchronize mowing and watering, but they also provide operations data to (3) the base station
+and receive software updates or operation schedules from it. The base station is connected to the
+cloud by using the customer buildings WLAN and Internet access. In the cloud, (4) Husqvarna
+Group AB backend and customer services are available. Thus, the owner of the garden has
+access to the services for operating, supervising and planning the garden maintenance using (5)
+mobile devices.
+As an initial step, Husqvarna Group AB had to create alignment between different product
+lines in terms of interfaces, communication standards, and functionality, i.e., regarding
+networking, communication and service provision. In this, Husqvarna Group AB designed and
+implemented reusable services and components (Common Services) for both the product lines
+and the back-office infrastructure which provided an IT and service architecture for the product
+lines.
+An example of a challenge during this phase was the software license management for
+products and software licenses for traditional enterprise-IT (accounting, finance HR, etc.).
+Husqvarna Group AB had to secure a technical infrastructure and use the same encryption and
+logging services for product software and enterprise software. This was done through defining
+common enterprise architecture elements for both product-IT and enterprise-IT. During the
+development of the common enterprise architecture Husqvarna Group AB had to address and
+handle a number of dimensions of the enterprise (concepts and constructs) that are not included
+in traditional EAM.
+In the second phase, somewhat in parallel with phase one, Husqvarna Group AB addressed its
+work procedures (operations) in order to handle the bimodal lifecycle (Mode 1 and Mode 2) of
+product-IT and enterprise-IT. A bimodal lifecycle is a direct consequence of addressing
+enterprise-IT and product-IT in an integrated way. Enterprise-IT (Mode1) is designed for
+stability, efficiency, and low cost, which is closely related to traditional enterprise architecture
+management (EAM). Product-IT, on the other hand, (Mode 2) is constituted by development
+projects that help to innovate or differentiate the business. This requires a high degree of
+business involvement, fast turnaround, and frequent updates, the so-called rapid path to
+transform business ideas into applications. To handle Mode 1 and Mode 2, Husqvarna Group AB
+has implemented DevOps Teams designed for agility, rapid development and short time to
+market.
+4.2 Requirements for a Product-IT Inclusive Method Support
+Based on the observed and described challenges in the case study above, it was possible to
+formulate requirements (REQ) for the envisioned artifact, the method for product-IT inclusive
+EAM (see also [21]).
+REQ 1: The method should support that product-IT is a part of strategy development,
+operational development, and technology development.
+The market changing potential of digital technologies often leads to substantial changes of
+entire business models [2]. Also, a competitive advantage often requires the implementation of
+operational effectiveness (OE) [16]. OE requires embracing best practices across the value chain,
+including up to date product technologies, the latest production equipment, and state-of-the-art
+sales IT solutions. The boundaries between IT supporting business functioning, digital services
+that increase the value of the products and automation of manufacturing become fuzzy, as they
+all act as parts of the digital assets of an enterprise and need to be considered in a structured and
+
+--- PAGE 8 ---
+8
+coherent manner both in terms of strategical and operational choices. This motivates the
+importance of formulating a digital strategy that would allow not only achievement of OE, but to
+create positioning that would allow strategic differentiation [16]. The practice of EAM has a
+broad range of frameworks and tools for translating strategy into implementation and can
+therefore be used for developing and implementing digital strategies, where product-IT will be
+considered as a crucial part.
+REQ 2: The method should be applicable in the environment where agile mode of IT
+development and traditional waterfall-like mode of IT development co-exist.
+A challenge that is apparent today in the digital transformation is the ability to handle the bi-
+modal dimensions of the IT development. The enterprise-IT dimension (Mode 1), is designed for
+stability, efficiency, and low cost, and is closely related to traditional EAM while product-IT
+(Mode 2) is constituted by development projects that help to innovate or differentiate the
+business and require a high degree of business involvement, fast turnaround, and frequent
+update, the so-called rapid path to transform business ideas into applications.
+[23] stated that there is a need to handle “A two speed architecture for the digital enterprise”.
+For digitally native enterprises and startups this is not a problem, since they have had the benefit
+of starting with a “clean slate” and think “digital” and take the advantage of this from the
+beginning without considering any legacy. This does, however, not work for more established
+enterprises. They have many years of delivered technology, architectures, governance, decisions
+structures and financing mechanisms. The central objective of the approach in this article is to
+differentiate the systems, architectures, and structures that must be flexible and agile (often on
+product-IT side) from those that have to be more reliable and deliver the highest quality (often
+on enterprise-IT side) [23].
+REQ 3: The method should provide means for many-sided analysis and modeling of EA,
+paying substantial attention to the role of product-IT in business value generation and strategy
+development.
+On one hand, many-sided analysis and modeling implies the set of clearly defined EA layers.
+A new EA method has to enable collaborative support for knowledge representation across
+different layers and domains and navigating through them easily.
+This need to cut through several layers and navigate through them is related to the concept of
+multi-level dynamic that is also discussed by [23]. The authors of [23] argue that the enterprise
+architect would need to understand the differentiating attributes of different levels and place
+enterprise activities within each level. The constituent activities of any process could be moved
+across level boundaries however the resulting implications of this would need to be traced. In
+that study several enterprise representatives have emphasized the need to pay significant
+attention to strategy formulation and implementation that would involve product-IT concerns.
+On the other hand, to enable many-sided analysis and modeling of product-IT inclusive EA, a
+set of illustrative constructs relevant for the context has to be identified – a set of focal areas,
+each including one or several related elements, that allow to illustrate the most important issues
+in the context.
+One important focal area in this context is customer journey. The customer journey model
+describes the set of steps of a customer (or end user) together with different touchpoints that
+characterize his/her interaction with the service or a product. The model can include the
+following elements: actor; products and services offered to an actor (offering); phases of the
+journey (processes or steps); concerns; thoughts and emotions (experiences); touchpoints.
+Data-driven business options also require consideration in the product-IT inclusive EA. Data-
+driven business options are a focal area that allows to represent the connection of people, their
+concerns, the entities producing data, and the value of the data in relation to the people’s
+concerns.
+These two focal areas (customer journey and business options) are important to analyze
+product-IT contribution into business value generation. However, they are not coherently
+supported by the existing methodological support for EA modeling.
+
+--- PAGE 9 ---
+9
+REQ 4: The method should address data as one of the resources for value generation.
+The importance to develop products and services in a data-intensive way becomes obvious for
+many companies, as data plays the role of the key asset that companies own or have access to.
+Business models are being reshaped, products and services are being enhanced, the ways to
+generate and deliver the value to the customers are being changed through data exploitation.
+Data-driven sensing and acting described in [23] suggests that enterprise change is being
+influenced by both the internal adoption of technologies and the general pervasiveness of digital
+technologies in the environment that they operate in. This kind of data-driven sense- and
+response loops for ongoing enterprise transformation already exist in multiple industries and
+often are realized by the mechanisms of Big Data analysis.
+The analysis of the data, focusing on the app feature usage, helps to optimize the features and
+facilitate further product improvement, which in the long run increases the value of the product
+for the customer and can address broader range of the customer concerns. Continuous analysis of
+data from usage situations for products and services, throughout the development, operations,
+and maintenance, helps to enhance the customer experience.
+REQ 5: The method should facilitate stakeholders’ collaboration and interaction.
+There is a need to facilitate the collaboration between various groups of stakeholders with
+different organizational belonging. The need for representational, collaboration and interaction
+mechanisms that can be used to support a dialog between stakeholders with various backgrounds
+(squad leaders, product owners, marketing specialists, graphical designers and others) becomes
+apparent and crucial to address. For instance, [16] points out the need for close collaboration
+between IT and Research & Development and continuous customer success management.
+According to [23] the particular issue for an enterprise architect is the need to be able to depict
+actor autonomy, actor objectives and goals, boundaries of actor influence, multiple levels at
+which these objectives and influences span, and interactions between the actors. Also, it will be
+important to show any alignment (or misalignment) of actor objectives with the enterprise-level
+objectives.
+5 Approach for Product-IT Inclusive EA
+This section presents the approach for product-IT inclusive EAM with its different methodical
+and conceptual components. One of the basic principles when developing the approach was to
+build upon established industrial practices whenever possible, i.e., to design method components
+and supporting tools that can be integrated into established EAM structures and processes in
+enterprises instead of replacing them. This principle basically emerged both as a requirement
+from the industrial case motivating this work (see Section 4.1 and [22]) and the analysis of the
+state of the art in EAM which showed the feasibility of such an integrative approach.
+TOGAF and ArchiMate (see Section 2.1) are among the most widely used EAM approaches in
+industry, and they form an environment suitable for integrating our approach to product-IT
+inclusive EA. The core element of our approach is the focal areas during business architecture
+development, i.e., when transforming towards smart connected products and integrating product-
+IT into business models and EA, enterprise should pay specific attention to the focal areas and
+apply method components from our approach in doing so. The focal areas are:
+• Customer journey. The journey model describes the set of steps of a customer (or end user)
+together with different touchpoints that characterize his/her interaction with the service or a
+product.
+• Data-driven business options focal area allows to represent the connection of customer
+groups, their concerns, the entities producing data and the value of the data in relation to the
+customer group’s concerns.
+• Business ecosystem concerns the product and services (offerings) within the company under
+consideration and what company-internal ecosystem they form. This helps to identify and
+
+--- PAGE 10 ---
+10
+represent the key actors and their relationships within an ecosystem. An ecosystem is
+defined by an offering or groups of offerings.
+• The interaction focal area allows to represent relationships and communication (exchange
+of interaction objects) between stakeholders.
+• The technological support of offerings is a focal area that allows to represent the relevant
+and potentially useful technology areas that enable successful functioning and development
+of an ecosystem of offerings.
+• The innovation agenda focal area aims to represent relevant technology areas, both
+currently used and potentially applicable, in the value creating activities of the company.
+Representation and analysis of innovation agenda can be used to prioritize the technology
+areas within a digital transformation effort. This focal area also allows to represent business
+actors who are assigned to the identified technology areas, and link product-IT and
+enterprise-IT with the identified technology areas.
+The results of working in the focal areas during business architecture development will have
+implications for the application architecture. This is most obvious for the data-driven business
+service area which has to be implemented by creating or adapting IT-services, applications or
+interfaces in the application architecture. Figure 2 illustrates the positioning of the focal areas
+and their corresponding method components in TOGAF ADM.
+Figure 2. Focal areas and their relation to TOGAF ADM
+How to actually proceed for the different focal areas is defined in a separate method
+component for each focal area. All method components share the same concepts and involve
+defined stakeholders. This integration of components and the overall definition of components
+follow principles from method engineering that will be presented in Section 5.1. In the context of
+
+--- PAGE 11 ---
+11
+this article, the focal areas business ecosystem, customer journey and data-driven business
+services were selected for presentation, which follows in Section 5.3.
+An important aspect of method engineering and at the same time an element of the integration
+into TOGAF and ArchiMate is the definition of the concepts that are used by the method
+components and their integration into EA modeling languages, such as TOGAF. From a
+technical perspective, these concepts were described as a meta-model for product-IT inclusive
+EAM, which is an extension of ArchiMate and is presented in Section 5.2.
+5.1 Method Engineering Perspective
+The resulting method was structured as a combination of several constituents, which are
+interconnected and linked to each other. The choice of the constituents was based on the method
+requirements and their implications on Goldkuhl et al.’s method theory [24]. The relationships
+between constituents are presented in Figure 3 and described below.
+According to [24] a method should include defined method perspective – what is considered
+important in the method. The method perspective for the resulting method is represented by the
+formulated requirements for product-IT inclusive EA method.
+Figure 3. Resulting method – the constituents
+Concepts are the essential entities within a domain. In this article, presented concepts are the
+key entities in the product-IT inclusive EA and provide the essential ground for all other
+constituents of the developed method. Concepts are providing the terminology in which the
+domain knowledge can be discussed and modeled. Concepts are fundamental to the introduced
+method and are used as a basis for focal areas and procedures. From the point of view of method
+theory, concepts for product-IT inclusive EA correspond to the full set of concepts relevant for
+the context that the method aims to address. This full set of concepts define conceptual basis of
+the method and helps to answer the question What to talk about? for the defined focal areas.
+Concepts for product-IT inclusive EA are presented in Section 5.2.
+Focal areas are relevant illustrative constructs for representing a domain. The focal areas for
+product-IT inclusive EA are enabling representation of the product-IT as a part of EA, showing
+the relationships between product-IT parts and other EA elements. Each focal area is defined by
+a set of interconnected concepts. The resulting method includes several focal areas specific for
+representing product-IT inclusive EA. From the point of view of method development theory, a
+focal area can be compared to a method component defined by [24]. According to [24], to form a
+method several method components can be defined, where each method component includes
+concepts, procedure and notation. In this article, focal areas include concepts and procedures,
+whereas the notation, i.e., how a concept should look like to enable graphical method usage
+(How to express answers?), is left outside of the research scope.
+Procedures can help to model the defined focal areas. Procedures are stepwise guidelines for
+modeling the focal area for the purpose of further analysis. Procedures are addressing the
+
+--- PAGE 12 ---
+12
+concepts of the focal areas, by which the focal areas are defined. Focal areas and corresponding
+procedures are presented in Section 5.3.
+Stakeholders and roles are stakeholders and roles (a responsibility assigned to an actor) that
+should participate in the modeling activities of the focal areas. On one hand, there are
+stakeholders that possess the domain knowledge of the focal areas within product-IT inclusive
+EA and can contribute in knowledge representation in participatory settings. A set of
+stakeholders and roles is specific for each focal area, which provides guidelines on Who answers
+questions? On the other hand, there is a modeling facilitator - Who asks questions? Combined,
+these two groups (Who asks questions? and Who answer questions?) correspond to Co-operation
+and collection principles from the method development theory [24].
+5.2 Meta-Model for Product-IT Inclusive EA
+The previous section described the importance of identifying the relevant concepts when
+specifying a method or method components. The concepts of the method for product-IT
+inclusive EA can be expressed in a meta-model. This meta-model builds upon the meta-model of
+ArchiMate and extends it by concepts specific to product-IT as an addition to EA. These
+concepts are motivated by the method requirements (see Section 4.2) and used by the method
+components (see Section 5.3).
+Figure 4 illustrates the meta-model by presenting an extended concept model with rounded
+rectangles representing concepts and connecting lines relationships. White rectangles indicate
+that the concepts are present in ArchiMate and blue rectangles are the extensions made for
+product-IT. These extensions are:
+• Offering: Offering should be introduced as a new concept to combine products and services
+in one phenomenon that has a purpose of value creation. Offering is capable to provide a
+value to a person via solving his/her problem or concern.
+• Ecosystem: An Offering together with key actors constitutes an ecosystem. Business
+ecosystem is an idea that is changing strategic, business and operating models and gets more
+and more recognition in companies across the globe. Ecosystem can be defined as a complex
+web of interdependent enterprises and relationships aimed at creating and allocating
+business value [25]. Companies can drive greater value from ecosystems by increasing the
+strategic impact of ecosystem engagement to their businesses, improving access and lower
+cost of skills and expanding the scope of strategic business opportunities and initiatives.
+• Touchpoint: Touchpoint is an important concept for defining interactions. Customers
+develop experiences every time they interact with a product, service or the enterprise as a
+whole, across multiple channels and at various points in time [26]. Such options of
+interaction between the customer and any part of the enterprise are known as touch points
+[27]. Both existing and potential customers can interact with the company via touchpoints,
+which means touchpoints can be divided into pre-purchase, purchase and post-purchase, and
+interactions can happen via various channels such as person-to-person, website, an app or
+any form of communication.
+• Experience: The idea of experience has been widely discussed in the field of marketing as
+the internal and subjective response customers have to any interaction with a company [28].
+The subjective nature of the experience is elucidated by [15] which indicate that experiences
+are inherently personal, existing only in the mind of an individual who has been engaged on
+an emotional, physical or intellectual level. Experience is a subjective reaction of an actor,
+and it can influence the value of the consumed offering.
+• Concern: Concern is closely related to Value and Experience. Value is defined as a
+motivation element in ArchiMate. Value represents the relative worth, utility or importance
+of a core element or an outcome. Though value can hold internally for some system or
+organizational unit, it is mostly applied to external appreciation of goods, services,
+
+--- PAGE 13 ---
+13
+information, knowledge, or money, normally as part of some sort of customer-provider
+relationship. However, in the discussed context, the value of an offering cannot be
+considered separately from the experience that an actor perceives when consuming an
+offering. In addition, to propose a relevant offering, it is crucial to know the concern that an
+actor has. This motivates the need to introduce the concept “concern”.
+Figure 4. Extended concept model for product-IT inclusive EA based on ArchiMate concepts
+• Opportunity: Opportunity is a possible way to develop an enterprise of technical or
+business character. Opportunities differ from capabilities - existing enterprise assets of
+various sorts, for instance, skills of an employee, specific kind of production equipment, etc.
+Opportunities and capabilities are supporting digital strategy, but at the same time drive and
+influence it. Opportunity is somewhat similar to the Driver motivation element defined by
+ArchiMate. However, a driver has more general character and the connection between driver
+and the strategy layer is not defined.
+
+--- PAGE 14 ---
+14
+• Technology Area: Technology area is a concept that represents a domain, which aims at
+solving a certain challenge and includes a range of IT-intensive methods and solutions to
+solve this challenge. Examples of technology areas are Artificial Intelligence, Voice
+Recognition, API Management, Identity Management, etc. One technology area can include
+numerous enterprise-IT and product-IT application and technology components.
+For some of the extensions, there are concepts in ArchiMate that could have been used to
+represent them, e.g., ArchiMate’s “business collaboration” to model “ecosystem” or ArchiMate’s
+“driver” to model “concern”. However, the semantics of Ecosystem and Concern is slightly
+different from Business collaboration and Driver, which supported the decision in favor of the
+extensions.
+5.3 Selected Method Components
+Based on the concept model in previous section we have selected three method components for
+further presentation, namely, ecosystem of offerings, customer journey and data-driven business
+options. The main reason for the selection of these three method components is that they are the
+method components that cater for bridging the gap between product-IT and enterprise-IT and to
+make EAM product-IT inclusive. The presentation of the method components follows the same
+structure for each method component: we start with the concepts from the meta-model (see
+Section 5.2) of particular importance to the method components, which is followed by a brief
+description of the objective of the method component. Subsequently, an example from the case
+study presented in Section 4.1 is given and the procedure to follow within the method component
+is summarized.
+5.3.1 Ecosystem of Offerings
+Concepts incorporated: Business ecosystem is a focal area that incorporates business actors,
+ecosystems of offerings, concerns and offerings (Figure 5).
+Figure 5. Ecosystem of offerings – included concepts
+Objective: This focal area helps to identify and represent the key actors and their relationships
+within an ecosystem. An ecosystem is defined by an offering or a group of offerings. Various
+offerings can be logically grouped into several ecosystems depending on the nature of the
+concerns that these offerings can to solve. Offerings can be tangible and intangible, for instance,
+products, services, information; and can partly or fully solve actors’ concerns.
+Ecosystem of offerings helps to show the overview of the important internal and external
+actors and their relationships; analyze existing and develop new business models based on the
+offerings and concerns; and identify existing and potentially relevant actors based on the
+offerings and concerns.
+
+--- PAGE 15 ---
+15
+Illustrative example from the Case Study
+Ecosystem of offerings focal area aims to provide an understanding of products and services
+(offerings) that belong to the given ecosystem and its key business actors. Four ecosystems of
+the case company are represented in Figure 6 together with the offerings that each of the
+ecosystems involves and business actors, in this case internal organizational units, who are
+assigned to each of the ecosystems.
+Ecosystemof offerings
+Commercial lawn
+and garden
+Ecosystemof offerings
+Construction
+Ecosystemof offerings
+Forestry
+Ecosystemof offerings
+Residential garden
+Offering
+Casual use
+chainsaw
+Offering
+Power cutter
+Gardena Division
+Construction
+Division
+Offering
+Floor saw
+Offering
+Tile saw
+Offering
+Masonry saw
+Offering
+Wall saw
+Offering
+Wire saw
+Offering
+Floor grinding
+machine
+Offering
+Dust& Slurry
+management
+Offering
+Demolition
+robot
+Offering
+Diamond tools
+Offering
+Roboticlawn
+mover
+Offering
+Ride-on lawn
+mover
+Offering
+Walk-behind
+lawn mover
+Offering
+Trimmer
+Offering
+Snow-thrower
+Offering
+Leaf blower
+Offering
+Watering lawn
+care
+Offering
+Smart Garden
+Offering
+Garden tiller
+Offering
+Tree and shrub
+care
+Offering
+Soil care
+Offering
+Garden tractor
+Husqvarna
+Division
+Consumer Brand
+Division
+Offering
+Coredrill
+Offering
+Compaction
+machine
+Offering
+All-round
+chainsaw
+Offering
+Robust chainsaw
+Offering
+Proffesional
+chainsaw
+Offering
+Top handle
+chainsaw
+Offering
+Other chainsaw
+Figure 6. Ecosystems of offerings, the key offerings and involved actors
+The model in Figure 7 represents the key competitors (represented as business actors) in the
+Forestry ecosystem, shown in Figure 6, focusing on a chainsaw as an offering.
+STIHL
+Offering
+Chainsaw
+Ecosystemof offerings
+Forestry
+Echo
+Dolmar
+Stiga
+Oregon
+DeWalt
+Makita
+Craftsman
+Oleo-mac
+Poulan
+Hitachi Ryobi
+Competitors
+Figure 7. Key competitors in the Forestry ecosystem of offerings, chainsaw offering
+
+--- PAGE 16 ---
+16
+Another important aim of ecosystem modeling is to analyze the high-level concerns that the
+stakeholders have – below in Figure 8 an example of customer concerns model in Residential
+garden ecosystem of Figure 6 is presented. Providing an overview of high-level concerns helps
+to keep the focus on the real needs and requirements of stakeholders (e.g., customer groups) and
+therefore allows to go beyond providing products in a traditional sense and to combine products
+and services or substitute products with services completely.
+Ecosystemof offerings
+Residential Garden
+Offering
+In housefarming and
+plant growing
+Offering
+Plant Identification
+Offering
+Gardening
+Marketplace
+Herbert
+Viri
+PlantSnap
+Bushel
+LawnGuru
+EcoQube EcoQube
+Garden owner
+Concern
+I want to havea calm
+place to relax
+Concern
+I want to havea placeto
+enjoy physical work and
+the resultof it
+Concern
+I want to havea place
+whereI would feel
+connected to the nature
+Concern
+I want to havea placeto
+be proud of and show my
+status
+Concern
+I want to havea place
+whereI could be
+creative
+Concern
+I want to havea place
+whereI could organize a
+gathering
+Figure 8. Residential garden ecosystem, offerings with the related actors and key concerns that are
+relevant for the garden owner (business actor)
+Procedures: The procedure for modeling of ecosystem of offerings includes five steps and is
+based on the concepts that define this focal area (Figure 9).
+Figure 9. Procedures for modeling of ecosystem of offerings
+1. Set the scope for analysis and identify the offerings that are important within the chosen
+scope. The offerings can be tangible or intangible, e.g., services, products or other value
+adding things. After the offerings are identified, group them. Each of the created groups
+correspond to an ecosystem of offerings. Set a suitable name for each ecosystem based on
+the character of the included offerings.
+
+--- PAGE 17 ---
+17
+2. Identify the important actors. They can include stakeholders that contribute into providing
+the key offerings or play other important roles in the given ecosystem. For instance, you can
+consider competitors, trend setting players on the market, providers of the competence or
+technological solutions, providers of the relevant information or data, customer groups,
+potential partners. Actors can be individuals, groups of people or other communicating
+entities.
+3. Represent the actors and their relationships. For this, analyze collaborative, competitive and
+other types of relationships between the identified actors.
+4. Consider and identify the concerns that the actors have. For this, analyze incentives and
+pain points (general or detailed) of the identified actors. List the concerns and relate them to
+the identified ecosystems. Analyze which concerns can be resolved with the help of the
+existing offerings from the identified ecosystems, and which ones remain unresolved and
+can provide basis for new offerings and ecosystems.
+5. Review and refine.
+5.3.2 Customer Journey
+Concepts incorporated: Customer journey focal area incorporates business actors, business
+processes, concerns, offerings, experience and touchpoints (Figure 10).
+Objective: Customer journey aims to represent a sequence of steps and touchpoints that a
+business actor goes through in relation to an offering or group of offerings and focus on the
+concerns and experiences perceived by the business actor.
+Figure 10. Customer journey focal with included concepts
+Illustrative Example from the Case Study
+An example of customer journey model is presented in Figure 11. This model shows eight steps
+(business processes) of customer journey related to the usage Lawn Mower Connect mobile app
+in the context of the ownership of the smart, connected lawn mower. A number of customer
+concerns (why does the person open the app) were identified and assigned to the steps of the
+journey.
+Afterwards it was possible to prioritize one of the concerns (marked with green dot in
+Figure 11) for further analysis. More detailed analysis of the customer’s concerns was performed
+and possible touchpoints (in this case In-App messages) were identified. The aim of the proposed
+touchpoints was to solve customer’s concern by referring to the existing offerings. For the
+proposed touchpoints the customer experience was analyzed and the priority for implementation
+was set on the In-App message “Did you hear about winter storage as a service?” (marked with
+green dot in Figure 12).
+
+--- PAGE 18 ---
+18
+Need Research Select Purchase Recieve Use Maintain Recommend
+Concern
+I want to see and
+test the app before
+Ipurchase
+Concern
+Iwant to see
+statistics of the
+product activity
+Concern
+Iwant to have
+access the
+information and
+facts about my
+product (manuals,
+installation)
+Concern
+I want to see and
+test the app before
+I purchase
+Concern
+Iwant to park
+automover when I
+plan to work in the
+garden
+Concern
+Thebad weater is
+coming! What
+should I do?
+Concern
+I want to know the
+status of the
+product
+Concern
+Need to control my
+product remotely
+Concern
+I want to get tips
+useful for me and
+my product
+Concern
+I want to control
+and changesettings
+Concern
+What Ineed to do
+when winter
+comes?
+Concern
+Iwant to see
+available
+promotions and
+campaigns
+Concern
+I want to see and
+test the app before
+I purchase
+Concern
+I want to see and
+test the app before
+I purchase
+Concern
+Iwant to see and
+test the app before
+I purchase
+Concern
+Iwant to see and
+test the app before
+I purchase
+Customer journey
+Lawn mover
+owner
+Figure 11. The customer journey and related customer concerns in the context of Lawn Mower Connect
+mobile app usage
+Concern
+I don t know how to
+maintain my
+product
+Concern
+I amworried my
+product will break
+during winter
+Concern
+Will it work when it
+is spring again?
+Concern
+When is ittimeto
+take my automover
+indoors?
+Concern
+I lack spaceto store
+my automover
+Concern
+I haveno ability to
+maintain my
+product
+Concern
+I do not have time
+to maintain my
+product
+Concern
+Should I do
+something with
+charging station?
+Concern
+Will theworkshop
+really takecare of
+my automover?
+Touchpoint
+In-App msg:Do not
+forgetto chargethe
+battery!
+Touchpoint
+YouTube video
+explaining cleaning
+and typical winter
+service
+Touchpoint
+Did you hear about
+winterstorage as a
+service?
+Touchpoint
+Show on map the
+nearestwinter
+storage provider
+Touchpoint
+Yourautomover is in
+good hands! Here is the
+picturefrom the shelve
+at winterstorage.
+Offering
+Winter storage
+Offering
+FAQ, handling and care
+instructions and videos
+Experience
+Oh wow! This mustbe
+something for me!
+Experience
+Wait, what does this
+map show? Are these
+the closestdealers?
+Figure 12. Customer concerns, touchpoints and offerings
+
+--- PAGE 19 ---
+19
+Procedures: The procedure for modeling of customer journey includes seven steps and is based
+on the concepts that define this focal area (Figure 13).
+Figure 13. Procedures for modeling of customer journey
+1. Set the scope for analysis and identify the business actors that you would like to focus on
+and the offerings relevant for the context. The focus can be set on an individual or a group of
+actors, who can be internal and external, potential and existing consumers of the value
+creating offerings.
+2. Represent the key steps of the customer journey for the identified scope – a sequence of
+business processes. One way to structure the journey is to consider the most important pre-
+purchase, purchase and post-purchase activities that are related to the product/service.
+Alternatively, the key season and off-season activities can be considered to represent the
+journey in a season-based view.
+3. Identify the concerns: go through various concerns that the customer has, and which are
+supposed to be solved by the offerings in the chosen scope. Consider that concerns are
+influenced by the customer context. Context can include location, age group, time of the
+day/year, duration of owning the product, etc.
+4. Analyze the identified (one several or all) concern in detail. Analyze detailed concerns for
+the chosen scenarios. Those can include Pains and Gains – specific thoughts, interests and
+issues that customers have in relation to a particular concern. Consider context to identify
+the most important pains and gains in relation to offerings in the chosen scope.
+5. Go through proposed detailed concerns and suggest touchpoints – a suitable way to get in
+contact with the customer to resolve the identified concern. For instance, touchpoint can
+include a push-notification, In-App message, e-mail, phone call, social media post aimed at
+a specific customer group, etc. It is important to make sure that the touchpoint is relevant for
+the user context and can help to resolve one or several identified concerns.
+6. Describe experiences that would characterize proposed touchpoints. This can help to choose
+between several touchpoints referring to the same offering and choose the one providing
+better experience. Use voting to choose the most appropriate alternatives (customer concern
+scenarios, touchpoints). Voting can help to identify the most important and timely option for
+further investigation or pilot implementation, from the modeling session participants point
+of view. Each participant can vote for defined number of proposed alternatives.
+7. Review and refine.
+
+--- PAGE 20 ---
+20
+5.3.3 Data-Driven Business Options
+Concepts incorporated: data-driven business options incorporate business actors, concerns,
+offerings, value and data objects (Figure 14.)
+Objective: Data-driven business options is a focal area that helps to represent possible value
+adding use of the data produced by offerings (smart, connected products and services). This focal
+area enables representation of business actors and their concerns, and data that is produced by
+offerings that has value for the actors in focus.
+Figure 14. Business options focal area with included concepts
+Illustrative Example from the Case Study
+An example of data-driven business options is represented in Figure 15. The figure shows
+several communication episodes of business actors (Tractor owner, Service Center, Store) and
+offerings (Garden tractor, Toolshed App). Business actors have various concerns in relation to
+the offerings in focus. For instance, Tractor owner would like to know when to buy new spare
+parts and service the tractor. On the other hand, offerings produce data that can add value in
+relation to the concerns of the actors. Timely order of the spare parts and booking a service, sent
+from tractor to the Service Center and confirmed by the tractor owner, will have a significant
+perceived value in the described context. Product Info and Operational status (generated by the
+Toolshed app) would allow to form an order for the specified product and operational status
+(Value) and subsequently simplify the order process for both Tractor owner and the Store given
+their concerns.
+
+--- PAGE 21 ---
+21
+Dataobject
+Service status (last
+service date, tractor
+service period)
+Concern
+When should I buy
+new spare parts and
+service my tractor?
+EcoQube Tractor owner Store
+Offering
+Garden tractor
+Data object
+Spare parts status
+(components
+standard durability,
+components
+current status)
+Value
+Forma request to
+order service
+Value
+Form a request to
+order spare parts
+Offering
+Toolshed App
+Dataobject
+Product Info
+Dataobject
+Operational status
+Value
+Form an order for
+the specified
+product and
+operational status
+Concern
+How can we get the
+orders for service and
+spare parts more
+precise and faster?
+Husqvarna
+ServiceCenter
+Concern
+How can we deliver
+fasterand to thepoint?
+Dataobject
+Geo location
+Value
+Providetheexact position of
+the tractorto Husqvarna
+Service CenterDelivery,
+implement To the tractor
+delivery
+Concern
+What if I amnot there
+when theorderwill be
+delivered?
+Figure 15. Data-driven business options – business actors and their concerns in relation to the offerings
+and the produced data
+Procedures: The procedure for modeling of data-driven business options includes six steps and
+is based on the concepts that define this focal area (Figure 16).
+Figure 16. Procedures for modeling of business data-driven business options
+1. Set the scope for analysis and identify the business actors to be focused on, and the
+offerings (products or services or their combination) relevant for their context. The focus
+can be set on an individual or a group of actors, and one or several offerings.
+
+--- PAGE 22 ---
+22
+2. For the specified business actors describe the concerns (a problem or need) in the scope of
+using the offerings. Consider that concerns are influenced by the actor context. Context can
+include location, age group, time of the day/year, duration of owning the product, etc.
+3. Analyze and list data that is produced by the identified offerings. Consider and document
+data objects that have value in relation to the identified concerns of the business actors.
+4. Analyze and describe the value of the identified data objects. Data objects can have value
+for solving one or several concerns of business actors.
+5. Analyze whether the identified data objects and their value can become a part of the existing
+offerings or serve as a foundation for new offerings (products and services).
+6. Review and refine.
+6 Validation of Approach and Selected Method Components
+The presented method components and the approach as a whole were validated through semi-
+structured interviews with experts. The validation was divided into three evaluation meetings as
+discussed below.
+Evaluation meeting 1 with two experts
+This activity was designed to evaluate the concepts for product-IT inclusive EA. The descriptive
+evaluation through informed argument and scenarios in combination with evaluation through
+structural testing were applied. The set of concepts for Product-IT inclusive EA was
+demonstrated to the invited expert and discussed in detail. The concept model, see Figure 4
+above, was presented, together with arguments for introducing new concepts. A number of
+scenarios was suggested, and the expert validated whether the proposed set of scenarios was
+sufficient to cover the domain in focus. Afterwards, the relationships between the specified
+concepts were validated, which served as a structural testing of the concept model in represented
+in Figure 4. Suggestions for improvements were documented and implemented through revision
+of the conceptual model(s).
+Experts: two industrial experts in EA and digital product development, digital transformation
+and human-centered design.
+Key contributions: evaluated set of concepts for product-IT inclusive EA.
+Evaluation meeting 2 with one expert
+This activity was designed to evaluate several dimensions of the product-IT inclusive EA
+approach: Concepts for product-IT inclusive EA, Focal areas for product-IT inclusive EA,
+Stakeholders for product-IT inclusive EA and Method for product-IT inclusive EA as a whole.
+The approach with these components was presented to the invited experts and discussed in detail.
+The descriptive evaluation was performed through presentation of scenarios together with
+arguments for each scenario. The expert evaluated whether the suggested set of concepts was
+sufficient to cover the domain in focus. In this evaluation meeting a set of stakeholders was also
+presented and discussed in detail with regards to the responsibilities and organizational
+affiliations. Suggestions for the improvements were documented and implemented in the
+method. The method was also validated in terms of structural coherence. The method component
+constituents were discussed with a special focus on the relationships between them. The method
+structure was also discussed in relation to the existing methods in EA field, comparing the aims
+of the methods and the choice of the method constituents to satisfy these aims.
+Expert: industrial expert in Enterprise-IT implementation and integration, broad experience
+on digital transformation and shift from physical product production to smart, connected product
+production in traditional manufacturing companies.
+Key contributions: validated set of concepts, focal areas and stakeholders for product-IT
+inclusive EA.
+
+--- PAGE 23 ---
+23
+Evaluation meeting 3 with one expert
+This activity was designed to evaluate the product-IT inclusive EA approach as a whole
+including:
+• Selected focal areas and method components for product-IT inclusive EA.
+• Stakeholders for product-IT inclusive EA.
+This was presented and discussed with the invited expert in detail to provide another
+perspective on the knowledge constructs.
+The validation was performed through presentation of scenarios together with arguments for
+each scenario. The expert then validated whether the proposed set of concepts was sufficient to
+cover the domain in focus. In this evaluation meeting a set of stakeholders was also presented
+and discussed in detail with regards to the responsibilities and organizational affiliations.
+Suggestions for the improvements were documented and implemented in the final version of the
+method. To evaluate the method as a whole the structural testing of the presented method has
+been performed similarly to the Evaluation meeting 2.
+Expert: academic expert in method development, EA and EAM, metamodel definition,
+constituents of methodological support in the EA field and digital transformation.
+Key contributions: validated set of concepts, focal areas and stakeholders for product-IT
+inclusive EA.
+To sum up these validation meetings, each validation activity resulted in several actions that
+were taken to improve the approach and the method. The refinement actions that took place
+included:
+1. Accepting or refining the proposed naming of the constructs. Changing the name was
+suggested by the validation experts and implemented accordingly for several constructs
+among method requirements and concepts (constituent of the generated method).
+2. Accepting or refining the presented meaning or definition of the constructs. Minor
+refinements of the meaning of several constructs were suggested and implemented for
+method requirements, concepts and focal areas (constituent in the generated method).
+3. Accepting or refining the identified relationships between constructs. Refinements of the
+relationships between several constructs were suggested and implemented for relationships
+between concepts (constituent of the generated method).
+4. Accepting or refining the stylistic details of the representation of constructs. Several stylistic
+changes were implemented for representation of the concepts and focal areas.
+7 Conclusions
+Based on an industrial case that illustrates the development of smart connected products and the
+creation of new kinds of business services, this article derives requirements for a product-IT
+inclusive EAM approach and addresses method support for product-IT inclusive business and
+application architectures. As a foundation for the method support, a meta-model is proposed
+which builds upon ArchiMate and integrates additional concepts required for representing
+product-IT and its use. The method as such consists of various components addressing the focal
+areas ecosystem of offerings, customer journey and data-driven business services. This method
+support can be integrated into TOGAF ADM in the phases B (Business Architecture) and C
+(Information Systems Architecture).
+Application of the proposed method on two industrial cases showed its applicability and
+usefulness. One of the cases is included in this article in Section 4.1; and the excerpts from the
+case as examples are shown when introducing the method components in Section 5.3. Detailed
+information about the second case is included in [22]. Furthermore, expert evaluation confirmed
+that the method meets industrial demands.
+
+--- PAGE 24 ---
+24
+Future work will concern empirical and conceptulal perspectives. From an empirical
+perspective, application of the method in additional cases should be in focus to gain experiences
+and additional requirements for improving or revising the method. Application cases should
+primarily be enterprises with smart connected products. Other application fields with substantial
+product-IT should follow to check applicability of the method and adaptation needs. The
+conceptual perspective of future work should include the search for additional focal areas and
+their integration into the meta-model and method components. Examples could be service
+evolution or product-IT prepared for the third party components.
+References
+[1] M. Porter and J. Heppelmann, “How smart, connected products are transforming competition,” Harvard
+Business Review, vol. 92, no. 11, pp. 64–88, 2014.
+[2] T. Hess, C. Matt, A. Benlian, and F. Wiesböck, “Options for Formulating a Digital Transformation Strategy,”
+MIS Quarterly Executive, vol. 15, no. 2, 2016.
+[3] S. Buckl, T. Dierl, F. Matthes, and C. M. Schweda, “Building blocks for enterprise architecture management
+solutions,” Working Conference on Practice-Driven Research on Enterprise Transformation, pp. 17–46, 2010.
+Available: https://doi.org/10.1007/978-3-642-16770-6_2
+[4] T. Tamm, P. B. Seddon, G. G. Shanks, and P. Reynolds, “How does enterprise architecture add value to
+organisations?” Communications of the Association for Information Systems, vol. 28, pp. 141–168, 2011.
+Available: https://doi.org/10.17705/1CAIS.02810
+[5] D. Simon, K. Fischbach, and D. Schoder, “Enterprise architecture management and its role in corporate
+strategic management,” Information Systems and e-Business Management, vol. 12, no. 1, pp. 5–42, 2014.
+Available: https://doi.org/10.1007/s10257-013-0213-4
+[6] F. Ahlemann, E. Stettiner, M. Messerschmidt, and C. Legner, Strategic enterprise architecture management:
+challenges, best practices, and future developments. Springer, 2012. Available: https://doi.org/10.1007/978-3-
+642-24223-6
+[7] M. Wißotzki, H. Koç, T. Weichert, and K. Sandkuhl, “Development of an enterprise architecture management
+capability catalog,” International Conference on Business Informatics Research, pp. 112–126, 2013.
+Available: https://doi.org/10.1007/978-3-642-40823-6_10
+[8] F. Rahimi, J. Gøtze, and C. Møller, “Enterprise architecture management: Toward a taxonomy of
+applications,” Communications of the Association for Information Systems, vol. 40, no. 1, pp. 120–166, 2017.
+Available: https://doi.org/10.17705/1CAIS.04007
+[9] The Open Group. The TOGAF Standard, Version 9.2. Van Haren Publishing, 2018.
+[10] R. Harrison, TOGAF 9 Certified Study Guide. Van Haren, Publishing, 2011.
+[11] H. Jonkers, E. Proper, and M. Turner, “TOGAF 9 and ArchiMate,” White Paper. The Open Group, 2009.
+[12] The Open Group. ArchiMate 3.1 Specification. 2019. Available:
+https://pubs.opengroup.org/architecture/archimate3-doc/toc.html
+[13] P. Parviainen, M. Tihinen, J. Kääriäinen, and S. Teppola, “Tackling the digitalization challenge: How to
+benefit from digitalization in practice,” International Journal of Information Systems and Project
+Management, vol. 5, no. 1, pp. 63–77, 2017.
+[14] H. Hirsch-Kreinsen and M. ten Hompel, “Digitalisierung industrieller Arbeit: Entwicklungsperspektiven und
+Gestaltungsansätze,” Handbuch Industrie 4.0 Bd.3, pp. 357–376, 2017. Available: https://doi.org/10.1007/978-
+3-662-53251-5_21
+[15] B. J. Pine and J. H. Gilmore, “Welcome to the experience economy,” Harvard Business Review, vol. 76,
+pp. 97–105, 1998.
+[16] S. J. Berman and R. Bell, “Digital transformation: Creating new business models where digital meets
+physical,” IBM Institute for Business Value, 2011.
+[17] A. R. Hevner, S. T. March, J. Park, and S. Ram, “Design science in information systems research,” MIS
+quarterly, vol. 28, no. 1, pp. 75–105.
+[18] P. Johannesson and E. Perjons, An introduction to design science. Springer, 2014. Available:
+https://doi.org/10.1007/978-3-319-10632-8
+
+--- PAGE 25 ---
+25
+[19] K. Sandkuhl, J. Kaidalova, and U. Seigerroth, “Towards Integration Methods of Product-IT into Enterprise
+Architectures,” IEEE 21st International Enterprise Distributed Object Computing Workshop (EDOCW),
+pp. 23–28, 2017. Available: https://doi.org/10.1109/EDOCW.2017.13
+[20] J. Kaidalova, K. Sandkuhl, and U. Seigerroth, “How Digital Transformation affects Enterprise Architecture
+Management – A Case Study,” International Journal of Information Systems and Project Management, vol. 6,
+no. 3, pp. 5–18, 2018.
+[21] J. Kaidalova, U. Seigerroth, and K. Sandkuhl, “Product-IT and Enterprise-IT integration in enterprise
+architecture management – Methodological perspective,” 17th International Conference on Perspectives in
+Business Informatics Research (BIR), Workshop on Resilient Enterprise Architecture (REA), ceur-ws.org, vol.
+2218, pp. 1–10, 2018.
+[22] J. Kaidalova, Integration of Product-IT into Enterprise Architecture – A method for participatory Business and
+IT Alignment. PhD dissertation. University of Skövde (Sweden), 2019. ISBN 978-91-984918-3-8
+[23] Z. Babar and E. Yu, “Enterprise Architecture in the Age of Digital Transformation,” Advanced Information
+Systems Engineering Workshops, pp. 438–443, 2015. Available: https://doi.org/10.1007/978-3-319-19243-
+7_40
+[24] G. Goldkuhl, M. Lind, and U. Seigerroth, “Method integration: the need for a learning perspective,” IEEE
+Proceedings-Software, vol. 145, no. 4, pp. 113–118. Available: https://doi.org/10.1049/ip-sen:19982197
+[25] S. Davidson, E. Giesen, M. Harmer, and A. Marshall, “In or out? Succeeding in the ecosystem economy,” IBM
+Institute for Business Value, 2017.
+[26] E. Pantano and M. Viassone, “Engaging consumers on new integrated multichannel retail settings: Challenges
+for retailers,” Journal of Retailing and Consumer Services, vol. 25, pp. 106–114, 2015. Available:
+https://doi.org/10.1016/j.jretconser.2015.04.003
+[27] A. Stein and B. Ramaseshan, “Towards the identification of customer experience touch point elements,”
+Journal of Retailing and Consumer Services, vol. 30, pp. 8–19, 2016. Available:
+https://doi.org/10.1016/j.jretconser.2015.12.001
+[28] P. C. Verhoef, K. N. Lemon, A. Parasuraman, A. Roggeveen, M. Tsiros, and L. A. Schlesinger, “Customer
+experience creation: Determinants, dynamics and management strategies,” Journal of Retailing, vol. 85, no. 1,
+pp. 31–41, 2009. Available: https://doi.org/10.1016/j.jretai.2008.11.001

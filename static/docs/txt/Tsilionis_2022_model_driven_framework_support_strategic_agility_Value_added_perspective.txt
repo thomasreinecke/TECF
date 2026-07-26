@@ -1,0 +1,1801 @@
+--- PAGE 1 ---
+Information and Software Technology 141 (2022) 106734
+Available online 30 September 2021
+0950-5849/© 2021 Elsevier B.V. All rights reserved.
+Contents lists available at ScienceDirect
+InformationandSoftwareTechnology
+journal homepage: www.elsevier.com/locate/infsof
+Amodel-drivenframeworktosupportstrategicagility:Value-added
+perspective
+Konstantinos Tsilionis, Yves Wautelet∗
+KULeuven, Belgium
+A R T I C L E I N F O
+Keywords:
+Strategic agility
+IT governance
+Strategic value
+Model-driven development
+Agile
+Agility
+i* framework
+Scaled agile framework
+SAFe
+MoDrIGo
+StratAMoDrIGo
+A B S T R A C T
+Context: The Covid-19 pandemic has shown the entire world that the habits of work, freedom, and consump-
+tion can change quickly and significantly for an undetermined amount of time. A dynamic environment as
+such, prompts organizations to move fast in order to leverage changing circumstances as sources of opportunity
+rather than deadly threats. Drastic changes in work organization, consumption habits, compliance, etc., may
+require firms to quickly adopt new technology delivering all sorts of added value.
+Objective: The development and adoption of new technology – structurally impacting the way the organization
+conducts its activities – requires a considerable amount of effort in a short time frame, thus rendering it a
+governance decision where the alignment of the technology’s adoption and use to the long term strategy
+needs to be evaluated. The short time frame requiring fast response implies that agility should not remain a
+development or management/operational concept but should also be adopted onto the strategic layer.
+Method: Design Science Research (DSR) has been applied to build-up a framework supporting strategic agility
+in a model-driven fashion called Strategic Agile Model Driven IT Governance (StratAMoDrIGo). The relevance,
+rigor and design cycles of DSR have been applied and presented.
+Results: StratAMoDrIGo is based on the identification of sources of value for the organization’s strategy, its
+stakeholders and the users of the implemented/adopted technology. Relevant concepts are consolidated in an
+ontology of which the application uses the NFR Model at strategic-level and the i* Strategic Rationale Model
+at management-level. The proposal is applied on the case of an hospital facing the Covid-19 pandemic.
+Conclusion: The value brought by strategic opportunities’ adoption to the organization, stakeholders and users
+can be evaluated ex ante through conceptual models.
+1. Introduction
+Governance and strategic decisions often face a lack of concrete
+data or formalisms supporting them [1]. Unstructured and fragmented
+information leads to a vision limited in many ways. Such information
+indeed fails to provide an ex ante evaluation of the consequences of IT
+adoption on the long term competitive position of the organization and
+the fulfillment of stakeholders’ best interests. Furthermore, all type of
+IT related decisions (including strategic ones) need to be taken on short
+notice because of the rapidly changing socio-economic environment. In-
+deed, recent years gave rise to unexpected events deeply impacting the
+economy and stakeholders’ (e.g. customers, employees, shareholders,
+...) behavior in a very short time frame and without any notice. For
+example, we can cite (i) the Covid-19 pandemic stipulating new ways
+of working/consumption habits; (ii) the 2008 financial crisis impacting
+the budget formulation processes and overall financial management
+of organizations, or (iii) random terrorist attacks disrupting civil lib-
+erties and worker mobility. When taking place, such events act as
+∗ Corresponding author.
+E-mail address: yves.wautelet@kuleuven.be (Y. Wautelet).
+game changers and reactive measures, impactful on the organizational
+strategy, need to be assessed and implemented almost in real-time.
+Conceptual modeling involves building a representation of selected phe-
+nomena in some domain [2]. Some conceptual models to support strate-
+gic decision making based on goal-driven representations (e.g. [3–6])
+have been developed and validated lately. Such models are able to
+incorporate organizational goals at a very high level of abstraction
+but also the goals of a wide variety of stakeholders together with
+their intentionality. Their use is significant to highlight, study, and
+evaluate the global impact of a new software or system development
+and deployment.
+This paper depicts the research aimed to build a framework, in-
+stantiated through conceptual models, allowing to quickly evaluate
+(when the business context changes rapidly) the impact of IT adoptions
+in terms of strategic, stakeholder and user value. By strategic value
+we mean, in the context of this paper, every development, adoption,
+https://doi.org/10.1016/j.infsof.2021.106734
+Received 15 January 2021; Received in revised form 12 September 2021; Accepted 14 September 2021
+
+--- PAGE 2 ---
+Information and Software Technology 141 (2022) 106734
+2
+K. Tsilionis and Y. Wautelet
+deployment of technology that enhances the long term position or the
+organization’s products and services. Similarly, stakeholder value refers
+to any kind of support resulting from technology that increases the
+level of quality of life of the stakeholder in a specific business context.
+Finally, user value essentially concerns furnishing functional and non-
+functional elements to an end-user helping him/her to more efficiently
+perform its private or business activities. Since the framework depicted
+in the paper focuses on the evaluation of the impact of technology
+adoption on an extended range of values on the one side and on rapid
+development/deployment in changing environments on the other side,
+it is aimed to support strategic agility through conceptual models.
+The developed framework extends the Model Driven IT Governance
+(MoDrIGo) one of [6] to include a broader range of potential tech-
+nologies on which governance-level adoption decisions need to be
+taken. These are purely based on (added) value evaluation to sus-
+tain agile principles; we thus call it Strategic Agile MoDrIGo, in short
+StratAMoDrIGo. MoDrIGo uses conceptual modeling to support the IT
+governance process especially for business and IT alignment evalua-
+tion when adopting IT services. In that sense, StratAMoDrIGo is more
+general (not focused on IT services only but on a broader range of
+(significant) technological adoptions) but also covering more aspects
+(because it allows to overview the impact of the adoption on stake-
+holders and users) while being also flexible (different configurations
+can be edited beforehand). StratAMoDrIGo is intended to be applied
+‘‘on the fly’’ when the business context changes and new technologies
+can be adopted while MoDrIGo is applied in a classical service portfolio
+approach when IT services are to be developed to replace decommis-
+sioned ones or address new needs. The main research questions the
+paper is answering to is ‘‘How could conceptual modeling be applied to
+highlight strategic, stakeholder and user value within technological adoptions
+in a fast moving business context’’. The main contribution of this paper
+is the enhanced framework (StratAMoDrIGo).
+The proposal is applied on the case of an hospital facing the Covid-
+19 situation. This hospital has been used for full validation of a pre-
+vious framework in which the one presented in this paper takes roots
+(see [6]). We here study the impact of the development of 2 (software)
+applications driven by the Covid-19 pandemic on the hospital’s strat-
+egy, stakeholders and application’s users. The impact of the pandemic
+on the hospital strategy has been, for the research team, an opportunity
+for the development and validation of the framework. An expert has
+also been consulted for the evaluation of the strengths and weaknesses
+of the framework. StratAMoDrIGo also went through a comparison with
+other agile development and value-driven methods.
+The rest of the paper is structured as follows. Section 2 gives
+some background information about strategic agility and stakeholder-
+based governance. Section 3 gives the context of the research, more
+specifically the application of design science through the relevance,
+rigor and design cycles. Section 4 depicts the ontology on which our
+framework (StratAMoDrIGo) is based. Section 5 documents the mod-
+els that our framework is constituted of. Section 6 depicts a process
+fragment that can be applied in order to use StratAMoDrIGo. Section 7
+depicts the application and evaluation of the framework on a case for
+evaluation/validation. Section 8 compares the framework with other
+state-of-the-art approaches and discusses some practical aspects related
+to agility and applicability as well as the threats to validity. Finally,
+Section 9 concludes the paper.
+2. Background
+2.1. Defining, characterizing and positioning strategic agility: from concepts
+to implementation
+Haakanson et al. [7] define strategy as the ... pattern of activities
+which has an impact on the achievement of the organizational goals in
+relation to its environment. By adjusting the offer of products and services
+through an adequate strategy, a better competitive positioning should
+quickly be achieved when the environment changes drastically. Indeed,
+environmental changes induce strategic opportunities. A strategic op-
+portunity involves the acquisition of resources at a price below their
+rent generating capacity [8]. The opportunity is outside the scope of
+the organization so the latter cannot influence it but it can make use
+of it for its own benefit [7]. All in all, it is an opportunity if it brings
+more value that the invested resources and we consider it being strategic
+when it leads to a competitive advantage through the mobilization of
+the resources it involves. Operational measures can mostly be taken on
+the fly, but the existence of game-changing events necessitate the swift
+evaluation/implementation of strategic (governance) level decisions as
+well; the latter are described as the ones having a structural impact on
+the organization, its finances and its stakeholders.
+Agile practices require the set-up of enterprise-wide, top-down and
+bottom-up collaboration and communication mechanisms that identify,
+promote and reinforce initiatives encouraging a rapid response to in-
+ternal/external organizational challenges [9,10]. However, despite the
+proliferation of the importance of agility when crafting organizational
+goals, the former does not necessarily constitute a panacea to every
+issue related to organizational effectiveness and efficiency. For one
+thing, agility is by nature a multipurposed conceptual term, open to
+many definitions and action strategies even within the same organiza-
+tion [11]. Sambanurthy et al. [12] illustrate the multidimensionality
+of agile by differentiating between some of its co-variants such as
+customer agility (leveraging customer insights to expedite innovation),
+partnering agility (exploiting strategic partnerships and business net-
+works to discover competitive opportunities) and operational agility
+(swift redesign and co-creation of business processes with the synergies
+of customers/developers for maximized business value delivery). The
+last variant has become prominent in the field of software development
+after the emergence of the so-called ‘Agile Manifesto’ [13] invoking the
+simplification of certain code-producing principles/attitudes and the
+disavowal of plan-driven rigidity for the attainment of user-oriented
+functions that yield maximized value. Operational agility lies into the
+use of the existing business model (i.e., improving the accuracy and
+quality of software to deliver a better product or service), however, up-
+scaling operational agility towards the achievement of strategic agility
+(i.e., creating new software developments, exploring new markets,
+making new products by the exploitation of opportunities [14]) is not
+self-evident.
+Progressively, there has been a lot of seminal work in the effort
+to chart the notion of agility in a wider organizational perspective by
+customizing specific ‘command and control’ mechanisms to software
+development teams (i.e., setting-up specific Key Performance Indicators
+(KPI), interventions and team coordination tactics) [15,16]. However,
+works as such do not consider how agility can be adopted at strategic
+level.
+Approaches found in literature to achieve strategic agility are most
+often a collection of advices or practices to be implemented (see for
+example [17]) or inherent qualities – like strategic sensitivity, resource
+fluidity and leadership unity [18] – to have to make the organization’s
+environment agile at a strategic level. According to several authors
+(e.g. [19–22], dynamic capabilities – that were originally defined for
+sustaining a competitive advantage in an increasingly interdependent
+environment – can be used for achieving strategic agility. Ordinary
+capabilities are operating routines concerning the business processes
+of an organization [23] while dynamic capabilities are more abstract
+ones implying a modification of the operational processes and enabling
+the business to evolve and expand using innovation [21,23]. Strong
+dynamic capabilities are required when organizations are facing highly
+uncertain environments in order to favor strategic agility [21]. A
+dynamic capability can be defined as the firm’s ability to integrate, build,
+and reconfigure internal and external competences to address rapidly chang-
+ing environments [19]. Dynamic capabilities do represent key elements
+for an organization’s capacity to innovate, adapt to change, and create
+change that is favorable to customers and unfavorable to competitors; they
+
+--- PAGE 3 ---
+Information and Software Technology 141 (2022) 106734
+3
+K. Tsilionis and Y. Wautelet
+are a specific type of organizational and managerial skills [21]. Glesne
+et al. [24] highlight that three main types of dynamic capabilities are
+relevant for strategic agility, i.e. the capacity to sense and shape opportu-
+nities (sensing), the capacity to seize opportunities (seizing) and the capacity
+to maintain competitiveness through reconfiguring the enterprise’s assets
+(shifting). The framework developed in this paper is aimed provide
+support to these dynamic capabilities. The inclusion of the framework
+in the organization’s practices is intended to enhance the sensing (by
+creating an opportunity-aware culture), its use concretely helps the
+seizing (by offering a concrete way to evaluate the organizational
+impact of opportunities’ adoption) and finally supports the shifting
+(by highlighting how organizational resources and structures can be
+reconfigured for the adoption of the opportunities). All in all, the
+framework is intended to furnish support to reasoning for strategic
+agility; this is done through the use of conceptual models.
+As already discussed, strategic agility has been mostly explored
+in strategic management sources in a very abstract manner via the
+exploration of qualities an organization should have to be strategically
+agile or via the experimentation of specific practices. To the best of the
+authors knowledge, no formal framework has been proposed favoring
+agility independently at a strategic level. The SAFe 5.1 framework [25]
+drives operational developments by value streams identified at strategic
+level but does not see agility as an independent aspect/quality of the or-
+ganization. Also, SAFe’s software developments are driven by strategic
+value flows but no ex-ante evaluation of the development’s impact can
+be realized with the framework. A detailed comparison between SAFe
+and StratAMoDrIGo can be found in Section 8.1. At operational-level,
+methods like Scrum and XP favor agility in software development;
+however, such frameworks do not include conceptual models natively
+and focus solely on the employment of user stories for requirements
+elicitation [26]. Thereby, the goal, as presented in the present paper,
+is to build a framework allowing to represent business/organizational
+situations in which rapid change is necessary by focusing on the de-
+livered value (the key component of agility). Thereby, the framework
+is purposed to evaluate the consequence of the adoption of strategic
+opportunities (mostly new technology) onto the organizational setting
+as a concrete approach of how to deal with a changing environment.
+Traditional (IT) governance frameworks also exist; frameworks like
+ISO/IEC 38500 [27] or Cobit 5 [28] provide guidance for a proper
+IT governance but do not encompass principles/processes/concepts
+to deal with changing environments and recommending immediate
+action. The framework developed in this paper covers these two gaps
+by being driven by conceptual models and allowing an integration of
+the strategic, tactical, and operational levels; strategic and operational
+agility can ultimately come together with the support of a structured
+approach.
+2.2. Towards stakeholder-driven governance
+The key concept of stakeholder-based governance lies on the fact
+that strategic decisions are not taken to maximize value for sharehold-
+ers only but rather for all of the stakeholders of the organization [29].
+The group of stakeholders is, by definition, much larger that the
+shareholder one since it may include C-level executives, middle and
+lower-level managers, users of an IT system, administrative employees,
+clients, suppliers, etc. Proper stakeholder-based governance means that
+when fixing strategic objectives and taking decisions to fulfill them, all
+of these individual groups should be taken into account to maximize
+shared value.
+Samavi et al. [30] highlight that most modeling techniques that are
+used to draw useful business insights may be focusing on maintaining
+and reinforcing the existing structure and functions of transactions
+in a value-driven network. They, however, do not engage in a fully-
+fledged stakeholder-based governance which would imply, by definition,
+the consideration of the intentional dimensions of the stakeholders par-
+ticipating in a business. This may lead to representational inefficiencies
+given the fact that creation and exchange of value in a business ecosys-
+tem is triggered and influenced by the goals/intentions/motivations of
+a multitude of stakeholders.
+2.3. Related work
+Lara et al. [31] regard governance from a design science perceptive
+where they discover that most software modeling constructs favor the
+portrayal of elements from the strategic apex in full concretization
+without necessarily incorporating their operational-layer technologies.
+As a solution, the authors introduce a set of new modeling elements
+which essentially extend ArchiMate [32]. This enables a better oper-
+ational imprint of the Enterprise Architecture (EA) but increases by
+far the number of inter- and cross-layer connections without provid-
+ing a clear contribution in improving the business and IT strategical
+decision-making structures when facing rapidly evolving requirements.
+Comparatively, Souza & do Prado Leite [33] try to bridge the rep-
+resentational disassociations across strategic, tactic and operational
+layers by proposing a model-driven methodology which merges i* [34]
+and BPMN [35]. In this way, inter-layer traceability is ensured by
+using relationships in places where these modeling languages intercept
+each other. The authors claim that integrating fit-for-purpose modeling
+constructs for each organizational level is bound to improve their in-
+between alignment, at least in a vertical perceptive. However, their
+contribution seems to be entailing a meticulous up-front design effort
+for all organizational tiers. This is seemingly at odds with the paradigm
+of using strategic opportunities where only coarse-grained features are
+defined to allow businesses to react rapidly to internal or external
+change.
+Juhnyoung et al. [36] propose a value-centric, model-driven ap-
+proach that is meant to identify business and IT gaps during the
+exploration of new business opportunities. The approach strives to map
+IT functions and capabilities to business performance while facilitating
+the demonstration of the delivered value of IT and services. It is
+comprised of these key modeling elements: first, a multi-layer model
+represents the linkage between business and IT semantics and enables
+IT and services to reflect their yielded business value. Second, a busi-
+ness modeling component provides a strategic-level business view of
+the entire enterprise and enables business analyses based on value and
+risk assessment elements such as KPIs and other operational metrics.
+Even though the approach aspires to yield an end-to-end integration of
+business value with the main IT enablers, the former is defined only in
+terms of cost metrics influencing the corporate governance view from
+the perceptive of the shareholder.
+Thomas & Vom Brocke [37] describe a conceptual modeling-based
+methodology to assess and determine valuation metrics of Service-
+Oriented Architecture (SOA) deliverables. The study aspires to traverse
+the gap between the flexibility that a SOA brings to IT integration and
+the leverage of the former to achieve (business) strategic objectives
+by providing support to those responsible for the design-decision of
+these services. Conceptual models provide with individual, factually
+documented, design alternatives evaluated with regard to their long-
+term economic viability. There are some points of attention with this
+approach with the first one being that value is considered solely insofar
+to its economic significance, disregarding in that sense some service
+which may be costly to design/implement but holds nonetheless the po-
+tential of solving crucial functional and/or strategic concerns. Second,
+the methodology describes the setup of a governance decision-support
+center for the design of specific services but does not depict the frame-
+work by which this center transmits the design-decision implications to
+the other layers of the organizational spectrum.
+Khurum et al. [38] acclaim that the existing value-construct con-
+tributions act in isolation from each other in software product de-
+velopment processes. Consequently, the study presents a consolidated
+software value map which introduces essentially a balanced scorecard
+approach that considers various internal/external factors before a final
+software product development decision can be taken. Similarly, Mendes
+et al. [39] detail a methodology that calls upon the improvement of
+decision-making activities associated with the development processes
+of software intensive products and services. This methodology can be
+
+--- PAGE 4 ---
+Information and Software Technology 141 (2022) 106734
+4
+K. Tsilionis and Y. Wautelet
+described as an amalgamation of knowledge creation processes and
+the use of Bayesian networks purposed to elicit the knowledge of key
+stakeholders in terms of the most significant factors that should be
+used as input to a Web-based value-assessing tool employed to support
+decision making. Both of these approaches seem to be detailing the
+value-centric decisions that need to be deliberated during the planning
+phase of the development process and do not offer concrete suggestions
+on the alignment between strategic and operational aspects during
+the running phase of the process. Overall, to the best of the authors’
+knowledge, there is no consolidated work up until now that explores
+value aside from the economic viability of technological adoptions
+in the business context while clearly demonstrating (with the use of
+conceptual modeling tools) how the best interest of a wide range
+of stakeholders can be supported by rendering the workings of the
+organization in a state of strategic agility.
+3. Research paradigm, method and approach
+This research follows the precepts of the Design Science (DS)
+paradigm [40]; DS is meant to build generic solutions for identified
+issues. The output of a DS-driven research can be a solution in the
+form of an artifact, terminology, methodology, engineering tool, and
+so forth. In the present research, an attempt has been made to build
+artifacts to improve the handling of strategic opportunities for the
+benefit (i.e., provided value) of all stakeholders in a highly dynamic
+business context. These artifacts aim to solve an unresolved issue or
+a problem considered being in a precarious state. More precisely, we
+furnish a tool to overview the impact of the adoption/deployment of
+strategic opportunities on (i) strategic objectives (to evaluate strategic
+value), (ii) stakeholder goals (to evaluate stakeholder value), and
+(iii) technological features (to evaluate user value). To answer the
+research question given in the introduction and, in accordance with
+the DS research cycles defined by Hevner [41], we are communicating
+an analysis of the Relevance Cycle in Section 3.1, the Rigor Cycle in
+Section 3.2 and the Design Cycle in Section 3.3.
+3.1. Relevance cycle
+The Relevance Cycle concerns the identification of opportunities/
+problems in the application domain. In our context, we identified the
+problem referring to the lack of a framework being able to adopt
+strategic opportunities in short time frames through the evaluation of
+the value they offer on a strategic, tactical and operational level. The
+problem has been identified in practice within a partner organization
+(that had already been in collaboration for the build-up of [6]). The
+former had been implementing an IT governance framework that was
+in a state of disruption with traditional (IT governance) frameworks for
+allowing the evaluation of larger technological developments and their
+added value on multiple levels; however, the framework was not agile
+enough to deal with changing business contexts. Even though agility
+was a major area of concern, together with the quest for integration
+with operational agility approaches, their existing framework offered
+analysis abilities through the use of conceptual modeling. The latter
+also contributed to the creation of an archetype for the evaluation of the
+strategic opportunities while maintaining uninterrupted the daily mode
+of operations within the organization. The recognition of the afore-
+mentioned problem along with the creation of the artifact occurred
+iteratively. The final release of the artifact had to satisfy each sub-sect
+of this problem.
+3.2. Rigor cycle
+The Rigor Cycle refers to the theories/methods that are used to
+ground the construction and evaluation of our artifact. Our framework
+is built upon an existing framework for IT governance validated in
+previous research. In order to support the contribution of this paper,
+we created a so-called ‘pseudo-ontology1
+’ [30,42] (i.e., not a fully-
+fledged ontological construction but the creation of an informal user
+friendly ontology). Indeed, we use a restricted and structured form
+of natural language to state and clarify the definition of its concepts.
+A Unified Modeling Language (UML) class diagram [43] is used to
+formalize the concepts of our ontology as well as the links between
+these concepts. The ontology and its application, through the use of
+existing models, constitute a contribution to the knowledge base of
+agility. More precisely:
+• For the strategic layer we started from the MoDrIGo framework
+which was applied for the IT governance of the partner organi-
+zation. More precisely, the strategic-layer concepts started from
+the ontology of MoDrIGo. The latter is aimed at defining key
+concepts for a governance situation where development/adoption
+decisions need to be taken for IT services. We were interested in
+linking the strategic layer with the overall organizational (busi-
+ness and/or IT strategy) so we used MoDrIGo for the represen-
+tation of the business (and IT) strategies because of its specific
+purpose of evaluating business and IT alignment out of conceptual
+models for service-based systems. The business situation we aim
+to represent here is nevertheless slightly different than in the
+traditional MoDrIGo framework. We have reviewed a series of pa-
+pers for the identification of relevant concepts for strategic agility.
+Unfortunately, and as said before in this paper, we mostly found
+sources negotiating it in a very abstract manner through qualities
+or practices to align to but never in the form of a framework
+that can be instantiated. Therefore, the concepts had to be refined
+from the domain of strategic agility but also driven by traditional
+agility (thus focusing on value). The framework indeed focuses on
+any technological adoption driven by a moving business context
+(which could also be an IT service); we have thus included the
+ones of business context and strategic opportunity. Finally, with
+respect to MoDrIGo, the concept of Business IT Service (by nature
+also very abstract thus represented at strategic-level, see [6,44])
+has been removed; the strategic opportunity can nevertheless be
+a Business IT Service even if the former is broader so can be a
+broader range of technological means;
+• For the tactical layer, the concepts are driven by stakeholder
+analysis so we tried to incorporate/represent the impact on stake-
+holders and the value provided to them by the adoption of the
+strategic opportunity;
+• Finally, for the operational layer, we link the tactical concepts
+to the notions of Epic User Story and User Story (these concepts
+are defined in [26,45,46]) to point to the agile (operational) de-
+velopment of the strategic opportunity; this nevertheless remains
+an optional part and is left for future work.
+3.3. Design cycle
+The Design Cycle refers to the construction and the evaluation of the
+artifact. Our framework (which we refer to as the artifact developed
+in this research from a DS perspective) has been constructed as an
+evolution of existing approaches that have been adapted to support
+agility on multiple levels due to the underlying focus on value. The
+evaluation is done through a case study onto an organization where
+the impending problem has been identified.
+The framework focuses on value through the triptych: strategic,
+stakeholder and user. The visual representation of the levels and the
+respective value brought is made using existing models and following
+1
+We use here the term ontology because we depict a representation of the
+relevant concepts to deal with an agile situation at strategic and management
+levels. The pseudo-ontology is then supported by two existing models for
+graphical representation. Thereby, it is not a meta-model as such because it is
+instantiated using two different models.
+
+--- PAGE 5 ---
+Information and Software Technology 141 (2022) 106734
+5
+K. Tsilionis and Y. Wautelet
+the principle of separation of concerns. This means that although the
+ontology is presented here as a unified set of concepts, instantiations
+are done through the use of different models to illustrate/treat the
+different aspects of the problem separately. This allows to keep the
+problem manageable; we can also deal better with scalability when
+evaluating strategic opportunities having a large impact on the orga-
+nizational setting or the representation of situations with the adoption
+of multiple strategic opportunities. More specifically:
+• At strategic level, an Non Functional Requirements (NFR)-like
+diagram [47] is used to represent the benefits of the strategic
+opportunity(-ies) on the business objectives to identify strategic
+value. Such diagrams were originally used to represent non-
+functional requirements but have later evolved to represent high
+level (very abstract) strategic objectives and trace the impact
+of functional developments (called operationalizations) on these
+kinds of developments (see for example [6,48]). This level thus
+allows to isolate the strategic objectives and the strategic op-
+portunities as coarse grained elements to study instantly the
+impact of the later on the former without tactical-level details
+(i.e., details on the impact of the deployment of the opportunity
+on the organizational setting);
+• At tactical and operational levels, a Strategic Rationale Dia-
+gram (SRD) [34] is used to represent the stakeholders and identify
+stakeholder value. Although it is called strategic, the SRD allows
+to represent a tactical-level situation where the goals of individual
+actors (i.e., stakeholders) and the means for their realization can
+be documented. It allows to study the organizational impact of
+the adoption of a strategic opportunity and, consequently, the
+induced value for these stakeholders (so stakeholder value, at
+tactical-level). Finally, end users of the technology constituting
+the strategic opportunity can be represented in the SRD along
+with their goals and tasks to identify the value, provided by this
+technology, for them (so user value, at operational-level).
+To show how the ontology can be dynamically used/applied in
+practice and supported with existing models, we also depict a process
+fragment, i.e. a set of process elements out of which concrete process
+instances can be composed when executed. The latter illustrates how
+to apply the framework as a method or within an existing (software)
+development method. It has been built generically to highlight the roles
+and activities that are performed in the context of a strategic oppor-
+tunity evaluation for adoption decision. The constituting activities are
+customizable in function of the project and the process fragment should
+only be taken as a guidance for application; it is not meant to be used as
+a turnkey process but as a plug-in to technology development/adoption
+methods and/or agile methods; it has been formalized using the process
+fragment concepts of [49] and represented graphically in i* [50] in the
+same fashion as in [51,52]. We chose the formalization of i* because
+it highlights the social dependencies between the actors/roles without
+it being sequential. Indeed, we did not aim to document a sequence
+of activities in the process fragment because of the high variability
+existing in the sequence and/or parallelism from business situation
+to business situation. This also shows implicitly the flexibility in the
+adoption of the process fragment by an organization. Indeed, multiple
+activities can be performed simultaneously, some can be omitted while
+others can be added and the sequence can be chosen in function of
+the field requirements/constraints. Workflow-based notations – that
+are more directive in terms of sequence – do not highlight social
+dependencies and are less tailorable/customizable, thus less relevant.
+Conversely, the i* notation accounts for the variability in the activities’
+execution and selection.
+The validation of the framework has been made through a case
+study in a Belgian hospital already studied in previous work (see [6,
+53]) but with the new context of the Covid-19 crisis as the cause of
+a changing business environment. The same organization had already
+applied the MoDrIGo approach (see [6]) but needed a more flexible
+approach to deal with crisis situations like for example the Covid-19
+pandemic. More specifically, new technological developments helping
+to deal with the Covid-19 situation are evaluated through conceptual
+modeling to identify the value provided at various levels. For illustra-
+tion purposes, we take the examples of a videoconferencing system and a
+Covid-19 self assessment app considered here as the strategic opportunities.
+This is fully detailed in Section 7. An expert opinion on the framework
+and its application has also been gathered for a better appraisal of the
+contributions.
+4. Ontology
+Fig. 1 depicts our reference ontology documenting the concepts
+required for dealing with strategic agility.
+For the description of the ontology, we will first start with the
+strategic-level; strategy is one of the most important aspects of cor-
+porate governance [54]. Strategic agility essentially delivers its full
+potential in a dynamic business environment where the context changes
+without notice and unexpectedly. We refer to this as the Business_Context
+which is represented as a class in the ontology. An example of an
+instance could be the Covid-19 pandemic, the 2008 financial cri-
+sis, the 2015/2016 terrorist attacks in Paris and Brussels, or other
+kinds of game changing events like a merger, new trends in cus-
+tomer habits, new behavior in employees’ work, etc. The core strategy
+may be impacted by the business context; we represent this by the
+drives relationship link between the Business_Context and the Strate-
+gic_Objective class (the latter can be in nature a Business_Objective
+then part of the Business_Strategy or an IT_Objective then part of the
+IT_Strategy). In parallel, a changing Business_Context can drive one or
+more Strategic_Opportunities; these have a Type attribute that identi-
+fies the form it takes, e.g. an IT Service (see for example [44,55]
+for a characterization), an entire software system, a single mobile
+application or any technological device. These are represented by the
+Strategic_Opportunity class in the ontology; what matters is that the
+development/adoption of the Strategic_Opportunity requires an amount
+of effort/resources having a significant impact on the organization’s
+performance jeopardizing its competitive position in the long run.
+The adoption of the Strategic_Opportunity can thus sustain pre-existing
+Strategic_Objectives and/or new ones driven by the Business_Context.
+When a Strategic_Opportunity sustains a Strategic_Objective it delivers
+Strategic_Value to the organization.
+The management-level further supports the governance one through
+the implementation of solutions supporting the strategic decisions/
+objectives. We aim here to bring value through the adoption of the
+Strategic_Opportunity to all of the stakeholders (represented through the
+Stakeholder class). The latter entails all the actors that have an interest
+in the organization and can either affect it or be affected by it. The
+approach presented here is, by nature, aimed to be stakeholder-driven
+and, to such an end, it explicitly identifies Stakeholder_Goals so, as a
+consequence, Stakeholder_Value resulting of the adoption of a Strate-
+gic_Opportunity. Stakeholders fulfill Management_Tasks some being re-
+quired by the Strategic_Opportunity to be successfully adopted/deployed
+in the business environment. Also, they achieve their individual Stake-
+holder_Goals by the fulfillment of Management_Tasks. In turn, the users
+(represented through the User class) are a subgroup of Stakeholders
+that are directly using the Strategic_Opportunity in one way or another.
+Consequently, Stakeholder_Value is a concept that is broader than the
+User_Value, the latter being value given by the immediate use of the
+Strategic_Opportunity. More specifically, a User uses a Feature which is a
+special kind of Management_Task that possibly sustains, through tech-
+nology, the realization of Strategic_Objectives. Stakeholders get direct
+(if they are Users) or indirect (if they are not Users) value from the
+adoption of the Strategic_Opportunity (through the use of its Features) in
+the specific Business_Context.
+The evaluation of a strategic opportunity (in the aforementioned
+manner) suggests implicitly that the application of the framework is not
+
+--- PAGE 6 ---
+Information and Software Technology 141 (2022) 106734
+6
+K. Tsilionis and Y. Wautelet
+Fig. 1. Strategic opportunities driving the strategic objectives: An ontology.
+made to be fully top-down but rather a round-trip between the levels
+to identify and exploit the relevant identified sources of value at any
+level. Further explanation on the followed application process will be
+given in Section 6.
+5. Model-based value representation
+While the previous section concentrated on defining the relevant
+concepts for strategic agility and the sources of value, this section pro-
+poses an instantiation of the concepts using existing modeling notations
+to visualize the sources of value brought by the adoption of a strategic
+opportunity at strategic (governance) and management levels.
+5.1. Strategic value driven by strategic opportunities: NFR approach
+In accordance with MoDrIGo and, as explained earlier, to represent
+the strategic level (where the strategic value brought by the adoption
+of a strategic opportunity can be identified), we use an NFR tree [56].
+Indeed, the latter is used first to build a strategic-level representation
+offering a decomposition of the Strategic_Objectives in a refinement
+fashion. Note that the same modeling approach can be followed for the
+organization’s Business_Strategy and for the IT_Strategy. In both cases,
+Strategic_Objectives are refined from top-level parent elements to more
+concrete leaf-level elements. In the NFR tree, Strategic_Opportunities are
+linked to leaf Strategic_Objectives through contribution links; this is both
+valid for the Business_Strategy and the IT_Strategy. Positive and negative
+contributions are inferred from the i* Strategic Rationale Diagram (SRD)
+– i.e., the management level – as task elements fulfilling a solution con-
+tributing to the realization of the Strategic_Objectives (see Section 5.3).
+A canonical form of an NFR tree customized for our purpose is given
+in Fig. 2.
+5.2. Stakeholder and user value driven by strategic opportunities: i* ap-
+proach
+In accordance with MoDrIGo, to represent the management-level
+(where the stakeholder and the user value are identified), we use the
+i* SRD [50]. Nevertheless, the latter is slightly adapted/customized for
+our specific purpose. Fig. 3 depicts a canonical form of the i* SRD
+instantiated to outline the Stakeholders’ intentions with respect to the
+Fig. 2. Model-driven representation of strategic value: Canonical form.
+Strategic Opportunities (so the impact of the latter on the former) within
+the organizational setting.
+The i* framework is a goal-oriented graphical requirement modeling
+notation [34]. It allows an early requirement engineering analysis in
+environments where social actors depend on each other for goals to be
+achieved, tasks to be performed, and resources to be furnished [34].
+Previous researches proved the relevance and utility of i* to model
+organizational requirements of a ‘‘multi-agent system’’ [44] facilitating
+stakeholder’s interactions by depicting their dependencies and hence
+providing a mean for coordination. i* was previously used to model
+several organizational settings [57] like online stores [58], hospital
+
+--- PAGE 7 ---
+Information and Software Technology 141 (2022) 106734
+7
+K. Tsilionis and Y. Wautelet
+beds management and health care [6,53], supply chains and more
+specifically outbound logistics [59], production support in the steel in-
+dustry [60] and also for the development of higher education platforms
+like collaborative learning software [48] and Massive Open Online
+Courses (MOOCs) [61]. The i* framework is divided in two parts, each
+providing a different level of abstraction: the Strategic Dependency
+(SD) model (used for the representation of actor-interdependencies)
+and the Strategic Rationale (SR) model (used for the representation of
+the actors’ internal intents) [34]. Fig. 3 provides the core elements of
+the i* framework as well as their graphical representations.
+The first element that needs to be highlighted is that Strategic Op-
+portunities are explicitly represented, in the diagram, as i* actors stereo-
+typed as i* agents (because a Strategic Opportunity is, in our framework,
+by nature technological). The most concrete Strategic_Objectives, iden-
+tified during the strategic evaluation, are cascaded in the i* SRD
+representation at management level as goals in the scope of the agent(s)
+representing the strategic opportunity(-ies). A Strategic_Objective found
+as a leaf in the NFR Business (or IT) strategy decomposition is found
+in the i* SRD representing the management-level organization if and
+only if the adoption of the strategic opportunity supports, by the use of
+a specific Feature, the realization of the Strategic_Objective. The Feature
+is represented as a mean to achieve the Strategic Objective it supports as
+an end (so means-end decomposition). The Feature is being pictured as
+an i* Task and the Strategic Objective as an i* goal. This allows to trace
+the concrete functional realization of the Strategic Objective through a
+Feature.
+Similarly, the Feature requires the intervention of a user that gets
+direct operational value from its use but also has an impact on a broader
+range of stakeholders that, even if they are not direct users, need to
+be somehow involved for a successful adoption. Stakeholders typically
+need the strategic opportunity (through its Features) to help towards
+the fulfillment of some of their goals; these goals are represented as
+dependencies between the actors. So, all in all they get value from the
+adoption of the Strategic Opportunity. Note that, in the canonical form
+of Fig. 3, one of the goals is represented as a dependency required
+by the Stakeholder (depender) but needs support from the Strategic
+Opportunity (dependee); in that case the latter finishes a service like
+automation, computing, etc. to fulfill the former’s referenced goal (the
+stakeholder is not necessarily a direct user of the technology but is
+benefiting for its deployment). The strategic opportunity then furnishes
+stakeholder-value (as can be seen in the Figure). A User represents a
+Stakeholder that has a direct interaction with the technology imple-
+mented through the Strategic Opportunity (e.g. an application end-user).
+In the canonical form of Fig. 3, the first goal dependency represents
+the User as depender and the Strategic Opportunity as a dependee so
+that the User needs a direct interfacing with the Strategic Opportunity
+to get (user) value. In the case of the second goal dependency, it is
+the Strategic Opportunity (depender) that needs the User (dependee) to
+fulfill it. In that case the technology might need direct input from the
+stakeholder for its processing.
+5.3. Traceability between the strategic and management levels
+Fig. 4 merges the strategic- and management-level views to show
+that the Strategic Objectives found in the business strategy, depicted in
+the NFR graph, can be found within the scope of the actor representing
+the Strategic Opportunity at management-level. The Features there
+furnish a solution to a Strategic Objective. Similarly, the Strategic
+Opportunity is represented at management-level as an actor whose
+internal intentions can be depicted, and, at strategic-level, we only see
+an aggregation of it summarizing its overall impact of the Strategic
+Objectives (so on the business strategy).
+The aim is not to build the strategic representation before the
+management-level one since one needs the latter to infer the overall
+contribution of the strategic opportunity on the strategic objectives.
+The goal is rather to do the two representations together and to have a
+Fig. 3. Model-driven representation of stakeholder and user value: Canonical form.
+round trip where different configurations can be tested. As an example
+of how a development team can get along with the different diagrams
+and collect the required knowledge, we depict in the next section
+a process fragment illustrating the possibilities when applying the
+framework. We would rather say that we are in a middle-out approach
+than in an top-down or a bottom-up one.
+6. Process fragment
+As already said, to highlight the Roles involved in the process
+fragment, their Work Product dependencies and their Activities, we
+use a pictorial Description using the i* framework.2
+Each Role can be
+played by several individuals; similarly, an individual can play different
+Roles.
+Table 1 documents all of the process fragment elements defined in
+Seidita et al. [49] that are instantiated onto our contribution using
+i*; this mapping is taken from previous work and is further justified
+in [51].
+Fig. 5 depicts our process fragment using an i* SRD; the following
+description systematically refers to it. We distinguish several types of
+stakeholders, all having various objectives and expectations, i.e.:
+• The Board of Directors (BoD) Role represents the top manage-
+ment of the organization regrouped in advice and/or decision
+boards [62]. The BoD is required to Set-up the Strategy and to be
+Dealing with a Changing Business Context which are process Phases
+so represented as Goals in the i* SRD. These Phases basically
+involve the same Activities as can be viewed in the graphical
+representation, so we point out that the former Phase is about
+defining the strategy in normal times while the latter represents
+evaluating the strategy shift when a new business context (as
+2
+We use i* in this section to depict how the framework can be used by
+a consulting or professional team. i* is also used in the framework to depict
+a management-level organization of stakeholders (as seen in Section 5.3). So,
+i* is used in 2 very different contexts in this paper and these should not be
+mixed to understand the research.
+
+--- PAGE 8 ---
+Information and Software Technology 141 (2022) 106734
+8
+K. Tsilionis and Y. Wautelet
+Fig. 4. Traceability between the strategic-level (NFR graph) and the management-level (i* strategic rationale diagram).
+Table 1
+Instantiation of a process fragment as an i* SRD (mapping made in [51]).
+Element Definition (from [49]) i* representation
+Phase A specification of the fragment position in the design workflow.
+Usually referring to a taxonomy.
+Goal
+Activity A portion of work assignable to a performer (role). Task
+Work product The resulting product of the work done in the fragment; it can
+be realized in different ways also depending on the specific
+adopted notation.
+Resource
+Role The stakeholder performing the work in the process and
+responsible of producing a work product (or part of it).
+Actor
+Description It is the textual and pictorial description of the fragment; it
+provides a panorama on the whole process the fragments come
+from and the fragment overview in terms of tasks to be
+performed, roles and work product kind to be delivered.
+A Strategic Rationale Diagram
+defined in Section 4) takes place. The main Activity (represented
+as an i* Task) required to perform these Phases is Determine
+Strategic Objectives. The Strategic Objectives are then a Work Product
+required by the Strategy Manager to perform its Activities;
+• The Strategy Manager Role thus depends on the BoD Role for
+obtaining the Strategic Objectives Work Product; that is why it is
+represented as a Resource dependency in the i* diagram of Fig. 5.
+The Strategy Manager is responsible of the Determine Strategic
+Value Phase. This is done through the realization of the Evaluate
+Impact of Strategic Opportunities on Strategic Objectives Activity.
+For this, the Strategy Manager requires the Strategic Objectives but
+also the i-star Strategic Rationale Diagram produced by the Analyst
+Role in order to examine the impact of the Strategic Opportunities’
+Features on the Strategic Objectives;
+• The Chief Information Officer (CIO) Role is in charge of the Evalu-
+ate Strategic Opportunities Phase. To such an end the Role performs
+the Activity Determine/Overview Features. The latter examines in
+detail the main Features brought by the Strategic Opportunity.
+The Analyst Role is depending on the CIO Role for the Strategic
+Opportunity’s Features Work Product;
+• The Analyst Role is in charge of understanding the intentions
+of stakeholders with respect to the Strategic Opportunity. To this
+end, this Role is in charge of the Determine Stakeholder Value
+Phase which is represented as an i* Goal in Fig. 5. A means-
+end decomposition then allows to refine the i* Goal representing
+this Phase. To fulfill it, the Software Analyst Role performs the
+Activity Represent stakeholder’s goals and management tasks. The
+purpose of this Activity is to build an i* SRD representation (see
+Section 5.3). More domain knowledge is usually needed to fully
+perform this Activity so that the Analyst Role needs to discuss
+elements with all of the possible stakeholders (including Users) to
+understand their Intentions. The (Strategic Opportunity’s Adoption
+Stakeholders) Intentions are then a Work Product represented
+as a resource dependency: the Analyst depends of the Strategic
+Opportunity’s Adoption Stakeholders for furnishing it;
+• The Stakeholder Role is in charge of performing the Furnish Knowl-
+edge Activity. The result of this Activity is the Work Product
+Intentions furnished to the Analyst;
+• The Product Owner Role is in charge of the Determine User Value
+Phase. To such an end, it performs the Define Epic User Stories
+Activity. Epic User Stories are essentially mapped to the Strategic
+Opportunity’s Features. The Product Owner Role is also in charge
+of collecting the Feature’s User Stories from the User Role for an
+Agile development of the Feature;
+• The (end) User Role is in charge of performing the Furnish Feature
+Requirements Activity. The result of this Activity is the Work
+Product Feature’s User Stories furnished to the Product Owner.
+7. Framework application, evaluation and validation
+This section summarizes the application of the framework on the
+case of the hospital. The presentation of the subsections follows a
+logical order. Section 7.1 depicts the context of the study. Section 7.2
+depicts the data collection process, the evaluation of the representa-
+tions, and the gathered expert opinion. Section 7.3 depicts the evolution
+of the strategy in the changing business context of the Covid-19 pan-
+demic. New business objectives are indeed identified and exposed in
+the latter subsection; these new objectives, along with the existing
+ones, represent the elements that need to be sustained by strategic
+opportunities. The follow-up order explains that we need the infor-
+mation provided by the management-level illustrating the tactical and
+operational support of the strategic opportunity’s features (depicted in
+
+--- PAGE 9 ---
+Information and Software Technology 141 (2022) 106734
+9
+K. Tsilionis and Y. Wautelet
+Fig. 5. Process fragment for strategic Agility.
+Section 7.4) to be able to aggregate the overall support of the strate-
+gic opportunity on the business objectives constituting the business
+strategy. Finally, Section 7.5 overviews the impact of the strategic
+opportunities’ adoption on the evolved business strategy as an aggrega-
+tion. This is the reason justifying the placement of Section 7.5 as last;
+the presentation in Section 7.5 can indeed be seen as a roll-up of the
+representations of Section 7.4.
+7.1. Case study background
+The case study described in this section further develops the case
+of a Belgian hospital already used for validation purposes in [6] and
+whose strategy has been described extensively in [53]. The example
+is adapted in some parts to deal with confidentiality issues but taken
+from a real case. Even though the application is only partial, it is meant
+to be realistic and relevant. Saint-Romain3
+is a Belgian hospital whose
+activities have grown exponentially in the last few years; available IT
+budgets have nevertheless grown only in a linear way.
+The hospital has been dealing recently with a drastic change in
+the business context. To be specific, the Covid-19 crisis has drastically
+impacted Belgium causing the need for an immediate response from the
+authorities. This context is particularly interesting to study the impact
+of a few initiatives seen as strategic opportunities on their produced
+value at strategic, stakeholder and governance level. The examples
+provided here refer to a videoconferencing system and a Covid-19 self-
+assessment app developed as part of the measures taken to control the
+pandemic.
+7.2. Data collection, representations evaluation and expert opinion
+The collaboration with the hospital started a few years ago with
+the development of a new information system for the hospital (more
+information about the implemented software system can be found
+3
+For confidentiality reasons the name of the hospital has been changed.
+in [53]). Back then the university team did not participate in the im-
+plementation (coding) of the new software system but it was involved
+in the organizational modeling and design of the new system. Organi-
+zational representations using i* were realized then and validated as a
+continuous process with the staff members in a back and forth fashion.
+The business strategy representation is an evolution of the one
+presented in [6] and has also been built on the basis of interviews.
+With respect to previous developments, the current research implied
+collecting new information about the impact of the pandemic on the
+hospital’s strategy as well as the IT developments that have (or have
+been envisaged) to be set-up in response to it. We consulted sources
+internal to the hospital to identify the impact of the pandemic on the
+strategy. Nevertheless, the data collection was not done in a systematic
+way but rather as a recollection of the impact on the basis of the
+documentation at disposal. External sources, including more technical
+documentation, were also consulted to evaluate the functions supported
+by strategic opportunities and to be taken as example when realizing
+the i* representations.
+The researchers’ experience with the strategic representations and
+with i*, the pre-knowledge on the organization as well as the available
+technical documentation assisted in the rapid realization of the model-
+ing within two business days. The models were not further validated
+with the members of the hospital. Nonetheless, they were audited
+(together with the entire approach) by an external expert in digi-
+tal transformation having extensive (10+) professional experience in
+conducting digitalization projects along with a deep understanding of
+academic approaches (the expert holds a PhD in business strategy). The
+latter confirmed the interest and value of the approach while he never
+made use of a structured (meaning non-textual) approach to depict a
+business (or IT) strategy. Similarly the structure and impact given by
+the management-level was pointed out as a strength of the approach;
+the expert pointed out such a structure is traditionally given/perceived
+in an ad-hoc manner (or with the use of a generic digital roadmap
+that is not adapted to moving contexts and very waterfall in its spirit)
+without any reasoning ability. He notably emphasizes It is not really
+about immediately identifying structural changes, it is more about bringing
+
+--- PAGE 10 ---
+Information and Software Technology 141 (2022) 106734
+10
+K. Tsilionis and Y. Wautelet
+the necessary, the required bricks in order to identify required changes and
+be able to adapt. The interviewee pointed out that the application and
+adoption of such a framework in times of business variability changes
+the mindset of people seeking for digital innovations ...by reviewing
+the involved stakeholders, resources and capabilities and thinking about
+potentially integrating strategic opportunities on-the-fly changes your way of
+working. In turn, the interviewee explains that before being agile at all
+organizational levels, especially at a higher one, a digital maturity needs
+to be reached in the organization where knowledge and mastering
+of key components like the current IT infrastructure, the strategy,
+knowledge about stakeholders, etc needs to be reached. According to
+the expert, StratAMoDrIGo is an innovative way of reaching towards
+a higher level of digital maturity by becoming more efficient in IT
+adoption decisions. The interviewee also identified the importance
+of working top-down and bottom-up at the same time (so implicitly
+working in a middle-out fashion). By that, the expert referred to the
+capability of identifying the structural impact (i.e., the organization of
+stakeholders) of technological adoption, the end-user experience and,
+at the same time, identifying the strategic impact. The representations
+of StratAMoDrIGo can be updated and reconfigured at will and this
+allows to support the framework’s round-trip way of working while
+reasoning on business situations. Business reasoning is an important
+point of consideration for the interviewee pointing out the necessity to
+include new business models and streams of revenue which, in chang-
+ing times, they can be partially studied through considering strategic
+opportunities as new actors impacting the organizational setting. Fi-
+nally, the expert recognized the lack of a global reasoning mechanism
+within the framework which would act as a way to quantify value
+ex ante and measure value ex-post for a full governance life cycle
+support. The expert would also like to see a measure of risk and a
+cost of adoption of different configurations (i.e. scenarios) represented
+through the framework. These elements will be studied later even if
+the heaviness of quantification in hazardous times could act against the
+simplicity/speed required by agility at all levels.
+7.3. Evolution of the business strategy due to the business context
+As said previously, the Business Context in our case study is the
+Covid-19 pandemic; the Strategic Opportunities that pop-up in this con-
+text are the development of a videoconferencing system and a Covid-19
+self-assessment app. As can be seen in Fig. 6, because of the pandemic,
+new Strategic Objectives have been defined by the BoD; more precisely,
+we distinguish 4 new ones brought by the Business Context and 2
+existing ones triggered by the Business Context. As an example, we
+can take the new Business Objective called Establish a synchronous and
+asynchronous communication channel between the citizen and the health
+care professional which has risen because of the pandemic and needs to
+be further supported by new IT solutions.
+7.4. Stakeholder and user value: Graphical representation
+Fig. 7 shows a management-level representation of the impact of the
+Strategic Opportunities onto the Stakeholders in general and the Users in
+particular. As discussed in Section 5.3, the Strategic Opportunities are
+represented as actors in the SRD (they are particularly stereotyped as
+agents). All of the other actors (except for the Integrated Videoconfer-
+encing for Primary and Specialized Care and Mobile App for Covid-19
+Self Assessment) represent stakeholders. We see explicitly what are the
+intentions of each stakeholder with respect to the Strategic Opportunities
+and from the Strategic Opportunities to the Stakeholders through the
+dependency elements (i.e., goals and softgoals in this Figure). Following
+Yu et al. [34], a softgoal is ... a condition in the world which the actor
+would like to achieve, but unlike in the concept of (hard-) goal, the criteria
+for the condition being achieved is not sharply defined a priori, and is subject
+to interpretation. Within the scope of each actor, the internal goals and
+tasks that need to be achieved for a proper integration of the Strategic
+Opportunities are specified. Also, the Strategic Objectives supported by
+the Strategic Opportunities are cascaded into the agent’s (representing
+the Strategic Opportunity) scope. We can take the example of Establish a
+synchronous and asynchronous communication channel between the citizen
+and the health care professional which is a Strategic Objective cascaded
+under the scope of Integrated Videoconferencing for Primary and Special-
+ized Care which is a Strategic Opportunity represented as an i* Agent. The
+Features are the elements of the Strategic Opportunity that support each
+of the relevant Strategic Objectives. Features should be seen as coarse-
+grained pieces of functionality requiring IT capabilities to be executed.
+We can for example point the Quickly furnish a meeting with the relevant
+healthcare professional as a Feature furnishing a (partial) solution to
+the Establish a synchronous and asynchronous communication channel
+between the citizen and the health care professional through Integrated
+Videoconferencing for Primary and Specialized Care which is the Strategic
+Opportunity. The Users are the Stakeholders that are directly using the
+Features. The Citizen is an example of a Stakeholder that is also a User
+of the Integrated Videoconferencing for Primary and Specialized Care app
+and that depends on it for the fulfillment of its Reduction of face to face
+visits goal. Features can be further developed in an agile fashion on the
+basis of bottom-up approach. Users are then expected to specify their
+desiderata with respect to the implementation content of the Features.
+7.5. Strategic value: Graphical representation
+The knowledge extracted from the i* SRD allows us to determine the
+positive impact of the Features’ implementation/deployment onto the
+Strategic Objectives so as to evaluate the Strategic Value of the Strategic
+Opportunity. We can take the example of the Integrated Videoconfer-
+encing for Primary and Specialized Care; as we have seen in detail at
+the management-level (so in the i* SRD), this Strategic Opportunity’s
+Features partially implement the realization of the following Strategic
+Objectives (i) Increase the continuity of care to smoothen the patient flow;
+(ii) Establish a synchronous and asynchronous communication channel
+between the citizen and the health care professional; (iii) Decrease non-
+essential visits of patients to the hospital; (iv) Prevent infections; (v) Avoid
+increases in waiting lists; (vi) Avoid stress increases in health care profes-
+sionals due to not being able to attend to their patients. Within the NFR
+graph of Fig. 8 we can thus witness that a positive contribution link has
+been put between the Strategic Opportunity and the Strategic Objective.
+This gives a rolled-up representation useful to immediately identify the
+Strategic Value provided by the Strategic Opportunity.
+8. Discussion
+This section further discusses different aspects of the framework.
+More precisely Section 8.1 compares the framework with other ap-
+proaches. Section 8.2 describes the lessons learned, the limitations and
+the applicability of the framework. Finally, Section 8.3 describes the
+threats to validity.
+8.1. Framework comparison with other approaches
+This section is dedicated to the comparison of StratAMoDrIGo with
+other methods covering the strategic layer with conceptual modeling
+or other – relevant to our context – frameworks dealing with agile
+development while encompassing a strategic analysis. In Section 8.1.1
+StratAMoDrIGo is compared with MoDrIGo for a clear positioning of
+the evolution and differences between the kindred frameworks. StratA-
+MoDrIGo is being compared to an industry-accredited agile framework
+(SAFe) in Section 8.1.2 and a widely researched value-based modeling
+framework (e3value) in Section 8.1.3. This comparison is based on a
+range of specific determinants (they are summarized in Table 2), i.e., (i)
+the frameworks’ intended purpose, (ii) ability to support strategy, (iii) the
+inclusion of conceptual modeling, (iv) the employed scope elements, and (v)
+the type of value-based modeling they support. Finally, in Section 8.1.4,
+each of these frameworks is used as benchmark for the examination
+of specific criteria to determine StratAMoDrIGo’s ability to place an
+organization in a state of strategic agility.
+
+--- PAGE 11 ---
+Information and Software Technology 141 (2022) 106734
+11
+K. Tsilionis and Y. Wautelet
+Fig. 6. Business strategy impacted by the Covid-19 crisis.
+Fig. 7. Strategic rationale diagram showing stakeholder and user value for the Integrated Videoconferencing for Primary and Specialized Care and Mobile App for Covid-19 Self
+Assessment strategic opportunities.
+8.1.1. Comparison with MoDrIGo
+The purpose of MoDrIGo is to evaluate business and IT align-
+ment of Business IT Services when taking governance-level adoption
+or development decisions. As mentioned before, StratAMoDrIGo is
+based on MoDrIGo but constitutes a significant evolution in terms
+of philosophy and approach. MoDrIGo also supports the strategic
+level by using strategic objectives to depict the strategy but, unlike
+StratAMoDrIGo, it uses Business IT Services as functional high level
+scope elements. Services are mostly centric in IT governance and
+management frameworks.
+Conceptual modeling wise, the two frameworks represent the or-
+ganizational strategy in a similar manner (using NFR representations).
+Business IT Services are ultimately the ones for which an adoption
+or development decision needs to be taken in MoDrIGo; their tactical
+and operational behavior is represented with i* (StratAMoDrIGo on the
+other hand uses i* to represent the impact of strategic opportunities
+on the organizational setting). These elements (i.e., Business IT Ser-
+vices) often represent commodity functions supporting state-of-the-art
+business processes indispensable for the organization. Such services,
+either align or misalign with the strategy but are never implemented
+exclusively for the immediate sustenance of some (or all of the) strate-
+gic objectives. On the other hand, StratAMoDrIGo allows to study the
+organizational impact of any type of technological deployments; thus,
+it is not limited to an adoption or development decision of Business IT
+Services (even if these can also be considered). Strategic opportunities,
+contrarily to Services, are often very innovative so specifically devel-
+oped to furnish strategic, stakeholder and user value in moving business
+contexts. As a result, in MoDrIGo, strategic objectives are perceived at
+managerial-level into the i* representation as softgoals that elements
+within Business IT Services help or hamper to fulfill. In StratAMoDrIGo,
+
+--- PAGE 12 ---
+Information and Software Technology 141 (2022) 106734
+12
+K. Tsilionis and Y. Wautelet
+Fig. 8. Impact of strategic opportunities on the business strategy.
+Table 2
+Comparison of key aspects of the StratAMoDrIGo, MoDrIGo, SAFe and e3Value methods.
+Strategic
+level support
+Conceptual-modeling supported Type of scope
+elements
+Type of value-based
+modeling
+StratA-
+MoDrIGo
+Yes Uses NFR for strategic-level roll-up and i* for the edition of
+tactical/operational stakeholders and technology
+configurations (drill-down).
+Strategic
+opportunities.
+Strategic, Stakeholder and
+User value of Strategic
+opportunities.
+MoDrIGo Yes Uses NFR for strategic-level roll-up and i*, SSD for Service
+Consumer and Provider identification and i* for service
+tactical/operational visualization (drill-down).
+Business IT
+Services.
+Service Strategic value only.
+SAFe Partial None. Value Streams. None.
+e3value Partial Use Case Maps for the top-level evaluation of economic
+value streams among actors; UML activity diagrams (or
+BPMN models) can be used for the middle-level plot of the
+business process activities; Possibility to include an
+operational tier to evaluate existing (or upcoming) IS
+systems, but only from a capital expense perspective.
+Value Exchange
+Flows.
+Stakeholder value only.
+Value is conceived only in a
+monetary perspective.
+strategic objectives are cascaded, in the management-level i* represen-
+tation, as (hard) goals that are immediately fulfilled by functions of
+the strategic opportunity. Therefore, the essence of the elements for
+which a governance decision for adoption or development is taken
+is slightly different. One could say that MoDrIGo is rather oriented
+on supporting business processes while StratAMoDrIGo is oriented on
+supporting innovation.
+As far as value is concerned, StratAMoDrIGo can also be seen as
+broader than MoDrIGo. Value is indeed considered at multiple levels;
+it also supposes that not all value can be determined beforehand so that
+new sources of value (especially for the stakeholder and the user) will
+be determined and supported at the time of implementation.
+8.1.2. Comparison with the scaled Agile framework
+The purpose of the SAFe 5.1 framework is to furnish an ap-
+proach for using the agile development approach on large development
+projects (i.e., to scale agility). This is not the case with StratAMoDrIGo;
+the latter aims to support agility at a strategic level. SAFe partially
+supports the strategic level; it uses value streams to determine
+which high-level trends need to be supported, and Epics as functional
+high-level scope elements; Epics (considered more abstract/coarse
+grained than in traditional methods like Scrum) are functions that are
+sufficiently large to be developed in a stand alone fashion. SAFe has a
+strategic alignment vision based on portfolio management rather than
+focusing on individual projects.
+Conceptual modeling wise, no support is furnished by SAFe.
+As far as value is concerned, SAFe prescribes to be value stream
+driven at strategic-level and in that sense it partially overlaps with
+StratAMoDrIGo. Strategic value is driven by a value stream involving 4
+(time) horizons, while Epics are defined from the portfolio in alignment
+with the value stream. Epics are then connected to their Program
+Increment (PI) planning in a top-down fashion. In fact a PI is a sequence
+of four different sprints where, for each individual sprint, different
+teams are working independently on different system parts (in parallel)
+by defining the Minimum Viable Product (MVP) of features that first
+need to be validated before further building the product. Therefore, the
+vision of SAFe is essentially top-down and waterfall (thus poorly agile),
+fuzzy in its application and very complex to trace at operational level
+since no unique form of conceptual modeling is suggested to support
+the alignment between the strategic goals and all the decision-level
+structures within an organization.
+
+--- PAGE 13 ---
+Information and Software Technology 141 (2022) 106734
+13
+K. Tsilionis and Y. Wautelet
+There is partial congruence between StratAMoDrIGo and SAFe in
+their exploration of ways in which governance decisions (i.e., eval-
+uation of pending heavy IT investments) can be reconciled with the
+agile management of their development. StratAMoDrIGo is similar to
+SAFe in terms of not aiming to fund projects but strategic opportunities
+encompassing new major functions that need to be supplied by the
+IT ecosystem. However, SAFe’s strategic approach is portfolio-based
+while ours is strategic opportunity-based. We also embrace new IT
+developments by rising opportunities rather than by a horizon-driven
+value stream approach as, as an hypothesis, strategic value (streams)
+for new IT developments can hardly be anticipated and mostly ap-
+pears when the business context changes (e.g. Covid-19 pandemic).
+We essentially follow a conceptual modeling approach where new
+strategic opportunities are defined and their value is evaluated but
+their practical implementation can be realized in a bottom-up fashion.
+The formal link is done at middle-out level through linking high-level
+conceptual entities (i.e. business objectives, strategic opportunities)
+with low-level ones (user features) to be able to trace (so to study) the
+strategic/stakeholder and user values delivered. That traceability and
+independence in definition is what fundamentally distinguishes the 2
+approaches.
+8.1.3. Comparison with the e3value framework
+We can also analogize our model-driven strategic agility approach
+to other value-oriented approaches proposed in literature. We will
+make a comparison with e3value [63,64] as it is one of the most
+commonly used value-modeling language illustrating the economic
+value (or utility) among actors when engaged in in-between value-
+exchange prepositions [65]. The purpose of the e3value framework is
+to represent organizational business models while integrating business
+and IT modeling approaches by focusing solely on how economic value
+is created and exchanged within a network of actors. E3value partially
+supports the strategic level. The use of the term ‘partially’ refers to
+the framework’s limitation of considering economic value exchanges
+as the sole decision-making factor during the set-up, extension or
+modification of a business model.
+Conceptual modeling wise, e3value was created primarily to sup-
+port the requirements’ analysis stage for the creation of business in-
+formation systems by defining an ontology to compromise business-
+oriented concepts with the required formality of information systems
+development modalities [63]. Right from the get-go, we experience a
+contrast between e3value and StratAMoDrIGo as the latter aims not
+only to facilitate the adoption of technological solutions that fulfill
+business (long-term strategic) objectives, but it does so by considering
+the elimination of any lag between the decision and the incorporation
+of these technologies within the organizational gears.
+The value concept is central within e3value. Indeed, amongst its
+primary concepts, the e3value ontology describes the participating – in
+a value-exchange setting – actors; these are to be considered elementary
+or composite in nature, but they are strictly economically independent
+from each other; this independence seems to be the guarantor of any
+gain that might occur during the entire value-exchanging process. A
+composite actor is perceived as a group actor that uses value interfaces
+with all its internally participating elementary actors. These value
+interfaces group value ports that provide (or request) value objects
+to or from other actors. Value flows are mapped using ‘AND’ or ‘OR’
+operators which attribute a sequential character within the positioning
+of value activities [66]. Finally, e3value modeling allocations allow
+actors’ compositions but no actor specializations [67]. Contrastingly,
+our StratAMoDrIGo approach allows for the vertical decomposition
+of actors according to their strategic, tactical and operational facets,
+which in turn attributes to them a different ‘value portfolio’. Each
+actor’s value portfolio is not considered in isolation and no value
+portfolio is considered more important than the rest. The point is to
+utilize parts of the i* modeling notations to map the intentionality
+among these different actors and determine how their overall social in-
+teractions affect these value-portfolios in response to the accumulative
+well-being of the entire enterprise. In this context, the value-flow from
+the upcoming technological adoption/development, as derived from
+the strategic opportunity, is being trichotomized in order to gratify the
+needs of all the enterprise actors by simultaneously (i) sustaining their
+strategic needs, (ii) accommodating their stakeholder goals, and (iii)
+allowing for feature implementations that will contribute towards the
+achievement of their strategic objectives. The plausibility of analyzing
+these value-interdependencies is not present in the e3value where its
+sequential value-flows focus on a quid-pro-quo (i.e., product for a
+service, product for a monetary exchange etc.) economic exchange
+within bilateral actor-to-actor relationships.
+8.1.4. Strategic agility as the evaluation dimension
+As already discussed earlier, the ability to render an organization
+in a state of strategic agility is construed concerning an organization’s
+capacity to sense opportunities in the event of changing business con-
+texts, its capacity to seize opportunities when such events occur, and its
+capacity to shift (reconfigure) its assets to take advantage of strategic
+opportunities [24]. These 3 criteria are used as the constituents of
+our main evaluation dimension; in fact, we determine how the pre-
+viously identified (and industry accredited) frameworks contribute to
+the attainment of these criteria (Table 3). The aim is to identify gaps
+and misconceptions compared to our current solution; regardless of the
+elements included in the table, a few more considerations are given in
+the rest of this Section for the SAFe framework and e3value.
+To begin with, SAFe signifies organizational agility as the optimiza-
+tion of operational agile development. SAFe considers an organization
+to be in a state of enterprise-wide agility when front-to-back supply-
+chain streams (they are called operational value streams within the
+framework) have been aligned with the agile development of a product
+to maximize its delivered value. To do so, SAFe prompts a continuous
+engagement of all the business actors in order to identify bottlenecks
+that would disrupt this value creation process. Nevertheless, SAFe
+does not seem to support a simultaneous top-down/bottom-up ideation
+process that would make it susceptible to external and/or internal
+business stimuli. On the contrary, the optimization of the operational
+value streams has to be reconcilable with the company’s ‘strategic
+themes’.4
+This limited capability in sensing changes in the business
+context admonishes the introduction of mechanisms for the evaluation
+of such changes (i.e., non-existent seizing capabilities). Overall, this
+asynchronous coping mechanism between the strategic and operational
+levels within the organizational ladder facilitates the erection of silos
+between development teams and the actual strategic directives ‘indoc-
+trinated’ in a top-down manner. In this sense, the actual organizational
+leaders (i.e., roles in a position of influence) appear to be the agile
+coaches (or external consultants as mediators) acting as the ‘conductors’
+of the agile release trains. Consequentially, one of the immediate
+actions that may come as a priority when implementing the SAFe
+framework is the harmonization of large scale agile development rather
+than the ability of the organization to reconfigure (shifting) its strategic
+assets to leverage drastic changes in the business context.
+Contrastingly, e3value, aims to project the necessary organizational
+configurations that need to take place in order to make the release of a
+new product/service/technology viable economically. This is done via
+the evaluation of 3 distinct value-driven ‘viewpoints’ (i.e., value view-
+point for the business layer, the process viewpoint for the operational
+layer, and the system architecture viewpoint for the infrastructural
+layer); similarly to the purposiveness of Archimate, such an approach
+is focused on the successful governance of the endeavor that is under
+examination. However, e3value’s consideration of value merely on its
+4
+SAFe 5.1 describes these as the company’s long-term values and a
+compliance evaluation process, reactive to new governmental regulations.
+
+--- PAGE 14 ---
+Information and Software Technology 141 (2022) 106734
+14
+K. Tsilionis and Y. Wautelet
+Table 3
+StratAMoDrIGo, MoDrIGo, SAFe and e3Value methods facing strategic agility criteria.
+Strategic sensitivity (sensing) Strategic response (seizing) Shifting
+StratA-
+MoDrIGo
+Its application and use pushes towards a
+culture of opportunities adoption and value
+seeking (also emphasized by the interviewee).
+Quickly overviews the impact of the
+deployment of a strategic opportunity in terms
+of strategic, stakeholder and user value. Several
+configurations can also be studied through i*.
+Through the representation of the information
+related to the adoption of a strategic
+opportunity with the identification of value, it
+supports communication of what to implement
+to the tactical/operational levels.
+MoDrIGo No support, Business IT Services are driven by
+need for IT support from IT clients (internal or
+external) and seldom driven by the business
+environment.
+Overviews the impact of the deployment of a
+Business IT Service in terms of strategic value.
+Poor flexibility for configuration since Services
+are very constrained.
+Through the representation of the information
+related to the adoption of a service, it supports
+communication to the tactical/operational
+levels.
+SAFe SAFe pushes towards a culture of taking
+advantage of external value streams. However,
+SAFe is more focused on feeding the
+operational Agile development.
+No framework for ex-ante solution impact
+evaluation.
+Development of software following the classical
+SAFe canvas, benefits are the one of large scale
+agile development.
+e3value Limited support in sensing new strategic
+opportunities/threats. e3value allows top-down
+ideation for the exploration of IT-enabled value
+propositions; however, the latter are analyzed
+profoundly on their economic viability.
+With the use of BPMN or UML activity
+diagrams, e3value facilitates the provision of a
+resource planning/allocation/release
+management cycle. Therefore, e3value offers
+the possibility of strategic response.
+Limited support in shifting (reconfiguring)
+organizational capabilities towards the
+achievement of strategic concerns.
+economic constituents (and its immediate byproducts) creates various
+strategic blind-spots (i.e., inadequacy to organize a faster response
+to changing business requirements/faster time to market to beat the
+competition etc.,) which impedes the exploration (sensing) of a dy-
+namic business setting. In actuality, e3value supports tools/techniques
+(i.e., BPMN or UML activity diagrams) to bring the organization in a
+state of betterment when it comes to seizing opportunities and going
+through organizational configurations (shifting) to achieve such oppor-
+tunities. Nonetheless, the latter can hardly be considered as strategic
+since they negotiate a better allocation of resources to economize on
+internal cost-saving procedures rather than bringing the organization
+in a state of readiness to exploit strategic opportunities.
+8.2. Practical aspects and applicability
+In the case study, we only considered the alignment with the
+business strategy. Traditional corporate governance focuses on the
+completion of the business strategy while IT governance focuses on the
+IT one. The alignment with the IT strategy could be considered in the
+same way. Two reasons are given here to justify our focus on the first
+one: (i) in a moving business context, a quick adaptation is critical to
+get new revenue streams or keep the current ones flowing; this is the
+focus of the business strategy; (ii) the hospital is considered as being
+in strategy execution mode following the Strategic Alignment Model of
+Henderson et al. [68] so, in accordance with the BoD, we considered
+that the business strategy primes especially in the context of a changing
+business environment.
+StratAMoDrIGo offers an interface ensuring continuity in the evalu-
+ation of value from the strategic to the management level. Strategic,
+stakeholder and user value is indeed evaluated through 2 traceable
+diagrams. Features – that can be aligned with epic user stories which
+constitute a functional level supported by methods like Scrum – can
+then be used to ensure concrete development by a traditional agile
+team. More precisely, features are the finest-grained level covered by
+our framework and the central pivot elements between strategic and
+operational agility. In other words, the framework allows to integrate IT
+governance mechanisms for adoption/implementation decisions with
+feature-oriented development (which are supported scope elements
+in user story-based development). Other types of information tech-
+nologies (hardware, devices, off the shelf apps etc.,) being strategic
+opportunities can of course be adopted on the fly without a sprint-
+based implementation cycle but when strategic opportunities are based
+partly or exclusively on software, the latter cycle (or even a DevOps
+approach [69]) delivers an interesting way of implementing the fea-
+ture(s). More specifically, we prescribe the use of (operational) agile
+development (e.g. through Scrum) for user-intensive applications where
+innovation plays a critical role. We also point (when possible) to inde-
+pendent feature development and deployment; this to effectively get
+all the sorts of value as early as possible as well as early field feedback
+that can later be used for adjustments and/or relevant knowledge for
+other feature(s) development. The strategic opportunity is thus not
+necessarily an unbreakable whole but since it is composed of features
+all delivering value, those can be implemented and deployed in an
+asynchronous manner (if these are of course sufficiently independent).
+The StratAMoDrIGo framework is intended to be applied to organi-
+zations being in dynamic businesses by people providing support to the
+C-level executives. The latter are the ones that can use the framework to
+understand the implications of strategic decisions taken in a short time
+frame. Internal employees or external consultancy companies can apply
+the framework to furnish support and advice to a BoD (so composed of
+C-level executives). The process fragment for the application of StratA-
+MoDrIGo provided in Section 6 gives an illustration of how internal
+employees or an external consultancy team can structure themselves
+for the application of the framework. The framework can be used on
+a regular basis to identify when the business context changes and new
+strategic opportunities can be identified. The results do not furnish a
+binary true/false answer but rather a general guidance supporting C-
+level executives in the adoption or development decision they might
+have to take.
+One may raise the question of the willingness of strategy consultants
+and agile teams to deal with a modeling approach, something they
+could be reluctant to. We cannot avoid making a strategic represen-
+tation in the form of a diagram to ensure a proper alignment study;
+this is an exercise relevant for helping C-level executives to define their
+strategy and is independent of a software development practice (where
+mostly conceptual modeling is applied). In our experience from the case
+study of the paper but also other cases, the representations can be done
+rather quickly with some knowledge of conceptual modeling. Moreover
+strategic representations need to be done once from scratch but then it
+is more an exercise of updating the information to keep it consistent.
+In a strategic agile perspective, the important but challenging aspect
+is to update the strategy with the impact of a new business context.
+Management-level representations are more time consuming but, in any
+case, if a new technology needs to be adopted in a short time frame,
+studying the impact of its adoption/deployment needs to be done to
+some extend as a premise to its design. Of course, it requires more time
+to study the complete stakeholder impact than only the operational
+requirements of users; this will eventually pay off with the provision
+of important information/insights on the IT investment(s) that needs
+to be made.
+
+--- PAGE 15 ---
+Information and Software Technology 141 (2022) 106734
+15
+K. Tsilionis and Y. Wautelet
+8.3. Threats to validity
+We discuss here the threats to the construct, internal and external
+validity of the StratAMoDrIGo framework and of its use.
+8.3.1. Construct validity
+The design of StratAMoDrIGo had to be checked in terms of its
+construct validity. In the scope of a model-driven framework, within
+the information systems’ domain, this means that the relevant concepts
+defined in this framework have been operationalized adequately into
+observable/workable elements [70]. A threat to the construct valid-
+ity is that the modeling constructs are incorrectly interpreted by the
+modelers or any other practitioner aiming to put StratAMoDrIGo into
+use. This entails the risk of using the framework (and its corresponding
+concepts) in another way than intended. In our case, the modeling
+work has here been realized by the two authors of the paper and
+the operationalization of the modeling constructs, within the setting
+of the hospital-case, was discussed systematically. In consequence,
+every concurrent/conflicting interpretation was discussed and resolved
+beforehand. Overall, the threat of not being able to encapsulate exactly
+(via the modeling process) what is being claimed to be encapsulated
+can be mitigated through the use of meetings or workshops were
+every modeling choice is discussed by the practitioners and specialized
+consultants.
+8.3.2. Internal validity
+Through the use of StratAMoDrIGo, the internal validity concerns
+the objectivity of the views gathered by the subjects within the knowl-
+edge acquisition procedure. Subjects can, during interviews, report on
+their personal view (as opposed to a collective consensus) when giving
+information on strategic or management-level aspects. This would lead
+to inconsistent representations. Since the specialty of each correspond-
+ing interviewee can create a partial or bounded view where some as-
+pects of the modeled realization are (under)overemphasized, this threat
+to validity can be dealt with through multiple interviews and systematic
+comparison of the views of these actors for knowledge validation.
+In our case, the representations of the strategic-/management-level
+configurations in the hospital-case were determined based on a rigorous
+interview process (it is discussed in [6]) and an overall cross-reference
+of the subjects’ individual opinions.
+8.3.3. External validity
+External validity can be formally defined as the degree of support
+for the generalization of an ‘architectural explanation’ to a theoretical
+population [71]. In our case, the architectural explanation refers to the
+modeling constructs of StratAMoDrIGo, their in-between interactions,
+and the purpose they are supposed to fulfill (i.e., quick assessment of
+strategic opportunities in an organizational context according to the
+value they expose). A threat to the external validity is the misappro-
+priation of StratAMoDrIGo when applied to different organizational
+settings by various supporting or consulting groups. This jeopardizes
+the generalized use of the framework by the corresponding information
+systems’ community (i.e., our population). Until now, the framework
+has solely been applied by the authors of this paper, by members of
+the research group being familiar with conceptual modeling, goal-based
+requirements engineering and i* (so up to 5 people) and a few consul-
+tants familiar with conceptual modeling through UML. Such experience
+and pre-knowledge certainly has an impact on the ability to apply such
+a framework correctly and successfully so not many valuable insights
+could be drawn in terms of its generalization. For this reason, the ability
+of novice modelers to apply goal-based conceptual modeling has been
+tested in [72,73] with other kind of formalisms. The latter showed that
+consistently applying goal-based frameworks with some guidance on
+real life problems can be done rather easily and it allows practitioners
+to understand requirements. Lack of experience with such frameworks
+can thus be compensated by proper guidance and it leads to an increase
+in understandability. The framework is currently being applied to other
+cases by external professionals under the supervision of the authors
+who are domain experts but no modeling experts. The application of
+the framework is done in an iterative manner including discussions
+with the authors of the framework. Typical modeling mistakes are
+committed notably at the level of the i* modeling. The modeling of the
+strategy nevertheless does not appear to cause any issue. A guide for
+application will be developed out of the common mistakes and issues
+that are identified in this process and shared through a website.
+9. Conclusion
+The need for an IT development approach structured around strate-
+gic opportunities yet allowing agility at all levels has risen progressively
+due to fast moving business contexts. The concept of value is, in StratA-
+MoDrIGo tailored to (i) the strategic-level for the long-term competitive
+position of the organization, (ii) the tactical-level to ensure taking into
+account the broad impact of adopted solutions on stakeholders and (iii)
+the operational-level to practically support the end-user requirements.
+At this stage, we can get back to the RQ stated in the introduc-
+tion (How could conceptual modeling be applied to highlight strategic,
+stakeholder and user value within technological adoptions in a fast mov-
+ing business context?) To answer this question, we have developed
+a framework called StratAMoDrIGo which is to be conceived as an
+evolution of MoDrIGo. It has been formalized through an ontology and
+its instantiation has been based on the NFR and i* frameworks. On
+the one side, NFR allows to model the strategic layer and to roll-up
+the impact of the tactical and operational layers onto the (business or
+IT) strategy. On the other side, i* allows drilling down to detail how
+specific strategic objectives are supported by the (functional) features
+of strategic opportunities. StratAMoDrIGo has been applied on a case
+in the medical sector. It has also been compared to existing approaches
+to highlight its focus and support to strategic agility. The latter has
+been depicted within the (strategic management) literature as a concept
+describing the capacity of an organization to sense, seize, and shift
+opportunities. All in all, the application of StratAMoDrIGo (i) pushes
+towards a culture of persistently adopting opportunities and seeking
+value (sensing); (ii) allows to overview the impact of the deployment
+of a strategic opportunity in terms of strategic, stakeholder and user
+value but also to possibly test several configurations with the use of
+i* (seizing); and (iii) allows the representation of information related
+to the deployment of a strategic opportunity with the identification of
+value, supporting thusly the communication of what to implement to the
+tactical/operational levels (shifting).
+Finally, the framework needs to gain a higher level of maturity with
+the utilization of more case studies for its fine-tune. For this reason,
+it will be applied in the context of other case studies through the
+mediation of a consulting team from a private company. Even if the
+framework has been fabricated to be the most expressive possible by
+using existing modeling notations, it can be seen as requiring some
+technical knowledge to be adopted. Even if the expressiveness and
+details may suffer in the process, we aim to provide something as simple
+as possible to organizations to ease the adoption on the largest possible
+scale. Accordingly, future work also involves simplifying the framework
+so that models hold on a structured sheet like for the Business Model
+Canvas [74].
+CRediT authorship contribution statement
+Konstantinos Tsilionis: Conceptualization, Methodology, Valida-
+tion, Investigation, Writing – original draft, Writing – review & editing.
+Yves Wautelet: Conceptualization, Methodology, Validation, Investi-
+gation, Writing – original draft, Writing – review & editing, Project
+administration.
+
+--- PAGE 16 ---
+Information and Software Technology 141 (2022) 106734
+16
+K. Tsilionis and Y. Wautelet
+Declaration of competing interest
+The authors declare that they have no known competing finan-
+cial interests or personal relationships that could have appeared to
+influence the work reported in this paper.
+References
+[1] P.P. Tallon, R.V. Ramirez, J.E. Short, The information artifact in IT governance:
+Toward a theory of information governance, J. Manage. Inf. Syst. 30 (3) (2014)
+141–178, URL http://www.jmis-web.org/articles/927.
+[2] A. Olivé, Conceptual Modeling of Information Systems, Springer Science &
+Business Media, 2007.
+[3] S.J. Bleistein, K. Cox, J.M. Verner, K. Phalp, B-SCP: a requirements analysis
+framework for validating strategic alignment of organizational IT based on
+strategy, context, and process, Information & Software Technology 48 (9) (2006)
+846–868, http://dx.doi.org/10.1016/j.infsof.2005.12.001.
+[4] A. Babar, K. Cox, V. Tosic, S.J. Bleistein, J.M. Verner, Integrating B-SCP and
+MAP to manage the evolution of strategic IT requirements, Inf. Softw. Technol.
+50 (7–8) (2008) 815–831, http://dx.doi.org/10.1016/j.infsof.2007.11.005.
+[5] J. Horkoff, D. Barone, L. Jiang, E.S. Yu, D. Amyot, A. Borgida, J. Mylopoulos,
+Strategic business modeling: representation and reasoning, Softw. Syst. Model.
+13 (3) (2014) 1015–1041, http://dx.doi.org/10.1007/s10270-012-0290-8.
+[6] Y. Wautelet, A model-driven IT governance process based on the strategic impact
+evaluation of services, J. Syst. Softw. 149 (2019) 462–475.
+[7] H. Håkansson, I. Snehota, No business is an island: The network concept of
+business strategy, Scand. J. Manag. 5 (3) (1989) 187–200.
+[8] J.B. Barney, Strategic factor markets: Expectations, luck, and business strategy,
+Manage. Sci. 32 (10) (1986) 1231–1241.
+[9] S. Vejseli, D. Proba, A. Rossmann, R. Jung, The agile strategies in IT governance:
+Towards a framework of agile IT Governance in the banking industry, 2018.
+[10] K. Tsilionis, Y. Wautelet, From service-orientation to agile development by
+conceptually linking business IT services and user stories: A meta-model and a
+process fragment, in: 23rd IEEE Conference on Business Informatics, CBI 2021,
+Bolzano, Italy, September 01-03, 2021. Volume 2, IEEE, 2021.
+[11] N. Abbas, A.M. Gravell, G.B. Wills, Historical roots of agile methods: Where did
+‘‘agile thinking’’ come from? in: International Conference on Agile Processes and
+Extreme Programming in Software Engineering, Springer, 2008, pp. 94–103.
+[12] V. Sambamurthy, A. Bharadwaj, V. Grover, Shaping agility through digital
+options: Reconceptualizing the role of information technology in contemporary
+firms, MIS Q. (2003) 237–263.
+[13] K. Beck, M. Beedle, A. Van Bennekum, A. Cockburn, W. Cunningham, M. Fowler,
+J. Grenning, J. Highsmith, A. Hunt, R. Jeffries, et al., The agile manifesto, 2001.
+[14] S. Denning, The next frontier for agile: strategic management, Strategy Leadersh.
+(2017).
+[15] T.-H. Cheng, S. Jansen, M. Remmers, Controlling and monitoring agile soft-
+ware development in three dutch product software companies, in: 2009 ICSE
+Workshop on Software Development Governance, IEEE, 2009, pp. 29–35.
+[16] J. Vlietland, R. Van Solingen, H. van Vliet, Aligning codependent scrum teams
+to enable fast business value delivery: A governance framework and set of
+intervention actions, J. Syst. Softw. 113 (2016) 418–429.
+[17] S. Denning, Strategic agility: Using agile teams to explore opportunities for
+market-creating innovation, Strategy Leadersh. (2017).
+[18] Y. Doz, Fostering strategic agility: How individual executives and human resource
+practices contribute, Hum. Resour. Manag. Rev. 30 (1) (2020) 100693.
+[19] D.J. Teece, G. Pisano, A. Shuen, Dynamic capabilities and strategic management,
+Strateg. Manag. J. 18 (7) (1997) 509–533.
+[20] D. Teece, G. Pisano, The dynamic capabilities of firms, in: Handbook on
+Knowledge Management, Springer, 2003, pp. 195–213.
+[21] D. Teece, M. Peteraf, S. Leih, Dynamic capabilities and organizational agility:
+Risk, uncertainty, and strategy in the innovation economy, Calif. Manage. Rev.
+58 (4) (2016) 13–35.
+[22] C.A. Lengnick-Hall, T.E. Beck, et al., Resilience Capacity and Strategic Agility:
+Prerequisites for Thriving in a Dynamic Environment, Citeseer, 2009.
+[23] M. Zollo, S.G. Winter, Deliberate learning and the evolution of dynamic
+capabilities, Organ. Sci. 13 (3) (2002) 339–351.
+[24] D. Glesne, M. Pedersen, Strategic agility: adapting and renewing strategic direc-
+tion: an exploratory case study, Master’s thesis, Norwegian School of Economics,
+2020.
+[25] K. Richard, D. Leffingwell, SAFe 5.0 Distilled: Achieving Business Agility with
+the Scaled Agile Framework, Addison-Wesley Professional, Boston, 2020.
+[26] M. Cohn, User Stories Applied: For Agile Software Development, Addison-Wesley,
+2004.
+[27] ISO, ISO/IEC 38500:2015 Information Technology – Governance of IT for the
+Organization, International Organization for Standardization, 2015.
+[28] ISACA, COBIT 5: A Business Framework for the Governance and Management of
+Enterprise IT, ISACA, 2012.
+[29] R.E. Freeman, Strategic Management: A Stakeholder Approach, Cambr. Univ.
+Press, 2010.
+[30] R. Samavi, E. Yu, T. Topaloglou, Strategic reasoning about business models: a
+conceptual modeling approach, Inf. Syst. E. Bus. Manag. 7 (2) (2009) 171–198.
+[31] P. Lara, M.E. Sánchez, J. Villalobos, Bridging the IT and OT Worlds Using an
+Extensible Modeling Language, 35th Intl. Conf. in Conceptual Modeling, ER 2016,
+Proceedings, Vol. 9974 of LNCS, 2016, pp. 122–129.
+[32] T.O. Group, ArchiMate®
+3.0.1 Specification, 2017.
+[33] H.P. Sousa, J.C.S. do Prado Leite, Modeling organizational alignment, in: E.S.K.
+Yu, G. Dobbie, M. Jarke, S. Purao (Eds.), 33rd International Conference on
+Conceptual Modeling, ER 2014. Proceedings, in: LNCS, 8824, Springer, 2014,
+pp. 407–414.
+[34] E. Yu, P. Giorgini, N. Maiden, J. Mylopoulos, Social Modeling for Requirements
+Engineering, MIT Press, 2011.
+[35] OMG, Business Process Model and Notation (BPMN). version 2.0.1, Tech. rep.
+2013.
+[36] L. Juhnyoung, A. Ivan, Value-centric, model-driven business transformation.
+in: Proceedings of the 8th IEEE International Conference on and Enterprise
+Computing, E-Commerce, and E-Services, 2006, 1–31.
+[37] O. Thomas, J. Vom Brocke, A value-driven approach to the design of service-
+oriented information systems—making use of conceptual models, Inf. Syst. E-Bus.
+Manag. 8 (1) (2010) 67–97.
+[38] M. Khurum, T. Gorschek, M. Wilson, The software value map—an exhaustive
+collection of value aspects for the development of software intensive products,
+J. Soft. Evol. Proc. 25 (7) (2013) 711–741.
+[39] E. Mendes, P. Rodriguez, V. Freitas, S. Baker, M.A. Atoui, Towards improving
+decision making and estimating the value of decisions in value-based software
+engineering: the VALUE framework, Softw. Qual. J. 26 (2) (2018) 607–656.
+[40] A.R. Hevner, S.T. March, J. Park, S. Ram, Design science in information systems
+research, MIS Q. 28 (1) (2004) 75–105.
+[41] A.R. Hevner, The three cycle view of design science, Scand. J. Inf. Syst. 19 (2)
+(2007) 4, URL http://aisel.aisnet.org/sjis/vol19/iss2/4.
+[42] M. Uschold, M. Gruninger, et al., Ontologies: Principles, methods and
+applications, TECHNICAL REPORT-UNIVERSITY of EDINBURGH ARTIFICIAL
+INTELLIGENCE APPLICATIONS INSTITUTE AIAI TR.
+[43] OMG, OMG Unified Modeling Language (OMG UML). Version 2.5, Tech. rep.,
+2015.
+[44] Y. Wautelet, M. Kolp, Business and model-driven development of BDI multi-agent
+systems, Neurocomputing 182 (2016) 304–321.
+[45] Y. Wautelet, S. Heng, M. Kolp, I. Mirbel, Unifying and extending user story
+models, in: M. Jarke, J. Mylopoulos, C. Quix, C. Rolland, Y. Manolopoulos,
+H. Mouratidis, J. Horkoff (Eds.), 26th International Conference on Advanced
+Information Systems Engineering, CAiSE 2014. Proceedings, in: LNCS, 8484,
+Springer, 2014, pp. 211–225.
+[46] Y. Wautelet, S. Heng, M. Kolp, I. Mirbel, S. Poelmans, Building a rationale
+diagram for evaluating user story sets, in: Tenth IEEE International Conference
+on Research Challenges in Information Science, RCIS 2016, IEEE, 2016, pp. 1–12.
+[47] L. Chung, B. Nixon, E. Yu, J. Mylopoulos, Non-functional requirements in
+software engineering, Kluwer Academic Publishers, 2000.
+[48] M. Kolp, Y. Wautelet, Human organizational patterns applied to collaborative
+learning software systems, Comput. Hum. Behav. 51 (2015) 742–751, http:
+//dx.doi.org/10.1016/j.chb.2014.11.094.
+[49] V. Seidita, M. Cossentino, A. Chella, A proposal of process fragment definition
+and documentation, in: M. Cossentino, M. Kaisers, K. Tuyls, G. Weiss (Eds.),
+Multi-Agent Systems - 9th European Workshop, EUMAS 2011, Maastricht, the
+Netherlands, November 14-15, 2011. Revised Selected Papers, in: LNCS, Vol.
+7541, Springer, 2011, pp. 221–237.
+[50] E.S.K. Yu, P. Giorgini, N.A.M. Maiden, J. Mylopoulos (Eds.), Social modeling for
+requirements engineering, Cooperative information systems, MIT Press, 2011.
+[51] Y. Wautelet, S. Heng, S. Kiv, M. Kolp, User-story driven development of multi-
+agent systems: A process fragment for agile methods, Comput. Lang. Syst. Struct.
+50 (2017) 159–176.
+[52] Y. Wautelet, S. Shafiee, S. Heng, Revisiting the product configuration systems
+development procedure for scrum compliance: An i* driven process fragment, in:
+X. Franch, T. Männistö, S. Martínez-Fernández (Eds.), Product-Focused Software
+Process Improvement - 20th International Conference, PROFES 2019, Barcelona,
+Spain, November 27-29, 2019, Proceedings, in: Lecture Notes in Computer
+Science, Vol. 11915, Springer, 2019, pp. 433–451, http://dx.doi.org/10.1007/
+978-3-030-35333-9_31.
+[53] Y. Wautelet, M. Kolp, S. Heng, S. Poelmans, Developing a multi-agent plat-
+form supporting patient hospital stays following a socio-technical approach:
+Management and governance benefits, Telemat. Inform. 35 (4) (2018) 854–882.
+[54] D.P. Forbes, F.J. Milliken, Cognition and corporate governance: Understanding
+boards of directors as strategic decision-making groups, Acad. Manag. Rev. 24
+(3) (1999) 489–505.
+[55] R. Haesen, M. Snoeck, W. Lemahieu, S. Poelmans, On the definition of service
+granularity and its architectural impact, in: Z. Bellahsene, M. Léonard (Eds.),
+20th International Conference, CAiSE 2008, Proceedings, in: LNCS, Vol. 5074,
+Springer, 2008, pp. 375–389.
+[56] L. Chung, B. Nixon, E. Yu, J. Mylopoulos, Non-Functional Requirements in
+Software Engineering, Kluwer Academic Publishing, 2000.
+
+--- PAGE 17 ---
+Information and Software Technology 141 (2022) 106734
+17
+K. Tsilionis and Y. Wautelet
+[57] Y. Wang, T. Li, Q. Zhou, J. Du, Toward practical adoption of i* framework: an
+automatic two-level layout approach, Requir. Eng. (2021) 1–23.
+[58] M. Kolp, Y. Wautelet, S. Faulkner, Sociocentric design of multi-agent architec-
+tures, in: E. Yu, P. Giorgini, N. Maiden, J. Mylopoulos (Eds.), Social Modeling
+for Requirements Engineering, MIT Press, 2011.
+[59] Y. Wautelet, Representing, modeling and engineering a collaborative supply
+chain management platform, Int. J. Inf. Syst. Supply Chain Manag. 5 (3) (2012)
+1–23.
+[60] Y. Wautelet, M. Kolp, L. Penserini, Service-driven iterative software project
+management with I-Tropos, J. UCS 24 (7) (2018) 975–1011, URL http://www.
+jucs.org/jucs_24_7/service_driven_iterative_software.
+[61] Y. Wautelet, S. Heng, M. Kolp, L. Penserini, S. Poelmans, Designing an MOOC
+as an agent-platform aggregating heterogeneous virtual learning environments,
+Behav. IT 35 (11) (2016) 980–997, http://dx.doi.org/10.1080/0144929X.2016.
+1212095.
+[62] P. Weill, J.W. Ross, IT Governance: How Top Performers Manage IT Decision
+Rights for Superior Results, Harvard Business Press, 2004.
+[63] J. Gordijn, H. Akkermans, Designing and evaluating e-business models, IEEE
+Intell. Syst. 16 (4) (2001) 11–17.
+[64] J. Gordijn, E3-Value in a nutshell, in: International Workshop on E-Business
+Modeling, HEC Business School, Citeseer, 2002.
+[65] P. Johannesson, M. Bergholtz, Rights and intentions in value modeling, in:
+Intentional Perspectives on Information Systems Engineering, Springer, 2010, pp.
+195–213.
+[66] E. Souza, A. Moreira, J.a. Araújo, S. Abrahão, E. Insfran, D.S. Da Silveira,
+Comparing business value modeling methods: A family of experiments, Inf. Softw.
+Technol. 104 (2018) 179–193.
+[67] V. Pant, Strategic Coopetition-A Conceptual Modeling Framework for Analysis
+and Design, in: PoEM Doctoral Consortium, 2018, pp. 1–14.
+[68] J.C. Henderson, H. Venkatraman, Strategic alignment: Leveraging information
+technology for transforming organizations, IBM Syst. J. 32 (1) (1993) 472–484.
+[69] L.J. Bass, I.M. Weber, L. Zhu, DevOps - a Software Architect’s Perspective, in:
+SEI series in software engineering, Addison-Wesley, 2015, URL http://bookshop.
+pearson.de/devops.html?productid=208463.
+[70] R.J. Wieringa, J.M. Heerkens, The methodological soundness of requirements
+engineering papers: a conceptual framework and two case studies, Requir. Eng.
+11 (4) (2006) 295–307.
+[71] R. Wieringa, M. Daneva, Six strategies for generalizing software engineering
+theories, Sci. Comput. Program. 101 (2015) 136–152.
+[72] Y. Wautelet, M. Velghe, S. Heng, S. Poelmans, M. Kolp, On modelers ability to
+build a visual diagram from a user story set: A goal-oriented approach, in: E.
+Kamsties, J. Horkoff, F. Dalpiaz (Eds.), Requirements Engineering: Foundation
+for Software Quality - 24th Int. Working Conf., REFSQ 2018, Proceedings, in:
+LNCS, Vol. 10753, Springer, 2018, pp. 209–226.
+[73] K. Tsilionis, J. Maene, S. Heng, Y. Wautelet, S. Poelmans, Conceptual modeling
+versus user story mapping: Which is the best approach to agile requirements
+engineering? Lect. Notes in Bus. Inf. Process. 415 (2021) 356–373.
+[74] A. Osterwalder, Y. Pigneur, Business Model Generation: A Handbook for
+Visionaries, Game Changers, and Challengers, vol. 1, John Wiley & Sons, 2010.

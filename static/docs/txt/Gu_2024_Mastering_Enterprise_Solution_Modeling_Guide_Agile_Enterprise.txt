@@ -1,0 +1,412 @@
+--- PAGE 1 ---
+Mastering Enterprise
+Solution Modeling
+A Guide to Agile Enterprise
+Solution Architecture (A-ESA)
+Sean (Chunhong) Gu
+
+--- PAGE 2 ---
+MasteringEnterpriseSolutionModeling:AGuidetoAgileEnterprise
+SolutionArchitecture(A-ESA)
+ISBN-13 (pbk): 979-8-8688-0991-0		 ISBN-13 (electronic): 979-8-8688-0992-7
+https://doi.org/10.1007/979-8-8688-0992-7
+Copyright © 2024 by Sean (Chunhong) Gu
+This work is subject to copyright. All rights are reserved by the Publisher, whether the whole or
+part of the material is concerned, specifically the rights of translation, reprinting, reuse of
+illustrations, recitation, broadcasting, reproduction on microfilms or in any other physical way,
+and transmission or information storage and retrieval, electronic adaptation, computer software,
+or by similar or dissimilar methodology now known or hereafter developed.
+Trademarked names, logos, and images may appear in this book. Rather than use a trademark
+symbol with every occurrence of a trademarked name, logo, or image we use the names, logos,
+and images only in an editorial fashion and to the benefit of the trademark owner, with no
+intention of infringement of the trademark.
+The use in this publication of trade names, trademarks, service marks, and similar terms, even if
+they are not identified as such, is not to be taken as an expression of opinion as to whether or not
+they are subject to proprietary rights.
+While the advice and information in this book are believed to be true and accurate at the date of
+publication, neither the authors nor the editors nor the publisher can accept any legal
+responsibility for any errors or omissions that may be made. The publisher makes no warranty,
+express or implied, with respect to the material contained herein.
+Managing Director, Apress Media LLC: Welmoed Spahr
+Acquisitions Editor: Aditee Mirashi
+Coordinating Editor: Kripa Joseph
+Copy Editor: Kezia Endsley
+Cover designed by eStudioCalamar
+Cover image designed by Unsplash
+Distributed to the book trade worldwide by Springer Science+Business Media New York,
+233 Spring Street, 6th Floor, New York, NY 10013. Phone 1-800-SPRINGER, fax (201) 348-4505,
+e-mail orders-ny@springer-sbm.com, or visit www.springeronline.com. Apress Media, LLC is a
+California LLC and the sole member (owner) is Springer Science + Business Media Finance Inc
+(SSBM Finance Inc). SSBM Finance Inc is a Delaware corporation.
+For information on translations, please e-mail booktranslations@springernature.com; for
+reprint, paperback, or audio rights, please e-mail bookpermissions@springernature.com.
+Apress titles may be purchased in bulk for academic, corporate, or promotional use. eBook
+versions and licenses are also available for most titles. For more information, reference our Print
+and eBook Bulk Sales web page at http://www.apress.com/bulk-sales.
+Any source code or other supplementary material referenced by the author in this book can be
+found here: https://www.apress.com/gp/services/source-code.
+If disposing of this product, please recycle the paper
+Sean (Chunhong) Gu
+Portland, OR, USA
+
+--- PAGE 3 ---
+iii
+About the Author���������������������������������������������������������������������������������xi
+About the Technical Reviewer�����������������������������������������������������������xiii
+Acknowledgments������������������������������������������������������������������������������xv
+Introduction��������������������������������������������������������������������������������������xvii
+Part I:  A-ESA Specification and Demo�����������������������������������������1
+Chapter 1:  A Brief Overview of A-ESA��������������������������������������������������3
+The Intent of A-ESA�����������������������������������������������������������������������������������������������3
+The A-ESA Model Specification�����������������������������������������������������������������������������5
+Architecture Area���������������������������������������������������������������������������������������������6
+Architecture View��������������������������������������������������������������������������������������������7
+Architecture Element�������������������������������������������������������������������������������������11
+Architecture Property������������������������������������������������������������������������������������16
+A-ESA Lean Model Mode�������������������������������������������������������������������������������������17
+Summary������������������������������������������������������������������������������������������������������������21
+Chapter 2:  A-ESA Modeling by Example���������������������������������������������23
+A-ESA Profile 1: Strategic Architecture���������������������������������������������������������������27
+ESA Principles�����������������������������������������������������������������������������������������������27
+Capability Views��������������������������������������������������������������������������������������������32
+A-ESA Profile 2: Lean Business Architecture������������������������������������������������������34
+Pattern Views������������������������������������������������������������������������������������������������34
+Use Case Model Views�����������������������������������������������������������������������������������35
+Table of Contents
+
+--- PAGE 4 ---
+iv
+Business Process Views��������������������������������������������������������������������������������37
+Process View Mapping with Value Stream����������������������������������������������������40
+Architecture Outline View: Service Layering��������������������������������������������������42
+High-level Functional Service Views�������������������������������������������������������������43
+Functional Service Interface Views���������������������������������������������������������������44
+A-ESA Profile 3: Reference Architecture�������������������������������������������������������������45
+Application Business-centric Reference Architecture�����������������������������������46
+Data-centric Reference Architecture�������������������������������������������������������������47
+Technology-centric Reference Architecture��������������������������������������������������48
+Context-based Reference Architecture����������������������������������������������������������49
+Baseline Reference Architecture�������������������������������������������������������������������50
+A-ESA Profile 4: Enterprise Integration Architecture�������������������������������������������52
+Capability Views��������������������������������������������������������������������������������������������53
+Case Scenario Views�������������������������������������������������������������������������������������56
+Outline Views�������������������������������������������������������������������������������������������������60
+Metrics Views������������������������������������������������������������������������������������������������62
+Pattern Views������������������������������������������������������������������������������������������������64
+Functional Service Views������������������������������������������������������������������������������66
+Deployment Views�����������������������������������������������������������������������������������������71
+A-ESA Profile 5:Application Architecture������������������������������������������������������������72
+Case Scenario Views�������������������������������������������������������������������������������������72
+Architecture Outline Views����������������������������������������������������������������������������73
+Metrics Views������������������������������������������������������������������������������������������������75
+Pattern Views������������������������������������������������������������������������������������������������82
+Functional Views�������������������������������������������������������������������������������������������85
+Validation Views������������������������������������������������������������������������������������������106
+Table of Contents
+
+--- PAGE 5 ---
+v
+A-ESA Profile 6: Microservice Architecture (MSA)��������������������������������������������109
+Microservice Design Views��������������������������������������������������������������������������109
+Metrics Views����������������������������������������������������������������������������������������������115
+Data Collaboration Views�����������������������������������������������������������������������������120
+Operational Environment Views�������������������������������������������������������������������123
+A-ESA Profile 7: Cloud Hosted Architecture (FaaS)�������������������������������������������125
+Capability Views������������������������������������������������������������������������������������������127
+Case Scenario View�������������������������������������������������������������������������������������128
+Metrics View������������������������������������������������������������������������������������������������130
+Enterprise DevOps View������������������������������������������������������������������������������133
+Functional Collaboration View���������������������������������������������������������������������137
+Operational Infrastructure View�������������������������������������������������������������������138
+A-ESA Profile 8: Big Data Technical Architecture����������������������������������������������140
+Capability Views������������������������������������������������������������������������������������������140
+Case Scenario Views�����������������������������������������������������������������������������������141
+Solution Architecture Overview�������������������������������������������������������������������142
+Operational View������������������������������������������������������������������������������������������148
+Model Thinking Questions���������������������������������������������������������������������������������152
+Questions on Profile 1: Strategic Architecture���������������������������������������������153
+Questions on Profile 2: Lean Business Architecture������������������������������������154
+Questions on Profile 3: Reference Architecture�������������������������������������������156
+Questions on Profile 4: Integration Architecture������������������������������������������157
+Questions on Profile 5:Application Architecture������������������������������������������159
+Questions on Profile 6: Microservice Architecture���������������������������������������161
+Questions on Profile 7: Cloud Architecture��������������������������������������������������163
+Questions on Profile 8: Big Data Technical Architecture������������������������������165
+Summary����������������������������������������������������������������������������������������������������������166
+Table of Contents
+
+--- PAGE 6 ---
+vi
+Part II:  A-ESA Governing Ideas������������������������������������������������169
+Chapter 3:  The A-ESA Thinking Framework�������������������������������������171
+The Distinct Nature of A-ESA Thinking��������������������������������������������������������������172
+The A-ESA Architectural Process����������������������������������������������������������������������173
+Pillars of the A-ESA Thinking Framework���������������������������������������������������������177
+Abstraction for Landscape View Architecture����������������������������������������������178
+System Aspect-orientation for Structural Architecture��������������������������������180
+Metrics Mapping for Decisional Architecture����������������������������������������������184
+A-ESA Modeling Effects������������������������������������������������������������������������������������185
+Architectural Clarity�������������������������������������������������������������������������������������185
+Architectural Responsibility�������������������������������������������������������������������������190
+Architectural Quality������������������������������������������������������������������������������������191
+Summary����������������������������������������������������������������������������������������������������������194
+Part III:  A-ESA Essentials���������������������������������������������������������195
+Chapter 4: A-ESA Measurement�������������������������������������������������������197
+Enterprise Input Metrics�����������������������������������������������������������������������������������202
+Enterprise Principle Guidance���������������������������������������������������������������������202
+Enterprise Governance Guidance����������������������������������������������������������������203
+Key Architectural Quality Metrics����������������������������������������������������������������������204
+Architectural Structuring Quality�����������������������������������������������������������������205
+Architectural Connectivity���������������������������������������������������������������������������207
+Functional Quality Metrics��������������������������������������������������������������������������������208
+Business Functional Quality������������������������������������������������������������������������209
+Application Service Usability�����������������������������������������������������������������������209
+Application Service Adaptability������������������������������������������������������������������212
+Application Service Maintainability�������������������������������������������������������������212
+Table of Contents
+
+--- PAGE 7 ---
+vii
+Operational Quality Metrics�������������������������������������������������������������������������������214
+User-aware Operational Quality�������������������������������������������������������������������214
+Non-runtime Operational Quality�����������������������������������������������������������������224
+DevOps Metrics�������������������������������������������������������������������������������������������������229
+SRE Practice������������������������������������������������������������������������������������������������232
+Solution Constraint and Opposing Force�����������������������������������������������������������233
+Solution Constraint Metrics�������������������������������������������������������������������������234
+Cost as a First-Class Metric������������������������������������������������������������������������235
+Opposing Force Metrics�������������������������������������������������������������������������������236
+Lean Measurement Cluster�������������������������������������������������������������������������������237
+S-MAPS Measurement Cluster��������������������������������������������������������������������237
+S-MAPS NFRs Checklist������������������������������������������������������������������������������239
+S-MAPS NFRs by Team Responsibility���������������������������������������������������������242
+Summary����������������������������������������������������������������������������������������������������������243
+Chapter 5:  A-ESA Modeling Styles����������������������������������������������������245
+Style 1: Strategic Architecture��������������������������������������������������������������������������253
+Style 2: Enterprise Architecture������������������������������������������������������������������������255
+Style 3: Heat-Mapping Capability Architecture�������������������������������������������������258
+Enterprise Capability�����������������������������������������������������������������������������������258
+Mapping with Value Stream������������������������������������������������������������������������263
+Style 4: Business Architecture��������������������������������������������������������������������������266
+Relationship Between Business Model and Business Architecture�������������266
+Organization Communication Structure������������������������������������������������������270
+Business Objectives������������������������������������������������������������������������������������273
+Business Scenario���������������������������������������������������������������������������������������274
+Table of Contents
+
+--- PAGE 8 ---
+viii
+Style 5: Information Architecture����������������������������������������������������������������������276
+Style 6:Application Architecture�����������������������������������������������������������������������279
+Functional Architecture�������������������������������������������������������������������������������279
+DevOps Environment�����������������������������������������������������������������������������������280
+Style 7: Data Architecture���������������������������������������������������������������������������������281
+Data Transaction Considerations�����������������������������������������������������������������281
+AI Considerations in Data Architecture��������������������������������������������������������284
+Style 8:Technical Architecture��������������������������������������������������������������������������287
+Operational Architecture������������������������������������������������������������������������������287
+Technical Platform Architecture������������������������������������������������������������������288
+Physical Architecture�����������������������������������������������������������������������������������292
+Style 9: Service-oriented Architecture (SOA)����������������������������������������������������293
+Style 10: Microservice Architecture (MSA)��������������������������������������������������������298
+Microservice Architecture Principle������������������������������������������������������������298
+Microservice Architectural Process�������������������������������������������������������������299
+Microservices Architecture Design��������������������������������������������������������������300
+Microservice DevOps�����������������������������������������������������������������������������������303
+Microservice Pattern�����������������������������������������������������������������������������������305
+Microservice Operational Architecture��������������������������������������������������������307
+Style 11: EDM Architecture�������������������������������������������������������������������������������308
+Style 12: Large-scale Website Architecture������������������������������������������������������312
+Style 13:Agile and Digital Architecture�������������������������������������������������������������321
+Agile Architecture����������������������������������������������������������������������������������������321
+Digital Architecture��������������������������������������������������������������������������������������330
+Agile and Digital Architecture����������������������������������������������������������������������331
+Style 14: Cloud Architecture������������������������������������������������������������������������������332
+Cloud Hosting Architecture��������������������������������������������������������������������������332
+Cloud Architecture Migration�����������������������������������������������������������������������333
+Table of Contents
+
+--- PAGE 9 ---
+ix
+Cloud Service Selection�������������������������������������������������������������������������������336
+Style 15: Security Architecture��������������������������������������������������������������������������338
+Style 16: Reference Architecture����������������������������������������������������������������������342
+AI Reference Architecture and Pattern��������������������������������������������������������345
+Architectural Evolution��������������������������������������������������������������������������������������349
+Summary����������������������������������������������������������������������������������������������������������351
+Chapter 6:  A-ESA Governance Techniques����������������������������������������353
+Guide 1: Customizing Modeling for Purpose�����������������������������������������������������355
+Adopting A-ESA Model Form(s)�������������������������������������������������������������������355
+Following a Modeling Process���������������������������������������������������������������������357
+Customizing A-ESA Architectural Style��������������������������������������������������������358
+Customizing A-ESA Solution Operating Model���������������������������������������������358
+Customizing A-ESA Areas/Views�����������������������������������������������������������������359
+Customizing A-ESA Elements����������������������������������������������������������������������363
+Guide 2:Applying Leading Practice�������������������������������������������������������������������367
+Architectural Tenet��������������������������������������������������������������������������������������367
+Architectural Pattern and Template�������������������������������������������������������������369
+Guide 3: Key Tradeoff Consideration�����������������������������������������������������������������372
+Similarity and Dissimilarity Analyses����������������������������������������������������������372
+Key Architectural Considerations�����������������������������������������������������������������377
+Comparative Rating Techniques������������������������������������������������������������������381
+Guide 4:Application Architecture Techniques���������������������������������������������������384
+Serviced-based Application Technique��������������������������������������������������������384
+Example of Application Partitioning Practices���������������������������������������������393
+Application Domain Structuring (Stages)����������������������������������������������������398
+Microservice Domain Structuring (Steps)����������������������������������������������������400
+Application Data Service Structuring����������������������������������������������������������402
+Guide 5:Technical Architecture Techniques������������������������������������������������������404
+Table of Contents
+
+--- PAGE 10 ---
+x
+Deployment Package Mapping��������������������������������������������������������������������404
+NFR-driven Operational Excellence�������������������������������������������������������������405
+Technical Data Service Structuring�������������������������������������������������������������407
+Guide 6: Effective Governance��������������������������������������������������������������������������412
+Governance Authority����������������������������������������������������������������������������������412
+Governance Enforcement����������������������������������������������������������������������������413
+Architecture Validation��������������������������������������������������������������������������������415
+Governance Automation������������������������������������������������������������������������������416
+Guide 7: Solution Management Context������������������������������������������������������������418
+Architectural Assessment����������������������������������������������������������������������������421
+Requirements Management������������������������������������������������������������������������423
+Cost Control and Management��������������������������������������������������������������������430
+Test Management����������������������������������������������������������������������������������������434
+Risk Management����������������������������������������������������������������������������������������436
+Asset Management��������������������������������������������������������������������������������������437
+Guide 8:Architecture Adoption Event (AAE)������������������������������������������������������439
+Summary����������������������������������������������������������������������������������������������������������442
+Epilogue��������������������������������������������������������������������������������������������443
+ Appendix I: A-ESA Spec Addendum��������������������������������������������������445
+ Appendix II: A-ESA Tools������������������������������������������������������������������461
+ Appendix III: Modeling Language Comparison���������������������������������463
+ Appendix IV: ESA Architect’s Roles and Skills����������������������������������465
+ Appendix V: FAQs about A-ESA���������������������������������������������������������471
+Bibliography�������������������������������������������������������������������������������������485
+Index�������������������������������������������������������������������������������������������������491
+Table of Contents
+
+--- PAGE 11 ---
+xi
+About the Author
+Sean(Chunhong)Guis a current Open Group
+architect certification board member and a
+certified distinguished architect with broad IT
+experience in various industries, including
+international business, manufacturing,
+healthcare, and retail. Over the past 30 years,
+he has led a multitude of large-scale enterprise
+solution projects in the United States and
+China, and has recently been focusing on
+enterprise solution architecture consulting
+and training. His previous book, Service-
+oriented Enterprise Application Architecture, drew from his numerous
+landing projects and sold very well in China.
+As a global IT architecture SME (Subject Matter Expert) and a chief
+IT architect at IBM GCG, Sean facilitated thousands of architects and
+technical leaders in China, the Asia-Pacific, the United States, and Europe,
+and he mentored top-level executive architects and IT solution leaders in
+different industries.
+Sean graduated from the University of Chicago and holds masters’
+degrees in physical science, systems analysis, and business administration.
+He has a wide array of interests, including swimming, hiking, calligraphy,
+and the zither. He now resides in Los Angeles, California, United States.
+
+--- PAGE 12 ---
+xiii
+About the Technical Reviewer
+JordanWangis a proven and competent
+information technology professional with
+excellent technical, organizational, and
+communication skills. He has 20 years of IT
+experience in the FSI, telecom, and energy
+industries within a multi-language and
+multi-culture environment. Eighteen of those
+years was in cloud consulting, designing,
+building, and operations. He is familiar
+with GenAI technology, LLM, NLP, and CV,
+including Open AI services and ChatGPT, IBM WatsonX, Azure Machine
+Learning, and Google Bard. He is familiar with architecture design
+methodologies and frameworks, including traditional IT, the hybrid cloud
+architecture, and the main AI technologies.
+
+--- PAGE 13 ---
+xv
+Acknowledgments
+I want to express my gratitude to the publishing team, especially Aditee
+Mirashi and Kripa Joseph at Apress and Springer, for helping me bring
+this book to life. I also want to acknowledge Jordan Wang for his technical
+review of the book. I am deeply appreciative of the encouragement and
+support I have received from my colleagues, business partners, customers,
+students, and fellow IT architects in writing this book.
+
+--- PAGE 14 ---
+xvii
+Introduction
+Solutionmodelingembodiestheunityofknowinganddoing.
+This book serves as a guide to applying the Agile Enterprise Solution
+Architecture (hereafter referred to as Agile ESA or A-ESA),1
+which provides
+a link between Enterprise Architecture (EA) and Solution Architecture
+(SA), leaning toward the latter in an Agile manner. The book covers the
+architectural thinking and measurement process for better understanding
+and pragmatic adoption. It includes various architectural styles that use
+A-ESA to produce simple and comprehensive insights.
+Enterprise architects often create IT plans, blueprints, or processes
+that are not grounded in reality. IT professionals often rely on codebases,
+reengineering, or design models to explain how a system works. However,
+these alone may not be sufficient to manage complex solutions or to
+explain why or how a solution system was directed, valued, built, hosted,
+evolved, and most particularly, architected.
+The book extends the Agile ESA specification and presents an
+architectural philosophy with six constituents: the thinking framework,
+method specification, measurement metrics, governance technique,
+applicable situation, and tool support. These six constituents form a
+well-rounded A-ESA model, as shown in Figure 0-1. Each constituent is
+covered in detail, as outlined in Table 0-1.
+1
+See “Agile Enterprise Solution Architecture – An IT Service-based Modeling Approach” for
+detailed specifications.
+
+--- PAGE 15 ---
+xviii
+“Talk is cheap” is a motto that was often quoted by my Silicon Valley
+team during my earlier IT career. The book takes a practical approach and
+explores how the enterprise solution architecture is embodied through
+a systematic philosophy and these six constituents, accompanied with
+examples. It begins with a brief introduction to A-ESA and eight typical
+solution cases (Part I), followed by a thinking framework (Part II). Part III
+then explores the essentials of A-ESA modeling in more depth.
+Thinking Framework
+Method
+Specification
+Architectural
+Styles
+Measurement
+Criteria
+Tool
+Governance
+Techniques
+A-ESA Model
+guides
+validate
+govern
+supports
+specifies
+feature
+Figure0-1. The essence of the Agile ESA model
+Introduction
+
+--- PAGE 16 ---
+xix
+Table0-1. A-ESA Constituents
+Constituent Part Chapter Description
+Model specification I Chapter 1 Method specification: the A-ESA foundation
+Chapter 2 Examples of A-ESA modeling
+Thinking framework II Chapter 3 Architectural thinking: governing ideas in A-ESA
+Measurement III Chapter 4 Measurement metrics by core architecture area
+Architectural style Chapter 5 A-ESA modeling for distinctive styles
+Governance Chapter 6 A-ESA governance techniques
+Modeling support Appendix II A-ESA tools
+Introduction

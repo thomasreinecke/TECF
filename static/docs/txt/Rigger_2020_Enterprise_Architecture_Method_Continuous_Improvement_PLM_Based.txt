@@ -1,0 +1,563 @@
+--- PAGE 1 ---
+HAL Id: hal-03753144
+https://inria.hal.science/hal-03753144v1
+Submitted on 17 Aug 2022
+HAL is a multi-disciplinary open access archive
+for the deposit and dissemination of scientific re-
+search documents, whether they arepublished or not.
+Thedocumentsmaycomefromteachingandresearch
+institutions in France or abroad, or from public or pri-
+vate research centers.
+L’archiveouvertepluridisciplinaireHAL,estdes-
+tinée au dépôt et à la diffusion de documents scien-
+tifiquesdeniveaurecherche, publiésounon, émanant
+des établissements d’enseignement et de recherche
+français ou étrangers, des laboratoires publics ou
+privés.
+Distributed under a Creative Commons CC BY 4.0 - Attribution - International License
+Enterprise Architecture Method for Continuous
+Improvement of PLM Based on Process Mining
+Eugen Rigger, Thomas Vosgien, Samuel Bitrus, Piroska Szabo, Benoit Eynard
+To cite this version:
+EugenRigger,ThomasVosgien,SamuelBitrus,PiroskaSzabo,BenoitEynard. EnterpriseArchitectureMethod
+forContinuousImprovementofPLMBasedonProcessMining. 17thIFIPInternationalConferenceonProduct
+Lifecycle Management (PLM), Jul 2020, Rapperswil, Switzerland. pp.563-575, ⟨10.1007/978-3-030-62807-9_45⟩.
+⟨hal-03753144⟩
+
+--- PAGE 2 ---
+This document is the original author manuscript of a paper submitted to an IFIP
+conference proceedings or other IFIP publication by Springer Nature. As such, there
+may be some differences in the official published version of the paper. Such
+differences, if any, are usually due to reformatting during preparation for publication or
+minor corrections made by the author(s) during final proofreading of the publication
+manuscript.
+
+--- PAGE 3 ---
+Enterprise Architecture Method for Continuous Im-
+provement of PLM based on Process Mining
+Eugen Rigger1
+*, Thomas Vosgien2
+, Samuel Bitrus1
+, Piroska Szabo2
+, Benoit Eynard3
+1 V-Research GmbH, Digital Engineering, Austria
+2 Hilti Befestigungstechnik AG, 69121 Heidelberg, Swiss
+3 Université de Technologie de Compiègne, Department of Mechanical Systems Engineering,
+France
+eugen.rigger@v-research.at
+Abstract. The complexity and dynamics of IT landscapes and related PLM strate-
+gies of engineering enterprises are continuously growing due to trends such as Industry
+4.0 and ever shorting product development cycles. To ensure interoperability, robust-
+ness, flexibility and efficiency of the IT systems and PLM, methods are needed that can
+handle these dynamics and complexities. In this paper, a method is presented that com-
+bines principles from enterprise architecture as well as business process mining to en-
+able continuous improvement of PLM processes and the related IT systems. In partic-
+ular, process mining is applied to validate the alignment of IT systems with related
+PLM processes. The method is demonstrated using an industrial case study that high-
+lights the requirements from industrial practice and the applicability of the approach
+for PLM related processes. The method is shown to be particularly beneficial for the
+enterprise architects to support them with quantitative data as a basis for the design of
+continuous improvement cycles to make the PLM evolve. Future work will address the
+application of process mining for PLM related processes with distributed IT systems
+and the handling of the related complexity.
+Keywords: PLM, Enterprise Architecture, Process Mining, Continuous Im-
+provement.
+1 Introduction
+Digitalization of engineering companies [1] which builds upon trends such as Indus-
+try 4.0 [2] lead to increasing complexities in the IT landscape of engineering enter-
+prises. In this context, Enterprise Architecture (EA) aims to ensure interoperability
+among IT applications as well as the related business processes and infrastructure sat-
+isfying the needs of an enterprise regarding robustness, flexibility and efficiency [3].
+EA methods for modeling and management of architectures [3] have been proven to be
+beneficial in industrial practice with respect to monitoring and making enterprises
+evolve [4],[5] but are still subject to improvement with respect to new challenges stem-
+ming from the new opportunities in digital engineering and production [6].
+With respect to handling of data and applied tools among the lifecycle of a product,
+Product Lifecycle Management (PLM) is applied as a strategic management approach
+
+--- PAGE 4 ---
+2
+for product information, engineering workflows and related applications [7]. Hence, it
+can be governed and supported by enterprise architecture methods.
+However, ever shortening product development cycles, the application of new tech-
+nologies in industry such as Industrial Internet of Things or web-based technologies in
+general as well as the use of domain specific applications in engineering render the
+monitoring of enterprise architecture in a PLM context a challenge [1] calling for agile
+approaches to manage the continuous changes [8]. Hence, strategic approaches such as
+PLM and enterprise architecture require means to monitor and validate theoretically
+derived models of the enterprise architecture based on the actual operational use of
+applications. In this respect, process mining has been established as a means to validate
+and analyze business processes with respect to conformance based on analysis of event
+logs [9]. This enables to consolidate and optimize processes. Hence, the processes that
+are being applied in an enterprise, can be reengineered based on log data from the used
+systems. However, currently, process mining is applied to business processes with vast
+amount of data and single IT solutions which makes it difficult to be applied in a PLM
+context.
+In response to these needs, this paper proposes a method enabling continuous PLM
+improvement combining principles from enterprise architecture as well as business pro-
+cess mining. The needs for this method are validated based on a use case reflecting the
+requirements from industrial practice and the actual method is illustrated using a refer-
+ence process from PLM. Thus, this paper contributes by introducing a means that sup-
+port business and operation excellence in the PLM area.
+In the following, Section 2 reviews the state of the art and state of practice regarding
+business process mining.Following this, enterprisearchitecture methods areintroduced
+and critically reviewed with respect to the applicability in agile and dynamic contexts.
+Section 2 is then summarized highlighting the research gaps that build the motivation
+and basis for derivation of the method that is presented in Section 3. Section 4 intro-
+duces case studies reflecting the current situation and application scenarios of the
+method in an industrial context. Section 5 comprehensively discusses these findings
+and Section 6 closes this paper by some concluding remarks.
+2 Background
+In this section the state of the art as well as state of practice of business process mining
+are discussed. Focus is put on currently applied industrial use cases of business process
+mining and its application in a context of product lifecycle management. Similarly, ex-
+isting methodologies and supporting methods regarding enterprise architecture are re-
+viewed. The background section is concluded by a summary highlighting the research
+gaps.
+2.1 Business Process Mining vs. PLM
+Process mining is a set of analysis techniques in the field of business process man-
+agement [10] that applies machine learning and data mining to re-engineer and dis-
+cover business process models using logs of information systems [9]. Correspondingly,
+
+--- PAGE 5 ---
+3
+the threemainfields of application of business process mining refer to discovery, where
+a model is generated from event logs; conformance checking, where the data obtained
+from the model are compared to identify deviations from actual execution of a business
+process; and enhancement, where an existing process model is improved and optimized
+[11]. Recent reviews of the technology show that business process mining is an estab-
+lished technology [12] and multiple commercial platforms exist that address open re-
+search issues related to usability and understandability of the techniques with respect
+to non-experts.
+In the context of PLM, reported applications of business process mining mainly fo-
+cus on the improvement of manufacturing processes based on data from manufacturing
+execution systems [13]–[16] or decision making duringoperation of systems [17].Con-
+sidering the central data management systems that build the core of PLM such as the
+product data management system (PDM), only few works can be identified. The work
+presented in [18] claims PDM related process improvement. However, the work is
+available in Korean, only. Zhaoxia et al. [19] extends the attributes of the data format
+within the standardized Mining XML format [20] that enables mining of events related
+to data management in PDM systems such as the approval process of documents. Mon-
+itoring of process in PDM are particularly important due to the rapid evolution of new
+tools and technologies from fields such as CAx or design automation each interfacing
+with PDM.
+2.2 Enterprise Architecture
+Enterprise Architecture (EA) provides means to describe, analyze, represent and design
+different dimensions of an enterprise [3], [21]. EA aims to manage the organizational
+structure and related processes of an enterprise as well as the supporting information
+systems and infrastructure so to understand complexity and manage change [22], [23,
+p. 201]. Multiple EA methods and standards have emerged since the origins of enter-
+prise architecture in the late 1980s [21], e.g. [24], [25], [26], [27].
+An essential part of PLM is concerned with the design process that is hard to for-
+mally model due to its situated [28] and iterative [29] character. Further, the engineer-
+ing domain is characterized by domain specific tools featuring support for highly spe-
+cific tasks, e.g. CAx [30] or design automation [31], [32]. Still, the works presented in
+[33], [34] have shown that the principles of enterprise architecture are also applicable
+in a PLM context. Hence, in this work methods of enterprise architecture are also used
+for the design and monitoring of PLM strategies.
+Regardingtheformalmodeling of theenterprise architectureso to communicate and
+validate the knowledge about enterprise architecture, the ArchiMate graphical model-
+ing language has been established as a standard [35]. Archimate features task prece-
+dence modeling in the three relevant layers for formalization of an enterprise architec-
+ture, namely business, application, and technology. The graphical modeling supports
+communication [36], participation and reengineering of enterprise architectures [37].
+Archimate differentiates itself from other standardized notations for task precedence
+modeling, e.g. BPMN [38] or IDEF3 [39], by enabling modelling of the additional lay-
+ers for applications and technologies.
+
+--- PAGE 6 ---
+4
+2.3 Summary
+Business process mining is an established technology that has gained recent interest
+inaPLMcontextdueto theavailability ofstructureddatawithintherelatedinformation
+systems. However, there is a lack of methods with respect to systematic integration of
+business process mining in the context of the core applications of PLM such as the
+PDM to enable continuous improvement of the related business processes for data man-
+agement. Existing EA methods need to be elaborated on to incorporate analysis and
+improvement cycles based on the monitoring capabilities provided by business process
+mining.
+3 EA Method for continuous improvement of PLM
+As highlighted in the review of the state of the art, existing methods from the field of
+enterprise architecture do not feature the continuous evolution process required to man-
+age the dynamics of enterprise architecture within thefield ofPLM. Hence,in this work
+we propose a method featuring both the agility and flexibility required to account for
+the opportunities stemming from emerging technologies in the context of PLM as well
+as the monitoring capabilities required to guarantee streamlined application of these
+technologies based on process mining. The method is illustrated in Figure 1.
+Fig. 1. Overview of the A Method for continuous improvement of PLM
+
+--- PAGE 7 ---
+5
+As can be seen in Figure 1, the method presented in this work is based on the main
+principles of continuous improvement [40], [41] so that the dynamics of PLM can be
+taken into account. The method is constituted by the following steps:
+1. The enterprise architecture is formalized using the ArchiMate modelling lan-
+guage. The business processes, related applications as well as the supporting
+infrastructure are captured holistically in one model repository. Each architec-
+ture artifact is then documented with additional metadata that will be used for
+the EA assessment.
+2. The enterprise architecture is evaluated based on a comparison of the formal-
+ized EA with the practically applied PLM processes. The monitoring of pro-
+cesses as well as the evaluation of multiple dimensions of PLM maturity [42],
+[43] such as the level of IT alignment allow to draw a balanced scorecard in-
+dicating the maturity of a selected process.
+3. Based on the yielded score card, informed decisions regarding the adaptation
+of the EA can be taken. Potential actions include the adaption of business pro-
+cesses, the inclusion/exclusion of specific application functions etc.
+4. A potential solution reflecting the changes within the EA to realize the previ-
+ouslydefinedaction isdesignedbythesolutionarchitects.Definingapotential
+solution follows basic software development principles as defined in ISO
+25010 [44]
+5. Thepotentialsolution isevaluatedwith respecttonon-functionalrequirements
+reflecting the EA conformance.
+6. When conformance is guaranteed, the solution is implemented and integrated
+to the enterprise IT systems.
+7. The newly integrated IT solution is reviewed with respect to functional re-
+quirements and if necessary adapted.
+8. The EA model is adapted to incorporate the newly integrated IT solutions.
+Step 1 and step 8 encompass the same activity of EA modeling. Hence, these actions
+indicated the continuous character of the method that should be permanently applied to
+ensure robustness, flexibility and efficiency of modern engineering companies.
+4 Case Study
+In the following, the current state of application of the method in an engineering
+enterprise producing a large variety of high value-added manufacturing systems for the
+construction industry. In a first step, the challenges of this business with respect to EA
+are briefly introduced. Following this, the current state of application of the EA Method
+for continuous improvement of IT system is presented. Thereby, focus is put on assess-
+ment of the EA based on process mining as well as heat maps that enable multi-dimen-
+sional assessment of business processes and the related EA. Finally, an outlook includ-
+ing a representative PLM process is presented to highlight how the company wants to
+move towards comprehensive application of the method to fully grasp the potential of
+simultaneous application of enterprise architecture and business process mining.
+
+--- PAGE 8 ---
+6
+4.1 Industrial Challenges for Applying EA in the PLM Area
+The industrial case deals with products of large system complexity and like any other
+manufacturing industry product data is cross-functionally used among the various de-
+partments of thecompany, e.g.product data is shared and exchanged among the various
+disciplines involved in the design process. The IT systems that enable product data and
+configuration management processes require a stable and robust IT landscape where IT
+architecture guidelines and principles are fully applied. Contrarily, the cross-function-
+ality and multidisciplinary character of the product development call for a variety of IT
+systems and authoring applications, which makes the PLM IT landscape particularly
+difficult to govern from an EA perspective. For example,theengineering business units
+ask for flexibility and efficiency in implementation of desired authoring applications
+without necessarily taking care of applying the company standards, whereas these
+standards are necessary for ensuring the full traceability and consistency of the pro-
+cessed product data. Eventually, this leads to data quality issues downstream the prod-
+uct life cycle.
+From another perspective, the emergence of cloud solution for PLM enabling IT
+systems poses additional challenges to the enterprise architecture, since a mix of on-
+premise,desktopandcloudsolutionsneedstobeintegrated.ThismakesEAgovernance
+and EA principles difficult to apply and requires the definition of new integration pat-
+terns.
+Finally, to align PLM enabling IT systems with the IT strategy of the company, costly
+and risky PLM transformation projects are necessary. However, complex PLM IT sys-
+tems need to be validated regarding the operational usage in order to assess the align-
+ment of the IT systems with the business process and eventually the IT strategy. This
+is particularly truefor the PLMsystems forproductdata management thatneed to cover
+many business use cases and are complex. This leads to gaps between the defined and
+applied processes. Therefore,potential future solutions need to be assessed with respect
+to the possibilities for setting up process mining cases for the application.
+4.2 State of Practice of Application of Enterprise Architecture
+This section shows how the EA Method for continuous improvement of PLM intro-
+duced in section 3 is currently applied in practice to general business processes. Focus
+is put on the second step of the method, i.e. the EA assessment necessary to align the
+PLM IT systems with the EA strategy and principles of the company. The assessment
+itself consists of a compliance assessment with respect to EA architecture principles
+and also relies on a process mining solution to identify the state of application of a
+specific IT solution with respect to applied processes.
+Assessment of Systems’ Compliance and Maturity to EA Principles
+Regarding the assessment of a systems maturity, the company introduced “assess-
+ment” metadata attributes for IT systems directly within modeling environment ADOit.
+Metadata comprises information such as the operating model (e.g. On Premise, XaaS),
+the mission criticality of a system, the level of customization of a system, the used
+
+--- PAGE 9 ---
+7
+integration patterns and technologies, lifecycle information, etc. This enables the solu-
+tion architects and enterprise architects to classify and assess the various software ap-
+plications based on different IT strategy and principles criteria. Given the complete
+assessment of the corporate IT systems, a heatmap of IT systems maturity can be drawn
+as shown in Fig. 2 so that a comprehensive overview of the current state of IT system
+maturity is given. Alternatively, this data can also be visualized using balanced score-
+cards. One of the first principles which is checked is “A system is supporting and is
+aligned with business processes and avoids functional redundancy”. Until now, this
+assessment was based on the qualitative and subjective evaluation of the architect
+and/or owner of the solution. In this paper,we propose now to complete this assessment
+by applying process mining to the respective supported business processes.
+Fig. 2. Excerpt of EA heat map report with columns indicating the different levels of IT system
+maturity. The systems are hidden for confidentiality reasons.
+PLM Process Mining for Operational Alignment between PLM IT Systems and
+Processes
+In the following, the application of process mining to assess the alignment of the
+used ERP/PDM system SAP S/4 HANA with applied engineering change management
+process. The case has been implemented using the Celonis process mining toolbox.
+Whereas the company already applies the proposed method in the context of sales
+and marketing business processes (e.g. purchase-to-pay and order-to-cash), the PLM
+related processes are currently not yet operationally mined. One of the reasons is that
+the PLM environment is subject to current major changes and the engineering change
+management processes is currently involving several software applications which are
+currently not yet in the scope and roadmap of the process mining initiative. Moreover,
+each new process mining case requires additional costs, efforts and time, not only for
+integrating Celonis with other software systems but also for formalizing, setting up,
+implementing, executing the case and analyzing the results.
+In the following, the data model of SAP S/4 HANA is investigated with respect to
+its capabilities to support and monitor the engineering change management process
+(ECM). ECM is taken as a representative PLM process since it is critical with respect
+to its impact on data quality and information traceability required in downstream engi-
+neering processes. Hence, misalignments between the software implementation and its
+usage by the end-users are critical and need to be avoided.
+Fig. 3 depicts the engineering change management reference process and the related
+data structure in SAP S/4 HANA as implemented in the company. This allows the iden-
+tification of business processes based on the analysis of interrelations of the identified
+Software
+Systems
+EA Score
+A systemis aligned with
+business processes and avoids
+functional redundancy
+A systemfollows "best
+practice" architectures to
+foster reliability
+A system has a
+managed lifecycle
+A system has managed
+interfaces and follows
+interoperability standards
+Principle Score 53.6 78.6 85.0 67.9
+System A 65.9 P M M M
+System B 75.0 L M M F
+System C 68.2 M L F L
+System D 75.0 L F F F
+System E 54.5 P M M P
+System F 84.1 M F F F
+System G 72.7 M M M P
+
+--- PAGE 10 ---
+8
+processactivities.Giventhisinformation, thedefinition ofprocessactivitiesas required
+for setting up a process mining case can be performed.
+Fig. 4 shows some of the proof of concept results for the analysis of the ECM process.
+Even though the details cannot be provided due to confidentiality, it can be seen that
+multiple variants of processes are identified when tracking the data event logs for engi-
+neering change request/orders. This information can then be used to elaborate on the
+defined processes as well as to support the assessment of the IT system with regards to
+its capabilities alignment with their operational usage. In this specific case, the results
+of the process mining enabled the enterprise architect to adjust the EA assessment “A
+system is supporting and is aligned with business processes and avoids functional re-
+dundancy” so that a qualitative estimation is replaced by quantitative evaluations. Fur-
+ther, the setup of process mining cases right from the start of implementation of a new
+IT system in the PLM context, will be used to monitor the adoption of new systems so
+to enable continuous improvement of the IT systems also in a PLM context.
+Fig. 3. Engineering Change Management Process and related data structure in SAP S/4 HANA.
+
+--- PAGE 11 ---
+9
+Fig. 4. Process deviations report in Celonis for the usage of SAP S/4 HANA.
+5 Discussion
+In the following, the work and results presented in this work are discussed with its
+impact with respect to industry as well as academia.
+Regarding the contributions with respect to industry, the business case introduced in
+Section 4 summarizes the challenges of a manufacturing engineering enterprise with
+respect to PLM and EA adoption. Building upon these challenges, different dimensions
+of PLM / IT systems maturity are introduced to assess these challenges and enable con-
+tinuous improvement of the PLM / IT systems. In this work, the application of process
+mining is proposed to support the assessment of PLM / IT systems also based on quan-
+titative data stemming from the evaluation of data logs. In this respect, the results stem-
+ming from the process mining case can be used to rework the processes as well as the
+supporting IT systems and application functions. The enterprise architectures benefit
+from this data since it enables them to lead informed discussions with related stake-
+holders based on quantitative data rather than qualitative estimations. Further, the en-
+hanced understanding of the As-Is state of the enterprise architecture also increases
+applicability and quality of the potential To-Be states since reality is reflected in more
+detail.
+The introduced process mining case in Section 4 indicates how the ability to setup a
+process mining for a potential IT system can be an evaluation criterion for the evalua-
+tion of IT systems. Having the ability to conduct process mining for PLM related pro-
+cesses is key to improve the collaboration of the different engineering disciplines. Dif-
+ferent disciplines have different requirements for product data management leading to
+
+--- PAGE 12 ---
+10
+potential misalignments in applied processes. Having the overview of different pro-
+cesses, established processes can be adapted eventually leading to a better data quality
+when PLM processes are well adopted by the different users. Considering the overview
+of the various instances of PLM processes from an applied process mining case, the
+origins of misalignments in data can be identified, e.g. when adiscipline keeps ignoring
+specific process activities. Using this information, the related users can be identified
+and informed with respect to the effects of this misalignments. Thus, motivation of the
+related stakeholders can be increased to actively contribute to PLM and EA design and
+compliance. With regards to the number of observed process deviations, the real com-
+plexityofthecaseismuchhigherthanexpected.Thisleadsto considersomelimitations
+regarding the application of process mining in industrial practice. These great number
+of process deviations have been observed by analyzing the data logs of only one IT
+systems, whereas, in practice,the ECM process’ actorsgenerally uses severaldataman-
+agement and authoring systems. Reflecting the operational reality would require more
+investigations and more process mining investments. On the other hand, by mining
+other data sources, the amount of data to analyze as well as the amount of process de-
+viations would increase, leading to the risk of not being able to efficiently analyze these
+deviations. Therefore, industrialists must be careful when willing to apply process min-
+ing excessively. One of the challenges is to coordinate and align the process mining
+activities with the PLM transformation roadmap to avoid a negative perception or non-
+adoption of the approach by both management and process ‘actors point of views.
+With respect to academia, the proposed work contributes by the introduction of an
+EA framework that considers state-of-the-art technologies and puts a focus on the chal-
+lenges stemming from the PLM domain. This work particularly takes into account the
+point highlighted in [23] that the future directions of EA need to push the boundaries
+of EA by integrating different field and pursue a multidisciplinary approach and there-
+fore increase visibility and dynamics in the field.
+The future workneeds tofocuson the actual implementationof PLM process mining
+cases and the development of a method to detect isolated (non-integrated) IT systems
+within PLM based on process mining.
+6 Conclusion
+This work contributes by introducing an enterprise architecture-based method for con-
+tinuous improvement of PLM processes and the related IT systems. To quantitatively
+evaluate the As-Is state of PLM, the method applies process mining monitor the align-
+ment of IT systems with the related PLM processes. The validation of the method based
+on an industrial case shows the applicability to support enterprise architects in the re-
+view of the As-Is state to enable continuous improvement of PLM. Further, the method
+contributes by merging different previously unconnected fields of research.
+However, the industrial case also shows the complexity of process evaluation in a PLM
+context. Hence, future work needs to address the development of methods that enable
+the application of process mining for PLM related processes with distributed IT sys-
+tems.
+
+--- PAGE 13 ---
+11
+Acknowledgements
+This work has been supported and funded by the Austrian Research Promotion Agency
+(FFG) via the “Austrian Competence Center for Digital Production” (CDP) under the
+contract number 854187.
+References
+[1] Y. Xin and V. Ojanen, “The impact of digitalization on product lifecycle management:
+How to deal with it?,” in 2017 IEEE International Conference on Industrial Engineering
+and Engineering Management (IEEM), Singapore, 2017, pp. 1098–1102, doi:
+10.1109/IEEM.2017.8290062.
+[2] E. Oztemel and S. Gursev, “Literature review of Industry 4.0 and related technologies,”
+Journal of Intelligent Manufacturing, vol. 31, no. 1, pp. 127–182, Jan. 2020, doi:
+10.1007/s10845-018-1433-8.
+[3] F. Gampfer, A. Jürgens, M. Müller, and R. Buchkremer, “Past, current and future trends
+in enterprise architecture—A view beyond the horizon,” Computers in Industry, vol. 100,
+pp. 70–84, Sep. 2018, doi: 10.1016/j.compind.2018.03.006.
+[4] J. Váchal and J. Straková, “Enterprise Architecture within the Process of Permanent
+Change,” SHS Web of Conferences, vol. 61, p. 01029, 2019, doi:
+10.1051/shsconf/20196101029.
+[5] G. Shanks, M. Gloet, I. Asadi Someh, K. Frampton, and T. Tamm, “Achieving benefits
+with enterprise architecture,” The Journal of Strategic Information Systems, vol. 27, no.
+2, pp. 139–156, Jun. 2018, doi: 10.1016/j.jsis.2018.03.001.
+[6] P. Saint-Louis, M. C. Morency, and J. Lapalme, “Defining Enterprise Architecture: A
+Systematic Literature Review,” in 2017 IEEE 21st International Enterprise Distributed
+Object Computing Workshop (EDOCW), Quebec City, QC, 2017, pp. 41–49, doi:
+10.1109/EDOCW.2017.16.
+[7] M. Abramovici, “Future Trends in Product Lifecycle Management (PLM),” in The Future
+of Product Development, P. D.-I. F.-L. Krause, Ed. Springer Berlin Heidelberg, 2007, pp.
+665–674.
+[8] F. Gampfer, “Managing Enterprise Architecture in Agile Environments,” in Projektma-
+nagement und Vorgehensmodelle 2018, PVM 2018: der Einfluss der Digitalisierung auf
+Projektmanagementmethoden und Entwicklungsprozesse, M. Mikusz, A. Volland, M.
+Engstler, M. Fazal-Baqaie, E. Hanser, and O. Linssen, Eds. Düsseldorf: Gesellschaft für
+Informatik e.V. (GI), 2018.
+[9] W. van der Aalst, Process mining: discovery, conformance and enhancement of business
+processes. Berlin: Springer, 2011.
+[10] W. M. P. van der Aalst, M. La Rosa, and F. M. Santoro, “Business Process Management:
+Don’t Forget to Improvethe Process!,” Business & InformationSystems Engineering, vol.
+58, no. 1, pp. 1–6, Feb. 2016, doi: 10.1007/s12599-015-0409-x.
+[11] W. van der Aalst, “Process Mining: Overview and Opportunities,” ACM Trans. Manage.
+Inf. Syst., vol. 3, no. 2, pp. 1–17, Jul. 2012, doi: 10.1145/2229156.2229157.
+
+--- PAGE 14 ---
+12
+[12] M. Cho, M. Song, M. Comuzzi, and S. Yoo, “Evaluating the effect of best practices for
+business process redesign: An evidence-based approach based on process mining tech-
+niques,” Decision Support Systems, vol. 104, pp. 92–103, Dec. 2017, doi:
+10.1016/j.dss.2017.10.004.
+[13] A. Rozinat, I. S. M. de Jong, C. W. Gunther, and W. M. P. van der Aalst, “Process Mining
+Appliedto the Test Process of WaferScannersin ASML,”IEEE Transactions onSystems,
+Man, and Cybernetics, Part C (Applications and Reviews), vol. 39, no. 4, pp. 474–479,
+Jul. 2009, doi: 10.1109/TSMCC.2009.2014169.
+[14] H. Yang, M. Park, M. Cho, M. Song, and S. Kim, “A system architecture for manufactur-
+ing process analysis based on big data and process mining techniques,” 2014, pp. 1024–
+1029, doi: 10.1109/BigData.2014.7004336.
+[15] M. Park, M. Song, T. H. Baek, S. Son, S. J. Ha, and S. W. Cho, “Workload and Delay
+Analysis in Manufacturing Process Using Process Mining,” in Asia Pacific Business Pro-
+cess Management, vol. 219, J. Bae, S. Suriadi, and L. Wen, Eds. Cham: Springer Interna-
+tional Publishing, 2015, pp. 138–151.
+[16] S. Son et al., “Process Mining for Manufacturing Process Analysis: A Case Study,” in
+Procedia of 2nd Asia Pacific Conference on Business Process Management, Brisbane,
+Australia, 2015, p. 5.
+[17] W. Es-Soufi, E. Yahia, and L. Roucoules, “A Process Mining Based Approach to Support
+Decision Making,” in Product Lifecycle Management and the Industry of the Future, Se-
+villa, Spain, 2017, vol. 517, pp. 264–274, doi: 10.1007/978-3-319-72905-3_24.
+[18] S.-I. Lee, K.-Y. Ryu, and M.-S. Song, “Process Improvement for PDM/PLM Systems by
+Using Process Mining,” Transactions of the Society of CAD/CAM Engineers, vol. 17, no.
+4, pp. 294–302, Aug. 2012, doi: 10.7315/CADCAM.2012.294.
+[19] W. Zhaoxia, W. Jianmin, W. Lijie, and L. Yingbo, “Extracting Real-Life Log with Data
+Perspective in PLM System for Business Process Analysis,”in2009 WRIWorld Congress
+on Computer Science and Information Engineering, Los Angeles, California USA, 2009,
+pp. 664–668, doi: 10.1109/CSIE.2009.645.
+[20] B. F. van Dongen and W. M. P. van der Aalst, “A Meta Model for Process Mining Data,”
+in Proceedings of the CAISE’05 Workshops, 2005, 2005, pp. 309–320.
+[21] P. Bernus, L. Nemes, and G. J. Schmidt, Handbook on enterprise architecture. Springer
+Science & Business Media, 2003.
+[22] M. Lankhorst, Enterprise Architecture at Work, 4th ed. Berlin, Heidelberg: Springer Ber-
+lin Heidelberg, 2017.
+[23] J. Lapalme, A. Gerber, A. Van der Merwe, J. Zachman, M. D. Vries, and K. Hinkelmann,
+“Exploring the future of enterprise architecture: A Zachman perspective,” Computers in
+Industry, vol. 79, pp. 103–113, Jun. 2016, doi: 10.1016/j.compind.2015.06.010.
+[24] J. A. Zachman, “A framework for information systems architecture,” IBM Systems Jour-
+nal, vol. 26, no. 3, pp. 276–292, 1987, doi: 10.1147/sj.263.0276.
+[25] The Open Group, The open group architecture framework (TOGAF), vol. 1. Reading,
+United Kingdom: The Open Group, 2009.
+[26] ISO/IEC/IEEE, “ISO/IEC/IEEE 42010 - Systems and software engineering -- Architec-
+ture description.” 2011.
+[27] D. Nightingale, J. Srinivasa, and J. Mize, “Enterprise Transformation Roadmap.” MIT
+Press, 2010.
+
+--- PAGE 15 ---
+13
+[28] J. S. Gero and U. Kannengiesser, “The situated function–behaviour–structure frame-
+work,” Design Studies, vol. 25, no. 4, pp. 373–391, Jul. 2004, doi: 10.1016/j.des-
+tud.2003.10.010.
+[29] D. C. Wynn and C. M. Eckert, “Perspectives on iteration in design and development,”
+Research in Engineering Design, pp. 1–32, 2016, doi: 10.1007/s00163-016-0226-3.
+[30] S. Vajna, C. Weber, K. Zeman, P. Hehenberger, D. Gerhard, and S. Wartzack, CAx für
+Ingenieure. Berlin, Heidelberg: Springer Berlin Heidelberg, 2018.
+[31] E. Rigger, T. Stanković, and K. Shea, “Task Categorization for Identification of Design
+Automation Opportunities,” Journal of Engineering Design, 2018, doi:
+10.1080/09544828.2018.1448927.
+[32] E. Rigger, T. Vosgien, K. Shea, and T. Stankovic, “A top-down method for the derivation
+of metrics for the assessment of design automation potential,” Journal of Engineering
+Design, pp. 1–31, Oct. 2019, doi: 10.1080/09544828.2019.1670786.
+[33] D. McKendry, R. I. Whitfield, and A. H. B. Duffy, “Business and information manage-
+ment architectures for delivering Product Lifecycle Management (PLM) in Engineering
+To Order (ETO) products,” in Proceedings of ICCAS 2015, Bremen, Germany, 2015, pp.
+1–9, doi: 10.3940/rina.iccas.2015.16.
+[34] T. Vosgien, E. Rigger, M. Schwarz, and K. Shea, “A Federated Enterprise Architecture
+and MBSE Modeling Framework for Integrating Design Automation into a Global PLM
+Approach,” in PLM 2017: Product Lifecycle Management and the Industry of the Future,
+Cham, 2017, vol. 517, pp. 36–48, doi: 10.1007/978-3-319-72905-3_4.
+[35] The Open Group, ArchiMate 3.1 Specification. Reading, United Kingdom: The Open
+Group, 2019.
+[36] D. C. Wynn and P. J. Clarkson, “Process models in design and development,” Research
+in Engineering Design, 2018, doi: https://doi.org/10.1007/s00163-017-0262-7.
+[37] N. Melao and M. Pidd, “A conceptual framework for understanding business processes
+and business process modelling,” Information Systems Journal, vol. 10, no. 2, pp. 105–
+129, Apr. 2000, doi: 10.1046/j.1365-2575.2000.00075.x.
+[38] S. A.White and D. Miers, BPMN modelingand referenceguide: understanding and using
+BPMN; develop rigorous yet understandable graphical representations of business pro-
+cesses. Lighthouse Point, Fla: Future Strategies Inc, 2008.
+[39] R. J. Mayer, C. P. Menzel, M. K. Painter, P. S. Dewitte, T. Blinn, and B. Perakath, “In-
+formation integration for concurrent engineering (IICE),” KNOWLEDGE BASED
+SYSTEMS INC COLLEGE STATION TX, DEF3 process description capture method
+report, 1995.
+[40] S. Taghizadegan, Essentials of lean six sigma. Butterworth-Heinemann, 2010.
+[41] T. Pyzdek and P. A. Keller, The six sigma handbook. McGraw-Hill Education New York,
+2014.
+[42] J. Stark, “Product Lifecycle Management,” in Product Lifecycle Management, Cham:
+Springer International Publishing, 2015, pp. 1–29.
+[43] M. Probst, “Anwendung eines PLM Reifegradmodells als strategisches Instrument.” In-
+telliact AG, 2016.
+[44] ISO/IEC, “ISO/IEC 25010: Systems and software Quality Requirements and Evaluation
+(SQuaRE) — System and software quality models.” 2011.

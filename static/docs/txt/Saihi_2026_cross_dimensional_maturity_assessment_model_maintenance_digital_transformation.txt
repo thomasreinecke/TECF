@@ -1,0 +1,3369 @@
+--- PAGE 1 ---
+Original research article
+International Journal of Engineering
+Business Management
+Volume 18: 1–36
+© The Author(s) 2026
+Article reuse guidelines:
+sagepub.com/journals-permissions
+DOI: 10.1177/18479790261453695
+journals.sagepub.com/home/enb
+A cross-dimensional maturity assessment
+model for maintenance digital
+transformation: Aligningpeople, process and
+technology
+Afef Saihi1
+, Mohamed Ben-Daya2
+, Moncer Hariga2
+, and Rami As’ad2
+Abstract
+The digital transformation of maintenance operations, driven by the fourth industrial revolution and characterized by the
+widespread adoption of emerging technologies, is essential for enhancing operational efficiency, optimizing asset
+management, and increasing equipment reliability. Despite the significant benefits, maintenance organizations face
+numerouschallengesinimplementingthesetechnologiesandensuringsuccessfultransformations,includingtechnological
+integration complexities, cultural resistance, skill gaps, and aligning digital strategies with broader business objectives,
+amongothers.Thisworkaddressesthecriticalgapinstructuredmethodologiesforevaluatingandguidingdigitalmaturityin
+Maintenance Digital Transformation (MDT) by proposing a comprehensive maturity assessment model. The model is
+grounded in nine key maturity dimensions spanning organizational culture, technology & data management, leadership &
+management aspects, organizational development & change, digital strategy, knowledge & skills, and internal integration.
+Buildingonemergingresearchinthisfield,datacollectionandadvancedstatisticaltechniques,andfeedbackfromexpertsin
+the field, this work adopts a structured and rigorous methodology to (1) identify and test the maturity dimensions and
+subdimensionsdrivingthesuccessofthistransformation,(2)adoptwell-establishedguidelinestodevelopastructuredand
+comprehensive maturity assessment model allowing organizations to assess their current MDT maturity level, and (3)
+performaninitialempiricalvalidationoftheproposedmaturitygrid.Theresultingmaturitygridprovidesorganizationswith
+detailedguidelinesontheircurrentdigitalmaturitylevelandactionablerecommendationsforadvancingtohigherstagesof
+maturity. The model offers diagnostic insights and a strategic roadmap to guide maintenance organizations through the
+multifaceted digital transformation process.
+Keywords
+digital transformation, maintenance, maturity model, structural equation modeling, grid formulation, expert evaluation
+Received: 10 November 2025; Revised: 17 April 2026; Accepted: 7 May 2026
+1. Introduction
+TheIndustry4.0era,markedbyrapidadvancesindigitaltechnologies,hasreshapedhowindustriesoperateworldwide.This
+shift draws on technological tools such as Internet of Things (IoT), data analytics, Artificial Intelligence (AI) and cloud
+platforms to reconfigure business processes, including maintenance operations.1,2
+In the maintenance sector, the shift
+1
+Management Science and Engineering Department, Khalifa University, Abu Dhabi, UAE
+2
+Industrial Engineering Department, American University of Sharjah, Sharjah, UAE
+Corresponding author:
+Afef Saihi, Management Science and Engineering Department, Khalifa University, P.O. Box 127788, Abu Dhabi, UAE.
+Email: afef.saihi@ku.ac.edu
+Creative Commons Non Commercial CC BY-NC: This article is distributed under the terms of the Creative Commons
+Attribution-NonCommercial 4.0 License (https://creativecommons.org/licenses/by-nc/4.0/) which permits non-commercial use,
+reproductionanddistributionoftheworkwithoutfurtherpermissionprovidedtheoriginalworkisattributedasspecifiedontheSAGEand
+Open Access pages (https://us.sagepub.com/en-us/nam/open-access-at-sage).
+
+--- PAGE 2 ---
+towards the digitalization of maintenance represents a strategic endeavor to enhance operational efficiency, optimize asset
+management, and increase overall reliability and uptime of equipment.3
+Maintenance, traditionally seen as a cost center, has gradually been recognized as a critical component of operational
+strategy that can significantly influence the financial and operational performance of an organization.4
+Maintenance digital
+transformation(MDT)enablesorganizationstotransitionfromreactivetopredictivestrategies,whereindata-driveninsights
+facilitatethe anticipation of failuresbefore they occur. This predictive approach helps in reducing downtime,extending the
+life of assets, and reducing the total cost of ownership.5
+Beyond predictive maintenance, MDT encompasses a range of
+sophisticated strategies such as prescriptive maintenance, which in addition to forecasting when equipment will fail, also
+suggests actionable interventions to mitigate potential failures.6
+Another pivotal aspect of MDT is its capacity to integrate
+assetmanagementwithreal-timemonitoringanddecision-makingcapabilities.Thisintegrationenablesamoreholisticview
+of asset health, operational demands, and maintenance scheduling.7
+Furthermore, the shift towards MDT has facilitated the
+adoption of mobile and cloud-based solutions that enhance the accessibility and agility of maintenance operations.
+Technicians equipped with mobile devices can access maintenance histories, schematics, and component information on-
+the-go,enhancingservicespeedandquality.8
+However,despitethesesignificantbenefits,implementingandmaximizingthe
+value of digital technologies in maintenance remains challenging. Organizations often face technological integration
+complexities, cultural resistance to change, skill gaps among personnel, and difficulties in aligning digital strategies with
+broader business objectives.9–11
+Overcoming these barriers requires more than robust technological solutions. It also
+necessitates significant shifts in organizational culture and processes. This highlights that the journey toward digital
+transformation extends beyond technology itself.12,13
+Furthermore,oneofthesignificanthurdlesinthistransformationisthelackofstructuredandstandardizedmethodologies
+to assess and guide the maturity of an organization’s digital transformation capabilities within the maintenance domain.14
+Withoutaclearunderstandingoftheircurrentdigitalmaturitylevel,organizationsstruggletoeffectivelyplanandimplement
+strategiesthatharnessthefullbenefitsofIndustry4.0.ThenecessityforamaturityassessmentmodelinMDTstemsfromthe
+need to provide organizations with a framework to identify their current capabilities, benchmark against best practices, and
+systematicallyadvancetowardshigherlevelsofdigitalintegration.15
+Acomprehensivematuritymodelaidsinassessingthe
+current state of digital transformation. It also serves as a roadmap that guides organizations through the complexities of
+implementing digital initiatives. Such models are pivotal in diagnosing critical gaps in technology, processes, capabilities
+and skills, and providing targeted recommendations that are aligned with the organization’s specific context and industry
+standards.Theneedforsuchamodelisparticularlypressinggiventherapidevolutionoftechnologyandthevaryingpaceof
+adoption across different sectors.16
+Building on prior research on MDT,17–21
+particularly studies examining its enablers, barriers, and implementation
+requirements,9,15
+thisstudyaddressestheneedforastructuredandempiricallygroundedmaturityassessmentmodeltailored
+tothemaintenancecontext.ExistingcontributionshaveimprovedunderstandingofMDTimplementation;however,theydo
+not yet provide a comprehensive and empirically validated instrument that organizations can use to systematically assess
+their maturity and guide transformation efforts. To address this gap, this paper develops a Maintenance Digital Trans­
+formation Maturity Model (MDTMM) grounded in the multidimensional nature of MDT, encompassing strategic,
+technological, organizational, managerial, and human-related aspects. The literature review therefore not only describes
+MDTenablersbutalsoservesastheconceptualbasisforidentifyingthecorematuritydimensionsthatstructuretheproposed
+model.Thesetheoreticallygroundeddimensionsaresubsequentlyexaminedandrefinedthroughempiricalvalidationusing
+Partial Least Squared (PLS) Structural Equation Modeling (SEM) and expert evaluation. Thus, this study contributes by
+proposingamultidimensionalandempiricallyvalidatedmaturitymodelspecificallytailoredtoMDT,addressinglimitations
+ofexistingmaturitymodelsthatareoftengenericorfocusedonisolatedaspectsofdigitaltransformation.Inlinewiththisaim,
+the study is designed to meet the following objectives.
+· Identify and test the key maturity dimensions and indicators of MDT.
+· Develop a structured and comprehensive maturity assessment model for MDT based on established maturity model
+development guidelines and insights from both academic research and industry practice.
+· Provide a practical roadmap enabling organizations to assess their MDT maturity level and identify improvement
+priorities.
+· Conduct an initial validation of the proposed model through empirical analysis and expert evaluation.
+Thesubsequentsectionsarestructuredasfollows.Section2providesadetailedliteraturereviewthatexaminesthecurrent
+trends of MDT, its key enablers and challenges, the existing maturity models and frameworks, and the current gaps in the
+literature.Section 3describes the research methodology used to develop the maturity model includingthe macroand micro
+approaches for model development and the validation processes. Section 4 presents the maturity model in detail including1
+2 International Journal of Engineering Business Management 18
+
+--- PAGE 3 ---
+theanalysisofthematuritydimensionsandcomponents,2
+thedevelopmentofthematuritygrid,and3
+theempiricalvalidation
+ofthepreliminarymodelthroughexpertconsultationsandrefinement.Section5concludesthepaperandsuggestsdirections
+for future research.
+2. Review of the literature
+2.1. Digital transformation of maintenance operations
+Digital maintenance, also referred to as Maintenance 4.0 or MDT, involves integrating advanced technologies into
+maintenancepracticestoenhanceefficiencyandagility.ItleveragestechnologiessuchasAI,bigdata,andmachinelearning
+to enable data-driven decision-making. This transformation improves maintenance planning, reduces downtime, and
+enhancesoverallassetperformance.22
+Inaddition,MDTenablestheuseofVirtualReality(VR)andAugmentedReality(AR)
+for remote training, inspection, and troubleshooting, improving accuracy and reducing operational risks.23
+Through
+analyzing data patterns and trends, digital maintenance also enhances asset reliability and predictability, allowing or­
+ganizations to anticipate and prevent potential failures.24
+Furthermore, the integration of IoT and cloud solutions supports
+real-time coordination among stakeholders, fostering a more connected maintenance environment. Therefore, MDT
+represents a shift toward proactive, data-centric maintenance management, enabling improvements in efficiency, pro­
+ductivity, and performance.25
+Research on MDT can be broadly categorized into several streams. One major stream addresses the technical aspects of
+digital maintenance with particular focus on the integration and application of Industry 4.0 technologies in maintenance
+processes. Researchers have extensively studied the design and deployment of predictive maintenance models and al­
+gorithms,emphasizingtheimportanceofpredictiveanalyticsinforeseeingequipmentfailuresandoptimizingmaintenance
+schedules.26,27
+Theincorporationofroboticsandautomationtechnologiesintomaintenanceprocessesisanothersignificant
+area of research, highlighting advancements in automated inspections and repairs that enhance operational efficiency and
+safety.28
+Furthermore, the contribution of machine learning, AI, and digital twins to maintenance has been explored,
+demonstrating how these technologies can create virtual replicas of physical assets to monitor conditions in real-time and
+predict future failures.29
+Another significant research stream investigates the benefits and limitations linked to the implementation of digital
+maintenancesystems.Keybenefitsidentifiedincludeimprovedoperationalefficiency,enhancedsafety,reduceddowntime,
+andcostsavings,amongothers.30
+Theseadvantagesstemfromtheabilitytoleveragereal-timedataandadvancedanalyticsto
+make informed maintenance decisions. However, significant challenges accompany these benefits and are investigated by
+manystudies.10,31,32
+Amongthese challenges, issues of data privacy,security, and interoperabilityare prominent concerns,
+as the integration of various technologies and data sources necessitates robust cybersecurity measures and seamless data
+exchangeprotocols.33
+Otherkeybarriersinclude,butarenotlimitedto,resistancetochange,financialconstraints,andlackof
+standardization.34
+A third research stream examines practical examples and case studies providing valuable insights into the real-world
+application of MDT. Various industries have been the focus of these studies, including manufacturing, automotive, and oil
+and gas sectors.35–37
+Furthermore, the successful implementation of digital maintenance systems extends beyond technical
+aspects to include human factors and organizational impacts. Although not very extensive, research in thisarea emphasizes
+the critical contribution of training and competency development in equipping maintenance personnel with the necessary
+competencies to utilize advanced technologies effectively.38
+Organizational and cultural aspects related to the adoption of
+smartmaintenancearealsosignificantareasofstudythataredirectlytiedtosuccessfulimplementations.39
+Additionally,the
+impactofdigitalmaintenanceonorganizationalstructuresandstrategieshasbeenexplored.Thesestudieshighlighttheneed
+for organizations to adapt their processes and structures to accommodate new technologies and data-driven decision-
+making.40
+Moreover,ethicalandsocialconsiderationsareincreasinglygainingattentioninthecontextofdigitalmaintenance.Inthis
+context,researchershaveexploredhowsmartmaintenancereshapeslabordemandandroles,examininghowautomationand
+AI might affect employment and the nature of maintenance work.41,42
+Additionally, the sustainability gains enabled by
+maintenance4.0isakeytheme,asdigitalmaintenancetechnologiescanenhanceresourceefficiency,reduceenvironmental
+impact, and support sustainability goals.43
+Researchers have also looked into the importance of understanding the factors that influence success for organization
+seeking to implement digital maintenance. They have identified various multifaceted factors including technological
+readiness, management support, and internal and external collaborations, as critical determinants of successful MDT
+implementations.9
+Adoption trends and strategic guidance for managerial decisions in digital maintenance have been also
+studied, providing guidance on how organizations can effectively navigate the MDT journey.44
+Additionally, roadmaps for
+Saihi et al. 3
+
+--- PAGE 4 ---
+implementation offer structured approaches to planning and executing digital maintenance initiatives, ensuring that
+organizations can systematically integrate new technologies into their maintenance practices.15,18,45
+Despitethegrowingresearchonvariousaspectsofdigitalmaintenance,thereremainsanotablegapinthedevelopmentof
+comprehensive maturity models and implementation guidelines. While existing studies provide valuable insights into
+individual components of digital maintenance, there is a lack of holistic frameworks that guide organizations through the
+entireprocessofthistransition.Maturitymodelsthatevaluateanorganization’spreparednessandprogressinadoptingdigital
+maintenance practices are particularly scarce which highlights the need for further research in this area. Additionally,
+comprehensive implementation guidelines that address both technological and organizational challenges are essential to
+support maintenance organizations in their digital transformation journey.
+These findings indicate that MDT is not driven solely by the adoptionof individual digital technologies but rather by the
+coordinated development of organizational, technological, and managerial capabilities. This multidimensional nature of
+MDTprovidesanimportantconceptualbasisforstructuringthematuritydimensionsofadedicatedmaturitymodelforMDT.
+2.2. Key enablers of maintenance digital transformation
+The shift toward MDT is not only about adopting new technologies, but also about creating an environment in which these
+technologies can be effectively utilized to improve maintenance processes. Understanding the key drivers and enablers is
+therefore essential for organizations seeking to successfully implement digital transformation. These enablers provide the
+theoreticalbasisforthematuritydimensionsdevelopedinthisstudy,astheyrepresentthecoreorganizational,technological,
+andmanagerialcapabilitiesrequiredforMDTimplementation.Amongthesedrivers,therapidadvancementoftechnological
+innovations,combinedwiththepursuitofoperationalefficiency,playsacentralroleintransformingmaintenanceoperations.
+The integration of these technologies facilitates real-time monitoring of equipment, prediction of failures, optimization of
+maintenance schedules, and overall improvement of decision-making processes.3,25,46
+However, the successful imple­
+mentation of MDT is not solely driven by technological advancements and operational needs; it also hinges on other
+organizational and managerial aspects.
+Firstly, a supportive organizational culture and strong leadership commitment are crucial for fostering an environment
+where digital technologies can thrive. This involves promoting a culture of innovation, continuous learning, and col­
+laboration.Employeesmustbeencouragedto embracenewtechnologies andadapt tochangingmaintenance practices.47,48
+Leadershipcommitmentisequallyimportant.LeadersmustarticulateaclearvisionforMDTandensurealignmentacrossall
+levelsoftheorganization.Thisincludessecuringthenecessaryresources,settingrealisticgoals,andactivelyparticipatingin
+the digital transformation journey. Leadership support helps in overcoming resistance to change and ensures that MDT
+initiatives are prioritized and sustained over time.49,50
+Secondly,effectivedatagovernanceandanalyticalcapabilityarecriticalenablersofMDT.Themassivevolumesofdata
+generatedbyIoTdevicesandsensorsmustbeaccuratelyandpromptlycollected,stored,andanalyzedtoextractmeaningful
+insights.Tothatend,datamanagementandanalyticalskillsarecriticalfortransformingrawdataintoactionableintelligence,
+and quality and integrity are paramount, as poor data quality can lead to incorrect analyses and suboptimal decisions.51,52
+ThehumanelementisanothercriticalcomponentofMDT.Asmaintenanceprocessesbecomemoredigitalized,theskill
+setsrequiredformaintenancepersonnelalsoevolve.Thereisagreementamongresearchersthatorganizationsmustinvestin
+continuouseducationandtrainingprogramstodevelopthedigitalcompetenciesoftheirworkforce.Thisincludestrainingin
+dataanalytics,IoT,AI,andotherrelevanttechnologies.53,54
+Moreover,itisessentialtoaddresspotentialresistancetochange
+amongemployees. Changemanagementstrategies, suchas involvingemployees in the transformation process,articulating
+the benefits of MDT in a clear and accessible manner, and providing assistance throughout the transition, can alleviate
+resistance and foster a positive attitude towards digital maintenance.3,55
+Furthermore, collaboration within and beyond the organization is a vital enabler of MDT. Internally, cross-functional
+collaborationbetweenmaintenance,operations,IT,andotherdepartmentsisessential.Suchcollaborationensuresthatdigital
+maintenanceinitiativesarewellintegratedandalignedwithorganizationalgoals.56
+Externally,partnershipswithtechnology
+vendors, research institutions, and other industry players facilitate knowledge sharing, access to cutting-edge technologies,
+and the development of best practices.17
+Despite the advancements and opportunities presented by MDT, several gaps remain. While many studies focus on the
+technologicalaspectsofMDT,aholisticapproachthatalsoaddressesorganizational,cultural,andhumanfactorsisessential.
+In an attempt to address this gap, a recent work by9
+identified the multifaceted underpinning enablers driving this
+transformation.TheauthorsalsovalidatedtheidentifiedenablersthroughconductingaDelphistudywithahighlyqualified
+expertpanelincludingbothresearchersandpractitioners.However,researchonthespecificenablersanddriversofMDTis
+stillevolving,andmoreempiricalstudiesareneededtounderstandthevariousimpactsofthesefactorsindifferentindustrial
+contexts.
+4 International Journal of Engineering Business Management 18
+
+--- PAGE 5 ---
+2.3. Maturity models and frameworks in maintenance digital transformation
+GiventhemultidimensionalnatureofMDTidentifiedintheprevioussections,organizationsrequirestructuredapproachesto
+assess their progress in implementing MDT initiatives. Maturity models provide a suitable mechanism for this purpose, as
+they enable organizations to evaluate their current transformation stage and identify structured pathways for improvement.
+Maturity models have become essential tools in various fields to evaluate and guide organizations’ progress towards
+achieving optimal performance and efficiency. The essence of maturity assessments lies in their ability to provide a
+systematic evaluation of an organization’s processes, capabilities, and overall maturity within a specific domain.57
+This
+concept originated with the Capability Maturity Model (CMM) in the 1980s, developed to improve software development
+processesbyCarnegieMellonUniversity’sSoftwareEngineeringInstitute(SEI).CMMprovidedastructuredframeworkfor
+assessingthematurityofsoftwaredevelopmentpracticesandidentifyingareasforimprovement.58
+Intheearly2000s,theSEI
+introduced the Capability Maturity Model Integration (CMMI), which was designed to provide a more comprehensive
+approachtoprocessimprovement,coveringareassuchassystemsengineering,integratedproductandprocessdevelopment,
+andsuppliersourcing.59
+Astheconceptofmaturitymodelsgainedpopularity,researchersandpractitionersbegantodevelop
+models for other domains beyond software engineering, including supply chain management,60
+project management,61
+government services,62
+and innovation management,63
+among others. These maturity models share the common goal of
+helping organizations systematically improve their processes and capabilities through clearly defined stages of maturity.
+Eachstagerepresentsahigherlevelofsophisticationandeffectiveness,guidingorganizationsfrominitial,ad-hocpractices
+to optimized, continuous improvement processes.64
+Inthefieldofmaintenance,theintegrationofmaturityassessmentsbecamealogicalprogressiongiventheparadigmshift
+inmaintenancestrategies.Inessence,thedomainofmaintenancematurityassessmenthasseensignificantevolutionoverthe
+past two decades. Initially, research efforts were concentrated on establishing foundational frameworks. Pioneering
+contributionsby65–67
+focusedonthematurityofcorrectivemaintenanceprocesses,theimportanceofeducationandtraining
+for maintainers, and introduced a process model for problem management aimed at enhancing all aspects of maintenance.
+Thisearlyperiodmarkedthebeginningofastructuredapproachtomaintenancematurity,acknowledgingthecriticalroleof
+human factors alongside processes and technology. Moving into the early 2000s, research began to adopt a more integrated
+and strategicview of maintenance.68
+and69
+highlighted astrategic asset managementframework and the development of an
+evaluation framework within rail transit, blending strategic management principles with maintenance operations. The late
+2000sandearly2010ssawtheintroductionofCMMstoidentifypotentialimprovementswithinmaintenanceorganizations,
+with70
+proposing a “house of maintenance” framework based on this model. By the turn of the decade, the focus shifted
+towards the adoption of information and communication technologies (ICT) in maintenance.71
+explored the relationship
+betweene-Maintenancetechnologyselectionandthematurityofmaintenanceserviceprovisionsystems.Thisperiodreflects
+anincreasedinterestinleveragingdigitalsolutionstoenhancemaintenanceoperations,atrendthatcontinuestogrowtoday.
+Enteringtheseconddecadeofthe21stcentury,thefocusexpandedtoincludespecializedsectors,asseeninthestudyby72
+on
+problem management maturity in the telecommunications sector. Similarly,73
+assessed maintenance processes within air
+traffic control service providers, aligning with ISO/IEC 15504 standards, showcasing the application of maturity models in
+highly regulated and safety-critical environments.
+Research in the mid-2010s reflected the dual challenges of digitalization and integration, with maintenance maturity
+modelsserving as diagnostic tools and roadmapsfororganizational development in the digital era.74,75
+There was anotable
+shift towards the integration of maintenance and production management, especially within small and medium-sized
+enterprises (SMEs).75
+This trend emphasized the importance of digital readiness as organizations navigated the trans­
+formative wave of Industry 4.0.74
+The focus expanded to asset-intensive sectors such as public transportation and utilities,
+where continuous improvement and strategic alignment with organizational objectives became crucial.76,77
+From
+2020onwards,notableresearchworkscoincidedwiththedevelopmentofIndustry4.0.Thesestudiesreflectedanincreasing
+focuson integrating maintenancemanagementwith advanceddigital technologiesand the strategicimperativesof Industry
+4.0.14,15
+In fact, the emergence of Industry 4.0 has marked a new era of digital maturity, emphasizing the critical role of
+integratingmaintenancewithdigitaltechnologies.Researchinthisarea,althoughnotextensive,focusedontheintersection
+ofmaintenancematurityanddigitalization,stressingtheneedformaintenanceorganizationstobepreparedfortheadoption
+of digital technologies. This body of work explored how companies can assess and improve their digital readiness to
+effectivelyutilizeadvancedtechnologiesformaintenance.Thestudiesof14
+and78
+areexamplesoftheworksthatinvestigated
+digital maturity within the maintenance context. Additionally,74
+proposed a maturity model that evaluates the digital
+readiness of manufacturing firms, highlighting the transformative effects of digitalization on maintenance management.79
+introduced a digital-twin maturity model for asset management grounded in the Gemini principles, exemplifying the
+innovativeapproachtoassessingdigitaltwinmaturityinthecontextofassetmanagement.Toillustratethecurrentlandscape
+Saihi et al. 5
+
+--- PAGE 6 ---
+of MDTMM, Table 1 provides a comparative analysis of the extant works, highlighting their contributions to the field and
+contrasting them with the current study.
+Despite these advancements, the application of maturity assessment in MDT is a relatively new and evolving area, and
+research on MDTMM remains limited. Existing works often lack comprehensiveness, focus on specific segments of the
+transformation, or fail to validate their proposed frameworks. That is, there is a clear gap in the availability of a
+comprehensive maturity model that thoroughly covers the various dimensions involved in the MDT journey. Current
+researchoftenevaluatestheextenttowhichsomedigitaltechnologiesareintegratedintomaintenancepractices,butaholistic
+modelencompassingallfacets ofMDTremainselusive.Asnotedby,15
+havingpertinentmodelsto comprehensivelyassess
+readiness in this context helps organizations understand their current capabilities and identify areas needing improvement
+along the maturity scale. However, most existing digital maturity models are designed for broad digital transformation
+contexts and do not explicitly capture the specific organizational, technological, and managerial characteristics associated
+withMDT.Furthermore,asidefromafewnotableexceptions,asignificantcritiqueofexistingmaintenancematuritymodels
+is that their development often relies on the subjective best efforts of the authors, rather than following clearly defined,
+standardizedguidelinesasdiscussedin section2.4.Tothatend,thereisapressingneedforadoptingmorestandardizedand
+structuredmethodologiesindevelopingmaintenancematuritymodelsingeneralandMDTMMinparticular,ashighlighted
+by80
+and.57
+Takentogether,thereviewedliteraturehighlightsthatexistingmaturitymodelsinthecontextofdigitaltransformationand
+maintenanceareofteneithertoogeneric,focusonisolateddimensions,orlackempiricalvalidation.Atthesametime,these
+insights indicate that MDT maturity must be understood as a multidimensional construct emerging from the interaction of
+organizational, technological, managerial, and human capabilities. These limitations and conceptual observations point to
+the need for a more comprehensive and context-specific framework, directly motivating the structure of the proposed
+Table 1. Comparative analysis of existing works.
+Study Contribution Methods/guidelines
+used
+Key maturity dimensions Maturity levels
+14
+Propose a conceptual
+framework for evaluating
+digital maturity of
+maintenance processes
+tailored for SMEs.
+Action research
+approach, case
+studies
+Some technological and
+organizational factors
+3 levels (low, medium,
+high)
+No clear guidelines
+for model
+development
+74
+Develop a maturity model to
+measure the digital
+readiness of manufacturing
+firms.
+Based on CMMI
+principles
+Process, monitoring and
+Control, technology
+and organization
+structure
+5 levels (Initial, Managed,
+Defined, Integrated and
+Interoperable, Digital-
+Oriented)
+Covered only the
+phases design and
+populate of80
+79
+Develop a model for
+measuring digital twin
+maturity for asset
+management
+Gemini principles,
+surveys, case
+studies.
+Three dimensions
+(purpose, trust,
+function) and nine
+subdimensions
+6 levels (Unaware,
+Identifiable, Aware,
+Communicative,
+Interactive, Instructive)
+81
+Extension of the lean smart
+maintenance maturity
+model by adding Industry
+4.0 dimension
+Based on the
+principle of design
+science research
+and CMMI.
+Operative, strategic,
+normative
+5 levels (Initial, Managed,
+Defined, Quantitatively
+Managed, Optimizing)
+53
+Proposed a maturity
+assessment model for
+knowledge-based
+maintenance in smart
+manufacturing
+Quality indicators,
+balanced
+scorecard
+approach, case
+study.
+Data quality, information
+quality, knowledge
+quality, maintenance
+execution quality
+4 levels (Descriptive,
+Diagnostic, Predictive,
+Prescriptive)
+This work Proposes a comprehensive
+and validated maturity
+model for MDT.
+Experts’
+consultation,
+statistical
+modelling,
+previous research.
+Based on the enablers
+developed by9
+that
+include 10 dimensions
+and 40 indicators.
+5levelsthatwillbedefined
+in Section 3.
+Based on guidelines
+of57
+and80
+6 International Journal of Engineering Business Management 18
+
+--- PAGE 7 ---
+MDTMM,whichoperationalizestheseinterdependentdimensionsintoacoherentandempiricallyvalidatedmaturitymodel
+tailored to the maintenance context.
+2.4. Guidelines for developing maturity models
+Over the years, some methodologies and guidelines have been proposed to guide the systematic development of maturity
+models. This section reviews the most influential works in this area and compares their contributions.
+Reference80
+provided one of the most comprehensive guidelines applicable across various domains. Their methodology
+includesfivephases:“scope,design,populate,test,deploy,andmaintain”.Eachphaseiscarefullydetailedtoensurearobust
+model development process. They stress the importance of thorough domain understanding, iterative refinement, and
+applyingthemodelacrossmultipleorganizationsforvalidationandbenchmarking.Thisframeworkisparticularlynotedfor
+itsflexibilityandadaptabilitytodifferentorganizationalcontexts,makingithighlyrelevantfordiverseindustries.82
+proposed
+adetailedprocedurespecificallytailoredforITmanagementmaturitymodels.Theirmodelcompriseseightphases:problem
+formulation, benchmarking against existing models, development strategy formulation, iterative model development,
+evaluation, implementation, and maintenance. Emphasizing design science principles, the authors advocated for a rigorous
+and iterative process to ensure the practical applicability and effectiveness of the maturity model. Based on this work,83
+extended the existing guidelines by offering suggestions on how to improve extant design principles for maturity models
+development.84
+introduced the concept of focus area maturity models, which differ from fixed-level models like CMM by
+allowingincrementalimprovementswithinspecific functionaldomains.Thisapproachisparticularlysuitedfordeveloping
+areassuchasenterprisearchitectureandsoftwareproductmanagement,providingabalancedandincrementaldevelopment
+path.57
+provided a structured approach to creating maturity grids that is practical and applicable across different domains.
+They outlined a four-phase roadmap: planning, developing, evaluation, and maintenance. The authors highlighted the
+necessityofcleardefinitionsandlogicalprogressionofmaturitylevels,andtheyprovidedguidanceonformulatingcelltext
+for behavioral characteristics of processes at each maturity level.
+García-Mireles85
+conducted a systematic literature review to analyze existing methods and practices for developing
+maturity models. They identified common activities across various methodologies, such as establishing goals, designing
+modelarchitecture,settingcapabilitylevels,andpilottesting.Theirreviewhighlightedtheneedforasoundtheoreticalbasis
+andrigorousmethodologyinthedevelopmentofmaturitymodels,pointingoutthatmanymodelslacktheseelementswhich
+leads to ambiguous results in practice. While each of the above works provides valuable insights and methodologies for
+developingmaturitymodels,80
+and57
+offerthemostcomprehensiveanduniversallyapplicableguidelines.Bothframeworks
+shareseveralcommonstages,suchasscoping,designing,populating,andvalidatingthemodel,whichcanbemappedtoeach
+otherand complementeachotherin someotherrespects.Forinstance,80
+phases ofdesignandpopulatealignwith57
+stepsof
+definingmaturitylevelsand identifyingkey processareas.These stages emphasizethe iterative development and empirical
+validation of the model, ensuring its relevance and effectiveness. Furthermore, the complementary nature of these two
+frameworks provides a robust foundation for developing maturity models in the context of MDT through unifying the
+common stages and taking advantage of the complementary ones.
+Takentogether,thereviewedliteraturesuggeststhatMDTcannotbeunderstoodsolelythroughtheadoptionofindividual
+digital technologies. Instead, MDT maturity emerges from the alignment of multiple organizational dimensions, including
+strategic orientation, leadership commitment, technological infrastructure, knowledge and skills, and organizational
+integration.Thisinsightprovidestheconceptualfoundationforthepresentstudy.Accordingly,theproposedmaturitymodel
+conceptualizesMDTasamultidimensionaltransformationprocessandtranslatestheidentifieddimensionsintomeasurable
+constructs.Theempiricalphaseofthestudyisthereforedesignedtotestthereliabilityandvalidityoftheseconstructsandto
+operationalize them into a structured maturity model and maturity grid that can support organizational assessment and
+improvement.
+3. Research methodology
+Based on the literature synthesis presented in the previous section, this study adopts the premise that MDT maturity is a
+multidimensional construct that must be operationalized through theoretically grounded and empirically validated di­
+mensions. The methodological design therefore aims to translate the conceptual understanding of MDT into a structured
+maturity assessment model. To achieve this, the study combines established maturity model development guidelines with
+empirical construct validation using PLS-SEM and qualitative expert evaluation to refine and operationalize the final
+maturity grid.
+ThedevelopmentofacomprehensivematuritymodelforMDTrequiresastructuredandsystematicapproach.Thisstudy
+employs a dual methodology: a macro approach based on adaptation of the guidelines established by80
+and,57
+and a micro
+Saihi et al. 7
+
+--- PAGE 8 ---
+approachthatdefinesthedetailedmethodologicalstepsadoptedtoconducteachmacrostep.Themacroapproachprovidesa
+high-level framework for the development process, while the micro approach offers specific methods and techniques to
+ensure the robustness and validity of the model, as illustrated in Figure 1.
+3.1. Macro approach: Phases of model development
+The macro approach to developing the MDTMM incorporates the following phases, drawing on the works of80
+and57
+.
+· Scope & Design: Define the boundaries, focus, and structure of the model, including the domain it will target, the
+stakeholders involved, and the rating scale adopted.
+· Populate: Identify the content of the model, including domain components and sub-components which form the
+maturity dimensions of the model and their corresponding indicators.
+· Test: Test the model components and constructs for relevance, reliability, and validity.
+· Development: Populate the maturity grid cells with detailed descriptions and formulations, drawing on existing
+maturity models and best practices.
+· Evaluation: Iteratively refine the model through expert consultations to improve its accuracy and applicability.
+3.2. Micro approach: Methodological steps
+3.2.1. Scope & design
+As discussed in the previous sections, the focus of the MDTMM is to evaluate organizational readiness and progression in
+adoptingdigitalmaintenancepractices.AcomparisonwithexistingmodelsisconductedinSection2.3,illustratedbyTable1,
+which highlights the contributions and gaps of extant works and the peculiarities of this research.
+Figure 1. Research methodology.
+8 International Journal of Engineering Business Management 18
+
+--- PAGE 9 ---
+Five levels of maturity are defined for the MDTMM: “Initial, Managed, Defined, Quantitatively Managed, and
+Optimizing”,asdescribedinTable2.Theselevelsprovideacomprehensiveandstructuredframeworkthatalignswellwith
+establishedmaturitymodelssuchasCMMI,86
+ensuringconsistencyandcomparabilitywithothermaturityassessments.The
+clear definition of stages, from initial implementation to continuous optimization, enables organizations to systematically
+assess their progress and identify specific areas for improvement. This structured approach facilitates a more precise
+evaluationofdigitaltransformationeffortsinmaintenance,ensuringthateachlevelbuildsuponthepreviousonetoachieve
+higher maturity and better performance.
+3.2.2. Populate
+The components and subcomponents forming the maturity domains were identified in a previous work by,9
+which used a
+hybrid-reactive Delphi approach. This approach involved four rounds of iterative feedback and consensus building with a
+highly qualified expert panel, ensuring comprehensive coverage of the enablers of successful MDT. That study sys­
+tematicallyidentifiedandempiricallyvalidatedthekeyenablersofMDTthroughexpertconsensus,providingatheoretically
+grounded foundation for the maturity dimensions adopted in the present research. A snapshot of the various MDT maturity
+domains and their corresponding indicators are presented in Figure 2. These validated enablers represent the core or­
+ganizational,technological,managerial,andhumancapabilitiesrequiredforsuccessfulMDTimplementationandtherefore
+serve as the conceptual basis for defining the maturity dimensions of the proposed model.
+3.2.3. Test
+Theobjectiveofthisphaseistorigorouslyvalidatethematuritydimensionsandtheirrespectiveindicators,identifythemost
+impactful ones, and bring these dimensions to a manageable level by organizations. This is a crucial step to ensure the
+reliabilityandaccuracyofthedevelopedmaturitymodel,confirmingthatiteffectivelymeasurestheintendedaspectsrelated
+to MDT. To achieve this, a rigorous methodology is adopted, involving the development and administration of a detailed
+questionnaire followed by advanced statistical analysis.
+Firstly, a questionnaire is designed to capture data on the identified maturity dimensions and indicators. The survey
+targetedprofessionalsinvolvedinmaintenancemanagementanddigitaltransformationinitiativesacrossmultipleindustrial
+sectors, including manufacturing, energy, transportation, and other asset-intensive industries. The participating organi­
+zations vary in size, ranging from medium-sized firms to large multinational companies with established maintenance
+operations. Geographically, the respondents are distributed across multiple regions (e.g., UAE, France, India, USA, KSA,
+Tunisia,SouthAfrica,Sweden),reflectingtheinternationalscopeofMDTinitiativesandprovidingadiverserepresentation
+of maintenance practices across different organizational and industrial contexts. Participants were identified through
+professional networks, industry contacts, and relevant professional communities focusing on maintenance and digital
+transformation.Thesamplingapproachaimedtocapturerespondentswithdirectexperienceinmaintenanceoperationsand
+digital initiatives to ensure informed assessments of the maturity dimensions. Although the sampling strategy can be
+characterized as purposive and snowball-based, it enabled the collection of insights from practitioners actively engaged in
+MDTinitiatives.Giventherelatively largenumberofrespondents,theircharacteristicsaresummarizedinaggregatedform
+ratherthanpresentedindividually.Respondentswereencouragedtoprovidedetailedandhonestfeedback,whichisessential
+fortherobustnessandaccuracyofthesubsequentanalysis.ThequestionswereformulatedtoassessdifferentaspectsofMDT,
+Table 2. Defined maturity levels.
+Level Meaning
+1. Initial This level highlights the absence or very rudimentary stages of digital transformation, setting a clear
+baseline for improvement and emphasizing the ad-hoc nature of initial practices.
+2. Managed This level recognizes organizations that have moved beyond the initial stage and have some level of
+managedprocesses:Basicprocessesareestablished,andthereisanefforttomanagethem,butthey
+are not yet standardized.
+3. Defined This level reflects a more mature stage where processes are managed and also defined and
+standardized: There is a coherent framework and standardized procedures that are consistently
+followed.
+4. Quantitatively
+Managed
+Thislevelemphasizestheuseofquantitativedatatomanageprocesses,highlightingthetransitiontoa
+more analytical and metrics-driven approach.
+5. Optimizing This level represents the highest maturity, where in addition to managing and measuring processes,
+organizations continuously seek to optimize and innovate, reflecting a commitment to excellence
+and sustained improvement.
+Saihi et al. 9
+
+--- PAGE 10 ---
+suchasthe adoptionof digitaltechnologies,the integrationofdataanalytics, theorganizationalculturetowardsinnovation,
+and the efficiency of maintenance processes. Since the survey responses were collected from knowledgeable professionals
+involvedinMDTinitiativesandtheconstructsrepresentorganizationalcapabilitiesratherthanperceptualattitudes,therisk
+of common method bias is limited.
+Followingdatacollection,PLS-SEMisemployedtoanalyzethedata.Itisisapowerfulstatisticaltechniquethatallowsfor
+thetestingofcomplexrelationshipsbetweenobservedandlatentvariables.87,88
+TheselectionofPLS-SEMisappropriatefor
+this study for several reasons. First, PLS-SEM is well suited for exploratory and predictive research contexts where
+theoretical development is still evolving, as is the case with MDT maturity assessment. Second, the method can handle
+complexmodelswithmultiplelatentconstructsandindicatorswhileremainingrobustwithmoderatesamplesizes.89
+Third,
+thismethodisparticularlysuitableforvalidatingtheconstructsofthematuritymodel,asitcanassessboththemeasurement
+model (the relationships between indicators and their corresponding dimensions) and the structural model (the causal
+relationships between the dimensions themselves).
+This analysis helps in evaluating the reliability and validity of the maturity dimensions. Reliability is assessed by
+examining the internal consistency of the indicators, typically using Cronbach’s alpha. A high Cronbach’s alpha value
+indicatesthattheindicatorsreliablymeasurethesameunderlyingconstruct.Validity,ontheotherhand,isassessedthrough
+convergent and discriminant validity tests. Convergent validity ensures that indicators of a specific dimension are highly
+correlated, while discriminant validity confirms that the dimensions are distinct from each other.89
+In this study, the
+measurement model is reflective, meaning that the indicators reflect the underlying construct they are intended to measure.
+This specification is appropriate because the indicators represent observable manifestations of underlying organizational
+capabilitiesrelatedto MDTmaturityrather thanindependentformativecomponents.Oncethereliability andvalidityofthe
+measurement model are established, the structural model is assessed. Essentially, the path model tests the significance and
+relevanceoftherelationshipsbetweeneachmaturitydimension/constructandtheoverallMDTmaturity.Figure3describes
+the steps adopted for measurement model and structural model evaluation.
+Several methodological assumptions underpin the empirical analysis conducted in this study. First, the measurement
+model is specified as reflective, assuming that the observed indicators represent manifestations of the underlying maturity
+constructs.89
+Second,theempiricaldatausedintheSEManalysisarecross-sectional,capturingrespondents’perceptionsof
+Figure 2. Domain components and subcomponents.
+10 International Journal of Engineering Business Management 18
+
+--- PAGE 11 ---
+MDT maturity at a specific point in time. While this approach is appropriate for the initial validation of the maturity
+dimensions,itdoesnotcapturethedynamicevolutionofdigitaltransformationovertime.Finally,althoughthesamplesizeis
+adequateforPLS-SEManalysis,thefindingsshouldbeinterpretedwithconsiderationofpotentialsamplingbiasassociated
+with survey-based studies.
+3.2.4. Development
+Thedevelopmentphaseisintegraltotheoverallmaturitymodelcreation,focusingonpopulatingthegridcellswithdetailed
+descriptions and guidelines that correspond to each maturity level and dimension. This phase builds on the previously
+validatedmaturitydimensionsandtheirindicators,providingpracticalinsightsfororganizationstounderstandtheircurrent
+maturity level and the steps needed to advance.
+Theprocessbeginswithathoroughreviewofexistingliteratureonmaturitymodels,notlimitedtothefieldofmaintenance
+but also encompassing broader areas such as digital transformation in general and other industry-specific maturity models.
+ThiscomprehensivereviewhelpsinidentifyingbestpracticesandcommonelementsthatcanbeadaptedtotheMDTcontext.
+Given the limited literature on MDT-specific maturity models, insights are drawn from analogous fields to ensure the
+development of a robust and comprehensive model.
+Next, the grid cells are populated with detailed descriptions of each maturity level for all identified dimensions. These
+descriptions serve as benchmarks, illustrating the characteristics and capabilities that organizations should exhibit at each
+maturity stage. The five levels (Initial, Managed, Defined, Quantitatively Managed, and Optimizing) provide a clear
+progressionpathtohelporganizationssystematicallyenhancetheirMDTpractices.Eachleveliscarefullydefinedtoensure
+clarity and practical applicability.
+3.2.5. Evaluation
+Theevaluationphaseiscrucialforensuringthepracticalapplicabilityandrobustnessofthedevelopedmaturitymodel.This
+phase involves an iterative process of refinement through expert consultations and initial validation steps to enhance the
+model’s accuracy, relevance, and usability in real-world contexts.
+Theinitialphaseoftheevaluationprocessentailsdevelopingacomprehensivequestionnairetoconsultwithexpertsinthe
+field. This questionnaire is designed to capture both structured and open-ended feedback. The structured component asks
+experts to rate the overall comprehensiveness, practical applicability and adaptability of the model as well as their level of
+agreement with the formulation of each cell in the maturity grid across all levels. Experts rate each maturity cell on a Likert
+scale, indicating their agreement with how well the cell descriptions represent the intended maturity level and dimension.
+Figure 3. Measurement and structural models evaluation.
+Saihi et al. 11
+
+--- PAGE 12 ---
+This structured feedback helps identify the experts’ level of consensus and areas that may need further clarification or
+adjustment. Whereas the open-ended component provides space for experts to offer suggestions for improvement and
+refinement. They provide qualitative feedback including comments, suggestions, and insights based on their expertise and
+experience. These open-ended responses are essential for understanding the complex perspectives of the experts and
+capturing any overlooked aspects of the model.
+ThequestionnaireisdistributedtoacarefullyselectedpanelofexpertswithextensiveexperienceandknowledgeinMDT
+and related fields. The experts were selected based on their professional experience in maintenance management, digital
+transformationinitiatives,andrelateddomains,ensuringthattheevaluationreflectsbothacademicandindustryperspectives.
+Table 3 describes the profiles of the 11 experts involved in the evaluation phase. Subsequently, the analysis of the collected
+data involves two parts1
+: A quantitative analysis where the experts’ ratings are statistically analyzed. Measures of central
+tendencyand variability(standarddeviation(STD)andinterquartilerange(IQR))arecalculatedfortheratingsprovidedon
+each maturity cell, and the Intraclass Correlation Coefficient (ICC) method is utilized to evaluate the degree of agreement
+among the experts.2
+A qualitative analysis where the open-ended responses are analyzed using thematic analysis to extract
+keythemes,insights,andsuggestionsfromtheexperts.Thisprovidesadeeperunderstandingoftheexperts’perspectivesand
+identifiesspecificareasforimprovement.Thefeedbackisthencategorizedandsynthesizedtoguidetheiterativerefinement
+of the model.
+Expert involvement in the MDTMM development process is structured around two distinct groups. The first group
+consistsof106professionalswhocontributetotheempiricalvalidationofthematuritydimensionsandindicatorsthroughthe
+survey-based SEM analysis described in Section 4.1. The second group consists of 11 experts involved in the evaluation
+phase, where they assess and refine the maturity grid through quantitative ratings and qualitative feedback, including the
+evaluation of its comprehensiveness, applicability, and adaptability, as presented in Section 4.3.
+Theoutcomesofthescope&designandpopulatephases(Steps1and2)establishtheconceptualstructureandcontent
+of the MDTMM, including the definition of maturity levels and the identification of the core dimensions and indicators
+derivedfromthe literatureand prior research,asdetailed in Sections 3.2.1 and3.2.2. Theseelements formthefoundation
+forthesubsequentphasespresentedinSection4.ToprovideaconciseoverviewoftheMDTMMdevelopmentprocessand
+its associated outputs, Figure 4 summarizes the progression from the initial conceptual structure to the final validated
+model.
+4. Results and discussion
+4.1. A structural equation modeling analysis of the maturity dimensions
+Thissectionpresentstheresultsofthetestphase(Step3)describedinSection3.2.3,wherethematuritydimensionsandtheir
+associated indicators are empirically validated using PLS-SEM. The analysis is based on survey data collected from
+maintenance professionals, as described below.
+Table 3. Profiles of experts involved in the evaluation phase.
+Expert ID Education Position/Field of expertise Country Years of
+experience
+Expert 1 PhD Professor/Maintenance and reliability, digital transformation UAE Morethan20years
+Expert 2 PhD Research specialist/Maintenance, production, digitalization Sweden 5 to 10 years
+Expert 3 Master CTOandCOO/Operations,strategy,digitalservicestransformation Sudan Morethan20years
+Expert 4 Master Digital transformation product and operation manager Sweden Morethan20years
+Expert 5 Master Head of maintenance/Digital maintenance, technology
+management
+UAE Morethan20years
+Expert 6 Master Head of Digital Maintenance Indonesia 10 to 20 years
+Expert 7 PhD Project manager/Maintenance and quality management,
+digitalization
+India Morethan20years
+Expert 8 Master Strategy and innovation consultant/Operation management,
+technology
+SaudiArabia 10 to 20 years
+Expert 9 Master Head of operational excellence and digital transformation UAE 10 to 20 years
+Expert10 Master Head of operations/Operation management, digital
+transformation
+Tunisia Morethan20years
+Expert11 Master Head of preventive and predictive maintenance Iran Morethan20years
+12 International Journal of Engineering Business Management 18
+
+--- PAGE 13 ---
+The survey instrument was distributed among maintenance professionals involved in digital transformation initiatives
+acrossmultipleindustrialsectors,yielding106completeresponsesusedfortheempiricalanalysis.PriortotheSEManalysis,
+responses were screened for completeness and consistency to ensure the quality of the dataset. The use of targeted
+professionalnetworkshelpedensurethatthecollectedresponsesrepresentpractitionersactivelyengagedinMDTinitiatives,
+therebyreducingthe risk of non-responsebias.Sophisticated SEMapproaches were subsequently appliedon thisdataset to
+evaluatethemodelintermsofreliabilityandvalidityandtoexaminetherelationshipsamonglatentvariables.Thesystematic
+approach illustrated in Figure 3 is employed to evaluate the results of PLS-SEM analysis.
+4.1.1. Measurement model evaluation and estimation
+A series of essential checks are carried out to verify the reliability and validity of the measurement model. The model
+undergoes iterative modification until the constructs’ measurement criteria are adequately satisfied.89
+First, internal
+consistency reliability isassessed through measures suchas Cronbach’s alpha andcomposite reliability to determinethe
+degreetowhichitemswithinaconstructconsistentlycapturethesamelatentconcept.Scoresgreaterthan0.7indicatehigh
+internalconsistency.Second,convergentvalidityisevaluatedusingstandardizedouterloadingsandtheaveragevariance
+extracted (AVE) for each construct. The loadings indicate how strongly each indicator relates to its latent construct,
+whereas AVE represents the share of variance the construct captures relative to measurement error. As a rule of thumb,
+loadings above 0.70 and AVE greater than 0.50 provide evidence of strong convergent validity. Indicators with loadings
+between0.4and0.7areevaluatedfortheirimpactonotherreliabilityandvaliditymeasuresandtheirconceptualrelevance
+before deciding on their exclusion. Finally, discriminant validity is evaluated through Fornell-Larcker criterion (FLC)
+and the Heterotrait-Monotrait (HTMT) ratio where values exceeding 0.85 indicate a potential lack of discriminant
+validity.90
+After running the factor modeland analyzing the results, the indicators failing to meet thisthresholdof 0.7 outerloading
+are flagged, and the effects of their removal on reliability and validity indicators are rigorously assessed, as presented in
+Table4.Consequently,11indicatorsareremoved,resultinginarefinedmeasurementmodelwith29indicatorsmeasuringthe
+exogenousvariables,andnineindicatorsmeasuringtheendogenousvariableasdescribedinFigure5,whichalsoshowsthe
+indicators’respectiveouterloadings.Theremovaloftheseindicatorswasevaluatednotonlybasedonstatisticalcriteriabut
+also from a conceptual standpoint to ensure that the remaining indicators preserved the theoretical coherence of the
+corresponding maturity dimensions. For example, when multiple indicators within a dimension captured closely related
+organizational practices, the refinement process prioritized retaining those indicators that best represented the core
+conceptual meaning of the dimension while removing redundant or weaker measures. This is further illustrated by the
+removaloftheindicatorEXI.1,whoseexclusionwasstatisticallyjustifiedanddidnotcompromisetheconceptualrelevance
+of the External Integration dimension (see Table 4). As summarized in Table 5, reliability assessments of the adjusted
+measurement model comfortably exceed established benchmarks for acceptability. Convergent validity is established
+through AVE indicators that all surpass the threshold of 0.5. Discriminant validity is supported by the obtained FLC
+measures, confirming that for each construct the square root of its AVE exceeds its highest correlation with any other
+Figure 4. Summary of MDTMM development steps and associated outputs.
+Saihi et al. 13
+
+--- PAGE 14 ---
+construct.The findings of the analysis further substantiate discriminant validity, as all the obtained HTMT ratios fall below
+the stringent cutoff value of 0.85, indicating that the constructs are empirically distinct.
+These results confirm that the proposed maturity dimensions are empirically robust and suitable for assessing MDT
+maturityacrossmultipleorganizationaldomains.Thestrongreliabilityandvalidityindicatorssupportthemultidimensional
+Table 4. Impact of excluding indicators during the measurement model refinement process.
+Construct Indicators to
+exclude
+Impact
+DigitalStrategy–StrategicAlignment(DSA) DSA.4 Cronbach alpha, Composite reliability, and AVE improved
+significantly post removing the indicators Management Practices (MPR) MPR.2
+MPR.3
+Organizational Development & Change
+Management (ODC)
+ODC.1
+Organizational Culture (OCL) OCL.3
+OCL.4
+Knowledge Management & Skills
+Development (KMS)
+KMS.2
+Technology Management Aspects (TMA) TMA.1
+Data Management Aspects (DMA) DMA.2
+Internal Integration (INI) INI.2
+External Integration (EXI) EXI.1
+Figure 5. Revised SEM model.
+14 International Journal of Engineering Business Management 18
+
+--- PAGE 15 ---
+conceptualization of MDT proposed in Section 2, suggesting that the organizational, technological, and managerial factors
+identified in the literature can be operationalized as coherent maturity constructs. This finding reinforces the argument that
+MDTshouldbeunderstoodasacross-dimensionalorganizationaltransformationratherthanapurelytechnologicaladoption
+process.
+4.1.2. Path model evaluation
+After establishing reliability and validity of the measurement model, the focus turns towards estimating and evaluating the
+structural model, which is crucial for understanding the model’s predictive power and the relationships between its
+components. The detailed procedure illustrated in Figure 3 is employed. The process begins by checking the Variance
+Inflation Factors (VIF) to mitigate potential collinearity issues, then path coefficients are estimated while checking their
+statisticalsignificance. The model’s explanatory capability/power is captured by the coefficient of determination R2
+, which
+denotes the variance in endogenous constructs explained through their relationships with exogenous constructs. The effect
+sizef2
+assesseshowtheomissionofaparticularexogenousvariableinfluencesthemodel,asindicatedbytheresultingchange
+in R2
+. According to,89
+effect sizes are interpreted as small at 0.02, medium at 0.15, and large at 0.35, while values below
+0.02 are treated as negligible. Predictive relevance is assessed using Stone–Geisser’s Q2
+, derived via the blindfolding
+procedure; positive Q2
+values indicate that the exogenous constructs have predictive power for the specified endogenous
+variable. The results of these criteria are presented in Table 6, which provides an overview of the explanatory power,
+predictive relevance, and effect sizes of the maturity dimensions. According to the guidelines of,89
+the R2
+value for the
+endogenous variable “MDT_Maturity” is considered high. Regarding the effect sizes f2
+, “KMS” has large effect on
+“MDT_Maturity”. The variables “DSA”, “TML”, “ODC” and “OCL” have medium to large effects, while “MPR” has a
+mediumeffect.Thevariables“DMA”and“INI”havesmalltomediumeffects,“TMA”hasasmalleffect,andnosignificant
+effect is observed for “EXI”. The predictive relevance of the endogenous construct is confirmed by a positive Q2
+value.
+Table 6. Criteria for evaluating the structural model.
+Assessment criteria MDT_maturity
+R2 0.708
+Q2
+predict 0.596 (
+Effect size f2
+DSA 0.217 (Medium to large effect)
+TML 0.194 (Medium to large effect)
+MPR 0.151 (Medium effect)
+ODC 0.162 (Medium to large effect)
+OCL 0.187 (Medium to large effect)
+KMS 0.348 (Large effect)
+TMA 0.025 (Small effect)
+DMA 0.098 (Small to medium effect)
+INI 0.077 (Small to medium effect)
+EXI 0.013 (No effect)
+Table 5. Reliability and convergent validity analysis for the refined
+measurement model.
+Construct Cronbach’s alpha Composite reliability (ρc) AVE
+DSA 0.849 0.908 0.766
+TML 0.844 0.924 0.859
+MPR 0.878 0.916 0.731
+ODC 0.735 0.878 0.783
+OCL 0.815 0.886 0.722
+KMS 0.831 0.899 0.747
+TMA 0.846 0.893 0.678
+DMA 0.865 0.897 0.686
+INI 0.789 0.902 0.822
+EXI 0.808 0.908 0.832
+MDT_MAT 0.804 0.824 0.759
+Saihi et al. 15
+
+--- PAGE 16 ---
+Furthermore, the overall predictive relevance is considered strong, as this value exceeds 0.35. Finally, the bootstrapping
+methodrigorouslyteststhestatisticalsignificanceoftherelationshipswithinthemodel.Table7presentsthepathcoefficients
+andtheirp-values,revealingallthepathsarestatisticallysignificant,exceptfortherelationshiporiginatingfromthevariable
+“EXI”,whichwasfoundtohavenostatisticallysignificanteffectonMDTmaturityinthestructuralmodelandwastherefore
+excludedfromtheSEManalysisandfromthefinalmaturitygrid.Thissuggeststhat,withinthecontextofthisstudy,external
+integrationplaysalesscriticalrolecomparedtointernal organizationalandknowledge-related capabilitiesin drivingMDT
+maturity.Consequently,theExternalIntegrationdimensionwasnotretainedinthefinalmaturitygridpresentedinTable11
+and Table A.1 of the Appendix.
+The relative strength of these relationships reveals meaningful patterns regarding the drivers of MDT maturity. In
+particular, the strong influence of knowledge management and workforce skills development highlights the central role of
+humancapabilitiesinenablingdigitaltransformationinmaintenance.Thisfindingalignswithpriorstudiesemphasizingthat
+digital transformation initiatives require not only technological infrastructure but also the development of organizational
+competencies and digital skills among maintenance personnel. From a managerial perspective, this result indicates that
+organizations seeking to advance their digital maintenance maturity should prioritize investments in workforce digital
+competencies, knowledge-sharing practices, and training programs that enable personnel to effectively leverage emerging
+maintenance technologies.
+Overall,thestructuralmodelresultsprovideempiricalsupportforthemultidimensionalframeworkofMDTproposedin
+thisstudy. The findingsdemonstrate that multipleorganizational and technological dimensions jointlycontribute to overall
+digital transformation maturity, rather than any single factor acting independently. This pattern is consistent with the
+conceptual foundations presented in the literature review, which emphasize the interdependence of strategic, cultural,
+technological, and knowledge-related capabilities in driving successful digital transformation initiatives.
+Compared with prior maturity models discussed in Section 2.3, the present model offers a broader and more integrated
+representation of MDT maturity. While several existing models emphasize technological readiness or selected organi­
+zational factors, the results of this study support a framework in which strategic, organizational, managerial, technological,
+andknowledge-relateddimensionsjointlyshapeoverallMDTmaturity.Inthissense,theproposedmodeldiffersnotonlyby
+being tailored to the maintenance context, but also by providing a more empirically grounded and cross-dimensional
+assessment framework than many extant digital maturity models.
+4.2. Maturity grid development
+Thissectionpresentstheresultsofthedevelopmentphase(Step4)describedinSection3.2.4,wherethevalidatedmaturity
+dimensions are translated into a structured maturity grid. The resulting maturity grid and its formulation are described
+below.
+ThedevelopmentofthematuritygridandformulationofitscellsarepivotalstepsinoperationalizingtheMDTMM.Each
+maturity dimension represents a critical aspect of MDT, encompassing strategic, organizational, and technological factors
+that collectively drive successful digital transformation in maintenance. Indicators within each dimension provide specific
+measuresforassessmenttoensureacomprehensiveevaluationofanorganization’scapabilitiesandpractices.Inconstructing
+the maturity grid, clear and concise descriptions are developed for each maturity level across all the dimensions. These
+formulationsprovideorganizationswithadetailedunderstandingofwhatisrequiredateachstageofmaturity,fromtheinitial
+phases of digital adoption to the advanced stages of optimization. The grid articulates clear characteristics and benchmarks
+for each level to facilitate a structured approach to achieving higher maturity and guide organizations through a systematic
+Table 7. Path model significance.
+Path coefficient STDEV P-values
+DSA → MDT Maturity 0.220 0.064 0.001
+TML → MDT Maturity 0.260 0.063 <0.001
+MPR → MDT Maturity 0.173 0.068 0.012
+ODC → MDT Maturity 0.171 0.072 0.018
+OCL → MDT Maturity 0.296 0.066 <0.001
+KMS → MDT Maturity 0.358 0.081 <0.001
+TMA → MDT Maturity 0.083 0.073 0.041
+DMA → MDT Maturity 0.205 0.069 0.003
+INI → MDT Maturity 0.182 0.075 0.016
+EXI → MDT Maturity 0.078 0.071 0.262
+16 International Journal of Engineering Business Management 18
+
+--- PAGE 17 ---
+progression. As discussed in Section 3.2.1., the maturity levels defined in this study are1
+Initial,2
+Managed,3
+Defined,4
+QuantitativelyManaged,and5
+Optimizing.Eachlevelisdesignedtoreflectadistinctstageofmaturitytoenableorganizations
+to measure their progress and plan for future advancements. The grid descriptions offer practical insights into the expected
+performanceandcapabilitiesateachstage,helpingorganizationstoaligntheirstrategiesandinitiativeswithbestpracticesin
+MDT. In practice, the maturity grid can be used as a self-assessment tool. For example, an organization may evaluate its
+practicesforeachmaturitydimensionanddeterminethelevelthatbestdescribesitscurrentcapabilities.Ifanorganization’s
+practices align with the characteristics described under the “Managed” level for a given dimension but not yet with thoseof
+the “Defined” level, this indicates that further process formalization and standardization may be required to progress to the
+Table 8. Central tendency and variability statistics.
+Mean Median Min Max STD IQR Comments
+Overall
+comprehensiveness
+of the model
+4.45 5.00 3.00 5.00 0.69 1.00 Theoverallcomprehensivenessofthemodelreceives
+high ratings. The low STD and IQR indicate strong
+consensus among experts, suggesting that the
+model is perceived as thorough and well-
+structured.
+Practical applicability of
+the model
+4.00 4.00 3.00 5.00 0.45 0.00 Practical applicability is rated high. The very low STD
+and zero IQR highlight uniform agreement on the
+model’s applicability.
+Adaptability of the
+model to different
+contexts
+4.00 4.00 3.00 5.00 0.63 0.00 Adaptability is rated high. The low STD and zero IQR
+suggestthatexpertsgenerallyagreeonthemodel’s
+flexibility across different organizational contexts.
+Component 1:
+DSA
+DSA.1 4.73 5.00 4.00 5.00 0.47 0.50 The DSA components formulations receive high
+ratings, particularly DSA.1. The low variability
+indicates strong expert agreement on the
+effectiveness of these formulations.
+DSA.2 4.55 5.00 4.00 5.00 0.52 1.00
+DSA.3 4.64 5.00 4.00 5.00 0.50 1.00
+Component 2:
+TML
+TML.1 4.91 5.00 4.00 5.00 0.30 0.00 The TML cell formulations, particularly TML.1, are
+rated very highly, reflecting strong approval. The
+very low STD(0.30) and zero IQR forTML.1 indicate
+a consensus on its clarity and relevance.
+TML.2 4.64 5.00 3.00 5.00 0.67 0.50
+Component 3:
+MPR
+MPR.1 4.36 4.00 3.00 5.00 0.67 1.00 MPR components receive positive ratings, with
+MPR.5 having the highest mean rating. The slightly
+higher STD and IQR indicate some variability in
+expert opinions, suggesting areas for potential
+refinement.
+MPR.4 4.45 5.00 3.00 5.00 0.69 1.00
+MPR.5 4.64 5.00 3.00 5.00 0.67 0.50
+MPR.6 4.55 5.00 3.00 5.00 0.82 0.50
+Component 4:
+ODC
+ODC.2 4.36 5.00 3.00 5.00 0.81 1.00 The ODC formulations show high ratings for both
+indicators. The higher variability suggests some
+divergence in expert feedback and points to
+possible areas for clarification.
+ODC.3 4.45 5.00 3.00 5.00 0.82 1.00
+Component 5:
+OCL
+OCL.1 4.45 5.00 3.00 5.00 0.82 1.00 The OCL components, particularly OCL.2, are rated
+highly, indicating strong expert approval of the
+formulations related to organizational culture.
+OCL.2 4.73 5.00 4.00 5.00 0.47 0.50
+OCL.5 4.64 5.00 3.00 5.00 0.67 0.50
+Component 6:
+KMS
+KMS.1 4.73 5.00 3.00 5.00 0.65 0.00 The KMS components are well-received, with high
+mean and median scores indicating that the
+formulations are perceived as effective and
+relevant.
+KMS.3 4.64 5.00 2.00 5.00 0.92 0.00
+KMS.4 4.55 5.00 3.00 5.00 0.69 1.00
+Component 7:
+TMA
+TMA.2 4.55 5.00 4.00 5.00 0.52 1.00 The TMA components receive positive ratings, with
+TMA.4 achieving the highest scores, reflecting high
+approval and suggesting that these formulations
+are well-regarded by experts.
+TMA.3 4.64 5.00 4.00 5.00 0.50 1.00
+TMA.4 4.73 5.00 3.00 5.00 0.65 0.00
+TMA.5 4.45 5.00 3.00 5.00 0.69 1.00
+Component 8:
+DMA
+DMA.1 4.55 5.00 3.00 5.00 0.69 1.00 The DMA components’ high ratings, particularly for
+DMA.3 and DMA.4, reflect strong expert approval,
+indicating that these aspects are clearly and
+effectively formulated.
+DMA.3 4.73 5.00 4.00 5.00 0.47 0.50
+DMA.4 4.73 5.00 3.00 5.00 0.65 0.00
+DMA.5 4.55 5.00 3.00 5.00 0.69 1.00
+Component 9:
+INI
+INI.1 4.55 5.00 4.00 5.00 0.52 1.00 The INI components are well-rated, with both
+indicators receivinghighmeanandmedianscores,
+suggesting that experts find these formulations
+clear and relevant.
+INI.3 4.64 5.00 3.00 5.00 0.67 0.50
+Saihi et al. 17
+
+--- PAGE 18 ---
+next maturity stage.From a managerial perspective, the grid canbeused to translate assessmentresults intoconcrete action
+priorities. For instance, if an organization demonstrates relatively stronger technological capabilities but lower maturity in
+knowledge management, change management, or strategic alignment, managers can use the model to redirect investments
+toward training, leadership development, cross-functional coordination, or governance mechanisms rather than focusing
+exclusively on technology acquisition.
+The practical implications of the model also vary across sectors. In manufacturing settings, the maturity assessment
+maybeparticularlyusefulforguidingtheintegrationofpredictivemaintenance,dataanalytics,andshop-floordecision
+support into established production systems. In other asset-intensive sectors such as transportation, utilities, or oil and
+gas, the model can help organizations assess how digital maintenance capabilities support reliability, safety, co­
+ordination across dispersed assets, and long-term asset performance. Accordingly, while the maturity dimensions
+remain stable, the operational emphasis and improvement priorities may differ depending on sector-specific
+requirements.
+Table A.1 of the appendix presents the preliminary maturity grid formulations initially developed by the authors. The
+updated maturity grid, incorporating refinements based on expert feedback obtained during the evaluation phase, is
+presentedinTable11.Inpractice,theproposedMDTmaturitygridcanservemultiplepurposesdependingonthecontext
+of application. First, it can function as a structured self-assessment tool, enabling organizations to evaluate their current
+capabilities across the different maturity dimensions and determine their current maturity level. Second, the model can
+supportconsultancyanddiagnosticassessments,wherepractitionersorconsultantsusethegridtoidentifycapabilitygaps
+and recommend targeted improvement initiatives for advancing MDT implementation. Finally, the framework can also
+serve as an academic benchmarking instrument, allowing researchers to compare digital maintenance maturity across
+organizations, sectors, or geographical contexts and to further investigate the determinants and outcomes of MDT
+maturity.
+4.3. Expert evaluation and model refinement
+Thissectionpresentstheresultsoftheevaluationphase(Step5)describedinSection3.2.5,wherethematuritymodelandgrid
+are refined through expert consultation. The evaluation combines quantitative analysis of expert ratings and qualitative
+assessment of their feedback to validate and further refine the proposed MDTMM.
+4.3.1. Quantitative analysis and expert consensus review
+The purpose of the quantitative analysis is to evaluate the strengths and identify potential improvements of the proposed
+maturity model based on the ratings of the consulted experts. The examination of central tendencies and measures of
+dispersion for each evaluated aspect of the model provides valuable insights into the collective opinions of the experts.
+Table 8 presents the descriptive statistics related to each element.
+Keyfindingswereuncoveredthroughthisanalysis.Firstly,themodel’soverallcomprehensivenessgarneredhighratings
+withminimalvariability,indicatingthatthemajorityofexpertsfinditwell-structuredandthorough.Secondly,thepractical
+applicability and adaptability of the model are rated consistently, achieving mean and median scores of 4, suggesting that
+experts view the model as broadly applicable and adaptable to different organizational contexts. Additionally, the specific
+formulationsofthecellsofthematuritygridreceivedgoodratingswithacceptablevariationlevels(STDandIQR≤1)which
+reflect strong expert approval. This indicates a generally favorable perception of these formulations despite minor di­
+vergences in the experts’ viewpoints regarding a few ones.
+The next step in the quantitative analysis is to evaluate the extent of expert agreement in their ratings. To gauge the
+robustness and consistency of the assigned ratings, the ICC method is applied. This analysis is performed utilizing IBM
+SPSS software version 29. The ICC captures the variation among raters assessing the same group of subjects. For this
+analysis, a two-way mixed effects model is used to evaluate consistency alongside absolute agreement among the
+experts.91
+Table 9 presents the results of the ICC analysis. Generally, ICC values below 0.50 suggest poor reliability,
+Table 9. ICC analysis results.
+ICC value 95% confidence interval
+Lower bound Upper bound
+Consistency 0.9558 0.9076 0.9858
+Absolute agreement 0.9532 0.9024 0.9849
+18 International Journal of Engineering Business Management 18
+
+--- PAGE 19 ---
+between 0.50 and 0.75 indicate moderate reliability, from 0.75 to 0.90 signify good reliability, and above 0.90 denote
+excellent reliability.92
+Consequently, the ICC value for consistency, which stands at 0.955, demonstrates a robust
+agreementamongtheexperts.TheICCscorerelatedtoabsoluteagreement,alsoat0.953,fitswithinthe“good”reliability
+category. These figures highlight the high consistency and dependability of the expert ratings, validating the previously
+outlined descriptive statistics. Additionally, the 95% confidence intervals bolster the ratings reliability, as they
+comfortably exceed the benchmarks for consistency and absolute agreement. The use of structured questionnaires
+combined with statistical agreement measures such as ICC helped reduce potential individual bias and ensured that the
+evaluation reflected a collective expert perspective. This dependable feedback offers a strong basis for moving forward
+withthequalitativeanalysis.Althoughthelevelofagreementamongexpertsishigh,thesizeoftheexpertpanelremainsa
+potential limitation, and expanding the number and diversity of experts in future research could further enhance the
+robustness of the validation process.
+4.3.2. Qualitative evaluation of experts’ open-ended responses and resulting improvements
+Upongatheringtheexperts’reviewofthedevelopedmaturitymodel,athematicanalysiswasconductedonthequalitative
+data to reveal key insights and discern underlying patterns. The purpose of this analysis is to pinpoint key themes,
+recurringpatterns,andnotablesuggestionsthatcouldaidin refiningthematuritygrid.Theresearchteamadoptedawell-
+establishedmethod,meticulouslyreviewingthedataseveraltimestobecomethoroughlyfamiliarwiththecontentandto
+identify the most pertinent comments and suggestions for improvement. Table 10 summarizes the most relevant and
+recurrent comments from the experts and the corresponding actions taken to address them, thereby ensuring the model’s
+robustnessandapplicability.Beyondwordingrefinements,theexpertfeedbackledtoseveralsubstantivemodificationsto
+the maturity grid. These include structural adjustments to the model (e.g., splitting certain indicators), conceptual
+clarifications to better define the scope of several dimensions, the inclusion of additional elements such as training
+requirements,feedbackmechanisms,andsustainabilityconsiderations,aswellasenhancementstoimprovethepractical
+applicability of the model in maintenance contexts. The detailed changes to the maturity grid formulations are
+documentedinTable11toprovideacomprehensiveviewoftheadjustmentsmadetoenhancethemodelbasedonexperts’
+feedback.
+5. Conclusion and future research directions
+The comprehensive maturity assessment model for MDT developed in this paper addresses a critical gap in current
+literature and practice. This model, grounded in nine dimensions, provides a structured framework for the evaluation and
+enhancement of digital maturity in maintenance operations, enabling organizations to systematically transition from
+traditional maintenance approaches to more advanced, data-driven strategies. This transformation is pivotal in achieving
+increased operational efficiency, optimized asset management, and enhanced equipment reliability, among others. This
+paper responds to the lack of structured and standardized methodologies for assessing and guiding the maturity of an
+organization’s digital transformation capabilities within the maintenance domain. Understanding the current level of
+digital maturity in maintenance is essential for these organizations to identify their strengths, weaknesses, and op­
+portunitiesforimprovement.Comparedtoexistingmaturitymodels,theproposedMDTMMoffersamorecomprehensive
+andempiricallyvalidatedframeworkthatintegratesmultipledimensionsofdigitaltransformationwithinthemaintenance
+context.
+The model’s development involved a thorough review of existing maturity models guidelines and digital trans­
+formation research and frameworks in order to identify key dimensions and indicators crucial for assessing MDT
+readiness. These include strategic, technological and managerial capabilities, organizational culture aspects, and human
+factors,allofwhichplaysignificantrolesinthesuccessfulimplementationofdigitalmaintenancestrategies.Theiterative
+refinement process, including expert consultations and statistical validations, ensured the model’s relevance, robustness,
+and applicability across various industrial contexts. The expert feedback was invaluable in highlighting areas for
+improvement,leadingtomoretailoredanddetailedformulationswithinthematuritygrid.Moreover,thedetailedmaturity
+grid provides organizations with clear guidelines on their current digital maturity level and actionable recommendations
+for advancing to higher stages of maturity. It also serves both as a diagnostic tool and a strategic roadmap to empower
+maintenance organizations in making their digitalization efforts successful. Furthermore, the empirical validation,
+conductedtopurifyandtestthematuritydimensionsandsubdimensionsandtoperformafirstlayerofexpertvalidationof
+the model, demonstrates its robustness and versatility, making it a valuable asset for organizations at different stages of
+their digital journey.
+Fromatheoreticalperspective,thisstudyadvancestheemergingbodyofknowledgeonMDTbyempiricallyvalidatinga
+multidimensional framework of assessing its maturity. While previous studies have often examined individual aspects of
+Saihi et al. 19
+
+--- PAGE 20 ---
+Table 10. Experts feedback and actions taken.
+Key expert comments Implemented improvements
+“While comprehensive, some of the cell formulations seem
+generic. The model could benefit from more customization
+to maintenance”.
+To address the feedback regarding the generic nature of some
+cellformulations,thegridisreviewedandrevisedtointegrate
+maintenance-specific examples and scenarios, ensuring the
+formulations are more relevant to the field. For example, in
+DSA.1 (initial), it is specified that digital initiatives are ad-hoc
+and uncoordinated specifically in the context of maintenance
+activities. Similarly, in DSA.1 (defined), the implementation of
+predictive maintenance and advanced diagnostic tools is
+includedaspartofthewell-definedstrategysupportedbytop
+management. This level of detail is added across the grid to
+ensure that the model is tailored to maintenance digital
+transformation.
+OCL.5:“Itdependsonthepositionofthemanpower.Frontmen
+are relatively the slowest and harder to adopt new
+technology even being motivated many times. They like to
+do what they get used to”.
+Refine the formulation of OCL.5 across all maturity levels to
+emphasize the need for targeted strategies to engage front-
+line maintenance workers and support their adoption of new
+technologies.
+“Verygoodandinterestingtopic.Youalsoneedtoconsiderthe
+specific cultural factors. Perhaps some points need to be
+made more general”.
+Nochangesareimplementedtothematuritygridasitisdesigned
+to be adaptable and considers the importance of cultural
+factorsthroughseveralofitsdimensions.Particularly,theOCL
+dimension is crafted to be general and flexible, allowing
+organizations to adapt it to their specific cultural
+environments.Thisdimensionemphasizespromotingadigital
+culture, fostering continuous improvement, and involving
+employees in decision-making processes, all of which are
+essential for tailoring the grid to different cultural settings.
+Additionally, the ODC dimension addresses the need for
+tailored change management practices. Effective change
+management must account for the unique cultural aspects of
+an organization to reduce resistance and ensure successful
+implementation of MDT initiatives.
+MPR.5: “Clarify that the risk assessment refers to risks
+associatedwithdigitaltransformation,notanykindsofrisk”.
+Toaddressthisexpertcomment,theformulationsforMPR.5and
+MPR.6 are revised to provide the necessary clarifications.
+MPR.6: “Clarify whether it relates to roles and responsibilities
+for maintenance, or roles and responsibilities for digital
+transformation initiatives”.
+ODC.3: “The term ‘changes’ here is very broad, maybe clarify
+that it is changes related to maintenance digitalization?”
+The formulations for ODC.3 is revised to clarify that the changes
+referred to are specifically related to maintenance
+digitalization.
+OCL.1: “This combines culture and decision-making in the
+same item, but they are distinct. I would split it into two
+items”.
+The formulation for OCL.1 are split into two distinct items
+(OCL.1.1andOCL.1.2)onefocusingoncultureandtheotheron
+decision-making. Additionally, the mention of resistance in
+OCL.2 at the “Managed” stage is removed for clarity. OCL.2: “It does not make sense to me to mention resistance in
+the “2. Managed” stage”.
+TMA.4: “Service level agreements is only one specific example
+ofcontracting,Iwouldrecommendaddingaclarificationon
+this, such as writing “for example with clear service level
+agreements”.
+The formulation for TMA.4 (3.Defined) is updated to include a
+clarification that service level agreements are one specific
+example of contracting.
+DMA.5: “Data warehouse is one option for infrastructure, but
+there are also others. Maybe you should write “for example
+data warehouse.”
+The formulations for DMA.5 are updated to improve clarity and
+provide specific examples.
+(continued)
+20 International Journal of Engineering Business Management 18
+
+--- PAGE 21 ---
+digital maintenance, such as technological adoption or predictive maintenance capabilities, the results of this research
+demonstrate that MDT maturity emerges from the interaction of multiple organizational, technological, and managerial
+dimensions.Byintegratingtheseelementsintoaunifiedmaturityassessmentmodel,thisworkcontributestoamoreholistic
+conceptualization of digital transformation in maintenance operations.
+Fromapracticalstandpoint,theproposedmaturitymodelprovidesmaintenanceorganizationswithastructuredtoolfor
+assessing their current level of digital transformation and identifying priority areas for improvement. The maturity grid
+developed in this study translates the multidimensional concept of MDT into clear maturity levels and operational
+indicators that can support maintenance managers and decision-makers in planning digital initiatives, aligning
+Table 10. (continued)
+Key expert comments Implemented improvements
+INI.1: “Clarify that the other functions are examples. There
+couldalsobeotherfunctionsformaintenancetocollaborate
+with”.
+The formulation for INI.1 is updated to clarify that the functions
+mentioned are examples and that maintenance can
+collaborate with various relevant departments. For INI.3, the
+focusisdifferentiatedfromINI.1byemphasizingcollaboration
+between employees with different expertise levels, including
+formalmechanismssuchasmentoringandknowledgesharing
+programs. This distinction between interdepartmental
+collaboration and collaboration across expertise levels is
+made clearer to ensure better validation.
+INI.3:“ThereisoverlapwithINI1inthesensethatbothfocuson
+collaboration. Thus, this part of the grid is a bit vague”.
+ODCdimension:“Iwouldincludethecontrolaspectsofchange
+management”.
+Thecorrespondingformulationsarerevisedtoexplicitlymention
+the control aspects of change management.
+KMSdimension:“Trainingandcompetencyassessmentshould
+be included as a mandatory requirement”.
+The formulations for KMS.1 and KMS.4 have been updated to
+emphasize the inclusion of training and competency
+assessments as mandatory requirements. These updates
+ensurethatemployeesareadequatelytrainedandassessedto
+meet the standards required for effective MDT
+implementation.
+TML dimension: “Incorporate regular training and workshops
+for top management to ensure continuous alignment with
+the evolving digital strategy”.
+To address the expert’s comment regarding incorporating
+regular training and workshops for top management in the
+TML dimension, the formulations are updated to reflect this
+emphasis.
+ODC dimension: “Highlight the importance of continuous
+feedback loops to ensure the effectiveness of change
+management practices”.
+ODC.2 and ODC.3 formulations are updated to emphasize the
+integrationofcontinuousfeedbackloops,whichmonitorsand
+improves change management practices, ensuring their
+effectiveness in MDT initiatives.
+KMS dimension: “Focus on partnerships with educational
+institutions to create a pipeline of skilled talents”.
+KMS.1formulationsareupdatedtoemphasizetheestablishment
+ofpartnershipswitheducationalinstitutionsandprofessional
+bodies. These partnerships ensure that training programs are
+continuously updated and aligned with the latest industry
+standards and best practices.
+TMA dimension: “Emphasize ongoing evaluation and updates
+to ensure technology remains relevant and effective”.
+TMA indicators are updated to emphasize the importance of
+ongoing evaluation and regular updates of technologies to
+ensure they remain relevant and effective in the context of
+maintenance operations.
+“Consider adding a subdimension that focuses on customer
+feedback integration into maintenance strategies”.
+Customer feedback is recognized as a critical component of the
+datacollectedforcontinuousimprovementwithintheexisting
+maturity model. Instead of adding a new indicator, the
+integrationofcustomerfeedbackhasbeenemphasizedwithin
+the existing data management and continuous improvement
+processes(refer to updatedformulations foroptimizing levels
+of MPR.1, MPR.2, OCL.2, DMA.1).
+“Consider including sustainability practices to ensure that
+digital transformation efforts are environmentally
+responsible”.
+DSA.1 formulations are updated to integrate sustainability
+practices across the maturity levels. As maturity increases,
+strategies evolve to include advanced maintenance
+technologies along with sustainability practices driven by
+digitalization. These changes ensure environmentally
+responsible digital maintenance initiatives.
+Saihi et al. 21
+
+--- PAGE 22 ---
+Table 11. Updated maturity grid formulations based on expert feedback.
+Dimension Indicator 1. Initial 2. Managed 3. Defined 4. Quantitatively
+managed
+5. Optimizing
+DSA: Digital
+Strategy -
+Strategic
+Alignment
+DSA.1 No formal strategy for maintenance
+digitalization. Digital initiatives are
+ad-hoc and uncoordinated,
+specifically within the context of
+maintenance activities, leading to
+inconsistent implementation of
+digital maintenance.
+Basic strategy exists but lacks
+comprehensive planning and support
+from top management. Efforts are
+somewhat coordinated, focusing on
+immediate maintenance needs rather
+than long-term digital integration.
+A well-defined strategy is in place,
+supported by top management.
+Clear goals and objectives are set,
+including the implementation of
+predictive maintenance, advanced
+diagnostic tools, and initial
+sustainability practices.
+Defined strategy is regularly reviewed
+and updated based on data and
+feedback from maintenance
+operations. There is a strong
+alignment with organizational
+objectives and thorough planning,
+including sustainability practices.
+Strategy is continuously optimized for
+maximum impact. Innovative
+approaches, such as machine
+learning for predictive maintenance,
+IoT integration and sustainability
+initiatives, are incorporated into the
+strategic framework.
+DSA.2 Developments are undertaken without
+any strategic assessment of gaps and
+needs, particularly in maintenance
+activities.
+Some developments are aligned with basic
+strategic goals but lack systematic
+assessments focused on maintenance
+needs.
+Developments are consistently aligned
+with defined strategic goals
+following thorough strategic
+assessments, including
+maintenance requirements and
+capabilities.
+All developments are strategically
+assessed and aligned. Continuous
+monitoring ensures alignment with
+evolving strategic goals,
+particularly focusing on predictive
+and prescriptive maintenance
+strategies.
+Strategic alignment is part of a
+continuous improvement process.
+New developments are proactively
+aligned and optimized for strategic
+fit, including innovative maintenance
+technologies and practices.
+DSA.3 No shared vision for digital
+maintenance. Employees are
+unaware or unengaged with digital
+maintenance initiatives.
+Basic efforts to communicate the vision
+exist but are sporadic and not fully
+effective, particularly in engaging
+maintenance teams.
+A clear and compelling vision for digital
+maintenance is communicated and
+shared across the organization,
+involving all maintenance
+personnel.
+The vision is regularly reinforced and
+integrated into daily maintenance
+operations. Employees are engaged
+and understand their role in
+achieving the vision.
+A strong, shared vision drives
+continuous innovation. Maintenance
+employees are highly motivated and
+actively contribute to advancing the
+digital maintenance vision.
+TML: Top
+Management and
+Leadership Skills
+TML.1 Leaders lack a clear vision for digital
+transformation in maintenance.
+There is minimal emphasis on
+integrating digital tools for
+maintenance activities.
+Leaders have a general idea of the
+importance of digital transformation,
+but no specific vision or plan for
+maintenance digitalization.
+Leaders have developed a clear vision
+for digital transformation in
+maintenance and have
+communicated it to the
+organization.
+Leaders ensure that the vision for
+digital transformation is regularly
+communicated and updated, with
+progress tracked and measured in
+the context of maintenance
+performance.
+Leaders made the vision for digital
+transformation fully embedded in
+the organization’s culture and used
+to drive continuous improvement
+and innovation in maintenance
+practices. Regular training and
+workshops are conducted for top
+management to ensure continuous
+alignment with the evolving digital
+strategy.
+TML.2 Limited or no involvement from top
+management in digital maintenance
+initiatives.
+Some involvement from top management,
+but commitment is inconsistent and
+support is limited in maintenance
+projects.
+Top management is actively involved
+in and committed to digital
+transformation efforts, providing
+resources and support for
+maintenance digitalization.
+Top management regularly reviews
+progress towards MDT goals and
+adjusts their approach as needed.
+Top management is fully committed to
+digital transformation, championing
+the effort and ensuring its success in
+maintenance activities.
+(continued)
+22 International Journal of Engineering Business Management 18
+
+--- PAGE 23 ---
+Table 11. (continued)
+Dimension Indicator 1. Initial 2. Managed 3. Defined 4. Quantitatively
+managed
+5. Optimizing
+MPR: Management
+practices
+MPR.1 Maintenance objectives are not clearly
+defined or aligned with business
+goals.
+Maintenance objectives are somewhat
+defined, but not consistently measured
+or tracked.
+Maintenance objectives are clearly
+defined and aligned with business
+goals, with metrics in place to track
+progress.
+Maintenance objectives are regularly
+reviewed and adjusted based on
+performance data, with a focus on
+continuous improvement in
+maintenance practices.
+Maintenance objectives are
+continuously optimized.
+Performance management tools are
+advanced, and continuous
+improvement is part of the
+organizational culture, driven by
+data from predictive and prescriptive
+systems. Include customer feedback
+as a key input in the regular review
+and adjustment of maintenance
+objectives.
+MPR.4 Business processes are not adapted to
+support digital transformation in
+maintenance.
+Some maintenance processes are
+reengineered, but efforts are sporadic
+and lack strategic direction.
+Business processes are reengineered
+to align with maintenance
+objectives. Strategic direction is
+provided but not consistently
+followed.
+Business process reengineering is
+systematically conducted and
+aligned with strategic objectives.
+Continuous monitoring and
+improvement are in place to ensure
+maintenance processes are
+efficient and effective.
+Business processes are continuously
+reengineered and optimized.
+Strategic direction is clear, and
+innovative approaches, such as real-
+time data analytics and advanced
+maintenance technologies, are
+regularly adopted. Incorporate
+insights from customer feedback to
+ensure maintenance processes
+remain aligned with customer needs
+and expectations
+MPR.5 No formal risk management
+techniques are in place for
+maintenance digitalization
+activities.
+Basic risk management techniques are
+adopted, but not systematically applied
+to maintenance digitalization.
+A formal risk management process is in
+place to identify and mitigate risks
+associated with digital
+transformation in maintenance.
+Risks related to MDT efforts are
+regularly monitored and assessed,
+and the risk management process is
+continuously improved.
+The maintenance organization has a
+proactive risk management culture.
+Innovative approaches are adopted
+to manage risks related to MDT
+effectively.
+MPR.6 Roles and responsibilities related to
+maintenance digitalization are not
+clearly defined or communicated.
+Some roles and responsibilities related to
+maintenance digitalization are defined,
+but there is inconsistency in their
+application and communication.
+MDT roles and responsibilities are
+clearly defined, documented and
+communicated across the
+maintenance organization.
+MDT roles and responsibilities are
+regularly reviewed and adjusted as
+needed to ensure alignment with
+organizational objectives.
+The maintenance organization has a
+flexible and adaptable workforce,
+with clear roles and responsibilities
+that can evolve as needed.
+ODC:
+Organizational
+Development &
+Change
+Management
+ODC.2 Change is not managed or
+communicated effectively, leading
+to resistance and confusion among
+maintenance personnel.
+Basic change management practices are in
+place, but they are not consistently
+applied or followed in MDT initiatives.
+Resistance to change is reduced but still
+present.
+Formal and well-defined change
+management processes are
+established and consistently applied
+in MDT initiatives, including control
+aspects to monitor and manage
+change effectively. Continuous
+feedback loops are integrated to
+monitor and improve change
+management practices.
+The change management process
+related to MDT efforts, including
+control aspects, is regularly
+reviewed and improved, and its
+effectiveness is measured and
+tracked through continuous
+feedback loops.
+Innovative approaches are used to
+manage change related to MDT,
+including comprehensive control
+mechanisms. The organization is
+highly adaptable and resilient, and
+maintenance employees are actively
+involved in this process through
+continuous feedback and iterative
+improvements.
+ODC.3 Changes related to MDT initiatives are
+implemented in an ad hoc and
+reactive manner, without a clear
+plan or strategy.
+Some planning is done before
+implementing changes related to MDT,
+but it is not comprehensive or
+systematic.
+Changes related to MDT are
+implemented using a structured and
+planned approach, with clear goals,
+timelines, milestones, and control
+aspects and feedback loops to
+ensure effective management.
+The planned change approach
+focused on MDT, including control
+aspects, is regularly reviewed and
+refined, and its effectiveness is
+measured and tracked through
+continuous feedback loops.
+Innovative and proactive planning of
+changes focused on MDT is
+embedded in the organizational
+culture, with robust control
+mechanisms to ensure high
+adaptability and resilience.
+Continuous feedback is used to drive
+iterative improvements and ensure
+the change management process
+remains effective.
+(continued)
+Saihi et al. 23
+
+--- PAGE 24 ---
+Table 11. (continued)
+Dimension Indicator 1. Initial 2. Managed 3. Defined 4. Quantitatively
+managed
+5. Optimizing
+OCL: Organizational
+Culture
+OCL.1.1: Digital
+culture in
+maintenance
+The organization lacks a digital culture,
+with limited awareness or interest in
+digital maintenance technologies.
+Basic awareness of digital culture exists,
+but it is not well-integrated into
+maintenance operations.
+A robust digital culture that is
+supported by top management is
+promoted within maintenance
+operations.
+Digital technologies are integrated
+into daily maintenance work
+processes. Regular feedback
+mechanisms ensure ongoing
+improvement.
+The maintenance organization has a
+strong digital culture, with
+employees actively seeking out and
+adopting new technologies to drive
+innovation.
+OCL.1.2:
+Decision
+making in
+MDT
+Decision-making in maintenance is
+based on intuition and experience
+rather than data.
+Data-driven decision making in
+maintenance operations is sporadic and
+not standardized.
+Data-driven decision making in
+maintenance operations is
+encouraged and supported by top
+management.
+Digital technologies and data-driven
+decision making are integrated into
+maintenance daily work processes.
+Maintenance employees are
+empowered to make decisions based
+on data, fostering continuous
+improvement and innovation.
+OCL.2 There is no formal process for
+continuous improvement in
+maintenance, and MDT initiatives
+are implemented in a reactive
+manner.
+Basic efforts to promote maintenance
+continuous improvement exist.
+A culture of maintenance continuous
+improvement is promoted and
+supported by top management.
+Employees are encouraged to
+participate in MDT improvement
+initiatives.
+Continuous improvement in
+maintenance is quantitatively
+managed. Regular assessments and
+feedback mechanisms ensure
+ongoing improvement and
+adaptation.
+Continuous improvement is a core
+value of the maintenance
+organization, and it is used to drive
+innovation and excellence in
+maintenance digitalization.
+Regularly gathering and acting on
+customer feedback to foster a culture
+that values customer input.
+OCL.5 Maintenance employees are not or
+rarely involved in decision-making
+processes. Decision making is
+centralized, and front-line workers
+show resistance to adopting new
+technologies.
+Basic efforts to involve maintenance
+employees in decision making exist, but
+practices are not standardized and their
+input is not always valued or acted upon.
+Front-line workers are still hesitant to
+adopt new technologies despite
+motivational efforts.
+Maintenance employees are actively
+involved in decision-making
+processes. Decentralized daily
+decision making is encouraged and
+supported by top management.
+Specific strategies are in place to
+engage front-line workers and
+support their adoption of new
+technologies
+Maintenance employees are
+empowered to make decisions and
+take initiative. Regular feedback
+mechanisms and targeted
+interventions ensure that workers
+are progressively adopting new
+technologies and improving their
+skills.
+Maintenance employees are fully
+engaged and empowered, with a
+strong sense of ownership and
+responsibility for their work.
+Decentralized decision-making is
+embedded in the culture. Front-line
+workers are proficient in using new
+technologies, supported by tailored
+motivation strategies. Mechanisms
+for recognizing and rewarding
+employee contributions to decision-
+making processes are in place.
+KMS: Knowledge
+Management &
+Workforce Skills
+Development
+KMS.1 No formal training or development
+programs for employees on digital
+technologies and maintenance
+trends.
+Some ad-hoc training related to MDT is
+provided, but it is not systematic or
+comprehensive.
+A formal training and development
+program is in place, covering both
+technical and soft skills related to
+MDT. Competency assessments are
+conducted to ensure employees
+meet required standards.
+Partnerships with educational
+institutions and professional bodies
+are established to ensure programs
+are up-to-date and industry-
+relevant.
+The training and development
+program is regularly updated to
+reflect changing needs and
+technologies in maintenance. Its
+effectiveness, including
+competency assessments, is
+measured and tracked.
+Maintenance staff exhibits advanced
+digital competencies. Continuous
+learning and upskilling are
+embedded in the organizational
+culture, with regular competency
+assessments to ensure ongoing
+proficiency. Regular collaborations
+with educational institutions and
+professional bodies ensure the
+training programs remain current
+and relevant.
+KMS.3 The organization struggles to attract
+and retain employees with the skills
+needed for digital transformation in
+maintenance.
+Basic efforts to attract new maintenance
+talents with digital expertise exist but are
+not standardized or strategic.
+Strategic efforts to attract and hire new
+maintenance talents with digital
+expertise. Recruitment processes
+are well-defined and supported by
+management.
+A robust talent management program
+is in place to identify and develop
+high-potential maintenance
+employees with digital skills.
+The organization is highly attractive to
+top maintenance talents with digital
+skills. Recruitment and retention
+strategies are continuously
+optimized and aligned with industry
+trends.
+KMS.4 Training and development programs
+are not tailored to the specific needs
+of the maintenance organization or
+its employees.
+Some customization of training programs
+is done, but it is not based on a
+systematic needs assessment in terms of
+MDT initiatives and technologies.
+Training and development programs
+are tailored to the specific needs of
+the maintenance organization and
+its employees. Competency
+assessments are a mandatory
+requirement to ensure training
+effectiveness.
+The effectiveness of the defined
+maintenance training and
+development programs, including
+competency assessments, is
+regularly evaluated and adjusted as
+needed.
+Learning programs are continuously
+optimized to address emerging
+trends in maintenance. The
+organization has personalized and
+individualized learning approaches
+related to MDT efforts, with
+mandatory competency assessments
+to maintain high standards.
+(continued)
+24 International Journal of Engineering Business Management 18
+
+--- PAGE 25 ---
+Table 11. (continued)
+Dimension Indicator 1. Initial 2. Managed 3. Defined 4. Quantitatively
+managed
+5. Optimizing
+TMA: Technology
+Management
+Aspects
+TMA.2 Systems and technologies are not
+integrated leading to data silos and
+inefficient workflows within
+maintenance operations.
+Maintenance technologies (e.g.,
+CMMS, digital twins, IoT systems) are
+used in isolation.
+Some integration exists, but it is limited.
+Basic use of compatible maintenance
+technologies. Initial efforts to adopt
+standardized solutions and identify
+specifications for interface
+compatibility.
+Systems and maintenance
+technologies are integrated using
+standardized protocols and
+interfaces, enabling data sharing
+and collaboration. Specifications for
+interface compatibility are well-
+defined and implemented.
+The level of integration of
+maintenance technologies is
+regularly monitored and improved,
+with a focus on reducing
+complexity. Regular assessments
+ensure technologies and tools
+remain compatible and standards
+are up-to-date, facilitating efficient
+maintenance workflows.
+The organization excels in using
+interoperable and compatible
+maintenance technologies. It has a
+seamless and integrated technology
+ecosystem, with data and flowing
+freely between systems and
+applications, , enabling advanced
+maintenance strategies such as
+predictive and prescriptive
+maintenance. Ongoing evaluation
+and updates ensure that the
+technology remains relevant and
+effective.
+TMA.3 Maintenance technologies are
+introduced without considering the
+company’s context and are chosen
+based on hype or personal
+preference, rather than a careful
+assessment of needs. Unnecessary
+complexity is common, leading to
+inefficient maintenance operations.
+Some consideration is given to needs, but
+technology choices are not always
+optimal. Basic efforts to avoid
+unnecessary complexity in maintenance
+technologies.
+Maintenance technologies are chosen
+based on a thorough assessment of
+needs and a clear understanding of
+the business case. Efforts are made
+to avoid unnecessary complexity
+and exploit the right technology at
+the right time, ensuring they align
+with maintenance objectives.
+Technology choices are regularly
+reviewed and updated to ensure
+they remain aligned with the
+maintenance organization’s goals
+and priorities.
+The organization is constantly
+evaluating and adopting new
+maintenance technologies that are
+optimized and fully appropriate to its
+context to stay ahead of the
+competition and drive innovation in
+maintenance practices. Regular
+updates ensure the technology
+remains effective and relevant.
+TMA.4 The maintenance organization lacks
+access to adequate technical
+support from technology vendors.
+Basic technical support for maintenance
+technologies is available, but it is not
+always timely or effective.
+The organization has a formal
+agreement with maintenance
+technology vendors for technical
+support, for example, with clear
+service level agreements (SLAs).
+Technical support for maintenance
+technologies is regularly evaluated,
+and feedback is provided to
+vendors to ensure that the services
+are aligned with organizational
+needs.
+The maintenance organization has a
+strong partnership with technology
+vendors, with regular collaboration
+and knowledge sharing. Ongoing
+evaluations and updates ensure that
+the support and technologies remain
+relevant and effective.
+TMA.5 Cybersecurity is not a priority in MDT
+efforts, and there are no formal
+policies or procedures in place.
+Some basic cybersecurity measures are in
+place in MDT efforts, but they are not
+comprehensive or regularly updated.
+A formal cybersecurity and data
+protection program is in place, with
+policies, procedures, and training for
+maintenance employees.
+The cybersecurity program for
+maintenance technologies is
+regularly reviewed and tested, and
+its effectiveness is measured and
+tracked.
+The maintenance organization has a
+robust cybersecurity culture, with
+employees actively involved in
+protecting the organization’s data
+and systems. Advanced
+cybersecurity measures are in place
+to protect maintenance technologies
+and data from potential threats.
+Regular updates ensure these
+measures remain effective.
+(continued)
+Saihi et al. 25
+
+--- PAGE 26 ---
+Table 11. (continued)
+Dimension Indicator 1. Initial 2. Managed 3. Defined 4. Quantitatively
+managed
+5. Optimizing
+DMA: Data
+Management
+Aspects
+DMA.1 Data is collected and processed in an
+ad hoc and manual manner, with
+limited visibility or control over
+maintenance activities.
+Maintenance data, such as
+equipment performance and failure
+rates, is not systematically captured
+or analyzed.
+Some basic data collection and processing
+tools are used, but the process is not
+standardized or efficient. Maintenance
+data is collected sporadically, leading to
+inconsistencies and gaps.
+Maintenance data is collected and
+processed in a standardized and
+automated way. A well-integrated
+Big Data system covers all aspects of
+the data value chain from generation
+and acquisition until analytics.
+Data is used to drive decision-making
+in maintenance, with regular
+reviews and adjustments to the
+data management processes.
+Predictive maintenance strategies
+are supported by accurate and
+timely data.
+The organization has a data-driven
+culture, with employees actively
+using data to improve their work.
+Maintenance data is collected and
+processed in real-time, enabling agile
+decision-making and continuous
+improvement in maintenance
+practices. Real-time data collection
+also includes customer feedback as a
+valuable source of information.
+DMA.3 Limited attention to data quality in
+maintenance. Data quality is poor,
+with frequent errors,
+inconsistencies, and missing values
+affecting maintenance decisions.
+Basic standards for data quality are
+established. Initial efforts to ensure data
+accuracy, comprehensiveness, clarity,
+and applicability for maintenance data.
+Well-defined quality standards for
+maintenance data are in place. Data
+quality is ensured through
+completeness, accuracy, timeliness,
+availability, and consistency,
+supporting effective maintenance
+operations.
+Data quality in maintenance is
+continuously monitored and
+improved, with a focus on accuracy,
+completeness, and timeliness,
+enhancing predictive and
+prescriptive maintenance.
+The organization has a high level of
+trust in its maintenance data, with a
+strong focus on data quality and
+integrity. Data is used to drive
+innovation and competitive
+advantage.
+DMA.4 Data collection and processing
+solutions are inflexible and cannot
+easily be scalable and adapt to
+changing needs in maintenance.
+Some flexibility exists, but it is limited and
+requires significant effort to implement
+changes in maintenance data
+management.
+Data collection and processing
+solutions for maintenance are
+modular and scalable, allowing
+them to adapt to changing needs
+and volumes of data.
+The flexibility and scalability of
+maintenance data solutions are
+regularly assessed and improved,
+with a focus on agility and
+responsiveness.
+The organization excels in maintaining
+flexible and scalable data collection
+solutions for maintenance,
+continuously optimizing to meet
+changing demands and support
+advanced maintenance strategies.
+DMA.5 The organization lacks the right
+infrastructure to support advanced
+data management and analytics in
+maintenance.
+Some basic infrastructure is in place, but it
+is not sufficient to support advanced
+analytics for maintenance data.
+The organization has invested in
+advanced data management and
+analytics infrastructure, including
+data warehouses and other
+advanced solutions.
+The data infrastructure for
+maintenance is regularly updated
+and expanded to support new
+technologies and applications.
+The organization has a state-of-the-art
+data infrastructure, enabling it to
+leverage the full power of its
+maintenance data to drive
+innovation and competitive
+advantage.
+INI: Internal
+Integration
+INI.1 Departments operate in silos. Limited
+integration of operational functions.
+Data sharing and collaboration
+between departments are minimal.
+Basic level of data sharing and
+interdepartmental collaboration. Initial
+efforts to integrate maintenance with
+operations, IT, engineering, R&D,
+purchasing, and other relevant
+departments, facilitating basic
+maintenance activities.
+Formal processes and systems are in
+place to facilitate collaboration and
+communication between
+departments. Maintenance works
+closely with other departments for
+joint decision-making and
+knowledge sharing.
+Collaboration is measured and
+tracked, with regular reviews and
+adjustments to improve
+effectiveness. Maintenance teams
+work seamlessly with other
+departments to ensure integrated
+maintenance planning and
+execution.
+The organization has a culture of
+collaboration and teamwork, with
+departments working together
+seamlessly to achieve common
+goals. Maintenance is fully integrated
+into the organizational workflow,
+supporting continuous improvement
+and innovation.
+INI.3 Minimal collaboration between
+employees with up-to-date
+competencies in maintenance
+technologies and those with
+traditional maintenance expertise.
+Basic efforts to facilitate this collaboration
+exist, but they are not consistent or
+structured. Maintenance staff
+occasionally share knowledge, but there
+is no formal process for that.
+Formal mechanisms are in place to
+facilitate collaboration between
+maintenance employees with
+different levels of expertise, such as
+mentoring and knowledge sharing
+programs.
+The effectiveness of this collaboration
+is measured and tracked, with
+regular reviews and adjustments to
+improve knowledge transfer and
+skill development. Maintenance
+teams actively engage in cross-
+functional learning and
+development activities.
+The organization has a culture of
+continuous learning and
+development, with employees
+actively sharing knowledge across
+different levels of expertise.
+Maintenance teams are proficient in
+both traditional and advanced
+maintenance techniques.
+26 International Journal of Engineering Business Management 18
+
+--- PAGE 27 ---
+technological investments with organizational capabilities, and systematically advancing their digital maintenance
+strategies. The model is particularly useful in helping managers sequence improvement efforts across dimensions and
+adapt those priorities to the specific operational context of their sector.
+While this study lays a solid foundation, several areas warrant further exploration to enhance the model’s ap­
+plicability and effectiveness. Firstly, future research should explore the adaptation of the model for specific industries,
+considering unique challenges and requirements. Tailoring the model to sectors such as manufacturing, healthcare, or
+transportationcouldenhanceitsrelevanceandimpact.Secondly,researchshouldalsoinvestigatehowtocustomizethis
+comprehensivemodeltovariouscontextsandcompanysizes,includingSMEs,toensureitsscalabilityandadaptability
+across diverse organizational environments. Thirdly, conducting longitudinal studies to track organizations’ pro­
+gression through the maturity levels over time would provide valuable insights into the model’s effectiveness and the
+long-termbenefitsofMDTinitiatives.FutureresearchcouldfurtherinvestigatetherelationshipbetweenMDTmaturity
+and organizational performance, providing insights into how improvements across maturity dimensions translate into
+enhanced maintenance and operational outcomes, as well as explore extensions of the model through AI-driven
+maintenance systems. Furthermore, comparative studies across different industries could help identify sector-specific
+challenges and best practices to enhance the model’s generalizability and applicability. In addition, as digital
+technologiescontinuetoevolverapidly,ongoingresearchisneededtoupdateandrefinethematuritymodelandensure
+that it remains relevant and incorporates the latest advancements. Finally, the empirical validation is based on cross-
+sectionalsurveydata,whichcapturesMDTmaturityataspecificpointintime,andalthoughthesamplereflectsmultiple
+regions and sectors, potential geographical concentration, sector-specific differences, and cultural influences may
+affectthegeneralizabilityofthefindings.Futureresearchcouldfurtheraddresstheselimitationsbyincorporatingricher
+contextual data, linking maturity assessments with performance outcomes, and refining the model to better account for
+context-specific organizational and cultural factors.
+Acknowledgement
+The authors sincerely thank the respondents to the survey and consulted experts for their contribution to the success of this research.
+ORCID iD
+Afef Saihi https://orcid.org/0000-0002-3664-8664
+Ethical considerations
+Approved by the Institutional Review Board of the American University of Sharjah.
+Funding
+The authors received no financial support for the research, authorship, and/or publication of this article.
+Declaration of conflicting interests
+The authors declared no potential conflicts of interest with respect to the research, authorship, and/or publication of this article.
+Data Availability Statement
+Data are available upon reasonable request after publication of the paper.
+References
+1. Fantozzi IC, Olhager J, Johnsson C, et al. Guiding organizations in the digital era: Tools and metrics for success. International
+Journal of Engineering Business Management 2025; 17: 18479790241312804. https://doi.org/10.1177/18479790241312804
+2. Lam H, Tang V and Wong L. Raising logistics performance to new levels through digital transformation. International Journal of
+Engineering Business Management 2024; 16: 18479790241231730. https://doi.org/10.1177/18479790241231730
+3. Silvestri L, Forcina A, Introna V, et al. Maintenance transformation through Industry 4.0 technologies: A systematic literature
+review. Computers in Industry 2020; 123: 103335. https://doi.org/10.1016/j.compind.2020.103335
+4. KumarU,GalarD,ParidaA,etal.Maintenanceperformancemetrics:Astate-of-the-artreview.JournalofQualityinMaintenance
+Engineering 2013; 19(3): 233–277. https://doi.org/10.1108/jqme-05-2013-0029
+5. Daily J and Peterson J. Predictive maintenance: How big data analysis can improve maintenance. Supply Chain Integration
+Challenges in Commercial Aerospace: A Comprehensive Perspective on the Aviation Value Chain. Springer International
+Publishing, 2017, pp. 267–278.
+Saihi et al. 27
+
+--- PAGE 28 ---
+6. ChoubeyS,BentonRandJohnstenT(eds).Prescriptiveequipmentmaintenance:aframework.2019IEEEinternationalconference
+on big data (Big Data). IEEE, 2019.
+7. Brous P, Janssen M and Herder P. Internet of Things adoption for reconfiguring decision-making processes in asset management.
+Business Process Management Journal 2019; 25(3): 495–511. https://doi.org/10.1108/bpmj-11-2017-0328
+8. MourtzisD,AngelopoulosJandZogopoulosV.IntegratedandadaptiveARmaintenanceandshop-floorrescheduling.Computersin
+Industry 2021; 125: 103383. https://doi.org/10.1016/j.compind.2020.103383
+9. Saihi A, Ben-Daya M and As' ad R. Underpinning success factors of maintenance digital transformation: A hybrid reactive Delphi
+approach. International Journal of Production Economics 2023; 255: 108701. https://doi.org/10.1016/j.ijpe.2022.108701
+10. JamesAT,KumarG,KhanAQ,etal.Maintenance4.0:implementationchallengesanditsanalysis.InternationalJournalofQuality
+and Reliability Management 2023; 40(7): 1706–1728. https://doi.org/10.1108/ijqrm-04-2021-0097
+11. Lundgren C, Bokrantz J and Skoogh A (eds). Hindering Factors in Smart Maintenance Implementation. Advances in Trans­
+disciplinary Engineering, 2022.
+12. Saihi A, Ben-Daya M and As' ad R. A Survey of the Underlying Success Factors of Maintenance Digital Transformation. IFAC-
+PapersOnLine 2022; 55(10): 2944–2949. https://doi.org/10.1016/j.ifacol.2022.10.179
+13. Vial G. Understanding digital transformation: A review and a research agenda. Journal of Strategic Information Systems 2019;
+28(2): 118–144. https://doi.org/10.1016/j.jsis.2019.01.003
+14. GroossOF.Digitalizationofmaintenanceactivitiesinsmallandmedium-sizedenterprises:Aconceptualframework.Computersin
+Industry 2024; 154: 104039. https://doi.org/10.1016/j.compind.2023.104039
+15. Saihi A, Ben-Daya M and As’Ad R. Advancing Maintenance Digital Transformation: A Conceptual Framework to Guide Its
+Effective Implementation. IEEE Engineering Management Review 2024; 52(1): 121–150. https://doi.org/10.1109/emr.2023.
+3331151
+16. GökalpEandMartinezV.Digitaltransformationmaturityassessment:developmentofthedigitaltransformationcapabilitymaturity
+model. International Journal of Production Research 2022; 60(20): 6282–6302. https://doi.org/10.1080/00207543.2021.1991020
+17. Bokrantz J, Skoogh A, Berlin C, et al. Maintenance in digitalised manufacturing: Delphi-based scenarios for 2030. International
+Journal of Production Economics 2017; 191: 154–169. https://doi.org/10.1016/j.ijpe.2017.06.010
+18. AnunciaçãoPF,DinisVMLandEstevesFM.IndustrialMaintenanceEnteringtheIndustry4.0Era:ARoadmapProposal.Reviving
+Businesses With New Organizational Change Management Strategies: IGI Global, 2021, pp. 229–250.
+19. WippelM,LuckeDandJoosteJL(eds).AnIndustry4.0TechnologyImplementationModelforRollingStockMaintenance,Procedia
+CIRP, 2021.
+20. TortorellaGL,FogliattoFS,Cauchick-MiguelPA,etal.IntegrationofIndustry4.0technologiesintoTotalProductiveMaintenance
+practices. International Journal of Production Economics 2021; 240: 108224. https://doi.org/10.1016/j.ijpe.2021.108224
+21. Algabroun H, Al-Najjar B and Jonsson M (eds). A framework for the integration of digitalised maintenance systems with relevant
+working areas: A case study. IFAC-PapersOnLine, 2020.
+22. Jasiulewicz - Kaczmarek M and Gola A. Maintenance 4.0 Technologies for Sustainable Manufacturing - an Overview. IFAC
+PapersOnLine 2019; 52(10): 91–96. https://doi.org/10.1016/j.ifacol.2019.10.005
+23. Gavish N, Gutiérrez T, Webel S, et al. Evaluating virtual reality and augmented reality training for industrial maintenance and
+assembly tasks. Interactive Learning Environments 2015; 23(6): 778–798. https://doi.org/10.1080/10494820.2013.815221
+24. Gupta S, Saputelli L and Nikolaou M (eds). Applying big data analytics to detect, diagnose, and prevent impending failures in
+electric submersible pumps. OnePetro, 2016.SPE Annual Technical Conference and Exhibition.
+25. Bousdekis A, Katerina L, Dimitris A, et al. A Review of Data-Driven Decision-Making Methods for Industry 4. 0 Maintenance
+Applications. Electronics 2021; 10: 828.
+26. Jasiulewicz-Kaczmarek M and Antosz K (eds). Industry 4.0 Technologies for Maintenance Management–An Overview. In:
+International Conference Innovation in Engineering. Springer, 2023.
+27. Achouch M, Dimitrova M, Ziane K, et al. On Predictive Maintenance in Industry 4.0: Overview, Models, and Challenges. Applied
+Sciences (Switzerland) 2022; 12(16): 8081. https://doi.org/10.3390/app12168081
+28. SeneviratneD,CianiL,CatelaniM,etal.Smartmaintenanceandinspectionoflinearassets:AnIndustry4.0approach.ActaImeko
+2018; 7: 50.
+29. MalekNG,TayefehM,BenderD,etal.LIVEDigitalTwinforsmartmaintenanceinstructuralsystems.IFAC-PapersOnLine2021;
+54(1): 1047–1052. https://doi.org/10.1016/j.ifacol.2021.08.124
+30. Crespo MA. Benefits of Digital Transformation for Maintenance Management Systems. Market Trends. Digital Maintenance
+Management. Springer, 2022, pp. 3–11.
+31. Maletič D, Grabowska M and Maletič M. Drivers and Barriers of Digital Transformation in Asset Management. Management and
+Production Engineering Review 2023; 14(1): 118–126. https://doi.org/10.24425/mper.2023.145370
+32. Lundgren C, Bokrantz J and Skoogh A. Hindering Factors in Smart Maintenance Implementation. SPS2022. IOS Press, 2022,
+pp. 629–637.
+28 International Journal of Engineering Business Management 18
+
+--- PAGE 29 ---
+33. Jantunen E, Di OrioG, Hegedűs C, et al.Maintenance 4.0 worldof integratedinformation. Proceedings of the I-ESA Conferences.
+Springer International Publishing. 2019. p. 67–78.
+34. SaihiA,Ben-DayaMandAs’adR(eds).Maintenance4.0researchlandscape:Insightsandkeytrendsfromabibliometricnetwork
+analysis. AIP Conference Proceedings. AIP Publishing, 2024.
+35. GiliyanaS,SalonenAandBengtssonM.PerspectivesonSmartMaintenanceTechnologies–ACaseStudyinLargeManufacturing
+Companies. SPS2022. IOS Press, 2022, pp. 255–266.
+36. FernandesJ,ReisJ,MelãoN,etal.TheroleofIndustry4.0andBPMNintheariseofcondition-basedandpredictivemaintenance:A
+case study in the automotive industry. Applied Sciences 2021; 11(8): 3438. https://doi.org/10.3390/app11083438
+37. Nordal H and El Thalji I. Modeling a predictive maintenance management architecture to meet industry 4.0 requirements: A case
+study. Systems Engineering 2021; 24(1): 34–50. https://doi.org/10.1002/sys.21565
+38. Hlihel FB, Chater Y and Boumane A (eds). Maintenance 4.0 Employees' Competencies: Systematic Literature Review. 2022 2nd
+International Conference on Innovative Research in Applied Science, Engineering and Technology. IRASET 2022, 2022.
+39. Wanner J, Herm LV, Janiesch C, et al. (eds). Industry 4.0 Maintenance: An Examination of the Readiness of Germany's Industrial
+Sector. 2022 IEEE 24th Conference on Business Informatics (CBI). IEEE, 2022.
+40. LundgrenC,BerlinC,SkooghA,etal.Howindustrialmaintenancemanagersperceivesocio-technicalchangesinleadershipinthe
+Industry 4.0 context. International Journal of Production Research 2022; 61: 1–20. https://doi.org/10.1080/00207543.2022.
+2101031
+41. AgrawalA,GansJSandGoldfarbA.Artificialintelligence:theambiguouslabormarketimpactofautomatingprediction.Journalof
+Economic Perspectives 2019; 33(2): 31–50. https://doi.org/10.1257/jep.33.2.31
+42. BokrantzJ,SkooghA,BerlinC,etal.SmartMaintenance:aresearchagendaforindustrialmaintenancemanagement.International
+journal of production economics 2020; 224: 107547. https://doi.org/10.1016/j.ijpe.2019.107547
+43. El KY, El Kihel A and Bouyahrouzi EM. Contribution of Maintenance 4.0 in Sustainable Development with an Industrial Case
+Study. Sustainability 2022; 14(17): 11090. https://doi.org/10.3390/su141711090
+44. Bokrantz J and Skoogh A. Adoption patterns and performance implications of Smart Maintenance. International Journal of
+Production Economics 2022; 256: 108746. https://doi.org/10.1016/j.ijpe.2022.108746
+45. Lundgren C, Bokrantz J and Skoogh A. A strategy development process for Smart Maintenance implementation. Journal of
+Manufacturing Technology Management 2021; 32(9): 142–166. https://doi.org/10.1108/jmtm-06-2020-0222
+46. CardosoDandFerreiraL.Applicationofpredictivemaintenanceconceptsusingartificialintelligencetools.AppliedSciences2020;
+11(1): 18. https://doi.org/10.3390/app11010018
+47. Krason P, Maczewska A and Polak-Sopinska A; Joint proceedings of the Ahfe International Conference on Advanced Production
+ManagementandProcessControlAICoHAoAMaAICoAMM.HumanFactorinMaintenanceManagement.AdvancesinIntelligent
+Systems and Computing 2019; 793: 49–56.
+48. Savolainen P, Magnusson J, Gopalakrishnan M, et al. Organisational Constraints in Data-driven Maintenance: a case study in the
+automotive industry. IFAC PapersOnLine 2020; 53(3): 95–100. https://doi.org/10.1016/j.ifacol.2020.11.015
+49. Bousdekis A, Apostolou D and Mentzas G. Predictive Maintenance in the 4th Industrial Revolution: Benefits, Business Op­
+portunities,andManagerialImplications.IEEEEngineeringManagementReview2020;48(1):57–62.https://doi.org/10.1109/emr.
+2019.2958037
+50. Ingemarsdotter EK, Kambanou ML, Jamsin E, et al. Challenges and solutions in condition-based maintenance implementation - A
+multiple case study. Journal of Cleaner Production 2021; 296: 126420. https://doi.org/10.1016/j.jclepro.2021.126420
+51. Loukopoulos P, Zolkiewski G, Bennett I, et al. Dealing with missing data as it pertains of e-maintenance. Journal of Quality in
+Maintenance Engineering 2017; 23(3): 260–278. https://doi.org/10.1108/jqme-08-2016-0032
+52. Johansson N, Roth E and Reim W. Smart and Sustainable eMaintenance: Capabilities for Digitalization of Maintenance.
+Sustainability 2019; 11(13): 3553. https://doi.org/10.3390/su11133553
+53. Nemeth T, Ansari F and Sihn W (eds). A maturity assessment procedure model for realizing knowledge-based maintenance
+strategies in smart manufacturing enterprises. Procedia Manufacturing, 2019.
+54. LamdasniYandOkarC(eds).Abilitiesforasuccessfulmaintenancedigitaltransformation:AcasestudyofaMoroccancompany.
+2020 IEEE 13th International Colloquium of Logistics and Supply Chain Management (LOGISTIQUA). IEEE, 2020.
+55. Golightly D, Kefalidou G and Sharples S. A cross-sector analysis of human and organisational factors in the deployment of data-
+driven predictive maintenance. Information Systems and e-Business Management 2018; 16(3): 627–648. https://doi.org/10.1007/
+s10257-017-0343-1
+56. RodaI,MacchiM,FumagalliL,etal.7InternationalConferenceonAdvancesinProductionManagementSystemsA.Thefutureof
+maintenance within industry 4.0: An empirical research in manufacturing. IFIP Advances in Information and Communication
+Technology 2018; 536: 39–46.
+57. MaierAM,MoultrieJandClarksonPJ.Assessingorganizationalcapabilities:Reviewingandguidingthedevelopmentofmaturity
+grids. IEEE Transactions on Engineering Management 2012; 59(1): 138–159. https://doi.org/10.1109/tem.2010.2077289
+Saihi et al. 29
+
+--- PAGE 30 ---
+58. PaulkMC,CurtisB,ChrissisMB,etal.Capabilitymaturitymodel,version1.1.IEEEsoftware1993;10(4):18–27.https://doi.org/
+10.1109/52.219617
+59. CMMI Product Team CP. Capability maturity model® integration (CMMI SM), version 1.1. CMMI for systems engineering.
+software engineering, integrated product and process development, and supplier sourcing (CMMI-SE/SW/IPPD/SS, V1 1) 2002;
+1: 2.
+60. GarciaReyesHandGiachettiR.UsingexpertstodevelopasupplychainmaturitymodelinMexico.SupplyChainManagement:An
+International Journal 2010; 15(6): 415–424. https://doi.org/10.1108/13598541011080400
+61. Backlund F, Chronéer D and Sundqvist E. Project management maturity models–A critical review: A case study within Swedish
+engineeringandconstructionorganizations.Procedia-SocialandBehavioralSciences2014;119:837–846.https://doi.org/10.1016/
+j.sbspro.2014.03.094
+62. PanayiotouNandStavrouV.AproposedmaturityassessmentframeworkoftheGreeklocalgovernmentWebElectronicServices.
+Transforming Government: People, Process and Policy 2019; 13(3/4): 237–256. https://doi.org/10.1108/tg-03-2019-0018
+63. SaihiA,MadaniBandNdiayeM.AninnovationmaturityassessmentframeworkforuniversitieswithanintegratedANPapproach.
+International Journal of Innovation Science 2023; 16: 1028.
+64. BenotmaneM,ElhariKandKabbajA.Areview&analysisofcurrentIoTmaturity&readinessmodelsandnovelproposal.Scientific
+African 2023; 21: e01748.
+65. Kajko-MattssonM, ForssanderSandOlssonU (eds).Correctivemaintenance maturitymodel(CM3):Maintainer'seducationand
+training. Proceedings - International Conference on Software Engineering. IEEE, 2001.
+66. Kajko-Mattsson M (ed). Motivating the Corrective Maintenance Maturity Model (CM3). Proceedings of the IEEE International
+Conference on Engineering of Complex Computer Systems. ICECCS, 2001.
+67. Kajko-Mattsson M (ed). Corrective maintenance maturity model: Problem management. Conference on Software Maintenance.
+2002.
+68. Maheshwari A (ed). Development of a strategic asset management framework. Proceedings of the 1st World Congress on
+Engineering Asset Management, WCEAM 2006, 2006.
+69. AdeneyWE,SindeAandWoodsM.Developmentofassetmanagementevaluationframeworkinrailtransitenvironment:London
+underground public-private partnership. Transportation Research Record 1986; 2006: 21–28. https://doi.org/10.1177/
+0361198106198600103
+70. Schuh G, Lorenz B, Winter CP, et al. (eds). The house of maintenance-identifying the potential for improvement in internal
+maintenanceorganisationsbymeansofacapabilitymaturitymodel.In:EngineeringAssetLifecycleManagement-Proceedingsof
+the 4th World Congress on Engineering Asset Management. WCEAM, 2009.
+71. Macchi M, Fumagalli L, Pizzolante S, et al. (eds). Towards e-Maintenance: Maturity assessment of maintenance services for new
+ICT introduction. Proceedings of APMS 2010 - International Conference on Advances in Production Management Systems.
+Polipress, 2010.
+72. Fumagalli L, Farina S, Macchi M, et al. (eds). Reference process for problem management maturity assessment in the tele­
+communication sector, IFAC Proceedings Volumes (IFAC-PapersOnline), 2012.
+73. Kundler J. Maturity assessment of maintenance processes at ATC-service providers. Transport and Telecommunication 2012;
+13(1): 18–32. https://doi.org/10.2478/v10244-012-0003-y
+74. DeCarolisA,MacchiM,NegriE,etal.(eds).Amaturitymodelforassessingthedigitalreadinessofmanufacturingcompanies.IFIP
+Advances in Information and Communication Technology, 2017.
+75. MacchiM,PozzettiAandFumagalliL(eds).ExploringtheIntegrationofMaintenancewithProductionManagementinSMEs.IFIP
+Advances in Information and Communication Technology, 2014.
+76. KhaliqSA,MahmoodMNandDasN(eds).Towardsabestpracticeassetmanagementframeworkforelectricalpowerdistribution
+organisations. Asia-Pacific Power and Energy Engineering Conference. APPEEC, 2016.
+77. Vanalle RM, Lucato WC and Rodrigues RT. The utilization of ISO 9004: Case study of the maintenance area of a public
+transportation company. Journal of Quality in Maintenance Engineering 2016; 22(1): 94–111. https://doi.org/10.1108/jqme-04-
+2014-0017
+78. Johannes K, Theodorus Voordijk J, Marias Adriaanse A, et al. Identifying Maturity Dimensions for Smart Maintenance
+ManagementofConstructed Assets:A MultipleCaseStudy.Journalof ConstructionEngineeringand Management2021; 147(9):
+05021007. https://doi.org/10.1061/(asce)co.1943-7862.0002112
+79. ChenL,XieX,LuQ,etal.Geminiprinciples-baseddigitaltwinmaturitymodelforassetmanagement.Sustainability(Switzerland)
+2021; 13(15): 8224. https://doi.org/10.3390/su13158224
+80. De Bruin T, Rosemann M, Freeze R, et al. (eds). Understanding the main phases of developing a maturity assessment model.
+AustralasianConference on InformationSystems (ACIS). Australasian Chapterof the Association forInformationSystems, 2005.
+81. SchmiedbauerO,MaierHTandBiedermannH(eds).EvolutionofaLeanSmartMaintenanceMaturityModeltowardsthenewAge
+of Industry 4.0. Proceedings of the Conference on Production Systems and Logistics. Hannover publish-Ing, 2020.
+30 International Journal of Engineering Business Management 18
+
+--- PAGE 31 ---
+82. Becker J, Knackstedt R and Pöppelbuß J. Developing maturity models for IT management: A procedure model and its application.
+Business & Information Systems Engineering 2009; 1: 213–222. https://doi.org/10.1007/s12599-009-0044-5
+83. Mettler T and Ballester O (eds). Maturity Models in Information Systems: A Review and Extension of Existing Guidelines. ICIS,
+2021.
+84. Van Steenbergen M, Bos R, Brinkkemper S, et al. (eds). The design of focus area maturity models. Global Perspectives on Design
+Science Research: 5th International Conference, DESRIST 2010, St Gallen, Switzerland, June 4-5, 2010 Proceedings 5. Springer,
+2010.
+85. García-MirelesGA,MoragaMÁandGarcíaF(eds).Developmentofmaturitymodels:Asystematicliteraturereview.IETSeminar
+Digest, 2012.
+86. Huang S-J and Han W-M. Selection priority of process areas based on CMMI continuous representation. Information &
+Management 2006; 43(3): 297–307. https://doi.org/10.1016/j.im.2005.08.003
+87. Hair JF, Ringle CM and Sarstedt M. PLS-SEM: Indeed a silver bullet. Journal of Marketing theory and Practice 2011; 19(2):
+139–152. https://doi.org/10.2753/mtp1069-6679190202
+88. Elseknidy M, Kineber AF, Oke AE, et al. Identifying the agile project management implementation barriers for sustainable
+residential buildings. International Journal of Engineering Business Management 2024; 16: 18479790241299634. https://doi.org/
+10.1177/18479790241299634
+89. Hair JJF, Hult GTM, Ringle CM, et al. A primer on partial least squares structural equation modeling (PLS-SEM). Sage
+publications, 2021.
+90. Saihi A, Ben-Daya M and As'ad R. A hierarchical component model for sustainable performance measurement of maintenance
+practices: A fourth-order PLS-SEM approach. Computers & Industrial Engineering 2023; 185: 109699. https://doi.org/10.1016/j.
+cie.2023.109699
+91. Koo TK and Li MY. A guideline of selecting and reporting intraclass correlation coefficients for reliability research. Journal of
+chiropractic medicine 2016; 15(2): 155–163. https://doi.org/10.1016/j.jcm.2016.02.012
+92. Jensen CS, Aagaard H, Olesen HV, et al. Inter-rater reliability of two paediatric early warning score tools. European Journal of
+Emergency Medicine 2019; 26(1): 34–40. https://doi.org/10.1097/MEJ.0000000000000493
+93. Senna P P, Barros AC, Bonnin Roca J, et al. Development of a digital maturity model for Industry 4.0 based on the technology-
+organization-environment framework. Computers and Industrial Engineering 2023; 185.
+94. SzedlakC,ReinemannHandLeyendeckerB.DeductionofDigitalTransformationStrategiesfromMaturityModels.LectureNotes
+on Multidisciplinary Industrial Engineering; F422022: 32–39, Part.
+95. Schallmo DRA, Lang K, Hasler D, et al. An Approach for a Digital Maturity Model for SMEs Based on Their Requirements.
+Management for Professionals. Part F4572021: 87–101.
+96. Wahyudin A, Nasuha AF and Junaeti E (eds). Strategic Alignment Maturity Level Model Using Drivers of Change in a Business
+Environment. 2020 6th International Conference on Science in Information Technology: Embracing Industry 40: Towards
+Innovation in Disaster Management, ICSITech 2020, 2020.
+97. KorachiZand Bounabat B(eds).Towards a MaturityModel forDigital Strategy Assessment. Advancesin Intelligent Systems and
+Computing, 2020.
+98. Lederer M and Thummerer J (eds). Organizing a Self-organized Team: Towards a Maturity Model for Agile Business Process
+Management. International Conference on Subject-Oriented Business Process Management. Springer, 2022.
+99. Doctor E, Eymann T, Fürstenau D, et al. A Maturity Model for Assessing the Digitalization of Public Health Agencies:
+Development and Evaluation. Business & Information Systems Engineering 2023; 65(5): 539–554. https://doi.org/10.1007/
+s12599-023-00813-y
+100. Wagire AA, Joshi R, Rathore APS, et al. Development of maturity model for assessing the implementation of Industry 4.0:
+learning from theory and practice. Production Planning & Control 2021; 32(8): 603–622. https://doi.org/10.1080/09537287.
+2020.1744763
+101. Fesenko G, Fesenko T, Fesenko H, et al. Developing e-maturity model for municipal project and program management system.
+Eastern-european journal of enterprise technologies 2021; 1(3): 109–128. https://doi.org/10.15587/1729-4061.2021.225278
+102. Duque SE and El-Thalji I (eds). Intelligent Maintenance Maturity of Offshore Oil and Gas Platform: A Customized Assessment
+Model Complies with Industry 4.0 Vision, Lecture Notes in Mechanical Engineering, 2020.
+103. van Tonder C, Bossink B, Schachtebeck C, et al. Key Dimensions That Measure the Digital Maturity Levels of Smand Medium-
+Sized Enterprises (SMEs). Journal of Technology Management and Innovation 2024; 19(1): 110–130. https://doi.org/10.4067/
+s0718-27242024000100110
+104. GatellISandAvellaL.AmaturitymodelforassessingDigitalGreenLeanleadershipandcultureimplementationinmanufacturing
+companies. TotalQualityManagement and BusinessExcellence 2024; 35(7-8): 860–897. https://doi.org/10.1080/14783363.2024.
+2347373
+Saihi et al. 31
+
+--- PAGE 32 ---
+105. Matrane O, Talea A, Okar C, et al. Towards A new maturity model for information system. International Journal of Computer
+Science Issues (IJCSI) 2015; 12(3): 268.
+106. Van Looy A, De Backer M and Poels G. Defining business process maturity. A journey towards excellence. Total Quality
+Management & Business Excellence 2011; 22(11): 1119–1137. https://doi.org/10.1080/14783363.2011.624779
+107. PopoolaOA,AdamaHE, OkekeCD, etal. Cross-industryframeworks forbusinessprocess reengineering:Conceptualmodelsand
+practical executions. World Journal of Advanced Research and Reviews 2024; 22(1): 1198–1208. https://doi.org/10.30574/wjarr.
+2024.22.1.1201
+108. Alijoyo FA, Bonita I and Sirait KB. The risk management maturity assessment: the case of Indonesian fintech firm. Asia-Pacific
+Management Review 2020.
+109. FarahB.Amaturitymodelforthemanagementofinformationtechnologyrisk.InternationalJournalofTechnology,Knowledgeand
+Society 2011; 7(1): 13–26. https://doi.org/10.18848/1832-3669/cgp/v07i01/56174
+110. Oruthotaarachchi C and Wijayanayake W. Developing a multi-perspective capability model for organisational business process
+managementmaturityassessmentindigitalera.InternationalJournalofInformationSystemsandChangeManagement2023;13(3):
+191–208. https://doi.org/10.1504/ijiscm.2023.133356
+111. TeunissenT.DevelopinganAgileDigitalTransformationMaturityModelandAssessmentInstrument.UniversityofTwente,2021.
+112. Paschou T, Rapaccini M, Peters C, et al. (eds). Developing a maturity model for digital servitization in manufacturing firms.
+Proceedings on 25th International Joint Conference on Industrial Engineering and Operations Management–IJCIEOM: The Next
+Generation of Production and Service Systems 25. Springer, 2020.
+113. MotzerPLH, ArmelliniFandPelletierLS. Changemanagement inthecontextofthe FourthIndustrial Revolution:Anexploratory
+research using qualitative methods. The Journal of Modern Project Management 2020; 7(4).
+114. NazarovaGandRudenkoV.Digitalmaturityanddigitaltransformationinhumanresourcesmanagement:Stabilityvsdevelopment.
+Simon Kuznets Kharkiv National University of Economics, 2023.
+115. MachadoCG,AlmströmP,ÖbergAE,etal.MaturityFrameworkEnablingOrganizationalDigitalReadiness.SPS2020.IOSPress,
+2020, pp. 649–660.
+116. WernickeB,StehnL,SezerAA,etal.Introductionofadigitalmaturityassessmentframeworkforconstructionsiteoperations.
+International Journal of Construction Management 2023; 23(5): 898–908. https://doi.org/10.1080/15623599.2021.1943629
+117. Buntak K, Kovačić M and Mutavdžija M. Measuring Digital Transformation Maturity of Supply Chain. Tehnicki Glasnik 2021;
+15(2): 199–204. https://doi.org/10.31803/tg-20200414191933
+118. Thordsen T and Bick M (eds). Towards a holistic digital maturity model. International Conference on Information Systems, ICIS
+2020 - Making Digital Inclusive. Blending the Local and the Global, 2021.
+119. Szedlak C, Leyendecker B, Reinemann H, et al. Methodology for Assessing Digitalization Readiness and Maturity of Small and
+Medium-Sized Enterprises. Lecture Notes on Multidisciplinary Industrial Engineering; 101–111. Part F2012020.
+120. Keshavarz H and Norouzi Y. A Maturity Model for Digital Information Management in University Libraries: A Design Science
+Study. International Information and Library Review 2022; 54(4): 299–314. https://doi.org/10.1080/10572317.2021.2022388
+121. MerktR,LangVandSchmidtA.Digi-culturalmindset.TheDigitalJourneyofBankingandInsurance2021;I:185–212,Disruption
+and DNA.
+122. Teichert R. Digital transformation maturity: A systematic review of literature. Acta Universitatis Agriculturae et Silviculturae
+Mendelianae Brunensis 2019; 67(6): 1673–1687. https://doi.org/10.11118/actaun201967061673
+123. NolascoP,BarataJ,daCunhaPR,etal.(eds).ReconcilingStrategy,Maturity,andPerformanceMeasurementinIndustry4.0.29th
+Annual Americas Conference on Information Systems. AMCIS 2023, 2023.
+124. KırmızıMandKocaogluB.Digitaltransformationmaturitymodeldevelopmentframeworkbasedondesignscience:casestudiesin
+manufacturing industry. Journal of Manufacturing Technology Management 2022; 33: 1319.
+125. SantallyMI,RajabaleeYB,SungkurRK,etal.Enablingcontinuousimprovementinonlineteachingandlearningthroughe-learning
+capabilityandmaturityassessment.BusinessProcessManagementJournal2020;26(6):1687–1707.https://doi.org/10.1108/bpmj-
+11-2018-0335
+126. Nygaard J, Colli M and Wæhrens BV (eds). A self-assessment framework for supporting continuous improvement through IoT
+integration. Procedia Manufacturing, 2020.
+127. Vereycken Y, Ramioul M, Desiere S, et al. Human resource practices accompanying industry 4.0 in European manufacturing
+industry. Journal of Manufacturing Technology Management 2021; 32(5): 1016–1036. https://doi.org/10.1108/jmtm-08-2020-
+0331
+128. BretzL,KlinknerF,KandlerM,etal.Theecomaturitymodel–ahuman-centeredindustry4.0maturitymodel.ProcediaCIRP2022;
+106: 90–95. https://doi.org/10.1016/j.procir.2022.02.160
+129. SimõesA,FerreiraF,CastroH,etal.(eds).AdoptionofdigitaltechnologiesduringtheCOVID-19pandemic:Lessonslearnedfrom
+collaborative Academia-Industry R&D case studies. 2021 IEEE 19th International Conference on Industrial Informatics (INDIN).
+IEEE, 2021.
+32 International Journal of Engineering Business Management 18
+
+--- PAGE 33 ---
+130. Draganić M. Managing the Company’s Digital Capability: A Case for Operational Excellence. Journal of Information and
+Organizational Sciences 2023; 47(1): 223–243. https://doi.org/10.31341/jios.47.1.13
+131. Galaske N, Arndt A, Friedrich H, et al. (eds). Workforce management 4.0 - Assessment of human factors readiness towards digital
+manufacturing. Advances in Intelligent Systems and Computing, 2018.
+132. FloresM,VeraTandTucciC(eds).Discoveringcollaborationandknowledgemanagementpracticesforthefuturedigitalfactory.
+IFIP Advances in Information and Communication Technology, 2009.
+133. Zare MS, Tahmasebi R and Yazdani H. Maturity assessment of HRM processes based on HR process survey tool: a case study.
+Business Process Management Journal 2018; 24(3): 610–634. https://doi.org/10.1108/bpmj-01-2017-0008
+134. GuerraJMM.Talent ManagementinDigitalTransformation.ManagementforDigital Transformation.Springer, 2023,pp.61–82.
+135. Guerra JMM, Danvila-del-Valle I and Méndez-Suárez M. The impact of digital transformation on talent management. Tech­
+nological Forecasting and Social Change 2023; 188: 122291. https://doi.org/10.1016/j.techfore.2022.122291
+136. Igartua J, Retegi J and Eguren J (eds). A managerial approach to Industry 4.0 training. Industry 40. The Power of Data: Selected
+Papers from the 15th International Conference on Industrial Engineering and Industrial Management. Springer, 2023.
+137. Treviño-Elizondo BL and García-Reyes H. An Employee Competency Development Maturity Model for Industry 4.0 Adoption.
+Sustainability 2023; 15(14): 11371. https://doi.org/10.3390/su151411371
+138. Haraguchi M, Funahashi T and Biljecki F. Assessing governance implications of city digital twin technology: A maturity model
+approach. Technological Forecasting and Social Change 2024; 204: 123409. https://doi.org/10.1016/j.techfore.2024.123409
+139. PhiriP,CavaliniH,ShettyS,etal.DigitalMaturityConsultingandStrategizingtoOptimizeServices:Overview.JournalofMedical
+Internet Research 2023; 25: e37545. https://doi.org/10.2196/37545
+140. Duncan R, Eden R, Woods L, et al. Synthesizing Dimensions of Digital Maturity in Hospitals: Systematic Review. Journal of
+Medical Internet Research 2022; 24(3): e32994. https://doi.org/10.2196/32994
+141. Von Solms J and Langerman J. Digital technology adoption in a bank Treasury and performing a Digital Maturity Assessment.
+African Journal of Science, Technology, Innovation and Development 2022; 14(2): 302–315. https://doi.org/10.1080/20421338.
+2020.1857519
+142. AriffinKAZandAhmadFH.Indicatorsformaturityandreadinessfordigitalforensicinvestigationineraofindustrialrevolution4.0.
+Computers and Security 2021; 105: 102237. https://doi.org/10.1016/j.cose.2021.102237
+143. Castelo-Branco I, Oliveira T, Simões-Coelho P,et al.Measuring the fourth industrialrevolution through the Industry 4.0 lens: The
+relevance of resources, capabilities and the value chain. Computers in Industry 2022; 138: 103639. https://doi.org/10.1016/j.
+compind.2022.103639
+144. Stahl B, Häckel B, Leuthe D, et al. Data or Business First? Manufacturers’ Transformation Toward Data-driven Business Models.
+Schmalenbach Journal of Business Research 2023; 75(3): 303–343. https://doi.org/10.1007/s41471-023-00154-2
+145. Pour MJ, Abbasi F and Sohrabi B. Toward a Maturity Model for Big Data Analytics: A Roadmap for Complex Data Processing.
+International Journal of Information Technology and Decision Making 2023; 22(1): 377–419. https://doi.org/10.1142/
+s0219622022500390
+146. Shah TR. Can big data analytics help organisations achieve sustainable competitive advantage? A developmental enquiry.
+Technology in Society 2022; 68: 101801. https://doi.org/10.1016/j.techsoc.2021.101801
+147. Klötzer C and Pflaum A (eds). Toward the development of a maturity model for digitalization within the manufacturing industry’s
+supply chain. Proceedings of the Annual Hawaii International Conference on System Sciences. AIS eLibrary, 2017.
+148. Bosch J and Olsson HH (eds). Maturity Assessment Model for Industrial Data Pipelines. 2023 30th Asia-Pacific Software
+Engineering Conference. IEEE: APSEC, 2023.
+149. Caballero I, Gualo F, Rodríguez M, et al. (eds). A Maturity Model for Data Governance, Data Quality Management, and Data
+Management. Conference on Cloud Computing, Big Data & Emerging Topics. Springer, 2023.
+150. LeyhC,BleyKandSchimmeleM.Towardsanopenecosystemformaturitymodelsinthedigitalera:Theexampleofthedataquality
+management perspective. AIS eLibrary, 2018.
+151. Gollhardt T, Halsbenning S, Hermann A, et al. (eds). Development of a digital transformation maturity model for IT companies.
+2020 IEEE 22nd Conference on Business Informatics (CBI). IEEE, 2020.
+152. Santos RC and Martinho JL. An Industry 4.0 maturity model proposal. Journal of Manufacturing Technology Management 2020;
+31(5): 1023–1043. https://doi.org/10.1108/jmtm-09-2018-0284
+153. StoiberCandSchönigS.Digitaltransformationandimprovementofbusinessprocesseswithinternetofthings:amaturitymodelfor
+assessing readiness. Hawaii International Conference on System Sciences, 2022.
+154. PutriNKS,PermatasariD,SusantoR,etal.KnowledgeManagementEvaluationUsingDigitalCapabilityMaturityModelinHigher
+Education Institution. Electronic Journal of Knowledge Management 2023; 21(2): 140–157.
+Saihi et al. 33
+
+--- PAGE 34 ---
+Appendix
+Table A.1.
+Table A.1. Maturity grid formulations.
+Dimension Indicator 1. Initial 2. Managed 3. Defined 4. Quantitatively managed 5. Optimizing Inspiring
+references
+DSA: Digital
+Strategy -
+Strategic
+Alignment
+DSA.1 No formal strategy for
+maintenance
+digitalization. Digital
+initiatives are ad-hoc and
+uncoordinated.
+Basic strategy exists but lacks
+comprehensive planning
+and support from top
+management. Efforts are
+somewhat coordinated.
+A well-defined strategy is in
+place, supported by top
+management. Clear goals
+and objectives are set.
+Defined strategy is regularly
+reviewed and updated
+based on data and
+feedback.Thereisastrong
+alignment with
+organizational objectives
+and thorough planning.
+Strategy is continuously
+optimized for maximum
+impact. Innovative
+approaches and
+continuous
+improvements are
+integrated into the
+strategic framework.
+93–100
+DSA.2 Developments are
+undertaken without any
+strategic assessment of
+gaps and needs.
+Some developments are
+aligned with basic strategic
+goals,butnotsystematically
+assessed.
+Developments are
+consistently aligned with
+defined strategic goals
+following thorough
+strategic assessments.
+All developments are
+strategically assessed and
+aligned. Continuous
+monitoring ensures
+alignment with evolving
+strategic goals.
+Strategicalignmentispartof
+a continuous
+improvement process.
+New developments are
+proactively aligned and
+optimized for strategic fit.
+DSA.3 No shared vision for digital
+maintenance. Employees
+are unaware or
+unengaged with digital
+initiatives.
+Basic efforts to communicate
+the vision exist but are
+sporadic and not fully
+effective.
+Aclearandcompellingvision
+for digital maintenance is
+communicatedandshared
+across the organization.
+The vision is regularly
+reinforced and integrated
+into daily operations.
+Employees are engaged
+and understand their role
+in achieving the vision.
+Astrong,sharedvisiondrives
+continuous innovation.
+Employees are highly
+motivated and actively
+contribute to advancing
+the digital maintenance
+vision.
+TML: Top
+Management
+and Leadership
+Skills
+TML.1 Leaderslackaclearvisionfor
+digital transformation in
+maintenance.
+Leaders have a general idea of
+the importance of digital
+transformation, but no
+specific vision or plan.
+Leaders have developed a
+clear vision for digital
+transformation in
+maintenance and have
+communicated it to the
+organization.
+Leaders make sure that
+vision for digital
+transformation is
+regularly communicated
+and updated, and
+progress towards the
+vision is tracked and
+measured.
+Leaders made the vision for
+digital transformation
+fully embedded in the
+organization’sculture and
+used to drive continuous
+improvement and
+innovation.
+101–104
+TML.2 Limited or no involvement
+from top management in
+digital maintenance
+initiatives.
+Some involvement from top
+management, but
+commitment is inconsistent
+and support is limited.
+Top management is actively
+involvedinandcommitted
+to digital transformation
+efforts, providing
+resources and support.
+Top management regularly
+reviews progress towards
+digital transformation
+goals and adjusts their
+approach as needed.
+Top management is fully
+committed to digital
+transformation,
+championing the effort
+and ensuring its success.
+MPR:
+Management
+Practices
+MPR.1 Maintenance objectives are
+not clearly defined or
+aligned with business
+goals.
+Maintenance objectives are
+somewhat defined, but not
+consistently measured or
+tracked.
+Maintenance objectives are
+clearlydefinedandaligned
+with business goals, with
+metrics in place to track
+progress.
+Maintenance objectives are
+regularly reviewed and
+adjusted based on
+performance data, with a
+focus on continuous
+improvement.
+Maintenance objectives are
+continuously optimized.
+Performance
+management tools are
+advanced,andcontinuous
+improvementispartofthe
+organizational culture.
+105–112
+MPR.4 Business processes are not
+adaptedtosupportdigital
+transformation.
+Some processes are
+reengineered,buteffortsare
+sporadic and lack strategic
+direction.
+Business processes are
+reengineered to align with
+maintenance objectives.
+Strategic direction is
+provided but not
+consistently followed.
+Business process
+reengineering is
+systematically conducted
+and aligned with strategic
+objectives. Continuous
+monitoring and
+improvement are in place.
+Business processes are
+continuously
+reengineered and
+optimized. Strategic
+direction is clear, and
+innovativeapproachesare
+regularly adopted.
+MPR.5 No formal risk management
+techniques are in place.
+Basic risk management
+techniquesareadopted,but
+not systematically applied.
+A formal risk management
+process is in place to
+identify and mitigate risks
+associated with digital
+transformation.
+Risks are regularly
+monitored and assessed,
+and the risk management
+process is continuously
+improved.
+The organization has a
+proactive risk
+management culture.
+Innovative approaches
+are adopted to manage
+risks effectively.
+MPR.6 Roles and responsibilities
+are not clearly defined or
+communicated.
+Some roles and
+responsibilities are defined,
+but there is inconsistency in
+their application and
+communication.
+Rolesandresponsibilitiesare
+clearly defined,
+documented and
+communicated across the
+organization.
+Roles and responsibilities
+areregularlyreviewedand
+adjusted as needed to
+ensure alignment with
+organizational objectives.
+The organization has a
+flexible and adaptable
+workforce,withclearroles
+and responsibilities that
+can evolve as needed.
+ODC:
+Organizational
+Development &
+Change
+Management
+ODC.2 Change is not managed or
+communicated
+effectively, leading to
+resistance and confusion.
+Basic change management
+practices are in place, but
+they are not consistently
+applied or followed.
+Resistance to change is
+reduced but still present.
+Formal and well-defined
+change management
+processes are established
+and consistently applied.
+The change management
+process is regularly
+reviewed and improved,
+and its effectiveness is
+measured and tracked.
+Innovative approaches are
+used to manage change,
+the organization is highly
+adaptable and resilient,
+and employees are
+actively involved in the
+change process.
+113–119
+ODC.3 Changesareimplementedin
+an ad hoc and reactive
+manner, without a clear
+plan or strategy.
+Some planning is done before
+implementing changes, but
+it is not comprehensive or
+systematic.
+Changes are implemented
+using a structured and
+planned approach, with
+clear goals, timelines, and
+milestones.
+The planned change
+approach is regularly
+reviewed and refined, and
+its effectiveness is
+measured and tracked.
+Innovative and proactive
+planning of changes is
+embedded in the
+organizational culture to
+ensure high adaptability
+and resilience.
+(continued)
+34 International Journal of Engineering Business Management 18
+
+--- PAGE 35 ---
+Table A.1. (continued)
+Dimension Indicator 1. Initial 2. Managed 3. Defined 4. Quantitatively managed 5. Optimizing Inspiring
+references
+OCL:
+Organizational
+Culture
+OCL.1 The organization lacks a
+digital culture, with
+limited awareness or
+interest in digital
+technologies. Decision
+making is based on
+intuition and experience.
+Basic awareness of digital
+culture exists. Data-driven
+decision making is sporadic
+and not standardized.
+A robust digital culture is
+promoted. Data-driven
+decision making is
+encouraged and
+supported by top
+management.
+Digital technologies and
+data-driven decision
+makingareintegratedinto
+daily work processes.
+Regular feedback
+mechanisms ensure
+ongoing improvement.
+The organization has a
+strongdigitalculture,with
+employees actively
+seeking out and adopting
+new technologies to drive
+innovation and to guide
+their decisions.
+120–128
+OCL.2 There is no formal process
+for continuous
+improvement, and
+initiatives are
+implemented in a reactive
+manner.
+Basic efforts to promote
+continuous improvement
+exist, butcultural resistance
+remains.
+A culture of continuous
+improvement is promoted
+and supported by top
+management. Employees
+are encouraged to
+participate in
+improvement initiatives.
+Continuous improvement is
+quantitatively managed.
+Regular assessments and
+feedback mechanisms
+ensure ongoing
+improvement and
+adaptation.
+Continuous improvement is
+a core value of the
+organization, and it is
+used to drive innovation
+and excellence.
+OCL.5 Employees are not or rarely
+involved in
+decision-making
+processes. Decision
+making is centralized.
+Basic efforts to involve
+employees in decision
+making exist, but practices
+are not standardized and
+their input is not always
+valued or acted upon.
+Employees are actively
+involved in
+decision-making
+processes. Decentralized
+daily decision making is
+encouraged and
+supported by top
+management.
+Employees are empowered
+to make decisions and
+take initiative. Regular
+feedback mechanisms
+ensure ongoing
+improvement and
+adaptation.
+Employeesarefully engaged
+and empowered, with a
+strong sense of ownership
+andresponsibilityfortheir
+work. Decentralized
+decision is embedded in
+theorganizationalculture.
+KMS: Knowledge
+Management &
+WorkforceSkills
+Development
+KMS.1 No formal training or
+development programs
+for employees on digital
+technologies and
+maintenance trends.
+Some ad-hoc training is
+provided, but it is not
+systematic or
+comprehensive.
+A formal training and
+developmentprogramisin
+place, covering both
+technical and soft skills
+related to digital
+transformation.
+The training and
+development program is
+regularly updated to
+reflect changing needs
+and technologies. Its
+effectiveness is measured
+and tracked.
+Staff exhibits advanced
+digital competencies.
+Continuous learning and
+upskilling are embedded
+in the organizational
+culture.
+129–137
+KMS.3 The organization struggles
+to attract and retain
+employees with the skills
+needed for digital
+transformation.
+Basic efforts to attract new
+talents exist but are not
+standardized or strategic.
+Strategic efforts to attract
+and hire new talents with
+digital expertise.
+Recruitment processesare
+well-defined and
+supported by
+management.
+A robust talent management
+program is in place to
+identify and develop
+high-potential employees
+with digital skills.
+The organization is highly
+attractive to top talents
+with digital skills.
+Recruitment and
+retention strategies are
+continuously optimized
+and aligned with industry
+trends.
+KMS.4 Training and development
+programs are not tailored
+tothespecificneedsofthe
+organization or its
+employees.
+Some customization of
+training programs is done,
+but it is not based on a
+systematic needs
+assessment.
+Training and development
+programs are tailored to
+the specific needs of the
+organization and its
+employees, based on a
+comprehensive needs
+assessment.
+The effectiveness of the
+defined training and
+development programs is
+regularly evaluated and
+adjusted as needed.
+Learning programs are
+continuouslyoptimizedto
+address emerging trends.
+The organization has
+personalized and
+individualized learning
+approaches.
+TMA: Technology
+Management
+Aspects
+TMA.2 Systems and technologies
+arenotintegrated,leading
+to data silos and
+inefficient workflows.
+Some integration exists, but it
+is limited. Basic use of
+compatible technologies.
+Initial efforts to adopt
+standardized solutions and
+identify specifications for
+interface compatibility.
+Systems and technologies
+are integrated using
+standardized protocols
+and interfaces, enabling
+data sharing and
+collaboration.
+Specificationsforinterface
+compatibility are
+well-defined and
+implemented.
+The level of integration is
+regularly monitored and
+improved, with a focus on
+reducing complexity.
+Regular assessments
+ensure technologies and
+tools remain compatible
+and standards are
+up-to-date.
+The organization excels in
+using interoperable and
+compatible technologies.
+It has a seamless and
+integrated technology
+ecosystem, with data and
+flowing freely between
+systems and applications.
+15,138–143
+TMA.3 Technologiesareintroduced
+without considering the
+company’s context and
+are chosen based on hype
+or personal preference,
+rather than a careful
+assessment of needs.
+Unnecessary complexity
+is common.
+Someconsiderationisgivento
+needs, but technology
+choices are not always
+optimal. Basic efforts to
+avoid unnecessary
+complexity.
+Technologies are chosen
+based on a thorough
+assessmentofneedsanda
+clear understanding of the
+business case. Efforts are
+made to avoid
+unnecessary complexity
+and exploit the right
+technology at the right
+time.
+Technology choices are
+regularly reviewed and
+updated to ensure they
+remain aligned with the
+organization’s goals and
+priorities.
+The organization is
+constantly evaluating and
+adopting new
+technologies that are
+optimized and fully
+appropriate to its context
+to stay ahead of the
+competition and drive
+innovation.
+TMA.4 The organization lacks
+access to adequate
+technical support from
+technology vendors.
+Basic technical support is
+available,butitisnotalways
+timely or effective.
+The organization has a
+formal agreement with
+technology vendors for
+technical support, with
+clear service level
+agreements (SLAs).
+Technical support is
+regularly evaluated and
+feedback is provided to
+vendorstoensurethatthe
+services are aligned with
+organizational needs.
+The organization has a
+strong partnership with
+technology vendors, with
+regular collaboration and
+knowledge sharing.
+TMA.5 Cybersecurity is not a
+priority, and there are no
+formal policies or
+procedures in place.
+Some basic cybersecurity
+measures are in place, but
+they are not comprehensive
+or regularly updated.
+A formal cybersecurity and
+dataprotectionprogramis
+in place, with policies,
+procedures, and training
+for employees.
+Thecybersecurityprogramis
+regularly reviewed and
+tested, and its
+effectiveness is measured
+and tracked.
+The organization has a
+robust cybersecurity
+culture, with employees
+actively involved in
+protecting the
+organization’s data and
+systems.
+(continued)
+Saihi et al. 35
+
+--- PAGE 36 ---
+Table A.1. (continued)
+Dimension Indicator 1. Initial 2. Managed 3. Defined 4. Quantitatively managed 5. Optimizing Inspiring
+references
+DMA: Data
+Management
+Aspects
+DMA.1 Data is collected and
+processed in an ad hoc
+and manual manner, with
+limited visibility or
+control.
+Some basic data collection
+and processing tools are
+used, but the process is not
+standardized or efficient.
+Data is collected and
+processed in a
+standardized and
+automated way. A
+well-integrated Big Data
+system covers all aspects
+of the data value chain
+from generation and
+acquisition until analytics.
+Data is used to drive
+decision-making, with
+regular reviews and
+adjustments to the data
+management processes.
+The organization has a
+data-driven culture, with
+employees actively using
+data to improve their
+work. Data is collected
+and processed in
+real-time, enabling agile
+decision-making and
+continuous improvement.
+53,140,144–150
+DMA.3 Limited attention to data
+quality. Data quality is
+poor,withfrequenterrors,
+inconsistencies, and
+missing values.
+Basic standards for data
+quality are established.
+Initial efforts to ensure data
+accuracy,
+comprehensiveness, clarity,
+and applicability.
+Well-defined quality
+standards for data are in
+place. Data quality is
+ensured through
+completeness, accuracy,
+timeliness, availability,
+and consistency.
+Data quality is continuously
+monitored and improved,
+with a focus on accuracy,
+completeness, and
+timeliness.
+The organization has a high
+level of trust in its data,
+with a strong focus on
+data quality and integrity.
+Data is used to drive
+innovation and
+competitive advantage.
+DMA.4 Data collection and
+processing solutions are
+inflexible and cannot
+easily be scalable and
+adapt to changing needs.
+Some flexibility exists, but it is
+limited and requires
+significant effort to
+implement changes.
+Data collection and
+processing solutions are
+modular and scalable,
+allowing them to adapt to
+changing needs and
+volumes of data.
+The flexibility and scalability
+of data solutions are
+regularly assessed and
+improved, with a focus on
+agility and
+responsiveness.
+The organization excels in
+maintaining flexible and
+scalable data collection
+solutions, continuously
+optimizing to meet
+changing demands.
+DMA.5 The organization lacks the
+right infrastructure to
+support advanced data
+management and
+analytics.
+Some basic infrastructure is in
+place, but it is not sufficient
+to support advanced
+analytics.
+The organization has
+invested in advanced data
+management and
+analytics infrastructure,
+includingdatawarehouses
+and analytics tools.
+The data infrastructure is
+regularly updated and
+expanded to support new
+technologies and
+applications.
+The organization has a
+state-of-the-art data
+infrastructure, enabling it
+to leverage the full power
+of its data to drive
+innovation and
+competitive advantage.
+INI: Internal
+Integration
+INI.1 Departments operate in
+silos. Limited integration
+of operational functions.
+Data sharing and
+collaboration between
+departments are minimal.
+Basic level of data sharing and
+interdepartmental
+collaboration. Initial efforts
+to integrate maintenance
+with operations, IT,
+engineering, R&D, and
+purchasing.
+Formal processes and
+systems are in place to
+facilitate collaboration
+and communication
+between departments.
+Maintenanceworksclosely
+with other departments
+for joint decision-making
+and knowledge sharing.
+Collaboration is measured
+and tracked, with regular
+reviews and adjustments
+to improve effectiveness.
+The organization has a
+culture of collaboration
+and teamwork, with
+departments working
+together seamlessly to
+achieve common goals.
+132,151–154
+INI.3 Minimal collaboration
+between employees with
+up-to-date competencies
+and those with traditional
+expertise.
+Basic efforts to facilitate this
+collaboration exist, but they
+are not consistent or
+structured.
+Formal mechanisms are in
+place to facilitate
+collaboration between
+employees with different
+levels of expertise, such as
+mentoring and knowledge
+sharing programs.
+The effectiveness of this
+collaboration is measured
+and tracked, with regular
+reviews and adjustments
+to improve knowledge
+transfer and skill
+development.
+The organization has a
+culture of continuous
+learning and
+development, with
+employees actively
+sharing knowledge across
+different levels of
+expertise.
+36 International Journal of Engineering Business Management 18

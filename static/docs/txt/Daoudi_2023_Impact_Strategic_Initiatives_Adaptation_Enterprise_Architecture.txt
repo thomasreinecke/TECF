@@ -1,0 +1,1181 @@
+--- PAGE 1 ---
+© 2023 Wissal Daoudi, Kawtar Imgharene, Karim Doumi and Laila Kjiri. This open-access article is distributed under a
+Creative Commons Attribution (CC-BY) 4.0 license.
+Journal of Computer Sciences
+Original Research Paper
+Impact of Strategic Initiatives on the Adaptation of
+Enterprise Architecture
+1
+Wissal Daoudi, 1
+Kawtar Imgharene, 2
+Karim Doumi and 1
+Laila Kjiri
+1
+National School of Computer Science and Systems Analysis (ENSIAS), Rabat Information Technology Center, Advanced Digital
+Enterprise Modeling and Information Retrieval Laboratory (ADMIR), Innovation on Digital and Enterprise Architectures Team,
+Mohammed V University in Rabat, Rabat, Morocco
+2
+Faculty of Juridical, Economic and Social Sciences (FSJES), National School of Computer Science and Systems Analysis
+(ENSIAS), Rabat Information Technology Center, Advanced Digital Enterprise Modeling and Information Retrieval Laboratory
+(ADMIR), Mohammed V University in Rabat, Rabat, Morocco
+Article history
+Received: 27-05-2023
+Revised: 24-07-2023
+Accepted: 22-08-2023
+Corresponding Author:
+Wissal Daoudi
+National School of Computer
+Science and Systems Analysis
+(ENSIAS), Rabat Information
+Technology Center, Advanced
+Digital Enterprise Modeling
+and Information Retrieval
+Laboratory (ADMIR),
+Innovation on Digital and
+Enterprise Architectures Team,
+Mohammed V University in
+Rabat, Rabat, Morocco
+Email: wissal_daoudi@um5.ac.ma
+Abstract:Nowadays,companiesareimmersedindisruptiveenvironments.To
+thrive in the ‘new normal’, they drive strategic initiatives resulting in changes
+with unpredictable frequencies and extents. These changes impact different
+elements of the company, which makes them a crucial matter for enterprise
+architecture. However, the traditional management operating models have
+become overstrained, which leads to existential threats. Therefore, the
+adaptation of enterprise architecture has emerged. It is an agile approach that
+continuously senses and responds to change without compromising the
+alignment in the enterprise. The management of the impact of strategic
+initiatives is pivotal to the success of companies. Overall, in the context of
+adaptation, contributions to the proactive assessment and monitoring of the
+impact of strategic initiatives on enterprise architecture are lacking. Therefore,
+this study aims to model this impact and evaluate it while focusing on the
+enterprise architecture structural components and their relationships. It
+proposes tools to support the analysis. Thereafter, it indicates the applicability
+of the suggested approach via a case study in a state urban planning agency.
+Keywords: Adaptation, Change, Enterprise Architecture, Impact of
+Strategic Initiative
+Introduction
+Companies do not evolve alone in an empty space but
+in an environment that influences how they operate.
+Nowadays, they are facing an increasingly changing
+business environment mainly characterized by
+unpredictability and disruptions or as it is called in extant
+literature:AVolatile,Uncertain,Complex,andAmbiguous
+(VUCA) environment. To cite one recent example,
+businesses around the world have been caught off guard by
+the COVID-19 pandemic. The pandemic became a big
+challenge for micro to large enterprises in all industries as
+it spread rapidly in 2020; thus, a quick response was
+required. Some of the enterprises closed down and their
+digital transformation became a necessity, not an option.
+In response to this environmental hostility, companies
+are required to navigate uncertainty and reassess growth
+opportunities. They need to develop dynamic capabilities
+to reconfigure their assets and proactively detect new
+opportunities. Thus, adaptation to this ‘new normal’ is
+compulsory. Enterprise Architecture (EA) can be
+leveraged as a catalyst for change (Lankhorst, 2013). EA
+first started in the eighties. It provides an overview of the
+systemsofanenterpriseandtheirrelationships(Afrilianaetal.,
+2022; Anthony Jnr, 2021). It supports the design of an
+enterprise at distinct levels by a set of principles and
+models. These levels are mainly business, organization,
+Information Technology (IT), and infrastructure
+(Lankhorst, 2013). EA ensures, by design, the alignment
+between the different structural components and their
+interrelations (Anthony Jnr, 2021). Traditional EA
+frameworks are heavy, lack agility, and are complex (Gong
+and Janssen, 2019; Masuda and Viswanathan, 2019). In
+current world dynamics, their adoption has refrained.
+Several scholars have pointed to the adaptation of
+Enterprise Architecture (EA) as a tool that facilitates
+change (Hinkelmann et al., 2016; Mocker and Boochever,
+2020), They call for the redesign of EA so that it is more
+adaptable to changes (Hinkelmann et al., 2016). In fact, to
+ensure a lightweight adaptation, EA should facilitate the
+
+--- PAGE 2 ---
+Wissal Daoudi et al. / Journal of Computer Sciences 2023, 19 (11): 1318.1332
+DOI: 10.3844/jcssp.2023.1318.1332
+1319
+responsetochange.Whenmovingfroman‘As-Is’toa‘To-
+Be’, EA should support continuous multi-level
+improvement to proactively address evolving requirements
+(Daoudiet al.,2021; Masuda andViswanathan,2019).The
+continuous response to change materializes as strategic
+initiatives impacting one or many layers of the EA and
+influencing the relationships between the components of
+theirarchitecture(Daoudiet al.,2021;Kawtaretal.,2020).
+Enterprises stepping out of their comfort zone, are
+confronted with numerous strategic proposals because of
+the high dynamic of their environment. Further, they face
+an increased risk of compromising the alignment between
+their EA components and the pre-established structural
+relationships. As previously stated, the accommodation to
+changes should be quick and effective while reducing
+complexity and cost (Beese et al., 2023; Masuda et al.,
+2021). In fact, adaptation EA projects that do not take into
+consideration the pace of change and the existing
+architectures are prone to failure or abandonment. They
+lead to a waste of time and effort. In addition, they lead to
+complex architectures, misaligned components, and
+maintenance issues. The enterprises, rather than focusing
+on their strategies, need to find workarounds to respond to
+changes. There is a gap in the literature on how to support
+enterprises to proactively assess and select their strategic
+initiatives. In addition, the quantification of the impact of
+strategic initiatives on the various pre-existing
+components and relationships that are already aligned is
+lacking (Daoudi et al., 2021). In the context of adaptation
+of Enterprise Architecture, the following questions occur:
+• How to model strategic initiatives and their impact on
+Enterprise Architecture?
+• How to evaluate the impact of these initiatives on
+Enterprise Architecture components and
+relationships?
+The objective of this contribution is to model the
+impact of strategic initiatives on Enterprise Architecture
+and to support their implementation while considering the
+existing alignment. This study has the potential to support
+companies in their transformation journey to survive in
+the current highly dynamic environment. It helps them
+clearly understand the impact of their strategic initiatives
+on their current architecture. It supports them in choosing
+the strategic initiatives to implement while fully
+understanding the impact on their EA. They can also
+decide to proceed partially or fully with the
+implementation of an initiative.
+In the following, the work related to the impact of
+strategic initiatives on EA, in a context of adaptation, is
+presented. The material and methods section highlights
+the methodology, the concepts, and materials adopted for
+our research. Moreover, the results section presents the
+modeling of strategic initiatives and their impact on the
+Enterprise Architecture. Furthermore, we highlight the
+approach to evaluate the studied impact, followed by a
+proposition of supporting algorithms and prototypes (a
+modeling tool and an impact evaluation tool). In addition,
+a case in a state urban planning entity shows the
+applicability of the work. In the last part, we discuss the
+results achieved. To wrap up the research, conclusions
+and perspectives are presented.
+Related Work
+Adaptation of Enterprise Architecture
+EA is a catalyst to move from an Initial State (As-Is)
+to a future one (To-Be) (Anthony Jnr, 2021). It is a set
+of all those elements that evolve while ensuring an
+aligned coherent structure. It offers a view of the internal
+functioning of an enterprise (Winter and Fischer, 2006).
+There are several EA frameworks (Gong and Janssen,
+2019). However, those traditional frameworks are
+heavy, lack agility, and are complex (Masuda and
+Viswanathan, 2019).
+In current world dynamics, the adoption of traditional
+EA frameworks has refrained. Academics and
+practitioners explored the adaptation of EA frameworks
+(Daoudi et al., 2021; Masuda and Viswanathan, 2019;
+Van de Wetering, 2019). The actions taken to adapt the
+EA impact architectural components and their
+relationships (Alwadain, 2014; Moreno-Camacho et al.,
+2019). Adaptation responds essentially to change (Van de
+Wetering, 2019). It leads to adjustments to align the
+business with the strategy and the Information System
+(Alwadain, 2014; Moreno-Camacho et al., 2019).
+Conversely, change impacts various levels of an
+enterprise.Ithasexternalandinternalsources(Kawtaretal.,
+2020). It can be triggered strategically or operationally
+(Hinkelmann et al., 2016). Thus, the adaptation of EA
+requires effective integration and alignment between
+adaptive strategy and operations. It fits into the value
+chain as a creator of value and supports alignment
+(Kotusev et al., 2022). Moreover, the adaptation of EA
+happens continuously over time. It is a set of EA projects
+that can be initiated through operational or strategic
+triggers. It impacts architectural layers, elements,
+relationships between components, and alignment in an
+EA (Hinkelmann et al., 2016).
+Impact of Strategic Initiatives on Enterprise
+Architecture
+Strategic initiatives define the priorities for a company.
+They constitute the overall strategy. Also, they are not
+static. They evolve continuously due to internal and
+external factors (Hanelt et al., 2021; Saunders et al., 2008).
+On the other hand, the main reasons that lead to the failure
+of implementation of strategic initiatives or projects are
+the lack of monitoring and the lack of impact evaluations
+
+--- PAGE 3 ---
+Wissal Daoudi et al. / Journal of Computer Sciences 2023, 19 (11): 1318.1332
+DOI: 10.3844/jcssp.2023.1318.1332
+1320
+(Kawtar et al., 2020; Kitsios and Kamariotou 2019). The
+implementation of strategic initiatives requires Information
+systems and business capabilities (Saunders et al., 2008).
+Therefore, as a holistic approach, EA helps with the
+implementation of an enterprise strategy. This is achieved
+through the simplification of the system into interrelated
+components and the sharing of a common view of the
+enterprise. It plays the role of a mediator between the
+strategy and the operations.
+The pace of change of strategic initiatives is linked to
+the world dynamics. In current highly changing
+environments, adaptation over time of an EA results in
+many strategicinitiatives that impact one or various layers
+of the enterprise (Hinkelmann et al., 2016; Masuda and
+Viswanathan, 2019). This disturbs the coherence and
+alignment required in an EA. Conversely, the complexity
+of the architectural model depends on the complexity of
+itsunderlyingmodules.Infact,withoutpropermonitoring
+of the impact of strategic initiatives, the adaptation of EA
+can lead to complexities as new elements and
+relationships are created (Gong and Janssen, 2019). This
+causes the failure of EA adaptation projects and the
+absence of alignment with the strategy. It also creates ad-
+hoc components and relationships in the operational
+models making them difficult to maintain and align with
+each other. This challenges theEA as a supportingtoolfor
+decision-making (Tamm et al., 2022).
+Consequently, an impact evaluation of strategic
+initiatives is required to support management in the
+selection and tracking of EA projects. The literature is
+poor on how to proactively assess the impact of strategic
+initiatives (Daoudi et al., 2021). Further, before
+undertaking any adaptation EA project, the initiating
+strategic initiative should be clearly defined and modeled.
+Also, their impact on the enterprise layers should be
+quantified and closely monitored. Most importantly, it is
+necessary to model the impact on the relationships between
+the layers. The impact engendered by those initiatives
+should be assessed proactively and reactively. This
+supports decision-making, ensures the right success rate,
+andminimizesthewasteofresources.Thisimpactanalysis,
+also, ensures a quick and effective implementation of
+initiatives while reducing complexity and cost.
+To achieve this, a modeling approach of the impact of
+strategic initiatives on the adaptation of enterprise
+architecture is presented. Further, this study suggests an
+evaluation approachto this impact. Itis supportedbytools
+and algorithms.
+Materials and Methods
+This section presents the material and the methods
+used in this research. It is based on a qualitative design.
+It uses an inductive conceptual methodology presented
+in the form of stages. The materials and the concepts
+used in each stage are detailed in below paragraphs.
+This helped identify research gaps and gain an in-depth
+understanding of the research problem of this study. To
+address this problem via a novel and adequate
+methodological approach, a four stages research
+methodology was defined. Figure 1 highlights the steps
+of the methodology.
+Fig. 1: Stages of the research methodology
+
+--- PAGE 4 ---
+Wissal Daoudi et al. / Journal of Computer Sciences 2023, 19 (11): 1318.1332
+DOI: 10.3844/jcssp.2023.1318.1332
+1321
+Literature Review and Analysis of Industry-
+Leading Studies
+The analysis of the literature was done through
+scientific databases: IEEE Explorer, Web of Science,
+ACM Digital Library, Science Direct, Springer,
+Scopus, DBLP, and Google Scholar. To narrow down
+the search scope, we focused on a set of keywords:
+"Adaptation", "enterprise architecture", "strategy",
+"strategic initiatives", "Impact", "Influence", "agile"
+and "dynamic". On top of this, industry-leading studies
+were explored. The search was limited to English and
+French publications (Thesis, journals, chapter books
+and conferences). The explored papers ranged from
+2015-2023. This range was selected to cover the most
+recent publications and the research stream of
+“adaptation of Enterprise Architecture” (Anthony Jnr,
+2021). The First screening helped with the identification
+of research gaps and limitations (Daoudi et al., 2021;
+Kawtar et al., 2020). On top of the language, the type of
+articles, and the publication date range, we selected the
+following inclusion and exclusion criteria:
+• Inclusion: Include articles on the adaptation of
+enterprise architecture for companies and public
+entities, the impact of changes, and the change
+implementation
+• Exclusion: Exclude articles that focused only on
+business/Information System alignment or strategic
+planning, without delving into the correlation between
+the two. Also, country frameworks were out of scope
+duetotheirspecificities.Similarstudieswereexcluded
+while retaining only the most recent versions
+Research Problem
+Enterprises are continuously evolving in their
+environment during their lifetime. In the current highly
+dynamic environment, they need to adapt their
+strategies to address various requirements, which
+impact different layers of the enterprise. Moreover, the
+changes create and/or alter architectural relationships
+and components. This disturbs the alignment required
+in an EA. Without a proactive analysis of the impact,
+companies fail their EA projects and waste effort and
+time. Also, without proper monitoring, the architecture
+becomes more complex and difficult to maintain.
+Based on the literature review and industry studies, the
+research problem formalizes into two main questions:
+How to model strategic initiatives and their impact on
+Enterprise Architecture? How to evaluate the impact of
+these initiatives on Enterprise Architecture components
+and relationships?
+Description of Strategic Initiatives and their Impact
+on Enterprise Layers
+The existing literature highlights the layered
+representation of EA. It shows the common layers or
+domains of EA: Organizational, strategic, business,
+information system, and technical aspects (Open Group,
+2019; 2018; Winter and Fischer, 2006). The EA is
+represented through cartographies of each layer. In an
+effort to adapt to Enterprise Architecture, the
+identification of the chosen strategic initiative that would
+be considered requires the gathering of existing
+architectures through interviews and observations.
+In addition, a thorough knowledge of the strategy of
+the company, industry trends, and strategic initiatives of
+the enterprise is needed. To gather this, the methods used
+are observations and in-depth discussions in small
+groups. On top of these qualitative data collection
+methods, thedescription of the chosen strategic initiative
+and of the existing architecture requires the use of
+metamodeling. In fact, models are pivotal in the
+description of structures and behaviors. They add an
+abstraction layer to concrete concepts allowing their
+explicit manipulation. Metamodeling is the use of a
+model to describe another model as an instance. It allows
+the analysis and creation of structures, rules, models, and
+characteristics to address a class of problems. The
+representation of models and metamodels requires the
+use of a language that provides syntax and sometimes
+semantics. The use of computerized visualization tools
+with palettes and rule validations allows the
+representation of these models and their manipulation.
+According to (Kitsios and Kamariotou, 2019), there is a
+large variety of EA modeling techniques.
+The existing literature advocates a layered design of
+EA. The common layers or domains are generally
+expressed in the form of architectures (Winter and
+Fischer, 2006). The researchers often refer to the
+organizational, strategic, business, information system,
+and technical aspects (Khabouze, 2022). Several
+proposals, ranging from three layers to five layers,
+generally, are present in the literature (Open Group,
+2019; 2018; Winter and Fischer, 2006). This study
+considers that EA can be formalized in three layers:
+Strategy layer, business layer, and Information System
+(IS) layer composed of application and technology sub-
+layers. The application and technology are combined
+into the IS layer to facilitate communication with the
+stakeholders while executing the approach. In fact, there
+is a proximity between application and technology actors
+and processes. The strategy perspective defines the
+target strategy, its vision, mission, and goals. The
+business perspective describes the processes that support
+
+--- PAGE 5 ---
+Wissal Daoudi et al. / Journal of Computer Sciences 2023, 19 (11): 1318.1332
+DOI: 10.3844/jcssp.2023.1318.1332
+1322
+goals and functional requirements. Further, it helps to
+define the IS requirements that are aligned with the
+business. Thereafter, the IS layer describes the systems,
+their interaction, the data organization, and the storage.
+Further, it includes the technology perspective that shows
+the network technologies and hardware infrastructure.
+In the following, the supporting architectural
+languages used in this study are presented. They are used
+to model the impact of strategic initiatives on the
+adaptation of EA. A strategic initiative highlights crucial
+changes impacting the long-term direction of a company
+(Saunders et al., 2008). According to Kitsios and
+Kamariotou (2019), there is a large variety of EA
+modeling techniques used by researchers and
+practitioners; however, only a few of them are frequently
+used, mainly ArchiMate and i* framework. ArchiMate
+was published in 2009 as a solution to EA modeling. Its
+core framework has three layers: Business, application,
+and technology (Open Group,2019). Further in this study,
+ArchiMate is used in the business and IS layers. Figure 2
+shows the metamodel of the concepts used in each layer
+(Open Group, 2019). For strategy modeling, researchers
+focus on improving ArchiMate to model business
+strategy. ArchiMate 3.1, as the latest iteration (Open
+Group, 2019), shows that some elements were added to
+create a full ArchiMate framework, mainly motivation
+and strategy elements. However, there are many strategy
+concepts. The main ones are mission, vision, strategy, and
+objective (Anir et al., 2019). The main limitation is that
+those concepts have various levels of abstraction, some of
+them are quantifiable and others are vaguer. However,
+when using the same concept to model all of them, as in
+Archimate, we cannot differentiate between them
+anymore (Kitsios and Kamariotou, 2019). ArchiMate
+language shows limitations when conceptualizing
+strategy elements with the 'goal' concept. Thus, the i*
+framework is explored. i* is a modelling framework that
+uses four central concepts. The first one conceptualizes
+the strategic goal. It is called a 'soft goal'. The second one
+is 'hard goal', which is operationally well refined. Further,
+there is a 'plan', which is the method to fulfill a goal.
+Finally, there are 'resources', which are the means to reach
+a goal. Further, i* defines dependency and intentional
+links (Zhu and Li, 2022). Figure 3 shows the metamodel
+of i* (Zhu and Li, 2022).
+In this study, the chosen languages are i* (Zhu and Li,
+2022) and Archimate (Open Group, 2019). In order to
+model strategic initiatives, Archimate concepts can be
+enriched with i* ones. Strategic initiatives are parts of the
+strategy layer.
+Analysis of the Impact of Strategic Initiatives on
+Enterprise Layers
+For this stage, we require the operationalization of the
+gathered data regarding the impact of the chosen strategic
+initiative on the architectural layers. To ensure this, a
+quantitative method is proposed. The idea is to generate
+metrics from the models discussed in the previous step.
+The translation of qualitative concepts into numbers
+allows an in-depth analysis and the definition of metrics.
+To perform this, the method proposed is based on
+algorithms and matrixial representation.
+Fig. 2: Archimate core meta-model for each layer
+
+--- PAGE 6 ---
+Wissal Daoudi et al. / Journal of Computer Sciences 2023, 19 (11): 1318.1332
+DOI: 10.3844/jcssp.2023.1318.1332
+1323
+Fig. 3: I* meta model
+The use of algorithms to calculate impact metrics
+provides a set of well-defined and rigorous instructions. It
+also ensures the readiness to inject these steps into a
+computer program to perform the calculation. It clearly
+states the inputs needed andthe outputs generated. Weuse
+pseudocodes to present the algorithms. In addition,
+matrices are linear maps. They allow explicit
+computations in linear algebra. The impact of strategic
+initiatives on the architectural layers is simply a mapping
+between each strategic initiative and the components of
+each layer. The algorithms and the detailed matrices are
+presented in the following parts.
+Based on this methodology, the resulting approach to
+address the research problem is presented. Moreover, a
+real case study involving enterprise stakeholders
+(architects and management) shows the applicability in
+the real context of the proposed approach. It validates the
+models presented. In other contexts, the set of
+stakeholders is narrowed down depending on each
+company’s organizational structure.
+Results
+This section is organized into three parts. The first part
+presents the identification of strategic initiatives for
+Enterprise Architecture adaptation. The second section
+deep dives into the modeling of the impact of a strategic
+initiative on the layers of an Enterprise Architecture. It also
+presents the analysis of this impact. The last part presents a
+case study that supports the applicability of the work.
+Identification of Strategic Initiatives for Enterprise
+Architecture Adaptation
+When adapting to the dynamic environment, enterprises
+continuously move their EA from an ‘As-Is’ architecture to
+a ‘To-Be’ architecture. This transition can be chunked into a
+succession over time of small projects constituting
+‘elementaryEA adaptations’, namely EAi (i is an integer not
+null). The transitions over time are shown in Fig. 4.
+The elementary EA adaptation is initiated by a
+strategic initiative, and it drives the changes in the
+business and IS layers. The identification of a strategic
+initiative allows having a clear view of the foundations
+of the adaptation EA project. It, also, ensures an
+alignment between the enterprise architect and the
+different stakeholders. Moreover, it sets the grounds
+for the impact assessment of the strategic initiative on
+the Business and IS layers.
+The first step is the modeling of the strategic
+initiatives using the soft goal concept from i* and its
+refinement into 'hard goals'. To ensure the readiness of
+the company for this elementary EA adaptation, an
+assessment of factors that influence the studied
+strategic initiative is suggested. These factors fall
+under four categories that show the strengths and the
+opportunities. According to Anir et al. (2019), the
+analysis of resources and capabilities of an enterprise
+highlights the company’s strengths and weaknesses. In
+Archimate, resources are assets related to a business
+and capabilities use resources to achieve a goal. In
+addition, opportunities and threats are external factors.
+To model them the driver concept from Archimate is
+used. In Archimate, drivers are internal or external
+elements that impact a business (Kitsios and
+Kamariotou, 2019). Thus, the initiative of the
+elementary EA adaptation project is defined. It is
+modeled using the concept of ‘soft goal’ from i*.
+Figure 5 highlights the modeling concepts used in this
+step and their relationships.
+
+--- PAGE 7 ---
+Wissal Daoudi et al. / Journal of Computer Sciences 2023, 19 (11): 1318.1332
+DOI: 10.3844/jcssp.2023.1318.1332
+1324
+Fig. 4: Elementary Enterprise Architecture adaptations
+Fig. 5: Metamodel of the identification of a strategic initiative
+for an elementary EA adaptation
+Fig. 6: Metamodel of the impact of strategic initiatives on EA
+layers
+Impact of a Strategic Initiative on Enterprise
+Architecture Adaptation
+In the following, the impact of strategic initiatives on
+the layers of the EA architecture is modeled. The impact
+analysis shows the changes caused by the strategic
+initiative on the business and IS layers. In the first part,
+this impact is modeled. In the second part, an evaluation
+algorithm is presented.
+Modeling the Impact of a Strategic Initiative
+This step ends with the presentation of the cartography
+highlighting strategic initiatives and their impact on the
+business and the IS.
+In this study, ArchiMate concepts are used in
+business and IS layers. They have enriched with i*
+concepts for strategy modeling: Soft goals and hard
+goals. This is done by adding specialization to the
+concept ‘goal’ of Archimate.
+The ArchiMate language offers basic components
+that are used in generic modeling. To address specific
+demands, ArchiMate offers two customization
+mechanisms: Adding attributes or ‘profiling’
+specialization (Open Group, 2019). The second
+mechanism is adopted because it best serves the
+approach in this study. A specialized element or
+relationship is quite similar to the ‘stereotype’ in UML.
+It has the same properties as the generalized elements
+it is inheriting from.
+To conduct the impact analysis, the following i*
+concepts areused in the strategy layer: Softgoals andhard
+goals. As previously stated, a soft goal models the
+strategic initiative of the elementary EA adaptation. The
+hard goal operationally refines the strategic initiative.
+Then, in the business and IS layers, the Archimate service
+concept is used. In this case, the concepts used are
+business service, application service, and technology
+service. The service concept reflects the function that a
+system exposes to the other systems and layers. It hides
+the internal details of the system.
+The relationship used between different layers and in
+the same layer is the ‘influence relationship’ with weights
+(Default Value 1).
+Figure 6 is a UML class diagram that presents shows
+theclassesandtheirrelationships.Theclassesaregrouped
+depending on the layer they belong to.
+To support the implementation of the presented
+method, the i*AM tool (i* ArchiMate modeling tool) was
+developed. It is the extension of the ArchiMate modeling
+tool to support the hybrid modeling method.
+Conversely, the extension description ArchiMate uses
+the Ecore language of the Eclipse Modeling Framework
+(EMF) to define its metamodel. E-Class, EReference, and
+EAttribute constitute the main elements of Ecore. The
+representationofsimilar model entities is regrouped in the
+EMF metamodel element:
+• E-Class: Each E-class has E-Attributes.
+Unidirectional relationships between two E-Classes
+are done through E-References. The specialization
+applied is on E-class
+
+--- PAGE 8 ---
+Wissal Daoudi et al. / Journal of Computer Sciences 2023, 19 (11): 1318.1332
+DOI: 10.3844/jcssp.2023.1318.1332
+1325
+Fig. 7: I*AM tool modeling palette
+Fig. 8: Algorithm used to calculate the impact of a strategic
+initiative on a business and Information System layers
+Archi® (Beauvoir and Sarrodie, 2022; Open Group,
+2019) is the modeling tool on which the authors
+performed their extension. It is an open-source tool that
+supports modeling activities using ArchiMate. It is
+developed using the Eclipse Integrated Development
+Environment (IDE). First, they worked on the
+prerequisites (development tools, plug-ins, version)
+necessary to run Archi on Eclipse. Using the eclipse
+modeling framework plug-in, they modified the Archi
+meta-model and model to support i* concepts.
+Thereafter, they generated the model code. Further, the
+relations between concepts are defined. Regarding
+graphical notation, the authors reused the ‘influence
+relationship’ in ArchiMate, and for the soft and hard
+goals, they used designs for the two concepts based on
+the original notation in i* modeling.
+In ArchiMate, the color used for the strategy layer is
+brown. The authors worked on the interface code using
+Eclipse graphical plug-in. Figure 7 shows what the Archi
+palette looks like after enriching it with i* concepts.
+Evaluation of the Impact of a Strategic Initiative
+This step consists of the quantification of the impact
+and its analysis. The main metrics considered in each
+layer (business and IS) are presented below:
+• Number of elements: Count of the elements
+composing the layer
+• Number of intra-relations: Count of the relationships
+between the elements of the layer
+• Average weight per intra-relation: Sum of weights of
+intra-relationsdivided bythenumberofinterrelations
+• Impact and weighted impact of a strategic initiative
+on a specific layer: The supporting algorithms are
+presented in the following
+As for the quantification of the impact of a strategic
+initiative on each layer, an algorithm is proposed based on
+matrices. The matrices are composed of the value of the
+integer couple that corresponds to the weighted links
+between the components. The rows and columns are the
+projections of different layers. The first part is '1' if there
+is an interaction between the corresponding row and
+column, or it is '0' if no relationship exists. The second
+part is the weight of the link. It is an integer between '0'
+and '5'. The matrices used to quantify the impact of a
+strategic initiative on the business and Information
+System layers are below:
+• SH represents the relationship between soft goals and
+hard goals
+• BA represents the relationship between business and
+application services
+• AT represents the relationship between application
+and technology services
+• HH, BB, AA, and TT represent the relationships in
+the same layer respectively hard goals, business
+services, application services, and technology
+services
+The method used in calculating the impact of a
+strategic initiative on a layer is based on the matrix
+notation. The two main metrics that are suggested are the
+impact of a strategic initiative and the weighted impact of
+a strategic initiative on each layer.
+The calculation used to have the impact of a strategic
+initiative and its weighted impact on a layer is performed
+using the algorithm in (Fig. 8).
+
+--- PAGE 9 ---
+Wissal Daoudi et al. / Journal of Computer Sciences 2023, 19 (11): 1318.1332
+DOI: 10.3844/jcssp.2023.1318.1332
+1326
+Fig. 9: The second interface of the T Strategic Initiative Impact
+Evaluation Tool (SIE)
+Fig. 10: Algorithm to upload a file in the SIET tool
+Fig. 11: Details of the metrics in each layer in the second
+The algorithm ensures the multiplication of the
+representative matrices. The coefficients of the resulting
+matrix are 2-tuples. The first part reflects the existence of
+impact and the second part shows the weight of the impact
+on a layer. The algorithm then sums the coefficients of the
+resulting matrix to extend the resulting coefficients to the
+entire layer interpretation. Finally, the scaling of the
+resulting matrix brings the numbers to an interpretable
+scale by the enterprise architect.
+The impact on the business layer is the result of the
+chain multiplication of the following representative
+matrices: SH, HB, and BB. Moreover, the impact of a
+strategy initiative on the IS layer is the result of the chain
+multiplication of the following representative matrices:
+SH, HB, BB, BA, AA, AT, and TT.
+To support the implementation of the presented
+algorithm, we developed a tool Strategic Initiative Impact
+Evaluation Tool (SIET). It allows the evaluation and
+monitoring of the impact of a strategic initiative for each
+elementary EA adaptation project.
+SIET is a Java web application developed using the
+framework spring web Model-View-Controller (MVC),
+which provides components that can be used to develop
+flexible and loosely coupled web applications.
+Figure9constitutesthesecondinterfaceoftheSIETtool.
+It allows the calculation of the impact metrics presented in
+the previous section. Using i*AM, the impact of a strategic
+initiative is modeled on both business and IS layers.
+Thereafter, i*AM generates three Comma Separated Value
+(CSV)files,definingtheelements,relationships,andweights
+of relationships. These files are imported to the SIET tool to
+calculate the impact metrics of the model uploaded.
+The algorithm used to upload each of the files into the
+database of the SIET tool is presented in Fig. 10. It is used
+in the second interface of the tool. Figure 11 presents the
+metrics calculated in each layer.
+Subsequently, the metrics are grouped in each layer
+and the management can deep dive into their respective
+values by selecting the layer in the interface.
+The calculation of the impact of a strategic initiative
+affects the actual management of EA by improving how
+adaptation decisions are taken. The measurements of the
+impact and its weight help the studied company assess its
+readiness to undergo a specific adaptation project. The
+stakeholders can analyze the way the supporting business
+and information system architectures will change. If the
+impactand theweightedimpact onalayer arehigh,itmeans
+that there will be significant changes that will operate. After
+doing the analysis on multiple initiatives, the enterprise
+architect can understand when to raise the red flags about a
+project. He can as well, decide whether to implement a
+strategic initiative, to replace or to delay it. Moreover, for
+each strategic initiative, he has the flexibility whether to
+implementornotahardgoal. Hecanaswellprioritize them.
+Ontopofthis,theaverageweightofimpactofintra-relations
+in a layer refers to the strength of the relationship between
+components. The higher it is the more the changes need to
+
+--- PAGE 10 ---
+Wissal Daoudi et al. / Journal of Computer Sciences 2023, 19 (11): 1318.1332
+DOI: 10.3844/jcssp.2023.1318.1332
+1327
+operate simultaneously and the riskier it is for the alignment
+between those components.
+On top of this, the count of elements and relations in a
+layer helps the management to keep track of the evolution
+of this number. Thus, they can decide when to perform
+optimization and cleaning actions of the architectures.
+Case Study
+AcaseinaMoroccanurbanagencyisstudiedbelow.The
+urbanagencyconductsandoperatesdevelopmentprojectsin
+theurbanizationsector.Itofferssolutionsforredevelopment,
+construction, studies, and consulting. It works with
+local/global partners. The agency has evolved in a complex
+context. Its core business involves continuous adaptation to
+theevolutionofthemarketandregulations.Further,allthese
+elementsinducechangestothestrategy,processes,activities,
+and organization of the agency, thereby impacting its IS.
+With the advent of climate change and social
+challenges, Sustainability has become essential in the
+proposals. It is voluntarily led by organizations. It shows
+their ethics to make a positive impact in the world.
+Organizations are urged to take their responsibilities
+seriously regarding world sustainability.
+The 2030 Agenda proposed by United Nations
+dedicates a specific goal to cities sustainability. In this
+sense, Morocco is taking many actions.
+In 2018, the ministry in charge of urbanization urged
+the urban agencies to rethink their processes to
+incorporate sustainability. Thus, the studied Moroccan
+agency wants to move from its ‘As-Is” to a “To-Be” state:
+Become a leader in sustainability for urban agencies.
+At the start of the project, we assessed the ‘As-Is’ by
+defining a list of drivers, capabilities, and resources. We
+analyzed the elements from the monitoring systems and
+various business intelligence tools of the agency.
+Afterward, the soft goals were refined.
+Following deep discussions with the main
+stakeholders in the urban agency, the main soft goals
+identified were as follows: ‘Define the sustainability
+vision’, ‘highlight territorial sustainability’, ‘Reduce
+digital divide between rural and urban areas’, ‘Promote
+clean energy and the sustainable use of land’ and ‘ensure
+alignment with country guidelines’.
+Multiple interviews with decision-makers and architects
+in the urban agency helped me gain more field insights, rich
+descriptions, and relevant observations. The main objectives
+were the understanding of the underlying architectures and
+thegatheringof theexpectedchanges ofthechosen strategic
+initiatives. The interviews focused on the following points:
+• Existing cartography of business layer
+• Existing cartography of information system layers
+(applications and technology)
+• Threats and opportunities
+• Supporting capabilities and resources
+• Weights of the relationships between components in
+business and information system layers
+• Adopted architecture frameworks
+• Critical architectural components
+• Expected changes related to the studied strategic
+initiative
+The focus was made on the following strategic
+initiative:‘Highlightterritorialsustainability’.Wealready
+had the cartography of relations between the business and
+IS components. The As-Is model is represented in Fig. 12
+using the i* AM tool.
+Based on the As-Is architecture, the influencing
+relationships were added.
+Below, we modeled the impact of this strategic
+initiative; the result is presented in Fig. 13.
+Using the modeling tool, the soft goal and the
+corresponding hard goals were created. The studied hard
+goals were as follows:
+• Hard Goal 1:Increase green projects and eco-cities
+• Hard Goal 2:Certify projects and service
+• Hard Goal 3:Incorporate sustainability claims into
+internal and external communications
+• Hard Goal 4:Ensure environmental diagnosis in
+urban planning
+To evaluate the impact of the studied strategic
+initiative, the CSV files are exported from the i*AM tool.
+The files are, then, imported into the SIET tool. The files
+were CSV files. Three files were exported from the tool.
+The first one highlighted the components, the second one
+highlighted the relationships and the third one comprised
+the weights. Notably, each component had a unique
+identifier,whichallowedtheenterprisearchitecttoperform
+the analysis after the representation. Figure 14 shows a
+snapshot from the CSV file representing the components of
+thearchitecture.Itisextractedfromthei*AMtool.Figure15
+shows a screenshot of the CSV file representing the
+relationships between the components of the architecture.
+The second interface of the SIET allowed the upload of
+those files to simulate the impact of the strategic initiative
+before adopting it as an intermediary architecture. The files
+uploaded are analyzed and the representative matrices are
+created as per the description in previous parts. The
+calculation of the metrics (count of elements, number of
+intra-relations, impact, and weighted impact) is performed
+usingthealgorithmpresentedin(Fig8).Forthe calculation
+oftheimpactonabusinesslayer,theinputsofthealgorithm
+arethescalingthresholdsandtherepresentativematricesof
+the strategy and the business layers. The same logic applies
+to the impact on the Information System layer. The output
+ofthecalculationsperformedusingthealgorithmpresented
+in Fig. 8 is presented in the figures below. First, Fig. 16
+presents the calculated impact of the studied strategic
+initiative on the business layer. Second, Fig. 17 shows the
+impact of the studied strategic initiative on the information
+system layer.
+
+--- PAGE 11 ---
+Wissal Daoudi et al. / Journal of Computer Sciences 2023, 19 (11): 1318.1332
+DOI: 10.3844/jcssp.2023.1318.1332
+1328
+Fig. 12: As-Is modeling of the business and information system layers of a Moroccan urban agency
+Fig. 13: Impact modeling of the strategic initiative; ‘Highlight territorial sustainability’; of a Moroccan urban agency
+
+--- PAGE 12 ---
+Wissal Daoudi et al. / Journal of Computer Sciences 2023, 19 (11): 1318.1332
+DOI: 10.3844/jcssp.2023.1318.1332
+1329
+Fig. 14: CSV file of the components extracted from the tool i*AM
+Fig. 15: CSV file of the relationships extracted from the tool i*AM
+Fig. 16:Details of business metrics of the impact of the studied
+strategic initiative using the SIET tool
+Fig. 17:Details of Information System metrics of the impact of
+the studied strategic initiative using the SIET tool
+Fig.18:Comparisonbetweentheweightedimpactofstudiedhard
+goalsonbusinessandinformationsystemlayersusingthe
+SIET tool
+In this case study, the management had to decide to
+implement partially or totally the hard goals of the studied
+strategic initiative. To support them with this analysis, the
+weighted impact of each hard goal on the business and the
+information system layers was calculated using the SIET
+tool. Furthermore, the data exported as a chart helps with
+the interpretation by the management stakeholders of the
+impact of the chosen strategic initiative. Fig. 18 shows a
+comparison between the four hard goals.
+Based on the comparison in Fig. 18, the decision-
+makers compared the weighted impact of each hard goal
+on the various layers. They concluded that the highest
+impact came from hard Goal 1 and Hard goal 3. The
+changes and modifications would affect various
+components of the business layers. This would require
+
+--- PAGE 13 ---
+Wissal Daoudi et al. / Journal of Computer Sciences 2023, 19 (11): 1318.1332
+DOI: 10.3844/jcssp.2023.1318.1332
+1330
+high effort to rethink some of the business processes.
+Combined with the model in Fig. 13, they identified
+clearly the most critical components and discussed
+whether to implement the changes or not. Due mainly to
+budget constraints and other risks, management decided
+to implement Hard goal 2 (certify projects and services)
+as a first adaptation project. Thanks to the analysis, this
+goal impacts the least the architecture layers. Also, based
+on Fig. 13, some changes required by this goal would
+prepare the architectural components for the future
+adaptation projects. In fact, there is an intersection of
+impact between the three first hard goals. In addition, the
+calculation of the weight of intra-links shows the
+dependency between components in each layer.
+The modeling of the impact of the chosen strategic
+initiative allows the alignment between different
+stakeholders from strategy, and business, to IS before
+undergoing the elementary EA adaptation. Further, it
+allows the prioritization of EA adaptation projects, while
+knowing the impact on the aligned structure and
+relationships between the components. In this case, it
+allowed the management stakeholders to choose the hard
+goals to pursue, delay, or remove from the strategy
+implementation roadmap.
+Discussion
+The adaptation of EA leads to adjustments to align
+its components. It happens continuously over time
+through a set of EA projects that can be initiated
+through operational or strategic triggers. The alignment
+required in an EA, as a mediator between the strategy
+and the operations, is impacted by many strategic
+initiatives (Masuda and Viswanathan, 2019).
+The literature presents methodologies and guidelines
+to adapt enterprise architecture. Nevertheless, it lacks
+focus on the proactive assessment of the impact of
+strategic initiatives before undergoing these adaptations
+(Daoudi et al., 2021). This shortfall pushes decision-
+makers to undergo fastidious adaptation projects for
+which they are not ready. It also complexifies the
+operational models making them difficult to maintain. The
+absence of monitoring of these initiatives leads to the
+abandonment of projects and a waste of effort and time
+(Kawtar et al., 2020; Kitsios and Kamariotou, 2019).
+The proposed approach allows companies to have clear
+visibility on their adaptation initiatives and the impact on
+the established EA. This helps them track the evolution of
+architectural elements and relationships. They can make
+informed decisions whether to undergo the changes
+partially, totally, or not at all. In fact, it helps identify the
+initiating strategic initiative of an adaptation EA project.
+Its modelling is supported by EA modelling languages.
+This helps the achievement of a common view of the
+targeted initiatives by all management stakeholders. In
+addition, the use of quantitative metrics and algorithms
+ensures a quick and effective analysis and simulation of the
+implementation of initiatives. It minimizes the risks of
+direct implementation of the strategic initiatives on the
+existing architectures.
+Moreover, in a context where enterprises use multiple
+frameworks of Enterprise Architecture, the proposed
+approach is agnostic to Enterprise Architecture
+Frameworks. This helps its applicability into various
+segments and verticals.
+The replication of the proposed approach is highly
+recommended. This will help improve the efficiency of the
+algorithm and assess its limitations depending on the
+industries. The steps required for the replication are the
+following: The identification of the strategic initiatives and
+their translation into i* concepts; the analysis of the drivers
+(opportunities and threats), the resources, and the
+capabilities supporting each strategic initiative; the
+modeling of the impact of strategic initiatives on business
+and Information System layer using the modeling tool; the
+export of the data from the modelling tool and the upload
+of the files generated using the SIET tool. Finally, the
+impact on the layers using the presented algorithm is
+calculated. The enterprise architect or the lead of the
+implementation of these projects can compare the data and
+decide which initiative to implement.
+Conclusion
+Companies, that are trying to survive in the current
+highly dynamic environment, rethink their strategies and
+transform internally. They undergo adaptation projects of
+their architectures. This study allows the modeling and
+evaluation of the impact of strategic initiatives when
+adapting an Enterprise Architecture. The identification of
+strategic initiatives needs to be in accordance with the
+requirements of the environment where a company
+evolves. Also, these initiatives need to have enough
+support through internal capabilities and resources. We
+concludethatthestrategicinitiativesimpactthealignment
+in the established architectures and the relationships
+between the components. The impact on the alignment
+has different weights.
+The contribution to the current literature is an
+approach that ensures the adaptation of companies while
+ensuring an aligned coherent architectural structure. As a
+consequence, management can choose the strategic
+initiatives to implement, assess the evolution of their
+impact, and monitor the transformation of their
+architecture. To address the modeling of the strategic
+initiatives and their impact on the established
+architectures, which is the first aim of this study, we
+propose a hybrid modeling method based on i* and
+Archimate languages. Also, the modeling of the studied
+impact is done through influential relationships coming
+
+--- PAGE 14 ---
+Wissal Daoudi et al. / Journal of Computer Sciences 2023, 19 (11): 1318.1332
+DOI: 10.3844/jcssp.2023.1318.1332
+1331
+from strategic initiatives and directed to business and
+Information Systems. A weight is affected by each
+relationship showing the level of impact. To support this
+modelingmethod, a tool was developed(i*the ArchiMate
+modeling tool). Moreover, understanding the extent of the
+impact of the strategic initiatives on the overall
+architecture helps companies estimate their readiness to
+undergo the adaptation projects. It allows them to keep
+control over their architectures and to prioritize enterprise
+architecture projects. To support this, we propose, as a
+second objective in this study, the measurement of the
+impact of a strategic initiative on the EA components and
+relationships. The quantification of this impact is done via
+an algorithm based on representative matrices of the EA
+layers. It allows the evaluation and monitoring of the
+impact of a strategic initiative for each elementary EA
+adaptation project. Our contribution helps companies
+undergo the required existential changes while
+maintaining alignment between strategy, business, and
+information systems. It is agnostic to enterprise
+architecture frameworks.
+Insubsequentwork,theintegrationofamachinelearning
+approach to analyze the impact of strategic initiatives on
+enterprise architecture is suggested. This will bring
+architectural and business intelligence to support decision-
+making while moving to a target enterprise architecture.
+Moreover, wepropose toenrich the evaluation of the impact
+ofstrategicinitiativeswithadditionalmetricsthatarespecific
+to the domain of the enterprise.
+Acknowledgment
+We would like to express our sincere gratitude to the
+Center of doctoral studies, professors, and colleagues for
+their valuable guidance. The acknowledgment goes to the
+reviewers for their informative comments that helped us
+improve the quality of our manuscript. We also highly
+appreciate the efforts and the great support of the editorial
+team throughout the publication process.
+Funding Information
+This research did not receive any specific grant
+from funding agencies in the public, commercial, or
+non-profit sectors.
+Author’s Contributions
+Wissal Daoudi and Kawtar Imgharene:
+Substantial contributions to the conception of the work,
+acquisition, analysis, and interpretation of data, drafted
+and critically reviewed.
+Karim Doumi: Substantial contributions to the
+conception of the work; interpretation of data, and
+critical review.
+Laila Kjiri: Substantial contributions to the
+conception of the work, final approval of the version to be
+published, accuracy and integrity of the work.
+Ethics
+This article is original and contains unpublished
+material. The corresponding author confirms that all the
+other authors have read and approved the manuscript. No
+ethical issues are involved.
+References
+Afriliana, N., Gaol, F. L., Supangkat, S. H., & Ranti, B.
+(2022). Intelligent Digital Enterprise Architecture:
+Perspectives, Trends and Technologies. In 2022
+International Conference on ICT for Smart Society
+(ICISS) (pp. 1-5). IEEE.
+https://doi.org/10.1109/ICISS55894.2022.9915159
+Alwadain, A. S. A. (2014). A model of enterprise
+architecture evolution (Doctoral dissertation,
+Queensland University of Technology).
+https://eprints.qut.edu.au/71204/
+Anir, H., Fredj, M., & Kassou, M. (2019). Towards an
+approach for integrating business continuity
+management into enterprise architecture.
+International Journal of Computer Science and
+Information Technology (IJCSIT) Vol, 11(2), 01-16.
+https://doi.org/10.5121/ijcsit.2019.11201
+Anthony Jnr, B. (2021). Managing digital transformation
+of smart cities through enterprise architecture-a
+review and research agenda. Enterprise Information
+Systems, 15(3), 299-331.
+https://doi.org/10.1080/17517575.2020.1812006
+Beauvoir, P., & Sarrodie, J.B. (2022). Archi-ArchiMate
+Modelling Editor. Version
+4.8.0. https://www.archimatetool.com/
+Beese, J., Haki, K., Schilling, R., Kraus, M., Aier, S., &
+Winter, R. (2023). Strategic alignment of enterprise
+architecture management-how portfolios of control
+mechanisms track a decade of enterprise
+transformation at Commerzbank. European Journal
+of Information Systems, 32(1), 92-105.
+https://doi.org/10.1080/0960085X.2022.2085200
+Daoudi, W., Doumi, K., & Kjiri, L. (2021). Complexity
+and Adaptive Enterprise Architecture. In ICEIS (2)
+(pp. 759-767).
+https://doi.org/10.5220/0010475707590767
+Gong, Y., & Janssen, M. (2019). The value of and myths
+about enterprise architecture. International Journal
+of Information Management, 46, 1-9.
+https://doi.org/10.1016/j.ijinfomgt.2018.11.006
+
+--- PAGE 15 ---
+Wissal Daoudi et al. / Journal of Computer Sciences 2023, 19 (11): 1318.1332
+DOI: 10.3844/jcssp.2023.1318.1332
+1332
+Hanelt, A., Bohnsack, R., Marz, D., & Antunes Marante,
+C. (2021). A systematic review of the literature on
+digital transformation: Insights and implications for
+strategy and organizational change. Journal of
+Management Studies, 58(5), 1159-1197.
+https://doi.org/10.1111/joms.12639
+Hinkelmann,K.,Gerber,A.,Karagiannis,D.,Thoenssen,B.,
+Van der Merwe, A., & Woitsch, R. (2016). A new
+paradigm for the continuous alignment of business and
+IT: Combining enterprise architecture modelling and
+enterprise ontology. Computers in Industry, 79, 77-86.
+https://doi.org/10.1016/j.compind.2015.07.009
+Kawtar, I., Karim, D., & Salah, B. (2020). Impact of
+Change in Business IT Alignment: Evaluation with
+CBITA Tool. International Journal of Advanced
+Computer Science and Applications, 11(10), 495-504.
+https://doi.org/10.14569/IJACSA.2020.0111062
+Khabouze, R. (2022). Modernization of Legacy
+Information Technology Systems (Doctoral
+dissertation, Walden University).
+Kitsios, F., & Kamariotou, M. (2019). Business strategy
+modelling based on enterprise architecture: A state of
+the art review. Business Process Management
+Journal, 25(4), 606-624.
+https://doi.org/10.1108/BPMJ-05-2017-0122
+Kotusev, S., Kurnia, S., & Dilnutt, R. (2022). The
+practical roles of enterprise architecture artifacts: A
+classification and relationship. Information and
+Software Technology, 147, 106897.
+https://doi.org/10.1016/j.infsof.2022.106897
+Lankhorst, M. (2013). Enterprise architecture at work.
+Enterprise Engineering Series. Springer. ISBN: 978-
+3-642-29651-2. https://doi.org/10.1007/978-3-642-
+29651-2
+Masuda, Y., & Viswanathan, M. (2019). Enterprise
+architecture for global companies in a digital it era:
+Adaptive Integrated Digital Architecture Framework
+(AIDAF). Springer. https://doi.org/10.1007/978-981-
+13-1083-6
+Masuda, Y., Zimmermann, A., Shepard, D. S., Schmidt,
+R., & Shirasaka, S. (2021, October). An adaptive
+enterprise architecture design for a digital healthcare
+platform: Toward digitized society-industry 4.0,
+society 5.0. In 2021 IEEE 25th
+International
+Enterprise Distributed Object Computing Workshop
+(EDOCW) (pp. 138-146). IEEE. https://doi.org/
+10.1109/EDOCW52865.2021.00043
+Mocker, M., & Boochever, J. O. (2020). How to Avoid
+Enterprise Systems Landscape Complexity? MIS
+Quarterly Executive, 19(1): 57-68.
+https://doi.org/10.17705/2msqe.00025
+Moreno-Camacho, C. A., Montoya-Torres, J. R., Jaegler,
+A., & Gondran, N. (2019). Sustainability metrics for
+real case applications of the supply chain network
+design problem: A systematic literature review.
+Journal of Cleaner Production, 231, 600-618.
+https://doi.org/10.1016/j.jclepro.2019.05.278
+Open Group. (2018). The TOGAF® Standard, Version
+9.2. http://pubs.opengroup.org/architecture/togaf9-
+doc/arch/index.html
+Open Group. (2019). ArchiMate® 3.1 Specification, a
+Standard of The Open Group.
+https://pubs.opengroup.org/architecture/archimate31
+-doc/
+Saunders, M., Mann, R., & Smith, R. (2008).
+Implementing strategic initiatives: A framework of
+leading practices. International Journal of
+Operations and Production Management, 28(11),
+1095-1123.
+https://doi.org/10.1108/01443570810910908
+Tamm, T., Seddon, P. B., & Shanks, G. (2022). How
+enterprise architecture leads to organisational
+benefits. International Journal of Information
+Management, 67, 102554.
+https://doi.org/10.1016/j.ijinfomgt.2022.10255
+Van de Wetering, R. (2019). Enterprise architecture
+resources, dynamic capabilities and their pathways to
+operational value. In International Conference on
+Information Systems. AIS electronic library.
+https://research.ou.nl/en/publications/enterprise-
+architecture-resources-dynamic-capabilities-and-their-
+Winter, R., & Fischer, R. (2006). Essential layers,
+artifacts and dependencies of enterprise architecture.
+In 2006 10th
+IEEE International Enterprise
+Distributed Object Computing Conference
+Workshops (EDOCW'06) (pp. 30-30). IEEE.
+https://doi.org/10.1109/EDOCW.2006.33
+Zhu, Y., & Li, T. (2022). An object detection-based
+framework for automatically recognizing iStar hand
+drafts. Automated Software Engineering, 29(2), 57.
+https://doi.org/10.1007/s10515-022-00361-x

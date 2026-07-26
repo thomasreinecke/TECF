@@ -1,0 +1,896 @@
+--- PAGE 1 ---
+Contents lists available at ScienceDirect
+FutureGenerationComputerSystems
+journal homepage: www.elsevier.com/locate/fgcs
+Enterprisearchitecture-basedmetamodelformachinelearningprojectsand
+itsmanagement
+Hironori Takeuchia,∗
+, Jati H. Husenb,c
+, Hnin Thandar Tunb
+, Hironori Washizakib
+,
+Nobukazu Yoshiokab
+a
+Musashi University, Toyotama-kami 1-26-1, Nerima-ku, Tokyo, 176-8534, Japan
+b Waseda University, Okubo 3-4-1, Shinjuku-ku, Tokyo, 169-8555, Japan
+c Telkom University, Kabupaten Bandung, Jawa Barat, 40257, Indonesia
+A R T I C L E I N F O
+Keywords:
+Business–IT alignment
+Enterprise architecture
+Machine learning project
+Metamodel
+A B S T R A C T
+In this study, we consider projects for developing service systems using machine learning (ML) techniques.
+These projects involve collaboration between various stakeholders. Several types of models representing system
+architectures are introduced so that stakeholders can develop a common understanding of these projects. In
+addition, metamodels are constructed by combining ML service systems models to provide project practitioners
+with a holistic view of the projects. In certain cases, these metamodels need to be extended to incorporate
+other business models for the business–IT alignment used in enterprises. For such situations, an enterprise
+architecture-based metamodel and method for managing the metamodel are proposed in this study, which
+provide a holistic view of business–IT alignment for ML projects. We confirm the effectiveness of the proposed
+metamodel and management method through real examples.
+1. Introduction
+Currently, numerous machine learning (ML) techniques are avail-
+able as application programming interfaces (APIs) on certain devel-
+opment platforms. As a result, it is possible to utilize ML techniques
+for practical business applications. Thus, enterprises have started im-
+plementing ML-based service systems in their business functions. In
+this study, we consider projects aimed at developing ML-based service
+systems in enterprises (ML projects). Many of these projects are planned
+across various domains where reliability and trustworthiness are cru-
+cial. Despite receiving significant attention and funding, it has been
+reported that many of these projects fail in the early stages or do not
+progress beyond the prototype stage to reach production [1,2].
+When ML techniques are applied to business functions in enter-
+prises, data on the target business domain are required for training
+the ML model. This means that sufficient knowledge of the target
+business domain or prior experience is essential. Therefore, it is nec-
+essary that representatives of the IT division and those of relevant
+business divisions participate in the project, which requires a common
+understanding of the project. For an example, in an insurance company,
+the reduction of labor costs was the top business goal. From this
+goal, automatic assessment of insurance payments from medical reports
+was derived as a business task conducted by the ML-based service
+system through the goal analysis by the business division [3]. However,
+∗ Corresponding author.
+E-mail address: h.takeuchi@cc.musashi.ac.jp (H. Takeuchi).
+there are technical challenges for collaboration in the requirement
+acquisition and analysis phases of ML projects [4,5].
+One of the solutions to the collaboration challenges encountered
+in the requirement acquisition or design phase of ML projects consists
+of representing the system or the project as a proper model. To this
+end, some model representations have been introduced [6,7]. In project
+practices, because various levels of models exist, such as business or
+system level, practitioners need to select a suitable model or combine
+models for their own purpose. Therefore, metamodels for combining
+models related to ML projects have been introduced [8,9]. In such
+ML project metamodels, project elements, such as business goals, sys-
+tem requirements, and system components, are represented, and the
+relations between such elements are defined so that practitioners can
+obtain a holistic view of their ML projects. However, various types of
+models are used for representing a project, especially from the business
+perspective. Thus, the metamodel needs to be enhanced so that ML
+projects can incorporate other business models.
+In this study, a method is proposed for extending the metamodel
+in ML projects to acquire a better understanding of the relationships
+between the elements in a business–IT alignment model [10]. The
+mapping between the model elements is identified using the enterprise
+architecture (EA) approach, and the extended metamodel is represented
+https://doi.org/10.1016/j.future.2024.06.062
+Received 13 February 2024; Received in revised form 13 June 2024; Accepted 30 June 2024
+Future Generation Computer Systems 161 (2024) 135–145
+Available online 4 July 2024
+0167-739X/© 2024 The Author(s). Published by Elsevier B.V. This is an open access article under the CC BY license (http://creativecommons.org/licenses/by/4.0/).
+
+--- PAGE 2 ---
+H. Takeuchi et al.
+by ArchiMate, which is an EA-modeling language [11]. In addition,
+we define a procedure to integrate elements in other business models.
+Through an example analysis, it was confirmed that the extended
+metamodel can be effectively utilized in the project design phase and
+we can integrate elements in other business models into the metamodel.
+The remainder of this paper is organized as follows. Related work
+is described in Section 2. In Section 3, we introduce canvas models
+and a metamodel for projects developing ML-based service systems,
+and further define the research question of the study. In Section 4,
+the method proposed for extending the metamodel for ML projects is
+described. Section 5 presents an evaluation of the proposed method
+through a real project example. Finally, the results are discussed in
+Section 6, and key points and future work are outlined in Section 7.
+2. Related work
+In this study, we consider projects developing ML-based service
+systems. To conduct such projects effectively, it is necessary to have a
+common knowledge to develop the system involving the stakeholders.
+A software design pattern is a type of such knowledge. In software de-
+sign patterns, best practices are formalized such that engineers can use
+them to solve typical problems that occur when designing an applica-
+tion or system. For ML-based service systems, best practices have been
+collected through literature reviews [12] and project practices [13],
+and signs in codes or data known as ‘‘bad smells’’, which cause serious
+issues in ML project execution, have been collected through literature
+reviews [14,15]. In addition, some design patterns for ML-based service
+systems have been compiled and published based on development
+experience within a company [16] and through a systematic literature
+review, some key design patterns for ML-based service systems have
+been identified [17,18].
+Another type of knowledge is the representation of ML-based ser-
+vice systems or ML projects so that stakeholders can have common
+understandings on the developed systems or the projects. In practical
+projects, an architecture is required to represent an entire system
+in which big data analytics or ML techniques are applied [19]. To
+this end, for development teams, several architectures have been pro-
+posed [20,21]. Although some architectures contain related business
+elements [22], they do not include business goals for each stakeholder.
+As a result, it is difficult to use them in discussions between businesses
+and IT organizations. Moreover, few studies have been conducted
+on the assessment of ML-based service system development projects.
+In [23], it is reported that there are evaluation issues for systems using
+prediction algorithms such as ML techniques when we use them as
+practical social systems. Thus, in evaluating a project, it is important
+to combine the business goal and business process with the developed
+application, and represent them in a single model. However, such multi-
+viewpoint evaluation methods have not yet been introduced for ML
+system development projects.
+Business–IT alignment, which defines the relationships among the
+business goal, business process, and IT system, has been introduced into
+enterprise system management. Business–IT alignment is used to dis-
+cuss the IT system between businesses and IT organizations to decrease
+organization uncertainty and improve the enterprise agility [24]. Sev-
+eral methods were introduced in [25,26] for constructing a business–IT
+alignment model using an EA modeling approach. It is important to
+prepare generic models for each application domain or industry to
+promote the business–IT alignment approach in practice. For example,
+generic models for business–IT alignment using EA have been pro-
+posed in IT system operation [27] and IT system risk management
+domains [28]. In the health insurance industry, a business–IT alignment
+model developed for an insurance system was used to discuss the digital
+transformation of the insurance system [29]. However, these models do
+not include information on the business goal or stakeholders and it is
+difficult to discuss an IT system from the higher business management
+perspective.
+Some models represent the relationships among the goals of the
+stakeholders, services, and business objects from the business perspec-
+tive, and a comparative study was conducted in [30]. In this study,
+these models are represented using ArchiMate, whereby canvas-style
+modes are used by project stakeholders for discussions during the
+project design phase. A business model canvas was introduced in [31]
+and has been used in various business domains. Furthermore, several
+project canvas models have been developed based on this business
+model canvas for ML-based service system development projects [6,32]
+[33].
+Because both business and technology are impacted by digital trans-
+formation, the appropriate alignment of business models and digital
+technologies for new digital strategies is required [34]. Therefore,
+the need for reference models that include business perspectives for
+introducing digitized service systems has been pointed out [35]. In this
+context, a reference architecture for intelligent systems was presented
+in [7]. In this model, both digital strategies and AI architectures [36]
+are considered. Stakeholders can easily assess the business value of the
+developed system with the architecture represented from both business
+and technology perspectives.
+In response to the existing studies, in this study we consider a
+reference model as a metamodel to provide a holistic business–IT
+alignment view on ML projects.
+3. Research subjects and research question
+3.1. ML and AI canvas models
+A discussion on the application of ML techniques in the business
+domain requires representing the project from various business view-
+points using these techniques. In this way, the idea of the application
+can be shared between stakeholders. For this purpose, inspired by the
+business model canvas proposed in [31], canvas models have been
+proposed for projects developing ML-based service systems. Fig. 1
+illustrates the ML canvas [32,37] and AI canvas [33].
+The ML canvas defines the requirements on the ML-based service
+system and primarily describes the desired functionality, performance,
+and strategy as follows:
+• Prediction task describes the type of task, the entity on which
+predictions are made, and possible outcomes.
+• Decision describes how predictions are turned into value for the
+end-user.
+• Value proposition describes the end-users, their objectives, their
+workflow, and the benefit they will obtain from the system.
+• Data collection describes the situation or the strategy for collect-
+ing training data, such as continuous updates.
+• Impact simulation describes the value for the end-users when
+correct decisions are made based on the prediction results.
+• Making prediction describes constraints, such as real-time or
+batch prediction computation time.
+• Building models describes the constraints for ML models, such
+as training time or model update intervals.
+• Live monitoring describes the metrics for measuring the system’s
+impact on businesses.
+In the business model canvas [31], the elements that make up
+the business model are arranged as cells on the canvas, allowing the
+entire business model to be comprehended easily. Specifically, the
+value proposition is placed at the center of the canvas. Elements related
+to customers are positioned on the right-hand side, while elements
+concerning new services or products are placed on the left-hand side.
+Additionally, elements associated with costs or revenue are located
+at the bottom. In the ML canvas, the value proposition is similarly
+positioned at the center of the canvas. On the right-hand side, elements
+Future Generation Computer Systems 161 (2024) 135–145
+136
+
+--- PAGE 3 ---
+H. Takeuchi et al.
+Fig. 1. Machine learning (ML) canvas and artificial intelligence (AI) canvas.
+Fig. 2. Analysis workflows for ML canvas and AI canvas.
+related to data or the ML model are placed. Elements related to predic-
+tions are also positioned on the left-hand side, and an element related
+to operations is placed at the bottom.
+When populating the AI canvas model, the project elements specific
+to the development of ML-based service systems are identified through
+business analysis. In addition to the basic project elements such as
+the customer, stakeholders, skills required from the development team,
+cost of the project, and data required for the ML service system, the
+following requirements on the ML-based service system are considered
+in the AI canvas.
+• Output describes the key metric for the business system.
+• Value proposition describes the business situation that would
+enable the users to benefit from the system.
+In the AI canvas, similar to the business model canvas, the value propo-
+sition is placed at the center of the canvas, and elements associated
+with costs or revenue are located at the bottom. On the right-hand
+side, elements related to marketing are placed, while elements related
+to development are positioned on the left-hand side.
+Through the discussion in the project planning stage, project mem-
+bers fill each cell and construct canvas models. For these two canvas
+models, typical analysis workflows [32,33] are defined as shown in
+Fig. 2.
+After planning ML projects from various business’ viewpoints, de-
+velopment teams initiate the design of the ML-based service systems.
+For example, in the case of mission critical applications, a safety case
+will be developed as part of the requirements analysis described for the
+canvas models.
+3.2. Metamodel for ML projects
+In project practices, where various levels of models exist, such as
+business or system level, practitioners need to select a suitable model
+for their own purpose. When some elements in a model need to be mod-
+ified, the other models may need to be updated for consistency. When
+the traceability between models is maintained manually, there is a risk
+of losing consistency. Therefore, metamodels were proposed in [8,9] to
+combine some ML-related models. In these metamodels (EMMM in [8]
+and M3S metamodel in [9]), the project elements, including the busi-
+ness goals, system requirements, and system components represented
+in different models as well as the relations between such elements, are
+defined so that the ML project practitioners can obtain a holistic view
+of their projects. Fig. 3 illustrates the M3S metamodel defined in [9].
+This M3S metamodel is integrated with models such as AI canvas,
+ML canvas, knowledge acquisition in automated specification (KAOS),
+system-theoretic accident model and processes (STAMP), and safety
+case.
+These existing metamodels for ML projects [8,9] are constructed
+in three phases. First, by looking at the concepts in each model, the
+experts construct metamodels based on their own modeling knowl-
+edge. Second, the team evaluates the correctness of each metamodel.
+In [8], the metamodels were reviewed through weekly meetings of all
+experts and they were iteratively improved until all experts approved
+them. Third, each metamodel is integrated into a unified metamodel
+where similar concepts are either merged into a single concept or con-
+nected with notations that represent relationships defined in the unified
+modeling language (UML). For example, concepts in a whole-part
+relationship are connected by the ‘‘composition’’ notation, concepts in
+a relationship where one concept is based on another are linked by the
+‘‘generalization’’ notation, and similar concepts are connected by the
+‘‘association’’ notation.
+Based on this metamodel, a platform supporting consistent require-
+ments and systems analysis methods is developed in [9]. For the
+metamodel, this platform provides some views selected based on the
+identification part ISO/IEC Guide 51 [38], which specifies analysis
+steps of the safety aspects for standards. For example, we can see
+related model elements defined in AI canvas and in ML canvas through
+the value view and the task view, respectively. Through this platform,
+we can make the ML-based service development process an ‘engineer-
+ing’ process. That is means that we can understand what purpose the
+ML model serves in the first place, how far we are aiming for impact in
+terms of project value, what kind of data characteristics it deals with,
+and what the expected performance and accuracy should ideally be. For
+instance, when we develop a model representing safety case through
+systems analysis on this platform for a solution argumentation, we can
+check the consistency between the safety case and the model repre-
+senting safety requirements derived by STAMP/STPA [39] through the
+metamodel.
+Future Generation Computer Systems 161 (2024) 135–145
+137
+
+--- PAGE 4 ---
+H. Takeuchi et al.
+Fig. 3. Metamodel for ML projects.
+3.3. Research question
+By introducing a metamodel on ML projects, an ML-based service
+system can be designed from multiple viewpoints, and the consistency
+between models can be retained when specifying the designed system.
+However, various types of models are used to represent IT systems,
+especially from the business viewpoint in the context of business–IT
+alignment. If ML projects are planned through a discussion among
+business stakeholders and these business models are used to assess the
+ML-based service system from the business–IT alignment perspective,
+such elements need to be considered in the system design phase. In
+addition, to support various viewpoints, we need to integrate other
+models on certain occasions as needed. In modifying the metamodel,
+the actual modification activities and the method for assessing the
+adequacy of the proposed modifications are not clearly defined. This
+means that the specific metamodel extension requires the modeling
+skills of practitioners.
+In this study, we consider the following research question (RQ):
+ 
+RQ: How can we manage an ML project metamodel to support a
+business–IT alignment viewpoint?
+ 
+For this RQ, we propose a method for extending the metamodel to
+better understand the relationships between the elements in a business–
+IT alignment model as well as those in existing ML project meta-
+models. The mapping between model elements is identified using the
+EA-based approach and the extended metamodel is represented by
+ArchiMate [11]. Through a real project example, it is confirmed that
+the extended metamodel can be effectively utilized in the project design
+phase and it is one of the solutions to the RQ. In addition, we propose
+a method for managing the EA-based metamodel and confirm that we
+can integrate the elements in other models into the metamodel through
+an example analysis.
+4. Proposal
+4.1. Business–IT alignment model for ML-based service systems
+In enterprise system management, business–IT alignment is intro-
+duced to define the relationships between business goals, business
+processes, and the IT system. Business–IT alignment is used to discuss IT
+systems between business and IT organizations, decrease organization
+Fig. 4. Generic business–ML alignment model.
+uncertainty, and improve enterprise agility [24]. Therefore, business–
+IT alignment models consider project elements such as applications,
+business processes, and goals, as well as the relationships among them.
+A generic business–IT alignment model for ML-based service sys-
+tems described by ArchiMate that is an EA modeling language was
+proposed in [40]. It is referred to as the generic business–ML alignment
+model (BMLA model) and is presented in Fig. 4.
+Using ArchiMate, a business and IT system can be represented as
+an EA with three layers, namely, the business layer, application layer,
+and technology layer. Business goals, an organization’s missions, and
+observed situations can be also represented elements of the motivation
+extension in ArchiMate. In this study, we use the model elements in the
+business layer, the application layer, and the motivation extension in
+ArchiMate as shown in Table 1 Between these model elements, various
+relations are defined in ArchiMate. Table 2 lists the relations used in
+this study.
+In a practical ML project, members from both the business and
+IT divisions are involved in developing a new business or ML-based
+services. The new services are performed through a new business
+process. An ML business process is part of a new business process to
+achieve a business goal, and a practitioner in the business division
+is assigned to the process. Before executing the ML business process,
+another process is required for the preparation of an ML model, which
+in turn requires training data (ML resource).
+The ML business process is realized through an ML application ser-
+vice. The application service, which has an ML function, includes an ML
+runtime prediction engine as a component; to execute the ML runtime
+Future Generation Computer Systems 161 (2024) 135–145
+138
+
+--- PAGE 5 ---
+H. Takeuchi et al.
+Fig. 5. Extended Architecture (EA)-based metamodel for ML projects.
+Table 1
+Model elements in ArchiMate used in this study.
+engine, an ML model is required. A training service is used in the ML
+model preparation process. As project objectives, the mission of the
+business division and a business goal are defined. The business goal is
+divided into ML goals, and each ML goal is divided into ML model goals.
+These goals are realized by the new business service, ML service, and
+ML runtime prediction engine. The business goal is monitored using a
+Table 2
+Relations in ArchiMate used in this study.
+business performance metric such as a key performance indicator (KPI);
+the ML goal is monitored through an application performance metric,
+and the ML model goal is monitored via model performance. Here, the
+application performance depends on the target business process and
+must be defined for each application. Precision and recall are used as
+performance metrics to assess the ML model.
+The model described in Fig. 4 is a generic model. Therefore, when
+starting a project, we need to substantiate this model by developing an
+ML-based service system in the business domain.
+4.2. Enterprise architecture (EA)-based metamodel for ML projects
+Studies representing business model canvas based on an EA mod-
+eling approach such as ArchiMate [30,41] are available. These ap-
+proaches assign ArchiMate elements to each canvas element in the
+metamodel.
+In the ML canvas model, in the definition of the canvas cell, the
+value proposition consists of the end users, their objectives, and their
+Future Generation Computer Systems 161 (2024) 135–145
+139
+
+--- PAGE 6 ---
+H. Takeuchi et al.
+Table 3
+Mapping element.
+Fig. 6. Metamodel extension process for ML projects [42].
+workflow, which are represented by ‘‘Actor’’, ‘‘Goal’’, and ‘‘Business
+process’’, respectively. As business layer elements, ‘‘Business process’’
+is assigned to ‘‘Decision’’; whereas, ‘‘Building model’’ and ‘‘Business
+object’’ are assigned to ‘‘Data sources’’. Among the elements of appli-
+cation layer, ‘‘Application component’’ is assigned to ‘‘Prediction task’’.
+As motivation extension elements, ‘‘Assessment’’ is assigned to ‘‘Live
+monitoring’’; ‘‘Data collection’’ and ‘‘Goal’’ to ‘‘Impact simulation’’;
+‘‘Meaning’’ to ‘‘Features’’; and ‘‘Requirement’’ to ‘‘Making prediction’’.
+In the AI canvas model, ‘‘Assessment’’ is assigned to ‘‘Output’’, and
+‘‘Value’’ is assigned to ‘‘Cost’’ and ‘‘Revenue’’ as motivation extension
+elements. As business layers elements, ‘‘Actor’’ is assigned to ‘‘Cus-
+tomers’’ and ‘‘Stakeholders’’; ‘‘Business object’’ to ‘‘Data’’; and ‘‘Busi-
+ness process’’ to ‘‘Value proposition’’. Finally, as strategy elements,
+‘‘Capability’’ is assigned to ‘‘Skills’’.
+After assigning the semantics defined in ArchiMate to model ele-
+ments, the elements corresponding to those in the business–ML align-
+ment model are identified. Here, an expert propose the corresponding
+element for each canvas model and such elements are reviewed by
+other experts. The corresponding elements are summarized in Table 3.
+In Table 3, each row represents the equivalent elements through
+the three models. The corresponding elements can be represented
+by connecting these elements through association relationships. As a
+result, we introduce an EA-based metamodel for ML projects as shown
+in Fig. 5. For this modeling, we use Archi1
+that is an open source,
+cross-platform ArchiMate modeling tool.
+The metamodel in Fig. 5 represents the elements in the business–ML
+alignment model and business model canvases as well as the relation-
+ships between these elements, thereby providing a holistic business
+viewpoint on ML projects for practitioners. In Section 5, the effective-
+ness of the proposed metamodel is confirmed through a real-world
+case.
+4.3. Method for enhancing the EA-based metamodel
+Although integrating multiple models using a metamodel allows the
+analysis and modeling of target new businesses or systems from multi-
+ple perspectives, any changes or modifications made to the constituent
+models require extending the metamodel while ensuring overall consis-
+tency. For this purpose, an extension of the metamodel was proposed
+for ML projects in [42] based on the software maintenance process
+defined in ISO/IEC/IEEE14764:2022 [43], as represented in Fig. 6.
+In this research [42], the need for metamodel extension is analyzed
+both at the system and ML levels. As a result, the affected model
+elements for each analysis process are identified: on the ISO/IEC/IEEE
+15288:2015 [44] for the system level, and the ML workflow [45] for
+the ML level.
+However, this process does not define the actual modification ac-
+tivities and the method for assessing the adequacy of the proposed
+modifications. Here, we propose a method for enhancing the EA-based
+metamodel based on this process. We consider a business model for
+representing the ML project and attempt to integrate some parts of
+the model into the EA-based metamodel. For each model element, we
+conduct the following steps:
+1
+https://www.archimatetool.com/
+Future Generation Computer Systems 161 (2024) 135–145
+140
+
+--- PAGE 7 ---
+H. Takeuchi et al.
+Fig. 7. Business flow for determining the destination of an overseas remittance.
+1. Assign an ArchiMate element to the model element.
+2. Identify the relationship between the model element and the
+element in the metamodel, and propose a modification.
+3. Review whether the identified relationships are valid and deter-
+mine whether we should accept the modification.
+5. Examples
+In this section, the proposed EA-based metamodel is applied to a
+real ML project, whereby the effectiveness of the proposed model is
+confirmed. In addition, we apply the proposed method for enhancing
+the EA-based metamodel for another canvas model for ML projects.
+5.1. Example of ML project model using EA-based metamodel
+Here, we consider a service system development project where the
+ML technique is applied to the overseas transmittance business of a
+bank. In a major Japanese bank, more than 10,000 transactions are
+executed in the overseas remittance (OR) business each month. For
+each transaction, practitioners need to understand the recipient from
+the natural-language text in the application document and determine
+the destination information on the basis of the bank’s own business
+rules. Fig. 7 shows the flow for determining the destination of an OR.
+In the foreign exchange business division, reducing the business cost is
+a business goal. In achieving this goal, one of the sub-goals can be to
+reduce the time for the destination determination in each transaction.
+Through the discussion with the OR business division, the data
+scientist in the IT division found that a machine learning-based named-
+entity extraction (NE Ext) technology can be applied to extract the
+recipient information from the text fields in application documents.
+Therefore, it was expected that a new destination determination process
+using the ML-based NE Ext application could partially realize the goal
+of reducing the cost in the OR business. In this process, key elements for
+the business–IT alignment such as business goals, business processes,
+and applications, as well as the relationships between these elements,
+are derived by applying the business analysis method proposed in [40].
+In this analysis method, the model elements are identified through
+the following steps:
+• By analyzing the business under consideration, identify concerns,
+problematic situations, cause analysis, the target system to be
+developed, and solutions.
+• By analyzing the solution derived in the previous step, identify
+the actor, service, information, goal, and metrics for evaluation.
+Based on the results, the business–ML alignment model can be specified
+for this project from the generic business–ML alignment model in Fig. 4.
+The specified business–AI alignment model is displayed in Fig. 8.
+By referring to the proposed EA-based metamodel represented in
+Fig. 5, an ML canvas model with some of the canvas cells already filled
+with the content described in the business–ML alignment model can be
+obtained, as in Fig. 9.
+In the discussion with project members from the business divisions,
+the development team explained that descriptions where the recipient
+information is annotated are required as training data. After that the
+following questionnaires were presented to the members from the
+business divisions:
+Fig. 8. Business–ML alignment model for the new service system in overseas remittance
+derived by the business analysis method [40].
+• Are there descriptions with recipient information available?
+• How many descriptions can be used for the project?
+• Who can annotate the recipient information in the descriptions?
+As results, we obtained the following insights regarding the availability
+of training data from the business division team.
+ 
+10,000 descriptions were available for training data.
+ 
+The data collection cell in the ML canvas was filled with this
+insight as the strategy for data collection. By referring to the EA-based
+metamodel, the business–ML alignment model was enhanced based on
+the updated ML canvas. It was found that data collection is related
+to the data source in the ML canvas, and data source is equivalent
+to ML resource in the business–ML alignment model. As a result, the
+enhanced business–ML alignment model represented in Fig. 10 was
+obtained. It was confirmed that the ML canvas and the business–ML
+alignment model can be updated by referring to the proposed extended
+metamodel.
+5.2. Example of EA-based metamodel enhancement
+To discuss the application of ML techniques in the business domain,
+other canvas models in addition to the ML and AI canvas models
+described in Section 3 have been proposed. For example, another
+canvas model for ML projects, called ‘‘ML Project Canvas’’, is shown
+in Fig. 11 [46].
+This canvas model is introduced to share the idea of the ML applica-
+tion between stakeholders. Here, we integrated some elements of this
+canvas model and enhanced the EA-based ML project metamodel based
+on the proposed method.
+As the first and second steps in the proposed method described in
+Section 4.3, for each element in the canvas, we assigned an ArchiMate
+element and identified the equivalent element in the metamodel.
+Table 4 presents the results of this analysis.
+From this results, as the third step in the proposed method, we
+selected ‘‘Purpose/Goal’’, ‘‘Metrics of success’’, ‘‘User segment’’, ‘‘Ac-
+tion based on prediction’’, ‘‘New business process’’, ‘‘Business data’’,
+and ‘‘Algorithm’’ and integrated them with the metamodel. Fig. 12
+represents the integrated part of the metamodel.
+6. Discussion
+In our proposal, we constructed an EA-based metamodel for ML
+projects by extending the existing metamodel (M3S metamodel) [9]
+and business–ML alignment model (BMLA model) [40]. Table 5 shows
+the comparison between the proposed model and existing metamodels
+Future Generation Computer Systems 161 (2024) 135–145
+141
+
+--- PAGE 8 ---
+H. Takeuchi et al.
+Fig. 9. ML canvas model with some of the canvas cells already filled with the content described in the business–AI alignment model in Fig. 8 through the proposed metamodel.
+Fig. 10. Business–ML alignment model enhanced based on the updated ML canvas (the
+insights on the collected training data in the canvas model were added as an assessment
+element connected to the training data.).
+Fig. 11. ML project canvas.
+or architecture. M3S metamodel includes the elements in ML canvas
+and AI canvas. Therefore, the proposed EA-based metamodel cov-
+ers elements across business, user, and ML service systems, and is
+comprehensive compared to other models in Table 5.
+Through the analysis examples, we have confirmed that the pro-
+posed EA-based metamodel provides a holistic view of an ML project
+and based on it, the stakeholders can plan the ML-based service ef-
+fectively. In addition, it was confirmed that we can integrate other
+business models into the metamodel based on the proposed model mod-
+ification method. These results indicate that the proposed metamodel
+could be one of the solutions to the research question. These results
+show that the proposed metamodel can be one of the solutions to
+the RQ. However, EA-based approaches may occasionally depend on
+the application domain, and in practice, it is common to modify such
+approaches for each project. Therefore, in order to validate whether
+Table 4
+ML project canvas element.
+the proposed metamodel can solve the RQ, it is necessary to conduct
+a questionnaire to practitioners after several ML projects in various
+industries or application domains. For example, we should confirm
+whether the corresponding model elements defined in Table 3 are
+reasonable from practitioners’ perspectives. In addition, there are some
+service systems containing multiple ML components. For such systems,
+we need to assess the feasibility of the metamodel and the analysis
+method using the model. These are our future work.
+In addition to the business model canvas, other business value
+modeling approaches are available such as e3-value and customer value
+chain analysis (CVCA). Some business goal modeling approaches, such
+as the i∗ framework and balanced score card (BSC), are available,
+and [30] showed that these models can be represented using the EA
+modeling notation and compared them from different EA perspectives.
+In ML projects, business value and business goal models can be con-
+structed based on these existing approaches. Through the examples, it is
+expected that they can be incorporated into the ML project metamodel
+using the proposed method. In our future work, we will extend the
+metamodels to other types of business models.
+In the proposed method, we assign semantics related to businesses,
+applications, and motivations to each model element so that practition-
+ers can easily compare the elements in the different models. However,
+no explicit steps have been defined for identifying the equivalent
+elements through multiple models. Connecting the elements of the
+different models allows practitioners to understand the meanings of
+these models and assess the relationships between them based on their
+knowledge. Therefore, some methods for assessing model elements are
+required; this is also an area of opportunity for future work.
+Future Generation Computer Systems 161 (2024) 135–145
+142
+
+--- PAGE 9 ---
+H. Takeuchi et al.
+Table 5
+Comparison between the proposed model and existing metamodels or architecture.
+Fig. 12. Extended EA-based metamodel (partial).
+7. Conclusion
+In this study, we discussed projects for developing service systems
+using ML techniques. These projects involve collaboration between dif-
+ferent stakeholders, and various challenges exist. One of the solutions to
+the collaboration challenges in the early stages of ML projects involves
+representing the system or the project as a proper model, and various
+types of models are used in project practices. When different models
+are used in a project, it is required that the consistency between these
+models be retained during the project. To this end, metamodels com-
+bining both the business level model and system architecture model are
+introduced for ML-based service systems. However, because different
+types of business model notations have been used in business domains,
+it is difficult to use such models independently in planning ML projects.
+Therefore, a holistic view of business–IT alignment is required for ML
+projects when using these models.
+For this purpose, we proposed an EA-based metamodel for ML
+projects by extending an existing metamodel and generic model for
+business–ML alignment. We identified the project elements, including
+business goals, system requirements, and system components, repre-
+sented in this metamodel and the generic model, as well as the relations
+between such elements. After deriving the mapping between the model
+elements, a metamodel was constructed using ArchiMate. In addition,
+we defined a procedure to manage the metamodel so that we can
+integrate elements in another business model with the metamodel.
+Through a real project example, it was confirmed that the ML canvas
+and the business–ML alignment model could be updated by referring
+to the proposed metamodel. It was also confirmed that the metamodel
+can be enhanced by adding elements in other business models based on
+the proposed method.
+For our future work, we plan to conduct practice-based validation
+of the proposed metamodel through new case studies or surveys with
+practitioners across various project domains, enhance the metamodel
+for complex ML-based service systems, and develop an assessment of
+model elements when updating the metamodel.
+CRediT authorship contribution statement
+Hironori Takeuchi: Writing – original draft, Methodology, Investi-
+gation. Jati H. Husen: Writing – review & editing, Validation, Method-
+ology. Hnin Thandar Tun: Writing – review & editing. Hironori
+Washizaki: Writing – review & editing, Methodology. Nobukazu Yosh-
+ioka: Writing – review & editing, Methodology.
+Declaration of competing interest
+The authors declare the following financial interests/personal rela-
+tionships which may be considered as potential competing interests:
+Hironori Washizaki reports financial support and travel were provided
+by Japan Science and Technology Agency. If there are other authors,
+they declare that they have no known competing financial interests or
+personal relationships that could have appeared to influence the work
+reported in this paper.
+Data availability
+The data that has been used is confidential.
+Acknowledgments
+This work was supported by the JST-Mirai Project (Engineerable
+AI Techniques for Practical Applications of High-Quality Machine
+Learning-based Systems), Japan, Grant No. JPMJMI20B8.
+References
+[1] VentureBeat, Why do 87% of data science projects never make it into pro-
+duction?, 2019, https://venturebeat.com/ai/why-do-87-of-data-science-projects-
+never-make-it-into-production/.
+[2] Gartner, Gartner identifies the top strategic technology trends for 2021, 2020,
+https://www.gartner.com/en/newsroom/press-releases/2020-10-19-gartner-
+identifies-the-top-strategic-technology-trends-for-2021.
+[3] artificial., AI for commercial underwriting: how it’s already making a differ-
+ence, 2020, https://artificial.io/company/blog/ai-for-commercial-underwriting-
+how-its-already-making-a-difference.
+Future Generation Computer Systems 161 (2024) 135–145
+143
+
+--- PAGE 10 ---
+H. Takeuchi et al.
+[4] F. Dalpiaz, N. Niu, Requirements engineering in the days of artificial intelligence,
+IEEE Softw. 37 (4) (2020) 7–10.
+[5] N. Nahar, S. Zhou, G. Lewis, C. Kästner, Collaboration challenges in building
+ML-enabled systems: Communication, documentation, engineering, and process,
+in: Proceedings of the IEEE/ACM 44th International Conference on Software
+Engineeering, ICSE, 2022, pp. 413–425.
+[6] A. Agrawal, J. Gans, A. Goldfarb, A simple tool to start making decision with
+the help of AI, in: Harvard Business Review Online, 2018, https://hbr.org/2018/
+04/a-simple-tool-to-start-making-decisions-with-the-help-of-ai.
+[7] A. Zimmermann, R. Schmidt, D. Jugel, M. Möhring, Evolution of enterprise ar-
+chitecture for intelligent digital systems, in: Proceedings of the 14th International
+Conference on Research Challenges on Information Science, 2020, pp. 145–153.
+[8] S. Idowu, D. Strüer, T. Berger, EMMM: A unified meta-model for tracking
+machine learning experiments, in: Proceedings of the 48th Euromicro Conference
+on Software Engineering and Advanced Applications, SEAA, 2022, pp. 48–55.
+[9] J. Husen, H. Washizaki, N. Yoshioka, H. Tun, Y. Fukazawa, H. Takeuchi,
+Metamodel-based multi-view modeling framework for machine learning systems,
+in: Proceedings of the 11th International Conference on Model-Based Software
+and Systems Engineering, MODELSWARD 2023, 2023, pp. 194–201.
+[10] H. Takeuchi, J.H. Hussen, H.T. Tun, H. Washizaki, N. Yoshioka, Enterprise
+architecture-based metamodel for a holistic business—IT alignment view on
+machine learning projects, in: Proceedings of the IEEE International Conference
+on E-Business Engineering, ICEBE, 2023, pp. 8–15.
+[11] The Open Group, ArchiMate 3.1 – A Pocket Guide, Van Hares Publishing, 2019.
+[12] A. Serban, K. van der Blom, H. Hoos, J. Visser, Adoption and effects of
+software engineering best practices in machine learning, in: Proceedings of the
+ACM / IEEE International Symposium on Empirical Software Engineering and
+Measurement, 2020, pp. 3:1 – 3:12.
+[13] H. Takeuchi, K. Imazaki, N. Kuno, T. Doi, Y. Motohashi, Constructing reusable
+knowledge for machine learning projects based on project practices, Intell. Decis.
+Technol. 16 (4) (2022) 725–735.
+[14] H. Foidl, M. Felderer, R. Ramler, Data smells: Categories, causes and conse-
+quences, and detection of suspicious data in AI-based systems, in: Proceedings
+of the IEEE/ACM 1st International Conference on AI Engineering - Software
+Engineering, CAIN, 2022, pp. 229–239.
+[15] H. Zhang, L. Cruz, A. van Deursen, Code smells for machine learning applications,
+in: Proceedings of the IEEE/ACM 1st International Conference on AI Engineering
+- Software Engineering, CAIN, 2022, pp. 217–228.
+[16] V. Lakshmanan, S. Robinson, M. Mann, Machine Learning Design Patterns:
+Solutions to Common Challenges in Data Preparation, Model Building, and
+MLOps, O’Reilly, 2020.
+[17] H. Yokoyama, Machine learning system architectural pattern for improving op-
+erational stability, in: Proceedings of IEEE International Conference on Software
+Architecture Companion, 2019, pp. 267–274.
+[18] H. Washizaki, F. Khomh, Y.-G. Guéhéneuc, H. Takeuchi, N. Natori, T. Doi, S.
+Okuda, Software-engineering design patterns for machine learning applications,
+IEEE Comput. 55 (3) (2022) 30–39.
+[19] S. Earley, Analytics, machine learning, and the internet of things, IEEE ITPro 17
+(1) (2015) 10–13.
+[20] Y. Demchenko, C. de Last, P. Membrey, Defining architecture components of
+the big data ecosystem, in: Proceedings of the International Conference on
+Collaboration Technologies and Systems, CTS, 2014, pp. 104–112.
+[21] J. Heit, J. Liu, M. Shah, An architecture for the deployment of statistical models
+for the big data era, in: Proceedings of IEEE International Conference on Big
+Data, 2016, pp. 1377–1384.
+[22] B. Geerdink, A reference architecture for big data solutions: Introducing a model
+to perform predictive analytics using big data technology, in: Proceedings of IEEE
+8th International Conference for Internet Technology and Secured Transactions,
+ICITST, 2013, pp. 71–76.
+[23] J.M. Hofman, A. Sharma, D.J. Watts, Prediction and explanation in social science,
+Science 355 (6324) (2017) 486–488.
+[24] M. Zhang, H. Chen, A. Luo, A systematic review of business-IT alignment research
+with enterprise architecture, IEEE Access 6 (2018) 18934–18944.
+[25] K. Hinkelmann, A. Gerber, D. Karagiannis, B. Thoenssen, A. van der Merwe,
+R. Woitsch, A new paradigm for the continuous alignment of business and IT:
+Combining enterprise architecture modeling and enterprise ontology, Comput.
+Ind. 79 (2016) 77–86.
+[26] J. Saat, U. Franke, R. Lagerström, M. Ekstedt, Enterprise architecture meta
+models for IT/Business alignment situations, in: Proceedings of the 14th IEEE
+International Enterprise Distributed Object Computing Conference, 2010, pp.
+14–23.
+[27] M. Vicente, N. Game, M.M. da Silva, A design theory nexus for situational
+enterprise architecture management, in: Proceedings of the 4th International
+Conference on Exploring Service Science, 2013, pp. 86–99.
+[28] N. Mayer, J. Aubert, E. Grandry, C. Feltus, E. Goettelmann, R. Wieringa, An
+integrated conceptual model for information system security risk management
+supported by enterprise architecture management, Softw. Syst. Model. (2018)
+1–28.
+[29] J. Degele, J. Hain, V. Kinitzki, S. Krauß, P. Kühfß, N. Sigle, Data architecture for
+digital health insurances, in: Proceedings of Digital Enterprise Computing, DEC,
+2017, pp. 107–116.
+[30] S. Yamamoto, A comparative analysis of business model notations, J. Bus. Theory
+Pract. 7 (3) (2019) 111–123.
+[31] A. Osterwalder, Y. Pigneur, Business Model Generation, Wiley, 2010.
+[32] L. Dorard, From data to AI with the machine learning canvas, 2016,
+https://medium.com/louis-dorard/from-data-to-ai-with-the-machine-learning-
+canvas-part-i-d171b867b047.
+[33] J. Zawadzki, Introducing the AI project canvas, 2019, https://
+towardsdatascience.com/introducing-the-ai-project-canvas-e88e29eb7024.
+[34] R. Schmidt, A. Zimmermann, M. Möhring, S. Nurcan, B. Keller, F. Bär, Digi-
+tization – Perspectives for conceptualization, in: Proceedings of the European
+Conference on Service-Oriented and Cloud Computing, 2015, pp. 263–275.
+[35] A. Zimmermann, R. Schmidt, J. Bogner, D. Jugel, M. Möhring, Software evolution
+for digital transformation, in: Proceedings of the 13th International Conference
+on Novel Approaches To Software Engineering, 2018, pp. 205–212.
+[36] A. Zimmermann, R. Schmidt, K. Sandkuhl, D. Jugel, J. Bogner, M. Möhring,
+Evolution of enterprise architecture for digital transformation, in: Proceedings of
+the IEEE 22nd International Enterprise Distributed Object Computing Workshop,
+2018, pp. 87–96.
+[37] L. Dorard, Machine learning canvas v1.1: change log, 2021, https://www.ownml.
+co/blog/machine-learning-canvas-v11-change-log.
+[38] Safety aspects — Guidelines for their inclusion in standards, International
+Organization for Standardization, 2014, ISO/IEC Guide 51:2014.
+[39] N.G. Leveson, Engineering a Safer World: Systems Thinking Applied to Safety
+(Engineering Systems), The MIT Press, 2012.
+[40] H. Takeuchi, S. Yamamoto, Business analysis method for constructing business–
+AI alignment model, in: Proceedings of the 24th International Conference on
+Knowledge-Based and Intelligent Information & Engineering Systems (Procedia
+Computer Science Vol. 176), 2020, pp. 1312–1321.
+[41] L.O. Meertens, M.E. Jacob, L.J.M. Nieuwenhuis, M.J.V. Sinderen, H. Jonkers, D.
+Quartel, Mapping the business model canvas to ArchiMate, in: Proceedings of the
+27th Annual ACM Symposium Applied Computing, SAC, 2012, pp. 1694–1702.
+[42] J. Husen, H. Washizaki, H.T. Tun, N. Yoshioka, Y. Fukazawa, H. Takeuchi,
+H. Tanaka, K. Munakata, Extensible modeling framework for reliable machine
+learning system analysis, in: Proceedings of the 2nd International Conference on
+AI Engineering – Software Engineering for AI, CAIN 2023, 2023.
+[43] Software engineering – Software life cycle processes – Maintenance, International
+Organization for Standardization, 2022, ISO/IEC/IEEE 14764:2022.
+[44] Systems and software engineering – System life cycle processes, International
+Organization for Standardization, 2015, ISO/IEC/IEEE 15288:2015.
+[45] S. Amershi, A. Begel, C. Bird, R. Deliner, H. Gall, E. Kamar, N.N.B. Nushi,
+T. Zimmermann, Software engineering for machine learning: A case study, in:
+Proceedings of the 41st International Conference on Software Engineering, 2019,
+pp. 291–300.
+[46] Mitsubishi Chemical Holdings Corporation, Machine learning project canvas,
+2019, https://www.mitsubishichem-hd.co.jp/news_release/pdf/190718.pdf.
+Hironori Takeuchi is a professor at Musashi University.
+He received M.S. degree in mathematical engineering from
+University of Tokyo in 2000. From 2000 to 2018, he was
+with IBM Reseach – Tokyo. He received his Ph.D degree
+from Keio University in 2012. His research interests include
+enterprise modeling, requirements engineering, and text
+analytics in software engineering.
+Jati H. Husen is a student in a Ph.D. course at Waseda
+University. He received his M.Eng. degree in Computer
+Science and Communication Engineering from Waseda Uni-
+versity, Tokyo, Japan, in 2018. Previously, he received a
+B.Eng. degree in computer science from Telkom University,
+Bandung, Indonesia, in 2014. He is also currently on leave
+as a lecturer in the Bachelor of Software Engineering study
+program at the School of Computing, Telkom University.
+He was an awardee of the Indonesia Endowment Fund for
+Education for his master’s education granted in 2016. His
+research interest lies in the software engineering domain, es-
+pecially requirement engineering and software engineering
+for AI systems. Previously, he worked in the game develop-
+ment industry at Batavian Studio as a game programmer in
+2015.
+Future Generation Computer Systems 161 (2024) 135–145
+144
+
+--- PAGE 11 ---
+H. Takeuchi et al.
+Hnin Thandar Tun is a Ph.D. course student at Waseda
+University. She received her M.Eng degree in Computer
+Science and Engineering from the University of Miyazaki,
+Japan, in 2016. Additionally, she earned a Double Master’s
+Degree from the University of Computer Studies, Yan-
+gon, Myanmar, and the University of Miyazaki in 2016.
+Currently, she is conducting research in Software Engineer-
+ing and Machine Learning Systems at Waseda University.
+Her research interests include Business Strategies within
+Software Engineering, Artificial Intelligence, and Machine
+Learning requirements and systems. Previously, she focused
+on the Capability Maturity Model for Business Industries in
+Software Engineering.
+Hironori Washizaki is a professor in the Department of
+Computer Science and Engineering at Waseda University
+and a visiting professor at the National Institute of Infor-
+matics. He also works in industry as outside director of
+eXmotion. He is an advisor of SYSTEM INFORMATION and
+University of Human Environments. His research interests
+include software design, reuse, quality assurance, machine
+learning engineering, project and business management, and
+ICT education. He received a Doctoral degree in information
+and computer science from Waseda University. He has
+served as the IEEE Computer Society President-Elect 2024
+and the President 2025. He has also served as a Convener
+of ISO/IEC/JTC1 SC7/WG20, the Chair of IPSJ SIGSE, and
+the Chair of JUSE SQiP. He is an Associate Editor of IEEE
+Transactions on Emerging Topics in Computing, Steering
+Committee Member of CSEE&T and APSEC, and an Advisory
+Committee Member of COMPSAC. He is a Professional
+Member of IEEE-Eta Kappa Nu. He spearheads the evolution
+project of the Guide to the Software Engineering Body of
+Knowledge (SWEBOK).
+Nobukazu Yoshioka is the CEO of QAML Inc. and a
+Guest Professor of the Research Institute for Science and
+Engineering at Waseda University, Japan. Dr. Nobukazu
+Yoshioka received his B.E. degree in Electronic and Infor-
+mation Engineering from Toyama University in 1993. He
+received his M.E. and Ph.D. degrees from the School of In-
+formation Science from Japan Advanced Institute of Science
+and Technology in 1995 and 1998, respectively. From 1998
+to 2002, he was with Toshiba Corporation, Japan. From
+2002 to 2004, he was a researcher, and from 2004 to 2021,
+he had been an associate professor at National Institute of
+Informatics, Japan. From 2021 to 2024, he was a Professor
+of Waseda Research Institute for Science and Engineering,
+Waseda University, Japan. His research interests include
+Security and Privacy Software Engineering and Software
+Engineering for Machine Learning-based Systems.
+Future Generation Computer Systems 161 (2024) 135–145
+145

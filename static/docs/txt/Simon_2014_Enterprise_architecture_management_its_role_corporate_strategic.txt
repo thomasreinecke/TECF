@@ -1,0 +1,1777 @@
+--- PAGE 1 ---
+ORIGINAL ARTICLE
+Enterprise architecture management and its role
+in corporate strategic management
+Daniel Simon • Kai Fischbach • Detlef Schoder
+Received: 5 October 2011/Revised: 30 December 2012/Accepted: 6 January 2013/
+Published online: 8 March 2013
+ Springer-Verlag Berlin Heidelberg 2013
+Abstract A considerable number of organizations continually face difficulties
+bringing strategy to execution, and suffer from a lack of structure and transparency
+in corporate strategic management. Yet, enterprise architecture as a fundamental
+exercise to achieve a structured description of the enterprise and its relationships
+appears far from being adopted in the strategic management arena. To move the
+adoption process along, this paper develops a comprehensive business architecture
+framework that assimilates and extends prior research and applies the framework to
+selected scenarios in corporate strategic management. This paper also presents the
+approach in practice, based on a qualitative appraisal of interviews with strategic
+directors across different industries. With its integrated conceptual guideline for
+using enterprise architecture to facilitate corporate strategic management and the
+insights gained from the interviews, this paper not only delves more deeply into the
+research but also offers advice for both researchers and practitioners.
+Keywords Enterprise architecture  Enterprise architecture management 
+Business architecture  Corporate strategic management  Strategic planning 
+Business model
+D. Simon  D. Schoder
+Department of Information Systems and Information Management,
+University of Cologne, Pohligstr. 1, 50969 Cologne, Germany
+e-mail: simon@wim.uni-koeln.de
+URL: http://www.wim.uni-koeln.de/
+D. Schoder
+e-mail: schoder@wim.uni-koeln.de
+URL: http://www.wim.uni-koeln.de/
+K. Fischbach (&)
+Chair in Information Systems and Social Networks,
+University of Bamberg, An der Weberei 5, 96047 Bamberg, Germany
+e-mail: kai.fischbach@uni-bamberg.de
+URL: http://www.uni-bamberg.de/sna
+123
+Inf Syst E-Bus Manage (2014) 12:5–42
+DOI 10.1007/s10257-013-0213-4
+
+--- PAGE 2 ---
+1 Introduction
+Since the late 1980s, enterprise architecture (EA) and its fundamental logic have
+garnered increasing attention from both the scientific and practitioner communities.
+The benefits of reducing operating costs, improving project execution, and
+increasing alignment of business and information technology (IT) (Buckl et al.
+2010b) are only some of what has spurred awareness of EA. In general, EA can be
+considered as a structured description of the enterprise and its relationships, which
+may make it the fundamental ‘‘management information system’’ for the enterprise.
+As such, it offers an integrated representation of different enterprise layers in
+descriptive models of past, current, and future states (Niemann 2006). At the highest
+level, these layers can be distinguished as business architecture and IT architecture.
+EA can be employed in various scenarios. Most often, it is associated with IT
+business alignment (Winter et al. 2010) and IT consolidation. Other scenarios
+involve, for example, IT cost management, project portfolio planning, compliance
+management, project initialization, and post-merger integration (Winter et al. 2007).
+Unfortunately, the scenario of managing the corporate strategy—‘‘the pattern of
+decisions in a company that determines and reveals its objectives, purposes, or
+goals, produces the principal policies and plans for achieving those goals,’’ and thus
+defines what business the company is to pursue and what kind of organization it
+intends to be (Andrews 1987)—does not appear to be given much consideration in
+the literature and in practice, despite that the original idea of EA involves elements
+such as business goals, strategies, plans, products, and partners (Zachman 1987).
+More important, lack of consideration exists despite promising experiences with
+strategic business architecting (Aier et al. 2008a; Kurpjuweit and Winter 2009;
+Winter 2002) and the general importance attached to EA in strategic planning and
+business transformation (Aier et al. 2008b; Kappelman et al. 2008; Riege and Aier
+2009; Schekkerman 2004; The Open Group 2009). A recent survey on the current
+state of EA programs reveals that many IT professionals perceive that business
+architecture is implemented only to a small extent of what they would really need
+(Leganza 2010).
+Although EA is considered to provide the blueprint of the enterprise and should
+essentially be a business exercise, it seems its scope has been scaled down gradually
+to information technology (Buckl et al. 2009). So, the aforementioned alignment
+(Henderson and Venkatraman 1992; Goeken et al. 2008) with the business most
+often takes place only on an operational level (Aier et al. 2008b), that is, with
+respect to business processes and organizational units. Moreover, the business is
+essentially reduced to a context variable rather than being treated as a design
+variable. EA activities seem to be concerned most often solely with the
+documentation of ‘‘operational’’ business elements for IT alignment purposes
+rather than with real business engineering, that is, the method- and model-based
+construction of enterprises (Winter 2003) up to a strategic level. As such, EA is
+deemed to remain stuck in the IT environment.
+At the same time, we find researchers in corporate strategic management, which
+we consider ‘‘the art and science of formulating, implementing, and evaluating
+cross-functional decisions that enable an organization to achieve its objectives’’
+6 D. Simon et al.
+123
+
+--- PAGE 3 ---
+(David 2011), calling for a greater cross-fertilization of the field with other
+disciplines (Furrer et al. 2008). Specifically, systems thinking, which can be
+considered a basic principle of EA, is recognized as a promising means to facilitate
+the examination of the cause-and-effect-relationships between different strategic
+measures (Wang and College 2006). This is in line with the suggestion to rank
+strategies based not only on financial criteria but also on their prioritized
+relationship with the firm’s mission (Hastings 1996), which is interesting given
+that relationships are at the core of any EA model. Another notion put forward is
+that of multiattribute value modeling, which essentially represents a procedure for
+evaluating different strategies against a set of objectives using decomposition to a
+level where relatively easy judgments can be made (Goodwin and Wright 2001). As
+such, it also relates to methods, which are at the heart of EA activities (i.e.,
+modeling, decomposition); likewise, they are considered practical in formal
+planning of strategies (Goodwin and Wright 2001), which in previous studies has
+most often been found to be related positively to higher performance (cf. Capon
+et al. 1988).
+Corporate strategic management, however, does not involve only the general
+stage of strategy formulation addressed above, but also those of programming/
+implementation and final evaluation/control (David 2011; Hax and Majluf 1984).
+Strategy implementation (including ongoing execution) in particular suffers from
+difficulties in achieving success in practice (Raps 2008; Cater and Pucko 2010).
+Among the most critical obstacles to successful strategy implementation recently
+identified are weaknesses in communicating strategy to lower organizational levels
+(Cater and Pucko 2010); again, this is an interesting finding given that one of the
+main functions associated with EA is to communicate organizational objectives
+(Kappelman et al. 2008).
+Against this background, this paper aims to provide a detailed description of EA
+as a potential instrument for corporate strategic management. This is based on a
+comprehensive business architecture framework as the methodological foundation
+and the application of this conception to a number of aspects of corporate strategic
+management—something that seems not to have yet been established by past
+research and is this paper’s main contribution. In fact, little progress has been made
+toward fully capturing business architecture, the ‘‘forgotten child’’ of EA. We
+employ a mixed method approach that combines design science (Hevner et al. 2004)
+with grounded theory (Glaser and Strauss 1967) to construct and apply the
+framework and, in particular, obtain empirical grounding through a series of
+interviews with strategic directors from different industries. Thereby, we not only
+address the gap between ‘‘original’’ EA and what it has been reduced to most often
+in practice (in that we enhance the understanding of EA’s application in corporate
+strategic management), but also survey the requirements of strategic management
+practitioners and deduce limits of EA as practiced today in terms of real business
+engineering. In other words, we set out to answer two main questions. What support
+can EA management, as the overall practice of developing and maintaining the EA,
+provide within corporate strategic management, and on what conception of business
+architecture is this based? In what areas does EA management need to develop to
+permeate corporate strategic management more deeply?
+Enterprise architecture management and its role 7
+123
+
+--- PAGE 4 ---
+The remainder of this paper is structured as follows. The next section surveys
+research pertaining to the role of EA in corporate strategic management and
+fundamental elements of EA that have been given little consideration to date. In
+particular, this involves the concept of the business model. We then sketch out the
+research methodology used for this paper. Next, we provide the conceptual
+foundation and introduce the business architecture framework. The subsequent
+section builds on the framework and details potential benefits of EA in corporate
+strategic management. The penultimate section elaborates on this and presents the
+results of our interviews with a number of strategic directors. The final section
+briefly summarizes our findings and discusses potential future research.
+2 Related work
+Strategic, with strong business roots, EA may serve as an instrument for several
+aspects of business management, from strategy to execution. However, there is little
+research dealing with the relationship of EA management and corporate strategic
+management. In a recent and the only study close to ours, Radeke (2011) illustrates
+how to apply EA management to the process of strategic change. However, this
+work does not ground its assertions in a thorough representation of what constitutes
+business architecture, which we consider crucial for a proper substantiation of
+relating EA with corporate strategic management. In addition, no insights from
+practitioners of corporate strategic management are included.
+Apart from that, Ross et al. (2006) is one of the very few and well-known
+examples that aims to provide a bridge from EA to strategic management; the
+authors define EA as ‘‘the organizing logic for business processes and IT
+infrastructure reflecting the integration and standardization requirements of the
+company’s operating model.’’ Thus, they link EA closely to the operating model,
+which represents the enterprise’s level of business process standardization and
+integration and can thus be considered as ‘‘a general vision of how a company will
+enable and execute strategies.’’ They distinguish between four types of operating
+models: diversification (low standardization, low integration), coordination (low
+standardization, high integration), replication (high standardization, low integra-
+tion), and unification (high standardization, high integration). Thereby, they clearly
+stress that EA is a business issue rather than an IT issue. Unlike with a holistic
+approach to EA, though, the business strategy and operating model are not
+considered as integral elements of EA itself; rather, in their view EA only reflects
+strategic choices—an approach basically shared by Whittle and Myrick (2004) as
+well as Versteeg and Bouwman (2006), for example, who position business
+architecture between business strategy and different architectural initiatives (e.g.,
+organization architecture, IT architecture).
+Both Bernard (2005) and Pereira and Sousa (2005) offer a different view, stating
+that EA includes the current and future business objectives, goals, visions, and
+strategies. This is also reflected in the work of Spewak and Hill (1993), who see
+business modeling as an integral part of EA planning. Parker (2009) details the
+strategic dimension of EA and explicates associations and links to the main
+8 D. Simon et al.
+123
+
+--- PAGE 5 ---
+constituents of strategic management: strategic analysis, strategy formulation,
+strategic execution, and strategic governance. Likewise, Aitken (2009) contributes
+to EA’s integration with strategic planning. This is based on his view that EA is
+considerably more than simply describing current and future states of the enterprise.
+In fact, the author emphasizes EA’s design capability, where he believes EA
+distinguishes itself by assisting the enterprise to determine which road to take to
+reach its target state and gain maximum competitive advantage. In particular, this is
+because EA may be used as a tool to capture the strategic context of the enterprise,
+both internal and external. Ganesan and Paturi (2009) also promote using EA for
+strategic planning; they suggest integrating business architecture with the business
+motivation model, as an acknowledged ‘‘scheme or structure for developing,
+communicating, and managing business plans in an organized manner’’ (Object
+Management Group 2010), and with the balanced scorecard approach, used to
+monitor the achievement of business goals in the context of financial, customer,
+internal business, and learning and growth performance measures (Kaplan and
+Norton 2001).
+Bernus et al. (2003) offer a comprehensive handbook on EA as the science of
+enterprise engineering, including, for example, strategy formulation and business
+model design. As part of this handbook, Molina (2003) proposes a framework for
+defining the enterprise concept, with the business concept (mission, vision, and
+culture), strategy (competitive strategy, value chain strategy, and production/service
+strategy) and the action plan (core processes, core competencies, business plan) as
+major components. According to Kalpic et al. (2003), a company needs to develop a
+view of its strategy. To allow more than just instrumentalist annual planning, they
+suggest establishing a strategic architecture that ‘‘provides a blueprint for building
+competencies needed to dominate future markets.’’
+All in all, however, business strategy and, particularly, the business model find
+themselves underrepresented in the EA literature; this is evidenced in a recent, very
+extensive analysis of EA research (Simon et al. 2013), in which the discourse on
+EA, apart from its general focus on IT issues, is shown to concentrate far more on
+business elements at the operational (e.g., business processes) than at the strategic
+level. This is despite the findings of Burkhart et al. (2011), who in their recent
+review of the business model literature identify an insufficient consideration of
+relations and dependencies between different business model elements as well as an
+absence of formalized means of graphical representations that allow structured and
+comparable visualizations of business models—issues that one may expect to be
+resolved by EA research.
+According to Uppington and Bernus (2003), the business model represents the
+system of relationships between the business entities involved. Detailed research on
+the business model concept has been done by Hedman and Kalling (2002, 2003),
+Osterwalder and Pigneur (2002, 2003), Osterwalder et al. (2005), Fritscher and
+Pigneur (2010), zu Knyphausen-Aufseß and Meinhardt (2002), and most important,
+Osterwalder and Pigneur (2010), who introduce the ‘‘Business Model Canvas.’’
+In general, this canvas describes different building blocks that constitute the business
+model, such as customer segments, business partners, and distribution channels.
+This is mainly in line with Kaplan and Norton (2004), who use ‘‘strategy maps’’ to
+Enterprise architecture management and its role 9
+123
+
+--- PAGE 6 ---
+describe how the organization creates value and to visualize the cause-and-effect
+relationships among the components of corporate strategy.
+Returning to the EA literature, Keller (2009) accounts for the fact that business
+capabilities have evolved to become one of the latest ‘‘hot topics’’ in EA
+management. In fact, he demonstrates how capabilities can be used to facilitate
+decision making. Close resemblance to this approach can be found in Brits et al.
+(2007), who further distinguish between different types of capabilities (e.g.,
+strategic capabilities) and suggest a method for business capability modeling.
+Further, Barroero et al. (2010) recognize the crucial role of capabilities in EA,
+offering a business capabilities-centric EA approach based on an extension of ‘‘The
+Open Group Architecture Framework’’ (TOGAF) (The Open Group 2009).
+In summary, EA may encompass a variety of business elements (Österle et al.
+2007), including those of a strategic nature. The importance of business architecture
+is supported by the findings of a survey among European practitioners conducted by
+Riege and Aier (2009), indicating that more mature EA practices engage in this field
+and are also involved in business strategy development. However, in this respect,
+the related work has left significant room for further scientific contributions. First,
+comprehensive discussions of EA management in light of corporate strategic
+management are rare and those that do exist are not based on thoroughly specified
+frameworks of business architecture content (e.g., Radeke 2011). Second, existing
+frameworks of business architecture content show different emphases that could be
+integrated into an overall picture. Third, insights and requirements from strategic
+management practitioners have not yet been explored systematically in the EA
+context. Fourth, formalized means of representation for certain strategic manage-
+ment activities are missing (cf. Burkhart et al. 2011). So, to sum up, a systematic
+assimilation of key business architecture entities in a comprehensive frame of
+reference and, on this basis, an application of EA to major concerns in corporate
+strategic management still seems to be lacking. This motivates the development of
+our approach in this paper.
+3 Research methodology
+In line with guidelines from previous research (Adams and Courtney 2004; Beck
+et al. 2012; Gregory 2010; Goldkuhl 2004; Holmström et al. 2009; Müller and
+Olbrich 2011), our research approach represents a reasonable combination of the
+design science paradigm (Baskerville 2008), which aims at extending ‘‘the
+boundaries of human and organizational capabilities by creating new and innovative
+artifacts’’ (Hevner et al. 2004), with the grounded theory concept (Glaser and
+Strauss 1967), used to study primarily qualitative data to generate theories (in terms
+of conceptual categories and the relationships between them) of both practical
+relevance and scientific rigor. In particular, we drew upon the design science
+research process proposed by Rossi and Sein (2003) (cf. Peffers et al. 2006), with
+subsequent steps of (a) identifying a need, (b) building a methodology using good
+design principles and best practices, (c) evaluating the methodology, and, finally,
+(d) learning and theorizing.
+10 D. Simon et al.
+123
+
+--- PAGE 7 ---
+As a more general research approach, design science can be used in combination
+with various research methods (Gregory 2010). So, inspired by the theory-generating
+design science approach presented by Beck et al. (2012), which combines design
+science and the grounded theory method, we complemented the above steps with
+supportive techniques from grounded theory, such as theoretical sampling (see
+below). We consider this complementary use reasonable: both design science and
+grounded theory are inherently iterative in that data collection and analysis, on the
+one hand, and artifact creation and evaluation, on the other hand, are closely
+intertwined (cf. Beck et al. 2012; Glaser and Strauss 1967; Hevner et al. 2004).
+Specifically, as suggested by Beck et al. (2012), we employed grounded theory
+characteristics and techniques to benefit from additional data collection and analysis
+following initial artifact creation, thereby generating additional theoretical insights
+and increasing the understanding of the usage of the artifact [see also Weedman
+(2008), another exemplary work that uses grounded theory techniques to support the
+analysis and evaluation in a design science research project; while not mentioning
+grounded theory, the author employs techniques resembling closely those of
+grounded theory (e.g., theoretical sampling) (cf. Beck et al. 2012)]. In this respect,
+we followed the guidelines of Offermann et al. (2009), who in their proposed design
+science research process include the presentation of the problem and its solution to
+practitioners in lectures or workshops, followed by a survey (including questions
+such as ‘‘Do you think the presented artifact provides a viable solution to the
+problem?’’) to evaluate perceived viability. Here, as proposed by Gregory (2010),
+the relationship of the designed artifact with organizational tasks (in line with our
+first research question)—something that can be considered an appropriate subject of
+a grounded theory—was to form the basis for this evaluation [thereby accounting
+for the findings that the grounded theory method may find particular applicability in
+the evaluation phase of the design science research process (Gregory 2010; Gregory
+and Muntermann 2011)].
+So, while the first step of our research process (identification of need) was in
+form of the literature review above, the second step (development/creation)
+involved building on existing theories that were applied and extended (Hevner et al.
+2004) to design a comprehensive business architecture framework and, using this as
+the basis for our understanding, elaborate a descriptive (Hevner et al. 2004)
+application of EA to corporate strategic management to develop theory further
+around EA as an artifact. This went hand in hand with the subsequent step of
+(qualitative) evaluation (i.e., the evidence of utility), where we (initially) mirrored
+the above to practice through a series of semi-structured interviews [as a common
+means used in grounded theory-based research (Müller and Olbrich 2011)] with
+experienced practitioners, which, being at the core of our research, were for the
+purpose of empirical grounding (Goldkuhl 2004) intended to ensure an adequate
+level of research rigor (cf. Hevner 2007). We did this against the background of
+various examples of design science work published in recognized IS journals
+journals or conference proceedings (e.g., Bartenschlager and Goeken 2010; Bekkers
+et al. 2010; Bradford et al. 2006; Felden and Buder 2012; Jansen et al. 2012;
+Repschlaeger et al. 2012; Urbach and Würz 2012; van Steenbergen et al. 2010) that
+employ expert interviews as the selected instrument (or at least a major instrument
+Enterprise architecture management and its role 11
+123
+
+--- PAGE 8 ---
+among others) for the (initial) evaluation/validation of the constructed artifact
+(cf. Flick 2009, stating expert validation of findings as a main way of using such
+interviews). The rationale behind this is the possible reconstruction of (exclusive)
+specialist knowledge (particularly process and interpretive/explanatory knowl-
+edge)—knowledge that has the chance to become (at least partly) asserted in a
+specific organizational or functional context and can thus be considered of high
+practical relevance, structuring ‘‘the practical conditions of other actors in their
+professional field in a substantial way’’ (Flick 2009). In the design and evaluation of
+reference conceptual models in particular (of which our framework can be
+considered), the use of expert interviews with potential users is deemed advisable to
+obtain a deeper understanding of the addressed problem situation and evaluate the
+created artifact in terms of quality (vom Brocke and Buddendick 2006).
+The interviews conducted also provided the bridge to the final step of learning
+and theorizing. Although we began with a focused set of research questions on the
+established business architecture framework and the associated role of EA
+management within corporate strategic management, we remained open to new
+insights that might emerge from the interview data rather than solely testing
+associated hypotheses (Madill et al. 2000). This is in line with the grounded theory
+nature as an iterative process of yielding new findings based on empirical data
+(Glaser and Strauss 1967), and, if necessary, enriching these with insights from the
+literature (despite myths that the grounded theory method involves sole reasoning
+from empirical data and does not consider other knowledge sources, such as the
+literature (Gregory 2010), there are several IS grounded theorists (e.g., Fernandez
+2004; Levina and Vaast 2005) that make use of the literature alongside empirical
+data to raise the conceptual level of their analyses).
+We identified potential interviewees based on purposeful sampling (Morse et al.
+2002; Sandberg 2000) of individuals holding positions as ‘‘strategic director,’’
+‘‘head of corporate strategy,’’ or ‘‘managing director strategy.’’ We limited our
+requests to these key positions because they were ‘‘golden sources’’ for the research
+questions we were asking, with firsthand knowledge because they carry responsi-
+bility for those aspects of strategic management relevant to our research (Morse
+et al. 2002). Our aim was to have interviewees who would represent major
+industries. We thus drew on the principles of theoretical sampling (i.e., cases are
+chosen for theoretical, not statistical, reasons), which is at the core of grounded
+theory and suggests the iterative analysis of a collection of independent slices of
+empirical data representing a set of cases selected based on their potential to reveal
+new insights, while a representative character has less priority (Glaser and Strauss
+1967; Eisenhardt 1989; Gregory 2010; Müller and Olbrich 2011). In total, we
+contacted and briefed eighteen individuals about the research project, and seven
+agreed to participate. Although this is not a fully representative sample, key
+industries were in fact represented and we could take advantage of a balanced
+interview portfolio (see Table 1); of course, more extensive field research will be
+required in the future to validate the findings further and extend them in terms of the
+effective usage in practice.
+Between April and October 2010, we conducted seven semi-structured,
+guideline-based interviews (Gläser and Laudel 2004; Hopf 2005) of one- to two
+12 D. Simon et al.
+123
+
+--- PAGE 9 ---
+hours’ duration. Each began with a short introduction to our research and the
+objectives and agenda of the interview, followed by a concise overview of the EA
+discipline. We then introduced seven potential application scenarios of EA
+management in light of corporate strategic management, using one or two
+presentation slides per scenario. We then asked the interviewee’s view on each
+scenario and, finally, the corresponding level of agreement (none, partial, full).
+Open questions of this sort, asked in a way to exclude interviewer bias (Kvale
+1989), initiated intense discussions and allowed us to explore the scenarios in
+greater depth. To facilitate the approach outlined, we also drew on basic ideas of
+appreciative interviewing (Schultze and Avital 2011), inviting the interviewees to
+draw paths to ‘‘ideal’’ types of corporate strategic management by reflecting on their
+personal experiences.
+Since we expected little agreement to having the interviews recorded, we used a
+documentation sheet to capture the interviewee’s narratives. We later created a
+transcript from these notes and from memory, which we then verified with the
+interviewees [in line with Dubé and Paré (2003), we will present several quotes later
+in our study]. Armed with the interview data, we applied a form of qualitative
+content analysis, iterating between the interdependent meaning of parts and the
+whole they form (Klein and Myers 1999) and categorizing the interviewees’
+statements (Flick 2008; Gläser and Laudel 2004; Kvale 2007; Schmidt 2005). We
+then revisited each scenario based on the additional insights gained and charted the
+territory for future EA research and practice.
+4 Conceptual foundation: a business architecture framework
+Generally speaking, EA management captures all those processes, methods, tools,
+and responsibilities needed to build a holistic and integrated view of the enterprise
+and allow for a continually aligned steering of business and IT (Matthes et al. 2008;
+Niemann 2008). As such, EA management deals with different architectural layers,
+one of which is business architecture—a structured description of the business
+Table 1 Interviewees by position and industry
+Position of interviewee Industry of interviewee
+1 Managing director Western Europe Courier, express &
+parcel
+2 Director Strategy, business development & equity investments Post
+3 Head of strategy/project coordination strategic business
+unit full-range national
+Retail
+4 Director strategy & business development Car rental
+5 Head of strategic architecture (on behalf of managing
+director strategy & innovation)
+Telecommunication
+6 Director strategy/new business development Chemicals
+7 Senior vice president corporate strategy and planning Automotive
+Enterprise architecture management and its role 13
+123
+
+--- PAGE 10 ---
+comprising a set of components and their interrelationships (as such, one significant
+aspect area of EA alongside, e.g., IT architecture). Business architecture is,
+however, subject to ambiguous use in the literature (cf. Glissman and Sanz 2009;
+Versteeg and Bouwman 2006). To allow for a holistic approach to EA management
+(e.g., its application to corporate strategic management), we suggest a three-layered
+business architecture framework in the form of a comprehensive taxonomy (see
+Fig. 1) that extends previous research (Bernard 2005; Graves 2010; Hoogervorst
+2004; Osterwalder et al. 2005; Wirtz 2011; Zachman 1987) and encompasses the
+concept as a whole, including different levels of abstraction (‘‘contextual,’’
+‘‘conceptual,’’ ‘‘logical,’’ and ‘‘physical’’) (cf., e.g., Op’t Land et al. 2009). Given
+this motivation, the decisions for the design of the framework’s structure and its
+inherent elements were based on a careful literature synthesis; in addition, talks with
+several EA practitioners about business architecture content and the first author’s
+knowledge of different EA practices and their business architecture models
+informed our design process. Within this process, we considered three criteria as
+additional requirements beyond comprehensiveness and a variety of abstraction
+levels: extensibility, on the one hand, and simplicity and understandability, on the
+other hand (cf. Hirvonen et al. 2007; Österle et al. 2007).
+At the top of our resulting framework is the business motivation (Ganesan and
+Paturi 2009), which captures the strategic context of the business and explains why
+it operates in a certain way. This is most often referred to as the strategy layer (cf.
+Winter and Fischer 2007). Strategy is, however, only one of the elements. In line
+with the Object Management Group (2010), we see three constituents of the
+business motivation: business end, business means, and business influencers. The
+Fig. 1 Business architecture framework
+14 D. Simon et al.
+123
+
+--- PAGE 11 ---
+business end includes essential elements of aspiration such as mission (the
+fundamental purpose of an enterprise’s existence), values (ideals, customs, or
+institutions an enterprise promotes or agrees with), vision (overall image of what the
+enterprise wants to be or become), and goals and objectives (both of which represent
+desired results: objectives quantify goals and may thus additionally be linked with
+key performance indicators and/or critical success factors) (cf. David 2011; Kalpic
+et al. 2003; Kantabutra and Avery 2010; Object Management Group 2010); business
+means represent the instruments employed to achieve those ends. Business strategy,
+as the general course of action, is at the core of the business means (it may be
+detailed by tactics; like strategies, they channel efforts towards goals/objectives)
+(Object Management Group 2010); it is complemented by business directives such
+as policies, principles, and rules. The employment of business means and thus the
+achievement of business ends are affected by business influencers, either internal or
+external to the enterprise, with the external factors basically encompassing the
+established PEST (political, economic, social, and technological) forces (Peng and
+Nunes 2007). An assessment of these influencers may result in a classification into
+strengths and weaknesses (both internal) as well as opportunities and threats (both
+external) (Object Management Group 2010). As such, they represent drivers and
+constraints of strategic choice.
+This leads us to the bottom layer of our framework—business execution. Most
+often referred to as the organization layer (cf. Winter and Fischer 2007), this
+primarily includes business processes, information entities, organizational structures
+(functional, geographical and legal), people, culture, resources, and their aggrega-
+tion into ‘‘logical’’ business capabilities (cf. Barney et al. 2001; Brits et al. 2007;
+Hoogervorst 2004; Kohlborn et al. 2009). A business capability is an enterprise’s
+ability to execute a defined and repeatable pattern of activities and produce a desired
+outcome (e.g., product, service) by deploying specific resources and expertise and
+processing information in a defined organizational and cultural environment (cf.
+Eisenhardt and Martin 2000; Helfat and Pereraf 2002; Kalpic et al. 2003;
+Osterwalder and Pigneur 2003). In general, business capabilities abstract from their
+realization through business processes, entities, organizations, people, culture, and
+resources (cf. Klinkmüller et al. 2010), thus being the fundamental and stable
+building blocks of the business (cf. Kohlborn et al. 2009) and potential influencers
+of business means. With technology not being part of capability realization (as
+opposed to, e.g., Brits et al. 2007) and thus treated as a separate aspect, business
+capabilities are also clearly delineated from information system capabilities—a
+differentiation that seems crucial both for IT architecture planning based on real
+business requirements and for a proper evaluation of the business value of
+information systems. The adequate application of the organization’s capabilities is
+assured by a governance system of incentives and control (Albers 2010; Raps 2008),
+which round out the building blocks of the business execution layer. All in all, this
+includes those components of the business necessary to execute the middle layer of
+our framework—the business model.
+The business model expresses the fundamental business logic and therefore
+represents the entire system of creating and delivering value to customers, capturing
+this value by earning profits from these activities and sustaining this value capture
+Enterprise architecture management and its role 15
+123
+
+--- PAGE 12 ---
+(cf. Osterwalder and Pigneur 2002, 2010; Shafer et al. 2005). As such, it can be
+considered a conceptual blueprint of the business strategy (cf. Osterwalder and
+Pigneur 2003, 2010), which given its Greek origin strategia (i.e., the art of war) is
+typically defined at a high level of abstraction. The business model offers several
+perspectives (cf., e.g., Al-Debei and Avison 2010; Feurer and Chaharbaghi 1994;
+Fritscher and Pigneur 2010; Hedman and Kalling 2003; Kaplan and Norton 2004;
+Shafer et al. 2005; Winter 2002; Wirtz 2011; Zott and Amit 2009) that facilitate
+translating strategy into execution models [and associating these with adequate
+performance measures (cf. Kaplan and Norton 2004)]. We suggest six business
+model perspectives: the offering perspective (value proposition, products/services);
+customer perspective (customer segments, customer relationships, customer chan-
+nels); supplier perspective (supplier segments, supplier relationships, supplier
+channels); activity perspective (value chain configuration, coordination and
+cooperation (cf. Zellner 2008), core assets (e.g., core competencies (as those
+capabilities being of strategic nature) or intellectual assets like reputation),
+operating model); financial perspective (cost/revenue model); and sustainability
+perspective (design themes) (as opposed to, e.g., Hedman and Kalling (2003), we do
+not consider competition as part of the business model, since competitors cannot
+necessarily be chosen).
+Together, the supplier, activity, and customer perspectives describe the entire
+architecture of value creation (cf. zu Knyphausen-Aufseß and Meinhardt 2002),
+which provides the basis for a certain offering. With customer co-creation and open
+innovation (Reichwald and Piller 2009; Schlagwein et al. 2010), this could also
+mean that customers themselves carry out key value chain activities. This aspect is
+related closely to other parts of the business model, such as the available set of core
+assets (Amit and Schoemaker 1993; Hafeez et al. 2002), the choice of key
+coordination mechanisms such as postponement and speculation (Pagh and Cooper
+1998; Pfohl 2004), and cooperation throughout the value chain by establishing
+strategic partnerships (Dussauge and Garette 1999). The architecture of value
+creation is also reflected within the financial model, as regards both revenues and
+costs. To sustain competitive advantage achieved by design and implementation of
+the business model, the enterprise may eventually consider design themes (Zott and
+Amit 2009) such as branding (Winter 2002), the use of patents, and customer lock-
+in through standardization.
+With these elements, the business model becomes an important part of a business
+plan when establishing a new business (cf. Osterwalder and Pigneur 2010). Figure 1
+illustrates the three-layered business architecture framework outlined. As indicated,
+the elements of business motivation, model, and execution possess various
+interrelationships. These can be captured in a meta model, that is, the conceptual
+scheme of the EA including its content elements and their relationships and
+attributes (cf. Kurpjuweit and Winter 2007). Populated with concrete instances (e.g.,
+the business capability to ‘‘meet regulatory requirements’’ and business processes
+such as ‘‘financial reporting’’ and ‘‘recruitment’’), this provides the basis for the
+practical use of EA in corporate strategic management and the application of
+architectural thinking—with its focus on the structure of components and their inter-
+relationships with each other and the environment (The Open Group 2009)—to the
+16 D. Simon et al.
+123
+
+--- PAGE 13 ---
+evolution of the business. In particular, this involves using specific views of this
+model (e.g., a capability realization map) that can assist in certain aspects of
+strategic management, as detailed in the following subsection. Views are
+representations of the architecture in terms meaningful to stakeholders. A view,
+in turn, is defined by an associated viewpoint, that is, a schema that specifies the
+information that should appear in the view and that proposes a way to present that
+information (Buckl et al. 2007; The Open Group 2009).
+5 The use of enterprise architecture in corporate strategic management
+Research to date identifies different stages of strategic management, basically
+ranging from strategy formation [‘‘whereby goals and objectives are identified,
+policies are formulated, and strategies are selected in order to achieve the overall
+purposes or mission of an organization’’ (Steiss 1985) (thus including visioning as a
+step that precedes actual strategy identification)] to programming/implementation
+and evaluation/control (David 2011; Ganesan and Paturi 2009; Hax and Majluf
+1984). According to Schäffer and Willauer (2003), the intensity of strategic
+planning is related positively to its effectiveness. To shed light on the role of EA
+therein, we distinguish between seven EA application scenarios (cf. Winter et al.
+2007) in light of corporate strategic management (cf. Kalpic et al. 2003; Parker
+2009; Raps 2008): strategic analyses, strategic choice, design of future business
+execution, business transformation readiness assessment, strategy implementation
+planning, strategy review, and strategic governance (see Table 2). These scenarios
+represent distinct tasks of strategic management as found in the literature, which we
+use to theorize regarding the use of EA in a more specific way than at the level of
+the stages above. We ground the descriptions of the scenarios (which relate either to
+one specific stage or link two stages) in the conception of EA in terms of what
+constitutes business architecture (which has been established in the previous section
+with our framework), stretching from business motivation to business execution,
+both linked by the business model layer. By doing this, we derive research
+propositions for the seven scenarios; we believe that with their substantiation by our
+Table 2 Strategic management stages and related EA application scenarios
+Stage of strategic management EA application scenario
+Strategy formation Strategic analyses
+Strategic choice
+Business execution
+design
+Business transformation
+readiness assessment Strategy programming/implementation
+Strategy implementation planning
+Strategy evaluation/control Strategy review
+Strategic governance
+Enterprise architecture management and its role 17
+123
+
+--- PAGE 14 ---
+empirical data set later in this paper we contribute to reducing the gap between EA
+and corporate strategic management.
+5.1 Strategic analyses
+Strategy formulation is typically preceded by thorough strategic analyses that
+capture factors both external and internal to the enterprise and determine the set of
+available strategic options. While the external perspective is at the heart of the
+market-based view (Porter 1980), the internal perspective is related closely to the
+resource-based view (Barney 1991, 1996; Barney et al. 2001), suggesting that
+unique resources provide the fundamental basis for strategic choice and achieving
+competitive advantage. With the progress achieved through research on the
+resource-based view, it has become clear that the notion of resources needs to go
+beyond its original meaning to include capabilities (Eisenhardt and Martin 2000;
+Grant 1991; Helfat and Pereraf 2002).
+With the business architecture framework outlined being translated into a meta
+model (see, e.g., Malik 2009; Österle et al. 2007; Smith 2011), EA allows for
+modeling both the external and internal drivers and constraints of strategic choice
+and setting them in relation to specific strategic options. Based on a classification of
+these factors, a SWOT (strengths, weaknesses, opportunities, threats) matrix
+(Bernard 2009) may be created as a specific view that provides immediate input for
+strategy formulation. Similarly, entire hierarchies of (and/or causal relationships
+among) goals and objectives can be depicted (Buckl et al. 2010b; Österle et al.
+2007; Samavi et al. 2009) and related to strategies, for example, using goal
+realization/contribution views as described in The Open Group (2012) and depicted
+in Fig. 2 [in which the top three icons represent goals, while the three others can be
+understood as representations of strategies (The Open Group (2012) uses the
+concept ‘‘requirement’’ to denote means to realize goals); the dotted arrows
+Fig. 2 Exemplary goal realization view [adapted from The Open Group (2012) and Kaplan and Norton
+(2004)]
+18 D. Simon et al.
+123
+
+--- PAGE 15 ---
+represent realization relationships, and the relationships between goals are
+aggregations]. Such a complete picture not only allows for transparency of the
+strategic context and requirements (Aitken 2009), but also offers the possibility of a
+model-based validation of strategy (e.g., strategy can be checked for overall
+consistency and alignment with business goals) and even of the underlying strategic
+identity (Kalpic et al. 2003) as captured in the business ends.
+As for the internal drivers and constraints of strategic choice, that is, the business
+capabilities, the role of EA may go even further, since EA may actually provide the
+methodological basis for capability identification. Given the heterogeneity of
+business capabilities across different firms (Amit and Schoemaker 1993) and that
+they represent a multi-dimensional construct realized by various elements (e.g.,
+business processes) and typically embedded deeply within the organization, this has
+been found to be a significant challenge (Day 1994). Based on integrated models of
+capability-realizing components such as business processes, information entities,
+and organizational units captured within the EA (represented in, e.g., information
+flow diagrams), the enterprise’s current business capabilities can be identified in a
+bottom-up way (cf. Brits et al. 2007; Day 1994; Hafeez et al. 2002) and visualized in
+capability maps (Klinkmüller et al. 2010) at different levels of granularity
+(Beimborn et al. 2005; Kohlborn et al. 2009) (which may take the form of nested
+box diagrams representing functional groupings). For example, a mergers &
+acquisitions capability may be derived by composition of (among others): the
+business processes ‘‘market analysis,’’ ‘‘due diligence checking’’ and ‘‘contract
+management’’; the information entities ‘‘partner’’ and ‘‘contract’’; and the ‘‘business
+insight,’’ ‘‘corporate development,’’ and ‘‘legal’’ units. This approach puts business
+capabilities into the context of the overall enterprise model.
+Capability heat maps (in which capabilities are color coded as per certain attribute
+values) (Keller 2009) can be used to detail capability types such as strategic and basic
+capabilities (Brits et al. 2007), or visualize hot spots within the capability landscape
+(e.g., capabilities with disproportionally high costs). Strategic capabilities are of
+particular relevance, since they constitute the core competencies (Prahalad and
+Hamel 1990) of the enterprise (Brits et al. 2007; Hafeez et al. 2002; Kalpic et al.
+2003) and are thus among the enterprise’s core assets captured in the business model
+[other assets include brands, patents, and institutional capital (Reihlen et al. 2010),
+for example (Amit and Schoemaker 1993; Hafeez et al. 2002)]. All in all, EA may
+inform corporate strategic management about the current business situation (Parker
+2009), and thus provides a methodological basis for developing adequate strategies
+according to both internal and external preconditions.
+Proposition 1 EA facilitates the analysis of the internal and external business
+context and the development of different strategic options.
+5.2 Strategic choice
+Based on the set of alternative strategies developed, strategic choice constitutes the
+next step within the strategic planning process (Kalpic et al. 2003). Such a choice
+may have significant impacts on procedures, routines, and structures within the
+Enterprise architecture management and its role 19
+123
+
+--- PAGE 16 ---
+enterprise. With a consistent EA model from business motivation to business
+execution (cf. Aitken 2009; Ganesan and Paturi 2009) and the underlying IT
+architecture, there is a profound basis for systematic impact analyses (cf. Micklich
+2005) and weighing alternative strategies against one another. In this way, EA can
+be used as the ‘‘feasibility sounding board’’ (Parker 2009) within strategy evaluation
+(Kalpic et al. 2003), which facilitates gaining an early idea of whether a considered
+strategy can really be executed, thus mitigating the risk of the ‘‘bogus strategy
+syndrome’’ of strategies that are not feasible or relevant (Parker 2009). A strategic
+option such as the launch of an online product offering can thus be evaluated in
+terms of, for example, the affected stages of the value chain, the underlying business
+processes as well as the supporting application systems and infrastructure that may
+need to be changed at certain costs and/or risks (e.g., to meet new availability
+requirements). For strategies of a more complex nature and that actually represent a
+set of strategic choices, the structured description of the business model may be of
+particular value for analysis. Through their reflection in the business model, these
+strategic choices can be tested for whether they are mutually supportive and
+internally consistent (Shafer et al. 2005), followed by an evaluation against
+alternative strategies as depicted above.
+Consider, for example, a value proposition of customized, high-quality product
+bundles. This may conflict with an operating model of diversification (low
+standardization and integration of business processes), which may impede cross-
+selling and product bundling across different businesses. It may also contradict
+mechanismsofspeculationforcoordinatingactivitiesalongthevaluechain,sincethis
+approach may not allow the envisioned production of customized end products. Once
+the business model has been analyzed in terms of consistency, one can also assess the
+impactsoftherepresentedsetofstrategicchoicesontheITarchitecture.Foraninsurer
+that aims to provide third-party administration services (e.g., claims settlement), it
+may be necessary to equip the involved application systems, as visualized in process
+support maps (Buckl et al. 2008), with multi-tenancy capability, for example. That
+being said, EA may provide a methodological frame of reference for corporate
+strategic management (Aitken 2009) in the process of strategy evaluation.
+Proposition 2 EA facilitates strategic choice with model-based analysis options.
+5.3 Business execution design
+The implementation of a defined strategy, which follows strategy formation (Kalpic
+et al. 2003), requires translation into a corresponding business execution layer.
+Again, this is where the business model as the conceptual blueprint of the business
+strategy, that is, the representation of a set of strategic choices (Shafer et al. 2005),
+can provide the necessary bridge from strategy to execution (cf. Osterwalder et al.
+2005). Based on a structured description of the business model related to both
+overarching business motivation and underlying business execution (as introduced
+above), EA may represent a powerful instrument for closing the chasm between
+formulations of business strategy and execution. This is due to the structure offered
+in the design of the future business model, based on the strategic direction (cf.
+20 D. Simon et al.
+123
+
+--- PAGE 17 ---
+Osterwalder et al. 2005) (i.e., the translation of strategic choice into the fundamental
+(grouped) elements of a promising business logic, including their relationships (e.g.,
+‘‘value chain configuration enables value proposition’’) (cf. Fritscher and Pigneur
+(2010), as visualized in graph-layout maps (Matthes et al. 2008) or simple matrices),
+and the derivation of future business capabilities required to execute this business
+model, thereby shaping the strategic architecture of the future (Prahalad and Hamel
+1990). A strategy of expanding business operations from the original home market
+to neighbouring countries to serve customers more directly than previously via the
+Internet results in a value proposition that involves an improved customer service,
+for example. To offer this service in equal quality than in the home market, a certain
+degree of standardization in business processes, as captured in the operating model,
+would be reasonable. The overall value chain, however, might still be configured in
+a way that does not require the establishment of own sites in the new market but
+builds on partners that provide the services on behalf of the organization. A required
+capability that results from this business model is, for example, ‘‘manage partners.’’
+On that basis, business capabilities are to be broken down into the components
+that make such capabilities realizable. Eventually, this leads in particular to the
+design of the future organizational structures and business processes (ideally based
+on re-usable architectural standards documented). Being less stable than abstract
+business capabilities (Kohlborn et al. 2009), they are likely to be much more
+difficult to anticipate. Strategy deduction by use of the business model and its
+translation into future business capabilities may, however, facilitate the specification
+of individual elements of capability realization and the specification of their
+relationships, for example, the mapping of the decision authority to the organiza-
+tional structure (Bernus 2003). This is because the ‘‘organizational fit’’ (Bernus
+2003) depends significantly on the business model established, for example, on
+factors such as being part of a partner network and the associated level of trust with
+partners. EA thus provides a conceptual bridge to achieve an adequate fit within
+business execution based on its structured description of the business model.
+Proposition 3 EA facilitates business execution design aligned with business
+motivation.
+5.4 Business transformation readiness assessment
+Having determined future business execution, an understanding of the organiza-
+tion’s readiness to accept change is a key to successful business transformation.
+There are many dimensions to change, with the human element likely the most
+important (The Open Group 2009). The degree of transformation that is
+immediately realizable may depend significantly on the complexity of current
+business execution and the underlying IT landscape (Mocker 2009; Simon et al.
+2010). Such complexity may hinder architectural transformations to keep up with
+new business needs (Simon et al. 2010), especially in cases where considerable gaps
+exist between the current and future architectures.
+EA makes this complexity visible and manageable (Schekkerman 2004; Simon
+et al. 2010), which allows for transparency as regards transformation readiness and
+Enterprise architecture management and its role 21
+123
+
+--- PAGE 18 ---
+the measures necessary to enable transformation. Business activities that are highly
+interlinked with one another, but at the same time operate on different information
+entity implementations and are subject to specific incentives that promote function
+rather than process orientation, might give rise to difficulties in an outsourcing of
+whole (non-core) processes to a shared service center, for example. To extend
+further beyond enterprise boundaries, other, IT-related aspects typically docu-
+mented in the EA are also relevant: the extent to which standardized, ‘‘plain-
+vanilla’’ interfaces are used; the length of transactions in automated business
+processes [as loosely coupled application systems (across enterprise boundaries)
+should not have a common transaction context (Engels et al. 2008)], and the number
+of dependencies of application systems affected by a planned transformation (e.g.,
+system to be outsourced) as visualized in graph-layout maps. While certain aspects
+of the business transformation readiness assessment may have already been
+addressed within strategy evaluation to gauge feasibility (Uppington and Bernus
+2003), this is also a major issue at the initiation of implementation planning (cf. The
+Open Group 2009).
+Proposition 4 EA facilitates the business transformation readiness assessment by
+providing transparency regarding the current business and IT landscape.
+5.5 Strategy implementation planning
+To implement strategic choice and modify business execution accordingly,
+initiatives and projects are planned and established (Op’t Land et al. 2009). These
+may differ in terms of their significance, and may be subject to budget and resource
+constraints. Therefore, they must be reasonably prioritized. With the chain of
+relationships from business strategy to capabilities captured in the EA (based on
+which the capabilities’ strategic value can be determined) and the project proposals
+assigned systematically to the business capabilities affected (i.e., project candidates
+mapped onto business capabilities, visualized using cross reference tables and/or
+project context diagrams), there is a conceptual basis for assessing the strategic
+importance of each potential project (Aier et al. 2008a) and visualizing this in
+portfolio matrices (Buckl et al. 2008). In the case of the example above of an
+outsourcing strategy, the capability ‘‘manage supplier’’ is likely to become
+particularly important; projects that are related to this capability thus turn out to
+be important alike. Knowing the affected business capabilities, inter-dependencies
+between different projects can also be revealed (e.g., ‘‘manage supplier’’ may be in
+scope of two different projects) and used to refine project planning and
+synchronization.
+From there, a final transition program (Aitken 2009) and implementation order
+can be developed that focuses on strategic and monetary (cf. Hafeez et al. 2002)
+business outcomes (rather than ‘‘technical deliverables’’) (The Open Group 2009).
+This, in turn, can be broken down into individual project increments (cf.
+Osterwalder et al. 2005). All in all, that allows for identifying strategic capabilities
+not being sufficiently covered by the transition program, which can then be re-
+22 D. Simon et al.
+123
+
+--- PAGE 19 ---
+addressed prior to any implementation activities. At its heart, this capability-based
+planning thus represents a systematic approach to implementing strategy.
+Proposition 5 EA facilitates informed decision making with respect to strategy
+implementation.
+5.6 Strategy review
+Following the completion of strategy implementation, planned and carried out
+according to the capability-based paradigm outlined, strategy is reviewed in terms
+of the results achieved and potential needs for re-design (Kalpic et al. 2003). In this
+post-implementation review, the insights gained during strategy implementation are
+consolidated and fed back to strategic choice (cf. Feurer and Chaharbaghi 1995a).
+With a consistent picture from strategy down to execution and the underlying IT
+architecture (e.g., which business processes (and IT components) have been
+transformed according to which strategic choice and which changes in the business
+model), EA allows for tracing the implemented business execution and, more
+generally, the solutions back to the strategic choices (Op’t Land et al. 2009), e.g.,
+the business process ‘‘procurement,’’ transformed into an e-procurement solution, to
+an envisioned cost leadership (as the basic strategy) with its associated supplier
+channels and relationships (as part of the business model) that focus primarily on the
+Internet. Along with adequate performance indicators (Aitken 2009) attached to
+elements of business execution [such as, e.g., in a balanced scorecard, which
+(among others) suggests the definition of internal process measures and their
+connection to value proposition elements (cf. Kaplan and Norton 2004)], this may
+provide a solid basis for measuring and visualizing the degree of strategy and goal
+fulfillment (Buckl et al. 2008), showing the added value achieved by the strategic
+choices implemented and thus indicating necessary strategy modifications. All in
+all, this supports a sustainable benefits management.
+Proposition 6 EA facilitates strategy re-design due to the traceability provided
+from execution back to strategy.
+5.7 Strategic governance
+To ensure the execution of the strategic choices and thus achieve sustainable
+strategy conformity, there is a need for ongoing strategic governance (cf. Raps
+2008). First and foremost, this requires proper strategy definition that allows for
+communicating strategy in an unambiguous and straightforward way (Op’t Land
+et al. 2009)—a challenge with which many companies apparently have struggled in
+the past (Kaplan and Norton 2001; Osterwalder et al. 2005; Raps 2008). The
+structured representation and decomposition of strategy into the business model
+provided by EA does, however, represent a powerful way to communicate strategic
+choices (Kappelman et al. 2008; Shafer et al. 2005) and create visibility and a
+shared understanding of the strategic direction and the business logic (Osterwalder
+et al. 2005; Parker 2009).
+Enterprise architecture management and its role 23
+123
+
+--- PAGE 20 ---
+Beyond that, EA can be leveraged to evaluate change requests from a strategic
+point of view. Potential changes within business execution can be evaluated in terms
+of how this conforms to the overall business model (Op’t Land et al. 2009). Likewise,
+modifications of the business model can be assessed in terms of resulting impacts
+(Osterwalder et al. 2005). If, for example, the activity split between the enterprise
+and the customer, or specific business units and an internal service organization, is
+supposed to change, a structured description of the business model provides
+systematic means to identify and analyze possible effects on the financial model.
+Based on the relationships around strategic choices captured within the EA and a
+breakdown of strategy into operating terms (i.e., with measures and metrics
+deconstructed to various business process levels) (cf. Ganesan and Paturi 2009),
+eventually there is also a basis for regular conformity checks (cf. Parker 2009). Core
+elements of business execution, such as business processes and organizational units,
+can thus be reviewed in terms of their strategy compliance, potentially revealing
+strategic hot spots within the business landscape. This also goes for business
+capabilities, which, as already outlined above, can be visualized in heat maps of
+their strategic fit (Keller 2009). Additionally, capability radars as suggested by The
+Open Group (2009), which visualize the (current or planned) status of capability-
+realizing components at certain times, may be used to govern the evolution of
+business capabilities as defined within strategy implementation. More specifically,
+such radars can be understood as kiviat diagrams, in which the lines radiating from
+the center represent the realizing components (e.g., business process, information
+entity); against each line, evolution points may be determined and joined up into a
+closed loop for specific transformation states (The Open Group 2009). This can be
+checked against the actual progress as part of strategic governance.
+Proposition 7 EA facilitates sustainable strategy execution.
+All in all, the consistent and structured representation of business motivation,
+business model, and business execution in one model, which can be visualized,
+analyzed, and tracked using dedicated viewpoints (Buckl et al. 2008) that expose
+specific relationships, dependencies, impacts, and conflicts (Parker 2009), may
+make EA a frame of reference for corporate strategic management (Aitken 2009). In
+particular, it can make strategy explicit down to the execution level and thus
+strengthen management and decision-making competence. Figure 3 (as a simplified
+illustration) summarizes the connections between our framework and the applica-
+tion scenarios we introduced. It shows which parts of the framework (including their
+links, both ‘‘internal’’ and ‘‘external’’ ones to other architecture layers/elements) are
+of primary relevance in which application scenarios. In other words, it shows which
+application scenarios may operate on which main components of the framework—
+or may use corresponding views of the components—with which temporal state,
+whether ‘‘as is’’ (which applies to all components not explicitly labeled otherwise)
+or ‘‘to be.’’ In the scenario strategic choice, for example (as illustrated above), one
+might benefit from a structured representation of the strategic options at hand,
+including any parts/sub-options, and the possible translation into the resulting future
+business model. For instance, in the example that outlined the option to increase the
+24 D. Simon et al.
+123
+
+--- PAGE 21 ---
+offering of customized product bundles, the future business model may show a high
+integration of business processes, as captured in the operating model, along with
+postponement as a main coordination mechanism. Based on the changes this likely
+entails with respect to current ways of business execution and the associated IT
+architecture (e.g., the degree of data sharing/centralization), one may then evaluate
+Fig. 3 Connections between business architecture framework and application scenarios
+Table 3 EA application scenarios in corporate strategic management and associated benefits
+Application scenario Benefits
+Strategic analyses Business capability identification; business context understanding;
+strategy documentation & validation/confirmation
+Strategic choice Intra-strategy evaluation; inter-strategy evaluation
+Business execution design Strategy decomposition (business model representation); strategy
+deduction (capability design)
+Business transformation
+readiness assessment
+Business complexity/dependency analysis; IT complexity/dependency
+analysis
+Strategy implementation
+planning
+Prioritization of transition initiatives/projects; project dependency
+analysis; strategic validation of project portfolio
+Strategy review Strategy traceability
+Strategic governance Strategy communication; evaluation of change requests/new
+requirements; strategic alignment check; business capability
+monitoring
+Enterprise architecture management and its role 25
+123
+
+--- PAGE 22 ---
+the strategic option in terms of criteria such as costs and risks. The illustrations of
+the other application scenarios in Figure 3—that is, the framework components and
+their interrelationships on which the scenarios operate, including, in particular, the
+cause-and-effect-relationships in the components’ design and the interdependencies
+of change—explain themselves accordingly, as is evident in the description of the
+scenarios given above. On that basis, Table 3 summarizes the benefits to be gained
+by using EA within corporate strategic management.
+6 Enterprise architecture as a facilitator of corporate strategic management:
+practitioner interviews
+Having depicted the potential use of EA in corporate strategic management, we now
+present and discuss the results of our practitioner interviews to elaborate on the
+application scenarios outlined and further analyze the research propositions derived
+from applying our framework. First, we describe the interview results step by step
+along the seven application scenarios, using quotes from our interviewees and some
+comparisons to findings in the existing literature. Second, we present a cross-case
+synthesis of the findings, in which we summarize the extent of interviewee
+agreement with the propositions, consolidate the benefits and limitations of EA
+(including the business architecture framework) within corporate strategic manage-
+ment and provide lessons learned with suggestions for how to solve certain
+identified issues.
+6.1 A step-by-step description of the interview findings
+6.1.1 Strategic analyses
+The interviews revealed no disagreement that there are different factors that should
+have an impact in strategy formation. According to the strategy director of an
+international car rental service, it is ‘‘a mixture of market, future prospects,
+competitors, capabilities and, of course, the overall business vision.’’
+What became particularly salient, however, was the precedence taken by the
+market-based view therein. Consider the following statement by the strategy
+director of a chemical company: ‘‘Within the past years, there has been a clear
+tendency towards the market-based view. … No, the resource-based view is not left
+unconsidered, but it’s primarily the market that determines what we are going to
+do.’’
+Trends are of particular importance within an appraisal of the external
+environment. This comes through in several interviewee statements. For example:
+‘‘It is very important not to put too much emphasis on historical data. From my point
+of view, you should instead draw on industry trends—also beyond your own ‘home’
+industry—and also mega trends within the entire society. This might give you a
+much broader view of potentially new product/market combinations than looking
+backwards or in your own silo.’’
+26 D. Simon et al.
+123
+
+--- PAGE 23 ---
+In fact, nearly every interviewee pointed out that anticipation is key to successful
+strategic analyses, and that market trends need to be captured as early as possible.
+As outlined above, capturing the business context can be done in a structured form
+within the EA—a benefit that was largely valued by our interviewees.
+While internal capabilities should not be left unconsidered, there was consensus
+among the interviewees not to constrain strategic choices to an inappropriate extent.
+As one of our interviewees insisted, ‘‘First you define a strategy. Then you ask
+yourself whether you have the required capabilities and, if not, how they can be
+acquired.’’
+The senior vice president for corporate strategy and planning of a leading
+automotive company provided a more colorful description: ‘‘At the beginning, there
+is no ‘right’ or ‘wrong.’ From my point of view, you should start by spanning the
+whole corridor instead of limiting yourself with any restrictions. Consider the roots
+of Lego as some sort of carpenter’s shop or those of Nokia as a manufacturer of
+boots, for example. Both would not have evolved to what they are today if they had
+made themselves subject to too many constraints and had not thought innovatively.
+The more important questions you need to answer are: ‘What do I want to be?’ and
+‘What am I really capable of?’’’
+In simple terms, the first question corresponds to the statement made by another
+interviewee: ‘‘Do we pursue being the ‘Aldi’ or ‘Porsche’ of our industry?’’ As for
+the second question, most of the interviewees saw the value of EA, as the following
+statement indicates: ‘‘I agree with you. It is not easy to define capabilities.
+Enterprise architecture may, indeed, facilitate this definition.’’
+As the interview findings suggest, another important aspect is the differentiation
+between capabilities and core competencies. As a constituent of business
+capabilities, resources represent a particular determinant of strategy formation.
+One interviewee stressed that this especially requires investigating the available
+monetary resources. Emphasis was also placed on the corporate culture (cf. Raps
+2008), illustrated by the following statement: ‘‘One of the biggest mistakes in
+strategy development you can make is to design a new strategy that does not fit into
+the cultural footprint—the DNA—of the company.’’ This is, however, where many
+of our interviewees saw difficulties in applying EA.
+One interviewee explained: ‘‘With enterprise architecture, you don’t get the soft
+facts like corporate culture or abilities of individual teams. It’s only about hard
+facts.’’ Translated to McKinsey’s 7S-framework for strategy implementation and
+organizational development (cf. Raps 2008), EA was thus described as a more
+powerful tool for describing the hard (strategy, structure, systems) than the soft
+elements (shared values, skills, style, staff).
+6.1.2 Strategic choice
+During the discussion of the role of EA in strategic choice, it became apparent that a
+more detailed definition of strategy is needed. This is in line with Feurer and
+Chaharbaghi (1997), who identify several dimensions that may be associated with
+this term, for example, scope (market selection, activities, etc.), content (diversi-
+fication, growth, etc.), and timeframe. To allow a more differentiated use of the
+Enterprise architecture management and its role 27
+123
+
+--- PAGE 24 ---
+term, one may distinguish between corporate strategy (specialized into growth
+strategy, stability strategy, retrenchment strategy) for general market definition,
+competitive strategy (including alliance strategy) for specific market navigation and
+leapfrogging respective competitors, and functional strategy (e.g., IT strategy,
+marketing strategy) (cf. Raps 2008; Hax and Majluf 1984), all of which are reflected
+in the business model.
+While interviewees largely acknowledged the role of EA as a facilitator of
+strategic choice, we were confronted with the question of why a detailed feasibility
+study is needed. According to one interviewee, ‘‘Strategies are always feasible if
+management has done its strategy development process properly. … Culture is the
+only thing you cannot work against; it has to be adapted slowly. Specific
+capabilities, for example, can be acquired or improved.’’ Elaborating, the
+interviewee added: ‘‘Sometimes, it’s simply best to say ‘that’s what I want; please
+work out how I will get there’.’’
+6.1.3 Business execution design
+Following the discussion of strategic choice, we discussed the breakdown into the
+business model as the basis for shaping the future business execution, which met
+with equal appreciation by our interviewees, as evidenced by this exemplary
+statement: ‘‘Using such a structured description to translate strategy into the future
+business organization sounds very promising.’’
+Based on capturing the different business model perspectives in the EA model,
+specific business model viewpoints (both intra- and inter-perspective) may help
+create adequate representations, as our interview findings indicate. Inspired by
+architectural viewpoints such as the business support matrix that displays the
+support of business processes in organizational units by application systems (cf.
+Buckl et al. 2008), interviewees found similar matrices of interest with respect to the
+business model. In particular, this involved a customer channel matrix (two-
+dimensional matrix of products and markets, populated by the customer channels
+used for specific combinations) and a business collaboration matrix (two-dimen-
+sional matrix of value chain stages and markets/products, displaying the internal and
+external actors present on these stages for a particular market or product).
+It was noted, however, that translation into the future business execution does not
+follow a fully deterministic logic and may work only up to a certain level of
+granularity. ‘‘While the high-level organizational structure can be derived from the
+strategy and the corresponding business model, detailed organizational design is
+subject to constraints, especially company politics,’’ said one interviewee.
+Whether there need to be any changes at all was also questioned: ‘‘Strategy
+changes do not necessarily result in a transformation of the business organization.
+You don’t change the organization that quickly.’’
+The aforementioned automotive industry representative went even further: ‘‘Such
+a structured description of the business model may help, but it is not critical. There
+are other criteria that have a greater impact on the future business organization.
+Whether the organization is structured along functions or business divisions—this is
+not something the business model determines, but is a general question of the
+28 D. Simon et al.
+123
+
+--- PAGE 25 ---
+governance vision. The same business model may lead to absolutely different
+business organizations. An example would be the business model of mobility
+services. If, for whatever reason, a credit card becomes part of the offering, it is
+instead a philosophical question that determines what the business organization will
+look like. Is the credit card considered as a complementary service or is it expected
+to become a considerable source of revenue generation? This is what you need to
+answer in that context, for example.’’
+6.1.4 Business transformation readiness assessment
+It was with respect to the assessment of business transformation readiness where the
+interviewees showed the highest level of agreement regarding the facilitating role of
+EA. A managing director of a leading player in the express delivery market made a
+notable remark: ‘‘I definitely see the value of enterprise architecture. But there are
+manyfactorsthatmayaffecttransformation readiness.Wehavealready discussedthe
+role of corporate culture, for example. But that’s only one part. Employment
+protection,theshopcommittee,theseareotheraspectsthatmayplayarolehere.…In
+general, you need a thorough and very convincing storyline to make the organization
+ready for transformation. And sometimes you may only achieve this if you manage to
+increase the level of suffering before you start the transformation process.’’
+Notably, this brought us back again to EA, since this may be an appropriate
+instrumentwithwhichtoestablishacolorfulstorylineandthusaddresswhatmaybethe
+most important dimension to change—the human element (The Open Group 2009).
+6.1.5 Strategy implementation planning
+Strategy implementation planning as another scenario to be facilitated by EA
+generally garnered at least partial agreement. The use of business capabilities was
+appreciated, but only seen as one facet of implementation planning, as one of our
+interviewees put it in a nutshell: ‘‘I agree with you that capabilities may help here.
+Honestly though, they are not sufficient. We employ a whole set of strategic
+assessment criteria.’’
+Furthermore, in one interview we had to clarify the difference between EA and
+traditional decision tree techniques. After some discussion and a review of the
+business architecture framework, the interviewee himself concluded that such
+techniques may still be well applied, but EA can provide an information base from
+which such trees may be generated on an ad hoc basis and stored for historical
+traceability.
+6.1.6 Strategy review
+The weakest agreement was on EA’s role in strategy reviews. This is due to the
+variety of aspects other than the strategy itself that may have led to poor
+performance, as expressed in the following statement: ‘‘In general, I see your point.
+However, what you need to find out is whether unsatisfactory results are due to
+strategic or implementation problems.’’
+Enterprise architecture management and its role 29
+123
+
+--- PAGE 26 ---
+Similarly, the strategy director of a postal service explained (cf. Feurer and
+Chaharbaghi 1995b): ‘‘Once you have implemented the defined business strategy,
+you should make an honest assessment of the targets set and the results achieved. In
+searching for reasons for any deviations, however, you should not forget to consider
+soft facts such as the employee’s resistance to change. So, results such as insufficient
+performance or high costs cannot be attributed automatically to the business strategy
+itself and do not necessarily mean that the defined strategy was the wrong choice.’’
+Consequently,oneshouldgiveequalconcerntostrategyanditsimplementationand
+subsequentexecutioninthesearchforexplanationsoffailures,asfurthersupportedby
+the following point made by an interviewee: ‘‘Once strategy has been implemented,
+whatyoubasicallydofrommypointofviewisacomparisonofthedefinedto-bewith
+the achieved as-is. I mean, you should have defined qualitative and quantitative goals
+at the beginning of the process, which should serve as the basis for this. … Are you
+aware of the EFQM management model (EFQM 2011)? If you look into this model,
+you will find several criteria that all have their impact on the achievement of certain
+outcomes. These are called the ‘Enablers.’ The business processes play a central role
+here. Maybe this is where something does not work well. In that case, it’s the strategy
+execution that is the deficient aspect, not the strategy itself.’’
+6.1.7 Strategic governance
+Eventually, our interviews involved very diverse discussions around EA’s position
+in strategic governance. While some of our interviewees saw EA’s greatest value as
+providing this ‘‘sanity check’’ to ensure sustainable strategy execution, others were
+less convinced: ‘‘Based on my experiences, you need to develop shared views of the
+strategic direction. This can be achieved only by thorough discussions.’’
+6.2 Discussion and synthesis of the interview findings
+All in all, the interviews provided fair support for EA’s facilitating role in strategic
+management, while pointing to specific issues to be addressed in future EA research
+and practice with respect to its strategic management facet. Table 4 summarizes the
+application scenarios as judged by our interviewees, pointing out that each of our
+propositions led to at least partial agreement from the interviewees [based on a scale
+Table 4 Evaluation of EA application scenarios
+Application scenario Mean score SD
+Strategic analyses 1.43 0.98
+Strategic choice 1.57 0.79
+Business execution design 1.57 0.79
+Business transformation readiness assessment 1.71 0.49
+Strategy implementation planning 1.14 0.9
+Strategy review 0.86 0.69
+Strategic governance 1 1
+30 D. Simon et al.
+123
+
+--- PAGE 27 ---
+from 0 to 2, where 0 represents ‘‘no agreement,’’ 1 represents ‘‘partial agreement,’’
+and 2 represents ‘‘full agreement,’’ as captured in the interviews (see research
+methodology section)]. Inter-rater reliability among the interviewees, which we
+calculated in SPSS 17.0.2 as an intraclass correlation coefficient (ICC) with two-
+way mixed effects (Shrout and Fleiss 1979), was, however, rather low (0.088 with a
+95 % confidence interval from -0.6 to 0.515), and the ratings’ variance largely
+differed across the scenarios observed, ranging from 0.238 to 1. This reflects the
+widely acknowledged need for an enterprise-specific and-situated approach to EA
+management (Buckl et al. 2010a). While EA in one organization might be
+considered particularly valuable for the purpose of strategic analyses, a different
+organization might not see these benefits or not see a certain need for EA in that
+context. Among others, this may depend on the schools of strategic management
+(Mintzberg et al. 1998) prevalent in the enterprise’s strategic management activities.
+The value of EA in strategic analyses was, on the one hand, attributed to the
+possible structured capturing of the business context (as part of the business
+motivation layer of our framework) by our interviewees. In fact, given that drivers
+and constraints can also be assigned with concrete timestamps (Saat 2010), EA may
+become even more beneficial for strategic analyses, addressing the temporal aspect
+of the context factors, which was also raised as a major concern during the
+interviews (see the above discussion around trends). On the other hand, it was EA’s
+support in defining business capabilities (as per the business execution layer of our
+framework) that was appreciated by our interviewees. This may apply in particular
+to ‘‘hidden’’ capabilities, which may be identified based on the various perspectives
+integrated within the EA. In cases where capability types (e.g., strategic capabilities)
+are made subject of the EA meta model, also the mentioned differentiation between
+capabilities and core competencies can be thoroughly modeled and made available
+for strategic analyses. In contrast, limitations may exist in capturing the soft
+elements of the enterprise. While the hard elements may indeed reflect the roots of
+EA, we believe that this may, however, not necessarily imply that the soft elements,
+for example, corporate culture (cf. Raps 2008), cannot be represented architecturally
+at all, so long as they can be made identifiable and tangible.
+Similarly, the interviewees recognized a facilitating role of EA models within
+strategic choice. Following the discussions around different strategy levels, EA
+management may, however, be well-advised to distinguish between those levels and
+incorporate this in its meta model (see Fig. 4) to actually provide effective
+assistance in corporate strategic management.
+Questions around the necessity of detailed analyses of strategy feasibility that we
+faced in some interviews seem to mirror a certain philosophy of strategic
+management (Feurer and Chaharbaghi 1997), in which planning is primarily driven
+by a certain vision, without great concerns about available capabilities, and which
+thus relates back to the ‘‘school of thought’’ (Mintzberg et al. 1998) mentioned
+earlier. However, even in an approach of ‘‘that’s what I want; please work out how I
+will get there,’’ we can conclude that EA still represents a reasonable tool that can
+be drawn upon to identify those capabilities that are to be acquired or improved.
+The possible breakdown of strategy into the business model as the basis for
+designing the future business execution was one of the main benefits associated with
+Enterprise architecture management and its role 31
+123
+
+--- PAGE 28 ---
+EA (and our underlying business architecture framework) in corporate strategic
+management, which provides fundamental support for the three established
+framework layers. As per the additional strategy levels identified (see Fig. 4), the
+corporate strategy is likely to determine the main customer segments and the
+offering perspective of the business model and drives the business model’s overall
+evolution. While the remaining parts of the business model are the subject mainly of
+the competitive strategy (which may differ across the product/market combinations
+selected), the functional strategies are not left unconsidered and may be reflected
+quite specifically (e.g., the procurement strategy in the business model’s supplier
+perspective). As our interviewees concluded, specific business model viewpoints for
+the purpose of visualization are likely to increase the understanding and facilitate
+the process of business execution design.
+Definitely, limitations exist when we come to detailed organizational design,
+which is affected significantly by company politics. While the factor of power
+games taking place in the organization should not be underestimated, the
+supportability of statements that the business model does not determine organiza-
+tional structures at all (see the above quote from the automotive representative),
+however, more likely depends on the perception of what constitutes a business
+model. Contrary to our concept introduced above, such a statement reflects a rather
+narrow view. In this case, translation into the future business execution apparently
+becomes much more limited.
+The business transformation readiness assessment is the scenario, in which EA is
+considered most significant, as it makes complex relationships (at the business
+execution layer and the underlying IT architecture) transparent. By doing this, EA
+also serves as an instrument for exposing the need for transformation and thus
+facilitating change management, as our interview findings suggest.
+The application scenario of strategy implementation planning is, again, where the
+possible use of business capabilities (as captured in the business execution layer of
+our framework) was appreciated, although criteria other than impacts on business
+capabilities should be taken into consideration as well for strategic assessments and
+informed decision-making with respect to strategy implementation.
+As indicated, the weakest agreement was on the proposition that EA facilitates
+strategy re-design, since the business processes in their current state of execution,
+for example, and not necessarily strategic choices, may have led to poor
+performance. Even then, however, we can conclude that the benefit offered by
+Fig. 4 Strategy levels meta model fragment
+32 D. Simon et al.
+123
+
+--- PAGE 29 ---
+EA remains the possible navigation of the paths from strategy to execution and vice
+versa, and thus may indicate what requires review in further detail.
+Eventually, EA was also valued in terms of its role in strategic governance
+[although we found the most varying opinions here (see Table 4)], because it
+supports monitoring and evaluating conformance with strategy and the correspond-
+ing business model. Particular comments that shared views of the strategic direction
+are most crucial and that these can be achieved only by thorough discussions do not
+reject, but rather support, our thesis of sustainable strategy execution facilitated by
+EA, since we found broad agreement with the assertion that strategy communication
+is among EA’s major benefits.
+The immediate core implications of the interviews on the framework and its
+application (i.e., in terms of modifications and/or amendments), as captured in the
+depicted scenarios, can thus be summarized as follows:
+• Framework:
+• Business motivation:
+As strategies may exist at different levels, the element ‘‘strategy’’ is
+specialized to distinguish between corporate strategy, competitive strategy,
+and functional strategy.
+• Business execution:
+As capabilities may be of different types, the element ‘‘capability’’ is
+specialized to distinguish between basic and strategic capabilities. Integra-
+tive capabilities represent an optional element to be used to bind together
+several capabilities of another type (cf. Brits et al. 2007).
+• Application scenarios:
+• Business execution design:
+• Based on the introduced strategy levels, the business model is derived
+from strategic choices as follows. While the main customer segments and
+the offering perspective are determined by the corporate strategy, the
+remaining business model parts are the subject primarily of the
+competitive strategy (with potential differences across the product/
+market combinations selected). Some parts of the business model may be
+designed based on additional input from specific functional strategies
+(e.g., supplier channels and relationships based on the procurement
+strategy).
+• Organizational structures are derived not only from the business model
+and its translation into corresponding capabilities, but also from other
+factors such as company politics.
+• Strategy implementation planning:
+Criteria other than impacts on business capabilities should be taken into
+consideration as well for the strategic assessment of project candidates.
+• Strategy review:
+In the review of implemented strategic choices, one must be aware that the
+business processes in their current state of execution, for example, and not
+Enterprise architecture management and its role 33
+123
+
+--- PAGE 30 ---
+necessarily strategic choices, may have led to poor performance. In this
+respect, the transparency of which elements of business execution are related
+to which strategic choices helps in identifying what requires review in
+further detail.
+Beyond these insights gained through the discussion of the seven application
+scenarios, there is another lesson we can learn from the interviews. As one
+interviewee said, ‘‘Most managers are hands-on people.’’ This is something other
+interviewees also emphasized, suggesting that the process and instruments of
+strategic management should not be overformalized but that they should be tailored
+to the enterprise’s management style. Corporate strategic management facilitated by
+EA may thus follow the design school rather than the planning school of strategic
+management (cf. Mintzberg et al. 1998), taking advantage of an approach to strategy
+development and execution that is both analytical and straightforward, and avoiding
+endless strategy formulation that may jeopardize the achievement of strategy
+execution (Op’t Land et al. 2009). This means that while the designed framework
+may act as a reference that provides a structure of relevant content and helps guide
+strategists through essential tasks of strategic management, not necessarily all of its
+elements and/or their relationships may actually be explicitly instantiated and thus
+formally modeled in the scenarios in which they have been found to be relevant.
+Strategy implementation planning, for example, may be done without a detailed
+assignment of project candidates to the affected business capabilities that finds its
+way into the EA model; rather, the project candidates’ strategic value may be
+assessed in an informal way using a capability map as a reference, if that better fits
+into the management style of a given enterprise in a certain situation.
+This lesson was reflected in a comment by another interviewee: ‘‘I think what
+you have to keep in mind is the cost-benefit relationship of doing this. I can imagine
+that this requires a lot of effort.’’ It thus seems essential to find a satisfactory middle
+ground that avoids becoming paralyzed by disproportionally great efforts. In
+general, this lesson connects to aspects that, apart from any methodical deficits and/
+or gaps, may have impeded the adoption of EA in corporate strategic management
+to date (despite the explored benefits): different world views/cultures of strategists
+and architects (van Gils 2009); a lack of experienced architects (Lucke et al. 2010)
+capable of making strategists understand and use EA; and the lagging acceptance of
+EA by strategic managers due to its affiliation to the IT department. So, such issues
+should be taken into additional consideration and, to the extent possible, resolved in
+EA practice; it is then that EA (including the suggested business architecture
+framework) can apparently prove its greatest value.
+7 Conclusion
+Having examined EA in light of corporate strategic management from both a
+theoretical and, through practitioner interviews, a practical point of view, we now
+draw some final conclusions and outline the implications for both research and
+practice. To answer our first research question (‘‘What support can EA management
+34 D. Simon et al.
+123
+
+--- PAGE 31 ---
+provide within corporate strategic management, and on what conception of business
+architecture is this based?’’), we have designed a comprehensive business
+architecture framework where one that embraces the concept as a whole had been
+lacking. This framework proposes three interrelated layers: business motivation,
+business model, and business execution. On this basis, EA has been applied to key
+tasks of corporate strategic management: strategic analyses, strategic choice,
+business execution design, business transformation readiness assessment, strategy
+implementation planning, strategy review, and strategic governance. This applica-
+tion argues for the use of EA as the frame of reference for corporate strategic
+management, which allows modeling of the business from strategy to execution and
+may thus yield several benefits within the aforementioned scenarios.
+Our empirical findings obtained through the interviews revealed further
+interesting insights. In general, our interviewees appreciated the role EA may take
+in corporate strategic management and thus bolstered the research propositions
+developed regarding this facilitating role of EA. This is particularly true for the
+business transformation readiness assessment. Also, the scenarios of strategic
+analyses, strategic choice, and business execution design found considerable
+agreement, mainly due to the support EA offers in business capability identification,
+business context understanding, and strategy decomposition into the business
+model. EA’s limits within strategic management come from the difficulties of
+modeling the soft elements of the business comprehensively; from company politics
+that affect, for example, organizational design; and from diverse aspects from
+strategy to execution that may influence results.
+All in all, we believe this approach of using design science to develop and apply
+a consistent business architecture framework, combined with ideas of grounded
+theory to allow for a qualitative examination through a series of interviews with
+strategic managers, is a way to move more deeply into the research area and offers
+ideas and advice for academics and practitioners alike. Aside from the academic
+value that lies in its analysis and understanding, the framework (and our theorizing
+about its application) may for practitioners serve as a conceptual guideline for
+implementing and applying comprehensive business architecture management,
+which facilitates establishing EA within the strategic management arena and paves
+the way for it to become an accepted tool in the business. In fact, our research may
+contribute to a greater understanding among strategic business managers of how EA
+models can support their work, and may illustrate to architects how EA can be used
+way beyond the management of the IT landscape.
+For both EA practitioners and academics, our research also provides a qualitative
+foundation on which to draw in the future and points to areas in which the EA
+discipline still needs to develop further or to which it is well-advised to turn greater
+attention to meet specific requirements imposed by corporate strategic management.
+Accordingly, as the answer to our second research question (‘‘In what areas does EA
+management need to develop to permeate corporate strategic management more
+deeply?’’), this involves in particular the differentiation and alignment of defined
+strategy levels, in line with the research agenda charted in the Furrer et al. (2008)
+state-of-the-art review of strategic management suggesting a greater focus on the
+alignment between corporate and competitive strategies, and the explicit
+Enterprise architecture management and its role 35
+123
+
+--- PAGE 32 ---
+consideration of corporate culture as a central element of strategy execution (cf.
+Raps 2008). Business capability modeling and business model architecting have
+been shown to be crucial and should thus be investigated further. For the latter, this
+requires in particular the consideration and visualization of dedicated business
+model viewpoints [for example, using the modeling language ArchiMate (The Open
+Group 2012)], in line with the research gaps identified by Burkhart et al. (2011)
+stated earlier. This may aid practitioners in actually applying business architecture
+at the strategic level.
+Having said this, the research design allowed us to capture a fairly large part of
+reality (because key industries were represented in the interviews) without
+foregoing the benefits offered by qualitative methods. This is despite the relatively
+small sample of interviewees and limited time in the interviews to achieve a full
+understanding of EA and its practical application, which also explains the few
+interview statements that reveal difficulties in grasping the concept of EA or initial
+perceptions of an architectural approach to corporate strategic management being
+too model-based. As indicated, further research and empirical evidence is thus
+required to make EA a significant part of the vocabulary of each and every strategic
+manager (potentially including further interviews with a more limited scope—e.g.,
+focus on fewer application scenarios—in favor of an increased level of detail). Our
+framework as set out, applied, and examined in this paper represents an essential
+step on this journey toward strategic business management based on EA.
+Acknowledgments The authors would like to gratefully acknowledge the valuable comments and help
+provided by Scott M. Cooper, Michael J. Shaw, and the anonymous reviewers.
+References
+Adams LA, Courtney JF (2004) Achieving relevance in is research via the DAGS framework. In:
+Proceedings of the 37th Hawaii international conference on system sciences
+Aier S, Maletta F, Riege C, Stucki K, Frank A (2008a) Aufbau und Einsatz der Geschäftsarchitektur bei
+der AXA Winterthur—Ein minimal invasiver Ansatz. In: Proceedings der DW2008: Synergien
+durch Integration und Informationslogistik
+Aier S, Riege C, Winter R (2008b) Unternehmensarchitektur—Literaturüberblick und Stand der Praxis.
+Wirtschaftsinformatik 50(4):292–304
+Aitken C (2009) Enterprise architecture, strategic management, and information management. In: Doucet
+G, Gotze J, Saha P, Bernard S (eds) Coherency management—architecting the enterprise for
+alignment, agility and assurance. AuthorHouse, Bloomington, pp 121–155
+Albers S (2010) Configurations of alliance governance systems. Schmalenbach Bus Rev 62:204–233
+Al-Debei MM, Avison D (2010) Developing a unified framework of the business model concept. Eur J Inf
+Syst 19:359–376
+Amit R, Schoemaker PJH (1993) Strategic assets and organizational rent. Strateg Manag J 14:33–46
+Andrews KR (1987) The concept of corporate strategy. Richard D Irwin, Homewood Illinois
+Barney JB (1991) Firm resources and sustained competitive advantage. J Manag 17(1):99–120
+Barney JB (1996) The resource-based theory of the firm. Org Sci 7(5):469
+Barney JB, Wright M, Ketchen DJ (2001) The resource-based view of the firm: ten years after 1991.
+J Manag 17:625–641
+Barroero T, Motta G, Pignatelli G (2010) Business capabilities centric enterprise architecture. In: Bernus
+P, Doumeingts G, Fox M (eds) Enterprise architecture, integration and interoperability, pp 32–43
+Bartenschlager J, Goeken M (2010) IT strategy implementation framework—bridging enterprise
+architecture and IT governance. In: Proceedings of 16th Americas conference on information
+systems
+36 D. Simon et al.
+123
+
+--- PAGE 33 ---
+Baskerville R (2008) What design science is not. Eur J Inf Syst 17:441–443
+Beck R, Weber S, Gregory RW (2012) Theory-generating design science research. Inf Syst Front. doi:
+10.1007/s10796-012-9342-4
+Beimborn D, Marting SF, Homann U (2005) Capability-oriented modeling of the firm. In: Proceedings of
+the IPSI 2005 conference
+Bekkers W, Spruit M, van de Weerd I, van Vliet R, Mahieu A (2010) A situational assessment method for
+software product management. In: Proceedings of the 18th European conference on information
+systems (ECIS)
+Bernard S (2005) An introduction to enterprise architecture. AuthorHouse, Bloomington
+Bernard S (2009) The importance of formal documentation in enterprise architectures. J Enterp Archit
+5(3):29–58
+Bernus P (2003) Organisational design. In: Bernus P, Nemes L, Schmidt GJ (eds) Handbook on enterprise
+architecture. Springer, Berlin, pp 575–594
+Bernus P, Nemes L, Schmidt GJ (2003) Handbook on enterprise architecture. Springer, Berlin
+Bradford L, Rosemann M, Seidel S, ter Hofstede A (2006) Developing a business process reference
+model for the screen business—a design science research case study. In: Proceedings of the 17th
+Australasian conference on information systems
+Brits J, Botha GHK, Herselman ME (2007) Conceptual framework for modeling business capabilities. In:
+Proceedings of the 2007 informing science and IT education joint conference
+Buckl S, Ernst AM, Lankes J, Schneider K, Schweda CM (2007) A pattern based approach for
+constructing enterprise architecture management information models. In: Proceedings of the 8th
+international conference on Wirtschaftsinformatik 2007, pp 145–162
+Buckl S, Ernst AM, Lankes J, Matthes F (2008) Enterprise architecture management pattern catalogue.
+TU Munich, Chair for Informatics 19 (sebis), Germany
+Buckl S, Ernst AM, Lankes J, Matthes F, Schweda CM (2009) State of the art in enterprise architecture
+management 2009. TU Munich, Chair for Informatics 19 (sebis), Germany
+Buckl S, Schweda CM, Matthes F (2010a) A design theory nexus for situational enterprise architecture.
+In: Proceedings of the 14th IEEE international enterprise distributed object computing conference
+workshops, pp 3–8
+Buckl S, Matthes F, Schewda CM (2010b) Conceptual models for cross-cutting aspects in enterprise
+architecture modeling. In: Proceedings of the 14th IEEE international enterprise distributed object
+computing conference workshops, pp 245–252
+Burkhart T, Krumeich J, Werth D, Loos P (2011) Analyzing the business model concept—a
+comprehensive classification of literature. In: 32nd international conference on information systems
+Capon N, Farley JU, Hulbert JM (1988) Corporate strategic planning. Columbia University Press, New
+York
+Cater T, Pucko D (2010) Factors of effective strategy implementation: empirical evidence from Slovenian
+business practice. J East Eur Manag Stud 15(3):207–236
+David FR (2011) Strategic management—concepts & cases, 13th edn. Prentice Hall, New Jersey
+Day GS (1994) The capabilities of market-driven organizations. J Mark 58(4):37–52
+Dubé L, Paré G (2003) Rigor in information systems positivist case research: current practices, trends,
+and recommendations. MIS Q 27(4):597–636
+Dussauge P, Garette B (1999) Cooperative strategy: competing successfully through strategic alliances.
+Wiley, New York
+EFQM (2011) The EFQM excellence model. http://www.efqm.org/
+Eisenhardt KM (1989) Building theories from case study research. Acad Manag Rev 14(4):532–550
+Eisenhardt KM, Martin JA (2000) Dynamic capabilities: what are they? Strateg Manag J 21:1105–1121
+Engels G, Hess A, Humm B, Juwig O, Lohmann M, Richter JP, Voss M, Willkomm J (2008) Quasar
+enterprise. dpunkt, Heidelberg
+Felden C, Buder JJ (2012) Integrated information supply for decision support in grid companies. Bus Inf
+Syst Eng 4(1):15–29
+Fernandez WD (2004) The grounded theory method and case study data in IS research: issues and design.
+In: Proceedings of 2004 information systems foundations workshop: constructing and criticising
+Feurer R, Chaharbaghi K (1994) Defining competitiveness: a holistic approach. Manag Decis 32(2):49–58
+Feurer R, Chaharbaghi K (1995a) Strategy formulation: a learning methodology. Benchmark Qual Manag
+Technol 2(1):38–55
+Feurer R, Chaharbaghi K (1995b) Performance measurement in strategic change. Benchmark Qual
+Manag Technol 2(2):64–83
+Enterprise architecture management and its role 37
+123
+
+--- PAGE 34 ---
+Feurer R, Chaharbaghi K (1997) Strategy development: past, present and future. Train Qual 5(2):58–70
+Flick U (2008) Designing qualitative research. SAGE, London
+Flick U (2009) An introduction to qualitative research. SAGE, London
+Fritscher B, Pigneur Y (2010) Supporting business model modelling: a compromise between creativity
+and constraints. In: Proceedings of the 8th international workshop on task models and diagrams,
+pp 28–43
+Furrer O, Thomas H, Goussevskaia A (2008) The structure and evolution of the strategic management
+field: a content analysis of 26 years of strategic management research. Int J Manag Rev 10(1):1–23
+Ganesan E, Paturi R (2009) Key performance indicators framework—a method to track business
+objectives, link business strategy to processes and detail importance of key performance indicators
+in enterprise business architecture. In: Proceedings of 15th Americas conference on information
+systems (AMCIS)
+Gläser J, Laudel G (2004) Experteninterviews und qualitative Inhaltsanalyse. VS Verlag für
+Sozialwissenschaften, Wiesbaden
+Glaser BG, Strauss AL (1967) The discovery of grounded theory: strategies for qualitative research.
+Aldine, Chicago
+Glissman S, Sanz J (2009) A comparative view of business architecture. IBM Research Report
+Goeken M, Johannsen W, Pfeiffer JC (2008) Motivation einer IT-Governance-Geschäftsarchitektur zur
+Unterstützung des Business/IT-alignments. In: Proceedings of the Multikonferenz Wirtschaftsin-
+formatik (MKWI) 2008
+Goldkuhl G (2004) Design theories in information systems—a need for multi-grounding. J Inf Technol
+Theory Appl 6(2):59–72
+Goodwin P, Wright G (2001) Enhancing strategy evaluation in scenario planning: a role for decision
+analysis. J Manag Stud 38(1):1–16
+Grant RM (1991) The resource-based theory of competitive advantage: implications for strategy
+formulation. Calif Manag Rev 33(3):114–135
+Graves T (2010) Mapping the enterprise: modelling the enterprise as services with the enterprise canvas.
+Tetradian Books, England
+Gregory RW (2010) Design science research and the grounded theory method: characteristics,
+differences, and complementary uses. In: Proceedings of the 18th European conference on
+information systems
+Gregory RW, Muntermann J (2011) Theorizing in design science research: inductive versus deductive
+approaches. In: Proceedings of the 32nd international conference on information systems (ICIS)
+Hafeez K, Zhang Y, Malak N (2002) Determining key capabilities of a firm using analytical hierarchy
+process. Int J Prod Econ 76(1):39–51
+Hastings S (1996) A strategy evaluation model for management. Manag Dec 34(1):25–34
+Hax AC, Majluf NC (1984) The corporate strategic planning process. Interfaces 14(1):47–60
+Hedman J, Kalling T (2002) The business model: a means to comprehend the management and business
+context of information and communication technology. In: Proceedings of the 10th European
+conference on information systems
+Hedman J, Kalling T (2003) The business model concept: theoretical underpinnings and empirical
+illustrations. Eur J Inf Syst 12:49–59
+Helfat CE, Pereraf MA (2002) The dynamic resource-based view: capability lifecycles. Strateg Manag J
+24:997–1010
+Henderson J, Venkatraman N (1992) Strategic alignment: a model for organizational transformation
+through information technology. In: Kochan T, Unseem M (eds) Transforming organizations.
+Oxford University Press, New York
+Hevner AR (2007) A three cycle view of design science research. Scand J Inf Syst 19(2):87–92
+Hevner AR, March ST, Park J, Ram S (2004) Design science in information systems research. MIS Q
+28(1):75–105
+Hirvonen A, Pulkkinen M, Valtonen K (2007) Selection criteria for enterprise architecture methods. In:
+Proceedings of the 2007 European conference on information management and evaluation
+Holmström J, Ketokivi M, Hameri AP (2009) Bridging practice and theory: a design science approach.
+Decis Sci 40(1):65–87
+Hoogervorst JAP (2004) Enterprise architecture: enabling integration, agility and change. Int J Cooper Inf
+Syst 13(3):213–233
+Hopf C (2005) Qualitative interviews—Ein Überblick. In: Flick U, von Kardorff E, Steinke I (eds)
+Qualitative Forschung: Ein Handbuch. Rowohlt, Germany
+38 D. Simon et al.
+123
+
+--- PAGE 35 ---
+Jansen S, Brinkkemper S, Souer J, Luinenburg L (2012) Shades of gray: opening up a software producing
+organization with the open software enterprise model. J Syst Soft 85(7):1495–1510
+Kalpic B, Pandza K, Bernus P (2003) Strategy as a creation of corporate future. In: Bernus P, Nemes L,
+Schmidt GJ (eds) Handbook on enterprise architecture. Springer, Berlin, pp 213–254
+Kantabutra S, Avery GC (2010) The power of vision: statements that reasonate. J Bus Strategy
+31(1):37–45
+Kaplan RS, Norton DP (2001) The strategy-focused organization: how balanced scorecard companies
+thrive in the new business environment. Harvard School Business Press, Boston
+Kaplan RS, Norton DP (2004) Strategy maps: converting intangible assets into tangible outcomes.
+Harvard School Business Press, Boston
+Kappelman L, McGinnis T, Pettite A, Salmans B, Sidorova A (2008) Enterprise architecture: charting the
+territory for academic research. In: Proceedings of 14th Americas conference on information
+systems (AMCIS)
+Keller W (2009) Using capabilities in enterprise architecture management. object architects, whitepaper
+Klein HK, Myers MD (1999) A set of principles for conducting and evaluating interpretive field studies in
+information systems. MIS Q 23(1):67–94
+Klinkmüller C, Ludwig A, Franczyk B, Kluge R (2010) Visualising business capabilities in the context of
+business analysis. In: Proceedings of business information systems 2010, Berlin
+Kohlborn T, Korthaus A, Chan T, Rosemann M (2009) Identification and analysis of business and
+software services—a consolidated approach. IEEE Trans Serv Comput 2(1):50–64
+Kurpjuweit S, Winter R (2007) Viewpoint-based meta model engineering. In: Proceedings of 2nd
+international workshop on enterprise modelling and information systems architectures, pp 143–161
+Kurpjuweit S, Winter R (2009) Concern-oriented business architecture engineering. In: Proceedings of
+SAC 2009
+Kvale S (1989) To validate is to question. In: Kvale S (ed) Issues of validity in qualitative research.
+Studentlitteratur, Lund
+Kvale S (2007) Doing interviews. SAGE, London
+Leganza G (2010) Topic overview: information architecture. Forrester Research Report 55951
+Levina N, Vaast E (2005) The emergence of boundary spanning competence in practice: implications for
+implementation and use of information systems. MIS Q 29(2):335–363
+Lucke C, Krell S, Lechner U (2010) Critical issues in enterprise architecting—a literature review. In:
+Proceedings of the 16th Americas conference on information systems
+Madill A, Jordan A, Shirley C (2000) Objectivity and reliability in qualitative analysis: realist,
+contextualist and radical constructionist epistemologies. Br J Psychol 91(1):1–20
+Malik N (2009) Toward an enterprise business motivation model. Architect J 19:10–16
+Matthes F, Buckl S, Leitel J, Schweda CM (2008) Enterprise architecture management tool survey 2008.
+TU Munich, Chair for Informatics 19 (sebis), Germany
+Micklich DL (2005) Strategic implications of causal mapping in strategy analysis and formulation. In:
+Narayanan VK, Armstrong DJ (eds) Causual mapping for research in information technology. IGI
+Global, pp 284–311
+Mintzberg H, Ahlstrand B, Lampel J (1998) Strategy safari—a guided tour through the wilds of strategic
+management. Free Press, New York
+Mocker M (2009) What is complex about 273 applications? Untangling application architecture
+complexity in a case of European investment banking. In: Proceedings of the 42nd Hawaii
+international conference on system sciences
+Molina A (2003) Developing the enterprise concept—the business plan. In: Bernus P, Nemes L, Schmidt
+GJ (eds) Handbook on enterprise architecture. Springer, Berlin, pp 333–372
+Morse JM, Barrett M, Mayan M, Olson K, Spiers J (2002) Verification Strategies for Establishing
+Reliability and Validity in Qualitative Research. Int J Qual Methods 1(2):13–22
+Müller B, Olbrich S (2011) The artifact’s theory—a grounded theory perspective on design science
+research. In: Proceedings of the 10th international conference on Wirtschaftsinformatik (2011),
+pp 1176–1186
+Niemann KD (2006) From enterprise architecture to IT governance—elements of effective IT
+management. Vieweg ? Teubner, Wiesbaden
+Niemann KD (2008) Enterprise architecture management and its role in IT governance and IT investment
+planning. In: Saha P (ed) Advances in government enterprise architecture. Information Science
+Reference, New York, pp 208–228
+Enterprise architecture management and its role 39
+123
+
+--- PAGE 36 ---
+Object Management Group (2010) The business motivation model, version 1.1. OMG document number:
+formal/2010-05-01
+Offermann P, Levina O, Schönherr M, Bub U (2009) Outline of a design science research process. In:
+Proceedings of the 2009 conference on design science research in information systems and
+technology
+Op’t Land M, Proper E, Waage M, Cloo J, Steghuis C (2009) Enterprise architecture—creating value by
+informed governance. Springer, Berlin
+Österle H, Winter R, Höning F, Kurpjuweit S, Osl P (2007) Business Engineering: Core-Business-
+Metamodell. WISU—Das Wirtschaftsstudium 2/07:191–194
+Osterwalder A, Pigneur Y (2002) Business models and their elements. In: Proceedings of the international
+workshop on business models 2002
+Osterwalder A, Pigneur Y (2003) An ontology for e-business models. In: Currie W (ed) Value creation
+from e-business models. Butterworth-Heinemann
+Osterwalder A, Pigneur Y (2010) Business model generation—a handbook for visionaries, game
+changers, and challengers. Wiley, New Jersey
+Osterwalder A, Pigneur Y, Tucci CL (2005) Clarifying business models: origins, present, and future of
+the concept. Commun Assoc Inf Syst 16(1):1–25
+Pagh JD, Cooper MC (1998) Supply chain postponement and speculation strategies: how to choose the
+right strategy. J Bus Logist 19(2):13–33
+Parker T (2009) The strategic dimension of enterprise architecture. In: Doucet G, Gotze J, Saha P,
+Bernard S (eds) Coherency management—architecting the enterprise for alignment, agility and
+assurance. AuthorHouse, Bloomington, pp 157–178
+Peffers K, Tuunanen T, Gengler CE, Rossi M, Hui W, Virtanen V, Bragge J (2006) The design science
+research process: a model for producing an presenting information systems research. In: Proceedings
+of the 1st International conference on design science research in information systems and
+technology, pp 83–106
+Peng GCA, Nunes MB (2007) Using PEST analysis as a tool for refining and focusing contexts for
+information systems research. In: Proceedings of the 6th European conference on research
+methodology for business and management studies, Lisbon, Portugal, pp 229–236
+Pereira CM, Sousa P (2005) Enterprise architecture: business and it alignment. In: Proceedings of SAC
+2005
+Pfohl HC (2004) Logistikmanagement: Konzeption und Funktionen. Springer, Berlin
+Porter ME (1980) Competitive strategy: techniques for analysing industries and competitors. Free Press,
+New York
+Prahalad CK, Hamel G (1990) The core competence of the corporation. Harvard Bus Rev 68(3):79–91
+Radeke F (2011) Toward understanding enterprise architecture management’s role in strategic change:
+antecedents, processes, outcomes. In: Proceedings of the 10th international conference on
+Wirtschaftsinformatik (2011), pp 497–507
+Raps A (2008) Erfolgsfaktoren der Strategieimplementierung: Konzeption und Instrumente. Deutscher
+Universitäts-Verlag, Wiesbaden
+Reichwald R, Piller F (2009) Interaktive Wertschöpfung: Open Innovation, Individualisierung und neue
+Formen der Arbeitsteilung. Gabler-Verlag, Wiesbaden
+Reihlen M, Smets M, Veit A (2010) Management consultancies as institutional agents: strategies for
+creating and sustaining institutional capital. Schmalenbach Bus Rev 62:317–339
+Repschlaeger J, Wind S, Zarnekow R, Turowski K (2012) Selection criteria for software as a service: an
+explorative analysis of provider requirements. In: Proceedings of 18th Americas conference on
+information systems (AMCIS)
+Riege C, Aier S (2009) A contingency approach to enterprise architecture method engineering. J Enterp
+Architect 5(1):36–48
+Ross JW, Weill P, Robertson DC (2006) Enterprise architecture as strategy. Harvard Business School
+Press, Boston
+Rossi M, Sein MK (2003) Design research workshop: a proactive research approach. In: 26th Information
+systems research seminar in Scandinavia, IRIS Association, Finland
+Saat J (2010) Zeitbezogene Abhängigkeitsanalysen der Unternehmensarchitektur. In: Proceedings of the
+Multikonferenz Wirtschaftsinformatik (MKWI) 2010, pp 119–130
+Samavi R, Yu E, Topaloglou T (2009) Strategic reasoning about business models: a conceptual modeling
+approach. Inf Syst E-Bus Manag 7:171–198
+40 D. Simon et al.
+123
+
+--- PAGE 37 ---
+Sandberg J (2000) Understanding human competence at work: an interpretive approach. Acad Manag J
+43(1):9–25
+Schäffer U, Willauer B (2003) Strategic planning as a learning process. Schmalenbach Bus Rev
+55:86–107
+Schekkerman J (2004) Trends in enterprise architecture: how are organizations progressing? Institute for
+Enterprise Architecture Developments
+Schlagwein D, Fischbach K, Schoder D, Bartsch S (2010) Open value creation: a framework for open and
+collaborative value creation concepts. In: Proceedings of the Multikonferenz Wirtschaftsinformatik
+(MKWI) 2010
+Schmidt C (2005) Analyse von Leitfadeninterviews. In: Flick U, von Kardorff E, Steinke I (eds)
+Qualitative Forschung: Ein Handbuch. rororo, Germany
+Schultze U, Avital M (2011) Designing interviews to generate rich data for information systems research.
+Inf Org 21:1–16
+Shafer SM, Smith HJ, Linder JC (2005) The power of business models. Bus Horizons 48:199–207
+Shrout PE, Fleiss JL (1979) Intraclass correlations: uses in assessing rater reliability. Psychol Bull
+86(2):420–428
+Simon D, Fischbach K, Schoder D (2010) Application portfolio management—an integrated framework
+and a software tool evaluation approach. Commun Assoc Inf Syst 26(1):35–56
+Simon D, Fischbach K, Schoder D (2013) An exploration of enterprise architecture research. Commun
+Assoc Inf Syst 32(1):1–72
+Smith KL (2011) An introduction to PEAF–pragmatic enterprise architecture framework. Pragmatic EA,
+England
+Spewak SH, Hill SC (1993) Enterprise architecture planning: developing a blueprint for data,
+Applications and Technology. Wiley, New Jersey
+Steiss A (1985) Strategic management and organizational decision making. D.C. Heath, Lexington
+The Open Group (2009) TOGAF version 9 enterprise edition. Van Haren Publishing, The Netherlands
+The Open Group (2012) ArchiMate 2.0 specification. Van Haren Publishing, The Netherlands
+Uppington G, Bernus P (2003) Analysing the present situation and refining strategy. In: Bernus P, Nemes
+L, Schmidt GJ (eds) Handbook on enterprise architecture. Springer, Berlin, pp 309–332
+Urbach N, Würz T (2012) How to steer the IT outsourcing provider: development and validation of a
+reference framework of IT outsourcing steering processes. Bus Inf Syst Eng 4(5):247–259
+van Gils B (2009) Strategy and architecture—reconciling worldviews. In: Advances in enterprise
+engineering II, first NAF academy working conference on practice-driven research on enterprise
+transformation (PRET 2009), pp 181–196
+van Steenbergen M, Bos R, Brinkkemper S, van de Weerd I, Bekkers W (2010) The design of focus area
+maturity models. In: Proceedings of the 5th international conference on design science research in
+information systems and technology (DESRIST), pp 317–332
+Versteeg G, Bouwman H (2006) Business architecture: a new paradigm to relate business strategy to ICT.
+Inf Syst Front 8:91–102
+vom Brocke J, Buddendick C (2006) Reusable conceptual models—requirements based on the design
+science research paradigm. In: Proceedings of the 1st international conference on design science
+research in information systems and technology (DESRIST)
+Wang JC, College HW (2006) Corporate strategic management and business re-engineering effort
+analyzed by the balanced scorecard model. J Am Acad Bus 10(1):102–109
+Weedman J (2008) Client as designer in collaborative design science research projects: what does social
+science design theory tell us? Eur J Inf Syst 17(5):476–488
+Whittle R, Myrick CB (2004) Enterprise business architecture: the formal link between strategy and
+results. Auerbach Publications, USA
+Winter R (2002) Business strategy modelling in the information age. In: Proceedings of the 3rd
+international web conference, Perth
+Winter R (2003) Modelle, Techniken und Werkzeuge im Business Engineering. In: Österle H, Winter R
+(eds) Business engineering—Auf dem Weg zum Unternehmen des Informationszeitalters. Springer,
+Berlin, pp 87–118
+Winter R, Fischer R (2007) Essential layers, artifacts, and dependencies of enterprise architecture.
+J Enterp Architect 3(2):1–12
+Winter R, Bucher T, Fischer R, Kurpjuweit S (2007) Analysis and application scenarios of enterprise
+architecture: an exploratory study. J Enterp Architecture 3
+Enterprise architecture management and its role 41
+123
+
+--- PAGE 38 ---
+Winter K, Buckl S, Matthes F, Schweda CM (2010) Investigating the state-of-the-art in enterprise
+architecture management methods in literature and practice. In: Proceedings of the 5th
+mediterranean conference on information systems (MCIS) 2010, Tel Aviv
+Wirtz B (2011) Business model management: design—instruments—success factors. Gabler Verlag,
+Wiesbaden
+Zachman J (1987) A framework for information systems architecture. IBM Syst J 26(3):276–292
+Zellner G (2008) Gestaltung hybrider Wertschöpfung mittels Architekturen—Analyse am Beispiel des
+Business Engineering. Wirtschaftsinformatik 50(3):187–195
+Zott C, Amit R (2009) Designing your future business model: an activity system perspective. IESE
+Business School—University of Navarra, Working Paper 781
+zu Knyphausen-Aufseß D, Meinhardt Y (2002) Revisiting strategy: Ein Ansatz zur Systematisierung von
+Geschäftsmodellen. In: Bieger T, Bickhoff N, Caspers D, zu Knyphausen-Aufseß D, Reding K (eds)
+Zukünftige Geschäftsmodelle: Konzept und Anwendung in der Netzökonomie. Springer, Berlin
+42 D. Simon et al.
+123

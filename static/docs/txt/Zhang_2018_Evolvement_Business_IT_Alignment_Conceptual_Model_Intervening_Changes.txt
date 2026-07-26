@@ -1,0 +1,1253 @@
+--- PAGE 1 ---
+Received January 9, 2018, accepted February 23, 2018, date of publication February 27, 2018, date of current version March 13, 2018.
+Digital Object Identifier 10.1109/ACCESS.2018.2810164
+Evolvement of Business-IT Alignment:
+A Conceptual Model and Intervening
+Changes From Resource Allocation
+MENGMENG ZHANG 1, HONGHUI CHEN1, XINYU LI2, AND KALLE LYYTINEN2
+1Science and Technology on Information Systems Engineering Laboratory, National University of Defense Technology, Changsha 410072, China
+2Weatherhead School of Management, Case Western Reserve University, Cleveland, OH 44106, USA
+Corresponding author: Mengmeng Zhang (mxz391@case.edu)
+This work was supported by the Natural Science Foundation of China under Grant 71571189.
+ABSTRACT Recently, dynamic business-IT alignment (BITA) has attracted increasing attentions. However,
+the description and the governance of dynamic BITA are insufficient in the literature. To address this gap,
+a conceptual BITA evolvement model is proposed combining enterprise architecture with the BITA maturity
+framework, and a sustainable BITA factor on dynamic resource allocation is introduced in this evolvement
+model.Todiscussthesustainablefactorinacomprehensiveway,weexploredaseriesofpossiblechangesand
+corresponding resource influences within the alignment of business functions and applications. A dynamic
+resource allocation algorithm is proposed, and an illustrative case study is presented to verify the algorithm’s
+efficiency.
+INDEX TERMS Business-IT alignment (BITA), enterprise architecture (EA), resource allocation, business
+functions, applications.
+I. INTRODUCTION
+The advantages of business-IT alignment (BITA) have been
+wellrecognizedanddocumentedsincethelate1970s[1]–[5].
+In the past several decades, it persisted among the top-
+ranked concerns of business executives and IT executives [6].
+Recently, dynamic BITA has been increasingly emphasized
+due to changes from various enterprise layers and domains.
+Baker et al. argued that there are two primary perspectives
+on alignment: alignment as an end-state outcome and as
+an ongoing process [7]. Chan et al. pointed out works that
+link the two perspectives are likely to be the most difficult
+but most beneficial [8]. Chen et al. deemed alignment as
+‘‘a moving target’’ [9]. Benbya et al. explained that align-
+ment is not a ‘‘state’’, but a journey that is not unfolded in
+predictable ways [10]. In brief, how to describe and sustain
+the BITA evolvement process is a challenging but pivotal
+issue.
+Nevertheless, despite having recognized the importance
+of dynamic BITA, relevant literature is scarce. Prior studies
+on dynamic BITA are shown alike limitations which can be
+summarizedintothreemainaspects.First,thedeepstructures
+for describing BITA are relatively inexhaustive, especially in
+terms of business strategy, IT strategy, business structure and
+ITstructure[11],[12].Second,withfewexceptions,theBITA
+measurement methods in the dynamic evolvement process
+are usually insufficient with BITA deep structures. Third,
+the influence factors (e.g. shared knowledge or mutual under-
+standings [13]) to sustain BITA are inadequately discussed in
+the literature. To address these limitations, this paper extends
+previous research from three aspects: (a) due to its abilities
+to abstract elements and relationships of enterprises, enter-
+prise architecture (EA) is adopted as a comprehensive deep
+structure to express dynamic BITA; (b) the BITA maturity
+framework proposed by Luftman [12] is correlated with EA
+to be a BITA measurement method; (c) to go beyond tradi-
+tional sustainable factors, a factor based on dynamic resource
+allocation is introduced, for which possible events that would
+changeresourcesareexploredandadynamicallocationalgo-
+rithm is proposed.
+The rest of this paper is organized as follows. We first
+refine the research question on the basis of theoretical back-
+ground, and then propose a conceptual model of dynamic
+BITA process. Next, we present a mechanism of dynamic
+resource allocation and introduce an algorithm to produce a
+dynamic resource allocation factor. This is followed by an
+illustrative case to explain the algorithm. Finally, we discuss
+9160
+2169-3536 2018 IEEE. Translations and content mining are permitted for academic research only.
+Personal use is also permitted, but republication/redistribution requires IEEE permission.
+See http://www.ieee.org/publications_standards/publications/rights/index.html for more information.
+VOLUME 6, 2018
+
+--- PAGE 2 ---
+M. Zhang et al.: Evolvement of BITA
+TABLE 1. A few typical studies on addressing dynamic BITA.
+our findings, as well as the limitations and implications of the
+paper.
+II. RESEARCH QUESTION
+BITA contributes to ‘‘maximize the return value of IT
+investments’’, ‘‘provide direction and flexibility to react
+to changes’’, and ‘‘improve company performance’’ [6].
+Recently, scholars have recognized the dynamic charac-
+teristics of BITA and have developed studies with deep
+insights. After collecting the literature on dynamic alignment
+with a set of keywords including ‘‘dynamic’’, ‘‘change’’,
+‘‘sustainable’’, ‘‘strategy alignment’’, ‘‘business alignment’’,
+‘‘IT alignment’’, and ‘‘business-IT alignment’’ we found the
+volume of the literature on dynamic BITA is relatively small.
+While most of the literature acknowledge the importance of
+dynamic BITA, few has explored the mechanism of it in a
+sophisticated way. Wagner and Heinz-Theo pointed out that
+the literature on the interrelationships among capabilities of
+continuously adapting and changing, achieved levels of the
+alignment, and business outcome is rare and the goal of
+achieving alignment in this respect is elusive [13]. A few
+typical studies on dynamic BITA are listed and summarized
+based on their research questions and approaches, which are
+displayed in Table 1.
+According to the summary of the literature in Table 1,
+several limitations and implications can be inferred:
+VOLUME 6, 2018 9161
+
+--- PAGE 3 ---
+M. Zhang et al.: Evolvement of BITA
+(1) The description of dynamic BITA process frequently
+involves several constructs. The first construct is
+deep structure, which helps to describe the alignment
+structure of organizations or firms. Sabherwal et al.
+described the deep structure with a strategic informa-
+tion systems management profile embracing business
+strategy, business structure, IS strategy, and IS struc-
+ture [11], which is similar to the research of Henderson
+and Venkatraman [5]; Lyytinen et al. explained the
+deep structure of information system from the per-
+spectives of structure, actors, task and technology [14].
+However, the majority of the literature discussing deep
+structures is inadequate and conceptualized which may
+lead to a difficulty in measuring the alignment between
+business and IT in practice. The second construct is
+BITA measurement method, which is the methodology
+to measure the BITA with the deep structure at each
+given period of time. Sabherwal et al. applied distances
+ofdifferentalignmentpatternsbetweenanytwodimen-
+sions to express low, medium or high alignments [11].
+Gaps between any two dimensions were used to repre-
+senttheunbalance[14].Haesetal.summarizedseveral
+measurementmethods[17].Asaresult,withthelimita-
+tionofdeepstructures,theBITAmeasurementmethods
+were always unsophisticated or incomplete. The third
+constructisthecriticalincident,representingtheevents
+that may cause different kinds of misalignment, such
+as the volatility of the business or IT environment. The
+fourth construct is intervention, which is the attempt to
+mitigate the misalignment, such as skills training and
+enhanced communication. Finally, another concept is
+the punctuation, which explains the intervals between
+adjacent BITA evolvement stages. The BITA evolve-
+ment process may contain a series of punctuation. The
+five constructs from the literature provide a thread to
+understand the BITA evolvement process in a compre-
+hensive way.
+(2) Several papers have explored the antecedents for pro-
+moting sustainable BITA. Wagner et al. argued that
+shared knowledge and mutual understandings between
+business departments and IT departments are the main
+factors to sustain BITA [11]. Baker et al. discussed that
+shared domain knowledge, strategic business plans,
+aligned reporting relationships and aligned incentive
+structures are the most sustainable components of
+BITA [7]. Ohlsson et al. pointed out strong top leader-
+ship, business responsibility and CIO’s role as a facil-
+itator and coordinator is the key to achieve sustainable
+BITA [18]. In addition, dynamic resource allocation
+is considered an important factor of sustainable BITA
+in this paper. This antecedent hasn’t attracted much
+attention in previous literature. The term ‘‘resources’’
+we used here refers to an assemblage of systems,
+services, persons, and data. Luftman et al. pointed
+out the allocation of resources is among the most
+important enablers/inhibitors of alignment of any kind
+in firms [19], but most firms face severe challenges
+in succeeding effective allocation of resources [12].
+Fromaperspectiveofhismaturityframework,dynamic
+resource allocation helps improve the maturity level of
+budgetary control and IT investment management in
+governance criteria.
+(3) Severalpapersarguedthatbetterfirmperformancescan
+beachievedinthepresenceofsustainableBITA.Talion
+et al. discussed the relationships between BITA and
+firm performance, and reached a conclusion that sus-
+tainable BITA helps achieve better performances [16];
+Jorfi et al. also explored the relationships between
+BITA, IT flexibility, and IT capabilities, and argued a
+positiveeffectofBITAonITflexibility[20].Therefore,
+integrating the above five elements and applying com-
+plete sustainable factors allow companies to success-
+fully achieve high performance. Accordingly, there is
+a need to extend previous research from three aspects.
+First, a more detailed deep structure for describing
+dynamic BITA needs to be introduced given the extant
+discussion on deep structures. EA is a structured and
+aligned collection of plans for the integrated represen-
+tation of the business and information technology (IT)
+landscape of an enterprise, in past, current and future
+states [21]. It is a comprehensive approach and tool
+to describe and achieve BITA [22]. EA helps shape
+the alignment structure in a more detailed way. In this
+paper, EA is adopted as the deep structure to suit our
+needs. Second, given the simplicity of BITA measure-
+ment methods, a more accurate and comprehensive
+measurement method is desirable. In his summary of
+BITA maturity assessment, Luftman et al. proposed a
+completematurityframeworkinvolvingsixcriteriaand
+five levels [12], [19], [23]. The current research will
+incorporatethematurityframeworkandusethosecrite-
+riaandlevelstocombinewithEA.Third,wegobeyond
+those traditional sustainable BITA factors by integrat-
+ing a dynamic resource allocation factor to address
+the incidents where resources are poorly allocated and
+ineffectivelyutilized.Variouskindsofcriticalincidents
+that may lead to reallocation of the resources will be
+explored and corresponding dynamic resource alloca-
+tion approach will be proposed.
+In brief, compared to prior literature, this paper aims
+to develop a dynamic BITA evolvement model through an
+integration of EA into the BITA maturity framework, while
+considering a dynamic resource allocation factor to achieve
+sustainable BITA.
+III. BITA EVOLVEMENT ANALYSIS
+In this section, we first provide a conceptual model
+to frame BITA evolvement process. Then, we take into
+account the alignment pattern between business functions
+and applications from the EA perspective, and explore all
+of the possible critical incidents between them. Finally,
+we analyze the intervention of dynamic resource allocation,
+9162 VOLUME 6, 2018
+
+--- PAGE 4 ---
+M. Zhang et al.: Evolvement of BITA
+FIGURE 1. A conceptual model for BITA evolvement process.
+and propose a corresponding algorithm for sustained
+realignment.
+A. A CONCEPTUAL MODEL FOR BITA
+EVOLVEMENT PROCESS
+The conceptual model proposed here is a structural abstrac-
+tion combining alignment in an end state and alignment in
+the process. Based on the analysis in section 2, we integrate
+the deep structure, BITA measurement method, critical inci-
+dents, interventions punctuation in a punctuational model.
+The punctuational model is shown in Figure 1.
+EA is a structured and aligned collection of plans for
+the integrated representation of the business and informa-
+tion technology (IT) landscape of an enterprise. Given the
+complexity and abstractness of EA, we adopt the EA frame-
+work which provides various viewpoints to shed light on
+enterprise design tasks and to produce valuable architecture
+description documentation. In our model, we select four
+viewpoints which are commonly used and central in various
+EA frameworks, such as DoDAF, TOGAF, and MoDAF [24].
+First, Business Architecture (BA), used to define business
+strategies, processes, and functional requirements [25], typ-
+ically contains business processes, organizational structures,
+business functions, etc. Second, System Architecture (SA),
+which describes the applications to fulfill business require-
+ments [25], typically includes applications, application ser-
+vices, etc. Third, Technology Architecture (TA), which refers
+to the infrastructure and system components that are neces-
+sary to support the application, includes software, hardware,
+networks, etc. Fourth, Data and Information Architecture
+(DIA), which describes what an organization needs to know
+to successfully operate [25], includes data structures and
+information entities existing in each layer. With this simpli-
+fied EA framework, the alignment of business and IT can be
+understood as the alignment of different contents within one
+EA layer or between two EA layers. An example of BITA
+in this framework would be the alignment between business
+functions in BA and applications in SA.
+To measure BITA at each given time with EA, a compre-
+hensive BITA measurement method to reflect where BITA
+stands accurately is critical. Luftman’s maturity framework
+is widely adopted for BITA measurement. His framework
+includes six criteria: communications (C), competence/value
+measurement (V), governance (G), partnership (P), scope &
+architecture (A) and skills (S) [12]. Several articles have
+integrated the EA framework with Luftman’s measurement
+method [26]–[28]. For example, to evaluate BITA with the
+Zachman framework, Plazaola compared the metamodel of
+the Zachman framework and Luftman’s maturity model, and
+proposed a process for collecting data for BITA measure-
+ment with Zachman artifacts [27]. Overall, as in Figure 1,
+we calculate the BITA maturity level at each given time with
+EA documentation.
+General speaking, due to strong inter-dependencies among
+EA artifacts, an enterprise would have achieved BITA
+after EA development. Occasionally, a misalignment occurs
+when one artifact becomes incompatible with others due to
+business dynamics or IT changes. The situation would ren-
+der certain risk and consequently harm the enterprise. For
+example,changesinbusinessfunctionsmayleadtomisalign-
+mentbetweenbusinessfunctions(BA)andapplications(SA),
+as shown in grey in Figure 1. As a result, the misalignment
+is reflected in the BITA measurement model, as represented
+by the small dot G in Figure 1. The misalignment is a contin-
+gencyintheEAthatthreatenstheBITAandreducescompany
+performance. Any event that generates a misalignment is a
+critical incident, such as the changes of business functions
+in the above example. Thus, we consider critical incidents as
+events that affect EA states in a way that threatens or signif-
+icantly decreases the alignment level reflected in Luftman’s
+maturity framework.
+Attempts to remove misalignments are specific types of
+events called interventions [14]. They are measures oriented
+towards one or multiple EA viewpoints or artifacts that can
+be controlled or manipulated to mitigate or to remove an
+observed misalignment. For example, in order to realign
+VOLUME 6, 2018 9163
+
+--- PAGE 5 ---
+M. Zhang et al.: Evolvement of BITA
+the business functions and applications in Figure 1, allo-
+cating resources to applications for creating new applica-
+tions or updating old applications is an effective intervention.
+To analyze this intervention thoroughly, we explore all pos-
+sible critical incidents that may influence the resources and
+propose a dynamic resource allocation mechanism to address
+these critical incidents.
+Obviously, critical incidents may cause misalignment and
+resources should be consumed to achieve realignment. For
+example, due to changes of environment, a firm introduces
+a new ‘‘innovation management’’ function into its existing
+business function set, causing a misalignment with existing
+applications. To realign the new business function set with
+the applications, it is necessary to add new applications
+and update or even obsolete old applications. To this end,
+resources such as budgets or technicians should be allocated
+to implement different realignment strategies. With regard
+to the EA framework in Figure 1, the misalignment may
+occur within a layer, such as misalignment between business
+processes and business functions in BA, or between differ-
+ent layers, such as misalignment between business functions
+in BA and applications in SA. For brevity, misalignment
+between business functions and applications is selected to
+be discussed in this article for demonstration (located in
+the grey part of Figure 1). A business function (e.g. an
+‘‘investment management’’ function) is a description of work
+performed to accomplish responsibilities of business units.
+Business functions result from the process of BA develop-
+ment. An application (e.g. an ERP system) is a building
+block to provide services to fulfill business actions. Appli-
+cations are expected to satisfy the requirements of business
+functions.
+FIGURE 2. A sub-conceptual model of alignment between business
+functions and applications.
+A sub-conceptual model for the alignment between busi-
+ness functions and applications is shown in Figure 2.
+‘‘Existing Functions’’ and ‘‘Existing Applications’’ are con-
+tents in EA prior to changes. In the pre-change stage,
+the applications have formed a structure to support exist-
+ing business functions. When critical incidents occur, ‘‘New
+Functions’’ or ‘‘New Applications’’ are added to the orig-
+inal sets (as the bold ellipse in Figure 2), and thus cause
+a misalignment. To realign the function and the application
+sets, the firm is required to interfere with proper strate-
+gies which would usually consumer additional resources.
+Therefore, the question in the following sections aims at
+realigning business functions and applications in EA through
+dynamic resource allocation mechanism. Solving this ques-
+tion helps improve the maturity level of governance criteria
+of the BITA maturity framework.
+To answer the question, the target is to achieve an
+efficient value for functions with different application
+portfolios, based on pre-determined resource restrictions.
+Therefore, we propose a quantitative mathematical program-
+ming method to simplify the complexity and scale of the
+solution.
+B. CRITICAL INCIDENTS CAUSING MISALIGNMENT
+BETWEEN BUSINESS AND APPLICATIONS
+Exploring different kinds of critical incidents helps induce
+changes in EA evolution, and allows managers to take proac-
+tive actions. From the literature, critical incidents may root in
+dynamic volatility of business environment or rapid innova-
+tion of information technologies [16]. Without loss of gener-
+alizability, we list three categories of critical incidents that
+occur in the EA framework and directly lead to misalign-
+ment between business functions and applications: business
+function changes in BA, application changes in SA, and data
+changes in DIA.
+Business function changes are reflections of business envi-
+ronment volatility. For example, an ‘‘innovation manage-
+ment’’ function is added to the existing business function set
+as a response to the increasing market pressures. The changes
+in business function include adding new business functions,
+updating existing business functions, or removing existing
+business functions.
+Applicationchangesareresultsofdynamicsystemrequire-
+ments. For example, applications are updated to take advan-
+tage of new technologies. Simon et al. analyzed optimization
+ofoptionsofapplicationsfromcreatingapplications,modify-
+ing applications and obsoleting applications [29]. Similarly,
+to satisfy the dynamic system requirements, we deem that
+the application changes include adding new applications in
+existing application structure, replacing existing applications
+with new applications, updating existing applications and
+disposing applications.
+Data changes refer changing the data used for achieving
+the alignment of business functions and applications. For
+example,theweightsofbusinessfunctionsmaychangedueto
+dynamic market environments, leading to an unbalanced and
+insufficient existing applications set. Data changes include
+changing weights of business functions, changing costs of
+applications, and changing applications’ supporting values
+for various business functions.
+Overall, different kinds of changes directly lead to mis-
+alignment of business functions and applications. The map-
+pings between critical incidents and leaf changes are called
+composition relationships, as shown in Figure 3.
+To respond to the leaf changes, we consider various coping
+strategies to realign business functions with applications.
+Provided that a new business function needs to be added
+in existing business function set, the coping strategies may
+9164 VOLUME 6, 2018
+
+--- PAGE 6 ---
+M. Zhang et al.: Evolvement of BITA
+FIGURE 3. Various types of changes on alignment between business
+functions and applications.
+include adding new applications to fulfill the new function,
+updating existing applications to enhance their functional-
+ity, or replacing existing applications with more capable
+applications. For example, assuming a firm intends to add
+a ‘‘quality management’’ function, the strategies would be
+either introducing an ‘‘online store’’ application, or updating
+the existing ‘‘ERP system’’ application, or replacing ‘‘ERP
+system’’withanew‘‘SAPsystem’’application.Thekeyissue
+is how to select the combinations of different strategies to
+form an effective application portfolio constrained by limited
+resources. Furthermore, the strategies to manage the changes
+of ‘‘Update business functions’’ and ‘‘Delete business func-
+tions’’ can also refer to the application changes.
+Further, application changes are immediately deployed in
+EA to better fulfill business functions. They are the coping
+strategies in their own right. However, the resource constraint
+is a pre-condition for the changes.
+Data changes also demand a new alignment between busi-
+nessfunctionsandapplications.Toachieveeffectivebusiness
+functions, adding new applications, replacing existing appli-
+cations, updating existing applications or disposing appli-
+cations are all possible strategies. For example, when the
+weights of business functions are changed, it is likely that
+the existing application set no longer satisfies business func-
+tions efficiently. As a response, introducing new applica-
+tions, or other feasible strategies, is required. Thus, the map-
+pings between business functions and applications need to be
+rebuilt.
+Accordingly, we use the four application strategies to
+address each kind of critical incidents. Casual relationships
+exist between the leaf changes and strategies, as shown
+in Figure 3. An analysis of the application strategies help
+form an effective dynamic resource allocation intervention.
+Exploring the resource influences on different kinds of appli-
+cation strategy, and analyzing the combination of the total
+resource consumption in different strategies, help realign the
+business functions and applications efficiently.
+C. RESOURCE ALLOCATION ON REALIGNMENT BETWEEN
+BUSINESS FUNCTIONS AND APPLICATIONS
+In this section, we firstly explore the resource influences
+for the aforementioned four kinds of application strategies.
+Then we present a resource allocation formula and the
+detailed algorithm.
+1) RESOURCE INFLUENCES OF APPLICATION STRATEGIES
+This section will discuss the resource consumption in each
+of the strategic scenarios. Because an application structure
+existsintheinitialalignment(Figure2),thereisaneedtocon-
+sider the structure’s change when modifying the applications.
+We introduce a method based on application degree to mea-
+surethechangesoftheapplicationstructure,whichisthesum
+of in-degree and out-degree of an application. Applications
+with a higher degree are more difficult to update or replace
+than the others because they contain multiple, complex rela-
+tionships with other applications, and thus the corresponding
+cost of updating or replacing will be higher. Below we sepa-
+rately discuss the four kinds of application strategies.
+a: ADDING NEW APPLICATIONS TO EXISTING
+APPLICATION STRUCTURE
+Supposing a new application from a new application set
+is introduced to an existing application structure, this new
+application typically developed based on other existing rela-
+tional applications, as shown in Figure 4 where the black
+ellipse in Figure 4 represents the new application. The new
+application set would be acquired from BA design, on the
+basis of experiences or knowledge.
+From the perspective of expense, there is a creating cost
+for adding a new application (cost
+j
+ad, j represents the jth new
+application). Meanwhile, there is a creating cost for build-
+ing relationships with existing applications (cost
+j
+cr), which
+is the sum of the number of relationships. We adopt the
+application degree to calculate the cost for building rela-
+tionships (cost
+j
+cr = dej × costre
+cr, where dej represents the
+sum of relationships with existing applications, which is 2 in
+Figure 4, and costre
+cr is a constant unit cost to establish each
+relationship). Therefore, the overall cost of adding a new
+application in existing application structure is the sum of the
+creating costs for the application and the creating cost for the
+relationships (costj = cost
+j
+ad + cost
+j
+cr).
+FIGURE 4. Adding new applications.
+b: REPLACING EXISTING APPLICATIONS WITH
+NEW APPLICATIONS
+Supposing an existing application in an application structure
+is going to be replaced by a new application from a new
+application set, the new application needs to be created and
+to replace the existing application, and to relate with other
+existing relational applications, as shown in Figure 5 where
+the black ellipse application replaces an existing application
+VOLUME 6, 2018 9165
+
+--- PAGE 7 ---
+M. Zhang et al.: Evolvement of BITA
+FIGURE 5. Replacing existing applications.
+and establishes relationships with other two existing appli-
+cations. For example, the ‘‘cloud computing’’ application
+replaces traditional ‘‘data process’’ application, followed by
+establishing new connections with other applications.
+Fromtheperspectiveofexpense,thereisareplacingcostto
+createandtodeployanewapplication(cost
+j
+re,jrepresentsthe
+jthnewapplication).Meanwhile,becausethenewapplication
+has to build relationships with other existing applications,
+there is a creating cost for building relationships (cost
+j
+cr =
+dej × costre
+cr, the same as the equation in the first scenario).
+Therefore, the total cost for replacing an existing application
+with a new application is the sum of the replacing cost and
+the creating costs for relationship building(costj = cost
+j
+re +
+cost
+j
+cr).
+FIGURE 6. Updating existing applications.
+c: UPDATING EXISTING APPLICATIONS
+In order to meet new business or system requirements, it is
+possible for an existing application to update to enhance
+its functionality, while retaining the relationships with other
+applications.ThisisshowninFigure6wheretheblackellipse
+application is the one to be updated, and it has five rela-
+tionships with other applications to maintain. For example,
+to improve the flexibility of an enterprise, component-based
+applications need to update to service-based applications.
+Their application interfaces would be changed accordingly.
+From the perspective of expense, renewing the applica-
+tion entails an updating cost (costi
+up, i represents the ith
+existing application). Meanwhile, a maintenance cost is also
+necessary to retain the relationships between the updated
+application and other applications, as calculated by the sum
+of all the relationships to be maintained (costi
+ma = dei ×
+costre
+ma, where costre
+ma is a constant unit cost for maintaining
+each relationship). Therefore, the total cost for updating an
+existing application is the sum of the updating cost of an
+application and the maintaining costs of all its relationships
+(costi = costi
+up + costi
+ma).
+d: DISPOSING EXISTING APPLICATIONS
+Obsoleting existing applications is likely the preferred option
+when applications are no longer necessary. This is managed
+specificallyforabusinessunitconsiderednomorefinancially
+viable [29]. For example, traditional ‘‘database storing’’
+application may become obsolete with the introduction of
+‘‘XML storing’’ application. There is no cost associated with
+this strategy.
+The holistic resource allocation intervention for managing
+each critical incident can be seen as a combination of the
+four types of application strategy. Nonetheless, the original
+application set supports unchanged requirements, if any. The
+intervention aims at obtaining a proper application portfo-
+lio from existing and new applications to satisfy both the
+unchanged and new requirements.
+2) DYNAMIC RESOURCE ALLOCATION MODEL
+Considering a situation in practice where a proper applica-
+tion portfolio is extracted to satisfy both the changed and
+unchanged part in BITA evolvement. For example, when
+new business functions are introduced to address dynamic
+business requirements, some of the existing business func-
+tions remain as they were to support the unchanged business
+requirements. The acquired application portfolio is expected
+to support both the changed part and unchanged part.
+In a way, adopting existing applications to address the
+unchanged part can be considered as an alternative strategy
+in addition to the four strategies discussed above. When
+originalapplicationsarestillfitinthesystem,itisuneconom-
+ical to create new applications to satisfy original functions.
+Therefore, the total cost to fulfill an unchanged part with an
+existing application is 0 (costi = 0).
+max
+p X
+k=1
+ωkVk(x)
+= max
+p X
+k=1
+ωk{V
+(1)
+k (x) ∪ V
+(2)
+k (x) ∪ V
+(3)
+k (x) ∪ V
+(5)
+k (x)}
+×eg.
+l X
+j=1
+(cost
+j
+ad +costj
+cr)x
+(1)
+j +
+h X
+j=1
+(costj
+re+costj
+cr)x
+(2)
+j
++
+m X
+i=1
+(costi
+up + costi
+ma)x
+(3)
+i +
+m X
+i=1
+costi
+x
+(5)
+i
+−
+m+h+l X
+i=1
+m+h+l X
+j=1
+syn(i,j) ≤ Cost, xi,xj = 1, 0
+×x
+(3)
+i + x
+(5)
+i ≤ 1,i = {1...m}
+×x
+(2)
+j + x
+(3)
+i ≤ 1,ifjreplacesi,i = {1...m},j = {1...h}
+×Vk(x) > 0, k = {1...p}
+We compose these 5 strategies to form a proper application
+portfolio to shift from original applications to new appli-
+cations to address changes in business functions, data, and
+applications. This is simplified as a mathematical optimiza-
+tion problem: the aim is to achieve a high value on busi-
+ness functions; the constraints involve budgets, cost, and
+preference relationships A resource allocation model for
+application portfolio analysis is developed as formula 1.
+9166 VOLUME 6, 2018
+
+--- PAGE 8 ---
+M. Zhang et al.: Evolvement of BITA
+The first row of the formula aims to maximize the total
+value of business functions. Here, p is the number of busi-
+ness functions, which include the existing business functions
+and new business functions. ω represents the weights of the
+functions, and are different from the initial weights in the EA
+design stage. The weights may be point values or interval
+values. Interval values are discussed in this paper due to the
+difficulty to acquire exact weights. V refers the supporting
+valuesofcorrespondingapplicationportfolio,whichvariesin
+different application strategies. The calculation of the values
+requires addition rules.
+The first constraint limits the total cost of each possible
+application portfolio to avoid over budget. Here, m is the
+number of existing applications, h is the number of new
+applications used to replace existing applications, and l is
+the number of applications used to add in the existing appli-
+cation structure. x represents whether the application will
+be selected, denoted as 1 or 0 (selected = 1). The cost of
+each application is the same as it was in the above section.
+syn(i,j) represents the synergic relationship between two
+applications. It is a cost discount if both are selected.
+The second and third constraints indicate that statuses of
+an application are mutually exclusive. That is, in the sec-
+ond constraint, an application cannot be updated and kept
+unchanged simultaneously. If the updating strategy is applied
+to one existing application, there is no reason to assume this
+application would remain unchanged. Similarly, in the third
+constraint, an application is not supposed to be updated while
+simultaneously be replaced by a new application. The fourth
+constraint describes the positive definition of the value of
+each business function.
+Theabovemathematicaloptimizationmodelsimplifiesthe
+application portfolio selection problem under different kinds
+ofcriticalincidents,suchasbusinessfunctionchanges,appli-
+cations changes and data changes. The model helps optimize
+the mappings between business functions and applications
+with a relatively low cost and a relatively high supporting
+value. As a result, the maturity level of governance criteria
+in BITA maturity framework will be improved.
+3) DYNAMIC RESOURCE ALLOCATION ALGORITHM
+This section proposes an algorithm to solve the above model.
+Part of the algorithm adopts a bubble comparison algorithm
+on portfolio decision analysis provided by Kangaspunta [30].
+As follows, the overall algorithm includes four steps.
+Algorithm 1 Determine the Ultimate Application Portfolio
+After EA Changing
+Step 1: Calculate all of applications’ cost in each strategy
+Step 2: Get all of the feasible portfolios PF
+Step 3: Get all of the cost-efficient portfolios PCE
+Step 4: Get the ultimate portfolio PU
+In Step 1, we calculate the costs of applications in each
+strategy. An application may include several kinds of cost
+because of its presence in multiple strategies. For exam-
+ple, two kinds of costs would be calculated if an existing
+application can be either updated to fulfill new business
+functions, or kept unchanged to satisfy the original business
+functions. All kinds of cost for each application are inputs for
+the following steps.
+In Step 2, we obtain all of the feasible portfolios, denoted
+as PF. Feasible portfolios refer to the application portfolios
+that meet all of the four constraints in formula 1. It is a key
+step to integrate the five strategies.
+In Step 3 we aim to obtain all cost-efficient portfolios,
+denotedasPCE.Cost-efficientportfoliosachievehigherbusi-
+ness function values with lower total costs. Cost-efficient
+portfolios are a subset of feasible portfolios. Because the
+weights are interval values, there are multiple cost-efficient
+portfolios. The cost-efficient portfolios are obtained by
+Kangaspunta’s algorithm used to address a weapon portfolio
+problem [30].
+Given the cost-efficient portfolios, we aim to select one
+ultimate portfolio, PU, as an optimal solution in step 4.
+Several principles in the domain of operation research are
+applied here, including a minimum-regret rule, maximum
+rule, and so on [31]. Consequently, we acquire an ultimate
+application portfolio to align with business functions.
+Specifically, we propose the pseudocode to address step 1
+and step 2 in detail. This includes 5 sub-steps. In sub-step 1,
+applications are enumerated by order of strategy (5), (3),
+(2), (1). The applications would be repeated with different
+strategies. The total number of X is 2m+l+h. Each possible
+value portfolio in X forms an application portfolio. Sub-
+step 2 calculates the costs of applications in X, including
+degree calculation and cost calculation. Sub-step 3 stores all
+of the synergic relationships by enumerating each pair of
+applications in X. Sub-step 4 enumerates all of the possible
+combinations of 1 or 0 for each application, and then all
+of the application portfolios are stored. Sub-step 5 is the
+core to calculate the feasible portfolios which can be divided
+into 5 steps. In sub-step 5(a), all of the possible application
+portfolios are enumerated by varying the value of X. In sub-
+step 5(b), the set of feasible portfolios is initially empty and
+theindexkandparesettozero.Insub-step5(c),theindexpis
+increased by one and in sub-step 5(d), the algorithm iterates
+through all portfolios in an increasing order until the index
+reaches k. In the next few steps, we ensure the constraints in
+formula 1 by checking the constraints one by one. Finally,
+in sub-step 5(e), the final set of all feasible portfolios is
+recorded.
+Furthermore, we acquired all cost-efficient portfolios
+applyingKangaspunta’sportfoliodecisionanalysisalgorithm
+[30]. Finally, the maximum rule or minimum-regret rule help
+determine the ultimate portfolio. As a result, an application
+portfolio is acquired to fulfill the business functions suffering
+various critical incidents.
+Thealgorithmprovidesareferenceforothertypesofalign-
+ment in EA, such as alignment between business processes
+and business functions, alignment between applications and
+VOLUME 6, 2018 9167
+
+--- PAGE 9 ---
+M. Zhang et al.: Evolvement of BITA
+TABLE 2. Mappings between existing business functions and applications.
+Algorithm 2 Dealing With Step1 and Step2 of Algorithm 1
+1. Define X = {x1,...xm,xm+1,...x2m,x2m+1,...x2m+l,
+x2m+l+1,...x2m+l+h}
+2. for(i = 1,...2m + l + h)
+deg(xi);Cost[i] = cost(deg(xi))
+3. Define k = 0
+for(i = 1,...2m + l + h;j = 1,...2m + l + h;i 6= j)
+if ∃syn(i,j) < 0
+Syn(i,j,k) = syn(i,j);k = k + 1
+4. Define k = 1
+for(v1 = 0,1;v2 = 0,1;...;v2m+l+h = 0,1)
+List(k) = [v1,v2,...,v2m+l+h];k = k + 1
+5. (a) Define P = {List(1)...List(22m+l+h)}
+(b) Set P0
+F = 8 k = 0 q = 0
+(c) Set q = q + 1;
+(d) While k < 22m+l+h do
+for(i = 1,...,m)
+if (P(k)i + P(k)m+i > 1) then k = k + 1
+and go to(d)
+for(i = 1,...,m;j = 1,...,l;x2m+j replaces xi)
+if (P(k)m+i +P(k)2m+j 6= 1 or P(k)i +P(k)2m+j 6=
+1) then k = k + 1 and go to (d)
+if (P(k) ⊗ Cost − Syn(P(k)) > Budget)
+then k = k + 1 and go to (d)
+Set P
+q
+F = P(k) ∪ P
+q−1
+F then k = k + 1 and go to (c)
+(e) Set PF = P22m+l+h
+F
+technologies, alignment between capabilities and services,
+and so on. Due to the complexity and scale of the resource
+allocation problem, mathematical solution is necessary to
+align different contents in EA. The solution helps restore
+alignment in a timely manner after misalignment occurs.
+In summary, the algorithm helps choose proper dynamic
+resource allocation interventions to address the different
+kinds of critical incidents in the BITA evolvement process
+(Figure 1). While meeting the budgets, a new application
+portfolio obtained would achieve a higher maturity level of
+governance criteria in BITA maturity framework.
+IV. AN ILLUSTRATIVE CASE STUDY
+In this section, we verify the above resource allocation algo-
+rithm through a modified case of Switcher SA [32]. Fritscher
+and Pigneur developed business models for Switcher SA in
+detail and built the alignment between business models and
+EA with Archimate language [32]. The business contents
+and applications are selected in this paper for demonstra-
+tion. Switcher SA is a small private company engaged in
+the manufacture and distribution of garments with a par-
+ticular focus on social responsibility throughout the whole
+valuechain,fromresourceproductiontoproductdistribution.
+In this section, we firstly describe the case background as
+well as the emergent changes of their business functions;
+then we collect the data for realigning business functions
+and applications; finally, we illustrate the achievement of
+alignment using a new application portfolio structure derived
+from the algorithm discussed above.
+A. CASE DESCRIPTION
+We explore the business contents and system contents of
+Switcher SA in terms of its EA and business model. Accord-
+ing to the case, there are three main business functions in
+Switch SA, including operations management function (F1),
+customer management function (F2) and innovation func-
+tion (F3). Nine applications are selected to support the three
+functions [30]. The applications and their supporting func-
+tions are displayed in Table 2. The firm has achieved the
+alignment of the business functions and the applications
+through the mapping relationships. The initial data including
+weights of the functions, supporting values and costs of the
+applications.
+Recently, the garment market is highly competitive due
+to globalization [33]. The trend of globalization and inten-
+sive competition increases a collaborative culture in the
+enterprises. The supply chain has gradually changed to
+9168 VOLUME 6, 2018
+
+--- PAGE 10 ---
+M. Zhang et al.: Evolvement of BITA
+TABLE 3. Costs of applications, relationships and budget.
+TABLE 4. Cost synergies of applications and their discounts.
+TABLE 5. Supporting values of all applications for new functions set.
+collaborative networks. Enterprises composing the collabo-
+rative networks are integrated with each other and become
+more competitive and efficient. Therefore, the enterprises
+become more complex and hard to understand. In order to
+meet these trends, two business functions are introduced to
+the existing function set. One is personnel training function
+(F4), which is used to cultivate knowledge and skills for
+different roles in Switch SA and its partners; and the other is
+partner management function (F5), which is used to manage
+relationships and share information with partners such as
+garment manufacturers and logistics companies. In the new
+setting,fivebusinessfunctionsexistandthebusinessfunction
+changes,resultinginanewfunctionsetwhichwecalledpost-
+change business function set.
+In order to support the post-change business function set,
+the above five application strategies are considered. The
+application set is composed of the original application struc-
+ture and several new applications. New applications are gath-
+ered through analyses on new business functions within EA.
+We won’t discuss those analyses in detail in this paper.
+Given the post-change business function set, several appli-
+cation strategies are introduced. First, existing 9 applications
+still function well to support the original 3 functions (the
+unchanged part). Second, 3 new business functions are intro-
+duced to support F4 and F5: the first is a collaboration net-
+work application (A10), which harmonizes different roles in
+Switch SA and its partners; the second is a knowledge gener-
+ation application (A11), which induces and stores knowledge
+from daily experiences; the third is a knowledge training
+application(A12), which cultivates the skills and understand-
+ings on businesses and IT. Third, updates are available for
+A5, A6 or A7 to take the roles of partners into account.
+Fourth, two applications can be replaced by more capable
+applications: A3 can be replaced by a cloud oriented dash-
+board (A3’), which implements cloud technology to advance
+data computing; A4 can be replaced by a virtual conformity
+network (A4’), which strengthens inside conformity from
+FIGURE 7. Business functions changes and application strategies.
+network technology. We assume all of the possible strategies
+areabletosupportbothF4andF5.Inordertoachieveahigher
+overall function value for the post-change business function
+set with a lower cost, we need a new application portfolio
+combining some original applications and new applications.
+Diagrammatic sketch of the description above is showed
+in Figure 7.
+B. DATA COLLECTION
+This section aims to collect relevant data for the parameters
+in algorithm 1 and 2. The data are hypothetical in this arti-
+cle. For getting reasonable analysis results, assumptions for
+the data have to meet several rules: the maintenance costs
+of relationships should be lower than the creation costs of
+relationships; application update costs should be lower than
+the creation costs, and creation costs should be lower than
+the replacement costs; the supporting values of applications
+after changing should be higher than that before changing.
+Thecostsofapplicationsandrelationships,andthebudgetare
+presumed in Table 3. Cost discounts of synergy relationships
+are presumed in Table 4. All the data are given in dollars.
+For maximizing the total value, all of the applications’
+supporting values for each function are pre-determined
+in Table 5. The numbers on the left to the slashes describe
+applications’ supporting values before the changes, and the
+number on the right describe the values after the changes.
+VOLUME 6, 2018 9169
+
+--- PAGE 11 ---
+M. Zhang et al.: Evolvement of BITA
+FIGURE 8. Realignment of business functions and applications.
+Additionally, the weights of the 5 functions are presumed in
+a relative sense in the following formula.
+ω5 ≥ ω4 ≥ ω2 ≥ ω1 ≥ ω3
+C. RESULTS ANALYSIS
+Usingalgorithm2andKangaspunta’sportfoliodecisionanal-
+ysis algorithm, we acquire 11 cost-efficient application port-
+folios, among which an ultimate portfolio prevails over the
+others by the minimum-regret rule. The post-change appli-
+cation structure, which aligns with the post-change business
+functions, is shown in Figure 8. According to the modifica-
+tions, the ‘‘respect inside conformity website’’ application is
+replaced by the ‘‘virtual conformity network’’ application;
+the ‘‘B2B platform’’ and the ‘‘Web presence’’ applications
+are updated; additionally, the ‘‘collaboration network appli-
+cation’’ application is introduced to the original application
+structure. This would be our resource allocation invention
+that allows efficient reconstruction of the alignment between
+business functions and applications.
+In the above case, the portfolio selected by the algorithm
+has satisfied the budget and achieved the highest function
+value than any other application portfolio. The quantitative
+resource allocation method takes a short reaction time when
+misalignment occurs, and helps enterprise return to its trajec-
+tory rapidly.
+D. METHOD EXPLANATION
+The resource allocation algorithm is viable for dynamic
+BITA problems. Dynamic resource allocation intervention
+is regarded as a sustainable factor in BITA evolvement,
+and helps improve the maturity level of governance criteria.
+Besides, due to the complexity and scale of data and model,
+a mathematical solution is beneficial and helpful to deal with
+this issue in a timely manner.
+This paper discusses the influences of limited resources on
+different kinds of application strategies, and how to compre-
+hensively understand those influences to obtain the most fea-
+sible application portfolio. We adopt Kangaspunta’s portfolio
+decisionanalysisalgorithm[30]toconfrontthemathematical
+analysis of the various resource influences. In the research
+stream of portfolio decision analysis (PDA), Systems Anal-
+ysis Laboratory at Aalto University School of Science has
+done considerable research. Salo and his coauthors issued a
+book to explain PDA’s definition, source, quality framework
+and some relevant techniques [34]. Liesio et al. proposed
+robust portfolio modeling [31], scenario-based portfolio
+selection [35] to deal with incomplete information. In order
+to validate feasibility of methods, Salo and Liesiö applied the
+PDA in a Scandinavian Research Program [36]. They also
+studied the strategy to produce a portfolio in a telecommuni-
+cation company [37]. Kangaspunta et al. studied the weapon
+system portfolio using cost-efficient analysis [30]. The matu-
+rity and feasibility of PDA increases along with the growing
+attention on this topic. There are some similarities between
+the objects discussed in this paper, functions and applica-
+tions, and objects in prior research such as projects, products
+and weapons. Therefore, it is reasonable to adopt PDA in
+this paper, and to propose such a mathematical solution for
+sustaining BITA.
+In order to apply the current study in practice, a number
+of issues are noteworthy. The first issue concerns the acces-
+sibility of relevant data. As we know, we need to collect
+several kinds of data to fuel the algorithm. According to
+Figure 1, the data may exist in the EA documentation. Thus,
+an automatic data collection method to collect data from
+EA documentation is feasible. As an alternative, Systems
+Analysis Laboratory also studied how to gather the analysis
+data through survey. The second issue is how to apply this
+algorithm to alignment with different patterns. While we
+mainly discussed the alignment between business functions
+and applications in this paper, we acknowledge that there
+are other types of alignment in EA that require resource
+allocation. As a result, new data need to be collected, and
+new constraints other than those in formula 1 may emerge.
+The third issue is that applying the sustainable factor of
+dynamic resource allocation in practice requires a compre-
+hensive consideration that takes other sustainable factors,
+such as sharing knowledge and aligning reporting relation-
+ships, into account. One needs to determine the priority and
+interactions of the sustainable factors. For example, when
+sharing domain knowledge between business roles and IT
+roles, we may have a clear perception of the applications’
+supporting values for business functions, and this would help
+usimplementtheresourceallocationalgorithminanaccurate
+way.Therefore,weshouldgiveprioritytothesustainablefac-
+tor of sharing domain knowledge over the dynamic resource
+allocation factor.
+Several constraints of the proposed mathematical solu-
+tion require additional explanations. In our illustrative exam-
+ple, we find that the algorithm is able to deliver desirable
+outcomes if multiple applications are supporting one sin-
+gle function. However, if each function is only supported
+by one application, the values of such algorithm would be
+extensively decreased. In practice, there are one-to-many
+(many-to-one) or many-to-many mappings between the
+aligning elements, making the algorithm more feasible.
+Moreover, the algorithm would be generally more power-
+ful in a data-normative company due to the importance of
+availability of the data.
+9170 VOLUME 6, 2018
+
+--- PAGE 12 ---
+M. Zhang et al.: Evolvement of BITA
+V. DISCUSSIONS
+This paper aims to address some limitations in the previous
+literature. Given the three drawbacks discussed in section 2,
+we propose a holistic conceptual BITA evolvement model
+that combines EA with BITA maturity framework. To this
+end, a resource allocation factor was discussed as a neglected
+sustainable BITA factor beyond the factors that are analyzed
+in previous literature. The possible critical incidents and
+dynamic algorithm were proposed to align the business func-
+tionsandapplications.Besidesthisalignment,thesustainable
+factor can be applied to other alignment patterns in EA.
+The paper makes some potential contributions to the lit-
+erature. By combining EA and Luftman’s BITA maturity
+framework, we develop a useful framework to describe the
+organization structure and to evaluate the BITA. Meanwhile,
+focusing on the categories of changes and their resource
+allocation mechanism helps make the BITA sustainable and
+flexible. Furthermore, complementing this quantitative sus-
+tainable factor with other qualitative factors helps facilitate
+BITA sustainability in a holistic way.
+However, some challenges in the current study limits the
+generalizability of the findings. First, the conceptual model
+is relatively simple. We only adopted a few common EA
+viewpoints rather than an entire EA framework, such as
+TOGAF or DoDAF. Besides, we didn’t present the detailed
+BITA measurement method with EA at a given time. Second,
+we didn’t propose a holistic view to combine the resource
+allocation factor with other traditional mechanisms. Third,
+our findings were demonstrated merely using a hypotheti-
+cal case. To explain the conceptual model at different time
+segments, a practical case with a long evolvement period
+is required. At the same time, to deal with the dynamic
+business environment and IT innovations currently, we will
+consider how to coevolve the business and IT in the next
+step. The coevolution of business and IT is often studied
+fromacomplexityperspective.Withinthissituation,multiple
+critical incidents may appear and need to be addresses at
+the same time, which also provides a repuirement for future
+research.
+VI. CONCLUSION
+Given the insufficiency of current research on dynamic
+BITA, this paper proposed a conceptual model combining
+EA with BITA measurement method. Besides the traditional
+sustainable factors, a resource allocation factor was partic-
+ularly discussed in this paper. Considering the alignment
+between business functions and applications, this paper took
+intoaccountthepossiblechangesandcorrespondingresource
+influences. We propose a dynamic resource allocation algo-
+rithm and verified using an illustrative case. The explorations
+in this article contribute to sustainable BITA research.
+REFERENCES
+[1] M. Parker and R. J. Benson, Information Economics. Englewood Cliffs,
+NJ, USA: Prentice-Hall, 1988.
+[2] J. C. Brancheau and J. C. Wetherbe, ‘‘Key issues in information systems
+management,’’ MIS Quart., vol. 11, no. 1, pp. 23–45, 1987.
+[3] P. J. Dixon and D. A. John, ‘‘Technology issues facing corporate manage-
+ment in the 1990s,’’ MIS Quart., vol. 13, no. 3, pp. 247–255, 1989.
+[4] F. Niederman, J. C. Brancheau, and J. C. Wetherbe, ‘‘Information systems
+managementissuesforthe1990s,’’MISQuart.,vol.15,no.4,pp.475–500,
+1991.
+[5] J. C. Henderson and H. Venkatraman, ‘‘Strategic alignment: Leveraging
+information technology for transforming organizations,’’ IBM Syst. J.,
+vol. 32, no. 1, pp. 472–484, 1993.
+[6] D. Avison, J. Jones, P. Powell, and D. Wilson, ‘‘Using and validating
+the strategic alignment model,’’ J. Strategic Inf. Syst., vol. 13, no. 3,
+pp. 223–246, 2004.
+[7] J. Baker and D. Jones, ‘‘A theoretical framework for sustained strategic
+alignment and an agenda for research,’’ in Proc. JAIS Theory Develop.
+Workshop. Sprouts, Working Papers Inf. Syst., vol. 8. 2008, pp. 1–30.
+[8] Y. E. Chan and B. H. Reich, ‘‘IT alignment: What have we learned?’’ J.
+Inf. Technol., vol. 22, no. 4, pp. 297–315, 2007.
+[9] R.-S.Chen,C.-M.Sun,M.M.Helms,andW.-J.Jih,‘‘Aligninginformation
+technology and business strategy with a dynamic capabilities perspective:
+A longitudinal study of a Taiwanese Semiconductor Company,’’ Int. J. Inf.
+Manage., vol. 28, no. 5, pp. 366–378, 2008.
+[10] H. Benbya and B. McKelvey, ‘‘Using coevolutionary and complexity
+theoriestoimproveISalignment:Amulti-levelapproach,’’J.Inf.Technol.,
+vol. 21, no. 4, pp. 284–298, 2006.
+[11] R. Sabherwal, R. Hirschheim, and T. Goles, ‘‘The dynamics of alignment:
+Insights from a punctuated equilibrium model,’’ Org. Sci., vol. 12, no. 2,
+pp. 179–197, 2001.
+[12] J. N. Luftman and R. M. Kempaiah, ‘‘An update on business-IT alignment:
+‘Aline’hasbeendrawn,’’MISQuart.Executive,vol.6,no.3,pp.165–177,
+2007.
+[13] H.-T.Wagner,‘‘Evolvementofbusiness-ITalignmentovertime:Asituated
+change perspective,’’ in Proc. 47th Hawaii Int. Conf. Syst. Sci. (HICSS),
+2014, pp. 4366–4375.
+[14] K. Lyytinen and M. Newman, ‘‘Explaining information systems change:
+A punctuated socio-technical change model,’’ Eur. J. Inf. Syst., vol. 17,
+no. 6, pp. 589–613, 2008.
+[15] J. Baker, D. Jones, Q. Cao, and J. Song, ‘‘Conceptualizing the dynamic
+strategic alignment competency,’’ J. Assoc. Inf. Syst., vol. 12, no. 4, p. 299,
+2011.
+[16] P. P. Tallon and A. Pinsonneault, ‘‘Competing perspectives on the link
+between strategic information technology alignment and organizational
+agility: Insights from a mediation model,’’ MIS Quart., vol. 35, no. 2,
+pp. 463–486, 2011.
+[17] S. De Haes and W. Van Grembergen, Enterprise Governance of Infor-
+mation Technology: Achieving Strategic Alignment and Value. Cham,
+Switzerland: Springer, 2015.
+[18] J. Ohlsson, S. Han, M. Hultin, and B. Rosengren, ‘‘How to achieve
+sustainable business IT alignment—Designing a circular organizational
+structure at SAAB,’’ in Proc. 49th Hawaii Int. Conf. Syst. Sci. (HICSS),
+2016, pp. 5116–5125.
+[19] J. Luftman, ‘‘Assessing business-IT alignment maturity,’’ Commun. AIS,
+vol. 4, Dec. 2000, Art. no. 14.
+[20] S.Jorfi,K.M.Nor,andL.Najjar,‘‘TherelationshipsbetweenITflexibility,
+IT-business strategic alignment, and IT capability,’’ Int. J. Manage. Inf.
+Technol., vol. 3, no. 1, pp. 16–31, 2011.
+[21] K. D. Niemann, From Enterprise Architecture to IT Governance: Elements
+of Effective IT Management, vol. 1. Wiesbaden, Germany: Springer, 2006.
+[22] J.Saat,U.Franke,R.Lagerstrom,andM.Ekstedt,‘‘Enterprisearchitecture
+meta models for IT/business alignment situations,’’ in Proc. 14th IEEE Int.
+Enterprise Distrib. Object Comput. Conf. (EDOC), Oct. 2010, pp. 14–23.
+[23] J. Luftman, ‘‘Strategic alignment maturity,’’ in Handbook on Business
+Process Management 2. Berlin, Germany: Springer, 2015, pp. 5–43.
+[24] V. Haren, TOGAF Version 9.1. Dordrecht, The Netherlands: Van Haren
+Publishing, 2011.
+[25] P. Sousa, C. M. Pereira, and J. A. Marques, ‘‘Enterprise architecture
+alignmentheuristics,’’MicrosoftArchitectsJ.,vol.4,pp.34–39,Oct.2004.
+[26] L. Plazaola, E. Silva, N. Vargas, J. Flores, and M. Ekstedt, ‘‘A metamodel
+for strategic business and IT alignment assessment,’’ in Proc. 4th Annu.
+Conf. Syst. Eng. Res. (CSER), 2006, pp. 187–196.
+[27] L. Plazaola, J. Flores, E. Silva, N. Vargas, and M. Ekstedt, ‘‘An approach
+toassociatestrategicbusiness-ITalignmentassessmenttoenterprisearchi-
+tecture,’’ in Proc. 5th Conf. Syst. Eng., 2007, pp. 1–10.
+[28] L. Plazaola, J. Flores, N. Vargas, and M. Ekstedt, ‘‘Strategic business and
+ITalignmentassessment:Acasestudyapplyinganenterprisearchitecture-
+based metamodel,’’ in Proc. 41st Annu. Hawaii Int. Conf. Syst. Sci.,
+Jan. 2008, p. 398.
+VOLUME 6, 2018 9171
+
+--- PAGE 13 ---
+M. Zhang et al.: Evolvement of BITA
+[29] D. Simon, K. Fischbach, and D. Schoder, ‘‘Application portfolio
+management—An integrated framework and a software tool evaluation
+approach,’’ Commun. Assoc. Inf. Syst., vol. 26, no. 1, p. 3, 2010.
+[30] J.Kangaspunta,J.Liesiö,andA.Salo,‘‘Cost-efficiencyanalysisofweapon
+system portfolios,’’ Eur. J. Oper. Res., vol. 223, no. 1, pp. 264–275, 2012.
+[31] J. Liesiö, P. Mild, and A. Salo, ‘‘Preference programming for robust
+portfolio modeling and project selection,’’ Eur. J. Oper. Res., vol. 181,
+no. 3, pp. 1488–1505, 2007.
+[32] B. Fritscher and Y. Pigneur, ‘‘Business IT alignment from business model
+to enterprise architecture,’’ in Proc. Int. Conf. Adv. Inf. Syst. Eng., 2011,
+pp. 4–15.
+[33] A. Vargas, L. Cuenca, A. Boza, I. Sacala, and M. Moisescu, ‘‘Towards the
+development of the framework for inter sensing enterprise architecture,’’ J.
+Intell. Manuf., vol. 27, no. 1, pp. 55–72, 2016.
+[34] A. Salo, J. Keisler, and A. Morton, Eds., Portfolio Decision Analy-
+sis: Improved Methods for Resource Allocation. New York, NY, USA:
+Springer, 2011.
+[35] J. Liesiö and A. Salo, ‘‘Scenario-based portfolio selection of investment
+projects with incomplete probability and utility information,’’ Eur. J. Oper.
+Res., vol. 217, no. 1, pp. 162–172, 2012.
+[36] A. Salo and J. Liesiö, ‘‘A case study in participatory priority setting for
+a Scandinavian research program,’’ Int. J. Inf. Technol. Decision Making,
+vol. 5, no. 1, pp. 65–88, 2006.
+[37] M.Lindstedt,J.Liesiö,andA.Salo,‘‘Participatorydevelopmentofastrate-
+gic product portfolio in a telecommunication company,’’ Int. J. Technol.
+Manage., vol. 42, no. 3, pp. 250–266, 2008.
+MENGMENG ZHANG received the B.E. and
+M.D. degrees in management science and engi-
+neering from the National University of Defense
+Technology (NUDT), China, in 2012 and 2015,
+respectively, where he is currently pursuing the
+Ph.D. degree with the Science and Technol-
+ogy on Information Systems Engineering Labo-
+ratory. From 2016 to 2018, he was a Visiting
+Scholar with the Department of Design and Inno-
+vation, Case Western Reserve University, USA.
+His research interests focus on the business-IT alignment, enterprise archi-
+tecture design, and management.
+HONGHUICHENiscurrentlyaProfessorofman-
+agement science and engineering and the Direc-
+tor of Science and Technology on Information
+Systems Engineering Laboratory, National Uni-
+versity of Defense Technology, China. He has
+authored over 30 journal and conference papers,
+and issued two books. His major research inter-
+ests are information systems and management,
+requirement engineering, and enterprise architec-
+ture management.
+XINYU LI received the B.S. degree in supply
+chain and information systems and the B.S. degree
+in economics from Pennsylvania State Univer-
+sity. He is currently pursuing the Ph.D. degree
+with the Design and Innovation Department,
+Weatherhead School of Management, Case West-
+ern Reserve University. The majority of his
+works relates to digital innovation and organiza-
+tional research. Taking an organizational genetics
+approach, he seeks to use sequence analysis and
+social network techniques to discover the latent patterns of digital innovation
+activities, to explore the association of the innovation initiators, and to
+identify the DNA of innovative digital artifacts.
+KALLE LYYTINEN is currently the Iris S. Wol-
+stein Professor Case Western Reserve University,
+USA, an Adjunct Professor with the University of
+Jyvaskyla, Finland, and a Visiting Professor with
+the University of Loughborough U.K. He is cur-
+rently involved in research projects that look at the
+IT-induced radical innovation in software devel-
+opment, IT innovation in architecture, engineering
+and construction industry, requirements discovery
+and modeling for large-scale systems, implemen-
+tation processes of ERP, and the adoption of broadband wireless services
+in the U.K., South Korea, and USA. He has authored over 180 scientific
+articles and conference papers and edited or written 11 books on topics
+related to nature of IS discipline, system design, method engineering, orga-
+nizationalimplementation,riskassessment,computer-supportedcooperative
+work, standardization, and ubiquitous computing. He was an AIS fellow
+in 2004, and the former chairperson of IFIP 8.2 and a Founding Member
+of SIGSAND. He serves currently on the editorial boards of several leading
+information systems and requirements engineering journals, including the
+Journal of AIS, the Journal of Strategic Information Systems, the Informa-
+tion and Organization, Requirements Engineering Journal, the Information
+Systems Journal, the Scandinavian Journal of Information Systems, and
+Information Technology and People, among others.
+9172 VOLUME 6, 2018

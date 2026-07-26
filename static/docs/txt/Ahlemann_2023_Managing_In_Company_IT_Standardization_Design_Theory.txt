@@ -1,0 +1,1648 @@
+--- PAGE 1 ---
+Vol.:(0123456789) 1 3
+InformationSystemsFrontiers(2023)25:1161–1178
+https://doi.org/10.1007/s10796-022-10277-2
+ManagingIn‑CompanyITStandardization:ADesignTheory
+Frederik Ahlemann1
+· Sven Dittes2
+·Tim Fillbrunn1
+· Kevin Rehring1
+· Stefan Reining1
+· Nils Urbach3
+Accepted:4April2022/Publishedonline:29April2022
+©TheAuthor(s)2022
+Abstract
+Today’s companies rely heavily on in-company information technology standards (ICITS) to reduce costs, ensure flexibil-
+ity, and facilitate the planning, implementation, and operation of IT systems. Steering and managing ICITS has proven to
+be challenging, revealing the need for efficient governance mechanisms. But even though prior research demonstrates the
+challenges of ICITS, viable advice on how to implement ICITS is scarce. In this paper, we develop an organizational design
+theory for the management of ICITS based on the framework of organizational control theory. We conducted a critical case
+study to identify basic goals, constitutive elements, and fundamental mechanisms of a working ICITS management. The
+resulting design goals and principles were then evaluated and further refined in the light of additional expert interviews.
+With our work, we wish to extend the body of theoretical knowledge on the management of ICITS and help practitioners
+master the various challenges occurring in this domain.
+Keywords IT standardization · In-company IT standards · Design theory · IT management · IT governance
+1 Introduction
+Standardization has become an established approach for
+organizations to coordinate and organize their resources
+and processes to ensure product and service quality and to
+raise work efficiency (Choi et al., 2019; Kondo, 2000; Wül-
+lenweber et al., 2008). Companies operating worldwide in
+particular rely heavily on standards to leverage economies
+of scale through uniform business processes. Thus, it is not
+surprising that also most information technology (IT) depart-
+ments pursue standardization (Curran, 2010). The objects
+of standardization include network technologies, operating
+systems, database systems, applications, or IT management
+processes. The importance of in-company standards for IT
+departments has increased steadily over time, due to the
+growth and increasing costs of IT in almost all departments
+in large organizations. Also, the implementation of auto-
+mated and standardized processes can help to reduce the
+complexity of technological environments, resulting in a bet-
+ter control of cost (Foorthuis et al., 2016). A survey by the
+Boston Consulting Group indicates that organizations with
+a well standardized IT infrastructure can decrease IT infra-
+structure costs by 15% and overall IT costs by 33% (Thiel
+et al., 2004). Another survey of IT leaders from across the
+world finds that they rate in-company IT standards (ICITS)
+as one of the three most valuable activities in their compa-
+nies (Curran, 2010). While the academic discourse mainly
+refers to terms like IS company standards (van Wessel et al.,
+2005) or corporate IT standardization (van Wessel, 2010),
+ICITS can be applied at different levels and organizational
+units within companies. They can apply to a company as a
+whole or only to certain parts of it, e.g., in the case of larger
+corporations. For this reason, we use the terms company and
+organization interchangeably in this article.
+* Stefan Reining
+stefan.reining@uni-due.de
+Frederik Ahlemann
+frederik.ahlemann@uni-due.de
+Sven Dittes
+sven.dittes@fernuni-hagen.de
+Tim Fillbrunn
+timfillbrunn@gmail.com
+Kevin Rehring
+kevin.rehring@uni-due.de
+Nils Urbach
+nils.urbach@fim-rc.de
+1
+University of Duisburg-Essen, Duisburg, Germany
+2
+FernUniversität in Hagen, Hagen, Germany
+3
+University of Bayreuth, Bayreuth, Germany
+
+--- PAGE 2 ---
+1162 InformationSystemsFrontiers(2023)25:1161–1178
+1 3
+The implementation of ICITS is a costly endeavor involv-
+ing activities such as the identification of areas that require
+standardization, the specification and documentation of
+standards, their approval, the training of staff, the monitor-
+ing of their usage, and the resultant reporting. Noncompli-
+ance is a major risk when implementing ICITS and it may
+affect an organization very negatively. Non-compliance pre-
+vents ICITS from having positive effects on the complex-
+ity of IT architectures and processes. This in turn means
+that intended cost savings cannot be realized. In addition,
+responsible managers lose credibility and respect due to
+their failure to enforce ICITS. Eventually, IT staff may be
+negatively impacted in terms of morale and commitment.
+Organizations therefore try their best to enforce compliance
+with organizational IT standards, but often without success.
+While reliable data on non-compliance with organizational
+IT standards is generally difficult to obtain, some data sug-
+gests that more than 50% of employees use certain IT com-
+ponents without approval of their respective IT departments
+(Silic, 2015). Herath and Rao (2009) state that employees’
+negligence and non-compliance are often responsible for
+failing security policies. Prior research suggests that this
+adoption problem is multifaceted with causes on both the
+individual and organizational level (Emmerich et al., 1999;
+Liang et al., 2012). While these causes are increasingly well-
+understood and documented through models of ICITS suc-
+cess and adoption (Dittes et al., 2015; Müller et al., 2015),
+practitioners and researchers alike still struggle finding the
+right approach to successfully manage ICITS.
+Despite the practical importance of ICITS, little, and
+rather fragmented, research has been carried out on stand-
+ards within organizations’ IT departments so far (De Vries
+et al., 2006; van Wessel et al., 2005). Besides the richer
+body of knowledge on non-organizational, industry-related
+IT standards, such as standards set by international consortia
+and official bodies (e.g. ISO norms, government standards)
+(Backhouse et al., 2006; Schmidt & Werle, 1998), only few
+studies investigate aspects of ICITS. Managerial recommen-
+dations are also fragmentary and isolated, making it diffi-
+cult to understand and anticipate which set of managerial
+approaches can lead to a sustainable and successful stand-
+ardization initiative. Moreover, such recommendations often
+lack theoretical underpinnings and justification.
+We address this gap by proposing an organizational
+design theory describing the constituent elements and mech-
+anisms of an effective and efficient management of ICITS.
+Design theories in Information Systems are prescriptive
+theories that integrate different aspects into design paths
+with the goal to design a process that is more effective and
+feasible (Ngai et al., 2009; Walls et al., 1992). Our theory
+includes fundamental design goals, basic ICITS manage-
+ment principles, and explanations (in the form of proposi-
+tions) of how these principles lead to the attainment of the
+aforementioned goals. The theory thereby offers research-
+ers a more comprehensive understanding of how ICITS can
+unfold their potential. At the same time, it serves as a guide-
+line for practitioners in their endeavor to implement ICITS.
+We conceptualize the problem of ICITS management as a
+process of planning and controlling activities enforcing com-
+pliant behavior of IT staff, so that ICITS are actually used in
+a beneficial manner. Accordingly, we chose organizational
+control theory (OCT) (Ouchi, 1978, 1979, 1980) for our
+problem analysis and as a theoretical foundation of subse-
+quent design activities. OCT allows us to capture the domain
+of ICITS as a control problem where individual behavior
+needs to be aligned so that organizational and individual
+goals match and desired behavior is enforced. As the reasons
+for deviant behavior and low adoption rates in the area of
+ICITS can be diverse (Chua et al., 2014; Dittes et al., 2015)
+and many of these reasons are not yet well understood, we
+decided to first explore the problem in more depth before
+developing our design theory. Therefore, we started with
+a critical interview study that allowed us to understand the
+multifaceted phenomenon of ICITS. Based on the insights
+gained from this interview study, we developed a first ver-
+sion of our design theory, which was later evaluated and
+refined through a series of interviews with subject-matter
+experts from different companies and industries.
+The remainder of this paper is structured as follows.
+Section 2 presents related work on ICITS, conceptualizes
+ICITS as an organizational control problem, and describes
+how OCT was used as a theoretical lens for our work. Sec-
+tion 3 outlines the research method applied and describes the
+critical case we used for exploring the problem. In Sect. 4,
+we present our design theory and in Sect. 5, we present the
+results of its evaluation. In Sect. 6, we discuss our findings,
+summarize the paper, and give an outlook on future research.
+2  In‑Company IT Standardization
+as an Organizational Control Process
+Following Dittes et al. (2015), we define an ICITS as any
+formal rule or guideline within organizations based on a
+clear motivation aimed at harmonizing tangible and intan-
+gible objects related to or consisting of information tech-
+nology within that organization. Van Wessel (2010) defines
+three abstract domains for ICITS: technological standards
+(e.g. standards determining the brand and type of servers
+in data centers), data standards (e.g. specific data structures
+and their semantics), and process standards (e.g. security
+guidelines or project management processes). While these
+domains differ significantly in terms of their content, their
+management is fairly similar. They all require the same
+activities such as definition, approval, communication,
+use, monitoring, and maintenance. Moreover, they all offer
+
+--- PAGE 3 ---
+1163 InformationSystemsFrontiers(2023)25:1161–1178
+1 3
+a significant potential for complexity and cost reduction,
+because low degrees of standardization lead to a need for
+more staff with specific knowledge and more specific opera-
+tional and management processes, e.g., in the case of operat-
+ing systems for installing security patches, running backups,
+updating the systems etc. Independent from these domains,
+ICITS may further be categorized according to their form.
+In this sense, ICITS may occur as: a) a reference to external
+standards (e.g. ISO norms or standard software) adopted by
+the organization, b) a modified version of an external stand-
+ard, c) a subset of an external standard; d) a reproduction
+of (parts of) other external documents, or e) a self-written
+standard (De Vries, 1999, p. 231).
+The implementation of ICITS is often more difficult than
+companies expect, as revealed by reports about failed imple-
+mentation attempts or significant problems when it comes
+to actually benefitting from implemented IT standards (Jun
+& Cai, 2003; Zhu & Fu, 2009). ICITS often come along
+with great uncertainties regarding their costs and benefits
+and thereby also with uncertainties regarding adequate plan-
+ning and control strategies (Weitzel, 2003, p. 64). One tradi-
+tional problem facing standardization and standards usage in
+organizations is that of demonstrating its contribution to the
+organization’s overall success (Hesser & Inklaar, 1998). This
+issue naturally results in motivational barriers. Accordingly,
+studies indicate that many ICITS efforts often fail due to low
+acceptance rates among staff, and that adherence to the rel-
+evant standards tends to be superficial (Russo et al., 1996).
+As stated by Bird (1998), companies’ standardization efforts
+often leave too much room for employees to use non-stand-
+ard components, emphasizing the importance of a proper
+enforcement of ICITS. Given these motivational, planning
+and controlling challenges, we argue that ICITS can best
+be conceptualized as an organizational control problem.
+Organizational control theory is particularly well-suited for
+capturing the phenomenon of ICITS because ICITS failures
+are an immediate result of a misalignment of organizational
+(ICITS) goals and individual usage behaviour. A working
+management of ICITS must avoid deviant usage behaviour
+and foster higher ICITS adoption rates.
+The problem of misaligned goals and behavioural pat-
+terns has long been explored in academic research. Given the
+insight that organizations’ and their employees’ goals par-
+tially diverge (Barnard, 1968), it has been regarded as worth
+investigating how to effectively direct individuals’ efforts
+towards organizational goals (Flamholtz, 1983). Throughout
+this paper, the term “organizational control” shall denote
+“mechanisms (both processes and techniques) designed to
+increase the probability that people will behave in ways that
+lead to the attainment of organizational objectives.” (Flam-
+holtz et al., 1985, p. 38).
+Organizational control has traditionally been divided
+into three types: formal outcome control, formal behavior
+control, and informal clan control (Ouchi, 1978, 1979,
+1980). Formal control is realized through formal mecha-
+nisms, including project plans, test protocols, and reports. In
+contrast, informal control works through social events, social
+norms, and peer pressure (Kirsch, 2004, p. 378). In the case
+of ICITS, tasks are usually very clearly specified through
+process guidelines, handbooks specifying the standards, etc.,
+which suggests that formal control mechanisms are most
+suitable in this case.
+Individual control types are usually not used in isolation.
+Rather, they tend to be combined to achieve complex goals
+(Tiwana, 2010; Turner & Makhija, 2006), while showing
+significant synergy effects (Cardinal et al., 2004; Kirsch,
+1996). Accordingly, the analysis and evaluation of different
+control types should be done collectively to avoid conflicts
+that may weaken the desired effect (Kirsch, 2004; Tiwana,
+2010). Flamholtz et al. and’s (1985, p. 38) integrative frame-
+work (a modified version of which is depicted in Fig. 1) is
+not only one of the most influential models of organizational
+control, but it is also among the few frameworks that con-
+sider the above-mentioned insights by integrating several
+control types.
+As depicted in Fig. 1, the framework describes a core
+control system surrounded by a control context, consisting
+of organizational structure, culture, and the organization’s
+external environment. While the core control system is sup-
+posed to provide control mechanisms to directly influence
+the employees’ behavior, the control context contains mecha-
+nisms with indirect control functions (Flamholtz et al., 1985,
+p. 38). Corresponding to the fact that this model focuses on
+the control of human agents rather than of machine pro-
+cesses, the operational subsystem at the center of the core
+control process comprises “human systems within an organ-
+ization, at the individual, group and organizational levels
+of analysis” (Flamholtz et al., 1985, p. 38). The processes
+illustrated by the arrows in Fig. 1 can be summarized as fol-
+lows: First, the planning component generates standards that
+are communicated to the operational subsystem and form
+the basis of an evaluation-reward mechanism. Adherence
+to these standards is monitored and measured, leading to
+advice on corrective action for the operational subsystem
+and generating input for the execution of the evaluation-
+reward mechanism. The feedback provided to the operational
+subsystem is also fed back to the planning component for
+adjustment of generated standards. The elements of the
+control context can have a facilitating or an inhibiting influ-
+ence on the core control system’s effectiveness, depending
+on whether the configurations of the contextual component
+provide an environment conducive to the communication,
+acceptance, and monitoring of ICITS. For instance, given
+appropriate context configurations, organizational control
+has even been found to potentially strengthen employ-
+ees’ trust in the organization, contrary to what had been
+
+--- PAGE 4 ---
+1164 InformationSystemsFrontiers(2023)25:1161–1178
+1 3
+suggested in previous literature, thus enhancing employee
+performance not only directly through forms of coercion, but
+also indirectly through enhanced trust (Verburg et al., 2018).
+The organizational culture element also influences in how far
+the core control mechanisms are realized in terms of formal
+behavior control or informal clan control.
+In the remainder of this paper, we take Flamholtz’s frame-
+work as premise and conceptual foundation for our design
+theory of the management of ICITS.
+3 Research Method
+Prior literature on ICITS reports on successful ICITS man-
+agement in different firms that varies significantly in terms
+of processes, structures and policies. Therefore, we posit
+that there is no general ICITS approach for all firms. Instead,
+our research is built on the presupposition that there are
+general, crucial characteristics of ICITS implementations
+shared across different IT organizations. For this reason, our
+theoretical model will offer guidelines to practitioners for
+the design of their ICITS while leaving enough room for
+firm-specific adaptations.
+In doing so, our research includes the following core
+components of an information systems design theory: To
+specify the (1) purpose and scope of our design theory, we
+clearly defined a set of four design goals as the boundaries
+of our work. These goals capture the specific organizational
+challenges of ICITS and how these translate into specific
+desired end states. Thereby, we abstract from a narrow,
+idiosyncratic problem and refer to a class of problems the
+design theory can solve. (2) Principles of form and func-
+tion define how solutions based on the design theory work.
+They describe an abstract architecture for solving a class of
+problems. We describe eight design principles for successful
+ICITS management, which are consistent with OCT’s core
+propositions. (3) The design principles are supported by test-
+able propositions. These propositions are truth statements
+about the theory and can be tested against their validity on
+instantiation of the solution artifact. We formulate fourteen
+testable propositions for our ICITS approach that basically
+link design principles to design goals, thus explaining how
+the design theory is supposed to address ICITS related chal-
+lenges. (4) Finally, justificatory knowledge refers to kernel
+theories underlying the design theory. This knowledge is
+relevant with respect to the understanding of the design of an
+artifact and its working. In our case, we use OCT as a kernel
+theory informing our design.
+Our research was conducted in three phases that allowed
+us to (1) identify challenges and design goals for a success-
+ful ICITS management by means of an exploratory interview
+study (see Sect. 3.1 for details), (2) develop a design theory
+Fig.1  Analytical framework for this study derived from organizational control theory (based on Flamholtz et al., 1985)
+
+--- PAGE 5 ---
+1165 InformationSystemsFrontiers(2023)25:1161–1178
+1 3
+for ICITS management, consisting of design principles and
+corresponding testable propositions, based on the design
+goals identified in phase 1 and an analysis of relevant ICITS
+literature, and (3) evaluate the design theory through a round
+of confirmatory expert interviews (see Sect. 3.2 for details).
+3.1 TheCaseofaLargeAutomotiveManufacturer
+While the difficulties of implementing successful ICITS has
+often been stressed in the literature, little is known about
+the detailed intricacies of this problem. In order to deepen
+our knowledge on the specific causes of ICITS success and
+failure, the first phase of our research consisted of a case
+study of a large automotive manufacturer from Germany.
+This critical case was chosen because it displays a very
+complex IT/IS architecture with thousands of IT infrastruc-
+ture elements, applications and processes. Moreover, it was
+complex in terms of organization and governance with a
+highly distributed IT organization dispersed over multiple
+countries, legal entities and organizational units. Not sur-
+prisingly, ICITS is a major challenge for this organization.
+Several far-reaching ICITS initiatives cover large parts of the
+enterprise architecture. Some of them were successful, some
+of them were partially successful and some of them may be
+considered a failure. Therefore, studying this firm allowed
+us to compare different embedded cases, which gives us the
+opportunity to distinguish successful managerial practices
+from less successful ones.
+In this case study, we conducted 11 interviews with pro-
+fessionals from the organization’s IT departments at differ-
+ent levels of hierarchy (Table 1). The interviews took 45
+to 60 min each and were conducted in German. Hereby,
+minutes were taken and important quotes and statements
+were written down. As proposed by Weston et al. (2001),
+the interview minutes were reviewed by the interviewees
+to avoid a wrong or incomplete description of the interview
+content. After the interviewees had confirmed their inter-
+view statements, all statements and quotes relevant regarding
+ICITS challenges were stored in a database for the purpose
+of coding and categorization. Based on an in-depth analysis
+of the coded interviews, we identified six core challenges
+for IT standardization. We then generalized these findings
+to derive a set of four design goals (Sect. 4.1). These design
+goals define the purpose and scope of our design theory.
+Based on the developed design goals, OCT, and relevant
+further literature, we went on to develop a set of design prin-
+ciples and formulated corresponding testable propositions.
+3.2 Evaluation
+In the final phase, we evaluated our design theory in a con-
+firmatory interview round with subject-matter experts from
+practice. In this round, we reached out to 126 experts that
+we identified through personal and professional networks
+(e.g. XING). The acquisition through professional networks
+was based on several keyword searches. We targeted profes-
+sionals with job descriptions including the terms IT stand-
+ardization, IT architecture or IT governance. Additionally,
+for the purpose of the design theory, we exclusively focused
+on experts from companies of middle to large size. We con-
+ducted telephone interviews with seven of these experts
+after which results converged and no further insights could
+be generated (“theoretical saturation”). These participants
+have a work background in several different industries. All
+of them are currently employed in either middle or top man-
+agement positions. Table 2 shows some detailed information
+about the participants.
+The interviews lasted approximately 40 to 60 min each
+and started with exploratory, open-ended questions on major
+challenges and success factors of ICITS as well as current
+ICITS practices in the expert’s organization. We then pre-
+sented the participants with the design goals and asked them
+Table1  Interviewees from the exploratory round of interviews
+Number Role Experience with IT standardization
+1 Technical project manager No active involvement in IT standardization projects yet, only passive experience
+2 Team leader Daily experience with component standards, current involvement in a tool standardization project
+3 IT architect Central role in one standardization project in the past
+4 IT architect Database officer in a (failed) standardization project in the past
+5 IT process manager Process owner in ITIL (information technology infrastructure library) processes
+6 IT architect Has defined and established standards in past projects
+7 Infrastructure coordinator Manages Oracle and MSSQL standards
+8 IT architect Supportive role in several standardization projects in the past
+9 IT architect Experience with the development, implementation, and acceptance of architecture standards as
+consultant and committee leader
+10 IT architecture manager No active involvement in IT standardization projects yet, only passive experience
+11 Enterprise architecture manager Supportive role in standardization projects and manager of standardization processes
+
+--- PAGE 6 ---
+1166 InformationSystemsFrontiers(2023)25:1161–1178
+1 3
+for an evaluation, using a five-point Likert scale measuring
+the participants’ degree of agreement with each design goal.
+We repeated this process for the design principles and test-
+able propositions. We concluded with open-ended questions
+on strengths and weaknesses of the current design as well as
+on the participants’ personal and professional background.
+Furthermore, in each section, participants were given the
+chance to suggest further design goals, design principles,
+testable propositions, and add comments. As in the explora-
+tory interview round, the transcripts were recorded, tran-
+scribed and reviewed by the interviewees to avoid wrong or
+incomplete descriptions of the interview content, and after
+that, all relevant quotes from the sections involving open-
+ended questions were collected in a database, coded, and
+categorized. The results of the analysis of the coded quotes
+will be presented in Sect. 5.
+4 DesignTheory
+In the following, we will discuss our design theory’s final
+components, ground them in OCT and illustrate them with
+narratives from our critical case and quotes from our inter-
+views with subject-matter experts. The purpose and scope of
+our design theory is specified in Sect. 4.1. Principles of form
+and function and the corresponding testable propositions are
+presented in Sect. 4.2.
+4.1 BoundariesandDesignGoals
+The purpose of our design theory is to help organizations to
+successfully implement ICITS standards through an effec-
+tive management approach. Our approach is applicable
+within the boundaries of medium to large companies with
+medium to high complexity IT/IS landscapes. We explic-
+itly exclude smaller organizations and less complex IT/IS
+architectures for two reasons. First, in smaller organiza-
+tion, the degree of division of labor and specialization is
+usually lower which requires less complex role models and
+processes. For instance, in smaller organizations it will be
+hard to install dedicated ICITS managers or establish com-
+plex lifecycle models of ICITS. Second, certain challenges
+are more prevalent with more complex architectures. For
+instance, the problem of architectural transparency is a lot
+less relevant for simple architectures. Consequently, ICITS
+management in the context of complex architectures requires
+more processes for establishing transparency and monitor-
+ing progress. Along similar lines, our design theory’s appli-
+cability is restricted to organizations that display a certain
+level of IT management maturity. In particular, we assume
+that organizations have (a) a working and to some extent
+standardized project management, (b) a working enterprise
+architecture management (EAM) that provides a minimum
+of architectural transparency and control, and (c) an estab-
+lished governance framework the ICITS management can
+be built on. Within the framework of these boundary condi-
+tions, our design theory is supposed to address four different
+design goals (Table 3) that have been identified through our
+empirical work. In the following, these design goals as well
+as some central factors hindering their achievements will be
+introduced with references to representative points from our
+first round of interviews.
+One of the most frequently mentioned reasons why com-
+panies promote standardization initiatives is the reduction
+of IT costs. Cost reductions are expected due to a reduc-
+tion of the number of IT staff, the reduction of the number
+Table2  Participants from the confirmatory round of interviews
+Interviews Experts Organizations
+7 6
+Industry ICT consultancy Electronics distribution Steel and armaments Public services
+2 2 2 1
+Age (in years) <25 25–30 31–45 46–60 >60 N/A
+0 1 3 3 0 0
+Work experience (in years) <1 1–3 3–5 5–10 >10 N/A
+0 0 1 2 4 0
+IT management experience <1 1–3 3–5 5–10 10 N/A
+1 0 3 0 3 0
+IT management domain IT governance IT architecture IT consultancy Professional ser-
+vices
+3 2 1 1
+Management level Top Management Middle Management
+3 4
+
+--- PAGE 7 ---
+1167 InformationSystemsFrontiers(2023)25:1161–1178
+1 3
+of necessary licenses, and the advantage resulting from a
+stronger position towards suppliers, namely, scale effects
+resulting from the reduction of ordered products. Accord-
+ingly, a study by the Boston Consulting Group (Scantlebury
+et al., 2004) also shows that standardizing organizational IT
+can decrease IT infrastructure costs by up to 33%. However,
+the goal of cost reduction was generally perceived not to be
+reached yet. Rather, a poor communication and adherence
+to standards has so far resulted in project delays, as finished
+systems that turned out not to meet certain standards could
+not be handed over to the organization.
+A further goal of IT standardization is increasing organi-
+zational flexibility by significantly decreasing the introduc-
+tion effort for new applications. As Tiwana and Konsynski
+(2010) point out: “Paradoxically […] rigidity in IT architec-
+tures (e.g. standardization to increase modularity) increases
+IT agility” (p. 299). However, as noted by some interview-
+ees, agility through standards can only be properly realized
+if the standards themselves can be quickly adjusted to market
+dynamics. Accordingly, the need was expressed for faster
+cycles of standard definition and introduction.
+Another major goal of IT standardization is reducing IT
+complexity due to less hardware and software heterogeneity
+and lower maintenance and support effort, resulting in bet-
+ter IT manageability and controllability. As Boh and Yellin
+(2006) maintain: “By standardizing across different tech-
+nologies, vendors, platforms, and application architectures,
+organizations can potentially reduce the complexity of their
+operations, control the number of skills required to maintain
+their IT systems […]” (p. 166). Furthermore, ICITS were
+generally perceived to foster fail-safety due to a higher vali-
+dation of systems, and troubleshooting as well as various
+other kinds of changes were reported as considerably easier.
+Lastly, IT standardization aims to improve the qual-
+ity of IT services by reducing the number of errors during
+implementation and utilization of new software. Addition-
+ally, it significantly fosters customer satisfaction. In fact,
+a successful mapping of customer requirements on ICITS
+was frequently mentioned both as one of the major goals
+of ICITS and as a criterion for the success of ICITS imple-
+mentation. However, a tendency to accommodate customer
+wishes at all costs was also perceived as an inhibitory factor
+by some.
+4.2 DesignPrinciplesandTestablePropositions
+In this sub-section, we present and explain the principles of
+form and function of our design theory (Table 4). For each
+principle, we specify the design goals the respective princi-
+ple aims at and derive corresponding testable propositions.
+4.2.1 DesignPrinciple1:EstablishDedicatedSteering
+andMonitoringofICITS
+OCT teaches us that observing ICITS adoption (not neces-
+sarily individual behavior) and measuring ICITS outcome
+will likely have a positive impact on individuals’ compli-
+ant behavior (OCT construct Measurement). Moreover, this
+monitoring is the basis for any form of deviance analysis and
+definition of counteractions. As a formal control mechanism,
+monitoring can be time-consuming and complicated as data
+has to be collected, analyzed, and conclusions have to be
+drawn. While some required data collection can certainly
+be automated, some may not. Given the fact that medium
+to large IT organizations often maintain dozens (if not hun-
+dreds) of different ICITS for IT infrastructure, applications,
+and processes, we conclude that a dedicated organizational
+instance should be responsible for steering and monitoring
+activities. We therefore propose:
+DP1. There is a structural element within the organiza-
+tion that is responsible for steering and monitoring (the
+usage of) ICITS.
+Dedicated ICITS steering and monitoring presumably
+allows for controlling key standardization aspects such
+Table3  Design goals for an IT standardization management framework. (as mentioned by the informants)
+Label Design goal Description Mentioned in interview
+DG1 Cost reduction IT standardization aims to reduce business IT costs by
+• Decreasing the size of IT support staff
+• Reducing the number of applications and necessary licenses
+1, 2, 3, 4, 5, 6, 8, 9, 10, 11
+DG2 Flexibility IT standardization aims to increase business flexibility on an organizational level by
+• Decreasing the introduction effort for new applications
+1, 2, 4, 8
+DG3 Manageability and
+controllability
+IT standardization significantly increases IT manageability and controllability by
+• Reducing IT complexity
+• Lowering IT maintenance and support effort
+4, 5, 6, 7, 8
+DG4 Quality improvement IT standardization aims to improve the quality of IT services by
+• Reducing implementation and utilization errors
+• Fostering customer satisfaction
+2, 3, 4, 5, 7, 10, 11
+
+--- PAGE 8 ---
+1168 InformationSystemsFrontiers(2023)25:1161–1178
+1 3
+as cost–benefit relation, standard diffusion, and standard
+adoption. DP1 therefore directly aims at DG3 (enhanced IT
+manageability and controllability). Furthermore, dedicated
+ICITS steering and monitoring is expected to allow monitor-
+ing the behavior of users of standards, reveal critical areas
+which require action. DP1 therefore also directly aims at
+DG4 (improved quality of IT services). Accordingly, we for-
+mulate the following testable propositions for DP1:
+TP1a. Dedicated ICITS steering and monitoring improve
+IT manageability and controllability.
+TP1b. Dedicated ICITS steering and monitoring improve
+the quality of IT services.
+4.2.2 DP2.IntroduceaStandardLifecycleConcept
+Advanced organizations ensure that standards are regularly
+checked in terms of up-to-dateness. ICITS that are no longer
+current or useful are discontinued and eventually removed
+from the ICITS catalogue. From the perspective of OCT this
+represents a reaction to changing environmental conditions
+and requires regular planning and adjustment of goals (OCT
+constructs External Environment, Planning). We therefore
+posit that ICITS run through a series of lifecycle phases:
+DP2. The management of ICITS is based on a structured
+lifecycle model that describes ICITS’ phases from initia-
+tion to shutdown.
+In the ICITS context, we distinguish four phases of a
+standard lifecycle based on Dittes et al., (2014, p. 36). In
+the first phase, a standard is initiated, conceptualized and
+approved. In the second phase, the standard is introduced,
+and IT staff is prepared to use it. During this phase, benefit
+communication and convincing users as well as stakehold-
+ers are pivotal. During the next phase, the ICITS is used by
+IT staff. At the same time, utilization is monitored and – if
+necessary – audits are carried out to enforce compliance.
+Support and maintenance might also be necessary. The dis-
+continuation and shutdown phase includes information of IT
+staff as well as the initiation of subsequent ICITS that can
+replace the discontinued standard. Here, responsible roles
+might start a new ICITS development process.
+Introducing a lifecycle concept can not only ensure that
+the maintenance and discontinuation of standards are taken
+seriously. It also serves as a general framework for the man-
+agement of ICITS. Moreover, a lifecycle concept is expected
+to ensure a consistent management of ICITS thus increas-
+ing general transparency, which eventually allows managers
+to better oversee ICITS. DP2 is therefore directed at DG3
+(enhanced IT manageability and controllability), and we
+posit the following testable proposition:
+TP2. Introducing a standard lifecycle concept improves
+IT manageability and controllability.
+4.2.3 DP3.LinkIndividualandOrganizationalGoals
+As already outlined earlier, a key hindrance for ICITS suc-
+cess is the lack of acceptance of ICITS by IT staff. OCT
+suggests that such a lacking motivation of pursuing organi-
+zational goals can be alleviated through aligning them with
+individual goals, e.g. through rewards and/or other mecha-
+nisms (OCT construct Evaluation-Reward). Management
+by objectives (MBO) allows for passing goals down the
+organizational hierarchy and motivates employees to reach
+Table4  Design principles for an IT standardization management framework, (as mentioned by the informants)
+Label Design Principal Description Mentioned in interview
+DP1 Steering and Monitoring There is a structural element within the organization that is responsible
+for steering and monitoring (the usage of) ICITS
+2, 3, 4, 5, 10, 11
+DP2 Lifecycle Concept The management of ICITS is based on a structured lifecycle model that
+describes ICITS’ phases from initiation to shutdown
+2, 9, 10, 11
+DP3 Individual and organizational goals Incentives and sanctions for the utilization of/non-compliance with ICITS
+are defined, communicated, and applied
+4, 5, 6
+DP4 Technical Change Technical change resulting in the need for an update of ICITS is antici-
+pated and handled quickly
+1, 4, 7
+DP5 Information Push Those affected by an IT standard should be provided with all relevant
+information regarding its utilization and benefits, so that users do not
+have to ask for information first
+1, 2, 3, 4, 6, 8, 9, 10
+DP6 Integration into existing processes Standard management is integrated into the organization to corroborate
+the significance of ICITS within the organization and avoid contradic-
+tory decision-making
+9, 10, 11
+DP7 Role Concept Establish a role concept with clear responsibilities 3, 5, 6, 7, 11
+DP8 Limitation of Component Standards The number of standards for single, small components is minimized. Plat-
+form standards covering a significant functional range are used instead
+10, 11
+
+--- PAGE 9 ---
+1169 InformationSystemsFrontiers(2023)25:1161–1178
+1 3
+business goals as they become linked to their own (Bell,
+1980, p. 20). MBO further increases awareness for business
+objectives and improves results and communicative per-
+formance (Shetty & Carlisle, 1974, p. 159). Münstermann
+et al. (2010) further identify incentives as a key instrument
+in reaching ICITS success. To support a standard oriented
+management by objectives approach, we thereby propose the
+implementation of an incentive system for standard users,
+including positive and negative sanction mechanisms: Posi-
+tive sanctions should be used to encourage specific user
+behavior. In practice, positive sanctions may simply be not
+using negative sanctions. Negative sanctions should increase
+the individual cost of deviant behavior. Noncompliance to
+IT standards should be possible but only at exceedingly high
+individual costs.
+Such an incentive system supports the implementation of
+control mechanisms to reveal critical compliance issues and
+help to initiate countermeasures. Thus, we posit:
+DP3. Incentives and sanctions for the utilization of/non-
+compliance with ICITS are defined, communicated, and
+applied.
+We expect such incentives and sanctions to increase
+acceptance rate and adoption, which is a necessary pre-
+condition for ICITS to unfold their potential. Beyond this,
+incentives and sanctions make it easier for responsible man-
+agers to enforce compliance thus making it easier and less
+effortful to manage and control standards. DP3 thereby pro-
+motes DG3 (enhanced IT manageability and controllability).
+Standard-oriented MBO is further expected to counteract
+employees’ deviant behavior towards ICITS. DP3 thus also
+promotes DG4 (improved quality of IT services). We there-
+fore formulate the following testable propositions:
+TP3a. Linking individual and organizational goals
+improve IT manageability and controllability.
+TP3b. Linking individual and organizational goals
+improve the quality of IT services.
+4.2.4 DP4.AnticipateTechnicalChangeandHandleit
+Quickly
+IT standards are subject to constant technical change (Han-
+seth & Braa, 2001), organizations need to make a continuous
+effort to maintain the technical usefulness and integrity of
+an IT standard throughout its lifecycle. Moreover, changes
+regarding an IT standard induce further changes in its envi-
+ronment (Allen et al., 2013; Hanseth & Braa, 2001). This
+requires supervision of the standard itself and its technical
+environment. Another aspect related to technical change
+management is system up-to-dateness. Organizations need to
+constantly challenge the task-technology fit of IT standards.
+The literature on task-technology fit and technology accept-
+ance suggests that task performance is influenced by the
+degree to which technology appropriately meets the task’s
+requirements and the user’s demands (Goodhue, 1995; Ven-
+katesh & Davis, 2000; Zigurs & Buckland, 1998). We thus
+posit:
+DP4. Technical change resulting in the need for an update
+of ICITS is anticipated and handled quickly.
+Anticipating technical change and handling it quickly is
+expected to reduce the response time for technical change
+management. DP4 thereby aims at DG2 (increased organi-
+zational flexibility). Furthermore, anticipating technical
+change and handling it quickly presumably reduces the cost
+and effort of technical change management. DP4 thus pro-
+motes DG3 (enhanced IT manageability and controllability).
+We therefore formulate the following testable propositions:
+TP4a. Quickly anticipating and handling technical
+change leads to higher organizational flexibility.
+TP4b. Anticipating and handling technical change
+improves IT manageability and controllability.
+4.2.5 DP5.PushallRelevantInformationtotheUsers
+An open communication culture in which knowledge is
+made available to users has positive impacts on individual
+productivity (Andres & Zmud, 2002, p. 62). Along simi-
+lar lines, OCT stresses the role of culture for organizational
+control systems (OCT construct Organizational Culture). As
+our first round of interviews additionally revealed, “passive”
+organizational communication mechanisms were perceived
+as a major reason for insufficient knowledge on the user side.
+Participants stated that they were often confronted with situ-
+ations in which they had to take initiative (e.g., access the
+newest manual) to get necessary information about IT stand-
+ards rather than being provided with it in the first place. We
+argue that organizations should reduce effort on the user side
+and establish active (push-oriented) communication mech-
+anisms. This concerns information about the introduction
+of new standards, associated individual and organizational
+benefits, aspects of usage, and areas of application. As our
+design theory aims at medium to large-sized organizations,
+we assume that intranet networks are already installed and
+relatively stable, thereby serving as a foundation for sharing
+knowledge through multiple channels such as email, bro-
+chures, manuals, meetings, and workshops. We thus posit:
+DP5. Those affected by an IT standard should be pro-
+vided with all relevant information regarding its utiliza-
+tion and benefits, so that users do not have to ask for
+information first.
+
+--- PAGE 10 ---
+1170 InformationSystemsFrontiers(2023)25:1161–1178
+1 3
+Pushing all relevant standard information to the users is
+expected to counteract faulty user behavior and, thereby, the
+creation of unnecessary costs and deficient IT services. DP5
+thus targets DG1 (IT cost reduction) and DG4 (improved
+quality of IT services). Pushing all relevant information to
+the users also presumably reduces the effort and resistance
+on the user side, thus promoting DG3 (enhanced IT manage-
+ability and controllability). We therefore posit the following
+testable propositions:
+TP5a. Pushing all relevant standard information to the
+users reduces business costs.
+TP5b. Pushing all relevant standard information to the
+users improves IT manageability and controllability.
+TP5c. Pushing all relevant standard information to the
+users improves the quality of IT services.
+4.2.6 DP6.IntegrateStandardManagementintoExisting
+ProcessesandStructures
+Implementing IT standard management as we propose in
+this paper has interdependencies with existing business
+operations (e.g. new process standards) and managerial
+decision-making (e.g. which standards should be introduced
+regarding which processes). OCT also suggests, that work-
+ing control systems require a careful consideration of organi-
+zational structure (OCT construct Organizational Structure).
+Structural integration helps realizing additional coordina-
+tion capacities in the context of high-level interdependency
+between IT, business, and standard management (Puranam
+et al., 2009). Process integration further enables an organiza-
+tion to steer and coordinate activities across internal borders
+(Rai et al., 2015). For instance, existing structures such as
+IT executive meetings can be adjusted with relative ease by
+including standards managers in order for IT management
+decisions regarding standardization topics to not contradict
+those of standard management (Dittes et al., 2014). We thus
+posit:
+DP6. Standard management is integrated into the organi-
+zation to corroborate the significance of ICITS within the
+organization and avoid contradictory decision-making.
+Integrating standard management into existing processes
+and structures is expected to improve standard decision-
+making, procedural integrity, and structural integration. DP6
+thus aims at DG3 (IT manageability and controllability), and
+we formulate the following testable proposition:
+TP6. Integrating standard management into existing
+processes and structures improves IT manageability and
+controllability.
+4.2.7 DP7.EstablishaRoleConceptwithClear
+Responsibilities
+Approaching OCT from the perspective of organizational
+roles, Collins (1982) argues that in order to achieve effective
+social control, it is necessary to communicate and internalize
+role expectations (OCT construct Organizational Structure).
+Literature in this field further suggests that people identify
+with the social norms and expectations associated with roles
+and aim to satisfy these expectations (Biddle, 1986). Moreo-
+ver, prescribed roles reinforce stability and predictability of
+the organizational structure (Rogers, 1983, p. 349). Moreo-
+ver, an effective implementation of a role concept improves
+accountability, which plays a significant part in reducing
+non-compliance to policies (Vance et al., 2013, 2015). We
+therefore posit:
+DP7. There is be a clear definition of all relevant roles in
+the ICITS process.
+Establishing a role concept with clear responsibilities is
+expected to lead to better personal accountability and to help
+employees understand their obligations. DP7 therefore aims
+at DG3 (IT manageability and controllability). We thus posit
+the following testable proposition:
+TP7. Establishing a role concept with clear responsibili-
+ties improves IT manageability and controllability.
+4.2.8 DP8.MinimizetheNumberofComponentStandards
+In our first round of interviews, it already became clear that
+the sheer number of standards can become a significant
+problem regarding the overall process of the implementation
+of ICITS. Participants did not only emphasize the high num-
+ber of standards they were confronted with, but also men-
+tioned that they were sometimes “uncertain which compo-
+nent standards work together.” While this issue is related to
+DP5 (Push all relevant information to the users), the extent
+of difficulties regarding unnecessary standard redundancy
+merits its separate treatment. The participants further sug-
+gested platform standardization as a potential solution for
+these transparency issues. We therefore posit:
+DP8. The number of standards for single, small compo-
+nents is minimized. Platform standards covering a signifi-
+cant functional range are used instead.
+Minimizing the number of component standards is
+expected to decrease redundancy caused by functionally
+overlapping standards and to reduce the likelihood of dys-
+functional integration of standards. DP8 therefore promotes
+
+--- PAGE 11 ---
+1171 InformationSystemsFrontiers(2023)25:1161–1178
+1 3
+DG1 (IT cost reduction). Minimizing the number of com-
+ponent standards also presumably increases the procedural
+transparency for users and improves the functional interac-
+tion of standards. DP8 therefore also aims at DG4 (qual-
+ity of IT services). We thus posit the following testable
+propositions:
+TP8a. Minimizing the number of component standards
+reduces business costs.
+TP8b. Minimizing the number of component standards
+improves the quality of IT services.
+Table 5 summarizes how the testable propositions link
+design principles and design goals.
+5 Evaluation
+5.1 EvaluationResultsofDesignGoals
+In general, the participants expressed strong agreement1
+with
+the design goals. This is reflected by average values (AVG)
+of agreement with the design goals ranging from 4.29 to
+4.86 on a scale from 1 (full disagreement) to 5 (full agree-
+ment), and a maximum standard deviation (STD) of 0.95
+as shown in Table 6. All participants noted that the current
+design goals cover all relevant objectives of ICITS and no
+participant named any additional ICITS goal not covered
+by the current design. Most experts further emphasized
+that the design goals strongly represent the practitioner’s
+perspective.
+With respect to DG1, it was confirmed that IT cost reduc-
+tion is a major driving point for organizations to initiate
+ICITS projects. The participants proposed increased hard-
+and software homogeneity and realization of economies of
+scale as the main reasons for this.
+Participants further commented that the degree to which
+ICITS reduce IT costs strongly depends on the current IT
+management maturity and the ability to bundle know-how
+on employees in ICITS steering positions, as hypothesized
+above. DG2 has the lowest average value with 4.29 and
+the highest standard deviation at 0.95. The interviewees
+acknowledged that organizations aim to increase flexibility
+through, e.g., simplified application landscapes, even though
+this may come at the cost of individual flexibility. DG3 and
+DG4 had the highest agreement throughout all interviews.
+Table 6 summarizes the quantitative parts of the design
+goals’ evaluation.
+5.2 EvaluationResultsofDesignPrinciples
+andtheirTestablePropositions
+In this section, we first discuss the general feedback regard-
+ing strengths and weaknesses of the current design and
+examine the evaluation results for each design principle and
+its testable propositions in detail.
+Regarding the strengths of the current design, most
+interviewees agreed that the current DPs are complete in
+the sense that they provide guidance in all relevant areas
+of ICITS. One participant commented that the DPs “have
+a good level of granularity while still covering all rele-
+vant aspects of [ICITS]”. A further strength identified by
+the interviewees consists in the relevancy of each DP for
+the ICITS process as well as the fact that the DPs guide
+organizations in efficient steering and managing of ICITS
+projects. Furthermore, there was a consensus that the DPs
+are applicable to any organizational context as long as the
+necessary decision-making and steering functions to get top
+management support for ICITS are guaranteed and as long
+as the specifics of an organization are not neglected during
+Table5  Summary of testable propositions, design principles and
+design goals
+Testable
+Proposition
+Design
+Principles
+DG1 DG2 DG3 DG4
+TP1a DP1 X
+TP1b DP1 X
+TP2 DP2 X
+TP3a DP3 X
+TP3b DP3 X
+TP4a DP4 X
+TP4b DP4 X
+TP5a DP5 X
+TP5b DP5 X
+TP5c DP5 X
+TP6 DP6 X
+TP7 DP7 X
+TP8a DP8 X
+TP8b DP8 X
+Table6  Design goals’ evaluation results
+Design goal N AVG STD
+DG1. Reduced IT costs 7 4.57 0.53
+DG2. Increased organizational flexibility 7 4.29 0.95
+DG3. Enhanced IT manageability and controllability 7 4.86 0.38
+DG4. Improved quality of IT services 7 4.86 0.38
+1
+More specifically, we asked for the participants’ respective degree
+of agreement with statements of the form “IT standardization aims
+at…”.
+
+--- PAGE 12 ---
+1172 InformationSystemsFrontiers(2023)25:1161–1178
+1 3
+the implementation of the DPs. The clear structure of the
+DPs was also positively noted.
+None of the interviewees named any overall weaknesses
+of the presented DPs. However, we noticed issues with the
+wording of some DPs – in particular the term ‘dedicated’ for
+DP1 as well as the lack of a clear reference to redundancy
+in the title of DP7 caused confusion for some participants.
+We also noticed an issue with the evaluation design. In par-
+ticular, we used applicability and adequacy as a combined
+criterion for evaluating each design principle. It seems that
+these two constructs target different aspects as most partici-
+pants answered the item ‘applicability and adequacy’ in two
+separate parts. The first part referred to whether the design
+principle can be applied in practice and the second part to
+whether it accurately supports ICITS. The experts further
+pointed out that our current design overlooks some inter-
+dependencies between design principles and design goals,
+which provides an interesting avenue for future research.
+5.2.1 EvaluationResultsofDP1anditsTestable
+Propositions
+The experts generally agreed that DP1 is purposeful and
+relevant (Avg: 4.71). They also agreed with it being appli-
+cable and adequate for supporting ICITS (Avg: 4.71). One
+participant pointed out that the applicability of DP1 depends
+on an organization’s management capabilities and size.
+This person suggested that while it makes sense to define
+responsibilities for standard steering and monitoring in large
+organizations, medium-sized organizations may choose to do
+so by defining appropriate roles for employees rather than
+establishing a dedicated institution.
+This suggests that we may need to address differences
+between medium and large organizations when defining
+DP1. Two interviewees further expressed that there is a gen-
+eral risk of overregulation. One of them said that “especially
+in Germany there is a regulation frenzy” that needs to be
+considered when organizations decide how to implement
+DP1.
+The evaluation of the testable propositions for DP1
+affirmed their validity with an average rating of 4.29 to 4.43
+and a maximum standard deviation of 0.76. Participants
+agreed that dedicated steering and monitoring supports the
+control of key standardization aspects and hence improves
+IT manageability and controllability (TP1a). In particular,
+experts from large organizations commonly described that
+they already use dedicated standard steering and monitoring
+(e.g. in the form of standard offices) and stated that it signifi-
+cantly reduces ICITS management complexity. They further
+validated that monitoring standard user behavior counter-
+acts noncompliance and positively influences the quality of
+IT services (TP1b). Most experts agreed that performance
+indicators can be used to quickly evaluate key ICITS aspects.
+One participant mentioned key performance indicators to
+be a prerequisite for controlling the ICITS process. Another
+participant pointed out that DP1 can lead to overall business
+IT cost reduction if implemented thoroughly and efficiently.
+5.2.2 EvaluationResultsofDP2anditsTestable
+Propositions
+All participants fully agreed that a standard lifecycle con-
+cept is purposeful and relevant for successful ICITS. They
+also generally confirmed the applicability and adequacy of
+DP2 (Avg: 4.71). However, only few of the experts were
+aware of a standard lifecycle in their organization. Instead,
+they commonly referred to general patterns of the introduc-
+tion and the use of IT standards in their companies. Most
+of them argued that the IT standard lifecycle varies signifi-
+cantly depending on its organizational purpose. Some par-
+ticipants further stated that their organization follows ITIL
+(Information Technology Infrastructure Library) definitions
+and ISO norms rather than having an abstract lifecycle for
+IT standards.
+With reference to TP2, the average rating is 4.71 with a
+standard deviation of 0.49. The experts acknowledge that
+a standard lifecycle concept helps with the awareness of
+phase-specific challenges as well as establishing standardi-
+zation as an ongoing process, and thereby positively influ-
+ences IT manageability and controllability. One participant
+commented that understanding the lifecycle of an IT stand-
+ard is a critical requirement for large scale ICITS. Three
+participants further stated that DP2 allows for better plan-
+ning of organizational resources.
+5.2.3 EvaluationResultsofDP3anditsTestable
+Propositions
+One participant did not evaluate DP3 due to lacking experi-
+ence with the management by objective (MBO) approach.
+The remaining experts fully agreed with the purpose and
+relevancy of DP3 and generally confirmed its applicabil-
+ity and adequacy (Avg: 4.33). One expert expressed doubts
+regarding the applicability of an incentive system with posi-
+tive sanctions for standard compliance and hence gave lower
+ratings for all items of DP3 and its testable propositions,
+except purpose and relevancy.
+With reference to the testable propositions, five partici-
+pants confirmed the validity of TP3a stating that standard-
+oriented MBO fosters the linkage of individual and organi-
+zational goals (Avg: 4.00). They agreed that it leads to better
+understanding of organizational ICITS goals and increasing
+the motivation of employees to work towards them, thereby
+positively influencing IT manageability and controllability.
+They further confirmed that including employees and lower
+management into the definition of ICITS objectives as well
+
+--- PAGE 13 ---
+1173 InformationSystemsFrontiers(2023)25:1161–1178
+1 3
+as introducing an incentive system counteracts employees’
+deviant behavior towards IT standards and therefore posi-
+tively affects the quality of IT services (TP3b). Two partici-
+pants said that their organizations run mandatory enterprise-
+wide application control.
+5.2.4 EvaluationResultsofDP4anditsTestable
+Propositions
+Six of the seven interviewees fully agreed with the purpose
+and relevancy (Avg: 4.86) as well as applicability and ade-
+quacy (Avg: 4.57) of DP4. One participant criticized the
+applicability of DP4 and described that most organizations
+avoid change until no longer possible. While it may be true
+that organizations avoid change, we believe this emphasizes
+the purpose and relevancy of DP4 as it speaks to the exact
+problem of organizations avoiding change rather than han-
+dling it in a timely manner.
+TP4b had the lowest rating of all testable propositions
+(Avg: 3.70). As mentioned above, one participant fully disa-
+greed with the need for organizations to welcome change,
+arguing that in practice, organizations tend to preserve
+systems that are deemed to work well. Another participant
+stayed neutral towards TP4b as this person was not con-
+vinced that the overall cost-savings of anticipating techni-
+cal change outweigh the cost for establishing anticipatory
+change management. The other five participants expressed
+their approval of TP4b. TP4a, on the other hand, received
+overall acceptance with an average of 4.57.
+5.2.5 EvaluationResultsofDP5anditsTestable
+Propositions
+All experts considered DP5 to be purposeful and relevant for
+ICITS and confirmed its applicability and adequacy (Avg:
+4.71). They named communication as a major driver for pro-
+cess transparency.
+The interviewees regarded all three testable propositions
+as valid. They agreed that organizations should provide their
+employees with all relevant information regarding the use of
+newITstandardsaswellastheirindividualandorganizational
+benefits. They generally confirmed that this counteracts faulty
+userbehavior,thusleadingtoreducedbusinessITcosts(TP5a)
+and improved quality of IT services (TP5c). One participant
+mentionedthatemployeesshouldreceiveregulartraining(e.g.
+regular workshops) to prevent misuse of standards and user
+frustration. The experts further agreed that DP5 reduces the
+effort for obtaining necessary information on the user side
+and counteracts resistance to standards, thereby supporting
+IT manageability and controllability (TP5b). However, they
+emphasized that organizations need to avoid flooding their
+employees with irrelevant information when implementing
+DP5. According to the participants, organizations need to
+make use of efficient communication channels when provid-
+ingemployeeswithinformationandavoidprovidingtoomuch
+unnecessary information as standard resistance may increase
+otherwise. All participants described that their organizations
+communicate information about new IT standards but most
+of them stated that there is no communication of the ben-
+efits of standards. Additionally, they commented that infor-
+mation about new IT standards is usually kept to basic user
+instructions.
+5.2.6 EvaluationResultsofDP6anditsTestable
+Propositions
+Allexpertsexpressedfullagreementwiththepurposeandrel-
+evancyofDP6forsuccessfulICITS.Mostexpertspointedout
+that (management) integration is a key topic of ICITS. There
+was general consent that it is applicable and adequate for sup-
+porting the ICITS process in organizations (Avg: 4.57). Most
+participants acknowledged the integration of current business
+and IT management with standard management as a manda-
+tory precondition for ICITS.
+They also validated that existing processes and structures
+– such as executive meetings – should be complemented with
+IT management mechanisms to avoid contradictory decision
+making,ensuretheintegrityofIT(standard)relatedprocesses,
+improvestructuralintegration,andtherebyultimatelyenhance
+IT manageability and controllability (TP6). One participant
+suggestedthatDP6alsopositivelyinfluencescostreductionas
+integrated decision-making avoids faulty process design and
+therefore prevents processes from failing.
+5.2.7 EvaluationResultsofDP7anditsTestable
+Propositions
+The interviewees fully agreed with DP7 being purposeful
+and relevant for ICITS. They also confirmed that a role con-
+cept with clear responsibilities is applicable in practice and
+supports organizational ICITS.
+The experts validated that a role concept leads to bet-
+ter personal accountability and helps employees understand
+their obligation, thus improving IT manageability and con-
+trollability (TP7). Most participants further agreed that roles
+need to be clearly defined to keep the ICITS process trans-
+parent. One participant commented that DP7 addresses the
+quality of IT services (DG4), arguing that clear role defini-
+tions lead to a higher compliance to IT standards as people
+can be held accountable for their actions.
+5.2.8 EvaluationResultsofDP8anditsTestable
+Propositions
+The experts fully confirmed the purpose and relevancy
+of DP8. They generally agreed with its applicability and
+
+--- PAGE 14 ---
+1174 InformationSystemsFrontiers(2023)25:1161–1178
+1 3
+adequacy (Avg: 4.86). They stated that avoiding unneces-
+sary redundancy is an important aspect of keeping ICITS
+processes transparent for users. However, there seem to be
+some issues with the exact phrasing of DP8, as most experts
+initially misunderstood it and thought that it promotes a
+reduction of ICITS rather than controlling unnecessary
+redundancy.
+With reference to TP8a, the participants agreed that by
+minimizing small component standards and controlling
+unnecessary standard redundancy, functional overlaps and
+integration errors can be reduced, thus leading to reduced IT
+costs. They also agreed that decreasing the number of com-
+ponent standards increases process transparency for users,
+improves the functional interaction of standards, and thereby
+improves the quality of IT services (TP8b). The interviewees
+pointed out that the successful implementation of DP8 criti-
+cally depends on the maturity of the large standards replac-
+ing old standards. One participant further mentioned that
+DP8 enhances IT manageability and controllability (DG3)
+as it reduces the complexity of the IT landscape. Another
+participant suggested that by reducing the number of stand-
+ards in an organization, standards can be replaced with less
+effort and it becomes easier for employees to focus on cer-
+tain standards. That person concluded that this leads to lower
+reaction times for the ICITS support staff, thus increasing
+organizational flexibility (DG2).
+Table 7 summarizes the quantitative parts of the evalua-
+tion of the design principles and their testable propositions.
+6 Discussion and Conclusion
+The aim of this paper was to develop a design theory for the
+management and governance of organizational IT standards.
+The theory is grounded on Organizational Control Theory,
+additional relevant literature, as well as on an exploratory
+Table7  Evaluation results for
+the design principles and their
+testable propositions
+* One of the seven interviewees could not provide information regarding DP4 and the corresponding TPs
+Design principles and their testable propositions N AVG STD
+DP1. Steering and monitoring – Purpose and relevancy 7 4.71 0.49
+DP1. Steering and monitoring – Applicability and adequacy 7 4.71 0.49
+TP1a. Improved IT manageability and controllability 7 4.29 0.76
+TP1b. Improved IT services quality 7 4.43 0.54
+DP2. Lifecycle concept – Purpose and relevancy 7 5 0
+DP2. Lifecycle concept – Applicability and adequacy 7 4.71 0.49
+TP2. Improved IT manageability and controllability 7 4.71 0.49
+DP3. Linking goals – Purpose and relevancy 6* 5 0
+DP3. Linking goals – Applicability and adequacy 6 4.33 0.82
+TP3a. Improved IT manageability and controllability 6 4 1.1
+TP3b. Improved IT services quality 6 4.17 0.75
+DP4. Anticipate and handle technical change – Purpose and relevancy 7 4.86 0.38
+DP4. Anticipate and handle technical change – Applicability and adequacy 7 4.57 1.13
+TP4a. Improved organizational flexibility 7 4.57 0.79
+TP4b. Improved IT manageability and controllability 7 3.7 1.38
+DP5. Push communication – Purpose and relevancy 7 5 0
+DP5. Push communication – Applicability and adequacy 7 4.71 0.49
+TP5a. Reduced IT costs 7 4.57 0.54
+TP5b. Improved IT manageability and controllability 7 4.71 0.49
+TP5c. Improved IT services quality 7 4.57 0.54
+DP6. Integrate standard management – Purpose and relevancy 7 5 0
+DP6. Integrate standard management – Applicability and adequacy 7 4.57 0.79
+TP6. Improved IT manageability and controllability 7 4.86 0.38
+DP7. Clear role concept – Purpose and relevancy 7 5 0
+DP7. Clear role concept – Applicability and adequacy 7 4.86 0.38
+TP7. Improved IT manageability and controllability 7 4.57 0.79
+DP8. Minimize small component standards – Purpose and relevancy 7 4.86 0.38
+DP8. Minimize small component standards – Applicability and adequacy 7 4.14 1.22
+TP8a. Reduced IT costs 7 4.86 0.38
+TP8b. Improved IT services quality 7 4.86 0.38
+
+--- PAGE 15 ---
+1175 InformationSystemsFrontiers(2023)25:1161–1178
+1 3
+and a confirmatory interview study. Based on our qualita-
+tive exploratory study at a large automotive manufacturing
+organization, we posited four design goals indicating that
+IT standardization should be managed so as to lower busi-
+ness costs, increase organizational flexibility, enhance IT
+manageability and controllability, and improve the quality
+of IT processes and services. Based on these goals and an
+analysis of relevant literature, we developed eight design
+principles with corresponding testable propositions that
+can be applied in practice in order to manage organizational
+IT standardization. Finally, the resulting design theory was
+evaluated through a quantitative and qualitative interviews
+study involving subject-matter experts from different com-
+panies and industries.
+Our research contributes to theory as well as practice: To
+the best of our knowledge, our work is the first design theory
+to provide a detailed, holistic management framework for
+organizational IT standardization. While previous studies
+about the management of IT standardization mostly concern
+non-organizational, industry-related standards set by higher
+authorities, investigations of in-company IT standards are
+fragmented and do not provide a holistic set of managerial
+recommendations. Furthermore, existing recommendations
+regarding ICITS mostly lack any theoretical underpinnings.
+Our theory, in contrast, showcases the adaptability of OCT
+in the context of ICITS, thus adding to the theory’s valid-
+ity and generalizability. The holistic nature of our theory,
+its empirical foundations, and its theoretical underpinnings
+together form a valuable contribution to the existing body of
+theoretical knowledge on the management of ICITS.
+Further, we provide hands-on management mechanisms
+to guide future standardization endeavors in practice. Apply-
+ing our design principles in practice, organizations can bet-
+ter understand IT standardization, minimize deviant behav-
+ior towards organizational IT standards and thus decrease
+costs, enhance flexibility, ensure manageability and improve
+the service quality of the organizational IT. However, our
+research also revealed that companies should not blindly fol-
+low and implement these principles. Instead, the proper way
+of applying our theory to specific organizations varies with
+several factors, including the following: size of the organiza-
+tion, organizational IT maturity, degree of IT standardiza-
+tion, and organizational attitude towards change. In what
+follows, we will address the role of each of these factors.
+First, while our theory only addresses medium to large
+sized companies, there may still be significant implemen-
+tation differences between medium and large companies.
+For instance, it may not be necessary for medium-sized
+companies to introduce an incentive system if the organi-
+zation size allows for relatively easy control of standard
+compliance. On the other hand, an incentive system might
+be necessary for controlling standard compliance in large
+companies. The responsible authorities in large companies
+may, for instance, consider regular application scans in
+order to guarantee adherence to IT standards. Furthermore,
+it may be efficient for large companies to employ members
+who are fully dedicated to steering and monitoring stand-
+ards, while medium-sized companies may assign these
+responsibilities to existing roles.
+A second factor we anticipate affecting our theory’s
+implementation is organizational IT maturity. We expect
+organizations with high IT maturity (e.g., high expertise
+in IT governance, high level of IT integration, experience
+with ICITS) to already use some of our design princi-
+ples and also to have processes as well as structures in
+place that facilitate the implementation of the other design
+principles. We assume this is particularly likely for DP1
+(steering and monitoring), DP2 (lifecycle concept), DP4
+(technical change standard change management), and DP7
+(clear role concept).
+Third, we hypothesize that the degree of organizational
+IT standardization influences the ease of implementation
+as well as the acceptance of the design principles. In par-
+ticular, organizations with a high degree of standard diffu-
+sion are likely to already use some of our design principles
+in practice and implement further ones more efficiently.
+Additionally, we suspect acceptance of standards and
+corresponding management processes to be higher since
+employees are already used to IT standards and recognize
+their importance.
+Finally, we consider an organization’s attitude towards
+change as a fourth factor influencing the ease of imple-
+menting the principles. That is, we expect organizations
+that promote organizational change and motivate employ-
+ees to give them feedback about current management prac-
+tices to experience less resistance to ICITS.
+Our research underlies certain limitations. Since the
+evaluation of our design theory is still in an early phase, we
+were not yet able to observe all our current design princi-
+ples fully applied in practice, as recommended by Gregor
+and Jones (2007). Additionally, we are not yet in a position
+to confidently attribute individual weights concerning the
+importance of each design principle. Accordingly, we plan
+to further evaluate our theory by developing a measurement
+model and conducting a study using quantitative methods in
+order to determine the importance of each design principle
+for organizational IT standardization. Another avenue for
+future research that we are currently planning to pursue con-
+cerns an empirical investigation of interdependencies both
+among the design goals and among the design principles.
+Funding Open Access funding enabled and organized by Projekt
+DEAL.
+
+--- PAGE 16 ---
+1176 InformationSystemsFrontiers(2023)25:1161–1178
+1 3
+Declarations
+Conflict of Interest All authors declare that they have no conflicts of
+interest.
+OpenAccess This article is licensed under a Creative Commons Attri-
+bution 4.0 International License, which permits use, sharing, adapta-
+tion, distribution and reproduction in any medium or format, as long
+as you give appropriate credit to the original author(s) and the source,
+provide a link to the Creative Commons licence, and indicate if changes
+were made. The images or other third party material in this article are
+included in the article's Creative Commons licence, unless indicated
+otherwise in a credit line to the material. If material is not included in
+the article's Creative Commons licence and your intended use is not
+permitted by statutory regulation or exceeds the permitted use, you will
+need to obtain permission directly from the copyright holder. To view a
+copy of this licence, visit http://​creat​iveco​mmons.​org/​licen​ses/​by/4.​0/.
+References
+Allen, D. K., Brown, A., Karanasios, S., & Norman, A. (2013).
+How should technology-mediated organizational change be
+explained? A comparison of the contributions of critical real-
+ism and activity theory. MIS Quarterly, 37(3), 835–854.
+Andres, H. P., & Zmud, R. W. (2002). A contingency approach to
+software project coordination. Journal of Management Informa-
+tion Systems, 18(3), 41–70. https://​doi.​org/​10.​1080/​07421​222.​
+2002.​11045​695
+Backhouse, J., Hsu, C. W., & Silva, L. (2006). Circuits of power in
+creating de jure standards: Shaping an international information
+systems security standard. MIS Quarterly, 30(Special Issue),
+413–438.
+Barnard, C. I. (1968). The Functions of the Executive. Harvard Uni-
+versity Press.
+Bell, M. L. (1980). Management by objectives. Journal of Nursing
+Administration, 10(5), 19–26.
+Biddle, B. J. (1986). Recent development in role theory. Annual
+Review of Sociology, 12, 67–92.
+Bird, G. B. (1998). The business benefit of standards. StandardView,
+6(2), 76–80. https://​doi.​org/​10.​1145/​301688.​301691
+Boh, W. F., & Yellin, D. (2006). Using enterprise architecture stand-
+ards in managing information technology. Journal of Manage-
+ment Information Systems, 23(3), 163–207. https://​doi.​org/​10.​
+2753/​MIS07​42-​12222​30307
+Cardinal, L. B., Sitkin, S. B., & Long, C. P. (2004). Balancing and
+rebalancing in the creation and evolution of organizational con-
+trol. Organization Science, 15(4), 411–431. https://​doi.​org/​10.​
+1287/​orsc.​1040.​0084
+Choi, B., Raghu, T. S., Vinzé, A., & Dooley, K. J. (2019). Effec-
+tiveness of standards consortia: Social network perspectives.
+Information Systems Frontiers, 21, 405–416. https://​doi.​org/​10.​
+1007/​s10796-​017-​9759-x
+Chua, C., Storey, V., & Chen, L. (2014). Central IT or Shadow IT?
+Factors Shaping Users’ Decision to Go Rogue With IT. ICIS
+2014 Proceedings, 1–14. https://​aisel.​aisnet.​org/​icis2​014/​proce​
+edings/​ISGov​ernan​ce/2. Accessed 18 Apr 2022.
+Collins, F. (1982). Managerial accounting systems and organiza-
+tional control: A role perspective. Accounting, Organizations
+and Society, 7(2), 107–122. https://​doi.​org/​10.​1016/​0361-​
+3682(82)​90015-0
+Curran, C. (2010, May 6). CIO Dashboard » Governance, Analytics
+and Standards. http://​www.​cioda​shboa​rd.​com/​it-​strat​egy/​analy​
+tics-​gover​nance-​stand​ards/. Accessed 18 Apr 2022.
+de De Vries, H. J., Slob, F. J. C., & Zuid-Holland, V. G. (2006).
+Best Practice in company standardization. International Journal
+of IT Standards and Standardization Research (IJITSR), 4(1),
+62–85. https://​doi.​org/​10.​4018/​jitsr.​20060​10104
+De Vries, H. J. (1999). Standardization: A Business Approach to
+the Role of National Standardization Organizations. Kluwer
+Academic Publishers.
+Dittes, S., Urbach, N., & Ahlemann, F. (2014). IT-Standardis-
+ierung—Vom Lippenbekenntnis zu nachhaltigem Nutzen.
+Wirtschaftsinformatik & Management, 6(4), 29–39. https://​doi.​
+org/​10.​1365/​s35764-​014-​0440-6
+Dittes, S., Urbach, N., Ahlemann, F., Smolnik, S., & Müller, T.
+(2015). Why don’t you stick to them? Understanding factors
+influencing and counter-measures to combat deviant behavior
+towards organizational IT standards. Proceedings of the 12th
+International Conference on Wirtschaftsinformatik (WI), Osna-
+brück, Germany, 615–629.
+Emmerich, W., Finkelstein, A., Montangero, C., Antonelli, S., Armit-
+age, S., & Stevens, R. (1999). Managing standards compliance.
+IEEE Transactions on Software Engineering, 25(6), 836–851.
+https://​doi.​org/​10.​1109/​32.​824413
+Flamholtz, E. G. (1983). Accounting, budgeting and control sys-
+tems in their organizational context: Theoretical and empiri-
+cal perspectives. Accounting, Organizations and Society, 8(2),
+153–169.
+Flamholtz, E. G., Das, T. K., & Tsui, A. S. (1985). Toward an
+integrative framework of organizational control. Accounting,
+Organizations and Society, 10(1), 35–50. https://​doi.​org/​10.​
+1016/​0361-​3682(85)​90030-3
+Foorthuis, R., van Steenbergen, M., Brinkkemper, S., & Bruls, W. A.
+G. (2016). A theory building study of enterprise architecture prac-
+tices and benefits. Information Systems Frontiers, 18, 541–564.
+https://​doi.​org/​10.​1007/​s10796-​014-​9542-1
+Goodhue, D. L. (1995). Understanding User Evaluations of Information
+Systems. Management Science, 41(12), 1827–1844.
+Gregor, S., & Jones, D. (2007). The anatomy of a design theory. Jour-
+nal of the Association for Information Systems, 8(5), 313–335.
+Hanseth, O., & Braa, K. (2001). Hunting for the treasure at the end of
+the rainbow: Standardizing corporate IT infrastructure. Computer
+Supported Cooperative Work (CSCW), 10(3–4), 261–292. https://​
+doi.​org/​10.​1023/A:​10126​37309​336
+Herath, T., & Rao, H. R. (2009). Protection motivation and deter-
+rence: A framework for security policy compliance in organisa-
+tions. European Journal of Information Systems, 18(2), 106–125.
+https://​doi.​org/​10.​1057/​ejis.​2009.6
+Hesser, W., & Inklaar, A. (1998). An Introduction to Standards and
+Standardization (2nd ed.). Beuth.
+Jun, M., & Cai, S. (2003). Key obstacles to EDI success: From the US
+small manufacturing companies’ perspective. Industrial Manage-
+ment & Data Systems, 103(3), 192–203. https://​doi.​org/​10.​1108/​
+02635​57031​04656​70
+Kirsch, L. J. (1996). The management of complex tasks in organiza-
+tions: Controlling the systems development process. Organization
+Science, 7(1), 1–21.
+Kirsch, L. J. (2004). Deploying common systems globally: The dynam-
+ics of control. Information Systems Research, 15(4), 374–395.
+https://​doi.​org/​10.​1287/​isre.​1040.​0036
+Kondo, Y. (2000). Innovation versus standardization. The TQM Maga-
+zine, 12(1), 6–10. https://​doi.​org/​10.​1108/​09544​78001​02871​77
+Liang, H., Xue, Y., & Wu, L. (2012). Ensuring employees’ IT com-
+pliance: Carrot or stick? Information Systems Research, 24(2),
+279–294. https://​doi.​org/​10.​1287/​isre.​1120.​0427
+Müller, T., Dittes, S., Ahlemann, F., Urbach, N., & Smolnik, S. (2015,
+January). Because Everybody is Different: Towards Understand-
+ing the Acceptance of Organizational IT Standards. Proceedings
+of the 48th Hawaii International Conference on System Sciences.
+
+--- PAGE 17 ---
+1177 InformationSystemsFrontiers(2023)25:1161–1178
+1 3
+Münstermann, B., Eckhardt, A., & Weitzel, T. (2010). The performance
+impact of business process standardization: An empirical evalu-
+ation of the recruitment process. Business Process Management
+Journal, 16(1), 29–56. https://​doi.​org/​10.​1108/​14637​15101​10179​
+30
+Ngai, E. W. T., Poon, J. K. L., Suk, F. F. C., & Ng, C. C. (2009). Design
+of an RFID-based Healthcare Management System using an Infor-
+mation System Design Theory. Information Systems Frontiers, 11,
+405–417. https://​doi.​org/​10.​1007/​s10796-​009-​9154-3
+Ouchi, W. G. (1978). The transmission of control through organiza-
+tional hierarchy. Academy of Management Journal, 21(2), 173–
+192. https://​doi.​org/​10.​2307/​255753
+Ouchi, W. G. (1979). A conceptual framework for the design of
+organizational control mechanisms. Management Science, 25(9),
+833–848.
+Ouchi, W. G. (1980). Markets, bureaucracies, and clans. Administrative
+Science Quarterly, 25(1), 129–141.
+Puranam, P., Singh, H., & Chaudhuri, S. (2009). Integrating acquired
+capabilities: When structural integration is (un)necessary. Organi-
+zation Science, 20(2), 313–328. https://​doi.​org/​10.​1287/​orsc.​1090.​
+0422
+Rai, A., Arikan, I., Pye, J., & Tiwana, A. (2015). Fit and misfit of plural
+sourcing strategies and IT-enabled process integration capabili-
+ties: Consequences of firm performance in the US electric utility
+Industry. Mis Quarterly, 39(4), 865–885.
+Rogers, E. M. (1983). Diffusion of Innovations (3rd ed.). The Free
+Press.
+Russo, N. L., Hightower, R., & Pearson, J. M. (1996). The Failure of
+Methodologies to Meet the Needs of Current Development Envi-
+ronments. Proceedings of the British Computer Society’s Annual
+Conference on Information System Methodologies, 387–393.
+Scantlebury, S., Thiel, W., Datel, A., & Kimmel, S. (2004). From IT
+Complexity to Commonality: Making Your Business More Nim-
+ble (Opportunities for Action in Information Technology). Boston
+Consulting Group.
+Schmidt, S. K., & Werle, R. (1998). Coordinating Technology: Stud-
+ies in the International Standardization of Telecommunications.
+MIT Press.
+Shetty, Y. K., & Carlisle, H. M. (1974). Organizational correlates of a
+management by objectives program. The Academy of Management
+Journal, 17(1), 155–160. https://​doi.​org/​10.​2307/​254780
+Silic, M. (2015). Emerging from the Shadows: Survey Evidence of
+Shadow IT Use from Blissfully Ignorant Employees (SSRN Schol-
+arly Paper ID 2633000). Social Science Research Network. https://​
+papers.​ssrn.​com/​abstr​act=​26330​00. Accessed 18 Apr 2022.
+Thiel, W., Datel, A., Scantlebury, S., & Kimmel, S. (2004, May). From
+IT Complexity to Commonality. Bcg.Perspectives. https://​www.​
+bcgpe​rspec​tives.​com/​conte​nt/​artic​les/​infor​mation_​techn​ology_​it_​
+organ​izati​on_​from_​it_​compl​exity_​to_​commo​nality/. Accessed 18
+Apr 2022.
+Tiwana, A. (2010). Systems development ambidexterity: Explaining
+the complementary and substitutive roles of formal and informal
+controls. Journal of Management Information Systems, 27(2),
+87–126. https://​doi.​org/​10.​2753/​MIS07​42-​12222​70203
+Tiwana, A., & Konsynski, B. (2010). Complementarities between
+organizational IT architecture and governance structure. Informa-
+tion Systems Research, 21(2), 288–304. https://​doi.​org/​10.​1287/​
+isre.​1080.​0206
+Turner, K. L., & Makhija, M. V. (2006). The role of organizational con-
+trols in managing knowledge. Academy of Management Review,
+31(1), 197–217. https://​doi.​org/​10.​5465/​AMR.​2006.​19379​631
+van Wessel, R. (2010). Toward corporate IT standardization manage-
+ment: Frameworks and solutions. Information Science Reference.
+van Wessel, R., Ribbers, P., & Vries, H. de. (2005). On the effects of
+IS company standards on business process performance. The 4th
+Conference on Standardization and Innovation in Information
+Technology, 2005., 254–267. https://​doi.​org/​10.​1109/​SIIT.​2005.​
+15638​13.
+Vance, A., Lowry, P. B., & Eggett, D. (2013). Using accountability to
+reduce access policy violations in information systems. Journal
+of Management Information Systems, 29(4), 263–290. https://​doi.​
+org/​10.​2753/​MIS07​42-​12222​90410
+Vance, A., Lowry, P. B., & Eggett, D. (2015). Increasing account-
+ability through user-interface design artifacts: A new approach to
+addressing the problem of access-policy violations. MIS Quar-
+terly, 39(2), 345–366.
+Venkatesh, V., & Davis, F. D. (2000). A theoretical extension of the
+technology acceptance model: Four longitudinal field studies.
+Management Science, 46(2), 186. https://​doi.​org/​10.​1287/​mnsc.​
+46.2.​186.​11926. Accessed 18 Apr 2022.
+Verburg, R. M., Nienaber, A.-M., Searle, R. H., Weibel, A., Den Har-
+tog, D. N., & Rupp, D. E. (2018). The role of organizational con-
+trol systems in employees’ organizational trust and performance
+outcomes. Group & Organization Management, 43(2), 179–206.
+https://​doi.​org/​10.​1177/​10596​01117​725191
+Walls, J. G., Widmeyer, G. R., & El Sawy, O. A. (1992). Building an
+information system design theory for vigilant EIS. Information
+Systems Research, 3(1), 36–59. https://​doi.​org/​10.​1287/​isre.3.​1.​36
+Weitzel, T. (2003). A Network ROI. Proceedings of the 2003 MISQ
+Academic Workshop on ICT Standardization (Pre-ICIS Work-
+shop), Seattle (WA), 62–79.
+Weston, C., Gandell, T., Beauchamp, J., McAlpine, L., Wiseman, C.,
+& Beauchamp, C. (2001). Analyzing interview data: The devel-
+opment and evolution of a coding system. Qualitative Sociology,
+24(3), 381–400.
+Wüllenweber, K., Beimborn, D., Weitzel, T., & König, W. (2008). The
+impact of process standardization on business process outsourcing
+success. Information Systems Frontiers, 10, 211–224. https://​doi.​
+org/​10.​1007/​s10796-​008-​9063-x
+Zhu, H., & Fu, L. (2009). Quality of Data Standards: Empirical Find-
+ings from XBRL (SSRN Scholarly Paper ID 1556678). Social Sci-
+ence Research Network. https://​papers.​ssrn.​com/​abstr​act=​15566​
+78. Accessed 18 Apr 2022.
+Zigurs, I., & Buckland, B. K. (1998). A theory of task/technology fit
+and group support systems effectiveness. MIS Quarterly, 22(3),
+313–334.
+Publisher's Note Springer Nature remains neutral with regard to
+jurisdictional claims in published maps and institutional affiliations.
+FrederikAhlemann holds the chair for Information Systems and Stra-
+tegic IT Management at the University of Duisburg- Essen, Germany.
+He obtained his doctorate from the University of Osnabrück in 2006.
+He subsequently joined the European Business School, Germany as
+an Assistant Professor where he headed a competence center for stra-
+tegic IT/IS management. In 2012 he was appointed full professor at
+the University of Duisburg-Essen. Prof. Ahlemann’s research interests
+are digital transformation, digital business models, project portfolio
+management, enterprise architecture management, and Smart Cities.
+SvenDittes is a researcher at the University of Hagen and management
+consultant. His research interests lie in the areas of (digital) strategy,
+digital work, adoption, IS success and change management.
+TimFillbrunn works as a Solution Architect at the Mercedes Benz AG
+in Germany, Duesseldorf. He started working at his current position
+after finishing his Master’s Degree in Business Information Systems
+at the University of Duisburg-Essen.
+
+--- PAGE 18 ---
+1178 InformationSystemsFrontiers(2023)25:1161–1178
+1 3
+Kevin Rehring is Acting Chief Information Security Officer (CISO)
+& Enterprise Architect at DVV - Duisburger Versorgungs- und
+Verkehrsgesellschaft mbH. He obtained his doctorate from the Uni-
+versity of Duisburg-Essen, Germany in 2021, where he did research in
+the area of enterprise architecture management and augmented reality
+as well as smart city and IoT.
+Stefan Reining is a full-stack developer at FUNKE Mediengruppe
+GmbH & Co. KGaA. He obtained his Ph.D. degree in Analytic Phi-
+losophy at the University of Barcelona, Spain, in 2014 and worked as
+a research asscociate at the chair of Information Systems and Strategic
+IT Management at the University of Duisburg-Essen, Germany, until
+2021.
+NilsUrbach is Professor of Information Systems, Digital Business and
+Mobility as well Director of the Research Lab for Digital Innovation
+& Transformation (ditlab) at the Frankfurt University of Applied Sci-
+ences. Furthermore, he is Deputy Director of the Finance & Informa-
+tion Management (FIM) Research Center and the Project Group Busi-
+ness & Information Systems Engineering of the Fraunhofer Institute
+for Applied Information Technology FIT as well as Co-Founder and
+Director of the Fraunhofer Blockchain Lab.

@@ -1,0 +1,486 @@
+--- PAGE 1 ---
+ScienceDirect
+Available online at www.sciencedirect.com
+Procedia Computer Science 138 (2018) 655–662
+1877-0509 © 2018 The Authors. Published by Elsevier Ltd.
+This is an open access article under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0/)
+Selection and peer-review under responsibility of the scientific committee of the CENTERIS - International Conference on ENTERprise
+Information Systems / ProjMAN - International Conference on Project MANagement / HCist - International Conference on Health and
+Social Care Information Systems and Technologies.
+10.1016/j.procs.2018.10.087
+© 2018 TheAuthors. Published by Elsevier Ltd.
+This is an open access article under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0/)
+Selection and peer-review under responsibility of the scientific committee of the CENTERIS - International Conference on
+ENTERpriseInformationSystems/ProjMAN-InternationalConferenceonProjectMANagement/HCist-InternationalConference
+on Health and Social Care Information Systems and Technologies.
+ScienceDirect
+Procedia Computer Science 00 (2018) 000–000
+www.elsevier.com/locate/procedia
+1877-0509 © 2018 The Authors. Published by Elsevier Ltd.
+This is an open access article under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0/)
+Selection and peer-review under responsibility of the scientific committee of the CENTERIS - International Conference on ENTERprise
+Information Systems / ProjMAN - International Conference on Project MANagement / HCist - International Conference on Health and Social
+Care Information Systems and Technologies.
+CENTERIS - International Conference on ENTERprise Information Systems /
+ProjMAN - International Conference on Project MANagement / HCist - International
+Conference on Health and Social Care Information Systems and Technologies,
+CENTERIS/ProjMAN/HCist 2018
+Aligning Enterprise Systems Capabilities with Business Strategy:
+An extension of the Strategic Alignment Model (SAM) using
+Enterprise Architecture
+Prithvi Bhattacharya*
+Higher Colleges of Technology, Dubai, UAE
+Abstract
+In the last decade, Enterprise Architecture (EA) has been proposed to have the potential to improve and support strategic
+alignment between business and IT. This paper reviews the literature on cross-domain strategic alignment, as well as on
+Enterprise Architecture, and presents a new model to depict strategic alignment between business and IT by augmenting the
+widely cited Strategic Alignment Model (SAM) with an Enterprise Architecture framework, The Open Group Architecture
+Framework (TOGAF). The contribution of this paper is that it intends to present a holistic, generic model by synthesizing the
+SAM with the constructs of TOGAF to present a more comprehensive technique of modelling strategic alignment of business and
+IT. Also, the model illustrates this using Enterprise Systems as the chosen IT platform. Subsequently, the proposed model will be
+tested using empirical data from case studies and the results will be presented in another paper.
+© 2018 The Authors. Published by Elsevier Ltd.
+This is an open access article under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0/)
+Selection and peer-review under responsibility of the scientific committee of the CENTERIS - International Conference on
+ENTERprise Information Systems / ProjMAN - International Conference on Project MANagement / HCist - International
+Conference on Health and Social Care Information Systems and Technologies.
+Keywords: Enterprise Architecture, Strategic Alignment, Enterprise Systems
+* Corresponding author. Tel.: +971508631242.
+E-mail address: Prithvi.bhatt@gmail.com
+Available online at www.sciencedirect.com
+ScienceDirect
+Procedia Computer Science 00 (2018) 000–000
+www.elsevier.com/locate/procedia
+1877-0509 © 2018 The Authors. Published by Elsevier Ltd.
+This is an open access article under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0/)
+Selection and peer-review under responsibility of the scientific committee of the CENTERIS - International Conference on ENTERprise
+Information Systems / ProjMAN - International Conference on Project MANagement / HCist - International Conference on Health and Social
+Care Information Systems and Technologies.
+CENTERIS - International Conference on ENTERprise Information Systems /
+ProjMAN - International Conference on Project MANagement / HCist - International
+Conference on Health and Social Care Information Systems and Technologies,
+CENTERIS/ProjMAN/HCist 2018
+Aligning Enterprise Systems Capabilities with Business Strategy:
+An extension of the Strategic Alignment Model (SAM) using
+Enterprise Architecture
+Prithvi Bhattacharya*
+Higher Colleges of Technology, Dubai, UAE
+Abstract
+In the last decade, Enterprise Architecture (EA) has been proposed to have the potential to improve and support strategic
+alignment between business and IT. This paper reviews the literature on cross-domain strategic alignment, as well as on
+Enterprise Architecture, and presents a new model to depict strategic alignment between business and IT by augmenting the
+widely cited Strategic Alignment Model (SAM) with an Enterprise Architecture framework, The Open Group Architecture
+Framework (TOGAF). The contribution of this paper is that it intends to present a holistic, generic model by synthesizing the
+SAM with the constructs of TOGAF to present a more comprehensive technique of modelling strategic alignment of business and
+IT. Also, the model illustrates this using Enterprise Systems as the chosen IT platform. Subsequently, the proposed model will be
+tested using empirical data from case studies and the results will be presented in another paper.
+© 2018 The Authors. Published by Elsevier Ltd.
+This is an open access article under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0/)
+Selection and peer-review under responsibility of the scientific committee of the CENTERIS - International Conference on
+ENTERprise Information Systems / ProjMAN - International Conference on Project MANagement / HCist - International
+Conference on Health and Social Care Information Systems and Technologies.
+Keywords: Enterprise Architecture, Strategic Alignment, Enterprise Systems
+* Corresponding author. Tel.: +971508631242.
+E-mail address: Prithvi.bhatt@gmail.com
+
+--- PAGE 2 ---
+656 Prithvi Bhattacharya / Procedia Computer Science 138 (2018) 655–662
+2 Bhattacharya / Procedia Computer Science 00 (2018) 000–000
+1. Introduction
+The strategic potential of IT has been a topic of great interest for several decades. One of the ways in which this
+potential can be realized is through the strategic alignment of IT with the business (Chan and Reich 2007; Sabherwal
+and Chan 2001; Reich and Benbasat 2000; Gerow et al., 2014). Indeed, strategic alignment has been consistently
+ranked as one of the top concerns for senior IT management in surveys by the Society for Information Management
+(Brancheau, Janz, and Wetherbe 1996; Gottschalk 2000; Kearns and Lederer 2004; Tallon and Kraemer 2003; Byrd,
+Lewis, Bryan 2006 Luftman and Ben-Zvi 2010; Kappelman and Luftman 2013; Kappelman et al. 2014; Chan,
+Sabherwal, and Thatcher 2006; Gerow et al., 2014).In the last decade, Enterprise Architecture (EA) has been
+proposed as a guiding solution for firms’ IT investments - one that has the potential to improve and support strategic
+alignment (Wegmann 2002; Chen et al. 2005, Pereira and Sousa 2005; Ross, Weill, and Robertson 2006; Gregor,
+Hart and Martin 2007; Cuenca, Boza, and Ortiz 2011; Zarvic and Wieringa 2014). The purpose of this paper is to
+explain and illustrate how EA can be used by organizations in their pursuit of strategic alignment.
+The primary intended contribution of this paper is to provide a theoretically-supported prescriptive mechanism
+through which strategic alignment can be made possible using an EA framework. While some studies endeavour to
+explain the mechanism of how EA can promote strategic alignment (Bleistein et al., 2006; Fritscher and Pigneur
+2011), these studies are limited in one or more of the following three ways. First, these models are developed for
+specific organizations, with no generalizable model presented that can be applied in other organizations. Second,
+these frameworks show uni-directional traceability, starting with business strategic objectives and explaining the
+implementation of them using IT capabilities. Traceability is not shown in the opposite direction (Agarwal and
+Sambamurthy 2002; Chan and Reich 2007; Smaczny 2001; Benbya and McKelvey 2006). Third, the majority of the
+studies fail to focus on the specific types of IT that can be used to improve strategic alignment. In essence, we aim to
+answer the following question in this research:
+“Can Enterprise Architecture help firms achieve and maintain cross-domain strategic alignment of business and
+IT? And if so, how?”
+2. Literature Review
+Researchers have studied the challenges that organizations face in attaining a high degree of cross-domain
+alignment between business strategy and IT infrastructure and processes. The key challenges include: that business
+strategy is often unknown and ambiguous or difficult to implement (Baets, 1992; Reich and Benbasat, 2000), that
+top management does not understand the importance of alignment or the contribution IT can make to the business
+(Henderson and Venkatraman 1993; Robey and Boudreau 1999; Campbell, 2005), and that the business
+environment is dynamic and rapidly changing (Henderson and Venkatraman, 1993; Van Der Zee and De Jong
+1999). A number of implications have been observed as arising from these challenges. When business strategy is
+either unknown, ambiguous, or rigidly fixed, IT purchases are haphazard rather than purposeful, leading to
+inefficiency (Baets 1992). When there is a disconnect between the IT management team and the top management
+team (a group often without an IT representative) there is a lack of understanding of the strategic potential of IT
+(Robey and Boudreau 1999; Campbell, 2005). And in environments characterized by dynamism and hyper-
+competition, it is a daunting task to align IT capabilities to the ever-changing business strategy (Van Der Zee and De
+Jong 1999). In spite of this foregoing research, and in spite of the identification of challenges to cross-domain
+alignment, the mechanisms for aligning business strategy with IT infrastructure and processes remain under-
+investigated. Neither the aforementioned studies on finding important factors for alignment, nor the research that
+led to the Strategic Alignment Model (SAM) by Henderson and Venkatraman (1993), nor the MIT 1990s
+Framework, specify the mechanism or pathway through which a high degree of such alignment can be achieved.
+Restated, these studies leave a key issue unaddressed: the identification of a process to achieve cross-domain
+alignment between a firm’s overall business strategy and its IT infrastructure and processes.
+Enterprise Architecture (EA) is defined as “a coherent whole of principles, methods and models that are used in
+the design and realisation of the enterprise’s organisational structure, business processes, information systems, and
+infrastructure.” (Jonkers et al. 2006, p. 64). Architecture models, views, presentations, and analyses all help to
+
+--- PAGE 3 ---
+Prithvi Bhattacharya / Procedia Computer Science 138 (2018) 655–662 657
+Bhattacharya / Procedia Computer Science 00 (2018) 000–000 3
+bridge the communication gap between architects and stakeholders (Lankhorst 2013). EA is implemented using
+several standards and frameworks, including the Zachman’s Framework, The Open Group Architecture Framework
+(TOGAF), Four Domain Architecture, Reference Model for Open Distributed Processing (RM-ODP), OMG’s
+Model Driven Architecture (MDA), Department of Defence Architecture Framework (DoDAF), Generic
+Architecture Reference and Methodology (GERAM), and the Nolan Nortan Framework (Lankhorst 2013). Given
+that EA is intended to shape the development of IS and IT infrastructure, as well as the formation of processes in
+light of a firm’s strategy, we observe that EA offers a potential guiding solution framework to help firms realize
+higher levels of cross-domain alignment.
+For instance, the ‘SEAM’ paradigm was proposed as a systemic paradigm to improve existing EA frameworks and
+methodologies and to find explanations for the practical problems encountered by enterprise architects (Wegmann
+2002). Elsewhere, the Business IT Alignment Method (BITAM) has been applied to reveal twelve steps for
+managing, detecting, and correcting misalignment (Chen et. al 2005). A requirements engineering framework that
+demonstrates how an organization's IT requirements can be aligned with its business strategy has been presented and
+illustrated (Bleistein et al. 2006). Similarly, a firm’s physical business and IS/IT elements, along with their
+connective relationships, has been shown to enable strategic alignment (Gregor, Hart and Martin, 2007).
+Furthermore, a research study synthesizing business modelling and EA has used the TOGAF EA framework and the
+Business Model Canvas (BMC) technique to model alignment (Fritscher and Pigneur 2011). Ways to extend cross-
+domain strategic alignment beyond the organizational boundary to include its value chain partners have been
+discussed as well (Cuenca, Boza, and Ortiz 2011). Elsewhere, a study shows how both inter-organizational and
+intra-organizational strategic alignment can be achieved (Derzsi and Gordijn 2006). Hinkelmann et al (2016)
+proposed a new paradigm in the context of enterprise information systems for the continuous alignment of business
+and IT for the agile enterprise. Jansen (2017) explored how the alignment of an ‘ArchiMate-based’ enterprise
+architecture model can be monitored using Semantic Web Technology. In spite of this important work, each of the
+aforementioned studies are nevertheless limited in that their conclusions are specific to the organizations being
+studied. Further, while an integrated EA approach has been presented by synthesizing four distinct EA frameworks
+(Zarvic and Wieringa 2014), and while an exploratory study among 162 EA professionals was used to identify meta-
+models for four specific types of strategic alignment situations (Saat, Franke, Lagerström and Ekstedt 2010;Niemi
+and Pekkola 2017), both of these studies show how to achieve alignment starting with business strategy and leading
+to IT capabilities. The same issue appears in a conceptualization of Enterprise Modeling and EA (Seigerroth 2011).
+None of these studies explain how alignment can be improved by working in the opposite direction from IT
+capabilities inform business strategy. Thus, another limitation of existing research is an assumption of
+unidirectional traceability from business strategy to IT infrastructure and processes. This research stream can be
+enriched by examining ways in which IT can influence strategy and creating new strategic opportunities (Agarwal
+and Sambamurthy 2002; Chan and Reich 2007; Smaczny 2001; Benbya and McKelvey 2006). However, one study
+by Malyzhenkov and Inavova (2017) did attempt at providing a practical guidance for IT-business alignment as well
+as a strategic guidance for EA development by integrating traditional Strategic Alignment Model and The TOGAF
+framework. Additionally, each of the aforementioned studies refer to IT in general and do not specify any particular
+kind of IT that was explored for strategic alignment. The study we now describe represents an attempt to
+supplement existing research and address these limitations.
+3. Towards a New Model for Cross Domain Strategic Alignment using Enterprise Architecture
+In an attempt to address the limitations in the current literature, we now propose a theoretically-supported
+prescriptive model to explain how cross-domain strategic alignment can be pursued using the TOGAF Enterprise
+Architecture Framework. This framework is chosen because it is one of the most widely accepted EA frameworks
+and has been used in studies to link strategic goals and value proposition of an organization to organizational
+processes and technology (Chen et al., 2005, Bleistein et al., 2006, Derzsi and Gordijn, 2006, Tallon 2007). Our
+model is based on the Strategic Alignment Model (SAM) of Henderson and Venkataraman (1993), which suggests 4
+constructs: Business Strategy, Business Infrastructure and Processes, IT Strategy and IT Infrastructure and
+Processes. We focus in this paper specifically on cross-domain alignment between Business Strategy and IT
+Infrastructure and Processes, placing the other two constructs and other types of alignment outside the scope of this
+
+--- PAGE 4 ---
+658 Prithvi Bhattacharya / Procedia Computer Science 138 (2018) 655–662
+4 Bhattacharya / Procedia Computer Science 00 (2018) 000–000
+research. The reason is that this cross-domain alignment and especially in the direction suggested, has been found to
+be most relevant for industry, yet under-studied in academia. Other types of alignment can be addressed by a future
+research and results thereof published in a subsequent paper.We extend the SAM model by incorporating the
+concepts of a widely-used framework for Enterprise Architecture: TOGAF. TOGAF is a framework to guide the
+design and implementation of an enterprise architecture in an organization (togaf.org). The new model introduces
+several layers within and connecting the two constructs from the SAM ‘IT Infrastructure & Processes’ and ‘Business
+Strategy’. These are the following: technology layer, applications layer, business layer and motivation layer; these
+layers correspond to the TOGAF phases of ‘technology’, ‘information systems’, ‘business’, and ‘architecture vision’
+respectively. The proposed model is shown in Figure 1 and the constructs of the model are explained in Table 1.The
+table below defines each of the constructs of the above model.
+Table 1. Definitions of the Constructs of the Model
+Construct/Sub-
+construct
+Definition
+Business Strategy How a business organization aims to achieve the ultimate ‘end’: maximizing the returns of the owners/shareholders of the
+business
+Motivation
+Layer
+The means through which the organization can achieve its ‘end’; Structured in a hierarchy of strategic
+orientations/drivers, goals, and objectives; drivers are decomposed to goals and goals are decomposed to objectives.
+Drivers
+Organizations can choose one or more of the six ‘strategic orientations’ or ‘drivers’ to achieve their mission. Drivers are
+these six strategic orientations:
+Aggressiveness, Proactiveness, Defensiveness, Analysis, Futurity & Riskiness.
+Goals
+The high level things that organizations aim, given their ‘Driver’ :
+In Aggressiveness, the main goal is Market Penetration
+In Proactiveness, the main goals are Product Development, Market Development and Inorganic Growth.
+In Defensiveness, the main goal is Operational Efficiency
+In Futurity, the main goal is Diversification
+In Analysis, the main goal is Astute Strategic Decisions
+Objectives
+The more tangible things to ultimately attain the ‘Goals’. These include (but are not limited to):
+Market Penetration through: Price Reduction; Increase in promotion, Increase in Customer Satisfaction.
+Product Development through: Offering new products.
+Market Development through: Selling to different customer segments, Local and Global Expansion.
+Inorganic Growth through: Mergers and Acquisitions.
+Operational Efficiency through: Decrease in Direct and Indirect Costs
+Diversification through offering new products to new markets.
+Strategic Decisions through Internal and External Assessments
+IT Infrastructure &
+Processes
+The information technology capabilities an organization has in place
+Technology Layer The IT platform that an organization has in place including different nodes or devices and software servers. For this
+study, we focus on Enterprise System only
+Applications Layer Consists of the Enterprise System, that are composed of in-built functional units called ‘modules’ like Financials, Human
+Resources, Sales and Distribution, Materials etc. The applications layer also shows the different application services that
+are offered by the application(s):
+Integration Data and Systems
+Optimized and Standardized Processes
+Information and Analytics
+Multi-Country Support
+Standardized Organizational Structures
+Business Layer The business capabilities connect the ‘Applications Layer’ to the ‘Motivation Layer’. These include
+Campaign Management
+Better Fulfilment of Orders/Requests
+Lean Production
+Automation of Supply Chain
+Organizational Communication
+Consolidated IT Infrastructure and external systems
+Business Analytics
+The purpose of this model is to show how cross-domain strategic alignment is achieved by linking the ‘IT
+Infrastructure & Processes’ to ‘Business Strategy’, by traversing the different layers, as shown in Figure 1.
+
+--- PAGE 5 ---
+Prithvi Bhattacharya / Procedia Computer Science 138 (2018) 655–662 659
+Bhattacharya / Procedia Computer Science 00 (2018) 000–000 5
+Fig 1. A Model for Cross-Domain Business IT Strategic Alignment (based on SAM by Henderson and Venkataraman (1993))
+On one hand, the ‘IT Infrastructure and Processes contains the ‘Technology Layer’ that provides the technology
+(namely the Enterprise System). Enterprise Systems (ES) are large-scale, packaged, application software systems
+that can be used to streamline and integrate the business processes of an organization (Davenport 2004). The
+technology layer describes the logical software and hardware capabilities, including IT infrastructure, middleware,
+networks, communications, processing, and standards. This layer, in turn, enables the technological capabilities
+depicted by the ‘Applications Layer’. These are optimized and standardized processes, integrated data and systems,
+information and analytics, multi-country support and standardized organizational structures (Davenport 2004).
+On the other hand, the ‘Business Strategy’ construct contains the ‘Motivations Layer’. The Motivations Layer is
+structured as a hierarchy of levels, based on a combination of concepts proposed by Archimate and Business
+Motivation Model, and supported by several researchers like Beistein et al (2006), Feglar (2006), Quartel,
+Engelsman, Jonkers, & Van Sinderen, (2009), Fritscher and Pigneur (2011), and Clark, Barn, Oussena (2012). These
+levels are discussed as follows. The ‘end’ state of most business organizations is maximizing the benefits/returns of
+the owners/shareholders of the business, and measured by the Return on Equity (RoE), also called Return on Net
+Worth (RoNW) as suggested by Tully et al (1993), Hitt & Brynjollson (1996) Barua et al (1995). To achieve this
+ultimate ‘end’, different organizations employ different ‘means’ that form the first level: ‘Drivers’ or ‘Strategic
+Orientations’. This can be comprehensively depicted by a widely cited framework called the Strategic Orientation of
+Business Enterprises (STROBE) by Venkatraman (1989) that propose six strategic orientations: Aggressiveness,
+Proactiveness, Defensiveness, Analysis, Futurity and Riskiness. However, the Riskiness orientation has more to do
+with individual traits of an employee, and also its essence is captured in the other orientations; so this is being
+excluded from our model. The second level shows how the different Strategic Orientations/Drivers mentioned in the
+above level can be translated in the form of different high level ‘Goals’. These are based on the explanations given
+by Venkatraman (1989) and used in combination with the terms used in Ansoff’s (1957) widely used ‘Product-
+Market Strategy’. The third level shows how the different ‘Goals’ mentioned in the above level can be realized
+through more specific, achievable, measurable ‘Objectives’. These again are based on the explanations given by
+Venkatraman (1989) and used in combination with the terms used in Ansoff’s (1957) widely used ‘Product-Market
+Strategy’. The Strategic Orientations/Drivers, Goals and Objectives are defined in Table 1. Furthermore, the
+TOGAF EA architecture describes a business layer that exists between the Business Strategy and IT Infrastructure
+and Processes constructs: a layer that is key to understanding how business strategy is enacted in IT processes and
+infrastructure, and how IT processes and infrastructure can open up new strategic possibilities. The model proposes
+that linkage is achieved through the ‘Business Layer’ as an intermediary. The Business Layer facilitates cross
+domain strategic alignment by linking the (a) IT Infrastructure and Processes (shown in the Application Layer, as
+made available by the Technology Layer) and (b) the Business Strategy of the organizations, as attained through its
+objectives, goals, strategic orientations (shown in the Motivation Layer). This is postulated as below:
+Proposition PA: The Applications Layer enables the Business Layer
+Proposition PB: The Business Layer enables the Motivations Layer
+
+--- PAGE 6 ---
+660 Prithvi Bhattacharya / Procedia Computer Science 138 (2018) 655–662
+6 Bhattacharya / Procedia Computer Science 00 (2018) 000–000
+Such linking can be done one at a time, item by item (as defined in Table 1) from each of the three layers. This is
+illustrated using an example proposition as below: PA1: ES-enabled Optimized and standardized processes enables
+Campaign Management and PB1: Campaign Management enables Product Promotion
+A Marketing Campaign is a coordinated series of steps that can include promotion of a product through different
+mediums (television, radio, print, online) using a variety of different types of advertisements, demonstrations, and
+other interactive activities. There exist dedicated modules for campaign management in Enterprise Systems from the
+leading vendors like SAP and Oracle. These modules come with built-in processes so that organizations can analyze,
+plan, execute, and measure marketing activities through all inbound and outbound interaction channels. They can
+implement inbound and outbound campaigns that are multi-channel and multi-wave, and they can develop and
+execute the best marketing strategy by using constraint-based optimization techniques to determine the best
+marketing mix (Goodhue et. al 2002; Rigby and Ledingham 2004; Bligh and Turk 2004). So, ES-enabled optimized
+and standardized processes leads to Campaign Management (PA1).
+On the other hand, Product Promotion refers to raising customer awareness of a product or brand, generating sales,
+and creating brand loyalty. It is one of the four basic elements of the market mix, which includes the four P's:
+price, product, promotion, and place. It is well established in the marketing literature that marketing campaigns are a
+means used widely for product promotion (Mitchell 2002; Pracejus and Olsen 2004). The above-discussed ‘Business
+Layer’ capability of campaign management enabled by the ‘Applications Layer’ capability of optimized and
+standardized processes from the ‘Technology Layer’ of Enterprise Systems thus contributes to achieve the
+‘Motivation Layer- objective’ of Product Promotion. So, ES-enabled optimized and standardized processes
+(Applications Layer) enables Campaign Management (Business Layer) -PA1 , and that, in turn, enables Product
+Promotion (Motivation Layer) - PB1 . Further, as shown in the figure, the ‘Motivation Layer- objective’ of Product
+Promotion, in turn, is expected to realize the ‘Motivation Layer- goal’ of Market Penetration, i.e., (a) existing
+customers in the market will buy more of the products and (b) more customers in the market will buy the products
+(Ansoff 1957). This is what is desired in the ‘Motivation Layer- driver’ of Aggressiveness business strategy. This is
+one (of the many) path(s) by which Strategic Alignment of Business and IT is achieved through Enterprise Systems.
+Similarly, Enterprise Systems (Technology Layer) enables Information and Analytics (Application Layer) and leads
+to Business Analytics (Business Layer), that leads to Price Reduction (Motivation Layer- objective) that eventually
+leads to Market Penetration (Motivation Layer- goal), that in turn leads to fulfilling the Aggressiveness (Motivation
+Layer- driver) business strategy. So, ES-enabled Information and Analytics (Applications Layer) leads to Business
+Analytics -PA2; and that in turn leads to Price Reduction- PB2.
+Again, Enterprise Systems (Technology Layer) enables Optimized Processes (Application Layer) leads to Better
+Fulfilment of Orders/ Requests (Business Layer), that leads to Customer Satisfaction (Motivation Layer- objective)
+that eventually leads to Market Penetration (Motivation Layer- goal), that in turn leads to fulfilling the
+Aggressiveness (Motivation Layer- driver) business strategy. This eventually leads to Market Development
+(Motivation Layer- goal), that in turn leads to fulfilling the Proactiveness (Motivation Layer- driver) business
+strategy. So, ES-enabled Optimized Processes (Applications Layer) lead to Better Fulfilment of Orders/ Requests
+(Business Layer) –PA3 ; and that in turn leads to Customer Satisfaction (Motivation Layer) - PB3.The intention is
+to uncover, using empirical data from case studies, many more such links that illustrate our propositions PA and PB,
+and explain each of them.
+4. Conclusion
+This paper presented a new, enhanced cross-domain strategic alignment model, based on the SAM. The contribution
+of this paper is that it augmented the existing SAM with the constructs of an Enterprise Architecture framework
+namely TOGAF to present a more comprehensive technique of modelling strategic alignment between business and
+IT. This new model attempts to define a clear, step-by-step mapping of how an IT investment can support, shape or
+realize the business strategy of an organization. It is a generic model that can be tailored to suit different
+organizations, as shown by the illustrations PA1-3 and PB1-3. However, this paper aims to pave way for further
+research to elaborate and empirically test the knowledge claims that link the ‘Application Layer’ to the ‘Business
+Layer’ to the ‘Motivation Layer’ of the model to establish evidence of its validity. Such research can be used as a
+prescriptive framework to (a) model, and (b) achieve strategic alignment between business and IT in a wide range of
+organizations. Furthermore, the intention is to explore the other two constructs of the model, namely ‘IT Strategy’
+and ‘Business Infrastructure and Processes’, for future research.
+
+--- PAGE 7 ---
+Prithvi Bhattacharya / Procedia Computer Science 138 (2018) 655–662 661
+Bhattacharya / Procedia Computer Science 00 (2018) 000–000 7
+References
+[1] Agarwal, R., & Sambamurthy, V. (2002). Principles and models for organizing the IT function. MIS Quarterly, 1(1), 1.
+[2] Atkinson, A. B., & Brandolini, A. (2001). Promise and pitfalls in the use of “secondary” data-sets: Income inequality in OECD countries
+as a case study. Journal of Economic Literature, 39(3), 771–799.
+[3] Baets, W. (1992). Aligning information systems with business strategy. The Journal of Strategic Information Systems, 1(4), 205–213.
+[4] Baker, E. H. (2004). Leading alignment. CIO Insight, 1(45), 19–20.
+[5] Benbya, H., & McKelvey, B. (2006). Using coevolutionary and complexity theories to improve IS alignment: a multi-level approach.
+Journal of Information Technology, 21(4), 284–298.
+[6] Bleistein, S. J., Cox, K., Verner, J., & Phalp, K. T. (2006). B-SCP: A requirements analysis framework for validating strategic alignment
+of organizational IT based on strategy, context, and process. Information and Software Technology, 48(9), 846–868.
+[7] Brancheau, J. C., Janz, B. D., & Wetherbe, J. C. (1996). Key issues in information systems management: 1994-95 SIM Delphi results. MIS
+Quarterly, 225–242.
+[8] Broadbent, M., & Weill, P. (1993). Improving business and information strategy alignment: Learning from the banking industry. IBM
+Systems Journal, 32(1), 162–179.
+[9] Byrd, T. A., Lewis, B. R., & Bryan, R. W. (2006). The leveraging influence of strategic alignment on IT investment: an empirical
+examination. Information & Management, 43(3), 308–321.
+[10] Campbell, C. (2005). The romantic ethic and the spirit of modern consumerism. WritersPrintShop. Retrieved from
+https://www.google.com/books?hl=en&lr=&id=BhibiybA3R8C&oi=fnd&pg=PA1&dq=Campbell&ots=XI1JtamdDp&sig=8ODkh8aX7wqyUg-
+YZm5J4JGmTlM
+[11] Chan, Y. E., & Reich, B. H. (2007a). IT alignment: an annotated bibliography. Journal of Information Technology, 22(4), 316–396.
+[12] Chan, Y. E., & Reich, B. H. (2007b). IT alignment: what have we learned? Journal of Information Technology, 22(4), 297–315.
+[13] Chan, Y. E., Sabherwal, R., & Thatcher, J. B. (2006). Antecedents and outcomes of strategic IS alignment: an empirical investigation.
+Engineering Management, IEEE Transactions on, 53(1), 27–47.
+[14] Chen, H.-M., Kazman, R., & Garg, A. (2005). BITAM: An engineering-principled method for managing misalignments between business
+and IT architectures. Science of Computer Programming, 57(1), 5–26.
+[15] Ciborra, C. U. (1997). De profundis? Deconstructing the concept of strategic alignment. Scandinavian Journal of Information Systems,
+9(1), 2.
+[16] Cowton, C. J. (1998). The use of secondary data in business ethics research. Journal of Business Ethics, 17(4), 423–434.
+[17] Cuenca, L., Boza, A., & Ortiz, A. (2011). An enterprise engineering approach for the alignment of business and information technology
+strategy. International Journal of Computer Integrated Manufacturing, 24(11), 974–992.
+[18] Derzsi, Z., & Gordijn, J. (2006). A Framework for Business/IT Alignment in Networked Value Constellations. In BUSITAL. Citeseer.
+Retrieved from http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.143.554&rep=rep1&type=pdf
+[19] Feeny, D. F., Edwards, B. R., & Simpson, K. M. (1992). Understanding the CEO/CIO relationship. MiS Quarterly, 435–448.
+[20] Fritscher, B., & Pigneur, Y. (2011). Business IT alignment from business model to enterprise architecture. In Advanced Information
+Systems Engineering Workshops (pp. 4–15). Springer. Retrieved from http://link.springer.com/chapter/10.1007/978-3-642-22056-2_2
+[21] Gerow, J. E., Grover, V., Thatcher, J. B., & Roth, P. L. (2014). Looking Toward the Future of IT-Business Strategic Alignment through
+the Past: A Meta-Analysis. MIS Quarterly, 38(4), 1059–1085.
+[22] Gerow, J. E., Thatcher, J. B., & Grover, V. (2015). Six types of IT-business strategic alignment: an investigation of the constructs and
+their measurement. European Journal of Information Systems, 24(5), 465–491.
+[23] Gottschalk, P. (2000). Studies of key issues in IS management around the world. International Journal of Information Management, 20(3),
+169–180. https://doi.org/10.1016/S0268-4012 (00)00003-7
+[24] Grant, G. G. (2003). Strategic alignment and enterprise systems implementation: the case of Metalco. Journal of Information Technology,
+18, 159–175.
+[25] Gregor, S., Hart, D., & Martin, N. (2007). Enterprise architectures: enablers of business strategy and IS/IT alignment in government.
+Information Technology & People, 20(2), 96–120.
+[26] Hagan, D. P. J. (n.d.). Guide to the (Evolving) Enterprise Architecture Body of Knowledge. The MITRE Corporation. Retrieved from
+https://www.mitre.org/publications/technical-papers/guide-to-the-evolving-enterprise-architecture-body-of-knowledge
+[27] Henderson, J. C., & Venkatraman, H. (1999). Strategic alignment: Leveraging information technology for transforming organizations.
+IBM Systems Journal, 38(2/3), 472.
+[28] Henderson, J. C., & Venkatraman, N. (1993). Strategic alignment: Leveraging information technology for transforming organizations.
+IBM Systems Journal, 32(1), 4–16.
+[29] ICEX Inc. (2004). ICEX Knowledge Kit for IT Strategic Alignment. Boston, MA.
+[30] Hinkelmann, K., Gerber, A., Karagiannis, D., Thoenssen, B., Van der Merwe, A., & Woitsch, R. (2016). A new paradigm for the
+continuous alignment of business and IT: Combining enterprise architecture modelling and enterprise ontology. Computers in Industry, 79, 77-86.
+[31] Janssen, J. A. J. M. (2017). Enterprise Architecture Model Alignment using Semantic Web Technology (Master's thesis, Open
+Universiteit Nederland)
+[32] Jarvenpaa, S. L. (1991). Panning for Gold in Information Systems Research: ’Second-Hand’ Data. In Information Systems Research -
+Issues, Methods and Practical Guidelines. Alfred Waller Ltd.
+[33] Kappelman, L., & Luftman, J. (2013). MIS Quarterly Executive. Retrieved from
+https://www.researchgate.net/profile/Leon_Kappelman2/publication/263618863_Key_issues_of_IT_organizations_and_their_leadership_The_20
+13_SIM_IT_trends_study/links/00b4953c93cc6022e2000000.pdf
+[34] Kappelman, L., McLean, E., Johnson, V., & Gerhart, N. (2014). The 2014 SIM IT key issues and trends study. MIS Quarterly Executive,
+13(4), 237–263.
+[35] Kearns, G. S., & Lederer, A. L. (2004). The impact of industry contextual factors on IT focus and the use of IT for competitive advantage.
+Information & Management, 41(7), 899–919.
+
+--- PAGE 8 ---
+662 Prithvi Bhattacharya / Procedia Computer Science 138 (2018) 655–662
+8 Bhattacharya / Procedia Computer Science 00 (2018) 000–000
+[36] Lance, D., & Muretta, M. M. (2013). The Influence of Enterprise Systems on Business and Information Technology. Retrieved from
+http://digitalcommons.mtech.edu/business_info_tech/1/?utm_source=digitalcommons.mtech.edu%2Fbusiness_info_tech%2F1&utm_medium=PD
+F&utm_campaign=PDFCoverPages
+[37] Lankhorst, M. (2013). Introduction to Enterprise Architecture. In Enterprise Architecture at Work (pp. 1–10). Springer Berlin Heidelberg.
+Retrieved from http://link.springer.com/chapter/10.1007/978-3-642-29651-2_1
+[38] Loh, L., & Venkatraman, N. (1992). Determinants of information technology outsourcing: a cross-sectional analysis. Journal of
+Management Information Systems, 9(1), 7–24.
+[39] Luftman, J., & Ben-Zvi, T. (2010). Key issues for IT executives 2010: judicious IT investments continue post-recession. MIS Quarterly
+Executive, 9(4), 263–273.
+[40] Luftman, J., Papp, R., & Brier, T. (1999). Enablers and inhibitors of business-IT alignment. Communications of the AIS, 1(3es), 1.
+[41] Malyzhenkov, P., & Ivanova, M. (2017, June). An Enterprise Architecture-Based Approach to the IT-Business Alignment: An Integration
+of SAM and TOGAF Framework. In Workshop on Enterprise and Organizational Modeling and Simulation(pp. 159-173). Springer, Cham.
+[42] McDonald, M. (1996). Strategic marketing planning: theory, practice and research agendas. Journal of Marketing Management, 12(1-3),
+4–27.
+[43] Mooney, J. G., Gurbaxani, V., & Kraemer, K. L. (1996). A process oriented framework for assessing the business value of information
+technology. SIGMIS Database, 27(2), 68–81. https://doi.org/10.1145/243350.243363
+[44] Niemi, E., & Pekkola, S. (2017). Using enterprise architecture artefacts in an organisation. Enterprise Information Systems, 11(3), 313-
+338.
+[45] Papp, R. (1999). Business-IT alignment: productivity paradox payoff? Industrial Management & Data Systems, 99(8), 367–373.
+[46] Patton, M. Q. (2002). Qualitative Research & Evaluation Methods. SAGE Publications.
+[47] Pearlman, E. (2004). Welcome to the Crossroads. CIO Insight, 1, 45.
+[48] Pereira, C. M., & Sousa, P. (2005). Enterprise Architecture: Business and IT Alignment. Presented at the ACM Symposium on Applied
+Computing.
+[49] Ragu-Nathan, B., Ragu-Nathan, T. S., Tu, Q., & Shi, Z. (2001). Information management (IM) strategy: the construct and its
+measurement. The Journal of Strategic Information Systems, 10(4), 265–289.
+[50] Reich, B. H., & Benbasat, I. (1996). Measuring the linkage between business and information technology objectives. MIS Quarterly, 55–
+81.
+[51] Reich, B. H., & Benbasat, I. (2000). Factors that influence the social dimension of alignment between business and information
+technology objectives. MIS Quarterly, 81–113.
+[52] Robey, D., & Boudreau, M.-C. (1999). Accounting for the contradictory organizational consequences of information technology:
+Theoretical directions and methodological implications. Information Systems Research, 10(2), 167–185.
+[53] Rondinelli, D., Rosen, B., & Drori, I. (2001). The struggle for strategic alignment in multinational corporations: Managing readjustment
+during global expansion. European Management Journal, 19(4), 404–416.
+[54] Saat, J., Franke, U., Lagerström, R., & Ekstedt, M. (2010). Enterprise architecture meta models for IT/business alignment situations. In
+Enterprise Distributed Object Computing Conference (EDOC), 2010 14th IEEE International (pp. 14–23). IEEE. Retrieved from
+http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5630223
+[55] Sabherwal, R., & Chan, Y. E. (2001). Alignment between business and IS strategies: A study of prospectors, analyzers, and defenders.
+Information Systems Research, 12(1), 11–33.
+[56] Sambamurthy, V., & Zmud, R. W. (1994). IT Management Competency Assessment: A Tool for Creating Business Value Through IT.
+Financial Executives Research Foundation.
+[57] Seigerroth, U. (2011). Enterprise Modeling and Enterprise Architecture: the constituents of transformation and alignment of Business and
+IT. International Journal of IT/Business Alignment and Governance (IJITBAG), 2(1), 16–34.
+[58] Shang, S., & Seddon, P. (2002). Assessing and managing the benefits of enterprise systems: the business manager’s perspective.
+Information Systems Journal, 12, 271–299.
+[59] Smaczny, T. (2001). Is an alignment between business and information technology the appropriate paradigm to manage IT in today’s
+organisations? Management Decision, 39(10), 797–802.
+[60] Tallon, P., Kreamer, K. L., & Gurbaxani, V. (2000). Executives’ Perceptions of the Business Value of Information Technology: A
+Process-Oriented Approach. Journal of Management Information Systems, 16(4), 145–173.
+[61] Tallon, P. P., & Kraemer, K. L. (2003). Investigating the relationship between strategic alignment and IT business value: the discovery of
+a paradox. Creating Business Value with Information Technology: Challenges and Solutions. Hershey, PA: Idea Group Publishing, 1–22.
+[62] Tan, F. B., & Gallupe, R. (2006). Aligning business and information systems thinking: A cognitive approach. Retrieved from
+http://aut.researchgateway.ac.nz/handle/10292/629
+[63] Teo, T. S., & Ang, J. S. (1999). Critical success factors in the alignment of IS plans with business plans. International Journal of
+Information Management, 19(2), 173–185.
+[64] Van Der Zee, J. T. M., & De Jong, B. (1999). Alignment is not enough: integrating business and information technology management
+with the balanced business scorecard. Journal of Management Information Systems, 16(2), 137–158.
+[65] Wegmann, A. (2002). The systemic enterprise architecture methodology (SEAM). Business and IT alignment for competitiveness.
+Retrieved from http://infoscience.epfl.ch/record/52486/files/IC_TECH_REPORT_200265.pdf
+[66] Weill, P., & Broadbent, M. (1998). Leveraging the New Infrastructure, How Market Leaders Capitalize on Information Technology.
+Harvard Business School Press.
+[67] Weill, P., & Ross, J. (2009). IT Savvy: What Top Executives Must Know to Go from Pain to Gain.
+[68] Zarvić, N., & Wieringa, R. (2014). An integrated enterprise architecture framework for business-IT alignment. Designing Enterprise
+Architecture Frameworks: Integrating Business Processes with IT Infrastructure, 63.

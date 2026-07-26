@@ -1,0 +1,438 @@
+--- PAGE 1 ---
+ScienceDirect
+Available online at www.sciencedirect.com
+Procedia Computer Science 192 (2021) 1831–1838
+1877-0509 © 2021 TheAuthors. Published by Elsevier B.V.
+This is an open access article under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0)
+Peer-review under responsibility of the scientific committee of KES International.
+10.1016/j.procs.2021.08.188
+© 2021 TheAuthors. Published by Elsevier B.V.
+This is an open access article under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0)
+Peer-review under responsibility of the scientific committee of KES International.
+Available online at www.sciencedirect.com
+ScienceDirect
+Procedia Computer Science 00 (2021) 000–000
+www.elsevier.com/locate/procedia
+1877-0509 © 2021 The Authors. Published by ELSEVIER B.V.
+This is an open access article under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0)
+Peer-review under responsibility of the scientific committee of KES International
+25th International Conference on Knowledge-Based and Intelligent Information & Engineering
+Systems
+An EA Application Approach using Business Modularization for
+Management to Understand DX
+Yuko Taharaª*,Shuichiro Yamamotob
+
+The Graduate School of Information & Communication, 1-25-30 Takadanobaba, Shinjuku-ku, Tokyo 169-8518, Japan
+Nagoya University, Furo-cho,Chigusa-ku, Nagoya, Aichi Prefecture, 464-8601, Japan
+Abstract
+For the success of Digital Transformation (DX), corporate management must understand the relationship between DX
+and their corporate business. However, in many companies, business divisions and IT departments are siloed, so
+executives cannot discuss DX based on an overall picture of business and IT. Although dynamic capability is also
+used to explain the iterative DX process, the details of the feedback process of dynamic capability are still unclear.
+In this paper, we propose a method to promote understanding of DX using the Frame & Work Module (F&WM)
+method and Enterprise Architecture (EA) in order to make it easier for executives to get an overall picture of business
+and DX. The F&WM method is used to show the detailed steps of the feedback process of dynamic capability. The
+proposed method is applied to the case of a Japanese house building company and evaluated.
+Keywords: Dynamic Capability, Frame & Work Module, DX, EA, Modularization
+1. Introduction
+In 2018, the Ministry of Economy, Trade and Industry (METI) published the Report on Digital Transformation [1]
+and has been promoting digital transformation (hereinafter “DX”). In July 2019, METI released evaluation indicators
+for digital management reform (“DX promotion indices”) [2] and, in view of the great importance of the role that
+should be played by directors and the Board of Directors responsible for management supervision, formulated the
+“Items for Assessing the Effectiveness of a Board of Directors in Advancing DX Promotion.” [3]
+* Yuko Tahara. Tel.: +81-3-3207-0005; Fax: +81-3-3207-0015
+E-mail address: tahara@basic7.com
+Available online at www.sciencedirect.com
+ScienceDirect
+Procedia Computer Science 00 (2021) 000–000
+www.elsevier.com/locate/procedia
+1877-0509 © 2021 The Authors. Published by ELSEVIER B.V.
+This is an open access article under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0)
+Peer-review under responsibility of the scientific committee of KES International
+25th International Conference on Knowledge-Based and Intelligent Information & Engineering
+Systems
+An EA Application Approach using Business Modularization for
+Management to Understand DX
+Yuko Taharaª*,Shuichiro Yamamotob
+
+The Graduate School of Information & Communication, 1-25-30 Takadanobaba, Shinjuku-ku, Tokyo 169-8518, Japan
+Nagoya University, Furo-cho,Chigusa-ku, Nagoya, Aichi Prefecture, 464-8601, Japan
+Abstract
+For the success of Digital Transformation (DX), corporate management must understand the relationship between DX
+and their corporate business. However, in many companies, business divisions and IT departments are siloed, so
+executives cannot discuss DX based on an overall picture of business and IT. Although dynamic capability is also
+used to explain the iterative DX process, the details of the feedback process of dynamic capability are still unclear.
+In this paper, we propose a method to promote understanding of DX using the Frame & Work Module (F&WM)
+method and Enterprise Architecture (EA) in order to make it easier for executives to get an overall picture of business
+and DX. The F&WM method is used to show the detailed steps of the feedback process of dynamic capability. The
+proposed method is applied to the case of a Japanese house building company and evaluated.
+Keywords: Dynamic Capability, Frame & Work Module, DX, EA, Modularization
+1. Introduction
+In 2018, the Ministry of Economy, Trade and Industry (METI) published the Report on Digital Transformation [1]
+and has been promoting digital transformation (hereinafter “DX”). In July 2019, METI released evaluation indicators
+for digital management reform (“DX promotion indices”) [2] and, in view of the great importance of the role that
+should be played by directors and the Board of Directors responsible for management supervision, formulated the
+“Items for Assessing the Effectiveness of a Board of Directors in Advancing DX Promotion.” [3]
+* Yuko Tahara. Tel.: +81-3-3207-0005; Fax: +81-3-3207-0015
+E-mail address: tahara@basic7.com
+
+--- PAGE 2 ---
+1832 Yuko Tahara et al. / Procedia Computer Science 192 (2021) 1831–1838
+2 Author name / Procedia Computer Science 00 (2021) 000–000
+The issue here is that the management class generally consists of older people mainly of the generation who do not
+have sufficient experience of the digital age and, since Japan lags behind the rest of the world in the utilization of IT
+and DX in the workplace, many of these people lack digital knowledge. However, they do possess outstanding
+management skills and, since they become CEO at a point when there are more fields where they have no experience
+than fields where they have experience, they have to demonstrate these skills. In other words, since they understand
+the overall architecture of the business and have a clear grasp of the business elements and structure, once they
+understand the process of promoting DX and the resulting changes in the business architecture, they can apply their
+skills in business operations in an age of accelerating DX.
+In this paper, in order to get a clearer overall picture of business and DX conducted by management, Tahara
+proposes methods of promoting understanding of DX applying the frame &work module method (“F&WM method”)
+[4-6] and enterprise architecture (“EA”) that have been used to improve business and convert practical knowledge
+into explicit knowledge at many companies.
+The core architecture parts of EA are baseline, target, and transition architecture. The relationship between dynamic
+capability and EA is as follows.
+The baseline architecture is developed by sensing the current business process.
+The target architecture is clarified by seizing opportunities of enterprise structure, procedures, and designs.
+The transition architecture is planned by managing threats and transforming assets.
+From that point of view, we concentrate on the Business Architecture (BA) of EA. BA can define the “What” as
+business products, the “Who” as business actors, and the “How” as business processes.
+The rest of this paper is constructed as follows. Section 2 describes the research questions. Section 3 describes
+related work. Section 4 proposes an integrated method using the F&WM method and Dynamic Capability (DC).
+Section 5 outlines the application ofthe proposed method to a case ofnew businesscreation. Discussionsare described
+in Section 6. Section 7 outlines our conclusion and future challenges.
+2. Research Questions
+The following research questions are evaluated using the case of a Japanese house building company. The F&WM
+method consists of three viewpoints: What, Who, and How. Dynamic capability consists of three steps: sensing,
+seizing, and transforming. The F&WM method is used to design the iterative steps of DC.
+
+RQ1: How can the F&WM method be applied with the iterative steps defined in DC?
+RQ2: Can the method explain new business creation processes?
+3. Related Work
+3.1. Method of applying TOGAF to DX challenges
+According to Yamamoto [7], the EA framework TOGAF can be applied to DX challenges (Table 1).
+Table 1. Outline of method of applying TOGAF to DX challenges
+DX challenge Response measures EA method used
+Explanation of architecture challenges
+that executives can understand
+In order to explain alignment of business and IT, define
+a DX strategy map as a method of matching business
+goals, digital business models, and digital business
+processes with DX requirements.
+Business goals
+Viewpoints
+Business processes
+Motivation model
+Assessment
+Digitalization and definition of
+business priorities
+Define business to be digitalized to create value
+business value based on digital capability map.
+Capability map
+Business processes
+CBP (Capability Based Planning)
+CI (Capability Increment)
+Definition of DX strategy
+Define DX vision and DX road map through analysis
+of gap between future architecture and current
+architecture.
+Architecture vision
+Reference architecture
+Gap analysis
+
+--- PAGE 3 ---
+Yuko Tahara et al. / Procedia Computer Science 192 (2021) 1831–1838 1833 Author name / Procedia Computer Science 00 (2021) 000–000 3
+Transformation roadmap
+• Building collaboration between
+business divisions and IT division
+Define a digital business ecosystem that aligns
+business with digital technology and carry out DX
+governance that controls business processes and digital
+technologies through DX principles and DX
+committee.
+EA hierarchy
+Motivation model
+EA principles, EA committee
+EA governance
+3.2. Method of applying EA to DX challenges
+According to Tahara and Yamamoto [7], the opportunities for applying EA to the DX challenges listed in Table 1
+above are as follows.
+• Explaining alignment of business with IT through EA to executives conducting business so that senior executives
+can participate in the discussion.
+• 80% of advanced DX companies transform business processes using capability maps in order to clarify priorities.
+• Advanced DX companies spend time on the formulation of future plans. EA teams need to ensure compatibility
+between long-term plans and everyday requirements.
+• By providing training to business divisions in EA skills such as communication, coaching, and problem resolution,
+strong collaboration between business divisions and IT division is realized.
+3.3. Method of adapting the F&WM method using ArchiMate
+Using the F&WM method,workcan bedivided into modulesand integrated asa work frame. TaharaandYamamoto
+[8], based on the premise of DX, propose a method of integrating the F&WM method and ArchiMate [9], a graphic
+language of EA, as a means of linking work clarified by the F&WM method with the introduction of IT.
+3.4. Digital transformation
+Digital transformation (DX) is attracting attention [1] as a means of transforming existing companies into digital
+companies. In DX, collaboration among management, business divisions and IT division is essential. The DX
+promotion indices are based on 35 questions assessing DX maturity from the viewpoints of management and IT.
+However, the DX promotion indices lack a strategy for responding to these questions and the knowledge needed to
+build business processes utilizing digital technologies.
+For this reason, Yamamoto’s Digital Balanced Scorecard (DBSC) [10] proposes a method of linking management
+goals, customer and employee goals, business processes, and DX requirements using a digital strategy map.
+3.5. Business process re-engineering
+The F&WM method proposed by Tahara [5-6] is a practical method that can be easily understood intuitively by
+people in the workplace. However, there is a problem that, since it contains ambiguity, it cannot be immediately
+adapted to digitalization, which requires strict definition as an algorithm.
+Anotherproblemisthat, while a very strictschematic language such asbusinessprocessmodeling notation (BPMN)
+is suitable for software developers, it has not spread widely because of the high level of difficulty for people in the
+workplace, who are not good at logical reasoning. Unless a clear overall picture of business can be obtained, it is not
+possible to understand what aspect of work should be changed. People cannot take responsibility for change because
+they do not know what will happen if changes are made and if business processes cannot be visualized, business
+process re-engineering is impossible.
+3.6. Dynamic Capability
+Teece [11] explains the process that makes up dynamic capabilities in order to combine resources, including
+knowledge, to create new value and transform an organization. This process consists of two types of capability:
+ordinary capability for the efficient use of management resources and DC for creating new value in response to
+
+--- PAGE 4 ---
+1834 Yuko Tahara et al. / Procedia Computer Science 192 (2021) 1831–1838
+4 Author name / Procedia Computer Science 00 (2021) 000–000
+changesin the businessenvironment. DC requiresco-specialization consisting ofsensing threats, seizing opportunities
+and transforming organizations in order to create value that complementarily combines different resources. Co-
+specialization is also attracting attention as “DX monodzukuri.” [12]
+By deploying Teece’s product co-specialization to IT, Quieroz [13] defines the concept of co-specialization of
+business process and IT as follows: “the state of complementarity between business process and IT, based on the
+extent to which IT supports the business process and the extent to which that business process exploits available IT.”
+Moreover, Teece [14] indicates the necessity of the iterative cycle of sensing, seizing, and managing
+threats/transforming, but does not provide a specific model. Kikuzawa [15]states that, “Dynamic capability is a high-
+order meta-ability consisting of the existing routines, capabilities, resources, knowledge, and assets that have brought
+about a competitive advantage when responding to changes in the business environment. It is also the orchestration
+ability to reconstruct or reallocate not just the assets or knowledge of one’s own company but also to incorporate, if
+necessary, the assets or knowledge of other companies.” However, this is not demonstrated using a specific model
+that can be reproduced.
+3.7. Knowledge Creation
+The digital strategy of the United Nations Development Program (UNDP) [16] consists of the following two
+“pathways”:
+• Using digital technologies to improve partner experience and solve development challenges;
+• Using digital technologies to improve the quality, relevance and impact of UNDP’swork, while also improving the
+efficiency of UNDP’s operational systems and internal processes.
+From this it is clear that DX is not merely a problem of digital technology but also requires the integration of digital
+knowledge for organizational transformation with knowledge relating to the organization that uses it.
+The SECI model [17, 18] explains the process ofknowledgecreation based on the interaction of explicit knowledge
+and tacit knowledge. The connections of the SECI model provide a means of systematizing practical knowledge that
+strategically and analytically integrates and combines explicit knowledge derived from tacit knowledge within an
+organization.
+4. Proposal for unrolling the DC iteration cycle using the F&WM method
+This section describes how to unroll the DC iterative cycle using the F&WM method consisting of the What, Who,
+and How dimensions. The What dimension includes modularization, KPIs (Key Performance Indicators), and
+strengths of the company’s business. Table 2 shows the framework of the DC cycle unrolling framework.
+Table 2. DC cycle unrolling framework.
+F&WM Steps
+Dynamic Capability
+Sensing Seizing Transforming
+What
+Step 1: Modularization Decomposing elements
+(of business architecture)
+Discovering other elements that
+can be diverted (seizing
+opportunities)
+Transforming elements
+Step 2: KPIs Decomposingelements Decomposing elements to be
+diverted
+Decomposing after
+transformation
+Step 3: Strengths Discovering weaknesses
+of elements
+Discovering elements that can be
+diverted into strengths
+Confirming strengths of elements
+after transformation
+Who Reviewing customers Discovering new customers and
+demand
+Transformation of target
+customers
+How Reviewing business
+model
+Discovering and developing new
+business model
+Transformation of business model
+
+
+--- PAGE 5 ---
+Yuko Tahara et al. / Procedia Computer Science 192 (2021) 1831–1838 1835
+Author name / Procedia Computer Science 00 (2021) 000–000 5
+5. Application of the DC cycle unrolling framework
+The following describes the creation of new business creation using the above-mentioned DC cycle unrolling
+framework in terms of F&WM steps. The F&WM steps are defined as follows.
+Step I Modularization of corporate business processes is achieved through the sensing, seizing, and transforming
+of business capabilities.
+Step II KPIs are identified and transformed through DC for the business modules clarified in Step I.
+Step III The strengths of business modules are identified based on the KPIs identified in Step II.
+Step IV The most valuable customer segment is clarified based on the strengths of the business modules identified
+in Step III.
+Step V A new business is developed by sensing, seizing, and transforming business capabilities for targeting the
+customer segment identified in Step IV.
+5.1. Steps I through V
+To explain the unrolling of the DC iteration cycle, the case of a Japanese company is used. The company A is a
+medium-sized builder of prefabricated steel-framed houses. Over the past year, the number of orders received by the
+company has decreased. As a result, the utilization rate of the factory that manufactures house parts has decreased
+considerably.
+First, in Step I (What modules), the sales, design, and production divisions were modularized. For example, the
+production division was divided into modules such as technical capability, production system, and the factory to
+produce the systems designed through technical capability.
+In Step II (WhatKPIs), through this modularization, each module was identified and these could then be quantified.
+From this it became clear that when the number of orders for houses decreased, the utilization rate of the production
+system and factory declined, but there was no impact on technical capability.
+In Step III (What strengths), the strengths of the company were clarified through quantitative analysis. The strength
+of the company was discovered to be the technical capability of the production division, but the company was not
+fully aware of this strength.
+In Step IV (Who), while until now it had only utilized this technical capability to produce parts for the company, it
+became clear that it could utilize it for new customers in the construction of low-rise apartment buildings, low-rise
+hotels, and stores.
+In Step V (How), the strength to provide new products identified in Step III was proposed not only within the
+company but to customers outside the company. After trials over one year, a new company based on this technical
+capability was established independent from the production division. The establishment of the new company created
+new business for the building company.
+5.2. DC cycle unrolling using the F&WM method
+The example of the businesscreation process outlined in 5.1 abovecould notbe achieved by the simple combination
+of the business model and customers. The opportunity for creating business is the existence of a problem and threats
+such as competition and changes in the business environment. The co-specialization advocated by Teece in the
+research paper [12] mentioned in 3.6 above is discussed from the three viewpoints of sensing, seizing, and managing
+threats/transformation. Table 3 summarizes the above-mentioned case ofunrolling the DC cycle forthe house building
+company in terms of the three processes of DC.
+Table 3. New business creation case using DC cycle unrolling framework.
+F&WM steps
+Dynamic Capability
+Sensing Seizing Transforming
+
+--- PAGE 6 ---
+1836 Yuko Tahara et al. / Procedia Computer Science 192 (2021) 1831–1838
+6 Author name / Procedia Computer Science 00 (2021) 000–000
+Step I
+Three elements: Technical capability,
+production system, and factory are
+identified
+Supply only within company
+since establishment
+Executives understand dynamic
+capability and merits of business
+modularization
+Step II Technical capability: No change
+Production system and factory: Decrease
+in utilization rate
+Production for company: 100%
+Production for external users: 0%
+Managers analyze KPIs
+Step III Strength is technical capability Existence of external demand for
+products utilizing technical
+capability
+Managers discover new business
+model utilizing strength
+Step IV
+Technical capability used outside the
+company
+Development and proposal of
+products for external users
+Managers instruct division heads to
+implement new product development
+and business model change
+Step V Due to new business model, utilization
+rate of production system and factory
+increases
+Construction of stores, low-rise
+apartments buildings, and low-rise
+hotels
+After a one-year trial, a new company
+is established
+
+6. Discussions
+This section describesthe answersto research questions, and the effectiveness, novelty, andlimitationsofthisstudy.
+6.1. Answers to research questions
+Table 2 shows the unrolled iterative steps of DC, leading to the answer to RQ1. The work modules that make up a
+business were identified using the F&WM method. To unroll the iterative DC, we then described in detail the process
+from Step I, work modularization, to Step V, the creation of new business. In addition, by applying these iterative
+steps to an actual case, we confirmed the method’s effectiveness.
+The Table also describes the process of new business creation that can lead to the answer to RQ2.
+Although these answers are derived by only one case as described below, research questions have positively
+supported.
+6.2. Effectiveness
+This paper has described how, utilizing the F&WM method, existing business processes can be modularized and
+future processes designed as new businesses. In the case ofEA, (1) existing and future business processes are defined,
+then (2) the gaps between existing and future business processes are analyzed, (3) changes are planned to eliminate
+these gaps, and (4) the transformation plan is carried out. Therefore, the F&WM method enables us to clarify the
+future business processes in EA, making it possible to create new business. Furthermore, since senior officers can
+appreciate IT which is aligned with new business that creates value, this can promote dialogue about DX investment
+between senior management and executives.
+Regarding the items of the “explanation of architecture challenges that executives can understand” in Table 1 of
+Yamamoto’s previous work, “Application of TOGAF to DX Challenges” [8] described in 3.1 and 3.2 above, namely,
+business processes, motivation model, assessment, and actors, these are expressed in EA as modules, strengths, KPIs,
+and customers, respectively, using the F&WM method. The specific steps and case described in Section 5 are also
+viewed asBA developmentstepsin EA. Furthermore, unlessBA ismodularized, a company cannotfreely setbusiness
+goals in accordance with its purpose and executives’ business strategy.
+6.3. Novelty
+As described in 4.1 above, the modularization of work makes it possible to visualize business changes and trends
+
+--- PAGE 7 ---
+Yuko Tahara et al. / Procedia Computer Science 192 (2021) 1831–1838 1837
+Author name / Procedia Computer Science 00 (2021) 000–000 7
+(expansion, contraction, increase, decrease) by visualizing one’s own business and determining the KPIs. The digital
+twinsformed fromthe data visualized by thismethod quantify the problems ofthe business, organization and products,
+making visible the modules that should be revised. Furthermore, with the ongoing evolution of HR Tech, which uses
+text mining technology to visualize and quantify sales persons’ qualities such as skills, competencies and motivation,
+we can anticipate the development of strategic DX such as management strategies and personnel strategies that
+incorporate the digitalization ofhuman resources. The visualized data themselvesconstitute new productsand services,
+or may be developed into platforms.
+6.4. Limitations
+This paper only evaluates the proposed method in the case of one company. It also does not attempt to analyze and
+assess changes in executives’ understanding of DX before and after its introduction. It will be necessary in future to
+conduct an objective assessment using this method.
+7. Conclusion and Future Challenges
+This paper proposes a method of unrolling the DC cycle using the F&WM method. In particular, the three
+elementary processes of dynamic capability are applied in the three dimensions of the F&WM method, i.e., What,
+Who, and How. The research questions have been answered by the case study.
+Answer to RQ1: The iteration of dynamic capability can be decomposed through five steps based on the F&WM
+method.
+Answer to RQ2: The DC iteration cycle unrolling framework is used to design a new business for the company.
+EA is widely used to help executives understand enterprise business transformation. As EA is based on business
+building blocks, it is necessary to clarify modules based on business capability. The proposed method can identify
+business modules using the modularization of the F&WM method. Conversely, EA provides digitally automated
+component designs to realize the business modules clarified by this method. Therefore, the proposed method can be
+applied to EA, which is a useful in helping executives to understand DX, and thus also helps to promote DX.
+Future work includes the following.
+(1) To demonstrate the usefulness of the proposed framework for other company cases.
+(2) To clarify an integrated method of combining EA and F&WM.
+(3) To evaluate quantitatively the effectiveness of the proposed method.
+References
+[1] METI (September 7, 2018) “Report on Digital Transformation: Overcoming of ‘2025 Digital Cliff’ Involving IT Systems and Full-fledged
+Development of Efforts for Digital Transformation” (in Japanese).
+[2] METI (July 31, 2019) “DX Promotion Indices and Guidance Therefor” (in Japanese).
+https://www.meti.go.jp/press/2019/07/20190731003/20190731003-1.pdf (in Japanese).
+[3] METI (July 31, 2019) “Items for Assessing the Effectiveness of a Board of Directors in Advancing DX Promotion” (in Japanese).
+[4] Tahara, Yuko (2008) The 70-times Automated Business Model, Chukei Publishing (in Japanese).
+[5] Tahara, Yuko & Nagahira, Akio (2018) “Research on the Effectiveness of the Frame & Work Module in Business Transformation in the
+Workplace: A New Approach for Performance Improvement, Time Reduction, Human Resource Development, and Knowledge Sharing,”
+Journal of Japan Association for Management Systems, Vol. 35, No.1, pp. 59-68 (in Japanese).
+[6] Tahara, Yuko (2018) “Improvement of Intellectual Productivity utilizing Frame & Work Module Methodology, Problems, and Action Plan
+for their Resolution: Specific Steps for Improving Problem Resolution Ability and Creativity based on Introduction of RPA, AI,” 70th
+Annual Meeting of All Japan Federation of Management Organizations (in Japanese).
+[7] Yamamoto, Shuichiro (2020) “Fundamental Knowledge of DX: Digital Transformation Cases and Methods,” Kindai Kagakusha Digital
+(in Japanese).
+[8] Tahara, Yuko & Yamamoto, Shuichiro (2020) “Method of Applying ArchiMate to the Frame & Work Module Method,” 27th Japanese
+Society for Artificial Intelligence Knowledge Distribution Network Research Association, SIG-KSN-027-06 (in Japanese).
+[9] The Open Group (2019) ArchiMate® 3.1. Specification, C197.
+[10] Yamamoto, Shuichiro (2020) “A Proposal on the Digital Balanced Scorecard toward Digital Transformation,” SIG-KBSE, 2019-41 pp. 19-
+24 (in Japanese).
+
+--- PAGE 8 ---
+1838 Yuko Tahara et al. / Procedia Computer Science 192 (2021) 1831–1838
+8 Author name / Procedia Computer Science 00 (2021) 000–000
+[11] Teece, David J. (1986) "Profiting from Technological Innovation: Implications for Integration, Collaboration, Licensing and Public
+Policy," Research Policy (15:6), pp. 285-305.
+[12] METI, MHLW, MEXT (May 29, 2020) “2020 White Paper on Monodzukuri” (in Japanese).
+[13] Queiroz, M. (2017) “Business Process and IT Cospecialization: Conceptualization and Suggestions for Future Research,” 23rd Americas
+Conference on Information Systems, pp. 1-10.
+[14] Teece, David J. (2007) "Explicating Dynamic Capabilities: The Nature and Microfoundations of (Sustainable) Enterprise Performance,”
+Strategic Management Journal (28:13), pp. 1319-1350
+[15] Kikuzawa, Kenshu (2015) “Two Problems concerning Dynamic Capability Theory,” Harvard Business Review (in Japanese).
+[16] UNDP Digital Strategy (2019) https://digitalstrategy.undp.org/strategy.html
+[17] Nonaka, Ikujiro & Takeuchi, Hirotaka (1995) The Knowledge-creating Company: How Japanese Companies Create the Dynamics of
+Innovation, Oxford University Press, New York.
+[18] Nonaka, Ikujiro & Konno, Noboru (2003) Methodology of Knowledge Creation, Toyo Keizai (in Japanese).

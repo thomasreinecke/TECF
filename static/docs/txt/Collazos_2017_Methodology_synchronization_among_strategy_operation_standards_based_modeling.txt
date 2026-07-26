@@ -1,0 +1,829 @@
+--- PAGE 1 ---
+Ingeniería e Investigación vol. 37 n.° 2, august - 2017 (111-119)
+111
+Methodology of synchronization among strategy
+and operation. A standards-based modeling approach
+Metodología de sincronización entre la estrategia y la operación.
+Un enfoque de modelado basado en estándares
+V. Collazos1
+, and H. Duarte2
+ABSTRACT
+Enterprise Architecture (EA) has gained importance in recent years, mainly for its concept of “alignment” between the strategic and
+operational levels of organizations. Such alignment occurs when InformationTechnology (IT) is applied correctly and timely, working
+in synergy and harmony with strategy and the operation to achieve mutually their own goals and satisfy the organizational needs.
+Both the strategic and operational levels have standards that help model elements necessary to obtain desired results. In this sense,
+BMM and BPMN were selected because both have the support of OMG and they are fairly well known for modelling the strategic
+level and operational level, respectively. In addition, i* modeling goal can be used for reducing the gap between these two standards.
+This proposal may help both the high-level design of the information system and to the appropriate identification of the business
+processes that will support it.
+This paper presents a methodology for aligning strategy and the operation based on standards and heuristics. We have made a
+classification for elements of the models and, for some specific cases, an extension of the heuristics associated between them. This
+allows us to propose methodology, which uses above-mentioned standards and combines mappings, transformations and actions to
+be considered in the alignment process.
+Keywords: Enterprise architecture, strategic alignment, intentional modeling, goal models, goal orientation, BMM, i*, BPMN, BPM.
+RESUMEN
+La Arquitectura Empresarial (EA) ha ganado importancia en los últimos años, principalmente por su concepto de “alineación” entre
+los niveles estratégico y operacional de las organizaciones. Dicha alineación ocurre cuando la Tecnología de la Información (TI)
+se aplica correcta y oportunamente, trabajando en sinergia y armonía con la estrategia y la operación, logrando mutuamente sus
+propias metas, y alcanzando las necesidades de la organización.
+Tanto los niveles estratégicos como los operativos tienen estándares que ayudan a modelar los elementos necesarios para obtener
+los resultados deseados. En este sentido, el BMM y el BPMN fueron seleccionados debido a que tienen el soporte de la OMG y
+son bastante conocidos para modelar la estrategia y la operación respectivamente; además, el modelado de objetivos i* puede ser
+utilizado para reducir la brecha entre los dos estándares. Esta propuesta podrá ayudar tanto al diseño de alto nivel del sistema de
+información como a la identificación apropiada de los procesos de negocio que lo soportarán.
+Este artículo presenta una metodología para alinear la estrategia y la operación basada en estándares y heurísticas. Hemos realizado
+una clasificación de los elementos de los modelos y, en algunos casos específicos, una extensión de las heurísticas asociadas
+entre ellos. Esto nos permite proponer una metodología que utiliza los estándares antes mencionados y que combina mapeos,
+transformaciones y acciones a considerar en el proceso de alineación.
+Palabras clave: Alineación estratégica, modelado intencional, modelado de objetivos, arquitectura empresarial, orientación a
+metas, BMM, i*, BPMN, BPM.
+Received: March 11th 2016
+Accepted: March 31st 2017
+DOI: http://dx.doi.org/10.15446/ ing.investig.v37n2.60869
+1
+Ph D. student in Systems and Computer Engineering, Universi­ dad Nacional
+de Colombia, Colombia. Facultad de Ingeniería - Departamento de Sistemas e
+Industrial. Affiliation: Graduated E-mail: vecollazoss@unal.edu.co
+2
+Docteur Specialité Informatique, Université Joseph Fourier, Grenoble I, Fran-
+ce. Affiliation: Exclusive professor, Universidad Nacional de Colombia, Co-
+lombia. E-mail: hduarte@unal.edu.co
+How to cite: Collazos, V., and Duarte, H. (2017). Methodology of syn-
+chronization among strategy and operation. A standards-based modeling
+approach. Ingeniería e Investigación, 37(2), 111-119.
+DOI: 10.15446/ing.investig.v37n2.60869
+Attribution 4.0 International (CC BY 4.0) Share - Adapt
+Introduction
+Often, companies of any size and economic capacity
+define from its beginnings the visionary and basic concepts
+necessaries for its constitution; during this process,
+companies include motivational elements such as vision,
+mission and projection of objectives. As time passes and
+in a natural process, organizations´ strategy and processes
+tend to lose synchrony.This is mainly caused by a market´s
+active dynamic or the organizations own management of
+the business’ context, which in turn produces a continuous
+evolution of its processes.
+
+--- PAGE 2 ---
+Methodology of synchronization among strategy and operation. A standards-based modeling approach
+Ingeniería e Investigación vol. 37 n.° 2, august - 2017 (111-119) 112
+Consequently, finding diverse alternatives to achieve a
+greater alignment between strategy and business processes
+constitutes a challenge and a priority for the development
+of the strategic and operative components within the
+framework of an enterprise architecture - EA (Goethals et
+al., 2006; Lankhorst et al., 2005).
+Our proposal complements in several aspects some
+previous and independent work in the domain of
+alignment between strategic and operational models
+(Alves et al, 2013; Bleistein et al., 2006; Cravero 2012;
+Koliadis et al., 2006). We have contributed to the state
+of art in the paradigm of the strategic - operational
+alignment. We defined an integral methodology that will
+allow the tasks of modeling and bi-directional alignment
+among different levels of abstraction to be optimized in a
+practical manner.
+In the beginning, organizations use BMM (OMG: BMM,
+2015) to define the organizational strategy (motivation) and
+BPMN (OMG: BPMN, 2013) to model business operations.
+The correspondence between the two models is not
+evident and sometimes “ad hoc” methods that don’t allow
+reutilization or generalization are used. In this context, in
+order to reduce the natural gap between the motivation
+and the operational abstraction levels, a modeling agent-
+goal paradigm called i* (Yu, 1995) is used. To establish a
+bidirectional correspondence between these models, we
+have classified, unified and contributed transformation
+heuristics between the goals model and the operational
+one by complementing some previous works (Bleistein et
+al., 2006; Alves et al., 2013).
+Furthermore we developed transformation heuristics
+between the BMM and i* models, transformation heuristics
+between the i* and BPMN models, and some additional
+and specific mapping heuristics between the strategic
+model and the goal model. Some specific theories of
+transformation among the strategy and the operation were
+formed. In addition, we developed some support artifacts
+(Matrix mapping between constructs, Overview of the
+Matrix log of alignment) for tracing and controlling the
+alignment between these models.
+Research Context
+We have based our work on strategic - operational
+alignment paradigms, which are current and adopted in
+most organizations that focus its efforts in the area of the
+EA. Among them, we can mention the strategy orientated
+paradigm, that contains modeling oriented by goals and
+agents (Yu, 1997) and whose goal-oriented and agent-
+oriented approach have been important in the field of
+requirement engineering (RE). Therefore, frameworks that
+share this concept such as NFR (Chung et al., 2000), KAOS
+(Bodhuin et al., 2004) and GRL (Amyot & Mussbacher,
+2002;GRL,2016)havedemonstratedsignificantadvantages
+in organizational impact during strategy modeling.
+One of the framework derived from strategy-oriented
+paradigm is called i* (Yu, 1995), which allows modeling
+organizational goals and the relationship between the
+ones that are responsible for the organization, adopting
+an approach of the intentional domain y socio-technical.
+i* is normally used to model and understand the internal
+relationships and the external environment of an
+organization.This includes actors, goals and responsibilities
+of dependencies and alternatives (Horkoff and Yu, 2009).
+i*’s methodology includes: the Strategic Dependence
+model (SD), which describes how stakeholders depend on
+each other inside an organizational context; the Strategic
+Rational model (SR), which mainly describes stakeholder’s
+interests and concerns by means of intentional elements
+such as goals, soft goals, tasks and resources, as well as
+particular dependencies with other elements inside the
+organizational context (Yu, 1995).
+On the other hand, there are interesting works such as Yu
+et al. (2006); Cravero et al. (2009); and Cravero, (2012)
+illustrating the potential use of BMM together with i*
+supportingintentionalmodelingandEnterpriseArchitecture
+(EA) analysis under different perspectives.
+The Business Motivation Model (BMM) focuses primarily
+on modeling intentionality thus providing a framework for
+developing,communicatingandmanagingbusinessplansin
+an organized way (BGR, 2016).This structured meta-model
+introduces elements and intentional interrelationships,
+this includes: the ends, describing the aspirations of the
+company, the means defining plans the company utilizes
+to achieve those ends and the tactics and strategies to be
+implemented to fulfill those purposes. The model includes
+so called influencers, those elements that can positively or
+negatively impact the organization’s operation, means and
+ends (Collazos & Duarte, 2016).
+Additionally, BMM model has referenced four relevant
+concepts: Asset, Organization Unit, Business Process, and
+Business Rule; which have roles in BMM structure but
+actually belong in other standards OMG, where they are
+defined. Also, for construction of BMM model, techniques
+such as VMOST (Bleistein et al., 2006) and VMOST
+Extended (Collazos & Duarte, 2016), can be considered as
+semi-structured tools to define the business strategy.
+Another one of the paradigms that we address in this
+work, related with the strategic - operational alignment,
+aims to reduce the natural gap in the level of abstraction
+that exists between the strategic model and the operative
+model of business processes. Under this concept, in
+addition to strategic modeling, efficient operations design
+and modeling of business processes with its corresponding
+implementations are also treated as significant. It is here
+where the BMPN modeling standard serves as a common
+language, easy to interpret, for modeling business processes
+in a graphical manner.
+
+--- PAGE 3 ---
+Ingeniería e Investigación vol. 37 n.° 2, august - 2017 (111-119) 113
+COLLAZOS, AND DUARTE
+Inrelationwiththiswork,theliteraturepresentsspecificcases
+such as those as described by (Bleistein et al., 2006; 2006
+(b)), in which the strategy of an organization is represented
+through the i* goals and BMM models, distinguishing
+the business level above the information technology
+(IT) level with the objectives level, and establishing the
+correspondences between them. This approach differs from
+our work on the goals and in the omission of a context
+focused on strategic and operative alignment using BPMN to
+define the operational business model.
+Although, the literature shows us some proposals that try
+to independently integrate strategy with the goal model
+(Cravero et al., 2009; Cravero, 2012), and others based in
+i*’s goal model and BPMN (Alves et al., 2013; Koliadis et al,
+2006), we consider that our proposal is more complete and
+structured since we’ve supplemented it with new heuristics
+that can enables the passage between the different levels of
+abstraction and the introduction of new artifacts that make
+the alignment process more practical.
+Methodological Alignment Proposal
+Some authors like Reich et al., (1996); Luftman, (2000);
+Theve-net, (2006) state that an “alignment” takes place
+when information technologies (IT) are being applied
+correctlyandopportunely,workinginsynergyandharmony
+with strategy and operations to achieve IT’s own goals, and
+satisfy the organizational needs.
+Our approach based on heuristics (Reeves, 1996) and
+(Manie-ga, 2010) complement some previous works
+based in this concept (Koliadis et al., 2006; Alves et al.,
+2013); here we have focused on classifying the elements
+of the models extending some of the heuristics.This allow
+us to propose a methodology that applies an integral
+vision of mappings, transformations and actions to bear
+in mind in the alignment process using BMM, i*’s goal
+model and BPMN.
+Below, we present the heuristic proposed to bear in mind
+in the alignment process between the different levels of
+abstraction, obtaining concrete guidance for processing
+and aligning each model’s elements.
+Heuristic ofTransformation between models BMM and i*:
+Table 1 shows the key heuristics, in the identification of the
+goal model i* from the elements of the model BMM and
+vice versa.
+The alignment, in principle, can mostly be deduced by
+the analyst (Horkoff, 2006). This transformation allows
+to reduce the gap that exists between the abstracts levels
+strategic and operational. Here our additional contribution
+by heuristics: 6 (b), 7-12.
+Model Element
+#
+Heuristic.
+Description
+BMM I*
+Vision Softgoal 1
+Determined as the overall objective realized in the organizational unit in question (organization or
+area), Must be in a general sense abstract and implicit in the model (SR) and fully coherent with the
+Softgoals defined
+Mission 2
+There may be bi-directional transformation as follows:
+Softgoal (a)
+It must be coherent with the mission of the organizational unit, and must be represented abstractly,
+based on objective elements deduced as strategies
+Task (b)
+In a model with a low level of detail it can be represented as a task element i*, which uses task
+decomposition links with regard to the tasks defined as strategies
+Strategy Objective 3 Strategies BMM can be represented by Objetives i* also named hard goals
+Objective Objective 4 An objective, which is part of the desired result in BMM, can be represented by a hard goal in i*
+Goal Softgoal
+5
+Each actor present in the scope transforms into a participant in the BPMN model
+Tactic
+Task (a) A tactic can be translated into a task i*
+Resource (b) A resource can include a tactic according to human judgment
+Directive
+(Policy Rule)
+6
+Using human judgment, a policy type directive and business rule can be aligned as follows
+Softgoal (a) A BMM directive may be represented with a Softgoal or vice versa by human judgment
+Artefact (b)
+If the narrative of the directive includes some Artifact (resource, device, group, data), it can be
+transformed into a resource element
+Influencer 7
+An Influencer (Internal or external) identified in the narrative or model may be analyzed as follows
+Actor (a)
+If it is identified as an Actor, Position, Agent or Role, can be transformed into its corresponding
+element, according your narrative and human judgment
+Artefact (b)
+If the narrative is associated with a resource element it can be transformed with the corresponding
+type using human judgment
+Table1. Transformation heuristics between BMM and i* models
+
+--- PAGE 4 ---
+Methodology of synchronization among strategy and operation. A standards-based modeling approach
+Ingeniería e Investigación vol. 37 n.° 2, august - 2017 (111-119) 114
+Model Element #
+Heuristic.
+Description
+BMM I*
+Influencer
+Softgoal
+(Dependum)
+7 (c)
+The narrative can through human judgment, give a Dependum element between the actors invol-
+ved, so that your influence on the model is evident
+Organization
+Unit
+8
+A Placeholder Organization Unit identified in the narrative or model may be analyzed as follows:
+(infers title) (a)
+Defines the name of the entire organization or an area in which the model (SR) i* in question is
+focused, or vice versa. This name infers in the title or name of the defined model
+Actor (b)
+An Organization Unit may be represented with an Actor i* or vice versa, according to detail of mo-
+del. This can be inferred and decomposed into multiple actors and types through human judgment
+Business Process Task 9 A Placeholder Business Process may be represented with a Task (Root)
+Business Rule Softgoal 10
+A Placeholder Business Rule may be represented with a Softgoal associated whit the root task in i*
+model
+Asset Resource 11 A Placeholder Asset may be represented with a Resource i*
+Mission,Vision,
+Goal, Objective,
+Directive
+(Softgoal,
+Goal, Task)
+12
+A relationship between model elements through links should be analyzed in detail, depending on
+the judgment made by the analyst, may have the following cases:
+Contributions
+Links
+(a)
+A Contribution link is defined when one or more goals fail to meet the fulfillment of a Softgoal. Ac-
+cording to the type of concept is defined dependence Softgoal and can be classified as a Mission,
+Vision, Goal or Directive BMM, given by the human analysis made
+Means-End
+Links
+(b)
+It is defined a Means-Ends Link from the relationship between a Task and Goal i*. This relationship
+is evident in the BMM model with respect to their corresponding Tactic or Mission elements (for
+Task i*) associated with their respective Objective element (equivalent to Goal i*)
+Decomposition
+Links
+(c)
+When the satisfaction of a goal or task is accomplished by the total of his sons elements (Subgoal,
+Subtask, Resource, Softgoal), it is defined a decomposition links relationship of type logical ‘AND’.
+Also transformation to their corresponding elements BMM it is given between a Tactic or Mission
+(Task i *) that is achieved by the total of the related elements (Vision, Goal, Objective, Directive) as
+appropriate to human judgment
+(d)
+When the satisfaction of a goal or task is accomplished by any of his sons elements, it is defined a
+decomposition links relationship of type logical ‘OR’. Also transformation to their corresponding
+elements BMM it is given between a Tactic or Mission (Task i*) that is achieved by any of the related
+elements (Vision, Goal, Objective, Directive) as appropriate to human judgment.
+Heuristics Mapping between the models i* and BPMN In
+comparisons analysis and mappings of elements between
+strategic and operational models, numerous proposals
+have evolved (Alves et al., 2013; Fuxman et al., 2004;
+Giorginiet al., 2004; Koliadis et al., 2006).Thoseproposals
+described the possible ways to align goal and operational
+models systematically. During this mapping procedure, it
+Model Element
+# Heuristic. Description
+I* BPMN
+Model SR Model BPMN 1 Specify routines and define its scope, creating a BPMN model for each routine
+Stakeholder
+Swimlane
+2
+Each present actor in the scope model, becomes a participant in the model BPMN:
+Lane (a)
+Actors who do not belong to the same organization (at functional context) transformed
+into different BPMN Lanes
+Pool (b)
+Actors who belong to the same organization (at functional context), are transformed into
+different pools in the same Lane
+Task
+Activity
+(Task)
+3
+The internal tasks of the present actors in a scope are included, as an activity, into the
+lane/pool of the corresponding participant in the BPMN model
+4
+If the task within the scope is decomposed, its subtasks must be analyzed as follows:
+Subtask Swimlane (a) If the Subtasks must be performed in parallel, they become activities parallel in the Lane/
+Pool of the corresponding Actor
+Secuence Flow (b) If the Subtasks must be performed in sequence, they become activities linked through
+Sequence flows
+Task Dependum Activity/ Link flow
+message
+5 A Task Dependency is included as an activity in the corresponding lane to the Dependee
+actor, and a message flow links from the present activity in the lane corresponding to the
+Depender actor
+Goal (Hard) End Event 6 A goal become an end event:
+is important to specify the routines and define their scope
+(Koliadis et al., 2006; Yu, 1995). Heuristics adopted
+and in this work have been consolidated, classified
+and extended, allowing the determination of existing
+consistencies between models i* and BPMN, as expressed
+in Table 2. Here our additional contribution by heuristics:
+11(b, c).
+Table 2. Transformation heuristics between i* & BPMN models
+Source: Authors based on (Bleistein et al., 2006; Cravero et al., 2013).
+
+--- PAGE 5 ---
+Ingeniería e Investigación vol. 37 n.° 2, august - 2017 (111-119) 115
+COLLAZOS, AND DUARTE
+Model Element
+# Heuristic. Description
+I* BPMN
+Goal (Hard) De-
+pendum
+End Event (a) If the Goal is a dependency, the end event could be included in the lane corresponding
+to the Depender actor, according to human judgment made by the analyst
+Goal (Hard) End Event (b) If the goal is an internal element of an actor, the end event is included in the Lane/Pool of
+the corresponding actor, according to human judgment made by the analyst
+Root Task Start Event 7 The root Task, related to the chosen routine, becomes the initial event that triggers the
+process
+ResourceDependum Artefact / Flow
+message
+8 A Dependum Resource becomes an artifact produced by the present activity in the
+participant that represents the Dependee actor. Two flows of messages have to be added
+among the activities related to the assigned participants for the Depender and Dependee
+actors. These flows of messages have to be placed in opposite directions
+Task Sub process 9 When the task is decomposed into more than one level, it will be transformed into a
+sub-process
+Subtask ActivitySequence 10 A sequence of activities in the BPMN model must be analyzed, and depending on the
+analyst’s judgment, they could become sub-tasks of the same decomposed task or tasks
+without a father or sons
+Softgoal 11 According to human judgment, a Softgoal can be aligned as follows:
+Infer activities (a) Softgoals are not modeled in BPMN, but they can be inferred by searching and definition
+of quality attributes associated to the activities performed by the participants
+Artefact (b) If the Softgoal narrative includes any Artefact (resource, annotation, group, data), it can
+be transformed into a Resource element
+(c) By not modeling Softgoals they can also be defined Artifacts of type Annotation so that it
+conceptually enriches the intention of the diagrammed process
+OtherHeuristicsofi*TransformationtowardsBMM.During
+this proposal development, the proposal of some additional
+heuristics have been considered that might be taken into
+account during the transformation process, specifically,
+from the i* model towards BMM. This will allow the one
+modeling to cut time in strategic synchronization, optimize
+the alignment procedure of the motivational model with the
+objective model, besides enriching mutual, syntactically
+and semantically its elements. This corresponds to Table 3.
+Table 3. OtherTransformation Heuristics between i* & BMM models
+# Description of Heuristics
+1 Tactics are actions that use resources to achieve an objective, in this sense, a
+resource in the BMM model must be deducted by the analyst’s judgment and based
+on the formulated tactic; therefore, a resource cannot be literally expressed as a
+tactic in the model
+2 In the construction of modeling alternative (SD) i*, efforts are needed to not remove
+objectives or goals previously defined, unless they are modified with the analyst’s
+argument and criteria. Maintaining enough Softgoals will enrich the BMM model
+syntactically and semantically
+3 All resources -defined in the model (SD) i*- must be related to at least one tactic, if
+orphans tactics resources exists after the transformation process, it is necessary, by
+using human judgment, to define the new tactic given the criteria and the strategic
+need applicable
+4 In case that an element (SD) i*’s syntax is modified it necessarily implies that a
+change of type is necessary on its corresponding BMM element in a transformation
+process, eliminating the BMM element and the addition of a new one, depending
+on the applicable type, should be considered, all this to human judgment by the
+one modeling (e.g. Change an Objective by a Goal)
+Source: Authors
+Support artifacts in the alignment
+According to the views expressed by Karunakaran &
+Purao (2012), artifacts such as templates represent certain
+processes’ materials, which can facilitate their execution.
+This motivated us to build some concrete artifacts like
+matrices and templates as a guide for the alignment
+procedure and synchronization of the strategic and
+operational models. This approach, as a constructor under
+the design science paradigm (March and Smith, 1995) also
+has been adopted in others proposals (Collazos & Duarte,
+2016).
+Matrix mapping between constructs and its elements
+During the alignment procedure between BMM, i* and
+BPMN, the need to optimize the way referencing their
+basic elements between each other arises. Thus, we have
+designed a transposed matrix (At) of symmetrical type (nxn)
+(Grone et al., 1987), applying concepts of Toeplitz and
+Hankel matrices (Ikramov & Chugunov, 2016), that allows
+the mapping between the models and their basic elements
+wherein, for each one and doing its transposition, will
+always give us the same result guaranteeing that the search
+and alignment with any order (descending, ascending,
+vertical or horizontal, from the BMM towards i* and BPMN
+or vice versa), will always coincide independently from the
+criterion of orientation applied.
+Figure 1 shows the matrix in question, showing, highlighted
+in red, how, for instance, the element i* Goal can be
+mapped with the element BMM Objective or Strategies
+(horizontal or vertical view). Likewise, it shows how it can
+be aligned with the BPMN Event End element. This logic is
+applied reversely among any of the elements of the models
+involved. . In the present document (for space reasons), the
+narrative of some detected equivalences between BMM and
+BPMN models is not defined into a heuristics’ table, some
+of them through human judgment applied, however, in the
+alignment matrix of Figure 1, their respective co-relations
+can be directly identified, which are fully aligned with their
+corresponding associations to the i* model.
+Source: Authors, based on (Koliadis et al., 2006; Alves et al., 2013).
+
+--- PAGE 6 ---
+Methodology of synchronization among strategy and operation. A standards-based modeling approach
+Ingeniería e Investigación vol. 37 n.° 2, august - 2017 (111-119) 116
+Figure 1. Matrix mapping between constructs.
+Source: Authors
+Matrix log of alignment between elements: The evidence
+presented by the literature is adopted for the strategic-
+operational alignment, intuit the application of analytical
+and manuals procedures, which are based on subjective
+reasoning in the use of mapping mechanisms among the
+elements of the aligned models. This can be very handy
+in models whose size are small or relatively moderate,
+but to implement the strategic and operational mapping
+in an integrated and directly way, in models with medium
+or larger sizes, can result in a very complex process for
+the one modeling. Moreover, the process is more complex
+when software tools that support the concept and process
+of transformation are not available, even more so with the
+absence of traceability of the operations executed.
+This is why we contribute by defining a concrete artifact as
+a template that allows traceability to be objectively retained
+and alignment between elements of the involved models;
+this will allow us to textually keep the traceability applied
+(sequence) and the executed actions (add, update, delete)
+for every instance of the element aligned in the procedure,
+while providing practicality during the transformation
+routine in a bidirectional way.
+The proposed matrix works jointly with the matrix
+alignment constructs mentioned in the preceding block. It
+is composed of several sections: there is the item number (#
+Item)identifyingnumericallyeverytransformationoperation
+realizedtoaspecificelementanditscorrespondingelement
+to align. There is also specific sections for BMM, i* and
+BPMN and their corresponding basic elements (Elements)
+that can be correlated in a transformation procedures, this,
+accompanied by the instance name (Instance Name) of
+the element that applies in a particular way. In addition, it
+comprises a numerically column for keeping the reference
+(# Ref.) of each punctual change of the model (SD/
+SR) resulting in i* or BMM according to the direction of
+transformation.
+It also has a column responsible for defining each operation
+(item) the action (Action) to be performed by a particular
+model (Model that executes the “Action”) among which are:
+Add, Update or Delete.The use of this matrix corresponds to
+a manual procedure and to an objective analysis by the one
+modeling. Figure 2 shows the procedure described above.
+Running Example
+The model of alignment has been evaluated by a systematic
+method, as is evidenced in (Collazos, 2016). In this section
+we present a simple example to facilitate understanding of
+the integral procedure of alignment proposed. Accordingly,
+we have selected a basic example defined in the official
+documentation of the BMM motivational standard related
+to a Pizza Company. Initially, each motivational statement
+was classified in its respective element, sub-element and
+associated description according to the BMM model and
+applying the VMOST and VMOST Extended techniques.
+The strategic model of pizza Company is shown inTable 4.
+Figure 2. Overview of the Matrix log of alignment.
+Source: Authors
+
+--- PAGE 7 ---
+Ingeniería e Investigación vol. 37 n.° 2, august - 2017 (111-119) 117
+COLLAZOS, AND DUARTE
+Table 4. BMM Case for Pizza Company
+Element Sub-Element Description
+Organization Unit -- Pizza Company
+Business Process -- Make pizzas
+Business Rule --
+Making pizzas should have mutual benefits
+(customers / company)
+Vision -- Be the city’s favorite pizza place
+Mission -- Provide pizza to customers city-wide
+Goal To keep customers satisfied
+|_ Objective
+To deliver pizzas in an expedient amount
+of time
+|_ Objective
+By January 1, 2007, 95% on-time pizza
+delivery
+Strategy
+Deliver pizzas to the location of the custo-
+mer’s choice
+|_ Tactic
+Hire drivers with their own vehicles to
+deliver pizzas
+Business Policy
+Safety in the kitchen, and in the streets,
+comes first
+|_ Business Rule Pizzas must be delivered within one hour
+|_ Business Rule
+Pizzas may not be delivered beyond a
+radius of 30 miles
+External Influencer -- Instructions and current trade regulations
+Assessment Opportunity
+The bankruptcy of Pizza Company’s major
+competitor in Region-Y is assessed to be
+an Opportunity in its Goal “To increase
+market share
+Source: Authors
+The alignment in this case is of descending type, causing the
+process from the Strategic model towards the Operational
+model (BMM i* BPMN). Once classified the types
+and instances names in the identified BMM model, they
+are defined according to the section of BMM elements of
+the Matrix log of alignment. This will be the starting point
+for applying the correspondences between the elements
+of the motivational BMM model and the objective i*
+model, applying for each operation (# item) its correlation
+as appropriate. For that purpose, we rely on the Matrix
+mapping between constructs previously discussed, as well
+as its base and the heuristics of alignment between BMM
+and i*, described in Table 1.
+9 (# item 9), an element exists of type Tactics, whose
+transformation originates an Action to Add a Task of the
+model i* and which Names of Instance is transcribed as
+“Hire driver” and “Deliver pizzas”. The reference number
+(# Ref. 9) indicates that this new operation on i* model (To
+add new task), comes from the operation described initially
+in item # 9.
+We have omitted the i* (SD) resulting model for
+space reasons; nevertheless in Figure 4, we show the
+corresponding (SR) i* model for the current case of the
+Pizza Company.
+The figure demonstrates, for example, how the element
+Task in (SR) i* with Name of instance “Hire driver”
+(highlighted with red) (# Ref. 9) in Figure 4, and explained
+with more detail in the preceding paragraph, is the result of
+the transformation from the BMM element originated in its
+operational item (#9), and that corresponds to tactic “Hire
+drivers with their own vehicles to deliver pizzas” defined
+with a red circle in the Figure 3.
+In addition, we can see how, for instance, # item 8 in
+Figure 3 describes a strategy with instance name “Deliver
+pizzas to the location of the customer’s choice”, and that
+also by applying the matrix mapping between constructs
+(Figure 1), we find a direct relation with an element i*
+of type Goal, which in turn, by human judgment, has
+been defined the instance name i*: “Pizzas are delivery
+at domicile”. The preceding is evidenced in the Figure 4,
+# Ref 8.
+Figure 3. Excerpt from the application of Matrix log in the example of
+the Pizza Company.
+Source: Authors
+Continuing with the example above, Figure 3 describes
+(see the elements highlighted with red) that in the operation
+Figure 4. Model (SR) i* resulting from the sample case.
+Source: Authors
+The same alignment process is applied in the transformation
+of the Goal I* model to the Operational BPMN model.
+For instance, (highlighting some instances in red) Figure 5
+displays, according to the above, how theTasks (SR) i* “Hire
+driver” and “Deliver pizzas”, can be transformed to a Task
+element in BPMN and on human judgment has retained the
+same instance name.This operation has taken as a reference
+the existing correlation according to the established
+definition in the Matrix mapping between constructs.
+
+--- PAGE 8 ---
+Methodology of synchronization among strategy and operation. A standards-based modeling approach
+Ingeniería e Investigación vol. 37 n.° 2, august - 2017 (111-119) 118
+Figure 5. Matrix mapping between constructs.
+Source: Authors
+After defining the matrix log for the case of the Pizza
+Company, it is possible to finish with the process of
+descending alignment and define the corresponding BPMN
+model. In this case, we apply the transformation heuristic
+between the i* and BPMN models, as shown in Table 2.
+Figure 6 shows the basic BPMN model and the outcome
+of the transformation process. For instance, it is clear how
+Tasks “Deliver Pizzas” and “Hire driver” were transformed
+by applying heuristic # 3, both. Similarly it is evident
+how it is possible to describe in the operative model the
+corresponding Softgoal, in this case, defined in annotations
+and by human judgment, applying for these cases the new
+heuristics # 11(b).
+the description, with an example of a practical and simple
+application is presented in such a way that it facilitates
+comprehending the approach that we have proposed. The
+suggested methodology is a support tool that helps both, the
+Information System designer and the business expert in the
+alignment between the strategy and the business processes
+required to accomplish the established motivation.
+The alignment approach proposed here has been
+implemented already in previous works as evidenced in
+(Collazos, 2016; Collazos & Duarte, 2016) where in a
+specificcasestudyofatechnologycompanytheyhavebeen
+able to do an objective strategic-operational alignment in a
+bidirectional way, aiding themselves with this fundamental
+tool for implementing a method for the evaluation of the
+efficiency of the organizational strategy, demonstrating that
+the proposed approach covers an integral methodology
+between strategy and operations, addressing all the levels
+of abstraction modeling in an EA context.
+As future work, efforts can be invested in automating the
+alignment approach by implementing a tool that can apply
+the alignment in a systematic and assisted way, especially
+for models of greater dimensions. It is also very useful to
+identify specific and productive contexts, where they can
+validate and provide feedback on this approach that would
+enhance the effectiveness of the proposal.
+References
+Alves, R., Silva, C. & Castro, J. (2013). A bi-directional integra-
+tion between i* and BPMN models in the context of busi-
+ness process management: A position paper. ER@BR.
+Amyot D., Mussbacher G. (2002). URN: Towards a New Stan-
+dard for the Visual Description of Requirements. Procee-
+dings of the Third International Workshop on Telecommu-
+nications and beyond: The Broader Applicability of SDL
+and MSC, Aberystwyth, UK, June 24-26, pp. 21-37.
+Bleistein, S., Cox, K., Verner, J., &Phalp, K. (2006). B-SCP: A
+requirements analysis framework for validating strategic
+alignment of organizational IT based on strategy, context
+and process. Information and Software Technology, Vol.
+46, pp.846-868.
+Bleistein, S. J., Cox, K., &Verner, J. (2006) (b). Validating strate-
+gic alignment of organizational IT requirements using goal
+modeling and problem diagrams. Journal of Systems and
+Software, 79(3), 362-378.
+Bodhuin, T., Esposito, R., Pacelli, C., &Tortorella, M. (2004).
+Impact Analysis for Supporting the Co-Evolution of Busi-
+ness Processes and Supporting Software Systems. In CAiSE
+Workshops (2) (pp. 146-150).
+BRG: Business Rules Group (BRG),http://www.businessrules-
+group.org/ (2016)
+Chung, L., Nixon, B., Yu, E., &Mylopoulos, J. (2000). NFR in
+Software Engineering. Kluwer Academic Publishers.
+Figure 6. BPMN model aligned with the defined strategy.
+Source: Authors
+Conclusions
+Providing support for organizational analysis by business
+and motivational modeling, which includes strategic and
+operational alignment methods, arises as a necessity for
+any organization ready to optimize their processes in a
+BPM’s context. In this work, our particular contribution has
+been to provide an approach of organizational alignment
+based on heuristic techniques. We have also contributed in
+the classification, definition and extension of bidirectional
+heuristic mapping among the motivational BMM
+models, objective i* and operational BPMN. Similarly,
+another contribution that we have made is related to the
+construction of new matrix type artifacts, which improve
+the practicality and traceability of the implemented
+strategic-operational procedures of alignment (Figures
+1 and 2). Moreover, an additional contribution relates to
+
+--- PAGE 9 ---
+Ingeniería e Investigación vol. 37 n.° 2, august - 2017 (111-119) 119
+COLLAZOS, AND DUARTE
+Grone, R., Johnson, C.R., Sa, E.M., &Wolkowicz, H. (1987).
+Normal matrices. Linear Algebra and its Applications, 87,
+213-225.
+Cravero, A. (2012). Methodological proposal of Requirements
+Engineering aligning IS/IT to the business strategy. 31st In-
+ternational Conference of the Chilean Computer Science
+Society.
+Cravero, A., Sepúlveda, S., Trujillo, J., & Mazón, J. N. (2009).
+El Alineamiento de Objetivos de la Organización como
+Propuesta para el Análisis de Requisitos en Almacenes de
+Datos. In WORKSHOPINTERNACIONAL EIG.
+Collazos, V. (2016). Framework de evaluación de la efectivi-
+dad de los modelos estratégicos del negocio basados en los
+estándares BMM y BPMN. Tesis de Maestría, Universidad
+Nacional de Colombia, Departamento de Ingeniería de
+Sistemas e Industrial.
+Collazos,V. & Duarte, H. (2016). Motivational assessment fra-
+mework: An approach of alignment strategic-operational.
+Popayan, Colombia. 11 Congreso Colombiano de Compu-
+tación.
+Fuxman, A., Liu, L., Mylopoulos, J., Pistore, M., Roveri, M. &
+Traverso, P. (2004). Specifying and analyzing early requi-
+rements in Tropos. In: Requirements Engineering, Springer
+London, pp. 132–150.
+Giorgini, P., Kolp, M., Mylopoulos, J. &Pistore, M. (2004). The
+Tropos Methodology: an overview. In: Methodologies And
+Software Engineering For Agent Systems. Kluwer Academic
+Publishing.
+Goethals, F. et al., Managements and enterprise architecture
+click: The FADE framework, Information Systems Frontiers,
+vol. 8, no. 2, pp. 67-79, 2006.
+GRL: Goal-oriented Requirement Language (GRL),
+http://www.cs.toronto.edu/km/GRL/, ultimo acceso Sep-
+tember 2016
+Horkoff, J.M. (2006). Using i* Models for Evaluation. (Master’s
+Thesis).University of Toronto.
+Horkoff, J. & Yu, E. S. K. (2009). Evaluating goal achievement
+in enterprise modeling - an interactive procedure and expe-
+riences. In Persson,A.And Stirna, J., editors, PoEM, volume
+39 of Lecture Notes in Business Information Processing,
+pages 145–160. Springer.
+Ikramov, K. D., & Chugunov, V. N. (2016). On conditions for
+permutability of Toeplitz and Hankel matrices. Computatio-
+nal Mathematics and Mathematical Physics, 56(3), 354-357.
+Karunakaran, A., & Purao, S. (2012). Designing for recombi-
+nation: process design through template combination. In
+Design Science Research in Information Systems. Advan-
+ces inTheory and Practice (pp. 36-51). Springer Berlin Hei-
+delberg.
+Koliadis, G., Vranesevic, A., Bhuiyan, M., Krishna, A., &Gho-
+se, A. (2006).Combining i* and BPMN for Business Process
+Model Lifecycle Management. In Business Process Mana-
+gement Workshops,. 416-427
+Lankhorst, M., Enterprise Architecture at Work –Modeling,
+Communication, and Analysis, Berlin: Berlin Heidelberg,
+Springer–Verlag, 2005, pp352 .
+March, S.T., & Smith, G. F. (1995). Design and natural science
+research on information technology. Decision support sys-
+tems, 15(4), 251-266.
+Miers, D. (2006). Getting Past the First BPM Project: Deve-
+loping a Repeatable BPM Delivery Capability. BP Trends.
+Luftman, j. (2000). Assessing business-it alignment maturity.
+Communications of the Association for Information Sys-
+tems,Vol. 4, No.14, 1–50
+Reich, b., &benbasat, i. (1996). Measuring linkage between
+business and informationtechnology objectives. MIS Quar-
+terly,Vol. 20., 55—81
+Maniega -Legarda, D. (2010).Aplicación de un estudio de usa-
+bilidad en bibliotecas digitales: la Biblioteca Virtual de la
+UOC.
+OMG: BPMN, Business Process Model and Notation
+(BPMN).Version 2.0.2, OMG Document Number: for-
+mal/2013-12-09. OMG group, http://www.omg.org/spec/
+BPMN/2.0.2. (2013)
+OMG: BMM. Business Motivation Model (BMM). Version
+1.3, OMG Document Number: formal/2015-05-19.,
+http://www.omg.org/spec/BMM/1.3/PDF (2015)
+Palmer, N., & Mooney, L. (2009). Building a Business Case for
+BPM – a Fast Path to Real Results. Metastorm.
+Reeves, C. R. (1996). Modern heuristic techniques. VJ
+Rayward-Smith, IH Osman, CR Reeves, GD Smith (eds).
+Modern Heuristic Search Methods, Wiley, Chichester,
+pp. 1-25.
+Thevenet l. H., salinesi c., etien a., gam i., & Lassoued m.:
+experimenting a modeling approach for designing Organi-
+zation’s strategies (awre), Adelaide, Australia,(2006)
+Yu E. (1995). Modelling strategic relationships for process reen-
+gineering. Ph.D. thesis, also Tech. Report DKBS-TR-94- 6,
+Dept. of Computer Science, University ofToronto, Canada.
+Yu, E., (1997). Towards Modelling and Reasoning Support
+for Early-Phase Requirements Engineering. Proc. 3rd
+Int. Symp. On Requirements Engineering, Annapolis,
+pp. 226-235. NewYork.
+Yu, E., Strohmaier, M., & Deng, X. (2006).Exploring intentional
+modeling and analysis for enterprise architecture. In Enter-
+prise Distributed Object Computing Conference Works-
+hops, 2006. EDOCW’06.10th IEEE International. pp 32-32.

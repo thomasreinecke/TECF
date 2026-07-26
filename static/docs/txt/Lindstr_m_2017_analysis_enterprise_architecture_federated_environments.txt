@@ -1,0 +1,661 @@
+--- PAGE 1 ---
+HAL Id: hal-01765262
+https://inria.hal.science/hal-01765262v1
+Submitted on 12 Apr 2018
+HAL is a multi-disciplinary open access archive
+for the deposit and dissemination of scientific re-
+search documents, whether they arepublished or not.
+Thedocumentsmaycomefromteachingandresearch
+institutions in France or abroad, or from public or pri-
+vate research centers.
+L’archiveouvertepluridisciplinaireHAL,estdes-
+tinée au dépôt et à la diffusion de documents scien-
+tifiquesdeniveaurecherche, publiésounon, émanant
+des établissements d’enseignement et de recherche
+français ou étrangers, des laboratoires publics ou
+privés.
+Distributed under a Creative Commons CC BY 4.0 - Attribution - International License
+An Analysis of Enterprise Architecture for Federated
+Environments
+Niklas Lindström, Björn Nyström, Jelena Zdravkovic
+To cite this version:
+Niklas Lindström, Björn Nyström, Jelena Zdravkovic. An Analysis of Enterprise Architecture for Federated
+Environments. 10th IFIP Working Conference on The Practice of Enterprise Modeling (PoEM), Nov 2017,
+Leuven, Belgium. pp.156-170, ⟨10.1007/978-3-319-70241-4_11⟩. ⟨hal-01765262⟩
+
+--- PAGE 2 ---
+An Analysis of Enterprise Architecture for Federated
+Environments
+Niklas Lindström1
+, Björn Nyström2
+, Jelena Zdravkovic2
+1
+HSB Stockholm, Fleminggatan 41, Sweden
+2
+Department of Computer and Systems Sciences, Stockholm University, Kista, Sweden
+niklas.lindstrom@hsb.se, [bjny7070, jelenaz]@dsv.su.se
+Abstract. The challenge of business and IT-alignment has been a major concern
+for IT managers over the last few decades, as an increased congruence between
+the two aspects improves effectivity and results in organizations. Enterprise
+Architecture (EA) addresses the alignment by providing a holistic model-based
+view of the organization. However, previous research has revealed some generic
+discrepancies in prominent EA frameworks regarding their support towards more
+decentralized organizational structures. Following a case study research of a
+federated organization this paper analyzesin depth The Open Group Architecture
+Framework (TOGAF) EA framework, and based on identified discrepancies how
+it should be extended to provide an adequate support. By enabling the
+establishment and maintenance of a federated EA, the proposed extension should
+further increase the business and IT-alignment for federated organizations.
+Keywords: Enterprise Architecture, TOGAF, Organizational structure
+1 Introduction
+A major concern for IT managers during the last few decades has been business-IT
+alignment [1], [2]. The emergence of the global and increasingly complex
+organizational environments has entailed a wider use of decentralized structures within
+them. Decentralization allows organizations to encounter some of the past decade’s
+most important business concerns, including cost reduction, productivity, agility, and
+time to market [3]. However, the alignment can become increasingly difficult when
+utilizing a decentralized structure due to the decision-power being pushed out into the
+organization, increasing the challenge of moving in a unanimous direction [4], [5].
+Research has shown that an organization with effective alignment between business
+and IT outperform non-aligned organizations in both turnover and growth [2], [6], [7].
+To solve the alignment problems, there are multiple theoretical approaches available.
+Earlierresearch haspresented approachessuch asdeveloping adigital businessstrategy
+[6], [8], following IT governance models [9], and implementing enterprise architecture
+frameworks [7]. Enterprise Architecture (EA) is a comprehensive framework that links
+an enterprise's main components, e.g. business strategy and goals, processes,
+informationsystemsandinfrastructure[10],providingaholistic,model-basedblueprint
+
+--- PAGE 3 ---
+of the enterprise. EA frameworks used in today’s organizations are mostly The Open
+Group Framework (TOGAF) [11], Federal Enterprise Architecture (FEA) [12],
+Department of Defense Architecture Framework (DoDAF) [13], British Ministry of
+Defense Architecture Framework (MODAF) [14], and NATO Architecture Framework
+(NAF) [15]. Sandkuhl et al. [16] mention that TOGAF is more widely used across
+multiplebranchesthantheotherframeworkspreviouslynamed.AccordingtoTheOpen
+Group’s blog [17], the amount of TOGAF certified people across the globe has now
+exceeded 60 000, compared to 7000 the year 2011 and 13 000 during the year 2013
+which gives an indication of its fast-paced growth.
+By combining business strategy and goals, processes, and information systems in an
+enterprise and not solely focusing on specific aspects (such as strategy or IT
+governance), it should be possible to solve the business-IT alignment problem.
+However, previous research has shown that there are discrepancies between the EA and
+its possibility to solve major CIO concerns, such as decision support for issues related
+to the IT organization and estimating and managing costs [18]. Furthermore, Speckert
+et al. [19], argue that EA frameworks do not support decentralized organizational
+structures. Combined with [20] stating that the frameworks were initially developed
+focusing on a centralization of IT and management; it entails an emergenceofproblems
+such as governance and decision-making irregularities in decentralized organizations.
+The paper presents a case study research conducted in a large Swedish company in
+the real estate business domain. The research critically analyzed TOGAF and the way
+of working in the organization. Using the elicited knowledge, it attempted to highlight
+insufficiencies of TOGAF in contrast to the identified federated structural aspects of
+the organization, and suggest potential improvements. The results should facilitate
+further harmonization between EA and federated organizations as well as it should
+increase the business-IT alignment of organizations with similar characteristics.
+The paper is organized as follows: section 2 presents a brief overview of EA and
+TOGAF, different organization structures, and related works. Section 3 describes the
+organization of the case study, while section 4 provides research results in details.
+Section 5 follows with a discussion of the results, and section 6 provides concluding
+remarks as well as relevant directions for further research.
+2 Background
+2.1 EA, TOGAF
+Situated at the level of an enterprise, EA regards an interconnected overarching set of
+methods, principles, and models utilized in the development and implementation of an
+enterprise’s organizational structure, business processes, information systems, and
+infrastructure, attempting to align business with IT [21]. Because developing an EA
+generates a significant number of architectural components, e.g. artefacts, dividing the
+EA into different architecture layers provides a structure among the components and
+reduces the number of elements residing in the same model. TOGAF is an EA
+framework created by The Open Group [22] defining a subset of architecture layers:
+
+--- PAGE 4 ---
+Business Architecture; Information System Architecture (including Data- and
+Application Architecture); and Technology Architecture. Furthermore, the framework
+enables the inclusion of other architectural styles, such as Security Architecture and
+Service Oriented Architecture (SOA). TOGAF is divided into six parts, and each part
+isaccountedforasamaincomponent:ArchitectureDevelopmentModel(ADM),ADM
+Guidelines and Techniques, Architecture Content Framework, Enterprise Continuum
+and Tools, Reference Models and Architecture Capability Framework. Below we
+describe the framework’s essences relevant for the results of the study.
+ADM describes a process for developing and managing the TOGAF core [11]; the
+process is repeatable and an iterative cycle for building and transforming the
+organization. Figure 1 below visualizes the ADM process, with the circles representing
+the main phases A-H and a continuous Requirements Management phase, and the
+arrows representing the flow of artefacts between the phases.
+Architecture Capability Framework presents support to establish, operate and
+control at the enterprise level the architecture function according to the organization
+structure, business processes, roles, responsibilities, and skills, controlled at the
+enterprise level [11]. Two vital concepts involving the implementation, development,
+and governance of the EA, is Architecture Governance and Architecture Board, both
+positioned in the Architecture Capability Framework. The concept of Architecture
+Governance [11, Ch. 50] includes a framework and guidelines regarding architecture
+governance. TOGAF suggests that architecture governance could be practiced in four
+separate domains, including corporate, technology, IT, and architecture governance. In
+turn, each domain and their area of responsibility may exist in multiple levels within
+the whole enterprise. The Architecture Governance Framework is shown in figure 1.
+Fig. 1. TOGAF’s ADM process (left) and Architecture Governance Framework [11]
+To increase the success rate of architecture’s governance, TOGAF suggests the
+implementation of an Architecture Board. The concept of Architecture Board [11, Ch.
+47] refers to a cross-organization group overseeing the implementation of the
+
+--- PAGE 5 ---
+architecture strategy. Its main responsibilities include providing the basis for all
+decision-making regarding the various architectures, enforcing architecture
+compliance, and ensuring compliance and adherence with specified Architecture
+Contracts, which details joint requirements regarding the architectures. TOGAF
+suggests that the Architecture Board should consist of four or five members.
+2.2 Organizational Structure
+Enterprise activities are often grouped into subdivisions - departments, such as
+marketing, sales, manufacturing. The capabilities, responsibilities, and interconnection
+of the various subdivisions are defined in enterprise’s organizational structure referring
+to the formal configuration between individuals and groups regarding the allocation of
+tasks, responsibilities, and authority within the organization [23, p. 1]. Furthermore,
+[24, p. 451] states that organizational structure shapes an ecology of distinct frames that
+exist at the level of organizational subunits. Organizations can be distinguished from a
+few different dimensions [23], where the relevant for this study is The Type of
+Decentralization, referring to where decisions in the organization are conducted.
+Deciding upon the degree of decentralization in an organization can be a difficult
+task. Typically, different organizations, although facing similar conditions and
+environment, will choose different settings of decentralization, as described in [25]. In
+figure 2, three main kinds of organizational structures are visualized, including a)
+Centralized, b) Federated, and c) Decentralized. The circle shaped forms in the figure
+represent various subunits of the organization, and the archs refer to the steering forces
+of decision-making power and authority.
+Fig. 2. Three types of organizational structure
+A centralized structure induces that the steering forces flow from a center unit towards
+the various subunits, and with a decision-making process where all authority and power
+resides within one center, e.g. a top management group or one specific individual,
+providing a tight type of structure with increased coordination and supervision [26]. A
+federated structure, similarly to the centralized approach, contains a center; however,
+the steering forces between the center and subunits are bidirectional and exist between
+thesubunits,makingthecentralunitinformal.Afederatedstructureconsistsofmultiple
+(semi-)autonomous subunits sharing a common mission and purpose. Usually, the
+subunits together share the control of the central body, and each subunit enters the
+larger association voluntarily. A decentralized structure contains no central unit, i.e.
+authority and decision power are shared among organizational subunits [26].
+
+--- PAGE 6 ---
+Utilizing a centralized structure implies that all decisions are founded on knowledge
+relying on the central unit. However, by moving towards a more decentralized
+approach, decisions can be made by people with increased knowledge regarding the
+specific area of business. Decentralization suits situations when sufficient knowledge
+tosupportthedecision-makingprocessistoocumbersometotransferorwhencognitive
+limitations exist in the central unit. Furthermore, decentralization enables quicker
+adoption to local dynamic environments by reducing steps in the decision-making
+process, and it contributes to stimulating creativity and innovation [26]. According to
+[27], a trade-off exists between knowledge transfer costs and control costs. Larger
+organizations with expanding potential facing volatile and unstable environments tend
+to generate more specialized knowledge that is increasingly difficult to transfer to
+decision makers, thus making decentralization a more appropriate approach.
+Furthermore, according to [25], a more decentralized structure inducesbetter alignment
+between the subunits’ ideas and their environment, although at the cost of reduced
+learning and improvement between subunits.
+2.3 Related Work
+A significant amount of research has been conducted in the area of business-IT
+alignment and EA, however, the articles related in the same context as ours –
+decentralization issue, are very few. [27] emphasizes that the frameworks were initially
+developed focusing on a centralization of IT and central management, entailing
+emergence of problems such as governance and decision-making irregularities due to
+the characteristics of non-centralized organizations. In an article by Lindström et al.
+[18], a survey was conducted concluding that the available EA frameworks fulfill the
+needs and solve problems in theory, but when compared to actual practical problems,
+there are discrepancies. The survey indicated that the major concerns of Chief
+Information Officers (CIOs) in Sweden are to decrease the cost of business-related
+elements e.g. personnel, increase the interplay between the IT and business parts of the
+organization, provide technological solutions supporting the business part of the
+organization, and improve the quality of IT systems along with decreasing the costs of
+IT related elements. The survey revealed that some of the available EA frameworks
+provide insufficient support to solve the top concerns of the CIOs, and the authors
+suggested further harmonization between the concerns and EA framework’s foci is
+needed. Similar conclusions were derived in [16], [17] stating that discrepancies
+between TOGAF and the federated organizational structure exist. Speckert et al. [19]
+addressed the challenge of EA for decentralized organizations by investigating and
+concluding that commonly utilized EA frameworksneed to be extended to support such
+organizations (included even FEA, which despite the recognition of individual units
+prescribes standards that are to be followed throughout the organization limiting thus
+flexibilityandopinionsoftheunits).However,asfortheaspectofsolvingtheidentified
+problems, the results of this paper differ. [19] suggests a more theoretical solution, by
+utilizing peer production in the matters of decision making and governance within EA.
+The developed artefact of this study is closer aligned to the practical operational
+conduct of federated organizations and thus in more depth reflecting the characteristics
+
+--- PAGE 7 ---
+ofsuchorganizations.Therefore,theresultscompriseincreasedalignmentbetweenEA,
+in particular TOGAF, and federated organization's actual way of working.
+3 Business Case
+The business case regards a federated Swedish organization concerned in developing,
+building and managing real estate. The organization consists of multiple semi-
+autonomous subunits. They are autonomous in the sense of having their customer base,
+deciding upon what services they provide, and having full ownership of their economy
+(figure 2). 28 federated units share a common mission and a purpose defined at a
+national level. The enterprise is owned by its members and can be split into two parts,
+national level, and regional level.
+.
+Fig. 3. The organizational structure of the enterprise
+At the regional level, the core business is executed. The autonomous subunits own
+the deliverables and the results that are produced. To be a member of the
+enterprise/federation organization, a membership is needed, as well as compliance with
+company’s regulations. The structure and operational concepts deciding how the
+subunits conduct and manage their internal business is solely decided upon within each
+subunit without the interference of external actors.
+At the national level, there exists coordinating and supporting functions. The
+National Association is the owner of the company brand and it is responsible for the
+company’s vision, public appearances that regard national statements, as well as all
+political involvement. AFS is the internal business support organization (swe.
+Affärsstöd) merging the IT infrastructure and digital services of the federated
+organization into one company to achieve synergy effects. This for example implies
+that different IT functions already existing within the federated organization have been
+combined into one starting thus to provide a centralized IT service. AFS works with
+joint processes and approaches that the subunits within the federated organization
+decide upon. Based on the needs of the federated organization, new solutions are
+developed with the goal to be competitive as well as customized towards the federated
+subunits’ needs. This implies that all necessary joint solutions, whether they are IT- or
+business oriented, are developed, delivered and maintained by AFS. However, being
+
+--- PAGE 8 ---
+autonomous, it is not mandatory for any subunit of the federated organization to
+purchase joint solutions.
+Merging of multiple processes and infrastructure into one has entailed several
+problems.AFShascentralizedtheITinfrastructure,whileapplicationsandITdecisions
+are still decentralized. Business needs in the federated organization are identified
+throughalongerdevelopmentprocess,whichincreasesthetimetomarketanddecision-
+making times. The CIO of AFS has therefore requested an analysis of how the concept
+of EA, and more specifically TOGAF, could solve important practical problems within
+the organization such as lack of integration schemes, guidelines regarding data-
+handling, architectural and platform documentation, and other, while at the same time
+fully adhering to the established federated structure and way of working.
+4 Case Study Results
+4.1 Data Collection and Analysis
+The case study combined document-readings (internal-business) and semi-structured
+interviewsasthe main data collection methods. To analyze thewayofworking through
+the interviews, it was necessary to determine a representative sampling. Since the
+organization is well known to one of the authors, the purposive sampling was used, i.e.
+the respondents were picked according to their knowledge regarding the organization
+and its operations. The employees positioned as either chief of a business unit or
+supporting functions were deemed to have extensive knowledge concerning the
+organization, and thus they were able to provide adequate insights and information.
+Data collection and sampling were conducted until theoretical saturation was reached,
+i.e. when the analysis of new data solely contributed to the confirmation of previously
+derived insights, which was achieved after 8 interviews.
+The analysis has resulted in a thematic map consisting of the key concepts reflecting
+the federated organization's ways of working (figure 4).
+Fig. 4. Thematic map from the study analysis
+Subunit.Thefederatedorganizationconsistsofmultiplesubunits.Thesubunitsarefully
+autonomous economic powers in charge of day-to-day operations, inferring a complete
+control and decision mandate, except for certain guidelines and policies specified on
+the national level. Induced by the autonomous nature of the subunits, the federated
+
+--- PAGE 9 ---
+organization lacks a joint business strategy. The concept denoted Characteristics is
+coupled to every Subunit and influence its Needs. Some examples of Characteristics is
+the size (number of employees), turnaround, economic strength, amount of
+members/customers, business units, way of working, local competition. Various
+characteristics infer different needs, such as larger subunits having an expanded need
+for automation due to theincreased demand for employees in non-automated processes.
+The subunits of the federated organization have different needs, which can be either
+unique or shared with other subunits. The subunits desire to have their needs solved by
+joint solutions, but not all unique needs in a subunit can be addressed, inducing
+complications for the subunits and the federation. Furthermore, investing in
+information systems is expensive, and the subunits will not survive the market
+competition if they keep moving in separate directions. Developing joint solutions that
+work for all subunits is more efficient. To gather the proposals for the development of
+joint solutions and to allow each subunit to voice their opinion, the federated
+organization has developed and implemented a way of working, further described as
+Business Governing.
+Business governing. The concept embraces the way of taking federated business
+decisions by combining Networks, Steering Committees and Board. The business
+governing function in the federated organization embraces all matters, whether they are
+IT-related or business-related. The business decisions are empowered, either through
+AFS that develops IT solutions to support the business, or through the networks
+handling strictly business-oriented matters, such as policy updates. Each core business
+areawithinthefederatedorganizationhasitsownNetwork.Thenetworksarepopulated
+by representatives from the subunits working in the relevant business areas. By
+introducing the concept of networks, the federated organization has simplified the
+subunits possibility to voice their opinion and to further increase the anchoring of
+proposed ideas, boosting the persuasive force of steering in a common direction. The
+concept of network acts as an interface towards the subunits to ensure their possibility
+to fulfill their democratic rights. The Steering Committee is democratically chosen and
+populated directly from the network representatives. By further aggregating the
+networks into smaller groups, proposals can be prioritized and discussed in a
+democratic matter, while also reducing the number of stakeholders involved, which
+could otherwise distort the attention towards the holistic progress of the federated
+organization. The steering committees could be described as filters percolating the
+proposals and forwarding prioritized proposals to the board. The Board is populated by
+business manager representatives from the subunits. The board's task is to assess the
+proposals received from the steering committee. In the assessment process, the board
+will check adherence with the federated organization deciding whether the proposal
+would induce a positive or negative outcome not solely for individual subunits. An idea
+assessed and accepted by the board will eventually lead to development.
+Development. The development of common solutions within the federated organization
+entails multiple constraints, problems, and considerations. The various Characteristics
+and Needs of the individual Subunits and the great span of differentiation among them
+
+--- PAGE 10 ---
+produce a challenging way of creating common solutions, as it requires various
+reorganizationsin thesubunitsand controlover employees,processdescriptions,which
+is a big job especially for larger subunits. The maturity level regarding the subunits
+ability to receive and utilize solutions further infers problems to the development
+process, as although subunits may require the specific common solutions, their ability
+to receive and utilize it correctly could be cumbersome. Furthermore, multiple subunits
+possess existing individual solutions, which affect the outcome and their interest in
+newly developed common solutions. Additionally, a major concern regarding the
+development process involves financing, as it is voluntary for the individual subunits
+to participate and purchase the common solutions. The development phase is initiated
+by a pilot study, which involves a group of subunit business representatives deemed as
+experts within their respective fields. The finalized pilot study suggests a solution
+(whether the solution is bought on the market or self-developed) with complete pricing
+including user-support, system administration, future adjustments, etc. AFS presents
+the solution to all the subunits, which then have a choice to buy the solution, or not. In
+the development process, when attempting to solve a common need shared throughout
+the whole company, a lack of requirements exists. Often, subunits, as well as AFS, will
+haveseparateinformationsystemsthatneedtobeintegratedwiththenewjointsolution.
+There is an identified discrepancy between the documentation of requirements fromthe
+development unit that eventually hands over the responsibility to the IT governance
+unit, causing an inadequate and complicated workflow.
+Change. The Change represents how the development of joint solutions affects the
+subunits and federation. The subunits’ capability to receive created joint solutions
+greatly varies, inducing implications in the implementation process, i.e. how receivable
+the change is in the specific subunit. This is due to the subunits’ different existing
+solutions, maturity levels (resource pool, commitment, knowledge, etc.), local
+strategies, and characteristics. Hence, change management is of great importance and
+it can become a major concern for producing desired outcomes of the common
+solutions. Furthermore, it is of great importance to persuade as many subunits as
+possiblewith thenecessityfor changeinorder todecreasetheoverallcostsandsimplify
+future development.
+4.2 Business Case and TOGAF
+In this section, the derived and analyzed way of working in the federated organization
+is compared to relevant propositions and concepts from TOGAF. The ADM process is
+the heart of TOGAF, providing a method for developing and managing the EA
+lifecycle. However, due to the generic level of the ADM process and its main
+components such as Architecture Capability Framework being in the focus of this
+study, i.e. their insufficiencies in the support, TOGAF lacks customization towards
+organizations of various structures, such as federated organizations.
+According to the Architecture Governance, the successfulness of the architecture
+function requires certain organizational structures, processes, roles, and
+responsibilities. The organizational structures and roles are clearly defined within the
+
+--- PAGE 11 ---
+ramification of a centralized organization. However, TOGAF provides less or nearly
+no support regarding decision-making power and mandate to organizational structures
+not utilizing a centralized, hierarchical structure.
+Set in contrast to the federated organization's way of working, some areas of concern
+can be identified. In the federated organization, the concept of an enterprise-wide
+control system trying to control adherence to the common strategy, would be neglected
+due to the autonomous nature of the subunits and the fact that no party within the
+federated organization could possibly hold that type of mandate. Requirements
+produced within the federated organization require increased involvement of subunits
+in order to boost the anchoring, such as IT-security aspects for example. The
+Requirement Managements phase is a major component inside the ADM process. Its
+main objective is to ensure that requirements are available and managed throughout the
+whole ADM process and all of its relevant phases. However, TOGAF does not mention
+within the different phases how the requirements should be collected and prioritized
+except that the prioritization should be conducted according to the architecture vision.
+The concept of Architecture Board is according to TOGAF a key success factor of
+Architecture’s governance. Compared to the federated organization's way of working,
+multiple concerns can be identified. The suggested size of 4-5 members, would neglect
+the subunits' possibility to voice their opinion, as 10 members would not be able to
+handle a large quantity of subunits, inducing a decreased level of anchoring regarding
+proposals. Furthermore, as the Architecture Board is a major part of the Architecture
+Governance, and the fact that it should act as a top management type of group
+controlling adherence and compliance regarding the EA, it would be neglected in the
+federated organization due the autonomous state of the subunits. Furthermore,
+controlling adherence to the architecture vision could be problematic, as there is no
+authority holding the ability to supervise the subunits' actions.
+Considering the concepts of Change and Development derived in the analysis of the
+interviews in comparison to the proposed relevant concepts of TOGAF, the identified
+problems involves the areas of governing and decision-making. The proposed relevant
+areas regarding change and development in TOGAF, stating what is needed to solve
+the practical problems of an organization, such as documentation and integration, is
+deemed appropriate for various organizational structures. However, the areas of how it
+should be implemented and maintained could become problematic, as mentioned
+previouslyinthissection.Asmentionedcontrollingadherencetothearchitecturevision
+could be problematic, as there is no authority holding the ability to supervise the
+subunits' actions.
+Concluding, a gap exists between TOGAF’s proposal for having a governing body
+(architecture board, architecture governance), and the ability for a federated
+organization to have a governing body that is formed according to the TOGAF
+documentation. TOGAF does not provide necessary details to support federated
+organizations. Any provided guideline or examples involve a centralized way of
+working, such as illustrated Architecture Governance and Architecture Board. From an
+enterprise-wide organizational viewpoint, this approach of working is not feasible nor
+supportive to a federated organization.
+
+--- PAGE 12 ---
+4.3 Proposal
+The main requirement of the proposed solution is to support federated organizations to
+implement and maintain an EA such as TOGAF by adding an extension according to
+the specifics of the federated organizational structure characteristics as it is earlier
+described.Twomainalternativesexcelledfromthegeneratedideasthatwerediscussed:
+Alternative 1: Design an entity (conceptual) model representing an organizational
+structure that will serve as an alternative to the Architecture Board, i.e. an extension to
+the Architecture Capability Framework [11, p. Chapter 45]. The organizational
+structure will provide guidelines to the decision and governing aspects of an EA, and
+support the implementation and maintenance of an EA in federated environments.
+Alternative 2: Design a method for supporting an organizational structure change in
+the federated organizations using TOGAF. The artefact would provide guidelines on
+how the federated organization should restructure in order to adhere to the concepts of
+TOGAF, and thus enable a successful transition into utilizing the framework.
+Selecting alternative 2 would result in an organization-specific solution, requiring
+possibly major restructuring within the enterprise, which in turn would substantially
+affect the organization's way of working. In addition, the foundation of the enterprise
+is of greater importance than any framework, as it has been developed and refined over
+a significant period. The selection of alternative 1 is further validated by the fact that it
+would result in a more generalized solution, i.e. trying to fit TOGAF onto the
+organization rather than the opposite. The resulting conceptual model will contribute to
+federated organizations' ability to adhere and include all relevant subunits, allowing
+increased anchoring of proposals throughout the whole enterprise.
+In figure 5, the proposed solution (artefact) of alternative 1 is presented. The circles
+of the figure represent the entities of the model. The cardinality of the specific entity is
+inferred by the amount of circles, i.e. multiple circles imply a higher quantity of the
+entity. The arrows in figure 5 refer to how the various entities are related.
+Fig. 5. The proposed artefact – an extension to support federated organizations
+The Subunits are completely autonomous and control day-to-day operations. They
+generate their own revenue, and are enabled to produce ideas commonly influenced by
+specific needs and characteristics for new developments. The Network is populated by
+representatives from the Subunits. Each core business area within the federated
+organization has its own Network. The Steering Committee is democratically chosen
+from the Network, by the Network representatives, in order to prioritize the ideas. The
+Board consistsof business manager representatives fromtheSubunits in order to accept
+or decline ideas imparted from the Steering Committees.
+
+--- PAGE 13 ---
+In the model, subunits influence all aspects of business development. The subunits
+populate the networks, which in turn populate the steering committees. Furthermore,
+the subunits also populate the board. The selection of representatives for the steering
+committee is performed utilizing a democratic process, while each subunit decides on
+their representative on their own. By involving the subunits in every area and aspect of
+the decision making process, an increased anchoring of proposals can be reached.
+Increasedanchoringandsubunitinvolvementprovidesgreaterpossibilityofconvincing
+subunits to steer in a common direction, benefiting the federated organization as a
+whole.
+The proposed model can be positioned as an extension within the Architecture
+Governance Framework (figure 1, right). The governance framework is a part of the
+overarching Architecture Capability Framework, which is an integral part of
+successfully operating an architecture function within the enterprise. As an extension
+of the Architecture Governance Framework, the artefact will be seen as an alternative
+solution, replacing the CIO/CTO function and the Architecture Board. The artefact is
+not contradicting or refining any other concepts proposed in TOGAF; in the ADM
+process or the content meta-model.
+5 Discussion of Results
+In this section, an example of a theoretical case utilizing the designed and developed
+artefactwillbecomparedtothecurrentTOGAFrecommendations.Thetheoreticalcase
+starts with the emergence of multiple needs in the subunits of a federated organization,
+and ends with an enterprise-wide impact. In table 1, the managing of the needs by
+TOGAF and the proposed solution is presented.
+Table 1.Theoretical case comparison
+Theoretical
+Case Phase
+TOGAF Solution artefact
+Gather needs No guidance stating how to
+collect needs emerging from
+various sources.
+The needs of a particular subunit are
+presented to networks represented by the
+subunits of the federated organization
+allowing for the gathering of other
+subunits' similar needs.
+Prioritize needs No guidance stating how to
+identify and prioritize needs
+other than conducting a gap
+analysis detailing benefits
+and drawbacks.
+Prioritization is performed by the
+steering committee, populated by the
+subunits. In turn, this allows for
+increased subunit involvement.
+Furthermore, this enables prioritized
+solutions to satisfy a majority of the
+needs rather than what is most beneficial
+towards one specific unit or enterprise.
+
+--- PAGE 14 ---
+Control holistic
+adherence
+Suggests the utilization of an
+Architecture Board in charge
+of controlling the holistic
+adherence of solutions.
+Utilizing the artefact, the concept
+denoted Board (Fig. 5) handles the
+adherence controlling. The board
+increases the enterprise- wide
+involvement as it is populated by
+subunits.
+Solution
+acceptance
+Using the stated
+recommendations, the final
+solution suffer from
+decreased enterprise-wide
+acceptance. Multiple steps in
+the process from needs to
+solution entails top-
+management decision and
+decreased involvement of the
+subunits of the federated
+organization.
+As the artefact ensures involvement of
+subunits throughout the whole process,
+the proposed solution will have
+increased enterprise-wide acceptance,
+and further the solution will satisfy a
+majority of the subunits' needs.
+The main goal of implementing a framework such as TOGAF is to optimize an
+enterprise'scapabilityto supportchangeand to increasethesuccessfulnessindelivering
+business strategy. Its popularity on the market is a sign that it supports that capability.
+However, while using examples of typical centralized organizational structures and the
+broad generalization given in the framework, it needs to be expanded to giving
+examples for other organizational structures. In organizations that are not centrally
+controlled, the decision mandate of what and how something should be done cannot be
+given to only one group. The solution that is proposed should be seen as an extension
+or alternative to TOGAF's Architecture Board [11], and as such will affect the
+Architecture Governance and Requirements Management.
+The problem is not unique to the examined organization’s domain. There are
+multiple businesses in Sweden, both public and private, facing the same governance
+and alignment problems. The decision rights are decentralized while the IT is
+attempting to be centralized and the whole organization uses a federated structure. One
+could always argue that all companies are unique depending on the granularity.
+However, this study approaches the federated characteristics and business procedures
+with a holistic view. Thus, this proposal is a representative for generalization towards
+larger federated organizations.
+6 Concluding Remarks
+The paper presented a case study research conducted in a large Swedish company in
+the real estate business domain. It contrasted TOGAF’s concepts and methods related
+to governance with the way of working in the federated organization of the case study.
+Usingtheelicitedknowledgefromorganization’sexperts,itemphasizedinsufficiencies
+
+--- PAGE 15 ---
+of TOGAF to support the identified federated structural aspects of theorganization, and
+suggest potential improvements. In particular, the concepts regarding governing and
+decision making in TOGAF, including but not limited to Architecture Governance,
+Architecture Board, and Requirements Management, would be neglected in a federated
+organization due to the autonomous state and quantity of various subunits.
+The resulting solution, with similar areas of impact as the Architecture Board
+proposedbyTOGAF,isaimed toactasasupporttoguidefederatedorganizationswhen
+implementing and maintaining an EA, such as TOGAF. By ensuring the involvement
+of all relevant subunits, and further increasing the anchoring of proposals throughout
+the organization, the artefact could increase the alignment between business and IT.
+The presented solution should be of a particular interest for the case organization,
+as it was produced utilizing its own structure and the way of working as a model. Large
+federated organizations would also benefit from the result as it could provide guidance
+and increased success rate when implementing TOGAF.
+To further confirm the validity and control the functionality of the presented
+solution, it should be tested in an actual practical case involving a federated
+organization and their implementation of TOGAF. Secondly, as the artefact was
+derived utilizing only one specific federated organization, future research should
+involve multiple federated organizations in order to increase the credibility of the
+results and to further contribute to an increasingly generalized conclusion. Thirdly, as
+this research involved a federated organization not utilizing TOGAF, it would be of
+interest to analyze a federated organization working with TOGAF to identify concrete
+practical problems in their day-to-day business. The focus towards TOGAF can be a
+hindrance when researching concerns that focus on organizational forms and concepts.
+Finally, a research direction of interest includes analysis for supporting customers’
+preferences [28] in different organizational forms.
+References
+1. Luftman, J. and Ben-Zvi, T. Key Issues for IT Executives 2011: Cautious Optimism in
+Uncertain Economic Times. MIS Quarterly Executive, Vol. 10 Issue 4, p203-212 (2011)
+2. Silvius, A. J. G., de Waal, B. and Smit, J. Business and IT Alignment; Answers and
+Remaining Questions. In PACIS 2009 Proceedings http://aisel.aisnet.org/cgi/
+viewcontent.cgi?article=1044&context=pacis2009 (2009)
+3. Luftman, J. Assessing Business-IT Alignment Maturity. Communication of Association for
+Information Systems, vol. 4, no. 1, Dec. (2000
+4. Kearns, G.S. and Sabherwal, R. Strategic Alignment between Business and Information
+Technology: A Knowledge-Based View of Behaviors, Outcome, and Consequences. Journal
+of Management Information Systems, vol. 23, no. 3, pp. 129–162, Dec. (2006)
+5. Tarigan, R. An Evaluation of the Relationship between Alignment of Strategic Priorities and
+Manufacturing Performance. International Journal of Management, 22(4), 586–597. (2005)
+6. Chan, Y. E. and Reich, B. H. IT alignment: what have we learned? .Journal of Information
+technology, 22(4), 297-315, (2007)
+7. Chan, Y. E. Huff, S., Barclay, D, and Copeland, D. Business Strategic Orientation,
+Information Systems Strategic Orientation, and Strategic Alignment. Journal of Information
+Systems Research, 125 – 150 June (1997)
+
+--- PAGE 16 ---
+8. Bharadwaj, A., Sawy, E., Pavlou, O. and Venkatraman, N. Digital Business Strategy:
+Toward a Next Generation of Insights. Social Science Research Network, Rochester, NY,
+SSRN Scholarly Paper ID 2742300, Jun. (2013)
+9. Weill, P. Don’t just lead, govern: How top-performing firms govern IT. MIS Quarterly
+Executive., Vol. 3, no. 1, pp. 1– 17 (2004)
+10. Sessions, R. A Comparison of the Top Four Enterprise-Architecture Methodologies. May-
+(2007) Available: https://msdn.microsoft.com/en-us/library/bb466232.aspx
+11. TOGAF® 9.1. Available: http://pubs.opengroup.org/architecture/togaf9-doc/arch/
+12. FEA Consolidated Reference Model Document Version 2.3. Available:
+https://www.fsa.usda.gov/Assets/USDA-FSA-Public/usdafiles/SDLC-non-secure/
+Enterprise-Architecture- Program-/Training/Docs/FEA
+13. DODAF - DOD Architecture Framework Version 2.02 - DOD Deputy Chief Information
+Officer. Available: http://dodcio.defense.gov/Library/DoD-Architecture-Framework/
+14. MOD Architecture Framework - GOV.UK. Available: https://www.gov.uk/guidance/mod-
+architecture-framework
+15. UK Ministry of Defense. Proposed NAF v4 Meta-Model (MODEM). NATO Architecture
+Framework v4.0 Documentation, 2013. Available: http://nafdocs.org/modem
+16. Sandkuhl, K., Stirna, J., Persson, A. and Wiotzki, M. Enterprise Modeling: Tackling
+Business Challenges with 4EM Method. Springer Publishing Company, Incorporated (2014)
+17. TOGAF 9.1 | The Open Group Blog. Available: https://blog.opengroup.org/tag/togaf-9-1/
+18. Lindström, Å., Johnson, P, Johansson, E., Ekstedt, M. and Simonsson, M. A survey on CIO
+concerns-doEAframeworkssupportthem? InfSystFront,vol.2006,no.8,pp.81–90,(2006)
+19. Speckert,T., Rychkova,I.,Zdravkovic,J.andNurcan,S.On the Changing RoleofEnterprise
+Architecture in Decentralized Environments: State of the Art. In 17th
+IEEE International
+Enterprise Distributed Object Computing Conference Workshops, 2013, pp. 310–318 (2013)
+20. Rabelo, R. J., Noran, O. and P. Bernus. Towards the Next Generation Service Oriented
+Enterprise Architecture. In: IEEE 19th
+EDOC Workshop, pp. 91–100 (2015)
+21. Jonkers, H., Lankhorst, M., ter Doest, H., Arbab, F., Bosma, H. and Wieringa, R. Enterprise
+architecture: Management tool and blueprint for the organization. Journal of Information
+Systems Frontier, vol. 8, no. 2, pp. 63–66, Feb. (2006)
+22. Leading the development of open, vendor-neutral IT standards and certifications | The Open
+Group. Available: http://www.opengroup.org/
+23. Lunenberg, F.C. Organizational Structure: Mintzberg’s Framework. Int. Journal of Scholar
+Acad. Intellect. Divers., vol. 14, no. 1, (2012)
+24. Jacobides, M. J. The Inherent Limits of Organizational Structure and the Unfulfilled Role of
+Hierarchy: Lessons from a Near-War. Journal Organ. Sci., vol. 18, no. 3, pp. 455–477 (2007)
+25. Chang, M.H. and Harrington, J. E. Centralization vs. Decentralization in a Multi-Unit
+Organization: A Computational Model of a Retail Chain as a Multi-Agent Adaptive System.
+Journal of Management Sci., vol. 46, no. 11, pp. 1427–1440, Nov (2000)
+26. Mintzberg, H. The Structuring of Organizations: A Synthesis of the Research. Michigan:
+Prentice-Hall, (1979)
+27. Christie,A.,Joye,M.andWatts,R.Decentralizationofthefirm:theoryandevidence.Journal
+of Corp. Finance, vol. 9, no. 1, pp. 3–36, (2003)
+28. Svee, E.O., Giannoulis, C., and Zdravkovic, J.: Modeling Business Strategy: a Consumer
+Value Perspective, Proceedings of Practice of Enterprise Modeling (PoEM 2011), Oslo,
+Norway, Springer, LNBIP vol. 92, pp. 67-81. (2011)

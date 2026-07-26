@@ -1,0 +1,937 @@
+--- PAGE 1 ---
+R E S E A R C H A R T I C L E
+An enterprise technical architecture for the implementation of
+the South African National Health Insurance
+Tiko Iyamu | Farirai Chitsa
+Department of Information Technology, Cape
+Peninsula University of Technology,
+Cape Town, Western Cape, South Africa
+Correspondence
+Tiko Iyamu, Department of Information
+Technology, Cape Peninsula University of
+Technology, Cape Town, Western Cape,
+South Africa.
+Email: iyamut@cput.ac.za
+Abstract
+The South African National Health Insurance (NHI) faces challenges due to a lack of
+an enterprise technical architecture (ETA) solution, for the implementation. This
+study aims to propose an ETA, to enable and support the implementation of the
+South African ETA. The qualitative method was employed in the data collection.
+Actor-network theory (ANT) was applied as a lens to examine the data. The findings
+reveal several critical influencing factors, including readiness assessment, geographi-
+cal locations of stakeholders; diversity of healthcare facilities; flexibility of technology
+solutions; and synchronization of processes and patients' data. The study highlights
+the need to provide governance for the technologies that influence the implementa-
+tion of NHI. Based on the influencing factors, a framework was developed. The
+framework is intended to provide architectural governance (principles, standards, and
+policies), to efficiently and effectively, facilitate, support, and enable the implementa-
+tion of the South African NHI.
+KE YWOR DS
+actor-network theory, Enterprise architecture, Enterprise technical architecture, health
+insurance
+1 | INTRODUCTION
+In terms of practice, National Health Insurance (NHI) is a new universal health programme in South Africa. At the time of this study in 2021, the
+programme was being piloted. The NHI ensures extended coverage and increases access to health services regardless of socioeconomic status
+(Cape, 2015). The current health system is two-tiered and it promotes socioeconomic status. It is thus intended to address challenges within the
+South African health sector, which have become severe, primarily because it lacks equitable access to healthcare (Marten et al., 2014). On one
+hand, public healthcare centres are often under-resourced, and infrastructures are obsolete compared to private healthcare providers (Mhlaba
+et al., 2016). NHI, on the other hand, is expected to provide healthcare services through both certified private and public healthcare providers
+(Marten et al., 2014).
+Despite the importance of the NHI in the country, the implementation remains challenging. An area of the challenge is how to employ IT solu-
+tions, to enable and support patients' datasets including the processes and activities of the NHI system. The challenges were propelled due to the
+lack of a technical architecture, to govern factors such as technology infrastructure disintegration, information manipulation, and processes
+(Chitsa & Iyamu, 2020). Thus, an enterprise technical architecture (ETA), a domain of the enterprise architecture (EA) is required to address the
+fundamental challenges in enabling and supporting NHI implementation. EA is an approach that provides a holistic view including bridging the gap
+between the technology infrastructure and non-technology units of an enterprise (Dale & Scheepers, 2020; Kotusev, 2019). Iyamu (2022) affirms
+that the obstinate nature of events and challenges motivates organizations to seek a redeemable approach such as EA.
+The ETA ensures that the existing and modern IT solutions are selected and maintained respectively to achieve the strategic goals of an orga-
+nization (Constantinides et al., 2018; De Vries & van Rensburg, 2008). Iyamu (2023) explains how ETA is a prevailing paradigm, which questions
+Received: 9 October 2024 Revised: 14 October 2024 Accepted: 29 October 2024
+DOI: 10.1002/isd2.12352
+Electron j inf syst dev ctries. 2025;91:e12352. wileyonlinelibrary.com/journal/isd2 © 2024 John Wiley & Sons Ltd. 1 of 17
+https://doi.org/10.1002/isd2.12352
+
+--- PAGE 2 ---
+the goals, scope, processes, and roles considered on the technology front. However, the development and use of ETA, to enable and support NHI
+involve several phases and consist of various stakeholders. The stakeholders made decisions at different stages or phases, for or against the
+deployment of IT solutions. Decisions are often negotiated. The decisions are based on how the issues concerning ETA are problematized includ-
+ing the interest of individuals or groups (stakeholders). During the NHI implementation pilot, it was not empirically known, why and what
+influenced individuals' decisions and interests.
+From the assessment of the ongoing pilot of the NHI, it was reported that at the end of 2018, 20 million people were registered, but IT
+solutions such as poor connectivity, and hardware problems hindered the participation of some clinics (Child, 2019). It was also reported that
+poorly designed systems affect the implementation of IT systems for healthcare service delivery (Jeffries et al., 2017). Many IT solutions' chal-
+lenges manifest from a lack of governance (Johnston & Gillam, 2019). ETA is a domain of EA that focuses on technology governance including
+selection, use, and management. According to Iyamu (2012), ETA bridges the gap between the enabler and the enabled, pragmatic assessment
+and technology solutions in addressing the needs, and semiotics of IT solutions' deployment. ETA stabilizes the deployment and use of IT solu-
+tions in an environment. Without architectural guidance, IT solutions encounter challenges and fail to enable and support goals and objectives
+towards fulfillment.
+This study was undertaken based on the challenges identified above. The study aims to propose an ETA that can be used to enable the imple-
+mentation of the NHI, in South Africa. In achieving the aim, two research questions were formulated: (1) what are the factors that influence the
+ETA development for NHI? (2) How can an ETA be used to enable the implementation of the NHI? In answering the research questions towards
+achieving the aim, it was essential to examine the interactions among the stakeholders and the translation of activities including how negotiation
+shifted during the processes. This was to gain a deeper understanding of how things could have manifested into the various decisions. This led to
+the selection of actor-network theory (ANT) to underpin the study. The theory is the only theory that focuses on both translation (Callon, 1986)
+and shifting negotiation within networks (Latour, 2005).
+2 | LITERATURE REVIEW
+2.1 | National Health Insurance
+The NHI refers to a publicly funded scheme that is managed by the country's government to ensure the healthcare cost of its citizens achieves
+universal health coverage (UHC) (Martin et al., 2018). The scheme provides finance for the needed healthcare to the citizens free of charge, by
+the accredited and committed private and public healthcare providers (Surender et al., 2016). The services of these accredited health professionals
+are paid for by NHI (Gaqavu & Mash, 2019). Although the affordability by the country's government is questionable, as argued by Mhlaba et al.
+(2016), the South African NHI is expected to pool funds from the general tax revenue and tax contributions from the citizens (Mcintyre
+et al., 2017).
+The South African NHI is motivated by a realization that the current health system is biased and undermines the rights of unemployed citi-
+zens and low-income earners (Sekhejane, 2013). Every citizen deserves good quality health care regardless of their social and economic status
+(Ranabhat et al., 2018). Thus, the NHI programme, as stated by Marten et al. (2014), is intended to address most of the challenges within the
+South African health sector by bridging the gap between the poor and the rich. The participation of the private healthcare sector in the pro-
+gramme can also reduce staff shortages and resource concerns of the public health sector (Mathew & Mash, 2019). This type of health
+programme is not unique to South Africa. Similar programmes have been adopted in many developed and developing countries across the globe
+(Marten et al., 2014). Many of these countries encountered one challenge or another, linked to IT solutions (Gutierrez et al., 2017), which makes
+the implementation critical.
+From health systems perspective, Sligo et al. (2017, p. 86) argued that implementation is “a process of planning, testing, adapting and integrat-
+ing Health Information System (HIS) so that technology becomes routinely used in an organization”. Like every other system, NHI goals require IT
+solutions to enable and support its operationalization and fulfillment (Chitsa & Iyamu, 2020; Ross et al., 2016). Patient medical data are shared
+across a variety of stakeholders nationally; hence these IT solutions enable the interoperability of systems for the successful implementation of
+NHI (Martin et al., 2018; Sajid & Ahsan, 2016). Interoperability becomes a challenge without architecture. It is within this context that Passchier
+(2017) emphasized on the investment in IT infrastructure for the successful implementation of NHI in South Africa.
+The implementation process, as stated by Sligo et al. (2017), requires an organizational transformation that needs proper resources, time, as
+well as support, commitment, and the involvement of stakeholders from developing to implementing the system (Tao et al., 2015). The adoption
+of health systems is affected by poor IT infrastructure in most parts of the country (Chitsa & Iyamu, 2020). Architectural design is often used as a
+prerequisite for the implementation of IT-enabled systems. The successful automation of systems, as argued by Wachter (2016), does not only
+depend on how effective the technology is but also on people's behavior and attitudes (Garavand et al., 2016). As a ‘green field’ for UHC,
+implementing NHI in the South African environment without architectural guidance can be inevitably challenging (Chitsa & Iyamu, 2020). The
+2 of 17 IYAMU and CHITSA
+16814835, 2025, 2, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/isd2.12352 by Sã¤Chsische Landesbibliothek, Wiley Online Library on [07/07/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+--- PAGE 3 ---
+reports on the assessment and evaluation of the ongoing NHI pilot reveal that IT problems attributable to poorly designed systems at some clinics
+are affecting the implementation of the programme (Child, 2019).
+2.2 | Enterprise technical architecture
+EA comprises four main domains enterprise business architecture (EBA), enterprise application architecture (EAA), ETA, and enterprise informa-
+tion architecture (EIA) (Chitsa & Iyamu, 2020; Sajid & Ahsan, 2016). Like the other domains, ETA is a model that uses unique technologies to attain
+its deliverables (Castellanos & Correal, 2012). An ETA, as explained by Iyamu (2012, p. 190), “ensures that existing and new information technolo-
+gies and systems are maintained and selected to achieve the strategic goals of the organization”. Implementing IT-enabled systems in many devel-
+oping countries is often derailed by the absence of ETA guidance (Iyamu, 2020). Through standards and principles, ETA guides selecting and
+choosing technology investments that support the integration and interoperability of systems during the implementation of complex systems such
+as NHI (Chitsa & Iyamu, 2020). An ETA framework consists of middleware, data, security, distributed, platform, and network domains
+(Iyamu, 2012).
+From an IT solutions perspective, the ETA domains enable and support healthcare systems such as the NHI through the integration of sys-
+tems and data. Sajid and Ahsan (2016) explain how IT solutions enhance the interoperability and integration of data across the stakeholders' envi-
+ronments. Thus, Ahsan et al. (2009) argued that the absence of architectural guidance leads to the failure of many IT projects in the healthcare
+sector due to a lack of interoperability and integration. Hence, the selection and use of IT solutions are critical, and the process involves negotia-
+tions among the stakeholders. Also, based on individuals' translations, there are various interests, which lead to the formation of networks, con-
+sciously or unconsciously. Thus, actors' involvement in the activities and processes of IT solutions inevitably brings about negotiation, to reach a
+common goal in the interest of the environment (Iyamu, 2021: P. 76).
+Additionally, the alignment and standardization of processes and activities relating to healthcare systems remain challenging. Price et al.
+(2018) suggested that alignment between healthcare objectives and IT solutions can be addressed using ETA. In such as situation, translation
+occurs, that is, when the human actors' interests are aligned with their actor-network (Walsham, 1997). Widén and Haseltine (2015) emphasized
+the criticality of IT solutions' standards in deploying health information systems. A lack of standardization and governance leads to the selection
+of inappropriate IT solutions (Johnston & Gillam, 2019).
+The pilot of the implementation of SA's NHI, according to a recent study by Chitsa and Iyamu (2020), was not guided by ETA. This has
+resulted in many IT-related challenges as reported by Child (2019). These challenges include hardware and software failures, lack of internet con-
+nectivity, and unqualified IT staff at some of the clinics (Child, 2019; Chitsa & Iyamu, 2020). Chitsa and Iyamu (2020) further explain how SA's
+healthcare documents and policies do not consider the importance of the deployment of ETA in the implementation of NHI. Without architectural
+guidance, the implementation of NHI can be derailed by prohibitive circumstances such as non-compatibility of hardware and software, lack of
+connectivity, and consistent loss of data and information due to poor data security measures (Aubakirov & Nikulchev, 2016).
+2.3 | Actor-network theory
+ANT is selected to underpin the study for two reasons, translation, and shifting negotiation. Primarily, ANT focuses on translation and shifting
+negotiation among involved actors, within actor-network (Callon, 1986; Law, 1992). Latour (2005) explains how a network incorporates human
+and non-human actors and stabilizes translations and interactions between actors. In the context of healthcare, Muhammad and Wickramasinghe
+(2016) argued that ANT can be applied to get a better comprehension of healthcare operations and processes through the interactions of the
+healthcare stakeholders with the technology. The theory was useful in examining the relationships and interactions that happened among
+the stakeholders, to determine how negotiation shifted in the processes (Shaanika & Iyamu, 2015).
+2.3.1 | Translation
+Translation, a key tenet of ANT, facilitates the alignment and mediation of diverse actors' interests and actions within a network (Iyamu, 2018). Its
+role in negotiating meanings and creating shared understandings makes it particularly suitable for identifying the factors of influence towards
+development of ETA for NHI implementation. Translation occurs in stages, referred to as moments of translation. The moments of translation
+consist of four key stages, problematization, interessement, enrolment, and mobilization (Callon, 1986). Through the moments of translation, the
+study exhumes how actors engaged in the process of aligning their interests, negotiating processes, and meanings on why and how to employ
+ETA in the implementation of NHI.
+IYAMU and CHITSA 3 of 17
+16814835, 2025, 2, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/isd2.12352 by Sã¤Chsische Landesbibliothek, Wiley Online Library on [07/07/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+--- PAGE 4 ---
+Problematization is the first moment of translation is problematization, whereby the main actor identifies the problem or an issue to be solved
+(Iyamu, 2013). It is during this stage that different roles and responsibilities of the actors are identified as well as the deliverables of the proposed solu-
+tion (Iyamu, 2013). The next moment, interessement, explains how actors are recruited to be part of a network meant to solve the problem
+problematized. During this stage, the main actor attracts the attention of other actors by proposing different roles and responsibilities to lock different
+actors into a network (Heeks & Stanforth, 2015). This is followed by enrolment, in which actors partake in solving the problems assigned to them
+(Waeraas & Nielsen, 2016). Enrolment thus involves the actual participation or action of actors in a network. During the implementation of healthcare
+systems, the participation of non-technical actors, such as policies and processes, can thus be considered obligatory, as their presence is mandatory.
+Mobilization, the last stage of translation entails the communication and sharing of information about tasks carried out by the spokesperson or the rep-
+resentative of that network (Shim & Shin, 2016). According to Makovhololo and Iyamu (2020, p. 7), “the focal actor needs to continually convince the
+actors that their interests are still the same”. Thus, the mobilization process is intended to strengthen the formed network (Iyamu, 2013).
+Shifting negotiation—One of the main focuses of ANT is understanding how negotiations shift among actors, consciously or unconsciously
+(Callon, 1986). In the implementation of NHI, decisions about the enabling technologies were made at different levels and by various groups of
+stakeholders. Those decisions were reached as negotiations shifted. Iyamu (2021) argues that everything in the social and natural world exists in
+constantly shifting negotiations in networks of relationships (P. 74), thus, actors' involvement in the activities and processes of IT solutions inevi-
+tably brings about negotiation, to reach a common goal in the interest of an environment (P. 76). Consciously or unconsciously, negotiations hap-
+pen and often shift as the event progresses. What remained unknown is how and why the negotiations shifted, to manifested into the selection
+of technologies. This helps to understand the factors that influence the activities and processes in using ETA to support and enable NHI.
+3 | RESEARCH METHODOLOGY
+Qualitative methods focus on opinions and views and are mostly applied in studies where little is known but deeper knowledge is required
+(Algozzine & Hancock., 2016). Håkansson (2013, p. 4) explains that, unlike quantitative methods, the qualitative method “uses smaller data sets
+that are sufficient enough to reach reliable results, where the data collection continues until saturation is reached.” The qualitative method allows
+a deeper understanding and seeks to capture thoughts and subjective viewpoints (Creswell & Poth, 2017). This enabled us to extract views from
+existing documents, as presented in Table 1. Sutton and Austin (2015) argued that the qualitative method allows researchers to capture richer
+TABLE 1 Data collected.
+Type of document Code Description
+Number
+of pages
+Government Gazette GG-01 The proposed NHI policy notice. The notice was gazetted on the 11th of December 2015 98
+GG-02 White paper on the NHI. The document was gazetted on the 30th of June 2017 80
+NHI Policy Paper PP-01 The final policy document for the South Africa NHI 59
+National Health Strategic
+Document
+SD-01 The document on the national eHealth Strategy, for South Africa for the period of
+2012/13–2016/17
+36
+SD-02 The strategic document on the National Department of Health's plan for the 2020/21 to
+2024/25 period
+60
+SD-03 The South African National Digital Health Strategy document for the 2019 to 2024 period 36
+SD-04 An explanatory summary of the South African NHI Bill [B 11—2019] 60
+The Department of Health
+Annual Performance Report
+AP-01 The Department of Health's annual performance report on the strategic objectives for the
+year 2017/2018
+216
+AP-02 The Department of Health's annual performance report on the strategic objectives for the
+year 2018/2019
+202
+Progress report on the status of
+NHI Pilot districts
+PR-01 The third 12-month report on the rapid assessment of the implementation status of NHI
+piloted in the districts. The report covers the February 2014 to February 2015 progress
+44
+Evaluation report on NHI pilot
+districts
+ER-01 A report on the evaluation of the phase one implementation of NHI pilot districts. The
+evaluation was undertaken between November 2017 and December 2018, and published
+in July 2019
+192
+Technical report on NHI TR-01 A report on the country's NHI. The report answers the “What, Who, Why and How” of the
+NHI programme
+97
+Newspaper article NA-01 An article on the assessment of the pilot project for the period of 2012–2017 5
+Total pages 1185
+Abbreviation: NHI, National Health Insurance.
+4 of 17 IYAMU and CHITSA
+16814835, 2025, 2, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/isd2.12352 by Sã¤Chsische Landesbibliothek, Wiley Online Library on [07/07/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+--- PAGE 5 ---
+data from the participants. The method was helpful because it provided deeper insights into real-world problems (Martelli & Greener, 2018).
+Hence, characterized as a descriptive method of the phenomenon being studied (Saunders et al., 2019).
+3.1 | Case study design
+It was essential to select a case that reflected the main objective of the study. Hence, a single case was selected and investigated, which is the
+South African NHI. As a new phenomenon, which at the time of this study had yet to be implemented, the selection of NHI as a case enabled a
+deeper understanding of the process, legislature, technological, and non-technological factors that affect the successful implementation of the
+system in the country. During this study, NHI had not been implemented in the country, hence no persons had an experience that could be used
+as empirical evidence. Thus, the document analysis technique was the only feasible data collection method, and empirical data was obtained from
+the evaluation of relevant documents (Iyamu, 2018).
+3.1.1 | Government institutions
+In the context of the NHI stakeholders, the South African government, as presented in Figure 1, is divided into two sub-sections: The Parliament
+and the Department of Health. The role of the national Parliament as a stakeholder in NHI is to finalize the NHI bill. The National Department of
+Health is responsible for the development, setting of standards, and coordinating national health policies.
+3.1.2 | Citizens
+South African citizens are required to play a vital role in the NHI implementation because the country has been built on the socio-economic status
+of inequity. Inequality shapes the divide between the private and the public healthcare sectors. Thus, it was important for the citizens to partici-
+pate in this study.
+3.1.3 | Public health sector
+The public health sector is divided into three main layers: primary, secondary, and tertiary health care services. Primary health care services focus
+on providing basic health needs, services often offered at district health centres. Secondary healthcare provides specialist support to primary care
+centres, which are delivered through regional hospitals. The third level is tertiary, which consists of provincial hospitals and specialized hospitals,
+which only work with referral systems.
+Citizens
+Socio-economic status
+Private Health Sector
+Private health institutions
+Medical schemes
+Government Institutions
+The Parliament
+The Department of health
+Public Health Sector
+Primary health
+Secondary health
+Tertiary health
+NHI
+System
+FIGURE 1 NHI's main stakeholders. NHI, National Health Insurance.
+IYAMU and CHITSA 5 of 17
+16814835, 2025, 2, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/isd2.12352 by Sã¤Chsische Landesbibliothek, Wiley Online Library on [07/07/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+--- PAGE 6 ---
+3.1.4 | Private health sector
+Private healthcare is divided into two, private health institutions and medical schemes. Private health institutions comprise surgeries, private hospitals,
+and pharmacies run by individuals or groups. Medical schemes pool their members' contributions and provide funding for private healthcare services.
+3.2 | Data collection
+Thus, we gathered materials that focused on government institutions in the context of healthcare, the public health sector, the private health sec-
+tor, and the citizens of the country. To gather a wide range of materials about the phenomenon being studied, the Boolean operators: AND, OR,
+and NOT were used in the search query. Keywords, healthcare, universal health, health insurance, and NHI were used in the search for materials.
+The search was conducted on the South African government databases including healthcare-related databases in the country. The focus was on
+the country primarily because of the uniqueness of the phenomenon.
+As shown in Table 1, a total of thirteen (13) documents constituting four strategic documents, two government gazettes, two annual perfor-
+mance reports, a policy paper, a progress report, an evaluation report, a technical report, and a newspaper article were collected. For easy referencing
+during analysis, the documents were coded accordingly. For example, code GG-01; GG refers to the type of document, which is a government
+gazette, and the 01 represents the first gazette, which is the proposed NHI policy, with the last column representing the total number of pages of
+the document. Thus, a document coded GG-02 simply means the second gazette document with a different description as shown in Table 1.
+3.3 | Data analysis
+For ease of referencing during the data analysis process, the 13 collected documents were provided with unique identification, meaning codenames
+were assigned, including the number of each documentation. This process helps to define referencing standards adopted for analysis purposes. An
+example of the referencing standard is “GG-01, pg.35”: the GG refers to a government-gazetted document; 01 represents the document's number,
+and pg.35 is the document's page number. Thus, GG-01, pg.35, means page 35 of the first government gazette.
+To achieve the stated objectives, the analysis process was conducted from the interpretive perspective. As mentioned above, the ANT's four
+moments of translation were used as a lens to guide the analysis. The data analysis process is presented in the following section. Based on the objec-
+tives, the focus of the analysis was threefold: (1) Examine how networks are formed as the actors (human and non-human) take up roles in the imple-
+mentation of NHI; (2) Identify and understand the human and non-human factors, including governance involved in the implementation of NHI; and
+(3) Examine the various processes and activities from both technical and non-technical perspectives in implementing NHI in their heterogeneity.
+The data were analyzed using the interpretive approach perspective (Goldkuhl, 2012; Walsham, 2014). The analysis was guided using ANT as
+a lens. The inductive approach (Azungah, 2018) was employed in identifying the factors that could influence the ETA for NHI implementation.
+Based on which six factors were identified as the key influencing factors: (1) readiness assessment; (2), Government levels of health services;
+(3) Geographical locations of stakeholders; (4) Diversity of healthcare facilities; (5) Flexibility of technology solutions; and (6) Synchronization of
+processes and patients' data.
+4 | FINDINGS AND DISCUSSION
+4.1 | Moments of translation
+In ANT, translation is a concept through which the focal actor builds networks, recruits actors, and defines roles by constantly shifting negotiation
+(Elbanna, 2011; Callon, 1984). There are four main moments in translation: problematization, interessement, enrolment, and mobilization net-
+works (Callon, 1984; Iyamu, 2013). The activities of the NHI are consciously and sometimes unconsciously carried out in the process of deploy-
+ment. Thus, it has been difficult for some factors, attributes, or characteristics to be identified or appropriately understood. Thus, the activities
+involved in deploying the NHI are analyzed, using the four moments of translation as a lens.
+4.1.1 | Problematization
+Problematization is the first moment of the translation process. This moment is when the main actor identifies the problem or an issue to be
+solved (Iyamu, 2013). In this study, the implementation of the NHI was problematised from two different perspectives: (1) the South African
+6 of 17 IYAMU and CHITSA
+16814835, 2025, 2, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/isd2.12352 by Sã¤Chsische Landesbibliothek, Wiley Online Library on [07/07/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+--- PAGE 7 ---
+government problematized the need to attain UHC in the country through the Department of Health; and (2) the use of IT solutions to
+enable and support the NHI, including integrating related healthcare systems, was also problematized. The latter is based on the former.
+Also, the focus of this study is on how to employ the ETA to govern the use of IT solutions, to enable the implementation of the
+South African NHI.
+The implementation of the South African NHI system was key for achieving UHC. The NHI fund intended to bridge the gap in the healthcare
+system by pooling the funds to provide the needed healthcare services to the patients based on need and not affordability. This measure was
+expressed in one of the documents as:
+The implementation is underpinned by Vision 2030 of the National Development Plan (NDP), which envisions that by 2030, every-
+one must have access to an equal standard of care, regardless of their income, and that a common Fund should enable equitable
+access to healthcare, regardless of what people can afford or how frequently they need to use a service (GG-02, pg. 13).
+The problematization of the NHI by the government followed several steps. First, the initial development and implementation of the NHI sys-
+tem were supported by policies and laws. Second, it was the NHI green paper, published in 2012 for contributions and comments from the public.
+Third, the feedback and contributions on the green paper were used to develop the white paper for the NHI policy to guide phase-one implemen-
+tation of the NHI system later passed into law by the legislative arm of the government.
+This process of problematization happened at the three main levels of government, local, provincial, and national. Also, this means that it cuts
+across the various geographical locations of the country to increase buy-in through widespread, sufficient, and accurate information disseminated
+to the citizens and other stakeholders such as healthcare practitioners. This happened through the piloting of the NHI system. The 11 piloting dis-
+trict sites (with at least a site per province) were selected demographically, and the socio-economic status, and the burden of diseases, were con-
+sidered in the criteria. It is stated in one of the NHI gazetted documents as follows:
+In preparing the ground for NHI, there is a clear imperative to improve the administration and effectiveness of public health deliv-
+ery, to draw on lessons of current practice and to pilot innovative approaches to partnering between public and private service
+providers (GG-02, pg. 52).
+The pilot programme increases stakeholders' levels of understanding and awareness of the NHI implementation plans and vision as they par-
+ticipate. In addition, this first phase of piloting the NHI system was mainly for preparing, strengthening, and testing the public health systems
+before the full implementation of the system.
+From the IT solutions' perspective, the NHI was problematised by IT personnel in the government. This action was done for both IT specialists
+and non-IT specialists, including healthcare practitioners, citizens, and government agencies, to ensure the gathering of comprehensive require-
+ments, which determine the IT solutions that will be provided to enable and support the strategic operations of the NHI. To the IT specialists,
+problematization was intended to explain the NHI in enabling and supporting healthcare solutions. Thus, some of the IT specialists involved were
+software developers, network administrators and managers, and IT infrastructure managers. One of the essentialities of the IT solutions in the
+implementation of the NHI system is as explained below:
+The NHI Fund's information system will be based on an electronic platform, with linkages between the NHI Fund membership
+database and the accredited and contracted health care providers. The information system will be crucial for implementing the
+NHI and the portability of services for the population (GG-01, pg. 80).
+Although the problematization of the NHI from both the technology and healthcare fronts was done through different means like media and
+government gazette, they were all documented. Thus, how the documents were shared, stored, and managed became the most important aspect
+of problematization. Primarily, actors' roles and responsibilities, including NHI's rationale and requirements, are contained in the various docu-
+ments, which remain reference points as the implementation of the solution progresses. The actors' roles range from providing healthcare services
+to any other support needed in the healthcare processes, such as administrative duties.
+4.1.2 | Interessement
+From the existing documents, the implementation of the South African NHI system is of interest to the stakeholders, which include citizens,
+healthcare providers (practitioners and managers), sponsors (government), and IT specialists. These stakeholders' interests were, however, driven
+by different factors. In the NHI system, citizens constituted the key stakeholders as one of the beneficiaries of the system. Primarily, many citizens
+IYAMU and CHITSA 7 of 17
+16814835, 2025, 2, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/isd2.12352 by Sã¤Chsische Landesbibliothek, Wiley Online Library on [07/07/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+--- PAGE 8 ---
+are interested in quality healthcare at no cost or reduced cost at the point of care. Also, many South Africans are interested in the NHI concept
+because it is expected to extend to the country's rural areas.
+As the sole custodian of the NHI fund, the interest of the Department of Health was the formulation of the health policies, including the NHI
+policy, and the governance of all the required resources. The other crucial information contained in these policies includes the NHI's rationale and
+requirements and the roles and responsibilities of the involved actors. Thus, the interest in formulating these policies is to mitigate challenges in
+the implementation process, as each actor or stakeholder involved in the process would know their roles and responsibilities.
+Other actors interested in implementing NHI were the physicians from both private and public healthcare institutions at different levels of
+health services. These include all the medical staff such as nurses, doctors, administration staff, and pharmacists with distinct roles in providing
+the healthcare service per the patients' needs. The laws of medical associations guided the physicians as they participated in formulating and stip-
+ulating the healthcare processes and requirements for implementing the NHI system.
+The interest of the IT specialists is mandatory, as they are responsible for developing IT solutions for the enablement and support of the NHI
+system. It is through IT solutions that the NHI system can be implemented across the country. The criticality of the IT solutions is explained in
+one of the strategic documents:
+The national Department of Health shall facilitate and coordinate the establishment, implementation, and maintenance of the
+information systems by provincial departments, district health councils, municipalities, and the private health sector at national,
+provincial, and local levels to create a comprehensive national health information system (SD-03, pg.15).
+Thus, as the enablers of the NHI system, IT specialists are interested in providing the needed IT solutions (based on the given health require-
+ments) for the implementation of the NHI system. The interested IT specialists include the IT managers, software developers, network administra-
+tors and managers, and IT infrastructure managers playing different roles in enabling and supporting the required IT solutions.
+Also, the IT specialists were interested in providing sustainable, less complex integration with other HIS systems and flexible solutions that
+enable the NHI across the country. Professionalism and national interest drive such interest. There is bound to be personal interest, including
+know-how in selecting and deploying technologies to enable and support the NHI. Some IT specialists are skilled in one or two areas, not in all
+technology solutions. This is fundamental to the success or failure of IT in achieving its goals and objectives. Thus, the selection of IT solutions
+must be based on governance, including policies, standards, and principles. However, not all the stakeholders that have shown interest in the
+deployment of NHI participate in the ongoing actualization of the solution (NHI system). An example is the private medical schemes, whose role
+outside the NHI system was explained as follows:
+Once NHI is fully implemented, medical schemes will offer complimentary cover to fill gaps in the universal entitlements offered
+by the State (GG-01, pg. 89).
+According to the NHI constitution, some of the actors were not assigned any roles in the implementations of the NHI system at the time of
+the study, regardless of their interests.
+4.1.3 | Enrolment
+Enrolment is the third stage of translation. At this stage, different actors accept the roles proposed by the focal actor (or actors) and jointly find a
+solution to the problematized item or entity (Waeraas & Nielsen, 2016), meaning that roles and responsibilities were assigned to interested human
+actors by the focal actor. However, not all interested actors participated in implementing NHI in the country during this study due to various cir-
+cumstances unexplained. The actors' participation was guided and influenced by their interests. Participation of human actors was from both tech-
+nical and non-technical angles.
+Participation from the non-technical front entailed the gathering of requirements from citizens (patients), healthcare (or medical), and legisla-
+tive (government) perspectives. These tasks were allocated to people with know-how and capability. From the legislative perspective, participa-
+tion entailed enacting NHI, and health policies used to guide the implementation process by the parliament. According to the NHI policies, an
+example of the NHI requirements is the mandatory registration of patients for care. This registration was explained in one of the NHI reports as
+follows:
+The health patient registration system was rolled out to capture patient details on a computer system. By the end of 2018, 20 mil-
+lion people were registered. But poor connectivity, hardware problems and a lack of IT staff meant some clinics were unable to
+connect to the internet (NA-01, pg. 3).
+8 of 17 IYAMU and CHITSA
+16814835, 2025, 2, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/isd2.12352 by Sã¤Chsische Landesbibliothek, Wiley Online Library on [07/07/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+--- PAGE 9 ---
+Patients' participation was through their interaction with the physicians during the registration process. This interaction was done at the point
+of care, seeking healthcare, and receiving the needed healthcare service from the physicians. The healthcare stakeholders participated in
+implementing the NHI system because of their critical roles in determining the functional requirements of the NHI system. Thus, the IT specialists
+developed the IT solutions for the enablement of the NHI system through the requirements of the various physicians. In addition, these physicians
+participated in implementing the NHI system as they provided the needed healthcare to the patients.
+Those who participated from the technical viewpoint included software developers, network administrators and managers, IT managers, and
+systems analysts. The IT managers ensured that relevant IT solutions were developed and implemented as they executed their management
+duties. The systems analysts' role includes applying their expertise to bridge the gap between the technical and non-technical stakeholders of the
+NHI system. The systems analysts engaged with non-technical actors, including the medical, government, and citizens, to gather the requirements.
+The software developers used these requirements to develop IT solutions such as the HPRS, which was being used for the mandatory patient reg-
+istration process at the time of the study. The system was used to capture the patients' details as they registered to become beneficiaries of the
+NHI system.
+On the other hand, network administrators and managers are responsible for coordinating and managing the computer networks across
+healthcare facilities. The implementation of NHI requires communicating and sharing data and information among the private and public
+healthcare institutions' stakeholders. At the time of the study, different IT solutions were being used across these institutions. Thus, the leading
+role of the network administrators was to enable the connection and coordination of the IT resources both internally and externally, enabling the
+sharing and integration of the patient's data and information among the NHI stakeholders.
+4.1.4 | Mobilization
+Mobilization entails communicating the interests and roles of actors and the formed network by the spokespersons or the representatives of that
+network (Shim & Shin, 2016). During the implementation of the NHI system, mobilization took place from the government, IT specialists, and
+healthcare institutions' perspectives at different levels. Representatives played fundamental roles in negotiating and communicating the actors'
+roles in their respective sub-networks to ensure the implementation of the NHI system.
+On behalf of the South African government, the health minister became the focal actor of the NHI system. They mobilized the strategic
+operationalization of the NHI system in several ways. First, they accredited and enforced the participation of private and public healthcare physi-
+cians and other stakeholders. Also, they provided constant feedback and updates on the progress of the phased implementation of NHI and
+encouraged the stakeholders in the NHI network. Mobilization also occurred at the district levels through the district health managers and the
+respective facility managers at the NHI pilot centres. These managers played the representative roles of managing and mobilizing the healthcare
+activities at the designated centres, ensuring the customized implementation of the NHI system using the available IT solutions. This was done by
+mobilizing the communities and enforcing the smooth registration of the patients on the HPRS. This engagement with the community is explained
+as follows:
+HPRS has been communicated to communities through open days to inform them of the new system and the need for them to
+bring their identity documents when visiting a healthcare facility so that they can be registered. These efforts have created a sense
+of ownership among the implementers and, in doing so, have generated buy-in at all (ER-01, pg. 96).
+Such direct communication channels at specific sites benefit the overall success of the implementation process as it requires a collaboration
+of stakeholders. From the Technology perspective, the mobilization was done by providing the IT solutions and resources required to implement
+the system. The IT managers mobilized their IT specialists as they provided the IT solution. The joint effort of a team consisting of software devel-
+opers, network administrators and managers, and systems analysts resulted in the development and deployment of the various HISs being used
+by healthcare institutions at the time of the study to customize the implementation of the NHI system across the country.
+5 | THE INFLUENCING FACTORS
+Based on the analysis of the data presented in the previous section, six key factors influenced the implementation of the South African NHI:
+(1) readiness assessment; (2), Government levels of health services; (3) Geographical locations of stakeholders; (4) Diversity of healthcare facilities;
+(5) Flexibility of technology solutions; and (6) Synchronization of processes and patients' data. As shown in Figure 2, the factors are connected.
+Thus, the figure should be read with the following discussion to understand better how the factors influence the implementation of the NHI in
+the country.
+IYAMU and CHITSA 9 of 17
+16814835, 2025, 2, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/isd2.12352 by Sã¤Chsische Landesbibliothek, Wiley Online Library on [07/07/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+--- PAGE 10 ---
+5.1 | Readiness assessment
+Readiness assessment is the systematic analysis conducted by an organization before adopting or implementing a technology solution. The pro-
+cess increases the organization's level of readiness as gaps can be identified and addressed, thus reducing the risks of the implementation project's
+failure (Kirmizi & Kocaoglu, 2020). IT solutions enable the NHI system. Thus, readiness assessment in the context of the NHI system's implemen-
+tation entails assessing the health environment technologically to mitigate the potential technical infrastructure challenges in the implementation
+process.
+The South African health environment is diverse. According to the analysis conducted, there seems to be no readiness assessment conducted
+in technology. The public and private healthcare institutions operate on different IT solutions, making synchronizing patients' data and consolidat-
+ing technologies impossible. The health department manages the procurement process of the IT infrastructure for public healthcare institutions,
+using standards and principles different from the private institutions. However, the implementation thereof is decentralized at primary and sec-
+ondary levels while governed by a set of policies. Hence, the existence and utilization of disjointed IT solutions at different public and private
+healthcare institutions are non-compatible.
+The analysis showed that healthcare institutions from both private and public across the country were still operating at different phases
+regarding technology usage. Some health facilities were transitioning from paper-based to electronic, while others maintained both paper-based
+and electronic records. Thus, if a readiness assessment process had been done, the challenges such as interoperability and integration of
+healthcare IT solutions and internet connectivity issues faced during the phase one implementation of the NHI system would have been mitigated
+through the application of ETA in the development of the IT solution.
+5.2 | Government levels of health services
+The analysis reveals three government levels of healthcare services, namely, primary, secondary, and tertiary. These levels are classified based on
+the type or level of healthcare they offer. The primary level is the first point of care where patients are expected to contact when they need
+healthcare services. As the first point, the registration of patients and their details were carried out. Examples of primary level are clinics, general
+practitioners, commonly referred to as GPs and district hospitals. The secondary level is the second tier of health service, where the primary level
+healthcare facility refers patients. Examples of secondary level are the hospitals offering specialized care, such as urology and cardiology. The third
+level is tertiary, which offers more advanced and specialized healthcare services such as cardiac surgery and is only accessed through a referral
+system from the secondary level.
+These different levels of health services use different customized IT solutions to operationalize the healthcare service. As revealed in the anal-
+ysis, the uniqueness of the health facilities makes it highly possible to have differentiation in the IT solutions selected and deployed in the various
+environments. These different IT solutions are disjointed and pose integration challenges Thus, referral processes and activities are sometimes
+Readiness assessment
+Synchronisation of processes
+and patients’ data
+Government levels of health
+services
+Flexibility of technology
+solutions
+Geographical locations of
+stakeholders
+Diversity of healthcare facilities
+FIGURE 2 Factors influencing NHI implementation. NHI, National Health Insurance.
+10 of 17 IYAMU and CHITSA
+16814835, 2025, 2, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/isd2.12352 by Sã¤Chsische Landesbibliothek, Wiley Online Library on [07/07/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+--- PAGE 11 ---
+considered better off through a manual system. However, one of the dangers is that the manual process is often prone to human errors. There-
+fore, the successful implementation of the NHI system depends on the flexibility of IT solutions, as they enable the integration and interoperabil-
+ity of heterogeneous IT solutions (Chitsa & Iyamu, 2020). Constant synchronization of the health processes and patients' data will reduce data
+duplication at these different levels of healthcare service and allow for instant access to the patient's data and medical history in the NHI
+network.
+Communication technologies such as internet connectivity are also essential to support the sharing and transportation of data among
+healthcare stakeholders as they can be at different geographical locations. However, it is difficult to select and manage these complex healthcare
+IT solutions without EA (Chitsa & Iyamu, 2020).
+5.3 | Geographical locations of stakeholders
+Most NHI stakeholders are geographically dispersed, making it difficult to connect them for easier NHI resource sharing. Therefore, the imple-
+mentation of the NHI system requires the formation of a network of NHI stakeholders based in different geographical locations to synchronize
+patients' data to meet the objectives easily. One of the objectives of the NHI system is to enable citizens to access the needed quality healthcare
+service at their nearest healthcare provider, regardless of their affordability. As revealed in the analysis, a patient could visit a nearby primary
+accredited healthcare provider. From the primary healthcare (PHC) facility, private or public, the patient can be referred to a secondary or tertiary
+level for specialized care, depending on the patient's needs. Hence, flexible integration of IT solutions enables the synchronization of the NHI pro-
+cesses and patients' data. In addition, this effort is essential to the manageability of patients' data between private and public health facilities
+across the geographical locations of the country. The manageability, including the integration and flexibility of IT solutions, can be ensured, and
+enforced through an EA.
+The analysis revealed that successful implementation of the HIS can be hindered by critical factors, such as lack of good governance, lack of
+appropriate selection and deployment of IT solutions, weak inclusiveness of stakeholders through their requirements (conditionalities), and lack
+of integrated IT solutions. This challenge is increasingly critical because, as evidenced in the analysis, there is an unequal distribution of IT solu-
+tions across the South African healthcare environment, making the NHI system implementation difficult. This inequality leads to challenges such
+as poor connectivity, and hardware and software failures affecting the NHI registration and referral processes during the first phase of the imple-
+mentation of the NHI system at some rural areas pilot sites. These challenges can be addressed through EA, as the approach focuses on all
+spheres of NHI implementation, from information to IT solutions (Chitsa & Iyamu, 2020). In addition, readiness assessment is critical when
+implementing such new and complex IT solutions to mitigate the potential technical infrastructure challenges that may affect the NHI system's
+implementation process.
+Synchronizing patients' data and using flexible technology allow the collaboration of stakeholders from different geographical locations as
+they securely share and access the patients' confidential data and information on the network. This synchronization, however, can be difficult in
+the absence of technical architectural guidance. Thus, the deployment of an EA can solve the problems of integration and interoperability of
+healthcare systems (Chitsa & Iyamu, 2020; Sajid & Ahsan, 2016).
+5.4 | Diversity of healthcare facilities
+The implementation of the NHI system means the collaboration of both public and private healthcare facilities. These facilities are grouped based
+on the level and type of care offered. As noted in the analysis, the collaboration of the stakeholders in the NHI system can be based on the refer-
+ral system. A referral system is a process whereby a patient can move from PHC service to secondary or tertiary specialized care, depending on
+the healthcare needs. This process entails creating a heterogeneous network of different actors using IT solutions to meet the healthcare needs
+of the patients.
+However, the current IT solutions are disjointed. As noted in the analysis, private and public healthcare institutions are disjointed because
+they are designed and implemented customarily to meet the specific healthcare institution's needs. The existence of these disjointed systems
+among healthcare facilities hinders the integration, interoperability, and synchronization of processes in the deployment of the NHI system. Thus,
+for the successful implementation of the NHI system, there is a need for flexible IT solutions to enable the secure sharing of patient data and
+information across the different healthcare facilities. Designing and developing such effective IT solutions require governance, including standard-
+ization, principles, and policies that promote the collaboration of the stakeholders, manageability of data, and synchronization of processes with
+the guidance of EA. The EA consists of four interconnected domains, namely business, information, application, and technical. These domains
+should be deployed in alliance to “ensure holistic coverage, from business (health) goals and objectives, information exchanges and flows, to
+processing (eHealth) of activities and events” (Chitsa & Iyamu, 2020:727).
+IYAMU and CHITSA 11 of 17
+16814835, 2025, 2, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/isd2.12352 by Sã¤Chsische Landesbibliothek, Wiley Online Library on [07/07/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+--- PAGE 12 ---
+5.5 | Flexibility of technology solutions
+The flexibility of IT solutions is referred to as “the capacity of an IS to adapt, support, and enable organizational practices and change” (Bjorn
+et al., 2009:439). With the NHI stakeholders operating on different levels, technologically, flexible IT solutions are crucial to facilitate the interac-
+tion of systems in the operationalization of the NHI system to ensure effective performance. Flexible IT solutions reduce the risks of duplicating
+patients' data sets and the lack of interoperability of systems. Thus, the successful implementation of the NHI system is dependent on the flexibil-
+ity of technology solutions. With new diseases and technology, IT solutions must be flexible to incorporate adjustments in the NHI system.
+In addition, the analysis has shown that, based on need, the NHI board will accredit more private healthcare services, such as Pediatrics,
+Gynecology, and retail pharmacies, to ensure equitable access to medicines and specialized care. The enrolment of these stakeholders from differ-
+ent levels of health services means an addition to the diversity of the current NHI stakeholders and a need for synchronization of the process to
+allow for the safe sharing and accessing of patient data. This factor, among others, shows the need to develop flexible IT solutions capable of
+accommodating new requirements and enabling the integration and interoperability of solutions without impacting the existing solutions for the
+successful implementation and deployment of the NHI system. However, the development of such flexible IT solutions can be a challenge without
+architectural guidance. An ETA “ensures that existing and new information technologies and systems are maintained and selected to achieve the
+organization's strategic goals” (Iyamu, 2012:190).
+5.6 | Synchronization of processes and patients' data
+Synchronization is the coordination and integration of computing processes to enable the seamless sharing of resources among the stakeholders
+(Lomotey et al., 2017). As revealed in the analysis, the beneficiaries of the NHI system may seek healthcare services from any nearest accredited
+private or public healthcare provider. This situation entails registering the patients and medical information at any accredited PHC service pro-
+vider, either public or private and should be accessed and updated from any geographical location countrywide by any NHI accredited service
+provider. Lack of synchronization of patients' data and processes can cost the organization time and resources.
+Implementing the NHI system requires instant access and sharing of patients' data and medical history records in the NHI network. However,
+the lack of standardized processes and factors such as the health service levels, the geographical location of stakeholders, and the type of
+healthcare facility can also hinder the integration and interoperability of the NHI system. Hence, there is a need for constant synchronization
+of the health processes and patients' data. Synchronization is also critical for the referral system, as it enforces the interoperability of systems and
+allows the interaction and collaboration of the stakeholders in the operationalization of the NHI system. According to Chitsa and Iyamu (2020,
+p. 727), the deployment of ETA “facilitates the integration, collaboration, standardization, deduplication, and reengineering of IS/IT solutions” crit-
+ical for the implementation of the NHI system.
+6 | ETA FRAMEWORK FOR THE IMPLEMENTATION OF THE NHI
+This section presents and discusses the ETA framework that can guide the implementation of the NHI. The framework (Figure 3) was developed
+based on the interpretation of the findings as presented in Section 5. Two main steps are involved in developing the ETA framework: step 1: the
+technical and non-technical factors that influence the ETA are mapped, as shown in Table 2. Step 2: the framework is developed. To better under-
+stand the framework and how it can be applied in implementing the NHI system, Table 2 and Figure 3 should be read with the following
+discussion.
+6.1 | Factors of the enterprise technical architecture framework
+The ETA is influenced by eleven (11) key factors, which are process, activity, and IT in nature. The factors are placed in columns and rows. As
+shown in Table 2, the factors on the “Y” axis are vision, integration of health systems, consolidation of IT solutions, EA, interoperability, data man-
+agement, and governance. On the “X” axis, the factors are healthcare, legislature, patients' needs, and IT solutions. The X and Y axes align the
+influencing factors to understand how technical and non-technical, including human needs and governmental regulation, come together. The ETA
+framework can be used in addressing the challenges of implementing the South African NHI, as follows:
+1. Have a good understanding of Table 2, which describes the alignment and relationships among the aspects of the NHI system and the factors
+that influence ETA development.
+2. The content of each cell (conjunction of the X and Y axes) in Table 2 is a deliverable. Each deliverable should be enforced through policy.
+12 of 17 IYAMU and CHITSA
+16814835, 2025, 2, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/isd2.12352 by Sã¤Chsische Landesbibliothek, Wiley Online Library on [07/07/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+--- PAGE 13 ---
+Table 2 presents the aspects of the NHI system and the key factors influencing the development of the ETA. Based on these critical factors
+(Table 2), an ETA framework was developed, as shown in Figure 3, to guide the implementation of the South African NHI. In doing so, the 11 fac-
+tors were divided into three groups, which makes the levels. The levels are technical, non-technical, and architectural entities.
+1. Level #1: This is the technical entity. It consists of existing IT-related elements. This includes interoperability, data management, governance,
+IT consolidation, and integration of health systems. Each of these factors must be understood and documented, to enable assessment of their
+capability and deficiency in developing the ETA.
+2. Level #2: This level contains the non-technical factors. Umbrellaed by healthcare, it comprises of government's legislature, patients' needs, and
+vision of the NHI. The level determines the trajectory of the NHI in the country.
+3. Level #3: This is the architectural entities, the ETA, EA, and IT solutions. On the one hand, the development of ETA is guided using EA princi-
+ples. This is primarily because ETA is a domain of the EA, as explained in section 2.2. On another hand, IT solutions are involved and enable
+ETA development.
+The ETA framework presents the key influencing factors for the development of ETA to implement the NHI. These factors are vision, integra-
+tion of health systems, consolidation of IT solutions, EA, interoperability, data management, governance, healthcare, legislature, patients' needs,
+and IT solutions. Considering these factors may enable the development of an ETA that can guide the implementation of the NHI. The developers
+of the ETA should consider the need to select and deploy the IT solutions, which align with the vision of the NHI and the healthcare systems. The
+vision includes the requirements and objectives of the healthcare and NHI. Acknowledging the vision of the NHI and the healthcare system's fac-
+tors can lead to the selection of IT solutions that will enable connectivity across the healthcare facilities in the country.
+Factors such as the consolidation of IT solutions and integration of health systems enable flexibility and compatibility, which are critical in the
+NHI system. Considering these factors can mitigate the existence of redundant, idle, and duplicate systems across healthcare facilities as the best
+IT solutions for the implementation of the NHI can be selected and deployed. EA outlines the relationships between the strategic vision of an
+organization and different levels of IT infrastructure (Ahsan et al., 2009). Thus, there is a need for the concatenation of EA and ETA to enable the
+alignment and connection of the IT solutions and the healthcare processes in the NHI system. The ETA can solve the problems of integration and
+interoperability of healthcare systems.
+Governance refers to the set of standards, policies, and processes developed to ensure the accountability of activities in an organization
+(Floridi, 2018). Due to the sensitive nature of the healthcare environment, there is a need for the ETA to comply with the policies from both the
+government and IT perspectives. Lastly, data management is another critical factor that ensures the effective capturing, storing, sharing, and use
+of patients' data across the NHI stakeholders.
+Interoperability
+Data
+Management
+Governance
+IT soluons
+Consolidaon
+Integraon of
+health systems
+Healthcare
+Legislature Paents’ needs Vision
+ETA for NHI
+implementation
+IT soluons
+Enterprise
+Architecture
+Level #1
+Level #2
+Level #3
+FIGURE 3 ETA framework for the implementation of the NHI. ETA, enterprise technical architecture; NHI, National Health Insurance.
+IYAMU and CHITSA 13 of 17
+16814835, 2025, 2, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/isd2.12352 by Sã¤Chsische Landesbibliothek, Wiley Online Library on [07/07/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+--- PAGE 14 ---
+7 | CONCLUSION
+The study developed an ETA framework to implement the NHI in South Africa. This ETA framework can be of significance to the South African
+government as it can be used as a guide to fully implement the NHI in the country. Healthcare practitioners and IT people in the health sector can
+also benefit from the study. The ETA framework can be used as a guideline when developing IT solutions, to enable health processes and activi-
+ties. The successful implementation of NHI through this ETA framework is intended to benefit the country. The technical and non-technical fac-
+tors that influenced the implementation of the NHI system were revealed in the study. In addition, the factors which influence the development
+TABLE 2 Factors influencing the development of an ETA.
+Factors Healthcare Legislature Patients' needs IT solutions
+Vision The ETA should
+incorporate both the NHI
+and healthcare vision.
+The vision includes the
+objectives and future
+requirements of the NHI
+The vision of the NHI
+should align with the laws
+and acts that govern
+healthcare in the country
+The healthcare vision of the
+NHI should incorporate the
+patients' needs across diverse
+backgrounds
+IT solutions should be shaped by the
+NHI vision.
+Connectivity across the country is
+the main requirement for the
+implementation of NHI
+Integration of
+health systems
+Integrate healthcare
+services from both public
+and private facilities
+Ensure a secure sharing of
+patients' data across
+different healthcare
+facilities
+The integration of the
+healthcare systems is
+guided by government
+policies
+Provide a platform that enables
+the secure sharing of patient's
+needs across the various NHI
+stakeholders
+Ensure compatibility of the different
+IT health solutions
+Eradicate redundant and duplicated
+IT solutions
+Consolidation
+of IT solutions
+Ensure efficient healthcare
+operations from
+consolidated IT solutions.
+Avoid duplication of
+processes and waste
+resources
+IT solutions should
+comply with the laws and
+the acts that govern the
+implementation of the
+NHI
+Provide access to information,
+improve communication, and
+support the patient across the
+healthcare levels countrywide
+Allow for flexibility and compatibility
+of solutions.
+Enable the sharing of IT resources
+across healthcare stakeholders
+Enterprise
+architecture
+Link and align the different
+healthcare processes and
+requirements across the
+healthcare stakeholders.
+Enable the alignment of IT
+solutions and healthcare
+needs.
+Provide a framework on
+which the EA is built
+Policies and laws to
+support the development
+of an EA
+Patients are critical. EA should
+be developed to meet the
+patient's needs
+Ensure mapping of IT solutions and
+the healthcare requirements, to
+support the healthcare functions
+The ETA domain of EA to manage the
+IT solutions
+Interoperability Ensure access to
+healthcare data in a timely
+and secure manner.
+Optimize the healthcare
+systems during the
+operationalization of the
+NHI system
+The NHI stakeholders to
+comply with the policies
+that govern the sharing
+and use of patients' data
+Improve patient experience,
+and efficiency, to reduce the
+error rate in the NHI system
+Different IT solutions to exchange
+usable data among the NHI
+stakeholders
+Data
+management
+Ensure proper data
+creation, storage, use, and
+sharing among NHI
+stakeholders across the
+country
+Principles to govern the
+storage, use and sharing
+of patients' data among
+the NHI stakeholders
+Enable the effective use of
+patients' data across all the
+stakeholders of the NHI system
+in supporting patients' needs
+Ensure effective sharing of healthcare
+data among different IT solutions
+Governance Ensure the setting and
+monitoring of the NHI
+objectives and strategic
+goals.
+Healthcare laws and
+policies govern the
+healthcare environment,
+which is sensitive
+The NHI stakeholders
+should comply with the
+healthcare policies
+The patients should receive the
+expected healthcare from the
+NHI stakeholders.
+Policies to protect and secure
+the confidentiality of the
+patient's data and information
+Policies and principles to guide the
+selection, development, and
+implementation of standardized IT
+solutions across the NHI healthcare
+facilities
+Abbreviations: EA, enterprise architecture; ETA, enterprise technical architecture; NHI, National Health Insurance.
+14 of 17 IYAMU and CHITSA
+16814835, 2025, 2, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/isd2.12352 by Sã¤Chsische Landesbibliothek, Wiley Online Library on [07/07/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+--- PAGE 15 ---
+of the ETA for the implementation of the South African NHI were also presented. Understanding these influencing factors can also be of theoreti-
+cal contribution to other developing countries intending to implement similar health systems.
+From a practical viewpoint, the ETA framework was developed based on the findings from the analysis of the study. The study developed an
+ETA framework for the implementation of the NHI in South Africa. The framework can be used to guide the implementation of the NHI. As rev-
+ealed in the analysis, the current implementation of the NHI is not guided by ETA, and the process has been challenging technology-wise. Thus,
+through the framework, the ETA can be developed to address the current and possible future technological challenges such as non-compatibility,
+flexibility, and integration of solutions in the implementation of the NHI. ETA is required to address the fundamental challenges and to enable and
+support NHI implementation.
+DATA AVAILABILITY STATEMENT
+The data that support the findings of this study are available on request from the corresponding author. The data are not publicly available due to
+privacy or ethical restrictions.
+ORCID
+Tiko Iyamu https://orcid.org/0000-0002-4949-094X
+REFERENCES
+Ahsan, K., Shah, H., & Kingston, P. (2009). The role of enterprise architecture in healthcare‐IT. In 2009 sixth international conference on information technol-
+ogy: New Generations, 27–29 April 2009 (pp. 1462–1467). IEEE.
+Algozzine, B., & Hancock, D. (2016). Doing case study research: A practical guide for beginning researchers (pp. 1–116). Teachers College Press.
+Aubakirov, М., & Nikulchev, E. (2016). Development of system architecture for E-government cloud platforms. International Journal of Advanced Computer
+Science and Applications, 7(2), 253–258.
+Azungah, T. (2018). Qualitative research: Deductive and inductive approaches to data analysis. Qualitative Research Journal, 18(4), 383–400.
+Bjorn, P., Burgoyne, S., Crompton, V., MacDonald, T., Pickering, B., & Munro, S. (2009). Boundary factors and contextual contingencies: Configuring elec-
+tronic templates for healthcare professionals. European Journal of Information Systems, 18(5), 428–441.
+Callon, M. (1984). Some elements of a sociology of translation: Domestication of the scallops and the fishermen of St Brieuc Bay. The Sociological Review,
+32, 196–233.
+Callon, M. (1986). Some elements of the sociology of translation: Domestication of the scallops and the fisherman of St Brieuc Bay. In J. Law (Ed.), A new
+sociology of knowledge, power, action and belief (pp. 196–233). Routledge.
+Cape, W. (2015). Pursuing universal healthcare coverage through the implementation of NHI.
+Castellanos, C., & Correal, D. (2012). KALCAS: A framework for semi-automatic alignment of data and business processes Architectures. In 2012 east
+European conference on advances in databases and information systems (pp. 111–124). Springer. KALCAS: A FrameworK for Semi-automatic ALignment
+of Data and Business ProCesses ArchitectureS.
+Child, K. (2019). National health insurance: Pilot projects reveal deep problems.
+Chitsa, F., & Iyamu, T. (2020). Towards Enterprise technical architecture for the implementation of the south African NHI. Advances in Science, Technology
+and Engineering Systems Journal, 5(2), 724–729.
+Constantinides, P., Henfridsson, O., & Parker, G. G. (2018). Introduction—Platforms and infrastructures in the digital age. Information Systems Research,
+29(2), 381–400.
+Creswell, J. W., & Poth, C. N. (2017). Qualitative inquiry and research design: Choosing among five approaches (4th ed.). Sage.
+Dale, M., & Scheepers, H. (2020). Enterprise architecture implementation as interpersonal connection: Building support and commitment. Information Sys-
+tems Journal, 30(1), 150–184.
+De Vries, M., & Van Rensburg, A. C. (2008). Enterprise architecture‐new business value perspectives. South African Journal of Industrial Engineering, 19(1),
+1–16.
+Elbanna, A. (2011). Applying actor‐network theory and managing controversy. Information Systems Theory, 29, 117–129.
+Floridi, L. (2018). Soft ethics and the governance of the digital. Philosophy & Technology, 31(1), 1–8.
+Gaqavu, M., & Mash, R. (2019). The perceptions of general practitioners on National Health Insurance in Chris Hani district, eastern Cape, South Africa.
+South African Family Practice, 61(3), 102–108.
+Garavand, A., Samadbeik, M., Kafashi, M., & Abhari, S. (2016). The identification and classification of deployment challenges related to electronic health
+records: A review article. Shiraz E-Medical Journal, 17(2), 1–7.
+Goldkuhl, G. (2012). Pragmatism vs interpretivism in qualitative information systems research. European Journal of Information Systems, 21(2), 135–146.
+Gutierrez, M., Moreno, R., & Rebelo, M. (2017). Information and communication technologies and Global Health challenges. Global Health Informatics,
+50–93.
+Håkansson, A. (2013). Portal of research methods and methodologies for research projects and degree projects. In In the 2013 world congress in computer
+science, computer engineering, and applied computing WORLDCOMP2013; Las Vegas, Nevada, USA, 22–25 July (pp. 67–73). CSREA Press.
+Heeks, R., & Stanforth, C. (2015). Technological change in developing countries: Opening the black box of process using actor–network theory. Develop-
+ment Studies Research, 2(1), 33–50.
+Iyamu, T. (2012). A framework for developing and implementing the enterprise technical architecture. Computer Science and Information Systems, 9(1),
+189–206.
+Iyamu, T. (2013). Underpinning theories: Order-of-use in information systems research. Journal of Systems and Information Technology, 15(3), 224–238.
+IYAMU and CHITSA 15 of 17
+16814835, 2025, 2, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/isd2.12352 by Sã¤Chsische Landesbibliothek, Wiley Online Library on [07/07/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+--- PAGE 16 ---
+Iyamu, T. (2018). Collecting qualitative data for information systems studies: The reality in practice. Education and Information Technologies, 23, 2249–
+2264.
+Iyamu, T. (2020). A framework for selecting analytics tools to improve healthcare big data usefulness in developing countries. SA Journal of Information
+Management, 22(1), 1117–1129.
+Iyamu, T. (2021). Applying theories for information systems research (pp. 1–228). Routledge.
+Iyamu, T. (2022). Enterprise architecture for strategic Management of Modern IT solutions. Auerbach Publications.
+Iyamu, T. (2023). The concept of Enterprise architecture from theory to practice. CRC Press.
+Jeffries, M., Phipps, D., Howard, R., Avery, A., Rodgers, S., & Ashcroft, D. (2017). Understanding the implementation and adoption of a technological inter-
+vention to improve medication safety in primary care: A realist evaluation. BMC Health Services Research, 17(1), 1–11.
+Johnston, C., & Gillam, L. (2019). Legal and ethical issues arising from the use of emerging technologies in paediatric healthcare. QUT Law Review, 18(2),
+93–110.
+Kirmizi, M., & Kocaoglu, B. (2020). The key for success in enterprise information systems projects: Development of a novel ERP readiness assessment
+method and a case study. Enterprise Information Systems, 14(1), 1–37.
+Kotusev, S. (2019). Enterprise architecture and enterprise architecture artefacts: Questioning the old concept in light of new findings. Journal of Information
+Technology, 34(2), 102–128.
+Latour, B. (2005). An introduction to actor-network-theory. In Reassembling the social. Oxford University Press.
+Law, J. (1992). Notes on the theory of the actor‐network: Ordering, strategy, and heterogeneity. Systems Practice, 5, 379–393.
+Lomotey, R. K., Sriramoju, S., & Deters, R. (2017). Middleware platform for the synchronisation of mobile medical data. International Journal of Business Pro-
+cess Integration and Management, 8(2), 136–144.
+Makovhololo, P., & Iyamu, T. (2020). A framework to guide ICT solution for language barrier in south African healthcare. Journal of Cases on Information
+Technology, 22(2), 1–17.
+Martelli, J., & Greener, S. (2018). An introduction to business research methods. Bookboon.
+Marten, R., McIntyre, D., Travassos, C., Shishkin, S., Longde, W., Reddy, S., & Vega, J. (2014). An assessment of progress towards universal health coverage
+in Brazil, Russia, India, China, and South Africa (BRICS). The Lancet, 384(9960), 2164–2171.
+Martin, D., Miller, A., Quesnel-Vallée, A., Caron, N., Vissandjée, B., & Marchildon, G. (2018). Canada's universal health-care system: Achieving its potential.
+The Lancet, 391(10131), 1718–1735.
+Mathew, S., & Mash, R. (2019). Exploring the beliefs and attitudes of private general practitioners towards national health insurance in Cape Town,
+South Africa. African Journal of Primary Health Care & Family Medicine, 11(1), 1–10.
+Mcintyre, D., Meheus, F., & Røttingen, J. (2017). What level of domestic government health expenditure should we aspire to for universal health coverage?
+Health Economics, Policy and Law, 12(2), 125–137.
+Mhlaba, L., Parry, A., & Blaauw, D. (2016). Is National Health Insurance a viable option for South Africa? Experiences from other countries. AfricaGrowth
+Agenda, 2016(10), 8–12.
+Muhammad, I., & Wickramasinghe, N. (2016). How an actor network theory (ANT) analysis can help us to understand the personally controlled electronic
+health record (PCEHR) in Australia. E-Health and Telemedicine, 1320–1337.
+Passchier, R. (2017). Exploring the barriers to implementing National Health Insurance in South Africa: The people's perspective. South African Medical Jour-
+nal, 107(10), 836–838.
+Price, C., Green, W., & Suhomlinova, O. (2018). Twenty-five years of national health IT: Exploring strategy, structure, and systems in the English NHS. Jour-
+nal of the American Medical Informatics Association, 26(3), 188–197.
+Ranabhat, C., Atkinson, J., Park, M., Kim, C., & Jakovljevic, M. (2018). The influence of universal health coverage on life expectancy at birth (LEAB) and
+healthy life expectancy (HALE): A multi-country cross-sectional study. Frontiers in Pharmacology, 9, 960–970.
+Ross, J., Stevenson, F., Lau, R., & Murray, E. (2016). Factors that influence the implementation of e-health: A systematic review of systematic reviews
+(an update). Implementation Science, 11(1), 146–158.
+Sajid, M., & Ahsan, K. (2016). Role of enterprise architecture in healthcare organisations and knowledge-based medical diagnosis system. Journal of Informa-
+tion Systems and Technology Management, 13(2), 181–192.
+Saunders, M. N. K., Lewis, P., & Thornhill, A. (2019). Research methods for business students. Pearson Education.
+Sekhejane, P. R. (2013). South African National Health Insurance (NHI) policy: Prospects and challenges for its efficient implementation. Africa Institute of
+South Africa (AISA), 102, 1–5.
+Shaanika, I., & Iyamu, T. (2015). Deployment of enterprise architecture in the Namibian government: The use of activity theory to examine the influencing
+factors. Electronic Journal of Information Systems in Developing Countries, 71(1), 1–21.
+Shim, Y., & Shin, D. (2016). Analysing China's fintech industry from the perspective of actor–network theory. Telecommunications Policy, 40(2–3), 168–181.
+Sligo, J., Gauld, R., Roberts, V., & Villa, L. (2017). A literature review for large-scale health information system project planning, implementation and evalua-
+tion. International Journal of Medical Informatics, 97, 86–97.
+Surender, R., Van Niekerk, R., & Alfers, L. (2016). Is South Africa advancing towards National Health Insurance? The perspectives of general practitioners in
+one pilot site. South African Medical Journal, 106(11), 1092–1095.
+Sutton, J., & Austin, Z. (2015). Qualitative research: Data collection, analysis, and management. The Canadian Journal of Hospital Pharmacy, 68(3), 226–231.
+Tao, C., Sarkar, I., & Bouamrane, M. (2015). Managing interoperability and complexity in health systems. Managing Interoperability and Complexity in Health,
+54(1), 1–4.
+Wachter, R. (2016). Making IT work: Harnessing the power of health information technology to improve care in England (pp. 1–71). Department of Health.
+Waeraas, A., & Nielsen, J. (2016). Translation theory ‘translated’: Three perspectives on translation in organizational research. International Journal of Man-
+agement Reviews, 18(3), 236–270.
+Walsham, G. (1997). Actor-network theory and IS research: Current status and future prospects. In Proceedings of the IFIP TC8 WG 8.2 international confer-
+ence on information systems and qualitative research, 31st may–3rd June 1997, Philadelphia, Pennsylvania, USA (pp. 466–480). Springer US.
+Walsham, G. (2014). Empiricism in interpretive IS research: A response to Stahl. European Journal of Information Systems, 23(1), 12–16.
+Widén, S., & Haseltine, W. (2015). Case study: The Estonian eHealth and eGovernance system (pp. 1–74). Access Health International.
+16 of 17 IYAMU and CHITSA
+16814835, 2025, 2, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/isd2.12352 by Sã¤Chsische Landesbibliothek, Wiley Online Library on [07/07/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+--- PAGE 17 ---
+AUTHOR BIOGRAPHIES
+Tiko Iyamu holds a PhD in Information Systems from the University of Cape Town. Currently, he is a Professor at the Department of Informa-
+tion Technology, Cape Peninsula University of Technology, South Africa. His areas of interest include enterprise architecture, health informat-
+ics, big data analytics, mobile computing, and IT strategy. Professor Iyamu has authored eight books, which include Applying Theories for
+Information Systems Research; Enterprise Architecture for Strategic Management of Modern IT Solutions; and Advancing Big Data Analytics
+for Healthcare Service Delivery. He has edited five books and authored more than 190 peer‐reviewed research articles in a wide range of
+Journal outlets, Conference Proceedings, and book chapters. He has supervised two postdoctoral fellows, eleven doctoral, and twenty‐one
+Masters’ students, successfully. He is an associate editor of the Journal: Education and Information Technologies (EAIT); The African Journal
+of Information Systems (AJIS), and a pioneer Associate Editor of the International Journal of Actor‐Network Theory and Technological Innova-
+tion (IJANTTI). Iyamu has received several awards in research and excellence in the supervision of postgraduate students.
+Farirai Chitsa holds a Master's in Information Technology (MIT) from Cape Peninsula University of Technology (CPUT), South Africa. Ms
+Chitsa is an academic with a Technical and Vocational Education and Training (TVET) college, in Cape Town. She specialises in research quali-
+tative methods and her focus areas include health informatics and architecture. Ms Chitsa has authored research articles in international jour-
+nal outlets.
+How to cite this article: Iyamu, T., & Chitsa, F. (2025). An enterprise technical architecture for the implementation of the South African
+National Health Insurance. The Electronic Journal of Information Systems in Developing Countries, 91(2), e12352. https://doi.org/10.1002/
+isd2.12352
+IYAMU and CHITSA 17 of 17
+16814835, 2025, 2, Downloaded from https://onlinelibrary.wiley.com/doi/10.1002/isd2.12352 by Sã¤Chsische Landesbibliothek, Wiley Online Library on [07/07/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License

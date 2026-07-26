@@ -1,0 +1,359 @@
+--- PAGE 1 ---
+ScienceDirect
+Available online at www.sciencedirect.com
+Procedia Computer Science 239 (2024) 364–371
+1877-0509 © 2024 TheAuthors. Published by Elsevier B.V.
+This is an open access article under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0)
+Peer-review under responsibility of the scientific committee of the CENTERIS / ProjMAN / HCist 2023
+10.1016/j.procs.2024.06.183
+© 2024 TheAuthors. Published by Elsevier B.V.
+This is an open access article under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0)
+Peer-review under responsibility of the scientific committee of the CENTERIS / ProjMAN / HCist 2023
+ScienceDirect
+Procedia Computer Science 00 (2023) 000–000
+www.elsevier.com/locate/procedia
+1877-0509 © 2023 The Authors. Published by ELSEVIER B.V.
+This is an open access article under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0)
+Peer-review under responsibility of the scientific committee of the CENTERIS – International Conference on ENTERprise Information Systems /
+ProjMAN - International Conference on Project MANagement / HCist - International Conference on Health and Social Care Information Systems
+and Technologies 2023
+CENTERIS – International Conference on ENTERprise Information Systems / ProjMAN –
+International Conference on Project MANagement / HCist – International Conference on
+Health and Social Care Information Systems and Technologies 2023
+Unicage Architecture Development Method
+Nobuaki Tounakaa
+, Shuichiro Yamamotob
+, Buyanjargal Shirnena,b,
+*
+a
+Unversal Shell Programming Laboratory Ltd., 3-3-3 Nishishimbashi, Minato-ku ,Tokyo 105-0003, Japan
+b
+IPUT in Nagoyo, 4-27-1 Meieki, Nakamura-ku, Nagoya 450-0002, Japan
+Abstract
+Digital transformation necessitates the creation of business value or innovation using digital technology in every industry.
+Enterprises are facing an unprecedented business environment and competition for resources and market, which forces them to be
+more adaptive. Consequently, their Enterprise Information Systems must also be adaptive as so for Architecture Development
+Method. As a result, enterprises turn to adopt Agile and Lean approaches at scale, which requires architecture iteration and
+refactoring, or evolvability. In this paper, we propose a loosely-coupled, process-based enterprise architecture development
+method- Unicage – which aligns with Agile and Lean principles, complementing them with concrete technology architecture.
+The proposing Architecture Development Method especially fits for Enterprise Resource Planning systems.
+© 2023 The Authors. Published by ELSEVIER B.V.
+This is an open access article under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0)
+Peer-review under responsibility of the scientific committee of the CENTERIS – International Conference on ENTERprise
+Information Systems / ProjMAN - International Conference on Project MANagement / HCist - International Conference on
+Health and Social Care Information Systems and Technologies 2023
+Keywords: Enterprise Architecture Development Method; Data Driven Enterprise Architecture; Open Agile Architecture; ArchiMate;
+1. Introduction
+The objective of the latest Enterprise Architecture (EA) is business transformation, not the overall optimization of
+IT systems. Furthermore, since the objective of EA is business transformation, the business capability-based EA
+* Corresponding author. Tel.: +81-3-3432-1174; fax: +81-3-3432-1174.
+E-mail address: s-buyan@usp-lab.com
+Available online at www.sciencedirect.com
+ScienceDirect
+Procedia Computer Science 00 (2023) 000–000
+www.elsevier.com/locate/procedia
+1877-0509 © 2023 The Authors. Published by ELSEVIER B.V.
+This is an open access article under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0)
+Peer-review under responsibility of the scientific committee of the CENTERIS – International Conference on ENTERprise Information Systems /
+ProjMAN - International Conference on Project MANagement / HCist - International Conference on Health and Social Care Information Systems
+and Technologies 2023
+CENTERIS – International Conference on ENTERprise Information Systems / ProjMAN –
+International Conference on Project MANagement / HCist – International Conference on
+Health and Social Care Information Systems and Technologies 2023
+Unicage Architecture Development Method
+Nobuaki Tounakaa
+, Shuichiro Yamamotob
+, Buyanjargal Shirnena,b,
+*
+a
+Unversal Shell Programming Laboratory Ltd., 3-3-3 Nishishimbashi, Minato-ku ,Tokyo 105-0003, Japan
+b
+IPUT in Nagoyo, 4-27-1 Meieki, Nakamura-ku, Nagoya 450-0002, Japan
+Abstract
+Digital transformation necessitates the creation of business value or innovation using digital technology in every industry.
+Enterprises are facing an unprecedented business environment and competition for resources and market, which forces them to be
+more adaptive. Consequently, their Enterprise Information Systems must also be adaptive as so for Architecture Development
+Method. As a result, enterprises turn to adopt Agile and Lean approaches at scale, which requires architecture iteration and
+refactoring, or evolvability. In this paper, we propose a loosely-coupled, process-based enterprise architecture development
+method- Unicage – which aligns with Agile and Lean principles, complementing them with concrete technology architecture.
+The proposing Architecture Development Method especially fits for Enterprise Resource Planning systems.
+© 2023 The Authors. Published by ELSEVIER B.V.
+This is an open access article under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0)
+Peer-review under responsibility of the scientific committee of the CENTERIS – International Conference on ENTERprise
+Information Systems / ProjMAN - International Conference on Project MANagement / HCist - International Conference on
+Health and Social Care Information Systems and Technologies 2023
+Keywords: Enterprise Architecture Development Method; Data Driven Enterprise Architecture; Open Agile Architecture; ArchiMate;
+1. Introduction
+The objective of the latest Enterprise Architecture (EA) is business transformation, not the overall optimization of
+IT systems. Furthermore, since the objective of EA is business transformation, the business capability-based EA
+* Corresponding author. Tel.: +81-3-3432-1174; fax: +81-3-3432-1174.
+E-mail address: s-buyan@usp-lab.com
+
+--- PAGE 2 ---
+Nobuaki Tounaka et al. / Procedia Computer Science 239 (2024) 364–371 365
+2 Nobuaki Tounaka et al. / Procedia Computer Science 00 (2023) 000–000
+development method starts implementing parts that generate business value in stages. Activities that do not generate
+business value are not recommended. Thus, architecture development is a continuous, cyclical process, and in
+executing the Architecture Development Method (ADM) repeatedly over time. The Open Group Architecture
+Framework (TOGAF) [3] accepts the iterative model, which is a critical component of Agile. In microservice
+architecture, microservices that correspond to business capabilities are loosely coupled to promote DX. To achieve
+this, it is necessary to design and implement overall business, data and application, and technology architectures,
+which are consisting the EA as suggested by TOGAF core architecture layers, in the loosely coupled manner. This
+type of architecture enables the flexibility to iterative development such as Agile development or TOGAF ADM
+because it considers only input and output (IO) data to/from the business process. The IO data driven architecture
+also advantages system developers to achieve a full cycle system development since it requires only understanding
+input and output in every business process which directly maps to an IO data-based application component.
+Based on the fact mentioned above, we propose an IO data-driven, process-based architecture and its architecture
+development method, consisting of loosely coupled building blocks that compose business, application, and
+technology architecture layers. The proposing architecture development method aligns with Agile and Lean
+development principle, expending their capabilities with an enterprise architecture- Unicage architecture.
+In the following, the related research will be explained in Section 2. Next, Section 3 proposes Unicage enterprise
+architecture model by ArchiMate [1] and its architecture development method. Then, Section 4 explains a customer
+case of the Unicage Architecture Development Method (UADM). Section 5 describes the discussion, and Section 6
+summarizes this paper and mentions future issues. We also illustrate a practical model to implement the architecture
+with ArchiMate.
+2. Related work
+Steven H. Spewak [2] suggested a Data-Driven Information System Architecture as Enterprise Architecture
+Planning (EAP). It recommends that data be defined before applications, and data dependency determines the
+sequence for implementing application systems. Data must be provided at a reasonable, affordable cost. With EAP,
+the first architecture defines all the data needed to support the business. When that is completed, the second
+architecture defines the applications needed to manage that data.
+TOGAF [4] suggests Open Agile Architecture (O-AA) and its Architecture Development Method (ADM). Agile
+architecting aims at benefiting from emergence while minimizing unnecessary complexity and undesirable
+outcomes. The O-AA suggests that architecture has to evolve when weak solutions are eliminated. Architecture
+refactoring refers to the architecture restructuring that occurs when architecture evolves. Moreover, high-performing
+teams are more likely to have loosely-coupled architectures than medium and low-performing teams [5]. When
+dependencies are minimized, teams can develop, test, and deploy new functions and features without depending on
+other teams for additional work, resources, or approvals, and with less back-and-forth communication [6], which
+realizes a full cycle development.
+O-AA Axiom 9 suggests Modular Data Platform that the centralized and monolithic data platform is an anti-
+pattern [7]. In the axiom, Agile Architecture shall create modular data platforms using domain decomposition logic:
+“instead of flowing the data from domains into a centrally owned data lake or platform, domains need to host and
+serve their domain datasets in an easily consumable way”. Source domain datasets represent closely the raw data at
+the point of creation and are not fitted or modeled for a particular consumer.
+Yamamoto [8] proposed the Data Driven Process Design Method (DDPDM) which focuses on elimination of the
+business process which does not create business value or overlapping the process.
+Netflix [9] proposed a model that says “Operate what you built” or a Full Cycle Software Development.
+Developing and running a software service involves a full set of responsibilities, which can create inefficiencies
+across the entire life cycle when segmented. The full cycle developers are responsible for the full software life cycle,
+from design to support, by combining all of these ideas together into a single development team equipped with
+amazing developer productivity tools.
+CRIBB [10], James P. Houghton [11], João M.P. Moreira [12] mentioned or evaluated the technology
+performance of Unicage Architecture.
+
+--- PAGE 3 ---
+366 Nobuaki Tounaka et al. / Procedia Computer Science 239 (2024) 364–371
+Nobuaki Tounaka et al. / Procedia Computer Science 00 (2023) 000–000 3
+3. Unicage Architecture Development Method (UADM)
+The Unicage Architecture (UA) complies with TOGAF [3] and Table 1. describes its core building blocks for the
+core architecture layers as in the TOGAF, to propose a practical model for Enterprise Information System (EIS)
+implementation. The ArchiMate metamodels based on TOGAF ArchiMate Metamodels for the data, application,
+and technology layers are explained in the following chapters. As shown in Table 1., a business process design maps
+directly to Application and Technology building blocks since each block is designed based on IO data or
+information, which allows the microservice architecture and full cycle development. Having the business process
+analyzed and designed means having the data and application design ready at a time, which allows efficiency of
+development cycle and the full cycle development available. We here emphasize Data, Application, and Technology
+Architecture along with the UADM.
+Table 1. Data Driven Process-Based Unicage Architecture (UA) Core Building Block
+3.1. Data Architecture Model in UA
+Based on the principles below, the entire data leaves a complete chronological record of the workings of
+Enterprise Information System (EIS). This makes it easier to find out the cause of a problem when it occurs, since
+all the workings of the system can be visualized retroactively. Table 2. shows the data type, their application, and
+the data management capability. Having the few data types and the data management tool realized by data IO-based
+commands which are also used to realize an application component, allows an EIS developer less learning cost.
+Without using a middleware for data management, it also allows developers less learning and operation cost, and
+less cost for the entire EIS development, which also supports Enterprise Architecture Planning (EAP) suggestion
+[2].
+• Principle 1: Allow redundancy, eliminate the unnecessary.
+• Principle 2: Any data will NOT be overwritten, updated, or deleted, but spawned.
+• Principle 3: Avoid data dependency.
+The data architecture metamodel for the UA is depicted in Fig 1. which is along with the TOGAF metamodel.
+TOGAF
+Core Elements
+UA Core
+Building Block Definition
+Note
+(IO: Input and Output)
+Business Architecture IO data-based business
+process
+Consider a business process as a function with an input and output data; The processes are
+connected through information or data only. Analyze and design it with Data Driven Process
+Design Method [8].
+Data Architecture Name indexed text file Conform to data architecture design principles, file and directory indexing convention in the
+Unicage Architecture Development Method.
+Application
+Architecture
+IO data-based application
+component
+Implement as-is business process into an application component. The components are
+connected through data only as so the business processes. I.e., the components are data-
+coupling and it realizes the microservice architecture.
+Technology
+Architecture
+IO data-based command A command is the smallest building block with the same IO data-based structure as a
+business process and application component. The command has a sophisticated single
+functionality to process an input data, being able to be implemented with any programming
+language. I.e., the command is highly cohesive.
+Architecture
+Development Method
+UA development method Composed of Lean and Agile principles with Unicage Architecture, the full cycle
+development, project management method, and programming standard including error
+handle, low-code, code description, and directory tree conventions.
+
+--- PAGE 4 ---
+Nobuaki Tounaka et al. / Procedia Computer Science 239 (2024) 364–371 367
+4 Nobuaki Tounaka et al. / Procedia Computer Science 00 (2023) 000–000
+Table 2. Data type in UA
+Data type Artifact Application Data management
+Logical/layout data Plain text file Design, Coding, Documentation Data IO-based software commands
+Data Plain text file Business application Data IO-based software commands
+Media Binary Business application Data IO-based software commands
+Fig. 1. Data Architecture Metamodel in ArchiMate
+3.2. Application Architecture Model in UA
+An application component consists of component, liner, and command as shown in Fig. 2. A liner is a collection
+of commands which are connected by Unix Pipe and it expresses a stage that comprises an application component or
+a business process. Any application, liner, or command is connected through data object only. In other words, the
+application architecture is microservice architecture or loosely coupled. An IO-based application component
+matches its serving business process in structure with the same IO data, which implies that the business process
+design is ready so is the application design. The application component also conforms to the following principles in
+terms of code understandability, code simplicity, data management, and system maintenance.
+• Principle 1: Write a description for input and output file layout into/from a command.
+• Principle 2: Write a single command with input data in a line.
+• Principle 3: Write a description for each liner and application component/business process.
+• Principle 4: Applications that create data should be implemented before applications that use data.
+The application component realized by the UA meets the following criterion that Enterprise Architecture
+Planning (EAP) [2] suggests, due to the IO data-based microservice application and technology architecture.
+• Criterion 1: It should be understandable. The application definitions make sense and are easily understood
+by people throughout the enterprise.
+• Criterion 2: It should be complete. Applications support most business functions and every data entity is being
+managed; and it should be consistent with no overlap or duplication of application capabilities.
+• Criterion 3: It should be stable. Each application definition is based solely on the business model and data
+
+--- PAGE 5 ---
+368 Nobuaki Tounaka et al. / Procedia Computer Science 239 (2024) 364–371
+Nobuaki Tounaka et al. / Procedia Computer Science 00 (2023) 000–000 5
+architecture and is independent of who uses the application, how the application works, where the application is
+located, or when the application is operated.
+Fig. 2. Application Architecture Metamodel in ArchiMate
+3.3. Technology Architecture Model in UA
+Fig. 4 shows the Technology Architecture Model in which the IO data-based command lies at its core. The
+commands are implemented with the core libraries of an operation system based on POSIX (Portable Operating
+System Interface) and can be written in any programming language. A command has a highly cohesive and
+sophisticated single functionality to process an input data while providing a simple coding syntax or interface such
+as below.
+The command serves as a software cushion implementing complex algorithm which may take a long line of
+codes if it is implemented with a computer programming language.
+• Command syntax: {command}, {parameters}, {data}
+The command or tool must comply with the following principles.
+• Principle 1: Use only core and sophisticated POSIX libraries to implement the command.
+• Principle 2: Keep the command syntax normalized as in the command syntax above.
+• Principle 3: Keep the number of commands as few as possible. Thus, try combination of commands to solve
+any required data processing before creating a new command.
+In appreciation to the software cushion and principles above, the Technology Architecture in the UA meets the
+criteria that Enterprise Architecture Planning (EAP) [2] suggests to apply open-systems concepts, meaning that
+operating systems should be as follow.
+• Portable: run across multiple vendor platforms.
+• Scalable: run across a wide power range from small to large computers.
+• Interoperable: run in a heterogeneous environment.
+• Compatible: preserve the investment in existing software and enable technology advances to be integrated with
+other components.
+Fig 3. proposes the technology architecture model in ArchiMate.
+
+--- PAGE 6 ---
+Nobuaki Tounaka et al. / Procedia Computer Science 239 (2024) 364–371 369
+6 Nobuaki Tounaka et al. / Procedia Computer Science 00 (2023) 000–000
+Fig. 3. Technology Architecture Metamodel in ArchiMate
+4. Case study
+KYOWA KOGYO Co., LTD is one of international leading automobile part suppliers head-quartered in Nagoya,
+Japan and it is well known for its universal joint part with a patented manufacturing method. The company had a
+challenge with DX because of not only labor shortage but also lead time, and recent competent business
+environment. The company had introduced a standardized yet conventional manufacturing package software but
+failed to achieve its goal.
+In this case, we overview the phases taken places to introduce Unicage Architecture Development Method
+(UADM) and quantitative results the company achieved between 2018 and 2021 years. Table 3. shows the phases
+along with the Lean Agile principles and their actual processes in an EIS development.
+Table 3. IO Data-based Command category
+# Phase Architecture Architecture Development Process
+1 See the whole process,
+Eliminate waste,
+Amplify learning
+Business Architecture Hearing up the weak signals from front-line employees with a
+company leader and decide if the signal is waste
+2 Business Process Kaizen Business Architecture Optimize overall business process toward enterprise goal
+3 Enterprise System Development
+Deliver as fast as possible, Empower Team,
+Testing and re-development based on feed
+backs and user capacity upgrades
+Data, Application, and
+Technology Architecture
+Implement the business processes and functions based on an
+IO data-based technology architecture
+The Fig.4 briefs the result after executing the UADM. We here emphasize the refactor in the UADM means re-
+development. To achieve this result, we have re-developed the EIS over time with less cost in appreciation to
+microservice Unicage architecture with its ADM. One more thing shall be shared is that the EIS users’ capability in
+digital literacy have upgraded while executing the UDAM and it also has allowed the result.
+
+--- PAGE 7 ---
+370 Nobuaki Tounaka et al. / Procedia Computer Science 239 (2024) 364–371
+Nobuaki Tounaka et al. / Procedia Computer Science 00 (2023) 000–000 7
+Fig. 4. The result after introducing UADM
+5. Discussion
+5.1. Novelty
+In the Digital Transformation (DX) era and the current competitive business market, enterprises and their
+information systems need to be adaptive to any unpresented event such as Covid-19 [14]. The major enterprise
+architecture frameworks such an Open Agile Architecture (O-AA) [4], TOGAF [2], Enterprise Architecture
+Planning [EAP] and, Lean and Agile Software Development [6], [13] suggest the enterprises good guidance,
+defining a set of deliverables of the guidance or framework. However, this guidance for enterprise information
+system architecture is often broad and conceptual which is inevitable to realize higher adoptability for any
+enterprise, despite it also sets the enterprises to seek a practical implementation to meet the guidance criteria. Thus,
+we proposed the practical building blocks to expand the core architecture layers recommended by TOGAF [3] with
+loosely coupled microservice technology architecture along with data and application architecture which especially
+fits for Enterprise Resource Planning systems. The novelty here shall be (1) data driven business process design
+method which directly maps to (2) loosely-coupled application components constructed with (3) highly cohesive
+command modules. The commands as (4) a software cushion also play a decisive role to realize loosely-coupled
+application components and the full cycle development [9].
+5.2. Effectiveness
+The proposed architecture development method has been effectively introduced to the company in the user case
+and shown its effectiveness in a quantitative way. It has also shown that the architecture is a microservice or loosely
+coupled architecture which has made the architecture refactoring achieve with less cost or effort.
+6. Conclusion
+In this paper, we proposed the data driven enterprise architecture development method- Unicage Architecture
+Development Method (UADM) with the practical implementation blocks with ArchiMate metamodels, expanding
+the current enterprise architecture framework guidance. Although the proposed architecture development method
+has effectively applied to the case, the architecture is designed for Enterprise Resource Planning (ERP), especially.
+More quantitative evaluation on its effectiveness shall be conducted and more detailed and methodological
+explanation on business architecture be illustrated.
+Future work includes more case studies illustrated with the proposed architecture development method.
+
+--- PAGE 8 ---
+Nobuaki Tounaka et al. / Procedia Computer Science 239 (2024) 364–371 371
+8 Nobuaki Tounaka et al. / Procedia Computer Science 00 (2023) 000–000
+Acknowledgements
+The cooperation for producing this paper shall be credited to KYOWA KOGYO Co., LTD and the Association
+for Support of Economic Sustainable Development for 21st Century (ESD21). Thanks to their cooperation, this
+paper has become available.
+References
+[1] Phillip Beauvoir & Jean-Baptiste Sarrodie. (2022) “Archi -archimate modelling”, Archi version:4.9.3 supporting the ArchiMate® 3.1
+language.
+[2] Steven H. Spewak and Steven C. Hill. (2008) “Enterprise Architecture Planning: Developing a Blueprint for Data, Applications, and
+Technology”, John Wiley & Sons, Inc.
+[3] The Open Group. (2018) “The TOGAF® Standard, Version 9.2”
+[4] The Open Group. (2020) “Open Agile Architecture™”
+[5] Puppet Labs. (2015, 2017) “DevOps Technical 2015 & 2017 “, DOI: 10.13140/RG.2.1.3890.2645,
+[6] Nicole Forsgren, Kim Humble, and Gene Kim. (2018) “Accelerate: The Science of Lean Software and DevOps: Building and Scaling High
+Performing Technology Organizations”, Published by Trade Select.
+[7] Zhamak Dehghani. (2019) “How to Move Beyond a Monolithic Data Lake to a Distributed Data Mesh”,
+https://martinfowler.com/articles/data-monolith-to-mesh.html
+[8] Shuichiro Yamamoto, Junko Hosomi. (2022) “A Proposal on Data Driven Process Design Method”, IEICE Technical Report KBSE2022-24:
+vol. 122, no. 139,79-84.
+[9] Philip Fisher-Ogden, Greg Burrell, and Dianne Marsh. (2018) “Full Cycle Developers at Netflix – Operate What You Build”, Netflix
+Technology Blog.
+[10] COMPUTATIONAL RESEARCH in BOSTON and BEYOND (CRIBB). (2013) “How to Analyze 50 Billion Records in Less than a
+Second without Hadoop or Big Iron”, https://math.mit.edu/crib/2013/aug2.html
+[11] James P. Houghton et al. (2017) “Tracking the evolution of conversational clusters in social media”,
+https://doi.org/10.1177/0049124117729705
+[12] João M.P. MoreiraHelena GalhardasHelena GalhardasMiguel PardalMiguel Pardal. (2018) “LeanBench: comparing software stacks for
+batch and query processing of IoT data”, DOI: 10.1016/j.procs.2018.04.067
+[13] Mary Poppendieck, Tom Poppendieck (2003), “Lean Software Development: An Agile Toolkit”, The Agile Software Development Series,
+Addison-Wesley
+[14] World Health Organization (2019), Coronavirus disease (COVID-19), https://www.who.int/health-topics/coronavirus

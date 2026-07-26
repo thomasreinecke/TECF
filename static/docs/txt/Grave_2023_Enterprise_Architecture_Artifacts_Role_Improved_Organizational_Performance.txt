@@ -1,0 +1,494 @@
+--- PAGE 1 ---
+Open Universiteit
+www.ou.nl
+Enterprise Architecture Artifacts’ Role in Improved
+Organizational Performance
+Citation for published version (APA):
+Grave, F., van de Wetering, R., & Kusters, R. J. (2023). Enterprise Architecture Artifacts’ Role in Improved
+Organizational Performance. In B. Shishkov (Ed.), Business Modeling and Software Design: 13th International
+Symposium, BMSD 2023, Utrecht, The Netherlands, July 3–5, 2023, Proceedings (1 ed., Vol. 483, pp. 214-224).
+Springer. https://doi.org/10.1007/978-3-031-36757-1_13
+DOI:
+10.1007/978-3-031-36757-1_13
+Document status and date:
+Published: 01/07/2023
+Document Version:
+Publisher's PDF, also known as Version of record
+Document license:
+Taverne
+Please check the document version of this publication:
+• A submitted manuscript is the version of the article upon submission and before peer-review. There can be important differences between
+the submitted version and the official published version of record. People interested in the research are advised to contact the author for the
+final version of the publication, or visit the DOI to the publisher's website.
+• The final author version and the galley proof are versions of the publication after peer review.
+• The final published version features the final layout of the paper including the volume, issue and page numbers.
+Link to publication
+General rights
+Copyright and moral rights for the publications made accessible in the public portal are retained by the authors and/or other copyright owners
+and it is a condition of accessing publications that users recognise and abide by the legal requirements associated with these rights.
+• Users may download and print one copy of any publication from the public portal for the purpose of private study or research.
+• You may not further distribute the material or use it for any profit-making activity or commercial gain
+• You may freely distribute the URL identifying the publication in the public portal.
+If the publication is distributed under the terms of Article 25fa of the Dutch Copyright Act, indicated by the “Taverne” license above, please
+follow below link for the End User Agreement:
+https://www.ou.nl/taverne-agreement
+Take down policy
+If you believe that this document breaches copyright please contact us at:
+pure-support@ou.nl
+providing details and we will investigate your claim.
+Downloaded from https://research.ou.nl/ on date: 06 Jul. 2026
+
+--- PAGE 2 ---
+Enterprise Architecture Artifacts’ Role
+in Improved Organizational Performance
+Frank Grave(B) , Rogier Van de Wetering , and Rob Kusters
+Open University, Valkenburgerweg 177, 6419 AT Heerlen, The Netherlands
+{frank.grave,rogier.vandewetering,rob.kusters}@ou.nl
+Abstract. The significance of enterprise architecture (EA) in strategic renewal,
+suchasdigitaltransformations,isevidentandwidelyaccepted.FirmsrelyonEAto
+support strategic renewal, especially digital technology-driven strategic renewal.
+EA artifacts are used to document and communicate decisions and facts about
+the EA’s current, future, and transition states. They facilitate bridging the com-
+munication gap and alignment between business and IT stakeholders. However,
+despite extant research in the area of EA, its role in strategic renewal, and its
+contribution to improving organizational performance, EA artifacts’ contribution
+mechanismisstillunknown.Therefore,thisresearchexploreshowEAartifactcre-
+ation and use facilitate strategic renewal, such as digital transformations. Based
+on 29 interviews at 4 case firms, we found 17 different EA artifacts and 16 ways
+EA contributes to strategic renewal, i.e., 16 EA values. Moreover, we determined
+the interrelatedness of EA values and a model of how EA artifacts contribute to
+strategicrenewalandimprovedorganizationalperformance.TheEAartifactvalue
+contribution mechanism described in this study is simple and universal and, thus,
+has significant implications for both practice and research.
+Keywords: Enterprise Architecture · Organizational Performance · Enterprise
+Architecture Artifacts · Multiple Case Study
+1 Introduction
+Increasingpressureduetofactorssuchasturbulenceincontemporarymarketsandglobal
+technology trends, demand for close alignment of business, and information technology
+(IT)[1–3].Globaltechnologytrendsaredigitaltechnologiessuchasbigdata,theInternet
+of Things, artificial intelligence, and combinations. The resulting digital technology-
+driven strategic renewal of business models is often called digital transformation [3,
+4].
+Integratingnewdigitaltechnologiesintofirms’existingtechnology,processes,roles,
+and responsibilities requires changes in the enterprise architecture (EA) [1, 2]. The EA
+capabilitydefinesthecurrentanddesirableorganizinglogicofpeople,processes,andIT
+and designs the roadmap for realizing the desired organizing logic [5, 6]. Artifacts that
+document these definitions and designs are EA artifacts. EA artifacts describe the EA
+from an integrated business and IT perspective, intending to bridge the communication
+© The Author(s), under exclusive license to Springer Nature Switzerland AG 2023
+B. Shishkov (Ed.): BMSD 2023, LNBIP 483, pp. 214–224, 2023.
+https://doi.org/10.1007/978-3-031-36757-1_13
+
+--- PAGE 3 ---
+Enterprise Architecture Artifacts’ Role in Improved Organizational Performance 215
+gap between business and IT stakeholders and improve business-IT alignment [2, 7].
+Moreover,enterprisearchitectscreateanduse,oratleastfacilitate,thecreationanduseof
+EA artifacts. Thus, EA artifacts are created and used to facilitate digital transformations
+and prepare firms to be readily changeable and adaptable.
+Recent empirical research on EA artifacts identified which EA artifacts facilitate
+digital transformation’sstrategic planning process, thereby expanding our knowledge of
+anEAcapabilityfacilitatingthestrategicplanningprocess[2,7–9].However,howthese
+EAartifactscontributetoimprovedorganizationalperformanceremainsunclear.Hence,
+enterprise architects may have difficulties communicating the need to create and use EA
+artifacts. Especially in turbulent environments, where the rate and unpredictability of
+change are high [10], the creation and use of EA artifacts might be experienced as
+a document-heavy approach delaying the transformation process. Consequently, EA
+concerns related to the transformation might not be considered. Therefore, we want to
+explore the contribution of EA artifacts to improved organizational performance to add
+to existing studies on the EA capability. Our primary research question is: how do EA
+artifacts contribute to improved organizational performance?
+This study proceeds as follows. First, this study outlines the theoretical background
+and related work. Then, we outline the research method. Section four presents the key
+results and our proposed EA artifact value contribution mechanism. Finally, in section
+five, we discuss the results of this study from the perspective of the current literature on
+EA,followedbyourcontributiontoresearchandpractice,adiscussiononthelimitations
+of this study, and we end with some concluding remarks.
+2 Related Work
+The EA capability has been found to contribute to numerous types of organizational
+value, such as reduced cost (e.g., [6, 8, 11–15]), increased agility (e.g., [5, 8, 14, 16,
+17]), improved project delivery (e.g., [5–8, 11–17]), and competitive differentiation
+(e.g., [2, 5, 7, 12–14, 16, 17]). Furthermore, different types of more or less overlapping
+value-creation mechanisms have been researched (e.g., [1, 5, 8, 9, 11–13, 15, 17–20]).
+For example, Van Steenbergen and Brinkkemper [18] developed a cause-and-effect-
+based network model that shows how EA practices contribute to business goals via
+organizational performance effects. E.g., an EA practice can improve strategic analysis
+byofferinginsightintoneworalteredbusinessmodelsorITopportunities.Theimproved
+strategic analysis leads to improved organizational performance through an updated
+strategy. As a result, the updated strategy leads to the business goal of, for instance,
+improved market share.
+Additionally,researchbyHakiandLegner[15]specificallyinvestigatedthemechan-
+ics of EA principles. They divided the mechanism into three related concepts: ways,
+means, and ends. The means are the required resources to achieve certain ends by fol-
+lowing ways. That is, the resources are the EA principles, and the ways are procedures
+and inductors to achieve specific desired results. The way of principles resides in their
+limitational effect on the EA design space. Subsequently, enforcing the EA principles
+leads to appropriate EA outcomes and, finally, to desired organizational results.
+
+--- PAGE 4 ---
+216 F. Grave et al.
+Furthermore, EA value has been clustered in many different ways. For example,
+Shanksetal.[5]andFoorthuisetal.[13]clusterEAvaluesintoprojectandorganization-
+wide benefits. Alternatively, Jusuf and Kurnia [21] cluster values into operational, man-
+agerial, strategic, IT infrastructure, and organizational benefits. Then again, Niemi and
+Pekkola [6] cluster the benefits into first-, second-, and third-level benefits.
+These varying perspectives and aspects of EA value and EA value creation mecha-
+nismsoffervariousvaluableviewsonEA’sroleinorganizationalperformance.However,
+they also highlight the fragmented body of knowledge provided by EA scholars, lack
+the general role of EA artifacts, and do not fully explain how EA artifacts contribute to
+EA value and improved organizational performance.
+3 Research Method
+ThisstudyaddressesanewviewofthegeneralmechanismofEAartifacts’contributionto
+improved organizational performance through the EA capability, making it exploratory
+research. Although preceding empirical research on the EA capability, EA artifacts, and
+EA value can be used as a basis for research purposes, no such study is available for the
+integral view we aim to investigate. We wanted to gain in-depth insights into the value
+contribution mechanism of EA artifacts, which warranted an exploratory case study as
+the research method. Furthermore, in the absence of established theories we could use
+as a basis for our research, we used an inductive approach.
+We assume that the in-depth knowledge of the EA artifact value creation mechanism
+necessary to answer our research question is present in the people working at organi-
+zations undertaking digital transformations and who are involved in creating and using
+EA artifacts. Rather than choosing a single case study, we chose a multiple case study
+to gain the data for our research. A multiple case study enables comparisons between
+cases, thereby mitigating the idiosyncratic characteristics of a single case and providing
+a more substantial base for theory building [22]. The multiple-case approach enabled a
+broaderexplorationoftheresearchquestionandyieldedamorerobustandgeneralizable
+theory.
+We selected four case firms and conducted 29 interviews to base our results. The
+firms were selected based on having undertaken a digital transformation and permitting
+access to interviewees. For ethical reasons, we anonymized the firms’ names to Alpha,
+Beta,Gamma,andDelta.Alphaisalargeretailfirmmainlysellingfurnitureandinterior
+decorations.Theyhavearound4,000employeesandmanyphysicalstoresspreadoverthe
+Netherlands. Beta is a prominent Dutch local government with over 12,000 employees.
+Gamma is a large international financial services organization with more than 55,000
+workers and is active in Asia, Europe, North America, South America, and Oceania.
+Finally, Delta is a Dutch government agency with nearly 3,000 employees across two
+locations. We selected interviewees who created or used EA artifacts for their digital
+transformation.WeselectedawiderangeofemployeesfrombusinesstoITandstrategic
+to tactical to get a broad view of the EA artifact value contribution mechanism.
+We selected semi-structured interviews as the most appropriate research method
+[23]. All the interviews were held using an interview guide covering the topics: EA, EA
+artifacts, and EA and EA artifact value for digital transformations. All the interviews
+
+--- PAGE 5 ---
+Enterprise Architecture Artifacts’ Role in Improved Organizational Performance 217
+were recorded with the permission of the interviewees and then transcribed ad-verbatim
+for qualitative analysis.
+Given the inductive nature of this explorative research, we started the analysis of
+the transcribed data with an initial coding cycle, followed by an axial coding cycle.
+We finished with a theoretical coding cycle [24]. In the initial coding cycle, we were
+motivated by the general components of EA artifacts, EA value, and the mechanics of
+valuecreationthroughEAartifacts.Therefore,wecodedEAartifacts,EAvalue,andEA
+value mechanics throughout the transcriptions. Furthermore, we coded antecedents of
+EA-artifact value and EA-artifacts’ value contributions recognized by the interviewees.
+And we also coded relationships among the elements when explicitly mentioned by
+the interviewees to increase the explanatory power of the results. Subsequently, we
+performedacycleofaxialcodingtorefineourcodingschemeintoamoremanageableset
+ofrelatedthemes.Andfinally,wecompletedacycleoftheoreticalcodingtointegrateand
+refine the categories we identified in the previous coding cycle. Consequently, relating
+EA values and EA artifacts resulted in the model of an EA artifact value contribution
+mechanism that integrates the data from our analysis of the concepts and their central
+relationships from the interviews.
+Based on suggestions from [22], we took several mitigating measures to improve
+the quality of our study. Hence, we monitored construct validity and generalizability
+by embedding the concepts we used, e.g., the solution overview EA artifact, in existing
+scientific literature. Furthermore, although the coding process of the interview was per-
+formed only by the first researcher, the second and third researchers reviewed this study
+for any anomalies in the use of concepts. For improved internal validity, we triangulated
+the interview results with the documents shown during the interviews. To ensure relia-
+bility, we maintained a case study database for this study, where we kept all our data.
+Finally, ethics were handled by anonymizing the interviewees and case firms, having
+the interviewees sign an informed consent form, and assuring our interviewees that they
+were free to stop participating in this research whenever they wanted.
+4 Results
+Our qualitative analysis of the interview data and EA artifacts that were shown to us
+identified 17 different EA artifacts and 16 EA values. These EA artifacts and values
+have been abstracted into a model of the role of EA artifacts in improved organizational
+performance. The values and the abstraction toward the contribution of EA artifacts are
+described below.
+4.1 EA Artifacts and EA Value
+Wefoundatotalof17differentEAartifactsatourcasefirms.Althoughthenamesofthe
+EAartifactsdifferedamongthecasefirms,wegeneralizedthemandusedthemostlogical
+name and thus distinguished 17 different EA artifacts. For example, Alpha mentioned a
+high-level design, and Delta mentioned a solution overview. Since the characteristics of
+these EA artifacts were the same, we generalized these EA artifacts into one EA artifact.
+
+--- PAGE 6 ---
+218 F. Grave et al.
+The values of EA have been studied extensively, e.g., [1, 5, 6, 11, 13, 14, 17, 21].
+Despite these studies and the combined knowledge they provide us, we used explorative
+interviewquestionstostayopentonewempiricalinsights.Additionally,wetriedtokeep
+an open mind during the interview data coding process [24]. This resulted in the list of
+values presented in Table 1.
+Table 1. Values enabled or provided by the EA capability
+Value Alpha Beta Gamma Delta
+Improved agility X X X
+Improved business-IT alignment X X X X
+Improved commitment X X
+Improved communication X X X X
+Improved complexity control X X X X
+Improved decision-making X X X
+Improved goal realization X X X
+Improved insights X X X X
+Improved knowledge conservation X
+Improved prioritization and resource allocation X X
+Improved regulatory compliance X X
+Improved reliability of the IT landscape X X
+Improved resource effectiveness X X X
+Improved risk management X
+Lower cost of change X X X
+Shorter lead times X
+Following is a short description of the EA values found. Improved agility mani-
+fests when the enterprise architecture landscape design becomes more easily adaptable.
+Improved business-IT alignment occurs when business and IT strategies and operations
+align better. Improved commitment results from providing the information necessary
+to convince relevant stakeholders. When many people work together, it takes effort to
+communicate clearly. Defining concepts more sharply and visualizing complex situa-
+tions through, for example, graphical models improves general communication within
+the organization and projects. Furthermore, firms get greater control over the com-
+plexity of their enterprise architecture landscape by systematically structuring it. The
+available information leads to better-informed decisions and, thus, better-quality deci-
+sions. Besides, the EA capability translates high-level goals into a high-level design
+of roles, processes, IT, guidelines, and principles. Doing so assures alignment between
+the high-level goals and the high-level EA design. Additionally, EA provides insight
+into aspects such as the current situation, the target situation, integration design, the
+
+--- PAGE 7 ---
+Enterprise Architecture Artifacts’ Role in Improved Organizational Performance 219
+impact of changes, necessary capabilities, and EA strengths, weaknesses, opportuni-
+ties, and threats. Explicating knowledge in EA artifacts makes that knowledge available
+to current and future stakeholders. Improved prioritization and resource allocation are
+enabledbytheinsightsprovidedbytheEAcapability.TheEAcapabilityconsiderslegal
+requirements when making an architecture that supports legal compliance. EA artifacts
+facilitate the reliability and sustainability of the IT landscape, considering aspects such
+as scalability and availability. Deploying resources the way they are intended to be
+deployed improves through, for example, the reuse of resources. The structures and
+insights provided by EA explicate risks, enabling improved risk management. Improved
+communication and improved insights facilitated by EA artifacts allow a lower cost of
+change. And finally, a more easily adaptable firm can adapt to change in less time.
+4.2 EA Artifacts and Organizational Performance
+ThedescriptionofEAvalueintheprevioussectionalreadyhintsattheinterrelatednessof
+EAvalues.E.g.,itwouldhelpifyouhadinsightintotheEAtocontrolitscomplexity,and
+alesscomplexEAlandscapeismoreadaptable,makingthefirmmoreagile.Furthermore,
+an EA landscape that becomes easier to manage will lead to lower management effort,
+thus lowering the cost for the firm. Through an in-depth analysis of the interviews, we
+managed to infer the interrelatedness of EA values. Hence, we derived the relations
+between different EA values on empirical data from our interview results.
+This study aimed to explore how EA artifacts contribute to improved organizational
+performance. We do so because the extant literature does not clarify EA artifacts’ role
+in enabling value. Moreover, this gap leaves scholars with the practical inconvenience
+of being unable to clearly explain EA artifacts’ value and justify creating and using
+them even in highly dynamic environments. After a thorough qualitative analysis of 29
+interviews at four case firms and going back and forth through the data, we abstracted a
+mechanismofEAartifactroleinorganizationalperformance.WefoundthatEAartifacts
+improve knowledge conservation and provide improved insights to its stakeholders, and
+creatingtheseinsightsisnotalwaysobvious.TheCIOofDeltadescribedit:“Thismeans
+thatasanarchitect,youhavetodoworktomakeprofessionalsketchesbecausethatisthe
+explicitly formulated knowledge about the organization. And that is not self-evident.”
+An additional quote from Alpha’s project manager highlights the improved insights
+aspect of EA artifacts: “The direct value is more about how are we going to set up the
+organization and also somewhat directly who is responsible for what, what roles do you
+need in that. Then it also comes out of what is a transition; we have the as-is and to-be.”
+Ineachcase,itwasapparentthatEAartifacts,asinstrumentsofknowledgeconservation,
+provided improved insights into various aspects such as the current situation, desired
+situation, integration, and the impact of changes and their risks.
+Furthermore, we found that EA artifacts enable improved communication. Beta’s
+strategicITconsultant gave anexample ofhow theexplicated knowledge inEAartifacts
+is used: “People from HR will be needed to assess whether certain data may be passed
+on. This also requires investments on the part of HR. Sharing the design with them also
+ensures they are willing to participate in such a process.” Another typical response on
+the creation and use of EA artifacts related to the communication aspect was given,
+for example, by Gamma’s business owner: “So making an artifact and throwing it over
+
+--- PAGE 8 ---
+220 F. Grave et al.
+the fence, then no one will ever use it. It’s about the conversation and conviction.”
+Independent of EA artifacts, communication was seen as a critical aspect of strategic
+renewal. For example, Alpha’s business consultant said, “Those artifacts, yes, they are
+important. But even more important is the alignment, the talking, all being on the same
+wavelength, so to speak, the soft side of it.”
+Wearguethatbyprovidingimprovedinsightandenablingimprovedcommunication,
+EA artifacts contribute to improved decision-making. And likewise, the actual commu-
+nication and insights provided through EA artifacts contribute to improved decision-
+making. Furthermore, EA artifacts were deemed essential for documenting decisions:
+“You have made decisions in the past, and you must continue to write them down [in EA
+artifacts].” [Gamma’s Chief Architect] Additionally, many interviewees indicated that
+improved communication led to improved insights on new possibilities and vice versa,
+which we concluded from interview responses such as: “It’s about the conversation and
+discovering new possibilities together” [Delta’s business consultant].
+Not surprisingly, our analysis revealed a cyclic dependency between improved
+knowledge conservation, insights, and communication. These three values depend on
+each other and thus mutually influence each other. In the remainder of this paper, we
+will refer to this cluster of values as the EA value fundament. Based on the cyclic
+nature of the components of the EA value fundament, we argue that EA artifacts, as
+instruments of improved knowledge conservation, provide improved insight and enable
+improved communication. And improved insight enables improved communications
+and improved knowledge conservation. Additionally, improved communication enables
+improved insight and improved knowledge conservation.
+We also established sequentiality in EA value creation. Our analysis showed that the
+EA value fundament precedes improved decision-making and that improved decision-
+making influences all other improvements either directly or indirectly. For example,
+Fig. 1. EA artifacts’ role in improved organizational performance
+
+--- PAGE 9 ---
+Enterprise Architecture Artifacts’ Role in Improved Organizational Performance 221
+improved decisions about the target architecture design will impact business-IT align-
+ment. Furthermore, when abstracting the improvements that sequentially come after
+improved decision-making into the general concept of improved organizational perfor-
+mance, we create a clear and straightforward view of the contribution of EA artifacts
+to improved organizational performance. Figure 1 shows the position of EA artifact’s
+contribution to improved organizational performance.
+5 Discussion, Contribution, Limitations, and Conclusion
+5.1 Discussion
+EA artifacts have received considerable attention in existing EA research. These studies
+aim to arrive at a point where a widely used standard exists for their form and function
+(e.g., [2, 7, 8, 19]). While these are all sound evidence-based studies analyzing the role
+of EA artifacts, the extent they arrive at well-established standards is low. For instance,
+Kotusev [7] identified solution overviews, landscape diagrams, and context diagrams as
+separateartifacts.However,severalofourintervieweesindicatedthatsolutionoverviews
+contain landscape diagrams and that some landscape diagrams are context diagrams.
+Furthermore, Grave et al. [2] deviate from Kotusev [7] in multiple aspects. For example,
+they presented a strategic plan as an EA artifact. Although enterprise architects can
+provide valuable input for a strategic plan, it is in no way their accountability. Our
+researchidentifieddifferentEAartifacts,suchasthearchitectureassessmentandscenario
+plans. Interestingly, Grave et al. [2] subsequently denote “ambiguity surrounding the
+definition of EA artifacts.” The ambiguity and diversity in the practical application of
+EA artifacts found in empirical studies and the fragmented body of knowledge provided
+by EA scholars seem to be an immaturity trait of the EA discipline.
+ContrarytoEAartifactresearch,wearguethatEAvalueresearchisrelativelyconver-
+gent. We came across many of the values found in previous studies. We found apparent
+values such as improved business-IT alignment, improved agility, and a lower cost of
+changereportedbymanyscholarsbeforeus(e.g.,[6,8,14]).Nevertheless,wealsoiden-
+tified two EA values that have not been reported by these three studies, i.e., improved
+commitment and improved regulatory compliance. Furthermore, Van de Wetering et al.
+[20] noted that an EA capability that drives dynamic capabilities enhances a firm’s inno-
+vativeness. Our interviewees did not explicitly mention this EA value. Thus, although
+there are minor differences and probably improvements in establishing EA’s value, we
+believe that research in this area is converging. Scholars seem to agree on its value
+generally.
+Nevertheless, it remains challenging to clearly show the value of EA and EA arti-
+facts in particular. Our elaboration on the relatedness of EA artifacts and organizational
+performance uncovers a mutually reinforcing value mechanism. EA values do not stand
+independently and, therefore, cannot be seen as separate goals to strive for. EA values
+are a complete package enabled by EA knowledge conservation, communication, and
+EA insights that lead to improved decisions. These improved decisions manifest them-
+selvesbecausetheyarebetter-informeddecisionsthatultimatelyimproveorganizational
+performance, such as enhanced agility and lowered costs. However, of course, it is still
+
+--- PAGE 10 ---
+222 F. Grave et al.
+necessary to balance the level of investment in the EA capability with the benefits it may
+offer.
+5.2 Contribution to Research and Practice
+This study has various theoretical implications. First, our findings extend those of other
+EAartifactresearchers(e.g.,[2,7,8,19])intheempiricalobservationthattheuseofEA
+artifactsdiffersconsiderablyamongfirms.Thefourcasefirmssubjecttoourstudyagain
+showed new artifacts compared to previous studies. Furthermore, this study unveiled a
+list of EA values experienced by case firm interviewees. We further ground the values of
+EA on empirical findings, and although we found several new values, we notice a strong
+convergence of these values in EA value research. More importantly, we established an
+empirically based analysis of EA values which provides insights into the relatedness of
+EA values. Moreover, improved knowledge conservation, communication, and insights
+are at the heart of all EA value opportunities. Finally, we established EA artifacts’ role
+in improved organizational performance. I.e., EA artifacts, as an instance of knowledge
+conservation, together with the improved communication and insights they enable, lead
+to improved decisions and ultimately to improved organizational performance.
+The first practical contribution is that this study offers an overview of EA values in
+natural, realistic settings. This may help other organizations reflect on their use of EA
+artifacts and the realization of EA value. Second, this study touches upon the values of
+an EA capability and the interrelatedness of these values. This understanding may help
+practitionersintheirworkandhelpthemunderstandwhattheycandotorealizeasmuch
+EA value as possible for their organization. For example, they can explain how EA arti-
+facts and improved communications and insights can help improve project prioritization
+decisions and complexity control. Finally, this study also describes how EA artifacts fit
+into the equation of EA value creation. This understanding allows practitioners to reflect
+on what to document and what not to document in EA artifacts. Primarily, it helps them
+use EA artifacts to improve communication and thus share insights, which might result
+in new insights followed by improved decisions by their management.
+5.3 Limitations
+Deriving the results from a multiple case study is an obvious limitation and might have
+caused bias. Furthermore, there are apparent geographical, industry, size, and maturity
+limitations. First, our case firms were all headquartered in the Netherlands. Second, we
+only investigated one firm in the retail industry, one local government, one financial
+services organization, and one government agency. Third, the specific sizes of our case
+firms might have influenced the results. Fourth, the case firms we explored had a certain
+maturity of their EA capability, and we did not conduct the same number of interviews
+in each firm which might have affected the results. We tried to mitigate external validity
+limitations by covering diverse firms. However, even with our varied set of firms, we
+still encountered a substantial degree of variety in the results.
+
+--- PAGE 11 ---
+Enterprise Architecture Artifacts’ Role in Improved Organizational Performance 223
+5.4 Conclusion
+This study explored EA artifacts’ role in organizational performance in-depth using a
+multiple case study at four case firms with 29 semi-structured interviews. We identified
+17 EA artifacts and 16 types of value associated with the EA capability. Furthermore,
+based on the interviews, we analyzed the interrelatedness of EA values. We touched
+upon how the different EA values influence and reinforce each other. Additionally,
+we conceptualized EA artifacts’ role in organizational performance consists of five
+interrelated concepts. EA artifacts as instances of knowledge conservation, together
+with improved communication and improved insights, contribute to improved decision-
+making, ultimately leading to improved organizational performance. This study adds to
+an enhanced understanding of EA values and the mechanism of EA value creation and,
+hence, offers an important contribution to research and practice.
+References
+1. VandeWetering,R.,Kurnia,S.,Kotusev,S.:Theeffectofenterprisearchitecture deployment
+practicesonorganizationalbenefits:adynamiccapabilityperspective.Sustainability12,8902
+(2020)
+2. Grave, F., Van de Wetering, R., Kusters, R.J.: Enterprise architecture artifacts facilitating
+digitaltransformations’strategyplanningprocess:asystematicliteraturereviewandmultiple
+case study. IADIS Int. J. Comput. Sci. Inf. Syst. 16, 46–62 (2021)
+3. Hess,T.,Matt,C.,Benlian,A.,Wiesböck,F.:Optionsforformulatingadigitaltransformation
+strategy. MIS Quarterly Executive 15 (2016)
+4. Vial, G.: Understanding digital transformation: a review and a research agenda. J. Strateg.
+Inf. Syst. 28, 118–144 (2019)
+5. Shanks, G., et al.: Achieving benefits with enterprise architecture. J. Strat. Inf. Syst. 27,
+139–156 (2018)
+6. Niemi,E.,Pekkola,S.:Thebenefitsofenterprisearchitectureinorganizationaltransformation.
+Bus. Inf. Syst. Eng. 62(6), 585–597 (2019). https://doi.org/10.1007/s12599-019-00605-3
+7. Kotusev, S.: Enterprise architecture and enterprise architecture artifacts: questioning the old
+concept in light of new findings. J. Inf. Technol. 34, 102–128 (2019)
+8. Kurnia, S., Kotusev, S., Shanks, G., Dilnutt, R., Taylor, P., Milton, S.K.: Enterprise archi-
+tecture practice under a magnifying glass: linking artifacts, activities, benefits, and blockers.
+Commun. Assoc. Inf. Syst. 49, 34 (2021)
+9. Van den Berg, M., Slot, R., Van Steenbergen, M., Faasse, P.: How enterprise architecture
+improves the quality of IT investment decisions. J. Syst. Softw. 152, 134–150 (2019)
+10. Danneels,E.,Sethi,R.:Newproductexplorationunderenvironmentalturbulence.Organ.Sci.
+22, 1026–1039 (2010)
+11. Ahlemann, F., Stettiner, E., Messerschmidt, M., Legner, C.: Strategic enterprise architecture
+management: challenges, best practices, and future developments (2012). https://doi.org/10.
+1007/978-3-642-24223-6
+12. Ahlemann, F., Legner, C., Lux, J.: A resource-based perspective of value generation through
+enterprise architecture management. Inf. Manage. 58, 103266 (2021)
+13. Foorthuis,R.,VanSteenbergen,M.,Brinkkemper,S.,Bruls,W.A.G.:Atheorybuildingstudy
+of enterprise architecture practices and benefits. Inf. Syst. Front. 18, 541–564 (2016)
+14. Frampton, K., Shanks, G.G., Tamm, T., Kurnia, S., Milton, S.K.: Enterprise Architecture
+Service Provision: Pathways to Value. ECIS 2015 Research-in-Progress Papers (2015)
+
+--- PAGE 12 ---
+224 F. Grave et al.
+15. Haki, K., Legner, C.: The mechanics of enterprise architecture principles. J. Assoc. Inf. Syst.
+22, 1334–1375 (2021)
+16. Grave,F.,VandeWetering,R.,Kusters,R.:HowEAinformationdrivesdigitaltransformation:
+amultiplecasestudyandframework.In:IEEE24thConferenceonBusinessInformatics(CBI)
+(2022)
+17. Tamm, T., Seddon, P.B., Shanks, G.: How enterprise architecture leads to organisational
+benefits. Int. J. Inf. Manage. 67, 102554 (2022)
+18. Van Steenbergen, M., Brinkkemper, S.: Modeling the contribution of enterprise architecture
+practice to the achievement of business goals. In: Papadopoulos, G.A., Wojtkowski, W.,
+Wojtkowski, G., Wrycza, S., Zupancic, J. (eds.) Information Systems Development: Towards
+a Service Provision Society, pp. 609–618. Springer, US, Boston, MA (2010)
+19. Niemi, E., Pekkola, S.: Using enterprise architecture artefacts in an organisation. Enterp. Inf.
+Syst. 11, 313–338 (2017)
+20. Van de Wetering, R., Hendrickx, T., Brinkkemper, S., Kurnia, S.: The impact of EA-driven
+dynamic capabilities, innovativeness, and structure on organizational benefits: a variance and
+fsQCA perspective. Sustainability 13, 5414 (2021)
+21. Jusuf MB, Kurnia, S.: Understanding the benefits and success factors of enterprise architec-
+ture.In:Proceedingsofthe50thHawaiiInternationalConferenceonSystemSciences(2017).
+https://doi.org/10.24251/HICSS.2017.593
+22. Yin, R.K.: Case study research and applications: design and methods. Sage publications, Los
+Angeles, Sixth edit (2018)
+23. Saunders, M.N.K., Lewis, P., Thornhill, A.: Research Methods for Business Students, 8th
+edn. Pearson, New York (2019)
+24. Saldaña, J.: The coding manual for qualitative researchers, 3rd edn. SAGE Publications Ltd,
+London (2016)

@@ -1,0 +1,1056 @@
+--- PAGE 1 ---
+Enterprise Architecture Governance of Excellence
+Peter Hillmann a
+, Mario Kesseler, Diana Schnell, Goran Mihelcic and Andreas Karcher
+Universität der Bundeswehr München, Department of Computer Science,
+Werner-Heisenberg-Weg 39, 85577 Neubiberg, Germany
+Keywords: Enterprise Architecture, Enterprise Architecture Governance, Federated Management, Enterprise
+Collaboration, Enterprise Architecture Management.
+Abstract: Every organization has an architecture that must be adapted to the given circumstances and future needs in
+order to stay competitive. Particularly in the case of federated structures, there is a high degree of complexity
+in terms of both business and IT. For a smooth process and a goal-oriented management, this should be done
+as proactively as possible in an orderly manner. To make this possible, the principles of governance have
+to be applied. This forms the organizational basis for Enterprise Architecture Management. It creates high-
+quality information that is used for strategic and operational decisions. The challenge we address is the lack
+of Enterprise Architecture Governance with focus on a federated environment. Our goal is a detailed and
+applicable concept for Enterprise Architecture Governance. For this purpose, the several components are
+examined more closely and detailed explanations are given in a compact form. The evaluation is based on
+practical examples in both industry and government.
+1 MOTIVATION FOR
+GOVERNANCE
+Every company and every organization has an Enter-
+prise Architecture (EA), regardless of whether one is
+aware of it. So, EA is always in the area of tension
+between unstructured ad-hoc adaptation and planned,
+structured change. This is where Enterprise Archi-
+tecture Management comes in for a controlled de-
+velopment. We define Enterprise Architecture Man-
+agement (EAM) in line with definition of EA (Buckl
+et al., 2010) as follows: EAM is a continuous and it-
+erative discipline for the structured further develop-
+ment, adaptation, and improvement of an organiza-
+tion. The goal is to align the company and their op-
+eration as a whole on the basis of a strategy, taking
+the environment into account. This includes the areas
+of governance and compliance, finance and risk, roles
+and processes as well as IT. It is essential that they are
+coordinated with each other with goal of Business-IT-
+Alignment.
+EAM requires a framework with a coherent set
+of methods and principles for designing the organiza-
+tional structure, business processes, information, ap-
+plications, systems and infrastructure. It relies on an
+a https://orcid.org/0000-0003-4346-4510
+adequate organizational form with adapted processes,
+roles and responsibilities as well as functioning com-
+mittees (Inge, 2022; Tiemeyer, 2023).The high im-
+portance of structured business planning through EA
+methods is reflected in the regulations and decrees of
+several governments. In the USA, the Clinger-Cohen
+Act mandated the use of EAM for all U.S. federal
+agencies (U.S. House, Committee on National Secu-
+rity, 1996; U.S. Federal Government, 2012). A well-
+known example of non federated usage is the U.S.
+Department of Veterans Affair (U.S. Department of
+Veterans Affairs, 2023).
+Therefore, we need governance to establish the or-
+ganizational structures for an EAM. It ensures up-to-
+date, complete, and high-quality information that is
+used for strategic and operational management. We
+define Enterprise Architecture Governance (EAG) as
+follows: EAG is used to define goals and strate-
+gies. It encompasses the control, administration and
+monitoring of architecture-related work to achieve re-
+quired business outcomes by evaluation of risk and
+chances. This includes establishing frameworks with
+rules, processes, actions, roles, and control mecha-
+nisms for structuring, managing and maintaining EA.
+It ensures that EA is effectively implemented, sus-
+tained and regulated. It enforces compliance with
+standards, guidelines and best practices to assure
+Hillmann, P., Kesseler, M., Schnell, D., Mihelcic, G. and Karcher, A.
+Enterprise Architecture Governance of Excellence.
+DOI: 10.5220/0012399000003690
+Paper published under CC license (CC BY-NC-ND 4.0)
+In Proceedings of the 26th International Conference on Enterprise Information Systems (ICEIS 2024) - Volume 2, pages 603-613
+ISBN: 978-989-758-692-7; ISSN: 2184-4992
+Proceedings Copyright © 2024 by SCITEPRESS – Science and Technology Publications, Lda.
+603
+
+--- PAGE 2 ---
+control, transparency and accountability within an
+organization.
+Governance can be divided into different ar-
+eas (Schelp and Stutz, 2007). The all-encompassing
+level is thereby described by the corporate gover-
+nance. This also includes federal associations. A sub-
+set of this is the actual EAG, which is divided into the
+areas of business architecture governance and IT gov-
+ernance. The challenge we address is a detailed de-
+scription for EAG and the missing link for Enterprise-
+IT-Governance with focus on federal environments,
+see Figure 1. Our goal is a detailed and applicable
+concept for EAG, which goes in line with the large
+frameworks of COBIT, TOGAF, and ITIL.
+Figure 1: Abstract structure of Enterprise-IT-Governance
+for coordination and management in federal cooperations.
+Separation of process, content, and context is crit-
+ical to successful governance. This allows for the de-
+scription of governance matters without reciprocal in-
+fluence. The content-independent approach ensures
+flexible applicability. According to COBIT (ISACA
+Germany, 2019), functioning governance helps to
+identify and address problems at an early stage. We
+see it as an proactive as well as reactive discipline.
+By describing the components and their relationships
+that constitute the whole enterprise, it provides a road
+map for business and technological change (Rybaric,
+2020). An enterprise architecture is a structured pro-
+cess for the implementation of an organisation’s vi-
+sion and strategy for effective change. It links the
+strategy to the execution by bringing the decision
+makers and the technical teams closer together and
+providing them with the information they need. This
+is done by creating, communicating and improving
+the key principles and artefacts that describe the fu-
+ture state of the enterprise and enable it to evolve.
+2 PROBLEMS AND
+REQUIREMENTS
+Our example comprises a conglomerate of companies
+focusing on energy systems, mobility solutions and
+medical technology. Business units are given a de-
+gree of autonomy in their development because they
+know best how to evolve their capabilities. There are
+various inter-dependencies between the business units
+in terms of internal processes and reuse of existing
+products. All units require, among other things, hu-
+man resources and financial management as well as
+other functions. In addition, sub-products from the
+energy systems are used in mobility solutions, for ex-
+ample. In order to make targeted use of these synergy
+effects between the business units as a joint company,
+this federal structure requires holistic coordination.
+The goal is to improve cooperation and integration.
+The approaches of EAG are suitable for this purpose,
+whereby these are to be transferred into a federal con-
+text.
+We see the following challenges for EA in general
+and especially for collaborations on a federated EA
+level:
+• Lack of Clear Purpose:
+Imprecise overall organizational goal of EA in
+managing and maintaining the relation between
+business innovations and complexity of growing
+IT systems.
+• Stakeholder Acceptance:
+Missing understanding and support about the use-
+fulness of EA in business development and es-
+tablishment of business collaborations for pre-
+planed, structured and organized procedures.
+• Lack of Oversight:
+Missing continuous overview and thus of the con-
+nection from the upper business level to the lower
+IT-technical realization level aligned with the
+strategic goals for proper governance and man-
+agement.
+• Heterogeneous Structures:
+Ingrained procedures and legacy systems create
+diversity and complexity, particularly in federal
+alliance with different approaches.
+• Different Frameworks:
+Usage of multiple EA frameworks and other ap-
+proaches require alignment and dedicated appli-
+cation descriptions.
+• Difficulty in Integration:
+Challenging interplay of EA approaches with
+other management disciplines like project and
+change management for gaining synergy of holis-
+tic thinking and consistent planning.
+ICEIS 2024 - 26th International Conference on Enterprise Information Systems
+604
+
+--- PAGE 3 ---
+Therefore, the following research questions will
+be addressed:
+1. How could a federated enterprise structure be or-
+ganized for an efficient collaboration?
+2. What structure of Advisory Boards are needed and
+how they should they be organized to make appro-
+priate decisions?
+3. What kind of architecture resources and skills are
+recommended?
+4. How should Multi-Portfolio controlling be han-
+dled?
+5. What kind of interfaces can occur and how could
+they be approached?
+In summary, we obtain the following main re-
+quirements for an EAG of federated enterprise man-
+agement:
+• Collaborative Work Possibilities: Support em-
+ployees work and interaction to achieve a com-
+mon goal in ways that benefit the enterprise.
+• Coordinated Processes: Guiding the overall
+business and EAM process towards a meaningful
+goalbetweeninterdependentprocessesintermsof
+syntax and semantic through the entire life cycle.
+• Handling of Enterprise and Projects Artefacts:
+Holistically structured and controlled architec-
+tures with homogenization and generalization to
+reduce complexity for overall simplification.
+• Transparency and Integration: Clear presenta-
+tion and easy access to agreed results with version
+and variant traceability for all stakeholders.
+• Synchronization and Conflict Management:
+Alignment of artifacts and processes for a coop-
+erative approach and integrated collaboration via
+working groups.
+• Artefact Maintenance and Maturity: Regular
+review of results for relevance and timeliness to
+achieve higher sophistication.
+3 RELATED WORK
+In the area of governance, the frameworks of TO-
+GAF (The Open Group, 2022), COBIT (ISACA,
+2019), and BTS (Business Technology Forum, 2019)
+provide initial information. All ot them have a large
+scope and offer only abstract high-level descriptions.
+So these are not practical, especially with regard to
+small companies.
+The compact approach of Hanschke (Inge, 2022)
+and Behara (Behara, 2022) aims directly at gov-
+ernance concerns. Similarly, Tiemeyer (Tiemeyer,
+2023) provides a description for modern architec-
+tures. While these designs list the essential areas, it
+does not offer specific suggestions and structures.
+For EAM, ADOIT offers an Airport Case
+Study (BOC Academy, 2017) with detailed explana-
+tions. However, these cannot be adapted to a feder-
+ated governance approach.
+With the goal of stakeholder management, Kur-
+pjuweit (Kurpjuweit, 2009) provides a structured ap-
+proach. Furthermore, Obermeier (Obermeier, 2014)
+and the Federal Republic of Germany (Beauftragten
+der Bundesregierung für Informationstechnik, 2022)
+provide a specific approach for public administration.
+Both also describe best practices and guidelines for
+creating artifacts. These are included here and kept
+compatible.
+ITIL (AXELOS, 2019) offers more in-depth infor-
+mation on governance with version 4. However, these
+have an IT specific focus and do not provide concrete
+suggestions. An interaction with the ITIL specific
+Service Knowledge Management System is planned.
+A deep insight into EAG is provided by the Uni-
+versity of Columbia (University Columbia, 2023).
+Suitable parts are abstracted and adapted. Subse-
+quently, the extension for the federal context takes
+place.
+Especially in the focus of a federated environment
+considered here, none of the comparable frameworks
+provides a suitable approach.
+4 CONCEPT OF EA
+GOVERNANCE FOR
+FEDERATED ENTERPRISE
+MANAGEMENT
+For an efficient interaction of a federally structured
+Enterprise, different domains have to be addressed.
+Figure 2 shows an overview of the essential domains
+and their interrelationship for a functioning EAG.
+The interrelationships extend to horizontal and ver-
+tical domains, anchoring a holistic approach across
+the entire organizational structure. Our integrative
+approach using EA fosters the collaboration of the
+federated grouping. Only through their more pre-
+cise design can a goal-oriented EAM take place. In
+particular, our concept reveals the expected interfaces
+and transition points that need to be addressed. With
+this concept, corresponding methods and coordina-
+tion demands are identified. Requirements for pro-
+cesses, transfer points and information become appar-
+ent, whereby a kind of workflow chain or network is
+created. For this purpose, corresponding workflows,
+Enterprise Architecture Governance of Excellence
+605
+
+--- PAGE 4 ---
+communication channels and formats have to be coor-
+dinated in order to realize a professional exchange in
+a federal context. Therefore, we describe operational
+interoperability with unified management structures.
+Application to multiple segments generates a multi-
+plier effect with regard to an emergence across the
+federal structure.
+Figure 2: Essential domains and their interrelationship for a
+functioning EAG.
+4.1 Enterprise Structure
+Within the federal affiliation, we have developed a
+genericbasic structure thatcanbe adaptedtoa respec-
+tive enterprise. Figure 3 shows the reference model
+with the goal of structured governance. Based on the
+design, this reveals interfaces between the business
+units where coordination is mandatory.
+Figure 3: Reference model for structuring of Federale En-
+terprise Architecture (according to ArchiMate, colors self-
+selected with regard to grouping).
+We start from Segment A in the middle, which be-
+longs to a larger enterprise, but can itself have sev-
+eral sub-segments. The federated enterprise is ex-
+ternally influenced by other cooperation partners and
+PESTLE (Aguilar, 1967) aspects as well as by science
+and research. In particular, reference architectures are
+listed here in the context of EA. On the same level
+as the considered Segment A, there are further seg-
+ments in the federated context. These cooperation is
+managed via boards. According to the Business-IT-
+Alignment, Segment A includes an IT staff unit. This
+unit is in collaboration with an IT unit at enterprise
+level via coordination bodies. Our focus is on the as-
+sociated EA staff unit from Segment A. It supports
+Segment A in its daily business and also coordinates
+with the higher-level enterprise and the sub-segments
+as well as IT. For the cooperation in the superordi-
+nate federal enterprise, corresponding boards are to
+be established for the various topic complexes, such
+as architectures, IT and portfolio integration. The
+same applies, if necessary, to the subordinate business
+units. In accordance with the hierarchical structure,
+instructions and directives can be made here from top-
+down. For the cooperation of segments on the same
+level, interfaces are created with the objective of col-
+laboration. Here, no direct specifications can be made
+on the basis of the hierarchy. Therefore, individual
+coordination of products, processes and interfaces is
+requiredandmandatorysupportisprovidedbytheEA
+staff unit.
+We see three main cases for interfaces between
+segments. If the segments use the same EA approach,
+then the cooperation should be easily possible. If the
+segments maintain different EA approaches, the inter-
+face and alignments has to be coordinated. In the last
+case, a segment has no EA approach at all, so it has to
+be covered primarily by the superordinate structure.
+The following areas and tasks are to be covered
+by the EA staff unit. Project and portfolio manage-
+ment is to be located here. The portfolio manage-
+ment serves as an overview and takes over the holis-
+tic coordination of existing as well as new artifacts.
+Project management coordinates and supports dedi-
+cated projects. In relation to TOGAF ADM, support
+is provided in particular in Phase F and G, although
+the previous Phases A-E should also be considered.
+In addition, a knowledge management system is re-
+quired for inventory administration. This also goes
+hand in hand with the ITIL approach, in particular for
+cooperation between Segment A and its IT staff unit.
+All artifacts are to be managed accordingly in an EA
+Repository. In addition, there is a support department
+for EA, which serves as a resource pool. In particu-
+lar, this provides support for the creation of artifacts
+andtheimplementationofEAforthesubordinateseg-
+ments of Segment A. This has to be planned for the
+sub-segments on a case-by-case basis depending on
+whether a sub-segment requires its own EA staff unit
+or not.
+The structure can be extended upwards and down-
+wards in the layers by focusing on a business unit as
+ICEIS 2024 - 26th International Conference on Enterprise Information Systems
+606
+
+--- PAGE 5 ---
+the segment under consideration. Particularly in the
+case of downward chaining, a decision must be made
+as to whether detailing within the framework of en-
+terprise architecture still makes sense or other meth-
+ods shall be applied instead. In general, the coordina-
+tion along the vertical axis for a parent enterprise with
+its segments is carried out by means of boards. To
+collaborate along the horizontal axis, individual co-
+ordination between the collaborating segments is re-
+quired. A segment n can simultaneously belong to the
+supporting enterprise via boards and collaborate with
+another segment.
+4.2 Processes, Triggers, and Interfaces
+The key aspects for governance processes are shown
+below with a focus on EAM. Figure 4 shows an
+overview of the essential tasks that are to be ad-
+dressed by processes. These are divided into the
+three levels: governance processes, main achievement
+processes (performance processes) and support pro-
+cesses. The governance processes also include the
+management activities of the Board of Directors. The
+main achievement processes are further subdivided
+into Plan, Do, Check, and Act activities. The vari-
+ous processes must be customised and adapted to the
+needs of the company, so that no details are provided
+here. An essential process for EA is the application
+of the TOGAF ADM, whereby this extends with its
+phases A-H over all sub-areas. In the case of a fed-
+erated consortium, the various processes and commu-
+nication plans must be coordinated and harmonized
+with the federated partners. The representation typi-
+cally takes place in several EA artefacts. This highly
+effects the interfaces between the artifacts for chain-
+ing. We suggest to double the interface from the prior
+process output as input of the following process, so
+disconnectionbecomesvisible. Startingpointsofpro-
+cesses and activation of the bodies are called triggers
+and can be of various kinds. For a holistic view of the
+interrelationships, an example sequence is visualized
+in Figure 4.
+4.3 Architecture Rolls, Responsibilities,
+and Training
+As part of EA governance, we see at least the follow-
+ingrolecategoriestoensurethebasicareasofactivity.
+These are described with their respective areas of re-
+sponsibility and adequate training. The roles and their
+authoritative relationship is shown in the Figure 5.
+• Enterprise Manager: Planning and further de-
+velopment of the enterprise and the IT landscape
+Figure 4: Overview of general EA processes for governance
+and management with example workflow.
+Figure 5: EA Governance roles and their relevant relation-
+ships.
+in specific areas; link between business area and
+enterprise architects; responsibility for the con-
+tent design; interpretation and documentation of
+requirements and content design decisions.
+• EA Sponsor: Responsibility for the EA initiative,
+consistency with corporate objectives, provision
+of resources.
+• EA Governor: Overall responsibility for the ap-
+plication; preservation of economic aspects and
+EA capabilities; strategic development; risk and
+change management; strategically develop and re-
+fine an enterprise architecture strategy that sup-
+ports long-term goals of the business; identifica-
+tion of drivers and translation into architectural
+requirements.
+• EA Portfolio Manager: Coordinates, syn-
+chronizes and controls architecture management;
+assurance of interoperability; resource man-
+agement; maintaining architecture capability;
+overview and knowledge management, includ-
+ing the repository; communication of architec-
+ture concepts to non-technical stakeholders; qual-
+ityassurance; performanceandoptimizationman-
+agement.
+Enterprise Architecture Governance of Excellence
+607
+
+--- PAGE 6 ---
+• EA Subject Manager: Responsible for the ar-
+chitectural knowledge of the subject area; co-
+ordinates, synchronizes and controls architecture
+management in specific areas; content design of
+architectures in compliance with the specifica-
+tions of the responsible business and solution ar-
+chitects; part of subject matter expert network; re-
+sponsible for the EA continuum of EA artifacts
+and reference architectures of the subject area.
+• EA Solution Architect: Are Subject Matter Ex-
+perts and work closely with the project teams; re-
+sponsible for architectural knowledge in specific
+areas; technology assessment and administration
+of reference architectures; creation and commu-
+nication of architecture concepts to stakeholders;
+governance implementation; following a cyclic
+approach of Plan-Do-Check-Act Cycle: analyze
+requirements, develop solutions, integration test-
+ing, and documentation; supported by EA De-
+signer to realization.
+• EA Designer (Optional): Responsible for ar-
+chitecture descriptions that conform to specifi-
+cations; creation and maintenance of architec-
+tural artifacts; capture all relevant information and
+interrelationships between the various architec-
+tural elements; prepare documentation; compli-
+ance with references, standards and best practices;
+ensuring Guidelines of Modeling (Becker, 1995;
+Ambysoft Inc., 2022) for accuracy, consistency
+andcompletenessinrelationtoaestheticrepresen-
+tation.
+• EA Analyst: Evaluate architecture models with
+respect to specific and substantive issues; make
+recommendations to various audiences, including
+executive management, IT teams, and stakehold-
+ers.
+• EA Method Specialist: Develop and maintain
+the methodologies, models, and frameworks to
+design and manage enterprise architecture; cus-
+tomization and integration of policies and stan-
+dards for usage; training and support for success-
+fulapplicationacrosstheenterprise; qualityassur-
+ance of EA artifacts; identification and promotion
+of best practices; continuous improvement in rela-
+tiontolifecyclemanagementandmaturitymodel.
+• EA Repository Administrator (Optional): Re-
+sponsible for EA artifact management; takes care
+on version and variant control; does configuration
+management of the EA Repository; set up access
+control to the EA Repository.
+In addition, there is also the important role of the
+stakeholders. We see this only indirectly as part of EA
+governance, here. Their interests are manifold and
+can vary greatly. Appropriate stakeholder maps must
+be maintained for them with concerns, views and re-
+lations. It is essential to be clear who the stakeholders
+are, before an artifact is created.
+According to these roles for the EAM, we have to
+address the specific areas and domains of application.
+This is especially important for the subdivision of the
+role of EA Solution Architect, EA Designer and EA
+Analyst. A more fine-grained subdivision depends
+on the size of the federated enterprise, especially in
+the diversification to specialized subject areas. In re-
+lation to the hierarchical structuring of EA artifacts
+and EA continuum, the following topics have to be
+addressed: business; application and technology; in-
+formation and data; infrastructure; process; security;
+risk; demand.
+We highly suggest that the EA Governor main-
+tains a RACI-VS Matrix for the responsibility of each
+roles and person. It show the conjunction with their
+services and function with respect to all the service
+areas and associated functions performed by the EA
+organization. This matrix is an EA artifact by itself
+and has to be maintained in the EA Repository. Fur-
+thermore, a flat hierarchy as a tree with two to three
+level is recommended.
+4.4 EA Boards
+We see as least the following three boards for discus-
+sions and decision making. Each board consists of up
+to seven members. In practice, larger boards are per-
+ceived as ineffective and should perhaps be structured
+via additional hierarchies. These boards exist at the
+federal level for vertical, superordinate alignment. If
+necessary, these also exists at the segment level for
+horizontal, inner coordination. The roles described
+exist at each level with their own staff unit EA. As-
+sociated to the boards are in each case the mentioned
+role of the higher segment (level n+1) and the same
+roles of the lower, parallel segments (level n). In ad-
+dition, the management of the federation should be
+involved, as EA is an integral part of the management
+culture and thus an effective cooperation is designed
+here.
+• EA Blueprint Board: Ensure a coordinated and
+consistent approach to the development, imple-
+mentation and application of EA methodologies
+within the federated enterprise. EA methods in-
+clude the tools, techniques, processes, and stan-
+dards used to design, manage, and optimize the
+enterprise architecture. It is responsible for moni-
+toring the appropriateness, viability, sustainabil-
+ity, costs, and benefits of the EA approach, es-
+pecially for Governance and Compliance. Con-
+ICEIS 2024 - 26th International Conference on Enterprise Information Systems
+608
+
+--- PAGE 7 ---
+duct reviews of EA artifacts to ensure architec-
+tural alignment. Build standards, patterns, tem-
+plates, and reference architectures. Involved roles
+of EA subdivisions: EA Governor or representa-
+tive EA Method Specialist or EA Portfolio Man-
+ager. Informed business role of the federation
+staff: CIO.
+• EAM Board and Strategy Council: Coordinate
+and direct strategic decisions and votes regarding
+the enterprise architecture on a federal level. En-
+sure that the various subdivisions and departments
+are in harmony with the overall corporate goals.
+Jointly develop EAM concerns and capabilities;
+share a vision and best practices, establish strate-
+gic direction for the EAM effort; set goals for
+project portfolio management; recommendations
+with regard to the further EAM project as well
+as the development of the IT landscape to max-
+imizing ICT’s effect. Involved EA roles of divi-
+sions and subdivisions: Enterprise Manager and
+EA Portfolio Manager or representative EA Sub-
+ject Manager. Informed business role of the fed-
+eration staff: CEO.
+• EA Portfolio Board: Controlling the project
+portfolio, evaluating and prioritizing project pro-
+posals and demands. Thus, it is defining and man-
+aging the portfolio of the EA artefacts. Projects
+are also started, stopped and paused, and in-
+vestment decisions are made accordingly, if nec-
+essary, to ensure the company’s long-term effi-
+ciency, flexibility and innovation through appro-
+priate EA initiatives. The focus is based on prod-
+uct areas and products. It takes care of the user
+and business owner perspectives. Involved EA
+roles of divisions and subdivisions: EA Portfolio
+Manager or representative EA Subject Managers,
+if required EA Sponsor. Informed business role of
+the federation staff: CTO.
+Beside these, every enterprise has to address addi-
+tional, not direct EA governance related boards, e.g.
+IT and Security Council. It must still be coordi-
+nated and guided with typical perspectives of holis-
+tic ICT-service, -application and -technology archi-
+tecture (Raad, 2023).
+4.5 Program, Portfolio, and Project
+Management
+This unit represents the operational power center.
+Here, the coordination of strategic intentions takes
+place within the framework of programs and projects.
+The activities in the portfolios of all projects must be
+coordinated with each other, especially with regard to
+dependencies, interconnections, and interfaces. This
+includes prioritizing projects and planning resources.
+It involves monitoring of budgets and progress. In
+the event of difficulties, appropriate escalation is to
+be made to the various boards. Depending on the
+size, a separate unit for controlling can be created or
+a division for the different programs can be installed.
+The managing role is the EA Portfolio Manager and
+should be centralized in one person if possible. For
+support and reliability, a deputy should be appointed,
+who is always informed and up to date. Typical arti-
+facts for this are: Strategy Map, Program and Portfo-
+lio Roadmaps with dependencies, Project Working-
+Plans and Gantt-Charts with milestones, and Gap-
+Analyses. They represent the knowledge center and
+maintain an overview. A holistic expertise of the EA
+Repository is required in order to provide precise in-
+formation. Comprehensive communication of results
+and interim information is essential for the success
+of the entire EA approach. Within the framework of
+the federal cooperation, a horizontal as well as verti-
+cal exchange has to take place. The contact persons
+for this are the respective EA Portfolio Manager or
+the corresponding board. For this purpose, an appro-
+priate reporting system with time, format, scope, and
+medium has to be coordinated.
+4.6 Artifacts, Deliverables, and
+Continuum
+Architecture artifacts can have a high degree of di-
+versity. This ranges from simple catalogs and ma-
+trices to structures and models to roadmaps and di-
+agrams (Roth et al., 2014; Kotusev, 2019). In the
+context of governance, this must be taken into ac-
+count when creating artifacts. Therefore, the fed-
+erated parties should agree in advance on the meth-
+ods, standards, and guidelines for designing. The EA
+blueprint board is particularly useful for this purpose.
+It is recommended that the category or a specific type
+of an artifact shall be determined appropriately ac-
+cording to the purpose (Bundesministerium des In-
+neren und für Heimat, 2022; Bundesministerium des
+Innern, 2007). This promotes cross-cutting collab-
+oration by narrowing down the multiplicity, elimi-
+nated ambiguity, and reduce complexity. Thus creat-
+ing a uniform understanding and a common approach.
+When artifacts are created, key design decisions are
+to be tracked in a table with justification. This sup-
+ports the application and also serves in the context
+of further development for new versions and diverse
+variants. Especially, variants enable the adaptation to
+one’s own specifics in a federal cooperation. In this
+context, compatibility with the reference must be en-
+Enterprise Architecture Governance of Excellence
+609
+
+--- PAGE 8 ---
+sured (Ascher et al., 2022).
+Efficient implementation of variant creation re-
+quires precise coordination across the Architecture
+Continuum following TOGAF. Here, a clear separa-
+tion between solution-independent architectures and
+the realization-dependent solutions must be ensured.
+These two types of artifacts must always be created,
+maintained and linked to each other. This is impor-
+tant in relation to the innovation cycle of technolo-
+gies (Hillmann et al., 2021), e.g. for a change of
+concrete solutions. A respective gradation of each
+type from foundation to organization-specific should
+take place as required. The additional effort in-
+volved should be weighed up in advance in relation
+to the benefits. Basically, artifacts of the federated
+enterprise describe the highest level of abstraction.
+These have a comprehensive view of the coopera-
+tion with often reduced details. Segment level arti-
+facts are more detailed in terms of programs, port-
+folio and projects. These include both business and
+IT. Domain-specific artifacts and specific designs de-
+scribe concrete services, systems, or effects for basic
+activities and projects. The use of Architecture Build-
+ing Blocks (ABB) can reduce the effort for both EA
+and implementation, preferably using Model-Driven-
+Architecture. For effective reuse in federated collabo-
+ration, these ABB and artifacts should be made avail-
+able transparently via a register.
+For the use of ABB and in variant formation, we
+see two possible uses in the federal domain:
+• Take-Over: An artifact is adopted by a fed-
+eral segment and is applied accordingly. Var-
+ious techniques can be used in this process:
+Copy, Analogy, Specialisation, Inheritance, In-
+stantiation, Configuration, Parametrisation (vom
+Brocke, 2018).
+• Joint use: A segment uses an artifact offered by
+another segment without changes. This can be
+done as reuse like a value chain or as aggregation
+of ABBs into a higher value benefit.
+Inbothcases, theinterfacesmustbepreciselydefined,
+harmonized and coordinated so that the artifacts can
+interact across areas. This can be done via the EA
+Portfolio Board. The goal here is Day Zero Interop-
+erability. The results of coordinated interfaces shall
+be tracked as artifacts, e.g. as in Federated Mission
+Networking 1. Furthermore, all artifacts have to be
+validated and verified, before these are released for fit
+for purpose by an EAM-Board.
+Independently of this, the responsible role or per-
+son must also be determined for each artifact in the
+1https://www.act.nato.int/activities/federated-mission-
+networking/
+federal cooperation. In the last instance, this is always
+performed by the EA Portfolio Manager and, if nec-
+essary, delegated. This person is then responsible for
+maintenance and quality assurance. All members are
+always responsible for use and compliance, whereas
+the EA Governor is supervising the process.
+4.7 Methods, Standards, Tools,
+Guidelines and Techniques
+The methods, standards, tools, guidelines and tech-
+niques used for EA must be harmonised as part of
+governance. A combination of frameworks can be
+used to address the interests of stakeholders at both
+business and IT level. Our approach follows The
+Open Group and is based on the frameworks of TO-
+GAF and ArchiMate in conjunction with ITIL. In ad-
+dition, the use of a grid according to Zachmann for
+the EA artefact organisation provides an overview.
+Within the framework of federated architecture
+management, our focus is on common principles and
+best practices for collaboration. Establishing best
+practices is an essential part of limiting degrees of
+variety in the design of EA artifacts. In addition, it
+gives the EAM direction for decisions and thus de-
+fines a basic order for all partners. The principles are
+documented classically using the following data: ID,
+Name, Statement, Rationale, Implication. For better
+clarity, it is advisable to categorize the principles ac-
+cording to their area of application or roles. For one
+area, a set of smaller than 30 principles has proven to
+be practically usable. These can grow organically and
+adapt to the needs of the enterprise. For the federal
+context, we see the following overarching principles
+in focus on a smooth cooperation:
+1. EA pursues the goal of value creation, which must
+be evident in every deliverable.
+2. Before an EA artifact is designed, the stakeholder
+has to be identified to be role concentrated.
+3. For each EA artifact, a clear maturity level is ad-
+dressed.
+4. Each EA artifact is self-contained.
+5. Every Design follows the Service-Oriented-
+Architecture (SOA) principle with clear defined
+interfaces for input and output in relation to inter-
+operability and modular extensibility.
+6. Extensive usage of standards, reference designs,
+interoperable open architecture, and glossary
+wherever possible.
+7. Every EA artifact has an identified owner for clear
+responsibility.
+ICEIS 2024 - 26th International Conference on Enterprise Information Systems
+610
+
+--- PAGE 9 ---
+8. EA artifacts follow the basics of proper modelling
+approach (Becker, 1995; Bundesministerium des
+Innern: Referat IT-Steuerung Bund, 2011) and
+fullfil visualization guidelines.
+9. Establishing a culture of digital information trans-
+fer.
+10. Establishing a welcoming culture for innovations
+and suggestions for improvement.
+4.8 Repository
+The repository serves as a central knowledge base of
+information by storing all artifacts. This also includes
+the EA artifacts of the EA governance. The goal is
+to make EA usable, widely available and comprehen-
+sivelytransparent. ItismanagedbytheEARepository
+Administrator or by the EA Portfolio Manager. In the
+context of federal cooperation there are two possibil-
+ities for the realization of the data library:
+• Common Archive: The federal community main-
+tains one central data repository, which is shared
+between all parties. This has the advantage that
+the contents can be directly linked with each other
+and reduces the administrative effort.
+• Multiple directories: Each party of the federal en-
+terprise maintains its own data repository. Rele-
+vant EA artifacts have to be made available to the
+other parties (Heiland et al., 2021), preferably via
+linking. For this purpose, Linked Data approaches
+are suitable using HTML iFrames, REST, AMQP,
+OSLC, RDF, or CSD. Here, the sovereignty over
+the data obliges by the individual party.
+Regardless of this, the principle of Single Source of
+Truth must be adhered to avoid synchronization and
+integration conflicts of shadow copies in different ver-
+sions and variants (Zenz et al., 2023). We recommend
+a common archive as Single Point of Information in
+the context of a federated enterprise. This avoids syn-
+chronization and conflict handling problems from the
+outset.
+As a realization, we use a web-platform to en-
+sure easy access for all stakeholders and employ-
+ees (Gidey et al., 2022; Pöhn and Hillmann, 2021). A
+detailed design of an EA Repository is referred to this
+work (Hillmann et al., 2022). To enable a broad use,
+all approved and released EA artifacts should be ac-
+cessible by everyone. This ensures full transparency.
+We see at least the following categories for the orga-
+nization of EA artifacts. These are not considered ex-
+clusive, rather they serve as tags within the metadata.
+• Governance and Methodologies Artifacts, Au-
+thority Structures
+• Business, Strategies and Capability Artifacts
+• IT Architectures (Is-Plan-Goal)
+• Processes and Data
+• Portfolio and Project Architectures
+• Reference Architectures, Building Blocks,
+Blueprint and Service Architectures
+• Standard Elements, Specifications, and Regula-
+tory Requirements
+4.9 Dashboard
+The dashboard serves on the one hand as a live
+overviewandontheotherhandasanentrypointtothe
+EA Repository. It offers the entry into the EA world
+of experience, as seen in the example Figure 6. For a
+clear start there is an interactive live grid with the dif-
+ferent aspects and subjects. For the management of
+the portfolio and the running projects a graph is used,
+where clockwise color notations serve as progress in-
+dicators 2. The Gantt chart provides a roadmap of
+deadlines and project dependencies (NATO Training
+Architecture Framework, 2019). Current information
+and changes can be found in the news feed and in
+the change log. This includes objectives, drivers, and
+history graphs. Metrics and alerts are displayed for
+monitoring purposes (Office of VA Enterprise Archi-
+tecture, 2016). In addition, it provides a wiki like tool
+for: Reference Models, Requirements (Heiland et al.,
+2023) , Baseline Documents and the Glossary.
+Figure 6: Example of an EA Dashboard as entry point of
+the EA Repository.
+4.10 Glossary
+A common understanding of terminology is essential
+for cooperation in a federal context. This is particu-
+larly important for discussions within the boards. For
+this purpose, a cross-company glossary must be es-
+tablished and maintained. The glossary itself rep-
+resents an EA artifact and is to be kept in the EA
+2https://principiamentis.com/de/main
+Enterprise Architecture Governance of Excellence
+611
+
+--- PAGE 10 ---
+Repository. A deep integration enables glossary el-
+ements to be referenced within EA artifacts through
+the tool landscape. This allows to provide further in-
+formation in a targeted manner. In addition, linking
+via ontology is recommended, as this makes it easy
+to identify inconsistencies. The machine-processable
+format enables comprehensive analyses, especially if
+links to the EA artifacts are traced. If standardized
+glossaries or ontologies already exist for a domain,
+these should preferably be used, such as NATO C3
+Taxonomy (NATO Consultation, Command and Con-
+trol Board (C3B), 2021) or Ontology for simulation,
+modeling, and optimization (Horsch et al., 2022). In
+thecontextofEAartifactcreation, alwaysuniquedes-
+ignations shall be used where possible. To avoid con-
+fusion, the singular and a gender neutral form should
+always be used.
+5 PRELIMINARY IMPRESSIONS
+The concept was transferred to a multidisciplinary
+company, like Siemens AG. This company is struc-
+tured as follows. Our considered segment is the pro-
+duction division for Medical Devices, e.g. MRI sys-
+tems. Parallel segments are e.g. Finance, Energy,
+Industrial Automation, Drive Technology. We co-
+operate with these parallel segments on a horizontal
+level. This relates in particular to the handling of
+finances and the development of components. Our
+Medical Devices segment is further subdivided into
+digital twin, radiology and training, among others.
+Bymeansofatable-topexercise, thepresentedap-
+proach is validated as a whole. For this purpose, the
+roles were assigned to different persons. Everyone
+is given a general overview and specific instructions
+on their tasks and responsibilities. Boards are formed
+by all participants, with the main responsible role be-
+ing the moderator. Starting point for the processes
+are done by randomly selecting different triggers on
+a card deck that typically occur in EA like technol-
+ogy innovations or market changes. Through these,
+the defined processes are triggered. The processes are
+manually replicated and tracked using pen and paper.
+One hurdle is initiating the right process and linking a
+suitable path across several processes. Each role must
+act according to its area of responsibility and create
+its necessary EA artifacts. The project specific EA ar-
+tifacts are mapped using puzzles, dominoes or Lego
+bricks. Here, a single piece symbolizes an ABB with
+defined service interfaces. Figure 7 shows a factual
+example of the overarching interaction.
+Experience has shown that our EAG concept
+works both for individual companies and in a federal
+Figure7: ExampleSolutionConceptDiagramwithusageof
+Architecture Building Blocks and servicesfor thecreation of
+project specific EA artifacts.
+context. The processes support a structured workflow
+and responsibilities can always be identified.
+6 SUMMARY
+In summary, our presented concept describes all es-
+sential components for EA governance in a federated
+context. This approach is independent of the spe-
+cific established EA frameworks, so that each partner
+can continue to use its own EA framework. It builds
+on top of theirs and regulates necessary coordination,
+processes and interfaces in federated collaborations.
+Thus, our concept enables a goal-oriented control by
+means of EAM. It highly supports the workflow by
+clear command and control. It has been shown that
+our framework can be adapted to individual specifics.
+All activities and decisions concerning the architec-
+ture are aligned with the concerns of the company
+and the context. The resulting architecture collections
+meettheexpectedbusinessneedsoftheenterpriseand
+its stakeholders.
+In the future, we will extend our concept in deal-
+ing with EA artifacts. In addition, a detailed analysis
+of the different EA processes with regard to gover-
+nance will be performed.
+REFERENCES
+Aguilar, F. J. (1967). Scanning the business environment.
+Macmillan.
+Ambysoft Inc. (2022). The Principles of Agile Modeling
+(AM).
+Ascher, D., Heiland, E., Schnell, D., Hillmann, P., and
+Karcher, A. (2022). Methodology for Holistic Ref-
+erence Modelingin Systems Engineering. Interna-
+tional Conference on Enterprise Information Systems
+(ICEIS), CEUR.
+ICEIS 2024 - 26th International Conference on Enterprise Information Systems
+612
+
+--- PAGE 11 ---
+AXELOS (2019). ITIL 4.
+Beauftragten der Bundesregierung für Informationstechnik
+(2022). Architekturrichtlinie für die IT des Bundes.
+Becker, J. (1995). Strukturanalogien in Informationsmod-
+ellen. Ihre Definition, ihr Nutzen und ihr Einflußauf
+die Bildung von Grundsätzen ordnungsmäßiger Mod-
+ellierung (GoM). Wirtschaftsinformatik, Wettbe-
+werbsfähigkeit, Innovation, Wirtschaftlichkeit. W.
+König. Heidelberg, pages 133–150.
+Behara, G. (2022). Enterprise Architecture Governance: A
+Holistic View.
+BOC Academy (2017). Enterprise Architecture Manage-
+ment - An Airport Case Study.
+Buckl, S., Dierl, T., Matthes, F., and Schweda, C. M.
+(2010). Building Blocks for Enterprise Architecture
+Management Solutions. Practice-Driven Research on
+Enterprise Transformation, Lecture Notes in Business
+Information Processing.
+Bundesministerium des Inneren und für Heimat (2022). Or-
+ganisationshandbuch.
+Bundesministerium des Innern (2007). Leitfaden für En-
+twickler vonProzess- und Datenmodellen. Referat IT
+2 (KBSt).
+Bundesministerium des Innern: Referat IT-Steuerung
+Bund (2011). Standards und Architekturen für
+eGovernment-Anwendungen (SAGA). Die Beauf-
+tragte der Bundesregierung für Informationstechnik
+(BfIT).
+Business Technology Forum (2019). Business Technologie
+Standard.
+Gidey, H. K., Kesseler, M., Stangl, P., Hillmann, P., and
+Karcher, A. (2022). A Document-based Knowledge
+Discovery withMicroservices Architecture. Interna-
+tional Conference on Intelligent Systems and Pattern
+Recognition (ISPR).
+Heiland, E., Hillmann, P., and Karcher, A. (2021). Enter-
+prise Architecture Model Transformation Engine. In-
+ternational Conference on Operations Research and
+Enterprise Systems (ICORES).
+Heiland, E., Hillmann, P., and Karcher, A. (2023). Con-
+straintbasedModelingaccordingtoReferenceDesign.
+International Conference on Perspectives in Business
+Informatics Research (BIR).
+Hillmann, P., Heiland, E., and Karcher, A. (2021). Auto-
+mated Enterprise Architecture Model Mining. NISe-
+curity.
+Hillmann, P., Schnell, D., Hagel, H., and Karcher, A.
+(2022). Enterprise Model Library for Business-IT-
+Alignment. International Conference on Computer
+Science, Engineering and Applications (SEAPP).
+Horsch, M. T., Todorov, I. T., Seaton, M. A., and Chiac-
+chiera, S. (2022). OSMO: Ontology for Simulation,
+Modelling, and Optimization.
+Inge, H. (2022). Enterprise Architecture Management - ein-
+fach und effektiv.
+ISACA (2019). Control OBjectives for Information and re-
+lated Technology.
+ISACA Germany (2019). COBIT 2019-Rahmenwerk: Gov-
+ernance und Managementziele.
+Kotusev, S. (2019). Yet Another Taxonomy for Enterprise
+Architecture Artifacts. Journal of Enterprise Archi-
+tecture Article.
+Kurpjuweit, S. (2009). Stakeholder-orientierte Mod-
+ellierung undAnalyse der Unternehmensarchitektur.
+PhD thesis.
+NATO Consultation, Command and Control Board (C3B).
+C3 Taxonomy Baseline 5.0.
+NATO Training Architecture Framework (2019). Processes
+& Governance: Dashboard along an Architecture.
+Slide 61.
+Obermeier, M. (2014). Enterprise Architecture Man-
+agement in der öffentlichenVerwaltung: Design,
+Einf”uhrung und Evaluation. PhD thesis.
+Office of VA Enterprise Architecture (2016). VA EA Vision
+and Strategy.
+Pöhn, D. and Hillmann, P. (2021). Reference Service Model
+for Federated Identity Management . Conference on
+Exploring Modeling Methods for Systems Analysis
+and Development.
+Raad, O. (2023). Strategic Architecture Governance in the
+Norwegian Defence. In TIDE Sprint 41.
+Roth, S., Zec, M., and Matthes, F. (2014). Enterprise Archi-
+tecture Visualization Tool Survey. Technical report,
+Chair for Software Engineering of Business Informa-
+tion Systems. Technische Universitaät München.
+Rybaric, R. (2020). Microsoft Power Platform Enterprise
+Architecture. Packt Publishing.
+Schelp, J. and Stutz, M. (2007). SOA Governance.
+The Open Group (2022). The Open Group Architecture
+Framework.
+Tiemeyer, E. (2023). Next Generation EA-Management
+und EA-Governance.
+University Columbia (2023). CUIT Enterprise Architec-
+ture.
+U.S. Department of Veterans Affairs (2023). VA Enterprise
+Architecture, VA EA Content.
+U.S. Federal Government (2012). The Common Approach
+to Federal Enterprise Architecture.
+U.S. House, Committee on National Security (1996).
+Clinger-Cohen Act, Title 40, National Defense Au-
+thorization Act. U.S. House. Conference Report. H.
+Report 104-450.
+vom Brocke, J. (2018). Konstruktionstechniken
+zur Referenzmodellierung - Enzyklopaedie
+der Wirtschaftsinformatik. Enzyklopaedie der
+Wirtschaftsinformatik.
+Zenz, L. J. I., Heiland, E., Hillmann, P., and Karcher,
+A. (2023). Aligning Models with Their Realiza-
+tion throughModel-based Systems Engineering. Con-
+ference on Advanced Enterprise Information System
+(AEIS).
+Enterprise Architecture Governance of Excellence
+613

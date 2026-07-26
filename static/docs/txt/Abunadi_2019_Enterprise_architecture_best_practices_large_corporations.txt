@@ -1,0 +1,1557 @@
+--- PAGE 1 ---
+information
+Article
+Enterprise Architecture Best Practices in
+Large Corporations
+Ibrahim Abunadi
+College of Computer and Information Sciences, Prince Sultan University, Rafha Street,
+Riyadh 11586, Saudi Arabia; iabunadi@psu.edu.sa
+Received: 15 August 2019; Accepted: 20 September 2019; Published: 23 September 2019
+
+
+Abstract: Enterprise architecture (EA) is an integrated strategy, business, and information systems
+approach for analysis, governance, and information technology (IT) alignment. It is a comprehensive
+blueprint that requires the careful planning, documentation, and analysis of all the operations of an
+organization. Employing EA helps companies achieve strategic goals with the support of business
+activities and information systems. However, some large corporations avoid EA frameworks and
+methodologies owing to their implementation difficulties or the presence of conflicting frameworks
+and business needs. The goal of this paper is to increase large organizations’ awareness of enterprise
+architecture best practices (EABPs) and methods of EA framework implementation. Thus, this
+research has developed an EABP capability matrix to measure companies’ capacities to implement
+EABPs and provided lessons based on how 17 organizations implemented EABPs. Based on an
+analytical literature review, the developed matrix includes eight critical EABPs categorized under four
+themes: EA framework and methodology, strategic practices, business activities, and information
+systems. As practical and theoretical contributions: (1) This inclusive approach was not found in the
+EA literature as most past research focuses on only one of these themes. (2) The EA matrix can be
+used as a measurement matrix research methodology to measure the extent to which cases adopt
+EABPs, making it beneficial to EA researchers and practitioners. (3) EA practitioners can also use it to
+practically determine and rectify the weak points of EABPs, thus taking advantage of EA frameworks.
+The findings indicate that many large organizations implement EABPs as business-as-usual practices
+without EA frameworks and methodologies. However, those that adopt an EA framework use
+the open group architecture framework and rely heavily on enterprise resource planning in the
+implementation of EABPs.
+Keywords: enterprise architecture; large organizations; business process management; enterprise
+resource planning; best practices; the open group architecture framework (TOGAF); governance;
+IT alignment
+1. Introduction
+Enterprise architecture (EA) promises great benefits to organizations that seek to improve their
+strategies, optimize their business activities, and better utilize information technology (IT). Through
+EA’sguidingprinciples,organizationscanmoreeasilyachievetheirgoalsandinitiativesandimplement
+critical information systems [1,2]. EA-based business activities can work coherently toward strategic
+aims and lead to better organizational outcomes [3]. IT resources can be tracked using EA repositories
+and subsequently aligned with business activities to steer a business towards its goals [4]. EA
+frameworks thus integrate strategies, business activities, and information systems by providing a
+representation of current organizational capabilities and enabling desirable results.
+Although EA is widely praised in the relevant literature, its implementation success rate remains
+low [1,5–7]. EA’s difficult implementation is attributable to its need for complex maintenance and its
+Information 2019, 10, 293; doi:10.3390/info10100293 www.mdpi.com/journal/information
+
+--- PAGE 2 ---
+Information 2019, 10, 293 2 of 26
+comprehensive coverage of all organizational areas. For successful implementation, EA requires the
+continuous documentation and analysis of all activities and resources throughout the organization
+while leading a given business to its desired strategic state [8,9].
+Understanding organizations’ technological practices that are analogous to enterprise architecture
+best practices (EABPs) is critical; this is the starting point at which organizations can begin successfully
+implementing EA. Large organizations with greater EABP capabilities are more likely to incorporate EA
+frameworks and methodologies [1,10–12]. EABPs are a set of activities that are conducted to enhance
+an organization’s strategic fulfillment through business tactics and information analysis. Although
+many technology-based business organizational practices (e.g., modeling business processes using
+a software) could be placed under the umbrella of EA because it is a comprehensive blueprint for
+organizations, certain horizontal (cross-sectional organizational practices) EABPs are essential in the
+adequate functioning of EA frameworks and methodologies [13]; this paper focuses on those EABPs.
+Horizontal EABPs serve an entire organization and have a strong impact on organizational success
+rates in EA implementation. In this research, “EABP capability” is defined as the effectiveness with
+which an organization can successfully apply the best practices of EA. Here, large private organizations
+are focused on because their commercial nature and complexity demand a greater need to enact EA
+frameworks and methodologies. In addition, this study emphasizes on horizontal EABPs, which are
+significant in the complete implementation of EA because they are conducted throughout an enterprise.
+In contrast, vertical practices (practices applied in one managerial unit or line of business) are outside
+the scope of this study [6,8]. Various studies focusing on best practices in EA research, including
+EA methodologies, strategic practices, business activities, and information systems practices, have
+been conducted. However, little research has combined these aspects, particularly for horizontal
+practices within large organizations. Implementing EABPs has many advantages, including directing
+organizational efforts toward achieving specific strategic goals, unifying employees’ way of work,
+creating the organizational backbone for integrating the use of business processes, and integrating the
+organization using horizontal information systems [1,7,9,14,15]. Grounded on previous EA research, a
+matrix has been developed and tested in this study to measure an organization’s capacity to utilize
+horizontal EABPs. Using this EABP matrix, organizations would be able to determine the shortcomings
+in their EABP implementation, leading to better decision-making for top and middle management.
+Through multi-case study analysis, the EABPs within 17 large corporations have been examined. This
+study investigates the following research questions: (1) What are the critical EABPs that are needed
+for the successful implementation of EA? (2) How can EABP capabilities within organizations be
+measured? (3) How are EABPs currently implemented in large organizations? Thus, this study will
+contribute to the EA literature as follows:
+1. Identify the critical horizontal EABPs for the successful implementation of EA.
+2. Provide a matrix that can be used to measure the EA capabilities within an organization.
+3. Provide insight into how organizations actually implement EABPs.
+This paper will proceed as follows. First, an analytical literature review will be conducted to
+determine the common horizontal EA practices found in past research. Second, the methodology and
+its results will be described. Finally, this study’s findings and conclusions will be discussed.
+
+--- PAGE 3 ---
+Information 2019, 10, 293 3 of 26
+2. Analytical Literature Review
+EA is “an approach for managing the complexity of an organization’s structures, business
+environments, and different information systems, and for facilitating the integration of strategy,
+personnel, business, data, and IT” [5] (p. 131).
+EA research has indicated that EABPs can be categorized as follows [1,7,9]:
+1. EA frameworks and methodologies
+2. Strategic practices
+3. Business activities
+4. IT capabilities
+The studies sourced to create the above categories were sought using the following search terms:
+(“Enterprise Architecture”) and ((“Capabilities,” “Best Practices,” or “Practices”), (“Framework”),
+(“Methodology”), (“Maturity”), (“Modeling”), (“Horizontal”), or (“Crosscutting”)). These terms were
+applied to several database search engines: ScienceDirect, ProQuest, Taylor & Francis, Web of Science,
+Scopus, Google Scholar, Emeralds, IEEE, and ACM. The selected search terms were based on the title,
+research keywords, abstract, and research questions. The inclusion criteria were as follows: English
+peer-reviewed articles including conference book chapters and journal articles, studies presenting
+relevance to the focus and research questions of this paper, repeated papers in different databases
+by title or content, non-accessible papers within databases or other search engines, papers published
+after 2004 (to focus only on recent developments), and short papers or posters. Thirty-seven papers
+were considered after excluding non-matching studies. These papers were reviewed and analyzed
+thoroughly for EABPs and the results are discussed in the following sections.
+2.1. EA Framework and Methodology
+An EA framework is the core horizontal component of an architectural practice. It can be defined
+as an instrument that aligns different resources, including IT, with the organization’s current and future
+needs[14]. KnownEAframeworks,suchasZackman,theopengrouparchitectureframework(TOGAF),
+federalenterprisearchitecture(FEA),Gartner,DepartmentofDefensearchitectureframework(DoDAF),
+and treasury enterprise architecture framework (TEAF), were created from various sources and have
+been applied to different contexts [16]. An organization’s workflow may change depending on the
+adoptedEAframeworkbecauseEAframeworksarelikeamasterplanofbusinessstrategiesconsistingof
+various processes and information technologies [17,18]. EA frameworks are beneficial to organizations
+because they (1) “[are] well-established solutions to architectural problems of organizations; (2) Help
+in documenting architectural design and implementation decisions; and (3) [facilitate] collaboration
+and communication between users” [19] (p. 45).
+Documentation and implementation in the EA framework is conducted through an EA
+methodology [20]. An EA methodology is a horizontal practice that an entire organization implements
+for effective decision-making and resource management [21]. It offers the tools required to
+guide an organization in documenting and modeling its current state using EA artifacts (shared
+organizational documents) and identifying the necessary documents that assist in making business and
+technology-related decisions, including resource management [22]. The EA methodology “prepares
+a set of methods and practices for developing, managing, and maintaining an EA implementation
+project” [23] (p. 927). As an EA framework implementation guide, EA methodologies outline how an
+organization transitions from its current (as-is) state to its planned (to-be) state. Some EA frameworks
+present a clear and detailed EA methodology, such as TOGAF architecture development method
+(ADM), FEA, and DoDAF. Other EA frameworks (e.g., Zachman and TEAF) provide general guides
+for the entrepreneurial transition from current to future states [23,24].
+Early EA research focused on understanding EA frameworks and methodologies. Nevertheless,
+recentstudieshaveconsideredmanagingandusingtechnologicaladvancementforthebetterapplication
+of EA frameworks and methodologies [25]. More emphasis on the horizontal approach of EA has been
+
+--- PAGE 4 ---
+Information 2019, 10, 293 4 of 26
+found in recent literature. However, this discussion is theoretical, with no clear consideration of the
+practical underpinnings within organizations [15]. The additional current organizational advancement
+that affected EA research is the evolved business models that now rely more on social media for
+marketing, e-commerce for sales, big data analysis for information, and shared economy (industry
+4.0) for infrastructure. According to previous studies [26–28], organizations using these technologies
+can lose track of information and resources and require higher levels of control, particularly the
+horizontal views and control, provided by EA [26,27]. Other studies [15,26] found that with the
+availability of advanced information systems and enterprise resource planning (ERP), EA frameworks
+and methodologies had a stronger impact on organizations. In the last five years, the number of
+publications discussing TOGAF EA frameworks and their organizational adoption, as well as the
+decline in the adoption of other frameworks, has increased [25]. This is attributable to the continuous
+support and improvements received by this framework from the Open Group, which keeps up with
+the current dynamic market and industry changes [29]. In addition, TOGAF is supported by many
+commercial off-the-shelf software such as SAP (Systems, Applications and Products in data processing)
+ERP, which simplifies its implementation for larger organizations [30]. The discussed publications in
+this section focus mostly on the EA frameworks or methodologies and do not seek a rounded approach
+to EA practices [6,30–32].
+2.2. Strategic Practices
+Strategic practices entail any methods, procedures, and tools used to plan and implement
+strategies [33]. These practices can range from making strategic plans, formulating strategic statements,
+monitoring strategic initiatives, and using strategic tools such as strengths, weaknesses, opportunities,
+andthreats(SWOT)analysisandbalancedscorecards[34]. However,theEAliteraturehasdemonstrated
+that a shared strategy and effective governance are the most essential factors in EA framework and
+methodology implementation.
+A strategic statement defines the purpose and future competitive direction of an organization [35].
+An organizational strategy is a generic EA practice [36]. An organizational strategy is finalized through
+the organizational synergy created by EA integration [37]. The purpose of an EA framework is to
+effectively work toward an organizational strategy [32]. Moreover, implementing EA usually starts
+with a strategic statement [38], and the EA framework’s purpose and necessary resources are derived
+from this statement. However, without a shared and communicated strategy, an EA framework can
+have no clear direction [15,39]. As such, a shared strategy is defined here as a purposeful statement
+that must be communicated throughout an organization. It is among the most important EABPs.
+As an EABP, effective governance is the process of potent self-interorganizational management.
+It entails the control of EA frameworks and methodologies as well as major corporate decisions and
+resources. Governance is conducted through a board of directors or a governance board; these bodies
+guide a corporation toward fulfilling its strategies [23,40,41]. EA is a mechanism of governance that
+enables governance boards to view their company’s key as-is performance indicators and resource
+deployment in detail, thereby allowing governance board members to determine whether the firm
+is working toward its to-be state [2]. Since EA enables holistic as-is views, governance boards can
+effectively formulate policies and regulations in accordance with organizational requirements using
+EA. Furthermore, EA empowers adopted standards and polices throughout an organization via
+structuring and sharing documents with an online repository. By referring to EA-based as-is views,
+governance boards can monitor the enforcement of policies and regulations supporting the governance
+process [42–44].
+EA can affect how a strategy is formulated, analyzed, and executed within an organization [39].
+Moreover, the EA framework can shape organizations’ collective thinking, thus affecting how
+strategy is created. The EA methodology creates the backbone of organizational governance that
+enables systemized analysis and execution of strategic goals [32,37,39]. A recent study discusses the
+development in large organizational governance by involving IT as a component requiring its own
+
+--- PAGE 5 ---
+Information 2019, 10, 293 5 of 26
+strategy [27]. In the study, an increasing need for large organizations to have their own core traditional
+strategy that is supported by an IT strategy is observed. EA comes into the picture here, as the
+authors discuss [27], by supporting organizations to govern their IT by traditional and IT strategies. A
+gap exists in the EA literature because strategy and governance are usually considered individually,
+without a deeper understanding of other related EA practices [9,32,37,39,45]. A growing trend in the
+EA literature is the discussion on the usage of strategic and governance practices such as strategic
+auditing, SWOT analysis, balanced score cards, and competitive advantage [13,39]. This shows that
+EA research is streamlining from being a computer and information systems discussion-engrossed
+discipline to only a more organizational and strategy-based approach [45]. All of these business tools
+were suggested in conjunction with an EA framework for planning as well as an EA methodology as
+an arm for the governance and implementation of strategic goals [13,23]. The author [6] discusses that
+a strategy can be integrated into an organization’s planning via an EA framework and applied through
+information systems and business processes.
+2.3. Business Activities
+Business functions, operations, procedures, and activities that support the achievement of core
+organizational goals are called business activities [46]. Business activities include service provision,
+product development, and/or trade [47]. These business activities can be governed and managed
+through an EA. The literature defines two essential business activities for the EA to function adequately:
+business processes and architectural modeling.
+Business processes are the key organizational activities that are corroborated by, integrated with,
+and directed toward an enterprise’s strategy. Business processes and EA enhance one another [8,48,49],
+andbusinessprocessescanprovideorganizationalcross-sectionalintegrationthatenhancesinformation
+interoperabilityasrequiredbyEAdocumentation[50,51]. AstudysuggeststhatoneofEA’smajorgoals
+is to integrate and standardize business processes within an organization [52]. EA’s as-is views support
+improved business processes by identifying bottlenecks and duplicate processes, which can help
+reduce performance issues and financial waste [3,52]. EA frameworks also provide the organizational
+blueprint needed to maintain and control business processes according to strategic needs [13,50,53].
+Moreover, EA can provide better IT and strategic alignment at the operational level by prioritizing the
+use of key resources [13].
+Another critical business activity to be conducted throughout an organization is modeling.
+Architectural modeling is a significant EABP that depicts cross-sectional representations of an
+organization [25]. Multiple tools are usually used for architectural modeling, including the unified
+modeling language (UML) 2.0, integrated definition (IDEF), Microsoft Visio, business process
+management notation (BPMN) 2.0, ArchiMate, and organizational information charts or graphical
+representations of the EA framework [26,54,55]. Through the lens of EA, architectural modeling
+provides viewpoints for strategic IT alignment, thereby steering an organization toward its to-be state
+while reducing IT costs [56]. Using dashboards, these architectural models provide real-time insights
+into an organization’s leadership and governance [51,57,58].
+The integration of EA, business processes, and/or architectural modeling is an outlook that has
+received only little attention in EA research [25,52]. A recent review [52] of EA and BPM integration
+studies found that the literature still lacks a perspective that combines these practices. This study
+seeks to fill this gap by creating an EABP matrix and analyzing case studies that combine EA, BPM,
+architectural modeling, and other related practices. Löhe and Legner [51] suggest that BPM models
+can be implanted into EA to create better documentation for decision-makers only using horizontal
+architectural modeling tools such as architecture of integrated information systems (ARIS). Their study
+focused on the documentation of BPM models and EA artifacts without considering other related
+EABPs [51]. The advancement in horizontal organizational technologies using architectural modeling
+(such as ARIS and ArchiMate) enabled stronger organizational mappings [26,59]. Large organizations
+have additional need for architectural modeling to be able to view and control various complexities
+
+--- PAGE 6 ---
+Information 2019, 10, 293 6 of 26
+of processes [3,11]. Yet, architectural modeling using tools, such as ArchiMate, would be misguided
+without the structure of an EA and organizational direction guided by a strategy [45,60].
+2.4. Information Systems
+An information system is “an organized collection of IT, data and information, processes, and
+people” [61] (p. 2). EA requires information systems, particularly documentation and resource usage
+data. The EA literature analysis has revealed that cloud repositories and resource tracking are the two
+critical functions of information systems.
+Large organizations often face information overload that can be rectified by knowledge or resource
+centersusingacentralizedcloudrepository[62]. Thisisparticularlytrueforlargeorganizationswherein
+information and documentation are in greater demand. Thus, using an online central data warehouse
+or cloud repository to store and share documentation across different divisions is necessary for larger
+organizations. An online repository can share documentation (including standards and policies),
+strengthen collaboration, enable the visualization of information, and enrich data analysis [62,63].
+As an EABP, cloud repository documentation (artifacts) is organized based on EA frameworks [64].
+Cataloging EA artifacts depends on the given EA framework, which acts as a schema to classify
+documents and information to simplify retrieval [51]. Cloud repositories must be continuously
+maintained to keep EA artifacts and related information updated, and cloud updates are necessary to
+meet both current and future business needs [9,23].
+Resource tracking is one of the most critically required technological competencies in larger
+organizations. It is defined as the use of information systems (e.g., ERP) for the effective employment
+of resources and competencies [65–67]. As an EABP, resource tracking is required to prioritize resource
+allocation according to a strategic EA goal. In addition, resource tracking is needed to foresee EA
+implementation within different organizational initiatives and projects [68]. An EA sets the rules and
+standards for resource tracking and use within an organization; this can reduce expenditures and
+avoid wasted efforts [69]. EA frameworks such as Gartner, TOGAF, and FEA have introduced the
+resource planning and tracking methods needed for organizational transformation [59,70].
+Various tools and techniques have been recently discussed in EA literature for the documentation
+of EA artifacts and resource tracking. These include horizontal EA documentation and resource
+tracking information systems such as ERP (e.g., SAP) and advanced horizontal modeling tools (e.g.,
+ArchiMate and ARIS) [56,59,65–67]. A semi-automated documentation process using a business
+process management system (BPMS) has been suggested by Farwick et al. [71]. In their study, they
+created a model wherein a BPMS surveys the processes using predefined criteria and then aggregates
+the documentation and key performance indicators (KPIs) to be presented on the dashboards for
+decision-makers. Regardless of the different advancements of documentation technologies and
+resource tracking tools, Banaeianjahromi and Smolander [72] have discussed that the commitment of
+top management toward EA documentation processes is a key factor for the continuous successful and
+beneficial utilization of the EA repository and resource tracking. However, neither Banaeianjahromi
+and Smolander [72] nor other studies in this theme [56,59,71] discuss the role of strategy or governance
+for effective resource and documentation utilization.
+Table 1 presents distinct EABP categories based on the organizational themes described in the EA
+literature. The following section describes the research methodology.
+
+--- PAGE 7 ---
+Information 2019, 10, 293 7 of 26
+Table 1. Critical enterprise architecture best practices (EABPs) found in the literature.
+Theme Practice Supporting Reference
+1. Enterprise Architecture (EA)
+-Adopting an EA framework: using an EA framework to
+guide the organization’s planning and operations.
+[14,15,19,25,26]
+-Using an EA methodology: documenting and
+implementing an EA framework.
+[20–24]
+2. Strategic Practices
+-Employing a shared strategy: strategic statements,
+goals, and practices used to guide the EA, leaders, and
+employees of the organization towards a
+specific direction.
+[6,32,36–39,45]
+-Effective governance: using EA to utilize resources and
+the workforce towards achieving the organization’s
+strategies and goals.
+[2,27,43,44]
+3. Business Activities
+-Implementing business processes: integrating and
+directing key business processes using EA framework.
+[13,48–51]
+-Architectural modeling: using EA framework to model
+horizontal representations of the organization.
+[25,54,56,58,60]
+4. Information Systems
+-Documenting material using cloud repositories: using a
+centralized online repository that is organized based on
+an EA framework to store and share documentation and
+key information.
+[9,23,63,64,72]
+-Using technological competencies to track and utilize
+resources: adopting horizontal information systems to
+optimize the usage of organizational resources in order
+to reach predefined EA strategic goals.
+[56,59,68,70]
+3. Methodology
+The research methodology was conducted in two phases. Phase 1 entailed the testing of the EABP
+matrix and exploration of the practices within large organizations. The EABP matrix is grounded on
+EA literature, which highlights eight practices; these practices were weighted (Appendix B) and each
+organization was evaluated based on these weights. In phase 2, the organizations most capable of
+implementing EABPs were considered for a multi-case study analysis. This analysis allowed a detailed
+investigation of established EABPs in one of the largest and most important corporations in the region.
+Figure 1 outlines the research methodology.
+Information 2019, 10, x FOR PEER REVIEW 7 of 28
+- Using technological competencies to track and utilize
+resources: adopting horizontal information systems to optimize
+the usage of organizational resources in order to reach
+predefined EA strategic goals.
+[56,59,68,70]
+3. Methodology
+The research methodology was conducted in two phases. Phase 1 entailed the testing of the
+EABP matrix and exploration of the practices within large organizations. The EABP matrix is
+grounded on EA literature, which highlights eight practices; these practices were weighted
+(Appendix B) and each organization was evaluated based on these weights. In phase 2, the
+organizations most capable of implementing EABPs were considered for a multi-case study analysis.
+This analysis allowed a detailed investigation of established EABPs in one of the largest and most
+important corporations in the region. Figure 1 outlines the research methodology.
+Figure 1. Outline of the research methodology.
+3.1. Phase 1: Testing of EABP Matrix
+Forbes lists the top 100 largest publicly traded corporations in different countries by assessing
+them based on profits, assets, annual revenue, and market value [73]. To enable adequate sampling
+in this study, the Forbes’ list of the top 100 largest companies in a country was acquired. The country
+and organization names are kept confidential for the sake of privacy of the examined organizations.
+Since this study focuses on large organizations, the largest corporations on the list were first
+considered for sampling. These organizations were contacted through their shared email or phone
+number on their websites. Those who did not respond or were not cooperative were excluded from
+Figure 1. Outline of the research methodology.
+
+--- PAGE 8 ---
+Information 2019, 10, 293 8 of 26
+3.1. Phase 1: Testing of EABP Matrix
+Forbes lists the top 100 largest publicly traded corporations in different countries by assessing
+them based on profits, assets, annual revenue, and market value [73]. To enable adequate sampling in
+this study, the Forbes’ list of the top 100 largest companies in a country was acquired. The country and
+organization names are kept confidential for the sake of privacy of the examined organizations. Since
+this study focuses on large organizations, the largest corporations on the list were first considered
+for sampling. These organizations were contacted through their shared email or phone number on
+their websites. Those who did not respond or were not cooperative were excluded from the sample.
+The final sample contained 17 organizations from 12 different industries; this satisfies the criteria
+of the convenient sampling technique [74]. Snowball sampling is a technique that can pinpoint
+information-rich consultants within organizations. In some cases, informants within one organization
+would lead to other key participants in other organizations. Thus, snowball sampling was deemed a
+suitable sampling method for this paper [75].
+Table 2 presents the 17 organizations’ industries and approximate number of employees. Some
+organizations specialized in several fields, including education, technology, health, and finance.
+Conglomerate companies are those with various lines of businesses in diverse fields (e.g., technology
+and finance) or those with different production lines. All the organizations had over 500 employees,
+which was a criterion used to confirm the size of the organization [76].
+Table 2. Organizational profiles.
+Organization Field Approximate Number of Employees Interviewees
+Org 1 Conglomerate 66,000 I14, I15
+Org 2 Telecommunication 18,000 I2, I3
+Org 3 Automobile 5000 I4
+Org 4 Food sector 32,000 I5, I13
+Org 5 Technology 2000 I6
+Org 6 Conglomerate 44,000 I7, I8
+Org 7 Financial services 3000 I9
+Org 8 Consultancy 1800 I10
+Org 9 Health 5000 I11
+Org 10 Education 7000 I1
+Org 11 Conglomerate 36,000 I12
+Org 12 Health 6000 I16
+Org 13 Conglomerate 8000 I17
+Org 14 Telecommunications 4000 I18
+Org 15 Transportation 2000 I19
+Org 16 Infrastructure industry 2500 I20
+Org 17 Education and consultancy 800 I21
+A total of 21 semi-structured interviews were conducted for the 17 organizations. Interviews were
+conducted with CEOs (Chief Executive Officer), CIOs (Chief Information Officer), IT managers, and
+senior project managers. Only those informants having horizontal knowledge of the organization and
+detailed knowledge of their organization’s functions in terms of EA frameworks and methodologies,
+strategic practices, internal business activities, and horizontal information systems were selected. Three
+approaches were employed to find out whether the informant possessed the relevant knowledge in the
+key research areas: snowball sampling (asking current participants about future subjects and their
+knowledge), reading about their position in the shared organization documents or professional social
+media (e.g., Linkedin), and asking them directly about their knowledge in these areas [75,77,78]. For the
+proper evaluation of horizontal EABPs, the largest firms in the sample—Organization (Org) 1, 2, 4, and
+11—required two interviews, whereas the other firms required only one interview. Subsequent to the
+interviews, shared and online organizational documentation for each of the contacted corporations
+was used as secondary data to verify the information. Published reports found on the internet and
+
+--- PAGE 9 ---
+Information 2019, 10, 293 9 of 26
+news articles about the companies were also useful in confirming the information obtained from
+the interviews.
+Thus, the interviewees were asked about EABP details as they were conceptually discussed in
+the EA literature. The interviews sought to evaluate EABPs within all 17 organizations using the
+evaluation matrix in Appendix B; therefore, the questions generally pertained to the companies’ current
+EABPs. The interviewer asked details about each EABP to assess the effectiveness of its implementation.
+First, interviewees were asked about their company’s typical practices, e.g., “Does your company
+have a strategy?” Next, they were asked for details regarding EABPs such as “Has the strategy been
+announced?” If the interviewee answered “no” to the second question, EABP implementation was
+considered limited compared with the cases outlined in the literature. However, if an interviewee
+replied “no” to both questions, then it was determined that their organization employed no EABPs.
+Interviewees were also asked to explain more about their company’s EABP usage; for instance, an
+interviewee would be asked “How is the strategy communicated to employees across the whole
+organization?” A senior project manager from Org 12 stated, “The strategy is announced on our
+website; employees receive information about the strategy in their email and we discuss the strategy
+with our employees in meetings.” The purpose of such discussions was to evaluate the efficacy of
+EABP implementation within all sampled organizations. A few interviewees were unsure of certain
+EABP information, such as their firm’s resource tracking practices. However, this information was
+found in the reports on the organizations’ website or in published articles about the organization.
+The same procedure was followed for all EABPs in the 17 companies. All the data were collected
+through electronic notes because many interviewees declined recorded interviews.
+The electronic notes from 21 interviews were thoroughly reviewed, analyzed, and summarized in
+a tabular form (see Table 6). This analysis aimed to evaluate each organization individually using the
+criteria in Appendix B. The outcome of these evaluations is presented in Table 4.
+To understand the companies’ EABP capabilities compared with the cases found in the literature,
+the interviewers’ notes were thoroughly analyzed for details regarding each EABP. Documents were
+also used to verify information about each EABP when needed. The results are detailed in Section 4.
+3.2. Phase 2: Multi-Case Study (Org 1 and 2)
+A case study methodology enables the examination of a situation in its organic context [79].
+Multi-case studies allow a deeper and more comprehensive insight into the phenomena being
+studied [80]. Thus, a multi-case study approach can broaden the perspectives on each case and compare
+the similarities and differences between organizations [81].
+In phase 2, six semi-structured interviews were conducted for Org 1 and 2, with each interview
+lasting about 1.5 h. The interviews were recorded and then transcribed. Questions were developed
+to collect information regarding the two companies’ EABPs and how they were implemented.
+The literature review assisted in developing open-ended questions, which motivated interviewees
+to describe EABPs and their applications within their organizational settings. To ensure that the
+questions in the interview protocol covered all of the EABPs, they were created based on the definition
+of EABPs derived from the literature. Thus, two questions were sometimes needed to cover all the
+EABPs. For example, two points were covered by the questions in Appendix A: “Which EA framework
+is used the organization?” and “How is it implemented?” These include identifying the used EA
+and examining the additional details of its implementation in the organization. All of the interview
+questions were influenced by the following studies: [9,13,14,21,37,82]. The interviews were based on a
+protocol (see Appendix A); thus, the interviewer followed a semi-structured approach and pre-selected
+questions were used as guidelines. This allowed participants to elaborate on topics they knew more
+about and removed restrictions during the interview [83]. In addition to interviews, many documents
+were used to triangulate and verify the information provided by the interviewees; this enabled more
+rigorous data collection [84]. Electronic notes were used as most interviewees refused to record the
+interviews. The data in the notes were coded to labels to condense the large volume of text in the data
+
+--- PAGE 10 ---
+Information 2019, 10, 293 10 of 26
+and to find details about the EABPs within both organizations. The coding was guided by the eight
+EABP definitions synthesized from the literature in Section 2. The data was scanned for practices that
+are related to EABP definitions. These practices were highlighted and grouped into labels. The labels
+were then grouped according to their corresponding EABPs and used to organize thought and logic
+while discussing the case studies in phase 2. The labels were also useful to determine the location of
+the related quotes while writing the findings of the case study [81,85].
+Table 3 shows the interviewees’ managerial positions, which pertain to EA implementation and
+maintenance. The table also indicates the experience of each interviewee, including their specific
+experienceintechnologyandEA.TheinterviewspresentedinTable3areinadditiontothoseconducted
+in phase 1 (Table 2) for Org 1 and 2. Consequently, different participants were interviewed to acquire
+further information about EABPs in Org 1 and 2.
+Table 3. Phase 2 participants.
+Participants Managerial Position Experience (years) Organization
+Interviewee 1 General Manager of Computer Center 20 Org 1
+Interviewee 2 Senior Enterprise Architect 17 Org 1
+Interviewee 3 Strategic Transformation Officer 11 Org 1
+Interviewee 4 ICT (Information Communication Technology) Solution Expert 15 Org 2
+Interviewee 5 Enterprise Architect 7 Org 2
+Interviewee 6 Enterprise Solution Architect 8 Org 2
+Documents were collected internally from organizations’ corresponding departments, online from
+their official websites, or from other websites. Table 4 describes the 18 collected documents and the
+organizations they are related to.
+Table 4. Documents collected in phase 2.
+Document Description Organization
+D1
+The human resources (HR) enterprise architect role document outlines
+what an EA framework is in the organization and how it should be
+implemented. The role of the enterprise architect is also described.
+Org 1
+D2
+Report on the importance of enterprise architecture (EA) in achieving
+and formulating Org 1’s strategy.
+Org 1
+D3
+Internal article discussing Org 1’s success in implementing EA and
+the awards received based on that.
+Org 1
+D4 Knowledge sharing report on EA implementation experiences. Org 1
+D5
+Presentation slides describing the challenges Org 1 faced and how EA
+can assist in overcoming these challenges.
+Org 1
+D6
+Report detailing organizational challenges and suggested solutions
+based on EA and enterprise resource planning (ERP).
+Org 1
+D7
+Annual reports detailing the role of information technology (IT) and
+EA in strategic fulfillment, as well as governance and its relationship
+with EA.
+Org 1
+D8
+Strategic planning document containing details on EA
+implementation and maintenance.
+Org 1
+D9 Technical document reporting SAP and EA use. Org 1
+D10
+Document providing information on service-oriented architecture
+(SOA), the open group architecture framework (TOGAF), and SAP.
+Org 1
+D11
+Job description of the enterprise architect role and the ICT skills
+required for it. It also describes the organization’s current EA status
+and what the job will require.
+Org 2
+
+--- PAGE 11 ---
+Information 2019, 10, 293 11 of 26
+Table 4. Cont.
+Document Description Organization
+D12
+Internal report discussing the organization’s financial issues and
+growth challenges and how EA can assist in solving these problems.
+Org 2
+D13
+Report discussing the implementation of business process
+management (BPM), EA, and related technologies.
+Org 2
+D14
+Government report specifying the Org 2’s success in implementing
+EA and state-of-the-art technologies.
+Org 2
+D15
+Report on the EA documentation methodologies within
+the organization.
+Org 2
+D16 ICT internal report on Org 2’s technological advances and EA use. Org 2
+D17
+Technical document specifying the integration of customer
+relationship management (CRM) with TOGAF and BPM software
+Org 2
+D18
+Internal report on best practices, such as information technology
+infrastructure library (ITIL), project management, and PRojects IN
+Controlled Environments (PRINCE2), and their roles within the
+enterprise architecture.
+Org 2
+4. Findings
+4.1. Phase 1
+The EABP capability matrices in Appendix B and Table 5 were developed and synthesized
+following the reviewed EA literature. This study created themes from the literature and EABP criteria
+to measure the organizations’ capabilities by following an approach similar to the questionnaire design
+in organizational capability or maturity matrix development studies found in information systems
+research (see [86,87]). First, the assessment of EABPs is conducted via the EABP evaluation matrix (see
+Appendix B). In each of the 17 organizations, interviewees were asked about the practices that existed
+in their organization according to the evaluation criteria of the matrix in Appendix B. Literal exact
+wording for each criterion was not required as every organization was different in their adoption of the
+EABPs; thus, the questions differed according to the situation. The interviews however assured that all
+of the criteria were covered. Each score was recorded in the EABP capability outcome matrix in Table 5.
+Based on the literature [13,14,21,25,37], the following EABPs counted for four evaluation points
+because they were identified as the most important EABPs: announced strategy, effective governance,
+EA methodology, and EA framework [14,21,37,82]. The remaining EABPs were allocated only two
+evaluation points because they were considered essential but not as imperative as the previous four
+EABPs [13,25,88]. Four levels and their corresponding scores (see the “Capability” column in the table
+below) were identified in the matrix: low = 1–6, average = 7–12, high = 13–18, and capable = 19–24.
+These four scoring levels were adapted from previously published articles [85,89,90].
+The mean score for EABP capability between all organizations was 13.12, indicating that most
+large organizations in the sample have a high chance of successfully employing EABPs. This is a
+sensible outcome because most large organizations are in a greater need of practices that can increase
+the cohesion of strategy, business, and technology. However, only 1 of the 17 organizations (Org 1)
+fully adopted an EA framework and methodology, and only two organizations (Org 2 and 11) applied
+them in limited vertical parts of the organization. Organizations with a high capacity of using EABPs
+are more likely to adopt an EA framework and methodology because they already employ the most
+critical EABPs.
+
+--- PAGE 12 ---
+Information 2019, 10, 293 12 of 26
+Table 5. The EABP capability matrix outcomes.
+Org EA Method (4) EA Framework (4) Strategy (4) Governance (4) Business Processes (2) Modeling (2) Cloud Repository (2) Resources Tracking (2) Score (24) Capability
+1 4 4 4 4 2 2 2 2 24 Capable
+2 2 2 4 4 2 2 2 2 20 Capable
+3 0 0 0 0 0 2 2 1 5 Low
+4 0 0 4 4 2 0 2 2 14 High
+5 0 0 4 4 2 2 2 2 16 High
+6 2 2 2 4 2 2 2 2 18 High
+7 0 0 4 4 0 2 2 2 14 High
+8 0 0 4 0 2 2 2 2 12 Average
+9 0 0 0 0 1 0 0 2 3 Low
+10 0 0 4 4 2 2 2 2 16 High
+11 2 4 2 2 2 2 2 2 18 High
+12 0 0 0 4 0 2 0 2 8 Low
+13 0 0 0 4 1 1 2 2 10 Average
+14 0 0 4 4 2 1 0 2 13 High
+15 0 0 2 4 2 2 0 1 11 Average
+16 0 0 2 4 2 1 2 2 13 High
+17 0 0 4 4 0 2 2 0 12 Average
+
+--- PAGE 13 ---
+Information 2019, 10, 293 13 of 26
+Organizations that were evaluated as “high” in the EABP matrix are as follows: 4, 5, 6, 7, 10, 11,
+14, and 16. These organizations had better levels of EABP implementation than those with “average”
+and “low” scores in the EABP matrix. The interview transcripts showed that the organizations with
+“high” scores had a vibrant strategic direction, had effective governance boards, and implemented an
+advanced horizontal information system. The strategic direction for these organizations was clear,
+and according to the interviewees (I1, I5, I6, I7, I8, I13, II8, and I17), the employees were aware
+of organizational strategic plans and the different objectives that can contribute to fulfilling them.
+This finding is consistent with the findings of [36–38,91] because a vibrant and well-communicated
+strategic direction can lead to better levels of focused change or a higher level of EABP implementation.
+Governance boards in these organizations focused on fulfilling organizational strategies and were
+data-driven. According to the interviewees, the governance boards facilitated EABP implementation by
+removing the barriers obstructing its adoption (I1, I5, I7, I8, I13, and I12). For instance, the governance
+boards of Org 4, 6, and 10 conducted a thorough assessment of the policies and technologies that can
+hinder the fulfillment of their strategy and implementation of business process management. A key
+finding of phase 1 is that all the organizations scoring “high” in the EABP matrix implemented a
+horizontal information system that assisted in the incorporation of EABPs within the organizations (I1,
+I13, I6, I7, I13, II8, and I17). For example, Org 6 and 11 implemented the SAP ERP information system,
+which assisted in resource and employee tracking and enabled better documentation throughout
+the organization. Both these organizations employed an EA framework (TOGAF) within the SAP
+ERP system for a few departments only (vertically), which in this case lowered the impact of the EA
+framework to only a limited number of departments. This finding is consistent with the findings
+of [9,23,63,64,88] as a successful implementation of horizontal information systems leading to higher
+levels of EABP implementation. Overall, these organizations adopted effective strategic practices and
+had advanced technological capabilities but lacked the usage of an EA framework and methodology.
+Four organizations were evaluated as “average” in the EABP matrix: Org 8, 13, 15, and 17. These
+organizations adopted adequate levels of strategic practices and high levels of architectural modeling.
+The strategic direction of Org 8 and 17 was clear and well-communicated, which is considered an
+important EABP. Moreover, the governance boards managed the transition of their organizations
+toward achieving their strategy by providing the necessary resources (I10 and I21). Although the
+governance board of Org 15 was keen to fulfill their strategic objectives, the strategic statement and
+goals were not adequately communicated through different employee levels (I19). Org 13 adopted
+operational governance of resource policies but lacked strategic direction. Thus, Org 13 did not
+effectively adopt EABPs, leading to non-unified and scattered operational efforts. This finding is
+similar to previous research [38,82,91] as the lack of strategic practices can impact the successful
+implementation of EABPs.
+The organizations evaluated as “low” on the EABP matrix were Org 3, 9, and 10. These
+organizations lacked strategic direction, organized business processes, and technological capabilities.
+In both Org 9 and 12, in providing health services to customers, it was noticed that the senior
+management were specialized in medical fields and lacked organizational technology and business
+training. This is a common practice in some health service organizations [92–94]. Since the senior
+management of both organizations were responsible for creating strategic direction and governance,
+EABP implementation in both organizations was affected (I11 and I16). Org 3 adopted fair information
+systems EABPs, which supported their sales and services. Nevertheless, it lacked many EABPs,
+particularly strategic practices and business activities (I4). Table 6 provides a summary of the eight
+EABPs for the organizations evaluated as “high,” “average,” and “low” in the EABP matrix. The two
+“Capable” organizations are discussed with additional details in the following section and are therefore
+not included in this table.
+
+--- PAGE 14 ---
+Information 2019, 10, 293 14 of 26
+Table 6. Summary of the used EABPs for the organizations evaluated as “high,” “average,” and “low”.
+EABP
+High Average Low
+Org: 4, 5, 6, 7, 10, 11, 14, 16
+Interviewees: I5, I13, I6, I7, I8, I9,
+I12, I18, I20
+Org: 8, 13, 15, 17
+Interviewees: I10, I17, I19, I21
+Org: 3, 9, 12
+Interviewees: I4, I11, I16
+1. Adopting an EA framework
+The adoption of an EA framework
+horizontally is lacking, except the
+vertical implementation of
+TOGAF framework.
+No EA architecture was adopted
+in any of these organizations.
+No EA architecture was adopted
+in any of these organizations.
+2. Using an EA methodology
+EA methodology was
+implemented only vertically
+within a limited number
+of departments.
+No EA methodology practices
+were implemented in
+these organizations.
+No EA methodology practices
+were implemented in
+these organizations.
+3. Employing a shared
+strategy
+These organizations implemented
+many strategic EABPs, including a
+shared strategic statement and the
+fulfillment of a strategy through
+the implementation of balance
+score cards, usage of strengths,
+weaknesses, opportunities, and
+threats (SWOT) analysis, and
+detailed and shared strategic goals
+and objectives.
+Strategic direction and statement
+were evident in these
+organizations. The strategic
+statement was shared publicly
+through their website or internally
+through the intranet and external
+systems. However, some
+organizations lacked other means
+of communication for these
+strategic directions, such as
+detailed goals or the
+implementation of balance
+score cards.
+All of these organizations lacked
+the usage of a clear strategic
+direction, goals, or objectives.
+4. Effective governance
+Governance boards sought to
+fulfill the strategic direction
+through the following:
+1. Support: provision of the
+needed resources and formulation
+of enabling regulations
+and policies.
+2. Monitoring of performance:
+most of these organizations used
+key performance indicators (KPIs)
+mapped with the strategic
+objectives to track the progress
+toward the fulfillment of
+their strategies.
+Most of these organizations had
+governance boards that supported
+the achievement of organizational
+goals through procuring the
+needed resources and monitoring
+organizational performance in
+achieving these goals.
+Governance board and
+governance practices only existed
+in one organization.
+5. Implementing business
+processes
+Structured business processes
+existed in most of these
+organizations. These business
+processes were supported by a
+horizontal information system.
+The information system provided
+modeling and task distribution for
+the process owners and
+processes personnel.
+Business processes were adopted
+as a form of structure for these
+corporations. Overall business
+process models and detailed
+specific models existed if a
+business process was adopted.
+Some of these organizations also
+provided business processes
+related to consultancy services to
+other organizations.
+The organizations were lacking in
+terms of the adoption and
+awareness of business process.
+Only one organization adopted
+business processes at the
+operational levels only without an
+adequate awareness and support
+from senior management.
+6. Architectural modeling
+Architecture modeling existed in
+some organizations. The practices
+ranged from using dashboards for
+representing models of the
+organizational processes and
+departments to using modeling
+tools such as unified modeling
+language (UML) and business
+process management notation
+(BPMN) 2.0. Performance of
+different processes and
+departments were tracked using
+visual representations.
+Most of these organizations
+adopted architectural modeling
+tools and techniques such as
+integrated definition (IDEF),
+BPMN, and UML 2.0. Overall,
+architectural modeling was used
+in these organizations to follow up
+with changes within
+the organizations.
+Modeling was used in only two of
+these organizations. The
+functionality of architectural
+modeling was similar to that in
+“high” and “average”
+organizations. One organization
+did not adopt any form of
+architectural modeling.
+
+--- PAGE 15 ---
+Information 2019, 10, 293 15 of 26
+Table 6. Cont.
+EABP
+High Average Low
+Org: 4, 5, 6, 7, 10, 11, 14, 16
+Interviewees: I5, I13, I6, I7, I8, I9,
+I12, I18, I20
+Org: 8, 13, 15, 17
+Interviewees: I10, I17, I19, I21
+Org: 3, 9, 12
+Interviewees: I4, I11, I16
+7. Documenting material
+using cloud repositories
+Some of these organizations used
+cloud repositories to share
+documentation, policies, and
+regulations. These organizations
+adopted an “organizational chat”
+model to organize documentation.
+All of these organizations stored
+their documentation on the cloud
+to be shared across geographically
+distant branches and departments.
+Only one organization adopted
+the usage of cloud repositories,
+which was useful in delivering the
+sales and marketing statuses for
+this automobile organization.
+8. Using technological
+competencies to track and
+utilize resources
+Tracking the resources and
+employees using ERPs and
+horizontal information systems
+was necessary for these
+organizations. Resource tracking
+was conducted visually using
+dashboards or within drill-in
+detailed charts and sheets. Most
+of these organizations used
+commercial off-the-shelf ERP
+systems such as SAP or
+Microsoft Dynamics.
+Two organizations used
+well-known ERP systems to track
+resources with the strategic
+prioritization of resource usage,
+whereas one organization used
+their own simple in-house system
+to track resources. Org 15 used
+their system to only book and
+track the usage of different
+resources without proper
+strategic prioritization.
+Most of these organizations
+adopted resource allocation,
+tracking, and prioritization based
+on customer needs using different
+off-the-shelf software and ERPs.
+To better understand current EABPs in large corporations, phase 2 focused on the “capable”
+organizations evaluated in Table 5 (Org 1 and 2).
+4.2. Phase 2: Multi-Case Studies
+4.2.1. Case 1 (Org 1)
+Org 1 is the largest corporation both in the sample and in the continent. It boasts 66,000 employees
+and is an international leader in providing chemical and energy products as well as technology
+solutions. The corporation originally focused exclusively on chemicals and energy, but its strong
+investment in technological research and development enabled it to provide technology solutions to
+other public and private enterprises.
+Org 1 faced many difficulties in managing its documentation and resources. It also struggled to
+achieve its strategies and meet its goals. Interviewee 1 said “There was no public model for classifying
+electronic records and every department did their own documentation procedure as an ad-hoc activity.
+This has created many inconsistencies and difficulties in sharing and archiving documents.”
+Filesaboutdocumentation,software,hardware,andconfigurationmanagementwereunstructured
+and non-standardized, thereby creating many operational discrepancies between departments.
+Although physical records were structured, formal electronic documents were not uniformly organized.
+Moreover, departments operated as independent silos with many communication problems and
+had trouble completing interdepartmental tasks. Information about such tasks or about corporate
+governance lacked accuracy, integrity, and quality. Moreover, sometimes the information was
+duplicated because different departments worked on the same or similar tasks. Information re-creation
+and loss occurred throughout the corporation, making it difficult to manage and control departments.
+Interviewee 2: “Resource apportionment was conducted on an on-demand basis, which did not
+allow enterprise-wide effectiveness and resource utilization.”
+Since there was no unified configuration management or resource standardization, the software
+and hardware resource development, procurement, support, and training costs were high. Different
+departments developed or obtained resources abruptly when the need arose, and each one applied
+a different setting to their software and hardware, thus acting independently of the firm’s overall
+requirements, goals, or strategies.
+Horizontal and vertical policies, standards, or guidelines were complex and not standardized;
+inotherwords,thecorporationlackedglobal(horizontal)securitypoliciesandstandards. Consequently,
+the corporation was vulnerable to cyberattacks, which was reported in the media.
+
+--- PAGE 16 ---
+Information 2019, 10, 293 16 of 26
+To handle many of the previously discussed issues, Org 1’s governance board decided that an EA
+was required. After researching the matter, the company’s computer center implemented the SAP
+EA framework (SAPEAF). The firm had already horizontally implemented SAP as an ERP system to
+link different departments within the corporation, but several resource alignment and documentation
+structuring issues were still present. SAPEAF was thus a reasonable EA framework choice because it
+couldintegratesystemsoutsideoftheSAPenvironmentunderawell-establishedarchitecture. SAPEAF
+is a commercial extension of the TOGAF framework that also supports transitioning to service-oriented
+architecture (SOA) if required [95].
+Many organizational entities within Org 1 implemented SAPEAF, but the firm’s computer
+center had the most responsibility in doing so. The computer center received an international
+award in EA excellence in 2016 for its successful EA implementation. According to Interviewee 1,
+“The implementation of SAPEAF has enabled [Org 1] to go through a smoother digital transformation,
+which would have been a more lengthy and complex procedure for such a large body.”
+Org 1 divides its operations into “upstream,” which includes development and production
+procedures, and “downstream,” which includes distribution and merchandizing processes.
+After SAPEAF implementation, the turnaround time decreased for upstream partners who participated
+in the development and production supply chain. The quality of the firm’s business services increased
+in the upstream, and according to Interviewee 2, more than 500 processes were modeled using
+ARIS and SAPEAF. The ARIS approach is used for holistic enterprise business process modeling,
+governance, and administration [96,97]. The computer center incorporated ARIS into SAPEAF to
+facilitate the modeling and governance of business processes. Applying EA enriched both upstream
+and downstream processes through EA practices, such as enterprise-wide technology standardization,
+enabling reusable services via SOA and software development lifecycle as part of the EA methodology
+planning, and documentation of software development projects. SAPEAF enabled Org 1 to focus its
+business processes and technological initiatives on serving its strategic goals and global organizational
+vision. Org 1 has shared its strategy on their website, and it is also visible through SAPEAF, reminding
+employees about it. The firm focuses on using technology, innovation, and business processes to
+become a global leader in energy and chemical products. Digital transformation is a crucial part of
+this strategy because Org 1 views technology as a catalyst for change and innovation. According to
+Interviewee 2 and the annual review reports, technological alignment with business processes and
+operations has driven Org 1 to achieve its financial and operational goals for 2018. The governance
+board includes more than 12 members with various backgrounds in technology, chemistry, economics,
+and finance. The board’s purpose is to oversee the company’s overall performance and monitor its
+operations. These activities are supported by EA initiatives, which enable the vigorous review of
+operations and open reporting channels. SAPEAF has placed different KPIs into perspective and
+under a common structure where they can be systematically tracked. This enables meaningful and
+structured data analyses in the context of relevant architectures or perspectives, such as production or
+procurement. SAPEAF has also based the firm’s business process architecture on TOGAF and has led
+processes to focus on services and reusability according to SOA. The business process architecture
+was founded on TOGAF, which is used for highlighting key processes, defining best practices, and
+outlining methods of governance and structure for each process [98]. Influenced by SOA, Org 1
+frames key processes as services through SAP NetWeaver after being integrated with ARIS. NetWeaver
+is a platform for integrating data, processes, and other systems within the SAP environment [99].
+Architectural modeling is conducted through ARIS, which sends and receives information to and
+from the SAP ERP software; this enables mining, optimization, and automation of processes. ARIS
+work-handlers are used to distribute tasks to employees, while process models guide work and link
+different departments. For documentation and electronic resource tracking, SAP Ariba is used to
+further enable a company’s digital transformation. Compounded with the SAPEAF architecture,
+documentation was organized into categories according to the TOGAF architecture, as shown in the
+Figure 2 below.
+
+--- PAGE 17 ---
+Information 2019, 10, 293 17 of 26
+conducted through ARIS, which sends and receives information to and from the SAP ERP software;
+this enables mining, optimization, and automation of processes. ARIS work-handlers are used to
+distribute tasks to employees, while process models guide work and link different departments. For
+documentation and electronic resource tracking, SAP Ariba is used to further enable a company’s
+digital transformation. Compounded with the SAPEAF architecture, documentation was organized
+into categories according to the TOGAF architecture, as shown in the Figure 2 below.
+Figure 2. TOGAF framework implemented in Org 1, adapted from [29].
+Supply chains are managed through e-contracts within the SAP Ariba environment, which is a
+form of electronic documentation that sets rules of conduct for Org 1’s partners. Data is shared
+between supply chain partners through the Ariba cloud, described by Interviewee 3 as a “cost-
+efficient trading community”. SAP Ariba is also used for e-sourcing, which is an electronic form of
+tracking resources on the cloud. This has led to better resource allocation, which accords with the EA
+framework, strategic requirements, and the firm’s business needs. The electronic cloud hub within
+the SAP environment has created an effective organizational portfolio management system for
+resource allocation and governance.
+4.2.2. Case 2 (Org 2)
+Although not the largest organization in the sample, Org 2 is a telecommunications company
+focused on adopting state-of-the-art technologies to serve its customers. Similar to Org 1, Org 2 is an
+industry leader in the region; it seeks to provide not only customer-to-business solutions but also
+business-to-business and business-to-government ICT solutions using business intelligence (BI), big
+data, cloud technologies, the Internet of Things, cybersecurity, and other relevant techno-business
+solutions.
+The corporation faced two key issues, one of which was its transition from being a government
+entity to a private sector corporation. Although this transition has been happening for the last 15
+years, the company continually suffered from bureaucracy and legacy systems and infrastructures,
+which slowed business processes and customer request fulfillment. Moreover, its major expansion
+and internationalization into becoming an ICT solution provider for several countries in the region
+Figure 2. TOGAF framework implemented in Org 1, adapted from [29].
+Supply chains are managed through e-contracts within the SAP Ariba environment, which is
+a form of electronic documentation that sets rules of conduct for Org 1’s partners. Data is shared
+between supply chain partners through the Ariba cloud, described by Interviewee 3 as a “cost-efficient
+trading community”. SAP Ariba is also used for e-sourcing, which is an electronic form of tracking
+resources on the cloud. This has led to better resource allocation, which accords with the EA
+framework, strategic requirements, and the firm’s business needs. The electronic cloud hub within the
+SAP environment has created an effective organizational portfolio management system for resource
+allocation and governance.
+4.2.2. Case 2 (Org 2)
+Although not the largest organization in the sample, Org 2 is a telecommunications company
+focused on adopting state-of-the-art technologies to serve its customers. Similar to Org 1, Org 2
+is an industry leader in the region; it seeks to provide not only customer-to-business solutions but
+also business-to-business and business-to-government ICT solutions using business intelligence
+(BI), big data, cloud technologies, the Internet of Things, cybersecurity, and other relevant
+techno-business solutions.
+The corporation faced two key issues, one of which was its transition from being a government
+entity to a private sector corporation. Although this transition has been happening for the last 15 years,
+the company continually suffered from bureaucracy and legacy systems and infrastructures, which
+slowed business processes and customer request fulfillment. Moreover, its major expansion and
+internationalization into becoming an ICT solution provider for several countries in the region created
+many challenges in governing organizational performance and documentation. Intense competition
+also arose for Org 2; many local and international organizations entered the region to provide
+telecommunication, technology, and consultation solutions to customers, businesses, and governments.
+Org 2’s expansion and the rise of its many competitors caused the company financial stress, which
+triggered a need for business optimization and greater strategic focus. However, the corporation
+possessed outdated systems and infrastructures, lacked standardization, had difficulty governing
+operations and resources, and experienced fierce international and national competition, all of which
+led to financial issues. Interviewee 5 stated “The local and international telecommunication market
+is very competitive, which increases the need for our company to grow returns on investment and
+market share.”
+
+--- PAGE 18 ---
+Information 2019, 10, 293 18 of 26
+The privatization, internalization, and robust competition pressured the company to adopt best
+practices that could lead to better governance and optimized operations, documentation, and resources.
+Consequently, the firm’s governance board formulated an EA center of excellence. Other centers of
+excellence, including strategy execution and project management, existed before the EA center of
+excellence. This center decided to adopt TOGAF because it accorded with the corporation requirements.
+TOGAF was incorporated into an in-house software called telecom company enterprise architecture
+(TCEA). This software was integrated with the Siebel customer relationship management (CRM)
+system. Org 2 used Siebel to handle customer requests and increase loyalty management, which is a
+necessity in the firm’s competitive industry. TCEA is used to document and track resources according
+to TOGAF repositories and methodologies. It is also used to ensure that processes and operations are
+strategized and optimized according to a corporation’s goals. Therefore, using Siebel CRM and TCEA
+as an EA governance software aligns with a customer-satisfaction-oriented loyalty strategy and is
+applicable to the EA of an entire corporation.
+As part of their EA methodology, Org 2 has adopted the information technology infrastructure
+library (ITIL), which is linked to TCEA and Siebel. ITIL is a library of best practices used in IT services
+and organizational business requirements alignment. It is used to standardize documentation about
+technology–businessalignmentpractices, services,processes,andprocedureswithinthecompany[100].
+Customer requests, or “incidents” as they are called in Org 2, go through Siebel and get documented in
+the micro-view through ITIL. Next, the requests are placed in a macro perspective through TOGAF
+(or TCEA). Power BI is a Microsoft business analytics tool that creates aggregations, dashboards, and
+visualizations for an organization [101], and this tool receives feeds from Siebel, TCEA, and other
+processes. Its views are created according to TOGAF and the organization’s strategy. Org 2’s centers of
+excellence and EA center handle Power BI; however, the final yearly, monthly, and sometimes daily
+reports and dashboards are also viewed by upper management and the governance board. Interviewee
+6 said “After applying the TOGAF framework via TCEA, we were able to structure our strategy and
+clearly determine responsibilities which fall under these structures. Additionally, TCEA allowed for
+upper management’s higher levels of control over our processes; they are able to shape these processes
+and steer them towards the realization of our goals and strategy.”
+Org 2’s strategy is divided into multiple clusters: (1) digitalization of internal operations
+and higher dependency on data; (2) improving overall performance and efficient resource use;
+(3) providing a leading customer experience; and 4) planning measured service expansion and
+market-penetration—this strategy is highlighted on their website. Their KPIs are also set within the
+TCEA environment and structured according to the strategy cluster. This has enabled top management
+to monitor the outcomes of each strategic goal periodically or, if necessary, in real time. The process
+architecture designed within ARIS classifies processes into three categories: core, management, and
+supporting. ARIS is integrated with TCEA to structure processes according to TOGAF. Moreover,
+information from these processes is retrofitted into their respective locations conferring to the TOGAF
+framework, which is helpful for governance and performance monitoring. Interviewee 4 said “ARIS is
+used in our organization as a business process management system, which conducts itself as an ERP
+system in terms of connecting the enterprise.”
+The firm initially conducts architectural modeling through a piece of software called Bizagi, while
+the storage of process architecture and all mature models is conducted through ARIS. Bizagi is an
+enterprise business process modeling tool with three versions: Modeler, Studio, and Engine [102].
+However, Org 2 relies on Bizagi for BPMN modeling only while ARIS manages the storage of process
+models, development of process applications, monitoring, simulation, automation, and process mining.
+Furthermore, resource allocation and tracking are both conducted through ARIS, which guides the
+strategy and TOGAF framework. The project management office (PMO) conducts resource planning
+and performance tracking using the Power BI, ARIS, and TCEA dashboards. The PMO applies
+the PRojects IN Controlled Environments (PRINCE2) method for project and resource management.
+PRINCE2 is part of TCEA and structures projects for different TOGAF architectures.
+
+--- PAGE 19 ---
+Information 2019, 10, 293 19 of 26
+5. Discussion and Conclusions
+There is a gap in the EA literature identifying the most critical horizontal EABPs for the successful
+implementation of EA. This is of specific importance in large organizations with complex processes
+and difficulties in enacting change. Only two studies, [9] and [23], had a scope close to that of this
+study. However, both only focused on EA methodology practices concerning the documentation of
+an as-is organizational situation. This research has pursued a broader approach by considering the
+horizontal EABPs that the literature has identified as most critical: EA framework, EA methodology,
+shared strategy, effective governance, business processes, architectural modeling, cloud repository, and
+resource tracking. Based on the outcome of this research, it is recommended that large organizations
+adopt these EABPs; doing so would increase strategy, business, and technology alignment and
+eventually lead to EA framework and methodology implementation.
+This research has significantly extended the EA literature. First, it identified the EABPs required
+for large organizations to successfully implement EA. Second, based on the reviewed literature, an
+EABP capability matrix was developed to help determine a firm’s current EA capability status. Third,
+this research has shown in the first phase of the findings that most organizations have high EABP
+capability but do not adopt any known EA frameworks. Finally, a multi-case study (phase 2) approach
+was used to understand how EABPs are implemented within EA-capable organizations. Results
+showed that 2 of the 17 studied organizations (Org 1 and Org 2) were able to successfully implement
+an EA framework and methodology because they were also effective in applying EABPs.
+Unlike Org 1, which focused on supply-chain efficiencies, Org 2 focused more on customer
+intimacy. Accordingto[103],organizationsshouldfocusononeofthreestrategicdirections: operational
+excellence, customer intimacy, or product leadership. Previous analysis demonstrated that Org 1
+focused on production and supply-chain optimization and therefore adopted a strategy of operational
+excellence; meanwhile, Org2focusedmoreonthecustomersandenforcedacustomerintimacystrategy.
+Compared with Org 1, Org 2 lacks greater awareness of EA. Although EA awareness is not
+necessarily widespread throughout Org 1, its employees understand and utilize EA more than Org
+2’s employees. This can be attributed to the recent EA implementation in Org 2 in comparison with
+Org 1, which implemented EA four years before Org 2. It is also noted that Org 2’s employees are
+more aware of EA’s benefits, which stems from upper management. Org 1’s understanding of EA’s
+importance comes from employees specializing in technology, such as those working in the computer
+center. Org 1’s computer center has a centralized and high-level impact on the organization because
+it is a chemicals production company and does not specialize in technology. Org 2 does not have a
+centralized unit implementing EA, but its EA center of excellence and other units, including the project
+management center of excellence, manage EA implementation and governance.
+NotethatbothorganizationsuseTOGAFasthecoreEAonwhichalltheirstrategies,organizational
+structures, and operations rely. Org 2 has a stronger focus on technological standards, such as ITIL
+and PRINCE2. Org 1 uses expensive software like SAP with less in-house development. In contrast,
+Org 2 develops software internally and TOGAF is built into their TCEA software, which is used as a
+repository and performance management tool. Org 2 only uses Siebel as comprehensive CRM software,
+integrating and organizing it based on TOGAF. This approach is more customized to Org 2’s needs
+because their TCEA is developed internally and TOGAF is tailored according to the firm’s business
+requirements. Org 1 uses the built-in features of commercial software for EA.
+It is recommended for large organizations to use the EA framework with customization and link
+it to technology, as the analysis of multi-case studies has shown. This finding is not widely discussed
+in the EA literature because, in reality, the findings show that EA framework implementation is linked
+with software systems. Note that when horizontal systems such as ERP and CRM are integrated with
+EA frameworks, they assist in monitoring the organizational performance and strategic-technology
+alignment. The usage of ERP and CRM did not significantly improve performance, as the case
+studies show. Usage of EA framework and methodology improved the performance of the two large
+organizations in terms of operations, production, and customer service. Technological standards and
+
+--- PAGE 20 ---
+Information 2019, 10, 293 20 of 26
+practices such as ITIL and configuration management enable better unification of EA documentation
+practicesandsoftwaredevelopment,whichisespeciallyimportantinlargeorganizations. Moreover,EA
+methodology provides the model and standardized method of documentation for large organizations.
+Both aspects of EABPs (EA framework and methodology) are not broadly used in large organizations,
+with the only exceptions of the two analyzed organizations. On the contrary, the adoption of a shared
+strategy is found to be one of the most used practices in large organizations. Realization of a strategy
+is conducted through an EA framework, as the phase 2 findings indicate. However, it is noticeable that
+organizations divide and categorize their strategies with a strong focus on technology, which is an
+important component of EA. Adopting an EA framework is recommended because it enables better
+categorization of KPIs and different performance indicators. This categorization also facilitates the
+aggregation of different KPIs, which is necessary for governance within large organizations. Business
+processes, as a model of improvement, management, and control of processes, are not extensively
+adopted in large organizations, as shown by the matrix [104]. However, it is a highly recommended
+practice for large organizations because it assists in the standardization of business activities and
+documentation. Working under an EA framework, these business processes become more purposeful
+and reusable, as indicated by the findings of phase 2. Both organizations depended on a BPMS for the
+managementandmodelingofbusinessprocesses,whichisasuccessfulpracticeinimprovingthequality
+of processes. According to the case studies, architectural modeling facilitated detecting bottlenecks
+and problematic processes. Modeling is not a common practice within large organizations, as shown
+by the matrix. However, it is important for the successful implementation of the EA framework
+and methodology because it provides transparency in overviewing the organizational structure and
+business processes. Although cloud repositories can be considered as a nonessential feature for large
+organizations, they are imperative for EA framework and methodology. It is a recommended EABP
+because large organizations use it for sharing the EA framework and methodology documentation.
+Moreover, cloud repositories assist large organizations in their digital transformation by being a
+common ground for electronic documentation and resource management. Project management in
+alignment with an EA framework is a recommended practice for resource management, which could
+lead to better strategic outcomes.
+Theoretically, this study combined the strategic, business, and technological perspectives of
+EA that, to the best of the researcher’s knowledge, has not been presented in EA research. This
+theoretical perspective is a synthesis of viewpoints focusing on distinct EA: methodological, strategic,
+or technological. The inclusive perspective is practical because organizations have to consider EA
+practices from all of these viewpoints. This practical study showed what the 15 large organizations
+lacked for the successful implementation of EABPs using the EABP matrix. Moreover, it discussed
+the successful EABP implementation in two large organizations using a multi-case methodology.
+The study also discussed how the two large organizations successfully integrated EABPs, reaping the
+benefits of EA.
+This study only focused on horizontal practices and did not discuss vertical EABPs; therefore, EA
+research can be further extended by focusing on vertical EABPs. Another limitation of this study is that
+only large organizations were analyzed and the EABP matrix was designed to measure the capability
+of only large organizations. Future research could therefore test the matrix on small to medium-sized
+organizations to broaden its applicability to smaller organizations. However, studying EABP literature
+that is more relevant to small and medium-sized enterprises is recommended. Qualitative research
+has its limitation on generalizability; thus, this paper calls for upcoming research to adopt the EABP
+matrix to other large organizations. Other methods such as quantitative study might be used to create a
+questionnaire based on the analysis and outcomes of this study. The sample of the largest organizations
+in this study was limited to one only country, which is another limitation; future studies might consider
+organizations from multiple countries to obtain a more diverse perspective.
+
+--- PAGE 21 ---
+Information 2019, 10, 293 21 of 26
+Funding: This research received no external funding.
+Acknowledgments: The author would like to thank the editor in chief, Willy Susilo, the three anonymous referees
+and the journal administrators for their support and feedback.
+Conflicts of Interest: The author declares no conflict of interest.
+Appendix A : Interview Protocol
+• Purpose of the organization, size, and structure.
+• Which EA framework is used in the organization? How is it implemented?
+• How is the EA methodology implemented?
+• What kind of software assists in EA implementation and methodology?
+• What is your strategy and how does EA help in its fulfillment? *
+• What is the role of governance boards with regard to EA?
+• Do you implement BPM and how is this related to EA? *
+• Do you use architectural modeling? What kinds of tools are used? How does this assist in the
+EA methodology? *
+• Do you use a cloud repository for your documents? How is it used in the EA framework
+and methodology? *
+• How do you track resources? How do you optimize the performance of resources? What is the
+contribution of EA to this? *
+* During the interview “you” and “your” referred to the organization.
+Appendix B : EABP Evaluation Matrix
+EABP
+Evaluation Criteria
+High Level of EABP Adoption
+Weight: (4–3)
+Average Level of EABP
+Adoption
+Weight: (2–1)
+Low Level of EABP Adoption
+Weight: (0)
+1. Adopting an EA framework
+[14,15,19,25,26]
+The strategic adoption of an EA
+framework is evident, and it is
+horizontally implemented
+throughout the organization.
+The EA framework operationally
+exists; however, it is only applied
+vertically in some departments.
+No EA framework is adopted.
+2. Using an EA methodology
+[20,21,23,24]
+EA methodology tools and
+artifacts exist, and they are used
+horizontally to assist in planning,
+decision-making, and
+resource management.
+EA methodology tools and
+artifacts are only used vertically or
+within a limited number
+of departments.
+EA methodology practices are not
+conducted vertically
+or horizontally.
+3. Employing a shared
+strategy [32,36–39]
+A strategic statement exists, and it
+is adopted horizontally
+throughout the organization.
+Although a strategic statement
+exists, it is not communicated well
+throughout the organization.
+No strategic statement, goals, or
+objects exist.
+4. Effective
+governance [2,27,43,44]
+Governance boards directed the
+organization toward achieving
+their strategy. Moreover, they
+oversaw performance and
+managed regulation resources.
+Governance boards existed but
+with weak or nonexistent
+involvement in directing the
+organizations through planning
+and resources.
+No governance boards existed.
+5. Implementing business
+processes
+[13,48–51]
+Business process models exist and
+are used to identify areas of
+improvement in organizational
+operations. Business processes are
+used to horizontally integrate
+different functional departments.
+Business process models exist but
+with vertical or limited
+cross-department integration.
+No business process structure or
+integration exists.
+
+--- PAGE 22 ---
+Information 2019, 10, 293 22 of 26
+EABP
+Evaluation Criteria
+High Level of EABP Adoption
+Weight: (4–3)
+Average Level of EABP
+Adoption
+Weight: (2–1)
+Low Level of EABP Adoption
+Weight: (0)
+6. Architectural modeling
+[25,54,56,58]
+Different tools, software, and
+methodologies exist to
+horizontally map organizational
+departments, processes,
+and operations.
+Architectural modeling is
+conducted within only IT or other
+departments without the
+cross-cutting adoption of
+modeling tools
+and methodologies.
+No architectural modeling
+methodologies or tools exist.
+7. Documenting material using
+cloud repositories
+[9,23,63,64,72]
+A documentation central cloud
+repository is horizontally adopted
+with visual representations,
+cataloging, or indexing for
+document retrieval.
+Different departments have their
+own repositories and these
+repositories are not fully
+integrated with other
+organizational entities.
+No documentation repositories
+exist, and documents are stored
+only on paper or other means such
+as email.
+8. Using technological
+competencies to track and utilize
+resources
+[56,59,68,70]
+Horizontal information systems or
+ERPs are used to track the
+performance and usage of
+resources. These information
+systems are used to prioritize
+resource allocation according to
+strategic needs of the organization.
+Resource tracking is only used
+vertically or within a few linked
+departments without clear
+strategic prioritization.
+No resource tracking or
+prioritization exists.
+References
+1. Kotusev, S.; Singh, M.; Storey, I. Investigating the Usage of Enterprise Architecture Artifacts. In Proceedings
+of the Twenty-Third European Conference on Information Systems, Münster, Germany, 26–29 May 2015.
+2. Niemann, K. From Enterprise Architecture to IT Governance: Elements of Effective IT Management; Vieweg:
+Wiesbaden, Germany, 2006.
+3. Šaša, A.; Krisper, M. Enterprise architecture patterns for business process support analysis. J. Syst. Softw.
+2011, 84, 1480–1506. [CrossRef]
+4. Boh, W.F.; Yellin, D. Using enterprise architecture standards in managing information technology. J. Manag.
+Inf. Syst. 2006, 23, 163–207. [CrossRef]
+5. Dang, D.D.; Pekkola, S. Systematic Literature Review on Enterprise Architecture in the Public Sector.
+Electron. J. E-Gov. 2017, 15, 130–154.
+6. Iyamu, T. Implementation of the enterprise architecture through the Zachman Framework. J. Syst. Inf. Technol.
+2018, 20, 2–18. [CrossRef]
+7. Ansyori, R.; Qodarsih, N.; Soewito, B. A systematic literature review: Critical Success Factors to Implement
+Enterprise Architecture. Procedia Comput. Sci. 2018, 135, 43–51. [CrossRef]
+8. Bernard, S. An Introduction to Enterprise Architecture; AuthorHouse: Bloomington, IL, USA, 2012.
+9. Rouhani, B.D.; Mahrin, M.N.R.; Nikpay, F.; Ahmad, R.B.; Nikfard, P. A systematic literature review on
+Enterprise Architecture Implementation Methodologies. Inf. Softw. Technol. 2015, 62, 1–20. [CrossRef]
+10. Schekkerman, J. How to Survive in the Jungle of Enterprise Architecture Frameworks: Creating or Choosing an
+Enterprise Architecture Framework; Trafford Publishing: Bloomington, IN, USA, 2004.
+11. Jahani, B.; Reza Seyyed Javadein, S.; Abedi Jafari, H. Measurement of enterprise architecture readiness within
+organizations. Bus. Strategy Ser. 2010, 11, 177–191. [CrossRef]
+12. Weiner, B.J. A theory of organizational readiness for change. Implement. Sci. 2009, 4, 67. [CrossRef]
+13. Simon, D.; Fischbach, K.; Schoder, D. Enterprise architecture management and its role in corporate strategic
+management. Inf. Syst. E-Bus. Manag. 2014, 12, 5–42. [CrossRef]
+14. Wang, X.; Zhou, X.; Jiang, L. A method of business and IT alignment based on enterprise architecture.
+InProceedingsofthe2008IEEEInternationalConferenceonServiceOperationsandLogistics,andInformatics,
+Beijing, China, 12–15 October 2008; pp. 740–745.
+15. Nurmi, J.; Pulkkinen, M.; Seppänen, V.; Penttinen, K. Systems Approaches in the Enterprise Architecture
+Field of Research: A Systematic Literature Review. In Enterprise Engineering Working Conference; Springer:
+Champaign, IL, USA, 2018; pp. 18–38.
+16. Bente, S.; Bombosch, U.; Langade, S. Collaborative Enterprise Architecture: Enriching EA with Lean, Agile, and
+Enterprise 2.0 Practices; Newnes: Burlington, MA, USA, 2012.
+
+--- PAGE 23 ---
+Information 2019, 10, 293 23 of 26
+17. Winter, R.; Fischer, R. Essential layers, artifacts, and dependencies of enterprise architecture. In Proceedings
+of the 2006 10th IEEE International Enterprise Distributed Object Computing Conference Workshops
+(EDOCW’06), Hong Kong, China, 16–20 October 2006; p. 30.
+18. Espinosa, J.A.; Boh, W.F.; DeLone, W. The organizational impact of enterprise architecture: A research
+framework. In Proceedings of the 2011 44th Hawaii International Conference on System Sciences, Kauai, HI,
+USA, 4–7 January 2011; pp. 1–10.
+19. Taleb, M.; Cherkaoui, O. Pattern-oriented approach for enterprise architecture: TOGAF framework. J. Softw.
+Eng. Appl. 2012, 5, 45–50. [CrossRef]
+20. Medini, K.; Bourey, J.P. SCOR-based enterprise architecture methodology. Int. J. Comput. Integr. Manuf. 2012,
+25, 594–607. [CrossRef]
+21. Kaisler, S.H.; Armour, F.; Valivullah, M. Enterprise architecting: Critical problems, HICSS’05. In Proceedings
+of the 38th Annual Hawaii International Conference on System Sciences, Big Island, HI, USA, 6–6 Jane 2005;
+p. 224b.
+22. Bernard, S. Using enterprise architecture to integrate strategic, business, and technology planning.
+J. Enterp. Archit. 2006, 2, 11–28.
+23. Nikpay, F.; Ahmad, R.B.; Rouhani, B.D.; Mahrin, M.N.R.; Shamshirband, S. An effective Enterprise
+Architecture Implementation Methodology. Inf. Syst. E-Bus. Manag. 2017, 15, 927–962. [CrossRef]
+24. Trevisan, M.S. Evaluability assessment from 1986 to 2006. Am. J. Eval. 2007, 28, 290–303. [CrossRef]
+25. Gampfer, F.; Jürgens, A.; Müller, M.; Buchkremer, R. Past, current and future trends in enterprise
+architecture—A view beyond the horizon. Comput. Ind. 2018, 100, 70–84. [CrossRef]
+26. Romero, D.; Vernadat, F. Enterprise information systems state of the art: Past, present and future trends.
+Comput. Ind. 2016, 79, 3–13. [CrossRef]
+27. Hitz, C.; Schwer, K. The role of IT governance in digital operating models. J. East. Eur. Cent. Asian Res. 2018,
+5, 61–79. [CrossRef]
+28. Schwer, K.; Hitz, C.; Wyss, R.; Wirz, D.; Minonne, C. Digital maturity variables and their impact on the
+enterprise architecture layers. Probl. Perspect. Manag. 2018, 16, 141–154. [CrossRef]
+29. Open Group the Open Group Architecture Framework (Togaf). Available online: https://www.opengroup.
+org/togaf (accessed on 25 July 2018).
+30. Hill, R.; Hirsch, L.; Lake, P.; Moshiri, S. Enterprise cloud computing. In Guide to Cloud Computing; Springer:
+London, UK, 2013; pp. 209–222.
+31. Al-Jaroodi,J.; Mohamed,N.; Jawhar,I.Aservice-orientedmiddlewareframeworkformanufacturingindustry
+4.0. ACM SIGBED Rev. 2018, 15, 29–36. [CrossRef]
+32. Narang, T.; Narang, R. Enterprise Architecture Framework and Cloud Models for Rapid Replication.
+In Proceedings of the 9th International Conference on E-Governance (ICEG 2012), Cochin, India, 26 April
+2012; pp. 7–18.
+33. Ikävalko, H. Strategy Process in Practice: Practices and Logics of Action of Middle Managers in Strategy
+Implementation; Helsinki University of Technology: Helsinki, Finland, 2005.
+34. Kaplan, R.S.; Norton, D.P.; Barrows, E.A. Developing the Strategy: Vision, Value Gaps, and Analysis.
+Balanced Scorec Rev. 2008. Available online: http://www.ssu.ac.ir/fileadmin/templates/fa/Marakeze_
+Tahghighati/syasatsalamat/maghalat/comperhencive.pdf (accessed on 19 September 2018).
+35. Porter, M.E. How competitive forces shape strategy. In Readings in Strategic Management; Springer: London,
+UK, 1989; pp. 133–143.
+36. Rood, M.A. Enterprise architecture: Definition, content, and utility. In Proceedings of the Third Workshop
+on Enabling Technologies: Infrastructure for Collaborative Enterprises, Morgantown, WV, USA, 17–19 April
+1994; pp. 106–111.
+37. Lapalme, J. Three Schools of Thought on Enterprise Architecture. IT Prof. 2012, 14, 37–43. [CrossRef]
+38. Dirgahayu, T. A business intelligence-driven approach to government enterprise architecture. Adv. Sci. Lett.
+2015, 21, 3110–3113. [CrossRef]
+39. Edhah, B.S.; Zafar, A. Enterprise Architecture: A Tool for IS Strategy Formulation. Int. J. Educ. Manag. Eng.
+2016, 2, 14–23. [CrossRef]
+40. Rock, R.; Otero, M.; Saltzman, S. Principles and Practices of Microfinance Governance; Development Alternatives,
+Incorporated: Amman, Jordan, 1998.
+41. Farrar, J. Corporate Governance: Theories, Principles and Practice; Oxford University Press: Oxford, UK, 2008.
+
+--- PAGE 24 ---
+Information 2019, 10, 293 24 of 26
+42. Raghupathi, W.R. Corporate governance of IT: A framework for development. Commun. ACM 2007, 50, 94–99.
+[CrossRef]
+43. Zachman, J. The Zachman Framework for Enterprise Architecture; Zachman Framework Associates: Herndon,
+VA, USA, 2006.
+44. Gill, A.Q. Agile enterprise architecture modelling: Evaluating the applicability and integration of six
+modelling standards. Inf. Softw. Technol. 2015, 67, 196–206. [CrossRef]
+45. Kitsios, F.; Kamariotou, M. Business strategy modelling based on enterprise architecture: A state of the art
+review. Bus. Process Manag. J. 2019, 25, 606–624. [CrossRef]
+46. Kalpič, B.; Bernus, P. Business process modeling through the knowledge management perspective.
+J. Knowl. Manag. 2006, 10, 40–56. [CrossRef]
+47. Jennings, N.R.; Norman, T.J.; Faratin, P.; O’Brien, P.; Odgers, B. Autonomous agents for business process
+management. Appl. Artif. Intell. 2000, 14, 145–189. [CrossRef]
+48. Pereira, C.M.; Sousa, P. Enterprise architecture: Business and IT alignment. In Proceedings of the 2005 ACM
+Symposium on Applied Computing, Santa Fe, NM, USA, 13–17 March 2005; pp. 1344–1345.
+49. Alrabiah, A.; Drew, S. Deriving organisational business process change factors using the hierarchical
+elicitation workshop. Int. J. Bus. Process Integr. Manag. 2018, 9, 1–11. [CrossRef]
+50. Chalmeta, R.; Pazos, V. A step-by-step methodology for enterprise interoperability projects. Enterp. Inf. Syst.
+2015, 9, 436–464. [CrossRef]
+51. Löhe, J.; Legner, C. Overcoming implementation challenges in enterprise architecture management: A design
+theory for architecture-driven IT Management (ADRIMA). Inf. Syst. E-Bus. Manag. 2014, 12, 101–137.
+[CrossRef]
+52. Gonzalez-Lopez, F.; Bustos, G. Integration of Business Process Architectures within Enterprise Architecture
+Approaches: A Literature Review. Eng. Manag. J. 2019, 31, 127–140. [CrossRef]
+53. Mei, M.-M.; Andry, J.F. The Alignment of Business Process in Event Organizer and Enterprise Architecture
+Using TOGAF. JUTI J. Ilm. Teknol. Inf. 2019, 17, 21–29. [CrossRef]
+54. Hinkelmann, K.; Gerber, A.; Karagiannis, D.; Thoenssen, B.; Van der Merwe, A.; Woitsch, R. A new paradigm
+for the continuous alignment of business and IT: Combining enterprise architecture modelling and enterprise
+ontology. Comput. Ind. 2016, 79, 77–86. [CrossRef]
+55. Kotusev, S. TOGAF-based enterprise architecture practice: An exploratory case study. Commun. Ais 2018,
+43, 321–359. [CrossRef]
+56. Bhattacharya, P. Modelling Strategic Alignment of Business and IT through Enterprise Architecture:
+Augmenting Archimate with BMM. Procedia Comput. Sci. 2017, 121, 80–88. [CrossRef]
+57. Op’t Land, M.; Proper, E.; Waage, M.; Cloo, J.; Steghuis, C. Enterprise Architecture: Creating Value by Informed
+Governance; Springer Science & Business Media: New York, NY, USA, 2008.
+58. Fritscher, B.; Pigneur, Y. Business IT Alignment from Business Model to Enterprise Architecture.
+In Proceedings of the International Conference on Advanced Information Systems Engineering, London, UK,
+20–24 June 2011; Springer: London, UK, 2011; pp. 4–15.
+59. Azevedo, C.L.B.; Iacob, M.-E.; Almeida, J.P.A.; van Sinderen, M.; Pires, L.F.; Guizzardi, G. Modeling resources
+and capabilities in enterprise architecture: A well-founded ontology-based proposal for ArchiMate. Inf. Syst.
+2015, 54, 235–262. [CrossRef]
+60. Lee, H.; Song, Y.-T. Bridging enterprise architecture requirements to Archimate. In Computers, Networks,
+Systems, and Industrial Engineering 2011; Springer: Berlin/Heidelberg, Germany, 2011; pp. 63–78.
+61. Niemi, E.; Pekkola, S. Adapting the DeLone and McLean model for the enterprise architecture benefit
+realization process. In Proceedings of the 2009 HICSS’09. 42nd Hawaii International Conference on System
+Sciences, Big Island, HI, USA, 5–8 January 2009; pp. 1–10.
+62. Karim, N.S.A.; Hussein, R. Managers’ perception of information management and the role of information
+and knowledge managers: The Malaysian perspectives. Int. J. Inf. Manag. 2008, 28, 114–127. [CrossRef]
+63. Masuda, Y.; Shirasaka, S.; Yamamoto, S.; Hardjono, T. Architecture board practices in adaptive enterprise
+architecture with digital platform: A case of global healthcare enterprise. Int. J. Enterp. Inf. Syst. (IJEIS) 2018,
+14, 1–20. [CrossRef]
+64. Van Der Raadt, B.; Van Vliet, H. Designing the Enterprise Architecture Function. In Proceedings of the
+International Conference on the Quality of Software Architectures, Karlsruhe, Germany, 14–17 October 2008;
+Springer: Heidelberg, Germany, 2008; pp. 103–118.
+
+--- PAGE 25 ---
+Information 2019, 10, 293 25 of 26
+65. Selig, G.J. Implementing Effective IT Governance and IT Management; Van Haren Publishing: ‘s Hertogenbosch,
+The Netherlands, 2015.
+66. Jones, C. A Guide to Selecting Software Measures and Metrics; CRC Press: Boca Raton, FL, USA, 2017.
+67. Hajibaba, M.; Gorgin, S. A review on modern distributed computing paradigms: Cloud computing, jungle
+computing and fog computing. J. Comput. Inf. Technol. 2014, 22, 69–84. [CrossRef]
+68. Wieczorek, M.; Vos, D.; Bons, H. The Four “P” s of Enterprise ICT. In Systems and Software Quality; Springer:
+New York, NY, USA, 2014; pp. 31–49.
+69. Halawi, L.; McCarthy, R.; Farah, J. Where We Are with Enterprise Architecture. J. Inf. Syst. Appl. Res. 2019,
+12, 4.
+70. Magoulas, T.; Hadzic, A.; Saarikko, T.; Pessi, K. Alignment in enterprise architecture: A comparative analysis
+of four architectural approaches. Electron. J. Inf. Syst. Eval. 2012, 15, 88.
+71. Farwick, M.; Schweda, C.M.; Breu, R.; Hanschke, I. A situational method for semi-automated Enterprise
+Architecture Documentation. Softw. Syst. Model. 2016, 15, 397–426. [CrossRef]
+72. Banaeianjahromi, N.; Smolander, K. Lack of communication and collaboration in enterprise architecture
+development. Inf. Syst. Front. 2019, 21, 877–908. [CrossRef]
+73. Gupta, V.K.; Gupta, A. Relationship between entrepreneurial orientation and firm performance in large
+organizations over time. J. Int. Entrep. 2015, 13, 7–27. [CrossRef]
+74. Etikan, I.; Musa, S.A.; Alkassim, R.S. Comparison of convenience sampling and purposive sampling. Am. J.
+Theor. Appl. Stat. 2016, 5, 1–4. [CrossRef]
+75. Patton, M.Q. Qualitative Evaluation and Research Methods; SAGE Publications, Inc.: Thousand Oaks, CA, USA,
+1990.
+76. Deshpande, S.P.; Golhar, D.Y. HRM practices in large and small manaufacturing firms: A comparative study.
+J. Small Bus. Manag. 1994, 32, 49.
+77. Miles, M.B.; Huberman, A.M. Qualitative Data Analysis: An Expanded Sourcebook; Sage Publications, Inc.:
+Thousand Oaks, CA, USA, 1994.
+78. Neuman, W.L. Social Research Methods: Qualitative and Quantitative Approaches, 6th ed.; Pearson Education:
+Boston, MA, USA, 2006.
+79. Yin, R.K. Case Study Research: Design and Methods; Sage Publications: Thousand Oaks, CA, USA, 2009.
+80. Gustafsson, J. Single Case Studies Vs. Multiple Case Studies: A comparative Study; Academy of Business,
+Engineering and Science, Halmstad University: Halmstad, Sweden, 2017.
+81. Baxter, P.; Jack, S. Qualitative case study methodology: Study design and implementation for novice
+researchers. Qual. Rep. 2008, 13, 544–559.
+82. Ross, J.W.; Weill, P.; Robertson, D. Enterprise Architecture as Strategy: Creating a Foundation for Business
+Execution; Harvard Business Press: Boston, MA, USA, 2006.
+83. King, N.; Horrocks, C.; Brooks, J. Interviews in Qualitative Research; SAGE Publications Limited: London, UK,
+2018.
+84. Edwards, R.; Holland, J. What Is Qualitative Interviewing; A&C Black: London, UK, 2013.
+85. Miles, M.B.; Huberman, A.M.; Saldana, J. Qualitative Data Analysis; Sage: Thousand Oaks, CA, USA, 2014.
+86. Tan, W.; Chen, S.; Li, J.; Li, L.; Wang, T.; Hu, X. A trust evaluation model for E-learning systems. Syst. Res.
+Behav. Sci. 2014, 31, 353–365. [CrossRef]
+87. Isikdag, U.; Underwood, J.; Kuruoglu, M.; Acikalin, U. Data integration capability evaluation of ERP systems:
+A construction industry perspective. Int. J. Enterp. Inf. Syst. (IJEIS) 2013, 9, 113–129. [CrossRef]
+88. Lankhorst, M. Enterprise Architecture at Work: Modelling, Communication and Analysis; Springer:
+Berlin/Heidelberg, Germany, 2017.
+89. Venkatesh, V.; Bala, H.; Venkatraman, S.; Bates, J. Enterprise architecture maturity: The story of the veterans
+health administration. MIS Q. Exec. 2007, 6, 79–90.
+90. Henson, R.; Templin, J.; Douglas, J. Using efficient model based sum-scores for conducting skills diagnoses.
+J. Educ. Meas. 2007, 44, 361–376. [CrossRef]
+91. Whittle, R.; Myrick, C. Enterprise Business Architecture: The Formal Link between Strategy and Results; CRC Press:
+Boca Raton, FL, USA, 2004.
+92. Van Wijngaarden, J.D.; Scholten, G.R.; van Wijk, K.P. Strategic analysis for health care organizations: The
+suitability of the SWOT-analysis. Int. J. Health Plan. Manag. 2012, 27, 34–49. [CrossRef] [PubMed]
+
+--- PAGE 26 ---
+Information 2019, 10, 293 26 of 26
+93. Prenestini, A.; Lega, F. Do senior management cultures affect performance? Evidence from Italian public
+healthcare organizations. J. Healthc. Manag. 2013, 58, 336–351. [CrossRef] [PubMed]
+94. Martin, G.P.; Learmonth, M. A critical account of the rise and spread of ‘leadership’: The case of UK
+healthcare. Soc. Sci. Med. 2012, 74, 281–288. [CrossRef] [PubMed]
+95. Li, C. Improving Business-It Alignment through Business Architecture; Lawrence Technological University:
+Southfield, MI, USA, 2010.
+96. Scheer, A.-W. Business Process Engineering: Reference Models for Industrial Enterprises; Springer Science &
+Business Media: Berlin, Germany, 2012.
+97. Arora, A.; Bandara, W. IT service desk process improvement-A narrative style case study. In PACIS 2006
+Proceedings; Association for Information Systems: Kuala Lumpur, Malaysia, 2006; p. 78.
+98. Barros, O.; Julio, C. Enterprise and process architecture patterns. Bus. Process Manag. J. 2011, 17, 598–618.
+[CrossRef]
+99. Snabe, J.H.; Rosenberg, A.; Møller, C.; Scavillo, M. Business Process Management: The SAP Roadmap; SAP Press:
+Quincy, MA, USA, 2008; p. 392.
+100. Soomro, T.R.; Hesson, M. Supporting best practices and standards for information technology Infrastructure
+Library. J. Comput. Sci. 2012, 8, 272.
+101. Mavankal, G.R.; Blevins, J.; Edwards, D.; McGee, M.; Hardin, A. Predictions Generated from a Simulation
+Engine for Gene Expression Micro-arrays for use in Research Laboratories. SMU Data Sci. Rev. 2018, 1, 9.
+102. Koschmider, A.; Fellmann, M.; Schoknecht, A.; Oberweis, A. Analysis of process model reuse: Where are we
+now, where should we go from here? Decis. Support Syst. 2014, 66, 9–19. [CrossRef]
+103. Treacy, M.; Wiersema, F. Customer intimacy and other value disciplines. Harv. Bus. Rev. 1993, 71, 84–93.
+104. Smith, H.; Fingar, P. Business Process Management: The Third Wave; Meghan-Kiffer Press: Tampa, FL, USA,
+2003; Volume 1.
+© 2019 by the author. Licensee MDPI, Basel, Switzerland. This article is an open access
+article distributed under the terms and conditions of the Creative Commons Attribution
+(CC BY) license (http://creativecommons.org/licenses/by/4.0/).

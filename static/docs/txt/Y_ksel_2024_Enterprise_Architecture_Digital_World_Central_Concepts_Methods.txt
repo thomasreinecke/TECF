@@ -1,0 +1,307 @@
+--- PAGE 1 ---
+Enterprise Architecture in the DigitalWorld
+
+--- PAGE 2 ---
+HüseyinYüksel
+Enterprise Architecture
+in the DigitalWorld
+Central Concepts and Methods
+for EAM in Agile ProjectWork
+
+--- PAGE 3 ---
+HüseyinYüksel
+Darmstadt, Germany
+ISBN 978-3-658-45666-5 ISBN 978-3-658-45667-2 (eBook)
+https://doi.org/10.1007/978-3-658-45667-2
+Translation from the German language edition: “Enterprise-Architektur in der digitalen Welt” by Hüseyin
+Yüksel, © Der/die Herausgeber bzw. der/die Autor(en), exklusiv lizenziert an Springer Fachmedien Wies-
+baden GmbH, ein Teil von Springer Nature 2024. Published by Springer Fachmedien Wiesbaden. All Rights
+Reserved.
+This book is a translation of the original German edition “Enterprise-Architektur in der digitalen Welt” by
+HüseyinYüksel, published by Springer Fachmedien Wiesbaden GmbH in 2024. The translation was done with
+the help of an artificial intelligence machine translation tool. A subsequent human revision was done primarily
+in terms of content, so that the book will read stylistically differently from a conventional translation. Springer
+Nature works continuously to further the development of tools for the production of books and on the related
+technologies to support the authors.
+© The Editor(s) (if applicable) and The Author(s), under exclusive license to Springer Fachmedien Wiesbaden
+GmbH, part of Springer Nature 2024
+This work is subject to copyright. All rights are solely and exclusively licensed by the Publisher, whether
+the whole or part of the material is concerned, specifically the rights of translation, reprinting, reuse
+of illustrations, recitation, broadcasting, reproduction on microfilms or in any other physical way, and
+transmission or information storage and retrieval, electronic adaptation, computer software, or by similar or
+dissimilar methodology now known or hereafter developed.
+The use of general descriptive names, registered names, trademarks, service marks, etc. in this publication does
+not imply, even in the absence of a specific statement, that such names are exempt from the relevant protective
+laws and regulations and therefore free for general use.
+The publisher, the authors and the editors are safe to assume that the advice and information in this book
+are believed to be true and accurate at the date of publication. Neither the publisher nor the authors or the
+editors give a warranty, expressed or implied, with respect to the material contained herein or for any errors
+or omissions that may have been made. The publisher remains neutral with regard to jurisdictional claims in
+published maps and institutional affiliations.
+This Springer imprint is published by the registered company Springer Fachmedien Wiesbaden GmbH, part of
+Springer Nature.
+The registered company address is:Abraham-Lincoln-Str. 46, 65189 Wiesbaden, Germany
+If disposing of this product, please recycle the paper.
+
+--- PAGE 4 ---
+v
+Preface
+The economy is changing at a rapid pace due to digitization, and there is no end in sight.
+The topic of digital transformation has become a fixed component of internal company
+projects and changes. This constantly presents companies, executives, and employees
+with major challenges. Many CIOs and IT executives have to adapt to new digital eco-
+systems, business models, and ways of working. Existing things must be reviewed and
+regularly adapted to innovations from the digital world. This is where enterprise archi-
+tects come into play. They operate at the interface between business customers, i.e., the
+departments within their own company, and IT. They have an eye on the big picture and
+at the same time, they set the course for strategic (architecture) decisions. Somewhat
+exaggerated, one could say: The success of a company in the digital world depends on
+the quality of the decisions of its enterprise architects and the speed of implementation.
+In an unstable, uncertain, complex, and ambiguous “VUCA” world, as an enterprise
+architect, it is necessary to consider everything and maintain an overview. The perspec-
+tives of other people must be purposefully included in order to understand the big pic-
+ture, uncover blind spots, and make better decisions. This has resulted in far-reaching
+challenges for enterprise architects in the design of their perspective, work, and mode of
+operation over the past few years.
+In light of these challenges, I want to introduce specific and partly new perspectives
+for the EAM method in this book. They are intended to help understand the implications
+of digital change and to show EAs possible approaches to continue to be successful in
+the age of digitization. The statements in this book are based on my own experiences
+from many digitization and EAM projects and on insights from an intensive exchange
+with a large number of experts from both companies and corresponding consulting firms
+as well as from academia. In this book, central terms and concepts from epistemology,
+semiotics, and neuropsychology are introduced into enterprise architecture management.
+A model from semiotics is presented and used to analyze and describe complex software
+and enterprise systems with its help. From neuropsychology, basic functions of our brain
+when making decisions are presented and used to make strategic architecture decisions
+better. In addition, a positive image of humans and their fundamental abilities is brought
+into enterprise architecture management from neuropsychology. Among other things,
+
+--- PAGE 5 ---
+vi Preface
+our human adaptability, communication skills, and organizational skills in communities,
+developed through evolution, are examined more closely and their importance in the eve-
+ryday work of an enterprise architect is illustrated.
+I would like to use this foreword to express my special thanks and great appreciation
+to Prof. Dr. Johannes Reichardt. His semiotic model for software programs was one of
+the fundamental building blocks for my book. His tireless spirit inspired me and encour-
+aged me to integrate the semiotic model in an innovative way into enterprise architec-
+ture management. The depth of his thoughts and his willingness to share his knowledge
+deeply impressed me.
+I wholeheartedly thank my wife for her great understanding and support—especially
+in the final phase of writing. She and the children had to forego our shared time on many
+weekends. “Ba ashg va eradat” (Persian: “With love and respect”).
+Lastly, I would like to sincerely thank my friends from “likeminds”: You have been
+with me for many years—as friends as well as colleagues. Tirelessly, you have motivated
+and supported me during the writing process. Your encouraging words and your faith in
+me have inspired me and given me the strength to undertake and successfully complete
+this project.
+In conclusion, I would like to dedicate this book to my parents. They together created
+a new home in a then foreign country to provide a better life for my siblings and me.
+My father has particularly influenced me. Over the years, he has always fully committed
+himself to us and helped shape me into the person I am today. Rest in peace!
+Darmstadt HüseyinYüksel
+In November 2023
+
+--- PAGE 6 ---
+vii
+Contents
+1 Introduction. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  1
+Reference. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  5
+2 Introduction of Central Terms and Concepts. . . . . . . . . . . . . . . . . . . . . . . . . .  7
+2.1 Central Concepts. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  7
+2.1.1 Digital Transformation. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  7
+2.1.2 Agility. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  12
+2.1.2.1 Mindset and Principles ofAgility. . . . . . . . . . . . . . . . . . .  13
+2.1.2.2 Agility in Management. . . . . . . . . . . . . . . . . . . . . . . . . . .  15
+2.1.2.3 Self-Organization. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  15
+2.1.3 New Ways of Working. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  17
+2.1.3.1 New Understanding of Work. . . . . . . . . . . . . . . . . . . . . . .  18
+2.1.3.2 Implications for Management. . . . . . . . . . . . . . . . . . . . . .  19
+2.1.4 What Does Understanding Mean?. . . . . . . . . . . . . . . . . . . . . . . . . .  20
+2.1.5 Architecture Decisions in the Digital andAgile World. . . . . . . . . .  23
+2.1.6 EnterpriseArchitecture . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  25
+2.1.7 EnterpriseArchitecture Management. . . . . . . . . . . . . . . . . . . . . . . . 28
+2.2 Central Concepts. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  29
+2.2.1 Thinking and How the Subconscious Influences Our
+Understanding. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  29
+2.2.1.1 Fast Thinking and Slow Thinking. . . . . . . . . . . . . . . . . . .  31
+2.2.1.2 The Human at the Center. . . . . . . . . . . . . . . . . . . . . . . . .  34
+2.2.2 Understanding from the Perspective of the Semiotic
+Model and the Semiotic Enterprise Model . . . . . . . . . . . . . . . . . . .  35
+2.2.3 Digital Transformation of Business Models. . . . . . . . . . . . . . . . . .  38
+2.2.4 Digital Ecosystems. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  41
+2.2.5 Agility for EnterpriseArchitecture Management. . . . . . . . . . . . . . . 44
+2.2.5.1 Agile Organizations Using SAFe as an Example. . . . . . .  44
+2.2.5.2 Architectural Concepts in SAFe. . . . . . . . . . . . . . . . . . . .  46
+2.2.5.3 Architect Roles in SAFe. . . . . . . . . . . . . . . . . . . . . . . . . .  49
+References. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  51
+
+--- PAGE 7 ---
+viii Contents
+3 Understanding Companies in theAge of Digitalization. . . . . . . . . . . . . . . . .  55
+3.1 EnterpriseArchitecture in the Energy Industry. . . . . . . . . . . . . . . . . . . . . .  55
+3.1.1 Brief Portrait of EnBWAG. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  56
+3.1.2 Value Creation Stages and Market Roles Using
+the Example of EnBWAG. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  57
+3.2 Digital Transformation of the Energy Industry. . . . . . . . . . . . . . . . . . . . . .  61
+3.2.1 Digital Products and Services Using the Internet of Things. . . . . .  62
+3.2.2 Digital Business Models Using the Example of Tenant
+Electricity. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  63
+3.2.3 Digital Ecosystems Using the Example of Smart EVU. . . . . . . . . .  64
+3.3 The Semiotic Enterprise Model in a Nutshell. . . . . . . . . . . . . . . . . . . . . . .  67
+3.3.1 The Four Perspectives of Understanding. . . . . . . . . . . . . . . . . . . . .  68
+3.3.2 Business Capability as a Sign of a Company. . . . . . . . . . . . . . . . . .  70
+3.3.3 Working with the Four Perspectives of SEM. . . . . . . . . . . . . . . . . .  73
+3.4 Understanding the Strategic Level. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  78
+3.4.1 Understanding the Macroeconomic Environment. . . . . . . . . . . . . .  80
+3.4.2 Understanding the Influences from the Competitive
+Environment. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  83
+3.4.3 Mapping the Strategy in EnterpriseArchitecture
+with Business Capability Mapping. . . . . . . . . . . . . . . . . . . . . . . . .  84
+3.5 The Strategic Planning of EnterpriseArchitects. . . . . . . . . . . . . . . . . . . . .  88
+3.5.1 Creating Transparency and Understanding the Current State. . . . .  88
+3.5.2 Developing and Understanding the Target Landscape. . . . . . . . . . .  90
+3.5.3 Understanding Executives and Stakeholders
+in the Environment. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  92
+References. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  95
+4 CognitiveAttention: How EnterpriseArchitects Master
+the Pitfalls of Our Perception and the Noise of Our Intuition
+with Cognitive Techniques. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  97
+4.1 BIAS—The Pitfalls of Our Perception. . . . . . . . . . . . . . . . . . . . . . . . . . . .  97
+4.2 NOISE—The Roar of Intuition. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  102
+4.3 How We Can Improve OurArchitectural Decisions. . . . . . . . . . . . . . . . . .  103
+4.4 Common Misunderstandings about Bias . . . . . . . . . . . . . . . . . . . . . . . . . .  106
+4.5 How We Can Improve the Environment of Our
+Architectural Decisions. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  108
+4.6 Providing the Space for Genuine Dialogue. . . . . . . . . . . . . . . . . . . . . . . . .  109
+4.7 Countering Biases with Divergence. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  115
+4.8 Changing the DNA ofArchitecture Decision Processes and Culture. . . . .  126
+References. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  132
+
+--- PAGE 8 ---
+ix Contents
+5 EnterpriseArchitecture in theAgile Project Everyday Life. . . . . . . . . . . . . .  135
+5.1 Supporting Business and Software Development Tactically. . . . . . . . . . . .  135
+5.2 Understanding Challenges in theAgile Environment. . . . . . . . . . . . . . . . .  138
+5.3 AnAgile Target Operating Model Based on SAFe. . . . . . . . . . . . . . . . . . .  140
+5.3.1 Basic Concepts for the Target Operating Model. . . . . . . . . . . . . . .  141
+5.3.2 Portfolio Level—Setting the Strategic Framework
+for the Further Development of the IT Landscape. . . . . . . . . . . . . .  145
+5.3.3 Solution Level – TacticallyAdvancing IT Landscapes. . . . . . . . . .  151
+5.3.4 Program level – Ensuring the basic architecture with the
+Architectural Runway. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  156
+5.4 Management of Standards in theAge of Digitalization. . . . . . . . . . . . . . . .  158
+5.5 Use of Standards for Digital Ecosystems Using the
+Example of theAPI Economy. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  159
+5.6 Conclusion: The EnterpriseArchitect in theAgile Framework. . . . . . . . . .  162
+References. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  163
+6 Future Skills of an EnterpriseArchitect in the Digital World. . . . . . . . . . . .  165
+6.1 The PrimalAbilities of Humans as a Starting Point. . . . . . . . . . . . . . . . . .  171
+6.1.1 Communication Skills and the Importance of Language. . . . . . . . .  172
+6.1.2 Adaptability and the Principle of Self-Organization. . . . . . . . . . . .  174
+6.1.3 OrganizationalAbility and the Interplay of Individuality
+and Communality. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  176
+6.1.4 ReflectiveAbility and the Uniqueness of Thinking
+About Oneself. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  178
+6.2 Images and Narratives forArchitectural Work . . . . . . . . . . . . . . . . . . . . . .  179
+6.2.1 The Power of Inner Images. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  179
+6.2.2 The Dynamic Self-Image as the Core. . . . . . . . . . . . . . . . . . . . . . .  181
+6.2.3 A Positive Image of Humanity as a BasicAttitude. . . . . . . . . . . . .  182
+6.2.4 An Evolutionary Organizational Image as a Basic Idea . . . . . . . . .  184
+6.2.4.1 Self-organization. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  185
+6.2.4.2 Wholeness. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  185
+6.2.4.3 Purpose and Meaning. . . . . . . . . . . . . . . . . . . . . . . . . . . .  191
+6.2.5 Sustainability as a New Guiding Principle forArchitectural
+Work. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  194
+6.2.5.1 Sustainability in StrategicArchitecture Management. . . .  195
+6.2.5.2 The SharedValue Concept by Porter and Kramer. . . . . .  200
+6.2.5.3 Architecture of Sustainability-oriented
+Business Models. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  202
+6.2.5.4 Outlook on Further Topics. . . . . . . . . . . . . . . . . . . . . . . .  204
+
+--- PAGE 9 ---
+x Contents
+6.3 Core Roles. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  205
+6.3.1 Sources of Inspiration for the Core Roles. . . . . . . . . . . . . . . . . . . .  206
+6.3.2 EA-Team. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  208
+6.3.3 EAM-Leader. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  208
+6.3.4 Lead EnterpriseArchitect. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 212
+6.3.5 EAM-Enabler. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  213
+6.3.6 CapabilityArchitect—Architect of Business Capabilities. . . . . . . .  214
+6.3.7 SolutionArchitect—SolutionArchitect. . . . . . . . . . . . . . . . . . . . . .  215
+6.4 The Future of EnterpriseArchitects. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  216
+References. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  216
+Final Consideration . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .  219
+
+--- PAGE 10 ---
+xi
+About the Author
+Dr. Hüseyin Yüksel, Born in 1974, he is married and the
+father of two children. He studied in Darmstadt and earned
+his doctorate in Plymouth, England. For over 20 years, he
+has been active as an entrepreneur and consultant, while also
+dedicating himself intensively to teaching and research. To
+this day, he advises on transformation projects in numerous
+large corporations as an enterprise architect and supports
+executives in the introduction of new working methods. His
+basic attitude is: “Empower people!” Together with his part-
+ners from “likeminds”, he helps large corporations to bring
+more humanity into the working world with new working
+methods. As a business coach, he helps start-ups in Hub 31
+in Darmstadt to build a sustainable company. In parallel, he
+is a lecturer in the Department of Computer Science and
+Business at the TU Darmstadt and the Darmstadt University
+ofApplied Sciences.
+
+--- PAGE 11 ---
+xiii
+Abbreviations
+AHS American Hospital Supply
+API Application Programming Interface
+ART Agile Release Train
+BCM Business Capability Mapping
+BDEW FederalAssociation of the Energy and Water Industry
+BMC Business Model Canvas
+BPMN Business Process Modeling Notation
+CDO Chief Digital Officer
+CIO Chief Information Officer
+CLS Controllable Local System
+CoP Community of Practice
+DevOps “Dev” (Development) and “Ops” (Operations, IT Operations)
+DSGVO General Data Protection Regulation
+DVS DevelopmentValue Stream
+EA EnterpriseArchitect
+EAM EnterpriseArchitecture Management
+EPK Event-driven Process Chain (contextARIS process modeling see [19])
+ESG Environment, Social, Governance
+EVU Energy supply companies
+GWA-S GatewayAdministration System
+iMSB intelligent metering operator
+IoT Internet of Things
+ITIL IT Infrastructure Library
+KI Artificial Intelligence
+KPI Key Performance Indicator
+LPM Lean Portfolio Management
+MaKo Market Communication
+MDM Meter Data Management
+MSB Metering point operator
+NB Network operator
+
+--- PAGE 12 ---
+xiv Abbreviations
+OA OrganizationalAmbidexterity
+OVS OperationalValue Stream
+PI Program Increment
+RLM Registered Power Measurement
+SAFe ScaledAgile Framework
+SEM Semiotic Enterprise Model
+SI Solution Increment
+SLP Standard load profile
+SWOT Strengths, Weaknesses, Opportunities, Threats
+TOGAF The Open GroupArchitecture Framework
+TOM Target Operating Model
+TOWS Threats, Opportunities, Weaknesses, Strengths
+ÜNB Transmission system operators
+VNB Distribution Network Operator
+WM-S Workforce Management System

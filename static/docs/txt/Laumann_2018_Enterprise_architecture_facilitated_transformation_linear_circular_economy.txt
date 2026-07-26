@@ -1,0 +1,898 @@
+--- PAGE 1 ---
+sustainability
+Article
+Enterprise Architecture for a Facilitated
+Transformation from a Linear to a Circular Economy
+Felix Laumann 1,* and Torben Tambo 2
+1 Centre for Environmental Policy, Imperial College London, London SW7 2AZ, UK
+2 Department of Business Development and Technology, Aarhus University, 7400 Herning, Denmark;
+torbento@btech.au.dk
+* Correspondence: f.laumann18@imperial.ac.uk; Tel.: +44-74-2462-7886
+Received: 25 September 2018; Accepted: 21 October 2018; Published: 25 October 2018
+
+
+Abstract: The circular economy is central to the agenda of responsible production and consumption
+with propositions for the conservation of natural resources and a broader understanding of the
+obligations of enterprises and product developers. The circular economy is challenging traditional
+operating models of enterprises due to the need to manage larger parts of the product life cycle
+and value chains. A linear economy will normally address a smaller part of the life cycle. The
+operating models of companies are supported with respect to information and technology with an
+enterprise architecture model. This article examines the necessary steps for analysing and designing
+the enterprise architecture model, aiming to facilitate the transformation of an enterprise from
+operating in a linear to operating in a circular economy model. The fundamentals and requirements
+of the circular economy enterprise are extracted to isolate the design requirements for the operating
+model, entailing cross-enterprise collaboration, traceability, and a broader value chain understanding.
+Furthermore, it conceptualizes enterprise architecture and its role and importance in connecting
+business strategies and operating technologies. This article develops an enterprise architecture
+framework, named the Circular Economy Enterprise Architecture Framework (CEEAF), which can
+form and support the effort of transitioning companies or be embedded into existing enterprise
+architecture frameworks. The CEEAF differs from traditional enterprise architecture frameworks
+by addressing the broader responsibility of the enterprise, the extended enterprise, the elimination
+of end-of-life perspectives and mind-sets, and the capabilities of the individual enterprise and its
+design activities.
+Keywords: enterprise architecture; circular economy; enterprise capabilities; sustainable operations
+1. Introduction
+Large corporations, civil communities, and a range of governments are increasingly addressing
+the issue of the depletion of commodities, waste management, and consumption. The philosophy
+of the circular economy (CE) aims to think about resource consumption in terms of regenerative
+processes [1] preserving the objective value, or the capital, of the resource. Companies as well as
+governmental organizations must consider CE as a strategic effort rooted in top-level management.
+The CE model captures and merges various environmentally sustainable concepts, therefore
+making it a much-appreciated model for a sustainable future [2]. As it has been strongly endorsed by
+China since 2008, with its CE Promotion Law [3], in addition to other endeavours in Europe [4] as well
+as by national governments, for example in the Netherlands [5], the U.S. [6], and France [7], it seems
+that a considerable portion, but certainly not all [8], of the world’s most hefty economies are focusing
+on the CE as the future model for a sustainable economy.
+Sustainability 2018, 10, 3882; doi:10.3390/su10113882 www.mdpi.com/journal/sustainability
+
+--- PAGE 2 ---
+Sustainability 2018, 10, 3882 2 of 16
+For a thorough implementation of a CE, its underlying concept must reach every level of any
+organization willing to operate according to its principles [1]. Besides the theoretical definitions of
+CE business models [9–12], a CE must be connected as a strategic initiative to, and supported by, the
+relevant technological systems and processes of the enterprise. Although adopting CE practices in an
+organization has been tried by lean methodologies [13] or supply chain management [14], this complex
+problem is defined as the enterprise architecture (EA). It is, due to its capabilities, a very promising
+methodology to apply CE practices throughout an organization, but has not been studied to-date. This
+article aims to close this gap by defining a novel EA framework, specifically defined for CE, as, e.g.,
+Yip and Bocken [15] thoroughly emphasise. In EA, the strategic objectives of the enterprise are enacted
+as initiatives, products, services, data, information, systems, applications, networks, and infrastructure.
+A fundamental hypothesis in this respect is that linkage of flow-of-goods with flow-of-information in
+classical industrial thinking must be reformulated into a CE-based industrial thinking. By designing an
+appropriate framework for the interrelatedness of CE and the information and technology architecture
+of the enterprise, open questions of making CE operational can be answered.
+This article argues that appropriate adaption and relevant augmentation must be implemented
+within traditional EA frameworks to manage the requirements raised by a CE. The argument is
+underpinned by the traditional EA frameworks being both explanatory models for the current
+technological portfolio and transitional in terms of acting as a guiding mechanism to enact
+new technological solutions. An EA framework that is particularly designed for the successful
+implementation of CE business models does not exist to date. In this article, the development of such a
+framework, named the Circular Economy Enterprise Architecture Framework (CEEAF), is suggested
+to close this research gap. Scholars and practitioners can apply the framework for connecting and
+improving the interrelation between business strategy, technology, processes and consumption of
+resources [16].
+Sincestrategicplanningencompassesthetriplebottomlineofeconomic, social, andenvironmental
+positioning regarding sustainability alongside the matter of the growth of environmental awareness
+among all continents’ inhabitants [17], this article focuses particularly on the enhancement of the
+environmental benefits due to it having been disregarded compared with the other two parts of
+the triple bottom line [18]. Nonetheless, CE and consequently the proposed CEEAF consider all
+three dimensions of sustainability. Environmental resilience is derived from CE’s opportunities
+of conservation of resources [19,20], thus the proposed framework is addressing technological
+opportunities, representational systems and information assurance related to creating stronger and
+more resilient patterns of consumption.
+This article is structured as follows: Firstly, theory necessary to understand the topic area, i.e.,
+definitions and elaborations of EA and CE are given (Section 2). Secondly, the methodological approach
+is explained (Section 3), before we delineate empirical positions of CE practices in medium to large
+corporations (Section 4). Afterwards in Section 5, we define an EA framework for the CE, which is
+then discussed (Section 6) and concluded (Section 7).
+2. Theoretical Background
+2.1. Enterprise Architecture
+EA is the ‘analysis and documentation of an enterprise in its current and future states from
+an integrated strategy, business, and technology perspective’ [21]. Its quintessence lies in building
+an organizing meta-context for the alignment of technology planning and business planning, with
+strategic planning as its primary driver [22,23]. Bernard [21] presents EA as a cubic representation
+consisting of the dimensions artefacts, segments, and levels as illustrated in Figure 1. Artefacts are
+large organizational entities of value creation. Segments are cross-cutting components of the enterprise,
+for example a human resource database. Levels are a hierarchical construct with the strategic initiatives
+of the enterprise at the top (level 1) and technology and infrastructure as the base layer (level 5).
+
+--- PAGE 3 ---
+Sustainability 2018, 10, 3882 3 of 16
+Level 4 is systems and applications, level 3 data and information, and level 2 products and services.
+Fundamental to the EA philosophy is the transition from a documented present state to an intended
+future state. The level-based model serves as an illustration of and support for interrelations within
+the enterprise of the distinct technological levels. Each level plays an exclusive role in ensuring that
+the operating model of the enterprise, for example products and services, is a representation of the
+artefacts required for a business service and thereby a business model [24]. Business models are
+defined from the top level but rely on distinctive hierarchical dependencies [25]; business models
+might define the enterprise architecture, but the enterprise architecture can also be used in the creation
+of business models, for example in switching from delivering physical products to delivering services
+for these products.
+Enterprise architecture is a complex discipline to master. Korhonen and Molnar [26] discuss
+EA as a (fundamental) business capability that is critical to the overall business creation. Ongoing
+discussions seek to capture the maturity of the enterprise in respect to EA and EA governance [27].
+In the sense of EA representing the systems and applications of the enterprise, it is closely related to
+(strategic) software systems’ portfolio management and thereby also decisive in the selection of the
+technological elements of the enterprise’s operating model.
+Sustainability 2018, 10, x FOR PEER REVIEW 3 of 16
+and services. Fundamental to the EA philosophy is the transition from a documented present state to
+an intended future state. The level-based model serves as an illustration of and support for
+interrelations within the enterprise of the distinct technological levels. Each level plays an exclusive
+role in ensuring that the operating model of the enterprise, for example products and services, is a
+representation of the artefacts required for a business service and thereby a business model [24].
+Business models are defined from the top level but rely on distinctive hierarchical dependencies [25];
+business models might define the enterprise architecture, but the enterprise architecture can also be
+used in the creation of business models, for example in switching from delivering physical products
+to delivering services for these products.
+Enterprise architecture is a complex discipline to master. Korhonen and Molnar [26] discuss EA
+as a (fundamental) business capability that is critical to the overall business creation. Ongoing
+discussions seek to capture the maturity of the enterprise in respect to EA and EA governance [27].
+In the sense of EA representing the systems and applications of the enterprise, it is closely related to
+(strategic) software systems’ portfolio management and thereby also decisive in the selection of the
+technological elements of the enterprise’s operating model.
+Figure 1. The basic elements of enterprise architecture (EA) analysis and design [16].
+EA is discussed in initiatives on inter-organizational relationships [28,29] and technological
+interoperability [30]. As the EA is derived from the single organization’s strategy, there are
+limitations to the ability to enact technological design in other enterprises, although most levels of
+the EA model rely on external relationships anyway, for example parts from suppliers, products for
+the market, and data sent to and from relevant parties. Drews and Schirmer [28] suggest that EA can
+be a positive driver for the creation of business eco-systems.
+EA is generically supported by the dominant implementation and maintenance framework
+TOGAF (The Open Group Architecture Framework) [31]. TOGAF outlines a methodology for
+implementation starting with the setting of business objectives and describing the outcome [32] and
+structures an enterprise from the business, data, application, and technology architectures, whereby
+the reaching out to the business surroundings is addressed by the idea of an ‘enterprise continuum’
+[33]. TOGAF strongly addresses enterprises’ ability to adapt and adopt technology from maturity
+measurement,statingthereadiness,organization,managementbuy-in,structurationlevel,andmore,
+and implementation is considered as a continuous process known as the architecture development
+method (ADM) [34].
+2.2. From Linear to Circular Economy
+The contemporary socio-economic model is referred to in the literature as the linear economy
+model [35,36] (see Figure 2) in comparisons with other models, especially the CE model (see Figure
+3). Itsmost obviouscharacteristicisthe discarding ofaproductafteritsuse, whichimpliesillusionary
+Figure 1. The basic elements of enterprise architecture (EA) analysis and design [16].
+EA is discussed in initiatives on inter-organizational relationships [28,29] and technological
+interoperability [30]. As the EA is derived from the single organization’s strategy, there are limitations
+to the ability to enact technological design in other enterprises, although most levels of the EA model
+rely on external relationships anyway, for example parts from suppliers, products for the market, and
+data sent to and from relevant parties. Drews and Schirmer [28] suggest that EA can be a positive
+driver for the creation of business eco-systems.
+EA is generically supported by the dominant implementation and maintenance framework
+TOGAF (The Open Group Architecture Framework) [31]. TOGAF outlines a methodology for
+implementation starting with the setting of business objectives and describing the outcome [32]
+and structures an enterprise from the business, data, application, and technology architectures,
+whereby the reaching out to the business surroundings is addressed by the idea of an ‘enterprise
+continuum’ [33]. TOGAF strongly addresses enterprises’ ability to adapt and adopt technology from
+maturity measurement, stating the readiness, organization, management buy-in, structuration level,
+and more, and implementation is considered as a continuous process known as the architecture
+development method (ADM) [34].
+
+--- PAGE 4 ---
+Sustainability 2018, 10, 3882 4 of 16
+2.2. From Linear to Circular Economy
+The contemporary socio-economic model is referred to in the literature as the linear economy
+model [35,36] (see Figure 2) in comparisons with other models, especially the CE model (see Figure 3).
+Its most obvious characteristic is the discarding of a product after its use, which implies illusionary
+assumptions of never-ending or even never-diminishing natural resources. Its practices are threefold,
+categorized by the extraction of resources (‘take’), the use of them to manufacture a product (‘make’),
+and their final disposal (‘dispose’) [37]. Practitioners often speak of a ‘take, make, dispose’ or
+‘cradle-to-grave’ mentality [38].
+Sustainability 2018, 10, x FOR PEER REVIEW 4 of 16
+assumptionsof never-ending or even never-diminishing natural resources. Its practices are threefold,
+categorized by the extraction of resources (‘take’), the use of them to manufacture a product (‘make’),
+and their final disposal (‘dispose’) [37]. Practitioners often speak of a ‘take, make, dispose’ or ‘cradle-
+to-grave’ mentality [38].
+Figure 2. Linear economy model.
+Figure 3. Circular economy model.
+The CE model is entirely based on the fact that the prices for natural resources will rise and
+become more volatile in the near future [39,40]. It has emerged from various schools of thought and
+synergizes them; the first concrete features, with a focus on industrial economics, are developed by
+Stahel and Reday [41]. The most influential theories are cradle-to-cradle [42], the performance
+economy [43], biomimicry[44],industrial ecology [45],natural capitalism[46], theblue economy [47],
+and regenerative design [48]. Another crucial factor to realize CE business models is that
+organizations adopt to the concept of resilience[17,18].It encompasses theissues of businesssecurity,
+preparedness for environmental changes, risk analysis, and survivability of the business [49].
+Adopting to the concepts of resilience requests an enterprise to have a proactive, beyond a mere
+defensive, thriving attitude, inherent strength to withstand any crisis, and knowledge of its situation,
+its risks, vulnerabilities and current capabilities to make data-driven decisions [50].
+A well-accepted definition of the fairly recently emerged research field of CE is formulated as
+‘an industrial economy that is restorative or regenerative by intention and design’ [1]. Similarly, a CE
+is defined by other scholars as the ‘realization of [a] closed loop material flow in the whole economic
+system’ [51], as an economy that is ‘restorative by design, and which aims to keep products,
+components and materials at their highest utility and value, at all times’ [51], or as ‘design and
+business model strategies [that are] slowing, closing, and narrowing resource loops’ [11]. In the
+authors’ opinion, the most comprehensive definition is proposed by Geissdoerfer et al. [35], who
+describe CE ‘as a regenerative system in which resource input and waste, emission, and energy
+leakage are minimized by slowing, closing, and narrowing material and energy loops. This can be
+achieved through long-lasting design, maintenance, repair, reuse, remanufacturing, refurbishing,
+Figure 2. Linear economy model.
+Sustainability 2018, 10, x FOR PEER REVIEW 4 of 16
+assumptionsof never-ending or even never-diminishing natural resources. Its practices are threefold,
+categorized by the extraction of resources (‘take’), the use of them to manufacture a product (‘make’),
+and their final disposal (‘dispose’) [37]. Practitioners often speak of a ‘take, make, dispose’ or ‘cradle-
+to-grave’ mentality [38].
+Figure 2. Linear economy model.
+Figure 3. Circular economy model.
+The CE model is entirely based on the fact that the prices for natural resources will rise and
+become more volatile in the near future [39,40]. It has emerged from various schools of thought and
+synergizes them; the first concrete features, with a focus on industrial economics, are developed by
+Stahel and Reday [41]. The most influential theories are cradle-to-cradle [42], the performance
+economy [43], biomimicry[44],industrial ecology [45],natural capitalism[46], theblue economy [47],
+and regenerative design [48]. Another crucial factor to realize CE business models is that
+organizations adopt to the concept of resilience[17,18].It encompasses theissues of businesssecurity,
+preparedness for environmental changes, risk analysis, and survivability of the business [49].
+Adopting to the concepts of resilience requests an enterprise to have a proactive, beyond a mere
+defensive, thriving attitude, inherent strength to withstand any crisis, and knowledge of its situation,
+its risks, vulnerabilities and current capabilities to make data-driven decisions [50].
+A well-accepted definition of the fairly recently emerged research field of CE is formulated as
+‘an industrial economy that is restorative or regenerative by intention and design’ [1]. Similarly, a CE
+is defined by other scholars as the ‘realization of [a] closed loop material flow in the whole economic
+system’ [51], as an economy that is ‘restorative by design, and which aims to keep products,
+components and materials at their highest utility and value, at all times’ [51], or as ‘design and
+business model strategies [that are] slowing, closing, and narrowing resource loops’ [11]. In the
+authors’ opinion, the most comprehensive definition is proposed by Geissdoerfer et al. [35], who
+describe CE ‘as a regenerative system in which resource input and waste, emission, and energy
+leakage are minimized by slowing, closing, and narrowing material and energy loops. This can be
+achieved through long-lasting design, maintenance, repair, reuse, remanufacturing, refurbishing,
+and recycling.’
+Figure 3. Circular economy model.
+The CE model is entirely based on the fact that the prices for natural resources will rise and
+become more volatile in the near future [39,40]. It has emerged from various schools of thought
+and synergizes them; the first concrete features, with a focus on industrial economics, are developed
+by Stahel and Reday [41]. The most influential theories are cradle-to-cradle [42], the performance
+economy [43], biomimicry [44], industrial ecology [45], natural capitalism [46], the blue economy [47],
+and regenerative design [48]. Another crucial factor to realize CE business models is that organizations
+adopt to the concept of resilience [17,18]. It encompasses the issues of business security, preparedness
+for environmental changes, risk analysis, and survivability of the business [49]. Adopting to
+the concepts of resilience requests an enterprise to have a proactive, beyond a mere defensive,
+thriving attitude, inherent strength to withstand any crisis, and knowledge of its situation, its risks,
+vulnerabilities and current capabilities to make data-driven decisions [50].
+A well-accepted definition of the fairly recently emerged research field of CE is formulated as
+‘an industrial economy that is restorative or regenerative by intention and design’ [1]. Similarly,
+a CE is defined by other scholars as the ‘realization of [a] closed loop material flow in the whole
+economic system’ [51], as an economy that is ‘restorative by design, and which aims to keep products,
+components and materials at their highest utility and value, at all times’ [51], or as ‘design and
+business model strategies [that are] slowing, closing, and narrowing resource loops’ [11]. In the
+authors’ opinion, the most comprehensive definition is proposed by Geissdoerfer et al. [35], who
+
+--- PAGE 5 ---
+Sustainability 2018, 10, 3882 5 of 16
+describe CE ‘as a regenerative system in which resource input and waste, emission, and energy leakage
+are minimized by slowing, closing, and narrowing material and energy loops. This can be achieved
+through long-lasting design, maintenance, repair, reuse, remanufacturing, refurbishing, and recycling.’
+The overall field has received increasing academic interest with a variety of recently published
+reviews [52–54], in addition to more specific research in closed-loop value and supply chains [55],
+circular business models [11], and circular product design [56].
+2.3. Identifying Enterprise Architecture Requirements for a Circular Economy
+By definition, EA is ‘the analysis and documentation of an enterprise in its current and future
+states’ [21], of which the documentation can be divided into the aforementioned five basic levels of
+analysis and design to propose ways to make them more tangible and steerable [57]. The process begins
+with the choice of an appropriate EA framework, that is, defining clear boundaries for the architecture,
+since the integration of suppliers into the EA could be beneficial depending on the situation [58]. An
+EA framework for a business operating in a CE must encompass the extended business network to the
+fullest extent of relevance, while each distinctive line of business must investigate the building of its
+segment with its specific business partners, which are subsequently implemented in the overall EA [21].
+In cases of organizations belonging to the manufacturing industry, the extended manufacturing
+(supplier) network [59] must tentatively be represented in the EA. Additionally, investigations must be
+made on the other side of the value chain, that is, gathering data concerning the usage and quality
+of the product, because of the CE’s aspiration ‘to keep products, components and materials at their
+highest utility and value, at all times’ [51]. As the rationale for successful implementation of the
+CE model, changeable EA components, such as goals, processes, standards, and resources, need to
+comprehend the CE’s first core principle of customers renting, leasing, or sharing instead of owning
+products. The second core principle of merely using cradle-to-cradle materials again aims ‘to keep
+products, components, and materials at their highest utility and value at all times’ [51]. Business
+models for the CE [11] need to be designed and implemented at that stage. Subsequently, the current
+state of the existing architecture must be recorded on each level of the framework; that is, every line of
+business with its corresponding supplier, and ideally customer, needs to be represented in conjunction
+with its components. Accordingly, a baseline is established that must be acted on contextually towards
+the CE’s aforementioned two core principles, ultimately concluding in the fourth element of analysing
+and designing an EA, namely the formulization of a future architecture. Ambitiously, no concessions
+regarding the utilization and quality loss of products, components, and materials are allowed, which
+results in a formulization that seems to anticipate, at that point of time, a utopian ideal final result [60].
+How a smooth and efficient ongoing transition from the current to the future state is realizable is
+described in a living management plan that clearly states the present capabilities, their performance
+gaps, and the future capabilities with resource requirements, planned solutions, a sequencing plan,
+a time frame, and a summary of the current and future architecture [21]. If the aforesaid ideal final
+result were understood as what needs to be attained, the management plan would outline how those
+conditions can be attained [22]. The identified performance gaps need to be minimized by solutions of
+which the development and implementation require resources that are predefined and documented in
+a sequencing plan that is part of an overall transformation project time frame. Lastly, the threads of
+the EA concerning IT-related security, standards, and skill considerations are described. Due to the
+increasing complexity and uncertainty of the globally connected world, particularly careful elaboration
+must be exercised on the IT-related security. The type of data stored in such an EA would for many
+third-party stakeholders be of the greatest interest, since it contains information about the entire
+business line of suppliers, organizations, and customers in one single entity. Furthermore, using
+international, national, or industry standards at all levels enhances the integration of EA components
+and their individual controlling abilities. Another often-observed thread is the concern that employees
+are not able to unfold their full skills because of their impression of being tied into too strict guidelines
+or other factors that influence productivity, efficiency, or creativity negatively.
+
+--- PAGE 6 ---
+Sustainability 2018, 10, 3882 6 of 16
+3. Methodology
+The chosen methodology for the intended creation of a new EA framework that is customized for
+the implementation of CE business models and product designs falls into the scheme of design science
+research [61]. Characterizing this methodology are three inherent research cycles that connect the three
+indicating fields of any design science research project: Firstly, the contextual environment, that is, an
+application domain; secondly, the knowledge base of scientific foundations, experience, and expertise
+that informs the research project; and, thirdly, the actual design science research activities of building
+artefacts and evaluating them. Those three fields obviously intervene in each other when it comes to
+the creation of a new artefact. Hevner [62] entitles these intervention cycles, both a relevance cycle
+and a rigor cycle that bridge the contextual environment, respectively, the scientific knowledge base
+for the actual design science research activities. Within this field, a design cycle iterates between the
+artefacts’ building activities and their subsequent evaluation [61]. By focusing on the defined research
+problem while adhering to the methodology of design science research, an EA framework development
+methodology is employed, as described by Bernard [21] or TOGAF [63]. Accordingly, a systematic
+literature review [64] was conducted to identify, evaluate, and interpret all available research relevant
+to find existing EA frameworks in addition to CE business models. As little research exists regarding
+EA correlated with the CE, the search expanded into EA in relation to general sustainability, green
+technology, inter-organizational relationships, and value/supply chain management. The existing
+EA frameworks were then succinctly assessed in relation to their feasibility regarding CE business
+models together with recommendations for modifications. Ultimately, the process concluded with the
+creation of a new EA framework for organizations operating in a CE model, which we call the Circular
+Economy Enterprise Architecture Framework (CEEAF).
+4. Empirical Positions of CE Business Models
+For the purpose of providing readers with empirical positions of CE business models to see the
+requirement of a specific EA framework, we selected three case studies from disparate industries.
+Criteria for this particular selection of empirical positions were the diversity of industries, the size
+of the enterprise or extended enterprise, and the feasibility in geographically collocated businesses
+a novel EA framework must be applicable to. These studies do not only motivate the construction
+of an EA framework particularly designed for CE business models, they also show how various
+industries benefit from such a framework. In the previously described systematic literature review,
+numerous case studies were found (e.g., References [65–67]), but due to the aforementioned arguments
+of multi-industrial applicability the three subsequent studies are elaborated more in detail.
+4.1. Printed Circuit Boards
+Wen and Meng [68] evaluate quantitatively the CE performance of printed circuit boards (PCB)
+in an eco-industrial park in China’s Suzhou New District where all enterprises which are required to
+realize CE business models are collocated. The strength of the implementation of CE business models
+in such an industrial symbiosis is examined by a substance flow analysis and a resource productivity
+indicator for the core materials of any PCB (copper, water, energy). The authors define five categories of
+enterprises necessary to realize a circular substance flow, i.e., CE business models, which are displayed
+in the subsequent Table 1.
+Since any for-profit organization measures its uttermost performance in monetary profit, the
+resource productivity is given in thousand yuan per ton. Disparate scenarios with and without waste
+utilization are examined. Although geographical proximity of involved enterprises is in this case given,
+each of the three core materials still have a lower, i.e., more profitable, resource productivity without
+waste utilization than with waste utilization. Precisely, 21.38 compared to 23.15 thousand yuan per
+ton for enterprises of category 1, 64.15 compared to 71.32 thousand yuan per ton for enterprises of
+
+--- PAGE 7 ---
+Sustainability 2018, 10, 3882 7 of 16
+category 2, and 176.47 compared to 211.21 thousand yuan per ton for enterprises of category 3. The
+two residual categories process PCBs and are hence not taken into account in these calculations.
+Table 1. Categories of enterprises in an industrial symbiosis necessary for circular economy (CE)
+business models.
+Category PCB-Specific Role Generic Role
+1 Production of electrolytic copper foil Provide raw materials
+2 Usage of electrolytic copper foil to produce copper clad
+Refine raw materials to
+manufacturing materials
+3 Usage of copper clad to produce PCB
+Use manufacturing materials to
+produce component
+4
+Usage of PCB to assemble and produce
+electronic products
+Assemble components in products
+5
+Collection of waste etching solutions, recover copper
+sulphate from the waste, make a regenerated etching
+solution, collect and regenerate copper waste
+Collection and regeneration of waste
+and by-products
+4.2. Pay-Per-Use
+Business models where consumers pay for a service a given product can perform (e.g., wash)
+rather than own a product to have a desired service (e.g., washing machine) are widely known as
+pay-per-use business models. Clearly, these business models can be categorized as CE business
+models due to the consistent product ownership and the owners’ aspirations to keep products, hence
+services, at their highest utility and value at all times. Bocken et al. [69] investigate how strongly
+pay-per-use business models foster sustainable consumption. They find a substantial discrepancy
+between consumers’ behaviour in the first free month of their subscription to HOMIE, a provider of
+pay-per-use washing machines, and the subsequent ones. Since prices of each wash are determined
+by the temperature of the wash, consumers considerably reduced washing temperatures besides the
+number of washes. Noteworthy, HOMIE is not just another launderette, it combines the comfort
+of having an appliance at home with monetarily-encouraged sustainable consumption by charging
+consumers per wash while the product is still owned by HOMIE. Results show firstly that the average
+temperature per wash decreased from 40.2 ◦C in the first free month to 38.1 ◦C in the second paid
+month. Secondly, the average number of washes also decreased from the first free month to the second
+paid month by 12.9 to 10.3, respectively.
+4.3. Product Sharing Platform
+Peerby is a platform that allows neighbours to borrow or rent items from each other which
+was originally started as a simple Facebook group to enhance the sharing economy by offering an
+alternative for excessive consumption [70]. Due to the proximity to lending neighbours and the
+emotional connection one has when a possession is entrusted to one, item borrowers or renters feel
+naturally obligated to sustain the item quality on the highest possible level. Product owners have the
+freedom to decide individually if any charge should be applied to renting an item or the item can freely
+be borrowed by any neighbour. More than 100,000 neighbours are registered on the Dutch website
+and items range from electric wheelchairs to cameras and tables.
+4.4. Summarizing the Empirical Positions
+Empirical positions must be evaluated for relevance according to their offerings in a CE context.
+Thismeansthatthereexistsreflectedconsiderationsinresourceconsumptionandpotentialsofstudying
+informationandtechnology. Followingthecasespresentedby, e.g., theEllenMacArthurFoundation[1],
+it is important to be ambitious to change “non-obvious” industries, as well as it is also significant
+to work with suggestions for improvements of “obvious” industries. In this respect, the obvious
+industries includes industries with opportunity to control the physical goods all through its life-cycles,
+
+--- PAGE 8 ---
+Sustainability 2018, 10, 3882 8 of 16
+e.g., laundry rentals, cars, construction materials. Non-obvious industries include companies where
+resources transition beyond potentials of re-use like food, oil, digital services, entertainment. It is
+argued that the presented empirical cases qualitatively represent a range of industries suited for a
+broader generalizability of the findings.
+5. An EA Framework for a Circular Economy
+EA practice is generally derived from EA frameworks, or EA models as they are also called.
+More than 70 frameworks exist for various purposes, for example ease, complexity, responsibility,
+IT orientation, investment orientation, or emphasizing formality and rigor versus flexibility and
+organizational aspects. This is a matter of design orientation, contrary to design stand domains. Here,
+dimensions of sustainability and social responsibility have been introduced gradually since 2011.
+The Smart Grid Architecture Model (SGAM) [71] has been developed to ensure positive balancing in
+the electricity sector to include more renewable energy sources, for example wind and solar power.
+The Smart City Infrastructure Architecture Model (SCIAM) [72] is an architectural model ensuring
+interoperability, integration, and balancing between critical elements of modern metropolises in
+terms of transportation, energy, security, water, and waste. The Electric Mobility Architecture Model
+(EMAM) [73] extends the SGAM to electric vehicles for the management of car fleets, consumer needs,
+the car as consumer, the car as storage, and the car as provider. Furthermore, architectural frameworks
+have been developed for (sustainable) building management (HBAM) [72], intelligent transportation
+systems (FRAME) [74], and industrial rethinking and integration (RAMI 4.0) [75]. Common to all the
+frameworks are a multidimensional approach, the top-down structuration of technologies, and the
+top-down structuration of the organizational context. In the following, EA frameworks are discussed
+and analysed in the context of CE.
+Besides suggesting an advanced framework for balancing in energy systems, SGAM is important
+for its introduction of enterprise architecture in between resiliency and consumption. Resilience
+is encompassing a range of methodologies including reliability, adaption capacity, elasticity, and
+evolvability [76]. Resilience must be based on algorithmic approaches to manage demand-response and
+central-decentral connectivity through rightful functional decomposition and database designs [76].
+The pressure on organizations to divert their business strategy to embrace CE calls for a review
+of the key elements of EA to scrutinize the technological fit of the existing operating models to the
+CE as a strategy. By considering EA as a model of the key business enablers and a framework for
+documentation and planned change, a number of requirements can be refined from the above. The
+requirements must aim to create persistent information across any context of judicial ownership and
+spatio-temporal context throughout the life cycle of a set of resources until safe reclamation of these
+resources is accomplished. RAMI 4.0 contributes well to the understanding of the product in its
+‘active’ life cycle of development, manufacturing, and use, but it does not focus on the cross-cutting
+responsibilities, end-of-life responsibilities, and potential for the preservation of resources. The
+theoretical position of extended enterprise architecture (EEA) [29] is interesting, as it discusses
+cross-organizational barriers and enablers for designing architectures involving multiple actors;
+Tambo [29] highlights a range of focal points for ensuring qualitative EEA with imprecision, imbalance,
+heterogeneity, transformation, temporality, and operational maturity. The CE adds specific needs for:
+• Materiality: Understanding resources ecologically and as future resources.
+• Ownership: Responsibility in appropriate forms of meaningfulness, such as judicial, ethical,
+practical, and power.
+• Relationships: Collaboration across life cycles and supply chains.
+• Documentation: Knowledge about the quality, age, and place of products or parts.
+The CE is mostly interorganizational and is dependent on preserving the capital of resources at
+any life cycle stage [38]. Furthermore, it needs persistence in the form of long life cycle management
+and requires control elements to assure high quality of the resources throughout any given stage of the
+
+--- PAGE 9 ---
+Sustainability 2018, 10, 3882 9 of 16
+product’s life cycle. CE is dependent on interoperability to disseminate information on a resource and
+its handling, collect information on resources for taking back, pass a resource to business partners for
+handling, and eventually source new materials from other CE actors.
+A Circular Economy Enterprise Architecture Framework (CEEAF) is introduced, encompassing
+dimensions of the life cycle value stream, hierarchy levels, and layers, which are derived in accordance
+to RAMI 4.0 and SGAM. Bernard’s [21] five basic layers are increased to seven to involve all the
+required aspects. The proposal is presented in Figure 4, whereas Table 2 examines its relatedness to the
+RAMI 4.0 and SGAM architectural frameworks.
+Sustainability 2018, 10, x FOR PEER REVIEW 9 of 16
+the product’s life cycle. CE is dependent on interoperability to disseminate information on a resource
+anditshandling,collectinformationonresourcesfortakingback,passaresourcetobusinesspartners
+for handling, and eventually source new materials from other CE actors.
+A Circular Economy Enterprise Architecture Framework (CEEAF) is introduced, encompassing
+dimensions of the life cycle value stream, hierarchy levels, and layers, which are derived in
+accordance to RAMI 4.0 and SGAM. Bernard’s [21] five basic layers are increased to seven to involve
+all the required aspects. The proposal is presented in Figure 4, whereas Table 2 examines its
+relatedness to the RAMI 4.0 and SGAM architectural frameworks.
+Figure 4. Circular Economy Enterprise Architecture Framework (CEEAF).
+Table 2. CEEAF in comparison with RAMI 4.0 and SGAM.
+Dimension RAMI 4.0 SGAM CEEAF
+Life Cycle
+Value
+Stream
+Pre-use resource assessment
+Type
+Development Generation Resource preservation design
+Maintenance/usage Transmission Resource allocation
+Instance
+Production Distribution
+Resource renting, leasing,
+sharing for application
+Maintenance/usage
+Demand–response Resource distribution
+Consumer premise Resource application
+Resource reclamation
+Hierarchy
+Levels
+Connected world Market Global resource pool
+Enterprise Enterprise Resource management
+Work centres Operation
+Resource circularity
+technologies
+Station Station Reclamation
+Control device
+Resource tracing and
+information
+Figure 4. Circular Economy Enterprise Architecture Framework (CEEAF).
+Table 2. CEEAF in comparison with RAMI 4.0 and SGAM.
+Dimension RAMI 4.0 SGAM CEEAF
+Life Cycle Value
+Stream
+Pre-use resource assessment
+Type
+Development Generation Resource preservation design
+Maintenance/usage Transmission Resource allocation
+Instance
+Production Distribution
+Resource renting, leasing, sharing
+for application
+Maintenance/usage
+Demand–response Resource distribution
+Consumer premise Resource application
+Resource reclamation
+
+--- PAGE 10 ---
+Sustainability 2018, 10, 3882 10 of 16
+Table 2. Cont.
+Dimension RAMI 4.0 SGAM CEEAF
+Hierarchy Levels
+Connected world Market Global resource pool
+Enterprise Enterprise Resource management
+Work centres Operation Resource circularity technologies
+Station Station Reclamation
+Control device Resource tracing and information
+Field device Field Fields of application
+Product Process Product using resources temporarily
+Layers
+Business Business Resource preservation obligation
+Functional Functional Resource handling instruction
+Information Information Resource information platform
+Communication Communication Resource information sharing
+Integration
+Interorganizational resource
+information exchange
+Asset Component Resource data
+6. Discussion
+6.1. Considering Implementation
+The proposed CEEAF offers a theoretical basis for organizations to operate according to
+CE principles on a large scale using standard (enterprise) architectural management frameworks.
+Implementation efforts can be conducted following the industry standards of TOGAF as a dominant
+framework for the transition of the technology architecture. TOGAF, with its proposals for business,
+data, application, and technology architectures, provides a comprehensive ensemble of all domains,
+for which our proposed CEEAF must be the guiding principle. Precisely, the business architecture,
+which includes the definition of business processes, must be construed to facilitate the circulation
+of materials (through, for example, a disassembling phase, as described in Section 4 on electronics
+manufacturing). The data architecture must encompass the supplier, age, materials, transformations,
+usages, and so on to efficiently document the material properties or product component quality and
+hence their optimal utilization. Technologies that are capable of long traces without the possibility of
+being amended, like block-chain, escrow-style services, or the passport regime from the shipping case,
+would be ideal to use for this purpose. The application architecture aims to define which sub-systems
+are deployed and thus needs to comprise, for example, sub-systems documenting the dissembling
+processes in conjunction with the CEEAF. Intelligent design must be placed in the interactions of all
+the sub-systems, because the circulation of goods requires the transferring of data among multiple
+stages and loosely related stakeholders. The technology architecture must be designed to trace quality
+aspects throughout the lifetime of any goods; that is, the aforementioned block-chain technology
+seems to be capable of vast advancements in this endeavour. Ross’ [77] perspective of seeing EA
+on different maturity levels might provide support, whereas the technology architecture must aim
+to be modular. Jonkers et al. [57] describe a well-observable problem of merging business strategists
+and digital architects for a respected, appreciated among all the stakeholders, and thus successful
+implementation. Crucial to solving this problem is the applied implementation methodology, that is,
+the definition of how the proposed changes are satisfactorily realizable. At this point, the difficulties no
+longer arise from technological challenges; the management of people with its required persuasion of
+scepticism account for more obstacles [78].
+As another tool for the enhancement of the chances of successful EA implementation, a capability
+model [26] can be constructed to visualize not only the functions that the organization wants to achieve
+but also the functions that are possible with its internal capabilities. It facilitates strategic decision
+
+--- PAGE 11 ---
+Sustainability 2018, 10, 3882 11 of 16
+making through the provision of a common language and a shared understanding of the objectives of
+the enterprise. That gives the architect expertise, firstly, to identify and structure capabilities rapidly
+that are unique, stable, and abstracted. Secondly, the so-called strategic architect [79] is then qualified
+to change the entire enterprise. Prahalad and Hamel [79] define strategic architecture as ‘a road
+map of the future that identifies which core competences to build and their constituent technologies.’
+Knowledge about residual products, components, or materials that could theoretically be reused
+or recycled will enter the spotlight through that procedure. Building an initial capability model is
+achieved by pursuing a threefold process as visualised in Figure 5. To begin with, all the entities
+that are important to the organization need to be identified. Accordingly, the customer, supplier, and
+product and especially the processes operating in a linear economy model count as relevant objects.
+Secondly, those entities are turned into capabilities by adding the word ‘management’, that is, customer
+management, supplier management, product management, and process management. Lastly, within
+each capability, the verbs must be identified that represent the actions that must be conducted for
+successful exploitation of each capability. The application of those three steps with the ultimate goal of
+transforming an organization operating in a linear economy model into one operating in a CE model
+are visualized in the following Figure 5.
+Sustainability 2018, 10, x FOR PEER REVIEW 11 of 16
+supplier, and product and especially the processes operating in a linear economy model count as
+relevant objects. Secondly, those entities are turned into capabilities by adding the word
+‘management’, that is, customer management, supplier management, product management, and
+process management. Lastly, within each capability, the verbs must be identified that represent the
+actions that must be conducted for successful exploitation of each capability. The application of those
+three steps with the ultimate goal of transforming an organization operating in a linear economy
+model into one operating in a CE model are visualized in the following Figure 5.
+Figure 5. Capability model for circular economy business models and designs.
+Beyond that initially built capability model, apparently similar capabilities may appear under
+various headings, the requests refining the initial model. The services or processes behind those
+headings that implement the specific capability together with the corresponding stakeholders must
+be identified first. Then, several approaches can be utilized depending on the explicit case.
+Exemplarily, the architect could combine multiple instances as the capability model does not see the
+necessity for a hierarchy. Otherwise, a new higher-level capability could be created as an umbrella
+for all the similar capabilities identified earlier. Conversely, one precise capability could be selected
+as that aforementioned umbrella with references to it in other capabilities. Multiple iterations of this
+refining process should be applied but can be stopped when the benefits are flattening regarding the
+impact of mergers, acquisitions, divestment, strategic differentiation, the leverage of new markets,
+resource investments, strategic value-adding technology, or cost-decreasing technologies.
+6.2. Critical Reflections
+The proposed interpretation of the five basic levels of EA analysis and design according to
+Bernard[21],aswellasitsimplementation,requiresanextraordinarilyferventdesireoforganizations
+to transform themselves into ones operating within a CE model. Noteworthy are the substantial
+interdimensional relations between the resources of the life cycle value stream, the hierarchical levels of
+the tangible matters, and the layers of the organization in focus. Architectural frameworks have their
+strength in the systemic and generic approach to organizations with both descriptiveness of current
+states and aspirations for guidance for transformations to prospective states. By connecting the flow
+of resources to relevant business strategies, operational processes and technological systems, the
+CEEAF is supposed to be used as a generic and comprehensive organizational transformation tool.
+Critical to the proposed framework and a clear limitation is temporality in the form of high
+variation between life cycles ranging from hours and days to decades; short cycles are demonstrated
+Figure 5. Capability model for circular economy business models and designs.
+Beyond that initially built capability model, apparently similar capabilities may appear under
+various headings, the requests refining the initial model. The services or processes behind those
+headings that implement the specific capability together with the corresponding stakeholders must be
+identified first. Then, several approaches can be utilized depending on the explicit case. Exemplarily,
+the architect could combine multiple instances as the capability model does not see the necessity
+for a hierarchy. Otherwise, a new higher-level capability could be created as an umbrella for all the
+similar capabilities identified earlier. Conversely, one precise capability could be selected as that
+aforementioned umbrella with references to it in other capabilities. Multiple iterations of this refining
+process should be applied but can be stopped when the benefits are flattening regarding the impact
+of mergers, acquisitions, divestment, strategic differentiation, the leverage of new markets, resource
+investments, strategic value-adding technology, or cost-decreasing technologies.
+6.2. Critical Reflections
+The proposed interpretation of the five basic levels of EA analysis and design according to
+Bernard [21], as well as its implementation, requires an extraordinarily fervent desire of organizations
+to transform themselves into ones operating within a CE model. Noteworthy are the substantial
+interdimensional relations between the resources of the life cycle value stream, the hierarchical levels of
+the tangible matters, and the layers of the organization in focus. Architectural frameworks have their
+strength in the systemic and generic approach to organizations with both descriptiveness of current
+states and aspirations for guidance for transformations to prospective states. By connecting the flow of
+
+--- PAGE 12 ---
+Sustainability 2018, 10, 3882 12 of 16
+resources to relevant business strategies, operational processes and technological systems, the CEEAF
+is supposed to be used as a generic and comprehensive organizational transformation tool.
+Critical to the proposed framework and a clear limitation is temporality in the form of high
+variation between life cycles ranging from hours and days to decades; short cycles are demonstrated
+as manageable in SGAM, whereas CE overall propose responsibility to the long cycles. Additionally,
+the universal information access and societal enablement in responsible resource reclamation are
+prone to be critical. The conviction of all the involved stakeholders regarding the necessity for that
+transformation must be given, and persistence during the whole process is essential. Furthermore, the
+organization must deal with certain financial losses during the transformation process itself, which is
+nothing unusual when considering any change processes [80]. This loss will ultimately be redeemed
+by the profits gained from new business models. Even cases in which not all the involved stakeholders
+are convinced to the fullest extent, the increasing request of customers for products with low negative
+environmental influences [81] and NGOs’ efforts to achieve transparency in the entire value/supply
+chain [82] will most likely lead to the eventual transformation of those organizations as well.
+Another large limitation is the aspect of product or product part ownership, which is particularly
+noteworthy in industries like energy, food, or textile. Certainly, tracing a part of an assembled hardware
+(e.g., washing machine, automobile, or computer) is accomplishable with certain technologies.
+However, ensuring that food or textiles, often produced far away from their place of consumption
+in less technologically developed circumstances embodies a major challenge. Attaching the
+aforementioned tracing technologies like, e.g., a bar code or chips with a saved blockchain, to a
+product or product part can surely facilitate implementing CE business models for many of the
+consumable goods. However, the majority of food and textile products, or electricity can most likely
+not be adequately and quantitatively be measured. To summarize, the proposed CEEAF is more
+accessible to enterprises and extended enterprises producing only theoretically reusable hardware,
+henceitcangeneralizedandappliedtothosestraightforwardly. Nevertheless, enterprisesandextended
+enterprises in the aforementioned industries of food and textile products, or electricity might have
+major difficulties, which is aligned with the six limits and challenges Korhonen et al. [83] outline.
+7. Conclusions
+The circular economy (CE) is experiencing corporate and political momentum as resources run
+scarce and reclamation technologies improve. The CE offers answers in dealing with the future
+complexities of resource acquisition, reuse, and waste. This article has discussed the shortcomings of
+the strategic design of enterprises and the technological operating models using enterprise architecture
+(EA) as a fundamental construct for corporate management. The Circular Economy Enterprise
+Architecture Framework (CEEAF) has been proposed, which provides the theoretical basis of an
+EA designed to facilitate the transformation of organizations that are aiming to operate in a CE model
+but are currently operating in a linear economy model. The activities involved in designing long-lasting
+products that can be maintained, repaired, reused, remanufactured, refurbished, and recycled must
+be executable immediately in such an EA. Rather, fundamental and strategic guidelines are defined
+that necessitate personalized EA designs for each organization in future work. The CEEAF is, as any
+EA framework, made to be implemented in corporations with large amounts of data and numerous
+stakeholders who manage these. The enterprise-wide commonalities of data handling and accessing
+allows transparency throughout the organization which is particularly required for any business acting
+according to the CE.
+Author Contributions: Conceptualization, F.L. and T.T.; methodology, F.L.; investigation, F.L.; data curation, T.T.;
+writing—original draft preparation, F.L.; writing—review and editing, T.T.; visualization, F.L.; supervision, T.T.
+Funding: This research received no external funding.
+Conflicts of Interest: The authors declare no conflict of interest.
+
+--- PAGE 13 ---
+Sustainability 2018, 10, 3882 13 of 16
+References
+1. MacArthur, E. Towards the circular economy. J. Ind. Ecol. 2013, 7, 23–44.
+2. Costanza,R.; Daly,H.E.Naturalcapitalandsustainabledevelopment. Conserv. Biol. 1992, 6, 37–46. [CrossRef]
+3. Yuan, Z.; Bi, J.; Moriguichi, Y. The circular economy: A new development strategy in China. J. Ind. Ecol. 2006,
+10, 4–8. [CrossRef]
+4. European Commission (EC). Communication from the Commission to the European Parliament, the Council, the
+European Economic and Social Committee of the Regions. Roadmap to a Resource Efficient Europe; COM (2011) 571
+Final; European Commission: Brussels, Belgium, 2011.
+5. The Netherlands, Ministry of Infrastructure and Water Management. National Agreement on the Circular
+Economy; The Government of the Netherlands: The Hague, The Netherlands, 24 January 2017.
+6. U.S. Chamber of Commerce Foundation. 21 November 2017. Available online: https://
+www.uschamberfoundation.org/event/2017-sustainability-and-circular-economy-summit (accessed on
+21 August 2018).
+7. Lambert, F.-M. European Commission. 21 November 2017. Available online: https://ec.europa.eu/
+environment/ecoap/about-eco-innovation/experts-interviews/20150130_circular-economy-is-making-
+good-progress-in-the-regions-of-france_en (accessed on 21 August 2018).
+8. Wilts, H. Germany on the Road to a Circular Economy? Friedrich Ebert Stiftung: Bonn, Germany, 2016.
+9. Antikainen, M.; Valkokari, K. A framework for sustainable circular business model innovation. Technol. Innov.
+Manag. Rev. 2016, 6, 5–12. [CrossRef]
+10. Bocken, N.; de Pauw, I.; Bakker, C. Product design and business model strategies for a circular economy.
+J. Ind. Prod. Eng. 2016, 33, 308–320. [CrossRef]
+11. Lewandowski, M. Designing the Business Models for Circular Economy—Towards the Conceptual
+Framework. Sustainability 2016, 8, 43. [CrossRef]
+12. Sempels, C. Implementing a Circular and Performance Economy through Business Model Innovation. In A
+New Dynamic: Effective Business in a Circular Economy; Ellen MacArthur Foundation: Isle of Wight, UK, 2014.
+13. Preston, F. A Global Redesign?: Shaping the Circular Economy; Chatham House: London, UK, 2012.
+14. Genovese, A.; Acquaye, A.A.; Figueroa, A.; Koh, S.L. Sustainable supply chain management and the
+transition towards a circular economy: Evidence and some applications. Omega 2017, 66, 344–357. [CrossRef]
+15. Yip, A.W.; Bocken, N.M. Sustainable business model archetypes for the banking industry. J. Clean. Prod.
+2018, 174, 150–169. [CrossRef]
+16. Magoulas, T.; Hadzic, A.; Saarikko, T.; Pessi, K. Sustainable Enterprise Architecture: A Three-Dimensional
+Framework for Management of Architectural Change. In European Conference on Information Management and
+Evaluation; Academic Conferences International Limited: Sonning Common, UK, 2012; p. 178.
+17. Dunlap, R.E. A Brief History of Sociological Research on Environmental Concern. Green European: Environmental
+Behaviour and Attitudes in Europe in a Historical and Cross-Cultural Comparative Perspective; Routledge:
+New York, NY, USA, 2016.
+18. Venkatraman, S.; Nayak, R.R. Relationships among triple bottom line elements: Focus on integrating
+sustainable business practices. J. Glob. Responsib. 2015, 6, 195–214. [CrossRef]
+19. McCarthy, I.P.; Collard, M.; Johnson, M. Adaptive Organizational Resilience: An Evolutionary Perspective.
+Curr. Opin. Environ. Sustain. 2017, 28, 33–40. [CrossRef]
+20. Armeanu, D.Ş.; Vintilă, G.; Gherghina, Ş.C.; Petrache, D.C. Approaches on Correlation between Board of
+Directors and Risk Management in Resilient Economies. Sustainability 2017, 9, 173. [CrossRef]
+21. Bernard, S.A. An Introduction to Enterprise Architecture; AuthorHouse: Bloomington, Indiana, 2012.
+22. Lankhorst, M. Enterprise Architecture at Work; Springer: Dordrecht, The Netherlands; Heidelberg, Germany;
+London, UK; New York, NY, USA, 2009.
+23. Simon, D.; Fischbach, K.; Schoder, D. Enterprise architecture management and its role in corporate strategic
+management. Inf. Syst. e-Bus. Manag. 2014, 12, 5–42. [CrossRef]
+24. Gama, N.; Sousa, P.; da Silva, M.M. Integrating enterprise architecture and IT service management. In
+Building Sustainable Information Systems; Springer: Boston, MA, USA, 2013; pp. 153–165.
+25. Iacob, M.E.; Meertens, L.O.; Jonkers, H.; Quartel, D.A.; Nieuwenhuis, L.J.; van Sinderen, M.J. From enterprise
+architecture to business models and back. Softw. Syst. Model. 2014, 13, 1059–1083. [CrossRef]
+
+--- PAGE 14 ---
+Sustainability 2018, 10, 3882 14 of 16
+26. Korhonen, J.J.; Molnar, W.A. Enterprise architecture as capability: Strategic application of competencies to
+govern enterprise transformation. In Proceedings of the 16th Conference on Business Informatics (CBI),
+Geneva, Switzerland, 14–17 July 2014; pp. 175–182.
+27. Jahani,B.; Javadein,S.R.S.; Jafari,H.A.Measurementofenterprisearchitecturereadinesswithinorganizations.
+Bus. Strategy Ser. 2010, 11, 177–191. [CrossRef]
+28. Drews, P.; Schirmer, I. From Enterprise Architecture to Business Ecosystem Architecture: Stages and
+Challenges for Extending Architectures beyond Organizational Boundaries. In Proceedings of the 18th
+International Enterprise Distributed Object Computing Conference Workshops and Demonstrations, Ulm,
+Germany, 1–2 September 2014; pp. 13–22.
+29. Tambo, T. Enterprise Architecture beyond the Enterprise: Extended Enterprise Architecture Revisited. In
+International Conference on Enterprise Information Systems; SCITEPRESS Digital Library: Setúbal, Portugal,
+2017; pp. 381–390.
+30. Guédria, W.; Gaaloul, K.; Naudet, Y.; Proper, H.A. A Modelling Approach to Support Enterprise Architecture
+Interoperability. In OTM Confederated International Conferences on the Move to Meaningful Internet Systems;
+Springer: Berlin/Heidelberg, Germany, 2013; pp. 189–198.
+31. Tambo, T.; Bargholz, J.; Yde, L. Evaluation of TOGAF as a Management of Technology Framework. Int. Assoc.
+Manag. Technol. 2016, 25, 1–17.
+32. Rusli, D.; Bandung, Y. Designing an enterprise architecture (EA) based on TOGAF ADM and MIPI. In
+Proceedings of the International Conference on Information Technology Systems and Innovation, Bandung,
+Indonesia, 23–24 October 2017; pp. 38–43.
+33. Kearny, C.; Gerber, A.; van der Merwe, A. Data-driven enterprise architecture and the TOGAF ADM phases.
+In Proceedings of the International Conference on Systems, Man, and Cybernetics, Budapest, Hungary,
+9–12 October 2016; pp. 4603–4608.
+34. Cabrera, A.; Abad, M.; Jaramillo, D.; Gómez, J.; Verdum, J.C. Definition and implementation of the
+Enterprise Business Layer through a Business Reference Model, using the architecture development method
+ADM-TOGAF. In Trends and Applications in Software Engineering; Springer: Berlin, Germany, 2016; pp. 111–121.
+35. Geissdoerfer, M.; Savaget, P.; Bocken, N.; jan Hultink, E. The Circular Economy—A new sustainability
+paradigm? J. Clean. Prod. 2017, 143, 757–768. [CrossRef]
+36. Tukker, A. Product services for a resource-efficient and circular economy—A review. J. Clean. Prod. 2015, 97,
+76–91. [CrossRef]
+37. International Organization for Standardization (ISO). Environmental Management-Life Cycle
+Assessment-Principles and Framework; ISO: Geneva, Switzerland, 2006.
+38. Ellen MacArthur Foundation (EMF). 22 November 2017. Available online: https://www.
+ellenmacarthurfoundation.org/circular-economy (accessed on 17 July 2018).
+39. De Groot, H.L.; Rademaekers, K.; Smith, M.; Svatikova, K.; Widerberg, O.; Obersteiner, M.; Marcarini, A.;
+Dumollard, G.; Strosser, P.; de Paoli, G.; et al. Mapping Resource Prices: The Past and the Future; ECORYS:
+Rotterdam, The Netherlands, 2012.
+40. Von Weizsäcker, E.U.; de Larderel, J.A.; Hargroves, K.; Hudson, C.; Smith, M.H.; Rodrigues, M.A.;
+Manalang, A.B.; Urama, K.; Suh, S.; Swilling, M.; et al. Decoupling 2: Technologies, Opportunities and Policy
+Options; United Nations Environment Programme: Nairobi, Kenya, 2014.
+41. Stahel, W.R.; Reday, G. The Potential for Substituting Manpower for Energy, Report to the Commission of the
+European Communities; Commission of the European Communities: Brussels, Belgium, 1976.
+42. McDonough, W.; Braungart, M. Cradle to Cradle: Remaking the Way We Make Things; North Point Press:
+New York, NY, USA, 2010.
+43. Stahel, W. The Performance Economy; Palgrave Macmillan UK: Basingstoke, UK, 2010.
+44. Benyus, J.M. Biomimicry: Innovation Inspired by Nature; Perennial: New York, NY, USA, 2002.
+45. Thomas, V.M. Industrial ecology: Towards closing the materials cycle. J. Ind. Ecol. 1997, 2, 149–151.
+[CrossRef]
+46. Hawken,P.; Lovins,A.B.; Lovins,L.H.NaturalCapitalism: TheNextIndustrialRevolution; Routledge: NewYork,
+NY, USA, 2013.
+47. Pauli, G.A. The Blue Economy: 10 Years, 100 Innovations, 100 Million Jobs; Paradigm Publications: Boulder, CO,
+USA, 2010.
+48. Lyle, J.T. Regenerative Design for Sustainable Development; John Wiley & Sons: New York, NY, USA, 1996.
+
+--- PAGE 15 ---
+Sustainability 2018, 10, 3882 15 of 16
+49. Kalmykova, Y.; Sadagopan, M.; Rosado, L. Circular Economy—From Review of Theories and Practices to
+Development of Implementation Tools. Resour. Conserv. Recycl. 2018, 135, 190–201. [CrossRef]
+50. Geng, Y.; Doberstein, B. Developing the circular economy in China: Challenges and opportunities for
+achieving ‘leapfrog development’. Int. J. Sustain. Dev. World Ecol. 2008, 15, 231–239. [CrossRef]
+51. Webster, K. The Circular Economy: A Wealth of Flows; Ellen MacArthur Foundation Publishing: Isle of Wight,
+UK, 2015.
+52. Andersen, M.S. An introductory note on the environmental economics of the circular economy. Sustain. Sci.
+2007, 2, 133–140. [CrossRef]
+53. Ghisellini, P.; Ulgiati, S.; Cialani, C. A review on circular economy: The expected transition to a balanced
+interplay of environmental and economic systems. J. Clean. Prod. 2016, 114, 11–32. [CrossRef]
+54. Lieder, M.; Rashid, A. Towards circular economy implementation: A comprehensive review in context of
+manufacturing industry. J. Clean. Prod. 2016, 115, 36–51. [CrossRef]
+55. Stindt, D.; Sahamie, R. Review of research on closed loop supply chain management in the process industry.
+Flex. Serv. Manuf. J. 2014, 26, 268–293. [CrossRef]
+56. Bakker, C.; den Hollander, M.; van Hinte, E.; Zljlstra, Y. Products That Last: Product Design for Circular Business
+Models; TU Delft Library: Delft, The Netherlands, 2014.
+57. Jonkers, H.; Lankhorst, M.M.; Doest, H.W.t.; Arbab, F.; Bosma, H.; Wieringa, R.J. Enterprise architecture:
+Management tool and blueprint for the organisation. Inf. Syst. Front. 2006, 8, 63–66. [CrossRef]
+58. Schekkerman, J. How to Survive in the Jungle of Enterprise Architecture Frameworks: Creating or Choosing an
+Enterprise Architecture Framework; Trafford Publishing: Bloomington, IN, USA, 2004.
+59. O’Neill, H.; Sackett, P. The Extended Manufacturing Enterprise Paradigm. Manag. Decis. 1994, 32, 42–49.
+[CrossRef]
+60. Domb, E. Using the ideal final result to define the problem to be solved. TRIZ J. 1998, 6, 1–3.
+61. Hevner, A.R. A three cycle view of design science research. Scand. J. Inf. Syst. 2007, 19, 87–92.
+62. Hevner, A.R.; March, S.T.; Park, J.; Ram, S. Design science in information systems research. MIS Q. 2004, 28,
+75–105. [CrossRef]
+63. The Open Group. TOGAF Version 9.1; Open Group Standard G116; The Open Group: San Francisco, CA,
+USA, 2011.
+64. Kitchenham, B. Procedures for performing systematic reviews. Keele UK Keele Univ. 2004, 33, 1–26.
+65. Hu, J.; Xiao, Z.; Zhou, R.; Deng, W.; Wang, M.; Ma, S. Ecological Utilization of Leather Tannery Waste with
+Circular Economy Model. J. Clean. Prod. 2011, 19, 221–228. [CrossRef]
+66. Molina-Moreno, V.; Leyva-Díaz, J.C.; Llorens-Montes, F.J.; Cortés-García, F.J. Design of Indicators of Circular
+Economy as Instruments for the Evaluation of Sustainability and Efficiency in Wastewater from Pig Farming
+Industry. Water 2017, 9, 653. [CrossRef]
+67. Núñez-Cacho, P.; Molina-Moreno, V.; Corpas-Iglesias, F.A.; Cortés-García, F.J. Family Businesses
+Transitioning to a Circular Economy Model: The Case of “Mercadona”. Sustainability 2018, 10, 538. [CrossRef]
+68. Wen, Z.; Meng, X. Quantitative assessment of industrial symbiosis for the promotion of circular economy:
+A case study of the printed circuit boards industry in China’s Suzhou New District. J. Clean. Prod. 2015, 90,
+211–219. [CrossRef]
+69. Bocken, N.M.; Mugge, R.; Bom, C.A.; Lemstra, H.J. Pay-per-Use Business Models as a Driver for Sustainable
+Consumption: Evidence from the Case of HOMIE. J. Clean. Prod. 2018, 198, 498–510. [CrossRef]
+70. Bocken, N.M.; Schuit, C.S.; Kraaijenhagen, C. Experimenting with a Circular Business Model: Lessons from
+Eight Cases. Environ. Innov. Soc. Transit. 2018, 28, 79–95. [CrossRef]
+71. Simmon, E. Smart Grid Conceptual Architecture Framework. April 2011. Available online: https://
+docbox.etsi.org/Workshop/2011/201104_SMARTGRIDS/02_STANDARDS/NIST_SIMMON.pdf (accessed
+on 10 July 2018).
+72. Uslar, M.; Engel, D. Towards generic domain reference designation: How to learn from smart grid
+interoperability. DA-Ch Energieinform. 2015, 1, 1–6.
+73. Uslar, M.; Gottschalk, M. Extending the SGAM for Electric Vehicles. In Proceedings of the International ETG
+Congress 2015, Bonn, Germany, 17–18 November 2015.
+74. Jesty, P.H.; Bossom, R.A. Using the frame architecture for planning integrated intelligent transport systems.
+In Proceedings of the 2011 IEEE Forum on Integrated and Sustainable Transportation System (FISTS), Vienna,
+Austria, 29 June–1 July 2011; pp. 370–375.
+
+--- PAGE 16 ---
+Sustainability 2018, 10, 3882 16 of 16
+75. Wang, Y.; Towara, T.; Anderl, R. Topological Approach for Mapping Technologies in Reference Architectural
+Model Industrie 4.0 (RAMI 4.0). In Proceedings of the World Congress on Engineering and Computer
+Science 2017, San Francisco, CA, USA, 25–27 October 2017; Volume II.
+76. Lloret-Gallego, P.; Aragüés-Peñalba, M.; Van Schepdael, L.; Bullich-Massagué, E.; Olivella-Rosell, P.;
+Sumper, A. Methodology for the Evaluation of Resilience of ICT Systems for Smart Distribution Grids.
+Energies 2017, 10, 1287. [CrossRef]
+77. Ross, J. Creating a Strategic IT Architecture Competency: Learning in Stages; MIT Sloan Working Paper No.
+4314-03; Center for Information Systems Research Working Paper No. 335; SSRN: Rochester, NY, USA, 2003;
+pp. 1–18.
+78. Cau-Bareille, D.; Gaudart, C.; Delgoulet, C. Training, age and technological change: Difficulties associated
+with age, the design of tools, and the organization of work. Work 2012, 41, 127–141. [PubMed]
+79. Prahalad, C.; Hamel, G. The core competence of the corporation. In Strategic Learning in a Knowledge Economy;
+Springer: Berlin/Heidelberg, Germany, 2000; pp. 3–22.
+80. Mellert, L.D.; Scherbaum, C.; Oliveira, J.; Wilke, B. Examining the relationship between organizational
+change and financial loss. J. Organ. Chang. Manag. 2015, 28, 59–71. [CrossRef]
+81. Laroche, M.; Bergeron, J.; Barbaro-Forleo, G. Targeting consumers who are willing to pay more for
+environmentally friendly products. J. Consum. Mark. 2001, 18, 503–520. [CrossRef]
+82. Perez-Aleman, P.; Sandilands, M. Building value at the top and the bottom of the global supply chain:
+MNC-NGO partnerships. Calif. Manag. Rev. 2008, 51, 24–49. [CrossRef]
+83. Korhonen, J.; Honkasalo, A.; Seppälä, J. Circular Economy: The Concept and Its Limitations. Ecol. Econ.
+2018, 143, 37–46. [CrossRef]
+© 2018 by the authors. Licensee MDPI, Basel, Switzerland. This article is an open access
+article distributed under the terms and conditions of the Creative Commons Attribution
+(CC BY) license (http://creativecommons.org/licenses/by/4.0/).

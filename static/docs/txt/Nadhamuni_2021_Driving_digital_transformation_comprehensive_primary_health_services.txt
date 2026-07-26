@@ -1,0 +1,798 @@
+--- PAGE 1 ---
+ 1 Nadhamuni S, et al. BMJ Global Health 2021;6:e005242. doi:10.1136/bmjgh-2021-005242
+Driving digital transformation of
+comprehensive primary health services
+at scale in India: an enterprise
+architecture framework
+Sunita Nadhamuni,1
+Oommen John ‍ ‍ ,2
+Mallari Kulkarni,1
+Eshan Nanda,1
+Sethuraman Venkatraman,3
+Devesh Varma,4
+Satchit Balsari ‍ ‍ ,5,6
+Nachiket Gudi,7
+Shantidev Samantaray,1
+Haritha Reddy,8
+Vikas Sheel9
+Practice
+To cite: Nadhamuni S, John O,
+Kulkarni M, et al. Driving
+digital transformation of
+comprehensive primary health
+services at scale in India:
+an enterprise architecture
+framework. BMJ Global Health
+2021;6:e005242. doi:10.1136/
+bmjgh-2021-005242
+Handling editor Seye Abimbola
+► ► Additional supplemental
+material is published online only.
+To view, please visit the journal
+online (http://​dx.​doi.​org/​10.​
+1136/​bmjgh-​2021-​005242).
+Received 3 February 2021
+Revised 2 April 2021
+Accepted 5 April 2021
+For numbered affiliations see
+end of article.
+Correspondence to
+Sunita Nadhamuni;
+​sunita.​nadhamuni@​dell.​com
+© Author(s) (or their
+employer(s)) 2021. Re-­ use
+permitted under CC BY-­ NC. No
+commercial re-­ use. See rights
+and permissions. Published by
+BMJ.
+ABSTRACT
+InitscommitmenttowardsSustainableDevelopmentGoals,
+Indiaenvisagescomprehensiveprimaryhealthservicesasa
+keypillarinachievinguniversalhealthcoverage.Embedded
+insiloedverticalprogrammes,theirlackofinteroperability
+andstandardisationlimitssustainabilityandhencetheir
+benefitshavenotbeenrealisedyet.Weproposeanenterprise
+architectureframeworkthatovercomesthesechallenges
+andoutlinearobustfuturisticdigitalhealthinfrastructurefor
+deliveryofefficientandeffectivecomprehensiveprimary
+healthcare.Coreprinciplesofanenterpriseplatform
+architecturecoveringfourplatformleverstofacilitateseamless
+servicedelivery,monitorprogrammaticperformanceand
+facilitateresearchinthecontextofprimaryhealthcareare
+listed.Afederatedarchitecturesupportsthecustomneeds
+ofstatesandhealthprogrammesthroughstandardisation
+anddecentralisationtechniques.Interoperabilitydesign
+principlesenableintegrationbetweendisparateinformation
+technologysystemstoensurecontinuumofcareacrossreferral
+pathways.Aresponsivedataarchitecturemeetshighvolume
+andqualityrequirementsofdataaccessibilityincompliance
+withregulatoryrequirements.Securityandprivacybydesign
+underscoretheimportanceofbuildingtrustthroughrole-­ based
+access,stronguserauthenticationmechanisms,robustdata
+managementpracticesandconsent.Theproposedframework
+willempowerprogrammemanagerswithareadyreference
+toolkitfordesigning,implementingandevaluatingprimary
+careplatformsforlarge-­ scaledeployment.Inthecontextof
+healthandwellnesscentres,buildingaresponsive,resilientand
+reliableenterprisearchitecturewouldbeafundamentalpath
+towardsstrengtheninghealthsystemsleveragingdigitalhealth
+interventions.Anenterprisearchitectureforprimarycareisthe
+foundationalbuildingblockforanefficientnationaldigitalhealth
+ecosystem.Ascitizenstakeownershipoftheirhealth,futuristic
+digitalinfrastructureattheprimarycarelevelwilldeterminethe
+health-­ seekingbehaviourandutilisationtrajectoryofthenation.
+INTRODUCTION
+Primary healthcare (PHC) entails the provi-
+sion of holistic person-­ centred services
+comprising health promotion, disease
+prevention, health maintenance and the
+diagnosis and treatment of acute and chronic
+illnesses, to help maintain physical, mental
+and social well-­ being.1
+Evidence from low
+Summary box
+► ► Portability of health information is critical for ensur-
+ing continuum of care and improving health out-
+comes at the primary care setting.
+► ► Digital health tools to strengthen primary healthcare
+services are widely implemented across vertical
+healthcare delivery programmes in many low and
+middle-­ income country settings including India.
+► ► Stand-­ alone mHealth applications have been
+deployed across vertical programmes for non-­
+communicable diseases, tuberculosis and maternal
+and child health, under the National Health Mission
+in India.
+► ► The wider benefits of digitisation of the primary
+healthcare services have not been fully realised due
+to lack of interoperability, standardisation and scal-
+ability of these applications.
+► ► Efficiency, quality and coverage can be significantly
+enhanced when digital health infrastructure is im-
+plemented incorporating the core principles of an
+enterprise platform architecture covering four plat-
+form levers to facilitate seamless service delivery,
+monitor programmatic performance and facilitate
+research in the context of primary healthcare.
+► ► An enterprise architecture framework that address-
+es these key requirements and envisages a futuristic
+platform approach for a robust digital health infra-
+structure that would serve as a backbone for deliv-
+ery of efficient and effective comprehensive primary
+healthcare.
+► ► A federated architecture as proposed taking into
+consideration the local contexts that vary across
+the different states will enable scalability through
+standardisation best practices and decentralisation
+techniques in the context of comprehensive primary
+care through the health and wellness centres there-
+by contributing to the essential building blocks of the
+national digital health infrastructure.
+BMJ Global Health: first published as 10.1136/bmjgh-2021-005242 on 26 July 2021. Downloaded from https://gh.bmj.com on 7 July 2026 by guest.
+Protected by copyright, including for uses related to text and data mining, AI training, and similar technologies.
+
+--- PAGE 2 ---
+2 Nadhamuni S, et al. BMJ Global Health 2021;6:e005242. doi:10.1136/bmjgh-2021-005242
+BMJ Global Health
+and middle-­ income countries (LMIC) demonstrates that
+strengthening PHC results in improved health outcomes,
+and helps achieve universal healthcare.2 3
+The universal delivery of primary care is hampered
+by human and material resource constraints that can be
+substantially mitigated by strategic application of techno-
+logical solutions. LMICs like India have been challenged
+with low investment,4
+insufficient human resources with
+only 20.6 doctors per 10000 population, of which 70%
+are employed in the private sector.5
+This is exacerbated
+by low digital literacy and infrastructural issues.6 7
+Globally, we have seen the development of meaningful
+electronic data platforms that can support a range of
+services including universally accessible personal health
+records for patients, consolidated diagnostic reports and
+decisionsupporttoolsforproviders,qualityimprovement
+data for administrators and critical epidemiological data
+to public health practitioners.8
+However, fragmentation
+of the solution space, lack of scalability, limited config-
+urability and weak security and privacy frameworks limit
+the potential of technology in advancing comprehensive
+PHC in India.9 10
+India’s flagship health scheme, Ayushman Bharat,
+seeks to deliver comprehensive PHC through a package
+of 12 distinct primary health services offered at 150000
+health and wellness centres (HWC) across India.11
+These
+services are delivered via a range of vertical programmes
+each with varying levels of information technology (IT)
+development.12
+The national IT solutions for reproduc-
+tive and child health (RCH), non-­ communicable diseases
+(NCD) and tuberculosis (TB) replicate the silos of their
+parent programmes. This fragmentation places a heavy
+burden on health workers by duplicating data collection
+and reporting. It precludes the patient or provider from
+having access to a comprehensive picture of the patient’s
+health.13
+A plethora of technology pilots across health systems
+in India have exacerbated the fragmentation and have
+proved to be highly unsustainable.9 14
+App developers
+spend significant resources on duplicating foundational
+components like facility and user registries, authentica-
+tion protocols and collecting consent which are neither
+standardised nor easily available. The lack of reliable
+internet connectivity necessitates all software solutions
+to support offline functioning which exponentially
+increases their technical complexity. The sheer volume
+of patients and providers warrants high-­ performance,
+scalable systems fit for concurrent use by tens of thou-
+sands of users.
+Health system structures and workflows along with
+clinical protocols are also constantly evolving and are
+continually modified to suit the unique administrative
+context and needs of local governments. Most digital
+health solutions are not engineered to adapt rapidly to
+dynamic changes. Rigid, non-­ standardised, proprietary
+architectures also preclude the decentralised configu-
+ration required to support the heterogeneity of health
+systems across Indian states.15
+Traditional security and privacy-­ preserving measures
+are rendered ineffective by advances in data science
+and machine learning.16 17
+The designing, building and
+maintenance of secure privacy-­ preserving databases for
+millions of users is expensive and beyond the scope of
+small technology companies that may have very inno-
+vative solutions to offer for individual or population
+health.18
+In summary, the ad hoc, non-­ standardised and
+fragmented nature of health technology solutions is
+duplicative and wasteful, and unsustainable due to heavy
+costs associated with maintaining the agility, capacity and
+security required at scale.19
+In this paper, we describe how India’s evolving digital
+health ecosystem, including the National Digital Health
+Mission (NDHM) and public health platforms (that
+many of us are directly involved in designing and imple-
+menting), seeks to address the challenges of fragmenta-
+tion, scalability, configurability and privacy.
+Enterprise architecture: a platform thinking approach
+The inefficiencies and risks posited by the current frag-
+mentedhealthITlandscapecanbeaddressedbyadopting
+a systemic platform approach. Platforms, as described
+below, provide a stabilising framework responsible for
+maintaining governance mechanisms which include
+standards, interfaces and rules to support a dynamic
+ecosystem of autonomous complementors (third-­ party
+actors, like vendors) and consumers (eg, providers,
+patients or payers).20 21
+Disparate vertical programmes
+can then all plug into the platform, provided they adopt
+standards, use of common nomenclature and shared
+single sources of truth (SSOT) registries.22
+A modular
+design allows individual components of the system to be
+upgraded or exchanged without cascading effects on the
+entire system.
+Platform ecosystems are not new to India; the universal
+ID programme, Aadhaar, and related fintech advances
+including the universal payment interface and the
+consentmanagerframeworkthatallowsforasynchronous
+authentication of payments, execute millions of transac-
+tions daily.23
+Similar federated plug-­ and-­ play architecture
+undergirds the framework prescribed by India’s NDHM
+to ensure authenticated universal information access
+across various care settings enabling transition of care.21
+We describe below how components of a nascent digital
+platform ecosystem in India specifically for primary
+health will help address the challenges we discussed.
+From fragmentation to integration: developing standards and
+interoperability
+A platform approach allows a wide range of actors to
+participate in curating, applying and exchanging data
+provided they can identify each other and communicate
+via a shared language. Electronic Health Records (EHR)
+standards of Ministry of Health and Family Welfare that
+covers health data and metadata interchange stand-
+ards like Systematized Nomenclature of Medicine
+(SNOMED), International Classification of Diseases 10th
+BMJ Global Health: first published as 10.1136/bmjgh-2021-005242 on 26 July 2021. Downloaded from https://gh.bmj.com on 7 July 2026 by guest.
+Protected by copyright, including for uses related to text and data mining, AI training, and similar technologies.
+
+--- PAGE 3 ---
+Nadhamuni S, et al. BMJ Global Health 2021;6:e005242. doi:10.1136/bmjgh-2021-005242 3
+BMJ Global Health
+Revision (ICD-10)/ICD-11, Logical Observation Iden-
+tifiers Names and Codes (LOINC) and Health Level
+7 (HL7)/Fast Healthcare Interoperability Resources
+(FHIR) must be adopted.24
+Intervention and care proto-
+cols may also be exposed as FHIR bundles in line with
+Computable Care Guidelines standards.25
+Linking health
+data transactions across systems requires common iden-
+tifiers for both patients and providers, the generation
+of which is likely to be particularly challenging in India
+given lack of updated databases of registered providers,
+and uncertainty around identity systems in the context
+of India’s evolving privacy and data protection policies.26
+Health ID
+Individuals across the socioeconomic spectrum seek
+primary care across the public and private sectors, and
+often across state borders given the seasonal and annual
+migration patterns in India. Low health-­ seeking behav-
+iour and socioeconomic deprivation however disrupt
+reliable and timely access to care. Without a common
+identifier, it is hard to compile a comprehensive medical
+history, facilitate referrals and even more hard to identify
+those that fall through the cracks entirely. It is also ineffi-
+cient, requiring health workers to re-­ enrol beneficiaries
+in different health programme apps at the same facility.
+The NDHM recently launched the Health ID to
+address these problems.21
+The Health ID, linked to
+Aadhaar or mobile number, can be created by individ-
+uals themselves and provides the basis of integrating all
+their digital health records allowing seamless, consented
+sharing of health data between providers, laboratories
+and pharmacies. The health IT systems we have helped
+develop, Affordable Medicines and Reliable Implants for
+Treatment (AMRIT),27
+Technology Enabled Community
+Health Operations (TeCHO+)28
+and the national NCD
+(Digital LifeCare)29
+system have their own unique identi-
+fiers which are being linked to NDHM Health IDs.
+Registries
+Most IT systems have registries for facilities and providers
+embeddedwithin,andthesegroworganically,userbyuser,
+facility by facility, as the system adoption increases.30 31
+Instead, there must be independent registries which are
+an SSOT, accessible and usable by all primary health
+programmes for interoperability. The registries should
+have open interfaces for ease of access by all ecosystem
+apps, be scalable for heavy loads and have clear processes
+for maintenance.32
+The national identification number
+(NIN) for health facilities, an initiative of the Ministry of
+Health and Family Welfare, serves as the official basis of
+identification for all public health facilities today.33
+TeCHO+ hasa separate facility management module
+that uses the NIN to uniquely identify all the health facil-
+ities in its area of operation. Using this helped in better
+mapping of the RCH data collected at the state level
+with the national RCH monitoring system. AMRIT has
+leveraged state-­ based facility and health human resource
+registries which helps to uniquely identify the workforce
+and triangulate resources during referrals. Also, AMRIT
+has integrated with India’s TB platform to manage drug
+adherence and identification of comorbidities among
+patients. NDHM architecture includes registries for all
+healthcare providers, facilities and the first set of building
+blocks by NDHM include two registries, DigiDoctor for
+all registered doctors and the Health Facility Registry for
+all health facilities in the country.21
+Integration between information technology systems
+Integration has been attempted within well-­ defined
+programmatic frameworks. AMRIT, a platform for
+primary health interventions in resource-­ poor districts,
+currently serving 7+ million people (with an archived
+record base of 70+ million data points), has enabled
+vertical integration between front-­ line health workers
+and peripheral health facilities like HWCs, community
+outreach programmes through mobile medical vans and
+at first referral units which creates a longitudinal view
+of health information, handles escalations and creates
+referral pathways to help establish care continuum.27
+Digital LifeCare, the platform built for the Govern-
+ment of India NCD programme targeting 500 million
+people, integrates apps across village, subhealth centre
+and primary and secondary-­ level facilities by adopting a
+cloud EHR tagged with a unique health identifier, role-­
+based updation rights, e-­ referrals, centralised patient
+status and common registries.34
+TeCHO+ serves over 60
+million people across multiple health verticals in the
+primary care settings and enables longitudinal tracking
+of patient information using a unique ID between village
+health facilities, PHCs and across secondary healthcare
+facilities.28
+Lateral integration across these systems will be
+enabled by the adoption of the common Health ID and
+health registries offered by NDHM. Figure 1 describes
+the platform approach to establish a continuum of care.
+Distributed data and processing architecture as a pathway to
+scale
+Pilots do not scale in India due to the daunting hard-
+ware and computing capacity required when expanding
+projects to serve tens of millions of persons served by
+each state health ministry. Power and internet connec-
+tivity challenges necessitate data collection, consent
+management, information exchange and updates to
+work seamlessly even while offline. The volume of health
+data transactions generated in a population of 1.3 billion
+people raises significant challenges of data consistency,
+24×7 availability and scalability.
+Intermittent power and connectivity
+The TeCHO+’s distributed processing architecture
+allows a field health worker offline using a store-­ and-­
+forward approach to mitigate the challenges of network
+fluctuations. A strong sync mechanism at the server uses
+advanced logic to manage the longitudinal record integ-
+rity to merge data about the same beneficiary coming
+from multiple offline devices in the field. Like TeCHO+,
+BMJ Global Health: first published as 10.1136/bmjgh-2021-005242 on 26 July 2021. Downloaded from https://gh.bmj.com on 7 July 2026 by guest.
+Protected by copyright, including for uses related to text and data mining, AI training, and similar technologies.
+
+--- PAGE 4 ---
+4 Nadhamuni S, et al. BMJ Global Health 2021;6:e005242. doi:10.1136/bmjgh-2021-005242
+BMJ Global Health
+AMRIT uses a store-­ and-­ forward mechanism in its facility
+systems, mobile medical units or front-­ line worker
+systems, even enabling low-­ bandwidth teleconsultations.
+Clinical information collected via health helplines is used
+by the beneficiaries to get in touch with a doctor. These
+systems create a single longitudinal view of all benefi-
+ciary data resulting in a better health profile of people,
+community and district.
+Distributed data architecture
+Health IT platforms include a transactional system, with
+applications to conduct routine care operations and an
+analytics system, where the collected data are analysed to
+generate reports and dashboards. In the Digital LifeCare
+system, initially the data architecture for these two was
+unifiedanditworkedupto10millionbeneficiaries.Asthe
+volume increased to 15 million, the application perfor-
+mance began to degrade. This problem was addressed by
+adopting a distributed data architecture approach so that
+the analytics module did not impact transaction perfor-
+mance for users. The functional separation of data collec-
+tion, storage, integration, processing and visualisation is
+shown in the PHC example in figure 2. We will examine
+modules 2 and 4 which are key elements of a distributed
+data architecture.
+Transaction datastore layer
+The choice of database for transactional storage is
+based on the type and volume of data, storage duration,
+frequency of access, consistency and availability. PHC
+data consist of structured data (numerical values like
+height, weight, blood pressure, etc) which are stored in
+relational databases and unstructured data (X-­ ray images
+and free text) stored in object storage. Storage duration
+for archiving health records is based on policy which
+service providers need to comply with. For effective cost
+optimisation, frequently accessed health data can be
+stored in high-­ performance, but more expensive (hot)
+storage and other data can be stored in cheaper, slower
+performance (cold) storage.35
+For large-­ scale transac-
+tional data storage systems like public health systems,
+consistency is critical as all users must have access to the
+exact same data at any given point in time. Systems must
+be always running and highly available; to achieve this,
+they are deployed with duplicate copies of data on addi-
+tional servers in different data centres.
+Distributed processing layer
+Large-­ scale data warehouse systems require processing
+and storage to be distributed so they can provide dynamic
+updates to health administrators. Typically, in a distrib-
+uted datastore, the data are partitioned by location,
+year or beneficiaries. If a health administrator wishes to
+compare screening data over 5years, it requires data to
+be fetched from five different partitions. Partition design
+for smooth functioning even during network outage is
+very important for analytics systems.36
+This separation of
+data layer and distributed processing is implemented in
+Digital LifeCare and is currently handling 100 million
+beneficiaries and can scale up to 500 million benefi-
+ciaries.
+Plug-and-play model to allow configurability
+A federated enterprise architecture allows a vast network
+of loosely coupled, semiautonomous entities to exchange
+information in a standardised secure manner.37
+It fosters
+Figure 1 Platform thinking to establish care continuum. NCD, non-­ communicable disease.
+BMJ Global Health: first published as 10.1136/bmjgh-2021-005242 on 26 July 2021. Downloaded from https://gh.bmj.com on 7 July 2026 by guest.
+Protected by copyright, including for uses related to text and data mining, AI training, and similar technologies.
+
+--- PAGE 5 ---
+Nadhamuni S, et al. BMJ Global Health 2021;6:e005242. doi:10.1136/bmjgh-2021-005242 5
+BMJ Global Health
+innovation by allowing easy development of apps on the
+platform and allows for modular expansion by its adher-
+ence to standards. A variety of patient apps can be devel-
+oped that allow the individual to have a comprehensive
+view of her health record and track her visits, her wellness
+metrics and care regimen.
+Dynamic configurability in TeCHO+ has ensured that
+the system is always primed for changes in policy or
+evidence-­ based protocol updates. Well-­ defined intercon-
+nections and dynamic configurability between systems
+enable a ‘plug and play’ approach for innovation, rapid
+development and ease of customisation. For example,
+AMRIT can easily plug in various point-­ of-­ care devices to
+help collect clinical data points at various health settings
+(static or mobile). Using these, front-­ line worker systems
+can connect to health facilities and make quick decisions
+using decision support systems, saving time in the urgent
+referral for the high-­ risk pregnant woman needing to see
+a specialist right away. In Digital LifeCare, a clinical deci-
+sion support system for hypertension and diabetes has
+been plugged into the platform through standardised
+interfaces for use in one state while other states continue
+to use existing government protocols.
+Open-source stack
+An open-­ source platform leads to stronger community
+participationforecosysteminnovationsandsustainability.
+In all three platforms, the confidence in the platforms
+Figure 2 Distributed data architecture. IT, information technology; NCD, non-­ communicable disease; TB, tuberculosis.
+BMJ Global Health: first published as 10.1136/bmjgh-2021-005242 on 26 July 2021. Downloaded from https://gh.bmj.com on 7 July 2026 by guest.
+Protected by copyright, including for uses related to text and data mining, AI training, and similar technologies.
+
+--- PAGE 6 ---
+6 Nadhamuni S, et al. BMJ Global Health 2021;6:e005242. doi:10.1136/bmjgh-2021-005242
+BMJ Global Health
+and willingness to adopt them were significantly higher
+as they were built on open-­ source technologies and were
+themselves public good open-­ source systems.
+Authenticated, secure data exchange with privacy by design
+According to the National Resource Centre for EHR
+Standards, the government (as a health provider) is only
+a custodian of health data while ownership lies with the
+individual.24
+Digital LifeCare has a four-­ pronged security
+strategy as shown in figure 3.
+Consent
+Policy mandates that consent of an individual must be
+taken at the point of data collection and for sharing data
+with other systems. The consent must be free, specific,
+clearly given and revocable. The challenges with consent
+are twofold. First, consent is not necessarily informed
+or free from coercion given the inverted power asym-
+metries in many healthcare interactions, and second, the
+recording of consent is particularly constrained in low-­
+resource settings where individuals may not have mobile
+phones, connectivity is poor or data are entered retro-
+spectively from paper.
+AcorebuildingblockofNDHMistheconsentmanager
+which is designed to comply with government policies
+and frameworks including electronic consent framework
+(Technology Specifications v1.1) with its subsequent revi-
+sion(s) published by Ministry of Electronics and Infor-
+mation Technology.38
+Leveraging this, primary health
+platforms must additionally extend the consent frame-
+work to an offline first architecture using mechanisms
+like video, or a one-­ time password to capture consent
+electronically.38
+Sample flow control is explained in
+figure 4.
+Encryption and secure data exchange
+The architecture of a large-­ scale health system must
+have robust security features designed into the system.
+Digital keys used in cryptographic functions must be
+safeguarded and periodically rotated. In Digital Life-
+Care, data are securely encrypted whether it is at rest
+or in transit within the system, using the best available
+encryption key strength.39
+Secure transmission standards
+like HTTPS, TLS 1.2 and TLS 1.3 are adopted, along with
+digital signatures for ensuring authenticity of identity.
+Authentication and authorisation
+As digital ecosystems mature, it is imperative that access
+to data is role based in concordance with institutional
+policy and pertinent laws. As the COVID-19 pandemic
+has shown, it is still not a common practice or expec-
+tation that identities be masked from health data sets.
+To enable role-­ based access, Digital LifeCare platform
+authenticates user credentials through identity manage-
+ment and authentication services. Security features like
+strong password management, automatic logging off,
+CAPTCHA, access privileges and interface data valida-
+tions are part of the platform.
+Audit trail
+To ensure accountability and transparency, all transac-
+tionsshouldhaveaclearaudittrailthatrecordsuseriden-
+tity, identifies the data sets accessed, with timestamps and
+transaction description.40
+Audit trails should be available
+Figure 3 Security and privacy layer.
+BMJ Global Health: first published as 10.1136/bmjgh-2021-005242 on 26 July 2021. Downloaded from https://gh.bmj.com on 7 July 2026 by guest.
+Protected by copyright, including for uses related to text and data mining, AI training, and similar technologies.
+
+--- PAGE 7 ---
+Nadhamuni S, et al. BMJ Global Health 2021;6:e005242. doi:10.1136/bmjgh-2021-005242 7
+BMJ Global Health
+Figure 4 Control flow.
+BMJ Global Health: first published as 10.1136/bmjgh-2021-005242 on 26 July 2021. Downloaded from https://gh.bmj.com on 7 July 2026 by guest.
+Protected by copyright, including for uses related to text and data mining, AI training, and similar technologies.
+
+--- PAGE 8 ---
+8 Nadhamuni S, et al. BMJ Global Health 2021;6:e005242. doi:10.1136/bmjgh-2021-005242
+BMJ Global Health
+to authenticated users on demand or on a periodic basis
+for compliance monitoring as mandated by policy.
+In comparison with other enterprise architecture
+frameworks,41
+the framework being proposed here is for
+the unique context of LMICs like India. The framework
+needs to be able to scale up for health programmes that
+serve more than a billion people. It needs to be scalable
+and configurable to support last mile service delivery
+with close to a million field health workers and 150000
+subhealth centres from states with diverse administrative
+needs. Health systems in LMICs operate under severe
+resource constraints so the framework must be cloud
+based which requires lower investment and technology
+capability to manage. Finally, the poor connectivity in
+remote rural areas requires an architecture where data
+collection, consent management and secure data sharing
+need to work seamlessly in an offline mode.
+CONCLUSION
+We submit that a federated enterprise or platform
+approach for comprehensive PHC mandates standard-
+isation and security while offering interoperability and
+customisability. It can scale exponentially by leveraging
+third-­ party solutions that can enhance engagement, user
+experience and efficiency, while relying on consent and
+privacy frameworks maintained by the platform.
+This complementary approach allows for the vast
+heterogeneity in health system needs and capabilities
+acrossstatesinIndia,adaptstothedynamicandchanging
+nature of both medical practice and public health policy
+and is responsive to local workflows and end user needs
+whicharecriticaltostrengtheningprimaryhealthsystems
+to advance the well-­ being of populations.
+Author affiliations
+1
+Digital LifeCare, Dell Technologies, Bengaluru, Karnataka, India
+2
+The George Institute for Global Health, University of New South Wales, New Delhi,
+Delhi, India
+3
+Argusoft, Gandhinagar, Gujarat, India
+4
+Piramal Swasthya Management and Research Institute, Hyderabad,Telangana,
+India
+5
+Emergency Medicine, Beth Israel Deaconess, Harvard Medical School, Boston,
+Massachusetts, USA
+6
+Harvard University T H Chan School of Public Health, Boston, Massachusetts, USA
+7
+The George Institute for Global Health, New Delhi, Delhi, India
+8
+BeeHyv Software Solutions, Hyderabad,Telangana, India
+9
+Ministry of Health and Family Welfare, New Delhi, India
+Twitter Oommen John @oommen_john and Satchit Balsari @satchit_balsari
+Contributors SN, OJ, MK, EN and SS conceptualised the paper. MK, EN, SV, DV
+and SS analysed the frameworks. SN, OJ, MK, EN, SV, DV, SS, HR and NG drafted
+and revised the paper. SB and VS provided critical feedback and revised the paper.
+All authors read and approved the final version of the manuscript.
+Funding The authors have not declared a specific grant for this research from any
+funding agency in the public, commercial or not-­ for-­ profit sectors.
+Competing interests None declared.
+Patient consent for publication Not required.
+Provenance and peer review Not commissioned; externally peer reviewed.
+Data availability statement There are no data in this work.
+Supplemental material This content has been supplied by the author(s). It has
+not been vetted by BMJ Publishing Group Limited (BMJ) and may not have been
+peer-­ reviewed.Any opinions or recommendations discussed are solely those
+of the author(s) and are not endorsed by BMJ. BMJ disclaims all liability and
+responsibility arising from any reliance placed on the content.Where the content
+includes any translated material, BMJ does not warrant the accuracy and reliability
+of the translations (including but not limited to local regulations, clinical guidelines,
+terminology, drug names and drug dosages), and is not responsible for any error
+and/or omissions arising from translation and adaptation or otherwise.
+Open access This is an open access article distributed in accordance with the
+Creative Commons Attribution Non Commercial (CC BY-­ NC 4.0) license, which
+permits others to distribute, remix, adapt, build upon this work non-­ commercially,
+and license their derivative works on different terms, provided the original work is
+properly cited, appropriate credit is given, any changes made indicated, and the
+use is non-­commercial. See: http://​creativecommons.​org/​licenses/​by-​nc/​4.​0/.
+ORCID iDs
+Oommen John http://​orcid.​org/​0000-​0002-​9008-​1726
+Satchit Balsari http://​orcid.​org/​0000-​0002-​5492-​1900
+REFERENCES
+1 Ghebreyesus TA. Strengthening our resolve for primary health care.
+Bull World Health Organ 2020;98:726.
+2 Hsieh VC-­ R, Wu JC-­ li, Wu T-­ N, et al. Universal coverage for
+primary health care is a wise investment: evidence from 102
+low- and middle-­ income countries. Asia Pac J Public Health
+2015;27:NP877–86.
+3 Ministry of Health and Family Welfare GoI. National health policy,
+2017. Available: https://www.​nhp.​gov.​in//​NHPfiles/​national_​health_​
+policy_​2017.​pdf
+4 Kamath S, Kamath R. Does India really not have enough money to
+spend on healthcare? Postgrad Med J 2017;93:567–67.
+5 Karan A, Negandhi H, Nair R, et al. Size, composition and
+distribution of human resource for health in India: new estimates
+using national sample survey and registry data. BMJ Open
+2019;9:e025979.
+6 Nedungadi PP, Menon R, Gutjahr G, et al. Towards an inclusive
+digital literacy framework for digital India. Education+ Training
+2018;60:516–28.
+7 Garg S, Basu S, Rustagi R, et al. Primary health care facility
+preparedness for outpatient service provision during the COVID-19
+pandemic in India: cross-­ sectional study. JMIR Public Health Surveill
+2020;6:e19927.
+8 Cohen AB, Dorsey ER, Mathews SC, et al. A digital health industry
+cohort across the health continuum. NPJ Digit Med 2020;3:1–10.
+9 Bassi A, John O, Praveen D, et al. Current status and future
+directions of mHealth interventions for health system strengthening
+in India: systematic review. JMIR Mhealth Uhealth 2018;6:e11440.
+10 Mohan P, Sethi H, Reddy KR, et al. Designing primary healthcare
+systems for future in India. J Family Med Prim Care 2019;8:1817.
+11 NHSRC. Ayushman Bharat comprehensive primary health care
+through health and wellness centers operational. Delhi: Guidelines,
+2018.
+12 Choudhury NR. Framework for development of information
+technology infrastructure for health (ITIH) care in India–a critical
+study. . Qualitative and Quantitative Methods in Libraries,
+2017: 5. 787–96.
+13 Winkelman WJ, Leonard KJ. Overcoming structural constraints to
+patient utilization of electronic medical records: a critical review
+and proposal for an evaluation framework. J Am Med Inform Assoc
+2004;11:151–61.
+14 Bhatia A, Matthan R, Khanna T, et al. Regulatory Sandboxes: a cure
+for mHealth Pilotitis? J Med Internet Res 2020;22:e21276.
+15 Gavin Tong RT. How open is your system architecture? Canada:
+Healthcare Information Management and Communications, 2017.
+16 Vagadia B. Data integrity, control and Tokenization. digital disruption.
+Springer, 2020: 107–76.
+17 Wambugu SVC. mHealth for health information systems in low- and
+middle-­ income countries – challenges and opportunities in data
+quality, privacy and security 2016.
+18 Randall SM, Ferrante AM, Boyd JH, et al. Privacy-­preserving
+record linkage on large real world datasets. J Biomed Inform
+2014;50:205–12.
+19 Businesswire. Insights into the Digital Healthcare Market in India
+(2019 to 2024) - CAGR of 27.41% Expected - ​ ResearchAndMarkets.​
+com, 2020. Available: https://www.​businesswire.​com/​news/​
+BMJ Global Health: first published as 10.1136/bmjgh-2021-005242 on 26 July 2021. Downloaded from https://gh.bmj.com on 7 July 2026 by guest.
+Protected by copyright, including for uses related to text and data mining, AI training, and similar technologies.
+
+--- PAGE 9 ---
+Nadhamuni S, et al. BMJ Global Health 2021;6:e005242. doi:10.1136/bmjgh-2021-005242 9
+BMJ Global Health
+home/​20200221005363/​en/​Insights-​into-​the-​Digital-​Healthcare-​
+Market-​in-​India-​2019-​to-​2024-​CAGR-​of-​27.​41-​Expected-​
+ResearchAndMarkets.​com
+20 Hein A, Schreieck M, Riasanow T, et al. Digital platform ecosystems.
+Electronic Markets 2020;30:87–98.
+21 Ministry of Health and Family Welfare GoI. National digital health
+mission (NDHM), 2020. Available: https://www.​nhp.​gov.​in/​national-​
+digital-​health-​mission-(​ndhm)_​pg
+22 Vahidy F, Jones SL, Tano ME, et al. Rapid response to drive
+COVID-19 research in a learning health care system: rationale
+and design of the Houston Methodist COVID-19 surveillance and
+outcomes registry (curator). JMIR Med Inform 2021;9:e26773.
+23 INDIA NPCO. Unified payment interface API and technology
+specifications, 2015. Available: https://www.​mygov.​in/​digidhan/​
+pages/​pdf/​sbi/​NPCI%​20Unified%​20Payment%​20Interface.​pdf
+24 National Resource Centre for EHR Standards. EHR standards for
+India. Available: https://www.​nrces.​in/​standards/​ehr-​standards-​for-​
+india#​securuty_​technical_​standards
+25 Benson T, Grieve G. Principles of health interoperability: SNOMED
+CT, HL7 and FHIR. Springer, 2016.
+26 Greenleaf G. Promises and illusions of data protection in Indian law.
+International Data Privacy Law 2011;1:47–69.
+27 RCP. Ltd. Accessible medical record via integrated technologies
+(AMRIT) (2018-19). Available: https://​csrbox.​org/​India_​CSR_​Project_​
+Piramal-​Enterprises-​Limited-​Accessible-​Medical-​Record-​via-​
+Integrated-​Technologies-(​AMRIT)-​Telangana-_​15082
+28 Saha S, Kotwani P, Pandya A, et al. Addressing comprehensive
+primary healthcare in Gujarat through mHealth intervention: early
+implementation experience with TeCHO+ programme. J Family Med
+Prim Care 2020;9:340.
+29 Dell Technologies. FY20 dell technologies progress made real
+report, 2020. Available: https://​corporate.​delltechnologies.​com/​
+en-​in/​social-​impact/​reporting/​fy20-​progress-​made-​real-​report.​
+htm#​overlay=/​content/​dam/​delltechnologies/​assets/​corporate/​pdf/​
+progress-​made-​real-​reports/​delltechnologies-​fy20-​progress-​made-​
+real-​report.​pdf
+30 Faujdar DS, Sahay S, Singh T, et al. Public health information
+systems for primary health care in India: a situational analysis study.
+J Family Med Prim Care 2019;8:3640.
+31 Faujdar DS, Sahay S, Singh T, et al. Field testing of a digital health
+information system for primary health care: a quasi-­ experimental
+study from India. Int J Med Inform 2020;141:104235.
+32 Vukovic M, Laredo J, Muthusamy V, et al. Riding and thriving on the
+API hype cycle. Commun ACM 2016;59:35–7.
+33 Ministry of Health and Family Welfare GoI. National identification
+number to health facility of India (NIN-­ TO-­ HFI). Delhi: NHP India,
+2016. https://​nin.​nhp.​gov.​in/​about_​nin2hfi.​php#:~:​text=​NIN%​
+20will%​20be%​20random%​20but,​be%​20attached%​20to%​20NIN%​
+20initially
+34 Ministry of Health and Family Welfare GoI. CPHC NCD Solution.
+Available: https://​main.​mohfw.​gov.​in/​sites/​default/​files/​CPHC%​
+20NCD%​20Solutions%​20-%​20PHC%​20Medical%​20Officer%​
+20User%​20Manual_​0.​pdf
+35 Rouse M. Hot data. Available: https://​ searchstorage.​ techtarget.​ com/​
+definition/​hot-​data
+36 Nazrul SS. CAP theorem and distributed database management
+systems, 2018. Available: https://​ towardsdatascience.​ com/​
+cap-​theorem-​and-​distributed-​database-​management-​systems-​
+5c2be977950e
+37 Sheth AP, Larson JA. Federated database systems for managing
+distributed, heterogeneous, and autonomous databases. ACM
+Comput Surv 1990;22:183–236.
+38 (MeitY) MoEaIT. Electronic Consent Framework - Technology
+Specifications (Ver 1.1). Available: http://​dla.​gov.​in/​sites/​default/​files/​
+pdf/​MeitY-​Consent-​Tech-​Framework%​20v1.​1.​pdf
+39 DC NC. Data privacy and security, 2015. Available: https://www.​ nhp.​
+gov.​in/​data-​privacy-​and-​security_​mtl
+40 Walsh T, Miaoulis W. Privacy and security audits of electronic health
+information. J Ahima 2014;85:54–9.
+41 Mukherjee M, Cresswell K, Sheikh A. Identifying strategies to
+overcome roadblocks to utilising near real-­ time healthcare and
+administrative data to create a Scotland-­ wide learning health
+system. Health Informatics J 2021;27:1460458220977579.
+BMJ Global Health: first published as 10.1136/bmjgh-2021-005242 on 26 July 2021. Downloaded from https://gh.bmj.com on 7 July 2026 by guest.
+Protected by copyright, including for uses related to text and data mining, AI training, and similar technologies.

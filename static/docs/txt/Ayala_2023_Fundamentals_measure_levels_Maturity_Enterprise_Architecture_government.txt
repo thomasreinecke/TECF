@@ -1,0 +1,968 @@
+--- PAGE 1 ---
+Artículooriginal/Originalarticle/Artigooriginal
+DOI:10.22507/rli.v20n1a1
+-RevistaLasallistadeInvestigación-
+Vol.20No.1/enero-junio-2023
+Fundamentos para medir niveles de madurez de arquitectura empresarial en el sector
+gobierno
+7
+*Losautoresdeclaranquenotienenconflictodeinterés
+1 Artículo original derivado del proyecto de investigación Modelo metodológico de evaluación del nivel de implementación y madurez de una arquitectura
+empresarialenelsectorgobiernocolombianofinanciadoporlosautoresydesarrolladoparaoptaraltítulodeMaestríaenGestiónTICenelTecnológico
+deAntioquiaInstituciónUniversitaria.Proyectoejecutadoenelaño2021.
+2 MagísterenGestióndeTecnologíasdelaInformacióndelTecnológicodeAntioquiaI.U.,EspecialistaenGestióndeProcesosCurriculares,Especialista
+enDocenciaUniversitaria,EspecialistaenSeguridadInformática,IngenierodeSistemas,líderdeArquitecturaEmpresarialenlaSecretaríadeTICde
+laGobernacióndeAntioquiayprofesorinvestigadordelPolitécnicoJaimeIsazaCadavidI.U.Correo:santiago.diaz@antioquia.gov.co.
+Orcid:0000-0001-8226-8454.
+3 Doctor en Ingeniería de Sistemas e informática de la Universidad Nacional de Colombia, Magíster en Ciencias de la Computación, Ingeniero de
+Sistemas,profesorinvestigadordelTecnológicodeAntioquiaI.U.Correo:dsoto@tdea.edu.co/Orcid:0000-0002-6557-844X.
+4 Magíster en Diseño y Gestión de Proyectos Tecnológicos de la UNIR, Ingeniera de Sistemas, profesora investigadora del Tecnológico de Antioquia I. U.
+Correo:aixa.villamizar@tdea.edu.co/Orcid:0000-0002-4070-1763.
+AutorparaCorrespondencia: AutorparaCorrespondencia:santiago.diaz@antioquia.gov.co
+Recibido:13/05/2022 Aceptado:22/05/2023
+Fundamentos para medir niveles de madurez de
+arquitectura empresarial en el sector gobierno1
+SantiagoElíasDíazAyala2
+,DaríoEnriqueSotoDurán3
+,AixaEileenVillamizarJaimes4
+Resumen
+Introducción.ElMinticcomograncustodio
+del cumplimiento de la Política de Gobierno
+Digital (PGD) colombiana, presentó el Marco
+arquitecturaempresarial(MAE)paraelsector
+gobierno. El MAE permite que las entidades
+públicasapliquenunenfoquedearquitectura
+empresarial para fortalecer las capacidades
+institucionales requeridas para prestar
+servicios a los usuarios de cada entidad
+mediante el uso adecuado de las TIC. Se
+debe medir el nivel cumplimiento de la PGD
+y para ello se requiere que los ejercicios de
+arquitectura empresarial (AE) ejecutados
+sean evaluados de manera periódica para
+valorarlaevolucióndelosnivelesdemadurezy
+capacidadasociadosacadadominio.Objetivo.
+Desarrollar un modelo metodológico para
+evaluar el nivel de madurez de los dominios
+asociados a la arquitectura empresarial
+bajo el MAE 2.0. Materiales y métodos. Se
+usan dos perspectivas (cuantitativas y la
+cualitativas), la cualitativa desde la revisión
+y la argumentación; la cuantitativa desde
+la formulación y validación que requiere el
+modelo. Se ejecuto una ruta de tres etapas:
+análisis, diseño, validación. Resultados. Se
+propone un modelo metodológico de cuatro
+fases (alistamiento, adaptación al método,
+ejecución y plan de mejora) acompañado de
+un procedimiento para su implementación.
+Conclusiones.Elmodelopropuestoconstituye
+una herramienta para gestionar el uso y
+aprovechamiento de las TIC, da capacidades
+al Estado y sus connacionales haciéndolos
+
+--- PAGE 2 ---
+-RevistaLasallistadeInvestigación-
+Vol.20No.1/enero-junio-2023
+Fundamentos para medir niveles de madurez de arquitectura empresarial en el sector
+gobierno
+8
+SantiagoElíasDíazAyala,DaríoEnriqueSotoDurán,
+AixaEileenVillamizarJaimes
+digitalmente confiables, competitivos,
+proactivos, e innovadores, de manera tal que
+generen verdadero valor público.
+Palabras clave: transformación digital,
+arquitectura empresarial, modelos
+metodológicos, evaluación de madurez.
+Fundamentalstomeasure
+levelsofMaturityofEnterprise
+Architecture,inthegovernment
+sector
+Abstract
+Introduction. The Mintic as the great
+custodian of compliance with the Colombian
+DigitalGovernmentPolicy(PGD),presentsthe
+“Business Architecture Framework” (MAE)
+for the government sector. The MAE allows
+publicentitiestoapplyabusinessarchitecture
+approach to strengthen the institutional
+capacities required to provide services to the
+usersofeachentitythroughtheappropriateuse
+of ICTs. The level of compliance with the PGD
+must be measured and for this it is required
+thattheBusinessArchitecture(EA)exercises
+executedbeevaluatedperiodicallytoassessthe
+evolutionofthelevelsofmaturityandcapacity
+associated with each domain. Objective. To
+developamethodologicalmodeltoassessthe
+level of maturity of the domains associated
+with business architecture under MAE 2.0.
+Materials and methods. two perspectives
+are used (quantitative and qualitative). The
+qualitative from review and argumentation;
+the quantitative from the formulation and
+validation required by the model. A route of
+three stages was executed: Analysis, Design,
+Validation. Results. A Methodological Model
+of four phases (Enlistment, Adaptation to the
+method, Execution and improvement plan) is
+proposed,accompaniedbyaprocedureforits
+implementation. Conclusions. The proposed
+model constitutes a tool to manage the use
+and exploitation of ICTs, it gives capacities to
+the state and its compatriots, making them
+digitally reliable, competitive, proactive, and
+innovative, in such a way that they generate
+true public value.
+Keywords: Digital Transformation,
+Enterprise Architecture, Methodological
+Models, Maturity Assessment.
+Fundamentosparamedir
+osníveisdematuridadeda
+ArquiteturaEmpresarial,no
+setorgovernamental
+Resumo
+Introdução: O Mintic como o grande
+guardião do cumprimento da Política de
+GovernoDigitalColombiana(PGD),apresenta
+o “Marco de Arquitetura de Negócios” (MAE)
+para o setor governamental. O MAE permite
+que as entidades públicas apliquem uma
+abordagem de arquitetura de negócios para
+fortalecer as capacidades institucionais
+necessáriasparaprestarserviçosaosusuários
+de cada entidade por meio do uso adequado
+dasTIC.OníveldecumprimentodoPGDdeve
+ser medido e para isso é necessário que os
+exercícios de Arquitetura de Negócios (EA)
+executados sejam avaliados periodicamente
+para avaliar a evolução dos níveis de
+maturidade e capacidade associados a cada
+domínio. Objetivo: Desenvolver um modelo
+metodológicoparaavaliaroníveldematuridade
+dos domínios associados à arquitetura de
+
+--- PAGE 3 ---
+-RevistaLasallistadeInvestigación-
+Vol.20No.1/enero-junio-2023
+Fundamentos para medir niveles de madurez de arquitectura empresarial en el sector
+gobierno
+9
+SantiagoElíasDíazAyala,DaríoEnriqueSotoDurán,
+AixaEileenVillamizarJaimes
+negócios no MAE 2.0. Materiais e métodos:
+sãoutilizadasduasperspectivas(quantitativa
+equalitativa).Oqualitativoapartirdarevisão
+e argumentação; o quantitativo a partir da
+formulação e validação exigida pelo modelo.
+Foi executado um percurso de três etapas:
+Análise, Desenho, Validação. Resultados.
+Propõe-seumModeloMetodológicodequatro
+fases (Alistamento, Adaptação ao método,
+Execuçãoeplanodemelhoria),acompanhado
+deumprocedimentoparasuaimplementação.
+Conclusões:Omodelopropostoconstituiuma
+ferramentaparagerenciarousoeaexploração
+dasTIC,capacitaoEstadoeseuscompatriotas,
+tornando-os digitalmente confiáveis,
+competitivos,proativoseinovadores,demodo
+que gerem verdadeiro valor público.
+Palavras-chave: transformação
+digital, arquitetura de negócios, modelos
+metodológicos, avaliação de maturidade.
+Introducción
+La Política de Gobierno Digital (PGD)
+tiene por objetivo “gestionar el uso y
+aprovechamiento de las tecnologías de la
+información y las comunicaciones para
+fortalecer al Estado y sus connacionales
+haciéndolos digitalmente confiables,
+competitivos, proactivos, e innovadores, de
+maneratalquegenerenvalorpúblico”.LaPGD
+referenciaalaarquitecturaempresarial(AE)
+como el principal de tres grandes elementos
+quejalonan,impulsanyhabilitanellogrodesu
+propósito.Conbasealoanterior,yconelobjeto
+defacilitarlaimplementacióndelaPGDenlas
+regiones descentralizadas (departamentos y
+municipios)segúnloconsagradoenelDecreto
+1008 de 2018 expedido por la Presidencia de
+laRepública.Elpresentetrabajosecentraen
+el segundo habilitador transversal llamado
+marco arquitectura empresarial (MAE).
+A continuación, en la figura 1, se ilustran
+los elementos del MAE 2.0, así como la
+ubicación del objeto de estudio del presente
+trabajo de grado.
+Figura1.DominiosdelMAE2.0
+Nota: adaptada por los autores a partir de MRAE 2.0 Mintic.
+
+--- PAGE 4 ---
+-RevistaLasallistadeInvestigación-
+Vol.20No.1/enero-junio-2023
+Fundamentos para medir niveles de madurez de arquitectura empresarial en el sector
+gobierno
+10
+SantiagoElíasDíazAyala,DaríoEnriqueSotoDurán,
+AixaEileenVillamizarJaimes
+Se debe medir el nivel cumplimiento de
+la PGD y para ello se requiere que el MAE
+propuestoporMinticseaevaluadodemanera
+periódica para valorar la evolución de los
+niveles de madurez y capacidad asociados a
+cada dominio.
+Los modelos de madurez surgen como un
+referente para que las entidades avancen de
+manera progresiva en el desarrollo de las
+capacidades claves para tener éxito en la era
+digital.Estossuponenunprocesodeprogreso
+a través de una línea continua. Es decir, bajo
+este enfoque, la madurez digital se basa en
+unaconstantemejoracontinuaeincremental
+(Ochoa, 2016).
+El modelo metodológico de evaluación
+cubre los dominios de la MAE 2.0 de manera
+talquesepuedaestablecerelniveldemadurez
+de cada dominio. La validación del modelo
+propuesto se realizará sobre alguno de los
+dominios seleccionado de la AE.
+Marcoteórico
+Marco Normativo para la transformación
+digitaldelEstadocolombiano
+Aunque en Colombia existen políticas
+y normas para asumir los retos en materia
+de tecnología e innovación, no existen
+mecanismosquefacilitensuimplementación.
+Específicamente en el campo de las TIC y
+más concretamente en la implementación
+de la Política de Gobierno Digital (incluida
+la transformación digital del Estado y sus
+procesos de AE) no es la excepción.
+Con el fin de apropiar el concepto de
+trasformación digital en las organizaciones
+del Estado y dar cumplimiento a la PGD se
+han redactado un sinnúmero de normas y
+decretos de los cuales podríamos destacar
+los relacionados en la tabla1.
+Tabla1. Marco normativo para la transformación digital del Estado colombiano
+Marconormativo Pertinencia
+Ley 1341 de 2009
+FacultaalMinticparaadoptarypromoverlaspolíticas,planes,programas
+y proyectos del sector de las Tecnologías de la Información y las
+Comunicaciones, como por ejemplo la Política de Transformación Digital
+del Estado
+Decreto 1083 de 2015
+Controlayevalúaelfuncionamientodelopúblico.Enestecasoenparticular
+dicta los lineamientos para medir la madurez de la PGD (Incluido el MAE)
+Decreto 1008 de 2018
+La PGD define una buena AE con eje transversal y principal de la
+transformación digital de las entidades del Estado colombiano
+CONPES 3975 del 8 de
+noviembre de 2019
+LosdocumentosCONPESgarantizanqueunadeterminadapolítica—ypor
+ende sus proyectos— trasciendan un determinado periodo de gobierno
+Nota:elaborado por los autores.
+
+--- PAGE 5 ---
+-RevistaLasallistadeInvestigación-
+Vol.20No.1/enero-junio-2023
+Fundamentos para medir niveles de madurez de arquitectura empresarial en el sector
+gobierno
+11
+SantiagoElíasDíazAyala,DaríoEnriqueSotoDurán,
+AixaEileenVillamizarJaimes
+Framework o marcos de trabajo referentes
+enAE
+Según Guerrero et al. (2016), el concepto
+de arquitectura empresarial es introducido
+por John Zachmman en 1987 a través del
+términomarcodetrabajoparalaarquitecturade
+sistemasdeinformación.Comoserepresenta
+en la figura 2, algunos autores definen la AE
+comolamejorpracticaquearticulaelnegocio,
+losobjetivosorganizacionalesylastecnologías
+de la información (TI) en pro del crecimiento
+continuodelaorganizacióntravésdelamejora
+en los procesos de negocio.
+Figura2.Laarquitecturaempresarial
+Nota:elaborado por los autores.
+Los marcos de trabajo normalmente
+integran una serie de prácticas que guían la
+definición de un proceso. En el dominio de la
+AE,seanalizanlosmarcosmásrepresentativos
+los cuales se describen a continuación:
+• Framework de Zachman: entrega la
+estructura básica que soporta a la
+organización,definecómoserelacionan
+integralmente,desarrollan,gestionan
+y cambian un conjunto de productos
+dentro de los componentes TIC de la
+empresa.Nocuentacondocumentación
+metodológicaparasuimplementación,
+seconformadecuatrodominiosocapas
+y no cuenta método para evaluar su
+madurez.
+• TOGAF (The Open Group Architectural
+Framework): da máxima importancia
+a los requerimientos, es dinámica
+y flexible, dado que mantiene
+una alineación con los procesos
+de negocio y los stakeholders. Se
+estructuraapartirdecuatrodominios
+(negocio, información, aplicaciones
+y tecnología). Es uno de los más
+utilizadosactualmenteyconstadeADM
+(Architecture Development Method),
+una metodología de implementación.
+• GEAF(GartnerEnterpriseArchitectural
+Framework): líder mundial en
+investigación y conocimientos de TI,
+ha presentado suficientes mejores
+prácticas para las soluciones de
+arquitectura empresarial a lo largo
+de los años durante sus prácticas de
+consultoría, por lo que ha construido
+su propia metodología. No cuenta con
+documentación metodológica para su
+implementación,asícomotampococon
+unametodologíadeimplementación.Se
+apalanca en cuatro dominios.
+• MAE (versión 2.0 del Mintic, gobierno
+colombiano): principal catalizador de
+la transformación digital del Estado
+defineloslineamientosparallevarala
+práctica los ejercicios de arquitectura
+TI en Colombia. Se enfoca en la AE
+de empresas del sector gobierno. Se
+sustenta en siete dominios adaptados
+de TOGAF y su objetivo es desarrollar
+capacidades en los estamentos del
+estado brindando los lineamientos
+necesariosparamaterializarunacultura
+hacia la arquitectura empresarial.
+Posee guías, pero no cuenta con
+documentación metodológica para su
+
+--- PAGE 6 ---
+-RevistaLasallistadeInvestigación-
+Vol.20No.1/enero-junio-2023
+Fundamentos para medir niveles de madurez de arquitectura empresarial en el sector
+gobierno
+12
+SantiagoElíasDíazAyala,DaríoEnriqueSotoDurán,
+AixaEileenVillamizarJaimes
+implementación,asícomotampococon
+una metodología de implementación.
+La tabla 2 sintetiza la caracterización de
+losmarcosreferentesanalizadosy,altiempo,
+secomparanconelmarcodereferenciaMAE
+2.0, a partir de criterios como: propósito,
+guía de implementación, enfoque y método
+de evaluación.
+Tabla2.Marcos o frameworks de trabajo para AE
+Marco
+Métodode
+implementación
+Capas
+Métodoevaluación
+madurez
+Zachman No 4 No
+TOGAF Sí 4 No
+GEAF No 4 No
+MRAE No 7 No
+Nota:elaboración de los autores.
+Modelosynivelesdemadurez
+Según Pérez-Mergarejo et al. (2014), “los
+modelosysusnivelesdemadurezconstituyen
+una evolución de las metodologías para
+gestionar la calidad de la organización” en
+tanto estos modelos de madurez son una
+herramienta fundamental en los procesos
+demejoracontinuaenlasorganizaciones.Es
+por ello que, a través de instrumentos como
+estándares, metodologías y guías, permiten
+eldesarrollodeprocesosdeimplementación
+y evaluación de la madurez y capacidades en
+las organizacionales.
+En contexto de la AE, los modelos de
+madurez facilitan el avance sistemático de
+las capacidades organizacionales previstos
+entre los dos momentos: estado actual
+y estado deseado; pero se carece de un
+modelo metodológico que permita evaluar la
+madurezdecadadimensióndelaarquitectura
+del negocio con un enfoque integrador que
+especifique las áreas y acciones de mejora.
+Actualmente,enelmundoexistenmuchos
+modelos para diferentes realidades. Según
+GómezySánchezCastillo(2021),“sibienexisten
+múltiplespropuestasenelmundoacadémico
+para la medición de la madurez, uno de los
+modelosconmayoraugeyreconocimiento,es
+el propuesto por Harold Kerzner” en su obra
+UsingtheProjectManagementMaturityModel.
+Strategic Planning for Project Management, el
+cual se ha convertido en un referente para
+este tipo de procesos. Kerzner considera
+cinco niveles de madurez como los más
+estandarizados, que abarcan desde un nivel
+inexistente hasta uno optimizado, a saber:
+• Nivel 0 (nada): no existe programa de
+arquitectura para la organización ni el
+área de TI.
+• Nivel 1 (inicial): implica el desarrollo
+deunprocesoinformaldearquitectura
+caracterizadoporlaimplementaciónde
+las primeras iniciativas, la alineación
+inicial con la estrategia del negocio y
+la ausencia de un modelo de gobierno
+para la arquitectura.
+
+--- PAGE 7 ---
+-RevistaLasallistadeInvestigación-
+Vol.20No.1/enero-junio-2023
+Fundamentos para medir niveles de madurez de arquitectura empresarial en el sector
+gobierno
+13
+SantiagoElíasDíazAyala,DaríoEnriqueSotoDurán,
+AixaEileenVillamizarJaimes
+• Nivel 2 (en desarrollo): proceso de
+arquitectura en desarrollo donde
+interviene la definición de una
+arquitectura objetivo, adopción de
+estándares y mayor alineación con los
+componentes estratégicos.
+• Nivel3(definida):arquitecturadefinida,
+definiciónclaraderesponsabilidadesy
+definicióncompletadelmodelotécnico
+de referencia.
+• Nivel 4 (administrado): proceso de
+arquitectura incorporado a la cultura
+organizacional,conmétricasdecalidad,
+ciclos regulares de actualización de
+la arquitectura, participación en la
+definición de la arquitectura y modelo
+degobiernoadoptadocompletamente.
+• Nivel 5 (optimizada): mejoramiento
+continuo del proceso de arquitectura
+caracterizado por la definición e
+implementación de estándares,
+realimentación de las áreas de la
+organización para la mejora de la
+arquitectura empleado para la toma
+de decisiones a cualquier nivel y todos
+los componentes organizacionales
+alineados entre sí.
+A continuación, se describen definiciones
+metodológicas para la implementación y
+evaluación de modelos de madurez:
+• ElmétodoFischer:permiteeldesarrollo
+para la evaluación de la madurez en
+organizacionesdeserviciosencuatros
+fases (preparación, adaptación al
+método, conducción de la evaluación
+y plan de mejora). Este procedimiento
+considera el trabajo en equipo y la
+mejora de los procesos a partir de los
+resultados de la evaluación. Para ello,
+define un plan de acción con métricas
+de mejora, cuya ejecución debe ser
+valorada regularmente.
+• MetodologíaSCAMPI.Fuedesarrollada
+porelInstitutodeIngenieríadelSoftware
+(SEI), para el modelo de madurez
+CMMI. Consta de dos documentos
+que permiten realizar la evaluación.
+Asimismo, la metodología considera
+tres niveles o clases de evaluación
+(clase A, clase B y clase C). Las clases
+definen los requerimientos que debe
+cumplir la evaluación y determinan
+tanto la posibilidad de adaptación del
+método como la profundidad de la
+evaluación.LametodologíadeSCAMPI
+se ejecuta en tres fases (preparación
+y planificación, conducción de la
+evaluación y reporte de resultados).
+Según Peralta etal.(2012) en SCAMPI,
+“los resultados de una evaluación
+se obtienen mediante la aplicación
+de un conjunto de reglas de negocio
+aplicadas a cada componente del
+modelo (prácticas, objetivos, áreas de
+procesoynivelesdemadurez)”.Dichas
+reglas requieren de la utilización de
+herramientasparalograrlavaloración
+de estas, ya que no se trata de una
+simple encuesta, sino una evaluación
+detallada y casi matemática.
+Estametodologíaescomplejadeaplicar
+ymuyrigurosaynoofreceherramientas
+para su aplicación. Solo puede ser
+utilizada por auditores autorizados
+o personal entrenado en su uso. A
+diferencia del procedimiento anterior,
+esta no incluye una etapa de mejora,
+limitándose solamente a reportar los
+resultados obtenidos a partir de la
+evaluación.Esimportantedestacarque,
+ni el procedimiento, ni la metodología
+descritos, ponen a disposición las
+herramientasoformasderecolección
+de información que utilizan.
+
+--- PAGE 8 ---
+-RevistaLasallistadeInvestigación-
+Vol.20No.1/enero-junio-2023
+Fundamentos para medir niveles de madurez de arquitectura empresarial en el sector
+gobierno
+14
+SantiagoElíasDíazAyala,DaríoEnriqueSotoDurán,
+AixaEileenVillamizarJaimes
+• Metodología PEMM, tiene como
+propósito identificar y analizar los
+procesos actuales y establecer
+medianteunaseriederecomendaciones
+yalternativaslamejoradeldesempeño
+y eficiencia organizacional. Según
+Hammer(2007),sedebenarticularlas
+capacidades organizacionales a los
+procesos a través de los facilitadores
+quevisibilizanypotenciaeldesempeño
+de estos. A nivel procedimental la
+metodología de PEMM se desarrolla
+en tres fases cíclicas (preparación,
+evaluación y plan de mejora).
+Unavezanalizadoslosprincipalesmarcos
+de AE y las metodologías de evaluación
+existentes, se puede inferir que inicialmente
+Zachman —y mucho más reciente TOGAF—
+recomiendan como objetivo principal de la
+AE ir mucho más allá de la adquisición de la
+tecnologíacomolohacenDodafyGeaf.Como
+se muestra en la tabla 3, se analiza el marco
+de referencia propuesto por el Mintic en su
+versión 2.0 ya que, si bien cumple con los
+lineamientosdeTOGAFalllevarlosalapráctica
+sugierehablardesietedominiosocapasyno
+decinco.Enrealidad,noesquehayapensado
+endosdominiosnuevos,simplementeelMAE
+2.0realizóunaadaptaciónoespecificaciónde
+loscincodominiostradicionalesseparandoel
+dominiodeinfraestructuratecnológicaendos:
+infraestructura y seguridad.
+Tabla3.DominiosocapasmarcosdetrabajoparaAE
+Marco Dominios
+Negocio Información Aplicación Tecnología Usoyapropiación
+Zachman X X X X
+TOGAF X X X X
+GEAF X X X X
+MRAE X
+Nota:elaborada por los autores.
+LosmarcosdeZackmanyTOGAFnodefinen
+la fase de uso y apropiación de las TIC como
+un dominio, pero sí incluyen este factor en la
+capa de negocio.
+El MRAE en la versión 2.0 separa la capa
+de negocio en dos dominios: planeación
+de la arquitectura y arquitectura misional.
+Igualmente, el MRAE define una división
+de la capa de tecnología en dos dominios:
+infraestructura TIC y seguridad TIC.
+Malleuve et al. (2015) expresan que la
+“adopciónexitosadeundeterminadomarco
+de trabajo se requiere en gran medida el
+compromiso de las personas interesadas
+en el negocio y el grado de madurez que
+tenga este con respecto a la arquitectura
+empresarial”.Enconsecuencia,losprocesos
+y recursos tecnológicos deben responder
+y soportar la estrategia organizacional,
+evidenciable en la AE.
+
+--- PAGE 9 ---
+-RevistaLasallistadeInvestigación-
+Vol.20No.1/enero-junio-2023
+Fundamentos para medir niveles de madurez de arquitectura empresarial en el sector
+gobierno
+15
+SantiagoElíasDíazAyala,DaríoEnriqueSotoDurán,
+AixaEileenVillamizarJaimes
+Aunque existen diversos modelos de
+madurez, la implementación y evaluación
+se dificulta debido a problemas como el
+contexto de aplicación, la complejidad
+organizacional, la falta de documentación
+entre otros. En la tabla4 se caracterizan las
+fasesdeimplementaciónincorporadasporlos
+modelosrevisadosyevaluadosenelcontexto
+de la madurez de los procesos.
+Tabla4.Atributosdelosenfoquesmetodológicos
+Método Alistamiento Evaluación Reportes
+Procesode
+mejora
+FISCHER X X X X
+SCAMPI X X X
+PEMM X X X X
+Nota:elaborada por los autores.
+Para el caso concreto de los modelos de
+madurez relacionados con la arquitectura
+empresarial, también se dificulta su
+implementación debida, por ejemplo, a una
+inadecuada gestión por procesos, a la falta
+de preparación del personal directivo, entre
+otros factores.
+Por esta razón, la relevancia de una guía
+metodológicaparalaevaluacióndelamadurez
+contribuye a la gestión de una AE, dado que
+ofreceunflujodeprocesosistemáticoymedible.
+Materialesymétodos
+Partiendodeenunenfoquedeinvestigación
+mixtoseusandosperspectivas(cuantitativasy
+lacualitativas).Lacualitativadesdelarevisión
+y argumentación; la cuantitativa desde la
+formulación que requiere el modelo. Basado
+enestesustentosedesarrollódesdelasetapas
+teniendoencuentaeltipodetrabajoyelcampo
+de trabajo de la ingeniería.
+El propósito de llevar a cabo este enfoque
+se debe a que el investigador no se limitó a
+la recolección de datos, sino que se llevó a la
+prácticaestableciendolarelacióndelmodelo
+conelobjetodeestudio.Acordeconloanterior,
+se presentan los objetivos y la hipótesis del
+trabajo en tres etapas: análisis, diseño,
+validación, a saber:
+• Análisis: caracterizar las normas,
+estándares, marcos y modelos
+aplicables para la evaluación de las
+capacidades en las organizaciones en
+el contexto de una implementación
+de una arquitectura empresarial y la
+evaluacióndesusnivelesdemadurez.
+• Diseño: diseñar y proponer un modelo
+metodológicoparalaevaluacióndelos
+dominiosalineadoalmarcoMAE2.0de
+Mintic.
+• Validación: validar el modelo de
+evaluación de madurez en un dominio
+mediante el desarrollo de un caso de
+estudioaplicadoaldominioplaneación
+delaAE(MAE2.0)enlagobernaciónde
+Antioquia.
+
+--- PAGE 10 ---
+-RevistaLasallistadeInvestigación-
+Vol.20No.1/enero-junio-2023
+Fundamentos para medir niveles de madurez de arquitectura empresarial en el sector
+gobierno
+16
+SantiagoElíasDíazAyala,DaríoEnriqueSotoDurán,
+AixaEileenVillamizarJaimes
+Lasunidadesderevisióndocumentalpara
+la etapa de análisis fueron todos aquellos
+documentos académicos sobre el tema,
+encontrados en las bases de datos: Google
+Académico, ProQuest, Scielo, y artículos de
+internet en general. En la búsqueda solo se
+contemplaron como criterios búsqueda:
+normas, libros, artículos y revistas. Las
+palabrasclaveutilizadasparalaconstrucción
+delacadenadebúsqueda(incluyeneloperador
+OR) fueron:
+• Español: transformación digital,
+arquitectura empresarial, y modelos
+de madurez.
+• Inglés : Digital Transformation,
+EnterpriseArchitecture,Methodological
+Models, Maturity Assessment.
+Finalmente, a partir de la revisión de
+literatura acompañada por el conocimiento
+que se tiene por parte de los investigadores
+delascapacidadesdelasempresasdelsector
+gobierno, sus políticas y sus dinámicas,
+el presente trabajo propone un modelo
+metodológicoqueconstadecuatrofasescomo
+se puede observar en la figura3.
+Figura3.ModelodeevaluaciónnivelmadurezdelMAE2.0
+Nota:elaborada por los autores.
+Elmodeloesadaptadoyespecializadopara
+medir el nivel de madurez de la arquitectura
+empresarial de cualquier organización del
+Estado bajo el marco de referencia MAE 2.0
+propuesto por Mintic.
+Resultados
+Sisetieneencuentaelmétododeevaluación
+de Fischer —el cual considera el trabajo en
+equipo la mejora de los procesos a partir de
+los resultados de la evaluación y se define un
+plandeacciónparalasmedidasdemejora—y
+siseadicionaelprocesoderetroalimentación
+
+--- PAGE 11 ---
+-RevistaLasallistadeInvestigación-
+Vol.20No.1/enero-junio-2023
+Fundamentos para medir niveles de madurez de arquitectura empresarial en el sector
+gobierno
+17
+SantiagoElíasDíazAyala,DaríoEnriqueSotoDurán,
+AixaEileenVillamizarJaimes
+propuesto por PEMM en el cual la ejecución
+debeservaloradaregularmente,sinperderel
+enfoque de los lineamientos propuestos por
+MinticatravésdelMRAE-TOGAFseproponeen
+modelo visualizado en la figura 4 y explicado
+en la tabla 5. La propuesta cumple con los
+requerimientos definidos en el modelo de
+autoevaluación de MIPG.
+Figura4.Diseñometodológico-evaluaciónmadurez
+Nota:elaborada por los autores.
+El modelo aplica para los siete dominios
+definidos por el Mintic, sigue sus treinta y
+nueve lineamientos y vigila la existencia de
+losrespectivosentregablesyevidenciaspara
+cada dominio. En relación con lo anterior se
+describen en la tabla 5 las cuatro fases con
+sus respectivas actividades.
+Tabla5.Modelodeevaluaciónconfasesyactividades
+Fases No. Actividad
+Fase I
+Alistamiento
+1 Inicio del proceso
+2 Selección del dominio de AE a evaluar
+3 Consolidación del plan de trabajo
+4 Estrategiasdesensibilización,capacitaciónyempoderamiento
+5 Gestión de calidad de la fase I
+
+--- PAGE 12 ---
+-RevistaLasallistadeInvestigación-
+Vol.20No.1/enero-junio-2023
+Fundamentos para medir niveles de madurez de arquitectura empresarial en el sector
+gobierno
+18
+SantiagoElíasDíazAyala,DaríoEnriqueSotoDurán,
+AixaEileenVillamizarJaimes
+Fases No. Actividad
+Fase II
+Adaptación
+1 Revisión documental
+2 Definición de instrumentos
+3 Gestión de calidad de la fase II
+Fase III
+Ejecución
+1 Aplicación de instrumentos
+2 Recogida de datos e información
+3 Emisión de resultados preliminares
+4 Búsqueda de un consenso final
+5 Análisis de resultados
+6 Construcción del informe final
+Fase IV
+Plan de mejora
+1 Diseño del plan de mejora
+2 Socialización del informe de autoevaluación
+3 Preparación para visita o evaluación del Mintic
+Nota:elaborada por los autores.
+Sinoeslaprimeravezqueseevalúalaentidad
+en un determinado dominio, en la actividad 3
+de la Fase I, se deberá revisar el estado del
+plan de mejoramiento resultante del último
+ejercicio de evaluación realizado. En la etapa
+3 de validación de la metodología, el modelo
+gestiona metodológicamente el proceso de
+evaluacióndecadaunodelosdominiosdeun
+ejercicio de AE. La respectiva validación se
+llevóacaboenlaSecretaríadelasTecnologías
+de la Información y Comunicaciones de la
+Gobernación de Antioquia teniendo como
+premisa que el modelo metodológico facilita
+la gestión de los diferentes momentos para
+medirelgradodemadurezdeladependencia
+ensusprocesosyproyectosdeAEconrespecto
+a los lineamientos del MAE 2.0. El modelo se
+ejecuta de manera cíclica por cada dominio
+a través de las cuatro fases que implementa
+(alistamiento,adaptaciónalmétodo,ejecución
+y plan de mejora). Este proceso integra tres
+nivelesqueson:comitéAE,equipoevaluadory
+procesoevaluado.Ladescripciónseevidencia
+en la figura 5.
+
+--- PAGE 13 ---
+-RevistaLasallistadeInvestigación-
+Vol.20No.1/enero-junio-2023
+Fundamentos para medir niveles de madurez de arquitectura empresarial en el sector
+gobierno
+19
+SantiagoElíasDíazAyala,DaríoEnriqueSotoDurán,
+AixaEileenVillamizarJaimes
+Figura5.Diagramadeimplementacióndelmodelo
+Nota:elaborada por los autores.
+Discusión
+Con la implementación del presente
+modeloseesperacontribuiramejorarlagran
+problemática del sector que se manifiesta
+en el bajo nivel de implementación, uso y
+apropiacióndeunaarquitecturaempresarial
+MAE2.0ylamedicióndeesteenlasentidades
+del sector, sumado a la desinformación del
+nivel real de madurez de las organizaciones.
+En general, las entidades públicas
+cuentan con el plan estratégico de TI, ya
+sea en su fase de planeación ya sea —para
+las más adelantadas— en ejecución. Según
+Mintic (2019), “en Colombia solo el 18 % de
+lasentidadespúblicasutilizanelhabilitador
+de arquitectura de gobierno digital, siendo
+la meta del cuatrienio 2020-2022, llevarla
+al 30 %”. Por ahora, se continúa con la
+ejecución de estrategias e iniciativas de
+bajo impacto para el fortalecimiento de
+las organizaciones y no se logra identificar
+la alta inversión en TIC y cómo favorece la
+estrategia empresarial el propósito de una
+arquitecturaempresaria.Enestosaspectos
+se han encontrado problemas como:
+• Falta de criterios en la planeación
+de proyectos que den respuesta a
+las necesidades identificadas en
+las capacidades tecnológicas de la
+organización.
+• Faltadeunaculturaparalosescenarios
+de transición digital que permitan
+la apropiación de los procesos de
+mejora continua en el contexto de la
+digitalización de procesos y adopción
+tecnológica.
+• Infraestructuraadecuadaquesoporte
+las iniciativas empresariales a corto,
+mediano y largo plazo.
+• No se evidencian procesos de
+seguimiento que reporten la
+realidad empresarial en términos de
+transformación digital.
+• Lainteroperabilidaddelossistemasde
+informacióndadoquesereportatiempos
+de respuesta bajos a la ciudadanía en
+las solicitudes de información.
+
+--- PAGE 14 ---
+-RevistaLasallistadeInvestigación-
+Vol.20No.1/enero-junio-2023
+Fundamentos para medir niveles de madurez de arquitectura empresarial en el sector
+gobierno
+20
+SantiagoElíasDíazAyala,DaríoEnriqueSotoDurán,
+AixaEileenVillamizarJaimes
+Conclusiones
+Las complejidades detectadas en los
+modelos de evaluación de madurez, así
+como también los costos y requisitos de
+evaluadores certificados en algunos casos
+atentan negativamente contra la efectividad
+del proceso de evaluación y planificación de
+laadopcióndeunaarquitecturaempresarial.
+Un criterio base para un modelo de
+evaluación de madurez adecuado es su
+adaptabilidadgeneralalaestructuraycultura
+de la entidad. Muchos esfuerzos de AE fallan
+debido, en primer lugar, a la poca motivación
+de los funcionarios públicos que, a veces, no
+están abiertos a nuevas ideas; y segundo a
+la complejidad y a la incomprensibilidad de
+los desarrollos tecnológicos. Por lo tanto,
+un modelo de madurez de la AE además
+de ser adaptable debe ser simple y fácil de
+implementar como el modelo presentado.
+En consecuencia, se requiere un modelo
+metodológicoquepermitamedirlaarticulación
+delagestiónporprocesosylamejoracontinua
+en los gobiernos corporativos de TI de las
+organizaciones del Estado y de respuesta
+a retos a la demanda de la arquitectura
+empresarial en términos de definición y
+gestión para establecer y orientar los planes
+yproyectosquegeneranvaloralosescenarios
+detransformacióndigitalenlasorganizaciones
+del sector gobierno colombiano.
+El objetivo de la evaluación del nivel
+de madurez de la AE en una entidad y sus
+ejercicios de AE es establecer y comprender
+las lecciones aprendidas después de su
+ejecución, evaluar el alcance de los objetivos
+planteados, verificar la existencia de los
+artefactos entregables presupuestados,
+conocer las brechas existentes (entre el AS-
+IS y el TO-BE) y su respectivo mapa de ruta
+para cerrarlas, producto del análisis de la
+información generada durante el proceso de
+evaluación.
+Esto contribuirá a mejorar el nivel de
+madurez de la entidad en estas prácticas de
+arquitectura, si y solo si se logra mediante
+el compromiso de todos los interesados en
+la puesta en práctica de las cuatro fases del
+modelo propuesto.
+Referencias
+ConsejoNacionaldePolíticaEconómicaySocial.
+(2019). Conpes 3975 de noviembre 8.
+Políticanacionalparalatransformación
+digital e inteligencia artificial. https://
+colaboracion.dnp.gov.co/CDT/Conpes/
+Econ%C3%B3micos/3975.pdf
+Decreto 1083 de 2015 [Presidencia de la
+República].Pormediodelcualseexpide
+el Decreto Único Reglamentario del
+Sector de Función Pública a partir de
+la fecha de su expedición. 26 de mayo
+de 2015.
+Decreto 1008 de 2018 [Presidencia de la
+Rapública].Porelcualseestablecenlos
+lineamientosgeneralesdelapolíticade
+GobiernoDigitalysesubrogaelcapítulo
+1 del título 9 de la parte 2 del libro 2 del
+Decreto 1078 de 2015, Decreto Único
+ReglamentariodelsectordeTecnologías
+delaInformaciónylasComunicaciones.
+14 de junio de 2018.
+Gómez, C. y Sánchez Castillo, V. (2021).
+Evaluación del nivel de madurez en la
+gestión de proyectos de una empresa
+prestadora de servicios públicos.
+EconómicasCUC, 42(2), 133-144.
+
+--- PAGE 15 ---
+-RevistaLasallistadeInvestigación-
+Vol.20No.1/enero-junio-2023
+Fundamentos para medir niveles de madurez de arquitectura empresarial en el sector
+gobierno
+21
+SantiagoElíasDíazAyala,DaríoEnriqueSotoDurán,
+AixaEileenVillamizarJaimes
+Guerrero, W., Rojas, W., Sánchez, M. y
+Villamizar, A. (2016). Arquitectura
+empresarial: dominios y beneficios.
+FACE, 16(1), 87-92.
+Hammer, Michael. La auditoría de procesos.
+Harvard Business Review, 2007, vol. 4,
+no 2, p. 73-84.
+Malleuve, A., Stuart, M. y Robaina, D. (2015).
+Aproximación hacia la evaluación del
+nivel de madurez de la arquitectura
+empresarial. Revista Cubana de
+Ingeniería, 6(3), 33-24.
+Ochoa,O.(2016).Modelosdemadurezdigital:
+¿en qué consisten y qué podemos
+aprender de ellos? Boletín de Estudios
+Económicos, 71(219), 573-590.
+Peralta, M., Diez, E., Britos, P. y García, R.
+(2012).EvaluaciónasistidadeCMMI-SW.
+https://bit.ly/3GXDCTd
+Pérez-Mergarejo, E., Pérez-Vergara, I. y
+Rodríguez-Ruíz, Y. (2014). Modelos de
+madurez y su idoneidad para aplicar
+en pequeñas y medianas empresas.
+IngenieríaIndustrial,35(2), 146-158.
+Ministerio de TIC -Mintic. (2019). Sistema
+Nacional de Evaluación de Gestión y
+Resultados(Sinergia). Mintic.

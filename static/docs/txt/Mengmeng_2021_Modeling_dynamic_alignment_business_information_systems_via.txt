@@ -1,0 +1,820 @@
+--- PAGE 1 ---
+Modeling the dynamic alignment of business and information
+systems via the lens of human-centered architecture evolution
+ZHANG Mengmeng
+1
+, YI Shuanghui
+2,*
+, CHEN Honghui
+1
+, LUO Aimin
+1
+,
+LIU Junxian
+1
+, and ZHANG Xiaoxue
+1
+1. Science and Technology on Information Systems Engineering Laboratory, National University of Defense Technology, Changsha
+410072, China; 2. National Key Laboratory for Complex System Simulation, Military Academy of Sciences, Beijing 100080, China
+Abstract: The complexity of business and information systems
+(IS) alignment is a growing concern for researchers and practi-
+tioners alike. The extant research on alignment architecture fails
+to consider the human viewpoint, which makes it difficult to em-
+brace emergent complexity. This paper contributes to the extant
+literature in the following ways. First, we combine an enterprise
+architecture (EA) framework with a human viewpoint to address
+alignment issues in the architecture design phase; second, we
+describe a dynamic alignment model by developing a human-
+centered meta-model that explains first- and second-order
+changes and their effects on alignment evolution. This paper
+provides better support for the theoretical research and the
+practical application of dynamic alignment.
+Keywords: business and information systems (IS) alignment,
+human viewpoint, enterprise architecture (EA), meta-model, dy-
+namic alignment.
+DOI: 10.23919/JSEE.2021.000076
+1. Introduction
+The importance of business and information systems (IS)
+alignment has been well known and documented since
+the late 1970s [1−5]. Over the past several decades, it has
+remained as one of the top-ranked concerns of business
+and information technology (IT) executives, contributing
+to initiatives such as “maximizing the return value from
+IT investments”, “providing direction and flexibility to
+react to change”, and “improving company performance”
+[6]. Significant progress has been made in understanding
+and addressing alignment issues in recent years, mainly in
+streams of research on alignment measurement [7−9], en-
+terprise evolution and management [10−12], and enter-
+prise architecture (EA) research [13−15], as well as these
+topics’ relationships with other subjects [16−18]. How-
+ever, due to the emergent complexity and nonlinearity
+caused by social influence factors [19], dynamic align-
+ment is still difficult to achieve. In the organizational
+evolution process, individual behaviors and human iner-
+tia are difficult to control, which hinders the achievement
+of sustainable alignment [20].
+The methodology of EA is a beneficial way to achieve
+business and IS alignment. The purpose of the discipline
+of EA is to effectively align the strategies of enterprises
+with their processes and resources (business and IS).
+Many association studies have discussed various aspects
+of this discipline, such as EA design [13−15], EA evolu-
+tion [10−12], and EA measurement [7−9].
+Currently, many scholars have emphasized the import-
+ance of the human viewpoint in EA research [21−23].
+Different from other viewpoints in IS architecture, the hu-
+man viewpoint is required to explicitly represent human
+factors and to document the unique implications that hu-
+mans bring to system design. This viewpoint enables an
+understanding of the human role in systems and EAs,
+which provides a basis for stakeholder decisions by
+providing a structured linkage from the engineering com-
+munity to the manpower, personnel, training, and human
+factor communities. It provides early coordination of task
+analysis efforts by both systems engineering and human
+factors teams. Currently, common EA frameworks fail to
+capture the human-centered design aspects necessary to
+ensure the effectiveness of human operated and main-
+tained systems [21−23]. Applying a human viewpoint to
+the architecture framework helps to plan the alignment
+architecture from the top down and to capture human be-
+haviors from the bottom up.
+Through the above explanation, to address human
+factors in the architecture design phase and to achieve
+continuous alignment, it is beneficial to consider the ap-
+plication of human viewpoints to the architecture frame-
+work. This paper introduces two contributions: first, we
+Manuscript received November 28, 2019.
+*Corresponding author.
+Journal of Systems Engineering and Electronics
+Vol. 32, No. 4, August 2021, pp.881 – 888
+
+--- PAGE 2 ---
+introduce a novel lens to combine architecture frame-
+work with the human viewpoint to capture human beha-
+viors in alignment architecture; second, we describe the
+dynamic alignment of business and IS by developing a
+human-relevant meta-model and alignment evolution
+model, which explain the external changes and their in-
+fluences on alignment evolution.
+The remainder of this paper is structured as follows:
+Section 2 presents the related work; Section 3 mainly de-
+scribes a human-relevant meta-model combining the
+North Atlantic Treaty Organization (NATO) human
+viewpoint with the meta-model of the Department of De-
+fense Architecture FrameworkF (DoDAF); Section 4 de-
+velops an alignment evolution model with the above hu-
+man-relevant meta-model and mainly explains the first-
+order changes and second-order changes in the evolution
+model; and Section 5 discusses further studies, contribu-
+tions and limitations of this paper.
+2. Related work
+To support our research, we separately explain related
+works from the extant alignment research, the alignment
+research with the EA method, and the human-related re-
+search on the architecture framework.
+2.1 Extant alignment research
+Throughout the research history of business-IS alignment,
+two distinct conceptualizations have been situated in dif-
+ferent regions of complexity. The first is located in the re-
+gion of order [24], where alignment exhibits high de-
+grees of stability. A great deal of research has been con-
+ducted to establish such an alignment from multiple types
+[25,26], levels [6,27], and dimensions [28,29]. Multiple
+alignment techniques have been recommended, such as
+business process management, EA, and service-oriented
+architecture. Although static and dynamic alignments are
+differentiated in this region, all of these techniques view
+alignment as a balanced [25], cause-effect deterministic
+logic [20].
+The second conceptualization is situated in the region
+of emergent complexity [30]. The alignment in this re-
+gion moves away from equilibrium and exhibits features
+such as emergence, nonlinearity, self-organization, and
+coevolution [24]. This kind of alignment goes beyond tra-
+ditional alignment assumptions and challenges prior
+methods and models. A coevolutionary theory is deemed
+to be a superior way to address this research challenge
+[20]. This theory expresses alignment as a coevolution-
+ary process that reconciles top-down rational control and
+bottom-up emergent adaptation [20]. Beyond the intended
+planning of alignment, the coevolutionary process aims to
+coordinate business and IS through continuous adapta-
+tion and learning [31]. In our previous work, we classi-
+fied the extant coevolutionary literature on alignment
+from dimensions including focus, framework, level,
+method, and phase [32]. As a result, we found that it was
+still difficult to describe the dynamic nature of the align-
+ment using the extant coevolutionary research.
+According to the literature, alignment complexity
+mainly results from the social dimension, such as unin-
+tended deviations caused by human inertia, human errors,
+and lack of communication [20]. Human behaviors are
+difficult to ascertain and control within the “dancing
+rugged” external environment and amid IT innovations
+[33]. Capturing the human viewpoint is a key solution to
+enabling the pursuit of continuous alignment.
+2.2 Alignment research with the EA method
+EA is defined as the “fundamental organization of a sys-
+tem, embodied in its components, their relationships to
+each other and the environment, and the principles gover-
+ning its design and evolution” [34]. Enterprise architects
+seek to align enterprise processes and structures with
+their supporting IT systems so that enterprises can flour-
+ish in their environments [35]. This alignment seems to
+be an instinct of EA development, and the evolution pro-
+cess from as-is EA to to-be EA can satisfy the dynamic
+requirements of the alignment. As Ross argued, EA is a
+payback of the alignment achievement [36].
+It is widely acknowledged that intimate connections
+exist between alignment research and EA research
+[37,38]. Many association studies have discussed various
+aspects of this discipline, such as EA design [13−15], EA
+evolution [10−12], and alignment measurement [7−9]. In
+our previous research, we examined alignment research
+combined with the EA method using research questions,
+research methods, and techniques [39]. A main limitation
+that results from the research examining this combina-
+tion is the lack of human-relevant alignment manage-
+ment research. The discipline of EA is a top-level re-
+search method through top-down planning, which makes
+it difficult to control bottom-level human behaviors. En-
+hancing human-related exploration is important for fu-
+ture EA research.
+2.3 Human viewpoint in architecture framework
+The human viewpoint enables an understanding of the
+human role in EA. It provides a basis for stakeholder de-
+cisions by providing a structured linkage from the engi-
+neering community to the manpower, personnel, training,
+and human factor communities. An EA framework
+defines a common approach for development, presenta-
+tion, and integration of architecture descriptions. The ap-
+plication of a framework enables stakeholders to contri-
+882 Journal of Systems Engineering and Electronics Vol. 32, No. 4, August 2021
+
+--- PAGE 3 ---
+bute more effectively to building interoperable systems
+and to managing the associated complexities. Currently,
+most EA frameworks fail to capture the human-centered
+design aspects necessary to ensure the effectiveness of
+human-operated and maintained systems [21−23]. For ex-
+ample, the open group architecture framework (TOGAF)
+[40] and DoDAF [41] describe the roles and objectives of
+performers but seldom explain human structures and hu-
+man constraints, which limits them to capturing dynamic
+individual behaviors.
+NATO provided a human viewpoint to model human
+resources and their applications in architecture evolution
+[21]. The purpose of the NATO human view (HV) is to
+capture human requirements and the way that humans in-
+teract with other elements of a system. The models, de-
+scriptions, and contents of the NATO HV are displayed
+in Table 1 [21−23]. These clarifications provide human-
+related requirements for other EA frameworks.
+Table 1 NATO HV
+Model Description Content
+HV-A: concept A conceptual, high-level representation of the human component of the EA framework
+Pictorial depictions
+Textual descriptions
+HV-B: constraints The expression of capabilities and limitations of humans in systems
+Manpower projections
+Career progression
+Establishment inventory
+Health hazards
+HV-C: functions A list of human-specific activities and tasks
+Function set
+Execution criteria of tasks
+Task-role matrix
+HV-D: roles The roles for humans interacting with systems
+Responsibility
+Authority
+Competencies
+HV-E: human network Human-to-human communication patterns
+Groupings or teams
+Type of interactions
+Team performance impacts
+HV-F: training The instruction, education or training that is required
+As-is training resources
+To-be training demands
+HV-G: metrics A repository for human-related values, priorities and performance criteria
+Human performance metrics
+Human function to metrics mapping
+Target values
+HV-H: human dynamics The dynamic aspects of the human system components defined in above models
+States and state changes
+Triggering events
+Performance measures
+3. Human-centered DoDAF meta-model
+The Department of Defense Architecture Framework 2.0
+(DoDAF 2.0) provides an overarching set of architecture
+concepts, guidance, best practices, and methods to enable
+and facilitate architecture development, which is widely
+adopted by governments. The data meta-model (DM2) of
+DoDAF 2.0 provides a mechanism to collect, organize,
+and store data, which stipulates the architectural data
+standard at a top level and thus guides different view-
+points. The data collected with the DM2 can then be
+rendered into either of the standard models described by
+the “Fit for Purpose” presentations. The complete DM2
+can be found in [41].
+According to the NATO architecture framework, the
+human viewpoint lacks specific data elements and appli-
+cation approaches, such as alignment achievement with
+human considerations. Within DoDAF 2.0, “Fit for Pur-
+pose” is “an architectural description that is consistent
+with specific project or mission objectives ” [23]. As
+Handley pointed out, the flexible data schema provided
+by the DM2 and the ability to describe custom views
+tailored to address specific purposes can provide the op-
+portunity to integrate the NATO HV with DoDAF [23].
+The human centered DoDAF meta-model is displayed
+in Fig. 1 with its NATO HV contents. The integrity and
+validity of the meta-model can be guaranteed by associat-
+ing the data in the HV with the concept layer data and the
+logic layer data in other views. The mappings between
+DM2 entities and HV models are listed in this figure. For
+example, the HV-C functions can be related to the DM2
+“Activity” entity; the HV-E human network can be re-
+lated to the “Organization” entity. These DM2 contents
+can be combined with other viewpoints of DoDAF 2.0 to
+develop the complete EA description. Notably, although
+DM2 can describe the NATO human contents, the corres-
+ponding human viewpoint is lacking in DoDAF 2.0,
+which can be examined in future research.
+ZHANG Mengmeng et al.: Modeling the dynamic alignment of business and information systems via the lens of ... 883
+
+--- PAGE 4 ---
+Capability
+Activity
+Rule
+Measure type
+Performer Person type Skill
+Organization Service
+System
+Condition
+HV-H
+HV-B
+HV-E
+HV-F
+HV-B
+HV-D
+HV-C
+HV-A
+HV-G
+Fig. 1 Human-relevant DoDAF meta-model
+The above human-centered meta-model can support
+alignment achievement in the following ways: first, from
+the perspective of EA planning, this meta-model deter-
+mines the relationships of various viewpoints in multiple
+layers, which correlates business-related data and IS-re-
+lated data; second, from the perspective of alignment
+modeling, e.g., strategic alignment model [5], this meta-
+model aligns business capability, IS capability, business
+structures, and IS structures with the EA description;
+third, from the perspective of human behaviors, this meta-
+model tracks different kinds of performers’ relationships,
+tasks, and roles to capture the human uncertainty in the
+organizational evolution. Overall, this meta-model sum-
+marizes human-related data and provides a better founda-
+tion for business and IS alignment.
+4. Human-centereddynamicalignmentmodel
+According to dynamic alignment research, the above
+meta-model acts as a deep structure of alignment evolu-
+tion. For example, Sabherwal described the deep struc-
+ture of alignment with a strategic IS management profile
+embracing the business strategy, the business structure,
+the IS strategy, and the IS structure [25], and Lyytinen
+explained the deep structure of IS from the perspectives
+of structure, actors, tasks and technology [42]. This pa-
+per emphasizes human factors from a human viewpoint.
+Therefore, this paper considers the human-related deep
+structure via the DoDAF meta-model.
+The dynamic alignment model is developed in Fig. 2,
+showing the first-order change and the second-order
+change from external and internal environments. This
+model explains the alignment trajectory in the organiza-
+tional evolution process. These two kinds of changes oc-
+cur in different complexity regions. During the organiza-
+tional evolution, the organizational structure may under-
+go first- and second-order changes. The first-order
+changes may be slight, while the second-order changes
+are often dramatic and revolutionary. First-order adapta-
+tion and second-order adaptation can be applied in these
+situations.
+Capability
+Activity
+Rule
+Measure type
+Performer Person type Skill
+Organization Service
+System
+Condition
+Capability
+Activity
+Rule
+Measure type
+Performer Person type Skill
+Organization Service
+System
+Condition
+First-order change First-order adaptation
+Second-order change
+Second-order adaptation
+Dynamic alignment
+First-order change
+Time
+Environmental changes
+Human-relevant alignment meta-model
+Organization
+structure 1 Organization
+structure 2
+Human-relevant alignment meta-model
+Fig. 2 Human-centered dynamic alignment model
+4.1 First-order change and adaptation
+According to [25] and [42], the first-order change occurs
+between periods of incremental adaptation, and the
+second-order change brings revolutionary and episodic
+upheaval. As Section 1 explains, the first-order change is
+situated in the complexity region of order, which can be
+adjusted by correction mechanisms, while the second-or-
+der change causes nonlinearity, which needs to be pre-
+dicted, and corresponding unintended deviations should
+be tamed.
+According to extant misalignment research [43,44], the
+first-order change can cause misalignment among the en-
+tities of meta-models. We enumerate the misalignment
+symptoms caused by first-order changes in Fig. 3 and
+884 Journal of Systems Engineering and Electronics Vol. 32, No. 4, August 2021
+
+--- PAGE 5 ---
+Table 2. For example, in regard to external changes, or-
+ganizational goals and the responsibilities of business
+processes may be unknown (S01), which misaligns busi-
+ness and IS capabilities; changing business goals creates
+a lack of required information for performers to support
+their day-to-day activities (S05); and business structure
+and IS structure fall out of harmony with one another be-
+cause business/IS actors have not participated in IS/busi-
+ness organizations (S10). These misalignment symptoms
+caused by first-order changes describe the possible devi-
+ations of the meta-model. Human factors, including
+goals, responsibilities, activities, skills, and groups, are
+mainly considered in Table 2. Overall, this kind of mis-
+alignment is easily checked and is often corrected by
+means of meetings, introducing or deleting elements of
+the model, reorganizing elements or organizations, and so
+on [25,45]. A first-order change can be easily sensed and
+absorbed and always improves organizational perform-
+ance after the misalignment is corrected [43].
+Capability
+Activity
+Rule
+Measure type
+Performer Person type Skill
+Organization Service
+System
+Condition
+S01
+S02
+S04
+S05
+S06
+S07
+S08
+S09
+S10
+S11
+S12
+S03
+S13
+S14
+Fig. 3 Misalignment caused by first-order changes
+Table 2 Misalignment descriptions
+Number Misalignment symptom
+S01 Organizational goals and responsibilities of business processes are unknown.
+S02 Responsibilities of business and IS activities are unknown.
+S03 Mappings of systems and services are unclear.
+S04 There is a lack of required information to support alignment measurement.
+S05 There is a lack of required performer information to support day-to-day activities.
+S06 Relationship between systems and activities is lacking, insufficient, or multiple.
+S07 Relationship between services and activities is lacking, insufficient, or multiple.
+S08 Systems have not been manipulated by performers.
+S09 Services have not been manipulated by performers.
+S10 Business/IS actors have not participated in IS/business organizations.
+S11 Business/IS actors have not received relevant training.
+S12 Criteria for satisfying capabilities are unclear.
+S13 Conditions of executing activities are unknown.
+S14 There is a lack of required capabilities for measurement alignment.
+4.2 Second-order change and adaptation
+The second-order change is revolutionary and involves
+more than one of the elements or relations shown in Fig. 1.
+For example, an IS innovation may alter systems, deploy
+performers, or even adjust capabilities. In the extant digit-
+izing world, an organization’s external and internal com-
+plexities may increase with the challenge of “dancing
+rugged ” environments [46], pervasive digital technolo-
+gies [33], and a multitude of interdependent relationships
+[47]. Under these situations, the traditional alignment
+shifts away from equilibrium and starts to embrace “emer-
+gent complexity” [20]. Instead of requiring a fixed solu-
+tion, deviations from the intended plans generated by the
+second-order changes need to be “captured” and “tamed”
+[24]. This forces governance mechanisms to identify the
+root causes of these dynamics and to regulate human be-
+haviors by experimenting and learning [20].
+This second kind of change can be absorbed and tamed
+by governance principles [20]. In our previous research,
+we explored 10 governance principles from the extant li-
+terature [32]. For example, frequent mutual communica-
+tion among actors can reduce human inertia, e.g., nega-
+tive emotions due to threat perception, stickiness due to
+norm and value re-enactment, which can be caused by
+short-term success but would lead to suboptimal condi-
+tions in the long term; in addition, knowledge sharing
+supports the perception of unpredictable changes and is
+effective in organizational transformation [31]; further-
+more, facilitating the learning capability in a company
+helps to reduce uncertainties, increase companies’ inter-
+ZHANG Mengmeng et al.: Modeling the dynamic alignment of business and information systems via the lens of ... 885
+
+--- PAGE 6 ---
+nal complexity, and accelerate future change rates [48].
+These governance principles help to tame unintended de-
+viations caused by second-order changes.
+Overall, the whole alignment trajectory is connected by
+first-order changes and second-order changes. The human-
+centered alignment meta-model acts as a deep structure to
+determine alignment states. The above dynamic align-
+ment model explains human behaviors and their long-
+term effects on alignment.
+5. Discussion and conclusion
+Human-centered architecture exploration from the align-
+ment perspective is a novel research topic. This paper
+mainly introduces a human-centered alignment meta-
+model and develops a dynamic alignment model with this
+meta-model. This paper suggests further research into
+other human-related issues. First, the relationships
+between the human viewpoint and other EA viewpoints,
+e.g., capability viewpoint and system viewpoint, need to
+be determined, and the development process also needs to
+be built on the basis of alignment achievement. Second,
+architecture data from a human viewpoint should be used
+to measure alignment maturity. Third, with the help of a
+human viewpoint, the alignment process combining top-
+down rational design and bottom-up emergent adaptation
+needs to be developed.
+We contribute to the extant literature in two ways. The-
+oretically, we combine the EA framework and the human
+viewpoint to address alignment issues in the architecture
+design phase. In addition, we describe dynamic align-
+ment by developing a human-centered meta-model and
+dynamic alignment model, which can explain first- and
+second-order changes and their effects on alignment evo-
+lution. Practically, the human viewpoint captures the re-
+levant dynamics of human factors and associates them
+with the components defined in other views. These cha-
+racteristics make it easier to analyze the human view-
+point in terms of dynamic changes in organizational
+transformation and evolution. This paper thus provides
+better support for theoretical research and practical ap-
+plication.
+This paper still presents limitations. First, given the
+lack of validation of the human viewpoint, further human-
+related description models need to be developed; second,
+the theoretical dynamic alignment model is proposed, but
+the best way to guide the practical application of this
+model still needs to be explored. A sensing capability that
+can identify first-order changes and second-order changes
+should be considered in the dynamic alignment model.
+All of these limitations need to be analyzed in future re-
+search.
+Overall, with the advent of emerging technologies and
+the associated dynamic strategies, complexity is likely to
+pose a long-term challenge to the analysis of alignment
+[49,50]. The human viewpoint is a key solution to align-
+ment complexity. Given the lack of human consideration
+of alignment and architecture frameworks, this paper
+combines traditional alignment and dynamic alignment to
+achieve alignment through human-centered EA design
+and evolution to better describe the alignment evolution
+process.
+References
+PARKER M, BENSON R. Information economics. New Jer-
+sey: Prentice-Hall, 1988.
+[1]
+BRANCHEAU J, WETHERBE J. Issues in information sys-
+tems management. MIS Quarterly, 1987, 11(1): 23–45.
+[2]
+DIXON P J, JOHN D A. Technology issues facing corporate
+management in the 1990s. MIS Quarterly, 1989, 13(3):
+247–255.
+[3]
+NIEDERMAN F, BRANCHEAU J, WETHERBE J. Infor-
+mation systems management issues for the 1990s. MIS
+Quarterly, 1991, 15(4): 475–495.
+[4]
+LUFTMAN J N. Competing in the information age: practical
+applications of the strategic alignment model. New York:
+Oxford University Press, 1996.
+[5]
+AVISON D, JONES J, POWELL P, et al. Using and validat-
+ing the strategic alignment model. The Journal of Strategic
+Information Systems, 2004, 13(3): 223–246.
+[6]
+LUFTMAN J N. Assessing business-IT alignment maturity.
+Communications of the Association for Information Systems,
+2000, 4: 14.
+[7]
+LUFTMAN J, KEMPAIAH R. An update on business-IT
+alignment: “a line” has been drawn. MIS Quarterly Execut-
+ive, 2007, 6(3): 165–175.
+[8]
+ESCALONA M J, ARAGON G, LINGER H, et al. Informa-
+tion system development. Berlin: Springer, 2014.
+[9]
+WAGNER T H. Evolvement of business-IT alignment over
+time: a situated change perspective. Proc. of the 47th Hawaii
+International Conference on System Sciences, 2014:
+4366–4375.
+[10]
+OHLSSON J, HAN S, HULTIN M, et al. How to achieve
+sustainable business IT alignment-designing a circular organ-
+izational structure at SAAB. Proc. of the 49th Hawaii Inter-
+national Conference on System Sciences, 2016: 5116–5125.
+[11]
+BAKER W E, NIEDERMAN F. Integrating the IS functions
+after mergers and acquisitions: analyzing business-IT align-
+ment. The Journal of Strategic Information Systems, 2014,
+23(2): 112–127.
+[12]
+PEREIRA C M, SOUSA P. Enterprise architecture: business
+and IT alignment. Proc. of the ACM Symposium on Applied
+Computing, 2005: 1344–1345.
+[13]
+ZARVIC N, WIERINGA R. An integrated enterprise archi-
+tecture framework for business-IT alignment. Proc. of the
+CAISE*6 Workshop on Business/IT Alignment and Intero-
+perability BUSITAL ’06, 2006. DOI: 10.1201/b16417-5.
+[14]
+HINKELMANN K, GERBER A. A new paradigm for the
+continuous alignment of business and IT: combining enter-
+prise architecture modelling and enterprise ontology. Com-
+puters in Industry, 2016, 79: 77–86.
+[15]
+LUFTMAN J N. IT Governance: an alignment maturity per- [16]
+886 Journal of Systems Engineering and Electronics Vol. 32, No. 4, August 2021
+
+--- PAGE 7 ---
+spective. International Journal of IT/Business Alignment and
+Governance, 2010. DOI: 10.4018/jitbag.2010040102.
+LUFTMAN J N, LYYTINEN K. Enhancing the measure-
+ment of information technology business alignment and its
+influence on company performance. Journal of Information
+Technology, 2017, 32(1): 26–46.
+[17]
+GEROW J E. Looking toward the future of IT-business stra-
+tegic alignment through the past: a meta-analysis. MIS
+Quarterly, 2014, 38(4): 1059–1085.
+[18]
+BAKER J, SINGH H. The roots of misalignment: insights
+from a system dynamics perspective. Proc. of JAIS Theory
+Development Workshop, 2015: 1–37.
+[19]
+BENBYA H, MCKELVEY B. Using coevolutionary and
+complexity theories to improve IS alignment: a multi-level
+approach. Journal of Information Technology, 2006, 21(4):
+284–298.
+[20]
+HANDLEY H, SMILLIE R J. Architecture framework hu-
+man view: the NATO approach. Systems Engineering, 2008,
+11(2): 156–164.
+[21]
+HANDLEY H, SMILLIE R J. Human view dynamics—the
+NATO approach. Systems Engineering, 2010, 13(1): 72–79.
+[22]
+HANDLEY H. Incorporating the NATO human view in the
+DoDAF 2. 0 meta model. Systems Engineering, 2012, 15(1):
+108–117.
+[23]
+TANRIVERDI H, LIM S Y. How to survive and thrive in
+complex, hypercompetitive, and disruptive ecosystems? The
+roles of IS-enabled capabilities. Proc. of the 38th Interna-
+tional Conference on Information Systems, 2017: 1–21.
+[24]
+SABHERWAL R, HIRSCHHELM R, GOLES T. The dy-
+namics of alignment: insights from a punctuated equilibrium
+model. Organization Science, 2001, 12(2): 179–197.
+[25]
+GEROW J E, THATCHER J B, GROVER V. Six types of IT-
+business strategic alignment: an investigation of the con-
+structs and their measurement. European Journal of Informa-
+tion Systems, 2015, 24(5): 465–491.
+[26]
+WAGNER H T, WEIZEL T. How to achieve operational
+business-IT alignment: insights from a global aerospace firm.
+MIS Quarterly Executive, 2012, 11(1): 1–11.
+[27]
+CHAN Y E, REICH B H. IT alignment: what have we
+learned? Journal of Information Technology, 2007, 22(4):
+297–315.
+[28]
+SCHLOSSER F, WAGNER H T, COLTMAN T. Reconsi-
+dering the dimensions of business-IT alignment. Proc. of the
+45th Hawaii International Conference on System Science,
+2012: 5053–5061.
+[29]
+PAGE S E. Understanding complexity. Chantilly, VA:
+Teaching Company, 2009.
+[30]
+SAWY E, MALHOTRA A, PARK Y, et al. Research com-
+mentary—seeking the configurations of digital ecodynamics:
+it takes three to tango. Information Systems Research, 2010,
+21(4): 835–848.
+[31]
+ZHANG M M, CHEN H H, LYYTINEN K. Principles of or-
+ganizational coevolution of business and IT: a complexity
+perspective. Proc. of the 27th European Conference on In-
+formation Systems, 2019. https://aisel.aisnet.org/ecis2019_
+rip/8.
+[32]
+YOO Y, BOLAND R J, LYYTINEN K, et al. Organizing for
+innovation in the digitized world. Organization Science,
+2012, 23(5): 1398–1408.
+[33]
+IEEE Std 1471−2000. IEEE recommended practice for archi-
+tectural description of software intensive systems. New York:
+IEEE Computer Society, 2000.
+[34]
+WEGMANN A, REGEV G, LOISON B. Business and IT
+alignment with SEAM. Proc. of the 1st International Work-
+shop on Requirements Engineering for Business Need, and
+IT Alignment, 2005: 74–84.
+[35]
+ROSS J W. Creating a strategic IT architecture competency:
+learning in stages. MIS Quarterly Executive, 2003, 2(1):
+31−43.
+[36]
+SCHEKKERMAN J. How to survive in the jungle of enter-
+prise architecture frameworks—creating or choosing an en-
+terprise architecture framework. Victoria, Canada: Trafford,
+2004.
+[37]
+SCHONHERR M. Enterprise architecture frameworks. Ber-
+lin: GITO, 2004.
+[38]
+ZHANG M M, CHEN H H, LUO A M. A systematic review
+of business-IT alignment research with enterprise architec-
+ture. IEEE Access, 2018, 6: 18933–18944.
+[39]
+The Open Group. TOGAF "Enterprise Edition" Version 8.1.
+New York: Publishing V H, 2003.
+[40]
+DoD Architecture Framework Working Group. DoD Archi-
+tecture Framework Version 2.0. Washington D. C.: Depart-
+ment of Defense, 2009.
+[41]
+LYYTINEN K, NEWMAN M. Explaining information sys-
+tems change: a punctuated socio-technical change model.
+European Journal of Information Systems, 2008, 17(6):
+589–613.
+[42]
+ORI D. Misalignment symptom analysis based on enterprise
+architecture model assessment. IADIS International Journal
+on Computer Science & Information Systems, 2014, 9(2):
+1–15.
+[43]
+ORI D. On exposing strategic and structural mismatches
+between business and information systems: misalignment
+symptom detection based on enterprise architecture model
+analysis. Budapest: Corvinus University of Budapest, 2017.
+[44]
+ZHANG M M, CHEN H H, LI X Y, et al. Evolvement of
+business-IT alignment: a conceptual model and intervening
+changes from resource allocation. IEEE Access, 2018, 6:
+9160–9172.
+[45]
+TANRIVERDI H, RAI A, VENKATRAMAN N. Research
+commentary—reframing the dominant quests of information
+systems strategy research for complex adaptive business sys-
+tems. Information Systems Research, 2010, 21(4): 822–834.
+[46]
+ALLEN P M, VARGA L. A co-evolutionary complex sys-
+tems perspective on information systems. Journal of Informa-
+tion Technology, 2006, 21(4): 229−238.
+[47]
+KANDJANI H, TAVANA M, BERNUS P, et al. Co-evolu-
+tion path model: sustaining enterprises as complex systems
+on the edge of chaos. Cybernetics and Systems, 2014, 45(7):
+547–567.
+[48]
+ILMUDEEN A, BAO Y, ALHARBI I M. How does business-
+IT strategic alignment dimension impact on organizational
+performance measures: conjecture and empirical analysis.
+Journal of Enterprise Information Management, 2019, 32(3):
+457–476.
+[49]
+GIDEON J, LAZAR R, ERIK P. Business-IT alignment in
+the era of digital transformation: quo vadis? Proc. of the 53rd
+Hawaii International Conference on System Sciences, 2020:
+5563–5572.
+[50]
+ZHANG Mengmeng et al.: Modeling the dynamic alignment of business and information systems via the lens of ... 887
+
+--- PAGE 8 ---
+Biographies
+ZHANG Mengmeng was born in 1990. He re-
+ceived his M.S. degree in management science
+and technology from the National University of
+Defense Technology (NUDT), Changsha, China,
+in 2011. He received his Ph.D. degree from the
+NUDT, Changsha, China, in 2019. His research
+interests are information system architecture
+design, analysis and validation.
+E-mail: 18670381635@163.com
+YI Shuanghui was born in 1978. He received his
+M.S. degree in computer science and technology
+in 2003. He has been engaged in distributed com-
+puting research for nearly 10 years, software test-
+ing for more than three years, and information
+system architecture design for more than five
+years at Beijing Institute of System Engineering.
+Currently, he is the deputy director of the Second
+Research Department of National Key Laboratory for Complex System
+Simulation.
+E-mail: 377019128@qq.com
+CHEN Honghui was born in 1969. He received
+his M.S. and Ph.D. degrees from the National
+University of Defense Technology (NUDT). He is
+a professor and the executive vice director of Sci-
+ence and Technology on Information Systems En-
+gineering Laboratory in the NUDT. His current
+research interests include requirement engineer-
+ing, military information system, and enterprise
+architecture design and analysis.
+E-mail: chh0808@gmail.com
+LUO Aimin was born in 1971. She received her
+M.S. and Ph.D. degrees from the National Uni-
+versity of Defense Technology (NUDT). She is a
+professor in the NUDT. Her current research in-
+terests include requirement engineering, military
+information system, and enterprise architecture
+design and analysis.
+E-mail: amluo@nudt.edu.cn
+LIU Junxian was born in 1973. He received his
+M.S. and Ph.D. degrees from the National Uni-
+versity of Defense Technology (NUDT). He is a
+professor in the NUDT. His current research in-
+terests include requirement engineering, military
+information system, and enterprise architecture
+design and analysis.
+E-mail: 18674864900@163.com
+ZHANG Xiaoxue was born in 1986. She re-
+ceived her M.S. and Ph.D. degrees from the Na-
+tional University of Defense Technology (NUDT).
+She is an associate professor in the NUDT. Her
+current research interests include requirement en-
+gineering, military information system, and enter-
+prise architecture design and analysis.
+E-mail: snow1126@126.com
+888 Journal of Systems Engineering and Electronics Vol. 32, No. 4, August 2021

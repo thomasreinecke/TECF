@@ -1,0 +1,1695 @@
+--- PAGE 1 ---
+The Journal of Systems and Software 152 (2019) 134–150
+Contents lists available at ScienceDirect
+The Journal of Systems and Software
+journal homepage: www.elsevier.com/locate/jss
+How enterprise architecture improves the quality of IT investment
+decisions
+Martin van den Berga,∗
+, Raymond Slotb
+, Marlies van Steenbergenc
+, Peter Faassed
+,
+Hans van Vliete
+a
+Department of ICT, De Nederlandsche Bank, Amsterdam, the Netherlands
+b
+Information Systems Architecture Research Group, University of Applied Sciences Utrecht, the Netherlands
+c
+Digital Smart Services Research Group, University of Applied Sciences Utrecht, the Netherlands
+d
+Afstudeerbegeleider, Amsterdam, the Netherlands
+e
+Department of Computer Science, VU University, Amsterdam, the Netherlands
+a r t i c l e i n f o
+Article history:
+Received 10 September 2018
+Revised 6 January 2019
+Accepted 25 February 2019
+Available online 26 February 2019
+Keywords:
+Enterprise architecture
+Enterprise architecture maturity
+IT investments
+Quality of IT investment decision outcomes
+Enterprise architecture insights
+Enterprise architecture artifacts
+a b s t r a c t
+According to literature, enterprise architecture (EA) is supposed to support IT investment decision-
+making. However, it is not yet clear how EA can do that. The objective of this study is to explore how EA
+can support IT investment decisions. A quantitative research approach was chosen, in which data were
+collected from a survey of 142 participants. These data were used to perform a comparative analysis be-
+tween top and bottom quartile organizations on 1) the EA maturity, 2) the use of EA artifacts in the
+preparation of IT investments, and 3) the key insights that EA provides in preparation of IT investments.
+We found that top quartile organizations are more mature in all EA maturity areas. They also make more
+extensive use of different types of EA artifacts in the preparation of IT investment decisions, especially
+diagnostic and actionable artifacts. Finally, EA provides top quartile organizations with more key insights
+in the preparation of IT investment decisions, and in particular, strategic insights. As a result of our re-
+search we created a conceptual model that integrates seven propositions. Further research is required
+to test these propositions and develop instruments to aid enterprise architects to effectively support IT
+investment decisions.
+© 2019 Elsevier Inc. All rights reserved.
+1. Introduction
+Enterprise architecture (EA) gained a lot of attention over the
+years and is employed by many organizations to deal with the
+increasing complexity of their corporate IT environments (Aier,
+2014; Weiss et al., 2013). EA is deﬁned as a discipline that is
+able to create “overview and insights needed to translate strat-
+egy into execution, enabling senior management to take owner-
+ship of the key decisions on the design of the future enterprise”
+(Greefhorst and Proper, 2011). One of these decisions is the IT in-
+vestment decision. The IT investment decision “selects and funds
+initiatives and addresses how much to spend, what to spend it
+on, and how to reconcile the concerns of different stakeholders”
+(Weill and Ross, 2004). The promise of EA is that it guides and
+informs IT investment decisions (Blosch and Burton 2014; Gøtze,
+2013; Buchanan and Soley, 2002; CIO Council, 2012). In other
+∗
+Corresponding author.
+E-mail address: bergmart@online.nl (M. van den Berg).
+words, the use of EA would increase the quality of IT investment
+decisions.
+The quality of the outcome of an IT investment decision is
+an important indicator given the amounts of money that are in-
+vested in IT. The estimated IT spending for 2018 is USD 3.68 tril-
+lion (Lovelock et al., 2017). According to IDC (2018), the total IT
+spending by small and medium-sized businesses is forecasted to
+be nearly USD 602 billion in 2018, an increase of 4.9% over 2017.
+According to Weill and Ross (2004), “the IT investment decision
+is one of the ﬁve interrelated IT decisions that every enterprise
+must address, and often the most visible and controversial as some
+projects will be approved, others are bounced”. The CHAOS report
+indicates that in 2015 only 29% of projects were successful, i.e., on
+time, on budget, and with a satisfactory result, 19% of all projects
+failed and 52% were challenged (Standish Group, 2015). IT invest-
+ment decisions appear to be important as well as risky decisions.
+In this research we studied three aspects of EA that relate to
+how it supports the quality of IT investments. First, the maturity
+of an EA practice. We consider an EA practice “the whole of activ-
+ities, responsibilities and actors involved in the development and
+application of EA” (Van Steenbergen et al., 2010). The maturity of
+https://doi.org/10.1016/j.jss.2019.02.053
+0164-1212/© 2019 Elsevier Inc. All rights reserved.
+
+--- PAGE 2 ---
+M. van den Berg, R. Slot and M. van Steenbergen et al./The Journal of Systems and Software 152 (2019) 134–150 135
+an EA practice is an indicator for the quality of an EA practice. The
+purpose of maturing an EA practice is to increase its performance
+and effectiveness upon achieving a higher maturity (Meyer et al.,
+2011). In this research we want to explore whether there is a rela-
+tionship between the maturity of an EA practice and the quality of
+IT investment decision outcomes.
+Second, the artifacts created by EA practices. We consider an EA
+artifact as a single document describing a particular aspect of EA
+(Kotusev et al., 2015). In this research we are particularly interested
+in what EA artifacts are used in the preparation of IT investment
+decisions. Third, the key insights that EA provides in the prepara-
+tion of IT investment decisions. These insights should enable senior
+management to take ownership of the key decisions on the design
+of the future organization (Greefhorst and Proper, 2011; Johnson
+et al., 2004; Janssen, 2012; Op ’t Land et al., 2008).
+In this study, we want to explore how EA delivers value to IT
+investment decisions. In this way, we seek to complement and ex-
+tend existing studies on EA beneﬁts and success factors by building
+theory on how EA contributes to IT investment decisions. There-
+fore, our main research question is:
+How does EA improve the quality of IT investment decisions?
+To answer this question, a quantitative approach was followed.
+Based on a survey among 142 EA developers, EA users and EA im-
+plementers, we performed a comparative analysis of two groups,
+i.e., the top and bottom quartile cases with regard to the quality of
+the outcomes of the IT investment decisions. For both the top and
+bottom quartile cases, we measured the EA maturity, the use of EA
+artifacts in the preparation of IT investment decisions and, ﬁnally,
+the key insights that EA provides in the preparation of IT invest-
+ment decisions. Based on the differences between top and bottom
+quartile cases, we generated theory.
+This study demonstrates that top quartile organizations have
+a more mature EA practice across the board. Furthermore, in top
+quartile organizations more diagnostic and actionable EA artifacts
+are used and, as a likely consequence, EA provides more strategic
+insights in the preparation of IT investment decisions, like whether
+the IT investment ﬁts with business strategy and the relationships
+with past and future investments.
+This research is important because it underpins the value of
+EA in supporting IT investment decisions. Enterprise architects are
+provided with useful insights about where to focus on to improve
+their practices, processes and products. For decision-makers, this
+research demonstrates which artifacts and insights they need to
+ask their enterprise architects when preparing IT investment deci-
+sions. Researchers are provided with frameworks to measure the
+contribution of EA and the outcomes of IT investment decisions,
+as well as with insights for further researching the beneﬁts of EA
+with regard to IT investment decisions.
+In an earlier paper based on the same data, we reported on a
+quantitative study about the relationship between EA maturity and
+the quality of IT investment decisions (Van den Berg et al., 2018).
+To make this particular paper self-contained we reused some parts
+of the earlier paper. In particular, we have reused the subsections
+on theoretical background of the quality of IT investment decision
+outcomes (2.1.) and EA maturity (2.2.2.). We also reused the sub-
+sections on measurement of the quality of IT investment decision
+outcomes (3.2.1.1.) and EA maturity (3.2.1.2.) as well as the sub-
+sections on data collection (3.2.2.), focus groups (3.2.3.), and data
+reliability and validity (3.2.4.).
+The theoretical background of this research is presented in the
+next section. In the subsequent section, we discuss the research
+model and methodology. The section after that contains the quar-
+tiles and descriptives. In the next section we present the results
+of our research. Finally, we discuss the results, outline the implica-
+tions of this research, elaborate on the limitations, and end with a
+conclusion.
+2. Theoretical background
+In this section we discuss related work on the quality of IT in-
+vestment decision outcomes, and the use of EA. With regard to
+the quality of IT investment decision outcomes we searched Google
+Scholar for literature with the keywords “quality of a decision” and
+“success of a decision” followed by forward and backward snow-
+balling. Google Scholar was also used to ﬁnd relevant literature on
+“enterprise architecture maturity” followed by forward and back-
+ward snowballing. Based on our extensive experience as practicing
+enterprise architects and EA researchers, we created a list of EA ar-
+tifacts and key insights. In Google Scholar references were searched
+for each of the EA artifacts and key insights.
+2.1. Quality of IT investment decision outcomes
+The purpose of this research is to compare the use of EA be-
+tween organizations with high quality outcomes of IT investment
+decisions and organizations with low quality outcomes of IT in-
+vestment decisions. In this subsection we discuss related work
+with regard to the components that comprise the quality of the
+outcomes of an IT investment decision: a decision, the quality of a
+decision, and an IT investment decision.
+We consider a decision “a speciﬁc commitment to action”
+(Mintzberg et al., 1976). A decision is made in a process that fol-
+lows two stages, the ﬁrst of which is the formulation of the deci-
+sion, in which the decision is prepared and ends with the speciﬁc
+commitment to action. In the second stage the decision is imple-
+mented (Papadakis et al., 2010). Fig. 1 shows the two stages.
+There are differing perspectives about the quality of a deci-
+sion. These perspectives can be related to the different stages of
+the decision-making process. One perspective is that rational anal-
+ysis during the formulation phase improves the initial quality of
+the decision: “in high velocity environments, the more compre-
+hensive the search for strategic alternatives, the better the perfor-
+mance of the ﬁrm” (Bourgeois and Eisenhardt, 1988). The quality
+of a decision thus depends on the formulation stage. Another per-
+spective is that successful decisions were found “to be more on
+time, have lived up to intentions more than others, and [are] more
+satisfactory to those concerned” (Miller, 1997). In this perspec-
+tive, the quality of a decision highly depends on the implemen-
+tation. Miller (1997) regards a decision as being successful when
+it is completed, achieved, and acceptable. While the decision itself
+is established at the end of the formulation stage, its completion,
+achievement, and acceptability can only be measured after the im-
+plementation. Hetebrij (2011) argues that the quality of a decision
+depends on two factors: decision power and content quality. A de-
+cision has decision power if it is made on a timely basis and if
+it is actually implemented. A decision has content quality if it is
+based on relevant knowledge and if the concerns of the stake-
+holders involved are carefully considered. Hetebrij (2011) relates
+the success of a decision to both its formulation and implemen-
+tation. Nooraie (2008) also states that the decision outcomes may
+Fig. 1. Stages of decision-making (based on Papadakis et al., 2010).
+
+--- PAGE 3 ---
+136 M. van den Berg, R. Slot and M. van Steenbergen et al./The Journal of Systems and Software 152 (2019) 134–150
+be investigated in two stages. In the formulation stage “the qual-
+ity of the decision-making process output in terms of timeliness
+or speed of the decision-making, acceptability to interested units
+and people, and adaptiveness to change can be evaluated. This ac-
+tually deﬁnes how well the decision process is carried out”. The
+implementation stage determines “how well the decision (selected
+alternative) is accomplished, the decision goals are achieved, or
+problems are solved” (Nooraie, 2008). The results of both the for-
+mulation and implementation stage determine the quality of a de-
+cision.
+The IT investment decision is the decision to approve or dis-
+approve an IT investment. Compared with other types of de-
+cisions, IT investment decisions have some speciﬁc characteris-
+tics. First, IT investments require funds or budgets. Budgets are
+amounts of money required for the investment. As part of the
+IT investment decision, a budget should be approved. Second, IT
+investment decisions cannot be taken in isolation; other IT in-
+vestment decisions must be taken into account when making a
+particular IT investment decision. Organizations try to achieve an
+optimal IT investment portfolio, i.e., a portfolio in which all in-
+vestments contribute to strategic, long-term objectives. Strategic
+alignment between business strategy and IS strategy positively
+moderates the relationship between IT investments and ﬁrm per-
+formance (Byrd et al., 2006). We consider an IT investment deci-
+sion to follow the two stages of decision-making: the formulation
+and the implementation stage. The results of both stages determine
+the quality of IT investment decisions.
+2.2. Use of EA
+2.2.1. EA positioning
+The use of EA differs across organizations and EA can
+have different meanings for both practitioners and researchers.
+Lapalme (2012) introduced the three schools of EA based on a re-
+view of the key EA literature. He makes the distinction between
+enterprise IT architecting, enterprise integrating, and enterprise
+ecological adaptation. Each school is grounded in its own belief
+system. In enterprise IT architecting, EA is the glue between busi-
+ness and IT, in enterprise integrating, EA is the link between strat-
+egy and execution, in enterprise ecological adaptation, EA is the
+means for organizational innovation and sustainability. In this re-
+search we used Greefhorst and Proper’s deﬁnition of EA: “EA as
+a discipline that is able to create overview and insights needed
+to translate strategy into execution, enabling senior management
+to take ownership of the key decisions on the design of the fu-
+ture enterprise” (Greefhorst and Proper, 2011). Like in Lapalme’s
+enterprise integrating school we consider EA as the link between
+strategy and execution. However, we did not include the schools of
+thought in our research.
+Based on an exploratory empirical analysis,
+Aier et al. (2008) distinguished three different EA scenarios.
+These scenarios depend on the level of organizational penetration
+of EA and the adoption of advanced architectural design paradigms
+and modeling capabilities. The most mature EA scenario is “EA
+engineer” which scores high on both dimensions. The scenario “IT
+architect” scores low on both dimensions. The scenario “EA initia-
+tor” scores high on the level of organizational penetration but low
+on the adoption of advanced architectural design paradigms and
+modeling capabilities. The results of Aier’s analysis demonstrate
+that there is no overall approach to implement EA in practice.
+We regard the differences between Aier’s scenarios as a matter of
+maturity, the subject we will discuss next and is part of our study.
+2.2.2. EA maturity
+To aid organizations in the adoption of EA best practices, ma-
+turity models have been developed and proposed. These models
+offer assessment frameworks and roadmaps for increasing EA ma-
+turity (Vallerand et al., 2017). Several EA maturity models exist,
+with different purposes and different ways of measuring the EA
+maturity (Meyer et al., 2011; Vallerand et al., 2017; Van Steen-
+bergen et al. 2007). We choose to apply the Dynamic Architec-
+ture Maturity Matrix (DyAMM) in this study. The DyAMM is devel-
+oped by Sogeti and scientiﬁcally evaluated (Van Steenbergen et al.,
+2007; Van Steenbergen et al., 2010; Van Steenbergen et al., 2012).
+DyAMM is an instrument to incrementally build an architecture
+function. It distinguishes 17 architecture practice focus areas that
+must be implemented. These focus areas were derived from prac-
+tical experience in the ﬁeld of EA. Each focus area is divided into
+a number of maturity levels. By positioning these maturity levels
+against each other in a matrix, the DyAMM presents the order in
+which the different aspects of the architectural function should be
+implemented. A total number of 137 checkpoints (statements) have
+to be answered with a “yes” or “no” to determine the maturity
+of a particular EA practice. If an organization does not satisfy all
+checkpoints of a certain maturity level, DyAMM provides improve-
+ment suggestions. DyAMM is based on the DyA EA approach de-
+veloped by Sogeti. This approach focuses on a goal-oriented, evo-
+lutionary development of the architectural function (Wagter et al.,
+2005). We choose DyAMM because it is a model that can be used
+to assess the maturity of an EA practice, the latest version is pub-
+lished recently (in 2012), the model is publicly available, and has
+been applied across different industries (Van Steenbergen et al.,
+2010).
+2.2.3. EA artifacts
+EA practices create different types of artifacts. In this research
+we distinguish between different types of EA artifacts as can be
+seen in Table 1. We are aware of different concepts and deﬁnitions
+with regard to EA. There is not one common vocabulary or set of
+standardized artifacts in the EA community despite efforts of the
+Open Group (2018) and Kotusev (2018).
+2.2.4. EA insights
+Table 2 contains the key insights that EA possibly can provide
+in the preparation of IT investment decisions, and thus help to im-
+prove these decisions. These insights are derived from literature.
+3. Research design
+3.1. Research questions
+One of the 2012 Clinger-Cohen Core Competencies & Learn-
+ing Objectives (11.4) states that “the use of EA in IT invest-
+ment decision-making should be one of the competencies of EA”
+(CIO Council, 2012). There is broad consensus that the EA disci-
+pline should guide and inform IT investment decisions (Blosch and
+Burton, 2014; Gøtze, 2013; Jusuf and Kurnia, 2017; Buchanan and
+Soley, 2002). However, there is little evidence on the how. With
+this research, we aim to explore how to apply EA to achieve higher
+quality outcomes of IT investment decisions. In particular, we are
+interested in what EA maturity areas, what EA artifacts and what
+key insights from EA contribute to more successful IT investments.
+This leads to the following questions:
+Q1: What is the maturity on EA focus areas in organizations with
+high-quality IT investment decision outcomes compared to or-
+ganizations with low-quality IT investment decision outcomes?
+Q2: What EA artifacts are used in the preparation of IT investment
+decisions in organizations with high-quality IT investment de-
+cision outcomes compared to organizations with low-quality IT
+investment decision outcomes?
+
+--- PAGE 4 ---
+M. van den Berg, R. Slot and M. van Steenbergen et al./The Journal of Systems and Software 152 (2019) 134–150 137
+Table 1
+EA artifacts that can be used in the preparation of IT investment decisions.
+Type of EA artifact Deﬁnition References
+Business capability
+models
+Structured graphical representation of all organizational business capabilities, their
+relationship and hierarchy. A business capability is a particular ability that a business
+may possess or exchange to achieve a speciﬁc purpose.
+Kotusev (2018)
+Open Group (2018)
+Future state
+architectures
+High-level graphical descriptions of the desired long-term future state of an organization.
+Sometimes referred to as the "to-be", "soll" or "target" architecture.
+Kotusev (2018)
+Van der Raadt and Van Vliet (2008)
+Open Group (2018)
+Current state
+architectures
+Descriptions of the current situation of an organization. Sometimes referred to as the
+"as-is" or "ist" architecture.
+Van der Raadt and Van Vliet (2008)
+Principles A declarative statement that normatively prescribes a property of the design of an artifact. Greefhorst and Proper (2011)
+Kotusev (2018)
+Policies Overarching organizational norms typically of restrictive nature providing compulsory
+prescriptions in certain areas.
+Kotusev (2018)
+Guidelines Prescriptions of best practices that provide guidance on the optimal ways to carry out
+design or implementation activities.
+Kotusev (2018)
+Open Group (2018)
+Van der Raadt and Van Vliet (2008)
+Standards Three classes of standards exist: 1) Legal and regulatory obligations: these standards are
+mandated by law and therefore an enterprise must comply or face serious consequences.
+2) Industry standards: these standards are established by industry bodies and are then
+selected by the enterprise for adoption. 3) Organizational standards: these standards are
+set within the organization and are based on business aspiration. The purpose of
+standards is to help achieve technical consistency, technological homogeneity and
+regulatory compliance.
+Open Group (2018)
+Kotusev (2018)
+Heat maps A map where different colors are used to visualize the status of certain attributes of a
+business capability. These attributes may include maturity, effectiveness, performance,
+and the value or cost of each capability to the business. Heat maps can also be used in
+conjunction with e.g., information objects.
+Open Group (2018)
+Roelens and Poels (2014)
+Landscape diagrams High-level connections between various applications, databases, platforms, systems and
+sometimes business processes covering large parts of the corporate IT landscape,
+typically in their current states.
+Kotusev (2017)
+Roadmaps An abstracted plan for business or technology change, typically operating across multiple
+disciplines over multiple years. A roadmap describes a realization path from the current
+state to the future state.
+Open Group (2018)
+Van der Raadt and Van Vliet (2008)
+Project start
+architectures
+Delineates a concrete and usable framework within which a project should be carried out.
+It contains the translation of general principles and policy directives into speciﬁc project
+guidelines. It provides the constraints and general direction for the further elaboration of
+the project’s fundamental design.
+Wagter et al. (2005)
+Foorthuis and Brinkkemper (2007)
+Solution outlines High-level description of speciﬁc proposed solutions. Kotusev (2018)
+Table 2
+Insights that EA may provide in the preparation of IT investment decisions.
+Type of EA insight Description References
+Relationship with past
+IT investments
+IT investments can beneﬁt from previous IT investments. Riempp and Gieffers-Ankel (2007)
+Relationship with
+current IT
+investments
+IT investments can interfere with current IT investments, positively or negatively. Riempp and Gieffers-Ankel (2007)
+Van den Berg and Van Vliet (2016)
+Niemi and Pekkola (2016)
+Relationship with
+future IT investments
+IT investments can create opportunities for future IT investments. Riempp and Gieffers-Ankel (2007)
+Risks of IT investment IT investments are inherently risky due to uncertainty about their economic impact,
+technological complexity, rapid obsolescence, implementation challenges and so on. IT
+risk is the variability of returns on IT investment, which is increased by unexpected
+positive or negative outcomes.
+Riempp and Gieffers-Ankel (2007)
+Jusuf and Kurnia (2017)
+Plessius et al. (2014)
+Tamm et al. (2011)
+Dewan et al. (2007)
+Feasibility of IT
+investment
+IT investments have a certain degree of feasibility, i.e., the ability and likelihood to
+successfully complete an IT investment including relevant factors such as economic,
+technological, legal and scheduling factors.
+Standish Group (2015)
+Investopia (2018)
+Fit with the future
+state architecture
+IT investments can contribute to the realization of the future state architecture. Buchanan and Soley (2002)
+Fit with the business
+strategy
+IT investments can contribute to the realization of the business strategy. Buchanan and Soley (2002)
+Tamm et al. (2011)
+Niemi and Pekkola (2016)
+Consequences for the
+current state
+IT investments can have consequences for the current state of operations, clients and
+markets.
+Plessius et al. (2014)
+Options for the future IT investments can create options for the future, i.e., an IT investment now can create an
+opportunity to gain future beneﬁts.
+Saha (2006)
+Slot (2010)
+Different solution
+alternatives and their
+pros and cons
+IT investments can be realized by means of different solution alternatives. These
+alternatives have their pros and cons.
+Plessius et al. (2014)
+
+--- PAGE 5 ---
+138 M. van den Berg, R. Slot and M. van Steenbergen et al./The Journal of Systems and Software 152 (2019) 134–150
+Table 3
+Measurement items for OQ with factor loadings.
+Measurement item λ
+OQ1 The desired outcomes of IT investments are achieved in my organization 0.75
+OQ2 Stakeholders are satisﬁed with the ﬁnal outcomes of IT investments in my organization 0.69
+OQ3 The ﬁnal outcomes of IT investments contribute to strategic, long-term objectives in my organization 0.59
+OQ4 The due dates for IT investments are achieved in my organization 0.69
+OQ5 IT investments in my organization are implemented on a timely basis 0.72
+OQ6 IT investments in my organization are on budget 0.75
+Q3: What are the key insights that EA provides in the preparation
+of IT investment decisions in organizations with high quality IT
+investment decision outcomes compared to organizations with
+low quality IT investment decision outcomes?
+3.2. Research methodology
+We followed a quantitative approach with the aim to build the-
+ory. We collected data by means of a survey among EA developers,
+EA users, and EA implementers. The purpose of the survey was
+twofold. Firstly, to measure the quality of IT investment decision
+outcomes and the EA maturity. Secondly, to gain insight in the use
+of EA artifacts and the key insights that EA provides in the prepa-
+ration of IT investment decisions. These insights “can help identify
+the concepts, are the basis for measurement, and are very appro-
+priate for early stages of the research” (Malhotra and Grover, 1998).
+In addition to the survey, we collected explanations for our ﬁnd-
+ings with three focus groups.
+3.2.1. Measurement model
+To answer the research questions, we took the top and bot-
+tom quartile cases based on the quality of IT investment decision
+outcomes and compared the way organizations in these quartiles
+make use of EA. To determine the quality of IT investment decision
+outcomes (OQ) and the division of cases over quartiles we asked
+six questions in the questionnaire. To answer research question Q1
+we had to measure the EA maturity (EAM) on different aspects.
+The survey contains 23 questions on EAM. Finally, we used two
+questions to determine the use of EA artifacts (Q2) and the key
+insights that EA provides (Q3). Next to the aforementioned ques-
+tions, the survey contains general questions on EA and IT invest-
+ments and on demographics. In the next subsections, we explain
+the measurement of OQ, EAM, use of EA artifacts, and key insights
+that EA provides in more detail.
+3.2.1.1. Measurement OQ. OQ is measured in a formative mode by
+six indicators. The measurement items for OQ are based on a com-
+bination of decision-making literature and IT investment literature
+(Miller, 1997; Miller et al., 2004; Hetebrij, 2011; Nooraie, 2008;
+Weill and Ross, 2004; Byrd et al., 2006; Ward et al., 2008). These
+items are measured on a ﬁve-point Likert scale (1 = never, 2 = sel-
+dom, 3 = about half the time, 4 = often, 5 = always). Table 3 pro-
+vides an overview of the measurement items for OQ. The median
+of each of these items is 3.00.
+The overall OQ has a mean μ = 3.09 with standard deviation
+σ = 0.621.
+3.2.1.2. Measurement EAM. The measurement model for EAM is
+based on DyAMM (Van Steenbergen et al., 2007; Van Steenbergen
+et al., 2012). The way we applied DyAMM in this research is dif-
+ferent from its regular application. First, DyAMM is primarily an
+instrument to incrementally build an architecture function. In this
+study we will only apply the measurement part of DyAMM. Sec-
+ond, the total number of checkpoints or indicators of DyAMM is
+137. We regard this number of measurement items as too large to
+handle in a survey. Instead of asking whether these 137 indicators
+have been achieved, we created statements that describe the dif-
+ferent maturity levels per focus area. Since the initial level is not
+described in DyAMM, we added statements for this level for each
+of the focus areas.
+DyAMM measures the maturity of an EA practice in 17 focus
+areas. Accordingly, the measurement model for EAM consists of 17
+construct dimensions (focus areas). Each dimension is measured
+on a maturity level ranging from 0 to A, B, C or D. Table 4 il-
+lustrates that ﬁfteen dimensions have four levels, one dimension
+has three levels and one dimension ﬁve. For 12 construct dimen-
+sions we asked one question containing statements for each matu-
+rity level. For development of architecture we divided the statements
+over three questions. For alignment with realization, implementation
+of the architectural role, interaction and collaboration, and architec-
+tural tools we divided the statements over two questions. In total
+we asked 23 questions to determine the maturity level per con-
+struct dimension. Each question contains two to four statements.
+The way we measure EAM is the same as the measurement of
+maturity in DyAMM, which is based on a step-by-step approach.
+The ﬁrst step toward EA maturity starts by reaching level A in
+three areas: development of architecture, alignment with business
+strategy, and commitment and motivation. Once a start has been
+made on these areas, then focus on obtaining level A in the use of
+architecture, alignment with realization, and interaction and collabo-
+ration. In effect, the levels for all 17 construct dimensions can be
+comparatively ranked in a similar manner. The resulting set of in-
+terdependencies is represented by Table 5 (Van Steenbergen et al.,
+2012).
+The letters in Table 5 (0, A, B, C or D) indicate the level of ma-
+turity per construct dimension (row in the matrix). Each construct
+dimension has its own maturity. However, the overall EA maturity
+(EAM), indicated by the columns in Table 5, depends on the matu-
+rity achieved for each of the construct dimensions taking into ac-
+count the dependencies between the construct dimensions. Based
+on 23 questions we ﬁrst determined the maturity level per con-
+struct dimension. As a second step, EAM is determined based on
+the dependencies between the construct dimensions. Table 6 con-
+tains an example to demonstrate the measurement of EAM. Each of
+the construct dimensions in Table 6 has achieved a certain level of
+maturity, indicated by the gray colors. For example, development of
+architecture is at level B. EAM is determined by looking at the ﬁrst
+column where a letter is not colored gray. This is the “A” in column
+2 for interaction and collaboration, which indicates that this con-
+struct dimension has not yet reached maturity level A. This means
+that in this example column 1 has been achieved, so EAM is 1.
+To summarize, EAM is measured according to the scales of ma-
+turity and varies from 0 to 12 with equal distances between the
+scales.
+3.2.1.3. Measurement of use of EA artifacts and key insights that EA
+provides. We used two questions to determine what EA artifacts
+are used respectively what key insights EA provides in the prepa-
+ration of IT investment decisions. Respondents could choose from
+a predeﬁned list that was composed based on Tables 1 and 2, with
+
+--- PAGE 6 ---
+M. van den Berg, R. Slot and M. van Steenbergen et al./The Journal of Systems and Software 152 (2019) 134–150 139
+Table 4
+Measurement model for EAM.
+Construct dimension Level 0 Level A Level B Level C Level D
+Development of
+architecture
+Initial Architecture is developed
+with a clear focus on
+objectives
+Architecture is developed
+in consultation with the
+stakeholders
+Architectures are developed
+as a cohesive whole
+–
+Use of architecture Initial Architecture is informative Architecture is prescriptive Architecture is aligned with
+the decision-making
+process
+–
+Alignment with
+business strategy
+Initial Architecture is related to
+business objectives
+Architectural process is
+steered by the business
+objectives
+Architecture is an integral
+part of the strategic
+dialogue
+–
+Alignment with
+realization
+Initial Ad hoc Structural Interactive –
+Relationship to the
+as-is state
+Initial Attention to the as-is state Future and existing
+situations are viewed in
+connection
+– –
+Responsibilities and
+authorities
+Initial Responsibility for
+architecture as a product
+has been assigned
+Management is responsible
+for the architectural
+process
+Senior management is
+responsible for the effect
+of architecture
+–
+Alignment with change
+portfolio
+Initial Steering the content of
+individual projects
+Coordination between
+projects
+Strategic portfolio
+management
+–
+Monitoring Initial Reactive monitoring Proactive monitoring Fully incorporated
+monitoring
+–
+Quality assurance Initial Explicit quality review Quality assurance process
+has been set up
+Fully incorporated quality
+assurance policy
+–
+Management of the
+architectural process
+Initial Management is incidentally
+executed
+Management procedures
+have been set up
+Continuous process
+improvement
+–
+Management of the
+architectural products
+Initial Management is incidentally
+executed
+Management procedures
+have been set up
+Presence of a management
+policy
+–
+Commitment and
+motivation
+Initial Allocation of budget and
+time
+Architecture is
+acknowledged as a
+management instrument
+Architecture is
+acknowledged as a
+strategic issue
+–
+Implementation of the
+architectural role
+Initial Role has been recognized Role has been detailed Role is supported Role is ap-
+preciated
+Architectural method Initial Ad hoc Structural Fully incorporated –
+Interaction and
+collaboration
+Initial Collaboration between
+architects
+Involvement of the
+stakeholders
+Shared ownership –
+Architectural tools Initial Ad hoc and
+product-oriented
+Structural and
+process-oriented
+Integration of tools –
+Budgeting and planning Initial Ad hoc Structural Optimizing –
+Table 5
+Measurement model for EAM, with maturity levels per construct dimension and columns with maturity scales.
+common EA artifacts and key insights. Multiple answers were al-
+lowed.
+3.2.2. Data collection
+Data were collected by means of a questionnaire. The tar-
+get population of the survey is deﬁned as ’all people working in
+commercial or public organizations (either as internal employees
+or external consultants) who in a professional capacity have to
+deal with EA as an EA developer, EA user or EA implementer’.
+The unit of analysis is the individual worker, who is asked about
+his or her perceptions on the maturity of the EA practice and
+the quality of IT investment decision outcomes. We followed the
+principles of survey research from Kitchenham and Pﬂeeger
+(2002a,b,c,d, 2003).
+The development of the survey underwent several iterations.
+Originally, the survey was developed by the ﬁrst author of this
+
+--- PAGE 7 ---
+140 M. van den Berg, R. Slot and M. van Steenbergen et al./The Journal of Systems and Software 152 (2019) 134–150
+Table 6
+Example how to determine the overall EA maturity.
+article and improved in several iterations with the other authors.
+Then a web version of the survey was created which was tested
+for reliability and validity in two iterations. In a ﬁrst iteration,
+the survey was tested by 13 experienced EA developers, EA users
+and EA implementers. Six of them provided feedback by email.
+Seven participants were asked to think aloud when answering the
+questions in the presence of one of the researchers who took notes.
+The participants were asked to ﬁll in the survey and provide feed-
+back on a) the clarity of the questions: identify missing or un-
+necessary questions, ambiguous questions, and instructions, b) the
+questions that could not be answered due to a lack of knowledge,
+or because one could not remember anymore, c) how much time it
+took to complete the survey, and d) any suggestions for improve-
+ment. Based on the feedback the survey and instructions were im-
+proved for clarity, consistency, and comparison reasons. The most
+important improvement was to adjust questions on EA maturity.
+Originally, we had one question per focus area containing three
+to ﬁve statements per maturity level depending on the number of
+maturity levels per focus area. Based on the feedback of partici-
+pants we divided some questions into two or even three questions
+because some statements were ambiguous; they included different
+topics in one statement. Because of this rather fundamental ad-
+justment we conducted a second test with two participants. These
+participants were also asked to think aloud. The results of this test
+led to some small adjustments.
+A special issue that we had to overcome was the timeframe.
+According to Kitchenham and Pﬂeeger (2002b), you may get in-
+accurate responses if you ask people about events that happened
+long in the past. In our case we had to ask questions about
+completed IT investment decisions. For larger IT investment de-
+cisions, it can take years to complete the implementation. What
+can participants remember from these decisions and how accu-
+rate will the answers be? As a ﬁrst measure we did not ask
+about the quality of a particular decision, but about the quality
+of the decisions that were implemented recently. Secondly, we
+asked the test participants how conﬁdent they were about their
+answers on the questions on EA maturity as well as on IT in-
+vestment decisions. Overall, they acknowledged that they were
+conﬁdent.
+The ﬁnal questionnaire contained 54 questions and was created
+in SurveyMonkey. At any moment during the survey session, re-
+spondents could see what percentage of the questions they had
+responded to, encouraging them to complete it. Furthermore, we
+offered participants the possibility to provide their email address
+if they wanted to receive the results of the survey.
+Our survey is unsupervised; i.e., the target group was invited by
+email to ﬁll in a questionnaire that was sent as a link to a survey
+tool (Pﬂeeger and Kitchenham, 2001). All survey questions explic-
+itly referred to the current (or latest) organization in which the re-
+spondents worked, for example because they were an employee or
+because they were employed there as an external consultant. The
+terms “Enterprise Architecture” and “IT investment decision” were
+deﬁned at the beginning of the questionnaire. In the remainder of
+the questionnaire several other terms were explained. We applied
+different exclusion criteria. At ﬁrst, we excluded submissions that
+were not completed. Secondly, we excluded submissions in which
+respondents answered that they did not deal with EA. Finally, sub-
+missions were excluded that contained inconsistent answers.
+Due to the lack of registers with EA developers, EA users or
+EA implementers, we used a non-probability sample, i.e., a sam-
+ple that has not been selected using a random selection method.
+As a consequence, some units are more likely to be selected than
+others (Bryman and Bell, 2015). When targeting EA developers, EA
+users and EA implementers, we lowered the risk of not being se-
+lected by using some well-known networks to distribute our sur-
+vey. We concentrated most of our efforts on the Netherlands. We
+used the following Dutch networks: NAF (Dutch architecture fo-
+rum), CIO-platform (Dutch CIO organization), KNVI (Dutch com-
+puter society), LAC (annual Dutch architecture conference), and the
+network of one of the architectural thought leaders in the Nether-
+lands. These networks attracted the attention of their members to
+the survey by newsletters or dedicated emails. Since the survey
+was drafted in English it was also advertised on social media. Some
+international thought leaders on EA forwarded the link to the sur-
+vey to their networks. Furthermore, some international networks
+distributed the survey: an international IT service provider and IFIP.
+The data were collected between June 2017 and August 2017.
+In total 260 respondents started the survey of which 173 com-
+pleted it. After applying the exclusion criteria 142 surveys re-
+mained. In the end we had 142 cases at our disposal. As the sur-
+vey was distributed to unconﬁned users, an immediate response
+rate cannot be calculated. Therefore, we conducted a power anal-
+ysis using G∗Power 3 software (Faul et al., 2007). Given our re-
+search model, and with type-1 error probabilities set to α < 0.05,
+a sample size of N=123 was required to reach suﬃcient statis-
+tical power (1−β error probability > 0.80) for effect sizes of
+
+--- PAGE 8 ---
+M. van den Berg, R. Slot and M. van Steenbergen et al./The Journal of Systems and Software 152 (2019) 134–150 141
+f2 > 0.15 (medium) (Cohen, 1988). This implicates that our sam-
+ple size (N=142) is adequate.
+3.2.3. Focus groups
+"We discussed the results of the survey in three focus groups.
+The focus groups were used as an ex post method to aid in in-
+terpreting the survey results (Sutton and Arnold, 2013). The mem-
+bers of the focus groups were experienced EA developers, EA users
+and EA implementers, with an average of 20 years’ experience with
+EA. The ﬁrst group consisted of two EA consultants and one CIO.
+The second group had one EA consultant, three enterprise archi-
+tects, one information manager, two managers of CIO oﬃces and
+one project manager, all from different organizations. The last fo-
+cus group had eight members from the same organization, two
+of them acting as IT manager, two as information manager, two
+as enterprise architect, one as information analyst, and one as
+information security coordinator. A standard procedure was used
+to achieve a high level of comparability across groups (Morgan,
+1996). In order to stimulate independent thinking, we asked the
+focus group members to individually brainstorm and write down
+their explanations before discussing these in the group (Sutton and
+Arnold, 2013). The focus group meetings lasted about two hours
+and were recorded and transcribed.
+3.2.4. Validity and reliability
+We evaluated our theoretical model in terms of content valid-
+ity, face validity, construct reliability, indicator reliability, and data
+normality.
+Content validity was ensured upfront by using existing models
+and literature to create the theoretical model and develop the con-
+structs. As explained before, the content validity and face validity
+were also tested by 15 experienced EA developers, EA users, and
+EA implementers; all members of the target population of our sur-
+vey. Based on their comments, we adjusted the survey to ensure
+that it includes everything it should and nothing that it should not
+(Kitchenham and Pﬂeeger, 2002c).
+Regarding construct reliability we used Cronbach’s Alpha to
+test the internal consistency of our constructs (Kitchenham and
+Pﬂeeger, 2002c). The Cronbach’s Alpha for OQ is 0.86. The desir-
+able values of Cronbach’s Alpha are in the magnitude of 0.7 or
+0.8 (Field, 2009). The Cronbach’s Alpha value for OQ exceeds 0.8,
+which conﬁrms the reliability of this construct.
+Indicator reliability was tested by means of factor loadings.
+Table 3 demonstrates that OQ has ﬁve or more strongly loading
+items (λ = 0.50 or better). This indicates that OQ is a solid factor
+(Costello and Osborne, 2005).
+As another test, we assessed the data for normality by using a
+sample moment test of skewness and kurtosis statistics. This anal-
+ysis conﬁrmed that relevant thresholds (skewness < 2 and kurtosis
+< 7) were not exceeded (Stevens, 2012).
+4. Quartiles and descriptives
+4.1. Quartiles
+Initially, the quartiles of OQ of the 142 cases were determined
+with SPSS, a software package for statistical analysis. The ﬁrst quar-
+tile value is 2.67, the second one is 3.17, and the third quartile
+value is 3.50. Based on these quartile values we determined the
+top and bottom quartiles. The boxplot of SPSS in Fig. 2 demon-
+strates the distribution of the OQ scores. The upper and lower lim-
+its of the box represent the ﬁrst and third quartiles of the OQ. The
+median is represented by the horizontal bar in the middle of the
+box.
+As can be seen in the frequency distribution of OQ in Table 7,
+the ﬁrst quartile value (2.67) and the third quartile value (3.50)
+Fig. 2. Boxplot of quality of IT investment decision outcomes.
+contain 12 cases. As a consequence, it is impossible to have an
+exact equal proportion of cases in all four quartiles. We therefore
+consider all cases with an OQ < 2.67 as bottom quartile cases and
+the cases with OQ > 3.50 as top quartile cases. We consider all re-
+maining cases as the interquartile range. Table 8 shows the number
+of cases as well as statistics for the different quartiles.
+4.2. Descriptives
+Tables 9 and 10 demonstrate the division of the 142 respon-
+dents to the survey over the top quartile (top performer) and bot-
+tom quartile (bottom performer) groups. The respondents can have
+multiple roles regarding EA: developer, user and/or implementer
+of EA. From Table 9 we conclude that respondents with regard to
+their EA role are equally represented in the top and bottom quar-
+tile group.
+Respondents can also have different roles with regard to IT in-
+vestment decisions: accountable, responsible, consulted and/or in-
+formed on IT investment decisions. From Table 10 we learn that
+in the top quartile group, respondents who are responsible for IT
+investment decisions are more represented, and respondents who
+are consulted and informed about IT investment decisions are less
+represented compared to the bottom quartile group.
+Fig. 3 contains the distribution of respondents over economic
+sector per quartile. This ﬁgure demonstrates that top quartile cases
+are proportionally more represented in the information, communi-
+cation, entertainment and recreation sector where bottom quartile
+cases are more represented in the public administration sector. The
+public administration sector contains relatively more bottom and
+0,0% 5,0% 10,0% 15,0% 20,0% 25,0% 30,0% 35,0% 40,0% 45,0% 50,0%
+Finance and insurance
+Manufacturing (products
+and food) and construcon
+Informaon, communicaon,
+entertainment and recreaon
+Public administraon
+(including defence)
+Educaon and research
+Energyand water supply
+and waste management
+Humanhealth and
+socialwork acvies
+Trade,transportaon,
+hotel,catering,real estate
+and other services
+Top quarle Interquarle Boom quarle
+Fig. 3. Distribution respondents over economic sector per quartile.
+
+--- PAGE 9 ---
+142 M. van den Berg, R. Slot and M. van Steenbergen et al./The Journal of Systems and Software 152 (2019) 134–150
+Table 7
+Frequency distribution of quality of IT investment decision outcomes.
+OQ Frequency Percentage Cumulative percentage
+1.50 1 0.7 0.7
+1.83 1 0.7 1.4
+2.00 7 4.9 6.3
+2.17 8 5.6 12
+2.33 6 4.2 16.2
+2.50 9 6.3 22.5
+2.67 12 8.5 31
+2.83 13 9.2 40.1
+3.00 13 9.2 49.3
+3.17 7 4.9 54.2
+3.33 19 13.4 67.6
+3.50 12 8.5 76,1
+3.67 10 7 83,1
+3.83 7 4.9 88
+4.00 14 9.9 97,9
+4.17 3 2.1 100
+Total 142 100.0
+Table 8
+Descriptives per quartile.
+Statistic Bottom quartile Inter-quartile Top quartile
+Number of cases 32 76 34
+Mean quality IT investment decision outcomes (OQ) 2.22 3.10 3.88
+Standard deviation IT investment decision outcomes (OQ) 0.24 0.29 1.67
+Mean EA maturity (EAM) 0.53 1.61 2.00
+Standard deviation EA maturity (EAM) 0.98 1.88 1.95
+Table 9
+Distribution respondents over target population (more than one answer possible).
+Role with regard to EA Total sample Top quartile Bottom quartile
+# % # % # %
+Developer of EA artifacts (e.g. enterprise architect, domain architect,
+EA-manager, external EA consultant)
+123 51.5 27 50.9 30 51.7
+User of EA artifacts (e.g. C-level executive, business manager, IT manager,
+information manager, portfolio manager)
+51 21.3 12 22.6 13 22.4
+Implementer of EA artefacts (e.g. project manager, solution architect, software
+architect, business analyst, information analyst, developer)
+65 27.2 14 26.4 15 25.9
+Total 239 100 53 100 58 100
+Table 10
+Distribution respondents over target population (more than one answer possible).
+Role with regard to IT investment decisions Total sample Top quartile Bottom quartile
+# % # % # %
+Accountable (approves IT investment decisions) 13 5.3 3 5.2 3 5.4
+Responsible (prepares IT investment decisions) 77 31.6 20 34.5 12 21.4
+Consulted (consulted in the preparation of IT investment decisions) 105 43.0 25 43.1 28 50.0
+Informed (informed about IT investment decisions) 44 18.0 9 15.5 12 21.4
+No role 5 2.1 1 1.7 1 1.8
+Total 244 100 58 100 56 100
+less top performers compared to the information, communication,
+entertainment and recreation sector.
+Fig. 4 shows the distribution of respondents over organizational
+size per quartile. The bottom quartile cases are somewhat more
+represented in the medium-sized organizations (500–5000 em-
+ployees) and less in the small organizations (<500 employees).
+According to this study, medium-sized organizations contain rel-
+atively fewer top performers and more bottom performers.
+62% of all respondents come from the Netherlands. The other
+38% are from 21 different countries around the world. The ge-
+ographical distribution of respondents per quartile is different.
+In the bottom quartile, 50% of cases are from the Netherlands
+and the other 50% are from abroad. In the top quartile group
+58.8% of cases are from the Netherlands and 42.2% are from other
+countries.
+Fig. 5 presents the distribution of respondents according to the
+years of experience with EA, again per quartile. The average num-
+ber of years ago that the EA practice was ﬁrst established is 5.5
+years for the bottom quartile and 9.4 years for the top quartile
+cases. Organizations with the highest quality of IT investment de-
+cision outcomes have a longer tradition in EA than those with the
+lowest quality of IT investment decision outcomes.
+
+--- PAGE 10 ---
+M. van den Berg, R. Slot and M. van Steenbergen et al./The Journal of Systems and Software 152 (2019) 134–150 143
+0,0% 10,0% 20,0% 30,0% 40,0% 50,0% 60,0%
+<200
+200-499
+500-1999
+2000-5000
+>5000
+Top quarle Interquarle Boom quarle
+Fig. 4. Distribution respondents over organizational size per quartiles.
+0,0% 5,0% 10,0% 15,0% 20,0% 25,0% 30,0% 35,0% 40,0% 45,0% 50,0%
+0 year
+1 year
+2 years
+3-5 years
+6-10 years
+11-15 years
+16-20 years
+>20 years
+Top quarle Interquarle Boom quarle
+Fig. 5. Distribution of respondents according to number of years EA practice per
+quartile.
+5. Results
+In this section we compare the top and bottom quartiles with
+regard to EA maturity, the use of EA artifacts, and the key insights
+that EA provide.
+5.1. Comparison EA maturity
+As part of the survey we measured the EA maturity based on
+DyAMM. Fig. 6 contains the distribution of the top and bottom
+quartile cases per EAM scale. As can be seen, more than 70% of
+the bottom quartile cases are still at EA maturity scale zero. This is
+only 35% for the top quartile cases.
+Fig. 6 illustrates that top quartile cases have an EA practice that
+is more mature than bottom quartile cases. We conducted an in-
+dependent sample test (t-test) with EAM as the dependent vari-
+able and OQ as the independent variable, to determine whether
+the difference between the top and bottom quartile group is signif-
+icant. We checked the data for two assumptions. First, despite the
+slight deviation from normality we found that the distribution of
+EAM is normal enough to carry out a t-test. Second, Levene’s test
+of equality of variances shows that the assumption of homogeneity
+has been violated. Therefore, the t-test was corrected for unequal
+variances (Field, 2009). The result of this t-test demonstrates that
+the difference is signiﬁcant, t = −3.89, df = 49.34 and p < .001.
+0,0% 10,0% 20,0% 30,0% 40,0% 50,0% 60,0% 70,0% 80,0%
+EAM-0
+EAM-1
+EAM-2
+EAM-3
+EAM-4
+EAM-5
+EAM-6
+EAM-7
+EAM-8
+EAM-9
+Top quarle Boom quarle
+Fig. 6. Percentage of cases per EAM scale per quartile.
+Table 11 illustrates the differences between top and bottom
+quartile cases with regard to the different levels of maturity for
+all construct dimensions (focus areas) that constitute DyAMM.
+Top quartile cases score higher on the highest maturity level
+of all construct dimensions compared to bottom quartile cases.
+Table 11 demonstrates a big difference on the construct dimension
+relationship to the as-is state. Almost 80% of the top quartile cases
+are at level B, while more than 80% of the bottom quartile cases
+are still at level 0 and A. Other construct dimensions with rather
+big differences are: management of the architectural products, com-
+mitment and motivation, architectural method, and interaction and
+collaboration.
+From this section we can answer research question Q1 and con-
+clude that top quartile organizations are more mature on EA than
+bottom quartile organizations. This applies both to the overall EA
+maturity as well as to all the focus areas that underlie it.
+5.2. Comparison EA artifacts and insights
+We also compared the two quartiles for the types of EA artifacts
+that are used in the preparation of IT investment decisions and the
+kind of insights that EA provides in the preparation of IT invest-
+ment decisions. Fig. 7 demonstrates the differences in use of EA
+artifacts in the preparation of IT investment decisions. Top quartile
+cases use more EA artifacts in the preparation of IT investment de-
+cisions than bottom quartile cases. With some artifacts the differ-
+ences are very large. E.g., 82.4% of top quartile cases uses roadmaps
+in the preparation of IT investment decisions compared to 34.4% of
+bottom quartile cases.
+Fig. 8 shows the differences in key insights that EA provides in
+the preparation of IT investment decisions between top and bot-
+tom quartile cases. The overall impression is that EA provides more
+different insights in the preparation of IT investment decisions in
+top quartile cases than in bottom quartile cases. For some insights
+the differences are large, as in ﬁt with business strategy with 70.6%
+of top quartile cases using this insight in the preparation of IT
+investment decisions compared to only 28.1% of bottom quartile
+cases.
+Figs. 7 and 8 conﬁrm the prominent role of EA in top quartile
+organizations compared to bottom quartile organizations. Fig. 7 an-
+swers research question Q2; organizations with high quality IT
+investment decision outcomes make more use of, in relative or-
+der: heat maps, policies, roadmaps, business capability models, land-
+scape diagrams, and guidelines. It is also in these organizations
+where the EA-function provides in general more insights during
+the preparation of IT investment decisions, especially whether IT
+
+--- PAGE 11 ---
+144 M. van den Berg, R. Slot and M. van Steenbergen et al./The Journal of Systems and Software 152 (2019) 134–150
+Table 11
+Distribution of EAM per maturity level, per construct dimension for top and bottom quartiles.
+Construct dimension Quartile Level 0 Level A Level B Level C Level D
+Development of architecture Top 32.4 5.9 5.9 55.9
+Bottom 46.9 3.1 18.8 31.3
+Use of architecture Top 5.9 26.5 44.1 23.5
+Bottom 34.4 40.6 18.8 6.3
+Alignment with business strategy Top 5.9 35.3 35.3 23.5
+Bottom 43.8 34.4 18.8 3.1
+Alignment with realization Top 11.8 52.9 2.9 32.4
+Bottom 31.3 62.5 3.1 3.1
+Relationship to the as-is state Top 5.9 17.6 79.5
+Bottom 25.0 59.4 15.6
+Responsibilities and authorities Top 11.8 11.8 32.4 44.1
+Bottom 31.3 37.5 21.9 9.4
+Alignment with change portfolio Top 11.8 29.4 29.4 29.4
+Bottom 43.8 43.8 9.4 3.1
+Monitoring Top 20.6 14.7 35.3 29.4
+Bottom 59.4 21.9 18.8 0.0
+Quality assurance Top 14.7 44.1 32.4 8.8
+Bottom 46.9 34.4 18.8 0.0
+Management of the architectural process Top 2.9 50.0 26.5 20.6
+Bottom 37.5 40.6 21.9 0.0
+Management of the architectural products Top 2.9 38.2 50.0 8.8
+Bottom 18.8 71.9 9.4 0.0
+Commitment and motivation Top 5.9 29.4 26.5 47.1
+Bottom 31.3 53.1 9.4 6.3
+Implementation of the architectural role Top 5.9 29.4 2.9 38.2 23.5
+Bottom 18.8 65.6 6.3 6.3 3.1
+Architectural method Top 17.6 14.7 50.0 17.6
+Bottom 37.5 53.1 9.4 0.0
+Interaction and collaboration Top 8.8 32.4 8.8 50.0
+Bottom 31.3 53.1 9.4 6.3
+Architectural tools Top 8.8 52.9 14.7 23.5
+Bottom 37.5 50.0 12.5 0.0
+Budgeting and planning Top 17.6 47.1 29.4 5.9
+Bottom 62.5 25.0 9.4 3.1
+Fig. 7. EA artifacts used in the preparation of IT investment decisions.
+
+--- PAGE 12 ---
+M. van den Berg, R. Slot and M. van Steenbergen et al./The Journal of Systems and Software 152 (2019) 134–150 145
+Fig. 8. Key insights that EA provides in the preparation of IT investment decisions.
+Table 12
+Results of Pearson chi-square tests usage of EA artifacts, signiﬁcance, value, and degrees of freedom.
+Usage of EA artifact p Value df
+Roadmaps .000 15.70 1
+Policies .001 11.89 1
+Heat maps .015 5.95 1
+Future state architectures .021 5.32 1
+Standards .027 4.91 1
+Landscape diagrams .027 4.89 1
+Project start architectures .028 4.86 1
+Business capability models .036 4.38 1
+Guidelines .047 3.96 1
+Solution outlines .049 3.88 1
+Principles Not signiﬁcant
+Current state architectures Not signiﬁcant
+investments ﬁt with the business strategy, the relationship of IT in-
+vestments with future and past IT investments, and the risks of IT
+investments. Fig. 8 therefore answers research question Q3.
+We performed Pearson chi-square tests with the usage of EA
+artifacts and the usage of EA insights as dependent variables and
+OQ as the independent variable, to determine whether the differ-
+ences between the top and bottom quartile group are signiﬁcant.
+The results in Table 12 demonstrate that top quartile organizations
+use signiﬁcant more roadmaps, policies, heat maps, future state
+architectures, standards, landscape diagrams, project start architec-
+tures, business capability models, guidelines and solution outlines in
+the preparation of IT investment decisions compared to bottom
+quartile organizations. Table 13 illustrates that top quartile or-
+ganizations use three EA insights signiﬁcantly more often in the
+Table 13
+Results of Pearson chi-square tests per EA insight, signiﬁcance, value, and degrees of freedom.
+EA insight p Value df
+Fit with the business strategy .001 11.89 1
+Relationship with future IT investments .001 10.21 1
+Risks of IT investment .006 7.52 1
+Relationship with past IT investments Not signiﬁcant
+Relationship with current IT investments Not signiﬁcant
+Feasibility of IT investment Not signiﬁcant
+Fit with the future state architecture Not signiﬁcant
+Consequences for the current state Not signiﬁcant
+Options for the future Not signiﬁcant
+Different solution alternatives and their pros and cons Not signiﬁcant
+
+--- PAGE 13 ---
+146 M. van den Berg, R. Slot and M. van Steenbergen et al./The Journal of Systems and Software 152 (2019) 134–150
+Table 14
+Deﬁnitions of constructs used in the propositions.
+Construct Deﬁnition
+Maturity EA practice The overall EA maturity indicated by the scales of maturity (columns) in DyAMM with possible
+values between 0 and 12.
+Quality of IT investment decision outcomes The overall quality of IT investment decision outcomes indicated by six individual items:
+• The desired outcomes of IT investments are achieved.
+• Stakeholders are satisﬁed with the ﬁnal outcomes of IT investments.
+• The ﬁnal outcomes of IT investments contribute to strategic, long-term objectives.
+• The due dates of IT investments are achieved.
+• IT investments are implemented on a timely basis.
+• IT investments are on budget.
+Percentage of actionable and diagnostic EA artifacts used in
+the preparation of IT investment decisions
+Actionable EA artifacts are "signature-ready deliverables that directly drive or guide change by
+initiating projects or providing direction to change projects" (Burke and Burton, 2017). E.g., a
+roadmap.
+Diagnostic EA artifacts are artifacts "that provide the details and results of analysis" (Burke and
+Burton, 2017). E.g., a heat map.
+The percentage of actionable and diagnostic EA artifacts used in the preparation of IT investment
+decisions is compared with the total number of EA artifacts used in the preparation of IT
+investment decisions.
+Percentage of strategic types of insights that EA provides in
+the preparation of IT investment decisions
+Strategic types of insights provided by EA are insights with a rather long term and holistic
+perspective. E.g., the alignment of an IT investment with the business strategy.
+The percentage of strategic types of insights used in the preparation of IT investment decisions is
+compared with the total number of insights that EA provides in the preparation of IT investment
+decisions.
+Maturity on Relationship to the as-is state The maturity on construct dimension Relationship to the as-is state as part of DyAMM with
+possible values of 0, A or B and described as: "architecture is frequently associated with a
+desired state of affairs: the so-called to-be state. Most organizations also have to deal with an
+existing situation based on historical growth. In assessing the suitability of the architecture, it is
+important to realize that a set of circumstances already exists, which has its own range of
+possibilities and impossibilities. If this relationship to the as-is state is ignored, there is a danger
+that the organization will be able to do little with its elegantly drafted scenarios for future
+architecture" (Van Steenbergen et al., 2012).
+Maturity on Commitment and motivation" The maturity on construct dimension Commitment and motivation as part of DyAMM with
+possible values of 0, A or B and described as: "commitment and motivation of the architecture
+stakeholders is critical in bringing the architecture up to speed and making it successful. These
+stakeholders include not only the architects but also, and especially, senior business and IT
+management, plus project management. Business and IT management are primarily responsible
+for creating a favourable atmosphere. This ensures that the architectural process is given
+suﬃcient time, money and resources. Ideally, there is support for the architectural artifacts at all
+levels of management" (Van Steenbergen et al., 2012).
+Maturity on Interaction and collaboration The maturity on construct dimension Interaction and collaboration as part of DyAMM with
+possible values of 0, A or B and described as: "a great deal of interaction and collaboration
+among various stakeholders is required in developing architecture. Stakeholders like business
+managers, process owners, information managers, project managers, and IT specialists are
+involved. This interaction and collaboration is very important in making the architectural process
+function well. They make the architectural requirements clear and they create an opportunity to
+share the results of the architectural process with the users of the architecture"
+(Van Steenbergen et al., 2012).
+preparation of IT investment decisions compared to bottom quar-
+tile
+organizations: ﬁt with the business strategy, relationship with
+future investments and risks of IT investments.
+6. Towards a conceptual model
+This study allows us to build new theory with regard to the
+effectiveness of EA. Based on the ﬁndings of this study, we derived
+propositions that will be presented in this section. At the end of
+the section we present a conceptual model that integrates these
+propositions. The propositions are based on seven constructs that
+are deﬁned in Table 14.
+Our results clearly demonstrate that top quartile organizations
+have an EA practice that is more mature than bottom quartile or-
+ganizations. Furthermore, the t-test demonstrates that the differ-
+ence between the top and bottom quartile group is signiﬁcant. Ap-
+parently, EA contributes to the quality of IT investment decisions.
+This is supported by literature that says that EA guides and in-
+forms IT investment decisions (Blosch and Burton, 2014; Gøtze,
+2013; Buchanan and Soley, 2002; CIO Council, 2012; Janssen, 2012).
+Therefore, we posit:
+P1. There is a positive relationship between the maturity of an EA
+practice and the quality of IT investment decision outcomes.
+Top quartile organizations use more and different types of EA
+artifacts in the preparation of IT investment decisions. Differences
+in the use of different types of EA artifacts between top and bot-
+tom quartile organizations are particularly intriguing. The largest
+and signiﬁcant differences can be found in heat maps, policies, and
+roadmaps. The smallest, and not signiﬁcant differences are in prin-
+ciples and current state architectures. The focus group participants
+had the following explanations with regard to principles versus
+policies: “Principles give a very global direction and delineation. The
+question is to what extent principles contain sharp choices. Policies
+contain much harder choices. So, they have much more impact”. Fu-
+ture state and current state architectures can be regarded as the
+groundwork for EA; documenting the current state and design-
+ing the future state are the basis for a gap analysis (Wang et al.,
+2008; Bittler and Kreizman, 2005). Without that gap analysis there
+is a risk that EA becomes “shelfware” (Bittler and Kreizman, 2005).
+Roadmaps and heat maps can be considered as artifacts that pro-
+vide insight in the gap. Gartner introduced the term “Business-
+Outcome-Driven-EA” which in their view is a “strategic discipline
+focused on developing diagnostic and actionable deliverables that
+
+--- PAGE 14 ---
+M. van den Berg, R. Slot and M. van Steenbergen et al./The Journal of Systems and Software 152 (2019) 134–150 147
+help the business guide investment decisions in support of execut-
+ing business strategy” (Brand et al., 2017). Diagnostic deliverables
+are coined as “deliverables that provide the details and results of
+analysis” (Burke and Burton, 2017). A heat map is a typical example
+of a diagnostic deliverable. Actionable deliverables are “signature-
+ready deliverables that directly drive or guide change by initiat-
+ing projects or providing direction to change projects” (Burke and
+Burton, 2017). A roadmap is a typical example of an actionable de-
+liverable. Tamm et al. (2015), in their case study of an Australian
+retailer, conﬁrm the added value of using an EA roadmap: “it pro-
+vided visible beneﬁts in improved project sequencing and under-
+standing of critical project interdependencies”. Opposed to diag-
+nostic and actionable deliverables are so called enabling deliver-
+ables. Enabling deliverables are “deliverables that are composed of
+information that is collected, providing input to diagnostic deliv-
+erables” (Burke and Burton, 2017). A typical example of such an
+enabling deliverable is a current state architecture. Enabling deliver-
+ables are necessary to create diagnostic and actionable deliverables
+but have less value in themselves in guiding investment decisions.
+Our research reveals that the EA artifacts used in the preparation
+of IT investment decisions in top quartile organizations are more
+diagnostic and actionable than those in bottom quartile organiza-
+tions. We therefore posit:
+P2. There is a positive relationship between the percentage of action-
+able and diagnostic EA artifacts that are used in the preparation of
+IT investment decisions and the quality of IT investment decision out-
+comes.
+Top quartile organizations use more and different types of in-
+sights in the preparation of IT investment decisions. Insights into
+the ﬁt with business strategy, relationship with future investments,
+and risks of IT investments, demonstrate big and signiﬁcant differ-
+ences between top and bottom quartile organizations. In general,
+these types of insights are related to the bigger picture of an IT in-
+vestment and are rather strategic. One of the focus group members
+commented: “When it comes to decision-making it is always about
+strategy and risks; the future so to say”. Feasibility of IT investments,
+different solution alternatives, and consequences for the current state,
+show the smallest and not signiﬁcant differences. These types of
+insights are more related to an IT investment sec, and rather
+tactical. Apparently, EA provides more strategic types of insights
+in top quartile organizations. We posit:
+P3. There is a positive relationship between the percentage of strate-
+gic types of insights that EA provides in the preparation of IT invest-
+ment decisions and the quality of IT investment decision outcomes.
+Some areas of EA maturity stand out. The most striking is the
+relationship to the as-is state. There is a big difference between top
+and bottom quartile organizations in the way they connect future
+and existing situations. In one of the focus groups it was remarked:
+“Relationship to the as-is state is a conﬁrmation that you only can
+create a roadmap when you know the current situation and the gap
+with the desired situation”. Top quartile compared to bottom quar-
+tile organizations are more focused on the analysis of the current
+state and connecting future and current state: “There (in top quar-
+tile organizations) a more IT strategy-like architecture vision is cre-
+ated. Because there are the heat maps, roadmaps, landscape diagrams
+and capability models” and “Overview starts with landscape diagrams
+and heat maps and from that overview we can determine what are we
+going to do with roadmaps”. Tamm et al. (2015) support the need to
+connect future and current state. The case study organization they
+studied created a roadmap for a successful business transformation
+based on a baseline (current state) and a vision (future state). We
+posit:
+P4. There is a positive relationship between the maturity on Relation-
+ship to the as-is state and the percentage of actionable and diagnostic
+EA artifacts that are used in the preparation of IT investment deci-
+sions.
+A ﬁnding from this research is that EA provides more strate-
+gic insights in the preparation of IT investment decisions in top
+quartile organizations compared to bottom quartile organizations.
+Some EA maturity areas can possibly explain the differences in
+the percentages of strategic insights that EA provides between
+Fig. 9. Resulting conceptual model.
+
+--- PAGE 15 ---
+148 M. van den Berg, R. Slot and M. van Steenbergen et al./The Journal of Systems and Software 152 (2019) 134–150
+top and bottom quartile organizations. Top quartile organizations
+demonstrate a higher commitment and motivation for EA, and in-
+teraction and collaboration is also on a higher level. These areas
+in particular, can be seen as prerequisites for enterprise archi-
+tects to be part of IT investment decision processes and provide
+decision-makers with insights (Ylmäki, 2006). Lapalme argues, in
+case of the enterprise integrating school, that “because the enter-
+prise beast is complex, designs are achieved through team-based
+processes, so collaboration and enterprise-wide commitment are
+essential” (Lapalme, 2012). Several authors point out the impor-
+tance of collaboration (Bente et al., 2012; Gøtze, 2013; Tamm et al.,
+2015). This is why we posit:
+P5. There is a positive relationship between the maturity on Commit-
+ment and motivation and the percentage of strategic insights that EA
+provides in the preparation of IT investment decisions.
+P6. There is a positive relationship between the maturity on Interac-
+tion and collaboration and the percentage of strategic insights that EA
+provides in the preparation of IT investment decisions.
+Finally, we argue that the higher the percentage of actionable
+and diagnostic EA artifacts, the more and better the insights that
+EA can provide in the preparation of IT investment decisions. This
+research demonstrates that top quartile organizations use more EA
+artifacts, especially the actionable and diagnostic ones. It is also
+in these organizations where EA provides more strategic insights.
+Therefore, we posit:
+P7. There is a positive relationship between the percentage of action-
+able and diagnostic EA artifacts and the percentage of strategic in-
+sights that EA provides in the preparation of IT investment decisions.
+Fig. 9 shows the resulting conceptual model with the relation-
+ships between the different concepts that we discussed. Each con-
+cept is represented as a rectangle. An arrow represents the rela-
+tionship between two concepts. The direction of the arrow indi-
+cates the dependency between the two concepts. E.g., the maturity
+of an EA practice positively impacts the quality of IT investment
+decision outcomes as explained in proposition one (P1).
+7. Implications and limitations
+This research is important for decision-makers, practitioners,
+and researchers. For decision-makers such as COOs and CIOs, this
+research demonstrates which artifacts and insights they need to
+ask their enterprise architects when preparing IT investment deci-
+sions. This research should also convince decision-makers that ma-
+turing their EA practice pays off. Practitioners can use the concep-
+tual model as a guide to become more successful in their support
+of IT investment decisions. The most important lesson for prac-
+titioners is that they should tailor their artifacts and insights to
+decision-makers. A set of principles or a future state architecture
+is likely to provide insuﬃcient support for IT investment decisions.
+Next to these artifacts, heat maps, policies and roadmaps should
+be considered to aid in IT investment decision-making. Researchers
+are provided with frameworks to measure the contribution of EA
+and the outcomes of IT investment decisions as well as insights to
+further investigate the beneﬁts of EA in relation to IT investment
+decisions. Scientiﬁc knowledge of EA’s successful contribution to IT
+investment decisions has been expanded.
+Our study contains limitations. First, this research is based on
+comparisons of top and bottom quartiles. We derived propositions
+from quantitative data collected by means of a survey. Although
+we found some signiﬁcant differences between top and bottom
+quartiles, these groups are too small to generalize these propo-
+sitions. This calls for further research to statistically test these
+propositions. Second, the typology and classiﬁcation of EA arti-
+facts and EA key insights require further elaboration. The typol-
+ogy of EA artifacts and EA insights is not limitative and based
+on different sources which can be subject to different interpre-
+tations. We classiﬁed artifacts into diagnostic, actionable and en-
+abling, and insights into strategic and not strategic. These classi-
+ﬁcations call for further tightening and substantiation. Third, the
+results may have been inﬂuenced by the fact that respondents are
+aﬃliated to a speciﬁc EA school of thought (Lapalme, 2012). As a
+result, these respondents may follow a different path to EA matu-
+rity than DyAMM. We have not included EA schools of thought in
+this study. Fourth, although this research was not limited to geo-
+graphical boundaries, more than half of all respondents are from
+one country, i.e., the Netherlands. The results’ validity might be
+limited to this geographical area. Fifth, we allowed multiple par-
+ticipants from one organization. At least 12% of all cases consist
+of multiple questionnaires referring to the same organization. This
+might have an impact on the validity of our results. Sixth, our mea-
+surement model measures perceptions. As a consequence, this re-
+search may contain biases of respondents. Any form of bias cannot
+be excluded, although we took measures to guarantee reliability
+and representativeness of the data. Seventh, Table 10 indicates that
+respondents who are responsible for IT investment decisions are
+more represented in the top quartile group than respondents who
+are consulted and informed about IT investment decisions. We are
+aware that respondents who are responsible for IT investment de-
+cisions could be biased to give more positive answers regarding the
+quality of IT investment decision outcomes.
+8. Conclusion
+In this study we applied a quantitative approach i.e., we used
+survey data to generate theory on the use of EA in the support of
+IT investment decisions. The study reveals that organizations with
+the highest quality outcomes of their IT investment decisions (top
+quartile organizations) apply EA differently compared to organiza-
+tions with the smallest quality outcomes (bottom quartile organi-
+zations). What distinguishes these former organizations from the
+latter, is a higher EA maturity on all EA maturity areas. Top quar-
+tile organizations make more use of EA artifacts in the prepara-
+tion of IT investment decisions, in particular heat maps, policies,
+roadmaps, business capability models and landscape diagrams. In
+these organizations EA artifacts are not limited to artifacts that
+only provide insight and oversight but have evolved to more di-
+agnostic and actionable EA artifacts. It is also in the top quartile
+organizations where the EA function provides more strategic in-
+sights during the preparation of IT investment decisions, especially
+whether IT investments ﬁt with the business strategy, the relation-
+ship with future and past investments and the risks of IT invest-
+ments. These ﬁndings are important given the large amounts in-
+vested in IT and the risks associated with these investments. The
+right EA approach can help organizations to become more suc-
+cessful in their IT investments. Based on the ﬁndings of this re-
+search we deﬁned seven propositions. Further research is required
+to test these propositions. This research provides practitioners and
+decision-makers with insights on how to improve IT investment
+decisions. Researchers are provided with insights for further re-
+searching the beneﬁts of EA with regard to IT investment decisions.
+This research ultimately demonstrates that investments in EA have
+a positive relationship with the quality of the outcomes of IT in-
+vestments.
+Declarations of interest
+None.
+
+--- PAGE 16 ---
+M. van den Berg, R. Slot and M. van Steenbergen et al./The Journal of Systems and Software 152 (2019) 134–150 149
+References
+Aier, S., Riege, C., Winter, R., 2008. Classiﬁcation of enterprise architecture scenar-
+ios-an exploratory analysis. Enterprise Model. Inf. Syst. Archit. 3 (1), 14–23.
+Aier, S., 2014. The role oganizational culture for grounding, management, guidance
+and effectiveness of enterprise architecture principles. Inf. Syst. e-Bus. Manag.
+12 (1), 43–70.
+Bente, S., Bombosch, U., Langade, S., 2012. Collaborative Enterprise Architecture: En-
+riching EA with Lean, Agile, and Enterprise 2.0 Practices Newnes.
+Bittler, R.S., Kreizman, G., 2005. Gartner Enterprise Architecture Process: Evolution
+2005. Gartner research note G00130849.
+Blosch, M., Burton, B., 2014. Future of EA 2025: evolving from Enterprise to Ecosys-
+tem. Gartner Research Note G00269850.
+Bourgeois III, L.J., Eisenhardt, K.M., 1988. Strategic decision processes in high veloc-
+ity environments: four cases in the microcomputer industry. Manag. Sci. 34 (7),
+816–835.
+Brand, S., Santos, J., Burton, B., Burke, B., 2017. Deﬁne a Value Proposition for a Win-
+ning Business-Outcome-Driven EA Program. Gartner Research Note G00310309.
+Bryman, A., Bell, E., 2015. Business Research Methods. Oxford University Press, USA.
+Buchanan, R., Soley, R., 2002. Aligning EA and IT Investments With Corporate Goals.
+OMG and Meta Group.
+Burke, B., Burton, B., 2017. Stage Planning a Business-Outcome-Driven Enterprise Ar-
+chitecture. Gartner Research Note G00321942.
+Byrd, T.A., Lewis, B.R., Bryan, R.W., 2006. The leveraging inﬂuence of strategic align-
+ment on IT investment: an empirical examination. Inf. Manag. 43 (3), 308–321.
+CIO Council (2012). Clinger-Cohen Core Competencies & Learning Objectives.
+Cohen, J., 1988. Statistical Power Analysis for the Behavioral Sciences. Lawrence Erl-
+baum, Hillsdale, NJ.
+Costello, A.B., Osborne, J.W., 2005. Best practices in exploratory factor analysis: four
+recommendations for getting the most from your analysis. Pract. Assess. Res.
+Eval. 10 (7), 1–9.
+Dewan, S., Shi, C., Gurbaxani, V., 2007. Investigating the risk–return relationship of
+information technology investment: ﬁrm-level empirical analysis. Manag. Sci. 53
+(12), 1829–1842.
+Faul, F., Erdfelder, E., Lang, A.G., Buchner, A., 2007. G∗
+Power 3: a ﬂexible statisti-
+cal power analysis program for the social, behavioral, and biomedical sciences.
+Behav. Res. Methods 39 (2), 175–191.
+Field, A., 2009. Discovering Statistics Using SPSS. Sage publications.
+Foorthuis, R.M., Brinkkemper, S., 2007. A framework for project architecture in the
+context of enterprise architecture. In: Proceedings of the Second Workshop on
+Trends in Enterprise Architecture Research (TEAR 2007), pp. 51–60.
+Gøtze, J., 2013. The changing role of the enterprise architect. In: Proc. IEEE Intern.
+Enterprise Distributed Object Computing Conference Workshops, pp. 319–326.
+Greefhorst, D., Proper, E., 2011. Architecture Principles: the Cornerstones of Enter-
+prise Architecture. Springer Science & Business Media.
+Hetebrij, M., 2011. Een Goed Besluit is Het Halve Werk. Uitgeverij Van Gorcum.
+IDC, 2018. Worldwide Semiannual Small and Medium Business Spending Guide.
+Retrieved from https://www.idc.com/getdoc.jsp?containerId=prUS43565918, last
+accessed on December 14, 2018.
+Investopia, 2018. Retrieved from https://www.investopedia.com/terms/f/feasibility-
+study.asp, last accessed on August 5, 2018.
+Janssen, M., 2012. Sociopolitical aspects of interoperability and enterprise architec-
+ture in e-government. Soc. Sci. Comput. Rev. 30 (1), 24–36.
+Johnson, P., Ekstedt, M., Silva, E., Plazaola, L., 2004. Using enterprise architecture for
+cio decision-making: on the importance of theory. Second Annual Conference
+on Systems Engineering Research, paper 116.
+Jusuf, M.B., Kurnia, S., 2017. Understanding the beneﬁts and success factors of enter-
+prise architecture. In: Proceedings of the 50th Hawaii International Conference
+on System Sciences.
+Kitchenham, B.A., Pﬂeeger, S.L., 2002a. Principles of survey research part 2: design-
+ing a survey. SIGSOFT Softw. Eng. Notes 27 (1), 18–20.
+Kitchenham, B.A., Pﬂeeger, S.L., 2002b. Principles of survey research: part 3: con-
+structing a survey instrument. ACM SIGSOFT Softw. Eng. Notes 27 (2), 20–24.
+Kitchenham, B., Pﬂeeger, S.L., 2002c. Principles of survey research: part 4: question-
+naire evaluation. ACM SIGSOFT Softw. Eng. Notes 27 (3), 20–23.
+Kitchenham, B., Pﬂeeger, S.L., 2002d. Principles of survey research: part 5: popula-
+tions and samples. ACM SIGSOFT Softw. Eng. Notes 27 (5), 17–20.
+Kitchenham, B., Pﬂeeger, S.L., 2003. Principles of survey research part 6: data anal-
+ysis. ACM SIGSOFT Softw. Eng. Notes 28 (2), 24–27.
+Kotusev, S., Singh, M., Storey, I., 2015. Investigating the usage of enterprise architec-
+ture artifacts. ECIS.
+Kotusev, S., 2017. Eight Essential Enterprise Architecture Artifacts. Retrieved from
+http://www.bcs.org/content/conWebDoc/57318, last accessed on August 5, 2018.
+Kotusev, S., 2018. Enterprise architecture on a page, v1.2. Retrieved from http://
+eaonapage.com/Enterprise%20Architecture%20on%20a%20Page%20(v1.2).pdf, last
+accessed on August 5, 2018.
+Lapalme, J., 2012. Schools of Enterprise Architecture. IT Prof. 13 (6), 1–7.
+Lovelock, J., Hahn, W., Atwal, R., Gupta, N., Blackmore, D., O’Connell, A., Patel, N.,
+Swinehart, H., Adams, A., 2017. Forecast Alert: IT Spending, Worldwide, 4Q17
+Update. Gartner Research Note G00324700.
+Malhotra, M.K., Grover, V., 1998. An assessment of survey research in POM: from
+constructs to theory. J. Oper. Manag. 16 (4), 407–425.
+Meyer, M., Helfert, M., O’Brien, C., 2011. An analysis of enterprise architecture matu-
+rity frameworks. In: International Conference on Business Informatics Research.
+Springer, Berlin, Heidelberg, pp. 167–177.
+Miller, S., 1997. Implementing strategic decisions: four key success factors. Organ.
+Stud. 18 (4), 577–602.
+Miller, S., Wilson, D., Hickson, D., 2004. Beyond Planning:: strategies for Successfully
+Implementing Strategic Decisions. Long Range Plann. 37 (3), 201–218.
+Mintzberg, H., Raisinghani, D., Theoret, A., 1976. The structure of "unstructured" de-
+cision processes. Adm. Sci. Q. 21 (2), 246–275.
+Morgan, D.L., 1996. Focus groups. Ann. Rev. Sociol. 22 (1), 129–152.
+Niemi, E.I., Pekkola, S., 2016. Enterprise architecture beneﬁt realization: review of
+the models and a case study of a public organization. ACM SIGMIS Database 47
+(3), 55–80.
+Nooraie, M., 2008. Decision magnitude of impact and strategic decision-making pro-
+cess output: the mediating impact of rationality of the decision-making process.
+Manag. Decis. 46 (4), 640–655.
+Open Group, 2018. The TOGAF Standard, Version 9.2. Retrieved from http://pubs.
+opengroup.org/architecture/togaf9-doc/arch/index.html, last accessed on August
+5, 2018.
+Op ’t Land, M., Proper, E., Waage, M., Cloo, J., Steghuis, C., 2008. Enterprise Archi-
+tecture: Creating Value by Informed Governance. Springer Science & Business
+Media.
+Papadakis, V., Thanos, I.C., Barwise, P., 2010. Research on strategic decisions: taking
+stock and looking ahead. In: Nutt, P., Wilson, D. (Eds.), Handbook of Decision
+Making. Wiley, Chichester, pp. 31–69.
+Pﬂeeger, S.L., Kitchenham, B.A., 2001. Principles of survey research: part 1: turning
+lemons into lemonade. ACM SIGSOFT Softw. Eng. Notes 26 (6), 16–18.
+Plessius, H., Van Steenbergen, M., Slot, R., 2014. Perceived beneﬁts from enterprise
+architecture. In: Mediterranean Conference on Information Systems, p. 23.
+Riempp, G., Gieffers-Ankel, S., 2007. Application portfolio management: a deci-
+sion-oriented view of enterprise architecture. Inf. Syst. E-Bus. Manag. 5 (4),
+359–378.
+Roelens, B., Poels, G., 2014. The creation of business architecture heat maps to sup-
+port strategy-aligned organizational decisions. In: 8th European Conference on
+IS Management and Evaluation (ECIME). Academic Conferences and Publishing
+International Limited, pp. 388–392.
+Saha, P., 2006. A real options perspective to enterprise architecture as an investment
+activity. J. Enterp. Archit. 2 (3), 32–52.
+Slot, R.G., 2010. A Method For Valuing Architecture-Based Business Transformation
+and Measuring the Value of Solutions Architecture. Universiteit van Amsterdam.
+Standish Group, 2015. The CHAOS Summary 2015 Report. The Standish Group Inter-
+national, Boston, MA.
+Stevens, J.P., 2012. Applied Multivariate Statistics for the Social Sciences. Routledge.
+Sutton, S.G., Arnold, V., 2013. Focus group methods: using interactive and nominal
+groups to explore emerging technology-driven phenomena in accounting and
+information systems. Int. J. Account. Inf. Syst. 14 (2), 81–88.
+Tamm, T., Seddon, P.B., Shanks, G.G., Reynolds, P., 2011. How does enterprise ar-
+chitecture add value to organisations? Commun. Assoc. Inf. Syst. 28 (1), 141–
+168.
+Tamm, T., Seddon, P.B., Shanks, G., Reynolds, P., Frampton, K.M., 2015. How an Aus-
+tralian retailer enabled business transformation through enterprise architecture.
+MIS Q. Exec. 14 (4).
+Vallerand, J., Lapalme, J., Moïse, A., 2017. Analysing enterprise architecture maturity
+models: a learning perspective. Enterp. Inf. Syst. 11 (6), 859–883.
+Van den Berg, M., Slot, R., Van Steenbergen, M., Faasse, P., & Van Vliet, H. (2018).
+An empirical investigation of the relationship between enterprise architecture
+maturity and the quality of IT investment decisions. Manuscript submitted for
+publication.
+Van den Berg, M., Van Vliet, H., 2016. The decision-making context inﬂuences the
+role of the enterprise architect. In: Enterprise Distributed Object Computing
+Workshop (EDOCW), 2016 IEEE 20th International. IEEE, pp. 1–8.
+Van der Raadt, B., Van Vliet, H., 2008. Designing the enterprise architecture func-
+tion. In: International Conference on the Quality of Software Architectures.
+Springer, Berlin, Heidelberg, pp. 103–118.
+Van Steenbergen, M., Van den Berg, M., Brinkkemper, S., 2007. A balanced approach
+to developing the enterprise architecture practice. In: International Conference
+on Enterprise Information Systems. Springer, Berlin, Heidelberg, pp. 240–253.
+Van Steenbergen, M., Schipper, J., Bos, R., Brinkkemper, S., 2010. The dynamic ar-
+chitecture maturity matrix: instrument analysis and reﬁnement. In: Service-Ori-
+ented Computing. ICSOC/ServiceWave 2009 Workshops. Springer, Berlin, Heidel-
+berg, pp. 48–61.
+Van Steenbergen, M., Van den Berg, M., Boersma, A., 2012. Architecture maturity
+matrix DyA (version 3.0). Retrieved from www.dya.info, last accessed on August
+5, 2018.
+Wagter, R., Van den Berg, M., Luijpers, J., Van Steenbergen, M., 2005. Dynamic En-
+terprise architecture: How to Make It Work. John Wiley & Sons.
+Wang, X., Zhou, X., Jiang, L., 2008. A method of business and IT alignment based
+on enterprise architecture. In: Service Operations and Logistics, and Informatics,
+2008. IEEE/SOLI 2008. IEEE International Conference on, 1, pp. 740–745.
+Ward, J., Daniel, E., Peppard, J., 2008. Building better business cases for it invest-
+ments. MIS Q. Exec. 7 (1), 1–15.
+Weill, P., Ross, J.W., 2004. IT Governance: How top Performers Manage IT Decision
+Rights for Superior Results. Harvard Business Press.
+Weiss, S., Aier, S., Winter, R., 2013. Institutionalization and the effectiveness of en-
+terprise architecture management. 34th International Conference on Informa-
+tion Systems, Association for Information Systems.
+Ylimäki, T., 2006. Potential critical success factors for enterprise architecture. J. En-
+terp. Archit. 2 (4), 29–40.
+
+--- PAGE 17 ---
+150 M. van den Berg, R. Slot and M. van Steenbergen et al./The Journal of Systems and Software 152 (2019) 134–150
+Martin van den Berg is currently a Ph.D. candidate at the VU University Amster-
+dam, The Netherlands. He holds an M.Sc. in Business Economics and an M.Sc. in
+Logistics Management, both from Tilburg University. His research interests include
+enterprise architecture as a management instrument. In addition to his research,
+he is an enterprise architect at De Nederlandsche Bank. He is co-author of various
+books on enterprise architecture and co-founder of the Dynamic Architecture (DyA)
+approach. He is a member of the program board of the LAC (Dutch Architecture
+Conference) and a member of the jury of the Dutch Architecture Prize.
+Raymond Slot is Professor at Utrecht University of Applied Sciences. His research
+areas include the business value of enterprise architecture, privacy and security, so-
+cial inclusion, as well as education and training. He has an M.Sc. in computer sci-
+ence from the University of Twente, an MBA from TSM Business School, and a Ph.D.
+on the business value of enterprise architecture. Next to his work at the University
+of Applied Sciences, he is managing partner at Strategy Alliance. He has created
+business and IT architectures for over 20 years. He developed such architectures for
+various multinationals, including ABNAMRO, ING, Vodafone, and Rabobank. He also
+worked for the Dutch Ministry of Defence and several local authorities.
+Marlies van Steenbergen is Professor Digital Smart Services at Utrecht University of
+Applied Sciences. She focusses on the research areas of enterprise architecture for
+digital smart services, and data-analytics in the domain of customer-organization
+interactions. She has an M.A. in Linguistics from Groningen University (1987), a
+M.Sc. in Computer Science from TU Delft (2000) and a Ph.D. in the maturity and
+effectiveness of enterprise architecture from Utrecht University (2011). In addition
+to her work at the University of Applied Sciences, she is also principal consultant
+enterprise architecture at Sogeti Netherlands. In this capacity she helps enterprises
+to professionalize their architecture function. She is a frequent lecturer and pub-
+lisher in both academic and professional outlets. She is co-author of various books
+on enterprise architecture and co-founder of the Dynamic Architecture (DyA) ap-
+proach.
+Peter Faasse is CEO of Dataska Solutions in Amsterdam, a data analytics and statis-
+tics consultancy company. He has a B.A. in Psychology, an M.A. in Social Psychol-
+ogy and a minor in Communication Science from the University of Amsterdam. He
+worked as a private statistics and data analytics teacher and manager at Afstudeer-
+begeleider.nl for two and a half year, before starting his own company to focus
+more on big data analytics and machine learning techniques.
+Hans van Vliet is Emeritus Professor in Software Engineering at the VU University
+Amsterdam, The Netherlands. He obtained his Ph.D. from the University of Amster-
+dam. His research interests include software architecture, knowledge management
+in software development, global software development, and empirical software en-
+gineering. Before joining the VU University, he worked as a researcher at the Cen-
+trum voor Wiskunde en Informatica (CWI, Amsterdam). He spent a year as a vis-
+iting researcher at the IBM Almaden Research Center in San Jose, California. He is
+the author of “Software Engineering: Principles and Practice”, published by Wiley
+(3rd Edition, 2008). He is a member of IFIP Working Group 2.10 on software archi-
+tecture and was the Editor in Chief of the Journal of Systems and Software from
+2008–2017.

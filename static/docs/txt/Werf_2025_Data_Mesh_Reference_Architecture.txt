@@ -1,0 +1,645 @@
+--- PAGE 1 ---
+Towards a Data Mesh Reference
+Architecture
+Daniel van der Werf, João Moreira(B)
+, and Jean Paul Sebastian Piest
+University of Twente, Enschede, The Netherlands
+{j.luizrebelomoreira,j.p.s.piest}@utwente.nl
+Abstract. The increasing complexity and volume of organizational data
+have led to the emergence of the Data Mesh paradigm, a data architec-
+ture with a federated governance aimed at addressing the limitations
+of traditional monolithic data systems that has overlapping principles
+with the microservices architectural style. Although related work exists,
+the majority of architectural approaches regarding Data Mesh are con-
+ceptual, technology-centric or vendor speciﬁc. This paper introduces a
+Data Mesh Reference Architecture (RA) using the ArchiMate enter-
+prise architecture modeling language, designed to assist organizations
+in implementing (or migrating towards) data mesh solutions. The RA
+comprises three main components: domain architecture, self-serve data
+platform architecture, and federated governance, which reﬂect the main
+Data Mesh principles. Through a systematic literature review, four data
+mesh archetypes (Pure, Semi-Pure, Hybrid, and Distributed) were iden-
+tiﬁed, along with challenges, limitations, and motivational factors for
+adoption. A questionnaire-based validation among experts conﬁrmed the
+RA’s utility, quality, and variability. However, practical validation was
+not conducted within this study. The study contributes to both litera-
+ture and practice by oﬀering a structured approach and a set of reference
+models for designing data mesh architectures. Future research can con-
+tribute to practical validation, assessment of RA-driven design eﬃciency,
+and extending the RA with domain-driven solution architectures.
+Keywords: Data Mesh · Reference Architecture · Data Architecture ·
+Data Mesh Archetype · ArchiMate
+1 Introduction
+In recent years, the rising interest in data-driven decision-making has led orga-
+nizations to invest heavily in data storage and processing solutions. Initially,
+data platforms evolved from simple data warehouses to more complex two-tier
+architectures combining data lakes and data warehouses (lakehouses). However,
+these systems face limitations, including diﬃculties regarding the processing
+semi-structured data, high costs, and complexity in managing data pipelines.
+As businesses generate increasing amounts of data, centralized monolithic data
+c  The Author(s), under exclusive license to Springer Nature Switzerland AG 2025
+M. Kaczmarek-Heß et al. (Eds.): EDOC 2024 Workshops, LNBIP 537, pp. 339–353, 2025.
+https://doi.org/10.1007/978-3-031-79059-1_21
+
+--- PAGE 2 ---
+340 D. van der Werf et al.
+architectures, managed by central data teams, have become bottlenecks, strug-
+gling to scale, leading to ineﬃciencies in data cleaning, preparation, and access.
+These architectures also suﬀer from low domain-speciﬁc knowledge, lack of own-
+ership, siloed structures, and long lead times for accessing data, making them
+less responsive to modern business needs [1–4].
+The Data Mesh paradigm - introduced by Zhamak Dehghani in an article
+in 20191
+and further detailed in her book [5] - represents a shift from central-
+ized, monolithic data architectures to a decentralized, domain-driven approach
+with federated governance. It focuses on four core principles: treating data as
+a product, domain-oriented decentralized data ownership, self-serve data plat-
+forms, and federated computational governance. By decentralizing data manage-
+ment, Data Mesh addresses the bottlenecks and ineﬃciencies of traditional cen-
+tralized systems, enabling better scalability, ownership, and faster data access.
+Data products, managed within their respective domains, enhance collabora-
+tion and data quality, while the self-serve platform supports eﬃciency. However,
+implementing Data Mesh requires signiﬁcant organizational changes and strong
+governance to avoid siloing and ensure consistency [1,6–8].
+This paper presents a Reference Architecture (RA) for Data Mesh. The RA is
+based on a Systematic Literature Review (SLR) and modelled using ArchiMate.
+The main research question that is discussed in this paper is stated as follows
+“... ?”.
+This paper is structured as follows. Section2 describes selected related work
+that formed the theoretical foundation for the RA, including the main concepts of
+this study, with emphasis on Data Mesh and Enterprise Architecture. Section3
+presents the SLR that serves the purpose of answering the earlier introduced
+MRQ and derived Knowledge Questions (KQs). Section4 presents the Data Mesh
+RA. Section5 describes how the architecture was validated. Section6 discusses
+the results of the research in relation to related work. Section7 concludes this
+paper and outlines future work.
+2 Background
+This section covers foundational theoretical knowledge on key concepts, includ-
+ing Data Mesh, EA, and RAs.
+2.1 Data Mesh
+Data mesh is a decentralized, domain-oriented approach to managing enterprise
+data architecture, aiming to address challenges faced by large, data-driven orga-
+nizations [9]. It draws inspiration from the microservice architecture used in
+software engineering, which responded to the ineﬃciencies of monolithic sys-
+tems. Similar to how microservices decentralize application development, data
+mesh decentralizes data ownership and management across various domains,
+1
+https://martinfowler.com/articles/data-monolith-to-mesh.html.
+
+--- PAGE 3 ---
+Towards a Data Mesh Reference Architecture 341
+making it scalable and adaptable. Each domain in a data mesh operates like an
+independent unit responsible for its data products, fostering accountability and
+collaboration across the organization to meet dynamic business requirements
+[10].
+The four core principles of data mesh, as outlined by Dehghani2
+, are: treat-
+ing data as a product, domain-oriented decentralized ownership, self-serve data
+infrastructure, and federated computational governance. Treating data as a prod-
+uct means data must be accessible, self-explanatory, secure, and valuable to the
+business. Data products should be designed with key attributes, ensuring they
+are discoverable, trustworthy, and interoperable, among others. To implement a
+data mesh, organizations must undergo cultural and organizational changes, with
+teams becoming responsible for their data as a product to serve others [6,11].
+Domain-oriented decentralized data ownership assigns responsibility to speciﬁc
+business units or teams to manage and publish data products [12]. Domains are
+aligned with business functions, allowing them to independently produce data
+in line with organizational objectives [6,7]. The self-serve platform enables these
+domains to create and maintain their data products using shared infrastructure
+like computational resources, storage, and security, all managed by a central sup-
+port team. The federated computational governance ensures that while domains
+operate independently, they follow enforceable protocols and policies for data
+standards, security, and communication, maintaining overall cohesion [3,4,13].
+Implementing data mesh brings both beneﬁts and challenges. It promotes
+scalability, adaptability, and cost eﬃciency, yet it requires signiﬁcant organi-
+zational restructuring and cultural shifts [1,14]. Teams need to develop new
+capabilities to manage their data independently, while eﬀective governance, dis-
+coverability, and data security remain critical. Additionally, replicating eﬀorts
+across domains can lead to ineﬃciencies if not managed properly [15,16]. Despite
+these challenges, data mesh is a versatile methodology that can be applied not
+only within organizations but also across industries to enhance collaboration and
+secure data sharing [2].
+2.2 Enterprise Architecture
+EA provides a comprehensive view of an organization’s IT infrastructure, appli-
+cations, and data architecture, aligning IT strategy with business goals [17].
+By oﬀering a layered structure, EA helps organizations model their current
+state and develop a blueprint for transitioning to future states. This holistic
+approach enhances decision-making, improves change management, and sup-
+ports the alignment between business processes and IT. EA’s layered approach,
+as deﬁned by the TOGAF standard, includes business, data, application, and
+technology architectures, each providing distinct insights to help guide an orga-
+nization’s growth and transformation, especially when adopting decentralized
+architectures like data mesh.
+2
+https://martinfowler.com/articles/data-mesh-principles.html.
+
+--- PAGE 4 ---
+342 D. van der Werf et al.
+While EA oﬀers several beneﬁts such as strategic alignment, risk manage-
+ment, and process optimization, maintaining it poses challenges. Complex orga-
+nizational structures and fragmented information hinder the eﬀectiveness of EA
+[18]. Additionally, lack of alignment between EA practices and business goals
+can lead to siloed operations and poor transparency. Despite these issues, EA
+remains valuable for facilitating technological integration, supporting decision-
+making, and ensuring that IT infrastructure aligns with organizational objec-
+tives. Standards like ArchiMate further support EA by providing a modeling
+language to visualize business layers, aiding communication and collaboration
+across teams [19].
+RAs serve as templates or blueprints to streamline the creation of solution
+architectures. RAs oﬀer a standard set of vocabulary, best practices, and archi-
+tectural principles that accelerate the design process and ensure consistency
+across projects. They assist in technology evaluation and enable organizations
+to make informed decisions aligned with their strategic goals. By encapsulating
+industry standards and best practices, RAs support architects in designing eﬃ-
+cient and eﬀective architectures, contributing to the overall success of enterprise
+architecture initiatives [20].
+3 Systematic Literature Review
+This section addresses the following knowledge questions through a systematic
+literature review (SLR) by following a well-known SLR method [21]:
+KQ 1. What are the key components constituting a data mesh and what are
+the limitations?
+KQ 1-a: What diﬀerent kinds of data mesh archetypes exists?
+KQ 1-b: What are common components of a data mesh?
+KQ 1-c: What are the limitations of data mesh?
+KQ 2. Which factors determine if data mesh is a valid approach for an orga-
+nization?
+KQ 2-a: What are the main indicators to consider the switch to a data
+mesh?
+KQ 2-b: What is the impact of data mesh on the existing architecture?
+KQ 2-c: Which other data methodologies are there?
+KQ 3. Are there existing data mesh reference architectures?
+KQ 3-a: What are characteristics of data reference architectures?
+KQ 3-b: What parts of other data reference architectures can be re-used?
+KQ 4. How to develop a reference architecture?
+KQ 4-a: What are the goals and requirements of a reference architecture?
+KQ 4-b: Which method can be used to design and develop the reference
+architecture?
+KQ 5. How can a reference architecture be validated? Literature for this ques-
+tion will be gathered from the studies examined for KQ 3 and KQ 4
+
+--- PAGE 5 ---
+Towards a Data Mesh Reference Architecture 343
+3.1 Planning, Search and Selection
+In the planning phase of this SLR, Scopus, IEEE, and Google Scholar were cho-
+sen, with Scopus and IEEE providing peer-reviewed sources and Google Scholar
+supplementing with a broader range of results, including non-peer-reviewed
+materials. The search for “Data Mesh” yielded 83 results from IEEE, 111 from
+Scopus, and 3800 from Google Scholar. Some grey literature, such as founda-
+tional works on data mesh, was also included to ensure comprehensive coverage
+[1]. Search queries were carefully constructed to avoid irrelevant results, focusing
+speciﬁcally on “Data Mesh” and “Reference Architecture”.
+Inclusion and exclusion criteria were applied to manage the number of articles
+and maintain focus on relevant, high-quality studies. Peer-reviewed, English, and
+well-written articles with detailed metadata were prioritized, while incomplete,
+duplicate, or irrelevant articles were excluded. Only the ﬁrst 20 search results,
+sorted by relevance, were evaluated for manageability. After applying these cri-
+teria, the remaining articles were reviewed for their abstracts and conclusions,
+resulting in 61 articles being selected for further analysis. The complete report
+documenting the systematic literature review can be found in [22].
+3.2 Data Mesh Archetypes and Components
+This subsection explores the main archetypes of data meshes, their components,
+and the limitations they present [8].
+Data mesh architectures, though ﬂexible, typically consist of key compo-
+nents necessary for eﬀective implementation. These include domains, a self-serve
+data platform, and a federated governance layer [23]. However, data meshes
+are not a one-size-ﬁts-all solution, and their structure can vary signiﬁcantly
+between organizations. Various topologies have been identiﬁed in existing lit-
+erature, ranging from a ﬁne-grained, fully decentralized mesh to more managed,
+centralized forms. Importantly, a data mesh’s speciﬁc archetype depends on an
+organization’s requirements, and no single archetype solves all organizational
+data challenges [14].
+The ﬁrst archetype, a ﬁne-grained fully federated mesh, represents the most
+theoretical and decentralized form of a data mesh, where each domain oper-
+ates independently, handling its own data and communication. While oﬀering
+high ﬂexibility and domain specialization, this approach poses challenges, such
+as capability duplication, high costs, and complexity. The fully governed mesh,
+another variation, introduces a central data distribution layer to tackle some of
+these issues. In this model, domains retain autonomy, but data distribution is
+controlled through a central layer, improving compliance at the cost of ﬂexibility.
+The hybrid federated mesh oﬀers a middle ground, combining both centralized
+and decentralized elements, thus simplifying management but adding some over-
+head [23].
+A variety of other archetypes also exist, such as the value-chain aligned and
+coarse-grained meshes, which are suitable for organizations with diﬀerent opera-
+tional models, such as those involved in complex supply chains or those that have
+
+--- PAGE 6 ---
+344 D. van der Werf et al.
+expanded through mergers and acquisitions. These archetypes introduce vary-
+ing degrees of centralization and domain responsibility, accommodating larger or
+more complex business structures. While each archetype has advantages, such as
+improved governance or simpliﬁed implementation, they all come with their own
+limitations. These include potential bottlenecks in data ﬂow, diﬃculty adding
+new domains, and the potential for siloed data [8,23].
+In terms of components, a data mesh typically consists of domains, a self-
+serve data platform, and federated governance. These components are further
+divided into elements such as data products, data catalogs, and security protocols
+[24]. The self-serve platform provides tools for data storage, processing, and
+analytics, while the governance layer ensures compliance and standardization
+across domains [25]. Security is a key concern, requiring robust mechanisms for
+access control and data integrity. Finally, monitoring tools track the use of data
+products and enforce compliance, making visibility and governance an integral
+part of the architecture. This modular approach ensures that data meshes remain
+adaptable to an organization’s speciﬁc needs [7,8,26].
+3.3 Data Mesh Implementation and Migration
+The implementation of or migration to a data mesh architecture requires care-
+ful consideration of various motivating factors and prerequisites speciﬁc to each
+organization. Data mesh is most beneﬁcial for companies looking to reduce bot-
+tlenecks, improve collaboration, enhance data ownership, and increase scalabil-
+ity. The primary motivations include a need for a scalable and agile architecture,
+addressing data silos, and leveraging domain knowledge more eﬀectively [4]. Pre-
+requisites for transitioning include high data literacy, technical expertise, and a
+clear understanding of domain boundaries. Companies with a low demand for
+real-time, high-volume data or insuﬃcient resources may not ﬁnd data mesh
+suitable [14].
+Transitioning to a data mesh involves signiﬁcant organizational and architec-
+tural changes. The shift from a monolithic to a distributed architecture decentral-
+izes data ownership, requiring new governance models, continuous monitoring,
+and updated roles and responsibilities. It also demands investments in infrastruc-
+ture and tools to enable a self-serve data platform. While this transition increases
+management complexity, it oﬀers long-term beneﬁts like improved scalability,
+resource allocation, and the ability to leverage data as a strategic asset. How-
+ever, it requires ongoing eﬀort to ensure compliance with governance standards
+and eﬃcient coordination across domains [27].
+Finally, a data mesh is not always the best ﬁt, and other data methodolo-
+gies like data warehouses, data lakes, data lakehouses, and data fabrics oﬀer
+alternative solutions. These centralized architectures provide varying degrees of
+scalability, real-time processing, and management complexity. Each has its own
+strengths and limitations, and organizations must evaluate their speciﬁc needs,
+capabilities, and goals to determine whether a data mesh or one of these alter-
+natives is the best ﬁt for their data strategy [24,28].
+
+--- PAGE 7 ---
+Towards a Data Mesh Reference Architecture 345
+3.4 Data Mesh Challenges and Limitations
+The challenges and limitations of implementing a data mesh approach arise
+from both organizational and technical layers, as it requires changes in how a
+company operates and manages data. Organizationally, companies must align
+business and technology needs, which includes a company-wide cultural shift in
+handling data. Change management becomes a major challenge as it involves
+overcoming resistance, fostering a common understanding of data mesh princi-
+ples, and training employees to adapt to new responsibilities [11]. A signiﬁcant
+limitation is the need for increased data literacy and technical expertise, which
+can be a bottleneck for organizations lacking these resources. Additionally, the
+complexity of data management increases, posing challenges in security, privacy,
+and governance [7,14].
+On the technical side, a data mesh impacts the existing data architecture,
+with challenges around integrating the right systems and engines, ensuring inter-
+operability, and managing network strain [29]. Eﬀort duplication, where diﬀerent
+domains repeat the same work, and the risk of data duplication are concerns
+that arise from the federated nature of a data mesh. Establishing high-quality
+data products, setting clear standards, and maintaining data consistency across
+domains are further challenges. Additionally, handling changes in data, updating
+metadata across federated systems, and managing the deletion of data products
+create technical complexities that need to be addressed [1].
+To mitigate these challenges, several strategies are proposed [30,31]. For
+organizational issues, careful planning, people management, and training pro-
+grams are recommended to address resistance and the need for technical exper-
+tise. Implementing strong governance, setting clear roles and responsibilities,
+and standardizing communication are crucial for managing data complexity and
+ensuring compliance. Security and privacy concerns can be tackled through stan-
+dardized security measures, data encryption, and automated compliance checks.
+On the technical side, leveraging metadata, establishing standards to reduce
+data duplication, and implementing monitoring systems for data changes and
+product consistency are key solutions [14,30,31].
+In summary, data mesh implementations face both organizational and tech-
+nical hurdles, including the need for data literacy, governance challenges, cost
+concerns, and maintaining data quality. However, with careful planning, gover-
+nance structures, and the right technical strategies, many of these challenges can
+be mitigated. Solutions include targeted training, improved infrastructure plan-
+ning, and the use of standardized tools and processes to streamline operations
+and ensure eﬀective data management.
+3.5 Reference Architectures
+In the study of existing data mesh reference architectures, one architecture by
+Goedegebuure et al. (2023) was identiﬁed [1]. To address this gap, we explored
+related data reference architectures across various industries and methodologies,
+examining 19 in total. These architectures vary in their design styles, with many
+
+--- PAGE 8 ---
+346 D. van der Werf et al.
+opting for free-form modelling without using formal languages. Most validate
+their designs by mapping them to existing solution architectures. Despite the
+diﬀerences, common themes emerge, such as a lack of detailed domain modelling
+in some cases, particularly in data mesh-related architectures, which limits their
+direct applicability.
+We focus on developing a new reference architecture by drawing on compo-
+nents from existing models and leveraging established methodologies for design-
+ing reference architectures. Two primary design approaches were highlighted:
+Angelov et al.’s (2012) framework [32], which provides a structured approach
+to analyzing and designing reference architectures, and Galster and Avgeriou’s
+(2011) empirical method for grounding reference architectures through data col-
+lection, construction, and evaluation [33]. The latter was chosen for this study
+due to its focus on validation, aligning with the research’s design methodology.
+The validation approach of the reference architecture includes expert opinions,
+inspired by previous studies that employed surveys and case studies to ensure
+the architecture’s relevance, scalability, and applicability.
+4 Reference Architecture for Data Mesh Design
+This section describes the design of the data mesh reference architecture (RA)
+according to the 6 step method proposed by Galster and Avgeriou [33].
+4.1 Development Approach
+This RA development method was chosen because it includes a validation process
+that aligns with the engineering cycle and integrates aspects of Angelov et al.’s
+(2012) framework [32]. The six steps are: (1) decide on the type of RA; (2) select
+the design strategy; (3) empirical collection of data; (4) construction of the RA;
+(5) enable the RA with variability; and (6) evaluate the RA to check its validity.
+The usage context for the RA is classiﬁed as “industry-cross-cutting”, and
+we incorporated the answers for the 3 key questions of the method (why, where,
+and when questions). The envisioned RA is created to facilitate architects on
+designing data mesh solution architectures, to be used in multiple organizations,
+and is a “classical reference architecture” as the technologies necessary to create
+solution architectures are readily available. Therefore, the RA is classiﬁed as
+type 3: “classical facilitation reference architecture for multiple organizations”.
+For the design strategy, it was decided to build the RA from scratch, as
+the only existing data mesh RA did not fully cover the scope of this study.
+The design is practice-driven, drawing on insights from the literature review,
+and grounded in empirical data collected to ensure the RA addresses relevant
+components and requirements. The RA was constructed using the ArchiMate
+modeling language due to its clarity and extensibility, besides being a standard
+language for representing enterprise architectures.
+Another deliberate design choice is to include a component only once in the
+architecture even if multiple instances of this component are present in a solu-
+tion architecture. For example, a Domain Team can be responsible for multiple
+
+--- PAGE 9 ---
+Towards a Data Mesh Reference Architecture 347
+business processes or applications but only one business process was modelled
+to keep the models clear and readable.
+4.2 Domain-Driven Data as a Product
+The Domain-Driven Data as a Product model, illustrated in Fig.1, outlines the
+key processes carried out within a domain in a data mesh, as well as the main
+components supporting these processes. At the top of the architecture is the
+Domain Team, which is responsible for executing these processes. Firstly, they
+oversee a business process that generates operational data, which is then stored
+in a designated data storage system. Secondly, the Domain Team manages the
+creation, distribution, retention, and decommissioning of data products. This
+process consists of these steps: the data product is ﬁrst created based on the
+operational data, then it is accompanied by a data contract and made compliant
+with federated governance policies before being published in the data product
+catalog for use by other domains. After distribution, the Domain Team must
+ensure proper retention by monitoring, updating, and eventually discontinuing
+the data product once it reaches the end of its lifecycle. Lastly, the Domain Team
+is responsible for performing data analytics.
+The Domain Team leverages the capabilities of the Self-Serve Data Platform
+to establish the necessary infrastructure and make data products available to
+other domains participating in the data mesh, facilitated through the Data Prod-
+uct Catalog. The Federated Governance layer acts as an overarching governance
+structure, setting standards for communication, data product documentation,
+and other policies to ensure a secure and interoperable data mesh.
+Fig.1. ArchiMate model addressing domain-driven data as a product
+
+--- PAGE 10 ---
+348 D. van der Werf et al.
+4.3 Self-serve Data Platform
+The Self-Serve Data Platform model, illustrated in Fig.2, entails a capability
+model that is composed of a collection of capabilities that are provided to the
+domains participating in the data mesh and is managed by the Self-Serve Plat-
+form Team. The capabilities provided by the Self-Serve Platform are not hosted
+on the platform itself, rather the Domains still have to implement these tech-
+nologies in their own environments. The Data Storage capability can be realized
+by the traditional data warehouse and lake technology services, while the Data
+Store Engine capability is realized by database management system (DBMS)
+and Access Control capability is realized by an Authentication Engine service.
+Query Engine can be realized through an application interface, while a Data
+Visualization application can realize the capabilities of data visualization and
+monitoring. Lastly, the ETL pipeline capability is realized by an ETL solution
+that is assigned to an application process.
+Fig.2. ArchiMate model addressing self-serve data platform
+4.4 Federated Governance
+In the Federated Governance model, illustrated in Fig.3, the Data Mesh RA key
+principles are covered. These principles realize certain goals which are needed to
+make a data mesh function. For example, one goal is to create Secure Data Mesh
+since security is crucial. This goal is realized by principles on access policies,
+compliance, privacy and exchange policies in place that deﬁne standards and
+requirements to achieve a secure data mesh. Additionally, interoperability is a
+key principle to address the concept of Data Product, especially when these data
+products are exchanged among diﬀerent domains, ensuring both technical and
+semantic interoperability. Lastly, a documentation policy is needed to ensure
+traceability and usability of data products.
+
+--- PAGE 11 ---
+Towards a Data Mesh Reference Architecture 349
+Fig.3. ArchiMate model addressing federated governance
+5 Validation
+We used the validation methodology by Galster and Avgeriou (2011) [33], and we
+were inspired the Design Science Research methodology [34] to validate the pro-
+posed Data Mesh RA. Expert opinion was chosen as validation method because
+it provides valuable insights, especially in assessing aspects like perceived use-
+fulness, quality, and variability of the RA. The decision to gather feedback from
+experts with varying roles and knowledge levels aligns with the study’s aim to
+improve data mesh architectures by providing strategic design guidance.
+The questionnaire itself was divided into sections, starting with an intro-
+duction to gather participants’ roles and their familiarity with concepts like
+Data Mesh, Enterprise Architecture (EA), and ArchiMate. Subsequent sections
+assessed the perceived usefulness, quality, and variability of the RA through
+Likert scale questions, with participants discussing the three RA models, i.e.,
+the Domain, Self-Serve Data Platform, and Federated Governance. Each section
+concluded with optional open-ended questions to allow participants to provide
+additional feedback and suggestions for improvement, ensuring that the evalua-
+tion was comprehensive and addressed the critical aspects necessary for reﬁning
+the RA.
+The questionnaire was distributed within one of the biggest consultancy com-
+panies in data solution services, and to the wider data mesh community, resulting
+in responses from 32 participants across a range of professional roles, including
+Enterprise Architects, Data Architects, and Consultants. Most participants had
+at least some familiarity with the Data Mesh and EA concepts, with over 75%
+possessing theoretical or hands-on experience with Data Mesh. The study suc-
+cessfully collected diverse proﬁles and relevant feedback, particularly from data
+consultants and tech consultants, ensuring that the validation results were well-
+rounded and informative for improving the RA. The complete report describing
+the details of this research can be found here [22].
+6 Discussion
+The results of the validation through the questionnaire reveal a generally posi-
+tive reception towards the data mesh RA, particularly in terms of its relevance
+
+--- PAGE 12 ---
+350 D. van der Werf et al.
+to data-driven projects and its likelihood of being used in solution architectures.
+Respondents were more neutral about the model’s ease of use and its potential
+to accelerate the design of data mesh solution architectures. Interestingly, the
+Data Architects, especially the one who expressed a strong bias against RAs,
+were more skeptical, giving lower scores particularly on the model’s ability to
+speed up the design process. However, other roles, such as Data Engineers and
+Enterprise Architects, were more optimistic, showing a generally positive per-
+ception of the model’s usefulness. The overall response leaned towards neutral
+but slightly skewed to the positive side, reﬂecting mixed opinions across diﬀerent
+roles.
+In the quality and variability sections, a similar pattern emerged, with a
+tendency towards neutral or positive responses. While the Data Architects and
+CIO remained more critical of the model’s quality, other respondents, including
+the Professional Trainer, expressed a more favorable view. The Data Architects
+raised concerns about the level of detail, but removing the responses of one
+outlier (particularly the biased Data Architect) improved the overall perception
+of the quality of the model. In terms of variability, respondents were largely
+positive, especially regarding the model’s adaptability across multiple use cases
+and industries. The feedback suggests that, while there is some skepticism, espe-
+cially among more experienced roles like Data Architects, the data mesh RA is
+generally viewed as useful and adaptable by the majority of participants.
+In the additional feedback section of the questionnaire, respondents oﬀered
+valuable insights into the models, highlighting both strengths and areas for
+improvement. For the usefulness section, many respondents appreciated the role
+of the models in facilitating communication and early-stage exploration of solu-
+tions. However, multiple participants, including Data Architects and Enterprise
+Architects, suggested that the model requires constant evolution to stay rele-
+vant as use cases change. A recurring theme was the need for clearer guidance,
+such as step-by-step processes or better explanation of model components, as
+the current version was seen as diﬃcult to understand. Respondents also rec-
+ommended better representation of diﬀerent stakeholders and actors, as well as
+improvements in data visualization and monitoring capabilities.
+In the quality and variability sections, respondents echoed similar concerns
+about the need for model evolution and the lack of guidance. While the quality of
+the model received mixed reviews, with a median score of 3.1 out of 5, variability
+scored the highest at 3.9, indicating the model’s potential for use across various
+industries and contexts. Suggestions for improvement included adding principles
+related to data quality and ownership in the Federated Governance Architecture,
+rethinking the term ETL to reﬂect broader data processes, and ensuring clearer
+interaction between domains, which requires higher semantic interoperability.
+Overall, while the feedback was mostly positive, it underscored that the model
+is a good starting point but requires further reﬁnement to enhance its usability,
+adaptability, and relevance in diﬀerent use cases.
+
+--- PAGE 13 ---
+Towards a Data Mesh Reference Architecture 351
+7 Conclusion
+The main contributions of this research include the resulting analysis of the sys-
+tematic literature review, and the development of a Data Mesh RA using the
+ArchiMate enterprise architecture modeling language. This RA provides a struc-
+tured blueprint for solution architects to design data mesh solutions, detailing
+core elements like domain-driven data as a product, self-serve platforms, and fed-
+erated governance. Additionally, the study proposed four data mesh archetypes,
+helping organizations tailor their data mesh structures based on maturity and
+capabilities. We also extended the literature on data mesh by analyzing its com-
+ponents, challenges, and comparing it with alternative data architectures like
+data warehouses, lakehouses, and data fabrics.
+Key lessons learned from this study highlight that the data mesh approach
+requires a high level of technical expertise, organizational readiness, and strong
+governance mechanisms to manage complexity and ensure compliance with the
+four data mesh principles. We identiﬁed key motivational factors and prereq-
+uisites for transitioning to a data mesh architecture, emphasizing that proper
+planning and cultural readiness are crucial for success. The validation process,
+though only based on expert opinion, revealed that the proposed RA shows good
+variability, usability, and quality, making it adaptable across diﬀerent industries
+and use cases. However, real-world testing remains necessary to fully conﬁrm its
+practical eﬀectiveness. One of the core limitations of this research is that the val-
+idation relied solely on expert feedback, which may introduce bias. Additionally,
+potential gaps in the literature review and the use of a single group of respon-
+dents with varying expertise could impact the completeness of the ﬁndings.
+Future research is recommended to validate the RA through case studies
+across diﬀerent industries and to reﬁne the RA models by addressing feedback
+from users. In addition, it is necessary more precise guidelines on migrating
+a complex IT landscape to a data mash architecture, measuring the potential
+costs and return of investment. Furthermore, ontologies play an important role
+to address semantic interoperability in data meshes, especially among domains
+that have overlapping, and sometimes conﬂicting, terminology. Therefore, we
+believe that the adoption of the Findable, Accessible, Interoperable and Reusable
+(FAIR) data principles can improve the adoption of data meshes. Finally, the
+data mesh approach seems compatible with the International Data Spaces (IDS)
+reference architecture, and future work is required to investigate their relations.
+References
+1. Goedegebuure, A., et al.: Data mesh: a systematic gray literature review. ACM
+Comput. Surv. (2024)
+2. Podlesny, N.J., Kayem, A.V.D.M., Meinel, C.: CoK: a survey of privacy challenges
+in relation to data meshes. In: Strauss, C., Cuzzocrea, A., Kotsis, G., Tjoa, A.M.,
+Khalil, I. (eds.) DEXA 2022. LNCS, vol. 13426, pp. 85–102. Springer, Cham (2022)
+3. Falconi, M., Plebani, P.: Adopting data mesh principles to boost data sharing for
+clinical trials. In: 2023 IEEE International Conference on Digital Health (ICDH),
+pp. 298–306 (2023)
+
+--- PAGE 14 ---
+352 D. van der Werf et al.
+4. Pakrashi, A., Wallace, D., Namee, B.M., Greene, D., Guéret, C.: Cowmesh: a
+data-mesh architecture to unify dairy industry data for prediction and monitoring.
+Front. Artif. Intell. 6 (2023)
+5. Dehghani, Z., Fowler, M.: Data Mesh: Delivering Data-driven Value at Scale.
+O’Reilly Media (2022)
+6. Driessen, S., van den Heuvel, W.-J., Monsieur, G.: ProMoTe: a data product model
+template for data meshes. In: Almeida, J.P.A., Borbinha, J., Guizzardi, G., Link,
+S., Zdravkovic, J. (eds.) ER 2023. LNCS, vol. 14320, pp. 125–142. Springer, Cham
+(2023). https://doi.org/10.1007/978-3-031-47262-6 7
+7. Machado, I.A., Costa, C., Santos, M.Y.: Data mesh: concepts and principles of a
+paradigm shift in data architectures. Procedia Comput. Sci. 196, 263–271 (2022).
+International Conference on ENTERprise Information Systems / ProjMAN - Inter-
+national Conference on Project MANagement / HCist - International Conference
+on Health and Social Care Information Systems and Technologies 2021
+8. Pongpech, W.A.: A distributed data mesh paradigm for an event-based smart
+communities monitoring product. Procedia Comput. Sci. 220, 584–591 (2023). The
+14th International Conference on Ambient Systems, Networks and Technologies
+Networks (ANT) and The 6th International Conference on Emerging Data and
+Industry 4.0 (EDI40)
+9. Ashraf, A., Hassan, A., Mahdi, H.: Key lessons from microservices for data mesh
+adoption. In: 2023 International Mobile, Intelligent, and Ubiquitous Computing
+Conference (MIUCC), pp. 1–8 (2023)
+10. Jonkman, C.: Organisational maturity assessment during the paradigm shift from
+monoliths to data mesh - design science research in developing a data mesh matu-
+rity assessment model. Master’s thesis, TU Delft (2023). https://repository.tudelft.
+nl/record/uuid:294d7df5-511c-4149-9507-21be6379375d
+11. Vestues, K., Hanssen, G.K., Mikalsen, M., Buan, T.A., Conboy, K.: Agile data man-
+agement in NAV: a case study. In: Stray, V., Stol, K.-J., Paasivaara, M., Kruchten,
+P. (eds.) XP 2022, pp. 220–235. Springer, Cham (2022). https://doi.org/10.1007/
+978-3-031-08169-9 14
+12. Hooshmand, Y., Resch, J., Wischnewski, P., Patil, P.: From a monolithic PLM
+landscape to a federated domain and data mesh. Proc. Des. Soc. 2, 713–722 (2022)
+13. Hendriks, K.W.: Data governance structures in data mesh architectures (2023)
+14. Bode, J., Kühl, N., Kreuzberger, D., Holtmann, C.: Toward avoiding the data mess:
+industry insights from data mesh implementations. IEEE Access 12, 95402–95416
+(2024)
+15. Sedlak, B., et al.: Towards serverless data exchange within federations. In: Aiello,
+M., Barzen, J., Dustdar, S., Leymann, F. (eds.) SummerSOC 2023. CCIS, vol. 1847,
+pp. 144–153. Springer, Cham (2023). https://doi.org/10.1007/978-3-031-45728-9 9
+16. Vestues, K., Hanssen, G.K., Mikalsen, M., Buan, T.A., Conboy, K.: Agile data
+management in NAV: a case study (2022)
+17. Hermawan, R.A., Sumitra, I.D.: Designing enterprise architecture using togaf archi-
+tecture development method. In: IOP Conference Series: Materials Science and
+Engineering, vol. 662, no. 4, p. 042021 (2019)
+18. dela Cruz, N., Tobin, M., Schenz, G., Barden, D.: Enterprise data architecture:
+development scenarios using ORM. In: Meersman, R., Dillon, T., Herrero, P. (eds.)
+OTM 2011. LNCS, vol. 7046, pp. 278–287. Springer, Heidelberg (2011). https://
+doi.org/10.1007/978-3-642-25126-9 39
+19. Sanyoto, A.E.A., Saputra, M.C.: Archimate’s strengths and weaknesses as EA
+modeling language: a systematic mapping study. In: 2023 Eighth International
+Conference on Informatics and Computing (ICIC), pp. 1–6 (2023)
+
+--- PAGE 15 ---
+Towards a Data Mesh Reference Architecture 353
+20. Sang, G.M., Xu, L., de Vrieze, P.: Simplifying big data analytics systems with a
+reference architecture. In: Camarinha-Matos, L.M., Afsarmanesh, H., Fornasiero,
+R. (eds.) PRO-VE 2017. IAICT, vol. 506, pp. 242–249. Springer, Cham (2017).
+https://doi.org/10.1007/978-3-319-65151-4 23
+21. Carrera-Rivera, A., Ochoa, W., Larrinaga, F., Lasa, G.: How-to conduct a system-
+atic literature review: a quick guide for computer science research. Methods X 9
+(2022)
+22. van der Werf, D.: Towards a data mesh: reference architecture. Master’s thesis,
+University of Twente (2024)
+23. Strengholt, P.: Data Management at Scale: Modern Data Architecture with Data
+Mesh and Data Fabric. O’Reilly Media (2023)
+24. Dibouliya, A., Jotwani, D.V.: Review on data mesh architecture and its impact. J.
+Harbin Eng. Univ. (2023)
+25. Butte, V.K., Butte, S.: Enterprise data strategy: a decentralized data mesh app-
+roach. In: 2022 International Conference on Data Analytics for Business and Indus-
+try (ICDABI), pp. 62–66 (2022)
+26. Kancharla, J.R., Kumar, S.M.: Breaking down data silos: data mesh to achieve
+eﬀective aggregation in data localization. In: 2023 International Conference on
+Computer, Electronics & Electrical Engineering & their Applications (IC2E3), pp.
+1–5 (2023)
+27. Dončević, J., Fertalj, K., Brcic, M., Kovač, M.: Mask-mediator-wrapper architec-
+ture as a data mesh driver. IEEE Trans. Softw. Eng. 50(4), 900–910 (2024)
+28. Dahdal, S., Poltronieri, F., Tortonesi, M., Stefanelli, C., Suri, N.: A data mesh
+approach for enabling data-centric applications at the tactical edge. In: 2023 Inter-
+national Conference on Military Communications and Information Systems (ICM-
+CIS), pp. 1–9 (2023)
+29. McEachen, N., Lewis, J.: Enabling knowledge sharing by managing dependencies
+and interoperability between interlinked spatial knowledge graphs. Int. Arch. Pho-
+togrammetry Remote Sens. Spatial Inf. Sci. XLVIII-4/W7-2023, 117–124 (2023)
+30. Krystek, M., Morzy, M., Mazurek, C., Pukacki, J.: Introducing data mesh paradigm
+for smart city platforms design. In: Proceedings of the Annual Hawaii International
+Conference on System Sciences, vol. 2023-January, pp. 6885–6892 (2023)
+31. Kraska, T., et al.: Check out the big brain on brad: simplifying cloud data process-
+ing with learned automated data meshes. Proc. VLDB Endow. 16(11), 3293–3301
+(2023)
+32. Angelov, S., Grefen, P., Greefhorst, D.: A framework for analysis and design of
+software reference architectures. Inf. Softw. Technol. 54(4), 417–431 (2012)
+33. Galster, M., Avgeriou, P.: Empirically-grounded reference architectures: a pro-
+posal. In: Proceedings of the Joint ACM SIGSOFT Conference – QoSA and ACM
+SIGSOFT Symposium – ISARCS on Quality of Software Architectures – QoSA
+and Architecting Critical Systems – ISARCS, QoSA-ISARCS 2011, pp. 153–158.
+Association for Computing Machinery, New York (2011)
+34. Wieringa, R.J.: What is Design Science?, pp. 3–11. Springer, Heidelberg (2014)

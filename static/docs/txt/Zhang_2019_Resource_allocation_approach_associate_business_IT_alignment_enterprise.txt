@@ -1,0 +1,783 @@
+--- PAGE 1 ---
+Journal of Systems Engineering and Electronics
+Vol. 30, No. 2, April 2019, pp.343–351
+Resource allocation approach to associate business-IT
+alignment to enterprise architecture design
+ZHANG Mengmeng*
+, CHEN Honghui, and LIU Junxian
+Science and Technology on Information Systems Engineering Laboratory, National University of Defense Technology,
+Changsha 410072, China
+Abstract: Enterprise architecture (EA) development is always
+a superior way to address business-IT alignment (BITA) issue.
+However, most EA design frameworks are inadequate to allocate
+IT resources, which is an important metric of BITA maturity. Un-
+der this situation, the idea of IT resource allocation is combined
+with the EA design process, in order to extend prior EA research
+on BITA and to demonstrate EA’s capability of implementing IT
+governance. As an effective resource allocation method, portfo-
+lio decision analysis (PDA) is used to align business functions of
+business architecture and applications of system architecture. Fur-
+thermore, this paper exhibits an illustrative case with the proposed
+framework.
+Keywords: business-IT alignment (BITA), enterprise architecture
+(EA), IT resource allocation, portfolio decision analysis (PDA).
+DOI: 10.21629/JSEE.2019.02.13
+1. Introduction
+The importance of business-IT alignment (BITA) has been
+well known since the 1990s [1–5]. Over the past se-
+veral decades, it persists among the top-ranked concerns
+ofbusiness and ITexecutives,contributingto “maximizing
+the return value of IT investments”, “providing direction
+and flexibility to react to change”, and “improving orga-
+nizational performance” [6]. Significant progress has been
+made to address BITA in recent years, mainly from BITA
+measurement [7–9], BITA evolution [10–12], enterprise
+architecture (EA) development [13–15], and BITA’s re-
+lations with relevant fields [16–18]. Among them, EA is
+a methodology to effectively align the strategies of enter-
+prisestogetherwiththeirprocessesandresources(business
+and IT) [19,20]. It is a superior method to achieve BITA
+[21].
+In general, BITA should be well supported through ef-
+fective EA design processes [13,21,22]. Considering the
+Manuscript received December 25, 2017.
+*Corresponding author.
+This work was supported by the National Natural Science Foundation
+of China (71571189).
+six maturity criteria proposed by Luftman [7], and com-
+paratively analyzing them with EA research on BITA, we
+have identified that the “IT governance” criterion received
+the least attention. IT governance emphasizes the formal
+discussion and review for priorities and allocation of IT
+resources by appropriate business and IT participants [7].
+Several EA papers explained IT governance from a de-
+scriptive way, rather than proposed specific governance
+methods [21,22].
+To better support BITA with EA methods, the IT re-
+source allocation issue is mainly considered from the EA
+domain. This issue demands IT resources should be allo-
+cated in IT systems to satisfy business requirements at a
+lower cost and a higher efficiency. Without loss of gen-
+erality, this paper involves the resource allocation between
+business functionsandapplications[13,23].We seek to an-
+swer the following research question: how can we apply
+resource allocation analysis to the EA design process and
+achieve a better alignment between business functions and
+applications?
+To address this question, we will first discuss the impor-
+tance of IT resource allocation in the development of EA.
+In addition, a portfolio decision analysis (PDA) approach
+is introducedin the process of EA design. Furthermore,we
+exhibit an illustrative Switcher system architecture (SA)
+case to explain the application of the proposed method.An
+important theoretical and methodological novelty that we
+present in this work is a resource allocation contributionto
+identify and mitigate the weak point of BITA achievement
+with regard to the EA research.
+2. Related works
+2.1 BITA achievement with EA
+Generally, EA exhibits its advantages in aligning business
+and IT by developing architecture frameworks and mo-
+dels [21,22]. Various viewpoints and corresponding arti-
+facts are considered in the EA frameworks [23,24]. A suc-
+cessful EA research should support each aspect of BITA.
+
+--- PAGE 2 ---
+344 Journal of Systems Engineering and Electronics Vol. 30, No. 2, April 2019
+To analyze the extant EA research on BITA, we select rep-
+resentative EA studies and compare them with Luftman’s
+six maturity criteria. The mappings are displayed in Table
+1.Thesearticleshavebeenchosenbecauseeithertheyhave
+been widely cited, or they provide a particular perspective
+on BITA.
+Table 1 Comparative analysis between representative EA studies and BITA maturity criteria
+Luftman’s six alignment maturity criteria
+Source
+Communications
+Competence/value
+measurements
+IT governance Partnership
+Scope &
+architecture
+Skills
+Buchanan and Soley (2002) [30] ◦ – – ◦ • ◦
+Zarvic and Wieringa (2006) [14] • – – – ◦ –
+Wegmann, et al. (2005, 2007) [19,20] ◦ • – • ◦ –
+Plazaola, et al. (2007) [22] ◦ ◦ ◦ ◦ ◦ ◦
+Chen (2008) [31] ◦ • – – • ◦
+Wang, et al. (2008) [25] ◦ ◦ ◦ – ◦ –
+Saat, et al. (2010) [21] ◦ • ◦ ◦ ◦ ◦
+Fritscher and Pigneur (2011) [32] ◦ ◦ – ◦ • ◦
+Iacob, et al. (2012) [29] ◦ • • ◦ • ◦
+Hiukelmann and Pasquini (2014) [33] • – – ◦ • ◦
+Hinkelmann, et al. (2016) [15] • ◦ – ◦ • –
+Malta and Sousa (2016) [26] ◦ ◦ ◦ ◦ ◦ –
+Öri (2014, 2017) [27,28] ◦ ◦ ◦ ◦ • ◦
+As shown in Table 1, ◦ means the criterion is not in-
+cluded in a detailed form, • means the criterion is included
+in a detailed form, and – means the criterion is not in-
+cluded in the research. According to Table 1, all the crite-
+ria have been studied in the studies, while IT governance
+has acquired the least analysis. The six studies that involve
+IT governance are discussed as follows. Plazaola et al. ex-
+plored how and where to collect EA data and measured
+BITA with the abovesix criteria [22].Wang et al. proposed
+an open group architecture framework (TOGAF) develop-
+ment process which included EA design and governance
+implementation [25]. Saat et al. presented a meta-model
+method (a high-level abstraction of architecture contents)
+by considering tangible qualities of IT systems, business,
+and IT governance [21]. Malta and Sousa discussed that
+BITA should be achieved and maintained in an efficient
+and sustainable way [26]. Öri deemed IT governance as a
+part of BITA measurement and mapped it to the EA meta-
+model [27,28]. The above five studies examined IT go-
+vernance from a descriptive perspective. Addtionally, Ia-
+cob et al. extended the Archimate meta-model to repre-
+sent strategy and value related concepts, and introduced a
+binary integer programming model to minimize systems
+maintenance and implementation costs for new connec-
+tions among the systems [29]. This article executes a be-
+neficial attempt on resource allocation. Insufficiently, all
+the above authors did not provide a detailed process of
+how to apply resource allocation to the EA design process,
+which can facilitate developing a deeper understanding of
+BITA achievement with EA and making their combination
+more practical.
+IT resource allocation is always a key component of
+IT governance. Luftman argued that IT governance con-
+tained strategic planning, budgetary control, IT resource
+allocation, and so on [7]. He also pointed out that the
+IT resource allocation was among the most important en-
+ablers/inhibitors of alignment [7]. We mainly discuss IT
+resource allocation to bridge EA development with BITA
+achievement. And a PDA method, which has been widely
+used to resource allocation issues of government, medical,
+and military fields, is introduced here.
+2.2 PDA
+The resource allocation problem is ubiquitous in organiza-
+tions. It mainly represents the contradiction between abun-
+dant projects and limited investments. Scholars have pro-
+posed different resource allocation methods in the studies,
+such as the financial resource optimization [34,35],project
+selection [35,36], innovation portfolio management [37],
+and PDA [35,38].
+Among these methods, PDA refers to a body of theo-
+ry, methods, and practices which seeks to help decision-
+makers make multiple informed selections from a discrete
+set of alternatives through mathematical modeling that ac-
+counts for relevant constraints, preferences, and uncertain-
+ties [35]. With regard to the research on PDA, the Sys-
+tems Analysis Laboratory at Aalto University has con-
+ductedconsiderablestudies.Salo and his colleaguesissued
+a book to explain PDA’s definition, source, quality frame-
+work, and relevant techniques [35]. To meet incomplete
+information, Liesiö et al. proposed a robust portfolio mo-
+deling [38] and a scenario-based portfolio selection [39].
+In order to validate the PDA’s feasibility, Salo and Liesiö
+applied PDA in a Scandinavian research program [40]
+and a telecommunication company [41]. Kangaspunta et
+
+--- PAGE 3 ---
+ZHANG Mengmeng et al.: Resource allocation approach to associate business-IT alignment to enterprise architecture design 345
+al. discussed the weapon system portfolio through a cost-
+efficient analysis [42]. Overall, the maturity and practica-
+bility of PDA increase along with the growing attention on
+this topic.
+Comparing the features of PDA with our initiatives, we
+argue that business requirements can be regarded as de-
+cision goals and IT contents can be discrete alternatives.
+Considering the constraints, budgets and costs among
+them, PDA can be suitably used to select IT portfolios to
+meet business requirements in a cost-efficient way.
+3. Method description
+Various alignment patterns exist in EA layers or among
+different EA layers. In this section, we first introduce an
+alignment pattern which displays the fit between business
+functions and applications, then we apply PDA to this
+alignment and propose an integrated framework with EA
+design process.
+3.1 Question presentation
+To describe a complex organization, EA is used to include
+multiple layers, and not limited to the business architec-
+ture layer (e.g., capabilities, business processes, business
+functions), the information system architecture layer (e.g.,
+applications, application services, data structures), and the
+technology architecture layer (e.g., software, hardware,
+networks) [13,23]. Achieving alignments relating to these
+layers results in different EA design methods. Fig. 1 il-
+lustrates the development process of TOGAF [43], which
+includesthe EA design stage, the transitionplanningstage,
+and the governance implementation stage. The EA design
+stage includes the development of business architecture,
+information system architecture and technology architec-
+ture.
+Fig. 1 TOGAF development process
+Variousalignmentpatternsexist inthis stage,suchas the
+alignments between business processes and applications,
+business functions and applications, business services and
+application functions, and so on [44].
+Without loss of generality, we mainly analyze the align-
+ment between business functions and applications. This
+kind of alignment can reflect the correlation and depen-
+dency between business architecture and information sys-
+tem architecture (hollow arrow in Fig. 1). Generally, a
+business functionis a descriptionof workthatis performed
+to accomplish business units’ responsibilities. An applica-
+tion is a building block to provide abilities for fulfilling
+business actions. From the perspective of IT resource al-
+location, this alignment issue seeks to select application
+portfolios with limited resources in the searching for busi-
+ness functions.
+Practically, the applications in information system ar-
+chitecture are often redundant and complex because of the
+legacy ones [45]. To align business functions and applica-
+tions from the perspective of resource allocation, the fol-
+lowing questions should be discussed: (i) How can we
+gather complete business functions and applications in the
+EA design process? (ii) How can we integrate an align-
+ment model between business functions and applications?
+(iii) How can we obtain the cost-efficient application port-
+folios to support business functions? Under this situation,
+business functions can act as decision goals, and applica-
+tionsasdiscretealternatives.Therefore,aquantitativePDA
+approach should be applied in the EA design process.
+3.2 Integrated analysis framework
+Drawing on our explanation above, an integrated analysis
+framework is developed to specify the following aspects:
+drivers and benefits of combining EA design with PDA;
+the specific EA design process with PDA.
+This research is driven predominantly by the lack of re-
+source allocation oriented BITA research with EA, which
+lacks IT governance in the process of BITA achievement.
+Another driver roots in the incapability of designing an ef-
+fectiveEA. ThoughEA is well admittedowninga hugesu-
+periority in organizations, it is likely to allocate resources
+and align different viewpoints through subjective decision
+making [46]. The complexities of the business environ-
+ment and application landscape are also drivers of this
+paper [47]. Dynamic businesses and applications make
+nodes and their relationships turbulent. Additionally, var-
+ious legacy applications that have been migrated and new
+applications that need to invest also compound the com-
+plexity.
+Asaresult, theabovequestionscanbemitigatedthrough
+combiningPDA with EA design.PDA helpsstrengthenthe
+
+--- PAGE 4 ---
+346 Journal of Systems Engineering and Electronics Vol. 30, No. 2, April 2019
+dependency of EA layers, and reorganize their relation-
+ships with a reasonable decision method. Consequently, a
+robust and effective BITA with EA can be built in this pro-
+cess.
+A specific analysis frameworkis developedbased on the
+EA design process. The framework seeks to address the
+abovequestionsthroughseveralsteps (businessmodelsde-
+sign, business functions extraction, candidate applications
+extraction,datacollection,PDA,decisionmaking,andsys-
+tem models design). The analysis process is not a one-
+time effort, which forms a continuous cycle with the dy-
+namic external environments. Fig. 2 describes the drivers
+and benefits of the framework,and explainseach step from
+focus, methods and deliverables.
+Fig. 2 An integrated analysis framework
+(i) Business models design
+According to strategic requirements of organizations,
+this step aims to design business models from business ar-
+chitecture. Business models vary with different EA frame-
+works. Among them, TOGAF mainly includes business
+functions, business process, business services, and busi-
+ness roles [43].
+Theabovebusinesscontentscanbemodeledbydifferent
+modeling techniques, such as use case diagrams, block de-
+finition diagrams, state diagrams, time sequence diagrams,
+and so on. These techniques output detailed business mo-
+dels and their XML data. Business models are built to
+gather complete business functions.
+(ii) Business functions extraction
+This step aims to elicit business functions based on
+above business models. Business functions can be repre-
+sented by their names, enabled business activities and cor-
+relations. Extant EA frameworks (e.g., TOGAF, depart-
+ment of defense architecture framework (DoDAF)) use
+matrix or tables to map business functions with other busi-
+ness contents. Analysis methods, such as the balanced
+scorecard method, can be used to assess the importance of
+varied business functions. The outcomes of this phase are
+complete business functions and the corresponding XML
+data.
+(iii) Candidate applications extraction
+The applications should be gathered to support business
+functions. Two categories of applications need to be listed:
+i) legacy applications, refer to the applications extracted
+from prior projects [45], which may be updated to support
+the abovefunctions; ii) new applications,referto newlyin-
+troduced applications, which are invested by IT sectors or
+outsourcing. These two kinds of applications may support
+thesame business functions.In addition,theseapplications
+should include features such as application name and ap-
+plication owner, and also involve operationalperformance,
+enabled business functions, and costs.
+Therefore, this step exhibits three sub-steps: gather
+legacy applications that may support the business func-
+tions; consider new applications that organizations could
+introduce; determine the features of these applications.
+Threemethodscanbeadoptedtocollecttheabovecontents
+(automatic, manual, and semi-automatic). Automatic col-
+lection refers to the automation of reading source codes or
+databases. Manual collection obtains data directly by sur-
+veys and questionnaires. Semi-automatic collection inte-
+grates the abovetwo methodsandconsiders potentialcom-
+putational techniques.
+(iv) Data collection
+With complete business functions and applications, the
+
+--- PAGE 5 ---
+ZHANG Mengmeng et al.: Resource allocation approach to associate business-IT alignment to enterprise architecture design 347
+relevant data should be collected next. The data is dis-
+played as follows: legacy applications LA, new applica-
+tions NA, legacy applications’ updating costs c(LA), new
+applications’ creating costs c(NA), the values of legacy
+applications or new applications V (x), weights of busi-
+nessfunctionsω,budgetconstraintscost,andsynergycon-
+straints of different applications syn(x,y) which indicates
+a cost discount when selecting synchronously.
+Similarly, the data can also be collected by the above
+three methods (automatic data collection, semi-automatic
+data collection,and manualdata collection).The outcomes
+of this phase are the input of PDA.
+(v) PDA
+In general, several strategies can be involved to search
+for feasible application portfolios [48]: the “creating” ac-
+tion invests on new applications; the “updating” strategy is
+used to strengthen legacy applications; the “disposal” ac-
+tion refers to discard non-selecting applications. The PDA
+method helps determine the strategies an application may
+receive. The formula is presented as follows:
+⎧
+⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎨
+⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎪ ⎩
+max
+n 
+i=1
+ωiVi(x)
+e.g.
+m 
+j=1
+c(LAj)xj+
+h 
+k=1
+c(NAk)xk−
+m+h 
+p=1,q=1,p=q
+syn(Ap,Aq) ⩽ cost, xj,xk = 1, 0
+xLAp + xNAq ⩽ 1, ∃LAp, NAq meet Fi,
+p = {1,...,m}, q = {1,...,h}, i = {1,...,n}
+Vi(x) > 0, i = {1,...,n}
+.
+(1)
+Here, m is the number of LA; h is the number of NA;
+F represents functions; n is the number of F; xi means
+whether the ith application is selected or not; meet repre-
+sents that the applications can support the corresponding
+functions.
+Based on the ample PDA research, we can choose suit-
+able algorithms to solve the above equation. According to
+the collected data, the varied PDA algorithms are capa-
+ble to deal with uncertain information (e.g., values, costs,
+weights) [38,39] and make continuous feedback (e.g., ro-
+bust analysis) [38]. We introduce a PDA algorithm pro-
+posed by Kangaspunta [42]. This algorithm mainly consi-
+ders the incomplete data of weights, and has been ap-
+plied to the weapon systems portfolio [42]. Multiple cost-
+efficient application portfolios are calculated due to the in-
+complete data.
+(vi) Decision making
+Further decisions need to be determinedto compress the
+cost-efficient portfolios. There are mainly two approaches
+to acquire the optimal application portfolio. On the one
+hand, more exact data should be collected in the fourth
+step and a robust portfolio analysis [38] can be conducted
+to simplify the portfolios continuously. On the other hand,
+decisionrules,suchasthemaximumruleandtheminimum
+regret rule, can be adopted with regards to the overall cost,
+overall value, or the cost index of different applications.
+(vii) System models design
+Based on the optimal application portfolio, this step
+aims to design relevant contents in the information system
+architecture.These contents include applicationstructures,
+application scenario, and application states. Generally, the
+above contents are modeled by different methods, such
+as class diagrams, state diagrams, and time sequence dia-
+grams. The deliverables are system models and their XML
+files.
+Overall, the consideration of IT resource allocation is
+deployed in the EA design process in this section. Their
+combination helps achieve a better alignment of business
+functions and applications. The method can be applied to
+various EA frameworks or other alignment patterns in EA.
+4. An illustrative case study
+This section aims to illustrate the above framework based
+on a common case of Switcher SA [32]. Switcher SA is a
+small private company engaged in the manufacturing and
+distribution of garments, from resource production to dis-
+tribution of its products. Fritscher and Pigneur have deve-
+loped business models of Switcher SA and built the align-
+ment between business models and EA with an Archimate
+language [32]. Drawing on their study, the complete busi-
+ness contentsandapplicationsare displayedin this section.
+Steps 1–3 According to the research of Fritscher
+and Pigneur [32], the business models of Switcher SA
+have been developed from the financial perspective, the
+customer perspective, and the process perspective. Three
+business functions are extracted to support organizational
+strategies: operations management, customer manage-
+ment, and innovation. Additionally, three kinds of applica-
+tionsare gatheredtosupportbusinesses, whichare transac-
+tional applications, informational applications and strate-
+gic applications. Each of them includes specific applica-
+tions. According to the linkages between business pro-
+cesses and applications [32], mappings between business
+functions and the candidate applications are displayed as
+X in Table 2. Obviously,the cost-efficientapplicationport-
+folio (A1 − A13) needs to be identified in the search of
+satisfying business functions (F1 − F3).
+
+--- PAGE 6 ---
+348 Journal of Systems Engineering and Electronics Vol. 30, No. 2, April 2019
+Table 2 Mappings between business functions and applications in Switcher SA
+Application F1: Operations management F2: Customer management F3: Innovation
+A1: Kookaburra × × –
+A2: System applications and products (SAP) × – –
+A3: Online store × × –
+A4: Collection catalogs × – –
+A5: Dashboard metrics data × – –
+A6: Optimiso × – –
+A7: Switcher color system × – –
+A8: Respect inside conformity website × – –
+A9: Business to business (B2B) platform – × –
+A10: Switcher friends – × –
+A11: Web presence – × –
+A12: Respect-code.org – × ×
+A13: Respect inside community website – – ×
+According to [32], the legacy applications are assumed
+to contain A1, A2, A4, A5, A9, A10, and new applications
+are assumed to include A3, A6, A7, A8, A11, A12, A13.
+Step 4 This step collects relevant data in Fig. 2. Most
+of the data are assumed here. In order to obtain reasonable
+analysis results, the assumed data are required to meet the
+following rules:
+(i) Applications with a higher supporting value for busi-
+ness functions may have a higher cost to update or create.
+(ii) The applications which can support multiple func-
+tions may own a higher cost to update or create.
+(iii) Values of legacy applications may be lower than
+those of new applications, so as to the cost.
+Based on the above three assumptions, we assume that
+the legacy applications’ updating costs are 800, and values
+are 0.7; the new applications’ creating costs are 1 000, and
+values are 0.8. The unit is in dollars.
+(iv) Synergy relationships of applications may exist,
+which indicate a discount of cost when selecting both of
+them. The synergy relationships and their cost discounts
+are assumed in Table 3.
+Table 3 Cost discounts in synergy applications
+A1,A3 A5,A6 A7,A8 A1,A9 A3,A11
+Discount –100 –100 –200 –100 –100
+Therefore, the overall cost of an application’s portfolio
+is calculated by (2) (x = 0,1). The budget cost is assumed
+as 8 000.
+C(x) = 800xA1 + 800xA2 + ··· + 1 000xA13−
+100xA1xA3 − ··· − 100xA3xA11 ⩽ cost (2)
+(v) In light of [32], there must be at least one applica-
+tion in each kind of applications to support corresponding
+functions. For example, A1,A2,A3 are transactional ap-
+plications to support F1, and therefore at least one of them
+must be selected in the final application portfolio. These
+constraints are represented as the following formulas:
+xA1 + xA2 + xA3 > 0, xA4 + xA5 + xA6 > 0
+xA7 + xA8 > 0, xA1 + xA3 + xA9 > 0,
+xA3 + xA10 + xA11 > 0, xA12 > 0, xA13 > 0.
+(vi) The weights of business functions also need to be
+determined. Because point weights are difficult to be col-
+lected, the comparison relationships of the functions are
+assumed in (3). This is supported by the PDA algorithm
+with an extreme points method [42].
+ω2 ⩾ ω1 ⩾ ω3 (3)
+Step 5 With the abovedata andthe PDA algorithmpro-
+videdbyKangaspunta,28cost-efficientapplicationportfo-
+lios have been acquired. These portfolios own a lower cost
+and higher overall value, holding approximately 4.4% of
+all the 640 feasible portfolios. The 28 portfolios are dis-
+played in Table 4, and are used for further decision mak-
+ing.
+Steps 6–7 Strategies should be adopted to get the final
+applicationportfoliofromtheabove28 portfolios.Interms
+of the maximum rule, P26, P27, or P28 can be selected, so
+isthecase intheminimum-regretrule.Thecoreindex[38],
+which exhibits the frequency of applications in the portfo-
+lios, can be considered as a direct effect on the value of an
+application. Fig. 3 shows the core index of the 13 appli-
+cations. It is observed that A1,A2,A12,A13 are the most
+prominentwhileA6 receivestheleastemphasis.Therefore,
+A1,A2,A12,A13 are more likely to be selected in the final
+portfolio.Once the final portfoliohas been determined,the
+other system models can be developed to help implement
+the development of EA. These, however, will not be intro-
+duced here.
+
+--- PAGE 7 ---
+ZHANG Mengmeng et al.: Resource allocation approach to associate business-IT alignment to enterprise architecture design 349
+Table 4 Twenty-eight cost-efficient application portfolios
+Portfolio Applications Portfolio Applications
+P1 A1,A2,A4,A7,A9,A11,A12,A13 P15 A1,A2,A6,A7,A8,A11,A12,A13
+P2 A1,A2,A4,A8,A9,A11,A12,A13 P16 A1,A2,A6,A7,A10,A11,A12,A13
+P3 A1,A2,A5,A7,A9,A11,A12,A13 P17 A1,A2,A6,A8,A10,A11,A12,A13
+P4 A1,A2,A5,A8,A9,A11,A12,A13 P18 A1,A2,A5,A7,A8,A9,A10,A12,A13
+P5 A1,A2,A6,A7,A9,A10,A12,A13 P19 A1,A2,A3,A4,A7,A9,A10,A12,A13
+P6 A1,A2,A6,A8,A9,A10,A12,A13 P20 A1,A2,A3,A4,A8,A9,A10,A12,A13
+P7 A1,A2,A3,A4,A7,A11,A12,A13 P21 A1,A2,A3,A5,A7,A9,A10,A12,A13
+P8 A1,A2,A3,A4,A8,A11,A12,A13 P22 A1,A2,A3,A5,A8,A9,A10,A12,A13
+P9 A1,A2,A3,A5,A7,A11,A12,A13 P23 A1,A2,A5,A6,A8,A9,A10,A12,A13
+P10 A1,A2,A3,A5,A8,A11,A12,A13 P24 A1,A2,A4,A5,A7,A9,A11,A12,A13
+P11 A1,A2,A5,A7,A8,A11,A12,A13 P25 A1,A2,A4,A5,A8,A9,A11,A12,A13
+P12 A1,A2,A6,A8,A9,A11,A12,A13 P26 A1,A2,A4,A7,A9,A10,A11,A12,A13
+P13 A1,A2,A3,A6,A7,A11,A12,A13 P27 A1,A2,A4,A8,A9,A10,A11,A12,A13
+P14 A1,A2,A3,A6,A8,A11,A12,A13 P28 A1,A2,A5,A8,A9,A10,A11,A12,A13
+Fig. 3 Core indices of applications
+Therefore, the proposed framework has been illustrated
+with the Switcher SA case in this section. An alignment
+of business functionsand applicationsis achieved fromthe
+resource allocation perspective within the EA design pro-
+cess.
+5. Conclusions
+Given the insufficiency of extant EA studies in BITA, this
+paper elucidates the importance of IT governance in the
+design process of EA. From the perspective of IT resource
+allocation, this paper analyzes the alignment of business
+functions and applications, and applies the PDA method to
+the EA development. An illustrative Switcher SA case is
+conducted to explain the method’s effectiveness.
+We expect to contribute to the extant EA studies on im-
+proving IT governance capability. In particular, we com-
+bine the PDA method with the EA design process, and dis-
+cuss how their combination can be executed in companies.
+This study also provides an important practical implica-
+tion. The analysis helps maximize the return value of IT
+investments, and helps firms get a deeper understanding
+on EA development.
+Limitations still exist in this study. Given the high re-
+quirement of data in the model, we have not explained
+where to gather the data from EA artifacts or databases.
+Additionally, a practical case is absent in our research.
+However, we believe the approach is a beneficial attempt
+to combine IT governance with EA design. The next step
+of our research will detailedly explain the data collection
+process, and examine a practical case study. Furthermore,
+the dynamic alignment will be considered under the tur-
+bulent business and IT environments. An extended dy-
+namic resource allocation method will be discussed. Be-
+sides, the varied potential changes, and their governance
+mechanisms, will be taken into consideration.
+References
+[1] PARKER M M, BENSON R J, TRAINOR H E. Information
+economics: linking business performance to information tech-
+nology. New Jersey: Prentice-Hall, 1988.
+[2] BRANCHEAU J C, WETHERBE J C. Keyissues in informa-
+tion systems management. MIS Quarterly, 1987, 11(1): 23–
+45.
+[3] DIXON P J, JOHN D A. Technology issues facing corporate
+management in the 1990s. MIS Quarterly, 1989, 13(3): 247–
+255.
+[4] NIEDERMANF, BRANCHEAUJC, WETHERBEJ C.Infor-
+mation systems management issues for the 1990s. MIS Quar-
+terly, 1991, 15(4): 475–500.
+[5] HENDERSON J C, VENKATRAMAN N, OLDACH S.
+Aligning business and IT strategies. LUFTMAN J N ed. Com-
+peting in the information age, strategic alignment in practice.
+New York: Oxford University Press, 1996: 21–42.
+[6] AVISON D, JONES J, POWELL P, et al. Using and validating
+the strategic alignment model. The Journal of Strategic Infor-
+mation Systems, 2004, 13(3): 223–246.
+[7] LUFTMAN J. Assessing business-IT allignment maturity.
+VAN GREMBERGEN W ed. Strategies for information tech-
+nology governance. California: Idea Group Publishing, 2004:
+99–128.
+[8] LUFTMAN J, KEMPAIAH R. An update on business-IT
+alignment: “a line” has been drawn. MIS Quarterly Executive,
+2007, 6(3): 165–177.
+[9] TRIENEKENS J J M, KUSTERS R J, CUENCA L. Measur-
+
+--- PAGE 8 ---
+350 Journal of Systems Engineering and Electronics Vol. 30, No. 2, April 2019
+ing business-IT alignment, framework development and case
+study results. Information System Development, 2014: 1–16.
+[10] WAGNER H T. Evolvement of business-IT alignment over
+time: a situated change perspective. Proc. of the 47th Hawaii
+International Conference on System Sciences, 2014: 4366–
+4375.
+[11] OHLSSON J, HAN S, HULTIN M, et al. How to achieve sus-
+tainable business it alignment-designing a circular organiza-
+tional structure at SAAB. Proc. of the 49th Hawaii Interna-
+tional Conference on System Sciences, 2016: 5116–5125.
+[12] AMARILLI F, VLIET M, HOOFF B. An explanatory study
+on the co-evolutionary mechanisms of business IT alignment.
+Proc. of the 38th International Conference on Information,
+Systems, 2017: 1–21.
+[13] PEREIRA C M, SOUSA P. Enterprise architecture: business
+and IT alignment. Proc. of the 2005 ACM Symposium on Ap-
+plied Computing, 2005: 1344–1345.
+[14] ZARVIĆ N, WIERINGA R. An integrated enterprise architec-
+ture framework for business-IT alignment. https://core.acuk/
+download/pdf/11470029.pdf.
+[15] HINKELMANN K, GERBER A, KARAGIANNIS D, et al.
+A new paradigm for the continuous alignment of business and
+IT: combining enterprise architecture modelling and enterprise
+ontology. Computers in Industry, 2016, 79: 77–86.
+[16] LUFTMANJ, BEN-ZVI T, DWIVEDI R, et al. IT governance:
+an alignment maturity perspective. International Journal of
+IT/Business Alignment and Governance, 2010, 1(2): 13–25.
+[17] LUFTMAN J, LYYTINEN K, BEN ZVI T. Enhancing the
+measurement of information technology (IT) business align-
+ment and its influence on company performance. Journal of
+Information Technology, 2017, 32(1): 26–46.
+[18] GEROW J E, GROVER V, THATCHER J B, et al. Looking
+toward the future of IT-business strategic alignment through
+the past: a meta-analysis. MIS Quarterly, 2014, 38(4): 1059–
+1085.
+[19] WEGMANN A, BALABKO P, LÊ L S, et al. A method
+and tool for business-IT alignment in enterprise architecture.
+CAiSE Short Paper Proceedings, 2005: 113–118.
+[20] WEGMANN A, REGEV G, RYCHKOVA I, et al. Business
+and IT alignment with SEAM for enterprise architecture. Proc.
+of the 11th Enterprise Distributed Object Computing Confer-
+ence, 2007: 111–121.
+[21] SAAT J, FRANKE U, LAGERSTROM R, et al. Enterprise ar-
+chitecture meta models for IT/business alignment situations.
+Proc. of the 14th Enterprise Distributed Object Computing
+Conference, 2010: 14–23.
+[22] PLAZAOLA L, FLORES J, SILVA E, et al. An approach to
+associate strategic business-IT alignment assessment to enter-
+prise architecture. Proc. of the 5th Conference on Systems En-
+gineering, 2007: 121–130.
+[23] SOUSA P, PEREIRA C, MARQUES J. Enterprise architec-
+ture alignment heuristics. Microsoft Architects Journal, 2004,
+4: 34–39.
+[24] HENDERSON J C, VENKATRAMAN H. Strategic align-
+ment: leveraging information technology for transforming or-
+ganizations. IBM Systems Journal, 1993, 32(1): 472–484.
+[25] WANG X Y, ZHOU X W, JIANG L B. A method of business
+and IT alignment based on enterprise architecture. Proc. of the
+IEEE International Conference on Service Operations and Lo-
+gistics, and Informatics, 2008: 740–745.
+[26] MALTA P, SOUSA R D. Process oriented approaches in en-
+terprise architecture for business-IT alignment. Procedia Com-
+puter Science, 2016, 100: 888–893.
+[27] ŐRI D. Misalignment symptom analysis based on enterprise
+architecture model assessment. IADIS International Journal on
+Computer Science & Information Systems, 2014, 9(2): 1–15.
+[28] ŐRI D. On exposing strategic and structural mismatches be-
+tween business and information systems: misalignment symp-
+tom detection based on enterprise architecture model analysis.
+Budapest, Hungary: Budapesti Corvinus Egyetem, 2017.
+[29] IACOB M E, QUARTEL D, JONKERS H. Capturing business
+strategy and value in enterprise architecture to support portfo-
+lio valuation. Proc. of the 16th Enterprise Distributed Object
+Computing Conference, 2012: 11–20.
+[30] BUCHANAN R D, SOLEY R M. Aligning enterprise archi-
+tecture and IT investments with corporate goals. http://www.
+bptrends.com/publicationfiles/META%200MG%20WP%201-
+15-03.pdf.
+[31] CHEN H M. Towards service engineering: service orientation
+and business-IT alignment. Proc. of the 41st Hawaii Interna-
+tional Conference on System Sciences, 2008: 114.
+[32] FRITSCHER B, PIGNEUR Y. Business IT alignment from
+business model to enterprise architecture. Proc. of the Inter-
+national Conference on Advanced Information Systems Engi-
+neering, 2011: 4–15.
+[33] HINKELMANN K, PASQUINI A. Supporting business and
+IT alignment by modelingbusiness and IT strategy and itsrela-
+tions toenterprise architecture. Proc. of the Enterprise Systems
+Conference, 2014: 149–154.
+[34] ARTZNER P, DELBAEN F, EBER J M, et al. Coherent mea-
+sures of risk. Mathematical Finance, 1999, 9(3): 203–228.
+[35] SALO A, KEISLER J, MORTON A. An invitation to portfo-
+lio decision analysis. SALO A, KEISLER J, MORTON A ed.
+Portfolio decision analysis: improved methods for resource al-
+location. New York: Springer, 2011: 3–27.
+[36] SHANESA,ULRICHKT.Technological innovation, product
+development, and enterpreneurship in management science.
+Management Science, 2004, 50(2): 133–144.
+[37] KLINGEBIEL R, RAMMER C. Resource allocation strategy
+for innovation portfolio management. Strategic Management
+Journal, 2014, 35(2): 246–268.
+[38] LIESIÖ J, MILD P, SALO A. Preference programming for ro-
+bust portfolio modeling and project selection. European Jour-
+nal of Operational Research, 2007, 181(3): 1488–1505.
+[39] LIESIÖ J, SALO A. Scenario-based portfolio selection of in-
+vestment projects with incomplete probability and utility in-
+formation. European Journal of Operational Research, 2012,
+217(1): 162–172.
+[40] SALO A, LIESIÖ J. A case study in participatory priority set-
+ting for a Scandinavian research program. International Jour-
+nal of Information Technology & Decision Making, 2006,
+5(1): 65–88.
+[41] LINDSTEDT M, LIESIO J, SALO A. Participatory develop-
+ment of a strategic product portfolio in a telecommunication
+company. International Journal of Technology Management,
+2008, 42(3): 250–266.
+[42] KANGASPUNTA J, LIESIÖ J, SALO A. Cost-efficiency ana-
+lysis of weapon system portfolios. European Journal of Oper-
+ational Research, 2012, 223(1): 264–275.
+[43] HAREN V. TOGAF Version 9.1. New York: Van Haren Pub-
+lishing, 2011.
+[44] HAREN V. Archimate 2.0 Specification. Berkshire, UK: The
+Open Group, 2012.
+[45] MITLETON-KELLY E, PAPAEFTHIMIOU M C. Co-
+evolution and an enabling infrastructure: a solution to legacy?
+HENDERSON P ed. Systems engineering for business process
+change, London: Springer, 2000: 164–181.
+[46] NIEMI E, SAMULI P. Using enterprise architecture artefacts
+in an organisation. Enterprise Information Systems, 2017,
+11(3): 313–338.
+
+--- PAGE 9 ---
+ZHANG Mengmeng et al.: Resource allocation approach to associate business-IT alignment to enterprise architecture design 351
+[47] TANRIVERDI H, LIM S Y. How to survive and thrive in com-
+plex, hypercompetitive, and disruptive ecosystems? The roles
+of is-enabled capabilities. Proc. of the 38th International Con-
+ference on Information Systems, 2017: 1–21.
+[48] SIMON D, FISCHBACH K, SCHODER D. Application port-
+folio management–an integrated framework and a software
+tool evaluation approach. Communications of the Association
+for Information Systems, 2010, 26(3): 1–24.
+Biographies
+ZHANG Mengmeng was born in 1990. He is a
+Ph.D. candidate of Science and Technology at In-
+formation Systems Engineering Laboratory of Na-
+tional University of Defense Technology (NUDT)
+in China. He received his B.E. and M.S. degrees in
+management science and engineering from NUDT
+in 2012 and 2015, respectively. In 2016–2018, he
+was a visiting scholar with the Department of De-
+sign & Innovation at the Case Western Reserve University in the United
+States. His research interests are the business-IT alignment and enter-
+prise architecture design and management.
+E-mail: 186703816365@163.com
+CHENHonghui wasborn in1969. Heisa professor
+of management science and engineering, and direc-
+tor of science and technology at Information Sys-
+tems Engineering Laboratory of NUDT in China.
+His major research interests are information systems
+and management, requirement engineering, and en-
+terprise architecture management. He has published
+more than 30 journal and conference papers, and is-
+sued two books.
+E-mail: chh0808@gmail.com
+LIU Junxian was born in 1973. He received his
+M.Sc. degree and Ph.D. degree from NUDT. He is
+a professor in NUDT now. His current research in-
+terests include requirement engineering, military in-
+formation system, and enterprise architecture design
+and analysis.
+E-mail: 18674864900@163.com

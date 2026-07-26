@@ -1,0 +1,1003 @@
+--- PAGE 1 ---
+Journal of Systems Engineering and Electronics
+Vol. 31, No. 1, February 2020, pp.95–108
+An approach to measuring business-IT alignment
+maturity via DoDAF2.0
+ZHANG Mengmeng1,*
+, CHEN Honghui1
+, MAO Yi2
+, and LUO Aimin1
+1. Science and Technology on Information Systems Engineering Laboratory, National University of Defense Technology,
+Changsha 410072, China; 2. State Key Laboratory of Air Traffic Management System and Technology, Nanjing 210014, China
+Abstract: Measuring the business-IT alignment (BITA) of an or-
+ganization determines its alignment level, provides directions for
+further improvements, and consequently promotes the organiza-
+tional performances. Due to the capabilities of enterprise archi-
+tecture (EA) in interrelating different business/IT viewpoints and
+elements, the development of EA is superior to support BITA mea-
+surement. Extant BITA measurement literature is sparse when it
+concerns EA. The literature tends to explain how EA viewpoints
+or models correlate with BITA, without discussing where to collect
+and integrate EA data. To address this gap, this paper attempts
+to propose a specific BITA measurement process through asso-
+ciating a BITA maturity model with a famous EA framework: DoD
+Architectural Framework 2.0 (DoDAF2.0). The BITA metrics in the
+maturity model are connected to the meta-models and models
+of DoDAF2.0. An illustrative ArchiSurance case is conducted to
+explain the measurement process. Systematically, this paper ex-
+plores the process of BITA measurement from the viewpoint of EA,
+which helps to collect the measurement data in an organized way
+and analyzes the BITA level in the phase of architecture develop-
+ment.
+Keywords: business-IT alignment (BITA), measurement, en-
+terprise architecture (EA), DoD Architectural Framework 2.0
+(DoDAF2.0), meta-model.
+DOI: 10.21629/JSEE.2020.01.11
+1. Introduction
+The importance of business and IT alignment (BITA) has
+been well known since the 1990s [1–5]. BITA persists
+among the top-ranked concerns of business and IT execu-
+tives in the last several decades [6]. Scholars tend to align
+the business and IT elements bidirectionally and evolve in
+the same direction. It demands a holistic view and sus-
+tainable interrelations between business processes, orga-
+nizational structures, and IT systems, and helps to maxi-
+mize IT investmentsand organizationalperformances.The
+Manuscript received January 18, 2019.
+*Corresponding author.
+This work was supported by the National Natural Science Foundation
+of China (71571189) and the State Key Laboratory of Air Traffic Man-
+agement System and Technology (SKLATM201806).
+measurement of BITA determines the alignment level of
+an organization,and benefits further BITA governanceand
+improvements [7–12]. However, the extant literature is
+inadequate in collecting the measurement data [7,8]. The
+correspondingorganizationcontents, which can be used to
+measure BITA metrics, are not transparent in the litera-
+ture. Scholars are likely to adopt questionnaire surveys or
+experience-basedmethods to analyze BITA metrics, rather
+than starting from organization contents.
+The methodology of enterprise architecture (EA) forms
+a structured and aligned collection of plans for the inte-
+grated representation of the business and IT landscape of
+the organization[13]. EA is a superior approachto address
+BITA issues [14–16]. For example, Hinkelmann mapped
+a strategic alignment model [17] to the Zachman frame-
+work [18], and explained EA’s capability to measure BITA
+[19]. Ori applied multiple misalignment symptoms to the
+opengrouparchitectureframework(TOGAF)meta-model,
+and argued that TOGAF can support the analysis of mis-
+alignment measurement [20]. Due to the identification of
+meta-model and models in EA frameworks, EA develops
+the business and IT contents of an organizationwith a self-
+consistent way. These contents help to provide data for
+BITA measurement.
+Throughourpreviousstudy[21],we haveidentifiedthat
+the EA research on BITA measurement attracts the least
+attention, compared with the other BITA research streams
+combining with EA. We list fourteen representative mea-
+surement studies in Table 1. Within them, we identify that
+some just described the BITA measurementwith EA view-
+points and models [22–25]. They tend to focus on simple
+mapping methods such as matrix or tables [24–27]. The
+majority of the papers collect data from questionnaires or
+experiencesratherthanfromorganizationcontents[27,28],
+which makes the measurement results subjective. Without
+systematic guidance of data collection, the extant research
+is difficult to exhibit a holistic, in-depth BITA measure-
+ment analysis.
+
+--- PAGE 2 ---
+96 Journal of Systems Engineering and Electronics Vol. 31, No. 1, February 2020
+Table 1 Literature analysis on BITA measurement with EA
+Source Description Measurement approach
+Pereira and Branco (2004) [22]
+Presented a set of questions that are relevant to the
+alignment issues with regard to varied enterprise roles.
+Questionnaire survey
+Sousa, et al. (2004) [23] Explained how alignment can be categorized on the basis of basic components. Experience analysis
+Plazaola, et al. (2006,
+2007, 2008) [29–31]
+Displayed a process that associates the artifact of a BITA
+framework to the meta-model of the Zachman framework.
+Meta-model
+Tapia, et al. (2007) [28]
+Developed a value-based BITA maturity model based on
+inter-enterprise collaborations. EA is a key metric in this model.
+Model description
+Questionnaire survey
+Carvalho and Sousa (2008a,
+2008b) [24,25]
+Proposed a misalignment model to understand, classify,
+and manage misalignment through a medical sciences approach.
+Experience analysis
+Kang, et al. (2010) [26]
+Developed a strategy alignment model based on the business
+EA from strategy, enterprise process, and enterprise resource.
+Meta-model
+Elhari and Bounabat (2011) [32]
+Introduced a platform for modeling EA and assessing
+strategic alignment on the basis of internal EA metrics.
+Questionnaire survey
+Wagter, et al. (2011) [27]
+Proposed an instrument to assess enterprise coherence
+from four levels.
+Model description
+Questionnaire survey
+Clark and Barn (2013) [33]
+Introduced an EA simulation language to validate the
+conformance between logical EA and physical EA.
+Meta-model
+Ori (2014) [21]
+Combined misalignment analysis to EA models, with the aim to set up
+an EA-based misalignment assessment method.
+Meta-model
+Vasconcelos, et al. (2015) [34]
+Proposed 16 metrics for assessing information system
+architecture suitability. Alignment assessment is a key metric.
+Model description
+To address this research gap, we attempt to provide an
+association process combining the BITA maturity model
+[35–38] with a specific EA framework, i.e., DoD Archi-
+tectural Framework 2.0 (DoDAF2.0). We will mainly dis-
+cuss the mappings of each BITA metric with DoDAF2.0
+meta-modelandmodels,andthencollecttherequiredmea-
+suredatafromorganizationcontents.Throughthisprocess,
+the BITA measurement is likely to achieve reasonable and
+convincible results. The remainder of this paper is struc-
+turedas follows: Section2 illustrates the background;Sec-
+tion 3 explains the association thought of the BITA model
+with DoDAF2.0; Section 4 describes the detailed associ-
+ation process; Section 5 introduces an illustrative case to
+verify the above process; and Section 6 functions as the
+conclusion of this paper.
+2. Theoretical background
+2.1 BITA measurement
+BITA measurement has been studied since Henderson
+and Venkatraman proposed a strategic alignment model
+in 1993 [17]. Various BITA measurement models have
+sprung up in different forms since then. For example,
+Muñoz and Avila reviewed the extant BITA measurement
+models and methods [39]. McAdam explained the perfor-
+mancemeasurementofBITA throughadynamiccapability
+perspective [40]. Trienekens provided a detailed measure-
+ment frameworkincludingfive main factors [7]. Gerow in-
+tegratedsixtypes ofalignmentandmeasuredthemthrough
+surveys [8]. Hu and Huang introduced a balanced score-
+card model to measure BITA [9].
+Additionally, Luftman has conducted multiple research
+on BITA maturity assessment [35–38]. His maturity
+model has been widely adopted in other BITA research
+[41–43]. Six criteria are proposed in the maturity model.
+Among them, the “communication” criterion refers to the
+exchange of ideas and a clear understanding of strategies
+by different roles. The “competence/value measurements”
+focuses on the value of IT in terms of its contributions to
+the business. The “governance” criterion ensures the busi-
+ness and IT participants formally discuss and review the
+priorities and allocation of IT resources. The “partnership”
+explains the relationships between the business and IT or-
+ganizations. The aspect of “scope and architecture” repre-
+sents the maturity aspects of IT, and the “skills” criterion
+means the human resource considerations in an organiza-
+tion. The above six criteria and their respective metrics are
+displayed in Fig. 1.
+In general, collecting the varied kinds of measurement
+data is difficult when applying the measurement models to
+practices [29]. Experience-based methods are often used
+in the literature, which conduct the inadequate and subjec-
+tiveanalysis.We believethedevelopmentofEAis superior
+to build a reasonable in-depth BITA measurement process,
+due to its advantages of organizing information.
+
+--- PAGE 3 ---
+ZHANG Mengmeng et al.: An approach to measuring business-IT alignment maturity via DoDAF2.0 97
+Fig. 1 BITA maturity framework proposed by Luftman [35–38]
+2.2 EA framework
+EA refers to a “fundamental description of a system, em-
+bodied in its components, their relationships to each other
+and the environment, and the principles governing its de-
+sign and evolution” [44,45]. The EA framework acts as a
+guide to design EA, due to the complexity of an organiza-
+tion. In general, EA frameworks formalize multiple view-
+points and models, which helps to architect abstract from
+thelevelofdetailtobringenterprisedesigntasksintofocus
+and produce documentation of architectural descriptions.
+Varied EA frameworkshave been issued in the world, such
+as Zachman framework [18], TOGAF [45], DoDAF [46],
+and MoDAF [47].
+Without loss of generality, the 2.0 version of DoDAF,
+which exhibits eight viewpoints and quantity different
+models in each viewpoint, is adopted in this paper. Among
+the viewpoints, the capability viewpoint (CV) explains
+the capability requirements of an organization. The opera-
+tional viewpoint (OV) describes business activities and
+processes. The services viewpoint (SvcV) articulates the
+information system (IS) services and their relationships.
+The systems viewpoint (SV) represents the systems and
+their relationships. The standard viewpoint (StdV) refers
+to the policy, standards, guidance, and constraints in the
+organization. The data and information viewpoint (DIV)
+displays the data relationships and structures of architec-
+ture contents. The project viewpoint (PV) articulates the
+various projects and their support for capabilities. The all
+viewpoint (AV) describes the overarchingaspects of archi-
+tecture contexts that relate to all views. Additionally, each
+of the above viewpoints includes descriptive models, e.g.,
+the organizational structure model (OV4) in OV.
+In order to maintain the consistency of the architectural
+contents in different models, the DoDAF2.0 develops an
+overalldatameta-model(DM2).DM2displaystheabstrac-
+tionoftheaboveviewpointsandmodelsasshowninFig.2.
+Fig. 2 includes different data entities (e.g., “Activity”,
+“Project”)andtheirrelationships(e.g.,hollowcomposition
+relationship, triangle correlation relationship). These enti-
+ties and relationships help to ensure the formalization of
+
+--- PAGE 4 ---
+98 Journal of Systems Engineering and Electronics Vol. 31, No. 1, February 2020
+DoDAF models. For example, the organizational structure
+model (OV4) is composed of the data entities including
+“Performer”, “PersonType”, “Role”, and so on. Complete
+DM2 can refer to DoDAF 2.0 [46].
+Fig. 2 Main entities and relationships of DM2
+3. Association thought
+This section aims to explain the association thought be-
+tween BITA measurement and EA framework. We argue
+the data in EA models (Fig. 2) can be gathered to assess
+metrics of the BITA measurement model (Fig. 1). Fig. 3
+schematically depicts this link.
+Fig. 3 The link between EA models and its associated BITA
+In Fig. 3, the entire EA contents are composed of a mul-
+titude of description models (formed by DM2). We can
+explain the association by considering the organizational
+structuremodel (OV4).If a chiefinformationofficer (CIO)
+exists inthe businessstructureandfeaturesanattribute(as-
+sumed as “enable business strategy”), we can suppose that
+business and IT roles have developed a good communica-
+tion relationship. The BITA maturity model is displayed
+in Fig. 3, with 38 leaf metrics which need to be filled by
+maturity values. It is obvious that the value of the metric
+“Understanding of business by IT” (C1) can be explained
+by the above organizational structure model. Conforming
+to the five maturity levels proposed by Luftman [35], we
+can assume that the maturity of C1 is situated in level 4,
+with an “enable business strategy” attribute in the CIO en-
+tity. According to this example, the data in one EA model
+can be directly reflected as the maturity value of one BITA
+metric. Sometimes, one BITA metric may be simultane-
+ously supported by several EA models. Anyway, the link
+between EA models and BITA models is concretely spe-
+cified by the following requirement: the leaf metrics’ ma-
+turity values in the BITA model are obtained by collecting
+
+--- PAGE 5 ---
+ZHANG Mengmeng et al.: An approach to measuring business-IT alignment maturity via DoDAF2.0 99
+and integrating the data in one EA model or several EA
+models.
+In general, the meanings of BITA metrics help to iden-
+tifythe supportingdata entities, whichcanbe tailoredfrom
+architecturalDM2.TheexplorationoftheDM2canfurther
+conclude the EA models and data in the support of BITA
+measurement. To measure the BITA maturity in the sup-
+port of EA contents, we will first explore the relationships
+between DM2 and each BITA metric, and then determine
+the corresponding EA models. Then the maturity level of
+each BITA metric can be acquired with the data of these
+EA models. The association process can be divided into
+the following four steps.
+Step 1 Identify relevant entities and relationships of
+DM2 for each BITA metric, in order to gather correspond-
+ing EA models;
+Step 2 With regard to each BITA metric, determine
+corresponding EA models based on the above entities and
+relationships;
+Step 3 Based on EA contents from the above models,
+introduce suitable measurement methods to assess BITA
+metrics;
+Step 4 Measure the holistic BITA maturity with the
+maturity values of all the leaf metrics.
+Through these four steps, we can build mapping rela-
+tionships between BITA and EA models, which make the
+overall measurement reasonably and systematically. Con-
+cretely, each of the four steps will be discussed in the next
+section.
+4. Association process
+4.1 Identifying correlations between DM2 and BITA
+This step aims to identify the entities and relationships of
+DM2 in the support of each BITA metric. We will first
+explain the meanings of BITA metrics and explore their
+correspondingorganizationcontents (expressedby italics),
+andthenidentifythe entities andrelationshipsin DM2.For
+simplicity, the metrics under the same BITA criterion are
+discussed together.
+(i) Communication
+In the “Communication” criterion, C1 and C2 refer to
+the mutual understandingof business and IT roles. The un-
+derstandingcan be measuredby determiningwhetherbusi-
+ness/IT roles are involved in each other’s organizational
+structures, or in the operational processes. These contents
+can be checked through EA models organized by DM2.
+C3 refers to the educational background of an organiza-
+tion. This metric can be illustrated by the education level
+ofthepersonnel.C4, meaningthe rigidityofprotocols,can
+beansweredbytheconditionsofbusiness/ITprocesses. C5
+demands the knowledge sharing of business and IT roles.
+This metric should be checked by determining the exis-
+tence of the knowledge sharing processes in an organiza-
+tion. Additionally, C6 shows the effectiveness of liaison
+between business and IT, which requires us to examine the
+presence of liaison roles in the organizational structure.
+All of the above contents, including roles, organiza-
+tional structures, processes, can find corresponding ele-
+ments from the DM2. The entities and relationships of
+DM2 are tailored and displayed in Fig. 4. Fig. 4 in-
+cludes different kinds of entities (e.g., “Performer”, “Sys-
+tem”) and their relationships (e.g., “Overlap” relation,
+“Wholepart” relation). The hollow arrow represents the
+composition relationships, and the triangle arrow repre-
+sents the relevance relationship. Fig. 4 is tailored from
+DoDAF DM2. Specifically, the organization structure in-
+cludes “Organization Type”, “Person Type”, and “Indivi-
+dual Performer”. “Person Type” features an education at-
+tribute. The “Activity” entity is performed based on multi-
+ple“Conditions”and“Rules”. Thenthebusiness process is
+composed by “Performers” and business “Activities”, and
+the IT process is composed by “Performers” and IT “Acti-
+vities”. All of the above entities can be combined to sup-
+port the “Communication” metrics.
+Fig. 4 DM2 fragment for “Communication” criterion
+
+--- PAGE 6 ---
+100 Journal of Systems Engineering and Electronics Vol. 31, No. 1, February 2020
+(ii) Competence/value measurement
+The “Competence/value measurement” criterion in-
+cludes seven metrics. To identify their corresponding or-
+ganizationalcontents, we arguethat V1, V2, and V3 repre-
+sent the measures of the business and IT domain. They can
+be explained by varied measure types of an organization.
+V4 refers to the service level agreement, which should be
+supported by the service structures and service measures.
+V5 indicates the standards in the measurement process.
+The IT assessment process of V6 can be implemented by
+executing IT activities for business capabilities. Addition-
+ally, V7representsthecontinuousITmeasurementandim-
+provement. This metric can be exhibited through consum-
+ing and allocating resources, and introducing activities for
+new capabilities.
+The above contents (in italics) can also be identified
+in DM2. Similarly, Fig. 5 is tailored from DM2. It in-
+cludes the data entities and their relationships. For ex-
+ample, the “Performer” is composed by “System”, “Ser-
+vice”, and “Port”, and can perform “Activity”. In Fig. 5,
+“Measures” and “Measure Types” are introduced to sup-
+port varied measure types in V1, V2 and V3. “Service”
+and “Service port”are elements of “Performer”,which can
+represent V4 with “Service Level Measure” and “Service
+Level Agreement”. “Standards” can support V5. Further-
+more, the combination of “Activities” and “Performers”
+helps to implement “Capabilities” with “Resources”, and
+consequently explains V6 and V7.
+Fig. 5 DM2 fragment for “Competence/value measurement” criterion
+(iii) Governance
+In the “Governance” criterion, G1 refers to the business
+strategy planning. This metric can be fulfilled by perform-
+ing business processes in the search of business capabili-
+ties. G2 displays the IT strategy planning, which can be
+supported by implementing IT processes by projects. G3
+demands feasible organizational structures. G4 demands
+reasonable resource allocation for projects. G5 requires
+the IT investment scheme in projects management. G6 re-
+quiresasteeringcommitteeintheorganizationalstructure.
+Furthermore,G7 represents the prioritizationprocess of IT
+governance. This metric should be supported by time se-
+quences of projects.
+The above organization contents can be located in the
+DM2. Fig. 6 determines the possible data entities and the
+relationships. For example, the business “Performer” can
+perform multiple “Activity” to satisfy “capability”, which
+helps to support the business strategy in G1. Specifically,
+the process performing “Activities” for “Capabilities” can
+meet G1, and the process performing “Activities” to exe-
+cute “Projects” can represent as G2. Here, the organiza-
+tional structure is composed by “Organization Type” and
+personnel, which can support G3 and G6. “Data” and “In-
+formation” imply budgets and costs of G4. G5 and G7 are
+realized by “Projects”, “Desire Effect” and “Measures”.
+Thus, the “Governance” metrics can be measured by the
+combination of these entities and their relationships.
+(iv) Partnership
+With regardto the “Partnership”criterion,P1 focuses on
+thebusiness perspectiveofthe ITvalue.Thismetricshould
+bemeasuredbydeterminingwhetherIT roles participatein
+the business organizational structures. Similarly, P2 can
+be supported by IT roles involving in the business plan-
+ning processes. P3 refers to whether business and IT share
+goals when executing projects. P4 represents the levels of
+projects’ management. P5 refers to the trust level between
+business and IT, which can be checked whether there are
+corresponding standards in an organization. P6 demands
+the business sponsor roles in the business domain.
+The above contents including organizational structures
+andprojectscan besituated in theDM2. Fig. 7explainsthe
+correspondingentitiesandrelationships.Itmainlyincludes
+
+--- PAGE 7 ---
+ZHANG Mengmeng et al.: An approach to measuring business-IT alignment maturity via DoDAF2.0 101
+“Performer”, “Activity”, “Project”, and their relationship
+such as “BeforeAfterType” and “OverlapType”. In Fig. 7,
+the organizational structure composed by “Organization
+Type” and “Performer” is used to support P1 and P6. The
+processesof“Performer”,“Activity”, and“Capability”can
+be used to realize P2. The “Project”, “Desire Effect” and
+“Measure” can be used to support P3 and P4. The “Rule”
+helps to measure P5.
+Fig. 6 DM2 fragment for “Governance” criterion
+Fig. 7 DM2 fragment for “Partnership” criterion
+(v) Scope & architecture
+Under this criterion, A1 refers to the various roles re-
+lated to IT architecture. A2 represents the standards in
+IT architecture. A3 refers to the architecture integration
+among different organizations. This metric can be sup-
+ported by IT architecture and its organizational structure.
+Similarly, the features of A4 can also be measured by
+the performances of IT architectures. A5 refers to suitable
+waysofmanagingemergingITbyspecific standards.With
+regards to the above contents, the corresponding DM2 en-
+tities and relationships can be drawn as Fig. 8. Here, orga-
+nizationalstructures, IT architecture,andstandardscanbe
+formed by “Organization Type”, “Performer”, “Activity”,
+“System”, “Standard.”, and so on.
+
+--- PAGE 8 ---
+102 Journal of Systems Engineering and Electronics Vol. 31, No. 1, February 2020
+Fig. 8 DM2 fragment for “Scope & architecture” criterion
+(vi) Skills
+The “Skill” criterion mainly includes the standards and
+culture of an organization.Among them, S1 explains stan-
+dards on innovation and entrepreneurship. S2 represents
+the cultural locus of power, which can be illustrated by the
+typesoforganizationalstructure.S3representstheskillsin
+theprocessofprojectmanagement.S4expressesstandards
+in enterprise change management. S5 expresses standards
+of personnel training. S6 represents the market environ-
+ment. S7 refers to the rules on person hiring and retiring.
+The corresponding DM2 are displayed as Fig. 9, which
+also specify the contents such as “Skill”, “Rule”, and
+so on. Here, “Standards”, “Organizational Structures”,
+“Projects”, and “Skills” can be used to support the above
+metrics. The entities and relationships are displayed in
+Fig. 9.
+Fig. 9 DM2 fragment for “Skills” criterion
+Overall, this step mainly identifies the relevant entities
+and relationships of DM2 in the support of the BITA met-
+rics. The organization contents reflected by the BITA met-
+rics are located in the DM2. The mappings help to develop
+relevant EA models and collect EA data in the next few
+steps.
+4.2 Determining EA models for each BITA metric
+According to the above DM2 fragments, DoDAF2.0 mo-
+dels can be further determined to support the BITA met-
+rics. The mappings are displayed in Table 2.
+In general, one BITA metric can be measured by one
+or several EA models. Taking the “Communication” crite-
+rion for example, C1 is supported by organizational rela-
+tionships chart (OV-4)and operationalactivity model (OV-
+5b). These models can be used to check whether IT roles
+have been involved in business organizational structures
+and business processes. Similarly, C2 is supported by or-
+
+--- PAGE 9 ---
+ZHANG Mengmeng et al.: An approach to measuring business-IT alignment maturity via DoDAF2.0 103
+ganizational relationships chart (OV-4), services resource
+flow description (SvcV-2), and systems resource flow de-
+scription (SV-2). In addition, C3 is supported by the in-
+tegrated dictionary (AV-2) and standards profile (StdV-1).
+These models involve the contents of the personnel educa-
+tion level. C4 is supported by the operational rules model
+(OV-6a), services rules model (SvcV-10a), and systems
+rules model (SV-10a), which include all of the rules in
+EA. Furthermore, C5 is supported by operational activity
+decomposition tree (OV-5a), which can be used to check
+whether knowledge sharing activities exist in the organi-
+zation. The organizational relationships chart (OV-4) can
+check the presence of liaison roles in C6. With the same
+way, the other metrics can be supported by EA models in
+Table 2.
+Table 2 DoDAF models for measuring each BITA metric
+Criterion Metric Supportive EA model Explanation
+C1 OV-4, OV-5b
+Check whether business and IT roles share organization structures,
+and whether IT roles participate in business processes.
+C2 OV-4, SvcV-2, SV-2
+Check whether business and IT roles share organization
+structures, and whether business roles participate in IT processes.
+Communications C3 AV-2, Std-1 Check whether business and IT roles receive education training.
+C4 OV-6a, SvcV-10a, SV-10a Check whether the agreements in business and IT processes are rigid or not.
+C5 OV-5a Check whether there exists knowledge sharing process in a firm.
+C6 OV-4 Check whether there are liaison roles between business and IT.
+Competence &
+value measurements
+V1 SvcV-7, SV-7 Check whether there are measures on IT values.
+V2 CV-2, CV-5 Check whether there are measures on business values.
+V3 SvcV-7, SV-7 Check whether there are measures in IT aspects to achieve business.
+V4 SvcV-1, SvcV-10a Check whether there are agreements in service structure and process.
+V5 Std-1 Check whether there are standards on measure benchmarking.
+V6
+CV-6, OV5b, SvcV-2,
+SvcV-7, SV-2, SV-7
+Determine whether business process and IT
+process have realized relative requirements.
+V7 CV-6, SvcV-5, SV-5a, SV-5b Analyze the weak points of results and provide adjustment demands.
+Governance
+G1 OV-2, OV-5b, CV-1, CV-3, CV-6 Express the business strategy planning.
+G2 SvcV-2, SV-2, PV-1, PV-2, PV-3 Express the IT strategy planning.
+G3 OV-4 Express the relationships among different person types.
+G4 DIV-2, DIV-3 Check whether there is information on budgets and costs.
+G5 CV-2, DIV-3, PV-2, PV-3 Analyze the IT investment in project executing process.
+G6 OV-4 Check whether there exists steering committee in organizational structure.
+G7
+CV-3, OV-6c, SvcV-10c,
+SV-10c, PV-2
+Analyze the time sequence relationships in EA.
+Partnership
+P1 OV-4 Check whether IT participates in business organizational structure.
+P2 OV-4, OV-5b, CV-6, CV-1 Check whether IT participates in business strategy planning.
+P3
+OV-4, PV-1, PV-2, CV3,
+SvcV-7, SV-7
+Check whether business and IT roles share goals
+and risks in projects executing.
+P4 PV-1, PV-2, PV-3 Analyze the project management activities.
+P5 OV-6a, SvcV-10a, SV-10a, Std-1 Check whether there are rules or standards on trust.
+P6 OV-4, CV1
+Check whether there are business sponsors or champions
+in organizational structure.
+Scope & architecture
+A1 SvcV-5, SV-5a, SV-5b Determine the enabling or driving factors in IT.
+A2 Std-1 Check the IT standards.
+A3 SvcV-2, SV-2, OV4 Analyze the architecture integration on functions and structures.
+A4
+SvcV-2, SV2, SvcV-3a, SvcV-3b,
+SV-3, OV-6b, OV-6c
+Analyze the performances of IT architecture, such as transparency,
+agility, and flexibility.
+A5 Std-2 Check whether there are standards on managing new ITs.
+S1 Std-1, OV-6a, SvcV-10a, SV-10a Check whether there are standards and rules on enterprise innovation.
+S2 OV-4 Analyze the organization types for power structure.
+S3 OV-4, PV-1, PV-2 Analyze the management styles in projects executing.
+Skills S4 Std-1, Std-2 Check whether there are standards on changes.
+S5 AV-2, Std-1 Check whether there are standards on personnel training and education.
+S6 AV-1, AV-2, CV-1, OV-1 Check whether there are illustrations on enterprise environments.
+S7 OV-4, Std-1 Check whether there are standards on personnel retiring and hiring.
+
+--- PAGE 10 ---
+104 Journal of Systems Engineering and Electronics Vol. 31, No. 1, February 2020
+The data in EA models can be used to measure BITA
+metrics. For example, the contents in OV4 provide evi-
+dence for C1, C2, and C6. In the next step, we will con-
+sider how to use these data to calculate the alignment level
+of each metric.
+4.3 Measuring BITA metrics with the above models
+With the above EA models, varied measurement tech-
+niques can be introduced to evaluate the alignment level
+of each metric. As the example of Fig. 3, the maturity level
+of C1 is acquired by the automatic data collection from
+OV-4. This is an automatic measurement method. Addi-
+tionally, some BITA metrics cannot be directly measured
+by EA contents. Measurement techniques should be intro-
+duced to integrate the EA contents in different models. We
+explain three measurement techniques in this paper.
+(i) Automatic measurement refers to the capability of
+reading EA data and calculating the maturity level auto-
+matically. According to DoDAF2.0, its architecture data
+is stored as XSD format based on the physical exchange
+specification [46]. The architecture data of some BITA
+metrics can be gathered automatically and convertedto the
+maturity level directly, as the example in Fig. 3.
+(ii) Semi-automatic measurement refers to the calcula-
+tion of some metrics’ maturity levels through integrating
+and processing different EA data. Computational formu-
+las may be necessary for the integration of the EA data.
+For example, with the structural data in DoDAF2.0, a net-
+work connectivity algorithm can be adopted to calculate
+the value of architecture flexibility (A4). Additionally, si-
+mulation methods may also be introduced to operate the
+EA data. For example, the architecture agility (A4) can
+be simulated by experimenting architecture reaction speed
+with different changes.
+(iii) Manual measurement refers to the measurement of
+BITA metrics with manual methods, such as questionnaire
+surveys and experience-based analyses. The manual mea-
+surement exhibits the incapability of EA data in the sup-
+porting of the BITA metrics. For example, the enterprise
+innovation and entrepreneurship metric (S1) cannot be to-
+tally explained by EA standards and rules. A questionnaire
+survey may be needed here.
+Therefore, each BITA metric can be measured by the
+abovetechniques.ThemappingsofBITAmetricsandmea-
+surement techniques are displayed in Table 3, in which
+the automatic measurement holds the most and the manual
+measurement holds the least. Table 3 also verifies EA’s ca-
+pability in the supporting of BITA measurement, because
+quite a lot of metrics can be directly/indirectly measured
+by EA contents.
+Table 3 Measurement techniques for BITA metrics
+Technique Metric
+Automatic measurement
+C1, C2, C3, C5, C6, V1, V2,
+V3, V4, V5, G3, G4, G6, P1,
+P2, P6, A1, A2, S5, S7
+Semi-automatic measurement
+C4, V6, V7, G1, G2, G5, G7,
+P3, P4, A3, A4, A5, S2, S3, S4
+Manual measurement P5, S1, S6
+4.4 Measuring the holistic BITA maturity
+The holistic BITA maturity of any organization can be
+calculated by the maturity values of leaf metrics and the
+weights among layers of Fig. 1. These weights can be ob-
+tained by qualitative analysis, e.g., questionnaire surveys
+[6] or quantitative analysis, e.g., structural equation mo-
+deling [38,48].
+Through the explanation of the above four steps, the
+BITA maturity can be measured with the help of the
+DoDAF2.0 meta-model and models. The next section will
+validate the steps of this section with an illustrative case.
+5. An illustrative case study
+To demonstrate the proposed process, we introduce an
+ArchiSurance case [49] in this paper. This case is often
+used in the EA community.As Iacob argued[49], this case
+takes the advantage of being realistic and of manageable
+size without being overly simplistic. ArchiSurance is a fic-
+titious company that provides the home, travel, and car
+insurances. It focuses on keeping relationships with cus-
+tomers, handling claims and financial issues. Iacob deve-
+loped the ArchiSurance architecture with an Archimate
+language[49].Wewill explaintheBITA measurementpro-
+cess of the ArchiSurance case step by step.
+5.1 Identifying correlations between DM2 and
+BITA metrics
+Forthe sake of simplicity, we will mainlycalculate the ma-
+turityvaluesofarchitectureagilityandflexibility(A4).Ac-
+cordingto Fig. 8, A4 is mainlysupportedby the DM2 enti-
+ties such as “Organization Type”, “Performer”, “System”,
+“Service”, and so on. These entities and their relationships
+can form multiple EA models in Table 2.
+5.2 Determining and developing DoDAF2.0 models
+According to Fig. 8 and Table 2, the corresponding busi-
+ness models, e.g., state transition description (OV-6b),
+event-trace description (OV-6c) and application models,
+e.g., services resource flow description (SvcV-2), systems-
+services matrix (SvcV-3a), services-services matrix
+(SvcV-3b), systems resource flow description (SV-2), and
+systems-systems matrix (SV-3) need to be built to support
+
+--- PAGE 11 ---
+ZHANG Mengmeng et al.: An approach to measuring business-IT alignment maturity via DoDAF2.0 105
+the architecture agility and flexibility. The above OV mod-
+els explore the overall business landscape, and the SvcV
+and SV models compose the physical architecture which
+can support the business strategy.
+We adopt the IBM Rhapsody tool to model the
+ArchiSurance case. The DoDAF2.0 package is embed-
+ded in the IBM Rhapsody. The entities and relationships
+in IBM Rhapsody are inherited from DM2. According to
+DoDAF2.0, OV-6c describes the sequence of actions in a
+scenario. One OV-6c is developed in Fig. 10, which de-
+scribes the time sequence of handling claims. Six opera-
+tional nodes exist in this model. Among them, the “Cus-
+tomer” node produces claims. The “Mailroomdeck” node
+is responsible for receiving and reporting claims, and no-
+tifying results to customers. The “Frontofficedeck” node
+registers claims and produces claim forms. The “Backof-
+ficedeck” node produces the claim decisions. The “Evalu-
+ator” node assesses claims. And the “Financialdeptclerk”
+node pays claims.
+Fig. 10 One OV-6c
+Within each operational node, there is one OV-6b that
+determines the states and transfers in executing business
+processes. The OV-6b of “Mailroomdeck” is exhibited in
+Fig. 11, which includes six states and transfers among
+the states. Operational actions and judging conditions are
+listed in states and transfers, such as the ReceiveResult ac-
+tion and the ClaimFlag judging condition. These actions
+determine the holistic function of the operational node.
+Therefore, the complete business landscape can be built
+with all of the OV-6bs and OV-6cs.
+In addition, the SV and SvcV models can be built based
+on the above OV models. We integrate the main system
+contents in one SV-2 model. The SV-2 model identifies the
+system components, service components, and the actors.
+
+--- PAGE 12 ---
+106 Journal of Systems Engineering and Electronics Vol. 31, No. 1, February 2020
+The SV-2 includes the operational nodes and their corre-
+spondingsystems and services.This modelformsthe over-
+all physical structure.
+Fig. 11 OV-6b of the “Mailroomdeck” node
+5.3 Measuring BITA metrics with the above
+EA models
+As in Section 4.3, this section aims to calculate the ma-
+turity levels of architecture agility and flexibility, with the
+EA data in the above models.
+We argue that the architecture agility refers to the firm’s
+average reaction time after receiving claims from cus-
+tomers. We adopt a simulation method to execute the busi-
+ness processesandtoacquiretheoverallprocessingtimein
+each experiment. Input data should be determined at first.
+In this paper, we assume the probability of false claims
+by a customer is 10%, and that of a true claim is 90%.
+We also assume that the handlingtime of each information
+processing event in Fig. 10 accords with a uniform dis-
+tribution U(5, 20). These events include receiving claims,
+registering claims, deciding claims and notifying cus-
+tomers. Additionally, the handling time of evaluating and
+paying claims are also assumed to accord with a uniform
+distribution U(30, 60). The unit is in minutes.
+All of the OV-6b and OV-6c are simulated with the
+aboverandomdatainthemodels.Theoverallreactiontime
+has been acquired in each simulation. The running time
+is plotted in Fig. 12 after executing 100 experiments. The
+X axis represents the 100 simulation tests and the Y axis
+shows the time consuming of each simulation. In Fig. 12,
+quite a lot of claims have received the payments, while
+several claims are false and rejected. The average reaction
+time of the 100 experiments is 136.07 min. This value can
+be used to measure the maturity level of the ArchiSurance
+firm’s agility.
+Furthermore, the architecture flexibility refers to the ex-
+tent of modifying the application structure. In this paper,
+the graph density can reflect the connectedness of the net-
+work structure. As for the SV-2, the higher the graph den-
+sity is, the higher the architecture flexibility will be. With
+the help of the graph density algorithm, the graph density
+of the SV-2 is 0.115, indicating a rather low level of net-
+work connectedness. This result can also be converted to
+the maturity level of the ArchiSurance firm’s flexibility.
+Fig. 12 Reaction time of 100 simulating results
+5.4 Measuring the holistic BITA maturity
+Through the above illustrations, the maturity levels of ar-
+chitecture agility and flexibility are separately calculated
+by the simulation and network connectedness algorithm,
+which provides better support for the measurement of
+BITA metric. Similarly, the values of other BITA metrics
+can also be acquired by different measurement techniques.
+As in Section 4.4, all of the values can be converged into
+the BITA maturity of the whole organization.
+Overall, the whole measurement process represents our
+thoughtto associate the organizations’BITA level with EA
+development results. The same EA development plan may
+produce different BITA results, which depend on the spe-
+cific measurement techniques adopted. The four steps are
+conducted structurally to make the holistic approach more
+reasonable.
+6. Conclusions
+TomitigatetheinsufficientresearchonBITA measurement
+with EA, this paper links the BITA maturity model with
+DoDAF2.0 meta-model and models. The specific associa-
+tion process is divided into four steps. This paper explains
+each step in detail, and demonstrates the process with an
+archisurance case.
+This paper provides insightful contributions compared
+to the previous literature. Given the inadequateBITA mea-
+surement with EA, this paper proposes a thorough associ-
+ation attempt and illustrates the combination clearly. Fur-
+ther, this paper puts more emphasis on data collection and
+
+--- PAGE 13 ---
+ZHANG Mengmeng et al.: An approach to measuring business-IT alignment maturity via DoDAF2.0 107
+integration from EA models. These contributions help to
+promote the research of combining BITA with EA. How-
+ever,limitationsstill exist.Forexample,thispaperdoesnot
+explain the entities of DM2 and DoDAF models in detail,
+and this paper does not apply the association to a practical
+case. These limitations demand motivations for further re-
+search. To validate the capability of the proposed method,
+we will conduct practical research in the next step.
+References
+[1] PARKER M, BENSON R. Information economics. Engle-
+wood Cliffs, New Jersey: Prentice-Hall, 1988.
+[2] BRANCHEAU J, WETHERBE J. Issues in information sys-
+tems management. MIS Quarterly, 1987, 11(1): 23–45.
+[3] DIXON P J, JOHN D A. Technology issues facing corporate
+management in the 1990s. MIS Quarterly, 1989, 13(3): 247–
+255.
+[4] NIEDERMAN F, BRANCHEAU J, WETHERBE J. Informa-
+tion systems management issues for the 1990s. MIS Quarterly,
+1991, 15(4): 475–495.
+[5] HENDERSON J, VENKATRAMAN N. Aligning business
+and IT strategies. LUFTMAN J N. Competing in the infor-
+mation age: practical applications of the strategic alignment
+model. New York: Oxford University Press, 1996.
+[6] AVISON D, JONES J, POWELL P, et al. Using and validating
+the strategic alignment model. The Journal of Strategic Infor-
+mation Systems, 2004, 13(3): 223–246,
+[7] TRIENEKENS J J, KUSTERS R J, CUENCA L. Measur-
+ing business-IT alignment, framework development and case
+study results. Information System Development, 2014: 1–16.
+[8] GEROW J E, THATCHER J B, GROVER V. Six types of IT-
+business strategic alignment: an investigation of the constructs
+and their measurement. European Journal of Information Sys-
+tems, 2015, 24(5): 465–491.
+[9] HUANG C D, HU Q. Achieving IT-business strategic align-
+ment via enterprise-wide implementation of balanced score-
+cards. Information Systems Management, 2007, 24(2): 173–
+184.
+[10] MAGOULAS T, HADZIC A, SAARIKKO T, et al. Alignment
+in enterprise architecture: a comparative analysis of four archi-
+tectural approaches. Electronic Journal Information Systems
+Evaluation, 2012, 15(1): 88–101.
+[11] SABHERWAL R, CHAN Y E. Alignment between business
+and IS strategies: a study of prospectors, analyzers, and de-
+fenders. Information Systems Research, 2001, 12(1): 11–33.
+[12] WEILL P, ROSS J W. IT governance: how top performers
+manage IT decision rights for superior results. Boston: Har-
+vard Business School Press, 2004.
+[13] Niemann K D. From enterprise architecture to IT governance.
+Wiesbaden: Friedr Vieweg & Sohn Verlag, 2006.
+[14] WEGMANN A, REGEV G, LOISON B. Business and IT
+alignment with SEAM. Proc. of the 1st International Work-
+shop on Requirements Engineering for Business Need, and IT
+Alignment, 2005: 74–84.
+[15] SAAT J, FRANKE U, LAGERSTROM R, et al. Enterprise ar-
+chitecture meta models for IT/business alignment situations.
+Proc. of the 14th IEEE International Enterprise Distributed
+Object Computing Conference, 2010: 14–23.
+[16] MALTA P, SOUSA R D. Process oriented approaches in en-
+terprise architecture for business-IT alignment. Procedia Com-
+puter Science, 2016, 100: 888–893.
+[17] HENDERSON J C, VENKATRAMAN H. Strategic align-
+ment: leveraging information technology for transforming or-
+ganizations. IBM Systems Journal, 1993, 32(1): 472–484.
+[18] ZACHMAN J. The Zachman framework for enterprise archi-
+tecture. CA Magazine, 2003, 128(9): 15–22.
+[19] HINKELMANN K, PASQUINI A A. Supporting business and
+IT alignment by modelingbusiness and IT strategy and itsrela-
+tions toenterprise architecture. Proc. of the Enterprise Systems
+Conference, 2014: 149–154.
+[20] ORI D. Misalignment symptom analysis based on enterprise
+architecture model assessment. https://www.researchgate.net/
+publication/318239729 Misalignment symptom analysis bas-
+ed on enterprise architecture model assessment.
+[21] ZHANG M M, CHEN H H, LUO A M. A systematic review
+of business-IT alignment research with enterprise architecture.
+IEEE Access, 2018, 6: 18933–18944.
+[22] PEREIRA C M, BRANCOE C. Business and information sys-
+tems alignment: understanding the key issues. http://citeseerx.
+ist.psu.edu/viewdoc/download;jsessionid=3506D73C5952B4-
+CD190D99F1F1CA0F9E?doi=10.1.1.129.5080&rep=rep1&-
+type=pdf.
+[23] SOUSA P, PEREIRA C, MARQUES J. Enterprise architec-
+ture alignment heuristics. Microsoft Architects Journal, 2004,
+4: 34–39.
+[24] CARVALHO G, SOUSA P. Using a medical sciences perspec-
+tive to harness business and information systems misalign-
+ment. Proc. of the 16th European Conference on Information
+Systems, 2008: 2496–2507.
+[25] CARVALHO R, SOUSA P. Business and information sys-
+tems MisAlignment model: an holistic model leveraged on
+misalignment and medical sciences approaches. http://ceur-
+ws.org/Vol-336/paper8.pdf.
+[26] KANG D, LEE J, KIM K. Alignment of business enterprise
+architectures using fact-based ontologies. Expert Systems with
+Applications, 2010, 37(4): 3274–3283.
+[27] WAGTER R, PROPER H A, WITTE D. Enterprise coher-
+ence assessment version. Proc. of the Working Conference on
+Practice-Driven Research on Enterprise Transformation, 2011:
+28–52.
+[28] TAPIA R S, DANEVA M, VAN ECK P. Validating adequacy
+and suitability of business-IT alignment criteria in an inter-
+enterprise maturity model 202. Proc. of the 11th IEEE Inter-
+national Enterprise DistributedObject Computing Conference,
+2007: 202–213.
+[29] PLAZAOLA L, SILVA E, VARGAS N, et al. A metamodel
+for strategic business and IT alignment assessment. http://
+www.asdifec.uni.edu.ni/Sitio/NormanVargas/187-Plazaola-A-
+%20METAMODEL%20FOR%20STRATEGIC%20BUSINE-
+SS%20AND%20IT%20ALIGNMENT%20ASSESMENT.pdf.
+[30] PLAZAOLA L, FLORES J, SILVA E, et al. An approach to
+associate strategic business-IT alignment assessment to enter-
+prise architecture. Proc. of the 5th Conference on Systems En-
+gineering, 2007: 1–10.
+[31] PLAZAOLA L, FLORES J, VARGAS N, et al. Strategic busi-
+ness and IT alignment assessment: a case study applying
+an enterprise architecture-based metamodel. Proc. of the 41st
+IEEE Hawaii International Conference on System Sciences,
+2008: 398–398.
+[32] ELHARI K, BOUNABAT B. Platform for assessing strate-
+gic alignment using enterprise architecture: applica-
+tion to e-government process assessment. arXiv preprint
+arXiv:1104.1132. 2011.
+[33] CLARK T, BARN B. A model-based approach to align-
+ing business goals with enterprise architecture. Progressions
+and Innovations in Model-driven Software Engineering, 2013:
+252–253.
+
+--- PAGE 14 ---
+108 Journal of Systems Engineering and Electronics Vol. 31, No. 1, February 2020
+[34] VASCONCELOS A, SOUSA P, TRIBOLET J. Enterprise
+architecture analysis-an information system evaluation ap-
+proach. Enterprise Modelling and Information Systems Archi-
+tectures, 2015, 3(2): 31–53.
+[35] LUFTMAN J. Assessing business-IT alignment maturity.
+Strategies for Information Technology Governance, 2004, 4:
+99.
+[36] LUFTMAN J, KEMPAIAH R. An update on business-IT
+alignment: “a line” has been drawn. MIS Quarterly Executive,
+2007, 6(3): 165–175.
+[37] LUFTMAN J. Handbook on business process management.
+Berlin: Springer, 2015.
+[38] LUFTMAN J, LYYTINEN K, BEN ZVI T. Enhancing the
+measurement of information technology (IT) business align-
+ment and its influence on company performance. Journal of
+Information Technology, 2017, 32(1): 26–46.
+[39] MUÑOZ L, AVILA O. Business and information technology
+alignment measurement —a recent literature review. Proc. of
+the International Conference on Business Information Sys-
+tems, 2018: 112–123.
+[40] MCADAM R, BITITCI U, GALBRAITH B. Technology
+alignment and business strategy: a performance measurement
+and dynamic capability perspective. International Journal of
+Production Research, 2017, 55(23): 7168–7186.
+[41] DE HAES S, VAN GREMBERGEN W. An exploratory study
+into IT governance implementations and its impact on busi-
+ness/IT alignment. Information Systems Management, 2009,
+26(2): 123–137.
+[42] CHEN L. Business-IT alignment maturity of companies in
+China. Information & Management, 2010, 47(1): 9–16.
+[43] ULLAH A, LAI R. A systematic review of business and infor-
+mation technology alignment. ACM Transactions on Manage-
+ment Information Systems, 2013, 4(1): 1–30.
+[44] Architecture Working Group of the Software Engineering
+Committee. Recommended practice for architectural descrip-
+tion of software intensive systems. New York: IEEE Standards
+Department, 2000.
+[45] The Open Group. TOGAF “Enterprise Edition” Version 8.1.
+New York: Publishing V H, 2003.
+[46] DoD Architecture Framework Working Group. DoD Architec-
+ture Framework Version 2.0. Washington D. C.: Department
+of Defense, 2009.
+[47] BIGGS B. Ministry of defence architectural framework
+(MODAF). IET Digital Library, 2005, 62(3): 311–321.
+[48] CHAROENSUK S, WONGSURAWAT W, KHANG D B.
+Business-IT alignment: a practical research approach. The
+Journal of High Technology Management Research, 2014,
+25(2): 132–147.
+[49] IACOB M E, MEERTENS L O, JONKERS H, et al. From en-
+terprise architecture to business models and back. Software &
+Systems Modeling, 2014, 13(3): 1059–1083.
+Biographies
+ZHANG Mengmeng was born in 1990. He re-
+ceived his M.S. degree in management science and
+technology from National University of Defense
+Technology (NUDT), Changsha, China, in 2011. He
+is pursuing his Ph.D. degree in the School of Infor-
+mation System and Management at NUDT. He was
+a visiting student in Case Western Reserve Univer-
+sity. His research interests include information sys-
+tem architecture design, analysis and validation.
+E-mail: 186703816365@163.com
+CHEN Honghui was born in 1969. He received his
+M.S. degree and Ph.D. degree from NUDT. He is a
+professor and the executive vice director of Science
+and Technology on Information Systems Engineer-
+ing Laboratory in NUDT now. His current research
+interests include requirement engineering, military
+information system, enterprise architecture design
+and analysis.
+E-mail: chh0808@gmail.com
+MAO Yi was born in 1985. He received his Ph.D.
+degree inNanjing University of Aeronautics and As-
+tronautics. He is an engineer in State Key Labora-
+tory of Air Traffic Management System and Tech-
+nology, China. His research interests include trans-
+portation planning and management, information
+system architecture.
+E-mail: mao y@nuaa.edu.cn
+LUO Aimin was born in 1971. She received her
+M.S. degree and Ph.D. degree from NUDT. She is
+a professor in NUDT now. Her current research in-
+terests include requirement engineering, military in-
+formation system, enterprise architecture design and
+analysis.
+E-mail: amluo@nudt.edu.cn

@@ -1,0 +1,1412 @@
+--- PAGE 1 ---
+Received 3 November 2025, accepted 5 January 2026, date of publication 13 January 2026, date of current version 21 January 2026.
+Digital Object Identifier 10.1109/ACCESS.2026.3653876
+Developing an Adaptive Enterprise Architecture
+Model Integrating Business Capabilities, Value
+Streams, and IT for Strategic Alignment in
+Complex Organizations
+IVKA IVAS , BORIS MILAŠINOVIĆ, (Member, IEEE), AND KREŠIMIR FERTALJ
+Faculty of Electrical Engineering and Computing, University of Zagreb, 10000 Zagreb, Croatia
+Corresponding author: Ivka Ivas (ivka.ivas@fer.unizg.hr)
+ABSTRACT This study presents the development of an adaptive enterprise architecture (EA) model
+designed to enhance strategic alignment in large, complex organizations. Developed through design science
+research in the finance industry, the model integrates business capability maps (BCMs), value streams, and
+IT applications into a unified business–IT view that evolves through continuous use. The accompanying
+developmentmethodprovidesapragmatic,stepwiseapproachforconstructingandrefiningthemodelinreal
+organizational settings. Building on the proposed model and its development method, the study contributes
+by: 1) demystifying the creation of a practical, value-adding, and detailed BCM; 2) extending the capability-
+centric view of EA with value streams to enable a holistic understanding of enterprise value delivery; and 3)
+integratingbusinessartifactswiththeITsystemsthatrealizethem.Together,thesecontributionsdemonstrate
+how an adaptive EA model can evolve through practical application by continuously delivering value while
+fostering ongoing business–IT alignment and organizational sensemaking in complex environments.
+INDEX TERMS Enterprise architecture, business capability map, value stream, strategic alignment, orga-
+nizational sensemaking, EA models.
+I. INTRODUCTION
+Effective management of complex organizations—large,
+multi-unit enterprises with thousands of employees and fre-
+quent mergers and acquisitions (M&A), characterized by
+substantial organizational, process, and IT complexity—
+requiresaclearunderstandingoftheirstructureanddynamics
+supported by a meaningful model. Such enterprises can be
+viewed as complex adaptive systems (CAS), where outcomes
+emerge from interdependent interactions rather than linear
+cause–effect relations [1]. In this context, reductionist engi-
+neering approaches that attempt to explain the enterprise by
+decomposing it into isolated parts prove inadequate, as they
+neglect the systemic interdependencies that shape its behav-
+ior.Managingsuchcomplexitythereforecallsforanadaptive,
+The associate editor coordinating the review of this manuscript and
+approving it for publication was Alba Amato .
+holistic view grounded in business understanding and orga-
+nizational sensemaking—defined as the process by which
+individuals and groups interpret complex or uncertain situa-
+tions to develop a shared understanding that enables coherent
+action [2]. A well-structured enterprise architecture (EA)
+model is essential for such sensemaking. Yet many organiza-
+tionsstruggletodevelopone,asaccountabilityforitscreation
+is often unclear [3], [4]. Without a unifying model, enter-
+prises risk unrealistic strategies and weak execution—issues
+reflected in survey showing that over half of organizations
+struggle with strategy formulation, and an even greater pro-
+portion with its effective implementation [5].
+This research addresses that gap by developing an EA
+model at the core of the Business Architecture–based Enter-
+prise Architecture framework for Strategic Alignment of the
+Enterprise (BASE), an initial ideation of which was intro-
+duced in [6]. BASE continues the line of work initiated by
+VOLUME 14, 2026
+2026 The Authors. This work is licensed under a Creative Commons Attribution 4.0 License.
+For more information, see https://creativecommons.org/licenses/by/4.0/ 9453
+
+--- PAGE 2 ---
+I. Ivas et al.: Developing an Adaptive EA Model Integrating Business Capabilities, Value Streams, and IT
+Aldea’s Enterprise Strategic Alignment Method (ESAM) and
+explicitly adopts its definition of strategic alignment (SA) as
+the balanced linkage between the formulation and realization
+of business strategy [7]. ESAM advanced the discipline by
+integrating four critical dimensions—strategy, capabilities,
+EA, and portfolio management—into a unified approach
+supporting SA across the full lifecycle from strategy design
+to execution. While comprehensive, ESAM remains broad
+in scope. BASE narrows this focus by extending ESAM
+from the perspective of EA as the structural mechanism that
+supports SA in complex organizational settings. However,
+elaborating the full BASE framework lies beyond the scope
+of this study. This research therefore concentrates on its
+central artifact—an adaptive, value-added EA model that
+integratesbusinessandITperspectivestooperationalizeEA’s
+role in supporting SA. Developed through a Design Science
+approach and validated in a large financial enterprise, the
+model evolves continuously with the organization. The core
+of the model consists of two main business-architecture arti-
+facts: business capability map (BCM) and value streams.
+The centrality of BCM builds on the recent trend toward
+capability-basedEA,whichaimstopositionEAasastrategic
+enabler [8], [9], [10]. To fully support such a role—grounded
+not only in an understanding of what an organization can
+do (through BCM) but also in a holistic understanding
+of end-to-end (E2E) value-delivery process—this research
+extends the capability-based EA trend by incorporating value
+streams and their integration with capabilities. It further
+incorporates IT aspects through a business lens, ensuring
+that IT applications directly reflect business capabilities they
+implement and value streams they support. In doing so,
+it addresses key limitations of current EA research and
+practice—namely, overly conceptual capability models that
+remain insufficiently researched and poorly understood in
+practice, insufficient integration of value streams, and weak
+linkage between these two business artifacts and IT. To move
+beyond these limitations, this research has three objectives:
+1. To demystify the development of a practical, value-
+added, and detailed BCM that goes beyond high-level
+conceptual abstractions and makes the model practi-
+cally applicable for SA;
+2. To extend capability-centric EA by integrating it with
+value streams; and
+3. To explore the combined integration of capabilities,
+value streams, and IT applications.
+The developed EA model should support the hypothe-
+sis of the BASE framework that EA with the proposed
+EA model facilitates SA by supporting (1) more informed
+strategy formulation, grounded in a holistic, capability- and
+value-stream-based situational awareness, and (2) modular
+strategy realization, achieved through a Composable Enter-
+prise approach—business–IT co-design of enterprise-level,
+reusable, capability-based services [11]. Thus, the paper con-
+tributes a practical, adaptive EA model and a method for its
+development. The method includes guidelines for building a
+detailed BCM, mapping value streams, and integrating them
+with IT applications. Together, these elements serve as a
+central part of the BASE framework, facilitating the opera-
+tionalization of ESAM’s concept of SA from the perspective
+of EA as its enabler.
+WhilemuchEAresearchremainsconceptualanddetached
+fromrealorganizationaldynamics[12],[13],[14]),thisstudy
+demonstrates how EA can deliver tangible value in prac-
+tice. Drawing on long-term observation and iterative model
+development within a large enterprise, it provides a rare,
+practice-based view of how architectural thinking evolves in
+complex settings.
+The remainder of this paper reviews related work on
+BCM and value streams, outlines the research methodology
+describingthemodeldevelopmentapproach,andpresentsthe
+resulting development guidance—including business capa-
+bility mapping, value stream mapping, and IT integration—
+and the EA model, illustrating its evolution, application, and
+benefits in practice.
+II. BACKGROUND AND RELATED WORK
+This section provides the theoretical and conceptual foun-
+dation for the research. It first outlines recent trends in
+capability-based EA and then elaborates on BCMs and value
+streams, identifying gaps in existing methods for their devel-
+opment. The section concludes by briefly introducing the
+concepts of EA models and the enterprise knowledge graph,
+which, although not the primary focus of this study, forms an
+essential foundation for supporting model adaptability.
+A. CAPABILITY-BASED EA
+EA has evolved from its early role as an IT planning disci-
+pline into a recognized enabler of SA—not only supporting
+strategy execution [15], but more recently also contribut-
+ing to strategy formulation [9], [16]. The recent trend
+toward capability-based EA has emerged to support this role,
+positioning BCMs as stable constructs that connect strate-
+gic objectives with operational execution, support informed
+decision-making, and serve as common reference points for
+business–IT alignment. Although the 2020s have consoli-
+datedcapability-drivenEAasthedominantparadigm[8],[9],
+[10],theintellectualrootsofthisideagobackearlier.Pioneer-
+ing work already recognized capabilities as stable building
+blocks for linking strategy and execution—whether in the
+decision-making focus of Keller [17], the conceptual frame-
+works of Brits et al. [18], the capability-centric extension of
+TOGAF by Barroero et al. [19], or the strategic management
+orientation advanced by Simon et al. [20]. Empirical research
+byKhosroshahietal.[21]highlightsBCMsasemergingtools
+in Enterprise Architecture Management, increasingly recog-
+nized for their strategic benefits but still limited in systematic
+use.Buildingonthesefoundations,recentstudiessuchasVan
+Riel and Poels [9] underline capability-based management as
+a structured way to bridge strategy formulation and execu-
+tion, while Kotusev and Alwadain [8] provide rare empirical
+insights into how BCMs are applied in practice to improve
+9454 VOLUME 14, 2026
+
+--- PAGE 3 ---
+I. Ivas et al.: Developing an Adaptive EA Model Integrating Business Capabilities, Value Streams, and IT
+TABLE 1. Overview of the most relevant literature on business capabilities.
+transparency and guide investment decisions. In parallel, this
+trend has started to be reflected in EA frameworks. Although
+earlier versions of TOGAF paid little attention to the concept
+of business capabilities [22], the TOGAF® Standard, 10th
+Edition [10] formally embedded capability-based planning
+into its methodology. Building on this capability-based per-
+spective, the following chapter examines BCMs as structured
+representations of enterprise capabilities and as key artifacts
+for aligning business and IT.
+B. BUSINESS CAPABILITY MAPS
+Business capabilities are the abilities or capacities embed-
+ded within people, processes, technology, and information
+that an enterprise leverages to achieve its goals [23], [24].
+According to Ulrich and Rosen [25], business capabilities
+are technology-agnostic and describe what an enterprise
+does, without detailing how, where, or why. Grounded in
+the ‘‘theory of the firm’’ [26], an organization can be
+understood as a coherent system of interrelated capabilities.
+A BCM expresses this system as a structured, hierarchi-
+cal representation of enterprise business capabilities [9],
+[27]. It provides a common language and reference model
+for understanding what the enterprise does, facilitating
+communication and alignment between business and IT
+stakeholders. Business-capability mapping is the systematic
+process of identifying, organizing, and representing these
+capabilities in a BCM to create a stable, technology-agnostic
+view of the enterprise, serving as a foundation for SA and
+informeddecision-making[9],[10],[17],[25]).Leonard[28]
+classifies capabilities within a BCM into three categories.
+Core capabilities differentiate a company in the market
+and constitute its primary source of competitive advantage;
+they are difficult to imitate and require long-term develop-
+ment. Supplemental capabilities support and enhance core
+capabilities—such as sales or marketing—while being more
+easily replicable. Enabling capabilities are essential for the
+company’s daily operations (e.g., accounting or legal) but do
+not directly contribute to competitive differentiation.
+Despite their potential value for managing complexity and
+fostering SA [29], BCMs remain inconsistently addressed
+across academic and professional literature. Van Riel and
+Poels [9] identified a significant methodological gap in
+business-capability mapping, noting that many organizations
+rely on proprietary consultancy methods—limiting trans-
+parency and internal capability-building. Similarly, Kotusev
+andAlwadain[8]observethatpractitionerliteratureislargely
+VOLUME 14, 2026 9455
+
+--- PAGE 4 ---
+I. Ivas et al.: Developing an Adaptive EA Model Integrating Business Capabilities, Value Streams, and IT
+anecdotal and prescriptive, while academic research remains
+conceptual and normative, offering limited practical insight.
+Although BCMs are widely recognized as key EA artifacts,
+their systematic use in practice is rare. They are often devel-
+oped at an abstract or consultancy-driven level [9], with
+limitedintegrationintoEApractices[8].Thislackofmethod-
+ological clarity constrains their potential to serve as effective
+instrumentsforSAincomplexorganizations.Tobetterunder-
+stand the scope of this issue, this paper builds on the work
+of Van Riel and Poels [9] and Kotusev and Alwadain [8].
+The goal is not to revisit theoretical foundations but to pro-
+vide practice-oriented insights for developing detailed BCMs
+integrated with value streams and decomposed into IT appli-
+cations.Thefocusedliteraturereviewextendstheapproachof
+VanRielandPoels[9],using‘‘capabilitymap’’astheprimary
+search term in Web of Science and Google Scholar. The
+searchwasconductediterativelyandconcludedinJune2025,
+complemented by backward and forward snowballing to cap-
+ture additional relevant studies. Targeted Google searches
+were also performed to include consultancy-based and prac-
+titioner sources, which Van Riel and Poels identified as
+key—but often unpublished—contributors of proprietary
+methods excluded from formal academic literature. The
+identified sources were analyzed for practical guidance on
+business-capability mapping and cross-checked for coverage
+of value-stream integration and IT-system decomposition.
+As summarized in Table 1, which presents the most relevant
+academic and professional sources found, only a few pro-
+vide practical, principle- or method-oriented guidance (e.g.,
+[9], [10], [17], [25], [30], [31], [32], [33]). Several studies
+remain narrow in scope, focusing on medium-sized organi-
+zations [32], or industry-specific contexts [34], while others
+depend on proprietary, non-transparent frameworks [33].
+Noneofthereviewedsourcesexplicitlylinkbusinesscapabil-
+ity mapping with both value-stream modelling and IT-system
+integration. The next chapter expands on this research gap by
+reviewing the literature on value streams, another key pillar
+of the proposed EA model.
+C. VALUE STREAMS
+While the BCM defines what an enterprise must be able to
+do, it does not show how value is delivered to customers. The
+concept of value streams was first introduced in the context
+of lean production by Womack and Jones [37] as the flow of
+value-addingandnon-value-addingstepsinvolvedincreating
+and delivering products or services. In business architecture,
+the notion stems from Martin [38], who described value
+streams as E2E activities delivering value to internal or exter-
+nal customers. Over time, the notion of ‘‘value’’ has evolved
+beyond mere product or service delivery to encompass a
+broader sense of utility, desirability, and significance, reflect-
+ing both monetary and non-monetary dimensions [39], [40].
+Ultimately, however, the delivery of value to customers and
+the generation of sustainable financial returns for investors
+remain the fundamental purpose of any enterprise [41].
+Value streams capture the high-level activities through which
+this value is created and delivered, allowing organizations
+to define and optimize these E2E flows [10], [25], [39].
+In business architecture, Value-stream mapping (VSM) is the
+systematic process of identifying, structuring, and represent-
+ing value streams by linking value-creating activities to the
+capabilities that enable them and analyzing how value flows
+acrosstheenterprise.AsWhelanandMeaden[42]note,value
+streams offer a strong foundation for validating capabilities
+and ensuring they fit together coherently. Importantly, value
+streams differ from business processes in that they depict
+how value is delivered at a high conceptual level, whereas
+business processes describe in detail how work is executed at
+the operational level.
+Business-architecture value streams should not be con-
+fused with related concepts such as value chains, value
+networks, or lean value streams. Porter’s [43] value chain
+focuses on economic value creation, Allee´s [44] value
+networks emphasize actor relationships, and lean value
+streams [37] target waste reduction. In contrast, business-
+architecturevaluestreamscombinewithbusinesscapabilities
+to provide a holistic, strategic view of enterprise E2E value
+delivery [10], [39].
+Despite the conceptual maturity of value streams, empiri-
+cal and methodological research within business architecture
+remains limited. A focused literature review was conducted
+using the same methodology as in the previous section,
+extending the approach of Van Riel and Poels [9]. The term
+‘‘value stream’’ was used as the primary search keyword
+across Web of Science, Google Scholar, and grey-literature
+sources. The search was iterative and complemented by
+backward and forward snowballing to identify additional
+studies addressing related concepts. The collected sources
+were analyzed to assess the extent to which they provide
+practical guidance for business-architecture value-stream
+mapping and whether they address integration with busi-
+ness capabilities or decomposition into IT systems. The
+search concluded in June 2025. Most of the identified stud-
+ies focused on lean value-stream applications or operational
+efficiency rather than on business-architecture value streams.
+The remaining literature offered very limited formal guid-
+ance, found mainly in frameworks such as TOGAF [10], the
+BIZBOK®Guide [33], and Ulrich & Rosen [25]. Notably,
+value streams were incorporated for the first time in the
+TOGAF® Standard, in its 10th Edition, which largely repro-
+duced content from [39]—illustrating the scarcity of original,
+detailed guidance on the topic. More recent sources, such as
+Ardoq [45] and Pratap and Pant [46], emphasize the need
+to align value streams with BCMs, yet no academically or
+practitioner-endorsed methodology exists for value-stream
+mapping within a business–IT EA model. Table 2 sum-
+marizes the most relevant literature addressing the creation
+of business-architecture value streams. However, none pro-
+vide a formalized development framework integrating value
+streams, BCMs, and IT applications as part of a business–IT
+EA model supporting SA in complex organizations. Build-
+ing on the capability- and value-stream perspectives, the
+9456 VOLUME 14, 2026
+
+--- PAGE 5 ---
+I. Ivas et al.: Developing an Adaptive EA Model Integrating Business Capabilities, Value Streams, and IT
+TABLE 2. Overview of the most relevant literature on value streams.
+following section elaborates on EA models as the structural
+layer connecting these business perspectives with IT.
+D. EA MODELS
+EA modelling can be viewed as a specialized form of system
+modelling that supports enterprise-wide planning rather than
+the design of individual systems. Because it bridges busi-
+ness and IT perspectives, EA models must remain simple,
+comprehensible, and communicable to business stakehold-
+ers [8]. To maintain business–IT alignment in dynamic
+environments,EAmodelsshouldevolvefromstaticrepresen-
+tations toward continuously adaptable structures. In contrast
+to traditional model-driven engineering, which assumes that
+models remain valid after implementation, Hinkelmann et al.
+[53] introduced two complementary paradigms—continuous
+adaptation and continuous business–IT alignment—wherein
+VOLUME 14, 2026 9457
+
+--- PAGE 6 ---
+I. Ivas et al.: Developing an Adaptive EA Model Integrating Business Capabilities, Value Streams, and IT
+FIGURE 1. Template for creating a starting version of BCM.
+continuous adaptation of models acts as the mechanism
+through which ongoing business–IT alignment is achieved
+in a rapidly changing environment. Their approach com-
+bines human-interpretable graphical models—facilitating
+communication and shared understanding—with machine-
+interpretable enterprise ontologies, which formally define
+domain knowledge (entities, types, and relationships) for
+automated reasoning and analysis. An ontology defines
+the structural schema of a domain by specifying general
+domain concepts and their relations, but it does not include
+information about specific instances. A knowledge graph
+instantiates this schema by populating it with concrete
+entities and their relationships, thereby representing actual
+instance-level data [54]. Building on this foundation, enter-
+prise knowledge graphs (EKGs) have emerged as practical
+implementationsofenterpriseontologies.Thisalignswiththe
+layered model stack for enterprise architecture proposed by
+Hinkelmann et al. [53], which forms the conceptual basis
+for adaptive EA modelling. At its Level 2 lies the EA meta-
+model,whichisrealizedasamachine-interpretableenterprise
+ontology that provides the formal schema for the EA model
+at Level 1; at Level 1 lies the human-interpretable graphical
+EA model, represented by the EKG, containing concrete,
+instance-level data about the enterprise and serving as a
+model of the enterprise at Level 0; and at Level 0 lies the
+enterprise itself, i.e., the enterprise architecture. By linking
+enterprise data to the enterprise ontology, the EKG enables
+machine interpretation and analysis [55], serving as an intel-
+ligent, integrated repository of EA knowledge accessible to
+both architects and broader stakeholders. Although not the
+primary focus of this study, the EKG represents an essential
+foundation for enabling adaptive and value-driven EA in
+complex organizations.
+III. METHODOLOGY
+The research described in the paper follows the design sci-
+ence research methodology [56]. In design-based research,
+knowledge on how to build artifacts (such as conceptual
+frameworks, models, and methods) emerges through an
+iterative process of applying design theories to develop
+solutions for problems that were previously unsolved. The
+accumulated prescriptive knowledge is the outcome of this
+iterativecycleofinvestigation,design,testing,reflection,and
+learning—identifying what worked, what didn’t, and how the
+solution can be generalized to address a broader class of
+similar problems.
+The study was carried out in a company which functions
+as an acquirer—a financial institution authorized to pro-
+cess credit and debit card transactions for merchants. The
+company is an example of a large, complex organization,
+employing over 10,000 people, with a decades-long history
+of M&A that has significantly contributed to its current
+business–IT complexity.
+The study was conducted in two distinct phases. The first
+phase involved developing the EA model, with the business
+layer defined by the BCM and the IT layer integrating it
+with relevant IT applications. The second phase extended
+the model by incorporating value streams, enabling an E2E
+representation of value delivery and its alignment with busi-
+ness capabilities and supporting IT systems. To support the
+creation and representation of model artifacts, the ArchiMate
+modelling language [52] was used. ArchiMate offers a stan-
+dardizedandwidelyadoptednotationfordescribingbusiness,
+application, and technology architectures. The open-source
+tool Archi served as the modelling environment and as the
+repository for EA artifacts developed in this study.
+To guide the development of a detailed BCM capa-
+ble of supporting SA in complex organizations, this study
+aimed to demystify the modelling process by establish-
+ing a set of proven, practically applicable principles for
+other practitioners. The process began by examining guid-
+ing principles identified in the literature and refining them
+through practical application to ensure their validity in real
+organizational contexts. Following Keller’s [17] recommen-
+dations, existing BCM materials within the company—such
+as high-level consultancy models and internal business plan-
+ning documents—were used as a starting point. To structure
+the model, Leonard’s [28] capability grouping was applied
+9458 VOLUME 14, 2026
+
+--- PAGE 7 ---
+I. Ivas et al.: Developing an Adaptive EA Model Integrating Business Capabilities, Value Streams, and IT
+FIGURE 2. ‘‘E2E value chain’’.
+FIGURE 3. Template for creating a starting version of E2E value stream.
+to classify capabilities according to their contribution to
+competitivedifferentiation,distinguishingbetweencore,sup-
+plemental, and enabling capabilities.
+To accelerate development, a reusable template (Figure 1)
+was created, outlining generic enterprise capabilities com-
+monly observed across industries and designed for reuse by
+other practitioners. In line with Keller’s [17] good enough
+principle, the focus was on rapidly producing a usable
+model rather than striving for exhaustive completeness—
+recognizingthatfullBCMconstructioninlargeorganizations
+can take years. This pragmatic approach, consistent with
+Weick’s [2] sensemaking notion of plausibility over preci-
+sion, emphasized iterative refinement through use. Accord-
+ingly, instead of mapping the entire organization upfront,
+a baseline model was created to deliver immediate practi-
+cal value and evolve through application in real initiatives,
+supported by informal interviews within the EA team and
+consultations with SMEs and business leaders [32].
+For the IT part of the EA model, in which the BCM is
+decomposed into IT applications, the term Business Appli-
+cation was adopted to represent an IT system (correspond-
+ing to the Application Component concept in ArchiMate).
+This terminology was selected because it aligns with the
+business-oriented perspective of the EA model. The defi-
+nition of a business application was further refined from a
+business perspective as ‘‘an application that fulfils a business
+purpose, is perceived as a distinct application from a business
+standpoint, and has dedicated business ownership, regardless
+ofitsstructureortechnicalimplementation.’’Buildingonthis
+definition, the next step involved examining how business
+capabilities relate to these business applications within the
+EAmodel.Directlymappingbusinesscapabilitiestobusiness
+applications was considered standard industry practice [21],
+[57] and had already been implemented in the organization.
+However, as existing practices typically focus on high-level
+alignment, this study aimed to examine this relationship in
+greater detail to explore how capabilities can be more pre-
+cisely linked to IT applications. To identify the most effective
+level of decomposition and the appropriate degree of IT
+detail, the study explored a range of elements and view-
+points recommended in the ArchiMate 3.2 specification [52],
+including elements from the Strategic, Business, and Appli-
+cation layers. The Technology and Infrastructure layers were
+intentionally excluded, as they fell outside the scope of the
+business architecture-focused EA model
+In the second phase, value streams were added to the EA
+model following a request from a project manager leading
+a major migration initiative, who asked the EA team to
+map the delivery steps of an internal artifact—the ‘‘E2E
+value chain’’ (Figure 2)—to the IT applications supporting
+the migration. While this goal of clarifying the business–IT
+scope and dependencies aligned with the study’s objec-
+tives, it also revealed a lack of shared understanding among
+stakeholders regarding the distinctions between value chains,
+value streams, and business capabilities—differences clari-
+fied in the theoretical background. To ensure consistency,
+a verb–object naming convention was introduced, emphasiz-
+ing that value streams represent processes, whereas business
+capabilities—expressed as nouns—serve as the foundational
+building blocks enabling those processes. The value chain
+concept, focused on identifying sources of economic value
+and competitive differentiation [43], was determined to be
+outside the study’s scope The E2E Value Stream was intro-
+duced to represent the enterprise’s overall value delivery
+process, capturing key customer-facing steps—from sales
+and onboarding to service delivery, customer support, and
+VOLUME 14, 2026 9459
+
+--- PAGE 8 ---
+I. Ivas et al.: Developing an Adaptive EA Model Integrating Business Capabilities, Value Streams, and IT
+invoicing. It is intentionally limited to a small number of
+customer-visible steps that collectively deliver end value and
+are supported by business capabilities from the BCM. This
+approach aligns with Weick’s [2] principle of organizational
+sensemaking, which values plausibility over precision in
+complex environments and fosters a shared understanding
+of E2E value creation across organizational silos. In con-
+trast, the previous ‘‘E2E Value Chain’’ included more steps,
+lacked capability integration, and contained internal activ-
+ities not visible to customers (e.g., clearing or risk and
+fraud)—activities that in this model are represented through
+underlying business capabilities. The E2E Value Stream is
+also envisioned to support early initiative scoping and the
+identification of key dependencies for investment planning
+and solution design. To accelerate development, a reusable
+template (Figure 3) was created, outlining common delivery
+steps applicable across industries and designed for reuse by
+other practitioners. It reflected the dual perspective of value
+creation—Satisfied customer and Profit—to emphasize that
+enterprises create value both by delivering outcomes and
+ensuring sustainable performance [41]. Similar to business
+capability mapping, the E2E Value Stream was developed
+from this template and refined through insights from the
+EA team, domain experts, and practical application in real
+initiatives.Valuestreammappingfollowedthesameiterative,
+practice-informed logic: validating guiding principles from
+the literature and refining them through practical experience
+to establish a set of proven, actionable principles for use by
+other practitioners.
+Following the company’s acquisition of Ardoq, a knowl-
+edge graph-based EA tool, during the second phase, it was
+adopted as the EKG to support the structured storage,
+retrieval,andcommunicationofEAmodelinformation,mak-
+ing it available not only to enterprise architects but also to
+other enterprise stakeholders. The adoption of the EKG also
+made it possible to address previously raised stakeholder
+requests for easier access to information about IT application
+owners. In response, the scope of the target EA model and
+its development method was deliberately kept open beyond
+business capabilities, value streams, and IT applications to
+accommodate additional elements required by stakeholders
+or specific initiatives, as reflected in step F of the model
+development method presented in the following section.
+Based on insights gained during the second phase, the step
+A ‘‘Starting with a story of your business’’ was introduced as
+the first step of the development method. This step emerged
+as a practical way to initiate organizational sensemaking by
+grounding the EA model in a narrative-based understanding
+of value delivery.
+A. EA MODEL DEVELOPMENT METHOD
+Inspired by the structure of TOGAF ADM [10], Figure 4
+illustrates the proposed development method for building the
+EA model, outlining the steps executed in two design phases
+in the previous section. The EA Model development method
+consists of the following steps:
+FIGURE 4. BASE EA model development method.
+A. Starting with a story of your business. The develop-
+ment method begins by constructing a narrative of
+how the company delivers value from the customer’s
+perspective. This step involves collaborative sessions
+with senior employees or business stakeholders who
+possess deep knowledge of the enterprise to explore
+questionssuchas:Whatdoesthecompanydo?Whoare
+its customers? As a customer, what do I receive, and
+what is required to deliver that value? This narrative
+approach aligns with organizational sensemaking [58],
+which emphasizes asking ‘‘What’s the story here?’’
+to reduce ambiguity and build shared understanding.
+Framing the discussion as a story helps participants
+make sense of enterprise complexity and provides a
+foundation for structuring the EA model.
+B. Creating high-level versions of the BCM & E2E Value
+Stream. Develop an initial E2E Value Stream show-
+ing the key steps to deliver value, and a high-level
+BCM outlining the business capabilities that support
+it. Use guiding principles and templates (Figures 1
+and 3) informed by literature and practice to create
+good enough starting versions that can deliver value
+and evolve through real use.
+C. Decomposing to IT. Link business capabilities to their
+supporting business applications through capability
+9460 VOLUME 14, 2026
+
+--- PAGE 9 ---
+I. Ivas et al.: Developing an Adaptive EA Model Integrating Business Capabilities, Value Streams, and IT
+FIGURE 5. Decomposition of Value-added services.
+instances, establishing traceability between business
+and IT.
+D. Detailing the BCM. Refine the BCM by decompos-
+ing high-level capabilities into more detailed sub-
+capabilities, driven by practical involvement in initia-
+tives and SME collaboration.
+E. E2E Value Stream. Break down E2E Value Stream
+steps into lower-level value streams and map them to
+corresponding business capabilities.
+F. Mapping related model elements. Extend the core
+(value streams, capabilities, applications) with related
+elements such as owners, vendors, or customers.
+G. Test and evolve through use. Continuously enrich and
+validate the model in real initiatives, using feedback to
+closegaps,improveconsistency,andstrengthenitsrole
+in sensemaking and decision-making.
+IV. RESULTS
+This section presents the outcomes of the previously
+described method, which, through an iterative process, pro-
+duced the EA model’s metamodel and associated artifacts,
+together with guidelines for BCM development, IT decom-
+position, and value stream mapping. The results further
+demonstrate, through concrete business initiatives, how the
+EA model delivers practical value in real organizational
+contexts.
+A. MODEL DEVELOPMENT GUIDANCE
+1) BCM DEVELOPMENT GUIDANCE
+Developing a detailed BCM that could serve as a shared ref-
+erence across business and IT functions proved challenging
+giventheenterprise’sscaleandcomplexity.Apragmaticgood
+enough approach was adopted, enabling the model to evolve
+through practical use rather than pursuing early complete-
+ness. This adaptive strategy, grounded in Keller’s [17] and
+Weick’s[2]principles,provedmoreeffectivethanformalized
+mapping methods, such as the one proposed by Van Riel
+and Poels [9], which assume rapid convergence. From this
+iterative development, a set of guiding principles for business
+capability mapping emerged, combining insights from liter-
+ature with lessons learned in practice. They were validated
+throughstakeholderengagementandreflect thepracticesthat
+proved most effective in real-world settings:
+1. BCM is business-focused. As the BCM provides enter-
+prise insights and a shared business–IT reference,
+it should be developed collaboratively with business
+experts to ensure alignment with business think-
+ing [30], [32]. IT reference models are not BCMs [9].
+2. Start with a BCM skeleton. Use the generic template
+(Figure 1) and adapt it to reflect organizational rele-
+vance and language.
+3. Leverage existing versions. Build on existing BCMs,
+internal categorizations, or industry frameworks
+instead of starting from scratch [17].
+4. Apply a pragmatic, value-focused approach. Model
+first the core 20% of capabilities delivering most busi-
+ness value and evolve iteratively—good enough and
+fast, not exhaustive [17].
+5. Test and refine through use. Continuously validate and
+enrich the BCM through real initiatives with domain
+experts [18], [31].
+6. Use established terminology. Apply company or
+industry-standard terms to ensure the BCM serves as
+a shared organizational language [9], [25].
+7. Prioritize pragmatism over taxonomy. Emphasize
+strategically important capabilities even if this breaks
+strict hierarchy [17]. For example, 41.Indirect Sales
+appears as a separate capability next to 9.Sales
+(Figure 6) because it plays a strategically significant
+role in the company.
+8. Learn as you go. Treat BCM building as an exploratory
+process that reveals ‘‘tribal’’ organizational knowl-
+edge [30]
+9. BCM is hierarchical but also an ontology. Maintain
+hierarchical clarity but use ontological links (e.g.,
+serves, associates to) when capabilities have multiple
+relationships [52].
+10. Keep it organization-agnostic. Design capabilities
+to remain stable despite structural or organizational
+changes [31].
+11. Ensure uniqueness. Each capability must represent a
+distinct building block, even if used across multiple
+parents [25], [29].
+12. Name capabilities as nouns. Express what the business
+does (e.g., Partner Management), not how [9], [10],
+[52].
+13. Use numbering for structure. Hierarchical numbering
+clarifies relationships and aids navigation in capability
+repositories [8].
+14. Assign capability identifiers. Use stable capability
+codes to support reuse and synchronization across
+teams and initiatives.
+15. Validatewithvaluestreams.Confirmthateachcapabil-
+ity supports at least one value-stream step; otherwise,
+exclude it [42].
+VOLUME 14, 2026 9461
+
+--- PAGE 10 ---
+I. Ivas et al.: Developing an Adaptive EA Model Integrating Business Capabilities, Value Streams, and IT
+FIGURE 6. The acquiring high-level BCM.
+FIGURE 7. An example of IT decomposition of document management
+capability (anonymized data).
+16. Do not organize the BCM as a process. A capability
+defines what the organization must be able to do—not
+how it does it. Value streams describe the how. Avoid
+structuringtheBCMasanE2Eprocess;capabilitiesare
+stable, reusable constructs supporting one or multiple
+value-stream steps.
+The initial BCM was created from the generic template
+(Figure 1), combining elements from earlier consultant-
+developed and internal models. It was refined through collab-
+oration with EA and business stakeholders and aligned with
+organizational terminology and industry references such as
+FIGURE 8. Harmonization decomposition of document management
+capability (anonymized data).
+BIAN. The most significant enrichment occurred during real
+initiatives. For example, engagement with domain experts
+during the Generic Surcharge initiative [11] enabled valida-
+tion and detailed decomposition of the Value-added services
+capability (Figure 5). As the model expanded, two levels
+were introduced to balance detail with communicability: a
+High-Level BCM (Figure 6) for strategic communication
+and a Detailed BCM for comprehensive documentation, later
+hosted in the enterprise knowledge-graph repository. Addi-
+tional internal groupings (e.g., Acceptance and Acquiring)
+were introduced to align the model with business language
+beyond Leonard’s [28] original categorization.
+9462 VOLUME 14, 2026
+
+--- PAGE 11 ---
+I. Ivas et al.: Developing an Adaptive EA Model Integrating Business Capabilities, Value Streams, and IT
+FIGURE 9. Direct decomposition of document management
+capability(anonymized data).
+FIGURE 10. Direct decomposition of the supplemental capabilities from
+the level 0 BCM (anonymized data).
+FIGURE 11. ArchiMate´s application cooperation viewpoint- integrations
+between applications (anonymized data).
+2) INTEGRATING IT APPLICATIONS
+The goal of this step was to explore how business capabili-
+ties integrate with the IT applications that realize them. The
+first activity involved documenting one of the company’s
+markets lacking sufficient IT architecture documentation—
+providing immediate value and practical insight. This effort
+experimented with linking business capabilities and IT appli-
+cations using ArchiMate’s Business and Application Layers,
+including Layered and Application Cooperation viewpoints
+and several custom diagrams.
+Figure 7 illustrates one of the early decompositions
+using ArchiMate’s Layered Viewpoint. This example—
+anonymized and generalized for confidentiality—does not
+represent actual system details but demonstrates the type
+of detailed decomposition explored during the early mod-
+elling phase. It includes ArchiMate Business Services and
+Processes (yellow) and Application Services and Applica-
+tions (blue). However, this approach, shown in Figure 7,
+was ultimately abandoned because it did not resonate with
+stakeholders and, due to its excessive level of detail, proved
+impractical to maintain and apply consistently across the
+enterprise.
+To ensure simplicity, clarity, and stakeholder alignment,
+theITaspectoftheEAmodelwasfinalizedaroundthreecore
+components:
+• Integration of business capabilities with business appli-
+cations via business services. Business capabilities
+are integrated with the applications that realize them
+through intermediate Business Services, representing
+sets of applications jointly delivering a capability
+(Figure 8). Unlike the ArchiMate Business Service,
+these services describe capability realization rather than
+service provision. The presence of multiple business
+services for the same capability often indicates dupli-
+cation resulting from uncoordinated IT investments or
+mergers, thereby highlighting opportunities for harmo-
+nization. Figure 8 illustrates three such redundancies,
+whereDocumentstoragesystem2andDocumentaccess
+system2jointlydeliverasingle—onebusinessservice—
+of Document management. Directly linking capabilities
+to applications, as in Figure 9, could misleadingly
+suggest that more systems are functional duplicates.
+This integration approach, referred to as harmonization
+decomposition,accuratelyrepresentsapplicationcollab-
+oration and avoids overstating redundancy. For clarity,
+each business service should have a descriptive name,
+ideallywitha sequencenumber whenmultipleinstances
+exist (e.g., 1. Nordic document management service).
+• High-level integration of business capabilities with
+business application. A default simplified version of
+integration is retained in the model for high-level pre-
+sentation purposes, typically for senior management,
+by linking high-level business capabilities from the
+High-Level BCM directly to a select set of key business
+applications (Figure 10).
+• Integration between business applications via flow
+relationship. ArchiMate’s Application Cooperation
+Viewpoint illustrates interactions between applications
+(Figure 11), providing a high-level overview of the
+application landscape.
+The established definition of a business application proved
+effective in managing architectural complexity. In the ana-
+lyzed case, the mainframe—technically a single system—
+wasdocumentedasseveraldistinctbusinessapplicationswith
+different ownerships, while the local onboarding integration
+system—comprising multiple microservices and a message
+queue—was modelled as a single logical application. Group-
+ing microservices in this way enhanced sensemaking and
+VOLUME 14, 2026 9463
+
+--- PAGE 12 ---
+I. Ivas et al.: Developing an Adaptive EA Model Integrating Business Capabilities, Value Streams, and IT
+FIGURE 12. Acquiring E2E value stream mapped to Level 0 BCM.
+FIGURE 13. Decomposition of the POS variant of 3. Enable transaction acceptance (from the figure 12).
+simplified portfolio management. This definition became
+particularly important after the merger, when the acquired
+company’s more flexible interpretation—classifying individ-
+ual microservices as separate applications—had significantly
+expanded the portfolio.
+3) VALUE STREAM MAPPING GUIDELINES
+To execute the first step of the EA model development
+method, ‘‘Starting with a story of your business’’ (Figure 4,
+Step A)—introduced during the second design phase
+alongsidetheconceptofvaluestreams—crucialinsightswere
+gatheredfromsenioremployeeswithadeepunderstandingof
+the acquiring enterprise’s operations, customers, and service
+delivery.Theseinsights,informallysharedbydomainexperts
+duringthefirstdesignphase,wereinstrumentalinshapingthe
+acquiring BCM.
+Introducing value streams provided a practical way to cap-
+ture this understanding as a clear, customer-oriented process
+mapped to the business capabilities required to deliver it.
+The ‘‘Starting with a story of your business’’ step was later
+9464 VOLUME 14, 2026
+
+--- PAGE 13 ---
+I. Ivas et al.: Developing an Adaptive EA Model Integrating Business Capabilities, Value Streams, and IT
+FIGURE 14. First version of the BASE EA model.
+FIGURE 15. EA model adjusted with value streams and ownership
+mapping.
+also applied during the Digital Operational Resilience Act
+(DORA) initiative (explained below) to document additional
+business domains beyond acquiring. The most challenging
+aspect of this step was identifying stakeholders with com-
+prehensive business knowledge who could articulate the
+company’s overall operations.
+The E2E Value Stream artifact (Figure 12) was developed
+using the template shown in Figure 3 and iteratively refined
+through its application in real initiatives. By definition, each
+step in a value stream delivers incremental value to the
+customer [10]; however, these increments were intentionally
+omitted from the E2E Value Stream diagram to maintain
+simplicity. The artifact increased organizational awareness of
+the importance of E2E scoping and became a key component
+of early initiative planning documents, where it functions
+as a checklist—used well before formal IT engagement—
+to capture critical dependencies required for early scope
+and cost estimates. Ivas [11] showed how combining an
+E2E Value Stream with a detailed BCM supports early ini-
+tiative scoping and the implementation of a Composable
+Enterprise.
+After developing the E2E Value Stream, the next step
+was to decompose its stages into lower-level value streams
+FIGURE 16. Using EKG to find employees responsible for Legacy CRM
+sys.1.
+(Figure4,StepE),startingwiththeinternalEAteam’sknowl-
+edge. Figure 13 illustrates the first decomposed step, ‘‘3.
+Accept transactions,’’ created with an EA team expert from
+the acceptance domain. The diagram outlines how this part of
+value delivery operates and highlights the key capabilities—
+without detailing technologies or processes. Following this
+internal phase, the plan was to engage domain experts for
+further documentation. While a few steps, such as ‘‘7.Bill
+merchant,’’ were successfully captured, the effort proved
+challengingdueto limitedexpert availabilityandthelow per-
+ceived value of the exercise. Consequently, the decision was
+made to document the remaining lower-level value streams
+within specific business initiatives, where their relevance and
+benefits would be clearer.
+Thefollowingguidingprinciplesforvaluestreammapping
+were derived from established literature and refined through
+practical application. Similar to business capability mapping,
+they reflect the principles that proved most effective and
+meaningful in real-world use.
+1. Keep it high level and concise. As often attributed to
+Albert Einstein, ‘‘If you can’t explain it simply, you don’t
+understand it well enough.’’ A value stream is not a busi-
+ness process; it should remain as simple to convey a broad
+understanding of the work required without delving into
+operational details [10].
+2. A value stream is triggered by a stakeholder and
+results in an outcome and value delivered to a stakeholder
+[10], [39].
+3.Usevaluestreamstogetherwithenablingbusinesscapa-
+bilities. Presenting value streams alongside their enabling
+capabilities fosters shared business–IT understanding of how
+value is delivered. This combination provides insights into
+VOLUME 14, 2026 9465
+
+--- PAGE 14 ---
+I. Ivas et al.: Developing an Adaptive EA Model Integrating Business Capabilities, Value Streams, and IT
+FIGURE 17. Navigating through EKG.
+FIGURE 18. Capability footprint of Legacy CRM system (navigating EKG).
+9466 VOLUME 14, 2026
+
+--- PAGE 15 ---
+I. Ivas et al.: Developing an Adaptive EA Model Integrating Business Capabilities, Value Streams, and IT
+both the delivery process and the required capabilities—
+independent of specific technologies or implementation
+details [10], [39].
+4. Include only customer-facing steps in E2E value
+streams. The E2E Value Stream should consist of a lim-
+ited number of high-level steps visible to the customer,
+which together deliver the final aggregated value. Supporting
+internal efforts are represented by the underlying business
+capabilities.
+5. Use verb–object naming. Name value streams and their
+steps using a verb–object format (e.g., ‘‘Provide reports’’)
+to clarify their intent and distinguish them from business
+capabilities, which are typically expressed as nouns [6], [11].
+Regarding the mapping of value streams to IT systems,
+in addition to their integration through supporting business
+capabilities—similar to the approach used for the High-
+Level BCM—the E2E Value Stream was also considered for
+direct linkage to a limited set of key business applications to
+enhance high-level understanding.
+B. EVOLUTION OF THE MODEL IN PRACTICE
+This section describes how the model evolved through
+real-world use and continuous refinement.
+The initial version of the EA model’s metamodel, shown
+in Figure 14, represents the model developed during the
+first design phase. It incorporated business capabilities and
+their integration with business applications through business
+services.
+Figure 15 illustrates the version created during the second
+design phase, which was extended to include value streams
+and related elements from ArchiMate’s Motivation Layer—
+Value, Outcome, and Stakeholder—as well as ownership
+mapping. During this phase, the ArchiMate Business Service
+element—used to represent a capability instantiation—was
+renamed Capability Instance to avoid ambiguity associated
+with the term ‘‘business service.’’ The term aligns with Busi-
+ness Architecture Guild [33] terminology, which defines it
+from a business perspective, enabling architects to assess a
+capability’s impact and effectiveness within a specific unit or
+valuestream.Inthisresearch,however,theconceptisapplied
+more broadly to represent any contextual IT realization of a
+capability.
+The model was further enhanced with ownership mapping
+following the introduction of the EA tool Ardoq as an EKG.
+This enhancement introduced a new Employee element (as
+a specialization of ArchiMate’s Business Actor element) and
+newrelationships—isbusinessownerof,istechownerof,and
+is expert in—linking employees with business applications,
+capability instances, and business capabilities.
+The ownership relationships for business applications—
+previously maintained in an Excel file—were migrated to
+Ardoq and later validated as part of the Application Portfolio
+Management initiative, which aimed to verify the applica-
+tion portfolio at the enterprise level. Although there was no
+immediate demand for ownership mapping for capability
+TABLE 3. The latest version of the base EA model.
+instances and business capabilities, these relationships were
+included as a ‘‘nice-to-have’’ feature for potential future use.
+VOLUME 14, 2026 9467
+
+--- PAGE 16 ---
+I. Ivas et al.: Developing an Adaptive EA Model Integrating Business Capabilities, Value Streams, and IT
+FIGURE 19. The latest version of the high-level BCM.
+FIGURE 20. The latest version of the BASE EA model.
+The introduction of Ardoq EKG as the primary
+model repository, featuring advanced communication
+capabilities—particularly its Discover ‘‘Google your busi-
+ness’’ functionality—made the EA model more accessible,
+discoverable, and searchable for external stakeholders. This
+functionality enabled users to easily retrieve information on
+business application ownership, as initially requested during
+the first design phase (demonstrated in Figure 16). Moreover,
+it significantly facilitated the effective use of the detailed
+BCM, which had been envisioned during the first design
+9468 VOLUME 14, 2026
+
+--- PAGE 17 ---
+I. Ivas et al.: Developing an Adaptive EA Model Integrating Business Capabilities, Value Streams, and IT
+phase for use with EKG capabilities. Figures 17 and 18
+illustrate the retrieval of detailed BCM information through
+Ardoq’s Discover functionality.
+1) DORA
+The next enhancement of the EA model occurred during
+the company’s compliance efforts with the European DORA
+regulation, which aims to strengthen the IT security and
+operational resilience of financial institutions [59]. DORA
+requires organizations to document their business–IT land-
+scape, third-party vendors, and other related services to
+demonstrate operational control and resilience. Achieving
+such control first requires a comprehensive understanding
+of how the organization operates and delivers value—a pur-
+pose for which the proposed EA model was particularly well
+suited.Itwasthereforeadoptedasthefoundationforthecom-
+pany’sDORAcompliancestrategy.Itscorecomponents—the
+BCM and E2E Value Stream—were applied consistently
+across all of the company’s legal entities to support sense-
+making of how value is delivered, providing an overarching,
+technology-independent business view across the enterprise.
+This enterprise-wide application of the model, especially
+the BCM, served as a large-scale validation exercise under
+DORA, confirming its fitness for purpose and providing
+valuable feedback for further enhancement. In particular, this
+exercise significantly reinforced Step C of the EA model
+development method (Figure 4)—decomposing to IT—by
+systematically documenting business applications and link-
+ing them to business capabilities via capability instances
+across all legal entities. As the Acquiring BCM was exten-
+sively applied across the entire company during DORA
+compliance, this facilitated its validation, enhancement, and
+further detailing. The practical experience gained during this
+process also played a key role in establishing the guiding
+principles for BCM design. As the company operates mul-
+tiple business models beyond acquiring, separate BCMs and
+E2E Value Streams were developed for each business model;
+however, details of these additional models fall outside the
+scope of this research. This led to an enhancement of the
+EA metamodel through the introduction of the new entity
+Business Domain (as a specialization of ArchiMate’s Group-
+ing element), representing distinct areas of the organization
+that deliver specific business models or value propositions
+(Figure20).EachbusinessdomaingroupstheBCMandvalue
+streams relevant to its context. The existence of multiple
+business domains also prompted structural refinements to
+the acquiring BCM. To establish a central, shared business
+model used across the company’s multiple business domains,
+Leonard’s Enabling capability group in the Acquiring BCM
+was moved into a separate business domain (Figure 19). This
+changewasalsoreflectedinthereorganizationofcapabilities,
+as some capabilities (e.g., 13. Integration, 14. Data) were
+reclassifiedfromtheAcquiringSupplementaltotheEnabling
+group of the shared business domain, having been identified
+as common across all business domains.
+Under DORA, 3rd party providers, i.e., vendors gained
+increased importance. The model was extended to include
+them, as a specialization of ArchiMate’s Business Actor ele-
+ment (Figure 20). Although DORA requires a more detailed
+specificationofservicesperformedbyvendorsforspecificIT
+applications—such as maintenance, development, operation,
+and licensing—the relationships were intentionally simpli-
+fied to a single provides relationship between the vendor
+and the business application to maintain the model’s general
+applicabilityacrossdifferentcontexts.Furthermore,asshown
+inFigure20,theupdatedmetamodelalsoallowedacapability
+instance to be realized by a vendor when the vendor provides
+thecorrespondingcapabilitytothecompanyasaservice(e.g.,
+Software as a Service, SaaS).
+DORA compliance further emphasized the importance
+of customers and capability ownership roles. Customers
+had not previously been represented in the metamodel,
+as the merchant-facing acquiring business included hun-
+dreds of customers, and modelling them was deemed overly
+extensive and difficult to maintain. To meet DORA require-
+ments, customers were subsequently introduced into the
+model as a specialization of ArchiMate’s Business Actor
+element and connected to capability instances via consumes
+relationship. The customers represented in the EA model
+were DORA-relevant financial institutions served by the
+company’s institution-facing business domains providing IT
+financial processing service. Finally, as DORA requires the
+assignment of roles and responsibilities for critical busi-
+ness capabilities, the previously introduced ‘‘nice-to-have’’
+is business owner relationship between a business capability
+and an employee was formally applied.
+The cumulative enhancements described above resulted
+in the refined version of the BASE EA model, shown in
+Figure 20, with its elements defined in Table 3.
+2) APPLICATION FOR SA IN SUBSEQUENT STUDIES
+The developed EA model was subsequently applied in two
+complementary research studies, each centered on a concrete
+enterprise initiative, to demonstrate its practical utility. The
+first study, Holistic Footprinting (Ivas et al., manuscript in
+preparation), applied the model to a real-world CRM strategy
+initiative, showing how it enhances situational awareness
+through capability- and value stream–based CRM migration
+gap analysis, thereby supporting more informed strategic
+decision-making. During this study, the BCM was exten-
+sively applied to detail the business capabilities realized
+by CRM systems, which led to the validation, enhance-
+ment, and further detailing of customer-facing capabilities
+within the CRM scope—such as sales, customer service,
+and onboarding. The practical experience gained during
+this process also played a key role in establishing guiding
+principles for BCM design. The second study, Compos-
+able Enterprise [11], applied the model in the context
+of a Generic Surcharge initiative, demonstrating how the
+same model—using the detailed BCM—supports modular
+strategy realization by enabling business–IT co-design of
+VOLUME 14, 2026 9469
+
+--- PAGE 18 ---
+I. Ivas et al.: Developing an Adaptive EA Model Integrating Business Capabilities, Value Streams, and IT
+composable, enterprise-wide, reusable capability-based ser-
+vices,exemplifiedthroughtheservicedesignattheSurcharge
+capability level (Figure 5). This study also used the E2E
+Value Stream to capture all critical dependencies of the
+initiative—such as onboarding, processing, and reporting—
+to support early scope estimation. Together, these studies
+provide empirical support for the model’s role in con-
+tributing to SA in complex enterprise environments—by
+strengthening situational awareness to enable more informed
+strategy formulation and by supporting modular strategy
+realization.
+V. CONCLUSION
+This paper demonstrates why large, complex organizations
+should embrace their inherent complexity and pursue a
+holistic understanding of their business as a foundation for
+effective management. To support this, it presents a practical,
+holistic business–IT model and its accompanying develop-
+ment method, designed to enable SA in large, complex
+enterprises. Developed through an adaptive probe–sense–
+respond approach, the model is continuously refined and
+validated through real business initiatives to ensure ongoing
+relevance.
+Together, the model and its method constitute the paper’s
+scientific contribution by:
+1. Demystifying the development of a practical, value-
+adding BCM that extends beyond conceptual abstrac-
+tions.
+2. Extending the capability-centric view of EA with value
+streams to enable holistic enterprise understanding.
+3. Integrating business architecture artifacts with the IT
+applications realizing them.
+The study illustrates how EA can evolve along-
+side the enterprise, supporting holistic sensemaking
+and tangible stakeholder value rather than enforcing
+rigid processes detached from reality. It also demon-
+strates how EA—traditionally associated with IT—can
+take a leading role in developing and maintaining the
+BCM, aligning more closely with business architecture
+and acting as a strategic bridge between business and
+IT.
+Aswithanyresearch,thisstudyhaslimitations.Conducted
+as a long-term design science study within a single finan-
+cial enterprise, it provides deep, practice-grounded insight
+with unique access to the internal realities of a large,
+complex organization, yet remains inherently bounded by
+its context. This limitation was mitigated by abstracting
+the approach, metamodel, templates, and guiding principles
+to enhance their transferability. Future research will focus
+on further developing the BASE framework by extending
+the model’s application—for instance, to portfolio manage-
+ment and through continued exploration of the Composable
+Enterprise approach.
+ACKNOWLEDGMENT
+The authors would like to thank enterprise architect Toni
+Lauri Juhani Mäenpänen for his valuable support and con-
+tributions to this study.
+DISCLOSURE STATEMENT
+Nopotentialconflictofinterestwasreportedbytheauthor(s).
+Portions of this manuscript were refined using ChatGPT
+(OpenAI,GPT-4,August2025release)toimproveclarityand
+language. Final responsibility for the content rests with them.
+REFERENCES
+[1] P. Anderson, ‘‘Perspective: Complexity theory and organization sci-
+ence,’’ Org. Sci., vol. 10, no. 3, pp. 216–232, Jun. 1999, doi:
+10.1287/orsc.10.3.216.
+[2] K. E. Weick, Sensemaking in Organizations. Thousand Oaks, CA, USA:
+Sage, 1995.
+[3] P. Hoverstadt, J. Gotze, and A. Jensen-Waud, ‘‘Why business should take
+enterprise architecture seriously,’’ in Beyond Alignment: Applying Systems
+Thinking in Architecting Enterprises. London, U.K.: College Publications,
+2013, pp. 55–166.
+[4] J. Stirna and J. Zdravkovic, ‘‘Interview with Sladjan maras on
+‘Challenges and needs in enterprise modeling,’’’ Bus. Inf. Syst.
+Eng., vol. 57, no. 1, pp. 79–81, Feb. 2015, doi: 10.1007/s12599-
+014-0358-9.
+[5] M. Roelfsema, A. Aldea, M. Lankhorst, and H. Franken, ‘‘How about
+strategy? A survey into the pitfalls of strategic alignment,’’ J. Enterprise
+Archit., vol. 12, no. 1, pp. 7–18, 2016.
+[6] I. Ivas, ‘‘Introduction to BASE enterprise architecture framework
+for holistic strategic alignment of the complex enterprise,’’ in
+Proc. 25th Int. Conf. Enterprise Inf. Syst., 2023, pp. 575–588, doi:
+10.5220/0011853200003467.
+[7] A. Aldea, ‘‘Enterprise strategic alignment method: A cross-disciplinary
+capability-driven approach,’’ Ph.D. dissertation, Univ. of Twente,
+Enschede, The Netherlands, 2017. [Online]. Available: https://research.
+utwente.nl/en/publications/enterprise-strategic-alignment-method-a-
+cross-disciplinary-capabi
+[8] S. Kotusev and A. Alwadain, ‘‘Modeling business capabilities in enter-
+prise architecture practice: The case of business capability models,’’
+Inf. Syst. Manage., vol. 41, no. 2, pp. 201–223, Apr. 2024, doi:
+10.1080/10580530.2023.2231635.
+[9] J. Van Riel and G. Poels, ‘‘A method for developing generic capability
+maps: A design science study in the professional sport industry,’’ Bus. Inf.
+Syst. Eng., vol. 65, no. 4, pp. 403–424, Aug. 2023, doi: 10.1007/s12599-
+023-00793-z.
+[10] The Open Group. (2022). TOGAF Standard. [Online]. Available: https://
+pubs.opengroup.org/togaf-standard/togaf/10/
+[11] I. Ivas, ‘‘Implementation of composable enterprise in an evolutionary way
+through holistic business-IT delivery of business initiatives: Real industry
+use case,’’ in Proc. 26th Int. Conf. Enterprise Inf. Syst., 2024, pp. 397–408,
+doi: 10.5220/0012728400003690.
+[12] T. Tamm, P. B. Seddon, G. Shanks, and P. Reynolds, ‘‘How does
+enterprise architecture add value to organisations?’’ Commun.
+Assoc. Inf. Syst., vol. 28, pp. 141–168, Jun. 2011, doi: 10.17705/
+1cais.02810.
+[13] E. I. Niemi and S. Pekkola, ‘‘Enterprise architecture benefit realization:
+Review of the models and a case study of a public organization,’’ ACM
+SIGMIS Database, DATABASE Adv. Inf. Syst., vol. 47, no. 3, pp. 55–80,
+Aug. 2016, doi: 10.1145/2980783.2980787.
+[14] Y. Gong and M. Janssen, ‘‘The value of and myths about enterprise
+architecture,’’ Int. J. Inf. Manage., vol. 46, pp. 1–9, Jun. 2019, doi:
+10.1016/j.ijinfomgt.2018.11.006.
+[15] W. Ross, P. Weill, and D. C. Robertson, Enterprise Architecture as Strat-
+egy: Creating a Foundation for Bus. Execution. Brighton, MA, USA:
+Harvard Bus. Review Press, 2006.
+[16] A. Aldea, M.-E. Iacob, and D. Quartel, ‘‘From business strategy to
+enterprise architecture and back,’’ in Proc. IEEE 22nd Int. Enterprise
+Distrib. Object Comput. Workshop (EDOCW), Oct. 2018, pp. 145–152,
+doi: 10.1109/EDOCW.2018.00029.
+9470 VOLUME 14, 2026
+
+--- PAGE 19 ---
+I. Ivas et al.: Developing an Adaptive EA Model Integrating Business Capabilities, Value Streams, and IT
+[17] W. Keller, ‘‘Using capability models for strategic alignment,’’
+in Business Architecture Management. Cham, Switzerland:
+Springer, 2015, pp. 107–122, doi: 10.1007/978-3-319-
+14571-6_6.
+[18] J.-P. Brits, G. Botha, and M. Herselman, ‘‘Conceptual framework for
+modeling business capabilities,’’ in Proc. Informing Sci. IT Educ. Joint
+Conf., 2007, pp. 1–16, doi: 10.28945/3148.
+[19] T. Barroero, G. Motta, and G. Pignatelli, ‘‘Business capabilities cen-
+tric enterprise architecture,’’ in Proc. IFIP Int. Conf. Enterprise Archit.,
+Integr. Interoperability. Cham, Switzerland: Springer, 2010, pp. 32–43,
+doi: 10.1007/978-3-642-15509-3_4.
+[20] D. Simon, K. Fischbach, and D. Schoder, ‘‘Enterprise architecture man-
+agement and its role in corporate strategic management,’’ Inf. Syst. e-Bus.
+Manage., vol. 12, no. 1, pp. 5–42, Feb. 2014, doi: 10.1007/s10257-013-
+0213-4.
+[21] P. Aleatrati Khosroshahi, M. Hauder, S. Volkert, F. Matthes, and
+M. Gernegroß, ‘‘Business capability maps: Current practices and
+use cases for enterprise architecture management,’’ in Proc. Annu.
+Hawaii Int. Conf. Syst. Sci., 2018, pp. 4603–4612, doi: 10.24251/hicss.
+2018.581.
+[22] TOGAF Series Guide: Bus. Capabilities, The Open Group, San Francisco,
+CA, USA, 2018.
+[23] T. Offerman, C. J. Stettina, and A. Plaat, ‘‘Business capabilities: A
+systematic literature review and a research agenda,’’ in Proc. Int.
+Conf. Eng., Technol. Innov. (ICE/ITMC), Jun. 2017, pp. 383–393, doi:
+10.1109/ICE.2017.8279911.
+[24] U. Homann, ‘‘A business-oriented foundation for service orientation,’’
+Microsoft Developer Network, Redmond, WA, USA, Tech. Rep., 2006.
+[25] W. Ulrich and M. Rosen, ‘‘The business capability map: The Rosetta stone
+of business/IT alignment,’’ Enterprise Archit., vol. 14, no. 2, pp. 13–18,
+2014.
+[26] D. Kantarelis, Theories of the Firm, 2nd ed., Olney, U.K.: Inderscience
+Enterprises, 2007.
+[27] J. Zdravkovic, J. Stirna, and J. Grabis, ‘‘Capability consideration in busi-
+ness and enterprise architecture frameworks,’’ in Capability Management
+in Digital Enterprises. Cham, Switzerland: Springer, 2018, pp. 41–56, doi:
+10.1007/978-3-319-90424-5_3.
+[28] D. Leonard, Wellsprings of Knowledge: Building and Sustaining the
+Sources of Innovation. Brighton, U.K.: Harvard Bus. School Press, 1995.
+[29] A. Aldea, M. E. Iacob, J. Van Hillegersberg, D. Quartel, and H.
+Franken, ‘‘Capability-based planning with archimate–linking motivation
+to implementation,’’ in Proc. 17th Int. Conf. Enterprise Inf. Syst., 2015,
+pp. 352–359, doi: 10.5220/0005468103520359.
+[30] J. Scott, ‘‘Business capability maps: The missing link between business
+strategy and IT action,’’ Archit. Governance Mag., vol. 5, no. 9, pp. 1–4,
+2009.
+[31] J. Scott. (Jan. 2014). Putting Bus. Capabilities to Work. Accessed: Jul. 1,
+2023. [Online]. Available: https://pdf4pro.com/view/putting-business-
+capabilities-to-work-omg-org-4257de.html
+[32] G. Bondel, A. Faber, and F. Matthes, ‘‘Reporting from the implemen-
+tation of a buisiness capability map as business-IT alignment tool,’’
+in Proc. IEEE 22nd Int. Enterprise Distrib. Object Comput. Work-
+shop (EDOCW), Stockholm, Sweden, Oct. 2018, pp. 125–134, doi:
+10.1109/EDOCW.2018.00027.
+[33] (2019).AGuidetotheBusinessArchitectureBodyofKnowledge(BIZBOK
+Guide). [Online]. Available: https://www.businessarchitectureguild.org/
+[34] (2023). Banking Industry Architecture Network. Accessed: Jul. 1, 2023.
+[Online]. Available: https://bian.org/
+[35] The Open Group. (Oct. 2022). ArchiMate 3.2 Specification. Accessed:
+Jul. 1, 2023. [Online]. Available: https://pubs.opengroup.org/architecture/
+archimate32-doc/
+[36] N. Bisswang, D. Petrik, S. Richter, and A. Zimmermann, ‘‘A busi-
+ness capability map for data-value creation,’’ Inf. Syst. Manage.,
+vol. 42, no. 4, pp. 644–662, Sep. 2025, doi: 10.1080/10580530.2025.
+2506368.
+[37] J. P. Womack and D. T. Jones, Lean Thinking: Banish Waste and Create
+Wealth in Your Corporation. New York, NY, USA: Simon & Schuster,
+1996.
+[38] J. Martin, The Great Transition: Using the Seven Disciplines of Enterprise
+Engineering to Align People, Technology, and Strategy. New York, NY,
+USA: AMACOM, 1995.
+[39] C. Dessus. (2019). Value Analysis With Value Stream and Capability Mod-
+elling.Accessed:Jun.4,2023.[Online].Available:https://www.slideshare.
+net/chdessus/value-analysis-with-value-stream-and-capability-modeling
+[40] A. Lindgreen, M. K. Hingley, D. B. Grant, and R. E. Morgan, ‘‘Value
+in business and industrial marketing: Past, present, and future,’’ Ind.
+Marketing Manage., vol. 41, no. 1, pp. 207–214, Jan. 2012, doi:
+10.1016/j.indmarman.2011.11.025.
+[41] M. C. Jensen, ‘‘Value maximization, stakeholder theory, and the corporate
+objective function,’’ J. Appl. Corporate Finance, vol. 14, no. 3, pp. 8–21,
+Sep. 2001, doi: 10.1111/j.1745-6622.2001.tb00434.x.
+[42] J. Whelan and G. Meaden, Business Architecture: A Practical Guide.
+Abingdon, U.K.: Routledge, 2016.
+[43] M. E. Porter, Competitive Advantage of Nations: Creating and Sustaining
+Superior Performance. New York, NY, USA: Free Press, 1990.
+[44] V. Allee, The Future of Knowledge: Increasing Prosperity Through Value
+Networks. Boston, MA, USA: Butterworth-Heinemann, 2002. ISBN: 978-
+0-7506-7591-8.
+[45] (Dec. 2024). Value Stream Mapping Overview: What Is VSM and How to
+Create a Map Step-by-Step. Accessed: Jul. 1, 2025. [Online]. Available:
+https://www.ardoq.com/knowledge-hub/value-stream-mapping
+[46] S. Pratap and P. Pant, ‘‘Enhancing value stream map effectiveness through
+business capability mapping: A business architecture perspective,’’ Int. J.
+Emerg. Trends Inf. Technol. (IJEIT), vol. 1, no. 1, pp. 1–12, May 2025.
+[47] K.MartinandM.Osterling,ValueStreamMapping:HowtoVisualizeWork
+and Align Leadership for Organizational Transformation. New York, NY,
+USA: McGraw-Hill Education, 2014. ISBN: 978-0-07-182891-8.
+[48] A. Zimmermann, R. Schmidt, K. Sandkuhl, D. Jugel, J. Bogner, and
+M. Möhring, ‘‘Evolution of enterprise architecture for digital transforma-
+tion,’’ in Proc. IEEE 22nd Int. Enterprise Distrib. Object Comput. Work-
+shop(EDOCW),Oct.2018,pp. 87–96,doi:10.1109/EDOCW.2018.00023.
+[49] G. Poels, K. Nollet, B. Roelens, H. D. Man, and T. V. Donge, ‘‘The value
+management platform and archimate—Towards an integration?: An illus-
+trative example for value stream mapping,’’ in Proc. 14th Int. Workshop
+Value Model. Bus. Ontol. (VMBO), vol. 2574, 2020, pp. 139–148.
+[50] S. Malakuti and J. Heuschkel, ‘‘The need for holistic technical debt man-
+agement across the value stream: Lessons learnt and open challenges,’’
+2021, arXiv:2104.08075.
+[51] F. J. D. B. Antunes, ‘‘Modeling BDN framework in archimate: Benefits
+management of IS investments applied in the context of media and televi-
+sion industry digital transformation,’’ Ph.D. dissertation, Univ. Lusofona
+Humanidades Tecnologias, Lisbon, Portugal, 2021.
+[52] The Open Group. (Oct. 2022). ArchiMate 3.2 Specification. [Online].
+Available: https://pubs.opengroup.org/architecture/archimate32-doc/
+[53] K. Hinkelmann, A. Gerber, D. Karagiannis, B. Thoenssen, A. van der
+Merwe, and R. Woitsch, ‘‘A new paradigm for the continuous alignment
+of business and IT: Combining enterprise architecture modelling and
+enterprise ontology,’’ Comput. Ind., vol. 79, pp. 77–86, Jun. 2016, doi:
+10.1016/j.compind.2015.07.009.
+[54] M. Yahya, J. G. Breslin, and M. I. Ali, ‘‘Semantic Web and knowledge
+graphs for industry 4.0,’’ Appl. Sci., vol. 11, no. 11, p. 5110, May 2021,
+doi: 10.3390/app11115110.
+[55] P.L.Glaser,S.J.Ali,E.Sallinger,andD.Bork,‘‘Model-basedconstruction
+of enterprise architecture knowledge graphs,’’ in Proc. 26th Int. Conf.
+EnterpriseDistrib.ObjectComput.,Bozen-Bolzano,Italy.Cham,Switzer-
+land: Springer, Oct. 2022, pp. 57–73, doi: 10.1007/978-3-031-17604-3_4.
+[56] A. R. Hevner, S. T. March, J. Park, and S. Ram, ‘‘Design science in
+information systems research1,’’ MIS Quart., vol. 28, no. 1, pp. 75–105,
+Mar. 2004, doi: 10.2307/25148625.
+[57] (2021). Application Portfolio Management, ServiceNow. Accessed:
+Jul. 1, 2023. [Online]. Available: https://docs.servicenow.com/en-U.
+S./bundle/tokyo-it-business-management/page/product/application-
+portfolio-management/concept/application-portfolio-management.html
+[58] K.E.Weick,K.M.Sutcliffe,andD.Obstfeld,‘‘Organizingandtheprocess
+of sensemaking,’’ Org. Sci., vol. 16, no. 4, pp. 409–421, Aug. 2005, doi:
+10.1287/orsc.1050.0133.
+VOLUME 14, 2026 9471
+
+--- PAGE 20 ---
+I. Ivas et al.: Developing an Adaptive EA Model Integrating Business Capabilities, Value Streams, and IT
+[59] Eur. Parliament and Council of the Eur. Union. (Dec. 2022). Regulation
+(EU)2022/2554onDigitalOperationalResiliencefortheFinancialSector
+(DORA). [Online]. Available: https://eur-lex.europa.eu/legal-content/EN/
+TXT/?uri=CELEX%3A32022R2554
+IVKA IVAS received the M.Sc. degree in com-
+puter science, in 2003. She is currently pursuing
+the Ph.D. degree with the Faculty of Electrical
+Engineering and Computing (FER), University
+of Zagreb, Croatia, with research focused on
+a business architecture-based enterprise architec-
+ture framework for strategic alignment of the
+enterprise. She is an Enterprise Architect based
+in Frankfurt, focusing on large-scale payment
+architecture and digital transformation initiatives,
+acting as a bridge between business and IT perspectives in enterprise-wide
+strategic, regulatory, and compliance programs. She has extensive expe-
+rience in enterprise and software architecture, contributing to end-to-end
+architectural assessments and design in major projects across the financial
+and telecommunications industries. Her professional interests include busi-
+ness architecture-driven enterprise architecture, grounded in value streams
+and business capability maps as an approach to managing large, complex
+organizations.
+BORIS MILAŠINOVIĆ (Member, IEEE) received
+the degree from the Department of Mathematics,
+Faculty of Science, University of Zagreb, in 2001,
+and the M.Sc. and Ph.D. degrees in computing
+from the Faculty of Electrical Engineering and
+Computing (FER), in 2006 and 2010, respec-
+tively. He is currently a Full Professor with the
+Department of Applied Computing, Faculty of
+Electrical Engineering and Computing, University
+ofZagreb.Hismainresearchinterestsincludesoft-
+ware development methodologies and workflow management. He has been
+a member of the Editorial Board of Computer Science and Information
+Systems journal, since 2018, and Journal of Computing and Information
+Technology (CIT), since 2021; and a program committee member of several
+international conferences.
+KREŠIMIR FERTALJ is currently a Full Profes-
+sor with the Faculty of Electrical Engineering and
+Computing (FER), University of Zagreb, Croa-
+tia, where he lectures on a couple of computing
+courses on bachelor’s, graduate, specialist, and
+Ph.D.studies.Hisprofessionalandscientificinter-
+estsincludeautomatedsoftwareengineering,com-
+plex information systems, project management,
+and software security. He led several scientific and
+research projects and a few dozen development
+projects. He was a mentor to students for more than 250 bachelor’s and
+graduate theses, nine M.Sc., and 11 Ph.D. theses. He has published nearly
+200 scientific and technical articles. He is the Founder of the Laboratory for
+Special Purpose Information Systems and the Postgraduate Specialist Study
+‘‘Project Management’’ with the FER. He is a Full Member of the Croatian
+AcademyofEngineering(HATZ).HeservedastheHeadofDepartmentwith
+FER, a Secretary with the Department of Information Systems, HATZ, and
+was one of the founders and members of the management board of the PMI
+chapter in Croatia.
+9472 VOLUME 14, 2026

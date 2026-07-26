@@ -1,0 +1,521 @@
+--- PAGE 1 ---
+ScienceDirect
+Available online at www.sciencedirect.com
+Procedia Computer Science 219 (2023) 848–855
+1877-0509 © 2023 TheAuthors. Published by Elsevier B.V.
+This is an open access article under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0)
+Peer-review under responsibility of the scientific committee of the CENTERIS – International Conference on ENTERprise
+Information Systems / ProjMAN - International Conference on Project MANagement / HCist - International Conference
+on Health and Social Care Information Systems and Technologies 2022
+10.1016/j.procs.2023.01.359
+© 2023 TheAuthors. Published by Elsevier B.V.
+This is an open access article under the CC BY-NC-ND license (https://creativecommons.org/licenses/by-nc-nd/4.0)
+Peer-reviewunderresponsibilityofthescientificcommitteeoftheCENTERIS–InternationalConferenceonENTERpriseInformation
+Systems / ProjMAN - International Conference on Project MANagement / HCist - International Conference on Health and Social Care
+Information Systems and Technologies 2022
+Available online at www.sciencedirect.com
+Procedia Computer Science 00 (2022) 000–000
+www.elsevier.com/locate/procedia
+CENTERIS - International Conference on ENTERprise Information Systems / ProjMAN -
+International Conference on Project MANagement / HCist - International Conference on Health
+and Social Care Information Systems and Technologies 2022
+Design Principles for Strategic Alignment in Smart City Enterprise
+Architectures (SCEA)
+Viviana Bastidasa,∗
+, Iris Reychavb
+, Markus Helfertc
+aDepartment of Engineering, University of Cambridge, Cambridge, United Kingdom
+bDepartment of Industrial Engineering and Management, Ariel University, Ariel, Israel
+cInnovation Value Institute, Maynooth University, Maynooth, Co. Kildare, Ireland
+Abstract
+Smart Cities are complex systems where digital innovations are applied to design enhanced city services and enable public value
+creation across various domains (e.g., mobility, energy and infrastructure, environment, and so). Such complexity challenges the
+alignment between city strategies with city services and underlying information systems, leading to providing services that may
+fail to achieve city goals and meet the needs of citizens. This paper defines a set of design principles to ensure strategic alignment
+in Smart City Enterprise Architectures (SCEA). The design principles were derived from the literature and validated by smart
+city domain experts, following a design-oriented research approach. The main contribution of this paper is the formulated design
+principles that deepen the knowledge of Enterprise Architecture design in the smart cities field. These design principles can be
+used by researchers and practitioners to guide the design of innovative digital services aligned with urban strategies.
+© 2022 The Authors. Published by Elsevier B.V.
+This is an open access article under the CC BY-NC-ND license (http://creativecommons.org/licenses/by-nc-nd/4.0/)
+Peer-review under responsibility of the scientific committee of the CENTERIS - International Conference on ENTERprise Infor-
+mation Systems / ProjMAN - International Conference on Project MANagement / HCist - International Conference on Health and
+Social Care Information Systems and Technologies 2022.
+Keywords: Smart city; enterprise architecture; alignment; design principles; urban digital innovation
+1. Introduction
+Smart Cities are complex systems where Information and Communication Technologies (ICT) play a significant
+role to address the needs of multiple stakeholders and ensure the delivery of improved city services [45, 28]. The
+application of digital technologies such as the Internet of Things (IoT), cyber-physical systems, Artificial Intelligence
+(AI),andotherrecenttechnologicalinnovationsinSmartCitiesmakethedeliveryofpublicservicesmoreefficient[13,
+∗ Corresponding author. Tel.: +447485470189.
+E-mail address: vab44@cam.ac.uk
+1877-0509 © 2022 The Authors. Published by Elsevier B.V.
+This is an open access article under the CC BY-NC-ND license (http://creativecommons.org/licenses/by-nc-nd/4.0/)
+Peer-review under responsibility of the scientific committee of the CENTERIS - International Conference on ENTERprise Information Systems /
+ProjMAN - International Conference on Project MANagement / HCist - International Conference on Health and Social Care Information Systems
+and Technologies 2022.
+Available online at www.sciencedirect.com
+Procedia Computer Science 00 (2022) 000–000
+www.elsevier.com/locate/procedia
+CENTERIS - International Conference on ENTERprise Information Systems / ProjMAN -
+International Conference on Project MANagement / HCist - International Conference on Health
+and Social Care Information Systems and Technologies 2022
+Design Principles for Strategic Alignment in Smart City Enterprise
+Architectures (SCEA)
+Viviana Bastidasa,∗
+, Iris Reychavb
+, Markus Helfertc
+aDepartment of Engineering, University of Cambridge, Cambridge, United Kingdom
+bDepartment of Industrial Engineering and Management, Ariel University, Ariel, Israel
+cInnovation Value Institute, Maynooth University, Maynooth, Co. Kildare, Ireland
+Abstract
+Smart Cities are complex systems where digital innovations are applied to design enhanced city services and enable public value
+creation across various domains (e.g., mobility, energy and infrastructure, environment, and so). Such complexity challenges the
+alignment between city strategies with city services and underlying information systems, leading to providing services that may
+fail to achieve city goals and meet the needs of citizens. This paper defines a set of design principles to ensure strategic alignment
+in Smart City Enterprise Architectures (SCEA). The design principles were derived from the literature and validated by smart
+city domain experts, following a design-oriented research approach. The main contribution of this paper is the formulated design
+principles that deepen the knowledge of Enterprise Architecture design in the smart cities field. These design principles can be
+used by researchers and practitioners to guide the design of innovative digital services aligned with urban strategies.
+© 2022 The Authors. Published by Elsevier B.V.
+This is an open access article under the CC BY-NC-ND license (http://creativecommons.org/licenses/by-nc-nd/4.0/)
+Peer-review under responsibility of the scientific committee of the CENTERIS - International Conference on ENTERprise Infor-
+mation Systems / ProjMAN - International Conference on Project MANagement / HCist - International Conference on Health and
+Social Care Information Systems and Technologies 2022.
+Keywords: Smart city; enterprise architecture; alignment; design principles; urban digital innovation
+1. Introduction
+Smart Cities are complex systems where Information and Communication Technologies (ICT) play a significant
+role to address the needs of multiple stakeholders and ensure the delivery of improved city services [45, 28]. The
+application of digital technologies such as the Internet of Things (IoT), cyber-physical systems, Artificial Intelligence
+(AI),andotherrecenttechnologicalinnovationsinSmartCitiesmakethedeliveryofpublicservicesmoreefficient[13,
+∗ Corresponding author. Tel.: +447485470189.
+E-mail address: vab44@cam.ac.uk
+1877-0509 © 2022 The Authors. Published by Elsevier B.V.
+This is an open access article under the CC BY-NC-ND license (http://creativecommons.org/licenses/by-nc-nd/4.0/)
+Peer-review under responsibility of the scientific committee of the CENTERIS - International Conference on ENTERprise Information Systems /
+ProjMAN - International Conference on Project MANagement / HCist - International Conference on Health and Social Care Information Systems
+and Technologies 2022.
+Available online at www.sciencedirect.com
+Procedia Computer Science 00 (2022) 000–000
+www.elsevier.com/locate/procedia
+CENTERIS - International Conference on ENTERprise Information Systems / ProjMAN -
+International Conference on Project MANagement / HCist - International Conference on Health
+and Social Care Information Systems and Technologies 2022
+Design Principles for Strategic Alignment in Smart City Enterprise
+Architectures (SCEA)
+Viviana Bastidasa,∗
+, Iris Reychavb
+, Markus Helfertc
+aDepartment of Engineering, University of Cambridge, Cambridge, United Kingdom
+bDepartment of Industrial Engineering and Management, Ariel University, Ariel, Israel
+cInnovation Value Institute, Maynooth University, Maynooth, Co. Kildare, Ireland
+Abstract
+Smart Cities are complex systems where digital innovations are applied to design enhanced city services and enable public value
+creation across various domains (e.g., mobility, energy and infrastructure, environment, and so). Such complexity challenges the
+alignment between city strategies with city services and underlying information systems, leading to providing services that may
+fail to achieve city goals and meet the needs of citizens. This paper defines a set of design principles to ensure strategic alignment
+in Smart City Enterprise Architectures (SCEA). The design principles were derived from the literature and validated by smart
+city domain experts, following a design-oriented research approach. The main contribution of this paper is the formulated design
+principles that deepen the knowledge of Enterprise Architecture design in the smart cities field. These design principles can be
+used by researchers and practitioners to guide the design of innovative digital services aligned with urban strategies.
+© 2022 The Authors. Published by Elsevier B.V.
+This is an open access article under the CC BY-NC-ND license (http://creativecommons.org/licenses/by-nc-nd/4.0/)
+Peer-review under responsibility of the scientific committee of the CENTERIS - International Conference on ENTERprise Infor-
+mation Systems / ProjMAN - International Conference on Project MANagement / HCist - International Conference on Health and
+Social Care Information Systems and Technologies 2022.
+Keywords: Smart city; enterprise architecture; alignment; design principles; urban digital innovation
+1. Introduction
+Smart Cities are complex systems where Information and Communication Technologies (ICT) play a significant
+role to address the needs of multiple stakeholders and ensure the delivery of improved city services [45, 28]. The
+application of digital technologies such as the Internet of Things (IoT), cyber-physical systems, Artificial Intelligence
+(AI),andotherrecenttechnologicalinnovationsinSmartCitiesmakethedeliveryofpublicservicesmoreefficient[13,
+∗ Corresponding author. Tel.: +447485470189.
+E-mail address: vab44@cam.ac.uk
+1877-0509 © 2022 The Authors. Published by Elsevier B.V.
+This is an open access article under the CC BY-NC-ND license (http://creativecommons.org/licenses/by-nc-nd/4.0/)
+Peer-review under responsibility of the scientific committee of the CENTERIS - International Conference on ENTERprise Information Systems /
+ProjMAN - International Conference on Project MANagement / HCist - International Conference on Health and Social Care Information Systems
+and Technologies 2022.
+
+--- PAGE 2 ---
+Viviana Bastidas et al. / Procedia Computer Science 219 (2023) 848–855 849
+2 Viviana Bastidas et al. / Procedia Computer Science 00 (2022) 000–000
+36]. The digital transformation of these cities should be composed of a well-defined strategic plan and innovative
+solutions that serve the needs of the citizens and urban environments [27, 1, 8]. Many municipalities have to face
+challenges in the development and implementation of smarter cities. They need to move from a traditional model of
+service delivery to a more citizen-centric approach, contributing to the success of Smart City initiatives [29].
+City services and underlying information systems must support a continuous strategic alignment during digital
+transformation. The effective transition of strategy into IT requires extensive design activity on both organisation
+design and information systems design [21]. [19] present a Strategic Alignment Model (SAM) which defines the
+different perspectives for the integration between business and IT. In this model, business strategy drives both the
+organisational design choices and the design of IS, while IT enables new or enhanced business strategies. Several
+analytical methodologies are available to make the strategic alignment operational: critical success factors, IS business
+systems planning, Enterprise Architecture (EA), and Enterprise Modelling (EM) [19, 12, 37]. Unlike the existing
+research that considers strategic alignment in the corporate and profit-oriented sector, strategic alignment in the Smart
+Cities domain is still an open challenge [40]. Smart Cities are required to achieve city goals and objectives and provide
+the desired services to citizens, with challenging implications in the management and design of services [15]. Citizen
+centricity must influence the design and delivery of city services driven by the needs of citizens (e.g., residents,
+visitors, and businesses) [23].
+Smart Cities Enterprise Architectures (SCEA) aim to provide a common framework for stakeholders and a guide
+to address their multiple concerns [4, 9]. Several SCEA are proposed to face the challenges of digitalising and trans-
+forming public services [27, 33, 16, 31]. Yet, these architectures mostly emphasize technical aspects that constitute
+Smart Cities, and they rarely focus on city services and their strategic aspects towards delivering cities’ vision and ob-
+jectives [35, 40]. Smart Cities are likely to fail to offer the required services to citizens because of this lack of strategic
+alignment considerations that negatively impact the achievement of city goals and objectives [32]. Design principles
+are necessary as general design considerations to address the alignment in the Smart Cities domain. Hence, this paper
+answers the following research question (RQ): “What are the design principles that support the strategic alignment
+between city services and information systems in SCEA?”. Such design principles are formulated as explicit prescrip-
+tions to answer this research question and facilitate design-science research on modelling the strategic alignment in
+SCEA. The main contribution of this paper is the formulation of a set of comprehensive design principles that deepen
+the knowledge of architectural design in the Smart Cities field. These principles can be used by researchers and prac-
+titioners to develop innovative digital services aligned with urban strategies. The structure of the paper is organised as
+follows, Section 1 introduces and motivates the research problem. Section 2 details the research method and Section 3
+presents the set of design principles. Section 4 discusses the formulated principles and concludes the paper.
+2. Research Method
+This paper defines a set of design principles to ensure strategic alignment between city services and information
+systems in SCEA. The design principles were derived from relevant literature and validated by Smart City domain
+experts as part of a design science research process [7]. The literature review process and the case studies are detailed
+as follows.
+2.1. Literature Review
+The search strategy follows a structured approach for literature reviews in order to determine the source material
+for the review [44]. The initial set of papers is selected by retrieving all the titles of the papers published by a relevant
+set of scientific journals and conferences on topics regarding Information Systems, Enterprise Architecture, and Smart
+Cities. We searched for literature in a database consisting of the “AIS Basket of 8” and open access databases such
+as Google Scholar. The keywords used in the search process include: smart city alignment, enterprise architecture
+alignment, alignment principle(s), and alignment design. The keywords are searched in the title, abstract, and key-
+words terms. A total of thirty-five journal articles and twenty-seven conference articles were identified. These papers
+are then selected and reviewed entirely. Next, the first set of design principles was identified by reflecting on the
+existing knowledge for alignment in EA and design knowledge acquired from working on modelling public services.
+Successively, additional relevant papers are identified proceeding backward by reviewing the citations of the identified
+
+--- PAGE 3 ---
+850 Viviana Bastidas et al. / Procedia Computer Science 219 (2023) 848–855
+Viviana Bastidas et al. / Procedia Computer Science 00 (2022) 000–000 3
+articles and proceeding forward by reviewing the citations of the identified articles. Next, the identified articles were
+analysed by following a logical approach to grouping the design principles in dimensions that represent the key design
+principles uncovered.
+2.2. Case Studies
+This paper validates the design principles identified by conducting multiple case studies on two real-world cities
+in Ireland and Israel. The two cities will be referred to as River City and Riviera City. These case studies rely on
+multiple sources of evidence (e.g., meetings, semi-structured interviews, internal documents, digital strategies), using
+a triangulation analysis. The data of the case studies are collected by using a direct method and independent analy-
+sis [38]. The stakeholders in River city include the head of digital strategy, the data manager, and the senior managers
+of the city council departments involved in the Smart City initiative. The stakeholders in Riviera city include the Smart
+City and digital domain manager, Geographic Information System (GIS) manager, and a process owner. We followed
+an inductive and iterative process of reading and examining the transcriptions and the secondary data to assign the
+information analysis units to the coding concepts related to the dimensions and design principles. These dimensions
+and principles were refined after three iteration loops with the stakeholders as presented in the next section.
+3. Design Principles Definition
+Objective
+DP1
+Citizens' Needs Focus
+DP2
+Consistency
+DESIGN
+PRINCIPLES
+DP3
+Compatibility
+DP4
+Dynamicity
+Design Principle Dimension
+Stage
+Scope
+Mechanism
+DP6
+Modelling
+DP5
+Vertical and Horizontal
+Fig. 1. Design Principles to Address the Alignment.
+This section defines a set of design principles for alignment between city strategies with city services and informa-
+tion systems in SCEA. Such design principles are defined as explicit prescriptions and they are illustrated by using
+conceptual models in a structured fashion. Figure 1 presents the set of design principles formulated. The principles
+are grouped along four dimensions: Objective, Usage, Scope, and Mechanism, and are outlined as follows.
+3.1. Dimension: Objective
+One main design principle is identified as specifying the objective of the alignment between city strategies with
+city services and information systems in SCEA: Citizens’ Needs Focus.
+3.1.1. DP1 - Citizens’ Needs Focus: Support the alignment between city strategies with city services and information
+systems in order to meet the needs of citizens.
+The objective of this alignment is to develop IS solutions according to city strategies and goals, thus responding to
+the needs of citizens. Smart City managers should develop a well-defined strategic plan and innovative solutions that
+serve the needs of citizens [27, 1, 42]. The needs of citizens involve the needs of individuals, but also the needs of
+communities, groups, neighbourhoods, and businesses of the city [14, 23, 2]. Smart cities are required to develop new
+ways of working across vertical silos to deliver more citizen-centric services, contributing to the success of Smart City
+
+--- PAGE 4 ---
+Viviana Bastidas et al. / Procedia Computer Science 219 (2023) 848–855 851
+4 Viviana Bastidas et al. / Procedia Computer Science 00 (2022) 000–000
+Citizens'
+Needs
+City Services
+Smart City
+Strategies
+Information
+Systems
+Alignment
+Citizens
+define have
+achieve
+Fig. 2. DP1: Citizens’ Needs Focus. Alignment Objective.
+initiatives among different domains [29, 23]. From the point of view of practitioners, the analysis of citizens’ needs
+and investment of substantial resources in technological development are required to improve the quality of their lives
+which first and foremost puts the citizens at the centre. Figure 2 presents a conceptual model to represent the Design
+Principle 1. The model illustrates how the needs of citizens define the Smart City strategies that are achieved through
+the alignment between city services and the information systems that enable them.
+3.2. Dimension: Stage
+Three main design principles are associated with the notion of the alignment between city strategies with city
+services and information systems in SCEA: Consistency, Compatibility, and Dynamicity.
+3.2.1. DP2 - Consistency: Provide a consistent alignment that allows a coherent architecture specification of concepts
+within each layer.
+Functional
+Department
+Human
+Resources
+Economic
+Development
+Finance
+Housing and
+Community
+CS
+alignment
+alignment
+Fig. 3. DP2: Consistent Alignment. City Council Functional Departments.
+The first stage of alignment concerns the development of a consistent architecture layer specification. The spec-
+ification of the components within each SCEA layer must be mutually supportive [34, 24, 3]. Addressing the con-
+sistency of alignment should involve two main dimensions. The first concerns selecting the appropriate components
+to satisfy the intent of the designer. The second is related to the correspondence among those components. The im-
+plementation of SCEA are more likely to be successful if the specifications of each architecture layer component are
+consistent [25, 34, 6]. The interviews highlighted that consistency of alignment within SCEA specification should be
+provided. Figure 3 illustrates an example of consistent alignment between functional departments in the city council
+A. In this example, Human Resources, Economic Development, Finance, and Housing and Community are concept
+specializations (CS) of the overall concept: Functional Department. This enables functional departments to be more
+easily supported by information covering all departments involved rather than information for each department.
+3.2.2. DP3 - Compatibility: Provide a compatible alignment that allows appropriate architecture specification of
+concepts across architecture layers.
+The next stage is related to the compatibility of alignment. This involves the definition of compatible specifica-
+tions across the selected components [25, 34]. For instance, a city service may be designed with the expectation of
+aggregated information from different city devices or smart objects that need to communicate and collaborate with
+
+--- PAGE 5 ---
+852 Viviana Bastidas et al. / Procedia Computer Science 219 (2023) 848–855
+Viviana Bastidas et al. / Procedia Computer Science 00 (2022) 000–000 5
+Application
+Service
+Application
+Service A
+Application
+Service B
+Application
+Service C
+Application
+Service D
+CS
+Data
+CS
+Data Data Data
+alignment alignment alignment alignment
+CS CS CS
+Fig. 4. DP3: Compatible Alignment. Multiple Application Services.
+software components [22, 20]. However, if the city does not have a data aggregation system to combine data or open
+interfaces that allow for a more dynamic form of orchestrating services, city stakeholders will not have the required
+information [11]. Figure 4 illustrates an example of compatible alignment between multiple application services and
+data collected, as expressed by interviewees in both case studies. In this example, different application services (e.g.,
+Application Service A, B, C, and D) are concept specializations (CS) of the concept: Application Service. Each appli-
+cation service should be aligned with the data required to support the service at the application level. Then, multiple
+alignment ensures that a local specification is compatible with the specifications of SCEA.
+3.2.3. DP4 - Dynamicity: Provide a dynamic alignment of concepts that allows a flexible architecture specification
+that can be adjusted over time.
+City Service
+Quality
+Smart City
+Performance
+Application
+Service Quality
+CS CS
+alignment
+Fig. 5. DP4: Dynamic Alignment. Quality Perspectives.
+Thenextstageconcernsdynamicalignment.Thisisrelatedtotherequiredflexibilityofthealignmentapproach[25,
+34]. This recognises, for example, that changing one component at the city service level affects other components at
+the information systems level. Dynamic alignment assumes that changes happen in a Smart City and as a result all
+alignments progress over time [41, 46]. Dynamic alignment in Smart Cities seeks to ensure that alignment principles
+(consistent and compatible) are adjusted over time, responding to the dynamic nature of Smart Cities. This can impact
+the strategy, structure interactions, and information systems [39, 30]. The participants of both case studies stressed the
+need for a dynamic alignment and a flexible architecture specification. Figure 5 illustrates an example of the dynamic
+alignment in terms of Smart City quality levels and their performance implications. In this example, the Smart City
+performancedependsonthealignmentofbothcityservicequalities(e.g.,efficiency,flexibility)andapplicationservice
+qualities (e.g., interoperability, availability).
+3.3. Dimension: Scope
+The scope refers to the level of the alignment between the service and information layers in SCEA. One scope
+design principle is identified: Vertical and Horizontal.
+3.3.1. DP5 - Vertical and Horizontal: Enable the vertical and horizontal alignment of Smart Cities since the archi-
+tecture specification.
+The alignment in Smart Cities involves the design and delivery of city services driven by the integration of domains
+rather than services within the silos of a city [23, 10, 18]. Understanding how a city operates is one of the key
+
+--- PAGE 6 ---
+Viviana Bastidas et al. / Procedia Computer Science 219 (2023) 848–855 853
+6 Viviana Bastidas et al. / Procedia Computer Science 00 (2022) 000–000
+Domain
+Energy Mobility Tourism
+CS
+CS
+alignment alignment alignment
+CS CS
+alignment alignment
+Fig. 6. DP5: Vertical and Horizontal Alignment. Smart City Application Domains.
+elements in designing the foundation for execution via EA by providing an actionable view of a city [37, 23]. A
+smart city operating model, as the basis for the alignment, enables cities to drive innovation and collaboration across
+these vertical domains and hence operationalises their vision and strategy [23]. Figure 6 illustrates the vertical and
+horizontal alignment in Smart Cities based on our practical work (i.e., modelling smart city services) in both cases.
+In this example, Energy, Mobility, and Tourism are concept specializations (CS) of the concept: Domain. Vertical
+relationships are either conducted between layers at different levels of abstraction (e.g., refinements) or with other
+representations (e.g., strategy, requirements, organisation structure, applications, data). Horizontal relationships refer
+to relationships between layers at the same level of abstraction (e.g., city service level).
+3.4. Dimension: Mechanism
+One main design principle is identified as a mechanism for the alignment between the service and information
+layers in SCEA: Modelling.
+3.4.1. DP6 - Modelling: Provide a modelling mechanism to express the alignment between architecture layers.
+Architecture
+Models
+Alignment
+Visualisation
+Alignment
+Analysis
+Smart City
+Stakeholders
+City Service
+Models
+Information
+Systems Models
+alignment
+Fig. 7. DP6: Modelling. Alignment Mechanism.
+All the concepts involved in the alignment between the service and information layers in SCEA should be mod-
+elled [5, 26]. Modelling is necessary to understand what information is considered for alignment analysis. Modelled
+concepts should be mapped to facilitate concept traceability and perform alignment analysis. This involves the defi-
+nition of the relationships between the concepts that need to be traced across Smart City systems [43]. [17] describe
+Model Driven Engineering (MDE) as a tool to support the alignment between architecture layers and views, and
+metamodels to represent the concepts involved in the alignment analysis. [25] proposes an Enterprise Modelling Lan-
+guage to support the alignment and coherent enterprise architecture descriptions. Figure 7 illustrates an example of the
+alignment mechanism by creating integrated architecture models (e.g., city service models and information systems
+models) in both case studies. The observations suggest that coherent SCEA models enable communication among
+different stakeholders and provide ways to determine the state of alignment and areas for architecture improvement.
+
+--- PAGE 7 ---
+854 Viviana Bastidas et al. / Procedia Computer Science 219 (2023) 848–855
+Viviana Bastidas et al. / Procedia Computer Science 00 (2022) 000–000 7
+4. Discussion and Conclusion
+Strategic alignment is required in the Smart Cities field in order to respond to city goals across various domains
+(e.g., mobility, energy, environment, and public safety). This research builds an understanding of the different design
+principles that can guide the design of SCEA. Hence, four dimensions (e.g., objective, stage, scope, mechanism)
+and six distinct design principles (e.g., citizen’s needs focus, consistency, compatibility, dynamicity, vertical and
+horizontal, modelling) are identified and validated with Smart City domain experts of cities. These design principles
+were defined as statements that describe how the alignment should be designed or built or what it should comprise.
+Our findings deepen the understanding of the strategic alignment in SCEA and add design principles based on our
+work with Smart City domain experts in two different cities. This study advances current research on the Smart
+Cities field, which has been mainly focused on the implementation of the information and technology aspects in
+these complex and dynamic urban environments. It contributes to the current understanding of how city strategies
+should be aligned with Smart City implementations. Besides, this research provides a prescriptive view to guide a
+coherent architectural design to support the fulfilment of the Smart Cities vision. Such a prescriptive view ensures
+that Smart City implementations are built according to city goals which reflect the needs and expectations of citizens.
+Our case studies validate this prescriptive view by analysing these design principles in line with city master plans and
+digital strategies. This is important to advance the concept of Smart Cities, as research has so far primarily focused
+on technical and engineering challenges with little attention to how to achieve city strategies [35, 40]. It is necessary
+to answer during the city service design, why these services exist or why they need to be changed. This can help city
+administrators and architects develop coherent architecture descriptions to support continuous alignment [25].
+The formulated design principles can be used as a foundation for design science research that seek to develop
+new or improved SCEA aligned with city strategies. These design principles provide a solid foundation to break the
+existing silos and ensure the interoperability of Smart Cities at various levels (e.g., strategic, city services, information
+systems). Our research work leads us to understand that city managers should ensure alignment with city strategies,
+tracing city services and information systems. Future research will investigate the strategic alignment by using a
+semantic analysis of the SCEA models. This will allow the design of integrated SCEA to reduce the silos that currently
+exist across public services.
+References
+[1] Agbali, M., Trillo, C., Ibrahim, I.A., Arayici, Y., Fernando, T., 2019. Are smart innovation ecosystems really seeking to meet citizens’ needs?
+insights from the stakeholders’ vision on smart city strategy implementation. Smart Cities 2, 307–327.
+[2] Al-Nasrawi, S., Adams, C., El-Zaart, A., 2015. A conceptual multidimensional model for assessing smart sustainable cities. JISTEM-Journal
+of Information Systems and Technology Management 12, 541–558.
+[3] Anthony Jnr, B., 2020. Smart city data architecture for energy prosumption in municipalities: concepts, requirements, and future directions.
+International Journal of Green Energy 17, 827–845.
+[4] Anthopoulos, L., Fitsilis, P., 2014. Exploring architectural and organizational features in smart cities, in: International Conference on Advanced
+Communication Technology (ICACT), 2014 16th, IEEE. pp. 190–195.
+[5] Aversano, L., Grasso, C., Tortorella, M., 2012. A literature review of business/it alignment strategies. Procedia Technology 5, 462–474.
+[6] Barletta, V.S., Caivano, D., Dimauro, G., Nannavecchia, A., Scalera, M., 2020. Managing a smart city integrated model through smart program
+management. Applied Sciences 10, 714.
+[7] Bastidas, V., 2021. ArchiSmartCity: Modelling the Alignment of Services and Information in Smart City Architectures. Ph.D. thesis. National
+University of Ireland, Maynooth.
+[8] Bastidas, V., Bezbradica, M., Helfert, M., 2017. Cities as enterprises: a comparison of smart city frameworks based on enterprise architecture
+requirements, in: International conference on smart cities, Springer. pp. 20–28.
+[9] Bastidas, V., Helfert, M., Bezbradica, M., 2018. A requirements framework for the design of smart city reference architectures, in: Proceedings
+of the 51st Hawaii International Conference on System Sciences, pp. 2516–2523.
+[10] Bhatt, V., Brutti, A., Burns, M., Frascella, A., 2017. An approach to provide shared architectural principles for interoperable smart cities, in:
+International Conference on Computational Science and Its Applications, Springer. pp. 415–426.
+[11] Böhmann, T., Leimeister, J.M., Möslein, K., 2018. The new fontiers of service systems engineering. Business Information System Engineering
+60, 373–375.
+[12] Chan, Y.E., Reich, B.H., 2007. It alignment: what have we learned? Journal of Information technology 22, 297–315.
+[13] Chiang, M., Zhang, T., 2016. Fog and iot: An overview of research opportunities. IEEE Internet of things journal 3, 854–864.
+[14] Chourabi, H., Nam, T., Walker, S., Gil-Garcia, J.R., Mellouli, S., Nahon, K., Pardo, T.A., Scholl, H.J., 2012. Understanding smart cities: An
+integrative framework, in: 45th Hawaii international conference on system sciences, 2012, IEEE. pp. 2289–2297.
+
+--- PAGE 8 ---
+Viviana Bastidas et al. / Procedia Computer Science 219 (2023) 848–855 855
+8 Viviana Bastidas et al. / Procedia Computer Science 00 (2022) 000–000
+[15] Cicirelli, F., Guerrieri, A., Spezzano, G., Vinci, A., 2017. An edge-based platform for dynamic smart city applications. Future Generation
+Computer Systems 76, 106–118.
+[16] Cox, A., Parslow, P., De Lathouwer, B., Klien, E., Kempen, B., Lonien, J., 2016. Espresso project d4.2 – definition of smart city reference
+architecture, systemic standardisation approach to empower smart cities and communities. URL: http://espresso-project.eu/. last
+accessed 12 December 2019.
+[17] De Castro, V., Marcos, E., Vara, J.M., 2011. Applying cim-to-pim model transformations for the service-oriented development of information
+systems. Information and Software Technology 53, 87–105.
+[18] Heaton, J., Parlikad, A.K., 2019. A conceptual framework for the alignment of infrastructure assets to citizen requirements within a smart
+cities framework. Cities 90, 32–41.
+[19] Henderson,J.C.,Venkatraman,H.,1993. Strategicalignment:Leveraginginformationtechnologyfortransformingorganizations. IBMsystems
+journal 32, 472–484.
+[20] Hernández, J.L., Garcı́a, R., Schonowski, J., Atlan, D., Chanson, G., Ruohomäki, T., 2020. Interoperable open specifications framework for
+the implementation of standardized urban platforms. Sensors 20, 2402.
+[21] Hevner, A.R., March, S.T., Park, J., Ram, S., 2004. Design science in information systems research. MIS quarterly , 75–105.
+[22] Huber, R.X.R., Püschel, L.C., Röglinger, M., 2019. Capturing smart service systems: Development of a domain-specific modelling language.
+Information Systems Journal 29, 1207–1255.
+[23] ISO37106, 2018. ISO 37106: 2018 - Sustainable cities and communities—Guidance on Establishing Smart City Operating Models for Sus-
+tainable Communities, in: International Standards ISO37106, First Edition, International Organization for Standardization.
+[24] ISO/IEC, 2015. Smart cities. preliminary report 2014. ISO/IEC JTC 1, Information technology .
+[25] Jonkers, H., Lankhorst, M., Van Buuren, R., Hoppenbrouwers, S., Bonsangue, M., Van Der Torre, L., 2004. Concepts for modeling enterprise
+architectures. International Journal of Cooperative Information Systems 13, 257–287.
+[26] Jonkers, H., Van Burren, R., Arbab, F., De Boer, F., Bonsangue, M., Bosma, H., Ter Doest, H., Groenewegen, L., Scholten, J.G., Hoppenbrouw-
+ers, S., et al., 2003. Towards a language for coherent enterprise architecture descriptions, in: Seventh IEEE International Enterprise Distributed
+Object Computing Conference, 2003. Proceedings., IEEE. pp. 28–37.
+[27] Kakarontzas, G., Anthopoulos, L., Chatzakou, D., Vakali, A., 2014. A conceptual enterprise architecture framework for smart cities: A survey
+based approach, in: 11th International Conference on e-Business (ICE-B), 2014, IEEE. pp. 47–54.
+[28] Khatoun, R., Zeadally, S., 2016. Smart cities: Concepts, architectures, research opportunities. Commun. Acm 59, 46–57.
+[29] King, S., Cotterill, S., 2007. Transformational government? the role of information technology in delivering citizen-centric local public
+services. Local Government Studies 33, 333–354.
+[30] Kourtit, K., Pele, M.M.M., Nijkamp, P., Pele, D.T., 2021. Safe cities in the new urban world: A comparative cluster dynamics analysis through
+machine learning. Sustainable Cities and Society 66, 102665.
+[31] Lnenicka, M., Machova, R., Komarkova, J., Pasler, M., 2017. Government enterprise architecture for big and open linked data analytics in a
+smart city ecosystem, in: International Conference on Smart Education and Smart E-Learning, Springer. pp. 475–485.
+[32] Manville, C., Cochrane, G., Cave, J., Millard, J., Pederson, J.K., Thaarup, R.K., Liebe, A., Wissner, M., Massink, R., Kotterink, B., 2014.
+Mapping smart cities in the eu. Policy Department A: Economic and Scientific Policy, European Parliament .
+[33] McGinley, T., Nakata, K., 2015. A community architecture framework for smart cities, in: Citizen’s right to the digital city. Springer, pp.
+231–252.
+[34] Morabito, J., Sack, I., Bhate, A., 1999. Organization modeling: innovative architectures for the 21st century. Prentice Hall.
+[35] Pérez González, D., Dı́az Dı́az, R., 2015. Public services povided with ict in the smart city environment: The case of spanish cities. Journal of
+Universal Computer Science 21, 248–267.
+[36] Rojas, E., Bastidas, V., Cabrera, C., 2020. Cities-board: A framework to automate the development of smart cities dashboards. IEEE Internet
+of Things Journal 7, 10128–10136.
+[37] Ross, J.W., Weill, P., Robertson, D., 2006. Enterprise architecture as strategy: Creating a foundation for business execution. Harvard Business
+Press.
+[38] Runeson, P., Höst, M., 2009. Guidelines for conducting and reporting case study research in software engineering. Empirical software
+engineering 14, 131.
+[39] Sabherwal, R., Hirschheim, R., Goles, T., 2001. The dynamics of alignment: Insights from a punctuated equilibrium model. Organization
+science 12, 179–197.
+[40] Sánchez-Corcuera, R., Nuñez-Marcos, A., Sesma-Solance, J., Bilbao-Jayo, A., Mulero, R., Zulaika, U., Azkune, G., Almeida, A., 2019. Smart
+citiessurvey:Technologies,applicationdomainsandchallengesforthecitiesofthefuture. InternationalJournalofDistributedSensorNetworks
+15, 1550147719853984.
+[41] Sen, A., Sinha, A.P., 2011. It alignment strategies for customer relationship management. Decision Support Systems 51, 609–619.
+[42] Simonofski, A., Vallé, T., Serral, E., Wautelet, Y., 2019. Investigating context factors in citizen participation strategies: A comparative analysis
+of swedish and belgian smart cities. International Journal of Information Management , 102011.
+[43] Tekinerdogan, B., Erata, F., 2017. Modeling traceability in system of systems, in: Proceedings of the Symposium on Applied Computing, pp.
+1799–1802.
+[44] Webster, J., Watson, R.T., 2002. Analyzing the past to prepare for the future: Writing a literature review. MIS quarterly , xiii–xxiii.
+[45] Zanella, A., Bui, N., Castellani, A., Vangelista, L., Zorzi, M., 2014. Internet of things for smart cities. IEEE Internet of Things journal 1,
+22–32.
+[46] Zimmermann, A., Schmidt, R., Sandkuhl, K., Wißotzki, M., Jugel, D., Möhring, M., 2015. Digital enterprise architecture-transformation for
+the internet of things, in: 2015 IEEE 19th International Enterprise Distributed Object Computing Workshop, IEEE. pp. 130–138.

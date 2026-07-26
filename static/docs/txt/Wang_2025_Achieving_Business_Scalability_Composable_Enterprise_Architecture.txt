@@ -1,0 +1,847 @@
+--- PAGE 1 ---
+Received 26 March 2025, accepted 23 April 2025, date of publication 28 April 2025, date of current version 6 May 2025.
+Digital Object Identifier 10.1109/ACCESS.2025.3564710
+Achieving Business Scalability With Composable
+Enterprise Architecture
+WEI-JI WANG
+Graduate Institute of Networking and Multimedia, National Taiwan University, Taipei 10617, Taiwan
+e-mail: d11944007@csie.ntu.edu.tw
+ABSTRACT This study introduces Composable Enterprise Architecture (CEA) as a strategic approach to
+addresstheinherentrigidityandoperationalconstraintsoftraditionalenterprisesystems,whichoftenimpede
+adaptability to fast-changing market conditions. By implementing a modular, cloud-native framework
+centered on Packaged Business Capabilities (PBCs), CEA enhances system reusability, autonomy, and
+scalability. Based on semi-structured interviews with industry stakeholders and extensive operational data
+analysis, the study reports significant benefits achieved through CEA adoption, including a 55% reduction
+in system downtime, an increase in deployment frequency from quarterly to monthly, and a 60% decrease
+in time-to-market for new features. These structural improvements streamline updates, reduce operational
+risks,andempowerorganizationstoresponddynamicallytomarketchanges.Assuch,CEAoffersavaluable
+architectural strategy to drive digital transformation and enhance agility across varied industries.
+INDEX TERMS Composable enterprise architecture, business agility, digital transformation, packaged
+business capabilities, cloud-native technologies, innovation.
+I. INTRODUCTION
+The rapid acceleration of digital transformation has posi-
+tioned business agility as a crucial factor for maintaining
+competitiveness [9]. As digital technologies continue to
+evolve and market conditions become increasingly unpre-
+dictable, organizations must swiftly adapt their strategies to
+keep pace with the changing landscape. This transforma-
+tion is not limited to technological upgrades; it requires a
+comprehensive restructuring of business models, operational
+processes, and technological infrastructure to succeed in a
+dynamic environment.
+The value of enterprise architecture extends beyond tech-
+nical enhancements; it is pivotal in aligning organizational
+capabilities with business objectives. Nonetheless, many
+organizations tend to overly focus on technical issues, often
+neglecting business priorities, which results in a grow-
+ing disconnect between anticipated outcomes and actual
+results. To address this challenge, enterprise architecture
+should strike a balance between technological innovation and
+business strategy, thereby more effectively supporting the
+organization’s overall goals and ensuring long-term value
+The associate editor coordinating the review of this manuscript and
+approving it for publication was Asadullah Shaikh .
+creation[1].AccordingtoLapalme[2],theconceptof‘Enter-
+prise Ecological Adaptation’ was introduced to emphasize
+the role of enterprise architecture in facilitating continuous
+adaptation to changing external conditions. This approach
+advocates for ongoing learning and strategic adjustments to
+effectivelyrespondtoevolvingcircumstances,therebyfoster-
+ing innovation, resilience, and sustainable growth. Building
+upon these perspectives, recent studies have further empha-
+sized that enterprise architecture contributes to this adap-
+tive capability through three interconnected mechanisms:
+improving decision-making, facilitating coordinated project
+delivery, and enabling the development of flexible, scalable
+information systems platforms [17]. These mechanisms col-
+lectively empower organizations to navigate change, drive
+innovation, and maintain operational resilience in digitally
+disruptive environments.
+The telecommunications industry, with its complex tech-
+nologicalrequirements,facesuniquechallengesandopportu-
+nities in this digital era [3]. Traditional telecom architectures
+often lack the flexibility and scalability needed to respond
+effectively to shifting market demands, leading to lengthy
+integration and deployment cycles that struggle to meet
+diversecustomerexpectations.Similarchallengesarepresent
+across other industries, such as finance, manufacturing, and
+76464
+2025 The Authors. This work is licensed under a Creative Commons Attribution 4.0 License.
+For more information, see https://creativecommons.org/licenses/by/4.0/ VOLUME 13, 2025
+
+--- PAGE 2 ---
+W.-J. Wang: Achieving Business Scalability With Composable Enterprise Architecture
+retail, which must also adapt rapidly to stay competitive amid
+ongoing digital transformation. To address these issues, this
+study introduces Composable Enterprise Architecture (CEA)
+as an innovative approach. CEA leverages modular design
+principles to facilitate the rapid configuration and recon-
+figuration of business functions, enhancing organizational
+agility. The research includes a case study focused on the
+telecommunications industry, demonstrating how CEA can
+streamline integration, improve operational efficiency, and
+drive business innovation during digital transformation.
+The key contribution of this study is to present and val-
+idate a versatile architectural approach that extends beyond
+telecommunications, offering benefits to various industries
+undergoing digital transformation. By implementing CEA,
+organizations can more effectively navigate changing market
+conditions, achieve improved agility, and sustain a competi-
+tive edge in a rapidly evolving landscape.
+In the following sections, this study will first analyze the
+evolution of enterprise architecture to highlight the advan-
+tages of CEA. It will then review the existing literature on
+business agility, digital transformation, and CEA to establish
+a foundation for understanding its relevance. Following this,
+we will present a detailed examination of CEA, focusing
+particularly on the value-added potential of PBC assem-
+bly. Additionally, a case study will be provided to illustrate
+the practical application of CEA in the telecommunications
+industry. The methodology section outlines the data collec-
+tion and analysis process. The results are then presented,
+followed by a discussion of key insights and strategic impli-
+cations in the final section on research insights and future
+directions.
+In summary, this study presents three core contributions.
+Conceptually, it introduces CEA as a novel architectural
+paradigm that addresses the limitations of traditional and
+microservices-based enterprise systems. Empirically, it val-
+idates the effectiveness of CEA through a case study in
+the telecommunications industry, supported by qualitative
+insights from expert interviews and quantitative system per-
+formance improvements. Technically, it proposes a practical
+implementation of CEA using modular PBCs, orchestrated
+via Kubernetes and encapsulated through micro-frontend
+architecture. The IVA-PBC serves as a concrete example to
+demonstrate how business functionality can be modularized,
+integrated,andenhancedwithintheCEAframework,thereby
+confirming its feasibility and adaptability in real-world enter-
+prise scenarios.
+II. ENTERPRISE ARCHITECTURE IN HISTORICAL
+CONTEXT: TRACING THE SHIFT FROM MONOLITHIC
+TO COMPOSABLE FRAMEWORKS
+A. MONOLITHIC VS. MICROSERVICES ARCHITECTURE:
+TRANSITIONING TO AGILE DECENTRALIZATION
+In a traditional Monolithic Architecture, the entire sys-
+tem’s functionalities are centralized within a single codebase,
+making development and testing more straightforward for
+smaller-scale systems. However, as the system grows and
+becomes more complex, this centralized design reveals sig-
+nificant limitations. Each update requires redeploying the
+entire application, which increases the risk of deployment
+issues and reduces flexibility, thereby complicating efforts to
+meet the demands for rapid iteration and high availability.
+MicroservicesArchitectureovercomesthesechallengesby
+decomposing a monolithic application into smaller, indepen-
+dent services, each focused on a specific business function.
+These services are organized around distinct business capa-
+bilitiesandcommunicatethroughlightweightprotocols,such
+as HTTP APIs, to minimize dependencies. This approach
+allowsdevelopmentteamstoindependentlydevelop,test,and
+deploy each service, improving the system’s adaptability and
+enabling faster responses to changing business requirements.
+While Microservices Architecture offers significant bene-
+fits in terms of maintainability and scalability, the transition
+from a Monolithic Architecture presents several challenges.
+These challenges include restructuring databases, deter-
+mining the appropriate level of service granularity, and
+ensuring stable communication between services. To achieve
+a successful migration, it is crucial to adopt an effective
+decomposition strategy, such as segmenting services based
+on business functions or utilizing automated tools to support
+the transition [4], [5], [6].
+Even after migrating to a Microservices Architecture,
+organizations may still face challenges related to flexibility
+and data management. Although the decentralized nature
+of microservices improves system modularity and facilitates
+independent deployments, it also introduces complexities in
+areas such as data isolation and service coordination, mak-
+ing it difficult to maintain data consistency and manage
+maintenance costs. Additionally, excessive fragmentation of
+services can lead to increased management overhead and
+communication expenses, potentially affecting development
+efficiency. To address these issues, newer approaches like
+Miniservices and Composable Enterprise Architecture have
+emerged,aimingtoovercomethelimitationsofmicroservices
+while further enhancing system modularity and business
+agility.
+B. MINISERVICES VS. COMPOSABLE ENTERPRISE
+ARCHITECTURE: ENHANCING MODULARITY AND
+BUSINESS AGILITY
+The Miniservices Architecture (MnSA) [7] provides a
+balanced approach between monolithic and microservices
+architectures to overcome the limitations of each. As enter-
+prises scale, monolithic systems often require downtime
+for system-wide maintenance and updates, increasing oper-
+ational complexity and risk. On the other hand, while
+microservices architectures offer greater modularity, their
+highly decomposed structure and stringent data isolation
+requirementssignificantlyincreaseimplementationcostsand
+technicalchallenges.MnSAintegratesthecohesionofmono-
+lithic architectures with the flexibility of microservices,
+VOLUME 13, 2025 76465
+
+--- PAGE 3 ---
+W.-J. Wang: Achieving Business Scalability With Composable Enterprise Architecture
+enabling services to share a common database [8], which
+simplifies data management. In practical implementation,
+MnSA supports containerization, allowing each miniservice
+to operate in separate containers. This enables indepen-
+dent development and deployment, facilitating more flexible
+updateandscalingstrategies.Additionally,MnSAeffectively
+integrates with CI/CD processes, minimizing system down-
+time through automated testing and deployment pipelines,
+thereby enhancing development efficiency and agility. These
+characteristics make MnSA a compelling alternative for
+organizations seeking a middle ground between traditional
+architectures and fully adopting microservices.
+While the MnSA enhances flexibility and development
+efficiency, it still encounters practical challenges. When
+multiple services share a common database, ensuring data
+consistency becomes more complex, and data conflicts may
+arise. Additionally, the tight coupling between services limits
+the flexibility for independent deployment and scaling, mak-
+ing it difficult to fully isolate the impact of one service on
+others.
+To address these challenges, we propose the CEA, which
+employs a fine-grained modular design to achieve loose cou-
+pling and independent data management. CEA ensures that
+each PBC has its own dedicated data source, eliminating
+issues related to shared databases and allowing for the inde-
+pendent development, testing, and deployment of each PBC.
+Thisapproachreducesdeploymentrisksandenhancessystem
+flexibility and scalability.
+Compared to MnSA, CEA’s architecture allows for rapid
+iteration and adaptation based on business needs, enabling
+developmentteamstoquicklyintroducenewfeatureswithout
+impacting other PBCs. This improves overall development
+efficiency and business agility. Additionally, CEA’s compos-
+ability empowers enterprises to flexibly combine different
+PBCs to swiftly respond to changing market demands, giving
+them a significant advantage over MnSA. This capability
+strengthens an organization’s competitiveness, ensuring sus-
+tained leadership in a rapidly evolving business landscape.
+III. LITERATURE REVIEW
+A. BUSINESS AGILITY AND DIGITAL TRANSFORMATION
+Business agility is essential for enterprise success, compris-
+ing both operational agility and strategic agility. Operational
+agility focuses on intensifying the emphasis on customer
+value within existing operations, while strategic agility
+involves fostering the creation of novel services to attract
+new clientele. However, achieving business agility requires
+coordination across diverse departments, with information
+technology playing a crucial role in empowering enterprises
+to adapt to changes with greater flexibility [9], [10].
+Digital transformation provides enterprises with flexible
+and innovative solutions to address market changes and
+challenges, thereby enhancing their competitiveness. This
+transformation drives enterprises to adopt a more modular
+approach to system construction internally, supporting agile
+development of various business components. By reassem-
+bling these components, enterprises can quickly respond to
+market opportunities and adapt to potential threats. This
+approach eliminates barriers between business and IT depart-
+ments, enabling enterprises to meet customer needs more
+effectively [11].
+B. COMPOSABLE ENTERPRISE ARCHITECTURE
+The concept of the ‘‘Composable Enterprise,’’ introduced by
+Gartner, refers to an organizational model designed to facili-
+tate innovation and agility in response to evolving business
+requirements. In simpler terms, a Composable Enterprise
+swiftly adjusts its operations and offerings to meet dynamic
+market demands by integrating and leveraging pre-packaged
+business functionalities. This approach fosters resilience
+and adaptability, allowing companies to remain competitive
+amidst changing landscapes [12].
+FIGURE 1. Composable enterprise architecture [13].
+Gartner [12] emphasizes the role of composable appli-
+cations in enhancing business agility and innovation, urg-
+ing organizations to adopt these flexible architectures to
+stay competitive. This perspective is further supported by
+Gaughan et al. [13], who illustrate the transformative poten-
+tialofCEAs in streamlining applicationdeliveryandimprov-
+ing operational efficiency. Scheer [14] explores the strategic
+advantages of composable enterprises, presenting them as
+game-changersfororganizationalagilityandinnovation.This
+work highlights how composable approaches can revolution-
+ize business processes and software solutions, fostering a
+more responsive and adaptable enterprise environment. Natis
+et al. [15] provide an in-depth analysis of PBCs and their crit-
+ical role in future composable enterprises, highlighting how
+PBCs facilitate modularity and scalability in business pro-
+cesses. IIakimets [16] further elaborates on the significance
+of PBCs, explaining their importance in creating flexible and
+efficient business operations.
+Ćorić and Mabić [11] further emphasize the critical role
+of composable enterprises, demonstrating how modular and
+76466 VOLUME 13, 2025
+
+--- PAGE 4 ---
+W.-J. Wang: Achieving Business Scalability With Composable Enterprise Architecture
+flexible IT infrastructures enable organizations to adapt
+swiftly to evolving business environments. They argue for a
+strategic shift towards composable models to enhance oper-
+ational flexibility and resilience. Building on this concept,
+Ivas[18]presentsComposableEnterpriseasacomprehensive
+business-IT framework that utilizes Business Composability
+to boost enterprise adaptability and efficiency.
+Additionally, Gašpar et al. [19], in their study on compos-
+able ERP systems, emphasize the continuous development
+and best practices of implementing composable solutions.
+They demonstrate how composable ERP architectures, built
+from modular and interchangeable components, can signifi-
+cantly enhance organizational agility. Moreover, the assem-
+bly of these components can provide tailored solutions to
+meet the specific needs of individual companies, showcasing
+advantages in scalability and adaptability.
+IV. COMPOSABLE ENTERPRISE ARCHITECTURE
+Our proposed CEA, illustrated in Figure 2, is anchored on
+cloud-native technologies. At its core is a hybrid multi-cloud
+platform built around Kubernetes, which serves as the foun-
+dation for seamless integration and scalability. Leveraging
+deployments across major public clouds (Azure, AWS, GCP)
+andKubernetesdeploymentswithinprivateenterpriseclouds,
+along with K3s deployments on edge clouds, we also estab-
+lish tailored hosted services to meet the diverse needs of
+various business components, encompassing data manage-
+ment, caching mechanisms, file storage, and messaging
+solutions.
+FIGURE 2. Our proposed composable enterprise architecture.
+This architecture utilizes hybrid multi-cloud Kubernetes
+and container virtual resource pool to streamline the deploy-
+mentandsharingofPBCswithintheenterprise.Additionally,
+our approach encapsulates each PBC component using
+micro-frontends, as depicted in Figure 3. As a result, our
+proposed method embodies the characteristics of loose cou-
+pling and high cohesion, facilitating the seamless assembly
+of PBCs and scalability of applications, while minimiz-
+ing communication overhead among PBCs. Furthermore,
+by leveraging HELM’s deployment mechanism, we fur-
+ther enhance the system’s manageability and maintainability,
+enabling enterprises to more efficiently manage and deploy
+applications.
+FIGURE 3. Our proposed PBC architecture.
+PBC represents a succinct collection of business functions
+designed to tackle specific business challenges. Each PBC
+functionsasanindependentbusinesscapabilitymodule,typi-
+cally incorporating business processes, data models, and user
+interfaces. This modular approach enables swift implemen-
+tation and utilization of business functionalities, providing
+enterprises with the flexibility and scalability necessary to
+adapt to evolving business demands [15], [16].
+Micro-frontends represent an innovative approach to fron-
+tend architecture and development, dividing frontend appli-
+cations into independent functional modules. This allows
+various teams within an organization to autonomously over-
+see their respective business modules, thereby improving
+collaboration efficiency. Consequently, it is suggested to
+reorganize organizations into cross-functional teams based
+on business functions rather than specialized domains. This
+organizational framework promotes greater flexibility and
+expedites the development and deployment of functional-
+ities [27]. Additionally, by focusing on specific business
+functions, each team possesses the capability to indepen-
+dently develop, deploy, test, scale, and maintain its business
+modules. As a result, enterprises can promptly respond
+to customer demands and adapt to market changes [20],
+[21], [22]. In light of this, we advocate for the adop-
+tion of micro-frontends as a highly suitable approach for
+implementing PBCs. Leveraging micro-frontends allows us
+to encapsulate each PBC component effectively within
+our system.
+In the standard micro-frontends architecture, teams have
+the flexibility to select suitable technologies and tools tai-
+lored to their business domains and requirements, covering
+frontend, backend, and database solutions. However, to meet
+the demands of constructing a CEA and facilitate the assem-
+bly and stacking of PBCs like building blocks, this paper
+adopts React as the unified technology for micro-frontends.
+Additionally, as illustrated in Figure 3, we have devised a
+shared component named ‘Centralized State Management,’
+VOLUME 13, 2025 76467
+
+--- PAGE 5 ---
+W.-J. Wang: Achieving Business Scalability With Composable Enterprise Architecture
+leveragingtheReduxStoremoduletosynchronizedatastates
+among PBCs, ensuring consistency across states.
+Furthermore, the paper implements the Webpack Fed-
+eration module, which enables the integration of multiple
+independentPBCsintoasingleuserinterface.Byassembling
+PBCs to add value, enterprises can rapidly create innovative
+application services.
+Observationsfromthisstudysuggestthatfrontendtechnol-
+ogy decisions influence not only the adaptability of the over-
+all system but also its alignment with broader architectural
+goals. Relevant evaluation criteria may include performance,
+integration complexity, maintainability over time, and how
+well the selected tools support modular design principles.
+In addition, the availability of skilled personnel and active
+communitysupportisanimportantfactorcontributingtosuc-
+cessful implementation and long-term sustainability. These
+findings indicate that both technology selection and resource
+planning play a critical role in achieving the intended archi-
+tectural and business outcomes of composable systems.
+V. VALUE-ADDED AND INNOVATION
+This section demonstrates how the proposed CEA frame-
+work can be instantiated and validated through a practical
+implementation. The IVA-PBC is designed as a cloud-
+native,modularservicethatintegratesthreecorearchitectural
+elements proposed in this study: PBC modularization, micro-
+frontend encapsulation, and Kubernetes-based orchestration.
+ByassemblingtheIVA-PBCwiththeIDCManagementPBC,
+we illustrate how CEA supports dynamic composition and
+value-addedservicedelivery.Thiscasesubstantiatesthecom-
+posability, operational scalability, and domain adaptability of
+the CEA framework in real-world enterprise scenarios.
+The architecture of IVA-PBC is comprehensive, com-
+prising four essential functional modules that collectively
+enhance the overall user experience. These modules encom-
+pass the 3D virtual scene and character module (100), the
+real-time voice and text conversation module (200), the
+speech-to-text conversion module (300), and the generative
+AI model and optimization module (400). Among these,
+the pivotal generative AI model and optimization module
+(400) undergoes a perpetual enhancement process facilitated
+by advanced deep learning techniques, specifically utilizing
+Retrieval-Augmented Generation (RAG) technology. This
+augmentation is achieved through the assimilation of an
+extensive corpus of domain knowledge. Additionally, the
+generative AI model benefits from continuous optimization
+through the integration of enterprise documents and web
+information.Thisknowledgeextractionprocessoperatesona
+dynamiclearningmechanism,ensuringaconstantrefinement
+of the generative AI model. Detailed descriptions of these
+modules can be found in both Table 1 and Figure 4.
+Each functional module within IVA-PBC is grounded in
+our proposed CEA, constructed as microservices to ensure
+both modularity and flexibility. Moreover, IVA-PBC is
+encapsulated with micro-frontend, a design principle that
+guarantees its adaptability and ease of assembly.
+TABLE 1. IVA-PBC function module table.
+The IDC Management PBC functions as telecom’s cloud
+data center management service, primarily developed using
+WebGLtechnologytoestablishavirtualenvironment.Within
+76468 VOLUME 13, 2025
+
+--- PAGE 6 ---
+W.-J. Wang: Achieving Business Scalability With Composable Enterprise Architecture
+FIGURE 4. IVA-PBC composition diagram.
+this platform, 3D scenes and model objects are hierarchically
+defined in JSON format, facilitating efficient scene layout
+and dynamic design. Operational staff can utilize the PBC
+to monitor real-time dynamics across data centers, fulfilling
+both management and operational requirements.
+The ongoing shortage of DevOps engineers presents a sig-
+nificantchallengeascloudoperationsbecomemorecomplex.
+To address this, our proposed CEA promotes innovation by
+modularly integrating PBCs, establishing a flexible frame-
+work for developing value-added solutions. Each PBC seam-
+lessly connects with other business components, enhancing
+the system’s overall capabilities. For example, integrating the
+IDC Management PBC with the IVA-PBC enables Human-
+AI collaboration in cloud data center operations, where AI
+supports staff in completing tasks more effectively [23], [25],
+[26]. This approach allows operational teams to fully lever-
+age AI, leading to streamlined workflows and substantial
+improvements in operational efficiency.
+For example, Apache Kafka’s architecture is highly effec-
+tive in managing real-time data streams, but its complexity
+can present operational challenges. A typical Kafka clus-
+ter consists of Brokers for message handling, Zookeeper
+nodes for coordinating the cluster, and Producers and Con-
+sumers to ensure scalability. Although Kafka performs
+well, maintaining stability requires ongoing monitoring and
+prompt troubleshooting. To address these challenges, IVA-
+PBC employs advanced algorithms and automation to speed
+up the detection and resolution of issues, thereby minimizing
+downtimeandimprovingworkflowefficiency.Byintegrating
+IVA-PBC into routine operations, teams can swiftly identify
+and resolve problems, ultimately resulting in more efficient
+and optimized operations.
+Ultimately, the advanced Human-AI Collaboration appli-
+cation,continuouslyimprovedthroughiterativefeedbackand
+refinements,enablesoperationalstafftoefficientlyandeffec-
+tively manage complex operations within cloud data centers.
+This collaborative framework enhances process efficiency
+and plays a crucial role in reducing risks and improving
+overall operational performance.
+The integration of Human-AI collaboration in the main-
+tenance and operation of cloud data centers represents a
+significantadvancement.Initiallydeployedforinternalenter-
+prise use, its practical stability and ongoing optimization
+efforts have validated its adoption. As technology and oper-
+ational requirements continue to evolve, there are promising
+opportunities for further refinement and development, poten-
+tially leading to novel product solutions suitable for external
+commercialization.
+VI. METHODOLOGY
+To evaluate the effectiveness and applicability of the pro-
+posed CEA framework, this study employed a qualitative
+casestudydesignsupplementedbysystem-levelperformance
+metrics.Themethodologywasdevelopedtoexplorehowcore
+architectural features—PBC modularization, cloud-native
+orchestration, and micro-frontend encapsulation—translate
+into tangible benefits and challenges in a real-world enter-
+prise context.
+A. INTERVIEW DESIGN AND SAMPLING STRATEGY
+This study conducted semi-structured interviews with 12 key
+stakeholders who participated in the planning, develop-
+ment, and deployment of CEA-based systems within a large
+telecommunications enterprise. Participants were selected
+using purposive sampling to ensure relevant domain exper-
+tise, and included system architects, DevOps engineers,
+software developers, and service managers. The interview
+protocol focused on participants’ experiences with modular
+development, deployment workflows, integration challenges,
+and perceived benefits of CEA adoption. Each interview
+lasted approximately 45 to 60 minutes and was conducted in
+a hybrid format (in-person and virtual), with consented audio
+recordings for analysis.
+B. QUALITATIVE CODING AND NVIVO ANALYSIS
+The interview data, originally collected in Traditional Chi-
+nese, were transcribed and analyzed using NVivo. A two-
+phase coding process was employed. First, open coding
+was conducted to identify recurring concepts and obser-
+vations. This was followed by axial coding to organize
+related codes into higher-level categories aligned with the
+research objectives. Emergent themes included improved
+deployment independence, modular reuse, integration com-
+plexity, and team coordination. To enhance coding reliability,
+the research team performed cross-validation through inde-
+pendent coding and resolved discrepancies via collaborative
+discussions.
+C. PERFORMANCE DATA TRIANGULATION
+In addition to qualitative insights, system operation records
+were collected to verify the architectural impact of CEA.
+These records included average monthly system downtime,
+deployment frequency, and time-to-market for new features
+beforeandaftertheCEAtransition.Thisdataprovidedabasis
+fortriangulationandstrengthenedtheempiricalfoundationof
+the findings reported in the Results section.
+VOLUME 13, 2025 76469
+
+--- PAGE 7 ---
+W.-J. Wang: Achieving Business Scalability With Composable Enterprise Architecture
+VII. RESULTS
+This study conducted semi-structured interviews with 12 key
+stakeholders and utilized NVivo for comprehensive analysis.
+The findings indicate that the development team recognizes
+several advantages of CEA, including reusability, inde-
+pendence, and modular design. Specifically, the design of
+PBCs facilitates the modularization of business functions,
+which reduces coupling between components. This enhance-
+ment improves system flexibility and reusability, allowing
+individual business teams to develop and deploy solutions
+independently. Furthermore, the assembly characteristics of
+CEA enable a quicker response to evolving business needs.
+However, the development team also identified several chal-
+lenges, including a steep learning curve that necessitates
+developers to possess a diverse skill set and substantial
+experience to address these demands. Additionally, shared
+functionalities among PBCs may lead to increased mainte-
+nance costs and associated risks.
+Quantitative data obtained from system operation records
+indicate that the transition from a monolithic architecture
+to CEA has resulted in significant improvements in key
+performance indicators. The average system downtime has
+decreased from 10 hours per month to 4.5 hours, representing
+a reduction of approximately 55%. This reduction signifies a
+substantial enhancement in both system stability and avail-
+ability. Moreover, the frequency of service deployments has
+increased from quarterly to monthly. The time required to
+develop and launch new features has been reduced from an
+average of 3 months to 1.2 months, indicating a decrease of
+about 60%. These advancements underscore the flexibility of
+CEA, enabling organizations to implement system updates
+and introduce new features more frequently. This capability
+allows for rapid adaptation to market demands and signifi-
+cantly enhances overall business agility.
+VIII. RESEARCH INSIGHTS AND FUTURE DIRECTIONS
+A. ADVANTAGES OF CEA
+Traditional monolithic architecture struggles to respond
+swiftly to changing demands due to its high coupling, which
+complicates updates and deployments. While microservices
+and miniservices architectures enhance modularity, they still
+face challenges related to module collaboration and data
+consistency management [4], [5], [6], [7], [8]. In contrast, the
+application of IVA-PBC highlights the significant advantages
+of CEA. By employing loosely coupled, highly cohesive
+module designs and refined module partitioning, IVA-PBC
+effectively reduces system coupling, allowing business com-
+ponents to be developed, tested, and deployed independently,
+therebyfacilitatingrapidresponsestoevolvingdemands[14].
+Furthermore,thedesignofCEApromotestheflexibleassem-
+bly of business components, which is essential for adapting
+to rapidly changing market trends. Standardized interfaces
+enable organizations to quickly integrate different PBCs,
+thereby enhancing system scalability, improving collabo-
+ration efficiency among modules, and increasing overall
+organizational adaptability and competitiveness [13].
+B. APPLICABILITY ACROSS ENTERPRISE SCALES
+The adoption and effectiveness of CEA vary significantly
+with organizational scale. In large enterprises, CEA is typ-
+ically implemented by assigning PBCs to cross-functional
+teams, thereby enabling modular governance across busi-
+ness domains. Each team oversees the full lifecycle of its
+designated PBC—including design, development, deploy-
+ment, and maintenance—facilitating component reuse and
+promoting horizontal innovation. This organizational model
+enhances collaboration across departments and supports
+operational efficiency. Given the complexity of legacy sys-
+tems and multi-layered structures, large enterprises often
+adopt a phased integration strategy to reduce disruption and
+ensure alignment with existing governance frameworks and
+IT roadmaps [18].
+In addition, Ross and Beath [27] highlight that effec-
+tive enterprise architecture entails decomposing key business
+outcomes—such as products, services, or processes—into
+discrete components. Each component is managed by a
+dedicated team that holds responsibility for the underlying
+people, processes, and technologies. These principles are
+well aligned with the modular and team-centric nature of
+CEA, empowering organizations to enhance adaptability and
+scalability while maintaining operational resilience.
+In contrast, small and medium-sized enterprises (SMEs)
+tend to possess greater organizational flexibility but face
+constraints in technical capacity and workforce availability.
+For such organizations, CEA offers a practical pathway to
+transformation through incremental modularization. Rather
+thanoverhaulingentiresystems,SMEscanbeginbyapplying
+CEA to specific business functions or product lines, then
+scale gradually based on growth and resource availability.
+This progressive approach allows SMEs to balance cost effi-
+ciency with faster time-to-market [28].
+In summary, the successful implementation of CEA
+depends on aligning the adoption strategy with the spe-
+cific characteristics of the organization—such as its scale,
+technical capabilities, and resource availability. By carefully
+adapting the modular design and deployment scope to these
+factors, both large enterprises and SMEs can fully leverage
+the flexibility, agility, and scalability that CEA offers.
+C. RESEARCH CONTRIBUTIONS
+This study provides empirical support for the exploration
+of modular architectures, illustrating that CEA plays a sig-
+nificant role in enhancing business agility. The findings
+emphasize the value of CEA in modular architectures, partic-
+ularly in rapidly changing market environments, where CEA
+effectivelyrespondstoevolvingdemands[11].Theseinsights
+not only contribute to the advancement of the field but also
+deepen our understanding of how CEA impacts organiza-
+tionaloperations.Furthermore,theIVA-PBCimplementation
+substantiates the technical feasibility and integrability of
+CEA by showcasing how distinct architectural elements
+can be modularized, assembled, and deployed to support
+76470 VOLUME 13, 2025
+
+--- PAGE 8 ---
+W.-J. Wang: Achieving Business Scalability With Composable Enterprise Architecture
+evolving enterprise needs. This demonstration offers action-
+able insights for both researchers seeking composable design
+patterns and practitioners aiming to accelerate innovation in
+distributed system environments.
+D. STRATEGIC RECOMMENDATIONS FOR IMPLEMENTING
+CEA
+In the implementation of CEA, organizations should priori-
+tizetheintegrationoftechnologicalinnovation[14],andalign
+it with their strategic planning processes to support digital
+transformation [30]. Specifically, they should explore emerg-
+ing technologies such as AI, cloud computing, blockchain,
+and IoT to enhance their capabilities in digital transfor-
+mation and business innovation. Additionally, fostering a
+culture of open innovation is essential, as it encourages
+cross-departmental collaboration and ensures that techno-
+logical advancements are quickly translated into practical
+applications, thereby improving the quality of products and
+services [31]. By adopting these strategies, organizations can
+maintain a competitive edge in a rapidly evolving market and
+promote sustainable business growth and development.
+E. LIMITATIONS
+While CEA provides numerous benefits, this study also iden-
+tifies several limitations that may affect its adoption and
+long-term effectiveness.
+First, the modular design of CEA requires that devel-
+opers and architects possess advanced system thinking and
+integration skills, potentially resulting in a steeper learning
+curve. This may pose challenges for organizations with lim-
+ited technical resources or experience in distributed design.
+As emphasized in the HI-TOP model [30], successful adop-
+tion of advanced architectural paradigms demands not only
+technical readiness, but also organizational alignment and
+change management support to facilitate smooth transition
+and sustainable operation.
+Second, our empirical findings reveal concrete organiza-
+tional and coordination challenges during practical deploy-
+ment. For instance, one participant described how the lack
+of a centralized API registry led to redundant logic being
+independently implemented by multiple teams, resulting in
+conflicting behaviors and integration delays. Other intervie-
+wees cited difficulties in aligning module release schedules
+and interface expectations. As more PBCs are introduced and
+managed across distributed teams, maintaining architectural
+coherence and operational alignment becomes increasingly
+complex [27]. Addressing these issues requires the imple-
+mentation of structured governance frameworks, shared
+designstandards,andongoingintegrationcheckpointstosus-
+tain system consistency under evolving conditions.
+Third, while modularity enhances operational flexibil-
+ity, it also broadens the system’s attack surface, potentially
+introducing new security vulnerabilities. Securing compos-
+able architectures requires a combination of architectural
+and runtime controls. For instance, service meshes enforce
+mutual TLS and apply policy-based routing across modules,
+whereas API gateways support centralized authentication,
+access control, and request validation. System-wide logging
+andanomalydetectionfurtherimproveobservabilityandhelp
+identify misconfigurations or malicious behaviors. These
+practices are essential for maintaining trust, particularly in
+dynamic, multi-domain environments.
+Lastly,thisstudyisboundedbyitsscopeandthecharacter-
+istics of the organizations examined. Although the proposed
+architecture demonstrated practical value in the studied
+context, further validation is needed in larger and more het-
+erogeneous environments. Future work should also explore
+long-termmaintainability,costimplications,andcross-sector
+applicability of CEA frameworks.
+F. FUTURE WORK
+Future research will leverage AI to support organizational
+decision-making and enhance adaptability through predictive
+data analysis, as emphasized in prior research on adaptive
+business architecture [24]. In addition, we aim to optimize
+the assembly of PBCs using AI and develop automated inte-
+gration methods. This aligns with emerging perspectives on
+how algorithmic coordination and intelligent systems can
+reshapeworkprocessesandenhanceagilitywithindistributed
+organizations [29]. We will also explore the deployment of
+CEA across various industries to broaden the applicability
+and impact of our findings.
+Specifically, future work will examine how machine learn-
+ing can identify workload patterns and predict component
+scaling needs based on real-time operational data. Clus-
+tering techniques may assist in classifying usage contexts,
+facilitating more effective reuse or replacement of PBCs.
+Additionally, AI-assisted interface matching and automated
+schema validation may accelerate the integration of newly
+introduced modules with existing systems. These directions
+aim to further realize the vision of intelligent, self-adaptive
+enterprise architectures that evolve in response to both
+internal organizational goals and external environmental
+changes.
+IX. CONCLUSION
+This study underscores the transformative impact of CEA in
+enhancing agility within enterprise systems. By integrating
+PBCs into a cloud-native, modular framework, CEA enables
+scalableandflexibleoperationsthataddressthelimitationsof
+traditional architectures. The results demonstrate that CEA
+improves operational efficiency, minimizes downtime, and
+accelerates deployment cycles, allowing organizations to
+respond swiftly to dynamic market demands.
+CEA’s modular design strategically aligns IT capabilities
+with business objectives, creating an adaptable architec-
+ture that supports scalable solutions and fosters continuous
+innovation with minimal disruption. Although implement-
+ing CEA requires a learning curve and skill development,
+it offers a resilient foundation for digital transformation.
+Expanding the application of CEA across industries has the
+VOLUME 13, 2025 76471
+
+--- PAGE 9 ---
+W.-J. Wang: Achieving Business Scalability With Composable Enterprise Architecture
+potential to redefine organizational approaches to scalabil-
+ity, resilience, and adaptability within an increasingly digital
+business landscape.
+REFERENCES
+[1] M. Boster, S. Liu, and R. Thomas, ‘‘Getting the most from your enterprise
+architecture,’’ IT Prof., vol. 2, no. 4, pp. 43–51, 2000.
+[2] J.Lapalme,‘‘Threeschoolsofthoughtonenterprisearchitecture,’’ITProf.,
+vol. 14, no. 6, pp. 37–43, Nov. 2012.
+[3] E. Gharib, ‘‘How does the digital transformation change the strategy of a
+telecommunication company?’’ Tech. Rep., 2019.
+[4] L. De Lauretis, ‘‘From monolithic architecture to microservices architec-
+ture,’’ in Proc. IEEE Int. Symp. Softw. Rel. Eng. Workshops (ISSREW),
+Oct. 2019, pp. 93–96.
+[5] F. Ponce, G. Márquez, and H. Astudillo, ‘‘Migrating from monolithic
+architecture to microservices: A rapid review,’’ in Proc. 38th Int. Conf.
+Chilean Comput. Sci. Soc. (SCCC), Nov. 2019, pp. 1–7.
+[6] Y. Abgaz, A. McCarren, P. Elger, D. Solan, N. Lapuz, M. Bivol,
+G. Jackson, M. Yilmaz, J. Buckley, and P. Clarke, ‘‘Decomposition
+of monolith applications into microservices architectures: A system-
+atic review,’’ IEEE Trans. Softw. Eng., vol. 49, no. 8, pp. 4213–4242,
+Aug. 2023.
+[7] Ü. Kanoğlu, A. Imre, and O. Chouseinoglou, ‘‘Migration of monolith
+applicationstominiservices:Acasestudyfromthetelecomdomain,’’Türk
+Telekom, Turkey, Tech. Rep., 2020.
+[8] A. Thomas and A. Gupta, (2017). Innovation Insight for Miniservices.
+Gartner Res. [Online]. Available: https://www.gartner.com/en/documents/
+3615120
+[9] R. Setiawati, J. Eve, A. Syavira, P. Ricardianto, and E. Endri, ‘‘The role of
+information technology in business agility: Systematic literature review,’’
+Calitatea, vol. 23, no. 189, pp. 144–149, 2022.
+[10] S.Denning,‘‘Thequestforgenuinebusinessagility,’’StrategyLeadership,
+vol. 48, no. 1, pp. 21–28, Jan. 2020.
+[11] I Ćorić and C. M. Mabić, ‘‘Is composable enterprise the key to digital
+transformation,’’ in Proc. 6th Int. Sci. Conf. Digit. Economy DIEC, Tuzla,
+BiH, 2023, pp. 1–12.
+[12] Gartner,‘‘Futureofapplications:DeliveringthecomposableenterpriseID:
+G00465932,’’ Gartner Inc., USA, Tech. Rep., 2021, pp. 3–4.
+[13] D.Gaughan,Y.Natis,G.Alvarez,andM.O’Neill,‘‘Futureofapplications:
+delivering the composable enterprise,’’ Gartner Inc., USA, Tech. Rep.,
+2020.
+[14] A. W. Scheer, The Composable Enterprise: Agile, Flexible, Innovative: A
+Gamechanger for Organisations, Digitisation and Bus. Software. Cham,
+Switzerland: Springer, 2023.
+[15] Y. Natis, D. Gaughan, M. O’Neill, B. Lheureux, and M. Pezzini. (2019).
+Innovation Insight for Packaged Bus. Capabilities and Their Role in the
+Future Composable Enterprise. Gartner Res. [Online]. Available: https://
+www.gartner.com/en/documents/3976170
+[16] A. IIakimets. (2020). The Bus. Value of Packaged Bus. Capabilities. Elas-
+tic Path Softw. Inc. [Online]. Available: https://elasticpath.dialedindev.ca/
+blog/-the-business-value-of-packaged-business-capabilitie
+[17] T. Tamm, P. B. Seddon, and G. Shanks, ‘‘How enterprise architecture
+leads to organisational benefits,’’ Int. J. Inf. Manage., vol. 67, Dec. 2022,
+Art. no. 102554.
+[18] I. Ivas, ‘‘Implementation of composable enterprise in an evolutionary way
+through holistic business-IT delivery of business initiatives: Real industry
+use case,’’ Univ. Zagreb, Croatia, Tech. Rep., 2024.
+[19] D. Gašpar, I. Ćorić, and M. Mabić, ‘‘Composable ERP-new generation of
+intelligent ERP,’’ in Proc. Int. Symp. Innov. Interdisciplinary Appl. Adv.
+Technol. Springer, Switzerland: Springer, Jun. 2023, pp. 359–375.
+[20] L. Mezzalira, Building Micro-Frontends. Sebastopol, CA, USA: O’Reilly
+Media, 2021.
+[21] F.Rappl,TheArtofMicroFrontends:BuildWebsitesUsingCompositional
+UIs That Grow Naturally As Your Application Scales. Birmingham, U.K.:
+Packt Publishing Ltd., 2021.
+[22] D.TaibiandL.Mezzalira,‘‘Micro-frontends:Principles,implementations,
+and pitfalls,’’ ACM SIGSOFT Softw. Eng. Notes, vol. 47, no. 4, pp. 25–29,
+Sep. 2022.
+[23] W.-J. Wang, W.-D. Lain, and Y.-S. Wang, ‘‘Empowering IT maintenance
+with human-AI collaboration for cloud native,’’ in Proc. IEEE 4th Int.
+Conf. Electron. Commun., Internet Things Big Data (ICEIB), Apr. 2024,
+pp. 80–82.
+[24] S. Srinivas, A. Q. Gill, and T. Roach, ‘‘Can business architecture modeling
+be adaptive?’’ IT Prof., vol. 23, no. 2, pp. 81–88, Mar. 2021.
+[25] C. Anthony, B. A. Bechky, and A. L. Fayard, ‘‘‘Collaborating’ with AI:
+Taking a system view to explore the future of work,’’ Org. Sci., vol. 34,
+no. 5, pp. 1672–1694, 2023.
+[26] K. Sowa, A. Przegalinska, and L. Ciechanowski, ‘‘Cobots in knowledge
+work: Human-AI collaboration in managerial professions,’’ J. Bus. Res.,
+vol. 125, pp. 135–142, Mar. 2021.
+[27] J. Ross and C. Beath, (2020). Why You-Yes, You-Need Enterprise Archi-
+tecture. MIT Sloan Manage. Rev. [Online]. Available: https://sloanreview.
+mit.edu/article/why-you-yes-you-need-enterprise-architecture/
+[28] A. Beohar, (2023). How Can Composable Commerce Benefit Small
+Businesses? Composable. [Online]. Available: https://composable.com/
+insights/composable-commerce-what-is-it-and-how-can-it-benefit-small-
+businesses
+[29] A. Malhotra, ‘‘The postpandemic future of work,’’ J. Manage., vol. 47,
+no. 5, pp. 1091–1102, May 2021.
+[30] R. Enstroem, P. Singh Kang, and B. Bhawna, ‘‘The harmonized
+information-technology and organizational performance model (HI-
+TOP),’’ Int. J. Organizational Anal., vol. 2024, pp. 1–24, Aug. 2024.
+[31] T. Ahmad, J. Boit, and A. Aakula, ‘‘The role of cross-functional collabo-
+ration in digital transformation,’’ J. Comput. Intell. Robot., vol. 3, no. 1,
+pp. 205–242, 2023.
+WEI-JI WANG is currently pursuing the Ph.D. degree with National Taiwan
+University. He is also a Researcher with Chunghwa Telecom. His research
+interests include intelligent software engineering, communication networks,
+and cybersecurity.
+76472 VOLUME 13, 2025

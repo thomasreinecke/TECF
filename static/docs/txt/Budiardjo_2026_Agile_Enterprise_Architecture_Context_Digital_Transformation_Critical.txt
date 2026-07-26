@@ -1,0 +1,1754 @@
+--- PAGE 1 ---
+INTERNATIONAL JOURNAL
+ON INFORMATICS VISUALIZATION
+journal homepage : www.joiv.org/index.php/joiv
+INTERNATIONAL
+JOURNAL ON
+INFORMATICS
+VISUALIZATION
+Agile Enterprise Architecture in the Context of Digital
+Transformation: A Critical Review
+Muhaemina
+, Eko K. Budiardjoa
+, Harry B. Santosoa
+, Panca O. Hadi Putraa,*
+Faculty of Computer Science, Universitas Indonesia, Kampus UI, Depok, 16424, Indonesia
+Corresponding author: *hadiputra@ui.ac.id
+Abstract—Existing enterprise architecture (EA) frameworks tend to have drawbacks such as being complex, cumbersome, and highly.
+focused on documentation and is difficult to implement directly without customization. Agile enterprise architecture (agile EA) is
+believed to address the challenges of contemporary EA development. This study aims to critically review Agile Enterprise Architecture
+(Agile EA) research in the context of digital transformation, focusing on how agility is conceptualized, operationalized, and evaluated
+across existing frameworks and models. The materials of this study consist of peer-reviewed journal articles indexed in Scopus
+published between 2012 and 2025. This research begins with a thorough, current systematic literature review employing the PRISMA
+methodology and a bibliometric analysis tool that generates visualizations, followed by data extraction and synthesis using thematic
+analysis. Based on a bibliometric and thematic analysis of the 65 identified papers, several insights emerged. Thus, this study makes
+several contributions, including (i) recognizing the contributions made by EA research with an agile approach, (ii) three types of agile
+EA frameworks or models resulting from several studies. Building on the insights and limitations identified in this review, future
+research should treat Agile Enterprise Architecture (Agile EA) frameworks as evolving constructs that require continuous refinement
+in response to both theoretical developments and practical demands. Greater emphasis is needed on empirical investigations that
+examine how Agile EA aligns with organizational culture, governance, leadership, and digital transformation readiness, particularly
+within specific national and institutional contexts
+Keywords—Agile; enterprise architecture; agile enterprise architecture; framework; digital transformation; bibliometric analysis.
+Manuscript received 15 Aug. 2025; revised 29 Oct. 2025; accepted 29 Dec. 2025. Date of publication 30 Jan. 2026.
+International Journal on Informatics Visualization is licensed under a Creative Commons Attribution-Share Alike 4.0 International License.
+I. INTRODUCTION
+The use of innovative digital technologies to drive
+substantial business improvements, whether by enhancing
+customer experience, optimizing operations, or creating new
+business models, is defined as the concept of digital
+transformation[1]. Some of the change processes undertaken
+include identifying organizational needs and designing new
+processes or reconfiguring existing processes to provide value
+to customers, businesses, and other important stakeholders
+through the integration of digital technology [2].
+“Enterprise architecture (EA) is the definition and
+representation of a high-level view of an enterprise‘s business
+processes and IT systems, their interrelationships, and the
+extent to which these processes and systems are shared by
+different parts of the enterprise” [3]. Although many
+companies are embarking on broad transformation initiatives,
+where Enterprise Architecture (EA) is responsible for
+designing and overseeing the transformational journey, EA is
+often perceived as a complex and demanding endeavor, with
+many initiatives yet to demonstrate tangible and immediate
+impact. Consequently, organizations are increasingly in need
+of an EA approach that is agile and adaptive to the ever-
+evolving dynamics of business[4], [5], [6].
+In 2001, a group of practitioners responsible for
+introducing various agile development methodologies
+authored the "Agile Manifesto"[7]. As stated in the Agile
+Manifesto, “four fundamental values that serve as the
+foundation for agile development practices:
+• Individuals and interactions over processes and tools.
+• Working software over comprehensive documentation.
+• Customer collaboration over contract negotiation.
+• Responding to change by following a plan [7].
+While agile principles have long been associated primarily
+with technical areas such as software development and IT
+operations, there is growing recognition of their relevance
+across various business domains, including production,
+marketing, and strategic implementation [8]. In the enterprise
+271
+JOIV : Int. J. Inform. Visualization, 10(1) - January 2026 271-288
+
+--- PAGE 2 ---
+architectureliterature,thetermsAgileEnterpriseArchitecture
+and Adaptive Enterprise Architecture are often used
+interchangeably to describe architectural capabilities oriented
+toward organizational adaptation and digital transformation.
+An agile or adaptive enterprise architecture capability is
+defined as an organization’s ability to apply diverse methods,
+practices, models, and tools to support enterprise adaptation,
+indicating that agility and adaptiveness represent expressions
+of the same underlying architectural capability[1]. Earlier
+studies emphasize Adaptive Enterprise Architecture as a
+response to organizational complexity and uncertainty [2],
+whereas subsequent Agile EA literature operationalizes this
+concept by applying agile principles within enterprise
+architecture practices. Based on this conceptual alignment,
+this review treats Adaptive Enterprise Architecture as a
+conceptual variant of Agile Enterprise Architecture.
+Accordingly, studies employing either term were included
+when they explicitly addressed enterprise-level architectural
+agility in support of digital transformation.
+Agile Enterprise Architecture (AEA) refers to an approach
+to developing enterprise architecture that integrates agile
+principles, emphasizing collaborative efforts, iterative
+progress, adaptability, and the transparent exchange of
+information regarding business and IT operations to support
+the successful execution of agile initiatives [6],[8]. AEA,
+recognized as a possible answer to the complexities of
+Enterprise Architecture, is gaining attention and proposals in
+the industrial and professional sectors [6],[9],[10].
+In recent years, agile Enterprise Architecture has attracted
+attention fromglobalscholarsasasolution to answer complex
+EA program problems that have an impact on the success of
+digital transformation [11],[9], [12], [13]. There have been
+many discussions of literature review related to EA
+management, for example, a review of critical success factors
+for implementing EA [14], [15]. Pekkola et al. reviewed EA
+in the public sector [16]. Alsufyani et al. [17] reviewed the
+Digital Maturity Model from the perspective of Adaptive EA.
+Daniel et al. [18] conducted a review on the Effect of
+Artificial Intelligence on Enterprise Architecture. In the last
+two years, Atencio et al. [19] conducted a literature review on
+the EA approach for project management and project-based
+organizations. However, no single literature review
+specifically addresses EA management using an agile
+approach. Consequently, a systematic review of agile EA
+literature is essential. Such a review would not only offer a
+detailed understanding of current research developments
+regarding agile EA but also provide valuable insights to guide
+and inspire future research aimed at enhancing agile EA
+practices during the digital transformation era. considering
+that agile EA has received widespread attention.
+In this regard, we believe it is essential to review recent
+research on agile EA. The main objective of this paper is to
+systematically identify and summarize research on agile
+approaches and enterprise architecture from 2012 to 2025.
+This study evaluates various characteristics of published
+papers, including journals, research topics, fields, highly cited
+academics, papers, countries, and affiliations, among others.
+To achieve this, bibliometric analysis methods were
+employed. Additionally, thematic analysis was used to
+synthesize and evaluate the final papers. To refine the focus
+of the study, the subsequent research questions were
+formulated as follows:
+• What are the publication trends in agile EA research?
+(Annual quantitative distribution of studies,
+quantitative analysis of publications, and journals that
+publish adaptive/agile EA research).
+• What is the context of published agile EA research?
+(Including countries represented, productive authors,
+relationships among terms or concepts, classification of
+studies by research method, and types of research
+contribution).
+• What are the existing agile EA frameworks or models
+and their characteristics in the research published? (To
+understand the existing agile EA frameworks or agile
+EA models and their implementation in organizational
+and industry sectors related to digital transformation.
+Furthermore, the paper is organized as follows: Section 2
+presents an overview of the research methodology employed.
+Section 3 presents a discussion and analysis of the research
+findings, highlighting key research topics, gaps, and trends in
+agile Enterprise Architecture (EA). Notably, based on an
+examination of existing agile EA literature, we identify
+potential research directions and trends to inform future
+research and practical applications. The concluding section
+wraps up the paper and discusses its limitations.
+II. MATERIALS AND METHOD
+This study employed a systematic literature review (SLR)
+to examine research on agile concepts in agile and EA
+management. The review procedure followed the PRISMA
+framework, with the process flow illustrated on the right side
+of Figure 1, and the PRISMA steps adapted from the
+guidelines shown on the left side, as proposed in [20].
+Fig. 1 PRISMA Flow Chart
+A. Literature Screening
+The first stage (identification) involved scanning the
+literature using a broad set of keywords to capture all relevant
+research discussing agile and EA in the context of digital
+272
+
+--- PAGE 3 ---
+transformation. Based on a search in the SCOPUS database
+using the keyword: (agil* OR adaptive) AND “enterprise
+architecture” , 676 data were found. The selection of Scopus
+was based on three main considerations: (1) Scopus offers a
+broader coverage of journals across disciplines such as social
+sciences, natural sciences, engineering, and humanities
+compared to Web of Science (WoS) [21]; (2) Scopus is one
+of the most widely used databases in bibliometric studies
+along with WoS and Dimensions [22].
+In the second stage, eligibility criteria were applied to
+determine relevant papers.
+Inclusion criteria:
+• Articles written in English
+• Conference papers and journal articles published
+between 2012 and 2025
+Exclusion criteria:
+• Non-English publications
+• Duplicate or repeated records
+• Studies not relevant to the research focus
+• Articles published in non-scientific media such as
+magazines
+After completing the inclusion and exclusion criteria
+stages, we identified 462 relevant papers across disciplines,
+including computer science, decision sciences, mathematics,
+engineering, business, social sciences, energy, and chemical
+engineering. Next, we conducted a second round of literature
+screening by carefully reviewing the titles and abstracts of
+papers that employ an agile approach to managing EA in the
+context of DT. Based on the title and abstract, identified 106
+relevant papers.
+In the third phase, using the 106 screened papers, we
+conducted a second round of literature screening by carefully
+reading the titles, abstracts, and full texts of papers that
+discussed the use of an agile approach to managing EA,
+particularly those that presented a framework or model.
+Studies in the literature were considered if they led to the
+development of a framework or model for agile EA that
+employed a rigorous methodology. Quality assessment
+criteria were applied to evaluate the studies selected for this
+research, adopting the method used by Dybå and Dingsøyr
+[23]. The assessment criteria are defined in Table 1. Each
+candidate study was evaluated using a structured quality
+assessment scheme comprising seven eligibility-oriented
+criteria, each scored on a three-point scale: 0 (not addressed),
+1 (partially addressed), and 2 (fully addressed). The total
+quality score for each study was calculated by summing the
+scores across all criteria, resulting in a maximum possible
+score of 14. Studies scoring below 9 out of 14 were excluded
+to ensure a minimum level of methodological transparency
+and conceptual relevance. To enhance the reliability of the
+assessment, the quality evaluation was conducted iteratively
+through cross-checking across multiple review rounds, and
+expert validation was applied where necessary to confirm
+consistency in scoring decisions. Finally, 65 studies met the
+established quality standards for further discussion and
+analysis. The results of the quality assessment are shown in
+Appendix A.
+TABLE I
+QUALITY ASSESSMENT CRITERIA
+Code
+Quality
+Assessment
+Criterion
+Consider (Eligibility-Oriented)
+QA1 Clarity of
+Research Aim
+Does the article clearly state a research
+aim that explicitly addresses Agile
+Enterprise Architecture in the context of
+digital transformation?
+QA2 Explicit
+Rationale and
+Agile EA Focus
+Does the article provide a clear rationale
+and position Agile Enterprise
+Architecture as the main focus of the
+study?
+QA3 Adequacy of
+Research
+Context
+Does the article adequately describe the
+organizational or digital transformation
+context in which Agile EA is examined?
+QA4 Justification of
+Research Design
+Does the article justify the chosen
+research design and explain its suitability
+for addressing the Agile EA research
+objectives?
+QA5 Transparency of
+Data Sources or
+Evidence Base
+Does the article clearly explain the data
+sources, evidence, or conceptual basis
+used to support its analysis?
+QA6 Rigor of Data
+Analysis
+Does the article describe a transparent
+and systematic analysis process,
+including theme derivation, supporting
+evidence, and validation where
+applicable?
+QA7 Clarity and
+Substantiation of
+Findings
+Does the article clearly present and
+substantiate its findings or contributions
+related to Agile EA?
+The fourth phase involved conducting a bibliometric
+analysis, a quantitative method used to map scientific
+knowledge and relationships among papers, to address RQ 1
+and RQ 2. Furthermore, to synthesize the various components
+used in agile EA frameworks or models using thematic
+analysis of selected data items extracted from each article to
+answer RQ 3.
+Data items extracted from each article are comprised of:
+1) Demography of selected articles with the following
+information:
+• Distribution of agile approach in enterprise architecture
+study.
+• Countries involved in the agile enterprise architecture
+study.
+• Source of agile enterprise architecture study.
+• Author of agile enterprise architecture study.
+• Distribution of research methods and techniques
+adopted in the study.
+• Citation count of the study.
+2) Frameworks, methods, or models related to agile
+enterprise architecture.
+B. Bibliometric Analysis Method
+Bibliometrics consists of research techniques that analyze
+bibliometric features and document systems, serving as an
+effective mechanism for quantitative analysis within a
+particular field of study. These methods utilize mathematical
+and statistical approaches to examine different attributes of
+papers, such as their distributed structure, interrelationships,
+and evolving trends.
+Lately, bibliometrics has gained popularity as a method for
+conducting studies on reviews. For instance, Cai et al.[24]
+utilized bibliometric methods to analyze Energy Performance
+Contracting. Shi et al. [25] performed a bibliometric analysis
+273
+
+--- PAGE 4 ---
+focusing on DigitalTransformation.Thisbibliometricmethod
+has also been applied to other areas of enterprise architecture,
+including the Enterprise Architecture Approach for Project
+Management [19]. Furthermore, bibliometric analysis has
+been used across research domains engaged in visual analysis
+reviews, employing bibliometric techniques to map
+knowledge on green roof development [26].
+C. The Analysis Tool: VOSviewer Software
+VOSviewer, developed by Van and Waltman [27], a
+software tool commonly used to analyze and visualize
+bibliometric networks, has also been employed in this study.
+The software offers distance-based visual representations of
+bibliometric networks, enabling the display of visualization
+networks and text mining functionalities [27]. Utilizing
+bibliographic data, VOSviewer can generate several types of
+visualization maps, including maps for co-authorship,
+keywordco-occurrence,citations,bibliographiccoupling,and
+co-citation [27].
+III.RESULTS AND DISCUSSION
+This section presents two key points: first, the results of the
+bibliometric analysis, and second, the results of the thematic
+analysis. It further discusses these findings in relation to the
+research questions.
+A. Research Question 1: What are the publication trends of
+agile EA research?
+1) Annual Quantitative Distribution of Studies:
+The results of the bibliometric analysis are presented
+through descriptive statistics. In Figure 2, the yearly
+distribution of the 59 chosen articles is shown. The oldest
+article that uses an agile approach to EA was published in
+2012. The years with the highest productivity were 2021 (13
+articles), 2022 (9 articles), and 2023 (6 articles). Publications
+appear to be constant from 2015 to 2020, with the number of
+publications between 4and 5 articles. However,in 2021,there
+was a contrast of 13 publications; this indicates that agile EA
+is among the EA methodologies attracting researchers'
+attention in digital transformation. Research on agile EA
+continued in2024 with four studies; in 2025, two studies were
+conducted.
+Fig. 2 Number of relevant studies published from 2012 to 2025
+2) Quantitative Analysis of Publications:
+Out of the 65 studies, most are conference papers, with 48
+categorized as such, while 17 are journal articles, as shown in
+Figure 3. These papers originate from various publications,
+predominantly in the fields of enterprise information systems.
+The journals featuring these articles are detailed in Table 2.
+TABLE II
+NUMBER OF SELECTED STUDIES PER STUDY SOURCE
+No Source (Articles)
+Number of
+Papers
+1 Computers and Security 1
+2 Global Journal of Flexible Systems Management 1
+3 Government Information Quarterly 1
+4 Heliyon 1
+5 IEEE Access 1
+6 IEEE Transactions on Engineering Management 1
+7 Information 1
+8 Information and Software Technology 1
+9
+International Journal of Enterprise Information
+Systems
+3
+10 International Journal of Lean Six Sigma 1
+11 Journal of Computer Science 1
+12 Sustainability 1
+13 Systems Engineering 2
+14 Technology in Society 1
+Total 17
+It is evident that journals publishing research on the Agile
+approach in EA management originate from various sources,
+with the International Journal of Enterprise Information
+Systems being the most frequently publishing journal. The list
+of conferences with a total of 48 studies, starting from the
+largest to the smallest, is as follows: Proceedings - IEEE
+International Enterprise Distributed Object Computing
+Workshop, EDOCW (4) studies; Smart Innovation, Systems
+and Technologies (4) studies; 25th Americas Conference on
+Information Systems, AMCIS 2019 (3) studies; ACM
+International Conference Proceeding Series (2) studies;
+Communications in Computer and Information Science (2)
+studies; International Conference on Enterprise Information
+Systems, ICEIS - Proceedings (2) studies; International
+Conference on Information Systems Development, ISD 2015
+(2) studies; Procedia Computer Science (2) studies;
+Proceedings of the 2017 Federated Conference on Computer
+Science and Information Systems, FedCSIS 2017 (2) studies;
+19th Americas Conference on Information Systems, AMCIS
+2013 - Hyperconnected World: Anything, Anywhere,
+Anytime (1) study; 2013 The International Conference on
+Technological Advances in Electrical, Electronics and
+Computer Engineering, TAEECE 2013 (1) study; 26th
+Americas Conference on Information Systems, AMCIS 2020
+(1) study; 26th International Computer Conference,
+Computer Society of Iran, CSICC 2021 (1) study; 31st Bled
+eConference: Digital Transformation: Meeting the
+Challenges, BLED 2018 (1) study; 7th International
+Conference on Control, Decision and Information
+Technologies, CoDIT 2020 (1) study; ACIS 2019
+Proceedings - 30th Australasian Conference on Information
+Systems (1) study; BMSD 2014 - Proceedings of the 4th
+InternationalSymposiumonBusinessModelingandSoftware
+Design (1) study; ICEIS 2020 - Proceedings of the 22nd
+International Conference on Enterprise Information Systems
+(1) study; Intelligent Systems Reference Library (1) study;
+International Conference on Evaluation of Novel Approaches
+to Software Engineering, ENASE - Proceedings (1) study;
+International Journal of e-Collaboration (1) study; Lecture
+Notes in Business Information Processing (1) study;
+274
+
+--- PAGE 5 ---
+Proceedings - 2017 6th IIAI International Congress on
+Advanced Applied Informatics, IIAI-AAI 2017 (1) study;
+Proceedings - 2017 IEEE 19th Conference on Business
+Informatics, CBI 2017 (1) study; Proceedings - 2021 IEEE
+23rd Conference on Business Informatics, CBI 2021 - Main
+Papers (1) study; Proceedings - 2022 Research, Invention,
+and Innovation Congress: Innovative Electricals and
+Electronics, RI2C 2022 (1) study; Proceedings - CBI 2016:
+18th IEEE Conference on Business Informatics (1) study;
+Proceedings - Pacific Asia Conference on Information
+Systems, PACIS 2014 (1) study; Proceedings of 2015
+International Conference on Cloud Computing Technologies
+and Applications, CloudTech 2015 (1) study; Proceedings of
+2016 4th International Conference on Cyber and IT Service
+Management, CITSM 2016 (1) study; Proceedings of the
+ACM Symposium on Applied Computing (1) study;
+Proceedings of the Annual Hawaii International Conference
+on System Sciences (1) study; Proceedings of the European
+Conference on e-Government, ECEG (1) study; 30th
+Americas Conference on Information Systems, AMCIS 2024
+(1) study.
+B. Research Question 2: What is the context of agile EA
+research published?
+1) Countries active in agile EA research:
+The United States and Japan have the highest numbers of
+papers (14 and 13, respectively) and exhibit the highest total
+link strengths (1,500 and 1,622, respectively), indicating
+strong impact and interconnectedness within the research
+community. Australia has the highest number of citations
+(298) among the listed countries, reflecting the high impact
+and recognition of its research contributions. Germany
+exhibits substantial total link strength (908) and a notable
+number of citations (134), suggesting that its research is well
+integrated and influential. Countries such as Morocco, the
+Netherlands, and Sweden have fewer papers and citations,
+indicating either emerging research activity or smaller
+research communities. Canada and Finland, despite having
+only 2 papers each, show relatively high citation counts (76
+and51) andstrongtotallink strengths (151each),highlighting
+the significant impact of their limited publications.
+TABLEIII
+COUNTRIES REPRESENTED IN AGILE EA RESEARCH
+No Country
+Number of
+Publications
+Citation
+Total Link
+Strength
+1 United States 14 224 1500
+2 Australia 13 298 946
+3 Japan 13 162 1622
+4 Germany 9 134 908
+5 Morocco 8 24 40
+6 Netherlands 4 20 18
+7 Sweden 3 30 55
+8 Brazil 2 1 40
+9 Canada 2 76 151
+10 Finland 2 51 150
+11 Norway 2 3 48
+12 Portugal 2 6 41
+13 China 1 3 48
+14 Colombia 1 0 21
+15 Indonesia 1 0 5
+16 Iran 1 1 0
+17 Lithuania 1 1 0
+18 Peru 1 0 21
+19 Poland 1 11 1
+20 Switzerland 1 6 69
+21 Taiwan 1 17 1
+22 Thailand 1 1 2
+23
+United Arab
+Emirates
+1 5 4
+24
+United
+Kingdom
+1 6 69
+Norway, China, and Portugal have moderate total link
+strengths and lower citation counts, suggesting active but less
+influential research contributions than those of the top-
+ranking countries. Other countries, such as Colombia,
+Indonesia, Iran, Peru, Lithuania, Poland, Singapore,
+Switzerland, Taiwan, Thailand, the UAE, and the United
+Kingdom, identified only 1 study on agile EA. This indicates
+that EA research employing Agile methods remains emerging
+and has not yet received widespread attention from
+researchers and practitioners. Network visualization is shown
+in Figure 3.
+Fig. 3 Network visualization of main countries in agile EA research
+2) Analysis of a productive author:
+An examination of the contributors to the 65 papers
+revealed the most prolific authors and their collaborative
+networks. Theproductivity of an author often showcases their
+commitment to research. For this analysis, the criteria
+included at least one published work and at least two citations
+per author. In total, 26 authors met this criterion. The top five
+authors were Masuda, Doudi, Gill, Alzoubi, and Uludag, each
+with 11, 6, 4, and 3 papers, respectively. The coupling map
+for highly productive authors is shown in Figure 5.
+275
+
+--- PAGE 6 ---
+Fig. 4 Coupling map of highly productive authors
+TABLE IV
+NUMBER OF SELECTED STUDIES PER STUDY TYPE
+No Author
+Number of
+Publications
+Citations
+Total link
+strength
+1 Masuda Y. 11 162 14
+2 Gill A.Q. 4 149 29
+3
+Bogner J.;
+Zimmermann
+1 49 5
+4 Korhonen J.J. 1 49 10
+5 Alsufyani N.; Gill A.Q. 2 37 4
+6
+Yu E.; Deng S.;
+Sasmal D.
+1 27 0
+7 Zimmermann A. Et All 1 22 1
+8 Canat M. Et All 1 20 7
+9 Hauder M. Et All 1 20 6
+10 Anwar M.J.; Gill A.Q. 2 19 3
+11 Uludag 3 17 5
+12 Daoudi W. 6 16 16
+13
+Werewka J.;
+Spiechowicz
+1 11 1
+14 Van Wessel R.M Et All 1 10 8
+Table 4 summarizes various authors' contributions to
+specific research domains, showing the number of papers
+published, citations received, and total link strength for each
+author with more than 10 citations. Masuda is the most
+prolific author, with 11 papers and the highest number of
+citations (162), indicating significant impact and recognition
+in the research community. The total link strength of 14
+suggests a moderate level of collaboration or influence within
+the co-authorship network. Gill A.Q. has published 4 papers
+with a high citation count (149), indicating substantial
+influence. The total link strength of 29, the highest among all
+authors, suggests that Gill A.Q. has a strong collaborative
+network and significant integration into the research
+community.
+With a single document, Korhonen J.J. has received 49
+citations, showing the paper’s high impact. The total link
+strength of 10 indicates decent collaboration despite having
+only one publication. Other notable contributors, such as
+Bogner et al., each have a single document, with 49 and 37
+citations, respectively. Their total link strengths (5 and 4)
+indicate a moderate level of collaborative influence. Yu E.,
+Deng S., and Sasmal, despite having 27 citations, have a total
+link strength of 0, indicating no significant collaborative
+influence or co-authorship network. Zimmermann, Schmidt,
+and Jugel have a single document with 22 citations and
+minimal influence on the collaborative network.
+From a collaboration and co-authorship perspective, Gill
+A.Q. appears multiple times, indicating collaborations with
+various co-authors, such as Alsufyani N. and Anwar M.J.,
+highlighting Gill A.Q.'s extensive collaborative reach and
+influence in the field. Van Wessel R.M., Kroon P., and De
+Vries H.J. have a balanced citation and link profile, indicating
+both influence and collaborative activity.
+3) Keyword co-occurrence analysis:
+Co-occurrence analysis is a statistical method for
+identifying relationships among entities in a dataset. In text
+analysis, this technique examines how frequently certain
+terms or concepts co-occur within a given corpus. Keywords
+serve to emphasize the focus of a paper, aiding readers in
+understanding its primary research contexts [28]. The
+generated map displays five clusters, labeled green, purple,
+blue, red, and yellow, as shown in Figure 5. Larger labels and
+circles indicate greater element weight. The proximity
+between two keywords roughly reflects their co-occurrence
+relationship, with closer keywords indicating a stronger
+connection [28]. Consequently, the keywords in the sample
+were analyzed using VOSviewer to identify high-frequency
+keywords and illustrate keyword relationships. A frequency
+threshold of 2 was set, resulting in the filtering of the 184
+author keywords; 36 met the threshold, as shown in Figure 5.
+276
+
+--- PAGE 7 ---
+Fig. 5 Co-Occurrence Analysis
+The core keyword of the sampled papers is clearly
+enterprise architecture. The results also highlight several key
+topics that have attracted significant attention across multiple
+dimensions. such as agile (i.e., adaptation, scrum, enterprise
+transformation),digital transformation (i.e., cloud computing,
+case study, EA framework, TOGAF, AIDAF), agile
+methodology (i.e., project management, agile enterprise
+architecture, change management), and digital IT (digital
+healthcare, risk management, industry 4.0, society 5.0). The
+connections between these keywords are also illustrated in
+figures, which are valuable for understanding and analyzing
+agile EA research topics from the past decade.
+4) Research methods and techniques adopted:
+The exploration of various research methods and data
+collection techniques aims to identify the methods and
+strategies employed in sixty-five primary studies. Among
+these studies, five employed a mixed-methods approach,
+forty-eight were qualitative, four were quantitative, and two
+used action research. A detailed breakdown of the methods
+and techniques used in each study is provided in Table 4.
+TABLE V
+NUMBER OF SELECTED STUDIES PER STUDY TYPE
+Research
+Method
+Technique Qty
+Qualitative Case Study (n=33)
+Design Science (n=4)
+Interview (n=3)
+Literature Review (n=13)
+53
+Quantitative Survey (n=5) 5
+Mixed methods Literature review and survey (n=1)
+Literature review and interview (n=1)
+5
+Case study and interview (n=2)
+Case study and questionnaire (n=1)
+Action Research Canonical Action Research (n=2) 2
+Total Studies 65
+Because many studies employ multiple data collection
+methods, some references are listed multiple times. Of the 65
+studies, 46 collected data through document analysis, 22
+employed observational techniques, 24 relied on interviews,
+6 used questionnaires, and 3 incorporated surveys as their
+primary data collection method.
+TABLE VI
+DATA COLLECTION TECHNIQUE USED
+Data Collection Technique
+Number of
+studies
+Percentage
+Documentation 46 45%
+Observation 22 22%
+Survey 4 4%
+Interview 24 24%
+Questionnaire 6 6%
+Document analysis, interviews, and observations are the
+most commonly used data collection methods. These
+techniques are frequently employed in studies that adopt a
+case study research design to demonstrate the empirical
+application of agileEA frameworksin practice.Given thatEA
+is a relatively broad domain within the information systems
+field, case study research offers the opportunity to generate
+rich, context-sensitive insights into the implementation of
+various agile EA frameworks across diverse and complex
+organizational settings.
+5) Types of research contributions:
+Inspired by Collins [29], who synthesized various
+contribution types originally proposed by Shaw [30] and
+further elaborated by Paternoster et al. [31]. Table 6 outlines
+six distinct types of research contributions.
+A visualrepresentation of thecontribution types of primary
+studiesis showninFig.5.Thesefindingsareexpectedtoyield
+meaningful practical contributions and to enrich the academic
+discourse surrounding agile approaches in EA. The analysis
+of the 65 primary studies indicates that the majority of
+contributions were categorized as frameworks or methods (23
+studies), followed by models (17 studies), advice or
+implications (13 studies), lessons learned (4 studies),
+guidelines (1 study), and tools (1 study). As shown in Table
+7, thereis a clear need for further research contributions in the
+areas of (i) models and (ii) tools, which remain
+underrepresented in the current literature.
+277
+
+--- PAGE 8 ---
+TABLE VII
+CONTRIBUTIONS TYPE [30], [31]
+Contribution Type Description
+Framework/Method/Technique The research presents a
+detailed framework, approach,
+or technique to assist in the
+development and management
+of software and information
+systems.
+Guidelines A compilation of suggestions
+or guidance derived from the
+analysis of the gathered
+research findings.
+Model A conceptualization process
+yields a conceptual
+representation of a specific
+phenomenon or observed
+reality.
+Advice/Implication A broad and conversational
+suggestion derived from
+perspectives.
+Lessons Learned The possible results are
+directly derived from the
+findings of the data analysis.
+Tool A program, application, or
+technology developed to
+support specific functions or
+aspects of information
+processing.
+TABLEVIII
+CONTRIBUTIONS ACROSS STUDIES
+Contribution Type Qty Primary Papers
+Framework/Method/ Technique 27 S2, S4, S6, S8, S10,
+S14, S17, S23, S24,
+S25, S26, S29, S40,
+S41, S42, S43, S44,
+S45, S52, S57, S58,
+S59, S60, S61, S62,
+S64
+Model 20 S3, S7, S9, S11, S12,
+S15, S20, S22, S30,
+S31, S32, S46, S47,
+S49, S53, S54, S55,
+S56, S63, S65
+Advice/Implication 13 S1, S5, S13, S16, S19,
+S27, S34, S35, S36,
+S37, S38, S39, S48
+Lessons Learned 3 S18, S21, S33
+Tool 1 S51
+Guidelines 1 S28
+Fig. 6 Contribution types of primary studies
+C. Research Question 3: What are the existing agile EA
+frameworks or models and their characteristics in the
+research published?
+Between 2012 and 2025, 41 relevantstudies were identified,
+comprising 23 frameworks and 18 models. These studies were
+coded inductively. Three stream areas emerged during the
+coding process: (1) process-oriented methods, (2) structure-
+oriented methods, and (3) behavior-oriented methods.
+The first group consists of frameworks or models whose
+orientation emphasizes flows, phases, or stages. This
+characteristic is referred to as process-oriented, and it appears
+in 73% of the studies (30 studies). The second group includes
+studies that produce models oriented toward architectural
+elements (such as components, metamodels, and artifacts) as
+extensions of the designed framework. This characteristic is
+termed structure-oriented and is found in 17% of the studies
+(7 studies). Lastly, the third group comprises frameworks or
+models that focus on user attitudes, perceptions, adoption, or
+satisfaction.Thesearereferredtoasbehavior-orientedmodels
+and are found in 10% of the studies (4 studies). A detailed
+breakdown of the types of frameworks and models
+constructed in each study is provided in Table 8. Figure 7
+illustrates the types of frameworks and models that have been
+designed according to their orientation characteristics.
+TABLE IX
+TYPE OF AGILE EA FRAMEWORKS AND MODELS
+Types of
+frameworks
+and models
+Description Primary Studies
+Behavioral-
+oriented (n=9)
+Focus on user
+attitudes,
+perceptions,
+adoption, and
+satisfaction
+S7, S22, S30, S49, S50,
+S54, S61, S62, S65
+Structural-
+oriented (n=7)
+Focus on
+architectural
+elements
+S11, S12, S15, S29, S55,
+S56, S9
+Process-
+oriented
+(n=29)
+Orientation
+emphasizes flows,
+phases, or stages
+S2, S8, S10, S14, S17,
+S20, S23, S24, S25, S26,
+S3, S31, S32, S4, S40,
+S41, S42, S43, S44, S45,
+S46, S47, S51, S52, S53,
+S57, S58, S59, S6, S60,
+S63, S64
+Fig. 7 Frameworks and models of primary studies
+By organizational sector, the healthcare sector accounts for
+12 studies, followed by the government sector (9), banking
+278
+
+--- PAGE 9 ---
+(4), telecommunications (2), and other organizational sectors
+(1). The composition is shown in Table 10.
+TABLE X
+TYPE OF ORGANIZATIONAL SECTORS
+Organization Sectors Number of studies Percent
+Not specified 22 34%
+healthcare 12 18%
+Government 9 14%
+Banking 4 6%
+Telco 3 5%
+Insurance 2 3%
+Manufacture 2 3%
+Railroad 2 3%
+Automotive 1 2%
+Chemical 1 2%
+Higher Education 1 2%
+IT Services 1 2%
+Logistic 1 2%
+Mining 1 2%
+Outsourcing Industry 1 2%
+Service Companies 1 2%
+Financial Service 1 2%
+Total 65
+It has been shown that industry sector characteristics and
+the organizational environment are crucial in promoting agile
+EA practices. Next, we discuss the scholarly contributions to
+the agile EA literature and the types of agile EA frameworks
+and models.
+1) The increasing trend of agile EA research in recent
+years:
+As previously shown in Figure 2, interest in AEA began to
+increase between 2014 and 2015, before accelerating more
+significantly in 2021. Despite slight declines in 2022 and
+2025, the overall trend in agile EA research appears to be
+increasing. This aligns with the prediction by Gampfer et al.
+[32],who anticipated thatagility in EA wouldbecomearising
+trend. This increase is driven by thegrowing demandformore
+agile business practices in response to volatility, uncertainty,
+complexity, and ambiguity (VUCA) conditions and the
+pressures of digital transformation.
+TheemergenceofEAwithanagileapproachcanbeattributed
+to several factors. One of the most significant issues is that
+existing EA frameworks are often perceived as too rigid and
+difficultto adapttothespecificneedsofindividualorganizations
+[9], [33], [12]. This concern was acknowledged in 2021, when
+TOGAF—one of the most widely adopted EA frameworks—
+responded by incorporating agility considerations into EA
+development [34]. Another driving factor is the emphasis on EA
+that is ready and responsive to both business and IT change, as
+highlighted by Kaddoumi et al. [6].
+Although research on agile Enterprise Architecture (EA) is
+increasing, research on the business implications of agile EA
+implementation remains relatively limited. The technical
+perspective is more dominant than the business perspective
+related to agile EA implementation. This can motivate further
+research to ensure thatagile EA is not considered a buzzword.
+Furthermore, based on a bibliometric analysis, most research
+on agile EA is conducted by researchers from the United
+States, Japan, and Australia (see Figure 4). Developing
+countries, such as Morocco and Indonesia, tend to have
+limited research involvement and are thus relatively behind in
+adapting to the pace of agile EA development.
+2) Contributions are dominated by frameworks or
+models:
+Of the 65 studies examined, the most dominant
+contribution was identified as “framework/method” (27
+studies), followed by “model” (20 studies), and
+“advice/implication” (13 studies). There was only one study
+ineachcategory:toolsandguidelines.Thisindicates anotable
+absence of research focused on the development of tools or
+guidelines for executing agile enterprise architecture. An
+illustrative example of a study that connects models to tools
+in agile EA is Loft et al. [35], which assists small and
+medium-sized enterprises (SMEs) in utilizing existing
+commercial EA frameworks within agile settings.
+One possible explanation for this imbalance is that most
+efforts in agile EA research remain at a conceptual or
+exploratory stage, with limited emphasis on empirical
+validation, maturity assessment, or evaluating business value
+outcomes. This tendency is also evident in the minimal use of
+quantitative research methods observed across the studies.
+3) Focus on a process-oriented method:
+Regarding the characteristics of existing agile EA
+frameworks and models proposed in the primary studies,most
+are process-oriented, emphasizing workflows that adopt agile
+methodologies for enterprise architecture development. This
+orientation is intended to address certain limitations of
+traditional EA frameworks, as seen in Table 8, from 29
+primary studies, 16 process-oriented agile EA frameworks
+have been empirically validated ([9], [12], [35], [36], [37],
+[38], [39], [40], [41], [42], [43], [44], [45], [46], [47], [48]).
+In the remaining 12 primary studies, the proposed agile EA
+frameworks remain conceptual.
+The following further explains three agile EA frameworks
+that received high citation counts, namely those proposed by
+Gill, Masuda, and Doaudi.
+Gill proposed an agile EA Framework developed with
+design science research known as the "Gill Framework" [33].
+However, the components of this framework remain a meta-
+framework that requires further elaboration. The application
+of adaptive EA in the Australian government's cloud
+computing initiative has not been accompanied by evidence
+of its success [10]. One perceived drawback of the adaptive
+enterprise architecture approach is that it necessitates
+comprehensive government-wide coordination and
+governance.
+Masuda et al. [9] proposed an Adaptive Integrated EA
+Framework (AIDAF) to support the strategy of promoting
+cloud/mobile IT. The process begins with the Context Phase,
+where architecture design guidelines, consistent with the IT
+strategy, are referenced to meet the needs of business
+divisions. In the next phase, the architecture committee
+reviews the conceptual design of the IT project's initiation
+documents. During the Rationalization Phase, stakeholders
+and the Architecture Board determine which existing
+information systems will be replaced or discontinued. Finally,
+in the Realization Phase, the project team implements the
+agreed-upon IT project. This approach enables the
+organization to adopt an EA framework that is flexible and
+adaptable to ongoing cloud and mobile IT projects, structured
+279
+
+--- PAGE 10 ---
+around these four phases. To verify the “Adaptive Integrated
+EA framework” against the requirements in the era of
+cloud/mobile IT/, and digital IT, they evaluated it through a
+case study of a global healthcare enterprise, a research-based
+company with a primary focus on pharmaceuticals. The
+Element of Agility is adopted from the Gill Framework,
+namely: “speed,” “leanness,” "flexibility", and “learning”.
+Based on his research results, he claims that AIDAF
+outperforms TOGAF in both qualitative and quantitative
+aspects. AIDAF has been applied in several contexts,
+including riskmitigation by theArchitectureBoard in aglobal
+healthcare enterprise [41], electronic health records in
+Australia [13], and digital transformation for new medicines
+in the healthcare industry, including artificial intelligence
+[38]. However, the readiness of organizations to adopt
+AIDAF has not been discussed, even though it is important,
+as organizations implementing agile EA in the context of
+digital transformation must account for the agility index, as
+shown by Kaddoumiet al.[6] which highlights the importance
+of examining an organization's agility index from the
+perspectives of motivators, enablers, and blockers.
+Daody et al. [12] proposed an Adaptive Enterprise
+Architecture model inspired by Scrum and its sprint model.
+The proposed model was illustrated through a case study in a
+manufacturing company. They explained how each
+component of their model functions and the roles and
+responsibilities of the teams. However, its success is not
+evaluated using any specific criteria. Another critique is that
+thismodelplacestoomuchemphasison applicationsolutions,
+even though digital transformation includes many other
+solutions, such as the use of advances in artificial intelligence
+and cognition, biometrics, robotics, blockchain, 3D printing,
+and edge computing [49]. Therefore, this model still needs to
+be expanded to incorporate more holistic dimensions in the
+context of digital transformation [50]. Moreover, the
+outcomes of the implementation are not assessed against
+success indicators or their impact on business performance.
+Structural-oriented models are the second most prevalent
+category of EA frameworks found in the primary studies.
+Notably, the study by Gill [51] stands out for its examination
+of the implementation and integration of high-level
+ArchiMate modeling standards with existing low-level
+modeling approaches. The study proposes a hybrid modeling
+approach to support the adoption of integrated techniques for
+agile enterprise architecture development. However, because
+it is applied to a single case study, this model cannot be
+generalized.
+Behaviorally oriented agile EA frameworks constitute the
+least explored category among the primary studies in our
+sample. This may be partly attributable to the lack of
+empirical evidence on the effective application of agile
+enterprise architecture across organizational and national
+settings. Measuring the impact of agile EA implementation
+remains relatively uncommon. One notable exception is the
+work of Alzoubi, who in multiple studies ([52], [53], [54])
+consistently attempts to assess the impact of agile EA on
+business value within the GDAD environment. However, the
+proposed model lacks generalizability to other organizational
+contexts, primarily due to differences in organizational
+structures and characteristics.
+Our research not only holds academic significance but also
+underscores several key practical implications. In particular,
+our study identifies the agile EA frameworks or models that
+organizations most frequently utilize, which also seem to be
+of considerable interest to researchers.
+Based on our findings, the application of agile approaches
+within the EA discipline—driven by the need to address the
+limitations of traditional EA frameworks—indicates a
+growing necessity to adopt and adapt agile practices based on
+specific business domains, particularly in the context of
+digital transformation initiatives.
+Although agile EA has the potential to support successful
+digital transformation, the absence of quantitative measures
+of business value in many implementation studies suggests
+that managers should exercise caution. Factors such as
+readiness for agility, EA governance that enables agile
+practices, and a shared organizational understanding of agile
+methods must be carefully considered and evaluated.
+Furthermore, the reviewed studies provide valuable
+insights for practitioners by offering lessons learned from
+implementing agile EA frameworks, detailing how agile
+methods are applied, the common challenges encountered,
+and the recommended best practices. The breadth of literature
+on agile EA within organizational contexts can make it
+difficult for practitioners to locate empirically relevant
+studies.However,by synthesizing andorganizing thefindings
+thematically, practitioners are better positioned to identify the
+studies most relevant to the challenges they face in
+implementing agile EA.
+Drawing from the insights and shortcomings highlighted in
+this review, a number of potential avenues for future research
+are suggested. Firstly, given the dynamic nature of both
+literature and practice, it is essential to view agile EA
+frameworks or models as evolving entities that should be
+updated and expanded upon by subsequent research. There is
+a need for more empirical studies to investigate and enhance
+the agile EA framework by considering organizational culture
+and to evaluate how well agile EA aligns with the readiness
+indicators of digital transformation programs in specific
+countries.
+Second, future research should explore the development of
+maturity models and readiness assessment tools that help
+organizations evaluate their preparedness for agile EA
+adoption. These tools should incorporate dimensions such as
+governance, culture, leadership, and understanding of agile
+principles across various organizational layers.
+Third, longitudinal case studies examining the long-term
+impacts of agile EA across different industries and national
+contexts are needed. Such studies would provide valuable
+insights into how agile EA evolves and how it supports
+sustained digital transformation.
+Lastly, greater attention should be paid to the behavioral
+and human factors that influence the adoption of agile EA.
+Future studies could investigate change management
+practices, team dynamics, and stakeholder engagement
+strategies that are critical for successful implementation. By
+addressing these research gaps, future studies can contribute
+to both theory development and practical guidance for
+organizations seeking to adopt agile enterprise architecture in
+an increasingly dynamic business environment.
+280
+
+--- PAGE 11 ---
+IV.CONCLUSION
+This systematic literature review provides a structured
+overview of the current state of agile EA research. This is
+achieved by identifying 65 primary studies related to agile EA
+articles over ten years (2012–2025) and analyzing them
+concerning (i) publication trends in agile EA (Annual
+quantitative distribution of studies, quantitative analysis of
+publications, and journals publishing adaptive/agile EA
+research),(ii)contextofpublishedagileEAresearch(Including
+countries represented, prolific authors, relationships between
+terms or concepts, classification of studies based on research
+methods, and types of research contributions), (iii) existing
+agile EA frameworks or models and their characteristics in
+published research. Bibliometric and thematic analyses were
+conducted on the 65 selected studies. The bibliometric analysis
+showed the following findings.
+The bibliometric analysis indicated that influential
+mainstream journals, such as the International Journal of
+Enterprise Information Systems, International Journal of
+Intelligent Information Technologies, Computers and
+Security, International Journal of e-Collaboration,
+Sustainability, International Journal of Lean Six Sigma,
+Technology in Society, and IEEE Transactions on
+Engineering Management, have primarily published research
+on Agile or Adaptive EA.
+The analysis of countries and regions active in agile EA
+research revealed that the United States and Japan lead in the
+number of publications, followed by Australia and Germany.
+Among productive authors, Masuda Y. and Gill A.Q. are
+the most prolific and influential, with substantial citation
+counts and strong collaborative networks. Masuda Y. et al.
+dominate agile EA research through their numerous case
+studies of implementation. Interestingly, the analysis also
+shows that some less prolific authors have achieved
+considerable impact, highlighting the importance of quality
+over quantity. The total link strength metric emphasizes the
+strength of an author’s co-authorship network, which
+enhances their influence and integration within the research
+community.
+An examination of high-frequency keywords revealed a
+consistent focus on terms such as Agile, adaptive EA,
+adaptation, Agile methodology, Scrum, cloud, change
+management, IT alignment, and project management. The co-
+occurrence of keywords also highlighted emerging trends and
+directions for future agile EA research, including topics like
+agile EA frameworks, Industry 4.0, Society 5.0, artificial
+intelligence, and change management.
+Based on thematic analysis, clear findings emerging from
+this systematic literature review are the need to (i) refine and
+extend existing agile EA frameworks to address a wider range
+of dimensions with a strong theoretical foundation and greater
+empirical rigor to enhance generalizability, and (ii) build
+cumulative knowledge. In addition, the findings of this study
+are valuable to academics and practitioners in the field of EA
+management. For EA academics, this paper can help them
+quickly and effectively learn about the development of agile
+EA research over the last decade. In addition, these findings
+can guide academics in conducting future agile EA research.
+For EA practitioners, the latest EA research can be examined
+through issues to inform and improve EA project operations
+and management, with implications for organizational
+benefits, particularly in the context of digital transformation
+toward Industry 4.0.
+The main limitations of our study pertain to the review
+process. We concentrated on retrieving data from the Scopus
+database, as its dataset can be processed for bibliometric
+analysis using VOSviewer. The search was restricted to the
+terms (agil* OR adaptive) AND “enterprise architecture”,
+which may have limited the scope of the selected literature.
+Additionally, our review focused on articles published in the
+past decade and in English only, potentially excluding other
+relevant studies. Furthermore, some of the reviewed articles
+lacked detailed descriptions of their methodology and
+interventions, and others did not include information on
+demographics or the organization's cultural context, which
+also limits the findings of our study.
+ACKNOWLEDGMENT
+This research was supported by the Reliable Software
+Engineering Laboratory, E-Government and E-Business
+Laboratory, Digital Library and Distance Learning Lab,
+Faculty of Computer Science, Universitas Indonesia.
+REFERENCES
+[1] K. S. R. Warner and M. Wäger, "Building dynamic capabilities for
+digitaltransformation:Anongoingprocessofstrategicrenewal," Long
+Range Planning, vol. 52, no. 3, pp. 326-349, Jun. 2019,
+doi:10.1016/j.lrp.2018.12.001.
+[2] I. Mergel, N. Edelmann, and N. Haug, "Defining digital
+transformation: Results from expert interviews," Gov. Inf. Quart., vol.
+36, no. 4, p. 101385, Oct. 2019, doi: 10.1016/j.giq.2019.06.002.
+[3] T. Tamm, P. B. Seddon, G. Shanks, and P. Reynolds, "How does
+enterprise architecture add value to organisations?," Commun. Assoc.
+Inf. Syst., vol. 28, 2011, doi: 10.17705/1cais.02810.
+[4] S. Bente, U. Bombosch, and S. Langade, Collaborative Enterprise
+Architecture: Enriching EA with Lean, Agile, and Enterprise 2.0
+Practices. Waltham, MA, USA: Newnes, 2012.
+[5] R. Duijs, P. Ravesteijn, and M. van Steenbergen, "Adaptation of
+enterprise architecture efforts to an agile environment," in Proc. Digit.
+Transform. – Meeting Challenges, 2018, pp. 389-400,
+doi:10.18690/978-961-286-170-4.26.
+[6] T. Kaddoumi and M. Watfa, "A foundational framework for agile
+enterprise architecture," Int. J. Lean Six Sigma, vol. 13, no. 1, pp. 136-
+155, Aug. 2021, doi: 10.1108/ijlss-03-2021-0057.
+[7] K. R. Lowell, "Using the agile manifesto as a framework," in Future
+Bus. Finance. Cham: Springer, 2023, pp. 13-18. doi: 10.1007/978-3-
+031-36429-7_4.
+[8] R.Hoda,J.Noble, andS.Stuart, "Agileprojectmanagement,"in Proc.
+NewZealand Comput.Sci.Res.Stud.Conf. (NZCSRSC),Christchurch,
+New Zealand, 2008, pp. 218-221.
+[9] Y. Masuda, S. Shirasaka, S. Yamamoto, and T. Hardjono, "An
+adaptive enterprise architecture framework and implementation," Int.
+J. Enterp. Inf. Syst., vol. 13, no. 3, pp. 1-22, Jul. 2017,
+doi:10.4018/ijeis.2017070101.
+[10] A.Q.Gill,S.Smith,G.Beydoun,andV. Sugumaran, "Agileenterprise
+architecture: A case of a cloud technology-enabled government
+enterprise transformation," in Proc. 19th Pacific Asia Conf. Inf. Syst.
+(PACIS), Chengdu, China, Jun. 2014, pp. 1-11.
+[11] A. Q. Gill, "Adaptive enterprise architecture driven agile
+development," in Proc. Int. Conf. Inf. Syst. Develop. (ISD), 2015.
+[12] W. Daoudi, K. Doumi, and L. Kjiri, "An approach for adaptive
+enterprise architecture," in Proc. 22nd Int. Conf. Enterp. Inf. Syst.
+(ICEIS), 2020, pp. 738-745, doi: 10.5220/0009343807380745.
+[13] Y. Masuda, D. S. Shepard, and S. Yamamoto, "Adaptive governance
+on electronic health record in a digital IT era," in Proc. 25th Amer.
+Conf. Inf. Syst. (AMCIS), Cancún, Mexico, Aug. 2019.
+[14] F. Nikpay, R. B. Ahmad, B. D. Rouhani, M. N. Mahrin, and S.
+Shamshirband, "An effective enterprise architecture implementation
+methodology," Inf. Syst. e-Bus. Manage., vol. 15, no. 4, pp. 927-962,
+Jan. 2017, doi: 10.1007/s10257-016-0336-5.
+281
+
+--- PAGE 12 ---
+[15] R. Ansyori, N. Qodarsih, and B. Soewito, "A systematic literature
+review: Critical success factors to implement enterprise
+architecture," Procedia Comput. Sci., vol. 135, pp. 43-51, 2018,
+doi:10.1016/j.procs.2018.08.148.
+[16] E. I. Niemi and S. Pekkola, "Enterprise architecture benefit
+realization," ACM SIGMIS Database, vol. 47, no. 3, pp. 55-80, Aug.
+2016, doi: 10.1145/2980783.2980787.
+[17] N. Alsufyaniand A.Q.Gill,"A review ofdigitalmaturity models from
+adaptive enterprise architecture perspective: Digital by design,"
+in Proc. 23rd IEEE Conf. Bus. Inform. (CBI), 2021, pp. 121-130,
+doi:10.1109/cbi52690.2021.00023.
+[18] J. D. Rittelmeyer and K. Sandkuhl, "Effects of artificial intelligence
+on enterprise architectures - A structured literature review," in Proc.
+25th IEEE Int. Enterp. Distrib. Object Comput. Workshop (EDOCW),
+2021, pp. 130-137, doi: 10.1109/edocw52865.2021.00042.
+[19] E. Atencio, G. Bustos, and M. Mancini, "Enterprise architecture
+approach for project management and project-based organizations: A
+review," Sustainability, vol. 14, no. 16, p. 9801, Aug. 2022,
+doi:10.3390/su14169801.
+[20] M. J. Page et al., "Updating guidance for reporting systematic reviews:
+development of the PRISMA 2020 statement," Center Open Sci.,
+Preprint, Sep. 2020. doi: 10.31222/osf.io/jb4dx.
+[21] P. Mongeon and A. Paul-Hus, "The journal coverage of Web of
+Science and Scopus: a comparative analysis," Scientometrics, vol.
+106, no. 1, pp. 213-228, Oct. 2015, doi: 10.1007/s11192-015-1765-5.
+[22] V.K.Singh,P.Singh,M.Karmakar,J.Leta,and P.Mayr,"Thejournal
+coverage of Web of Science, Scopus and Dimensions: A comparative
+analysis," Scientometrics, vol. 126, no. 6, pp. 5113-5142, Mar. 2021,
+doi: 10.1007/s11192-021-03948-5.
+[23] T. Dybå and T. Dingsøyr, "Empirical studies of agile software
+development: A systematic review," Inf. Softw. Technol., vol. 50, no.
+9-10, pp. 833-859, Aug. 2008, doi: 10.1016/j.infsof.2008.01.006.
+[24] X. Cai, C. Zhou, L. Zhou, and Q. Xu, "A bibliometric analysis of IL-
+35 research from 2009 to 2018," PeerJ, vol. 7, p. e7992, Oct. 2019,
+doi: 10.7717/peerj.7992.
+[25] L. Shi, Y. Mai, and Y. J. Wu, "Digital transformation," J. Organ. End
+User Comput., vol. 34, no. 7, pp. 1-20, Jun. 2022,
+doi:10.4018/joeuc.302637.
+[26] H. Li et al., "Green roof development knowledge map: A review of
+visualanalysisusingCiteSpaceand VOSviewer," Heliyon,vol.10,no.
+3, p. e24958, Feb. 2024, doi: 10.1016/j.heliyon.2024.e24958.
+[27] N. J. van Eck and L. Waltman, "Software survey: VOSviewer, a
+computer program for bibliometric mapping," Scientometrics, vol. 84,
+no. 2, pp. 523-538, Dec. 2009, doi: 10.1007/s11192-009-0146-3.
+[28] N. J. van Eck and L. Waltman, "VOSviewer goes online! (Part 2),"
+Front Matter, Preprint, Jul. 2021. doi: 10.59350/558vs-aj436.
+[29] C. Collins, D. Dennehy, K. Conboy, and P. Mikalef, "Artificial
+intelligence in information systems research: A systematic literature
+review and research agenda," Int. J. Inf. Manage., vol. 60, p. 102383,
+Oct. 2021, doi: 10.1016/j.ijinfomgt.2021.102383.
+[30] C. Theisen, M. Dunaiski, L. Williams, and W. Visser, "Writing good
+software engineering research papers: Revisited," in Proc. 39th
+IEEE/ACM Int. Conf. Softw. Eng. Companion (ICSE-C), May 2017, p.
+402, doi: 10.1109/icse-c.2017.51.
+[31] N. Paternoster et al., "Software development in startup companies: A
+systematic mapping study," Inf. Softw. Technol., vol. 56, no. 10, pp.
+1200-1218, Oct. 2014, doi: 10.1016/j.infsof.2014.04.014.
+[32] F. Gampfer, A. Jürgens, M. Müller, and R. Buchkremer, "Past, current
+and future trends in enterprise architecture—A view beyond the
+horizon," Comput. Ind., vol. 100, pp. 70-84, Sep. 2018,
+doi:10.1016/j.compind.2018.03.006.
+[33] A.Q. Gill, "Towardsthedevelopmentofanadaptiveenterpriseservice
+systemmodel,"in Proc.19thAmer.Conf.Inf.Syst. (AMCIS),Chicago,
+IL, USA, 2013, pp. 1-9.
+[34] M. C. S. Vera, "Blueprinting user-centric design for developing herbal
+plant location-based recommendation system applying TOGAF ADM
+and agile sprints," in Proc. Int. Conf.Adv. Comput., Commun., Electr.,
+Smart Syst. (iCACCESS), 2024, pp. 01-06,
+doi:10.1109/icaccess61735.2024.10499593.
+[35] P. Loft, Y. He, I. Yevseyeva, and I. Wagner, "CAESAR8: An agile
+enterprise architecture approach to managing information security
+risks," Comput. Secur., vol. 122, p. 102877, Nov. 2022,
+doi:10.1016/j.cose.2022.102877.
+[36] O. E. Balcicek, M. Gundebahar, and S. Cekerekli, "An agile approach
+for converting enterprise architectures," in Proc. Int. Conf. Technol.
+Adv. Electr., Electron. Comput. Eng. (TAEECE), 2013, pp. 380-386,
+doi: 10.1109/taeece.2013.6557305.
+[37] H. Ramos and A. Vasconcelos, "eXtreme enterprise architecture
+planning," in Proc. 29th Annu. ACM Symp. Appl. Comput., 2014, pp.
+1417-1419, doi: 10.1145/2554850.2555130.
+[38] Y. Masuda et al., "Adaptive enterprise architecture for the digital
+healthcare industry: A digital platform for drug
+development," Information, vol. 12, no. 2, p. 67, Feb. 2021,
+doi:10.3390/info12020067.
+[39] S. Hanschke, J. Ernsting, and H. Kuchen, "Integrating agile software
+development and enterprise architecture management," in Proc. 48th
+Hawaii Int. Conf. Syst. Sci. (HICSS), 2015, pp. 4099-4108,
+doi:10.1109/hicss.2015.492.
+[40] E. Hosiaisluoma, K. Penttinen, J. Mustonen, and J. Heikkilä, "Lean
+enterprise architecture method for value chain based development in
+public sector," in Proc. 18th Eur. Conf. Digit. Gov. (ECDG), Oct.
+2018, p. 86.
+[41] Y. Masuda, S. Shirasaka, S. Yamamoto, and T. Hardjono, "Risk
+management for digital transformation in architecture board: A case
+study on global enterprise," in Proc. 6th IIAI Int. Congr. Adv. Appl.
+Inform. (IIAI-AAI), 2017, pp. 255-262, doi: 10.1109/iiai-aai.2017.79.
+[42] M.-H.LiaoandC.-T.Wang, "Using enterprisearchitecturetointegrate
+lean manufacturing, digitalization, and sustainability: A lean
+enterprise case study in the chemical industry," Sustainability, vol. 13,
+no. 9, p. 4851, Apr. 2021, doi: 10.3390/su13094851.
+[43] F. Gampfer, Investigation on the Future of Enterprise Architecture in
+Dynamic Environments, Ph.D. dissertation, Universidad de Murcia,
+Murcia, Spain, 2019.
+[44] Y. Masuda et al., "An adaptive enterprise architecture design for a
+digital healthcare platform : Toward digitized society – Industry 4.0,
+Society 5.0," in Proc. 25th IEEE Int. Enterp. Distrib. Object Comput.
+Workshop (EDOCW), 2021, pp. 138-146,
+doi:10.1109/edocw52865.2021.00043.
+[45] P. Medeiros, A. Santana, M. Lima, H. Moura, and M. Mira da Silva,
+"An agile approach for modeling enterprise architectures," in Proc.
+23rd Int. Conf. Enterp. Inf. Syst., 2021, pp. 659-670,
+doi:10.5220/0010450506590670.
+[46] L. R. Saragih, M. Dachyar, and T. Y. M. Zagloel, "Implementation of
+telecommunications cross-industry collaboration through agile project
+management," Heliyon, vol. 7, no. 5, p. e07013, May 2021,
+doi:10.1016/j.heliyon.2021.e07013.
+[47] R. M. van Wessel, P. Kroon, and H. J. de Vries, "Scaling agile
+company-wide: The organizational challenge of combining agile-
+scaling frameworks and enterprise architecture in service
+companies," IEEETrans.Eng.Manage.,vol.69,no.6,pp.3489-3502,
+Dec. 2022, doi: 10.1109/tem.2021.3128278.
+[48] A. Schmitz and M. A. Wimmer, "Framework for interoperable service
+architecture development," Gov. Inf. Quart., vol. 40, no. 4, p. 101869,
+Oct. 2023, doi: 10.1016/j.giq.2023.101869.
+[49] J. W. Ross, C. M. Beath, and M. Mocker, Designed for Digital.
+Cambridge, MA, USA: MIT Press, 2019.
+doi:10.7551/mitpress/12188.001.0001.
+[50] A. Aras and G. Büyüközkan, "Digital transformation journey
+guidance: A holistic digital maturity model based on a systematic
+literature review," Systems, vol. 11, no. 4, p. 213, Apr. 2023,
+doi:10.3390/systems11040213.
+[51] A. Q. Gill, "Agile enterprise architecture modelling: Evaluating the
+applicability and integration of six modelling standards," Inf. Softw.
+Technol., vol. 67, pp. 196-206, Nov. 2015,
+doi:10.1016/j.infsof.2015.07.002.
+[52] Y. I. Alzoubi and A. Q. Gill, "An agile enterprise architecture-driven
+model for geographically distributed agile development," in Lecture
+Notes Inf. Syst. Organ.. Cham: Springer, 2016, pp. 63-77.
+doi:10.1007/978-3-319-30133-4_5.
+[53] Y. I. Alzoubi and A. Q. Gill, "An empirical investigation of
+geographically distributed agile development: The agile enterprise
+architecture is a communication enabler," IEEE Access, vol. 8, pp.
+80269-80289, 2020, doi: 10.1109/access.2020.2990389.
+[54] Y. I. Alzoubi and A. Q. Gill, "Can agile enterprise architecture be
+implemented successfully indistributed agile development? Empirical
+findings," Glob. J. Flex. Syst. Manage., vol. 23, no. 2, pp. 221-235,
+Feb. 2022, doi: 10.1007/s40171-022-00298-w.
+282
+
+--- PAGE 13 ---
+APPENDIX A
+QUALITY ASSESSMENT RESULT
+ID
+Study
+Paper QA1 QA2 QA3 QA4 QA5 QA6 QA7
+Total
+Score
+S1 Yu E.; Deng S.; Sasmal D., Enterprise architecture
+for the adaptive enterprise - A vision paper, Lecture
+Notes in Business Information Processing, 2012
+2 2 2 1 2 1 2 12
+S2 Balcicek O.E.; Gundebahar M.; Cekerekli S., An
+agile approach for converting enterprise
+architectures, 2013 The International Conference on
+Technological Advances in Electrical, Electronics
+and Computer Engineering, TAEECE 2013, 2013
+2 2 2 1 2 1 2 12
+S3 Gill A.Q., Towards the development of an adaptive
+enterprise service system model, 19th Americas
+Conference on Information Systems, AMCIS 2013
+- Hyperconnected World: Anything, Anywhere,
+Anytime, 2013
+2 2 2 1 1 1 2 11
+S4 Gill A.Q., Agile enterprise architecture: A case of a
+cloud technology-enabled government enterprise
+transformation, Proceedings - Pacific Asia
+Conference on Information Systems, PACIS 2014,
+2014
+2 2 2 1 1 1 2 11
+S5 Hauder M.; Roth S.; Schulz C.; Matthes F., Agile
+enterprise architecture management an analysis on
+the application of agile principles, BMSD 2014 -
+Proceedings of the 4th International Symposium on
+Business Modeling and Software Design, 2014
+2 2 2 1 1 1 2 11
+S6 Ramos H.; Vasconcelos A., EXtreme enterprise
+architecture planning, Proceedings of the ACM
+Symposium on Applied Computing, 2014
+2 2 2 1 1 1 2 11
+S7 Alzoubi et al., An agile enterprise architecture
+driven model for geographically distributed agile
+development, International Conference on
+Information Systems Development, ISD 2015, 2015
+2 2 2 2 2 2 2 14
+S8 Hanschke S.; Ernsting J.; Kuchen H., Integrating
+agile software development and enterprise
+architecture management, International Journal of
+e-Collaboration, 2015
+2 2 2 1 1 1 2 11
+S9 Gill A.Q., Agile enterprise architecture modelling:
+Evaluating the applicability and integration of six
+modelling standards, Information and Software
+Technology, 2015
+2 2 2 2 2 2 2 14
+S10 Gill A.Q., Adaptive enterprise architecture driven
+agile development, International Conference on
+Information Systems Development, ISD 2015, 2015
+2 2 2 1 1 1 2 11
+S11 Lakhrouit J.; Benhaddi M.; Baïna K., Enterprise
+architecture approach for agility evaluation,
+Proceedings of 2015 International Conference on
+Cloud Computing Technologies and Applications,
+CloudTech 2015, 2015
+2 2 2 1 1 1 1 10
+S12 Bogner J.; Zimmermann A., Towards Integrating
+Microservices with Adaptable Enterprise
+Architecture, Proceedings - IEEE International
+Enterprise Distributed Object Computing
+Workshop, EDOCW, 2016
+2 2 2 1 1 1 1 10
+283
+
+--- PAGE 14 ---
+ID
+Study
+Paper QA1 QA2 QA3 QA4 QA5 QA6 QA7
+Total
+Score
+S13 Korhonen J.J., Adaptive Enterprise Architecture for
+the Future: Towards a Reconceptualization of EA,
+Proceedings - CBI 2016: 18th IEEE Conference on
+Business Informatics, 2016
+2 2 2 1 1 1 2 11
+S14 Yuliana R.; Rahardjo B., Designing an agile
+enterprise architecture for mining company by
+using TOGAF framework, Proceedings of 2016 4th
+International Conference on Cyber and IT Service
+Management, CITSM 2016, 2016
+2 2 2 1 1 1 2 11
+S15 Zimmermann A.; Schmidt R.; Jugel D.; Möhring
+M., Adaptive enterprise architecture for digital
+transformation, Communications in Computer and
+Information Science, 2016
+2 2 1 1 1 1 2 10
+S16 Korhonen J.J., Enterprise architecture for digital
+transformation, Proceedings - 2017 IEEE 19th
+Conference on Business Informatics, CBI 2017,
+2017
+2 2 2 1 1 1 2 11
+S17 Masuda Y., An adaptive enterprise architecture
+framework and implementation: Towards global
+enterprises in the era of cloud/mobile IT/digital IT,
+International Journal of Enterprise Information
+Systems, 2017
+2 2 2 2 2 2 2 14
+S18 Masuda Y., Risk Management for Digital
+Transformation in Architecture Board: A Case
+Study on Global Enterprise, Proceedings - 2017 6th
+IIAI International Congress on Advanced Applied
+Informatics, IIAI-AAI 2017, 2017
+2 2 2 2 2 2 2 14
+S19 Veeresh Thummadi B.; Khapre V.; Ocker R.,
+Unpacking agile enterprise architecture innovation
+work practices: A qualitative case study of a
+railroad company, Proceedings of the 2017
+Federated Conference on Computer Science and
+Information Systems, FedCSIS 2017, 2017
+2 2 2 2 2 2 2 14
+S20 Werewka J.; Spiechowicz A., Enterprise
+architecture approach to SCRUM processes, sprint
+retrospective example, Proceedings of the 2017
+Federated Conference on Computer Science and
+Information Systems, FedCSIS 2017, 2017
+2 2 2 2 1 2 1 12
+S21 Canat M.; Pol Català N.; Jourkovski A.; Petrov S.;
+Wellme M.; Lagerström R., Enterprise Architecture
+and Agile Development: Friends or Foes?,
+Proceedings - IEEE International Enterprise
+Distributed Object Computing Workshop,
+EDOCW, 2018
+2 2 2 1 1 1 1 10
+S22 Duijs R.; Ravesteijn P.; van Steenbergen M.,
+Adaptation of enterprise architecture efforts to an
+agile environment, 31st Bled eConference: Digital
+Transformation: Meeting the Challenges, BLED
+2018, 2018
+2 2 2 1 1 1 1 10
+S23 Hosiaisluoma E.; Penttinen K.; Mustonen J.;
+Heikkilä J., Lean enterprise architecture method for
+value chain based development in public sector,
+Proceedings of the European Conference on e-
+Government, ECEG, 2018
+2 2 2 1 1 1 2 11
+S24 Masuda Y., Architecture Board Practices in
+Adaptive Enterprise Architecture with Digital
+Platform: A Case of Global Healthcare Enterprise,
+International Journal of Enterprise Information
+Systems, 2018
+2 2 2 2 1 1 2 12
+284
+
+--- PAGE 15 ---
+ID
+Study
+Paper QA1 QA2 QA3 QA4 QA5 QA6 QA7
+Total
+Score
+S25 Anwar M.J.; Gill A.Q., Using Adaptive Enterprise
+Architecture Framework for Defining the
+Adaptable Identity Ecosystem Architecture, ACIS
+2019 Proceedings - 30th Australasian Conference
+on Information Systems, 2019
+2 2 2 2 1 1 1 11
+S26 Masuda Y., Adaptive governance on electronic
+health record in a digital IT era, 25th Americas
+Conference on Information Systems, AMCIS 2019,
+2019
+2 2 2 2 2 1 2 13
+S27 Uludag, What to expect from enterprise architects
+in large-scale agile development? A multiple-case
+study, 25th Americas Conference on Information
+Systems, AMCIS 2019, 2019
+2 2 2 2 2 2 1 13
+S28 Uludag, Establishing architecture guidelines in
+large-scale agile development through institutional
+pressures, 25th Americas Conference on
+Information Systems, AMCIS 2019, 2019
+2 2 2 2 2 2 2 14
+S29 Xiong W.; Carlsson P.; Lagerstrom R., Re-using
+enterprise architecture repositories for agile threat
+modeling, Proceedings - IEEE International
+Enterprise Distributed Object Computing
+Workshop, EDOCW, 2019
+2 2 2 1 2 1 2 12
+S30 Alzoubi et al., An Empirical Investigation of
+Geographically Distributed Agile Development:
+The Agile Enterprise Architecture is a
+Communication Enabler, IEEE Access, 2020
+2 2 2 2 2 2 2 14
+S31 Daoudi W.et al., Adaptive Enterprise Architecture:
+Towards a model, ACM International Conference
+Proceeding Series, 2020
+2 2 1 1 1 1 1 9
+S32 Daoudi W.et al., An approach for adaptive
+enterprise architecture, ICEIS 2020 - Proceedings
+of the 22nd International Conference on Enterprise
+Information Systems, 2020
+2 2 1 1 1 1 1 9
+S33 Uludag, Investigating the role of enterprise
+architects in supporting large-scale agile
+transformations: A multiple-case study, 26th
+Americas Conference on Information Systems,
+AMCIS 2020, 2020
+2 2 2 2 2 2 2 14
+S34 Daoudi W.et al., Adaptive Enterprise Architecture:
+Initiatives and Criteria, 7th International
+Conference on Control, Decision and Information
+Technologies, CoDIT 2020, 2020
+2 2 2 1 1 1 1 10
+S35 Alsufyani N.; Gill A.Q., A Review of Digital
+Maturity Models from Adaptive Enterprise
+Architecture Perspective: Digital by Design,
+Proceedings - 2021 IEEE 23rd Conference on
+Business Informatics, CBI 2021 - Main Papers,
+2021
+2 2 2 2 2 2 2 14
+S36 Cammin P.; Heilig L.; Voß S., Assessing
+requirements for agile enterprise architecture
+management: A multiple-case study, Proceedings of
+the Annual Hawaii International Conference on
+System Sciences, 2021
+2 2 2 2 2 1 1 12
+S37 Daoudi W.et al., Complexity and Adaptive
+Enterprise Architecture, International Conference
+on Enterprise Information Systems, ICEIS -
+Proceedings, 2021
+2 2 2 1 1 1 1 10
+S38 Farzi N., Investigation of the Place of BIAN
+Standard in Digital Banking Enterprise
+Architecture, 26th International Computer
+Conference, Computer Society of Iran, CSICC
+2021, 2021
+2 2 2 1 1 1 1 10
+285
+
+--- PAGE 16 ---
+ID
+Study
+Paper QA1 QA2 QA3 QA4 QA5 QA6 QA7
+Total
+Score
+S39 Guo H.; Li J.; Gao S.; Smite D., Agile Enterprise
+Architecture by Leveraging Use Cases,
+International Conference on Evaluation of Novel
+Approaches to Software Engineering, ENASE -
+Proceedings, 2021
+2 2 2 2 1 1 1 11
+S40 Liao M.-H.; Wang C.-T., Using enterprise
+architecture to integrate lean manufacturing,
+digitalization, and sustainability: A lean enterprise
+case study in the chemical industry, Sustainability
+(Switzerland), 2021
+2 2 2 2 2 2 2 14
+S41 Masuda Y., Adaptive enterprise architecture
+process for global companies in a digital IT era,
+International Journal of Enterprise Information
+Systems, 2021
+2 2 2 2 2 2 2 14
+S42 Masuda Y., Adaptive enterprise architecture for the
+digital healthcare industry: A digital platform for
+drug development, Information (Switzerland), 2021
+2 2 2 2 2 2 2 14
+S43 Masuda Y., Adaptive integrated digital architecture
+framework: Risk management case, Intelligent
+Systems Reference Library, 2021
+2 2 2 2 2 2 2 14
+S44 Masuda Y., Regulated Digital Pharmacy Based on
+Electronic Health Record to Improve Prescription
+Services, Smart Innovation, Systems and
+Technologies, 2021
+2 2 2 2 1 1 2 12
+S45 Masuda Y., An Adaptive Enterprise Architecture
+Design for a Digital Healthcare Platform : Toward
+Digitized Society - Industry 4.0, Society 5.0,
+Proceedings - IEEE International Enterprise
+Distributed Object Computing Workshop,
+EDOCW, 2021
+2 2 2 2 2 2 2 14
+S46 Medeiros P.; Santana A.; Lima M.; Moura H.; da
+Silva M.M., An Agile Approach for Modeling
+Enterprise Architectures, International Conference
+on Enterprise Information Systems, ICEIS -
+Proceedings, 2021
+2 2 2 2 2 2 2 14
+S47 Saragih L.R.; Dachyar M.; Zagloel T.Y.M.,
+Implementation of telecommunications cross-
+industry collaboration through agile project
+management, Helion, 2021
+2 2 2 2 1 1 1 11
+S48 Alsufyani N.; Gill A.Q., Digitalisation performance
+assessment: A systematic review, Technology in
+Society, 2022
+2 2 2 2 2 2 2 14
+S49 Alzoubi et al., Can Agile Enterprise Architecture be
+Implemented Successfully in Distributed Agile
+Development? Empirical Findings, Global Journal
+of Flexible Systems Management, 2022
+2 2 2 2 2 2 2 14
+S50 Kaddoumi T.; Watfa M., A foundational framework
+for agile enterprise architecture, International
+Journal of Lean Six Sigma, 2022
+2 2 2 2 2 2 2 14
+S51 Loft P.; He Y.; Yevseyeva I.; Wagner I.,
+CAESAR8: An agile enterprise architecture
+approach to managing information security risks,
+Computers and Security, 2022
+2 2 2 2 2 2 2 14
+S52 Sararuch S.; Wannapiroon P.; Nilsook P.,
+Dimensions of Agile Enterprise Architecture,
+Proceedings - 2022 Research, Invention, and
+Innovation Congress: Innovative Electricals and
+Electronics, RI2C 2022, 2022
+2 2 2 2 2 2 2 14
+286
+
+--- PAGE 17 ---
+ID
+Study
+Paper QA1 QA2 QA3 QA4 QA5 QA6 QA7
+Total
+Score
+S53 Van Wessel R.M.; Kroon P.; De Vries H.J., Scaling
+Agile Company-Wide: The Organizational
+Challenge of Combining Agile-Scaling
+Frameworks and Enterprise Architecture in Service
+Companies, IEEE Transactions on Engineering
+Management, 2022
+2 2 2 2 2 2 2 14
+S54 Alzoubi et al., Enterprise architecture contribution
+in distributed agile software development, Systems
+Engineering, 2023
+2 2 2 2 2 2 2 14
+S55 Daoudi W.et al., Proposal of a sensing model in an
+adaptive enterprise architecture, Procedia Computer
+Science, 2023
+2 2 2 2 1 1 1 11
+S56 Daoudi W.et al., Impact of Strategic Initiatives on
+the Adaptation of Enterprise Architecture, Journal
+of Computer Science, 2023
+2 2 2 2 1 1 1 11
+S57 Masuda Y., Strategic Risk Management for Low-
+Code Development Platforms with Enterprise
+Architecture Approach: Case of Global
+Pharmaceutical Enterprise, Smart Innovation,
+Systems and Technologies, 2023
+2 2 2 2 1 1 1 11
+S58 Masuda Y., Applying AIDAF for Digital
+Transformation Toward Ecosystem in Global
+Enterprise, Smart Innovation, Systems and
+Technologies, 2023
+2 2 2 2 2 2 2 14
+S59 Andreas Schmitz, Framework for interoperable
+service architecture development, Government
+Information Quarterly, 2023
+2 1 2 2 2 1 2 12
+S60 A.Q., Gill, Asif Qumer; M., Hansnata, Mayada,
+Digital Government Ecosystem: Adaptive
+Architecture for Digital and ICT Investment
+Decision Making, ACM International Conference
+Proceeding Series, 2024
+2 2 2 2 2 1 1 12
+S61 Y.I., Alzoubi, Yehia Ibrahim; A., Mishra, Alok,
+Enterprise architecture contribution in distributed
+agile software development, Systems Engineering,
+2024
+2 2 2 2 2 2 2 14
+S62 N., Leikert-Boehm, Ninja; S., Baertschi, Simon; A.,
+Wiedemann, Anna; P., Matter, Philipp, Strategic
+Synergy at Swisscom: Insights from Role Theory
+on Merging Scaled Agile Frameworks with
+Enterprise Architecture Management Completed
+Research Full Paper, 30th Americas Conference on
+Information Systems, AMCIS 2024, 2024
+2 2 2 2 2 2 2 14
+S63 K., Avalos-Varillas, Kevin; R., Rivas-Carillo,
+Rafael; D.W., Burga, Daniel Wilfredo, Agile Model
+for the Gradual and Short-Term Deployment of an
+Enterprise Architecture in the Financial Sector,
+Communications in Computer and Information
+Science, 2024
+2 2 2 2 1 1 1 11
+S64 Y.Y.M., Masuda, Yoshimasa Y.M.; J.P.S., Piest,
+Jean Paul Sebastian; R., Jain, Rashmi; D.S.,
+Shepard, Donald Sloane; O., Nakamura, Osairiu;
+T., Toma, Tetsuya; S., Shirasaka, Seiko, Vision
+Paper for Enabling Generative AI Digital Platform
+Using AIDAF in Healthcare and Manufacturing
+Industry, Smart Innovation, Systems and
+Technologies, 2025
+2 2 2 2 2 2 2 14
+287
+
+--- PAGE 18 ---
+ID
+Study
+Paper QA1 QA2 QA3 QA4 QA5 QA6 QA7
+Total
+Score
+S65 I., Ettahiri, Imane; L., Rassam, Latifa; K., Doumi,
+Karim; Z., Ahmed, Zellou, An Overview Towards
+the Assessment and Measurement of Enterprise
+Architecture Dynamics, Procedia Computer
+Science, 2025
+2 1 2 1 2 1 2 11
+Total
+130 128 127 106 100 93 110
+288

@@ -1,0 +1,1529 @@
+--- PAGE 1 ---
+sustainability
+Article
+Sustainable Government Enterprise Architecture Framework
+Montree Thirasakthana and Supaporn Kiattisin *
+
+
+Citation: Thirasakthana, M.;
+Kiattisin, S. Sustainable Government
+Enterprise Architecture Framework.
+Sustainability 2021, 13, 879.
+https://doi.org/10.3390/su13020879
+Received: 16 December 2020
+Accepted: 13 January 2021
+Published: 16 January 2021
+Publisher’s Note: MDPI stays neutral
+with regard to jurisdictional claims in
+published maps and institutional affil-
+iations.
+Copyright: © 2021 by the authors.
+Licensee MDPI, Basel, Switzerland.
+This article is an open access article
+distributed under the terms and
+conditions of the Creative Commons
+Attribution (CC BY) license (https://
+creativecommons.org/licenses/by/
+4.0/).
+Faculty of Engineering, Mahidol University, Nakorn Pathom 73170, Thailand; montree.thi@student.mahidol.ac.th
+* Correspondence: supaporn.kit@mahidol.ac.th; Tel.: +66-81-866-4207
+Abstract: The suitable utility of driving the enterprise architecture exercise is to utilize the enterprise
+architecture framework as the fundamental guidance. But there are some challenges of applying
+those frameworks for government and their agencies because most of the frameworks have concen-
+trated focus for the private sector which some fundamentally requirement of government would be
+specifically different. This paper aims to propose that the sustainable government enterprise archi-
+tecture framework specifically applies for the national strategic planning in the optimum exercise
+process and clarity guidance for the information technology organization being able to transform
+and improve their services for an achievable adaptation efficiency, simplification, cost management,
+collaboration, shareability, and standardization which accommodate the rapidly changing service
+usability on digitalization known as “e-Government.” The fundamental design idea of this proposed
+framework has identified five keys principles, which are (1) legislation support, (2) top-down target
+architecture, (3) architecture governance, (4) shared services, and (5) cross-organization collaboration
+that would be considered as the key critical success factors for achieving the exercise. The overall
+response of the specific expert survey of this proposed framework has demonstrated the consensus
+responded at 90 percentage agreeable, which would strongly consider this framework applicable for
+groups of developing countries as the baseline framework for their digitalized transformation.
+Keywords: enterprise architecture framework; government enterprise architecture; sustainable
+government; e-Government
+1. Introduction
+Since the 1980s, most practitioner and scientific enterprises have recognized the con-
+tribution of an enterprise architecture (EA) [1] as the key criteria of improving enterprise
+ontology or enterprise re-engineering [2] by concentrating in reshaping information tech-
+nology landscapes in order to steer the organizational strategic execution and its operation.
+Specifically, in the national public services, there are a series of strategic initiatives for
+transforming from “Government Public Services,” which intensively require physical
+accessibilities, having physical interaction in between citizen and government officer to
+“e-Government Public Services,” which mainly presented by internet accessibilities using
+any mobility devices at any times and anywhere, having all digitalization processes with
+less of people interaction each other. The typical key improvement in the public services
+is to emphasize on digital enablement whereby the overall service offering would be con-
+centrated in simplification of usage adoption, standardization of operation procedure for
+commonality services, strengthen in security and privacy of data protection, efficiency of
+cost management, and improving of time consumption for people who request for services.
+In contrast, the adoption efficiency of enterprise architecture to address those strategic
+goals is still struggled in the reason of having fragmentation execution for each agency
+organization; also, each of them performs isolation and redundancy development, and hav-
+ing overlapping service functions [3]. More importantly, the understandability of usability
+on the practical enterprise architecture framework is still challenged, being viewed as
+a complexity utility [4] and lack of fruitfulness for accommodating the fundamentals of
+the government culture, which might need to serve the committed political agenda that
+Sustainability 2021, 13, 879. https://doi.org/10.3390/su13020879 https://www.mdpi.com/journal/sustainability
+
+--- PAGE 2 ---
+Sustainability 2021, 13, 879 2 of 26
+is being changed according to the level of stabilization of that government. There is no
+certainty of normative standardization for those operation procedures on the government
+direction or governance as per the complexity and understandability of the EA framework
+in principle, which would be reflected to the capability of design, fragmented mainte-
+nance, high complexity, and cost, especially supporting the new strategic announcement,
+new request of enforcement, regulatory, or compliance being adopted.
+There are several researchers who have proposed the exercise frameworks and trans-
+formation methods that are relevant to serve a modernization of the government in public
+services as the e-government capability. The researchers have proposed the encouraging
+of interoperability adoption [3,5,6], agile framework [7], Supply-Chain Operations Refer-
+ence based [8], or lean theoretical [9] in combination with practical enterprise architecture
+frameworks like The Open Group Architecture Framework (TOGAF) [10] or The Zachman
+Framework For Enterprise Architecture (ZFEA) [11]. In addition, there are several organi-
+zations at the government of developed countries, or their agencies have also implemented
+their own enterprise architecture framework as country or owned organization specific
+by adopting and refining on those particular practical enterprise architecture frameworks
+with legislation or governance enforcement like Federal Enterprise Architecture framework
+(FEAF) [12] or European Statistical System Enterprise Architecture Reference Framework
+(ESS EARF) [13]. The benefit realization of those specific governments has been recognized
+as achievable establishment of enforcing the execution framework addressing the strategic
+target of public administrative services with sustainable information technology landscapes
+according to the design fundamental. Importantly, those achievable has been adapted
+and improved their exercise guideline in the series of version with multi-years evolution,
+specifically within their organizations. Thus, in comparing with the group of developing
+countries who have purely adopted those practical enterprise architecture frameworks
+like TOGAF or ZFEA without truly understanding, inappropriate refinement, uncertain
+guidance, and no legislation enforcement for example of Thailand Government enterprise
+architecture policy which each agency department has been required to establish the target
+architecture on their owned decision and method for example of an adoption of Digital
+Government Agency (DGA )Enterprise Architecture Plan [14].
+This article objective is to fulfill the gap of the proposed sustainable government
+enterprise architecture framework for government by addressing the new comprehensive
+enterprise architecture framework that would be the solid guidance for developing coun-
+tries being able to effectively adopt this framework appropriately and efficiently with a
+more sustainable manner.
+This article has been structured with four major sections which begins with the
+introduction in Section 1, then followed by all related topics of enterprise architecture
+framework. Section 2 has mentioned about literature review findings, with the main search-
+ing scope concentrated in “Enterprise Architecture”, “Enterprise Architecture Framework”,
+“Interoperability”, “Enterprise Ontology”, “E-Government”, “E-Government Adoption
+and Barrier”, “E-Participation” and “Citizen Centricity” including the proposed research
+methodology and the proposed sustainable government enterprise architecture framework.
+Section 3 concludes the review response in the statement findings, including the summary
+of research discussion and presenting the case study of exercise on identifying target archi-
+tecture of Thailand’s Land Transport. Finally, Section 4 proposes the research conclusion.
+2. Materials and Methods
+As mentioned in the previous section, the key objective of proposing the sustainable
+government enterprise architecture framework is to comprehensively provide the clear
+guidance of executing the enterprise architecture framework for government or public
+administrative offices being able to effectively adopt with achievable results in the areas
+of standardization, services sharable, and cost efficient. There are several key reviewing
+areas that would lead to better understanding on the fundamental approach of enterprise
+architecture principal and its evolution in the proposed execution frameworks. The fact
+
+--- PAGE 3 ---
+Sustainability 2021, 13, 879 3 of 26
+findings below have briefly described the related matter information leading the idea of
+this paper.
+2.1. Fundamental Needed of Achievable in Information Technology Enablement
+The fundamental requirement of executive management emphasis on Chief Informa-
+tion Officer level (CIO) who manage the information technology portfolio has indicated
+several valid points that typically Information Technology management in general would
+be targeted to achieve, especially leading by the exercise contribution of enterprise archi-
+tecture. The survey has performed with several CIOs with the list of survey deliverable by
+priority ranking as per described in Table 1 [15].
+Table 1. The Survey Result.
+Survey
+Ranking
+Survey Result of CIO Expectation
+1
+Decrease the cost related to the business organization, such as cost for personnel in
+the business organization
+2
+Improve the quality of the interplay between the IT organization and the business
+organization, such as support, helpdesk, and end-user training
+3
+Provide new computer aided support to the business organization, such as new
+functionality, new information, and communication means
+4
+Improve the quality of the IT systems, such as security, performance, availability,
+reliability, quality of data, and correctness of functionality
+5
+Improve the quality of existing services or products that the business organization
+provides to the customer
+6
+Improve the quality of operation and maintenance, development, and acquisition of
+IT systems
+7
+Develop new services or products that the business organization provides to
+the customers
+8
+Improve the maintainability and modifiability, e.g., by improving interfaces,
+introducing middleware, and standardizing protocols and products
+9 Decrease the costs related to hardware and software
+10
+Decrease the costs related to the IT organization, such as wages and training for
+IT staff
+11
+Provide new IT based solutions to the IT organization, such as administrative tools,
+b-logs, and backup tools
+In the survey findings, most management expectations in summary have been con-
+centrated in several dimensions which could be summarized as better cost management,
+better collaboration in between businesses and IT, and better architecture and solution.
+The survey results are still challenged up until today for the organization that would expect
+to improve their information technology landscapes suited with their business operation
+and performance of their organization.
+2.2. Enterprise Architecture and Enterprise Architecture Frameworks
+The majority situations, the organization in general both of enterprise business and
+government, have operated their business or mission as per publicly commitment in
+the long periods of service duration even more prior than the establishment of an enterprise
+architecture which firstly proposed the commencement of information architecture by Zach-
+man since the 1980s [16]. The mean of architecture has been identified by ISO/IEC/IEEE
+42020 as fundamental concepts or properties of an entity in its environment and gov-
+erning principles for the realization and evolution of this entity and its related life cycle
+processes [17]. Also, this standard has defined the definition of architecture framework
+as conventions, principles, and practices used by architecture-related activities that have
+been established within a specific domain of application or community of stakeholders.
+The adoption of the term architecture and its framework can be applied for both the system
+level and enterprise level. To enable the architecture practice, there are five key dimen-
+
+--- PAGE 4 ---
+Sustainability 2021, 13, 879 4 of 26
+sions processes being proposed which are governance, management, conceptualization,
+evaluation, and elaboration. All dimensions would be relatively depended to each other,
+as shown in Figure 1.
+The key components of designing the architecture frameworks as of today’s avail-
+ability is concentrated in the core processes, which give more emphasis on the stage of
+conceptualization, evaluation, and elaboration with more detail steps. For instance, the pro-
+posed enterprise architecture framework of the TOGAF [10], which guide the exercise
+steps of performing enterprise architecture activity. In the findings, TOGAF has clearly de-
+scribed how to conduct the enterprise architecture exercise concentrating in identifiable of
+the current baseline architecture and proposed target architecture covering business, infor-
+mation system and technology but in the form of project execution style, with the business
+strategy or business requirement generally having its own characteristic to dynamically
+change according to government strategy and public commitment. Also, the proposed
+TOGAF has fundamentally emphasized on descriptive deliverables of each exercise step;
+the practitioner may not be able to completely understand and conduct the exercises for all
+those required activities fulfilling those required descriptive as per mentioned by Dinh and
+Pekkola [4].
+Figure 1. ISO/IEC/IEEE 42020 Architecture Enablement Processes.
+For other practical enterprise architecture frameworks like Zachman Framework
+for Enterprise Architecture (ZFEA) [11] or Gartner Enterprise Architecture Framework
+(GEAF) [18], there are few identifiable commonalities conceptual of the framework method-
+ology; the practitioner should mainly be able to describe the abstraction layer of the pro-
+posed target enterprise architecture landscapes and its execution roadmap. As mentioned
+earlier, the completeness of execution according to those frameworks might be challenged
+due to the clarity of understandability. And the context of availability enterprise architec-
+ture frameworks is still lacking level of detail for execution and managing dynamic changes
+in business strategic and planning appropriately [19]. More importantly for the government
+or public administrative offices, there is an analysis research for the systematic literature
+review on enterprise architecture in the public sector with the findings that there are still a
+limited number of researches that paid strong attention on concentrating over the adaptable
+of enterprise architecture framework to satisfy the public sector especially for the group of
+developing countries [4]. The analysis result was demonstrated that most researches have
+strongly concentrated on private sector or serving enterprise business which have more op-
+portunities to successfully adopt the framework in collaboration with organization strategy.
+Thus, this paper has intended to comprehensively propose the sustainable government
+enterprise architecture framework that is suited to government or public sector, especially
+for developing countries by addressing the gap of survey or analysis findings [20,21].
+
+--- PAGE 5 ---
+Sustainability 2021, 13, 879 5 of 26
+2.3. Enterprise Ontology and Alignment of Business to Information Technology
+The clear description of the term “Ontology” was defined in several definitions, and
+the fundamental concept can be defined into the same terminology. Thus, the simplest
+term of object-oriented perspective an ontology would be defined as the objects class
+and their corresponding class relationship whereby the class category has consisted with
+seven kinds of class, which are subject, object, community, tools, rules, division of labor,
+and outcome [22]. The adaptation of ontology would be described as the capabilities,
+functionalities, and their interoperability, such as the application packages which would be
+described in a single application or set of applications within the ecosystem. Consideration
+of the term “Enterprise Ontology,” O’Leary has also described that the enterprise ontology
+has comprised with five primary top-level classes called as meta ontology (entity, relation-
+ship, role, actor, and state), activities and processes, organization, strategy, and marketing.
+This means the comprehensive exercise of establishment of the enterprise ontology strategy
+for efficiency execution should necessarily incorporate all of those components.
+The most successful criteria of deliverable information technology solution is to be
+able to comprehensively accommodate business operation as per strategically defined
+under the theorical of enterprise ontology. Hence, this would be a basic fundamental of
+working method for enterprise architecture in order to align and interpret the business
+strategic planning to the suitable information technology solution by practicality concep-
+tual. There are several researches that have also mentioned business and information
+technology alignment, which expected increasing an efficiency of organization to achieve
+the improvement of decision making, better business process execution, or gaining incre-
+mentally customer satisfaction [23,24]. Presently, the challenge of performing alignment of
+business and information technology depends on the continuous alignment approach in
+order to support rapidly changing in the business and information technology strategic
+planning, which several new initiatives or innovations have been concentrated their focus
+on, such as the digital transformation program or digitalization era which would dramat-
+ically impact the ability of maintaining the deliverable capabilities in a much faster and
+more agile manner [2].
+2.4. Enterprise Architecture and Interoperability Framework for e-Government
+The ultimate goal of establishing the enterprise architecture for government and its
+agencies has been targeted to renovate and modernize over the overall public service
+operating model in order to improve the level of citizen satisfaction and quality of life,
+better manage and control cost of investment, promote an inter-collaboration by serving
+the standardization of information shared service, and increase the capability of data
+protection under legislation. All these are directed to the commonality objective which
+is to transform the current government service capability to be e-government service ca-
+pability, whereby introducing automated process, enablement of digital service channels,
+and comprehensively promote information shared services as open architecture under
+the control guideline of legislation. By doing this exercise as the strategic plan, the in-
+teroperability framework of each country has been developed [25,26] and proposed of
+adoption in compensating with the exercise of enterprise architecture for strategically driv-
+ing the e-government program [6]. The conceptualized of interoperability is to complete
+the entire operating model in comprised of multidimensional capabilities in coverage of
+policy, management, and technology while several agency organizations of government
+have considered interoperability as information technology enablement of information
+integration/sharing from one to another (Pardo et al., 2012). The adoption of e-government
+interoperability framework of those developed countries have demonstrated in some
+different context as per the comparison analysis [27]. The emphasis of this enforcement
+as the certainty guideline of implementing interoperability capability has brought up to
+the legislation as the federal policy such as the FEAF, which included the e-Government
+policy guideline into the framework itself. There are some samples of clear enforcement
+guideline of interoperability frameworks which promote European countries inclusion of
+
+--- PAGE 6 ---
+Sustainability 2021, 13, 879 6 of 26
+European Commission. They had identified their intention to ensure the establishment of
+interoperability would address the ability of exchange and mutually use the information
+in between organizations [28]. The group of developing countries specifically on each
+agency organization are still fragmented adoption of an enterprise architecture frame-
+work for their internal organization improvement with uncertainty guidance of improving
+the interoperability approach [3].
+2.5. An Adoption of e-Government
+Comprehensively, the e-government capability has identified the fundamentally re-
+quired level of articulation in connecting with the government strategic goal, whereas an
+enterprise architecture would play in the key role of critical driven in order to describe
+the abstraction roadmap and interoperability guideline. All those would accommodate
+in different challenges of their deliverable capability [29]. The proposed framework
+of e-government architecture which comprised four architecture layers (access layer,
+e-government layer, e-business layer, and infrastructure layer) would be the key driver
+in order to enable the public services conceptually. In the meantime, there are key bar-
+riers, which are IT infrastructure, security, privacy, IT skills, organizational issues, and
+cost. These barriers would be considerable factors of impact to the success of achieving
+the improvement of e-government intension, as well as some uncertainty of e-government
+policy and lack of expertise resources, including some constrains such as constitutional of
+legislation, jurisdictional, and collaboration [30–32]. With the surveying reported by World
+Market Research Center, there is 6 percentage of national e-government that could provide
+single one-stop service portal.
+Ojo et al. has defined 11 maturity factors shown in Table 2 [33], being proposed for consid-
+eration as the key success driver of practically exercise on government enterprise architecture.
+Table 2. Government Enterprise Architecture Maturing Factors by Ojo.
+Factor Number Factor Description
+1 Management Commitment/Support and Involvement
+2 Business Unit Participation/Alignment
+3 Governance Structure and Compliance (Legislation)
+4 Technical Skills and Development
+5 Policies and Processes
+6 External Support
+7 Change Management
+8 Functional Knowledge and Processes
+9 Communication
+10 Resources Availability and Organization
+11 Clear Vision and Goal/Strategy
+2.6. e-Government Proposed Architecture
+There are several architectures being proposed for accommodating the proposed
+public services by having some key considerable success of adoption. In fact, the proposed
+public service as the capability of e-government has been categorized into three kinds of
+categories, which are government to citizen, government to business, and government
+to government [34]. The fundamental of information availability of each category is
+dedicatedly designed, whereby the design for serving citizen would concentrate in general
+demographic, education, health, employment, income tax, and social welfare, such as
+the proposed unified data modelling and document standardization [35]. The concentration
+of business services would be more on corporate tax, custom, registration, and permits.
+Additionally, the definition of citizen centric would be the key consideration for improving
+the capability of public services, whereby the smart city would be presented in consisting
+with four key dimensions: technology in concentration of automation/information and
+transformation, service purpose, service authority, and delivery [36]. This would be highly
+considered as prioritization of concern due to (1) the complexity of citizen as the sources of
+
+--- PAGE 7 ---
+Sustainability 2021, 13, 879 7 of 26
+key consideration for developing citizen centricity, (2) citizen would be a direct beneficiary,
+and (3) they would be the key participants and responsible for development [37].
+More importantly, the key architecture designed of e-government would empha-
+size the level of participation, which is called e-participation and become one of the key
+focuses of the maturity level of government transformation into digitalization where
+the United Nations has the measurement survey frequently. The commonality definition
+of e-participation defined by the United Nations is to propose the process of engaging
+citizens through Information and Communication Technology in policy, decision-making,
+and service design and delivery so as to make it participatory, inclusive, and delibera-
+tive [38]. This also means the fundamental functions of e-participation would incorporate
+four dimensions, which are (1) e-services; informative or program announcement over
+internet, (2) e-democracy; participation in decision-making process via electronic channels,
+(3) e-commerce; all proposed public services to citizens such as tax paying, vehicle regis-
+tration, exchange service, recreational programs also including government procurement
+process, (4) e-management; government internal improvement process [39]. Conceptually,
+e-participation has widely architected the propose solution having two possible alternative
+ways to engage with the citizen which are top-down engagement from government or
+bottom-up engagement by citizen whereby the proposed e-participation ontology was
+exercised [40].
+An alternative view of architecting the e-participation suite, the government may
+consider the capability enablement the services into three kinds of participation engage-
+ments, which are one-way communication from government to citizen for information
+announcement, interactive two-way communication in the mode of consultation or re-
+sponse of any feedback, and the third is to encourage citizens to actively participate for
+deep engagement, whereby a citizen may participate in responding the request of defining
+or sharping the policies for instance [41,42].
+2.7. Fundamental of Research Methodology
+The proposed exercise for this research methodology is shown in Figure 2.
+Figure 2. Research Methodology.
+There are five exercise steps that would be the research guideline. Each step and its
+findings are described below.
+1. Assessment. This step is to understand on availability of the frameworks (enterprise
+architecture framework or interoperability framework), co-relation of frameworks un-
+der multidisciplinary, origination of country specific frameworks, and its enforcement
+and the adoption capability of the e-government initiatives. Additionally, the review
+also seeks for some challenges or barriers that would impact the success of framework
+adoptable. Hence, the ultimate goal of this is to potentially find an opportunity of
+improvement in the framework context for more sustainable information technol-
+ogy landscape in terms of better cost control, better collaboration under the same
+standardization, and better resources consumption by sharable services.
+The review topics that would be the key interested of this research and findings are
+described in Table 3.
+
+--- PAGE 8 ---
+Sustainability 2021, 13, 879 8 of 26
+Table 3. Review Findings.
+Review Topic Objectives Findings
+Fundamental need of achievable in
+information technology improvement
+To understand the key concentration
+requirement or expectation of
+information technology executive
+management have intended to achieve.
+Concentrate in the survey results of the
+relevant information technology
+executive management.
+By the survey with information
+technology executive management,
+the key concentration of their expectation
+has identified to the efficiency of cost
+control, better collaboration with
+business and organization strategy,
+and improving the quality of service.
+Enterprise Architecture and Enterprise
+Architecture Framework
+To validate the principle of
+conceptualization of the enterprise
+architecture which are being
+standardized by ISO/IEC/IEEE. Review
+the deliverables of practical enterprise
+architecture frameworks like Zachman
+Framework for Enterprise Architecture
+(ZFEA), The Open Group Architecture
+Framework (TOGAF), Gartner Enterprise
+Architecture Framework (GEAF),
+and specific enterprise architecture
+frameworks likes Federal Enterprise
+Arhcitecture (FEA)which concentrated
+serving the public sector or suitable for
+national governments.
+Basically, the practical enterprise
+architecture frameworks have proposed
+the framework in concentration within
+the core process as per described by
+Figure 1. The challenge would be
+the clarity guidance or governance and
+strategic direction of driving
+the framework, which the government
+would expect to clearly define.
+Additionally, the analysis finding by
+systematic literature review has shown
+that there are a limited number of
+researches paid attention on adaption of
+enterprise architecture framework and its
+challenges, especially on the group of
+developing countries.
+Enterprise Ontology and Alignment of
+Business to Information Technology
+To explore the means of enterprise
+ontology and the importance of
+alignment needed in between business
+and information technology in principle.
+Realize the meaning of linkage of those to
+enterprise architecture.
+Theoretically, an enterprise ontology has
+described the entity, relationship of
+the entity, role, actor, and state with its
+activities and processes also
+incorporating the impact of organization,
+strategy, and marketing, which would be
+considered as mandated of
+successfulness enterprise architecture to
+collaborate with enterprise ontology.
+Enterprise Architecture and
+Interoperability Framework
+for e-Government
+To understand the key role of
+interoperability on enterprise architecture
+frameworks in order to enable
+the information sharing in between
+the inter-government agencies
+and public.
+There are implemented clarity legislation
+of enterprise architecture framework by
+also incorporating the principal of
+interoperability into the framework
+specifically for developed countries.
+Developing countries have fragmented
+guidance of interoperability and
+enterprise architecture framework,
+which lead to challenges of sustainable
+information technology landscape.
+An Adoption of e-Government
+To seek the overall outcome of
+deployment of the e-Government by
+understanding the success factors and
+challenges facing.
+Important to successful enabling
+the e-government initiative,
+standardization, policy, and governance
+must be taken into consideration for
+fundamentally mandated
+the architecture context.
+e-Government Proposed Architecture
+To understand on availability of
+e-government proposed architecture and
+implementation rationale in order to
+analyze the detail architecture, its
+advantages and benefits and challenges
+for identifying opportunity
+of improvement.
+Key consideration of architecting
+the e-government is to concern on firstly
+the national data model, whereby all
+government agencies would be able to
+leverage, and secondly the concern on
+e-participation, whereby the conceptual
+of having full participation of citizens
+under the national strategy and plan.
+
+--- PAGE 9 ---
+Sustainability 2021, 13, 879 9 of 26
+2. Analysis. The step of analysis is to study on any availability survey results that link
+to the expectation of effective outcome of adapting enterprise architecture frame-
+work into national government and their agencies at the comprehensive and holistic
+viewpoint. Hence, the goal of this analysis is to identify the level of intensity of each
+survey expectation against the existing practicality enterprise architecture framework.
+The concentration analysis for this paper would be focused on ZFEA and TOGAF as
+peridentifiableatthemostreferralforboththeprivateandpublicsector. Bydoingthis,
+the analysis result would expect to lead the opportunity of proposing the sustainable
+enterprise framework for government specifically for developing countries.
+The step of analysis has begun with the understanding of organization expectation on
+exercising the enterprise architecture followed by validating the proposed deliverables of
+each enterprise architecture framework for adoptability over the government organizations.
+Step 1—Understandable of Organization Expectation
+In the survey results of expectation on deliverable contribution of enterprise archi-
+tecture and interoperability for e-government conducted by Janssen [3] with a group of
+line management, decision maker and enterprise architect for government agencies have
+demonstrated three kinds of expectation being concerned (desired goals, desired enterprise
+architecture products, and desired governance). Table 4 has described the analysis finding
+of expectations as mentioned above.
+Table 4. Janssen’s Survey Result.
+Survey Expectation As-is Expected
+Desired Goals
+Interoperability H H
+Client-Orientation H H
+Enabling Reuse M H
+Flexibility and Agility M H
+Coherency M S
+Aligning IT and Business L SH
+Decision Making L SH
+Enabling Transformation L SH
+Desired Enterprise Architecture Products
+Framework H H
+Principals and Policies H H
+Patterns H H
+Tools L H
+Basic Facilities L H
+Shared Services L SH
+Desired Governance
+Decision Making Structure and Support L SH
+Alignment Process ensuring Involvement L SH
+Formal Communication to enable knowledge distribution L SH
+As-is (H: High Contribution, M: Medium Contribution, L: Low Contribution); Expected (H: Higher than As-is, S:
+Same as As-is, SH: Significantly Higher than As-is).
+The opportunity of proposed sustainable government enterprise architecture frame-
+work supporting the national government would be concentrated in considering shared
+services and governance concerns being the framework component. Ultimately, this pro-
+
+--- PAGE 10 ---
+Sustainability 2021, 13, 879 10 of 26
+posedwillalsoincorporatetheneedofflexibilityandagilityaswellasbeingthebettersource
+of decision making which this expectation also being mentioned by Lapalme et al. [43].
+Step 2—Validating the Selected Enterprise Architecture Framework
+The summary below has described the lists of required maturity factor by each of
+literature review exercise shown in Table 5.
+The summary of this exercise has demonstrated that there are lists of required maturity
+factors being significantly impacted by the success of exercise on government enterprise
+architecture using the practical enterprise architecture framework. The figure below has de-
+scribed the highly frequently mentioned required maturity factor relevant with government
+enterprise architecture framework shown in Figure 3.
+Table 5. Lists of Required Maturing Factor by Literature Review.
+Components Mentioned
+Ojo et al. (2012)
+Janssen (2012)
+Dinh et al. (2017)
+Cameron et al. (2013)
+Vries, M. d. (2010)
+Lapalme et al. (2016)
+O’Leary (2010)
+Hinkelmann et al. (2016)
+Guijarro (2006)
+Pardo et al. (2012)
+Ebrahim et al. (2005)
+Lam (2005)
+Scholl et al. (2007)
+Blanc (2020)
+Porwol et al. (2016)
+Islam (2007)
+Management Support &
+Involvement
+x x x x x x x
+Business Participation (Business
+Alignment)
+x x x x x x x x x x
+Governance Structure x x x x x x x x x x
+Legislation (Compliance) x x x x x x x x x
+Skills Development x x x
+EA Policies & Processes x x x x x x
+External Support (Consultant) x x
+Change Management x x x x x x x
+Functional Knowledge &
+Processes
+x x x x x x x x
+Communication & Adoption x x
+Resources (Organization & Roles) x x x x x x x x x
+Clear Vision & Goal (Strategic
+Alignment)
+x x x x x x x x x
+Marketing x x
+Funding x x
+Interoperability x x x x x x x x x x x x
+Sharable Services & Collaboration x x x x x x x x
+Standard x x x x x x x x
+Taxonomy x
+Reference Model x x x
+Integration x x x x x
+Government Data Catalog x x x x x x x
+Citizen Centric Data Model x x x
+Technology & Security x x x x x x
+e-Participation x x
+
+--- PAGE 11 ---
+Sustainability 2021, 13, 879 11 of 26
+Figure 3. Relevant Required Maturing Factors.
+The validation method was designed using the scoring of 0 where the capability does
+not exist, 1 where the capability does exist, and 0.5 where the capability partially exists with
+the proposed of weight scores for a critical level of government required fundamentally.
+The rationale of designing the weight score has been based on the e-Government/e-
+Participation description in Section 2.6, whereby several developing countries have faced
+some challenges in order to strategically manage the transformation program by centralized
+cascading with proper collaboration and sharable for cross-government agencies.
+The validation finding in Table 6 has demonstrated that those selected enterprise
+architecture frameworks having less concentration (40 scores out of 100 for ZEAF and
+50 scores out of 100 for TOGAF) in government adoption while those frameworks have
+demonstrated accomplishment widely in the private sectors which those frameworks
+would be well recognized. In this regard, the most significantly higher expectation has
+been motivated researcher to comprehensively consider the possibility of an enhancement
+of the enterprise architecture framework for government in general concentrating on
+the group of developing countries by having explicitly described the framework execution
+guidance for more clarity and understandability.
+Table 6. Validation Exercise Capability for Government.
+Key Validation Topics % Weight
+ZFEA TOGAF
+Existing
+Score
+Weight
+Score
+Existing
+Score
+Weight
+Score
+1. Alignment IT and Business/Participation in Business Exercise 10 0.5 5 0.5 5
+2. Decision Making/Legislation Impact and Support 10 0 0 0 0
+3. Enabling Transformation/National Transformation
+Cascading/Top-Down Architecture
+15 0.5 7.5 0.5 7.5
+4. Promoting Shared Services Capability 10 0 0 0 0
+5. Emphasis in Architecture Exercise Governance 5 0 0 0.5 2.5
+6. Emphasis in Interoperability 5 0.5 2.5 1 5
+7. Emphasis in Operational Process Improvement during
+the Architecture Exercise
+10 0.5 5 1 10
+8. Emphasis in Analysis of Gap, Impact, and Dependency during
+the Architecture Exercise
+5 1 5 1 5
+9. Emphasis in Information Policy 15 1 15 1 15
+10. Emphasis in Cross-Organization Collaboration 15 0 0 0 0
+Total Scores 100 40.0 50.0
+
+--- PAGE 12 ---
+Sustainability 2021, 13, 879 12 of 26
+3. Design. The main activity of this step is to identify the theoretical baseline frame-
+work to be the design fundamental which the Supply-Chain Operations Reference
+(SCOR) will be used as the baseline structure of the design context of the sustainable
+government enterprise architecture framework. In principle, SCOR has declared
+the exercise steps to be four stages, which are Plan, Source, Make, and Deliver.
+Basically, this model would be able to apply as one of the best-in-class with practi-
+cal management and having clarity in four levels of exercise method starting from
+identify broad definitions under the four stages of SCOR dimensions (Plan, Source,
+Make, and Deliver), identifying core process categories under those four stages, define
+the execution method of those core processes in detail, finally implementing those
+designs as shown in Figure 4 [44].
+Figure 4. Supply-chain Operations Reference Model Structure.
+Additionally, the basic principle of SCOR was fundamentally designed to be mainly
+suited with the manufacturing process, beginning with the planning stage and delivering
+the product result at the end stage, thus holistically realizing the enablement result of
+enterprise architecture framework exercise under the SCOR methods and being able to
+properly propose the appropriate improvement further. The additional Evaluate step as
+described in Figure 5 has been proposed as enhanced SCOR to apply over the original
+SCOR process which is to mainly recognize the outcome efficiency as per designated of
+measurable method likes the total return ratio, total spending for instance.
+Figure 5. Enhanced Supply-Chain Operations Reference (SCOR).
+4. Validation. The validation exercise has proposed having two activities, which are
+(1) validating capability of the proposed framework same as validation criteria that
+exercise over ZEAF and TOGAF, which analysis findings has described in the Analysis
+step, and (2) conducting an interview session with a predefined list of questionnaires
+for field expertise to respond with their satisfaction level on the propose of sustainable
+government enterprise architecture framework.
+The plan for conducting an interview is to identify the list of field expertise who have
+direct experience on heading the function of enterprise architecture or related function,
+whereby experiencing adoption of enterprise architecture framework for government in
+whole or partial. Thereafter, the exercise would submit the brief proposal in containing
+the descriptive of this research objective, motivation, literature review in literature cat-
+egories, research method, and propose sustainable government enterprise architecture
+framework with the list of questionnaires using the satisfaction and agreement level from
+“not agree” or scoring as 1 to “strongly agree” or scoring as 5. After collecting all interview
+
+--- PAGE 13 ---
+Sustainability 2021, 13, 879 13 of 26
+responses, the analysis finding would be proceeded by firstly calculating mean score using
+Equation (1) of each questionnaire item in order to realize the agreeable proposed frame-
+work components relevant with government perspective. Secondly, the acknowledged
+score findings is found by calculating the mean score of all inputs and the expectation
+of acceptable score of satisfaction level should not be less than 4.25 or 85 percentage of
+overall score.
+Mean (µ) =
+1
+n
+n
+∑
+i=1
+ai =
+a1 +a2 +a3 + ··· +an
+n
+(1)
+Symbolic description, n means the total number of observations set of data where
+a1 +a2 +a3 + ··· +an representing the observations set of data.
+Additionally, before making the score findings, the experiment has proposed to prove
+the index of dispersion [45] or variance-to-mean ratio (VMR) described in Equation (2)
+in order to realize the level of dispersion of the probability distribution over the set of
+observation data using variance Equation (3), which the VMR result would expect to be
+equal to 0 (not dispersed) or the minimal value in between 0 and 1 (under-dispersed).
+This means the given questionnaire score by all interviewees were consented.
+VMR =
+δ2
+µ
+(2)
+Variance (δ) =
+1
+n −1
+n
+∑
+i=1
+(ai −µ)2
+(3)
+5. Stress Testing. The testing step is planned to simulate the adaptation of sustainable
+government enterprise architecture framework by proposing the case study of Thai-
+land for the proposed architecture landscape for one government agency that would
+be able to consolidate into the unified portal public services, which would be able to
+accommodate the definition of e-participation defining by the United Nations [46]
+and citizen centricity [34].
+2.8. The Sustainable Government Enterprise Architecture Framework
+The purpose of sustainable government enterprise architecture framework has been
+fundamentally designed based upon the enhanced SCOR as the previous section men-
+tioned. Figure 6 has described the key components of sustainable government enterprise
+architecture framework.
+There are 10 groups of activity under the fundamental SCOR process; plan, source,
+make, and deliver with an extended process; evaluate to be proposed as the enterprise
+architecture framework serving the architecture exercise for government and its agencies.
+The detailed explanation of each group is available in the following passages.
+
+--- PAGE 14 ---
+Sustainability 2021, 13, 879 14 of 26
+Figure 6. Sustainable Government Enterprise Architecture Framework.
+2.8.1. Plan
+This is the beginning exercise step of establishing the enterprise architecture initiative
+for government. As per the rapid change in the expectation of service capabilities, a variety
+of political commitments and modernization of technology evolution, the establishment
+of enterprise architecture, and its implementation of the framework must be taken into
+account as the permanently facilitated all relevant activities as the general function. Hence,
+this step is to fundamentally exercise for initialization of all required principles of further
+execution of information technology transformation under properly govern and steer as
+described in Figure 7.
+Figure 7. Detail Process of Plan Step.
+Govern
+The step of govern is to fundamentally provide commonality agreement that would
+be applied for government and all of its agencies in order to ensure that there are manda-
+tory requirements for further collaboration and achieving the goal in between the inter-
+organization of the government and its agencies. One important step is to address nec-
+essarily required legislation in order to eliminate unnecessarily traditional bureaucratic,
+as well as the “Silo” operational management, which would be the key barrier of achieving
+the goal.
+
+--- PAGE 15 ---
+Sustainability 2021, 13, 879 15 of 26
+Define
+This group of the process was designed for proposing the fundamental logistic activi-
+ties of an establishment the enterprise architecture organization with clarity on roles and
+responsibilities as described in Figure 8 for example. Also, the strategic driver of enterprise
+architecture execution for the clarity outcome needs to be incorporated while establishment
+of this function has been defined.
+Figure 8. Sample Enterprise Architecture Organization, Roles, and Responsibilities.
+2.8.2. Source
+The source process is to ensure that all relevant information supporting continuously
+of enterprise architecture working protocol will be satisfactorily available with appropriate
+updating cycle.
+Cooperate
+The mean of this process is to significantly encourage the collaboration exercise
+on identifying strategic and business planning by having enterprise architecture team
+members who are competent on business strategic or business planning participating into
+the exercise of designing those plans deliverable, which would consider this function to be
+part of enterprise architecture in coordinating deep exercise with business strategy unit.
+The key benefit of having this responsibility being part of enterprise architecture would
+be preventing the loss of understanding on the expectation of business strategy as well as
+business planning when translating those plans to be the target capabilities or business
+architecture, the proposed business process improvement, or identifying key measurable
+of each capability initiative.
+Manage and Control
+This proposed step is to encourage enterprise architecture taking owned responsibility
+managing the information technology portfolio and controlling information technology
+assets. Thus, the key importance of this process is to propose the detailed operating proce-
+dure of information technology management in order to efficiently manage the information
+technology portfolio to be updated and aligned with availability of information service
+solutions and defining the effective management and control the status of information tech-
+nology inventory assets covering all components of hardware and software. This would be
+utilized as the fundamental support information for future investment or enhancement on
+information technology solution.
+2.8.3. Make
+This Make process would need to practically begin with the “Bird-eye” view exercise,
+then drilling the relevant architecture contents down to the execution layer which mean
+the overall transformation strategy of government would be harmoniously aligned to
+
+--- PAGE 16 ---
+Sustainability 2021, 13, 879 16 of 26
+the operational agencies. Additionally, this process also proposes the clarity guidance of
+improving the operation process of public services function whereby the “e-”capabilities
+like e-verification, e-document for instance and robotic automation process, have been
+considered for adaptation as key success factors of achieving the goal of transformation.
+As per the proposed activities, there are several steps that should be taken into the exercise
+which would be efficiently managed and executed. Figure 9 has described the rationale of
+detailed exercise steps of this process which has proposed the exercise activities covering
+both of business and information technology with below detail description.
+Figure 9. Detailed Process of Make Step.
+Business Alignment
+The business alignment step has significantly proposed of enterprise architecture to
+perform an interpretation of government strategy contexts which would be the national
+strategic planning, national development planning, or government public commitment to
+architecture capabilities and the interrelationship of those capabilities as the strategic target.
+Ultimately, the mean of capability will describe the kind of public and administrative
+services that a citizen would be able to utilize in any available channels under commonality
+experience. Importantly, this step ensures the cascading of architecture capability has
+seamlessly distributed to all responsible units, whereas the commonality capability would
+be streamlined and consolidated into common capability and managed separately by a
+centralized unit.
+Criticality, the end stage of this process exercise ensures all proposed capability
+will be measured as the performance outcomes. Thus, the framework would propose
+including the design of key performance measurement of each improvement capability,
+whereby the key concentration of improvement could be the total cost of ownership or total
+turnaround time of citizen service, for instance.
+IT Alignment
+The importance of Information Technology alignment exercise is to ensure that there is
+a comprehensive interpretation of the mean of all required target capabilities as described
+in business alignment session to the description of information technology landscapes
+in several domain areas and performing the gap analysis of available components in
+order to potentially identify leveraging opportunity. The final step of this process is
+to design the solution architecture of each agency office. There are two critical keys of
+defining the architecture landscape for national perspective, which are (1) national data
+model in the description of citizen-centricity approach and (2) integration landscape in
+the description of sharable and openable under properly managed and control.
+
+--- PAGE 17 ---
+Sustainability 2021, 13, 879 17 of 26
+2.8.4. Deliver
+Deliver process is considered as the step that required all logistic supporting further
+implementation of proposed target architecture which could be completely or partially
+deliverable of the target architecture depending on possibility of that implementation
+capability. But more importantly, the plan of deployment would need to consider any
+possibility impact to the success of that deployment. Meanwhile, the delivery process
+would need to be effectively managed and planned for future activity.
+Change Management
+The change management has been proposed to be part of the delivery process for
+theactivitiesthatneedtoplanforhandlingthedeliveryofnewcapabilityintotheecosystem
+for serving the public services in efficient preparation and execution. This framework has
+proposed three major activities which are (1) properly managing organization and people,
+(2) efficiently defining the adoption plan, and (3) defining the benefit realization approach
+to be effectively measurable.
+IT Exercise
+Thisprocessinconcentrationwithinformationtechnologyistoexerciseoninformation
+service solution enablement accommodating the strategic plan of enterprise architecture
+that is being defined as the target architecture in the Make process. This process would
+begin after the target capability of some specific public service has been prioritized to
+implement. Then, the following steps should be exercised, which are (1) smoothly defining
+the transition plan of promoting new capability into the ecosystem, (2) properly defin-
+ingthe project prioritization and budgeting suiting with strategic plan, and (3) defining
+the program management approach to steer and manage the project execution effectively.
+2.8.5. Evaluate
+The expectation of this process is to measure for better understandability on the ef-
+ficiency of releasing the new or enhancing public services to citizens by concentrating
+on both quantitative and qualitative realization for further finding and improvement in
+the case of evolution or advance innovation being considered for more suitable adoption.
+Or, the result of measuring should be transitioned to be a new baseline of releasing other
+target architecture or new public service with proper improvement.
+Quantitative
+The purpose of quantitative measurable is to recognize the overall outcome response
+of deliverable for both of business realization and information technology performance
+referring to the measurements target designing upon prior process of the framework.
+The fundamental measurement objective has defined for comparison before and after on
+the efficiency of government strategy and planning as well as the appreciation of public
+response. At minimum of enterprise architecture involvement, the following measurements
+should be actively concerned.
+• Business Realization.
+◦ Penetration rate of citizen cooperation,
+◦ Government resources efficiency and productivity,
+◦ Operation cost reduction,
+◦ Improvement ratio of specific campaign like safety ratio.
+• Information Technology.
+◦ Total cost of ownership of Information Technology Investment,
+◦ Service turnaround times,
+◦ Accuracy rate improvement.
+
+--- PAGE 18 ---
+Sustainability 2021, 13, 879 18 of 26
+Qualitative
+The qualitative approach is to realize the challenges facing upon execution of new
+architecture or new solution starting at the point of initiation up until the release to public
+stage. This activity has intended to gather all challenges facing, understanding the root
+cause of challenges, and finding the resolution for further improvement. Additionally,
+this stage also suggests further research and feasibility study for future improvement.
+In the principal of exercising an enterprise, architecture has targeted to achieve the im-
+provement expectation on people, process, and technology; the government perspective
+is also targeted the same way. Thus, the evaluated result would be expected to be uti-
+lized for that improvement, especially the renovation of government service to public to
+be digitalization.
+3. Discussion
+In the description of fundamental of research methodology, the validation process
+after getting the first draft of proposed a sustainable government enterprise architecture
+framework was designed into two activities, which are (1) validating capability of the pro-
+posed framework same as validation criteria that exercise over ZEAF and TOGAF which
+analysis findings have described in Analysis step, and (2) conducting an interview session
+with a predefined list of questionnaires for field expertise to response their satisfaction
+level. This section is to describe the results of those validation exercises on the following.
+3.1. Validating the Capability of Proposed Framework
+Referring to the analysis of capability score in Section 2, Table 7 has shown the compar-
+ison of capability score over the proposed sustainable government enterprise architecture
+framework that the framework designed has emphasized on the transformable traditional
+operation procedures such as isolated architecture, struggle with legal policy to be more
+integrated architecture with appropriately legal support as well as promoting the strategic
+alignment in the view of nation-wide cascading and improving operation processes.
+Table 7. Validating Capabilities of Proposed Framework.
+Key Validation Topics % Weight
+ZFEA TOGAF
+Sustainable Government
+Enterprise Architecture
+Framework
+Capability
+Score
+Weight
+Score
+Capability
+Score
+Weight
+Score
+Capability
+Score
+Weight
+Score
+1. Alignment IT and
+Business/Participation in
+Business Exercise
+10 0.5 5 0.5 5 1 10
+2. Decision Making/Legislation
+Impact and Support
+10 0 0 0 0 1 10
+3. Enabling Transformation/
+National Transformation
+Cascading/Top-Down
+Architecture
+15 0.5 7.5 0.5 7.5 1 15
+4. Promoting Shared Services
+Capability
+10 0 0 0 0 1 10
+5. Emphasis in Architecture
+Exercise Governance
+5 0 0 0.5 2.5 1 5
+6. Emphasis in Interoperability 5 0.5 2.5 1 5 1 5
+7. Emphasis in Operational
+Process Improvement during
+the Architecture Exercise
+10 0.5 5 1 10 1 10
+
+--- PAGE 19 ---
+Sustainability 2021, 13, 879 19 of 26
+Table 7. Cont.
+Key Validation Topics % Weight
+ZFEA TOGAF
+Sustainable Government
+Enterprise Architecture
+Framework
+Capability
+Score
+Weight
+Score
+Capability
+Score
+Weight
+Score
+Capability
+Score
+Weight
+Score
+8. Emphasis in Analysis of Gap,
+Impact, and Dependency during
+the Architecture Exercise
+5 1 5 1 5 1 5
+9. Emphasis in Information Policy 15 1 15 1 15 1 15
+10. Emphasis in
+Cross-Organization Collaboration
+15 0 0 0 0 1 15
+Total Scores 100 40.0 50.0 100.0
+In the findings of validating the capabilities of the proposed sustainable government
+enterprise architecture framework, its capabilities have been designed accommodating
+the current challenges of cross-organization collaboration and national transformation
+strategy. Thus, all required capabilities were considered as key criticality of success in
+the intention of effectively drive the changes.
+3.2. Interview Responded and Discussions
+The activity would be conducted by having an interview session with five selected rel-
+evant representatives who have contributed their professional services to the organization
+both of private and public sector, which are three professionals in the private sector having
+an experience of enterprise architecture and two government officers who are responsible
+for transformation execution. The list of questionnaires has been submitted together with
+the brief of this article as described in a prior section and guide the score indicator by
+having proposed the range of agreeable score as per mentioned in Section 3.
+The list of questionnaires has been designed based upon the key consideration of
+proposing the sustainable government enterprise architecture framework which empha-
+sized five key areas that would create an inference of transformation consensus among all
+government agencies that required high collaboration in order to achieve their strategy
+alignment with the national target. The keywords of those questionnaires are (1) legislation
+support, (2) top-down target architecture, (3) architecture governance, (4) shared services,
+and (5) cross-organization collaboration, which the score finding has described in statistical
+information as shown in Figure 10.
+In summary, the overall scores have demonstrated the consensus of the interviewees
+responded which the final mean value was 4.50 or equivalent to 90 percentage. The VMR
+is shown as under-dispersed, which supports the scores finding as mentioned.
+In a nutshell, the proposed sustainable government enterprise architecture framework
+has been emphasized on how to comprehensively transform the national public service
+capabilities in the dimensions of collaboration, alignment, structural, sharable, and legal
+which the framework would be the suitable method for government or public sector to
+execute on target architecture improvement for accommodated national transformation
+like digitalization, promoting e-participation, e-government, or structuring the public
+service using citizen centricity by satisfying the constrained government way of working,
+like privacy law, for instance. Hence, the key highlight of propose of sustainable enterprise
+architecture for government has demonstrated the following capabilities.
+
+--- PAGE 20 ---
+Sustainability 2021, 13, 879 20 of 26
+strategy alignment with the national target. The keywords of those questionnaires are (1)
+legislation support, (2) top-down target architecture, (3) architecture governance, (4)
+shared services, and (5) cross-organization collaboration, which the score finding has
+described in statistical information as shown in Figure 10.
+In summary, the overall scores have demonstrated the consensus of the interviewees
+responded which the final mean value was 4.50 or equivalent to 90 percentage. The VMR
+is shown as under-dispersed, which supports the scores finding as mentioned.
+Figure 10. Questionnaires Response Findings.
+In a nutshell, the proposed sustainable government enterprise architecture
+framework has been emphasized on how to comprehensively transform the national
+public service capabilities in the dimensions of collaboration, alignment, structural,
+1.00
+2.00
+3.00
+4.00
+5.00
+0.0000
+0.3500
+0.7000
+1.0500
+1.4000
+Q1:Legislation Q2:Top-Down Target
+Architecture
+Q3:Architecture
+Governance
+Q4:Shared Services Q5:Cross-Organization
+Collaboration
+Findings
+VMR Variance Mean
+Figure 10. Questionnaires Response Findings.
+1. Business strategy and target capabilities of business has clearly proposed the cascad-
+ing structure from national strategy down to departmental or agency strategy.
+2. Cross-organization collaboration will be the key driver of making the successfulness
+of target deliverable according to national strategy and target architecture cascading.
+3. The architecture governance would be substantially improved to centralized overlook
+in order to comprehensively acknowledge all initiatives and transformation execution.
+4. The fundamental legislation supporting comprehensively executed enterprise archi-
+tecture proposed transformation roadmap has been emphasized at the plan process.
+5. Clearly define national data model using the citizen centricity approach. Each agency
+should be able to leverage sharable services over the citizen centric model.
+6. The proposed framework would be able to execute using an agile approach as there is
+no solid dependency of each process whereby the exercise would be partially executed
+according to partial readiness of each deliverable. More importantly, the core of
+the exercise over this framework is to ensure the strategy driver of national level must
+be explicitly defined and be able to further execute properly.
+3.3. Framework Exercise for Thailand’s Land Transportation Case Study
+One of the most actively required citizen participations in a daily activity is the ser-
+vices of land transportation, which Thailand government has structured this majority
+services function under the Ministry of Transport. The key consideration of this proposed
+framework exercise is to concentrate in land transportation administrative services in
+relation with information technology whereby the service responsibility is managed by
+the Department of Land Transport.
+The proposed exercise activities and defining the target architecture of transportation
+administration services would effectively adopt on sustainable government enterprise
+architecture framework following all required activities from the plan stage throughout
+the evaluate stage. In this case study, the proposed action taken of each framework stage
+will be described in the next sub-section, and the proposed of target architecture will be
+described in the last sub-section.
+3.3.1. The Findings of Strategic Actions
+Referring by the detail proposed of exercise on sustainable government enterprise
+architecture framework, the figures below have shown the findings of the criticality exercise
+over the framework adoption describing required activities of the Department of Land
+Transport for transformation adoption and plan.
+Firstly, the strategy of enterprise architecture at the national level has been defined as
+the fundamental principle for all government offices and its agencies have been directed in
+order to transform their information system serving public services into the same standard
+
+--- PAGE 21 ---
+Sustainability 2021, 13, 879 21 of 26
+and strategic direction. Figure 11 has described the key strategy of national enterpriswe
+architecture (National EA) having five dimensions, which directed all government offices
+and its agencies to exercise into the same expected target.
+Figure 11. National EA Strategy.
+Figure 12 has described the organization structure of enterprise architecture at the na-
+tional perspective by including all required organizational layer.
+Figure 12. National EA Organization and Governance Body.
+Figure 13 has shown the key components of EA Governance that would consider
+as key critical success factors of driving the national enterprise architecture program in
+the goal of national transformation to fully digital enablement.
+
+--- PAGE 22 ---
+Sustainability 2021, 13, 879 22 of 26
+Figure 13. National EA Governance.
+3.3.2. The Findings of Target Deliverables
+This stage would be exercised upon the readiness of planning preparation as described
+in the previous section and the readiness of supporting information, which is described
+in the sourcing stage. Thus, the making stage would be concentrated in designing target
+capabilities of future stage of information services.
+Figure 14 has demonstrated the comprehensive service capabilities of national ser-
+vices proposing to their citizen. This target would be considered as the baseline of further
+defining the ministry target capabilities in alignment with its national capabilities. Ad-
+ditionally, there will be the sharable layer being defined for centralized managing of all
+inter-department connectivity in the standardization procedures.
+nability 2021, 13, x FOR PEER REVIEW 22 of 26
+Figure 13. National EA Governance.
+3.3.2. The Findings of Target Deliverables
+This stage would be exercised upon the readiness of planning preparation as
+described in the previous section and the readiness of supporting information, which is
+described in the sourcing stage. Thus, the making stage would be concentrated in
+designing target capabilities of future stage of information services.
+Figure 14 has demonstrated the comprehensive service capabilities of national
+services proposing to their citizen. This target would be considered as the baseline of
+further defining the ministry target capabilities in alignment with its national capabilities.
+Additionally, there will be the sharable layer being defined for centralized managing of
+all inter-department connectivity in the standardization procedures.
+Figure 14. National Public Service Capabilities in Single Access.
+Giving by the key focus of this case study, Figure 15 would demonstrate the high-
+level capabilities of Ministry of Transport, whereby the key fundamental of national
+capabilities has defined transportation being one of the key transformations roadmap for
+the service capability suited with Single Access objective as shown in Figure 14. The
+mission of defining target capabilities of Ministry of Transport is to transform all public
+EA
+Governance
+Standardization
+Technology Blueprint
+Data Governance
+Integration Method
+Information Security
+Information Technology
+Governance
+Legislation
+National EA Policy
+Information Technology
+Investment Policy
+Data Collaboration Policy
+Interoperation
+API First
+Reusable Policy
+Data Layer
+Citizen Vehicle
+Social
+Welfare
+House
+hold
+Education Employment
+Service
+Layer
+Registration Administration Transaction
+Service
+Channel
+Self-Service Mobility Gov. Service Desk Gov. Contact Center
+Security Layer
+Authentication
+Authorization
+DataProtection
+Inquiry
+CyberProtection
+Gov. Agent
+Service Category
+Family & Housing Welfare & Safety Educational Transportation
+Utilities Military Service Logistic & Trading Employment
+Manufacturing Healthcare Criminal Voting & Hearing
+Sharable
+Layer
+Identification Verification Referenciation Maintenance
+API Gateway
+Others
+Figure 14. National Public Service Capabilities in Single Access.
+Giving by the key focus of this case study, Figure 15 would demonstrate the high-level
+capabilities of Ministry of Transport, whereby the key fundamental of national capabilities
+has defined transportation being one of the key transformations roadmap for the service
+capability suited with Single Access objective as shown in Figure 14. The mission of
+defining target capabilities of Ministry of Transport is to transform all public services being
+
+--- PAGE 23 ---
+Sustainability 2021, 13, 879 23 of 26
+served as self-service mobility directed to citizens. The collaboration as a sharable service
+for cross organization will be also considered as the target of improvement.
+nability 2021, 13, x FOR PEER REVIEW 23 of 26
+services being served as self-service mobility directed to citizens. The collaboration as a
+sharable service for cross organization will be also considered as the target of
+improvement.
+Figure 15. Target Capabilities of Ministry of Transport.
+Figure 16 has described the target capabilities of the Department of Land Transport
+in alignment with the defined target capabilities of Ministry of Transport shown in Figure
+15. This stage would consider as the first realization of the transformation roadmap. The
+following exercises all detailing will be conducted at the departmental level. The
+following exercises have been conducted.
+▪ Performing an improvement of operation processes suiting with new expected
+target capabilities.
+▪ Identifying key performances measurable in alignment with proposed process
+improvement.
+▪ Conducting an exercise designing architecture landscape covering on these
+domains; information systems (application and data), information technology
+infrastructure, security, and integration layer. The key success factor of this exercise
+is to identify the state of action on all components of each domain whereby the type
+of actions is comprised with new acquiring, decommissioning, upgrading, and
+replacing.
+▪ Conducting gap assessment exercise over the proposed architecture landscape of all
+domains.
+▪ Conducting the project executable roadmap and prioritization according to the
+proposed architecture landscape of each domain.
+▪ Conducting the detail design exercise of solution architecture.
+▪ Conducting the designing of change management execution plan.
+▪ Establishing the program management function for progressive monitoring and
+steered the strategic direction.
+In summary, the proposed sustainable government enterprise architecture
+framework has demonstrated the differentiated exercise activities of establishing the
+enterprise architecture program for national public services that target to consolidate all
+public services serving into the single access platform with the strategic alignment. The
+critical path of this framework is to ensure all government offices and its agencies has
+fully aligned with the national strategic objective. All executable capabilities under the
+enterprise architecture exercise framework has been completely addressed, whereby all
+roadblocks or limitations are being properly resolved using officially legislation
+management.
+Data Layer
+Land
+Transport
+Marine
+Transport
+Aviation
+Transport
+Rail
+Transport
+Highway Rural Road
+Service
+Layer
+Registration Administration Transaction
+Service
+Channel
+Self-Service Mobility Gov. Service Desk Gov. Contact Center
+Security Layer
+Authentication
+Authorization
+DataProtection
+Inquiry
+Cyber Protection
+Gov. Agent
+Service Category
+APIGateway
+Clearing
+House
+Sharable Layer
+CitizenVerification
+LawEnforcement
+PaymentGateway
+Rescue&
+Emergency Transport Highway, Rural Road & Tolling
+Centralized Traffic Management
+Free Flow Tolling
+e-Collaboration
+Land Marine Aviation Rail
+e-License/e-Exam
+e-Registration & Tax
+e-Logistic
+e-Ticket
+e-Safety
+e-Notification
+Figure 15. Target Capabilities of Ministry of Transport.
+Figure 16 has described the target capabilities of the Department of Land Transport in
+alignment with the defined target capabilities of Ministry of Transport shown in Figure 15.
+This stage would consider as the first realization of the transformation roadmap. The fol-
+lowing exercises all detailing will be conducted at the departmental level. The following
+exercises have been conducted.
+n Performing an improvement of operation processes suiting with new expected tar-
+get capabilities.
+n Identifyingkeyperformancesmeasurableinalignmentwithproposedprocess improvement.
+n Conducting an exercise designing architecture landscape covering on these domains;
+information systems (application and data), information technology infrastructure,
+security, and integration layer. The key success factor of this exercise is to identify
+the state of action on all components of each domain whereby the type of actions is
+comprised with new acquiring, decommissioning, upgrading, and replacing.
+n Conducting gap assessment exercise over the proposed architecture landscape of
+all domains.
+n Conducting the project executable roadmap and prioritization according to the pro-
+posed architecture landscape of each domain.
+n Conducting the detail design exercise of solution architecture.
+n Conducting the designing of change management execution plan.
+n Establishing the program management function for progressive monitoring and
+steered the strategic direction.
+In summary, the proposed sustainable government enterprise architecture framework
+has demonstrated the differentiated exercise activities of establishing the enterprise archi-
+tecture program for national public services that target to consolidate all public services
+serving into the single access platform with the strategic alignment. The critical path of
+this framework is to ensure all government offices and its agencies has fully aligned with
+the national strategic objective. All executable capabilities under the enterprise architecture
+exercise framework has been completely addressed, whereby all roadblocks or limitations
+are being properly resolved using officially legislation management.
+
+--- PAGE 24 ---
+Sustainability 2021, 13, 879 24 of 26
+nability 2021, 13, x FOR PEER REVIEW 24 of 26
+Figure 16. Target Capabilities of Department of Land Transport.
+4. Conclusions
+The purpose of this framework was designed for the group of developing countries
+who are going to implement the national enterprise architecture strategy in order to
+transform the fundamental national public services and information services ecosystem
+addressing the strategy of e-government having e-participation, e-document, and citizen
+centricity model as the guideline principal for their further innovation and digitalization.
+This article aims to propose a comprehensive view of the potentially compulsory
+components of enterprise architecture contribution to the government strategy of
+transformation in their proposed public services referring to the definition of e-
+government by the United Nations. The fundamental designed idea of this proposed
+framework has identified five keys principle which are (1) legislation support, (2) top-
+down target architecture, (3) architecture governance, (4) shared services, and (5) cross-
+organization collaboration that would be considered as the key critical success factors for
+achieving the exercise. The biggest challenge is to create cross-organization collaboration
+in concentration of a sharable perspective which might need to resolve the implication of
+legislation and regulation using EA Governance under the stage of Plan. The overall
+response of specific expert survey of this proposed framework has demonstrated the
+consensus responded at 90 percentage agreeable, which would strongly consider this
+framework applicable for group of developing countries as the baseline framework for
+their strategic planning and execution on the digitalized transformation. Thus, there is
+stillsomerequiredtailoringtofittothefundamentalofeachgovernmentanditsoperating
+model which might need to refine the framework upon appropriate.
+Author Contributions: Conceptualization, M.T.; methodology, M.T.; validation, S.K.; formal
+analysis, M.T.; investigation, M.T. and S.K.; resources, M.T.; data curation, M.T.; writing—original
+draft preparation, M.T.; writing—review and editing, M.T. and S.K.; visualization, M.T.;
+supervision, S.K. All authors have read and agreed to the published version of the manuscript.
+Funding: This research received no external funding.
+Institutional Review Board Statement: The study was conducted according to the guidelines of the
+Declaration of Helsinki, and approved by the Institutional Review Board (or Ethics Committee) of
+Mahidol University (protocol code MU-CIRB 2020/219.2108 and date of approval 20 September
+2020).
+Informed Consent Statement: Informed consent was obtained from all subjects involved in the
+study.
+Data Availability No new data were created or analyzed in this study. Data sharing is not
+applicable to this article.
+Data Layer
+Driver Vehicle
+Public
+Transport
+Logistic Safety Big Data
+Service
+Layer
+Registration Administration Transaction
+Service
+Channel
+Self-Service Mobility Gov. Service Desk Gov. Contact Center
+Security Layer
+Authentication
+Authorization
+DataProtection
+Inquiry
+Cyber Protection
+Gov. Agent
+Service Category
+APIGateway
+Sharable Layer
+CitizenVerification
+LawEnforcement
+PaymentGateway
+Rescue&
+Emergency Driver Vehicle
+e-Inspection
+e-Tax
+Public Transport &
+Logistic
+e-Monitoring
+e-Logistic
+e-Examination
+e-Driver License
+Shared Service
+Safety Control
+e-Communication
+e-Notification
+Data Service
+e-Registration e-Score
+IOT-Identification
+Figure 16. Target Capabilities of Department of Land Transport.
+4. Conclusions
+The purpose of this framework was designed for the group of developing coun-
+tries who are going to implement the national enterprise architecture strategy in order to
+transform the fundamental national public services and information services ecosystem
+addressing the strategy of e-government having e-participation, e-document, and citizen
+centricity model as the guideline principal for their further innovation and digitalization.
+This article aims to propose a comprehensive view of the potentially compulsory compo-
+nents of enterprise architecture contribution to the government strategy of transformation
+in their proposed public services referring to the definition of e-government by the United
+Nations. The fundamental designed idea of this proposed framework has identified five
+keys principle which are (1) legislation support, (2) top-down target architecture, (3) archi-
+tecture governance, (4) shared services, and (5) cross-organization collaboration that would
+be considered as the key critical success factors for achieving the exercise. The biggest
+challenge is to create cross-organization collaboration in concentration of a sharable per-
+spective which might need to resolve the implication of legislation and regulation using EA
+Governance under the stage of Plan. The overall response of specific expert survey of this
+proposed framework has demonstrated the consensus responded at 90 percentage agree-
+able, which would strongly consider this framework applicable for group of developing
+countries as the baseline framework for their strategic planning and execution on the digi-
+talized transformation. Thus, there is still some required tailoring to fit to the fundamental
+of each government and its operating model which might need to refine the framework
+upon appropriate.
+Author Contributions: Conceptualization, M.T.; methodology, M.T.; validation, S.K.; formal analysis,
+M.T.; investigation, M.T. and S.K.; resources, M.T.; data curation, M.T.; writing—original draft
+preparation, M.T.; writing—review and editing, M.T. and S.K.; visualization, M.T.; supervision, S.K.
+All authors have read and agreed to the published version of the manuscript.
+Funding: This research received no external funding.
+Institutional Review Board Statement: The study was conducted according to the guidelines of
+the Declaration of Helsinki, and approved by the Institutional Review Board (or Ethics Committee) of
+Mahidol University (protocol code MU-CIRB 2020/219.2108 and date of approval 20 September 2020).
+Informed Consent Statement: Informed consent was obtained from all subjects involved in the study.
+Data Availability Statement: No new data were created or analyzed in this study. Data sharing is
+not applicable to this article.
+Conflicts of Interest: The authors declare no conflict of interest.
+
+--- PAGE 25 ---
+Sustainability 2021, 13, 879 25 of 26
+References
+1. Simon, D.; Fischbach, K.; Schoder, D. Enterprise architecture management and its role in corporate strategic management. Inf. Syst.
+E-Bus. Manag. 2014, 12, 5–42. [CrossRef]
+2. Hinkelmann, K.; Gerber, A.; Karagiannis, D.; Thoenssen, B.; van der Merwe, A.; Woitsch, R. A new paradigm for the continuous
+alignment of business and IT: Combining enterprise architecture modelling and enterprise ontology. Comput. Ind. 2016, 79, 77–86.
+[CrossRef]
+3. Janssen, M. Sociopolitical Aspects of Interoperability and Enterprise Architecture in E-Government. Soc. Sci. Comput. Rev. 2012,
+30, 24–36. [CrossRef]
+4. Dang, D.D.; Pekkola, S. Systematic Literature Review on Enterprise Architecture in the Public Sector. Electron. J. e-Gov. 2017,
+15, 130–154.
+5. Pardo, T.A.; Nam, T.; Burke, G.B. E-Government Interoperability: Interaction of Policy, Management, and Technology Dimensions.
+Soc. Sci. Comput. Rev. 2012, 30, 7–23. [CrossRef]
+6. Guijarro, L. Interoperability frameworks and enterprise architectures in e-government initiatives in Europe and the United States.
+Gov. Inf. Q. 2007, 24, 89–101. [CrossRef]
+7. Gill, A.Q.; Smith, S.; Beydoun, G.; Sugumaran, V. Agile enterprise architecture: A case of a cloud technology-enabled government
+enterprise transformation. In Proceedings of the 18th Pacific Asia Conference on Information Systems (PACIS 2014), Chengdu,
+China, 24–28 June 2014; Association for Information Systems AIS Electronic Library: Atlanta, GA, USA, 2014; pp. 1–11.
+8. Medini, K.; Bourey, J.P. SCOR-based enterprise architecture methodology. Int. J. Comput. Integr. Manuf. 2012, 25, 594–607.
+[CrossRef]
+9. Janssen, M.; Estevez, E. Lean government and platform-based governance—Doing more with less. Gov. Inf. Q. 2013, 30, 1–8.
+[CrossRef]
+10. The TOGAF Standard Version 9.2 Overview. Available online: https://www.opengroup.org/togaf-standard-version-92-overview
+(accessed on 20 February 2020).
+11. Zachman, J.A. The Zachman Framework for Enterprise Architecture; Zachman International: El Paso County, CO, USA, 2003.
+12. The Office of Management and Budget. Federal Enterprise Architecture Framework Version 2; The Office of Management and Budget:
+Washington, DC, USA, 2013.
+13. Eurostat. ESS EA Reference Framework; Eurostat, European Commission: Luxembourg, 2015.
+14. Digital Government Development Agency. EGA Enterprise Architecture; Digital Government Development Agency (Public
+Organization): Bangkok, Thailand, 2015.
+15. Lindström, A.; Johnson, P.; Johansson, E.; Ekstedt, M.; Simonsson, M. A survey on CIO concerns-do enterprise architecture
+frameworks support them? Inf. Syst. Front. 2006, 8, 81–90. [CrossRef]
+16. Zachman, J.A. A framework for information systems architecture. IBM Syst. J. 1987, 26, 276–292. [CrossRef]
+17. ISO/IEC/IEEE. ISO/IEC/IEEE 42020: Software, Systems and Enterprise—Architecture Processes; IEEE: Geneva, Switzerland, 2019.
+18. Bittler, R.S.; Kreizman, G. Gartner Enterprise Architecture Process: Evolution 2005. Gart. Res. 2005. Available online:
+https://www.gartner.com/en/documents/486246/gartner-enterprise-architecture-process-evolution-2005 (accessed on
+15 February 2020).
+19. Fischer, R.; Aier, S.; Winter, R. A Federated Approach to Enterprise Architecture Model Maintenance. Enterp. Model. Inf.
+Syst. Archit. 2007, 2, 14–22.
+20. De Vries, M. A framework for understanding and comparing Enterprise Architecture models. Manag. Dyn. 2010, 19, 17–29.
+21. Cameron, B.H.; McMillan, E. Analyzing the Current Trends in Enterprise Architecture Frameworks. J. Enterp. Archit. 2013,
+9, 60–71.
+22. O’Leary, D.E. Enterprise ontologies: Review and an activity theory approach. Int. J. Account. Inf. Syst. 2010, 11, 336–352.
+[CrossRef]
+23. Zhang, M.; Chen, H.; Luo, A. A Systematic Review of Business-IT Alignment Research with Enterprise Architecture. IEEE Access
+2018, 6, 18933–18944. [CrossRef]
+24. Gerow, J.E.; Grover, V.; Thatcher, J.; Roth, P.L. Looking Toward the Future of IT–Business Strategic Alignment through the Past.
+MIS Q. 2014, 38, 1159–1186. [CrossRef]
+25. Charalabidis, Y.; Lampathaki, F.; Askounis, D.; Stassis, A. Shifting to Second Generation E-Government Interoperability Frame-
+works. In Proceedings of the International EGOV 2007 Conference, Regensburg, Germany, 3–7 September 2007.
+26. European Union. New European Interoperability Framework; Office of the European Union: Luxembourg, 2017.
+27. Charalabidis, Y.; Lampathaki, F.; Askounis, D. A Comparative Analysis of National Interoperability Frameworks. In Pro-
+ceedings of the 15th Americas Conference on Information Systems 2009 (AMCIS 2009 Proceeding), San Francisco, CA, USA,
+6–9 August 2009; Association for Information Systems AIS Electronic Library: Atlanta, GA, USA, 2009; pp. 1–11.
+28. Guijarro, L. Semantic interoperability in eGovernment initiatives. Comput. Stand. Interfaces 2009, 31, 174–180. [CrossRef]
+29. Hjort-Madsen, K.; Gøtze, J. Enterprise Architecture in Government—Towards a Multi-Level Framework for Managing IT in
+Government. In Proceedings of the 4th European Conference on e-Government, Castle Dublin, Ireland, 14 June 2004; pp. 365–374.
+30. Ebrahim, Z.; Irani, Z. E-Government Adoption: Architecture and barriers. Bus. Process Manag. J. 2005, 11, 589–611. [CrossRef]
+31. Lam, W. Barriers to e-government integration. J. Enterp. Inf. Manag. 2005, 18, 511–530. [CrossRef]
+
+--- PAGE 26 ---
+Sustainability 2021, 13, 879 26 of 26
+32. Scholl, H.J.; Klischewski, R. E-Government Integration and Interoperability: Framing the Research Agenda. Int. J. Public Adm.
+2007, 30, 889–920. [CrossRef]
+33. Ojo, A.; Janowski, T.; Estevez, E. Improving Government Enterprise Architecture Practice—Maturity Factor Analysis. In Proceed-
+ings of the 2012 45th Hawaii International Conference on System Sciences, Maui, HI, USA, 4–7 January 2012; IEEE Computer
+Sociaty: Washington, DC, USA, 2012; pp. 4260–4269.
+34. Islam, P. Citizen-centric E-Government: The Next Frontier. Harv. Kennedy Sch. Rev. 2007, 7, 103–108.
+35. Charalabidis, Y.; Lampathaki, F.; Askounis, D. Unified Data Modelling and Document Standardization Using Core Components
+Technical Specification for Electronic Government Applications. J. Theor. Appl. Electron. Commer. Res. 2008, 3, 38–51. [CrossRef]
+36. Lee, J.; Lee, H. Developing and validating a citizen-centric typology for smart city services. Gov. Inf. Q. 2014, 31, 93–105.
+[CrossRef]
+37. Lim, S.; Malek, J.A.; Hussain, M.Y.; Tahir, Z. Citizen participation in building citizen-centric smart cities. Malays. J. Soc. Space 2018,
+14, 42–53. [CrossRef]
+38. UN. E-Government for the Future We Want, E-Government Survey 2014; Department of Economic and Social Affairs, United Nation:
+New York, NY, USA, 2014.
+39. Dawes, S.S. The Future of E-Government; Center for Technology in Government, State University of New York: Albany,
+NY, USA, 2002.
+40. Porwol, L.; Ojo, A.; Breslin, J.G. An ontology for next generation e-Participation initiatives. Gov. Inf. Q. 2016, 33, 583–594.
+[CrossRef]
+41. Al-Dalou, R.; Abu-Shanab, E. E-Participation Levels and Technologies. Available online: https://www.researchgate.net/
+publication/273632293_E-participation_levels_and_technologies (accessed on 23 February 2020).
+42. Conroy, M.M.; Evans-Cowley, J. E-participation in planning: An analysis of cities adopting on-line citizen participation tools.
+Environ. Plan. C Gov. Policy 2006, 24, 371–384. [CrossRef]
+43. Lapalme, J.; Gerber, A.; van der Merwe, A.; Zachman, J.; de Vries, M.; Hinkelmann, K. Exploring the future of enterprise
+architecture: A Zachman perspective. Comput. Ind. 2016, 79, 103–113. [CrossRef]
+44. Stewart, G. Supply-chain operations reference model (SCOR): The first cross-industry framework for integrated supply-chain
+management. Logist. Inf. Manag. 1997, 10, 62–67. [CrossRef]
+45. Cox, D.R.; Lewis, P.A.W. The Statistical Analysis of Series of Events; Chapman & Hal: London, UK, 1996.
+46. Blanc, D.L. E-Participation: A Quick Overview of Recent Qualitative Trends. Available online: https://www.un.org/
+development/desa/ (accessed on 15 March 2020).

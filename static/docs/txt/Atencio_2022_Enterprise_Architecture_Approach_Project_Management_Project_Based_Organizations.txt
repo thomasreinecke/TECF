@@ -1,0 +1,1709 @@
+--- PAGE 1 ---
+Citation: Atencio, E.; Bustos, G.;
+Mancini, M. Enterprise Architecture
+Approach for Project Management
+and Project-Based Organizations: A
+Review. Sustainability 2022, 14, 9801.
+https://doi.org/10.3390/su14169801
+Academic Editor: Indra Gunawan
+Received: 17 June 2022
+Accepted: 3 August 2022
+Published: 9 August 2022
+Publisher’s Note: MDPI stays neutral
+with regard to jurisdictional claims in
+published maps and institutional affil-
+iations.
+Copyright: © 2022 by the authors.
+Licensee MDPI, Basel, Switzerland.
+This article is an open access article
+distributed under the terms and
+conditions of the Creative Commons
+Attribution (CC BY) license (https://
+creativecommons.org/licenses/by/
+4.0/).
+sustainability
+Review
+Enterprise Architecture Approach for Project Management and
+Project-Based Organizations: A Review
+Edison Atencio 1,2,3,* , Guillermo Bustos 1 and Mauro Mancini 3
+1 School of Industrial Engineering, Pontificia Universidad Católica de Valparaíso, Av. Brasil 2241,
+Valparaíso 2340000, Chile
+2 School of Civil Engineering, Pontificia Universidad Católica de Valparaíso, Av. Brasil 2147,
+Valparaíso 2340000, Chile
+3 Department of Management, Economics and Industrial Engineering, Politecnico di Milano,
+Via Lambruschini 4b, Bovisa, 20156 Milan, Italy
+* Correspondence: edison.atencio@pucv.cl
+Abstract: Project-based organizations (PBOs) derive income from conducting projects for their clients.
+Maintaining the most effective and efficient project governance style is an ongoing process for
+these organizations as the context continuously changes. Enterprise architecture (EA) is a systemic
+approach that supports organizations in modeling and describing themselves in different layers, such
+as strategy, business, application, and technology. This literature review describes the current state
+of EA usage in improving and quickly revising project management governance in PBOs to benefit
+practitioners and researchers for an integrated view of EA, PM, and PBO, and identification of future
+research gaps. This review used an EA model composed of layers as an analytical framework. The
+extracted bibliometric and content data from selected articles were processed using the VOSviewer
+tool for identifying and understanding the relationships between main concepts through network
+mapping. The selected articles are oriented to internal organization projects, mainly in information
+technology (IT). The need to align projects with business is highlighted, with EA positioned as a
+governance tool. It was found that application of EA in PBOs is rare. A trend toward using popular
+PM and EA frameworks, such as PMBOK and ArchiMate, was observed.
+Keywords: project-based organizations; PBO; project management; enterprise architecture; business
+process management
+1. Introduction
+Organizations and projects are important aspects of modern socioeconomic life. Man-
+agers devote significant time and effort to improving operations. Their initiatives are often
+implemented through projects [1]. In the last thirty years, the PM field has evolved consid-
+erably [2], with increased visibility and relevance [3]. In conventional organizational theory,
+projects were conceived as specific activities in a permanent organization (parent company).
+However, the focus is now on the project concept, its complexity, and the executive team
+that supports it. In this context, a project is conceived as a temporary organization [1].
+Some organizations partially or completely sustain their value through projects and their
+respective temporary organizations, project-based organizations (PBOs) [4–6]. PM is a core
+competence in PBOs [7]. The study of PBOs has focused on specific domains in a PBO con-
+text, including resource management, portfolios, programs, and knowledge management.
+The study of holistic design in PBOs is still in its early stages [8].
+PBO design has been primarily approached from an organizational development
+perspective [4]. The Star Model is a widely accepted PBO design guideline that uses this
+approach [5]. The model adapts Galbraith’s framework for organizational design [9] and
+considers the development and alignment of five components: Strategy, processes, behavior,
+human resources, and structure. This approach has the advantage of establishing the
+Sustainability 2022, 14, 9801. https://doi.org/10.3390/su14169801 https://www.mdpi.com/journal/sustainability
+
+--- PAGE 2 ---
+Sustainability 2022, 14, 9801 2 of 25
+interdependence of these components and a holistic view of PBO design. Other approaches
+address these components independently [8].
+For organizational design from a systems-thinking perspective, enterprise architecture
+(EA) is an alternative for modeling, analyzing, and designing an organization [10–12]. EA
+presents a coherent set of principles, methods, and models to design a company struc-
+ture using components, considering their business processes, information systems, and
+IT infrastructure [13,14]. Interest in EA has increased in recent years. Organizations con-
+tinue to discover challenges in the field regarding the development and implementation
+of EA [15–17]. The use of EA as a management tool has several benefits, as an instrument
+allowing companies to evaluate, adjust, and align policies and systems to achieve business
+objectives [18,19]. EA is also recognized as a tool that facilitates digital transformation,
+a trend affecting process transformation and sustainable business development [20,21].
+However, EA is still expanding as a formally adopted management discipline in organi-
+zations worldwide [22]. The value of EA to an organization is not always evident. The
+perception is that EA is a technical discipline, not a business discipline. Thus, professionals
+and executives are often reluctant to use EA [13].
+To help position EA as a business management tool, PBO design integrated with PM
+practices can help construct a perspective including systems thinking and current PBO
+design and management knowledge. It is helpful to consider that organizations have
+become more integrated into a systems approach for more successful transformations [23].
+First, it is necessary to review the literature concerning EA in PM and PBOs to understand
+what has been accomplished. This study considers the following research questions:
+• RQ1: What are the current state and key dimensions of EA approaches for PM? This
+question concerns research that formally applies EA to PM. The main contributions of
+these studies are discussed.
+• RQ2: What are the current state and key dimensions of EA approaches for PBO design?
+This question concerns research that formally applies EA to PBO design. The main
+contributions of these studies are discussed.
+• RQ3: What are the tendencies of frameworks in EA application in PM and PBOs? This
+question seeks to identify frameworks used in studies of EA, PM, and PBOs over time.
+• RQ4: How integrated are the EA, PM, and PBO domains? This question seeks to
+holistically assess how the EA, PM, and PBO domains are integrated in the literature.
+• RQ5: What are the main challenges in PM practices with EA presented as an alternative
+solution? This question seeks to recognize the main challenges in applying EA in the
+PM domain.
+This study aims to determine the state of the art of EA application in PM and PBOs. As
+such, the findings in the literature are synthesized and summarized using a methodology
+combining a bibliometric review and a systematic literature review [24]. Fifty-nine articles
+were selected for review from PM journals and engineering management.
+A review of the articles was conducted using the EA model conceived in [25], using
+an analytical framework with four component layers: Strategy, business, application, and
+technology. Bibliometric and content data were processed through co-occurrence maps and
+frequency graphs to guide the analysis.
+The review indicated no EA applications in PBOs, although some isolated EA compo-
+nents were identified in some papers. In contrast, applications of EA were found in PM.
+These studies focused on the alignment of local projects with the organization and PM
+activities in business processes, most focused on IT projects. PM and EA frameworks were
+identified in the reviewed articles, indicating strong adherence to PMI standards and use
+of ArchiMate (EA modeling language proposed by The Open Group (OMG) based on IEEE
+1471 standard for describing software-system architecture [25]).
+This paper is organized as follows. Section 2 presents the materials and methods used
+in this research. Section 3 presents the results and a discussion. The conclusions, research
+questions, and future research directions are presented in Section 4.
+
+--- PAGE 3 ---
+Sustainability 2022, 14, 9801 3 of 25
+2. Research Method and Article Selection Process
+2.1. Research Method
+EA applications in PM and PBO design were identified, including the level of integra-
+tion between these domains. To achieve this objective, a three-stage method was developed
+according to [26], as shown in Figure 1.
+Thispaperisorganizedasfollows.Section2presentsthematerialsandmethodsused
+in this research. Section 3 presents the results and a discussion. The conclusions, research
+questions, and future research directions are presented in Section 4.
+2. Research Method and Article Selection Process
+2.1. Research Method
+EA applications in PM and PBO design were identified, including the level of inte-
+gration between these domains. To achieve this objective, a three-stage method was de-
+veloped according to [26], as shown in Figure 1.
+Research tools
+Bibliometric
+review
+Activities
+Data acquisition
+Mapping and
+bibliometric study
+Deliverables
+Article database
+Keyword co-occurrence mapping
+and cluster analysis
+Systematic review
+PBO and PM
+addressing sub-
+domains identification
+Identification of EA
+components applied
+List of sub-domains identified
+List and frequencyof EA
+components applied
+Bibliometric and
+systematic review
+Bibliometric and
+systematic results
+analysis
+Answers to the research questions
+(1)
+Study of PBO, PM,
+and EA domain
+interrelation
+(2)
+Identification of EA
+approach in PBO and
+PM
+(3)
+Answers to the
+research questions
+Stage
+Most relevant PBO,PM and EA
+concerns
+Figure 1. Research method.
+The first stage seeks to understand the interrelation between PBO, PM, and EA do-
+mains. To achieve this objective, an analysis was developed from a meta-based perspec-
+tive using bibliometric data obtained from an extraction protocol proposed by [27] and
+adapted by [28]. The analysis was complemented with a bibliometric data analysis, allow-
+ing visualization of structural and dynamic aspects of scientific research [29]. These tech-
+niques allow the mapping of bibliometric data, providing a graphical visualization of the
+study domains and their relationships [30]. The outputs of this stage are the selected arti-
+cles and bibliometric data extracted and mapped. The second stage focuses on under-
+standinghowthecomponentsofEArelatetoaspectsofthePBOandPMdomainsthrough
+a systematic literature review (SLR) method from a content-based perspective. The con-
+tent was extracted and structured from successive readings of the articles, according to
+[27,28]. In this stage, the main layers of the ArchiMate language are considered as EA
+components [25]: (1) Strategy, (2) Business, (3) Application, (4) Technology. The strategy
+layer (1) considers capabilities, resources, and the course of action required to model the
+strategy of the organization. The business layer (2) considers the business processes, ser-
+vices, functions, and events of the business units. The application layer (3) considers the
+softwaresupportingbusinesscomponentswithapplicationservices.Thetechnologylayer
+(4) considers the hardware and infrastructure communication required to run the appli-
+cations [25]. Some papers could also have a cross-cutting relationship to the four layers of
+Figure 1. Research method.
+The first stage seeks to understand the interrelation between PBO, PM, and EA do-
+mains. To achieve this objective, an analysis was developed from a meta-based perspective
+using bibliometric data obtained from an extraction protocol proposed by [27] and adapted
+by [28]. The analysis was complemented with a bibliometric data analysis, allowing visual-
+ization of structural and dynamic aspects of scientific research [29]. These techniques allow
+the mapping of bibliometric data, providing a graphical visualization of the study domains
+and their relationships [30]. The outputs of this stage are the selected articles and biblio-
+metric data extracted and mapped. The second stage focuses on understanding how the
+components of EA relate to aspects of the PBO and PM domains through a systematic litera-
+ture review (SLR) method from a content-based perspective. The content was extracted and
+structured from successive readings of the articles, according to [27,28]. In this stage, the
+main layers of the ArchiMate language are considered as EA components [25]: (1) Strategy,
+(2) Business, (3) Application, (4) Technology. The strategy layer (1) considers capabilities,
+resources, and the course of action required to model the strategy of the organization.
+The business layer (2) considers the business processes, services, functions, and events of
+the business units. The application layer (3) considers the software supporting business
+components with application services. The technology layer (4) considers the hardware
+and infrastructure communication required to run the applications [25]. Some papers could
+also have a cross-cutting relationship to the four layers of architecture. These articles are
+then associated with a fifth typology referred to in this study as (5) “all EA layers”.
+The deliverables obtained in this stage are the EA-PBO-PM sub-domains identification
+and the understanding of how the EA components are applied in these domains and
+sub-domains. PBO and PM domain characteristics were obtained by data extraction using
+
+--- PAGE 4 ---
+Sustainability 2022, 14, 9801 4 of 25
+the framework proposed by [31]. Their application begins with initial familiarization from
+reading the articles, identifying initial codes, and transforming them into potential themes.
+Similarities between the themes are identified to define the main dimensions, as presented
+in Table 2, further on.
+The third stage integrates the developed bibliometric and systematic reviews, high-
+lighting key areas to ensure in-depth research, according to [32]. Then, the results are
+analyzed to respond the research questions and identify the most relevant PBO, PM, and
+EA concerns.
+2.2. Article Selection Process
+To the best of the authors’ knowledge, no SLR of the EA approach for an integrated
+view of PBO and PM design has been conducted. No SLRs were found regarding EA
+application to PM in general. However, the study by Miterev et al. [8] is considered a
+related work, with a review of PBO design from an organizational design perspective. Our
+study was conducted from a systems-thinking perspective. In response to the research
+questions, relevant documents were investigated according to the structure and keywords
+in Table 1. The PBO keywords correspond to those found in the literature, as summarized
+in [4]. The EA keywords pertain to topics that are elements of or related to EA. Some of
+these topics were synthesized in [33].
+Table 1. Keywords and Boolean operator used to search relevant articles.
+Keyword/Terms Boolean Operator Keyword/Terms
+Project-based organization (PBO) Enterprise Architecture (EA)
+Project-based firm Architecture
+Multi-project firm Business process architecture (BPA)
+Project-intensive firm AND Business process management (BPM)
+Project-oriented organization Design
+Project-based company Governance
+Project management Landscape
+Structure
+Map
+In selecting relevant documents for this study, certain inclusion criteria were met. If
+the documents met at least one exclusion criterion (EC), they were discarded. The exclusion
+criteria were: (EC1) Repeated document, and (EC2) The article does not report an EA
+application in a PBO or PM domain.
+A total of 347 papers were identified using the search string, including duplicates. The
+articles were obtained between August–November 2021. After application of exclusion
+and inclusion criteria, 59 articles remained. The following search engines were used:
+(1) Scopus, (2) Web of Science (WoS), (3) ResearchGate. The article selection process is
+shown in Figure 2.
+Sustainability 2022, 14, x FOR PEER REVIEW 5 of 27
+Webof
+Science
+Scopus
+Initial Sample
+516 articles
+EC1
+Documents
+discarded:
+N = 76
+Documents
+selected:
+N = 440
+EC2
+Documents
+selected:
+N = 59
+Documents
+discarded:
+N = 381
+Research
+Gate
+Figure 2. Document selection flowchart.
+The data extraction form used in this research is presented in Table 2. The metadata
+was obtained using DEM1–DEM7. Content-based data were extracted using DEC8–
+DEC15 and answered the research questions in Section 3.2.
+Table 2. Data extraction form.
+Figure 2. Document selection flowchart.
+
+--- PAGE 5 ---
+Sustainability 2022, 14, 9801 5 of 25
+The data extraction form used in this research is presented in Table 2. The metadata
+was obtained using DEM1–DEM7. Content-based data were extracted using DEC8–DEC15
+and answered the research questions in Section 3.2.
+Table 2. Data extraction form.
+ID Approach Field Question Value
+DEM1 Meta-perspective Title What is the name of the approach? Name
+DEM2 Meta-perspective Authors Who are its authors? Author list
+DEM3 Meta-perspective Year What is its publication year? Year
+DEM4 Meta-perspective Country What is the first author’s country? Country
+DEM5 Meta-perspective Journal What is the journal? Journal name
+DEM6 Meta-perspective Type What is the publication vehicle name?
+Conference paper OR journal OR
+thesis OR book chapter
+DEM7 Meta-perspective Citation count
+How many citations does the work
+have according to InCites Citation
+Report, Scimago Journal and Country
+Rank, or Research Gate?
+Number
+DEC8
+Content-based
+perspective
+PM Focus What is the PM focus of the article?
+Data extracted from successive
+readings of articles (project scope,
+PMIS, project control)
+DEC9
+Content-based
+perspective
+Relation to EA
+What is the main approach with EA
+components?
+Strategy OR/AND Business
+OR/AND Application OR/AND
+Technology OR/AND
+All EA layers
+DEC10
+Content-based
+perspective
+Framework, standard, or
+language reference
+What EA–PM frameworks, standards,
+or language are used in the article?
+Data extracted from successive
+readings of articles (PMBOK,
+PRINCE, TOGAF,
+ArchiMate, Zachman)
+DEC 11
+Content-based
+perspective
+Type of PBO identified What type of PBO is identified? Internal OR external
+DEC 12
+Content-based
+perspective
+Integration
+Does the article holistically integrate
+EA, PM, and PBO domains?
+Domains integrated: EA/PM,
+EA/PBO, EA/PM/PBO
+DEC 13
+Content-based
+perspective
+Complementary
+information
+What additional relevant information
+is provided?
+(Dis)advantages, emphasis, others
+DEC 14
+Content-based
+perspective
+Needs addressed
+What are the needs of the EA
+application?
+Data extracted and generalized
+from successive readings of articles
+(establishing project policies,
+communication problems,
+connecting Agile with EA, projects
+affecting EA)
+DEC 15
+Content-based
+perspective
+Challenges identified for
+future research
+What challenges are proposed for
+future research?
+Data extracted and generalized
+from successive readings of articles
+(case study, architect–project
+manager integration, adding
+complexity)
+3. Results
+In this section, the bibliometric and content data are processed and analyzed using the
+research method described in Section 2.
+3.1. Annual Quantitative Distribution of Literature
+Meta-perspective findings for bibliometric analysis were summarized using descrip-
+tive statistics. Figure 3 shows the distribution of the 59 selected articles by year.
+The oldest article is from 1996 and takes a process approach to PM [34]. The years
+with the greatest productivity were 2010, 2018, and 2021, with six, seven, and 13 articles,
+respectively. Since 2005, there has been constant development in the field, with at least one
+article per year. A growth trend is observed over time.
+
+--- PAGE 6 ---
+Sustainability 2022, 14, 9801 6 of 25
+In this section, the bibliometric and content data are processed and analyzed u
+the research method described in Section 2.
+3.1. Annual Quantitative Distribution of Literature
+Meta-perspective findings for bibliometric analysis were summarized using desc
+tive statistics. Figure 3 shows the distribution of the 59 selected articles by year.
+Figure 3. Number of relevant articles published from 1996 to 2021.
+The oldest article is from 1996 and takes a process approach to PM [34]. The y
+with the greatest productivity were 2010, 2018, and 2021, with six, seven, and 13 arti
+respectively. Since 2005, there has been constant development in the field, with at l
+one article per year. A growth trend is observed over time.
+3.2. Country Distribution of Selected Articles
+The articles are from 23 nations (primary author country of origin), as shown in
+ure 4.
+1 1
+3
+1
+3
+5
+1
+6
+1
+2
+3
+2
+1 1
+3
+7
+2
+3
+13
+0
+2
+4
+6
+8
+10
+12
+14
+1996
+2001
+2005
+2006
+2007
+2008
+2009
+2010
+2011
+2012
+2013
+2014
+2015
+2016
+2017
+2018
+2019
+2020
+2021
+Number of papers
+Year of publication
+Figure 3. Number of relevant articles published from 1996 to 2021.
+3.2. Country Distribution of Selected Articles
+Thearticlesarefrom23nations(primaryauthorcountryoforigin),asshownin Figure 4.
+Sustainability 2022, 14, x FOR PEER REVIEW 7
+Figure 4. Productivity by country: Number of papers and citations.
+The top five countries by number of papers are China, the Netherlands, US, Br
+and Portugal. The top five countries by number of citations are the US, South Africa
+Netherlands, Finland, and Portugal.
+3.3. Quantitative Analysis of Main Journals and Conferences
+Of the 59 articles, most were conference papers, followed by journal papers (31
+shown in Figure 5. One book chapter and one doctoral thesis were selected.
+11
+6 6
+5 5
+3 3
+2 2 2 2
+1 1 1
+1
+1 1 1 1 1 1 1 1
+20
+72
+142
+6
+39
+9
+75
+33
+3
+9 6
+0
+49
+1
+28
+4 0 6
+15
+0
+10
+5 0
+0
+20
+40
+60
+80
+100
+120
+140
+160
+0
+2
+4
+6
+8
+10
+12
+China
+Netherlands
+USA
+Brazil
+Portugal
+Germany
+South Africa
+Italy
+Poland
+Colombia
+Iran
+Indonesia
+Finland
+Estonia
+Russia
+Morocco
+UAE
+UK
+South Korea
+Australia
+Turkey
+Tunisia
+Romania
+Number of citations
+Number of papers
+Country
+Number of papers Citations
+Figure 4. Productivity by country: Number of papers and citations.
+The top five countries by number of papers are China, the Netherlands, US, Brazil,
+and Portugal. The top five countries by number of citations are the US, South Africa, the
+Netherlands, Finland, and Portugal.
+3.3. Quantitative Analysis of Main Journals and Conferences
+Of the 59 articles, most were conference papers, followed by journal papers (31), as
+shown in Figure 5. One book chapter and one doctoral thesis were selected.
+The 59 selected papers come from 51 different sources, mainly covering the disciplines
+of project management, engineering management, and computer engineering. Table 3
+shows the journals that group more than one article. The first journal focuses on PM.
+The second extends this field of knowledge to IT. The remaining sources correspond to
+conference papers focused on computer engineering.
+
+--- PAGE 7 ---
+Sustainability 2022, 14, 9801 7 of 25
+and Portugal. The top five countries by number of citations are the US, South Africa, the
+Netherlands, Finland, and Portugal.
+3.3. Quantitative Analysis of Main Journals and Conferences
+Of the 59 articles, most were conference papers, followed by journal papers (31), as
+shown in Figure 5. One book chapter and one doctoral thesis were selected.
+Figure 5. Distribution of papers by type.
+The 59 selected papers come from 51 different sources, mainly covering the disci-
+plines of project management, engineering management, and computer engineering. Ta-
+ble 3 shows the journals that group more than one article. The first journal focuses on PM.
+The second extends this field of knowledge to IT. The remaining sources correspond to
+conference papers focused on computer engineering.
+Table 3. Sources with two or more papers.
+Source (Journal/Conference) No. of Papers
+International Journal of Project Management 4
+Figure 5. Distribution of papers by type.
+Table 3. Sources with two or more papers.
+Source (Journal/Conference) No. of Papers
+International Journal of Project Management 4
+ACM International Conference Proceeding Series 2
+International Journal of Information Technology Project Management 2
+Procedia Computer Science 2
+Lecture Notes in Business Information Processing 2
+IFIP International Federation for Information Processing 2
+3.4. Keyword Co-Occurrence Analysis
+There were a total of 186 different author–keywords in the selected articles. After a
+standard coding process (‘project’ was grouped with ‘projects’, ‘business process manage-
+ment’ with ‘BPM’, etc.), a total of 181 keywords remained. The bibliometric metadata was
+processed in VOSviewer to produce a co-occurrence map. The minimum occurrence value
+was two keywords, meaning that a keyword appears on the map when two papers cite
+it. With this parameterization, the number of keywords was reduced to 25. The resulting
+map shows five clusters (represented in green, purple, blue, red, and yellow), as shown in
+Figure 6. A larger label and circle indicate greater element weight. The distance between
+two keywords roughly indicates their co-occurrence relationship. The closer the keywords
+are, the stronger their relationship [35]. Table 4 shows keywords with more than three
+occurrences, part of Figure 6.
+Table 4 summarizes the top keywords in Figure 6 and their occurrences, links, and
+weight. The ’number of occurrences’ value means that there are n-papers that mention a
+keyword. The ‘Links’ column describes the number of connections between keywords (the
+keyword is addressed in a paper with another term together quantity times the number
+of ’links’). The ‘Total Link Strength’ column indicates the weight of these links [26]. For
+instance, in the case of the ’governance’ term, there is a ’number of occurrence equal’ to
+three and ’links’ equal to nine. It means three papers mention this term, and this term is
+connected nine times with others (for instance, project management or roles in this case, as
+shown in Figure 6). If the term does not have a link, it will appear as a point on the map.
+Clustering of keywords generates five clusters: (1) Green: Enterprise architecture
+(EA), (2) Purple: Project management (PM), (3) Blue: Business process management (BPM),
+(4) Yellow: Project components, (5) Red: Mix of architecture components.
+
+--- PAGE 8 ---
+Sustainability 2022, 14, 9801 8 of 25
+With this parameterization, the number of keywords was reduced to 25. The resulting
+map shows five clusters (represented in green, purple, blue, red, and yellow), as shown
+inFigure6.Alargerlabelandcircleindicategreaterelementweight.Thedistancebetween
+twokeywordsroughlyindicatestheirco-occurrencerelationship.Thecloserthekeywords
+are, the stronger their relationship [35]. Table 4 shows keywords with more than three
+occurrences, part of Figure 6.
+Figure 6. Keyword co-occurrence map.
+Table 4. Keywords in selected papers with three or more occurrences.
+n Keyword Occurrences Links Total Link Strength
+1 enterprise architecture 19 20 46
+2 project management 17 16 39
+3 business process management 13 6 15
+4 projects 5 12 27
+5 process 4 3 4
+6 governance 3 9 18
+Figure 6. Keyword co-occurrence map.
+Table 4. Keywords in selected papers with three or more occurrences.
+n Keyword Occurrences Links Total Link Strength
+1 enterprise architecture 19 20 46
+2 project management 17 16 39
+3 business process management 13 6 15
+4 projects 5 12 27
+5 process 4 3 4
+6 governance 3 9 18
+Figure 7 presents the bibliometric information in Figure 6 by article year. Darker colors
+represent the oldest, and lighter colors represent the most recent articles.
+Each of the five generated clusters in Figure 6 is analyzed in the following sections.
+3.4.1. Enterprise Architecture
+InFigure6, theEAcluster(GreeninFigure6)hasthegreatestweightofthefive clusters.
+The keywords in this domain are ‘project portfolio management’, ‘IT governance’, ‘PM-
+BOK’, and ‘ArchiMate’. The last two keywords correspond to widely used frameworks
+in the literature. PMBOK is considered the most popular PM standard [36]. ArchiMate
+is a widely accepted language for modeling EAs [37,38]. The concept of IT governance
+is highlighted in this cluster, reflecting the orientation to IT projects in EA applications
+and the use of EA as a management tool to align the technological components of an
+organization [13,18].
+
+--- PAGE 9 ---
+Sustainability 2022, 14, 9801 9 of 25
+as shown in Figure 6). If the term does not have a link, it will appear as a point on the
+map.
+Clustering of keywords generates five clusters: (1) Green: Enterprise architecture
+(EA), (2) Purple: Project management (PM), (3) Blue: Business process management
+(BPM), (4) Yellow: Project components, (5) Red: Mix of architecture components.
+Figure 7 presents the bibliometric information in Figure 6 by article year. Darker col-
+ors represent the oldest, and lighter colors represent the most recent articles.
+Figure 7. Keyword co-occurrence map by year of citation.
+Each of the five generated clusters in Figure 6 is analyzed in the following sections.
+3.4.1. Enterprise Architecture
+In Figure 6, the EA cluster (Green in Figure 6) has the greatest weight of the five
+clusters. The keywords in this domain are ‘project portfolio management’, ‘IT govern-
+ance’, ‘PMBOK’, and ‘ArchiMate’. The last two keywords correspond to widely used
+frameworks in the literature. PMBOK is considered the most popular PM standard [36].
+ArchiMate is a widely accepted language for modeling EAs [37,38]. The concept of IT gov-
+ernance is highlighted in this cluster, reflecting the orientation to IT projects in EA appli-
+cations and the use of EA as a management tool to align the technological components of
+an organization [13,18].
+Figure 7. Keyword co-occurrence map by year of citation.
+3.4.2. Project Management
+In Figure 6, the PM cluster (Purple in Figure 6) is directly connected with the EA and
+BPM clusters. There is a link between PM and BPM at the beginning of the research time
+window. The PM cluster has the second greatest weight in the map. The main keywords
+in this group are ‘collaboration’ and ‘Agile development’, which connect the PM and EA
+clusters. This relationship is visible in an organization’s adherence to Agile approaches
+through projects. Agile methodologies have their origins in IT [39]. However, there is
+concern regarding the relationship between EA and Agile approaches. Agile tends to
+neglect the architectonic design of information systems [40], challenging the flexibility and
+agility of an organization (and the EA) when it must adapt to environmental changes [41].
+3.4.3. Business Process Management
+In Figure 6, the main keywords in the blue cluster are ‘process’, ‘workflow’, ‘process
+modeling’, and ‘product data management’ (Blue in Figure 6). The BPM cluster is mainly
+connected with the PM cluster. The process concept has been widely implemented in PM
+practices to articulate activities and artifacts, as in PM standards such as PMBOK [42] and
+PM2 [43]. The PMBOK standard describes its body of knowledge in five process groups
+broken down into 49 processes.
+3.4.4. Project Components
+In Figure 6, the main keywords in the yellow cluster are ‘project conformance’ (Yellow
+in Figure 6), ‘systems development’, and ‘analysis and design artifacts’. This cluster
+is connected to the EA cluster and to the architecture components cluster (red). The
+interrelated concepts in this cluster reflect the organizational concern for projects with an
+existing EA and components affected by changes produced by such projects [44–47]. To
+maintain the alignment of architecture components after the project, the project must be
+pre-aligned to the EA [47].
+
+--- PAGE 10 ---
+Sustainability 2022, 14, 9801 10 of 25
+3.4.5. Architecture Components
+In Figure 6 (Red in Figure 6), the main keywords in the red cluster are ‘programs’,
+‘governance’, ‘reference architecture’, ‘portfolios’, ‘layers’, ‘competencies’, and ‘roles’. These
+concepts are included in the most current publications (Figure 7). The concept of gover-
+nance connects with all cluster keywords. Governance has gained relevance in PM domain
+research. In the projects domain, governance refers to interactions between project partici-
+pants and mechanisms that affect engagement between stakeholders and the project [48,49].
+In the EA domain, governance is recognized as internal directives for enforcing plans and
+principles outlined in the EA and ensuring that projects that affect the EA are properly
+integrated [18]. With multiple projects, as the complexity between them increases, a man-
+agement tool is required [50]. It has been shown that using a reference architecture helps
+align an organization’s components and projects, effectively managing the project [51].
+3.5. Content-Based Data Perspective Analysis
+This section presents a systematic analysis of the 59 selected papers based on mapping
+of referenced EA layers and the main concepts of PBO and PM found by extracting data
+from Table 2.
+3.5.1. Main PM Concepts Related to EA Layers
+A co-occurrence map was developed from the extraction of the main focus of the
+articles in the PM domain (The DEC8 data, obtained with the form described in Table 2)
+withEAcomponentlayers (TheDEC9dataobtained, accordingtoTable 2). Everypaperwas
+labeled regarding one or more EA layers and PM focus, then developing a co-occurrence
+map. Figure 8 shows the relationship between the five EA layers and nine concepts in the
+PM domain.
+Fourteen concepts were extracted, as shown in Figure 8. The metrics are presented in
+Table 5. The concepts highlighted with a red ellipse in Figure 8 correspond to the EA layers.
+The first three concepts in Table 5 represent the most weighted concepts from the blue, red,
+and green clusters generated.
+Figure 8 shows that three clusters are formed for the mapped concepts: (1) EA business
+layer (blue), (2) EA application layer (red), (3) EA project management (green). The number
+of connections and weights for these three clusters are analyzed below.
+EA Business Layer Cluster (Blue)
+The blue cluster has the greatest weight, consisting of ‘strategy’, ‘project governance’,
+and ‘the general approach of PM’. The business layer is the most common in the selected
+articles (in 31 of the 59 selected articles).
+This cluster reflects the concern of researchers for adopting PM practices into the
+business as a whole to achieve these objectives. Aligning projects with the strategy and
+achieving their benefits is an objective of organizations that develops internal projects [52].
+Moreover, PMBOK defines the portfolio as a strategical viewpoint of projects. This concern
+has been achieved in the literature by the work of Cordeiro et al. [51,53], developing an
+architecture for balancing the time-cost-quality project constraints with the desired benefits.
+The above is proposed as a governance instrument by verifying deviations and detecting
+the architecture portfolio-program-project (PPP) model that best suits the context of an
+organization [51,53].
+The business layer is related to a general approach of PM, considering how the PM
+practices affect processes, roles, functions, and events. On the one hand, Peng et al. [54]
+relate the business model with the PM organizations’ activities through architecture models.
+On the other hand, Cui et al. [55] focus on the roles in multi-enterprise environments for the
+compliance of services and functions. This proposal is based mainly on models of processes
+and some relationships with applications.
+Also in this group are 14 papers that use business process modeling notation (BPMN)
+to model business processes. Process design has become a research topic of interest from
+
+--- PAGE 11 ---
+Sustainability 2022, 14, 9801 11 of 25
+different perspectives. The relationship between BPM and PM domains has been studied
+holistically [56], and the PMBOK framework has been translated into a BPMN language to
+integrate PM activities with those of the business more efficiently [57]. Another application
+approach is from the PM to the BPM domain. PM practices have been formalized to develop
+BPM projects using PMBOK [58] and aligning projects to IT governance standards such as
+COBIT [59].
+Project management and business processes have one common component that can be
+leveraged (tasks) [34].
+Sustainability 2022, 14, x FOR PEER REVIEW 11 of 27
+occurrence map. Figure 8 shows the relationship between the five EA layers and nine con-
+cepts in the PM domain.
+Figure 8. Co-occurrence map of the main focus of PM domain in terms of EA layers.
+Fourteen concepts were extracted, as shown in Figure 8. The metrics are presented in
+Table 5. The concepts highlighted with a red ellipse in Figure 8 correspond to the EA lay-
+ers.ThefirstthreeconceptsinTable5representthemostweightedconceptsfromtheblue,
+red, and green clusters generated.
+Table 5. Main focus of PM domain in terms of EA layers extracted from selected papers.
+n Focus Occurrences Links Total Link Strength
+1 business 31 12 50
+2 application 21 9 46
+3 EA project management 16 8 30
+4
+PMIS (project management infor-
+mation systems)
+16 6 36
+5 technology 15 8 35
+6 all EA layers 15 5 24
+7 internal projects 11 8 18
+8 APM (Agile project management) 10 6 21
+9 project alignment 7 6 13
+10 general approach of PM 6 6 10
+11 project governance 4 4 8
+12 project control 4 4 7
+Figure 8. Co-occurrence map of the main focus of PM domain in terms of EA layers.
+Table 5. Main focus of PM domain in terms of EA layers extracted from selected papers.
+n Focus Occurrences Links Total Link Strength
+1 business 31 12 50
+2 application 21 9 46
+3 EA project management 16 8 30
+4 PMIS (project management information systems) 16 6 36
+5 technology 15 8 35
+6 all EA layers 15 5 24
+7 internal projects 11 8 18
+8 APM (Agile project management) 10 6 21
+9 project alignment 7 6 13
+10 general approach of PM 6 6 10
+11 project governance 4 4 8
+12 project control 4 4 7
+13 strategy 3 4 6
+14 project quality 2 2 4
+
+--- PAGE 12 ---
+Sustainability 2022, 14, 9801 12 of 25
+EA Application Layer Cluster (Red)
+Twenty-one papers are related to the EA application layer. This cluster is related to the
+EA technology layer and PM concerns such as ‘PMIS’ (project management information
+systems), ‘project control’, and ‘project quality’. The relationship between these concepts
+can be explained by the need for automated support for PM activities. Automating through
+PMIS facilitates planning, evaluation, communication, documentation, and reuse of project
+information [34]. PMIS proposals are based on an EA framework such as the Depart-
+ment of Defence Architecture Framework (DoDAF) [60] and Unified Modeling Language
+(UML) [61]. PMIS was also developed by integrating BPM workflows with the Open
+Project application for scheduling [62] and project control [63,64]. It is known that using a
+process perspective in PM positively influences productivity and improves communication
+between project participants [63], collaboration, and information flow [58]. For project
+quality assurance, a PMIS proposal based on ISO 9000 [65] and a PMIS connected with
+the collaborative environment of architecture, engineering, and construction (AEC) indus-
+try projects were found [66]. Likewise, in manufacturing quality management, a process
+perspective continuously improves quality [65].
+EA Project Management Cluster (Green)
+The green cluster concentrates all EA layers and PM concerns, including project
+alignment, internalprojects, APM(Agileprojectmanagement), andEAprojectmanagement.
+This group contains 15 of the 59 selected papers, highlighting the need to align internal
+projects with the organization, with EA as the tool for this purpose [67]. Alignment can
+be achieved with a pre-existing EA, as in studies by Ralph Foorthuis [44–47]. Since 2007,
+he has investigated how internal projects (mainly IT projects) should be coupled to an
+existing EA to properly integrate the project. For IT projects, the EA approach has been
+extended with organization of artifacts produced by projects, highlighting at the portfolio
+level [68], as with Foorthuis, the importance of aligning these artifacts with the company,
+from strategy to infrastructure.
+The green cluster is also strongly linked to the EA project management cluster, consid-
+ering that project management for this type of project is predominantly transversal to all
+EA layers.
+3.5.2. EA and PM Languages and Standards
+The languages and standards used in the selected papers were extracted using the form
+in Table 2. All findings were mapped through their co-occurrences, as shown in Figure 9.
+Sustainability 2022, 14, x FOR PEER REVIEW 13 of 27
+The green cluster concentrates all EA layers and PM concerns, including project
+alignment, internal projects, APM (Agile project management), and EA project manage-
+ment. This group contains 15 of the 59 selected papers, highlighting the need to align in-
+ternal projects with the organization, with EA as the tool for this purpose [67]. Alignment
+can be achieved with a pre-existing EA, as in studies by Ralph Foorthuis [44–47]. Since
+2007, he has investigated how internal projects (mainly IT projects) should be coupled to
+an existing EA to properly integrate the project. For IT projects, the EA approach has been
+extended with organization of artifacts produced by projects, highlighting at the portfolio
+level [68], as with Foorthuis, the importance of aligning these artifacts with the company,
+from strategy to infrastructure.
+The green cluster is also strongly linked to the EA project management cluster, con-
+sidering that project management for this type of project is predominantly transversal to
+all EA layers.
+3.5.2. EA and PM Languages and Standards
+Thelanguagesandstandardsusedintheselectedpaperswereextractedusingtheform
+in Table 2. All findings were mapped through their co-occurrences, as shown in Figure 9.
+Figure 9. Co-occurrence map of EA and PM languages and standards.
+The map in Figure 9 contains 17 findings in five clusters. The number of occurrences,
+number of links, and weight are presented in Table 6.
+Table 6. PM and EA languages and standards used in selected papers.
+Figure 9. Co-occurrence map of EA and PM languages and standards.
+
+--- PAGE 13 ---
+Sustainability 2022, 14, 9801 13 of 25
+The map in Figure 9 contains 17 findings in five clusters. The number of occurrences,
+number of links, and weight are presented in Table 6.
+Table 6. PM and EA languages and standards used in selected papers.
+Language/Standard Domain Description Occurrences Links
+Total Link
+Strength
+BPMN EA
+BPMN: This language is widely used for its
+expressiveness, semantics, and simplicity [69]
+16 8 12
+PMBOK PM Body of knowledge for project management [40] 13 9 15
+APM PM
+Agile project management is an emerging approach
+used mainly in the IT industry [70]
+8 4 5
+ArchiMate EA EA modeling language [25] 7 4 7
+Zachman EA
+The first EA framework proposed by Zachman in the
+1980s [71]
+4 5 7
+TOGAF EA
+Architecture framework providing methods and tools
+for developing and maintaining an EA [72]
+3 3 5
+CANVAS EA
+Management tool for designing business models,
+structured in nine components: Customer segments,
+value propositions, channels, customer relationships,
+revenue streams, key resources, key activities, key
+partnerships, and cost structure [73]
+2 4 4
+ISO 21505 PM
+Guidance for project, program, and portfolio
+governance [74]
+2 3 4
+PRINCE PM
+Projects in Controlled Environments is a method for
+project management based on processes [75]
+2 2 3
+Hammer EA
+Maturity model for business process management
+proposed by Michael Hammer [76,77]
+2 1 1
+Scrum PM
+Methodology developed from technology-based
+companies, suitable for projects requiring speed and
+flexibility. Its main components are the product
+backlog (user requirements) and the sprint backlog
+(items for completing each sprint) [78]
+2 1 1
+APQC EA
+Taxonomy of business process for different industries,
+useful for addressing a common language, organizing,
+and mapping processes [79]
+1 3 3
+PM2 PM
+PM methodology developed by the Centre of
+Excellence in Project Management of the European
+Commission created for EU institutions using [80]
+1 2 2
+COBIT EA
+Control Objectives for Information and Related
+Technologies is a framework for developing,
+implementing, and improving IT governance and
+management [81,82]
+1 1 1
+FEAF EA
+Federal Enterprise Architecture Framework is a tool
+developed to help US government planners address a
+common language. This standard is structured in five
+domains: Strategy, business, data applications,
+infrastructure, and security [83,84]
+1 1 1
+SYSML EA
+Systems Modeling Language, proposed by OMG
+(Object Management Group) as a general language for
+systems engineering [85]
+1 1 1
+In Figure 9 and Table 6, the most heavily weighted findings per cluster are (1) BPMN
+(red), (2) PMBOK (yellow), (3) APM (green), (4) ArchiMate (blue), (5) CANVAS (purple).
+PMBOK and BPMN are strongly connected. There is a relationship regarding the pro-
+cess approach for managing PM activities. In Figure 10, the relationship between PMBOK
+and BPMN is located early in the research time window. These clusters are also connected
+using the CANVAS model [86,87], APQC reference process framework [87], and Agile
+Project Management (APM) [40,86,88]. Over time, the relationship turned to EA, beginning
+
+--- PAGE 14 ---
+Sustainability 2022, 14, 9801 14 of 25
+with Zachman’s EA framework [89–91] and later the ArchiMate language [51,53,92–95]
+and the TOGAF framework [91,96].
+Sustainability 2022, 14, x FOR PEER REVIEW 15 of 27
+Figure 10. Co-occurrence map of EA and PM languages and standards by citation year.
+With PMBOK, PM PRINCE standards are displayed, indicating that these standards
+are most commonly used by researchers and practitioners [97,98].
+3.5.3. Type of Projects Studied in Selected Articles
+According to the data extraction form in Table 2, the types of projects studied in the
+selected articles are shown in Figure 11:
+Figure 11. Types of projects studied in selected articles.
+The types of projects displayed in Figure 11 are also described in Table 7.
+Table 7. Description of each type of project displayed in Figure 11.
+Type of Project Description
+19
+14
+9
+6
+3 2 2 1 1 1 1
+0
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+General
+IT projects
+AEC
+EA projects
+Product
+development
+BPM projects
+Re-eingeneering
+projects
+Oil and Gas
+Science and
+Technology projects
+Capital projects
+PM improvement
+Number of papers
+Type of project
+Figure 10. Co-occurrence map of EA and PM languages and standards by citation year.
+With PMBOK, PM PRINCE standards are displayed, indicating that these standards
+are most commonly used by researchers and practitioners [97,98].
+3.5.3. Type of Projects Studied in Selected Articles
+According to the data extraction form in Table 2, the types of projects studied in the
+selected articles are shown in Figure 11:
+Sustainability 2022, 14, x FOR PEER REVIEW 15
+Figure 10. Co-occurrence map of EA and PM languages and standards by citation year.
+With PMBOK, PM PRINCE standards are displayed, indicating that these stand
+are most commonly used by researchers and practitioners [97,98].
+3.5.3. Type of Projects Studied in Selected Articles
+According to the data extraction form in Table 2, the types of projects studied in
+selected articles are shown in Figure 11:
+Figure 11. Types of projects studied in selected articles.
+The types of projects displayed in Figure 11 are also described in Table 7.
+Table 7. Description of each type of project displayed in Figure 11.
+Type of Project Description
+19
+14
+9
+6
+3 2 2 1 1 1 1
+0
+2
+4
+6
+8
+10
+12
+14
+16
+18
+20
+General
+IT projects
+AEC
+EA projects
+Product
+development
+BPM projects
+Re-eingeneering
+projects
+Oil and Gas
+Science and
+Technology projects
+Capital projects
+PM improvement
+Number of papers
+Type of project
+Figure 11. Types of projects studied in selected articles.
+The types of projects displayed in Figure 11 are also described in Table 7.
+
+--- PAGE 15 ---
+Sustainability 2022, 14, 9801 15 of 25
+Table 7. Description of each type of project displayed in Figure 11.
+Type of Project Description
+General
+Applications of EA to a general viewpoint of projects and not the specified type of project,
+e.g., [51,93]
+IT Projects Applications of EA on IT projects or IT project management needs, e.g., [23,96].
+AEC Architecture, Engineering, and Construction projects [99,100].
+EA projects Focus on EA projects and the PM practices for improving them [45,101].
+Product development EA is used to improve the product lifecycle and development through projects [54,61,102].
+BPM projects Focus on BPM projects and the PM practices for improving them [58,59].
+Re-engineering projects
+Focus on re-engineering the organization and understanding the PM practices for achieving
+the project’s objective. Articles take advantage of the models offered by EA [86,103].
+Oil and gas Managing the data complexity on Oil and Gas projects [104].
+Science and technology projects
+Proposing an integrated data-business model for Science and Technology projects funded
+by the government [105].
+Capital projects Managing the complexity of city asset improvement projects [106].
+PM improvement Improvement of PM practices applying the business layer and BPM [63].
+Figure 11 shows the application of EA with a general view of PM, and its application
+in IT and AEC projects. Organizations in the AEC industry generate most of their income
+from projects for external clients and can be classified as PBOs according to the criterion
+in [4]. EA applications are found in these articles. Only one article explicitly acknowledges
+the concept of PBO [107]. The uses of EA in this group focused on project scope control [58],
+the strategy of the organization [90], collaboration networks in AEC projects [66], the
+organizational maturity of project management [107], and project governance [87].
+3.5.4. Type of PBO Addressed
+The selected articles used different approaches and EA intensities in their projects.
+The articles do not directly refer to PBO, except for [64]. However, it is possible to identify
+whether the focus of the projects is the organization (internal projects) or external clients.
+In terms of project type and PBO in the articles, 45 were internal PBOs, 14 were external
+PBOs (Figure 12).
+Sustainability 2022, 14, x FOR PEER REVIEW 16 of 27
+General
+Applications of EA to a general viewpoint of projects and not the specified type of pro-
+ject, e.g., [51,93]
+IT Projects Applications of EA on IT projects or IT project management needs, e.g., [23,96].
+AEC Architecture, Engineering, and Construction projects [99,100].
+EA projects Focus on EA projects and the PM practices for improving them [45,101].
+Product development
+EA is used to improve the product lifecycle and development through projects
+[54,61,102].
+BPM projects Focus on BPM projects and the PM practices for improving them [58,59].
+Re-engineering projects
+Focus on re-engineering the organization and understanding the PM practices for achiev
+ing the project’s objective. Articles take advantage of the models offered by EA [86,103].
+Oil and gas Managing the data complexity on Oil and Gas projects [104].
+Science and technology pro-
+jects
+Proposing an integrated data-business model for Science and Technology projects
+funded by the government [105].
+Capital projects Managing the complexity of city asset improvement projects [106].
+PM improvement Improvement of PM practices applying the business layer and BPM [63].
+Figure 11 shows the application of EA with a general view of PM, and its application
+in IT and AEC projects. Organizations in the AEC industry generate most of their income
+from projects for external clients and can be classified as PBOs according to the criterion
+in [4]. EA applicationsare found in thesearticles. Onlyone article explicitly acknowledges
+the concept of PBO [107]. The uses of EA in this group focused on project scope contro
+[58], the strategy of the organization [90], collaboration networks in AEC projects [66], the
+organizational maturity of project management [107], and project governance [87].
+3.5.4. Type of PBO Addressed
+The selected articles used different approaches and EA intensities in their projects
+The articles do not directly refer to PBO, except for [64]. However, it is possible to identify
+whether the focus of the projects is the organization (internal projects) or external clients
+In terms of project type and PBO in the articles, 45 were internal PBOs, 14 were externa
+PBOs (Figure 12).
+Figure 12. Distribution of papers in terms of PBO type.
+3.5.5. Integration of PM, PBO, and EA Domains
+TheselectedarticleswereclassifiedaccordingtothelevelofgeneralizationofthePM
+PBO, and EA study and whether integration between these domains could be identified
+Thirty-one articles indicate a holistic relationship between domains, as shown in Figure
+13.
+Figure 12. Distribution of papers in terms of PBO type.
+3.5.5. Integration of PM, PBO, and EA Domains
+The selected articles were classified according to the level of generalization of the PM,
+PBO, and EA study and whether integration between these domains could be identified.
+Thirty-one articles indicate a holistic relationship between domains, as shown in Figure 13.
+Two articles applied EA in organizations that can be considered as PBOs, but do not
+explain the conceptual integration. Management tools such as EA, Capability Maturity
+Model Integration (CMMI), PMBOK, and PRINCE have been studied for claims not ade-
+quately addressed in the AEC industry [90]. Use of these standards and an architecture
+approach help this industry achieve strategic objectives [90,108]. It is confirmed again in
+this study that joint application of the concepts surveyed in the literature is mainly found
+in IT projects.
+
+--- PAGE 16 ---
+Sustainability 2022, 14, 9801 16 of 25 Sustainability 2022, 14, x FOR PEER REVIEW 17 of 27
+Figure 13. Distribution of papers in terms of EA-PM-PBO integration.
+Two articles applied EA in organizations that can be considered as PBOs, but do not
+explain the conceptual integration. Management tools such as EA, Capability Maturity
+Model Integration (CMMI), PMBOK, and PRINCE have been studied for claims not ade-
+quately addressed in the AEC industry [90]. Use of these standards and an architecture
+approach help this industry achieve strategic objectives [90,108]. It is confirmed again in
+this study that joint application of the concepts surveyed in the literature is mainly found
+in IT projects.
+Twenty-nine articles generally addressed EA with PM. This includes the work of
+Foorthuis, who investigated the conformity of project artifacts with an existing EA [44–
+47]. At the project portfolio level (PPM), connections between EA and PPM were identi-
+fied, with the need to align these domains with the business [51,68,92]. However, EA and
+PPM rarely appear related in the literature and connections between EA and PM have not
+been analyzed [68]. A building block toward integrating EA with PM was developed [68]
+but is still pending for cases scaling the EA approach. There are two articles in this group
+with greater generalization in the analysis of EA and PM domains. A model integrating
+the FEAF and PMBOK frameworks for developing EA projects was proposed [67]. A de-
+scription of the body of knowledge of the PMBOK framework in ArchiMate language was
+developed[95].However,onlythemainconceptsofthePMBOKwereconsidered,leaving
+alignment of motivation layer concepts at different levels of company, projects, and pro-
+cess for future research [95].
+4. Discussion
+This research has described the current application of EA on PBO and PM domains
+and gives an overview of the integration between these domains. From a bibliometric per-
+spective, it is possible to identify the increasing productivity of research in the studied
+field. Northern hemisphere countries concentrate most of the articles, coinciding with the
+originofthemainEAandPMstandardscitedintheliterature.Mostoftheselectedarticles
+are conference papers. Understanding that these kinds of articles are works in the process
+of maturing, this situation can be seen as an opportunity for the research field to take
+current knowledge to the next level. The above could confirm that the systems thinking
+in PBO and PM are still in their early stages.
+Processing the keywords of selected papers—using the data extraction form de-
+scribed in Table 2—through co-occurrence maps, clusters and interrelationships can be
+identified, as shown in Figures 6 and 7. The three most weighted concepts are EA, PM,
+and BPM, with PM as a central cluster. It can be seen that early researchers addressed the
+PM–BPM relationship. Over time, research interest expanded to include EA, culminating
+in EA–PM components such as governance, layers, portfolio, and programs. This trend is
+observedinthePMdomain.InthefirstsixversionsofthePMBOKframework,knowledge
+was structured in ‘processes’ [42] and hierarchical composition of PM knowledge [104].
+However, the recent 7th version of PMBOK deploys knowledge through systemically in-
+terrelated ‘domains’ [52,109].
+Figure 13. Distribution of papers in terms of EA-PM-PBO integration.
+Twenty-nine articles generally addressed EA with PM. This includes the work of
+Foorthuis, who investigated the conformity of project artifacts with an existing EA [44–47].
+At the project portfolio level (PPM), connections between EA and PPM were identified,
+with the need to align these domains with the business [51,68,92]. However, EA and PPM
+rarely appear related in the literature and connections between EA and PM have not been
+analyzed [68]. A building block toward integrating EA with PM was developed [68] but
+is still pending for cases scaling the EA approach. There are two articles in this group
+with greater generalization in the analysis of EA and PM domains. A model integrating
+the FEAF and PMBOK frameworks for developing EA projects was proposed [67]. A
+description of the body of knowledge of the PMBOK framework in ArchiMate language
+was developed [95]. However, only the main concepts of the PMBOK were considered,
+leaving alignment of motivation layer concepts at different levels of company, projects, and
+process for future research [95].
+4. Discussion
+This research has described the current application of EA on PBO and PM domains
+and gives an overview of the integration between these domains. From a bibliometric
+perspective, it is possible to identify the increasing productivity of research in the studied
+field. Northern hemisphere countries concentrate most of the articles, coinciding with the
+origin of the main EA and PM standards cited in the literature. Most of the selected articles
+are conference papers. Understanding that these kinds of articles are works in the process
+of maturing, this situation can be seen as an opportunity for the research field to take
+current knowledge to the next level. The above could confirm that the systems thinking in
+PBO and PM are still in their early stages.
+Processing the keywords of selected papers—using the data extraction form described
+in Table 2—through co-occurrence maps, clusters and interrelationships can be identified,
+as shown in Figures 6 and 7. The three most weighted concepts are EA, PM, and BPM,
+with PM as a central cluster. It can be seen that early researchers addressed the PM–
+BPM relationship. Over time, research interest expanded to include EA, culminating in
+EA–PM components such as governance, layers, portfolio, and programs. This trend is
+observed in the PM domain. In the first six versions of the PMBOK framework, knowledge
+was structured in ‘processes’ [42] and hierarchical composition of PM knowledge [104].
+However, the recent 7th version of PMBOK deploys knowledge through systemically
+interrelated ‘domains’ [52,109].
+The content data extracted (using the form of Table 2) were processed for five types of
+analyses in Section 3.5: (1) the relationship through EA layers and PM focuses identified
+in selected papers. The ‘business‘ layer in an EA is most often addressed in the articles.
+The above was also reflected in the keyword analysis (Figure 6), with the management
+of business processes (BPM) as activities within an EA. The work of Werewka [95] is
+highlighted in the blue cluster (Figure 8), which describes a part of PMBOK 6th edition
+through an EA model and using the business layer ArchiMate artifacts. As the author
+mentions, the PMBOK content is best represented through the concepts of business and
+
+--- PAGE 17 ---
+Sustainability 2022, 14, 9801 17 of 25
+strategy layers. Moreover, the business layer of an EA is composed of processes. BPM
+approach is an effective tool for process-oriented organizations allowing for improved
+performance through sustained application [110]. PM field has also taken advantage of this
+and has extended its knowledge from a process perspective, as has already been mentioned
+with the case of the PMBOK. ‘Application‘ and ‘Technology‘ are also most linked layers
+with other PM concepts (e.g., PMIS, project control and project quality), mainly covering
+the need for supporting and automating PM activities. EA brings the language and the
+structure for modeling the relationship with PM activities from a high level (e.g., task)
+to a low level (e.g., data architecture). These relationships would reinforce the idea that
+EA helps organizations to facilitate their digital transformation process, thanks to the
+integration of its components organizations (from strategy to data), and allow a better
+understanding of them even as complexity increases [20,111,112]. (2) The EA and PM
+languages and standards were analyzed through their connections (Figure 9). PMBOK, as
+a PM standard and BPMN and ArchiMate as an EA language, are the most used on the
+selected papers and confirm their wide acceptance again, as shown in Section 3.4.1. (3) The
+type of projects mentioned in elected papers were analyzed regarding their frequency. In
+this case, it was expected that EA applications would mainly focus on IT projects. However,
+the interest of the AEC industry is surprising because of the attention they have given
+to EA as a management tool. This relationship can be explained by the current need
+for digitalization of the AEC sector, characterized by its artisanal processes on site and
+occupying last place in productivity compared to other sectors [113]. (4) Selected articles
+do not directly refer to PBO. This situation would, in principle, show that no EA on PBO
+has been applied. However, the term PBO might not be fully diffused. Then, alternatively,
+by analyzing the type of organization mentioned in the articles or where EA is expected to
+be applied, it is possible to infer the type of PBO alluded to. Therefore, it is observed that
+EA is mainly being applied (45 out of 59 articles) from an internal PBO perspective, i.e., for
+projects that are developed within an organization for internal objectives. The rest of the
+articles focus on offering projects to external clients. This point becomes relevant because
+some of these articles consider a pre-existing EA to connect projects and their results. It is
+a coincidence that in the group of external PBOs, we find the AEC industry, which is not
+characterized by being managed through EA as a business but has been approaching EA
+as a tool to improve the performance of their projects and facilitate their management. (5)
+The analysis of EA-PM-PBO integration has a pure systemic objective for understanding
+the representations of PM knowledge or practices from an EA perspective. The findings
+confirm the statement of [68] regarding the lack of integration between these domains and
+the articles presenting some connections focused on specific PM sub-domains or applying
+a specific layer of EA. However, there is no complete integration between all layers of an
+EA and, for example, all PM bodies of knowledge.
+The challenges and future research were identified on selected papers and extracted
+and mapped, as shown in Figure 14.
+Figure 14 contains five clusters. The green cluster (1) is the most heavily weighted.
+Increasing complexity and study scope in current papers are identified as challenges
+for future research. Many studies start with simplified models for a proof of concept
+(POC). Authors have highlighted the need for business analysis automation tools for
+more complex models [60,93,95,114–117]. The red cluster (2) is the second most heavily
+weighted. Authors in this group have emphasized developing a case study to validate
+proposals [68,100,114,118]. A theoretical approach is a constant in these articles. Regarding
+the POC approach of the proposals, authors mentioned the need to increase the analysis
+scope, such as extending the EA application to other EA layers [45,65] and measuring the
+proposal performance in actual conditions [57,119]. Another concern in this cluster is the
+trend to rigidise EA applications. A proper mix using the Agile approach may produce a
+more flexible EA [51,53]. The blue cluster (4) indicates author concerns regarding practical
+application of their proposals. For better proposal applicability in organizations (models,
+reference architectures), greater standardization of practices and generalization are required
+
+--- PAGE 18 ---
+Sustainability 2022, 14, 9801 18 of 25
+to facilitate integration [34,94]. These concerns must be considered simply as means for
+use [62,86,120].
+Sustainability 2022, 14, x FOR PEER REVIEW 19 of 27
+Figure 14. Challenges identified for future research and co-occurrence mapping of findings.
+Figure 14 contains five clusters. The green cluster (1) is the most heavily weighted.
+Increasing complexity and study scope in current papers are identified as challenges for
+future research. Many studies start with simplified models for a proof of concept (POC).
+Authors have highlighted the need for business analysis automation tools for more com-
+plex models [60,93,95,114–117]. The red cluster (2) is the second most heavily weighted.
+Authors in this group have emphasized developing a case study to validate proposals
+[68,100,114,118]. A theoretical approach is a constant in these articles. Regarding the POC
+approach of the proposals, authors mentioned the need to increase the analysis scope,
+such as extending the EA application to other EA layers [45,65] and measuring the pro-
+posal performance in actual conditions [57,119]. Another concern in this cluster is the
+trend to rigidise EA applications. A proper mix using the Agile approach may produce a
+more flexible EA [51,53]. The blue cluster (4) indicates author concerns regarding practical
+application of their proposals. For better proposal applicability in organizations (models,
+reference architectures), greater standardization of practices and generalization are re-
+quired to facilitate integration [34,94]. These concerns must be considered simply as
+means for use [62,86,120].
+The yellow cluster (5) reflects the challenge for EA and PM integration, which must
+be systemic to achieve interoperability between project and organization [23]. There must
+also be integration and collaboration between project managers and EA to achieve better
+coupling of solutions with the organization [121]. Thus, training of project managers and
+architects is a concern in this cluster.
+PM needs to be filled through the application of EA in the selected articles were iden-
+tified and mapped through co-occurrence, as shown in Figure 15.
+Figure 14. Challenges identified for future research and co-occurrence mapping of findings.
+The yellow cluster (5) reflects the challenge for EA and PM integration, which must
+be systemic to achieve interoperability between project and organization [23]. There must
+also be integration and collaboration between project managers and EA to achieve better
+coupling of solutions with the organization [121]. Thus, training of project managers and
+architects is a concern in this cluster.
+PM needs to be filled through the application of EA in the selected articles were
+identified and mapped through co-occurrence, as shown in Figure 15.
+Sustainability 2022, 14, x FOR PEER REVIEW 20 of 27
+Figure 15. Co-occurrence map of needs identified in selected articles.
+Figure 15 shows that EA application needs consist of five clusters. The green cluster
+(1) considers business and project alignment, the most heavily weighted EA application.
+In developing internal projects, requirements and outcomes must be aligned and inte-
+grated with the organization for successful achievement of business goals through the
+project [121]. EA provides the resources and tools to translate strategy and project objec-
+tives into daily operations [93]. In the green cluster, the use of EA is identified for improv-
+ing PM practices [57] and PM maturity [107], reflecting that EA promotes organizational
+Figure 15. Co-occurrence map of needs identified in selected articles.
+Figure 15 shows that EA application needs consist of five clusters. The green cluster
+(1) considers business and project alignment, the most heavily weighted EA application. In
+developing internal projects, requirements and outcomes must be aligned and integrated
+
+--- PAGE 19 ---
+Sustainability 2022, 14, 9801 19 of 25
+with the organization for successful achievement of business goals through the project [121].
+EA provides the resources and tools to translate strategy and project objectives into daily
+operations [93]. In the green cluster, the use of EA is identified for improving PM prac-
+tices [57] and PM maturity [107], reflecting that EA promotes organizational maturity to
+complete projects and improve performance [106].
+The second most heavily weighted cluster is purple (2) in Figure 15. This cluster
+contains a study about how project development affects an existing EA. This concern was
+addressed by Foorthuis [44–47], who proposed a framework for coupling a local project to
+the EA, known as the Project Conformance Framework (PCF) [45] to achieve conformance
+between the project and the EA, considering all of their components, including artifacts,
+relationships, and processes.
+Application of EA (3) to establish project policies is the third most heavily weighted
+cluster (yellow) in Figure 15. This concern is related to the use of EA for project governance,
+reflecting the organizational need for a decision-making and management framework with
+transparency, accountability, and well-defined roles [122]. EA provides tools for establish-
+ing policies and governance statements for managing projects and their relationship to
+the organization.
+The blue cluster (4) connects the need to use EA to automate PM activities and manage
+project complexity. Some projects are developed by combining different organizational com-
+ponents, creatinganorganizationalchallengeinmanagingcomplexenvironments [117,123].
+EA helps to reduce and manage project complexity with detailed understanding and dis-
+cretization of organizational and project components and their relationships [60]. Au-
+tomation of PM activities goes hand-in-hand with complexity management. Using PM
+automation tools such as PMIS makes PM tasks more sustainable, allows for better decision-
+making, and increases the chances of project success [99].
+The red cluster (5) indicates the use of EA for the reuse of organizational components
+and knowledge, managing communication problems, and connecting EA with Agile. This
+cluster reflects the dynamism that organizations face today, with market changes and
+constant reconfiguration [102]. Organizational sustainability requires a representative
+architecture to sustain business decisions and transformation projects to maintain market
+competitiveness [92]. Agile methods have been used for projects with significant adherence
+in rapidly changing environments [124]. Thus, this cluster indicates researcher concern in
+using EA and the Agile approach for organizational transformation. Combining EA and
+Agile is a challenge. Agile allows flexibility, and EA provides consistency and long-term
+focus. These benefits sometimes oppose each other [40].
+Finally and regarding the research questions, in response to RQ1, ‘What are the current
+state and the key dimensions of EA approaches for PM?’, it was found that the key dimensions in
+applying EA in the PM domain are focused on the business layer. The process perspective
+facilitates application of PM practices, mainly in early research stages. The use of EA as a
+tool for project governance is also visualized. In different types of projects in the articles,
+the need for aligning projects, artifacts, and products with the layers of technology and
+infrastructure of the organization at the strategic level is highlighted. Most of the referred
+projects were related to IT.
+In response to RQ2, ‘What are the current state and the key dimensions of EA approaches for
+PBO design?’, the main finding was that there are no explicit applications of EA. However,
+it can be inferred that organizations classifiable as PBOs were considered, with the AEC
+industry appearing in five articles. The application of EA layers has gained research
+interest in this industry, relieving the need for coordination between different actors in
+AEC projects. For instance, one case in the AEC industry identified connections between
+structural engineering and architecture specialties. Such specialties must be properly
+integrated to achieve the project objectives [57]. EA was positioned as an alternative
+solution.
+In response to RQ3, ‘What are the tendencies of using frameworks in the application of
+EA in PM and PBO?’, some trends have been identified in PM and EA frameworks. The
+
+--- PAGE 20 ---
+Sustainability 2022, 14, 9801 20 of 25
+main PM framework in the selected articles was PMBOK, confirming its position as the
+most popular PM standard among researchers and professionals. From an architectural
+perspective, BPMN is the most-used modeling language (for processes) in the selected
+articles. ArchiMate is recognized as the most widely used EA language.
+Regarding the level of integration between EA, PM, and PBO domains, objects of
+RQ4, ‘What is the level of integration between the EA, PM, and PBO domains?’, 31 articles
+considered these domains from a holistic perspective. However, not all were integrated as
+such. Integration was concentrated between EA and PM domains for individual projects
+and portfolios. Of these articles, two stand out with a higher generalization level, relating
+to the FEAF–PMBOK and ArchiMate–PMBOK frameworks.
+In response to RQ5, ‘What are the main challenges in PM practices where EA is presented
+as an alternative solution?’, there were gaps filled by selected papers. The main PM need
+with the EA approach is alignment between projects and business. EA is considered a
+governance tool for management. Proper connection of projects and their outcomes with
+the organization is a concern highlighted in the articles.
+5. Conclusions
+A literature review was conducted analyzing bibliometric and content information
+through a systematic review. Of 516 articles found using a keyword group, 59 articles
+were selected for review. From a meta-based perspective, the works relating EA with
+PBO or PM domains date from 1996. Since 2005, there has been at least one article per
+year. An increasing trend was identified and 2021 produced the most articles. The selected
+works originated mainly from Asia, Europe, and North America, conference papers in
+most cases. The selected works were categorized in five clusters based on the analysis of
+co-occurrence of article keywords. EA, PM, and BPM were the most heavily weighted and
+connected clusters. Over time, this map reflects that in the early stages, PM used a process
+approach for displaying knowledge (PMBOK 1st–6th editions). It has been demonstrated
+that a business process approach produces better productivity, quality communication,
+collaboration, and more efficient information flows in projects. At present, the tools are
+disseminated in architectural components interconnected in a domain approach (PMBOK
+7th edition). PMBOK 7th edition [52] indicates the importance of systems thinking for PM
+knowledge, understanding, application, and emerging Agile approaches for flexible PM.
+Future research could focus on adding complexity to EA solution proposals for PM.
+However, the authors reported that automation tools must accompany this objective to
+facilitate design and analysis. Other challenges identified include the continuing study
+of EA and PM integration, which must be developed at a conceptual level and between
+people, such as project managers and enterprise architects. There is an understanding of
+the benefits of EA for project success, but authors report that sometimes EA adds rigidity.
+For this issue, Agile is considered an alternative solution, connecting the benefits of EA
+with the flexibility of Agile.
+EA has mostly been applied in IT. The origin of EA is related to IT. The Agile perspec-
+tive was born from the same field. It seems that the IT sector can anticipate behavior in
+other sectors, visualizing how industries such as AEC have historically conducted their
+projects using traditional PM approaches and original IT practices to improve their results.
+The world is becoming increasingly digital. Coexistence of people and technology is
+becoming more intense. Digital transformation is no longer the exclusive concern of the
+IT sector. Digitalization needs permeate all types of activities, organizations, and projects.
+Harmonious coexistence with technology as it becomes more complex requires systemic
+thinking to understand, manage, and improve it. As a management tool with a systemic
+perspective, EA is considered in different industries and seems to be a means of integrating
+organizations and developing projects in the digital era.
+This study is expected to contribute to researchers and practitioners systemically
+considering EA and PM domains and demonstrate the value of using EA in project man-
+agement. From a practical perspective, this article indicates trends such as concerns in
+
+--- PAGE 21 ---
+Sustainability 2022, 14, 9801 21 of 25
+using EA and the need for collaboration between project managers and architects. From a
+research perspective, this article demonstrates that EA is connected to the digital transfor-
+mation trend and that further development is required to improve the use of EA in more
+complex environments.
+Application in the PBO domain is still a challenge and future research should consider
+the architecture that characterizes this type of organization.
+Author Contributions: Conceptualization, E.A. and G.B.; methodology, E.A. and G.B.; software, E.A.;
+formal analysis, E.A. and G.B.; writing—original draft preparation E.A.; writing—review and editing,
+E.A., G.B. and M.M.; visualization, E.A., G.B. and M.M.; supervision, G.B. and M.M. All authors have
+read and agreed to the published version of the manuscript.
+Funding: This research received no external funding.
+Institutional Review Board Statement: Not applicable.
+Informed Consent Statement: Not applicable.
+Data Availability Statement: Not applicable.
+Acknowledgments: The authors wish to thank the School of Industrial Engineering and Civil
+Engineering of the Pontificia Universidad Católica de Valparaíso (Chile), where the research was
+started and also, to the Department of Management, Economics, and Industrial Engineering of the
+Politecnico di Milano where this paper was finished.
+Conflicts of Interest: The authors declare no conflict of interest.
+References
+1. Lundin, R.A.; Söderholm, A. A theory of the temporary organization. Scand. J. Manag. 1995, 11, 437–455. [CrossRef]
+2. Wawak, S.; Woźniak, K. Evolution of project management studies in the XXI century. Int. J. Manag. Proj. Bus. 2020, 13, 867–888.
+[CrossRef]
+3. Fernandes, G.; Ward, S.; Araújo, M. Improving and embedding project management practice in organisations—A qualitative
+study. Int. J. Proj. Manag. 2015, 33, 1052–1067. [CrossRef]
+4. Miterev, M.; Mancini, M.; Turner, R. Towards a design for the project-based organization. Int. J. Proj. Manag. 2017, 35, 479–491.
+[CrossRef]
+5. Turner, R.; Miterev, M. The organizational design of the project-based organization. Proj. Manag. J. 2019, 50, 487–498. [CrossRef]
+6. Puranam, P.; Alexy, O.; Reitzig, M. What’s “new” about new forms of organizing? Acad. Manag. Rev. 2014, 39, 162–180. [CrossRef]
+7. Huemann, M. Benchmarking the PM-competence of project-oriented organistions. In Proceedings of the IPMA World Conference
+London, London, UK, 22–25 May 2000.
+8. Miterev, M.; Turner, J.R.; Mancini, M. The organization design perspective on the project-based organization: A structured review.
+Int. J. Manag. Proj. Bus. 2017, 10, 527–549. [CrossRef]
+9. Galbraith, J. Designing Your Organization; Bass, J., Ed.; Wiley: Hoboken, NJ, USA, 2007; ISBN 9780787994945.
+10. Aler, S.; Riege, C.; Winter, R. Enterprise architecture—Literature overview and current practices. Wirtschaftsinformatik 2008, 50,
+292–304. [CrossRef]
+11. Gorkhali, A.; Xu, L. Da Enterprise architecture, enterprise information systems and enterprise integration: A review based on
+systems theory perspective. J. Ind. Integr. Manag. 2019, 4, 1950001. [CrossRef]
+12. Tao, Z.G.; Luo, Y.F.; Chen, C.X.; Wang, M.Z.; Ni, F. Enterprise application architecture development based on DoDAF and TOGAF.
+Enterp. Inf. Syst. 2017, 11, 627–651. [CrossRef]
+13. Lankhorst, M. Enterprise Architecture at Work, 4th ed.; Springer: Berlin, Germany, 2009; ISBN 9783662539323.
+14. Kotusev, S. Enterprise architecture and enterprise architecture artifacts: Questioning the old concept in light of new findings. J.
+Inf. Technol. 2019, 34, 102–128. [CrossRef]
+15. Al-Kharusi, H.; Miskon, S.; Bahari, M. Enterprise architecture development approach in the public sector. Int. J. Enterp. Inf. Syst.
+2018, 14, 124–141. [CrossRef]
+16. Niemi, E.I.; Pekkola, S. Enterprise architecture benefit realization: Review of the models and a case study of a public organization.
+Tamp. Univ. Technol. 2016, 47, 55–80.
+17. Iyamu, T. Understanding the complexities of enterprise architecture through structuration theory. J. Comput. Inf. Syst. 2019, 59,
+287–295. [CrossRef]
+18. Shanks, G.; Gloet, M.; Asadi Someh, I.; Frampton, K.; Tamm, T. Achieving benefits with enterprise architecture. J. Strateg. Inf. Syst.
+2018, 27, 139–156. [CrossRef]
+19. Perez-Castillo, R.; Ruiz, F.; Piattini, M.; Ebert, C. Enterprise architecture. IEEE Softw. 2019, 36, 12–19. [CrossRef]
+
+--- PAGE 22 ---
+Sustainability 2022, 14, 9801 22 of 25
+20. Masuda, Y.; Zimmermann, A.; Bass, M.; Nakamura, O.; Shirasaka, S.; Yamamoto, S. Adaptive enterprise architecture process for
+global companies in a digital IT era. Int. J. Enterp. Inf. Syst. 2021, 17, 21–43. [CrossRef]
+21. Kutnjak, A. Covid-19 accelerates digital transformation in industries: Challenges, issues, barriers and problems in transformation.
+IEEE Access 2021, 9, 79373–79388. [CrossRef]
+22. Lapalme, J.; Gerber, A.; Van Der Merwe, A.; Zachman, J.; De Vries, M.; Hinkelmann, K. Exploring the future of enterprise
+architecture: A Zachman perspective. Comput. Ind. 2016, 79, 103–113. [CrossRef]
+23. Sousa, P.; Lima, J.; Sampaio, A.; Pereira, C. An approach for creating and managing enterprise blueprints: A case for IT blueprints.
+In Advances in Enterprise Engineering III: 5th International Workshop, CIAO! 2009, and 5th International Workshop, EOMAS 2009, held
+at CAiSE 2009, Amsterdam, The Netherlands, 8–9 June 2009.; Albani, A., Barjis, J., Dietz, J.L.G., Eds.; Springer: Amsterdam, The
+Netherlands, 2009; pp. 70–84.
+24. Donthu, N.; Kumar, S.; Mukherjee, D.; Pandey, N.; Marc, W. How to conduct a bibliometric analysis: An overview and guidelines.
+J. Bus. Res. 2021, 133, 285–296. [CrossRef]
+25. The Open Group The ArchiMate®Specification. Available online: https://www.opengroup.org/archimate-home (accessed on
+7 June 2022).
+26. Galaz-Delgado, E.I.; Herrera, R.F.; Atencio, E.; La Rivera, F.M.; Biotto, C.N. Problems and challenges in the interactions of design
+teams of construction projects: A bibliometric study. Buildings 2021, 11, 461. [CrossRef]
+27. Houy, C.; Fettke, P.; Loos, P.; Houy, C.; Fettke, P.; Loos, P. Empirical research in business process management – analysis of an
+emerging field of research. Bus. Process Manag. J. 2011. [CrossRef]
+28. Gonzalez-Lopez, F.; Bustos, G. Integration of business process architectures within enterprise architecture approaches: A literature
+review. EMJ—Eng. Manag. J. 2019, 31, 127–140. [CrossRef]
+29. Cobo, M.J.; López-Herrera, A.G.; Herrera-Viedma, E.; Herrera, F. Science mapping software tools: Review, analysis, and
+cooperative study among tools. J. Am. Soc. Inf. Sci. Technol. 2011, 62, 1382–1402. [CrossRef]
+30. van Eck, N.J.; Waltman, L. Software survey: VOSviewer, a computer program for bibliometric mapping. Scientometrics 2010, 84,
+523–538. [CrossRef]
+31. Clarke, V.; Braun, V. Thematic analysis. J. Posit. Psychol. 2017, 12, 297–298. [CrossRef]
+32. Yin, X.; Liu, H.; Chen, Y.; Al-Hussein, M. Building information modelling for off-site construction: Review and future directions.
+Autom. Constr. 2019, 101, 72–91. [CrossRef]
+33. Gonzalez-Lopez, F.; Bustos, G. Business process architecture design methodologies—A literature review. Bus. Process. Manag. J.
+2019, 25, 1317–1334. [CrossRef]
+34. Shih, H.M.; Tseng, M.M. Workflow technology-based monitoring and control for business process and project management. Int. J.
+Proj. Manag. 1996, 14, 373–378. [CrossRef]
+35. Van Eck, N.J.; Waltman, L. VOSviewer Manual; VOS Viewer: Leiden, The Netherlands, 2021.
+36. Fitsilis, P.; Gerogiannis, V.; Anthopoulos, L. Ontologies for Software Project Management: A Review. J. Softw. Eng. Appl. 2014, 7,
+1096–1110. [CrossRef]
+37. Buchalcevova, A. Using ArchiMate to model ISO/IEC 29110 standard for very small entities. Comput. Stand. Interfaces 2019, 65,
+103–121. [CrossRef]
+38. Kotusev, S. TOGAF-based enterprise architecture practice: An exploratory case study. Commun. Assoc. Inf. Syst. 2018, 43, 321–359.
+[CrossRef]
+39. Papatheocharous, E.; Andreou, A.S. Empirical evidence and state of practice of software agile teams. J. Softw. Evol. Process. 2014,
+26, 855–866. [CrossRef]
+40. Van Wessel, R.M.; Kroon, P.; de Vries, H.J. Scaling Agile Company-Wide: The Organizational Challenge of Combining Agile-
+Scaling Frameworks and Enterprise Architecture in Service Companies. IEEE Trans. Eng. Manag. 2021, 1–21. [CrossRef]
+41. Ragin-Skorecka, K. Agile Enterprise: A Human Factors Perspective. Hum. Factors Ergon. Manuf. 2016, 26, 5–15. [CrossRef]
+42. PMI. A Guide to the Project Management. Body of Knowledege, 6th ed.; The University of Pennsylvania Press: Philadelphia, PA,
+USA, 2017.
+43. Comisión Europea. Metodología de Gestión de Proyectos; Publicaciones de la UE: Brussels, Luxemburg, 2021; ISBN 9789276313816.
+44. Foorthuis, R.; Brinkkemper, S. Best practices for business and systems analysis in projects conforming to enterprise architecture.
+Int. J. Enterp. Model. Inf. Syst. Archit. 2008, 3, 36–47.
+45. Foorthuis, R.; Brinkkemper, S.; Bos, R. An artifact model for projects conforming to Enterprise Architecture. Lect. Notes Bus. Inf.
+Process. 2008, 15, 30–46. [CrossRef]
+46. Foorthuis, R.; Brinkkemper, S. A framework for local project architecture in the context of enterprise architecture. J. Enterp. Archit.
+2007, 3, 51–63.
+47. Foorthuis, R. Project Compliance with Enterprise Architecture; Utrecht University: Utrecht, The Netherlands, 2014.
+48. Derakhshan, R.; Turner, R.; Mancini, M. Project governance and stakeholders: A literature review. Int. J. Proj. Manag. 2019, 37,
+98–116. [CrossRef]
+49. Turner, R. How Does Governance Influence Decision Making on Projects and in Project—Based Organizations ? White Rose University
+Press: York, UK, 2020.
+50. Stumpe, F.; Katina, P.F. A cybernetic ontology for project management. Int. J. Syst. Syst. Eng. 2017, 8, 42–73. [CrossRef]
+
+--- PAGE 23 ---
+Sustainability 2022, 14, 9801 23 of 25
+51. Cordeiro, G.; Vasconcelos, A.; Fragoso, B. Project, program, portfolio governance model reference architecture in the classic
+approach to project management. In Proceedings of the ICEIS 2020—22nd International Conference on Enterprise Information
+Systems, Prague, Czechia, 5–7 May 2020; pp. 619–630.
+52. PMI. A Guide to the Project Management Body of Knowledge (PMBOK®Guide), 7th ed.; Project Management Institute: Newtown
+Square, PA, USA, 2021.
+53. Cordeiro, G.; Vasconcelos, A.; Fragoso, B. Reference Architecture for Project, Program and Portfolio Governance; Springer: Cham,
+Switzerland, 2021; pp. 804–832.
+54. Peng, W.-L.; Lu, R.; Liu, Z. Process management of product design projects and its realization. Jisuanji Jicheng Zhizao Xi-
+tong/Computer Integr. Manuf. Syst. 2008, 14, 89–95.
+55. Cui, W.; Meng, X.; Liu, S. A Service-Oriented Architecture of Virtual Enterprise for Manufacturing Industry. In Proceedings of the
+2010 14th International Conference on Computer Supported Cooperative Work in Design, Shanghai, China, 14–16 April 2010.
+56. Kluska, R.A.; Lima, E.P. De Correlation process in content analysis for a BPM modeling project. In Proceedings of the 22nd
+International Conference on Production Research, Paraná, Brazil, 28 July–1 August 2013.
+57. Aquere, A.L.; Lima, R.M. Project management: Integrating architecture and structural engineering design processes. In Proceed-
+ings of the First International Conference on Structures and Architecture (ICSA 2010), Guimaraes, Portugal, 21-23 July 2010; CRC
+Press: Boca Raton, FL, USA, 2010.
+58. Lückmann, P.; Feldmann, C.; Lückmann, P.; Feldmann, C. Success Factors for Business Process Improvement Projects in Small
+and Medium Sized Enterprises—Empirical Evidence. Procedia Comput. Sci. 2017, 121, 439–445. [CrossRef]
+59. Zur Muehlen, M.; Ho, D.T. Risk Management in the BPM Lifecycle. In Proceedings of the Lecture Notes in Computer Science; Springer:
+Berlin, Germany, 2005.
+60. Browning, T.R. Managing complex project process models with a process architecture framework. Int. J. Proj. Manag. 2014, 32,
+229–241. [CrossRef]
+61. Wuliang, P. A Project Management System for Product Development. In Proceedings of the Proceedings—3rd International
+Symposium on Information Processing, Berkeley, CA, USA, 26–27 April 2004; pp. 78–82.
+62. Enrique, J.; Alarc, A.C. Alternative Interoperability Between BPMn and Project Management Tools. In Proceedings of the 13th
+International Conference, KMO 2018, Žilina, Slovakia, 6–10 August 2018. [CrossRef]
+63. Costa do Carmo, W.; Bessa Albuquerque, A. Project Management suported by Business Process Management: A Case Study in a
+Brazilian Justice Organization Welkey. In Proceedings of the 2014 9th International Conference on the Quality of Information and
+Communications Technology Project, Guimaraes, Portugal, 23–26 September 2014.
+64. Jallow, A.K.; Demian, P.; Anumba, C.J.; Baldwin, A.N. An enterprise architecture framework for electronic requirements
+information management. Int. J. Inf. Manag. 2017, 37, 455–472. [CrossRef]
+65. Peng, W.; Lu, R.; Wang, C. An enterprise-wide project quality management system in manufacturing industry. IFIP Int. Fed. Inf.
+Process. 2008, 255, 1335–1346. [CrossRef]
+66. Menzel, K.; Keller, M. Distributed model management for collaborative networks in AEC. IFIP Int. Fed. Inf. Process. 2006, 224,
+245–252.
+67. Anajafi, F. Developing effective Project Management for Enterprise architecture projects. In Proceedings of the 2010 2nd
+International Conference on Software Technology and Engineering, San Juan, PR, USA, 3–5 October 2010.
+68. Gellweiler, C. Connecting enterprise architecture and project portfolio management: A review and a model for IT project
+alignment. Int. J. Inf. Technol. Proj. Manag. 2020, 11, 99–114. [CrossRef]
+69. Zarour, K.; Benmerzoug, D.; Guermouche, N.; Drira, K. A systematic literature review on BPMN extensions. Bus. Process. Manag.
+J. 2019, 26, 1473–1503. [CrossRef]
+70. Conforto, E.C.; Amaral, D.C.; da Silva, S.L.; Di Felippo, A.; Kamikawachi, D.S.L. The agility construct on project management
+theory. Int. J. Proj. Manag. 2016, 34, 660–674. [CrossRef]
+71. Zachman, J.A. A framework for information systems architecture. IBM Syst. J. 1999, 38, 454–470. [CrossRef]
+72. The Open Group. The TOGAF Standard—Version 9.2; British Computer Society: Singapore, 2018.
+73. Salwin, M.; Jacyna-Gołda, I.; Kraslawski, A.; Waszkiewicz, A.E. The use of business model canvas in the design and classification
+of product-service systems design methods. Sustainability 2022, 14, 4283. [CrossRef]
+74. Preview, T.S. Project, Programme and Portfolio Management—Guidance on Governance; International Organization for Standardization:
+Geneva, Switzerland, 2017; Volume 2017, pp. 1–20. ISBN 978 0 580 86828.
+75. Group, I. PRINCE: PRoject IN Controlled Environments. Available online: https://www.prince2.com/uk/prince2-methodology
+(accessed on 8 June 2022).
+76. Hammer, M. The process audit. Harv. Bus. Rev. 2007, 85, 111. [PubMed]
+77. Dave, B. Business process management—A construction case study. Constr. Innov. 2017, 17, 50–67. [CrossRef]
+78. Jiménez, V.; Afonso, P.; Fernandes, G. Using agile project management in the design and implementation of activity-based costing
+systems. Sustainability 2020, 12, 10352. [CrossRef]
+79. APQC APQC Process classification framework (PCF). Available online: https://www.apqc.org/resource-library/resource-
+listing/apqc-process-classification-framework-pcf-cross-industry-excel-10 (accessed on 8 June 2022).
+80. European Comission. PM2 Project Management Standard; Publications Office of the European Union: Luxembourg; Brussel,
+Belgium, 2021; ISBN 978-92-76-31380-9.
+
+--- PAGE 24 ---
+Sustainability 2022, 14, 9801 24 of 25
+81. Solana-González, P.; Vanti, A.A.; García Lorenzo, M.M.; Bello Pérez, R.E. Data mining to assess organizational transparency across
+technology processes: An approach from it governance and knowledge management. Sustainability 2021, 13, 10130. [CrossRef]
+82. ISACA. A Business Framework for the Governance and Management of Enterprise IT, 5th ed.; ISACA: Rolling Meadows, IL, USA, 2012;
+ISBN 9781604202373.
+83. US Federal Government. The Common Approach to Federal Enterprise Architecture, 1st ed.; US Federal Government: Washington,
+DC, USA, 2012.
+84. CIO. Federal Enterprise Architecture Framework, 2nd ed.; US Federal Government: Washington, DC, USA, 2013; ISBN 10580530.
+85. OMG. OMG Systems Modeling Language (SysML); OMG: Needham, MA, USA, 2019.
+86. Falcone, D.; Di Bona, G.; Silvestri, A.; Forcina, A.; Belfiore, G.; Petrillo, A. An integrated model for an advanced production
+process—Agile Re-engineering Project Management. IFAC-PapersOnLine 2018, 51, 1630–1635. [CrossRef]
+87. Costa, L.; Barbosa, M.B.A.; Baldam, R.D.L.; Coelho, T.D.P., Jr. Challenges of process modeling in architecture and engineering to
+execute projects and public works. J. Constr. Eng. Manag. 2019, 145, 05018015. [CrossRef]
+88. Saragih, L.R.; Dachyar, M.; Zagloel, T.Y.M. Implementation of telecommunications cross-industry collaboration through agile
+project management. Heliyon 2021, 7, e07013. [CrossRef]
+89. Branch, S.DesigningEnterpriseOperatingSystemwithPRINCE2Framework. InProceedingsofthe2010InternationalConference
+on Computer and Communication Technologies in Agriculture Engineering, Chengdu, China, 12–13 June 2010.
+90. Ireland, V. Some neglected variables in construction management research contributing to a competitive advantage research
+approach. In Proceedings of the CME 2007 Conference—Construction Management and Economics: “Past, Present and Future”,
+Reading, UK, 16–18 July 2007; pp. 837–851.
+91. Rojas, L.M.; Llamosa, R. Processes of Organizational Leadership in Enterprise Architectures. UIS Ing. 2016, 15, 52–59. [CrossRef]
+92. Werewka, J. Developing Conformance Between Project Management and Enterprise Architecture Governance on the Basis of
+a PMBOK Case. In Proceedings of the International Conference on Information Systems Architecture and Technology, NYSA,
+Poland, 16–18 September 2018. [CrossRef]
+93. Sousa, P.; Carvalho, M. Dynamic Organization’s Representation. Linking Project Management with Enterprise Architecture. 2018, 2,
+170–174. [CrossRef]
+94. Costa, J.; Vasconcelos, A.; Fragoso, B. An enterprise architecture approach for assessing the alignment between projects and goals.
+Int. J. Inf. Technol. Proj. Manag. 2020, 11, 55–76. [CrossRef]
+95. Quartel, D.; Steen, M.W.A.; Lankhorst, M.M. Application and project portfolio valuation using enterprise architecture and
+business requirements modelling. Enterp. Inf. Syst. 2012, 6, 189–213. [CrossRef]
+96. Ilyin, I.V.; Grigoreva, A.A.; Zapivakhin, I.M. Architectural Solution as a tool for planning and approval of changes in projects for
+information systems implementation and customization. Bus. Inform. 2017, 2, 68–78. [CrossRef]
+97. Sobieraj, J.; Metelski, D.; Nowak, P. PMBoK vs. PRINCE2 in the context of Polish construction projects: Structural equation
+modelling approach. Arch. Civ. Eng. 2021, 67, 551–579. [CrossRef]
+98. Felipe Sanchez-Arias, L.; Solarte-Pazos, L. The body of knowledge of the Project Managmenent Institute—PMBOK Guide, and
+the especifities of Project Management—A critical review. Innovar-Rev. Cienc. Adm. Y Soc. 2010, 20, 89–100.
+99. Choi, J.; Ha, M. Validation of project management information systems for industrial construction projects. J. Asian Archit. Build.
+Eng. 2021, 1–12. [CrossRef]
+100. Udokwu, C.; Norta, A.; Wenna, C. Designing a Collaborative Construction-Project Platform on Blockchain Technology for
+Transparency, Traceability, and Information Symmetry. In Proceedings of the 2021 2nd Asia service sciences and software
+engineering conference, Macau, Macao, 24–26 February 2021. [CrossRef]
+101. Benade, S.J.; Pretorius, L. System architecture and Enterprise Architecture: A Juxta Position? S. Afr. J. Ind. Eng. 2011, 23.
+[CrossRef]
+102. Zhou, L.; Weiwei, L. Research on the reconfiguration of product development project. In Proceedings of the Chinese Control and
+Decision Conference, Shandong, China; 2008; pp. 1679–1682.
+103. De Felice, F.; Petrillo, A.; Silvestri, A. Relocation of production processes towards low-cost countries through the project
+management & process reengineering performance model. Bus. Process. Manag. J. 2015, 21, 379–402. [CrossRef]
+104. Alsaeedi, A.A.A.S.; Elabrashy, M.M.M.; Alzeyoudi, M.A.; Albadi, M.M.; Soni, S.; Isambertt, J.; Tripathi, D.; Shah, A. Big Data
+IAOM Project Management and Workflow Automation in a Giant Gas Field Digitization Drive. In Proceedings of the Abu Dhabi
+International Petroleum Exhibition & Conference, Society of Petroleum Engineers, Dallas, TX, USA, 17 November 2021.
+105. Wang, Z.; Wang, D.; Li, Q. Data Visualization on the Life Cycle of Science and Technology Projects. In Proceedings of the 2021
+IEEE 6th International Conference on Cloud Computing and Big Data Analytics (ICCCBDA), Chengdu, China, 24–26 April 2021.
+[CrossRef]
+106. Nalewaik, A.; Rose, C. An enterprise architecture approach to project optimization. AACE Int. Trans. 2012, 3, 1742–1752.
+107. Johnson, R.D. Project-based organizational maturity in architecture, engineering, and construction: A theoretical premise for
+practical purposes. In Developing Organizational Maturity for Effective Project Management; IGI Global: Hershey, PA, USA, 2018;
+pp. 55–77. [CrossRef]
+108. Ayyagari, M.R.; Atoum, I. CMMI-DEV Implementation Simplified A Spiral Software Model. Int. J. Adv. Comput. Sci. Appl. 2019,
+10, 445–450.
+
+--- PAGE 25 ---
+Sustainability 2022, 14, 9801 25 of 25
+109. Faraji, A.; Rashidi, M.; Perera, S.; Samali, B. Applicability-Compatibility Analysis of PMBOK Seventh Edition from the Perspective
+of the Construction Industry Distinctive Peculiarities. Buildings 2022, 12, 210. [CrossRef]
+110. Ubaid, A.M.; Dweiri, F.T. Business process management (BPM): Terminologies and methodologies unified. Int. J. Syst. Assur. Eng.
+Manag. 2020, 11, 1046–1064. [CrossRef]
+111. Masuda, Y.; Zimmermann, A.; Viswanathan, M.; Bass, M.; Nakamura, O.; Yamamoto, S. Adaptive enterprise architecture for the
+digital healthcare industry: A digital platform for drug development. Information 2021, 12, 67. [CrossRef]
+112. Julia, K.; Kurt, S. How Digital Transformation affects Enterprise Architecture Management—A case study. Int. J. Inf. Syst. Proj.
+Manag. 2018, 6, 5–18. [CrossRef]
+113. Muñoz-La Rivera, F.; Mora-Serrano, J.; Valero, I.; Oñate, E. Methodological-Technological Framework for Construction 4.0. Arch.
+Comput. Methods Eng. 2021, 28, 689–711. [CrossRef]
+114. Ait-Lamallam, S.; Yaagoubi, R.; Sebari, I.; Doukari, O. Extending the ifc standard to enable road operation and maintenance
+management through openbim. ISPRS Int. J. Geo-Inf. 2021, 10, 496. [CrossRef]
+115. Júnior, P.S.S.; Barcellos, M.P.; Falbo, R.D.A.; Almeida, J.P.A. From a Scrum Reference Ontology to the Integration of Applications
+for Data-Driven Software Development. Inf. Softw. Technol. 2021, 136, 106570. [CrossRef]
+116. Wang, D.; Li, Q.; Xu, C.; Wang, P.; Wang, Z. Research of Data Warehouse for Science and Technology Management System. In
+Proceedings of the 2021 International Conference on Service Science (ICSS), Xi’an, China, 14–16 May 2021. [CrossRef]
+117. Denicol, J.; Davies, A.; Pryke, S. The organisational architecture of megaprojects. Int. J. Proj. Manag. 2021, 39, 339–350. [CrossRef]
+118. Zhang, K.; Zhang, X. Research on the overall architecture design of project management information system based on SOA. In
+Proceedings of the 2021 International Conference on Service Science (ICSS), Dalian, China, 24–26 September 2021. [CrossRef]
+119. Wannes, A.; Ghannouchi, S.A. KPI-Based Approach for Business Process Improvement. Procedia Comput. Sci. 2019, 164, 265–270.
+[CrossRef]
+120. Madison, J. Agile and architecture Agile—Architecture Interactions. IEEE Softw. 2010, 27, 41–48. [CrossRef]
+121. Van der Merwe, A.P. Project management and business development: Integrating strategy, structure, processes and projects. Int.
+J. Proj. Manag. 2002, 20, 401–411. [CrossRef]
+122. Müller, R.; Pemsel, S.; Shao, J. Organizational enablers for project governance and governmentality in project-based organizations.
+Int. J. Proj. Manag. 2015, 33, 839–851. [CrossRef]
+123. Vaz-Serra, P.; Edwards, P.; Aranda-Mena, G. An early-stage project complexity assessment tool for the AEC industry. Constr.
+Innov. 2022, 22, 242–262. [CrossRef]
+124. Uludag, O.; Putta, A.; Paasivaara, M.; Matthes, F. Evolution of the Agile Scaling Frameworks. In Proceedings of the Agile
+Processes in Software Engineering and Extreme Programming (XP 2021), Virtual Event, 14–18 June 2022; Gregory, P., Lassenius,
+C., Wang, X., Kruchten, P., Eds.; Springer International Publishing: Cham, Switzerland, 2021; Volume 419, pp. 123–139.

@@ -1,0 +1,803 @@
+--- PAGE 1 ---
+Received: 1 May 2021
+-Revised: 15 December 2021
+-Accepted: 23 December 2021
+-IET Collaborative Intelligent Manufacturing
+DOI: 10.1049/cim2.12046
+ORIGINAL RESEARCH
+Applying a decision model based on multiple criteria decision
+making methods to evaluate the influence of digital
+transformation technologies on enterprise architecture principles
+Izabelle Hannemann1
+| Sarah Rodrigues1
+| Eduardo Loures1,2
+|
+Fernando Deschamps1,3
+| Jose Cestari3
+1
+Pontifical Catholic University of Paraná (PUCPR),
+Curitiba, Brazil
+2
+Federal University of Technology of Paraná
+(UTFPR), Curitiba, Brazil
+3
+Federal University of Paraná (UFPR), Curitiba,
+Brazil
+Correspondence
+Izabelle Hannemann, Pontifical Catholic University
+of Paraná (PUCPR), Curitiba, Brazil.
+Email: izabelle.freitas@pucpr.edu.br
+Abstract
+Organisations all over the world are going through the process of digital transformation
+(DT). Enterprise Architecture (EA) is a method and an organising principle that aligns
+the business's objectives and strategies with the Information Technology strategy and
+execution plan. EA provides a guide to direct the evolution and transformation of en-
+terprises with technology. The EA principles are one of the key concepts in the definition
+of EA; they assist in recognizing the organization vision and validating the outcomes.
+However, the lack of adequate instruments for assessing the current state and identifying
+opportunities for EA management procedures improvement often leave organisations
+unsure of where to begin improving their procedures. The aim of this paper is to help
+organisations identify these improvement opportunities. To do so, a decision model was
+developed to evaluate the influence DT technologies have on the EA principles proposed
+by The Open Group Architecture Framework (TOGAF). A literature review was con-
+ducted, and five main DT Technologies applied in the EA scope were identified. With
+that, a decisional model was created based on two decision‐making methods called
+Decision‐Making Trial and Evaluation Laboratory and PROMETHEE. The 21 archi-
+tecture principles proposed by TOGAF were evaluated and the influence the technolo-
+gies exercised on the principles were identified. As a result, Big Data and Cloud
+Computing technologies were indicated as having the greatest effect over the analysed
+principles, therefore concluding that when applied in the EA scope, these technologies
+can help organisations improve their EA procedures.
+K E Y WO R DS
+architecture principles, digital transformation, enterprise architecture, technologies, TOGAF
+1 | INTRODUCTION
+Organisations all over the world are going through the process
+of digital transformation (DT). According to Nightingale e
+Rhodes [1], enterprises are complex, highly integrated systems
+comprised of processes, organisations, information and sup-
+porting technologies, with multifaceted interdependencies and
+interrelationships across their boundaries. Understanding, en-
+gineering, and managing these complex social, technical, and
+infrastructure dimensions are critical in achieving and sus-
+taining enterprise performance [1]. To provide such support
+and attack the Business and Information Technology (IT)
+alignment problem, Enterprise Architecture (EA) has emerged.
+Taking a holistic approach, EA focusses not only on the
+technical aspects but also on the various aspects of the en-
+terprise upon which the IT systems operate [2].
+EA is a method and an organising principle that combines
+functional business objectives and strategies with an ITstrategy
+This is an open access article under the terms of the Creative Commons Attribution License, which permits use, distribution and reproduction in any medium, provided the original work is
+properly cited.
+© 2022 The Authors. IET Collaborative Intelligent Manufacturing published by John Wiley & Sons Ltd on behalf of The Institution of Engineering and Technology.
+IET Collab. Intell. Manuf. 2022;4:101–111. wileyonlinelibrary.com/journal/cim2
+-101
+
+--- PAGE 2 ---
+and execution plan. It provides a guide to direct the evolution
+and transformation of enterprises with technology, making IT,
+a more strategic asset to successfully implement a modern
+business strategy [3].
+According to Proença e Borbinha [4], the current EA
+literature shows a focus on refining existing methods and lacks
+attention towards the arising challenges of applying EA con-
+cepts to specific organizational environments. There are still no
+common adequate instruments for assessing the current state
+and identifying opportunities for improvement; consequently,
+many organisations are often unsure about where they should
+start improving their EA management procedures.
+Kempegowda e Chaczko [5] affirms that principles assist in
+obtaining the organization's vision and validating the out-
+comes. It gives the ability to the team to decide while executing
+the EA framework. It also provides Governance to verify and
+audit EA implementation. Principles are a key concept in the
+definition of EA [6]. It is critical for Enterprises to define
+Principles that will be referred by Architects on their day‐to‐
+day decision making [7].
+The main contribution of this paper is to help organisa-
+tions identify opportunities to improve their EA management
+procedures by proposing a decision model that evaluates the
+influence DT technologies have on the architecture principles
+proposed by The Open Group Architecture Framework
+(TOGAF). The first section contemplates the introduction and
+the research objectives. In the second section, the literature
+review conducted to identify the main DT technologies used in
+the field of EA is presented. The third section approaches the
+materials and methods applied in this research. The fourth
+section presents the results achieved by this research. Finally,
+the fifth section presents the conclusions and discussions of
+the results obtained.
+2 | LITERATURE REVIEW
+According to Xiao and Watson [8], a literature review is an
+essential feature of academic research. The knowledge
+advancement must be based on existing work. In reviewing the
+relevant literature, we understand the breadth and depth of the
+existing studies and identify gaps to be explored.
+A literature review was conducted to discover the main DT
+technologies applied to the scope of EA. The first step was to
+identify the keywords that would be used in the research. Axis
+1 contemplates words referring to the evaluation universe of
+the problem space while, Axis 2, includes words relevant to the
+second evaluation space. The keywords used in the research are
+presented in Table 1.
+Once the keywords were identified, the following research
+criteria were defined: (i) Papers limited to the last 5 years, from
+2016 to 2020; (ii) selection of papers available in the English
+language and (iii) exclusion of papers that do not include the
+author's name. A search using the defined keywords was per-
+formed in the SCOPUS database, generating a result of 1531
+articles. After applying the research criteria mentioned above,
+505 articles remained. Then a series of analyses were carried
+out and as a result, 32 articles remained. Table 2 includes the
+research criteria applied in the selection of papers.
+The 32 remaining articles were introduced in the NVivo
+software [9] and the word‐count tool was applied to determine
+the most mentioned technologies. As a result, the software
+generated a cluster analysis (Figure 1) of the most mentioned
+words.
+By analysing the results generated, five main technologies
+in the scope of I4.0 and EA were identified: Cloud Computing,
+Internet of Things (IoT), Artificial Intelligence (AI), Big Data
+and Cyber‐Physical systems (CPS). Table 3 includes the tech-
+nologies and their descriptions.
+3 | MATERIALS AND METHODS
+3.1 | Enterprise architecture (EA)
+An EA presents the structure of an enterprise and consists of
+the main enterprise components such as a company's goals,
+organizational structures, information infrastructure and busi-
+ness process. It helps the organization determine how it can
+effectively achieve its current and future goals. The perfor-
+mance of an enterprise, such as innovations generated within
+the company, the re‐engineering of business processes, and the
+quality and timeliness of information flow, can be improved if
+the EA system faithfully represents the characteristics and the
+nature of the organization [15]. According to Korhonen e
+Halén [16], EA has been suggested as a discipline to ensure a
+coherent structure, to make visible the underlying organiza-
+tional system, and to facilitate change.
+TABLE 1 Keywords
+Axes/boolean operator Keywords
+Axis 1 ‘Enterprise architecture’ OR ‘TOGAF’
+Boolean operator between
+the axis
+AND
+Axis 2 ‘Technologies’ OR ‘Digital transformation
+technologies’
+TABLE 2 Research criteria
+Research criteria Number of papers
+Limited to the last 5 years, that is,
+2020, 2019, 2018, 2017 and 2016.
+557
+Limited to the English language. 540
+Exclusion of articles that do not have
+the author's name.
+505
+Title analyses 89
+Abstract analyses 34
+Available articles 32
+102
+- HANNEMANN ET AL.
+25168398, 2022, 2, Downloaded from https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/cim2.12046 by Sã¤Chsische Landesbibliothek, Wiley Online Library on [07/07/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+--- PAGE 3 ---
+Currently, there are many EA frameworks that can be
+used by organisations or companies according to their
+needs. The four most widely used frameworks in the in-
+dustry today are the Zachman Framework, Gartner
+Framework, Federal Enterprise Architecture Framework, and
+TOGAF [17].
+TOGAF is a comprehensive open EA standard that con-
+tains several components, amongst which, the Architecture
+Development Method (ADM) stands at its core. The ADM
+describes an iterative process for developing EA with the help
+of several phases (Preliminary phase, Architecture Vision,
+Business, Information systems, Technology, Opportunities and
+solutions, Migration planning, Implementation governance,
+Architecture change management, and Requirements
+management).
+Four architecture domains are covered by TOGAF: (a)
+Business architecture, (b) Data architecture, (c) Application
+architecture and (d) Technology architecture. These are
+commonly accepted as subsets of an overall EA [18]. The
+TOGAF framework, a standard of The Open Group, is a
+proven EA methodology and framework used by the world's
+leading organisations to improve business efficiency [19].
+The Zachman Framework for Enterprise Architecture
+published by John Zachman in 1987 is considered as one of
+the pioneers in this domain [20]. The Framework is based
+around the principles of classical architecture that establish a
+common vocabulary and set of perspectives for describing
+complex enterprise systems [21]. The Zachman Framework has
+six perspectives or views: Planner, Owner, Designer, Builder,
+Subcontractor, and User. The second dimension of the
+FIGURE 1 Cluster analyses
+HANNEMANN ET AL.
+- 103
+25168398, 2022, 2, Downloaded from https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/cim2.12046 by Sã¤Chsische Landesbibliothek, Wiley Online Library on [07/07/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+--- PAGE 4 ---
+Zachman's Framework deals with the six basic questions: what,
+how, where, who, when and why. The framework does not
+provide guidance on a sequence, process, or implementation,
+but rather focusses on ensuring that all views are well estab-
+lished, ensuring a complete system regardless of the order in
+which they were established [22].
+Gartner defines EA as a continuous process, which in-
+volves assessing the current architectural state, defining ob-
+jectives to build a future state, and managing the entire
+portfolio continuously during the process [23]. According
+to Gartner, EA is more of a strategy than an engineering
+discipline that is used to construct a consolidated view of
+the enterprise that aligns with the business needs of an orga-
+nization [24].
+3.2 | Enterprise architecture principles
+According to The Open Group (2011), ‘Architecture Principles
+define the underlying general rules and guidelines for the use
+and deployment of all IT resources and assets across the en-
+terprise. They reflect a level of consensus among the various
+elements of the enterprise and form the basis for making
+future IT decisions’.
+According to Kempegowda e Chaczko [5], principles assist
+in obtaining the organization's vision and validating the out-
+comes. It gives the team the ability to decide while executing
+the EA framework and provides governance to verify and audit
+EA implementation. With the significant increase of technol-
+ogies such as Cloud, Big Data, Social Media, Internet of
+Things, Robotic Process Automation, Analytics and so forth, it
+is critical to define Principles that are easy to understand, broad
+enough and practical to use [7]. Architecture principles are
+largely produced, accepted and valued, but not largely
+approved and effectively used by enterprise architects, de-
+signers, developers, CIOs and managers [25].
+The Open Group Architecture Framework (TOGAF),
+being an open standard free to use framework has showed
+wide acceptance in the organisations, for that matter, in this
+present work the 21 Principles defined by TOGAF were used
+to develop the decision model to evaluate the influence DT
+technologies have on the architecture principles proposed by
+TOGAF. The current version 9.2 released in 2018 contain the
+same principles in the version 9.0 released in 2009.
+3.3 | Digital transformation
+Digital Transformation is defined as ‘the use of technology to
+radically improve performance or reach of enterprises’ [26].
+Another well‐known definition of the term is that it ‘is ach-
+ieved when the digital usages, which have been developed
+enable innovation and creativity and stimulate significant
+changes within the professional or knowledge domain’ [27].
+The term Industry 4.0 (I4.0), also known as smart
+manufacturing, was first mentioned at the Hannover fair in
+2011. Lu [28] summarises industry 4.0 as an integrated,
+adapted, optimised, service‐oriented, and interoperable
+manufacturing process, which is correlated with algorithms, big
+data, and high technologies. It facilitates inter‐connection and
+computerisation into the traditional industry. According to
+Liao et al. [29], the modelling and virtualisation/visualization
+technologies have been the two most frequent enabling tech-
+nologies applied to support the realization of Industry 4.0. The
+goals of Industry 4.0 are to provide IT‐enabled customisation
+of manufactured products; to make automatic and flexible
+adaptation of the production chain; to track parts and prod-
+ucts; to facilitate communication among parts, products, and
+machines; to apply human‐machine interaction paradigms; to
+achieve IoT‐enabled production optimisation in smart fac-
+tories; and to provide new types of services and business
+models of interaction in the value chain.
+TABLE 3 Main technologies (alternatives)
+Technologies Definition
+Artificial intelligence (AI) Artificial intelligence (AI) is the science and engineering domain concerned with the theory and practice of
+developing systems that exhibit the characteristics we associate with intelligence in human behaviour [10].
+Big data Big data describes technologies that promise to fulfil a fundamental tenet of research in information systems,
+which is to provide the right information to the right receiver in the right volume and quality at the right
+time [11].
+Cloud computing Cloud computing is an evolving technology that is consistently generating impact in IT industry and
+academia. It performs all computational tasks over the internet by using virtualisation techniques and
+remains isolated from intricate vast hardware and software infrastructures [12].
+Cyber‐physical systems Cyber‐physical systems (CPS) are systems of collaborating computational entities, which are in intensive
+connection with the surrounding physical world and its on‐going processes, providing and using, at the
+same time, data‐accessing and data‐processing services available on the internet [13].
+Internet of things (IoT) IoT is a conceptual framework that leverages on the availability of heterogeneous devices and inter‐connection
+solutions as well as augmented physical objects providing a shared information base on the global scale, to
+support the design of applications involving both people and representations of objects at the same virtual
+level [14].
+104
+- HANNEMANN ET AL.
+25168398, 2022, 2, Downloaded from https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/cim2.12046 by Sã¤Chsische Landesbibliothek, Wiley Online Library on [07/07/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+--- PAGE 5 ---
+3.4 | Multi‐criteria decision‐making
+methods
+According to the International Society on Multiple Criteria
+Decision Making (MCDM), ‘MCDM is the study of methods
+and procedures by which concerns about multiple conflicting
+criteria can be formally incorporated into the management
+planning process’ [7]. According to Cestari et al. [30], an
+MCDM helps the decision makers in understanding his pref-
+erences (using criteria) to choose an adequate alternative or
+prioritise and ranking a set or alternatives. When structuring
+the decision‐making process, it is essential to understand the
+type of problems in which the decision is inserted. The type of
+problem will guide the choice of the multi‐criteria method to
+be used. With that said, two methods were appointed as the
+most suitable for this research context.
+One of the methods chosen for this research is the
+Decision‐Making Trial and Evaluation Laboratory (DEMA-
+TEL) methodology proposed by Gabus and Fontela in 1971.
+This method has been applied to demonstrate the in-
+terrelations among criteria and to find aspects/criteria that
+play central roles in the system to represent the effectiveness
+of them [31]. In general, the DEMATEL technique can
+determine direct, indirect, and interdependence among the
+unpredictable features or attributes [32]. The DEMATEL
+method was chosen because it identifies which attributes
+have the greatest influence on others as well as the attributes
+that are most influenced. The method is composed of six
+steps [33]:
+I) Gather experts' opinion and calculate the average
+matrix Z;
+II) Calculatethenormalisedinitialdirect‐relationmatrixD;
+III) Derive the total relation matrix T;
+IV) Calculate the sums of rows and columns of matrix T;
+V) Set a threshold value ðαÞ;
+VI) Build a cause‐and‐effect relationship diagram.
+The PROMETHEE (Preference Ranking Organization
+Method for Enrichment Evaluation) method was also selected
+for this research. It is a multiple‐criteria decision making
+method developed by Brans et al. [34 35]. This method was
+chosen because it is a straightforward ranking method in
+conception and application compared with other methods
+used for multiple‐criteria analysis. It is well adapted to prob-
+lems where a finite number of alternatives are to be ranked
+according to several, sometimes conflicting criteria [36]. The
+evaluation table is the starting point of the PROMETHEE
+method. In this table, the alternatives are evaluated on the
+different criteria. The implementation of PROMETHEE
+requires two additional types of information, namely: (1) In-
+formation on the relative importance that is the weights of the
+criteria considered. (2) Information on the decision‐maker's
+preference function, which he/she uses when comparing the
+contribution of the alternatives in terms of each separate
+criterion.
+3.5 | Decision model structuring process
+To develop a decision model to evaluate the influence DT
+technologies have on the architecture principles proposed by
+TOGAF, a process composed of three phases was structured
+(Figure 2). In the first phase, the main technologies in the
+context of EA were identified. In the second phase the
+DEMATEL method was used to carry out an influence ana-
+lyses of the EA principles. In the last phase the PROMETHEE
+method was applied to structure and evaluate the Decision
+Model. Each of the phases will be further detailed in the next
+section.
+3.5.1 | Definition of the main technologies in the
+context of enterprise architecture
+To identify the main technologies in the scope of EA, a liter-
+ature review was conducted and detailed in section 2 of this
+paper. Five main technologies in the scope of I4.0 and EA were
+identified: Cloud Computing, Internet of Things (IoT), AI, Big
+Data and CPS.
+3.5.2 | Enterprise architecture principles
+influence analyses
+The influence analysis of the EA Principles is grounded on the
+DEMATEL method. The method is composed of six steps
+[33] and in the first step an average matrix Z is elaborated.
+Enterprise Architecture experts evaluate the influence between
+the 21 architecture principles (Table 4) proposed by TOGAF.
+During the execution stage of this research the experts' opinion
+were gathered to calculate the average matrix Z, with that in-
+formation in hands, the other five following steps proposed by
+DEMATEL were executed.
+3.5.3 | Decision model evaluation
+The PROMETHEE method was used to carry out an
+assessment of the technologies, to determine those that have
+FIGURE 2 Decision model structuring process
+HANNEMANN ET AL.
+- 105
+25168398, 2022, 2, Downloaded from https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/cim2.12046 by Sã¤Chsische Landesbibliothek, Wiley Online Library on [07/07/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+--- PAGE 6 ---
+the greatest influence on each of the criteria. This com-
+parison between the technologies was performed using a
+preference function and a chosen weight for each criterion.
+The preference function adopted was the ‘Usual’ function.
+Regarding the weights, the PROMETHEE method requires
+that the weights should be non‐negative numbers. Since the
+resulting influence obtained by DEMATEL has positive and
+negative values, some adaptations were necessary to attend this
+requirement. The smallest value obtained in the DEMATEL
+method was −0.06665; therefore, this value was added to all
+the resulting influences obtained by each principle. This way, all
+values became positive, and it was possible to calculate the
+percentage of influence that each principle had. These values
+were used as the weights in PROMETHEE.
+The 21 architecture principles (Table 4) proposed by
+TOGAF were chosen as criteria for the evaluation, whereas
+the alternatives used were the technologies obtained by the
+literature review carried out in this research (Table 3). Such
+criteria and alternatives were chosen to elaborate a decision
+model to evaluate the DT technologies (Industry 4.0) that
+have the most impact on the architecture principles proposed
+by TOGAF.
+4 | RESULTS
+A decision model was elaborated to evaluate the influence DT
+technologies have on the architecture principles proposed by
+TOGAF. In the first stage of the model the main technologies
+in the scope of I4.0 and EA were identified.
+The second stage of the model was based in an MCDM
+method known as DEMATEL. The method allows observing
+which attributes have the greatest influence on others as well as
+the attributes that are most influenced. The first step of the
+method is to gather the experts' opinion and calculate the
+average matrix Z. The list of principles composes the lines and
+rows of the matrix; the structure is presented in Figure 3.
+During the execution stage of this research, meetings
+were conducted with three EA experts. All the interviewed
+TABLE 4 Architecture principles proposed by the open group
+architecture framework (TOGAF) (criteria)
+Number TOGAF architecture principles
+1 Primacy of principles
+2 Maximise benefit to the enterprise
+3 Information management is everybody's business
+4 Business continuity
+5 Common use applications
+6 Service orientation
+7 Compliance with law
+8 IT responsibility
+9 Protection of intellectual property
+10 Data is an asset
+11 Data is shared
+12 Data is accessible
+13 Data trustee
+14 Common vocabulary and data definitions
+15 Data security
+16 Technology independence
+17 Ease‐of‐use
+18 Requirements‐based change
+19 Responsive change management
+20 Control technical diversity
+21 Interoperability
+FIGURE 3 Influence analyses structure (decision‐making trial and evaluation laboratory [DEMATEL] method)
+106
+- HANNEMANN ET AL.
+25168398, 2022, 2, Downloaded from https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/cim2.12046 by Sã¤Chsische Landesbibliothek, Wiley Online Library on [07/07/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+--- PAGE 7 ---
+experts worked as enterprise architects in the IT depart-
+ment of an automotive company located in Brazil. Two of
+the experts are senior architects with more than 10 years
+of experience and one of the experts is a junior architect
+with more than 3 years of experience in the EA field.
+One of the experts interviewed has been working for the
+company for more than 15 years. The experts come
+from an engineering and information systems academic
+background.
+Each expert evaluated the influence between the 21 ar-
+chitecture principles. After gathering each expert's opinion, the
+average matrix Z was calculated. With that information in
+hands, the other five following steps proposed by DEMATEL
+were executed.
+One of the main results obtained by this research is the
+identification of influences. The calculations were performed
+and the influences resulting from each attribute were identified.
+The criterion that provides the most influence is ‘Data is an
+Asset’, followed by ‘IT Responsibility’, ‘Information Manage-
+ment is Everybody's Business’, ‘Compliance with Law’ and
+‘Maximise Benefit to the Enterprise’.
+Those who receive the most influences are ‘Business
+Continuity’ followed by ‘Common Vocabulary and Data Def-
+initions’, ‘Common Use Applications’, ‘Data Trustee’, and
+‘Protection of Intellectual Property’.
+The resulting influence obtained by each principle was
+calculated. The positive values shown in Table 5 identify the
+principles that cause influence. The negative values show the
+principles that receive influence, in other words, in the cause‐
+and‐effect relationship, these principles are affected.
+With this information in hand, the evaluation model was
+created in the VISUAL PROMETHEE software [37]. In
+addition to the attributes already mentioned, it was necessary
+to choose how the alternatives would be evaluated for each
+criterion. In the ‘Min/Max’ field, the Maximum was chosen,
+that is, the higher the performance of the alternative in that
+criterion, the greater the influence of that technology for it.
+The scale used in the evaluation was a qualitative 5‐point scale,
+varying in the following levels of influence: 0 (no influence), 1
+(low influence), 2 (medium influence), 3 (high influence) and 4
+(influence very high), respectively. The model structured in the
+software is shown in Figure 4.
+For each alternative, two indexes were calculated: the
+positive flow (Φ+), which represents how much a certain
+alternative is better than the others and the negative flow (Φ−),
+which expresses how much one alternative is surpassed by the
+others [38]. With the data application, the ‘Phi’ values were
+generated for each of the technologies through the software,
+that is, the positive and negative flow indexes and the total flow
+of each alternative were calculated (Figure 5).
+TABLE 5 Resulting effect (decision‐making trial and evaluation laboratory [DEMATEL] method)
+Attributes Effect given Effect received Resulting effect
+1 Primacy of principles 0.0425 0.0408 0.0017
+2 Maximise benefit to the enterprise 0.1318 0.1114 0.0204
+3 Information management is everybody's business 0.0789 0.0506 0.0283
+4 Business continuity 0.0158 0.0825 −0.0667
+5 Common use applications 0.0478 0.0676 −0.0198
+6 Service orientation 0.0903 0.0749 0.0154
+7 Compliance with law 0.0538 0.0265 0.0273
+8 IT responsibility 0.1083 0.0755 0.0328
+9 Protection of intellectual property 0.0416 0.0578 −0.0162
+10 Data is an asset 0.0987 0.0656 0.0330
+11 Data is shared 0.0750 0.0768 −0.0018
+12 Data is accessible 0.0751 0.0714 0.0037
+13 Data trustee 0.0346 0.0538 −0.0192
+14 Common vocabulary and data definitions 0.0489 0.0710 −0.0220
+15 Data security 0.0845 0.0738 0.0107
+16 Technology independence 0.0553 0.0685 −0.0132
+17 Ease‐of‐use 0.0233 0.0319 −0.0086
+18 Requirements‐based change 0.0425 0.0466 −0.0041
+19 Responsive change management 0.0424 0.0492 −0.0068
+20 Control technical diversity 0.0622 0.0608 0.0014
+21 Interoperability 0.0457 0.0419 0.0037
+HANNEMANN ET AL.
+- 107
+25168398, 2022, 2, Downloaded from https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/cim2.12046 by Sã¤Chsische Landesbibliothek, Wiley Online Library on [07/07/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+--- PAGE 8 ---
+Analysing the results, it is possible to identify that the total
+flow of Big Data, Cloud Computing and IoT is positive,
+whereas the flows of AI and CPS are negative. Figure 6 shows
+the resulting flow, based on PROMETHEE, promoting a
+graphical representation of the result obtained.
+By applying the decision model, it was possible to deter-
+mine the technologies with the greatest impact on TOGAF's
+architecture principles. The difference between the rankings of
+the two most influential technologies were very small; Big Data
+surpassed Cloud Computing only by 0.01. The flow values
+obtained by the technologies were 0.3225 for Big Data and
+0.3125 for Cloud Computing.
+In this extended version of the paper ‘Applying a
+Decision Model to Evaluate the Influence of DT Tech-
+nologies on TOGAF Architecture Principles’ [39], the
+DEMATEL method was approached to identify which ar-
+chitecture principles have the greatest influence on others.
+The values obtained served as weights for the PROM-
+ETHEE method; that way, the architecture principles that
+cause the most influence on other principles would have
+greater weights inputted on the PROMETHEE structure,
+causing a greater impact on the result of the final
+PROMETHEE ranking.
+The results obtained in the previous research [39] showed
+that both Cloud Computing and Big Data had a greater gap
+between the rankings. The flow values obtained by the tech-
+nologies were 0.3095 for Big Data and 0.2738 for Cloud
+Computing without the DEMATEL weights. Figure 7 shows
+the resulting flow obtained by PROMETHEE without taking
+into consideration the DEMATEL weights.
+It is possible to notice in Figure 7 that when the
+DEMATEL weights were not contemplated, there was a bigger
+difference between the flow values obtained by the two most
+influential technologies. In this scenario, Big Data surpasses
+Cloud Computing by 0.0357 in the ranking.
+5 | DISCUSSION
+A previous study [39] was conducted with the objective of
+helping organisations identify improvement opportunities for
+EA management procedures. The first part of the research [39]
+FIGURE 4 PROMETHEE method structure
+FIGURE 5 ‘Phi’ Values generated in
+PROMETHEE
+108
+- HANNEMANN ET AL.
+25168398, 2022, 2, Downloaded from https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/cim2.12046 by Sã¤Chsische Landesbibliothek, Wiley Online Library on [07/07/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+--- PAGE 9 ---
+identified the technologies that cause the greatest impact on
+TOGAF's architecture principles. The study did not contem-
+plate the DEMATEL method and the weights obtained by the
+method. The results acquired in the previous study showed
+that both Big Data and Cloud Computing have the highest
+positive flow, concluding that these technologies cause the
+greatest effect on the analysed principles.
+In this extended version of the paper [39] the preceding
+research was enhanced. The DEMATEL method was
+approached to enrich the assessment. The method compares
+the influence between each architecture principles and iden-
+tifies which principles have the greatest influence on others.
+The values obtained from the method served as weights for the
+PROMETHEE method; that way, the architecture principles
+that cause the most influence on other principles would have
+greater weights inputted on the PROMETHEE structure,
+causing a greater impact on the results.
+In this paper, both results obtained from the first and
+second part of the research were compared. When the
+DEMATEL weights were not contemplated, the gap between
+the flow values obtained by the two most influential technol-
+ogies was bigger. In this second part of the research where the
+DEMATEL weights are considered, Big Data and Cloud
+Computing have a smaller gap between the flows. Even though
+the final ranking did not change, it is possible to conclude that
+when the DEMATEL weights are considered, both technol-
+ogies cause similar influence on the analysed principles.
+These technologies have been highly addressed in the ac-
+ademic field and applied in organisations. According to Malik,
+Rashid and Wani [40], Cloud Computing eliminates the need to
+have a complete software and hardware infrastructure to meet
+customers' requirements and applications. With this, principles
+such as Common Use Applications; Technological Indepen-
+dence; Ease‐of‐Use; Technical Diversity Control, are directly
+impacted by using this technology.
+According to a study conducted by Chen and Zhang [41],
+the authors state that 51% of the companies assessed believe
+that Big Data can impact the increase in operational efficiency
+and that 36% of the associations assume that this technology
+can help non‐strategic direction of companies. Therefore, two
+main principles proposed by TOGAF are impacted: Maximise
+Benefits to the Enterprise; and Responsive Change Manage-
+ment. Big Data also deals with the principles that involve data
+management, such as Information Management is Everyone's
+Business; Data is an Asset; Data is Shared; Data is Accessible;
+Common Vocabulary and Data Definitions; and Data Security.
+6 | CONCLUSION
+To help organisations identify opportunities to improve their
+EA management procedures, this research proposes a decision
+model based on MCDM Methods to assess the impacts of DT
+technologies on the architecture principles proposed by
+TOGAF. To do so, initially a literature review was carried out
+to identify the main DT technologies used in the scope of EA.
+FIGURE 6 Results obtained by PROMETHEE with decision‐making
+trial and evaluation laboratory (DEMATEL) weights
+FIGURE 7 Results obtained by PROMETHEE without the decision‐
+making trial and evaluation laboratory (DEMATEL) weights
+HANNEMANN ET AL.
+- 109
+25168398, 2022, 2, Downloaded from https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/cim2.12046 by Sã¤Chsische Landesbibliothek, Wiley Online Library on [07/07/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+--- PAGE 10 ---
+The decision model was developed based on two multi‐
+criteria decision‐making methods: DEMATEL and PROM-
+ETHEE. Both methods help decision makers make more
+assertive choices, reducing risks and negative impacts that can
+affect the whole organization. The 21 architecture principles
+presented by TOGAF were defined as the criteria to be used in
+the assessment. In the previous research [39], the DEMATEL
+method was not proposed in the decision model; however, in
+this extended paper, the results obtained by the DEMATEL
+method were taken into consideration in the model. The re-
+sults were inputted as weights in the PROMETHEE structure.
+The model was applied and, as a result, Big Data and Cloud
+Computing technologies were pointed out as those that effect
+the most the analysed principles. Although the overall ranking
+did not change, there was a reduction in the gap between the
+flow values of the two most influential technologies.
+To improve the study carried out, it is proposed as a future
+research work, to detail the identified technologies. This will
+lead to a more assertive assessment and will assist in directing
+opportunities for the evolution and transformation of orga-
+nisations with technology.
+ACKNOWLEDGEMENT
+None.
+CONFLICT OF INTEREST
+The author declare no conflict of interest.
+DATA AVAILABILITY STATEMENT
+Author elects to not share data.
+ORCID
+Izabelle Hannemann https://orcid.org/0000-0002-2398-
+3340
+Sarah Rodrigues https://orcid.org/0000-0003-0042-886X
+Eduardo Loures https://orcid.org/0000-0002-1963-6186
+Fernando Deschamps https://orcid.org/0000-0002-5269-
+3721
+Jose Cestari https://orcid.org/0000-0002-6422-1609
+REFERENCES
+1. Nightingale, D., Rhodes, D.: Enterprise systems architecting: emerging
+art and science within engineering systems, pp. 1–12. MIT Engineering
+Systems Symposium (2004)
+2. Armour, F.J., Kaisler, S.H., Liu, S.Y.: Building an enterprise architecture
+step by step. IT PRO (1999)
+3. Ike, M., Obikwelu, O.: Enterprise architecture – a tool for business
+innovation realization in the enterprise. Int. J. Eng. Sci. 2(5), 26–29 (2013)
+4. Proenca, D., Borbinha, J.: Enterprise architecture: a maturity model based
+on TOGAFADM. Proc. ‐ 2017 IEEE 19th Conf. Bus. Inf., CBI 2017. 1,
+257–266 (2017)
+5. Kempegowda, S.M., Chaczko, Z.: The optimum number of principles
+ideal for enterprise architecture practice. 26th Int. Conf. Syst Eng.,
+ICSEng 2018 – Proc., 1–4 (2018)
+6. Esmaeilzadeh, M., Millar, G., Lewis, E.: Mapping the enterprise archi-
+tecture principles in TOGAF to the cybernetic concepts ‐ an exploratory
+study. Proc. Annual Hawaii Int. Conf. Syst. Sci., 4270–4276 (2012)
+7. ISMCDM. Internacional society on multiple criteria decision making
+(2015)
+8. Xiao, Y., Watson, M.: Guidance on conducting a systematic literature
+review. J. Plann. Educ. Res. 39(1), 93–112 (2017). https://doi.org/10.
+1177/0739456X17723971
+9. QSR International. http://www.qsrinternational.com (1997). Accessed 8
+Jun 2020
+10. Tecuci, G.: Artificial intelligence. Wiley Interdiscip. Rev.: Comput. Stat.
+4(2), 168–180 (2012)
+11. Schermann, M., et al.: An interdisciplinary opportunity for information
+systems research. Bus. Inf. Syst. Eng. 6(5), 261–266 (2014)
+12. Ahmad, I., Bakht, H., Mohan, U.: Cloud computing – a comprehensive
+definition. J. Comput. Manag. Stud. 1, 30–2017 (2017)
+13. Monostori, L., et al.: Cyber‐physical systems in manufacturing. CIRP
+Annals. 65(2), 621–641 (2016)
+14. Atzori, L., Iera, A., Morabito, G.: Understanding the internet of things:
+definition, potentials, and societal role of a fast evolving paradigm. Ad
+Hoc Netw. 56, 122–140 (2017)
+15. Xu, L.: Enterprise systems: state‐of‐the‐art and future trends. IEEE
+Trans. Ind. Inf. 7(4), 630–640 (2011)
+16. Korhonen, J.J., Halen, M.: Enterprise architecture for digital trans-
+formation. Proc. ‐ 2017 IEEE 19th Conf. Bus. Inf., CBI 2017. 1,
+349–358 (2017)
+17. Sessions, R.: A comparison of the top four enterprise‐architecture
+methodologies. https://msdn.microsoft.com/en‐us/library/bb466232.
+aspx (2007). Accessed 10 Apr 2020
+18. The Open Group. ArchiMate 3.0 specification. van Haren Publishing
+(2016)
+19. The Open Group. TOGAF version 9.1. van Haren Publishing (2011)
+20. Goethals, F.: An overview of enterprise architecture framework deliver-
+ables (2003). www.econ.kuleuven.ac.be/leerstoel/sap/FramesPage.htm
+21. Urbaczewski, L., Mrdalj, S.: A comparison of enterprise architecture
+frameworks. Iss. Inform. Syst. 7 (2006)
+22. Zachman, J.: A framework for information systems architecture. IBM
+Syst. J.
+23. Bittler, R., Kriezman, G.: Gartner enterprise architecture process: evo-
+lution (2005)
+24. Cameron, H., Mcmillan, E.: Analyzing the current trends in enterprise
+architecture frameworks. J. Entrep. Archit. 60–71 (2013)
+25. Paauwe, M.: Understanding architecture principles as working mecha-
+nism. Springer Nature Switzerland AG (2019)
+26. Westerman, G., et al.: Digital transformation: a roadmap for billion‐dollar
+organizations. MIT Center for Digital Business and Capgemini Consul-
+ting (2011)
+27. Martin, A.: Digital literacy and the digital society. In: Digital literacies:
+concepts, policies and practices, pp. 151–176. (2008)
+28. Lu, Y.: Industry 4.0: a survey on technologies, applications and open
+research issues. J. Ind. Inf. Integration. 6, 1–10 (2017)
+29. Liao, Y., et al.: Past, present and future of industry 4.0 ‐ a systematic
+literature review and research agenda proposal. Int. J. Prod. Res. 55(12),
+3609–3629 (2017)
+30. Cestari, J.M.A.P., et al.: A capability model for public administration
+interoperability. Enterprise Inf. Syst. (2019)
+31. Gabus, A., Fontela, E.: World problems an invitation to further thought
+within the framework of DEMATEL. Battelle Geneva Research Centre,
+Geneva (1972)
+32. Hori, S., Shimizu, Y.: Designing methods of human interface for su-
+pervisory control systems. Control Eng. Pract. 7(11), 1413–1419
+(1999)
+33. Sumrit, D., Anuntavoranich, P.: Using DEMATEL method to analyze the
+causal relations on technological innovation capability evaluation factors
+in Thai technology‐based firms. Int. Trans. J. Eng. Manag. Appl. Sci.
+Technol. 4(2), 81–103 (2013)
+34. Brans, J.P., Mareschal, B.: The PROMCALC & GAIA decision support
+system for multicriteria decision aid. Decis. Support Syst. 12(4–5),
+297–310 (1994)
+35. Brans, J.P., Vincke, P., Mareschal, B.: How to select and how to rank
+projects: the PROMETHEE method. Eur. J. Oper. Res. 24, 228–238
+(1986)
+110
+- HANNEMANN ET AL.
+25168398, 2022, 2, Downloaded from https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/cim2.12046 by Sã¤Chsische Landesbibliothek, Wiley Online Library on [07/07/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+--- PAGE 11 ---
+36. Albadvi, A., Chaharsooghi, S.K., Esfahanipour, A.: Decision making in
+stock trading: an application of PROMETHEE. Eur. J. Oper. Res. 177(2),
+673–683 (2007)
+37. V.P. Solutions. Visual PROMETHEE 1.4 – manual and help file. http://
+www.promethee‐gaia.net/files/VPManual.pdf (2013). Accessed 5 May
+2020
+38. Silva, V.B.S., Schramm, F., Carvalho, H.R.C.: O uso do método
+PROMETHEE para seleção de candidatos à bolsa‐formação do Pro-
+natec. Production. 24(3), 548–558 (2013)
+39. Hannemann, I., et al.: Applying a decision model to evaluate the influence
+of digital transformation technologies on TOGAFarchitecture principles.
+The International Conference of Production Research, ICPR – Americas,
+Bahía Blanca (2020)
+40. Malik, M.I., Rashid, A., Wani, S.H.: Cloud computing technologies. Int. J.
+Adv. Res. Comput. Sci. 9(2), 379–384 (2018)
+41. Chen, C.L.P., Zhang, C.Y.: Data‐intensive applications, challenges, tech-
+niques and technologies: a survey on big data. Inf. Sci. 275, 314–347
+(2014). https://doi.org/10.1016/j.ins.2014.01.015
+How to cite this article: Hannemann, I., et al.:
+Applying a decision model based on multiple criteria
+decision making methods to evaluate the influence of
+digital transformation technologies on enterprise
+architecture principles. IET Collab. Intell. Manuf. 4(2),
+101–111 (2022). https://doi.org/10.1049/cim2.12046
+HANNEMANN ET AL.
+- 111
+25168398, 2022, 2, Downloaded from https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/cim2.12046 by Sã¤Chsische Landesbibliothek, Wiley Online Library on [07/07/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License

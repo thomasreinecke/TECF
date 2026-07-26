@@ -1,0 +1,329 @@
+--- PAGE 1 ---
+MappingtheEnterprise
+Modeling the Enterprise
+as Services with Enterprise
+Canvas
+Tom Graves
+
+--- PAGE 2 ---
+MappingtheEnterprise:ModelingtheEnterpriseasServiceswith
+EnterpriseCanvas
+ISBN-13 (pbk): 978-1-4842-9835-0		 ISBN-13 (electronic): 978-1-4842-9836-7
+https://doi.org/10.1007/978-1-4842-9836-7
+Copyright © 2023 by Tom Graves
+This work is subject to copyright. All rights are reserved by the Publisher, whether the whole or
+part of the material is concerned, specifically the rights of translation, reprinting, reuse of
+illustrations, recitation, broadcasting, reproduction on microfilms or in any other physical way,
+and transmission or information storage and retrieval, electronic adaptation, computer software,
+or by similar or dissimilar methodology now known or hereafter developed.
+Trademarked names, logos, and images may appear in this book. Rather than use a trademark
+symbol with every occurrence of a trademarked name, logo, or image we use the names, logos,
+and images only in an editorial fashion and to the benefit of the trademark owner, with no
+intention of infringement of the trademark.
+The use in this publication of trade names, trademarks, service marks, and similar terms, even if
+they are not identified as such, is not to be taken as an expression of opinion as to whether or not
+they are subject to proprietary rights.
+While the advice and information in this book are believed to be true and accurate at the date of
+publication, neither the authors nor the editors nor the publisher can accept any legal
+responsibility for any errors or omissions that may be made. The publisher makes no warranty,
+express or implied, with respect to the material contained herein.
+Managing Director, Apress Media LLC: Welmoed Spahr
+Acquisitions Editor: Aditee Mirashi
+Development Editor: James Markham
+Coordinating Editor: Aditee Mirashi
+Cover designed by eStudioCalamar
+Cover image by Freepik (https://www.freepik.com)
+Distributed to the book trade worldwide by Apress Media, LLC, 1 New York Plaza, New York, NY
+10004, U.S.A. Phone 1-800-SPRINGER, fax (201) 348-4505, e-mail orders-ny@springer-sbm.com,
+or visit www.springeronline.com. Apress Media, LLC is a California LLC and the sole member
+(owner) is Springer Science + Business Media Finance Inc (SSBM Finance Inc). SSBM Finance
+Inc is a Delaware corporation.
+For information on translations, please e-mail booktranslations@springernature.com; for
+reprint, paperback, or audio rights, please e-mail bookpermissions@springernature.com.
+Apress titles may be purchased in bulk for academic, corporate, or promotional use. eBook
+versions and licenses are also available for most titles. For more information, reference our Print
+and eBook Bulk Sales web page at http://www.apress.com/bulk-sales.
+Any source code or other supplementary material referenced by the author in this book is
+available to readers on GitHub (https://github.com/Apress). For more detailed information,
+please visit https://www.apress.com/gp/services/source-code.
+Paper in this product is recyclable
+Tom Graves
+Sailors Gully, VIC, Australia
+
+--- PAGE 3 ---
+iii
+Table of Contents
+About the Author���������������������������������������������������������������������������������ix
+About the Technical Reviewer�������������������������������������������������������������xi
+Acknowledgments�����������������������������������������������������������������������������xiii
+Introduction����������������������������������������������������������������������������������������xv
+Chapter 1:  What Is the Enterprise Canvas?������������������������������������������1
+On the Back of a Napkin���������������������������������������������������������������������������������������2
+Going Formal�������������������������������������������������������������������������������������������������������10
+Into Practice��������������������������������������������������������������������������������������������������������12
+Summary������������������������������������������������������������������������������������������������������������13
+Chapter 2:  The Nature of Service��������������������������������������������������������15
+A Matter of Metaphor������������������������������������������������������������������������������������������19
+Into Practice��������������������������������������������������������������������������������������������������������22
+On Services���������������������������������������������������������������������������������������������������22
+On Metaphor��������������������������������������������������������������������������������������������������23
+Summary������������������������������������������������������������������������������������������������������������23
+Chapter 3:  Service Context and Market����������������������������������������������25
+Service and Market���������������������������������������������������������������������������������������������27
+Vision,Values, and the Enterprise�����������������������������������������������������������������������33
+Into Action�����������������������������������������������������������������������������������������������������������37
+Organization and Enterprise��������������������������������������������������������������������������37
+
+--- PAGE 4 ---
+iv
+Service and Market���������������������������������������������������������������������������������������38
+Vision,Values, and the Enterprise�����������������������������������������������������������������39
+Summary������������������������������������������������������������������������������������������������������������40
+Chapter 4:  Service Vision and Values�������������������������������������������������41
+Identifying the Vision�������������������������������������������������������������������������������������������44
+Values, Principles, and Success Criteria�������������������������������������������������������������49
+Into Action�����������������������������������������������������������������������������������������������������������53
+Identifying the Vision�������������������������������������������������������������������������������������53
+Vision, Role, Mission, Goal, Outcome�������������������������������������������������������������53
+Values, Principles, and Success Criteria��������������������������������������������������������54
+Summary������������������������������������������������������������������������������������������������������������56
+Chapter 5: Service Layers�������������������������������������������������������������������57
+Layers of Abstraction and Realization�����������������������������������������������������������������59
+Into Action�����������������������������������������������������������������������������������������������������������67
+Summary������������������������������������������������������������������������������������������������������������69
+Chapter 6:  Service Actors and Other Entities�������������������������������������71
+Into Action�����������������������������������������������������������������������������������������������������������76
+Summary������������������������������������������������������������������������������������������������������������77
+Chapter 7:  Service Roles and Relationships���������������������������������������79
+Into Action�����������������������������������������������������������������������������������������������������������83
+Summary������������������������������������������������������������������������������������������������������������87
+Chapter 8: Service Structure��������������������������������������������������������������89
+Into Action�����������������������������������������������������������������������������������������������������������97
+Summary����������������������������������������������������������������������������������������������������������101
+Table of Contents
+
+--- PAGE 5 ---
+v
+Chapter 9: Service Flows������������������������������������������������������������������103
+Main Transaction Flows������������������������������������������������������������������������������������104
+Information Flows for Service Management�����������������������������������������������������110
+Into Action���������������������������������������������������������������������������������������������������������114
+Main Transaction Flows�������������������������������������������������������������������������������114
+Information Flow for Service Management�������������������������������������������������115
+Summary����������������������������������������������������������������������������������������������������������116
+Chapter 10: Service Guidance����������������������������������������������������������117
+Direction Services���������������������������������������������������������������������������������������������124
+Coordination Services���������������������������������������������������������������������������������������125
+Validation Services��������������������������������������������������������������������������������������������127
+Into Action���������������������������������������������������������������������������������������������������������129
+Direction Services���������������������������������������������������������������������������������������129
+Coordination Services���������������������������������������������������������������������������������130
+Validation Services��������������������������������������������������������������������������������������132
+Summary����������������������������������������������������������������������������������������������������������133
+Chapter 11:  Service Investors and Beneficiaries�����������������������������135
+Investor Flows and Beneficiary Flows��������������������������������������������������������������138
+A Question of Balance���������������������������������������������������������������������������������������143
+Into Action���������������������������������������������������������������������������������������������������������147
+Investment and Dividend�����������������������������������������������������������������������������147
+Balancing Investors, Beneficiaries, and the Enterprise�������������������������������148
+Summary����������������������������������������������������������������������������������������������������������149
+Chapter 12: Service Decomposition�������������������������������������������������151
+Into Action���������������������������������������������������������������������������������������������������������153
+Summary����������������������������������������������������������������������������������������������������������154
+Table of Contents
+
+--- PAGE 6 ---
+vi
+Chapter 13: Service Content�������������������������������������������������������������155
+Service and Product������������������������������������������������������������������������������������������156
+Service Layers and Service Content�����������������������������������������������������������������158
+The Service-Content Model������������������������������������������������������������������������������168
+Asset Content Elements������������������������������������������������������������������������������������177
+Function Content Elements�������������������������������������������������������������������������������178
+Location Content Elements�������������������������������������������������������������������������������180
+Capability Content Elements�����������������������������������������������������������������������������181
+Event Content Elements������������������������������������������������������������������������������������184
+Decision Content Elements�������������������������������������������������������������������������������185
+Cross-checks for Service Content��������������������������������������������������������������������186
+Into Action���������������������������������������������������������������������������������������������������������192
+Service and Product������������������������������������������������������������������������������������192
+Asset Content Elements������������������������������������������������������������������������������193
+Function Content Elements�������������������������������������������������������������������������195
+Location Content Elements��������������������������������������������������������������������������196
+Capability Content Elements������������������������������������������������������������������������198
+Event Content Elements������������������������������������������������������������������������������199
+Decision Content Elements��������������������������������������������������������������������������200
+Dependencies Between Content Elements��������������������������������������������������202
+Summary����������������������������������������������������������������������������������������������������������203
+Chapter 14: Services As Systems�����������������������������������������������������205
+Enterprises As Systems������������������������������������������������������������������������������������206
+Impact of Time Compression����������������������������������������������������������������������������209
+Systems and Cycles������������������������������������������������������������������������������������������212
+Strategy and Lifecycle Completion�������������������������������������������������������������������217
+Table of Contents
+
+--- PAGE 7 ---
+vii
+Into Action���������������������������������������������������������������������������������������������������������222
+Enterprises As Systems�������������������������������������������������������������������������������222
+Impact of Time Compression�����������������������������������������������������������������������224
+Systems and Cycles������������������������������������������������������������������������������������225
+Strategy and Lifecycle Completion��������������������������������������������������������������226
+Summary����������������������������������������������������������������������������������������������������������227
+Chapter 15: Example Patterns����������������������������������������������������������229
+Example 1: Publicly Owned For-Profit Business�����������������������������������������������229
+Example 2: Not-for-Profit Charity����������������������������������������������������������������������232
+Example 3: ITIL IT Service Management�����������������������������������������������������������236
+Example 4: BPMN Process Model���������������������������������������������������������������������239
+Example 5: Military Squad��������������������������������������������������������������������������������242
+Into Action���������������������������������������������������������������������������������������������������������246
+Summary����������������������������������������������������������������������������������������������������������247
+Chapter 16: Integration with Architectures��������������������������������������249
+Architectural Frameworks and Model Types�����������������������������������������������������249
+Strategic Frameworks and Model Types�����������������������������������������������������������254
+Structural and Operational Frameworks and Model Types�������������������������������255
+Into Action���������������������������������������������������������������������������������������������������������258
+Summary����������������������������������������������������������������������������������������������������������258
+Chapter 17: Rethinking Vision Bottom-Up����������������������������������������259
+Example 1: Swatch��������������������������������������������������������������������������������������������264
+Example 2: Mars MyM&Ms�������������������������������������������������������������������������������265
+Example 3: Play-Doh�����������������������������������������������������������������������������������������266
+Example 4: Oceaneering Animatronics�������������������������������������������������������������267
+Table of Contents
+
+--- PAGE 8 ---
+viii
+Example 5: Nokia����������������������������������������������������������������������������������������������269
+Into Action���������������������������������������������������������������������������������������������������������271
+Summary����������������������������������������������������������������������������������������������������������273
+ Appendix A: Enterprise Canvas: A Visual Summary�������������������������275
+ Appendix B: Working with Business-Model Canvas�������������������������283
+ Appendix C: Enterprise Canvas Notation������������������������������������������291
+ Appendix D: Enterprise Canvas and Service Viability�����������������������321
+ Appendix E: Sources and Resources������������������������������������������������353
+Sources���������������������������������������������������������������������������������������������357
+Index�������������������������������������������������������������������������������������������������365
+Table of Contents
+
+--- PAGE 9 ---
+ix
+About the Author
+TomGraves has been an independent consultant for more than four
+decades, in systems development, business transformation, enterprise
+architecture and knowledge management. His clients in Europe,
+Australasia and the Americas cover a broad range of industries including
+small-business, banking, utilities, manufacturing, logistics, engineering,
+media, telecoms, research, defense and government. He has a special
+interest in whole-enterprise architectures for non-profit, social,
+government and commercial enterprises.
+
+--- PAGE 10 ---
+xi
+About the Technical Reviewer
+Slade Beard is an ICT Architect and Program
+Manager with extensive experience in
+the design and implementation of ICT
+infrastructure environments, including
+integration with large construction projects.
+He has knowledge and experience in major IT
+infrastructure rollouts in the Defense, National
+Security, Emergency Services, Health and
+Secure Systems environments.
+He has proven experience in supporting the effective design,
+implementation and commissioning of complex ICT systems in
+high-risk environments where considerations such as avoiding disruption
+of existing operations are crucial to project success. In addition, as result of
+his extensive construction design and build experience, he is able to frame
+and articulate the integration of complex ICT systems within the service
+elements of facility build considerations and act as an effective advocate
+for ICT requirements within construction teams.
+
+--- PAGE 11 ---
+xiii
+Acknowledgments
+Amongst others, the following people kindly provided comments and
+feedback on themes in the various drafts of this book: Jose Antonio Alvarez
+(MX), Sally Bean (GB), Shawn Callahan (AU), Adrian Campbell (GB),
+Pat Ferdinandi (US), Ian Glossop (GB), Nigel Green (GB), Anders Jensen
+(DK), Cynthia Kurtz (US), Nick Malik (US), Alex Matthews (GB), Alex
+Osterwalder (CH), Kim Parker (AU), Ron Segal (NZ), Kevin Smith (GB),
+Michael Smith (GT), Peter Tseglakof (AU), Peter Ward (GB), John Wu (US),
+Alex Yakovlev (GB).
+Please note that, to preserve commercial and personal confidentiality,
+the stories and examples in this book will usually have been adapted,
+combined and in part fictionalized from experiences in a variety of
+contexts, and do not and are not intended to represent any specific
+individual or organization.
+Registered trademarks such as Zachman, TOGAF, ITIL, Business
+Model Canvas etc are acknowledged as the intellectual property of the
+respective owners.
+
+--- PAGE 12 ---
+xv
+Introduction
+How can we describe the enterprise? More specifically, how do we
+describe what happens there, how, when, where, why, by whom,
+with what?
+For architects and others tasked with creating conversations and
+connections across the enterprise, these are not trivial questions: they
+strike right to the core of the work that we do. The usual answer is
+‘models’ – data-sets, drawings, diagrams – that illustrate specific aspects
+of the respective issues. But the catch is that there are so many different
+model-types in use in enterprise-architectures and elsewhere, all different,
+all applying at different levels, all applying only to specific subsets of the
+context, and all with weak connection at best to any other type of model.
+It’s a huge problem – though one that’s not easy to see until we try to link
+everything together across the whole of the enterprise.
+Hence the Enterprise Canvas: a new model-template and checklist for
+service-design that can be used to describe just about anything in any part
+and at any level of the enterprise, and that also acts as a consistent frame
+for all the other types of models that we need in our architectures.
+The Canvas can take several different forms, such in the example
+shown in Figure I-1, but the same basic frame provides a consistent anchor
+in how to view everything else in the enterprise. It doesn’t really replace
+any other model: but within that frame, all those other models start to
+work together, and start to make practical sense.
+That’s the role of the Enterprise Canvas: not “one model to rule
+them all” , perhaps, but “one model to bind them” . Consistency at last;
+consistency that makes sense; that’s the aim here. Interested?
+
+--- PAGE 13 ---
+xvi
+Figure1. Enterprise Canvas: a basic example
+ Who should read this book?
+The book is intended for enterprise architects, business-architects,
+IT-­ architects, process-designers, service-designers and others who deal
+with the practical implications of whole-of-enterprise issues.
+It should also be useful for strategists and service-managers, and
+for anyone else who works with other enterprise-wide themes such
+as supply-chains, value-webs, quality, security, knowledge-sharing,
+sustainability, business ethics and social responsibility, or health, safety
+and environment.
+ What’s in this book?
+The text is divided into two main sections:
+• a step-by-step introduction to each of the components
+in the Enterprise Canvas model, and their function and
+use in modelling the overall enterprise
+• a variety of patterns, practical examples and business
+usages for the model and its associated tools and
+techniques
+Introduction
+
+--- PAGE 14 ---
+xvii
+Each chapter builds on the previous descriptions, introduces another
+core concept or component for Enterprise Canvas, and provides a set
+of ideas and methods to apply straight away in your day-to-day work.
+Although there’s a fair amount of theory behind the Canvas, the emphasis
+is always on practice – something that you can use – so each chapter
+includes examples and stories to place the ideas into a real-life context.
+Most chapters also include an Into Practice section, with sets of questions
+to help you apply the material within your own context.
+There’s also a set of appendices at the end of the book, providing
+a visual-summary, additional notes on converting to and from the
+popular Business Model Canvas, notes on using the Enterprise Canvas in
+computer-based modelling-tools and as a service-viability checklist, and
+pointers to other sources for further information.
+But what is the Enterprise Canvas, anyway? Let’s start with a brief
+overview.
+Introduction

@@ -1,0 +1,887 @@
+--- PAGE 1 ---
+Digital Government Ecosystem: Adaptive Architecture for Digital
+and ICT Investment Decision Making
+Asif Gill
+University of Technology Sydney
+asif.gill@uts.edu.au
+Mayada Hansnata
+University of Technology Sydney
+mayada.hansnata@uts.edu.au
+ABSTRACT
+Agencies, while operating in the federated digital government
+ecosystem, need to make significant investments in digital and
+information and communication technology (ICT) for providing
+services to people and businesses. A whole-of-government adap-
+tive architecture driven approach seems appropriate for supporting
+common language and consistent digital and ICT investment de-
+cision making. It enables adaptive planning and implementation
+with a view to make an optimal use of public funds and aligned
+with the strategic direction and priorities in digital and ICT invest-
+ments. However, the challenge is how to establish the adaptive
+architecture for supporting digital and ICT investment decision
+making in the complex and federated digital government ecosys-
+tem. Thispaperproposestheadaptiveenterprisearchitecture(AEA)
+meta-framework for digital ecosystems, as a lens, to systematically
+integrate the Australian Government Architecture (AGA), and Dig-
+ital and ICT Oversight Investment Framework (IOF) in establishing
+the adaptive architecture for assisting digital and ICT investment
+decisions within complex digital government ecosystems. The pro-
+posed approach is demonstrated and evaluated with the help of an
+example scenario for an Australian digital government service. The
+results of this study indicate that the adaptive architecture driven
+approach involving AGA and IOF seems useful for architecting and
+supporting complex digital and ICT investment decision making
+to deliver the holistic outcomes of data and digital government
+strategy objectives.
+CCS CONCEPTS
+• Architectures; • Enterprise information systems; • Govern-
+ment technology policy;
+KEYWORDS
+Adaptive architecture, ArcOps, Australian government architec-
+ture, Digital transformation, Government ecosystem, Investment
+decision making
+ACM Reference Format:
+Asif Gill and Mayada Hansnata. 2024. Digital Government Ecosystem:
+Adaptive Architecture for Digital and ICT Investment Decision Making. In
+25th Annual International Conference on Digital Government Research (dg.o
+2024), June 11–14, 2024, Taipei, Taiwan. ACM, New York, NY, USA, 10 pages.
+https://doi.org/10.1145/3657054.3657119
+This work is licensed under a Creative Commons Attribution International 4.0 License.
+dg.o 2024, June 11–14, 2024, Taipei, Taiwan
+© 2024 Copyright held by the owner/author(s).
+ACM ISBN 979-8-4007-0988-3/24/06
+https://doi.org/10.1145/3657054.3657119
+1 INTRODUCTION
+There is a significant interest in the ecosystem-oriented approaches
+for architecting, planning, and implementing digital transformation
+programs. An ecosystem is defined as a “system of systems, which
+is composed of a distributed and federated network of human and
+non-human organisms or actors that interact with each other using
+different interfaces for desired outcomes. These actors and their
+interactions span across the value chains of an individual enter-
+prise or organisation” [1]. A digitally enabled ecosystem (DE) is
+fundamentally changing the structure and operations of organisa-
+tions operating in the increasingly boundaryless, connected, and
+federated digital environments. There are several definitions of
+DE. Broadly, DE can be defined as “a set of distributed, adaptive,
+and open socio-technical systems. Being parts of such ecosystems,
+individual persons, public and private organisations are becoming
+increasingly dependent on each other” [2]. This definition provides
+both the socio-technical and interdependency aspects of the DE.
+DE can also be defined as a complex value network of individual
+and organisational actors that interact with each other for a specific
+purpose and value co-creation such as information sharing, service
+provisioning and delivery [3]. DE is supported by the underlying
+digital, information and communication technology (ICT). There
+are several examples and types of DEs. For instance, Airbnb, Ama-
+zon, and Uber can be classified as digital business ecosystems. Xero,
+a cloud-based accounting system typically used by small-medium
+enterprises, is also an example of digital business ecosystem that
+includes integration with the government ecosystem, e.g., for busi-
+ness reporting purposes. Similarly, connected government and
+federated agencies can be classified as digital government ecosys-
+tem or GovTech ecosystem [4]. GovTech refers to government
+digital technologies.
+Drawing on the above discussion and the DE [1-3] and GovTech
+[4], a digital government ecosystem (DGE) can be considered as a
+complex value network of government and non-government actors
+that interact with each other; develop, provide, and consume data
+and digital services for mutual value and benefits. These actors
+can include people, businesses, government agencies, universities,
+and other public and private organisations. Digital and ICT are
+core to the DGE and as they provide the necessary infrastructure
+to enable smooth interactions among these actors for provisioning
+and delivery of data and digital government services to people and
+businesses [5]. Thus, governmentagencies need to make significant
+investments in digital and ICT for provisioning and delivering data
+and digital services to people and businesses. These digital and
+ICT investments and related decisions, if made in isolation and
+independent of other related actors in the DGE, can be counter-
+productive and may not provide optimal value for public good. A
+whole-of-government adaptive architecture driven approach seems
+555
+
+--- PAGE 2 ---
+dg.o 2024, June 11–14, 2024, Taipei, Taiwan Asif Gill and Mayada Hansnata
+appropriate for supporting common language and consistent digital
+and ICT investment decision making. It enables adaptive planning
+and implementation with a view to make an optimal use of public
+funds whilst at the same time aligned with the Government strate-
+gic direction and priorities in digital and ICT investments. This
+draws our attention to the following important research question
+and challenge:
+How to establish the adaptive architecture for supporting digital
+and ICT investment decision making in the complex and federated
+digital government ecosystem?
+This paper aims to address this important research challenge
+in the context of Australian government as an example case of a
+DGE. This paper provides an independent view, and uses the adap-
+tive enterprise architecture (AEA) meta-framework for DE [1], as a
+lens, to systematically integrate the publicly available Australian
+Government Architecture (AGA) [6] and Digital and ICT Invest-
+ment Oversight Framework (IOF) [7] in establishing the adaptive
+architecture and operations (ArcOps) for assisting with digital and
+ICT investment decisions in the complex context of Australian
+DGE. ArcOps is defined as a “connectivity or loop between the
+architecture-operations, which is important for enabling the map-
+ping and flow of information between architecture and operations
+for effective decision making and value realisation” [39]. This paper
+also draws guidance from the well-known actor-network theory
+[8] and literature on quality decision making [29]. While this pa-
+per mainly discusses the Australian DGE case, however, learnings
+from this paper can be further used in other similar government
+contexts. This paper is organised as follows. Firstly, it discusses
+the research background and context. Secondly, it discusses the
+research method. Thirdly, it discusses the proposed adaptive archi-
+tecture approach and underpinning integrated AGA contents and
+IOF states. Fourthly, it discusses the application of the proposed
+adaptive architecture approach for decision making by using the
+example scenario of an Australian digital government service –
+myGov. Finally, it discusses the key insights, limitations, and future
+research directions before concluding.
+2 RESEARCH BACKGROUND AND CONTEXT
+DEisanetworkofinteractingactorsorentitiesthatcreateandoffer
+value (e.g., service, data) to their customers for mutual benefits (e.g.,
+profit, public good). DE can be described using the well-known
+actor-network theory [8], where actor-network is a focal point
+of interest that operates beyond the boundary of an individual or
+single enterprise. These actors could be broadly classified as human
+and non-human actors. In DE, these actors collaborate, compete,
+communicate, and coordinate their activities for mutual benefit
+[10]. These actors perform different roles in DE, which could be
+specific to certain sectors such as the education ecosystem where
+universities, industry and government actors interact with each
+other for providing educational services to their student actors for
+mutual benefits. Similarly, government is also an example of a large
+DE, referred to as DGE.
+GE consists of several interacting agencies that offer government
+services (e.g., applying for a driving license, getting child support
+information, applying for a passport, share information) to their
+citizens[11,12]. Governmentagenciesneedtomakedifferenttypes
+of complex decisions (e.g., compliance, financial) at different levels
+(e.g., strategic, tactical, and operational) about investments in digi-
+tal and ICT architecture and solutions to transform their services
+for people and businesses. Making such digital and ICT investment
+decisions by individual agencies, without a whole-of-government
+ecosystem oriented adaptive architecture and investment approach,
+may pose several challenges such as redundancies, inefficiencies,
+inconsistencies, lack of interoperability, lack of reusability and
+suboptimal value for public funds, including deviating from Gov-
+ernment’sstrategicdirectionandprioritiesindigitalandICTinvest-
+ments [1, 6, 13, 14]. An ecosystem oriented adaptive architecture
+provides a connected view [1], which is important to address the
+evolving needs of government as well as people and businesses, in-
+cludingindustrypartners. Thisdrawsourattentiontothefollowing
+important research question and challenge:
+How to establish the adaptive architecture for supporting digital
+and ICT investment decision making in the complex and federated
+digital government ecosystem?
+This paper addresses the above-mentioned research question in
+the context of Australian government as a DGE. Australian gov-
+ernment provides the publicly available Australian Government
+Architecture (AGA) [6]—an interactive, self-service online tool in
+the form of a library of guidance materials; and Investment Over-
+sight Framework (IOF) [7]—an end-to-end framework providing
+a way for the Government to manage digital investments. Both
+the AGA and IOF can be used for investment decision making that
+aligns with the Government strategic direction and priorities in
+digital and ICT investments [15]. This section establishes the con-
+text for the Australian DGE case and provides an overview of the
+AGA and IOF.
+2.1 Australian Government Digital Ecosystem
+Digital Government Ecosystem (DGE) in Australia consists of sev-
+eral agencies and government owned entities, which is organised
+into three levels: local, state/territories, and federal [16]. Australian
+DGE can be further divided into sub-ecosystems such as agriculture
+ecosystem, education ecosystem, finance ecosystem, health ecosys-
+tem and transport ecosystem, etc. [17, 37]. Thus, it is a super DGE.
+Each sub-ecosystem and their individual agencies deliver their ser-
+vices using digital and ICT-enabled capabilities. The Australian
+Government recently released the Data and Digital Government
+Strategy (DDGS) that outlines Government’s commitment to “de-
+liver simple, secure and connected public services for all people
+and business through world class data and digital capabilities” [9].
+This requires a whole-of-government architecture and investment
+approach in digital and ICT to deliver this strategy. To deliver the
+commitments outlined in the DDGS, the Australian Government
+seems to use its advice and governance mechanisms, specifically
+the AGA, as the library, and IOF, as the framework, to ensure that
+good quality investment principles and practices underpin data and
+digital investment decisions. The AGA and IOF provide a means
+to identify when and what other related recourses may be applica-
+ble such as ICT Investment Approval Process [18], Digital Service
+Standard [19] and Digital and ICT Reuse Policy [20].
+556
+
+--- PAGE 3 ---
+Digital and ICT Investment Decision Making dg.o 2024, June 11–14, 2024, Taipei, Taiwan
+2.2 Australian Government Architecture
+The AGA [6] can be seen as a library of artefacts and related mate-
+rials, which individual agencies can use as a reference to architect
+connectedservicesthroughdigitalanddatacapabilities[19-22]. The
+AGA library, i.e., contents, is organised by a Domain and Capability
+Model (DCM). It specifies domains, capabilities, policies, standards,
+and designs. The domain is the highest structure, followed by capa-
+bility, policy, standard and design. A domain can have more than
+one capability, policy, standard and design, but are exclusive to the
+one domain only. Strategy is not part of the content hierarchy as
+a strategy can be the overarching direction for multiple contents.
+For example, DDGS is providing strategic direction for the Govern-
+ment’s digital and ICT investment in general. It has been noted that
+the “AGA is publicly accessible to agencies, as well as industry and
+the public, in a way that is searchable and navigable based on user
+needs. This will encourage standardisation and reuse across gov-
+ernment” [6]. The AGA assists the Government in assessing new
+and existing digital and ICT solutions from several perspectives, by
+reviewing whether they “fit in” with what the Government already
+has, if so how; represent a new solution can “fill a gap”; or no longer
+“fit-for-purpose” and need to be retired. Accordingly, the AGA also
+provides signals to the industry (as a part of the ecosystem) on the
+Government’s digital and ICT priorities across the portfolio and
+capabilitiesexpectedtobedelivered[27,37]. Oncefullyoperational
+and matures, the AGA can provide a short-term and long-term view
+of capabilities delivery at a whole-of-government level and thus,
+level of reuse. As such, the AGA can also be used as a guidance for
+agencies’ internal, business-as-usual initiatives, moving away from
+siloed architecture and inconsistencies, arising from making invest-
+ment decisions in isolation. Therefore, the AGA library provides
+guardrails and guidance with a view to achieve alignment to the
+DDGS to support Government digital transformation. The AGA is a
+way to enable whole-of-government approach to the design and im-
+plementation of digital government transformation [6, 23]. While
+the AGA library provides resources and architectural artefacts to
+guide the design of a proposed digital and ICT-enabled capabilities,
+the investment decision-making process [24] can be guided by the
+IOF [7].
+2.3 Investment Oversight Framework
+The Australian Government aims to become one of the leading dig-
+ital government, economy, and society by 2030 [9]. This requires
+significant investments and good quality decision-making [29] for
+digital and ICT-enabled digital government [25]. Australian gov-
+ernment developed the IOF [7] for supporting the decision making
+relatedtodigitalandICT-enabledinvestments. TheIOFisorganised
+into six states that provide end-to-end process from early planning
+through to project delivery and realisation of planned benefits of
+digitalandICT-enabledcapabilityasproposedinvestmentisusedin
+real life operation. The IOF is administered by the Digital Transfor-
+mation Agency (DTA), which is part of the Finance Portfolio. The
+DTA is mandated to provide leadership on whole-of-government
+digital and ICT investment through the IOF. The AGA and IOF are
+developed and maintained by the DTA.
+The IOF, in principle, applies but not limited to Non-Corporate
+Commonwealth entities (e.g., agencies), starting from when de-
+veloping a proposal for digital and ICT-enabled investments (Pre-
+Budget),bringingforwardtheproposedinvestmentforGovernment
+consideration (Budget) and when delivering the agreed investments
+(Implementation). Investments that are subject to the IOF are dig-
+ital and ICT-enabled investments, which use technology as the
+primary levers for achieving expected outcomes and benefits. A
+proposed investment is considered in-scope for IOF if it cannot be
+delivered without the absence of digital and ICT-enabled capability.
+Further assessment under the IOF is required for in-scope proposed
+investments [33], which is determined based on multiple factors
+covering the extent of risks, complexity, strategic importance, and
+the consequences of delivery failure of digital and ICT-enabled
+components, as well as compliance to the IOF requirements [34].
+While Australian government provides both the AGA and IOF;
+the question is how agencies can use these two for architecting
+and supporting investment decision-making for ICT-enabled digital
+government. This paper proposes the AEA meta-framework for
+digital ecosystems [1], as a lens, to systematically integrate AGA
+library [6] and IOF [7] for establishing the adaptive architecture
+for assisting with the digital and ICT investment decisions in the
+complex digital government ecosystems.
+3 RESEARCH METHOD
+This research used the well-known design science (DS) research
+method [26, 30], which provides a practical approach and guidance
+to develop and evaluate an approach or method as an artefact such
+as the proposed adaptive architecture approach in this paper. DS
+research method is organised into 5 phases or stages [31]: (1) prob-
+lem identification, (2) suggestion, (3) development, (4) evaluation
+and (5) conclusion. The problem was identified based on the review
+of academic and government recourses as noted in the research
+background and context section. Here, the main problem or con-
+cern is around the digital and ICT investment decision making in
+the complex and federated digital government ecosystem. Based
+on the initial research, it is suggested to integrate and use the AGA
+and IOF for supporting digital and ICT investment decision making.
+This covers the first two phases of the DS research method, which
+produced two outputs: the research proposal and tentative design
+(see Figure 1).
+Development phase uses the existing knowledge and artefacts
+such as concepts, frameworks, models, and theories to develop
+the detailed artefact as proposed in the earlier phase of the DS
+research method. Thus, here in the development phase of the DS
+research method, AEA meta-framework [1] for DE is used as a core
+or kernel theory or theoretical lens including the underpinning
+supporting actor-network theory [8] and quality decision making
+[29]. Actor network theory [8] recognised the multi-agency or
+stakeholders’ aspect of the connected or networked DGE in the
+decision making, whereas the quality decision making literature
+[29] provided guidance on “what constitutes a good decision”. AEA
+meta-framework [1] provides overarching six major components
+for establishing an adaptive architecture: architecture principles,
+metamodel, layers, capability, pipeline, and services. The AEA
+pipeline is used to integrate the Australian government AGA and
+557
+
+--- PAGE 4 ---
+dg.o 2024, June 11–14, 2024, Taipei, Taiwan Asif Gill and Mayada Hansnata
+Figure 1: Adaptive Architecture for Digital and ICT Investment Decision Making
+IOF to establish the adaptive architecture approach for supporting
+digital and ICT investment decision making.
+Evaluation phases uses the evaluation criteria (e.g., applicability,
+completeness, effectiveness, generalisability, novelty etc.) and tech-
+niques (e.g., case study, expert evaluation survey, experimentation,
+illustrative scenarios) to ensure that the developed artefact is fit for
+purpose. Thus, in the evaluation phase of the DS research method,
+the proposed adaptive architecture approach has been applied to an
+example scenario of the Australian government digital service. The
+aim is to provide an initial evaluation and working example ensur-
+ing that the proposed approach is fit-for-purpose and appropriate
+to address the identified research question in hand. Further, such
+an adaptive approach can be generalised, scaled, and tailored to
+agencyspecificarchitecturepracticeneeds, whethersmall, medium,
+or large. Conclusion phase finalises the research results with op-
+tionsforfutureworkasnotedintheconclusionsectionofthispaper.
+The following section discusses the proposed adaptive architecture
+approach for digital and ICT investment decision making.
+4 ADAPTIVE ARCHITECTURE FOR ICT
+INVESTMENT DECISION MAKING
+Decision making is a complex undertaking that requires the en-
+gagement of multiple parties or actors [32] for good decisions and
+desired outcomes [29]. The adaptive architecture pipeline inte-
+grates the AGA and IOF to support the ICT investment decision
+making and is guided by the Australian Government DDGS [9]
+(see Figure 1). A decision, such as the investment, can be defined
+as “a choice between two or more alternatives that involves an
+irrecoverable allocation of resources” [29]. It is important to men-
+tion here the six elements that exhibit decision quality: (1) the
+decision maker, (2) a frame, (3) alternatives to choose from, (4) pref-
+erences, (5) informationand (6)the decisionlogic [29]. Thedecision
+maker has the authority to make decisions. A frame provides a
+point of view such as whether to establish own cloud or use the
+public cloud services? The selected frame is then used to identify
+the alternatives or options to choose from. Preference needs to be
+considered among the alternatives. Information is all about the
+evidence in hand to support the decision making. Information can
+be obtained by analysing the data from different sources such as
+architecture and operations (business and IT). This information is
+used for decision making. Finally, the decision logic explains the
+process used for arriving at the decision. The adaptive architecture
+pipeline captures the decisions and related elements in the Deci-
+sion Catalogue (DC) for audit, good governance, and transparency.
+This integrated approach ensures the alignment of the architecture,
+related digital initiatives, or proposals, and required digital and ICT
+investment decisions with the Australian Government’s vision to
+deliver simple, secure, and connected public services for all people
+and business, through world-class data and digital capabilities. The
+whole integrated adaptive architecture centric approach is mapped
+in Figure 1 and Table 1. This section first discusses the adaptive
+architecture pipeline followed by the AGA and IOF in detail.
+4.1 Adaptive Architecture Pipeline
+The AEA meta framework [1] provides the adaptive architecture
+pipeline (ArcOps), which is organised into 5 key stages (Figure 2):
+(1) vision and scope (initiate), (2) discover, (3) implement, (4) govern
+and (5) adapt. The adaptive architecture pipeline can be tailored for
+a specific agency context for delivering the end-to-end architecture.
+4.1.1 Vision and Scope. This stage, based on the strategic direc-
+tion of the DDGS, defines the vision and scope of an architecture
+project. This specifies the stakeholders and their concerns related
+to transforming individuals and businesses interactions with the
+Australian Government for operational efficiency, effectiveness and
+558
+
+--- PAGE 5 ---
+Digital and ICT Investment Decision Making dg.o 2024, June 11–14, 2024, Taipei, Taiwan
+Table 1: Adaptive Architecture Pipeline: Integrated AGA and IOF
+DDGS Missions Architecture Pipeline Stages AGA Library Contents IOF States
+Delivering for all people and
+business
+Simple and seamless services
+Government for the future
+Trusted and secure
+Data and digital foundations
+Vision and scope
+Discover and implement
+Govern and adapt
+Domains
+Capabilities
+Policies
+Standards
+Designs
+Strategic Planning
+Prioritisation
+Contestability
+Assurance
+Sourcing
+Operations
+Figure 2: Adaptive Architecture Pipeline with Integrated AGA & IOF (based on AEA, AGA, IOF, DDGS)
+automation of operations using the digital and ICT-enabled capa-
+bilities. As shown in Figure 2 below (adapted based on [1, 6, 7, 9]),
+once the vision and scope of the architecture project is established,
+then it triggers the next stage of the architecture pipeline.
+The vision and scope stage commences with an initiative for
+architecture project. It begins with the identification and analysis
+of stakeholders as well as understanding the strategic context and
+stakeholders’ concerns to identify solution ideas and information
+views and viewpoints in scope for assisting with the decision mak-
+ing. In the context of Australian Government’s digital and ICT
+investment process, this is part of identifying capability gaps when
+determining the future objectives of the Government’s digital and
+ICT-enabled investment portfolio. This aligns with the IOF’s first
+state, “Strategic Planning”. At this state, Australian Government
+entities will align their own strategies to the DDGS’s missions. As
+such, the AGA and IOF are used as guardrails from early planning
+of a digital and ICT proposed investment. For example, the AGA in-
+cludes information on Digital Service Standard (DSS), which plays
+an important role in the DDGS vision to deliver simple, secure,
+and connected public services, for all people and business by 2030.
+DSS provides guidance on a set of best practice principles to help
+agencies design and build public-facing digital services that puts
+people and business at the centre of government digital service
+delivery. The AGA and IOF are consulted as the AGA outlines the
+policy requirements, applicability as well the IOF state where a
+proposed investment will be assessed against the DSS and the IOF
+provides further guidance on the assessment process [7, 36].
+559
+
+--- PAGE 6 ---
+dg.o 2024, June 11–14, 2024, Taipei, Taiwan Asif Gill and Mayada Hansnata
+4.1.2 Discover and Implement. The discover and implement stages
+continue to use the AGA and IOF as guardrails. The discover stage
+analyses the current state and proposes the future state architec-
+ture based on the gap analysis. Future state adaptive architecture
+is decomposed into incremental transition architecture states. The
+discover stage can use the AGA contents (e.g., domains, capabili-
+ties, policies, standards, and designs) for specifying the future state
+architecture and underpinning transition state architectures and
+proposed digital and ICT initiatives, ensuring consistency, reusabil-
+ity and avoiding duplication across the government digital land-
+scape. TheproposeddigitalandICTinitiativesneedtobeprioritised
+from an investment perspective and for an optimal use of public
+fund. That is, digital and ICT initiatives will be considered by the
+Government following alignment with the Government’s strategic
+direction and priorities in digital and ICT investment. Thus, prior
+to Government consideration, i.e., pre-budget, it is critical to ensure
+such alignment. Thus, two pre-budget states of the IOF are inte-
+grated within the discover stage of the pipeline to guide (1) “Strate-
+gic Planning” and (2) “Prioritisation” of digital and ICT-enabled
+investment portfolio to deliver digital outcomes for Government.
+The implement stage focuses on developing the adaptive strate-
+gic roadmap and implementation plan based on the prioritised
+proposed digital and ICT initiatives from the discover stage (pre-
+budget). The proposed digital and ICT initiatives from the roadmap
+and implementation plan are put forward for budget and invest-
+ment decision making. Here, the IOF state (3) “Contestability”,
+ensures that the proposed digital and ICT initiatives are feasible
+and in compliance with the Whole-of-Government Digital and ICT
+policies and standards (e.g., Reuse Policy and alignment with the
+AGA) [20] and (4) “Assurance” ensures that governance is in place
+throughout the implementation stage. Once the proposed digital
+and ICT initiatives are funded, they then enter the IOF implementa-
+tion state (5) “Sourcing“, which ensures that Government gets the
+optimal value for money for their ICT investments.
+4.1.3 Govern and Adapt. The govern and adapt stages, across the
+pipeline, focus on implementation governance and adaptation to
+changes based on the operations (connected loop of ArcOps). These
+stages involve the AGA as well as IOF (6) “Operations” and (4)
+“Assurance” states. IOF Operations state continuously collects and
+analyses data about the size, health, and maturity of the digital
+and ICT investments, and provides insights and intelligence for
+adaptation. Assurance state tracks and provides governance of dig-
+ital and ICT investments ensuring they deliver expected outcomes
+and that benefits are realised. Feedback loop is used to adapt the
+architecture, AGA and future investment based on the digital and
+ICT investment performance and evolving stakeholder needs. The
+adaptive architecture pipeline (ArcOps) provides the overarching
+integrated view of the AGA and IOF and shows its alignment to
+DDGS for digital and ICT investment decision making. The follow-
+ing sections further discuss the internal details of the AGA and
+IOF.
+4.2 The Australian Government Architecture
+(AGA) Taxonomy
+The AGA content is broadly categorised into two main groups, un-
+endorsed and endorsed. For example, a domain and a capability
+may be endorsed, but the policy may still be unendorsed. Specifi-
+cally for the policy content, when a policy content is unendorsed,
+the Policy Elements section of a capability provides recommended
+better practice (i.e., agencies should); and if endorsed, the Policy
+Elements section will have a list of mandatory requirements (i.e.,
+agencies must). For each type of content, when unendorsed, the
+status is either drafting or consulting; and if endorsed, the status
+is either emerging, core, contain or retire. For example, Identity
+Management Capability for Individual (DOM1, CAP17) does not
+yet have an endorsed policy governing it although the domain and
+capability have been endorsed. It provides an extensive list of rec-
+ommended better practice under the capability’s Policy Elements
+section, whereby agencies are recommended to, i.e., should, for
+example, ”use accredited providers through the Services Australia
+Identity Exchange under the Trusted Digital Identity Framework
+(TDIF) when verifying identity of Australian businesses or their
+authorised representatives”. On the other hand, Hosting Capability
+(DOM2, CAP28), has an endorsed policy in place. Therefore, it re-
+quires, i.e., agencies must, for example, ”ensure that PROTECTED
+and whole-of-government systems are hosted in certified sovereign
+or certified assured data centres”. The following Figure 3 (adapted
+based on [6, 21]), referred to as the AGA Taxonomy, provides the
+hierarchy of the AGA contents as discussed.
+4.3 The Nature of Investment Oversight
+Framework (IOF)
+The IOF, as discussed earlier, is an end-to-end framework that
+provides a way for the Government to manage its digital and ICT-
+enabled investments across the entire project lifecycle, from early
+planning through to project delivery and realisation of planned
+benefits [7]. It consists of six linear but interactive states. As shown
+in Figure 4 (adapted based on [7, 28]), the six different states are
+Strategic Planning, Prioritisation, Contestability, Assurance, Sourcing
+and Operations reflect a lifecycle across an entire project. Although
+the latter state is primarily triggered by input from the previous
+state, each state’s output can provide input into any relevant state.
+The aim is to improve how each state informs other states and
+thus, improve the overall IOF and how it informs a digital and ICT-
+enabled project in the future. This indicates the IOF, like the AGA,
+is iterative and adapts to changes. This is to ensure that the Govern-
+ment makes the right digital and ICT-enabled investments, at the
+right time and in the right way to drive transformation of public
+services, leading Australia as one of the top digital governments
+[38] in the world by 2030 [9].
+The interactive and iterative nature of the IOF involves integra-
+tion with the AGA. Through close integration with the IOF, the
+AGA is implemented throughout the project lifecycle. The AGA in-
+teracts with every state of the IOF, providing architectural guidance
+that agencies ‘must’ or ‘should’ adhere to; a common language to
+describe digital capabilities, improve collaborations and streamline
+government’s service delivery; economies of scales arising from
+streamlined and shared services across government; and mecha-
+nism for strategic use of technologies, especially emerging ones, to
+manage government’s digital and ICT-enabled investments portfo-
+lio. The integration of AGA and IOF, therefore, will lead towards a
+composable platform architectures at a whole-of-government level,
+560
+
+--- PAGE 7 ---
+Digital and ICT Investment Decision Making dg.o 2024, June 11–14, 2024, Taipei, Taiwan
+Figure 3: The AGA Taxonomy (based on AGA content library)
+Figure 4: Investment Oversight Framework (based on IOF diagram)
+i.e., the DGE, where knowledge is shared, and services are efficient,
+transparent, and interoperable, enabling a more consistent and
+adaptive decision making to make an optimal use of public funds.
+5 APPLICATION
+Using the AEA pipeline as a lens, which integrates the AGA and
+IOF to support the digital and ICT investment decision making by
+561
+
+--- PAGE 8 ---
+dg.o 2024, June 11–14, 2024, Taipei, Taiwan Asif Gill and Mayada Hansnata
+Figure 5: Integrated Adaptive EA Pipeline, AGA, and IOF (based on AEA, AGA, IOF Diagrams, and Information)
+agencies, can be tailored for a specific context, and supported by
+different architecture roles, tools, and technologies (see Figure 5).
+This section only provides an independent example view of this
+proposed approach based on the publicly available information.
+There could be multiple ways of tailoring and using the proposed
+integrated approach. Guided by the Australian Government DDGS
+[9], the AEA pipeline intends to ensure the alignment of proposed
+digitalinitiativeswithAustralianGovernmentArchitectureandIOF
+requirements to deliver Australian Government’s vision of simple,
+secure, and connected public services for all people and business,
+through world-class data and digital capabilities. Using a hypothet-
+ical case, this paper aims to provide an illustrative application of
+AEA pipeline for a digital initiative or an ICT architectural project.
+An agency identifies strategic needs to develop digital capabili-
+tiesfordeliveringservicestothepeopleandbusinesseffectivelyand
+efficiently. Throughout the project lifecycle, the agency uses the
+AGA as a library, which provides architectural guidance through
+close integration with the IOF requirements, to ensure that pro-
+posed solution is aligned with the DDGS and Government’s digital
+agenda and policy environment. It enables the agency to identify
+whether the vision and scope of the strategic business needs can
+close capability gap at whole-of-government and to discover the
+right solution that aligns with government priorities. For example,
+the agency identifies that developing a digital portal is the solution
+to delivering services to the people and the AGA provides guidance
+for the agency to ensure compliance with the IOF requirements
+when delivering the digital portal and alignment with Government
+direction. The guidance is anchored on the policy elements of the
+digital portal capability, which stipulates the recommended better
+practice, and includes standards and designs for developing a digi-
+tal portal. The agency can identify suitable designs to develop the
+solutions, for example myGov, and it may involve exploring other
+capabilities such as using myGovID as the preferred digital identity
+management capability for the proposed solution. If a variation in
+the design is needed, the agency can use the AGA as a guidance
+to ensure compliance with relevant policies and standards, such
+as designing for reuse, so the new design can be shared through
+AGA for reuse in any future proposed investments with similar
+requirements.
+During the project implementation, the AGA continues to pro-
+vide guidance following the IOF states, whereby once funding
+sought is agreed by the Government, the agency can leverage ex-
+isting procurement arrangements to ensure simplified and value-
+for-money procurement of the required ICT products and services.
+The implementation of the digital and ICT-enabled investment is
+trackedtoassurethedeliveryofoutcomesandrealisationofbenefits
+remain as planned. Lessons learned from the real-world operations
+are fed back into the AGA and IOF to improve the process. This
+adaptive process can be considered as an architecture value stream,
+that is, where the AEA pipeline supports the delivery of architec-
+ture artefacts, products, and services by connecting the strategy in
+the upstream to the solution development and operations in the
+downstream. The following figure (based on [1, 6, 7, 32]) shows
+the overall integration of the IOF and AGA for digital and ICT
+investment decision-making from the lens of AEA pipeline [1].
+From the AEA pipeline perspective, the illustration discussed
+indicates that the integration of the AGA and the IOF can assist
+the Government in making digital and ICT investment decisions
+across multiple projects and agencies whereby the design of the
+architecture can be iteratively and incrementally discovered, by
+connecting solution development and operations. This avoids the
+up-front big design of architecture for each project that may be
+562
+
+--- PAGE 9 ---
+Digital and ICT Investment Decision Making dg.o 2024, June 11–14, 2024, Taipei, Taiwan
+disparate across projects and agencies, which may go against the
+Governmentdirection. Forexample,oneofDDGSmissions,“simple
+and seamless services”, envisions that the Australian Government
+provides service delivery to people and business as a unified en-
+terprise, i.e., it is digital by design, deploying scalable and secure
+architecture and tell us once (interoperable and integrated at a
+whole-of-government level). Using the hypothetical case discussed
+earlier, the policy elements of the digital portal capability capture
+alignment with DDGS requirements, such as to avoid building new
+capabilities and instead leverage existing digital portals as well as
+to ensure public-facing services are made available digitally. The
+agency can use the AGA to explore and discover the potential of
+reusing existing designs of a digital portal capability and other rele-
+vant capabilities that are already in use in operations to align with
+DDGS of delivering a simple and seamless services to the people
+and businesses whilst at the same time ensuring compliance with
+relevant policies and standards.
+The approach that the Australian Government agencies apply
+in delivering its digital and ICT investments, which resembles the
+operationalisation of an AEA pipeline, can be applied in other coun-
+tries with similar context. For example, the United Kingdom (UK)
+[40] and New Zealand (NZ) [41]. The UK (e.g., Digital, Data and
+TechnologyPlaybookorDDaTPlaybook)andNZ(e.g.,Government
+Enterprise Architecture New Zealand or GEA-NZ) have similar dig-
+ital and ICT investment decision-making processes to Australia.
+It seems that in both the UK and NZ, an architecture library and
+digital and ICT investment framework have been and continue to
+bedevelopedasresourcesappropriatetotheircontext. Forinstance,
+NZ has developed a comprehensive library of architectural guid-
+ance, which includes layered architectural framework. It provides
+information and tools to support Government in making transfor-
+mation across and within organisations towards coherent digital
+government [41]. Despite the different countries and their local
+contexts, the overall intent is the same, to promotea better decision-
+making that complies with policies and standards and aligns with
+the Government direction in digital and ICT investment.
+The key element to Australia’s approach is the whole-of-
+government integration of strategy, architecture library and invest-
+ment framework, enabling agencies to make good quality digital
+and ICT investment decision. Such integration enables the Gov-
+ernment to manage its digital and ICT investment portfolio that
+aligns with its priorities and promote better governance of digital
+and ICT investment spending that meets Government direction
+[35]. This includes mechanisms to make good quality investment
+decision and effective oversight. The absence of such an integrated
+approach may restrict the capacity of the government to better
+understand and respond to the digital needs of the public sector,
+including timely risks management [35, 37].
+In summary, the IOF is viewed at a whole-of-government level
+in Australia, from the perspective of Government’s investment
+states in managing digital and ICT investment. In the proposed
+approach, using AEA pipeline as a lens, the IOF states correspond
+to end-to-end projects lifecycle, from early planning through to
+project delivery and realisation of planned benefits as the delivered
+capabilities are used in operations. It seems that the IOF, through
+close integration with AGA, can assist the Australian Government
+to approach its digital investment expenditure decision-making at
+both whole-of-government and portfolio or agencies level. Based
+on limited comparative analysis using publicly available data, both
+the UK and NZ [40, 41] seem to have similar intents, however
+detailed analysis of their approaches are required to determine
+the use of architecture library (empirical evidence) that is closely
+integrated with an investment framework to promote the delivery
+of architecture artefacts, products, and services by connecting the
+strategyintheupstreamtothesolutiondevelopmentandoperations
+in the downstream. Thus, further studies will need be conducted to
+better understand how Australian context can be applied in other
+countries with similar context like the UK and NZ.
+6 DISCUSSION AND CONCLUSION
+This paper discusses an important challenge of digital and ICT
+investment decision making in the complex and federated digital
+government ecosystem in the context of Australian digital govern-
+ment ecosystem. One way to address this challenge is to establish
+anadaptivearchitecturepipeline(ArcOps)forsupportingandevolv-
+ing digital and ICT investment decision making in alignment with
+the government strategy. The Australian government provides
+Data and Digital Government Strategy (DDGS) and several related
+resources to support the establishment of adaptive architecture
+for decision making such as the Australian government Architec-
+ture (AGA) library and Investment Oversight Framework (IOF).
+This paper proposed the adaptive enterprise architecture (AEA)
+meta-framework for digital ecosystems, as a lens, to systematically
+integrate the AGA and IOF in establishing the adaptive architecture
+for assisting digital and ICT investment decisions for the Australia
+digital government ecosystem context.
+The AEA meta-framework consists of six major components for
+establishing an adaptive architecture: architecture principles, meta-
+model, layers, capability, pipeline, and services. This paper only
+used the AEA pipeline to integrate the AGA and IOF to establish
+the adaptive architecture approach for supporting the digital and
+ICT investment decision making for the Australian context (Figure
+5). The AEA pipeline has 5 key stages (Figure 2): (1) vision and
+scope (initiate), (2) discover, (3) implement, (4) govern and (5) adapt.
+These stages provide an overarching structure for the underpinning
+IOF and AGA. Further, it is important to note here that the initiate
+stage of the pipeline is also integrated with the upstream DDGS to
+ensurethedownstreampipelinestagesandintegratedIOFandAGA
+are in alignment with the overall government strategy. This, as a
+whole, provides an adaptive architecture driven approach intends
+to guide the digital and ICT investment decision making in the
+Australian government ecosystem.
+The proposed approach is demonstrated and evaluated with the
+help of an example scenario for an Australian digital government
+service. The results of this study indicate that the adaptive archi-
+tecture driven approach involving AGA and IOF seems useful for
+architecting and supporting complex digital and ICT investment
+decision making to deliver the holistic outcomes of data and digital
+government strategy objectives. Further, it also demonstrates how
+to integrate architecture, and digital and ICT investment oversight
+framework for configuring a comprehensive adaptive approach to
+decision making and for the delivery of data and digital strategy
+objectives. While this study has been conducted in the Australian
+563
+
+--- PAGE 10 ---
+dg.o 2024, June 11–14, 2024, Taipei, Taiwan Asif Gill and Mayada Hansnata
+government context, however, it is intended that the learnings from
+this study can be customised and applied to other similar govern-
+ment context and their digital transformations, which is subject
+to further research. Future work will further investigate the in-
+tegration of other related recourses or artefacts for evolving the
+proposed adaptive architecture driven approach to digital and ICT
+investment decision making.
+ACKNOWLEDGMENTS
+We wish to extend sincere thanks to anonymous reviewers and col-
+leagues from academia and the government for providing feedback
+in improving the quality of this paper.
+REFERENCES
+[1] Asif Q. Gill. 2022. Adaptive enterprise architecture as information: Architecting
+intelligent enterprises, In Intelligent information systems; vol. 8. Singapore:
+World Scientific Publishing Co.
+[2] John Krogstie. 2012. Modeling of Digital Ecosystems: Challenges and Opportu-
+nities. In: Camarinha-Matos L.M., Xu L., Af-sarmanesh H. (eds) Collaborative
+Networks in the Internet of Services. PRO-VE 2012. IFIP Advances in Information
+and Communication Technology, vol 380. Springer, Berlin, Heidelberg.
+[3] Asif Q. Gill. 2021. A Theory of Information Trilogy: Digital Ecosystem Informa-
+tion Exchange Architecture. Information. 2021; 12(7):283. https://doi.org/10.3390/
+info12070283. 2021.
+[4] Marissa Hoekstra, Anne Fleur Van Veenstra, and Nitesh Bharosa. 2023. Suc-
+cess Factors and Barriers of GovTech Ecosystems: A case study of GovTech
+ecosystems in the Netherlands and Lithuania. In Proceedings of the 24th An-
+nual International Conference on Digital Government. Research (DGO ’23).
+Association for Computing Machinery, New York, NY, USA, 280–288. https:
+//doi.org/10.1145/3598469.3598500.
+[5] Heidi Hietala and Tero Paivarinta. 2023. Multilectic Forums in Digital Service
+Ecosystems. In Proceedings of the 24th Annual International Conference on
+Digital Government Research (DGO ’23). Association for Computing Machinery,
+New York, NY, USA, 270–279. https://doi.org/10.1145/3598469.3598499.
+[6] DTA. 2023. The Australian Government Architecture (AGA). Retrieved from
+https://www.dta.gov.au/australian-government-architecture.
+[7] DTA. 2023. Digital and ICT Investment Oversight Framework (IOF).
+Retrieved from https://www.dta.gov.au/help-and-advice/digital-and-ict-
+investments/digital-and-ict-investment-oversight-framework-iof.
+[8] Bruno Latour. 2005. Reassembling the Social: An Introduction to Actor-Network-
+Theory. Oxford: Oxford University Press.
+[9] DTA. 2023. Data and Digital Government Strategy (DDGS). Retrieved from https:
+//www.dta.gov.au/digital-government-strategy.
+[10] Asif Q. Gill. 2022. The digital ecosystem information framework: Insights from
+action design research. Journal of Information Science. Sage.
+[11] Van Donge W, Bharosa N, Janssen MF. 2022. Data-driven government: Cross-case
+comparison of data stewardship in data ecosystems. Government Information
+Quarterly. 2022 Apr 1;39(2):101642.
+[12] Saba Siddiqui and Asif Qumer Gill. 2023. A Taxonomy Based Digital Platform
+Evaluation Model for Air Quality Data Management. The 22nd International
+Conference on Information & Knowledge Engineering (IKE’23: July 24-27, 2023;
+Las Vegas, USA), 2023.
+[13] JonathanWareham, PaulB.Fox, JosepLluísCanoGiner.2014.TechnologyEcosys-
+tem Governance. Organisation Science Journal.
+[14] Anand Rajaram, Kai Kaiser, Tuan Minh Le, Jay-Hyung Kim, and Jonas Frank.
+2014. The power of public investment management: Transforming resources into
+assets for growth. World Bank Publications.
+[15] DTA.2023.AGAandnewinvestments.Retrievedfromhttps://architecture.digital.
+gov.au/aga-and-new-investments.
+[16] Meyer SB, Mamerow L, Taylor AW, Henderson J, Ward PR, Coveney J. 2012.
+Demographic indicators of trust in federal, state and local government: implica-
+tions for Australian health policy makers. Australian Health Review. 2012 Nov
+2;37(1):11-8.
+[17] Asif Q. Gill. 2024. Data Satellite System for Observability and Navigation of Data
+in Digital Government Ecosystems. Public Sector Network.
+[18] DTA. 2023. ICT Investment Approval Process. Retrieved from https:
+//www.dta.gov.au/help-and-advice/digital-and-ict-investments/ict-investment-
+approval-process.
+[19] DTA. 2023. The Digital Service Standard. Retrieved from https://www.dta.gov.
+au/DigitalServiceStandard..
+[20] DTA. 2023, Digital and ICT Reuse Policy. Retrieved from https://www.dta.gov.
+au/our-projects/digital-and-ict-reuse-policy…
+[21] Gary Marchionni, Hanan Samet, and Larry Brandt. 2003. Digital government.
+Communications of the ACM. 2003 Jan;46(1):25-7.
+[22] Svenja Falk, Andrea Römmele, Michael Silverman. 2017. The promise of digital
+government.Digitalgovernment: Leveraginginnovationtoimprovepublicsector
+performance and outcomes for citizens. 2017:3-23.
+[23] Ida Lindgren and Anne Fleur van Veenstra. 2018. Digital government transfor-
+mation: a case illustrating public e-service development as part of public sector
+transformation. InProceedings of the 19th Annual International Conference on
+Digital Government Research: Governance in the Data Age 2018 May 30 (pp.
+1-6).
+[24] J. Ramón Gil-García and Theresa A. Pardo. 2005. E-government success factors:
+Mapping practical tools to theoretical foundations. Government information
+quarterly. 2005 Jan 1;22(2):187-216.
+[25] Cancan Wang, Rony Medaglia and Lei Zheng. 2018. Towards a typology of adap-
+tive governance in the digital government context: The role of decision-making
+and accountability. Government Information Quarterly. 2018 Apr 1;35(2):306-22.
+[26] Alan R. Hevner, Salvatore T. March, Jinsoo Park and Sudha Ram. 2004. Design
+Science in Information Systems Research. Management Information Systems
+Quarterly.
+[27] DTA. 2023. How to use: Why an Australian Government Architecture (AGA).
+Retrieved from https://architecture.digital.gov.au/how-to-use#why.
+[28] DTA. 2023. Digital and ICT Investment Oversight Framework (IOF) Diagram. Re-
+trieved from https://www.dta.gov.au/sites/default/files/2023-08/23-0157%20IOF%
+20diagram%20not%20accessible.pdf.
+[29] Ronald A. Howard, Ali E. Abbas. 2016. Foundations of Decision Analysis. Pearson.
+[30] Asif. Q. Gill and Eng Chew. 2019. Configuration information system architecture:
+Insights from applied action design research. Information & Management Journal.
+[31] VijayVaishnaviAndWilliamKuechler.2004.DesignScienceResearchinInforma-
+tion Systems (updated in 2017 and 2019 by Vaishnavi, V. and Stacey, P.); last up-
+dated(byVaishnavi,V.andDuraisamy,S.)onDecember15,2023.RetrievedMarch
+1, 2024 from: http://www.desrist.org/design-research-in-information-systems/.
+[32] DTA,2023.AGAandnewinvestments.Retrievedfromhttps://architecture.digital.
+gov.au/aga-and-new-investments. Accessed 2024.
+[33] DTA. 2024. Assurance Framework for Digital & ICT Investments. Retrieved from
+https://www.dta.gov.au/sites/default/files/2024-01/Assurance-Framework.pdf..
+[34] DTA. 2023. Digital Capability Assessment Process (DCAP). Retrieved from https:
+//www.dta.gov.au/help-and-advice/digital-capability-assessment-process-dcap.
+Accessed 2024.
+[35] OECD. 2024. 2023 OECD Digital Government Index. Retrieved 15 April 2024
+from https://www.oecd-ilibrary.org/governance/2023-oecd-digital-government-
+index_1a89ed5e-en.
+[36] DTA. 2023. Digital Service Standard v1.0. Retrieved from https://architecture.
+digital.gov.au/digital-service-standard-v10.
+[37] OECD. 2020. The OECD Digital Government Policy Framework. Retrieved 20
+April 2024 from https://www.oecd.org/governance/the-oecd-digital-government-
+policy-framework-f64fed2a-en.htm.
+[38] APH. 2024. The Digital Government Index: How does Australia mea-
+sure up?. Retrieved from https://www.aph.gov.au/About_Parliament/
+Parliamentary_departments/Parliamentary_Library/FlagPost/2024/April/
+DigitalGovernmentIndex.
+[39] Asif Q. Gill, 2023. The ArcOps: Connected Enterprise Architecture-Operations
+Pipeline. Enterprise Architecture Professional Journal.
+[40] UK Gov. 2024. The Digital, Data and Technology Playbook. Retrieved 28 April
+2024 from https://www.gov.uk/government/publications/the-digital-data-and-
+technology-playbook.
+[41] NZ Gov. 2024. Standards & guidance. Retrieved 28 April 2024 from https://www.
+digital.govt.nz/standards-and-guidance/.
+564

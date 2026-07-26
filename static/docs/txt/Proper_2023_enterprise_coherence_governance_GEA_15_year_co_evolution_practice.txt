@@ -1,0 +1,1946 @@
+--- PAGE 1 ---
+SoftwareandSystemsModeling(2023)22:551–571
+https://doi.org/10.1007/s10270-022-01059-0
+SPECIAL SECTION PAPER
+OnenterprisecoherencegovernancewithGEA:a15-yearco-evolution
+ofpracticeandtheory
+Henderik A. Proper1,2 · Roel Wagter3 · Joost Bekel4
+Received:28February2022/Revised:10July2022/Accepted:5October2022/Publishedonline:28October2022
+©TheAuthor(s)2022
+Abstract
+General Enterprise Architecting (GEA) is an enterprise architecture method which has emerged out of a need in practice,
+and has been developed and matured over the past 15 years. The GEA method differs from other enterprise architecture
+approaches in that it has a strong focus on enterprise coherence and the explicit governance thereof. This focus followed
+from the observed need to move beyond the Business-IT alignment and ‘Business-to-IT’ stack thinking that is embodied
+in most of the existing enterprise architecture approaches. The main objective of this paper is to report, and reflect on, the
+development of the GEA method (so-far), which involved a co-evolution between theory and practice. In doing so, we also
+present core elements of (the current version of) GEA, and illustrate these in terms of a real-world (social housing) case. We
+will, furthermore, also discuss some of the lessons learned in applying GEA across different organizations.
+Keyword Enterprise architecture
+1 Introduction
+The environment in which modern day enterprises (includ-
+ing commercial companies, government agencies, etc.) need
+to operate, changes constantly. As a result, enterprises trans-
+formalmostcontinuouslytokeepupwiththesechanges.One
+could even go as far as to say that enterprises need to stay
+‘in motion’ [35]. The involved transformations may range
+from changes in value propositions and business processes,
+via changes to the information systems used to support the
+business processes, to changes of the supporting software
+applications and IT infrastructures. Furthermore, the trans-
+Communicated by E. Serral Asensio, J. Stirna, J. Ralyté, and J. Grabis.
+B Henderik A. Proper
+e.proper@acm.org
+Roel Wagter
+roel.wagter@solventa.nl
+Joost Bekel
+joost.bekel@casema.nl
+1 Luxembourg Institute of Science and Technology (LIST),
+Esch-sur-Alzette, Luxembourg
+2 TU Wien, Vienna, Austria
+3 Solventa B.V., Nieuwegein, The Netherlands
+4 Maastricht University, Maastricht, The Netherlands
+formations may be the result of a ‘premeditated’ (strategy
+driven) desire to change, but they can also be the outcome
+of numerous ‘spontaneous’ changes as a result of locally
+needed, or induced, changes.
+Enterprise transformations are also likely to touch upon a
+rich mix of aspects of the enterprise, such as human resourc-
+ing, finance, organizational structures, reporting lines, etc.;
+i.e.notjust‘Business’and‘IT’.Asaconsequence,enterprise
+transformations typically involve many stakeholders [55]
+with differing stakes and interests, who (should) influence
+the direction, or the speed, of the transformation.
+To make (premeditated) enterprise transformations feasi-
+bleandmanageable,theyaretypicallymanagedasaportfolio
+of transformation programmes, where these programmes are
+split further into projects. Such a portfolio of programmes
+and projects, together with the ‘spontaneous’ (bottom-up)
+changes, all need to be mutually coordinated, while, at the
+sametime,alsomaintainingastrongcohesionwiththeenter-
+prise’s strategy. A lack of such coordination will likely lead
+to ‘local optimizations’ favouring short-term, or local, inter-
+ests over the overall longer-term interests of the enterprise.
+Thelatterultimatelyleadstoadegradationoftheenterprise’s
+coherence in terms of a logical, consistent, and connected,
+structure across the enterprise’s strategy, the implementation
+of its key capabilities as an integrated whole, and its portfo-
+lioofproductsandservices[21,22,38,42].Morespecifically,
+123
+
+--- PAGE 2 ---
+552 H.A.Properetal.
+LeinwandandMainardi[21,22]haveshowntheretobeapos-
+itive correlation between an enterprise’s level of coherence
+and its level of performance.
+Project and programme management have, traditionally,
+been put forward as being responsible to guard, or even
+improve, such coherence during transformations. However,
+these approaches focus primarily on the management of
+typical project parameters such as budgets, resource use,
+deadlines,etc.;i.e.“ontimeandwithinbudget”.Whenbeing
+too focused on such project parameters, one runs the risk of
+conductingonlylocalandorpartialimprovementsatthelevel
+of specific projects [38]. For example, when making design
+decisions that have an impact which transcends a specific
+project, projects are likely to aim for solutions that provide
+the best costs/benefits trade-off within the scope of that spe-
+cific project, while not looking at the overall picture [30,38].
+Regretfully, however, in practice such local optimizations
+do not just remain a potential risk. More often than not, this
+riskmaterializes,resultinginreducedstructuralcoherenceof
+importantaspectsoftheenterprise(suchashumanresources,
+services, customers, processes, marketing, finance, physical
+infrastructures, software applications, IT, etc.). As a result,
+enterprises often fail to actually realize the desired transfor-
+mation; even when the involved projects may have finished
+ontimeandwithinbudget.In[30],theauthorsprovideasum-
+mary of possible causes for failures of strategic initiatives:
+“The road from strategy formulation to strategy execution,
+including the use of programmatic steering, is certainly not
+an easy one to travel. Research shows that less than 60% of
+the strategic objectives in organizations are reached”.
+Asananswertothis,enterprisearchitecturehasbeenposi-
+tioned as a means to enable the needed coordination [7,30,
+38,46]. At the same time, however, one has to observe how
+most existing enterprise architecture approaches,1 includ-
+ing the Zachman framework [41], DYA [48], TOGAF [44],
+IAF [66], and ArchiMate [13,17], follow an ‘engineering
+oriented’ style towards enterprise transformation embodied
+in a pre-defined ‘design framework’ identifying different
+(design) perspectives in terms of which the (architecture of
+the) enterprise should be designed. In general, these design
+frameworks follow a ‘Business-to-IT-stack’ [65] style of
+thinking in identifying the different (design) perspectives.
+In practice, we have also observed how the traditional notion
+of Business-IT alignment [9] often results in a de-facto use
+of a design framework involving only two perspectives: (1)
+everything pertaining to IT, and (2) everything else. In many
+organizations,thisessentiallyresultsina‘Businessasevery-
+thing non-IT’ mindset.
+What is also important to acknowledge, is the fact that
+enterprise architecture as a discipline ‘grew’ out of the IT
+1 Used loosely here to refer to enterprise architecture-related general
+frameworks, modelling languages, and methods.
+domain [36,65]. This is illustrated by, for example, the his-
+tory of TOGAF [44], which started out from the IT focused
+TAFIM [43], as well as the discussion between enterprise
+architecture and enterprise-wide IT architecture [36] What
+is also interesting to note is that the original paper on the
+Zachmanframework[41],claimedbymanyasbeingstarting
+pointofenterprisearchitecture,speaksprimarilyaboutinfor-
+mation systems architecture (as its title suggests), while not
+referring to ‘enterprise’ at all. In practice we have observed,
+including organizations involved in GEA’s development2,
+how these ‘IT roots’ strengthen the ‘Business as everything
+non-IT’ mindset.
+While the design frameworks, as proposed by existing
+enterprisearchitectureapproaches,areusefultostructurethe
+actualdesigneffort byprovidingaclearframeworkofpoten-
+tially relevant aspects of the design, they are less suitable to
+structure the needed coordination among stakeholders and
+concernsthatplayaroleinaspecificenterprise.Forinstance:
+the Zachman framework [41] only provides a design frame-
+work; IAF [66] provides a design framework and a set of
+concepts (essentially a meta-model) in terms of which an
+architecture can be described; DYA [48] provides a design
+frameworkaswellasanoverallprocessonhowtostructurea
+‘just enough architecture’ based process; ArchiMate [13,17]
+provides a design framework and a modelling language to
+capture enterprise architectures in line with this framework.
+TOGAF[44]doessuggesttoinitiatean‘ArchitectureBoard’,
+whichtosomeextentcouldplayapositiveroletowardscoher-
+ence. However, TOGAF does not provide a structural way to
+identify which concerns and groups of stakeholders should
+be represented on the ‘Architecture Board’.
+To coordinate change, and ultimately ensure enterprise
+coherence [21,22], stakeholder interests, formal and infor-
+mal power structures within enterprises and its context, as
+well as the associated processes of creating win-win situ-
+ations and forming coalitions, should be taken as a starting
+point[23,47,55,62];i.e.notjustasanafterthoughtintermsof
+stakeholderspecific‘viewpoints’[19].Asmentionedbefore,
+theworkbyLeinwandandMainardi[21,22]hasshownthere
+tobeapositivecorrelationbetweenalevelofcoherenceanda
+level of performance. The need to take stakeholder interests,
+formalandinformalpowerstructures,etc.,asastartingpoint
+to improve and/or ensure coherence, can also be motivated
+in terms of what Conklin [5] refers to as fragmentation in
+thecontextofprojectsand/orprogrammes:“Fragmentation
+suggests a condition in which the people involved see them-
+selvesasmoreseparatethanunited,andinwhichinformation
+and knowledge are chaotic and scattered. The fragmented
+pieces are, in essence, the perspectives, understandings, and
+intentions of the collaborators. ”
+As we will see in Sect. 2, GEA identifies organiza-
+tion specific enterprise coherence perspectives to coordinate
+transformationsandgovernenterprisecoherence.GEAcases
+123
+
+--- PAGE 3 ---
+OnenterprisecoherencegovernancewithGEA… 553
+(see Table 2 on page 17) usually involve around 10 such
+perspectives. Of these perspectives, a majority of these
+(enterprise coherence) perspectives involve different aspects
+acrossthe‘Business-to-ITstack’.AswewillalsoseeinSect.
+2,theexistingdesignframeworkscertainlyhaveanimportant
+role to play in further structuring the (topics to be involved
+in the) coordination between the enterprise coherence per-
+spectives.
+In 2006, these insights triggered the Dutch consultancy
+firm Ordina to initiate a multi-client research programme to
+develop an enterprise architecture method that would indeed
+focusonenterprisecoherenceandtheneedtomoreexplicitly
+coordinateandgovernthiscoherenceduringenterprisetrans-
+formations.By2007thisresultedintheformalestablishment
+of a multi-party2 research and development program.3 This
+programme has resulted in the development (and ongoing
+evolution) of the GEA method [42,46,50].
+Even though the group2 of (Netherlands based) organiza-
+tions participating in the development of the GEA method
+includes, for example, banks, pension funds, and logistic
+companies, there is a strong presence of governmental agen-
+cies. This may be a natural consequence of three factors.
+Firstly, the specific branch of Ordina that initiated the devel-
+opmentofGEAwasOrdinaPublic,whichspecificallytargets
+clients in the public sector. Secondly, government-related
+organizations generally (certainly within the Netherlands)
+are open to collaborative improvement and maturation of
+enterprise/digital transformation. Thirdly, such transforma-
+tions in a public context tend to involve a wider variety of
+stakeholder across different organizational entities, while at
+the same time requiring a more consensus based decision
+making process. With the latter we do not want to imply that
+this is necessarily different in other sectors (e.g. industry,
+finance, etc.). However, the combination of these factors did
+lead to a strong participation from the public sector.
+The goal of this paper, which provides an elaboration
+on [37], is to (1) reflect on the development of GEA as
+a co-evolution between theory and practice, while also (2)
+presentingthecoreof(thecurrentversionof)GEAandillus-
+trating this in terms of a real-world (social housing) case, as
+well as (3) discuss several lessons learned in applying GEA
+across different organizations. In line with this, the remain-
+der of this paper is structured as follows. We start, in Sect.
+2 During different stages of the GEA research program, the fol-
+lowing client organizations participated: ABN-AMRO Bank; ANWB;
+Achmea; Belastingdienst—Centrum voor ICT; ICTU; ING; Kappa
+Holding; Ministerie van Binnenlandse Zaken en Koninkrijksrelaties;
+Ministerie van Defensie; Ministerie van Justitie—Dienst Justitiële
+Inrichtingen; Ministerie van Landbouw, Natuur en Voedselkwaliteit—
+Dienst Regelingen; Nederlandse Spoorwegen; PGGM; Politie Neder-
+land; Prorail; Provincie Flevoland; Rabobank; Rijkswaterstaat; UWV;
+Wehkamp.
+3 https://www.groeiplatformgea.nl.
+2, with a discussion of the core elements of the (current ver-
+sion of) the GEA method, where we will use the real-world
+case of a Social Housing Foundation (De Key4) to illustrate
+these elements. Section 3 then briefly reports on the research
+methodological setup of the GEA development programme.
+We continue in Sect. 4 with a report on the development of
+theGEAmethodasaco-evolutionofpracticeandtheory,and
+someofthelessonslearnedrelatedtothis.Indoingso,wewill
+also clarify why we prefer to speak about co-evolution, and
+why we put practice before theory. In Sect. 5, we then reflect
+on the use of GEA across multiple (large) cases. Finally, in
+concluding, we will also discuss some further directions in
+which we plan and expect GEA to (co)evolve further.
+2 Main elements of GEA
+In this section, we present the main elements of the GEA
+method [42]. GEA considers enterprise architecture to
+involveasetofguidingstatements,processes,products,peo-
+ple, and means that are used to direct the development of
+an enterprise, with a focus on coherence. The GEA method
+aims to contribute to the improvement of the coherence of
+an enterprise by way of an active participation of enter-
+prise architects in the governance and control processes of
+an enterprise, while providing senior management with con-
+tinuous insights into the coherence of relevant aspects of the
+enterprise and its environment. In doing so, GEA intends
+to complement existing enterprise architecture approaches,
+such as Zachman [41], DYA [48], TOGAF [44], IAF [66],
+and ArchiMate [13,17].
+Below we summarize the key elements of the GEA
+method,asitcurrentlystands,after15yearsofuseinpractice
+and regular improvements [42]. We will start, in Sect. 2.1,
+with a discussion of enterprise coherence which is the key
+focal point for the GEA method. For a given enterprise, the
+generic notion of enterprise coherence is operationalized in
+termsofitslevelofpurposeandlevelofdesign,whicharedis-
+cussed in Sects. 2.2 and 2.3, respectively. This is followed in
+Sect. 2.4 with the notion of enterprise issue, which captures
+the main driver for ‘doing’ a GEA iteration. The ‘solution’
+ofanenterpriseissueiscapturedintermsofanintegralsolu-
+tion contour, which will be discussed in Sect. 2.5. Finally,
+to guide the process of applying GEA to a (new) enterprise
+issue, the GEA method provides a road-map; which we will
+summarize in Sect. 2.6.
+We will illustrate main elements in terms of a recent case
+in which GEA was applied, involving a social housing foun-
+dation De Key4. This case also features as an illustrative case
+in [37,42]. In this paper, we only provide a summary of the
+4 https://www.dekey.nl.
+123
+
+--- PAGE 4 ---
+554 H.A.Properetal.
+Fig.1 The elements of coherence at level of purpose [42]
+De Key case. For a more elaborated discussion of this case,
+please refer to [42, pp. 100–114].
+2.1 Enterprisecoherence
+In [22], Leinwand and Mainardi define coherence, in the
+context of companies, as: “For a company to be described
+as coherent, it must be resolutely focused and clear-minded
+about three critical elements: its market position (its chosen
+‘way to play,’ if you will); its most distinctive capabili-
+ties, which work together as a system; and its products and
+services portfolio”. The GEA method subscribes to this def-
+inition, but starts out from a more generic vantage point by
+defining enterprise coherence as “the extent to which all
+relevant aspects of an enterprise are interconnected, such
+that these connections facilitate an enterprise in achieving
+its management’s desired results” [42]. GEA’s “achieving
+its management’s desired results” is a more generic way of
+considering the Leinwand and Mainardi’s “market position
+(its chosen ‘way to play,’ if you will)” and choices regarding
+which capability are to be considered to be “most distinctive
+capabilities”. Furthermore, the “the extent to which all rel-
+evant aspects of an enterprise are interconnected” in GEA’s
+definition is a more generalized way to refer to the “which
+work together as a system” in the context of “most distinc-
+tive capabilities, which work together as a system; and its
+products and services portfolio”.
+Theoperationalizationofthe(generic)definitionofenter-
+prise coherence in the context of a specific enterprise
+involves the creation of an enterprise specific GEA frame-
+work[59,61].Thisframeworkinvolvestenkindsofelements
+of coherence (see Fig. 2, on page 7, for an overview) that,
+for a given enterprise, operationalize the “relevant aspects
+of an enterprise” that need to be interconnected. This frame-
+work revolves around the notions of level of purpose and
+level of design, which are discussed in Sects. 2.2 and 2.3,
+respectively, where, for example, the relevant relationships
+embody the “the extent to which” from GEA’s definition of
+enterprise coherence.
+2.2 Levelofpurpose
+The level of purpose is the level at which GEA considers
+the meaning and purpose of an enterprise. At this level,
+GEA essentially adopts the “Strategic Development Process
+Model” as proposed by Kaplan & Norton [15], the “Strategy
+Formulation”approachbyThenmozhi[45]andthenotionof
+endless pursuit of a company’s mission from “Building Your
+Company’s Vision” by Collins & Porras [4]. These ways
+of thinking were at use at, or at least know to, the initial
+members2 of the GEA project. As such, it was a pragmatic
+choiceinthedevelopmentofGEAtousethesewaysofthink-
+ing as a starting point. Based on this, GEA distinguish five
+key elements to capture the level of purpose: mission, vision,
+core values, goals and strategy, see Fig. 1.
+Themissioninvolvesabrief,typicallyonesentence,state-
+ment that defines the fundamental purpose of the organiza-
+tion [15] that is “enduringly pursued but never fulfilled” [4].
+Itshouldincludewhattheorganization providestoitsclients
+and inform executives and employees about the overall goal
+they have come together to pursue [15]. The “enduringly
+pursued but never fulfilled” qualification refers to the fact
+thattheactofachieving amissionisneverfinished;realizing
+the fundamental purpose is an ongoing effort.
+The vision is a concise statement that operationalizes the
+mission in terms of the mid to long-term goals of the orga-
+nization. The vision should be external and market oriented
+and should express – preferably in aspirational terms—how
+the organization wants to be perceived by the world [15].
+Core value statements prescribe a desired behaviour, charac-
+terandculture[15]andarerequiredforanenterprisetobe,or
+become, successful within its formulated vision. Goal state-
+mentsinvolveaformulationofadesiredstageofdevelopment
+for an enterprise working towards achieving the enterprise’s
+123
+
+--- PAGE 5 ---
+OnenterprisecoherencegovernancewithGEA… 555
+vision [15]. The strategy involves a comprehensive master
+plan in which it is stated how an enterprise will achieve its
+goals. It should also maximize the competitive advantages
+and minimize competitive disadvantages [45].
+De Key: Levelofpurpose
+The mission of De Key is5 (translated from Dutch): “De
+Key contributes to the dynamics of the city of Amsterdam
+by enabling people to take their first steps on the housing
+market, inside, or just outside the A10 ring.” (The A10 is a
+highway around the core of the city.)
+While capturing the level of purpose, in terms of Fig. 1,
+all elements are confronted to each other using matrices
+‘ﬂowing’downthetriangle.Inotherwords,coreelements
+from the mission were confronted to the statements of
+the vision, these were then confronted with statements
+capturing the core values, etc.
+At De Key, this involved: 1 mission statement, 14 vision
+statements, 4 core values, 8 goal statements, and 15 strat-
+egy statements. Table 1 provides an excerpt of the matrix
+linking vision statements to key elements in the mission.
+It is interesting to note that in some organizations there
+might be some scepticism, or even ‘change fatigue’, towards
+the formulation and realization of the level of purpose. We
+wouldarguethatthisisoftenactuallyanindicationofastrong
+lackofcoherencebetweenthelevelorpurposeandthe(actu-
+ally realized) level of design.
+2.3 Levelofdesign
+The level of design, is concerned with a high level perspec-
+tive on the design of the enterprise, by which the level of
+purposeisinstantiated.Thislevelconcernsperspectives,core
+concepts,guidingstatements,coremodels,andrelevantrela-
+tionships:
+– (Coherence) perspectives concern the vantage points
+from which one would like to contemplate and to govern
+the enterprise. The set of perspectives used in a specific
+enterprise depend very much on its formal and informal
+power structures. Both internally, and externally. Typical
+examples are culture, customer, products and services,
+businessprocesses,informationprovision,finance,value
+chain, corporate governance, etc.
+– Core concepts define the main vantage points in terms of
+which one wishes to contemplate and to govern a per-
+spective.
+– Guiding statements are internally agreed and published
+statements which give direction to desirable behaviour.
+5 https://www.dekey.nl/Media/9b0b72d9c89e08f9232917106b273dc0/
+original/ruimte_voor_beweging.pdf/.
+These statements may involve overall policy statements,
+more specific objectives, as well as principles.
+– Core models are models of one or more perspectives,
+based on, and in line with, the guiding statements of the
+corresponding perspective(s). Such core models can typ-
+ically pertain to any aspect of the ‘business-to-IT stack’,
+from value propositions, via business processes to the
+supporting software applications and IT infrastructures.
+– Relevant relationships are descriptions of the connec-
+tions between the guiding statements from different
+perspectives.
+As an indication across multiple cases, Table 2 (page 17)
+provides some indicators of the number of perspectives and
+guidingstatementsfortypicalcases(someofwhichhavealso
+been published).
+It should be noted that next to the relevant relationships
+betweentheguidingstatements(fromdifferentperspectives),
+there are other relationships between the ten different GEA
+elements that are investigated within the GEA method, to
+assess and/or improve enterprise coherence. More specif-
+ically: (1) mission statement versus vision statements (see,
+forexample,Table1),(2)missionstatement andvisionstate-
+mentsversuscorevalues,(3)goalsversusmissionstatement,
+vision statements, and core values, (4) strategy statements
+versus goals, (5) goals versus objectives, (6) core values
+versusprinciples,(7)strategystatementsversuspolicystate-
+ments. This kind of confrontation leads to a number of
+matrices, such as the one shown in Table 1. The analysis is
+performedbythecoreteammembers.Nexttobasiccrossref-
+erentialanalysis(asisthecaseforTable1),thisalsoinvolves
+the creation of matrices that express the degree of support.
+For instance expressing the level at which a mission state-
+ment supports the vision statement, or the level at which a
+goal supports a core value, etc. In the cells of such matri-
+ces, the degree of support is expressed in terms of the range
+from −3 to +3. This ranking is discussed with the board
+with regard to the level of purpose and with the perspective
+owners at design level. As we will discuss in Sect. 6, this
+activity can certainly benefit from automated support. Even
+more, the scoring should ideally also be based on some form
+of quantifiable evidence.
+The resulting structure is exemplified in Fig. 2. The per-
+spectives as shown there are just illustrative. The actual set
+of relevant perspectives in a specific situation is organiza-
+tion specific. Note that even though Fig. 2 only shows three
+relevant relationships, the general experience is that there
+will be about twice as many such relations as there are per-
+spectives. These relationships provide the primary focus of
+the needed coherence between the different perspectives, in
+order to achieve and maintain an overall enterprise coher-
+ence.
+123
+
+--- PAGE 6 ---
+556 H.A.Properetal.
+Table1 Excerpt of De Key’s Mission-Vision matrix [42]
+Vision statements Mission elements
+De Key Dynamics of the city Ring A10 People First steps Housing market
+We are in line with current developments and remain
+true to values that have traditionally determined De
+Key’s identity.
+× ×
+Spatial the urbanization has consequences: for exam-
+ple, to build homes, more high-rise buildings are
+needed.
+× × ×
+Our contribution to the dynamism in Amsterdam is to
+create and manage affordable forms of housing that
+are attractive to people who want to take their first
+steps in the housing market.
+× × × × ×
+We continue to build current home ownership with
+activeportfoliomanagement,innovativehousingcon-
+cepts and by supporting initiatives.
+× × ×
+Thedesignframeworksunderlyingenterprisearchitecture
+approaches1 suchas:Zachman[41],DYA[48],TOGAF[44],
+IAF [66], and ArchiMate [13,17], can be used to further
+structure, across each of the identified (coherence) perspec-
+tives, the scopes of the core concepts, guiding statements,
+core models and relevant relationships. More specifically,
+core models can be expressed in modelling languages such
+as ArchiMate [13,17], BPMN [29], or UML [28].
+De Key: Levelofdesign
+At De Key, ten perspectives were identiﬁed: Finance, Cus-
+tomer, Real estate, Services, Suppliers, Governance, Employ-
+ees, Stakeholders, Processes, and Information provision. As
+an illustration, Fig. 3 shows for each of the identiﬁed per-
+spectives the number, and kinds of, guiding statements
+that were formulated.
+What was interesting is that for the Real estate and
+Stakeholders perspectives no principles were formulated,
+while for the Suppliers perspective no objectives were
+formulated. These observations raised concerns for the
+respective perspective owners. For instance, for a social
+housingfoundationitisrather‘odd’tomanagerealestate
+without clear (business) principles. Similarly, one would
+expect that for the management of suppliers there to be
+clear objectives.
+2.4 Enterpriseissue
+The main driver for enterprises to apply GEA is to deal
+with an enterprise issue, since such issues either trigger
+(top-down)enterprisetransformations,emergeduring,orare
+caused by, ongoing (bottom-up or top-down) transforma-
+tions. In general, an enterprise issue is defined as a problem,
+bottleneck, challenge, or alleged solution, which is consid-
+eredandcontrolledfromthecontextofdifferentperspectives
+within an enterprise. An enterprise issue can be a ‘positive’
+issue, such as the desire to innovate, move towards new mar-
+kets, apply new technologies to become more efficient, etc.
+It can also be a ‘negative’ issue, such as a need to become
+more efficient, reduce costs, manage/avoid a loss of market
+share, become GDPR compliant, etc.
+Enterprise issues can have both external and internal
+‘causes’. Examples of external causes include the need to
+respond to changes in the environment, such as legislation,
+technological developments, demographic trends or chang-
+ing competitive relationships. Examples of internal causes
+include a need to increase efficiency, cost control, and com-
+pliance with (legal) norms and standards. When the existing
+(base-line)structuresofanenterprisehasbeendocumentedin
+terms of, for example, (up-to-date) ArchiMate [13,17] mod-
+els, then these can be used to support such an analysis.
+Enterprise issues may originate from the strategic level,
+i.e. primarily influenced by and/or influencing the elements
+at the level of purpose. They may, however, also pertain to
+more operational issues (more directly linked to the level of
+design), such as a major security breach (with the need to
+report this to a national authority), or discovered evidence of
+GDPR non-compliance.
+De Key: Theenterpriseissue
+DeKeyisalargesocialhousingcorporationinAmsterdam
+withtwooﬃces.Ithadanissuethat,inshort,couldbebest
+described as “a required strengthening of the ﬁnancial
+function”. The underlying causes of this issue concerned
+changesinDutchﬁnanciallegislation,whichimposednew
+requirements with respect to ﬁnancial accountability for
+enterprises,aswellasfromtheperspectiveofthesupervi-
+sorybodiesthatcontrolledtheseaspectsthatrequiredDe
+Key to produce more detailed ﬁnancial reports.
+123
+
+--- PAGE 7 ---
+OnenterprisecoherencegovernancewithGEA… 557
+Fig.2 Elements of the GEA framework, [42]
+More speciﬁcally, the necessary data for external super-
+visors was missing from the ﬁnancial reports, which was
+partly the result of new legislation and regulations for the
+Dutch housing market. This mainly concerned new data
+that had to be gathered, registered and processed, and
+consequently provided to the ﬁnancial administration by
+all business units; eﬀectively having a deep impact on the
+enterprise-wideinternaldataﬂowunderlyingtheﬁnancial
+reporting.
+De Key’s responsible ﬁnancial director immediately real-
+ized that this issue could not be solved within the
+ﬁnancial administration alone, but that a strong depen-
+dency existed with other functions within De Key (across
+diﬀerent business units) and that solving these ‘ﬁnancial’
+issues would require the active cooperation of all man-
+agersoftheinvolvedfunctions.Inotherwords,anintegral
+solution was need.
+2.5 Integralsolutioncontour
+AswillbediscussedinSect.2.6,‘solving’anenterpriseissue
+involves the development of an integral solution contour at
+Fig.3 Guiding statements per perspective, [42]
+a global level. The integral solution contour is more than
+the sum of change initiatives, it is about meaningful coher-
+enceandthecreationofmutuallysupportiveinitiatives,while
+also reinforcing changes within an enterprise to support and
+improve its performance. Initially, there may be contradic-
+tions with other change initiatives, there may be overlap,
+123
+
+--- PAGE 8 ---
+558 H.A.Properetal.
+and change initiatives may clash with guiding statements
+from other perspectives. All change initiatives, starting with
+the initiatives with the highest priority must be examined
+for these problems. Any disagreements must be brought to
+the attention of the relevant perspective owners who must
+decide how these matters will be resolved. Once the dis-
+agreements have been solved, an integral solution contour
+can be described and submitted to the board of the enterprise
+for decision making.
+In developing and capturing an integral solution con-
+tour, an enterprise architecture modelling framework such
+as ArchiMate [13,17] can be used to express the solution
+contour, while also analysing inter-dependencies between
+different change initiatives [19]. Where needed, the solution
+contour can be elaborated further in terms of finer grained
+models(see[18])expressedinlanguagessuchasBPMN[29]
+or UML [28].
+De Key: Developingtheintegralsolutioncontour
+A one-day workshop was organized, which included the
+perspective owners from De Key, issue owners, some De
+Key board members and two GEA supervisors.
+Once the GEA supervisors had explained the workshop
+andmakingtheaforementioneditemsavailable,theissue
+ownersexplainedtheresultsoftheissueanalysis(Sect.2.6,
+step3)indepthusingtheir(earlier)preparedpresentation.
+Oncealltheissuesoftheparticipantshadbeenaddressed,
+the workshop moved to a level where it became clear
+that all the participants really understood the issue, and
+its degree of importance and urgency. Subsequently,
+the integral solution contour for the relevant issue as
+described above was co-created.
+2.6 Road-map
+Insolvingenterpriseissues,theGEAmethodsuggeststheuse
+oftheroad-mapasshowninFig.4.Thisroad-mapdefinesthe
+stepsrequiredtoarriveatanintegralsolutionforanenterprise
+issue. In the case of De Key, for now, only the first four steps
+oftheroad-maphavebeenperformed(thedarkgreyelements
+in Fig. 4).
+The road-map as shown in Fig. 4 is intended to be a ref-
+erence model, which will need situational adjustments to a
+specificenterprisecontext[42].Assuch,theroad-mapshould
+be seen as a guide and checklist, and not as a ‘cook-book’
+thatmustbestrictlyadheredto.Furthermore,thetaskswithin
+a step do not necessarily have to be carried out sequentially.
+They can often be done in parallel. The road-map involves
+different roles (such as enterprise architect, sponsor, stake-
+holders, perspective owners, issue owner, portfolio manager
+and programme manager), these are discussed in more detail
+in [42, page 136 ff.].
+It should also be noted that this road-map is part
+of a broader methodological framework, as provided by
+GEA [42], for the governance of enterprise coherence. This
+includes mechanisms to monitor enterprise coherence, while
+the enterprise is ‘in motion’ [35] (due to bottom-up and/or
+top-down changes) [42].
+The road-map starts with Step 1: initiating. The purpose
+of this initial step is to achieve clarity about the (change)
+process in terms of expected results, scope, staffing, every-
+one’s involvement and the starting documentation. This step
+involves four tasks:
+1. Orienting to the situation— Before starting a GEA pro-
+cess, it is necessary to clarify the motivation/driver for
+doing so, while also assessing if GEA is a suitable tool to
+apply in the situation at hand.
+2. Determining the scope of the enterprise— It is important
+to choose the scope of the enterprise in such a way that
+the influence of management on the implementation of
+the change initiatives is expected to be high enough to
+solve the enterprise issue.
+3. Identifying interlocutors— Before starting substantive
+work, it is important to identify relevant interlocutors,
+who represent (with mandate) the different stakes, inter-
+ests,andconcerns,thatneedtobetakenintoconsideration
+in solving (the) enterprise issue(s).
+4. Assessing initial documentation— Once the enterprise
+issue and the scope of the enterprise have been deter-
+mined, the next task is to collect all the relevant vision
+andpolicydocuments.Theseinclude,forexample,annual
+reports, annual plans, strategy notes, etc.
+One of the important deliverables of this step is an arte-
+fact that identifies potential coherence perspectives and their
+potential owners (and stakeholders). This artefact serves as
+animportantinputtothenextstep,whichaimstoanalysethe
+(existing)extentofenterprisecoherence,alsofurtherrefining
+the artefact.
+The overall goal for Step 2: analysing the coherence is to
+makeenterprisecoherenceexplicit(andvalidated)intermsof
+a first version of the organization specific GEA framework
+(in terms of the enterprise’s level of purpose and level of
+design as discussed in Sects. 2.2 and 2.3, respectively). This
+step involves three tasks:
+1. Analysing and categorizing statements, purpose and
+design level— Selected source documents from the enter-
+prise are analysed and all the statements considered to be
+relevant are selected for the GEA framework.
+2. Analysing the coherence— The analysis of the coherence
+takes place after identifying and categorizing the state-
+mentsfromtheprevioustask,andinvolvesanexamination
+to what extent these statements are consistent and com-
+123
+
+--- PAGE 9 ---
+OnenterprisecoherencegovernancewithGEA… 559
+Fig.4 The generic GEA road-map [42]; In dark grey the steps performed at De Key so-far
+plete. This happens at the level of purpose, the level of
+design and between the levels of purpose and design (see
+Sects. 2.2 and 2.3).
+3. Validating level of purpose and design— It is very impor-
+tant that the right stakeholders approve the explicitly
+determined levels of coherence found in their enterprise.
+This must be done to avoid discussions about the correct-
+ness and completeness of the guiding GEA framework
+used to develop a solution contour to an enterprise’s par-
+ticular issue(s).
+Subsequently,theenterpriseissueitselfisanalysedinStep
+3:analysingissue,withtheaimofobtaininganunambiguous
+and clear description of the enterprise issue to hand. The
+overallgoalofthisstepistoprovideagoodunderstandingof
+the enterprise issue for the perspective owners, so that they
+can achieve an integral solution contour for the enterprise
+issue at hand. This step involves three tasks:
+1. Analysing the issue— A substantive analysis of the enter-
+prise issue is performed in a workshop with the owners
+of the issue. An issue owner is the person responsible
+within an enterprise for the specific issue and responsible
+for implementing an effective solution.
+2. Analysing the GEA guiding framework based on the
+problem— Based on a description of the issue to hand,
+it is necessary to test whether the GEA framework is suf-
+ficiently complete to use it to perform step 4.
+3. Adjusting the guiding framework and preparing an inte-
+gral solution contour workshop— The previous analysis
+canleadtoadjustmentsoftheGEAframework,onthelev-
+els of purpose and design. These changes are discussed
+here with comments on those responsible for them, i.e.
+board members and/or perspective owners.
+The goal of Step 4: developing integral solution contour
+is to achieve an integral solution contour for the enterprise
+issue at hand. This step involves three tasks:
+1. Obtaining change initiatives— An inventory of possible
+change initiatives for the enterprise issue needs to be cre-
+ated. This is commonly done in the form of a one-day
+workshop with the issue owner and perspective owners
+present.
+2. Compiling an integral solution contour— The identified
+changeinitiativesaregroupedintotheactualintegralsolu-
+tion contour.
+3. Processing the integral solution contour in the GEA
+framework— When developing the integral solution con-
+tour, it is certainly possible that adjustments and/or
+updates have to be made to the GEA framework. There-
+fore, in this task, the GEA framework is (optionally)
+updated and it can be used in solving future enterprise
+issues.
+The development of the integral solution contour does
+require a prioritization; especially in relation to, for exam-
+ple,thelevelofpurpose,theenterpriseissue,goalsofchange
+initiatives,principles,etc.InapplyingGEAindifferentorga-
+nizations,itwasfoundtobeimportanttoorganizeworkshops
+withthe‘perspectiveowners’,involvingamixofgroupwork
+and plenary sessions.This allows, ina relatively shortperiod
+of time, for an identification (and commitment for) the most
+importantchangeinitiatives.Duringsuchworkshops,thepri-
+123
+
+--- PAGE 10 ---
+560 H.A.Properetal.
+oritization of change initiatives is supported both during the
+group work and the plenary sessions, and explicitly related
+to the interrelationships between the change initiatives and
+the triggers/causes, risks and implications of the issue at
+hand, as well as the extent to which the change initiatives
+are supported by existing guiding statements in terms of pol-
+icy statements, principles and objectives.
+TheaimofStep5:creatingrealizationplan(forthe)solu-
+tion contour is to develop a project/programme plan for the
+realizationoftheintegralsolutioncontour.Thisstepinvolves
+three tasks:
+1. Translating solution contour into planning— Plot the
+change initiatives over time.
+2. Estimating required capacity— For an enterprise to be
+abletoaccommodatethechangeinitiativesandtheassoci-
+ateddevelopmentsinitsportfolio,insightintotherequired
+capacity is also required to make the changes.
+3. Drawing up a realization plan for the solution contour—
+When the integral solution contour has been set in time
+and capacity, the core team must draw up the realization
+plan for the solution contour.
+Finally, Step 6: including developments in portfolio
+involves the (continuous) alignment of the realization of the
+realization plan with other changes taking place within the
+enterprise. It involves three tasks:
+1. Sharing knowledge and background about realization
+plan— To position all changes from the change plan the
+right place in an enterprise’s overall change portfolio, it
+is critical that the managers responsible for the portfo-
+lio have a good understanding of the necessary change
+initiatives to be realized within their enterprise.
+2. Analysing the relationship between the realization plan
+and existing portfolio— This involves a more in-depth
+analysis of how the activities in realization plan relate to
+the enterprise’s existing portfolio of changes.
+3 Research methodological perspective
+In this Section, we provide a summary of the research
+methodological perspective on the development of GEA. A
+more detailed discussion can be found in [63].
+3.1 DesignScienceasthebasicapproach
+In developing GEA, the GEA programme used the Design
+ScienceResearch(DSR)methodology [11,24].Morespecif-
+ically, Fig. 5 shows how DSR has been applied in the GEA
+programme.
+Theboxontheleft-handsideofFig.5representstheprob-
+lem domain of the research programme, i.e. the environment
+of enterprise coherence governance consisting of organiza-
+tions in the public and industrial area with more than 200
+employees, a high degree of multiple forms of labour divi-
+sion, the business issues that influence the level of coherence
+and the people involved in enterprise coherence governance.
+The boxes in the middle of Fig. 5 represent the two major
+phases of the research programme, i.e. the develop/build
+phase and the evaluation phase of the intended theory and
+artefacts(i.e.GEA).Theboxontheright-handsideofshows
+examples of the theories, frameworks, instruments, con-
+structs, models, techniques, measures and validation criteria
+thatwereadoptedtodevelopGEA,sothatitsupportstheexe-
+cutionofenterprisecoherencegovernance. Fig.5alsoshows
+that the GEA method actually consists of three components:
+ECA (Enterprise Coherence-governance Assessment) [56,
+59], ECF (Enterprise Coherence Framework) [61] and ECG
+(Enterprise Coherence Governance-approach) [57,62].
+3.2 AdoptionofDSRguidelines
+Hevner, et al [11] provide seven guidelines for DSR. Below
+we highlight how the GEA programme has endeavoured to
+meet these guidelines.
+Guideline 1: Design as an artefact— DSR must produce a
+viable artefact in the form of a construct, a model, a method,
+or an instantiation [11].
+Thekeyartefactresultingfromtheresearchprogrammeis
+theGEAmethod,consistingofatheoryandthecoreartefacts
+ECF, ECG and ECA.
+Guideline 2: Problem Relevance— The objective of DSR
+is to develop ‘technology-based solutions’ to important and
+relevant business problems [11].
+AsshownintheleftpartofFig.5,thechallengeaddressed
+in the GEA research programme was the improvement of
+enterprise coherence governance.
+Guideline 3: Design Evaluation— The utility, quality, and
+efficacyofadesignartefactmustberigorouslydemonstrated
+via well-executed evaluation methods. Evaluation of an arte-
+fact can be done using empirical and qualitative research
+methodssuchasobservational,analytical,experimental,test-
+ing or descriptive-oriented methods [11].
+The lower box in the middle part of Fig. 5 shows the
+evaluationmethodusedintheprogramme,beingthemultiple
+case study research approach from Yin [67].
+Guideline 4: Research Contributions— Effective DSR must
+provide clear and verifiable contributions in the areas of the
+design artefact, design foundations, and/or design method-
+ologies [11].
+The lower middle part of Fig. 5 shows that the main con-
+tribution of the research programme to the knowledge base
+consist of the GEA method and its associated artefacts ECA,
+123
+
+--- PAGE 11 ---
+OnenterprisecoherencegovernancewithGEA… 561
+Fig.5 Adoption of Design Science approach by the GEA programme [10,11]
+ECF and ECG as well as the publications reporting on its
+effect in practice.
+Guideline 5: Research Rigor— DSR relies upon the appli-
+cation of rigorous methods in both the construction and
+evaluation of the design artefact. DSR artefacts are created
+basedonexistingfoundationsandmethodologiesinaknowl-
+edge base which include theories, frameworks, instruments,
+constructs,models,methods,instantiations,experiences,and
+expertise [11].
+The right part of Fig. 5 shows the foundations and
+methodologies (i.e. existing literature) that we adopted in
+the development of GEA. The bottom of the left part of
+Fig. 6 shows that existing literature and experiences was be
+applied in the design, evaluation, and modifying phases of
+the research programme.
+Guideline6:DesignasaSearchProcess—Thesearchforan
+effective artefact requires utilizing available means to reach
+desired ends while satisfying laws in the problem environ-
+ment [11]. Design involves iterative research activities such
+asconstructing,evaluating,andrefiningtheartefactbasedon
+findings [10].
+The major design activities that were carried out in the
+research programme to achieve the research objectives are
+shown in the right part of Fig. 6. It also shows that all the
+developmentactivitiestoconductintheresearchprogramme
+have been grouped into phase 1, phase 2 and phase 3. The
+result of phase 1 consist of the first version of GEA and the
+evaluation phase 2 formed the basis to modify GEA during
+phase 3 into the final version of GEA. In the left part of
+Fig. 6 the evaluation methods that were used in the research
+programme are shown.
+While using DSR as the overall research approach, the
+GEA programme also used:
+– The Multiple Case Study Research Approach as sug-
+gested by Yin [67] to conduct phase 2.
+– TheAnatomyofaDesignTheory byGregoretal.[8]was
+used to evaluate GEA.
+– The DSR Methodology for Information System Research
+byPeffersetal.[32]wasusedasa‘template’fortheGEA
+design process.
+– In order to develop the initial versions of several of
+the GEA artefacts the group decision technique Meta-
+Plan [40] was used.
+Guideline 7: Communication of Research— DSR must be
+presented effectively both to technology-oriented as well
+as management-oriented audiences. Communication of the
+research programme was targeted both at academic and
+123
+
+--- PAGE 12 ---
+562 H.A.Properetal.
+Research Phase 1: Major tasks done in the design of GEA theory and GEA artifacts
+1. Identify the triggers to the research programme
+2. Translate triggers into research problem definition based on an
+exploratory survey among decision makers, influencers and enterprise architects
+3. Proof the research problem exists via development and exploration
+of an enterprise coherence governance assessment (ECA)
+4. Define the research questions and research objectives based on the
+research problem and ECA results
+6. Set up requirements based on relevant literature, the conducted ECA and
+the exploratory survey
+5. Review literature on enterprise governance, enterprise architecture, and research
+methodologies that is relevant to research questions and research objectives
+7. Formulate a theory on improving enterprise coherence (version 1)
+8. Design/build the artifacts ECF, ECG, ECA (version 1)
+9. Check if GEA theory including GEA artifacts meet the requirements
+10. Set up meta model GEA (version 1)
+Research Phase 2: Evaluation Phase of GEA
+11. Prepaire for observational evaluation of GEA
+12. Select cases
+13. Set up data collection protocol
+14. Conduct cases
+15. Draw cross case conclusions
+Research Phase 3: Modify GEA theory and GEA artifacts
+16. Set up meta model GEA (version 2) based on cross case conclusions
+17. Compare meta model GEA version 1 and meta model GEA version 2
+18. Modify GEA theory including GEA artifacts based on comparison meta models and
+cross case conclusions
+Multiple case study research
+approach from Yin
+Prepaire
+Evaluate
+Evaluation methods used
+in research phase 1,2,3
+The Anatomy of a Design
+Theory from Gregor et al.
+Design Science in Information
+Systems Research from
+Hevner et al.
+White paper 1-8,
+parallel tasks 1-10
+Review white papers by
+decision makers, influencers,
+enterprise architects
+Scientific paper 1-7,
+parallel tasks 1-15
+Publish
+Comments
+Review scientific papers
+by scientists
+Reviews:
+Research methodologies:
+Literature on enterprise
+governance, enterprise
+architecture, and
+research methodologies
+Rigor into design
+Rigor into evaluation
+A Design Science Research
+Methodology for Information
+System Research from
+Peffers et al.
+Fig.6 Activities conducted to achieve the research objectives
+industrialaudiences,morespecificallyleadingtoseveralsci-
+entific and industrial publications.
+3.3 ImplementationoftheGEAprogramme
+The GEA research programme itself was structured in terms
+of four groups:
+1. Acoreteamconsistingofsixtoeightpeoplewithin-depth
+knowledge in the field of enterprise architecture.
+2. Acustomerreferencegrouprepresentingthetwentymajor
+enterpriseswhoco-financed theprogramme.Theserepre-
+sentativesinvolvedpolicymakers,managersofenterprise
+architecture departments and lead enterprise architects.
+3. An expert review team involving thirty lead enterprise
+architects.
+4. A steering committee with seven leading representatives
+from science and industry.
+To participate in one of these groups, candidate participants
+had to meet strict criteria:
+1. For the core team, the participants were required to have
+in-depthknowledgeofthefieldofenterprisearchitecture
+and a willingness to spent a considerable amount of time
+on the activities of the research programme.
+2. For the customer reference group, participants were
+required:
+– to be working in one of the participating client orga-
+nizations,
+– haveastrongaffinitywiththedisciplineofenterprise
+architecture,
+– identifywiththetriggersandresearchproblemofthis
+research,
+– to be willing to discuss the interim results of this
+research on a regular basis and
+– to be willing (as an organization) to co-fund the
+research effort.
+3. To be part of the expert review team, members were
+required to have an in-depth knowledge in the field of
+enterprise architecture and the willingness to thoroughly
+evaluate the interim results of this research within a rel-
+atively short time-span.
+123
+
+--- PAGE 13 ---
+OnenterprisecoherencegovernancewithGEA… 563
+4. The scientific members of the steering committee were
+requiredtobeamongtheleadersintheirfield.Theindus-
+trial members of the steering committee were required to
+be employed/working at the boardroom level. All mem-
+bers of the steering committee were required to have the
+willingness (and commitment) to discuss the innovation
+strategy of this research on a regular basis.
+Theactualinvolvement(andcomposition)ofthesegroups
+depended on the specific phase of the research programme.
+The results of the research activities, as conducted by the
+core team, were regularly discussed with (and evaluated by)
+the customer reference group. The members of the expert
+review team were charged with the responsibility to guard
+thequality bythoroughly evaluation theresults.Thesteering
+committee regularly assessed the progress of the programme
+and the development strategy followed.
+During phase 2 (see Fig. 6), the GEA method (or parts
+thereof)wasappliedinmultipleorganizationswiththegoalto
+evaluatethemethod,andmakeimprovementswhereneeded.
+In selecting the case studies, the focus was on large organi-
+zations involving a broad application of the GEA results.
+During this phase, the primary case studies included:
+– Professionalization in administrative body of a ministry
+of the Dutch government [62].
+– An impact assessment ofthe introduction ofa new law at
+the Custodial Institutions Agency of the Dutch Ministry
+of Public Safety and Justice [64].
+– Digitization of the document flow at a ministry of the
+Dutch government [58,60].
+In line with Yin [67], the case studies involved the use of
+an explicit data collection protocol. Yin suggests to use five
+levels of questions in collecting data:
+1. Questions to specific interviewees.
+2. Questions at the level of an individual case (these are the
+questions in the case study protocol to be answered by
+theinvestigatorduringasinglecase,evenwhenthesingle
+case is part of a larger, multiple-case study).
+3. Questions focused on finding patterns across multiple
+cases.
+4. Questions at the level of the entire research effort (for
+example, calling on information beyond the case study
+evidence and including literature or published data that
+may have been reviewed).
+5. Normative questions about policy recommendations and
+conclusions, going beyond the narrow scope of the study.
+The evaluation questions used in the GEA programme are,
+for each level, listed in appendix A. These questions were
+validated by the core team.
+The data gathering, structuring and analysis resulted in
+the validation of evaluation criteria such as: degree of accep-
+tance by stakeholders, extend of applicability, achieved level
+of coherence governance, degree of transferability, balance
+between interests of different stakeholders, and level of inno-
+vation.
+4 Lessons learned from GEA’s development
+In this Section, we reflect on some of the practical expe-
+riences in the development of GEA. We start with a short
+discussion of the general background, and then structure the
+remainder of this Section around some of the key lessons
+learned.
+As discussed in the introduction, the initiative to develop
+the GEA method was taken by the Dutch consultancy firm
+Ordina in 2006. As a prelude to the actual start of the devel-
+opment, a survey was conducted among the participating
+organizationstoidentifytherequirementsonthedesiredout-
+comes. It also validated the need to more explicitly govern
+enterprise coherence, beyond mere Business-IT alignment.
+Morerecentpublications[21,22]providefurther(aposterior)
+support for this motivation.
+4.1 Organizetheneed
+From the start out, the ambition of the GEA research pro-
+gramme was to follow a science-driven approach. From a
+research methodological perspective [63], the development
+of GEA involved a design science [10] effort, with an impor-
+tantroleforcasesstudies[68]asawaytodrivetheiterations.
+It was, therefore, also important to have a good understand-
+ing of the needs for/requirements on GEA in practice, and it
+was necessary to have access to real-world cases. Therefore,
+the next step was the creation of the multi-client2 research
+program3 involving clients (i.e. future ‘users’ of the method)
+that saw a real need for the method.
+4.2 Validationofneedbyfinancialcommitment
+In the initial stages (i.e. the first five years) of the research
+program, the participating members were also required to
+provideafinancialcontributiontotheprogram.Thisfinancial
+contribution was not only meant to cover (some of) the costs
+oftheprogram.Requiringasubstantialfinancialcontribution
+also implied a (1) validation of the shared understanding of
+the need to develop GEA, and (2) commitment to the devel-
+opment of GEA (e.g. by way of real-world cases).
+Obtainingthisfinancialcommitment,alsohelpedmitigat-
+ing conflicting interests within Ordina. The development of
+GEAalsorequiredaninvestmentonOrdina’ssideintermsof
+hours spent by senior consultants, who would otherwise be
+123
+
+--- PAGE 14 ---
+564 H.A.Properetal.
+able to report ‘billable hours’ with clients. This caused some
+tension with their respective managers who had to deliver
+thesehoursattheexpense oftheirrevenue targets.Requiring
+the participating organizations to also contribute financially
+(in moderation) to the development of GEA, mitigated this.
+4.3 Valueforpracticebeforerigorforscience
+Next to the industrial partners, the research programme also
+involved an advisory board involved five senior researchers
+from different Universities, covering management sciences,
+organizational sciences, and business informatics. This is
+also where a first interaction between practice and theory
+tookplace.TheneedforthedevelopmentofGEAwasclearly
+born in practice. However, already at the start, the senior
+researchers in the advisory board were then able to already
+provide input regarding relevant existing theories and meth-
+ods that could be integrated into the design of the GEA
+method. This resulted in a series of white papers [50,51,53]
+(in Dutch) documenting the need for GEA, its initial design,
+as well as positioning in relation to existing related instru-
+ments(suchasthebalancedscorecard[14],andMcKinsey’s
+7s model [3]).
+SoonafterthestartoftheGEAprogrammeitbecameclear
+that, for the programme to succeed from the perspective of
+theindustrialpartners,itwasnecessarytofirstfocusonestab-
+lishing value for practice. In line with this, during the first
+stages of the GEA programme, the primary focus had to be
+ondoingreal-worldcases(inreal-worldcircumstances)with
+the project partners, and then at a later stage leverage these
+towards scientific reflection and publications. This, never-
+theless, did result in a number of white papers (e.g. [49,52])
+providinginitialdocumentationofthefirstGEAcases(which
+werealsobeneficialinattractingadditionalprojectpartners).
+At a later stage, once the programme was well on its way,
+and the first version of GEA had been documented in terms
+of a book [46], there was room for more scientific reflection
+and rigor [47,54–64].
+4.4 Evaluation:dataversusrealism
+Research methodological publications on DSR (and case
+study research) suggest different ways to conduct evalua-
+tions.They typicallyprescribeways to(1)identifywhatdata
+(andwithwhatquality)tocollect,(2)howtoprocessthedata,
+and (3) how to interpret the findings, what remains open is
+the question if the data can be collected at all.
+In the case of design artefacts that are developed for a
+real world context, like the GEA method, the ultimate eval-
+uation is the use of the artefact in real world circumstances
+they were intended for (e.g. by way of the different cases in
+which GEA has been applied). At the same time, however,
+in a such commercial (and political) context there are sev-
+eral constraints that make it hard to actually collect data. For
+instance, due to budget and time pressures, there may not be
+timetocollectdata.Evenwhenthedatacollectingisdoneby
+researchers that are external to the project (and its budget),
+project managers are likely to frown upon it, as the pres-
+ence of these ‘observers’ and their questions, will (at least
+givetheperceptionof)slow(ing)downtheproject’sprogress
+and/or impact the project’s focus. In addition, there may be
+political sensitivities about the project that different stake-
+holders may not want to become exposed. These challengers
+certainly emerged in some of the GEA cases.
+As such, it would be good for DSR to also provide more
+guidelines on how to conduct evaluations in such critical
+circumstances. Obtaining ideal evaluation data might not
+always be possible when aiming to evaluate a design arte-
+fact in the actual circumstances it is aimed for. As such, it
+sees a trade-off needs to be made between the completeness
+andqualityofthedatathatneedstobegather,andtherealism
+of the actual case.
+4.5 Looselycoupledco-evolutionofpractice&
+theory
+Next to the earlier mentioned lesson learned on value for
+practice before rigor for science, the ongoing work in the
+GEAprogramme also resultedina seriesof parallel research
+activities. These research activities were formally separate
+from the GEA programme, but partly inspired by the find-
+ings within the GEA programme, while some of the findings
+of these parallel research activities flowed back to the GEA
+programme.
+For instance, an important concept in GEA is the notion
+of guiding statement, which involves of policy statements,
+objectives, and principles. The need for a better understand-
+ingoftheseconceptsalsotriggeredmoreexplicitworkonthe
+concept of architecture principles, which a.o. resulted in [7].
+The latter then, in its turn, also enabled the GEA programme
+to further mature these concepts within the GEA context.
+The need for more coordination in enterprise transfor-
+mation to ensure enterprise coherence, was also one of the
+triggers for a broader Architectural Coordination of Enter-
+prise Transformation programme [38].6 Ph.D. candidates
+involved in the latter project also interacted with the project
+members of the GEA programme, to obtain case material for
+their work. Conversely, different results reported in [38] pro-
+vide(d)moretheoreticalunderpinning(s)oftheGEAmethod.
+The need to involve multiple stakeholders in a collabora-
+tive setting, also inspired work towards an approach to use
+collaboration engineering concepts to structure such interac-
+6 An FNR and SNFS co-funded research project involving the Luxem-
+bourg Institute of Science and Technology, the University of Luxem-
+bourg, and the University of St. Gallen in Switzerland.
+123
+
+--- PAGE 15 ---
+OnenterprisecoherencegovernancewithGEA… 565
+tions[26,27].Theseresultsareexpectedtobeintegratedinto
+future versions of GEA, in particular when developing more
+explicit tool support for the method (see the discussion on
+future research in Sect. 6).
+Finally, now that the GEA method is well established
+(and also internationally available [42]) there is a growing
+need (and ambition) to be able to more explicitly quantify
+enterprise coherence and its impact on the performance of
+enterprises. First steps in this direction have already been
+published [1,2].
+In each of these examples, the needs from GEA-related
+practices inspired the development of new concepts and the-
+ories, while some of the latter then flow(ed) back towards
+the further development of GEA. As such, we also prefer
+to speak about co-evolution from practice and theory, con-
+sciouslyputtingpracticefirst(ratherthantheoftenusedorder
+of theory and practice), while using the word ‘co-evolution’
+ratherthantheoftenused“frompracticetotheoryandback”.
+4.6 Controlledinitiation;independentgrowth
+As mentioned the GEA programme was initiated by the
+consultancy firm Ordina. Having one organization in clear
+control of the development proved valuable in order to
+organize the need, financial commitments towards the joint
+development, etc.
+However, after the establishment of a first stable version,
+and making this widely accessible [46] (to a professional
+audience), enterprise architects working at other consul-
+tancyfirmsalsobecameinterestedinco-developingtheGEA
+method. This then triggered the transfer of the GEA method
+to an independent foundation. This foundation7 now man-
+ages the further development of GEA from a more neutral
+position.
+5 Lessons learned from applying GEA
+Overthepast10to15years,GEAhasbeenappliedtoseveral
+cases. This includes several smaller cases, but also a number
+of larger cases. In the remainder of this Section, we discuss
+some of the lessons learned.
+Applying GEA in each of the (larger and smaller) cases
+has resulted in several lessons learned. Table 2 shows (par-
+tiallyanonymized)someofthekeyfiguresofthelargercases.
+Case 5 to 7, were conducted at the early stages of the devel-
+opment of GEA. For those stages, no detailed breakdown of
+the number of guiding statements is available.
+7 https://www.groeiplatformgea.nl/groeiplatform-gea/stichting/.
+5.1 Limitstotheapplicability
+GEA does not claim to be applicable in all situations. In
+practice,thisrequiresexplicitexpectationmanagement.This
+isalsowhyathoroughproblemanalysisisalwayscarriedout
+beforehandtodeterminewhether:(1)theenterpriseismature
+enough for a GEA approach, (2) the leadership style is of a
+sufficiently democratic level and (3) the enterprise issue in
+question is of a strategic level.
+Furthermore, GEA is primarily intended to be used by
+organizations (or business units) involving a few hundred
+employeeswitharelativelyhighdegreeofdivisionoflabour,
+a ‘democratic’ leadership style, and already fairly mature
+management and governance processes in place.
+InapplyingGEAinthecontextofagivenenterpriseissue,
+it is also common to test the suitability of the issue on the
+basis of the following three key questions:
+1. Isthetimehorizoninthecontextoftheissuesignificantly
+long?
+2. Is the relevant investment level significantly high?
+3. Is the solution to the problem expected to have an impact
+on a broad range of business segments?
+Ifallthreequestionsareansweredintheaffirmative,wecon-
+sider a GEA approach to be useful in addition to meeting the
+aforementioned organizational characteristics.
+5.2 Neededinvolvement
+On average the larger cases (see Table 2) require a 5 person-
+month involvement of external consultants and/or core team
+members, and on average 0.25 person-month (per perspec-
+tive) of the perspective owners. Combined, this is an average
+of 5 + 0.25 × 10 = 7.5 person-months in total, per case.
+These involvements include, more specifically:
+1. 3 to 4 members from senior management, to validate the
+documents reporting on the level of purpose.
+2. Producing the analysis of an enterprise issue (including
+the presentation), requires a typical involvement of 1 to 2
+‘owners’ of the enterprise issue at hand.
+3. The validation of documents reporting on the level of
+design requires the involvement of (on average) 2 per-
+spective owners (for, on average, 10 perspectives)
+4. The validation of the solution contour typically involves
+3 to 4 members from senior management, including a
+project/programme portfolio manager.
+As mentioned in Sect. 2.3, generally there about twice as
+many relevant relationships as there are perspectives. These
+relationships provide the primary focus of the needed coher-
+ence between the different perspectives, in order to achieve/
+123
+
+--- PAGE 16 ---
+566 H.A.Properetal.
+Table2 Overall indicators per project (first time iterations of the GEA road-map)
+Case Perspectives Guiding statements # Guiding statements %
+Policy statements Objectives Principle Total Policy statements Objectives Principle Total
+1 [58,60] 12 111 51 73 235 47 22 31 100
+2 10 75 64 152 291 26 22 52 100
+3 9 347 93 20 460 75 20 5 100
+4 [42] 10 108 95 66 269 40 35 25 100
+5 [64] 10
+6 11
+7 10
+maintain enterprise coherence. In gathering these relevant
+relationships (as part of Step 2 of the road-map), it is sug-
+gested to do this in terms of a workshop of half a day,
+involving the perspective owners. The perspective owners
+typically are divided in 4 groups of about 5, and are tasked to
+identifyabout5,intheiropinion,mostrelevantrelationships.
+These arethen plenary discussed,whileremoving redundan-
+cies and prioritizing. Afterwards, usually around 20 of such
+relevant relationships remain.
+It should be noted that the above mentioned number of
+7.5 person-month pertains to the first time iteration of the
+GEA road-map (Fig. 4). In follow-up iterations of the road-
+map, steps 1 and 2 require much less (if at all) effort. In
+these cases, the involvement reduces to 1.4 person-month
+involvementofexternalconsultantsand/+orcoreteammem-
+bers, and on average 0.1 person-month (per perspective)
+of the perspective owners. Combined, this is an average of
+1.5 + 0.1 × 10 = 2.5 person-months in total, per follow-up
+iteration.
+5.3 Benchmarkinnumbers
+Based on the experience across the different cases the fol-
+lowing average numbers seem to be relevant benchmarks for
+larger (1000+ employees) enterprises:
+1. The number of perspectives will be between 9 and 11.
+2. The average number of key concepts will be 4 to 8 per
+perspective.
+3. The number of guiding statements for a large enterprise
+will be between 200 and 400.
+4. Thedistributionoftheguidingstatementswillbeapprox-
+imately10to25%principles,30to45%policystatements
+and 30 to 45% objectives.
+Without assuming these numbers to represent an absolute
+truth, they provide important indicators of when a strong
+deviation from the patterns is visible in an enterprise. When
+strong deviations do occur, it is important to discuss these
+deviations with those responsible, such as the perspective
+owners, and to see whether it is necessary to change, to
+removeortoaddelementsatthelevelofdesign.Inthecaseof
+De Key, we already saw (in Sect. 2) that there were less than
+expectedprinciplesfortherealestateperspective,whilethere
+were no objectives formulated for the suppliers perspective.
+In another case, a GEA survey found that there to be 198
+policystatements,1principlestatementand1objectivestate-
+ment. This is a striking example of a not very result-oriented
+enterprise, which is stuck in policy-making processes.
+5.4 AddedvalueofusingGEA
+It is, of course, an interesting question what the added value
+of using GEA is in practice. Regretfully, given the size, the
+complexity, and situatedness, of enterprise transformations
+ingeneral,acomparativestudybetweentransformationsthat
+applied GEA and transformations that did not, is difficult.
+One overall observation is that, since the presence of a
+good documented enterprise mission, vision, core values,
+goals and strategy are prerequisites to determine the level
+of purpose and level of design, taking the first steps of the
+GEA road-map (Sect. 2.6) also results in a deeper reflection
+by senior management regarding the validity and coherence
+of the level of purpose. Furthermore, the explicit involve-
+ment of the different stakeholders (owners of the enterprise
+issue, the perspective owners, and project/programme port-
+folio management), also results in a stronger commitment to
+the chosen direction (as expression in the solution contour)
+and resulting portfolio of projects. This, in itself, is already
+an added value when applying GEA.
+Inaddition,acrosstheprojectsinwhichGEAwasapplied,
+several ‘feats of arms’ can be identified, such as:
+– With the help of GEA, the EU-accreditation of a large
+Dutch government agency, which had gotten completely
+out of control, was safeguarded within one year.
+123
+
+--- PAGE 17 ---
+OnenterprisecoherencegovernancewithGEA… 567
+– At a Dutch ministry, the unnecessary start-up of a large
+(and costly) project, initially triggered by a change of a
+law, was prevented [58,60].
+– In the context of a large digitization programme at a
+ministry, GEA was used to break (within two months)
+a stalemate in a decision-making process that had been
+stuck for a year [64].
+– With the help of GEA, the financial function of a large
+housing corporation was brought up to the level required
+by regulators within 3 months. This pertains to the De
+Key case as briefly reported on in this paper, while a
+more detailed description of this case is reported in [42].
+– With the help of GEA, the guardianship order put on a
+large municipality was lifted within one year.
+As one could imagine, these cases often involve (politically)
+sensitive issues. This makes it difficult, if not impossi-
+ble, to publish openly about such cases. In [42] additional
+(anonymized) cases are reported on as well.
+6 Conclusion & further research
+In this paper, we reported on the GEA method for enterprise
+architecture, and its development as a co-evolution between
+practiceandtheory,aswellasassociatedlessonslearned.We
+presented the core elements of (the current version of) GEA,
+and have illustrated these in terms of a real-world (social
+housing)case.Finally,wealsodiscussedsomeofthelessons
+learned in applying GEA across different organizations.
+Towards the future, we see several challenges for the fur-
+ther co-evolution between practice and theory. Here, we see
+five main clusters of challenges:
+1. Quantifying and smartening enterprise coherence—
+Thereisaclearneedtobetterquantifythenotionofenter-
+prise coherence, and for instance also provide evidence
+underpinning the scores for the matrices used to express
+the coherence between the different elements (see, for
+example, the discussion in Sect. 2.3). Initial work in this
+direction has already been reported in [1,2], but much
+more work remains.
+Once the notion of enterprise coherence has been quan-
+tified more explicitly, it also becomes possible to find
+causal relations between (the level of) enterprise coher-
+ence and the concept of EBIT(D)A; i.e. an enterprise’s
+economical performance in terms of earnings before
+interest, taxes, (depreciation), and amortization.
+As can be inferred from the discussion of the GEA road-
+map (Sect. 2.6), the creation of an organization specific
+GEA framework, and further monitoring the level of
+enterprisecoherence,canbetime-consuming.Especially
+as it involves the analysis of many different data sources.
+From a research perspective, also this provides ample
+opportunitiesto‘smarten’thisworkusingenablinginfor-
+mationtechnologies,includingnaturallanguageprocess-
+ing, enterprise cartography, process mining, and AI in
+general.
+2. Integration with existing approaches— As mentioned in
+the introduction, with its focus on enterprise coherence,
+GEAiscomplementarytoexistingenterprisearchitecture
+approaches. We also identified different ways in which
+thiscomplementarycanbeoperationalized.Forinstance,
+the design frameworks underlying these approaches can
+be used to provide more structure to the descriptions of
+the level of design, as well as the elaboration an integral
+solution contour.
+In practice, we observe there to be a need to define such
+relations more explicitly. In particular (but not only) to
+the ArchiMate [13,17] standard. Furthermore, the pur-
+pose of an enterprise is also closely linked to its business
+model and its position in value networks, making it rel-
+evant to explore the relationships to, for example, the
+Business Model Canvas [31] and Value Modelling [6],
+respectively.
+3. Organizationaloperationalizationandinstitutionalization—
+As mentioned before, the GEA programme was also
+linked to the broader Architectural Coordination of
+EnterpriseTransformation (ACET)researchprogramme
+[38]. The ACET programme already identified the need
+for further research into the institutionalization of enter-
+prise architecture processes in organizations (see chapter
+12 of [38]). Further work regarding the institutionaliza-
+tion of GEA-related processes is certainly called for.
+As also identified in the ACET programme (chapter 8
+of[38];buildingontheworkbyHofstede[12])organiza-
+tional culture can have a profound impact on the success
+of enterprise architecture-related activities. Since GEA
+has been applied mainly in the context of Dutch Govern-
+mentAgenciesandlargerwell-establishedorganizations,
+there is a need to investigate to what extend the GEA
+method has a ‘cultural bias’ toward such environments.
+4. Managingorganizationalcomplexity—InapplyingGEA
+in practice across different organizational contexts, it
+became clear [42] that strategies are needed to deal with
+organizational complexity. Based on the experiences so-
+far,suchcomplexitiesseemtobeduetotwomaincauses:
+(a) Inherent complexities of the enterprise— For exam-
+ple, enterprises involving multiple management lay-
+ers,matrixstructures,mixesofregionalandbusiness-
+line based structures, etc.
+Enterprisescanalsobeconnectedtootherenterprises
+in various forms of cooperation, including alliances,
+chains, and networks.
+123
+
+--- PAGE 18 ---
+568 H.A.Properetal.
+(b) Inherent complexities of the enterprise issue— The
+enterprise issue that triggers a GEA iteration may
+have a root cause and/or implications that have an
+inherent complexity. Examples include: the intro-
+duction of new regulations, shifting of the relevant
+business ecosystem towards cloud-based platforms,
+or major changes to social/legal obligations (e.g.
+changes to social security, or pension-related rules).
+In [42] some strategies are suggested to deal with such
+complexities. However, more theoretical and empirical
+underpinning is certainly needed.
+5. Collaborative decision making and capturing— Another
+result from the interaction between the GEA programme
+andtheACETprogrammehasbeenworktowardsexplicit
+decision making strategies and ways to capture the
+rationale of such decisions (see chapter 15 of [38],
+and [33,34]). These results can be used to further under-
+pin the (collaborative) decision making activities in the
+GEA roadmap (especially the activities requiring joint
+prioritization and committed to decisions; e.g. Step 4 or
+the GEA road-map). Related to this, we also see oppor-
+tunities for the integration of existing work regarding
+collaborativeapproachestoenterprisemodelling[16,20],
+enterprise architecture [27] and policy formulation [25].
+Acknowledgements We would like to thank the anonymous review-
+ers from both the Software and Systems Modeling journal as well as
+the Practice of Enterprise Modeling (PoEM 2021) conference. Their
+feedback has resulted in many improvements to the original paper. In
+addition,wewouldliketothanktheparticipantsofPoEM2021,fortheir
+participation in the on-line discussions regarding the original version
+of this paper. These discussions have also provided us with additional
+inspirations for improvements and extensions to the original paper.
+Funding Open access funding provided by TU Wien (TUW).
+Open Access This article is licensed under a Creative Commons
+Attribution4.0InternationalLicense,whichpermitsuse,sharing,adap-
+tation, distribution and reproduction in any medium or format, as
+long as you give appropriate credit to the original author(s) and the
+source, provide a link to the Creative Commons licence, and indi-
+cate if changes were made. The images or other third party material
+in this article are included in the article’s Creative Commons licence,
+unless indicated otherwise in a credit line to the material. If material
+is not included in the article’s Creative Commons licence and your
+intended use is not permitted by statutory regulation or exceeds the
+permitteduse,youwillneedtoobtainpermissiondirectlyfromthecopy-
+right holder. To view a copy of this licence, visit http://creativecomm
+ons.org/licenses/by/4.0/.
+A Case evaluation questions
+A.1Level1:
+– At the time of the validation process of the ECF:
+1. Are the guiding statements valid and up to date?
+2. Do the representatives of the perspectives agree with
+the identified perspectives, the identified core con-
+cepts within it and the related guiding statements?
+– At the time of the ECG analysis process of a major busi-
+ness issue:
+1. Do the causes, triggers, sub-problems, risks, impli-
+cations, etc., of the business issue lead to change
+initiatives?
+2. Do the (existing) guiding statements result in addi-
+tional change initiatives or restrictions (the so called
+solution space)?
+A.2Level2:
+– Are the documents at the level of purpose present and
+accessible?
+– Doesthedefinitionofthelevelorpurposeresultinaclear
+understanding of the sense of purpose and design of the
+organization?
+– Is one able to identify, and engage, the right represen-
+tatives for each of the perspectives? This engagement
+should cover both the identification and validation of the
+cohesive GEA elements and the analysis processes to
+solve the business issue.
+– Aretherepresentativesoftheperspectivesabletovalidate
+the ECF?
+– Aretherepresentativesoftheperspectives,usingthevali-
+datedECF,abletoexecutetheanalysisprocessestosolve
+major business issues?
+– Does the development of the ECF lead to an increase of
+enterprise coherence?
+– Does the use of GEA lead to an integral solution that
+contributes to the coherence of the organization?
+– Is the organization able to, autonomously, specify a busi-
+nessissuethatcanserveasinputtoaGEAbasedanalysis?
+– Dotheownersofthebusinessissuesucceedinspecifying
+thebusinessissueinsuchawaytherepresentativesofthe
+perspectivescanperformthecompleteGEAanalysisand
+develop an integral solution?
+A.3Level3:
+– Degree of acceptance by stakeholders?
+– Extend of applicability?
+– Extend of matching required dynamics?
+– Extend of compliance with required integrality?
+– Degree of accessibility?
+– Degree of transferability?
+– Extend of balance of interests?
+– Degree of innovativeness?
+123
+
+--- PAGE 19 ---
+OnenterprisecoherencegovernancewithGEA… 569
+A.4Level4:
+– Did the execution of the cases result into detectable per-
+formance improvements?
+– Does the literature support the answers to the above find-
+ings?
+A.5Level5:
+– What recommendations can be made towards the fur-
+ther development and expansion of the area of enterprise
+coherence?
+References
+1. Bekel, J., Wagter, R.: Measurement of enterprise coherence by
+meansoftheGeaC-Index-afirstinvestigation.In:22ndIEEECon-
+ference on Business Informatics, CBI 2020, Antwerp, Belgium,
+June 22–24, 2020. Vol. 2, pp. 57–64. IEEE (2020). https://doi.org/
+10.1109/CBI49978.2020.10058
+2. Bekel, J., Wagter, R.: Enterprise coherence metrics in enter-
+prise decision making. In: Aveiro, D., Guizzardi, G., Pergl, R.,
+Proper, H.A. (eds.) Advances in Enterprise Engineering XIV—
+10th Enterprise Engineering Working Conference, EEWC 2020,
+Bozen-Bolzano, Italy, September 28, October 19, and November
+9–10, 2020, Revised Selected Papers, Lecture Notes in Business
+Information Processing, vol. 411, pp. 213–227. Springer, Heidel-
+berg (2021). https://doi.org/10.1007/978-3-030-74196-9_12
+3. Channon, D.F., Caldart, A.A.: McKinsey 7S model. Strategic
+Manag. J. 12 (2015). https://doi.org/10.1002/9781118785317.
+weom120005
+4. Collins, J., Porras, J.: Building Your Company’s Vision. Harvard
+Business Review (1996)
+5. Conklin,J.:DialogueMapping:BuildingSharedUnderstandingof
+Wicked Problems. Wiley, New York (2005)
+6. Gordijn,J.,Akkermans,H.:Valuebasedrequirementsengineering:
+Exploringinnovativee-commerceideas.Requir.Eng.J.8(2),114–
+134 (2003). https://doi.org/10.1007/s00766-003-0169-x
+7. Greefhorst, D., Proper, H.A.: Architecture Principles: The Cor-
+nerstones of Enterprise Architecture. The Enterprise Engineering
+Series. Springer, Heidelberg (2011). https://doi.org/10.1007/978-
+3-642-20279-7
+8. Gregor, S., Jones, D.: The anatomy of a design theory. J. Assoc.
+Inf. Syst. 8(5), 312–335 (2007)
+9. Henderson,J.C.,Venkatraman,N.:Strategicalignment:leveraging
+information technology for transforming organizations. IBM Syst.
+J. 32(1), 4–16 (1993)
+10. Hevner,A.R.:Athreecycleviewofdesignscienceresearch.Scand.
+J. Inf. Syst. 19(2), 87–92 (2007)
+11. Hevner, A.R., March, S.T., Park, J., Ram, S.: Design science in
+information systems research. MIS Q. 28, 75–106 (2004)
+12. Hofstede, G.H., Hofstede, G.J., Minkov, M.: Cultures and Orga-
+nizations: Software of the Mind: Intercultural Cooperation and Its
+Importance for Survival, 3rd edn. McGraw-Hill, New York (2010)
+13. Iacob, M.E., Jonkers, H., Lankhorst, M.M., Proper, H.A.: Archi-
+Mate 1.0 Specification. The Open Group (2009)
+14. Kaplan, R.S., Norton, D.P.: The Balanced Scorecard: Measures
+that Drive Performance. Harvard Business Review (Jan–Feb), pp.
+71–79 (1992)
+15. Kaplan, R.S., Norton, D.P., Barrows, E.A.: Developing the Strat-
+egy:Vision,ValueGaps,andAnalysis.BalancedScorecardReview
+(2008)
+16. Koç, H., Sandkuhl, K., Stirna, J.: Design thinking and enter-
+prise modeling: an investigation of eight enterprise architecture
+management projects. In: Augusto, A., Gill, A., Nurcan, S.,
+Reinhartz-Berger, I., Schmidt, R., Zdravkovic, J. (eds.) Enterprise,
+Business-Process and Information Systems Modeling. BPMDS
+EMMSAD 2021, Lecture Notes in Business Information Process-
+ing,vol.421.Springer,Heidelberg(2021).https://doi.org/10.1007/
+978-3-030-79186-5_15
+17. Lankhorst, M.M., Hoppenbrouwers, S.J.B.A., Jonkers, H., Proper,
+H.A., Torre, L.v.d., Arbab, F., Boer, F.S.d., Bonsangue, M., Iacob,
+M.E., Stam, A.W., Groenewegen, L., Buuren, R.v., Slagter, R.J.,
+Campschroer, J., Steen, M.W.A., Bekius, S.F., Bosma, H., Cuve-
+lier, M.J., ter Doest, H.W.L., van Eck, P.A.T., Fennema, P., Jacob,
+J., Janssen, W.P.M., Jonkers, H., Krukkert, D., van Leeuwen, D.,
+Penders, P.G.M., Veldhuijzen van Zanten, G.E., Wieringa, R.J.:
+Enterprise Architecture at Work – Modelling, Communication and
+Analysis, 4th edn. The Enterprise Engineering Series. Springer,
+Heidelberg (2017). https://doi.org/10.1007/978-3-662-53933-0
+18. Lankhorst, M.M., Proper, H.A., Jonkers, H.: The anatomy of the
+ArchiMate language. Int. J. Inf. Syst. Model. Des. 1(1), 1–32
+(2010). https://doi.org/10.4018/jismd.2010092301
+19. Lankhorst, M.M., Torre, L.V.D., Proper, H.A., Arbab, F., Steen,
+M.W.A.: Viewpoints and visualisation. In: Enterprise Architecture
+at Work—Modelling, Communication and Analysis[17], pp. 171–
+214. https://doi.org/10.1007/978-3-662-53933-0_8
+20. Lantow, B., Sandkuhl, K., Stirna, J.: Enterprise modeling with
+4EM: perspectives and method. In: Karagiannis, D., Lee, M.,
+Hinkelmann,K.,Utz,W.(eds.)Domain-SpecificConceptualMod-
+eling.Springer,Heidelberg(2022).https://doi.org/10.1007/978-3-
+030-93547-4_5
+21. Leinwand, P., Mainardi, C.: The Coherence Premium. Harvard
+Business Review (2010)
+22. Leinwand, P., Mainardi, C.R.: The Essential Advantage: How to
+WinwithaCapabilities-DrivenStrategy.HarvardBusinessReview
+Press (2010)
+23. Magalhães, R., Proper, H.A.: Model-enabled design and engineer-
+ingoforganisations.Organ.Des.EnterpriseEng.1(1),1–12(2017).
+https://doi.org/10.1007/s41251-016-0005-9
+24. March, S.T., Smith, G.F.: Design and natural science research on
+information technology. Decision Support Syst. 15(4), 251–266
+(1995)
+25. Nabukenya, J., Bommel, P.v., Proper, H.A.: A theory-driven
+design approach to collaborative policy making processes. In: 42st
+Hawaii International International Conference on Systems Sci-
+ence (HICSS-42 2009), Proceedings (CD-ROM and online), 5–8
+January 2009, Waikoloa, Big Island, HI, USA, pp. 1–10. IEEE
+Computer Society, Los Alamitos, California (2009). https://doi.
+org/10.1109/HICSS.2009.44
+26. Nakakawa, A., Bommel, P.v., Proper, H.A.: Definition and valida-
+tion of requirements for collaborative decision-making in enter-
+prise architecture creation. Int. J. Cooperative Inf. Syst. 20(1),
+83–136 (2011). https://doi.org/10.1142/S021884301100216X
+27. Nakakawa, A., Bommel, P.V., Proper, H.A., Mulder, J.B.F.: A situ-
+ational method for creating shared understanding on requirements
+for an enterprise architecture. Int. J. Cooperative Inf. Syst. 27(4),
+1850,010 (2018). https://doi.org/10.1142/S0218843018500107
+28. OMG:UML2.0SuperstructureSpecification:FinalAdoptedSpec-
+ification. Tech. Rep. ptc/03–08–02, Object Management Group,
+Needham, Massachusetts (2003)
+29. OMG: Business Process Modeling Notation, V2.0. Tech. Rep.
+OMG Document Number: formal/2011-01-03, Object Manage-
+ment Group, Needham, Massachusetts (2011)
+123
+
+--- PAGE 20 ---
+570 H.A.Properetal.
+30. Op ’t Land, M., Proper, H.A., Waage, M., Cloo, J., Steghuis, C.:
+Enterprise Architecture: Creating Value by Informed Governance.
+The Enterprise Engineering Series. Springer, Heidelberg (2008).
+https://doi.org/10.1007/978-3-540-85232-2
+31. Osterwalder,A.,Pigneur,Y.:BusinessModelGeneration:AHand-
+book for Visionaries, Game Changers, and Challengers. Self
+Published, Amsterdam (2009)
+32. Peffers, K., Tuunanen, T., Rothenberger, M.A., Chatterjee, S.:
+A design science research methodology for information systems
+research. J. Manag. Inf. Syst. 24(3), 45–77 (2007)
+33. Plataniotis, G., Kinderen, S.d., Linden, D.J.T.V.d., Greefhorst, D.,
+Proper, H.A.: An empirical evaluation of design decision concepts
+in enterprise architecture. In: Grabis, J., Kirikova, M., Zdravkovic,
+J., Stirna, J. (eds.) The Practice of Enterprise Modeling—6th IFIP
+WG 8.1 Working Conference, PoEM 2013, Riga, Latvia, Novem-
+ber6-7,2013,Proceedings,LectureNotesinBusinessInformation
+Processing, vol. 165, pp. 24–38. Springer, Heidelberg (2013).
+https://doi.org/10.1007/978-3-642-41641-5_3
+34. Plataniotis, G., Kinderen, S.d., Proper, H.A.: Capturing design
+rationales in enterprise architecture: a case study. In: Frank, U.,
+Loucopoulos,P.,Pastor,O.,Petrounias,I.(eds.)Proceedingsofthe
+7th IFIP WG 8.1 working conference on the Practice of Enterprise
+Modeling (PoEM 2014), Lecture Notes in Business Information
+Processing, vol. 197, pp. 133–147. Springer, Heidelberg (2014).
+https://doi.org/10.1007/978-3-662-45501-2_10
+35. Proper, H.A.: Enterprise architecture: Informed steering of enter-
+prises in motion. In: Hammoudi, S., Cordeiro, J., Maciaszek, L.A.,
+Filipe,J.(eds.)EnterpriseInformationSystems–15thInternational
+Conference, ICEIS 2013, Angers, France, July 4-7, 2013, Revised
+Selected Papers, Lecture Notes in Business Information Process-
+ing, vol. 190, pp. 16–34. Springer, Heidelberg (2014). https://doi.
+org/10.1007/978-3-319-09492-2_2
+36. Proper, H.A., Lankhorst, M.M.: Enterprise architecture: towards
+essential sensemaking. Enterprise Model. Inf. Syst. Archit. 9(1),
+5–21 (2014). https://doi.org/10.18417/emisa.9.1.1
+37. Proper,H.A.,Wagter,R.,Bekel,J.:EnterprisecoherencewithGEA
+- A 15 year co-evolution of practice and theory. In: Serral, E.,
+Stirna, J., Ralyté, J., Grabis, J. (eds.) The Practice of Enterprise
+Modeling - 14th IFIP WG 8.1 Working Conference, PoEM 2021,
+Riga, Latvia, November 24–26, 2021, Proceedings, Lecture Notes
+in Business Information Processing, vol. 432, pp. 3–18. Springer
+(2021). https://doi.org/10.1007/978-3-030-91279-6_1
+38. Proper, H.A., Winter, R., Aier, S., Kinderen, S.d. (eds.): Architec-
+tural Coordination of Enterprise Transformation. The Enterprise
+Engineering Series. Springer, Heidelberg (2018). https://doi.org/
+10.1007/978-3-319-69584-6
+39. Rinderle-Ma, S., Sanz, J.L., Bai, X.Y. (eds.): 14th IEEE Interna-
+tional Conference on Commerce and Enterprise Computing, CEC
+2012, Hangzhou, China, September 9–11, 2012. IEEE Computer
+Society Press, Los Alamitos, California (2012). http://ieeexplore.
+ieee.org/xpl/mostRecentIssue.jsp?punumber=6470764
+40. Schnelle,E.:NeueWegederKommunikation. Spielregeln,Arbeit-
+stechniken und Anwendungsfälle der Metaplan-Methode. Heft 10.
+Hanstein, Königstein/Taunus, Germany (1978). In German
+41. Sowa,J.,Zachman,J.A.:Extendingandformalizingtheframework
+for information systems architecture. IBM Syst. J. 31(3), 590–616
+(1992)
+42. Stovers, R., Ruijter, J.D., Wagter, R.: GEA Enterprise Architecture
+in Practice: BetterPerformance by Managing Coherence. Dialoog,
+Zaltbommel, the Netherlands (2021)
+43. TAFIM: Department of Defence Technical Architecture Frame-
+work for Information Management: Architecture Concepts and
+Design Guidance. Tech. rep., Defence Information Systems
+Agency Center for Standards, United States of America (1996)
+44. The Open Group: TOGAF Version 9. Van Haren Publishing, Zalt-
+bommel, The Netherlands (2009)
+45. Thenmozhi, M.: Module 9—Strategic Management. Lecture
+Notes, Department of Management Studies, Indian Institute of
+Technology, Madras, India (2009). https://www.coursehero.com/
+file/6713100/9-1/
+46. Wagter,R.:SturenopsamenhangopbasisvanGEA-Permanenten
+event driven. Van Haren Publishing, Zaltbommel, the Netherlands
+(2009). (In Dutch)
+47. Wagter, R.: Enterprise Coherence Governance. Ph.D. thesis, Rad-
+boud University, Nijmegen, the Netherlands (2013)
+48. Wagter, R., van den Berg, M., Luijpers, J., van Steenbergen, M.E.:
+Dynamic Enterprise Architecture. How to make it work. Wiley,
+New York (2005)
+49. Wagter, R., Nijkamp, G., Proper, H.A.: Applying GEA to a busi-
+ness issue. White Paper GEA-5, Ordina, Utrecht, the Netherlands
+(2007). (In Dutch)
+50. Wagter, R., Nijkamp, G., Proper, H.A.: Overview 1th Phase:
+General Enterprise Architecturing. White Paper GEA-1, Ordina,
+Utrecht, the Netherlands (2007). (In Dutch)
+51. Wagter,R.,Nijkamp,G.,Proper,H.A.:TheElementsofthe“GEA-
+Structure”. White Paper GEA-2, Ordina, Utrecht, the Netherlands
+(2007). (In Dutch)
+52. Wagter, R., Nijkamp, G., Stovers, R., Proper, H.A.: E-Government
+using GEA and NORA. White Paper GEA-4, Ordina, Utrecht, the
+Netherlands (2007). (In Dutch)
+53. Wagter, R., Nijkamp, G., Witte, D., Proper, H.A.: GEA in relation
+toothersteeringinstruments.WhitePaperGEA-8,Ordina,Utrecht,
+The Netherlands (2008). (In Dutch)
+54. Wagter, R., Proper, H.A.: Coherence management dashboard for
+ACET. In: Proper et al. [38], chap. 18, pp. 183–191. https://doi.
+org/10.1007/978-3-319-69584-6
+55. Wagter, R., Proper, H.A.: Involving the right stakeholders: enter-
+prise coherence governance. In: Proper et al. [38], chap. 10, pp.
+99–110. https://doi.org/10.1007/978-3-319-69584-6
+56. Wagter, R., Proper, H.A., Witte, D.: Enterprise coherence assess-
+ment. In: Harmsen, A.F., Grahlmann, K., Proper, H.A. (eds.)
+Practice-Driven Research on Enterprise Transformation: Third
+Working Conference, PRET 2011, Luxembourg-Kirchberg, Lux-
+embourg, September 6, 2011. Proceedings, Lecture Notes in
+BusinessInformationProcessing,vol.89,pp.28–52.Springer,Hei-
+delberg (2011). https://doi.org/10.1007/978-3-642-23388-3_2
+57. Wagter, R., Proper, H.A., Witte, D.: Enterprise architecture:
+a strategic specialism. In: Rinderle-Ma et al. [39], pp. 1–8.
+https://doi.org/10.1109/CEC.2012.11. http://ieeexplore.ieee.org/
+xpl/mostRecentIssue.jsp?punumber=6470764
+58. Wagter, R., Proper, H.A., Witte, D.: Enterprise coherence in
+the Dutch ministry of social affairs and employment. In: Bajec,
+M., Eder, J. (eds.) Advanced Information Systems Engineer-
+ing Workshops—CAiSE 2012 International Workshops, Gdańsk,
+Poland,June25–26,2012.Proceedings,LectureNotesinBusiness
+Information Processing, vol. 112, pp. 600–607. Springer, Heidel-
+berg (2012). https://doi.org/10.1007/978-3-642-31069-0_50
+59. Wagter, R., Proper, H.A., Witte, D.: The extended enterprise
+coherence-governance assessment. In: Aier, S., Ekstedt, M.,
+Matthes„ F. Proper, H.A., Sanz, J. (eds.) Trends in Enterprise
+ArchitectureResearchandPractice-DrivenResearchonEnterprise
+Transformation – 7th Workshop, TEAR 2012, and 5th Working
+Conference, PRET 2012, Held at The Open Group Conference
+2012, Barcelona, Spain, October 23–24, 2012. Proceedings, Lec-
+ture Notes in Business Information Processing, vol. 131, pp.
+218–235. Springer, Heidelberg (2012). https://doi.org/10.1007/
+978-3-642-34163-2_13
+60. Wagter,R.,Proper,H.A.,Witte,D.:OntheuseofGEAattheDutch
+ministry of social affairs and employment. In: Rinderle-Ma et al.
+[39], pp. 115–119. https://doi.org/10.1109/CEC.2012.26. http://
+ieeexplore.ieee.org/xpl/mostRecentIssue.jsp?punumber=6470764
+123
+
+--- PAGE 21 ---
+OnenterprisecoherencegovernancewithGEA… 571
+61. Wagter, R., Proper, H.A., Witte, D.: A practice-based framework
+forenterprisecoherence.In:Proper,H.A.,Harmsen,A.F.,Gaaloul,
+K., Wrycza, S. (eds.) Practice-Driven Research on Enterprise
+Transformation—4th Working Conference, PRET 2012, Gdańsk,
+Poland, June 27, 2012. Proceedings, Lecture Notes in Business
+InformationProcessing,vol.120,pp.77–95.Springer,Heidelberg,
+Germany, Gdansk, Poland (2012). https://doi.org/10.1007/978-3-
+642-31134-5_4
+62. Wagter, R., Proper, H.A., Witte, D.: A theory for enterprise coher-
+ence governance. In: Saha, P. (ed.) A Systematic Perspective to
+Managing Complexity with EA. IGI Publishing, Hershey, Penn-
+sylvania (2013)
+63. Wagter, R., Proper, H.A., Witte, D.: Developing the GEA method
+– design science and case-study research in action. In: Franch,
+X., Soffer, P. (eds.) Advanced Information Systems Engineer-
+ing Workshops – CAiSE 2013 International Workshops, Valencia,
+Spain, June 17–21, 2013. Proceedings, Lecture Notes in Business
+InformationProcessing,vol.148,pp.43–57.Springer,Heidelberg,
+Germany, Valencia, Spain (2013). https://doi.org/10.1007/978-3-
+642-38490-5_4
+64. Wagter, R., Proper, H.A., Witte, D.: Enterprise coherence gover-
+nance in the public sector—custodial institutions agency of the
+Dutch ministry of security and justice. In: IEEE 15th Conference
+on Business Informatics, CBI 2013, Vienna, Austria, July 15–18,
+2013, pp. 117–124. IEEE Computer Society Press, Los Alamitos,
+California (2013). https://doi.org/10.1109/CBI.2013.25
+65. Winter,R.,Fischer,R.:Essentiallayers,artifacts,anddependencies
+of enterprise architecture. J. Enterprise Archit. 3(2), 7–18 (2007)
+66. Wout, J.V., Waage, M., Hartman, H., Stahlecker, M., Hofman, A.:
+The Integrated Architecture Framework Explained. Springer, Hei-
+delberg, Germany (2010)
+67. Yin, R.K.: Case Study Research: Design and Methods, 4th edn.
+Sage Publications, London (2009)
+68. Yin, R.K.: Case Study Research: Design and Methods (Applied
+Social Research Methods). Sage Publications, London (2013)
+Publisher’s Note Springer Nature remains neutral with regard to juris-
+dictional claims in published maps and institutional affiliations.
+Henderik A. Proper for friends,
+is an FNR PEARL Laureate, and
+senior research manager within
+the Computer Science (ITIS)
+department of the Luxembourg
+Institute of Science and Technol-
+ogy (LIST) in Luxembourg. He
+is also Adjunct Professor in Data
+and Knowledge Engineering at the
+University of Luxembourg, and a
+visiting professor at the TU Wien
+in Austria. Erik has a mixed back-
+ground, covering a variety of roles
+in both academia and industry.
+His core research drive is the
+development of theories that work, while his general research inter-
+est concerns the foundations and applications of domain modelling.
+Over the past 20 years, he has applied this research drive and gen-
+eral research interest towards the further development of the field of
+enterprise engineering, and enterprise modelling in particular. As of
+January 2022, Erik is vice-chair of the IFIP 8.1 working group, while
+also being the representative for the Netherlands in IFIP’s TC8 techni-
+cal committee. He is also the Stellvertretender Sprecher of the EMISA
+working group of the German Computer Science Society (Gesellschaft
+für Informatik), as well as a member of the management team of the
+Enterprise Engineering Network.
+Roel Wagter is a management
+consultant, associate partner at Sol-
+venta, co-supervisor of several Ph.D.
+candidates, lecturer in masterclass
+enterprise architecture at the Nether-
+lands Digital Architecture Network,
+lecturer at Business University Nyen-
+rode, and chairman of the GEA
+Growth Platform
+Foundation. He obtained his doc-
+torate from Radboud University
+Nijmegen in the field of enterprise
+architecture and has held many
+directorial, management and advi-
+sory positions in which he has
+gained more than 30 years of experience. This experience forms the
+basis of his ideas in the field of enterprise architecture, including
+the use of this field in the world of mergers & acquisitions. He is
+the founding father and first author of the internationally renowned
+method DYA (Dynamic Enterprise Architecture). In early 2006, he ini-
+tiated and became responsible for the ‘General Enterprise Architecting
+(GEA)’ innovation program. Between 2007 and 2022 he published
+about 60 books, scientific papers and articles in professional journals
+in the field of enterprise architecture. He founded the GEA Growth
+Platform Foundation as part of this innovation program. In 2016 he
+was awarded the NAF medal by the Netherlands Architecture Forum.
+Joost Bekel has worked for more than
+fifteen years in the financial sector in
+the field of solution, domain, and enter-
+prise architecture. Currently, he is a
+member of the strategy and architec-
+ture team of the Dutch Central Bank
+(DNB). He holds a master in Physics
+and a master in Business Administra-
+tion. Next to his work at the DNB, he
+is also doing a part-time PhD on the
+quantification of enterprise coherence.
+123

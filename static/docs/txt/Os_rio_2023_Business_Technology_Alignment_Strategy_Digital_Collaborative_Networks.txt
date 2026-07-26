@@ -1,0 +1,785 @@
+--- PAGE 1 ---
+HAL Id: hal-05540661
+https://ifip.hal.science/hal-05540661v1
+Submitted on 6 Mar 2026
+HAL is a multi-disciplinary open access archive
+for the deposit and dissemination of scientific re-
+search documents, whether they arepublished or not.
+Thedocumentsmaycomefromteachingandresearch
+institutions in France or abroad, or from public or pri-
+vate research centers.
+L’archiveouvertepluridisciplinaireHAL,estdes-
+tinée au dépôt et à la diffusion de documents scien-
+tifiquesdeniveaurecherche, publiésounon, émanant
+des établissements d’enseignement et de recherche
+français ou étrangers, des laboratoires publics ou
+privés.
+Distributed under a Creative Commons CC BY 4.0 - Attribution - International License
+A Business Technology Alignment Strategy for Digital
+Collaborative Networks
+A. Luís Osório, Ricardo J. Rabelo, Carlos Gonçalves
+To cite this version:
+A. Luís Osório, Ricardo J. Rabelo, Carlos Gonçalves. A Business Technology Alignment Strategy for Digi-
+tal Collaborative Networks. 24th Working Conference on Virtual Enterprises (PRO-VE), Sep 2023, Valencia,
+Spain. pp.380-397, ⟨10.1007/978-3-031-42622-3_27⟩. ⟨hal-05540661⟩
+
+--- PAGE 2 ---
+This document is the original author manuscript of a paper submitted to an IFIP
+conference proceedings or other IFIP publication by Springer Nature. As such, there
+may be some differences in the official published version of the paper. Such
+differences, if any, are usually due to reformatting during preparation for publication or
+minor corrections made by the author(s) during final proofreading of the publication
+manuscript.
+
+--- PAGE 3 ---
+A Business Technology Alignment Strategy
+for Digital Collaborative Networks
+A. Luís Osório1(B), Ricardo J. Rabelo2, and Carlos Gonçalves1,3
+1 ISEL - Instituto Superior de Engenharia de Lisboa, Instituto Politécnico de Lisboa, and
+POLITEC&ID, Lisboa, Portugal
+{aosorio,cgoncalves}@deetc.isel.ipl.pt
+2 UFSC – Federal University of Santa Catarina, Florianópolis, Brazil
+ricardo.rabelo@ufsc.br
+3 NOVA LINCS, Costa da Caparica, Portugal
+Abstract. The fast pace toward a digital-centered society requires new, more
+holistic strategies to model and lifecycle-manage sociotechnical systems and ser-
+vices under agnostic ecosystem provisioning. Despite the enormous multidisci-
+plinaryresearchtomodelanorganization’sinformationtechnologylandscapes.In
+this paper, we work further on previous consolidated research toward leveraging a
+digitalandservice-orientedtechnologytransformationtounderpincompanies’IT
+sovereignty. Our research challenges multi-layered systems’ responsibility mod-
+eling from the business domain to underly digital technologies formulations in
+intra-organization and Collaborative Networks. A core contribution of the paper
+is positioning the concept of Business System of Systems and the Business Ser-
+vice element as an IT-alignment strategy to map business modeling to informatics
+systems more integrally.
+Keywords: Enterprise Architecture · Collaborative Networks · Distributed
+System of Systems · Agnostic Technologies and Services
+1 Introduction
+Regardingtherapidevolutionofinformationtechnology(IT),existingapproachesmake
+it difficult to replace products or services with competing ones (replaceability) given the
+lack of complete standards and the constant changes in business and hence in systems’
+architecture and scalability [48].
+Since initial efforts in the 90’s using the hub-and-spoke pattern – mostly represented
+by Enterprise Application Integration (EAI) tools – organizations have increasingly
+moved their IT assets to the cloud. Although the point-to-point integration pattern is
+still very much used by most companies, modern integration approaches have shifted
+to loosely-coupled models, such as messaging and bus patterns, using e.g., integration-
+Platform-as-a-Service (iPaaS) cloud-based tools, endowing more flexible and scalable
+integrations of heterogeneous and distributed systems [12].
+© IFIP International Federation for Information Processing 2023
+Published by Springer Nature Switzerland AG 2023
+L. M. Camarinha-Matos et al. (Eds.): PRO-VE 2023, IFIP AICT 688, pp. 380–397, 2023.
+https://doi.org/10.1007/978-3-031-42622-3_27
+
+--- PAGE 4 ---
+A Business Technology Alignment Strategy 381
+However,bigcloudproviderssuchasAmazon,Google,andAzurehavenotsupported
+such flexibility and scalability. Although the many advantages got with this shift, the
+companies’ digital transformation strategies end up depending too much on the cloud
+provider’stechnologicalandcommercialstrategy,asmanysystemsareintegratedwithin
+thecloud,usinginternalproprietarytechnologiesandcomponents,whichcreateahugely
+difficult to replace systems due to the consequent lock-in [28].
+This new cloud centrality introduces novel challenges to fit organizations’ business
+needs, strategy, and objectives regarding business-IT alignment, being one of the most
+critical obstacles to successful digital transformation [39]. Agnostic IT strategies in
+multi-vendors business environments impact companies’ competitiveness [38].
+Onestrategyadoptedformanyyearstoaddressthisisusingopenstandards.However,
+despitemassiveinvestmentsinthisandopen-sourcesoftware,manybarriersstillexistto
+overcome[17].Actually,giventhecomplexityofformalizingmodelsbalancingbusiness
+and technology, the integrated digital as an integrated service delivery [50] still lacks
+a collaborative “platformization” as loose coupling and seamless integration between
+the various IT components and the management of their life cycles [20, 29, 34]. For
+example, suppose we pick an Enterprise Resource Planning (ERP) system. In that case,
+no formal border exists to delimit its responsibilities regarding functional scope (from
+the business perspective) and the IT entities that should execute it.
+The concept of service and Service Oriented Architecture (SOA) architectural style
+emerged in the 90’s [46] as a sounding attempt for a better structuration of distributed
+computational responsibilities in network-centric computing infrastructures [8]. Mean-
+while, the fast-rising of the Internet and cloud computing has established a new pace for
+digital transformation, demanding a renewed business-IT strategy [12, 46].
+The need for a strategy business-technology connection formulated in the dawn of
+80’s [25] is still a main challenge in the dawn of 20’s [42].
+Important initiatives in this direction, such as the COBIT framework, have been
+proposed. However, they lack a more unified and integral strategy that can cope with
+newbusiness-ITintegrationrequirementsintermsofhowtoalignbusinessmodelingand
+objectives to technology realizations and required quality expectations within this ever-
+increasingdigital,cloud,andecosystems-based,service-orientedmulti-vendoroffering,
+and collaborative environments [26, 46].
+This paper represents a first attempt towards this direction, presenting a more for-
+mal business framework that expresses business intents, the expected quality, and other
+aspects of the organization’s interest.
+The remaining paper is structured as follows. Section 2 summarizes some relevant
+worksrelatedtothispaper’sgoal.InSect.3weintroducetheconceptofBusinessSystem
+and Business System of Systems. Section 4 extends the proposed approach considering
+both business and informatics systems in the context of Collaborative Networks (CN).
+Section 5 presents conclusions and discusses further research.
+2 Related Research
+Business-IT alignment is not a new issue, it traces back to the 90’s [21], and it has been
+more recently extended to networked enterprises [10].
+
+--- PAGE 5 ---
+382 A. L. Osório et al.
+While formal models addressing the business IT alignment are lacking, there is a
+growingconsensusfortheneedforadeeperunderstandingoftheroleoftechnology[19].
+However, current integration approaches are challenged by the difficulties in adapting to
+new digital processes and technology toward integrated vendor-agnostic IT landscapes,
+as tried to be faced by the EMPAIA consortium, including legacy IT [28].
+The theoretical model in [23] considers twelve hypotheses, where H1 represents IT
+alignment and digitalization success, while H2..H12 maps to organizational structure,
+organizational culture, agility, leadership skills, digital metrics, stakeholder relation-
+ships, external domain alignment, and human resources management. The suggested
+theoretical model organizes essential aspects of the organization and business but lacks
+a more concrete strategy for a better alignment toward the promised success. In this
+line, and as later described, our research contribution proposes the concept of a business
+system from the business perspective, and the informatics system from the engineering
+viewpoint with an associated clear mapping strategy.
+The IT4IT initiative “… developed from the professional experience of its creators”
+[18] represents an alternative approach for a business view of IT to gain added control
+over the increasing vendor dependency of a distributed complex technology landscape.
+This new standard, 2015, “… describes a reference architecture that can be used to
+manage the business of Information Technology (IT) and the associated end-to-end
+lifecycle management of Digital Products”. IT4IT defines a digital product as a “…
+service, physical item, or digital item that provides an agreed and specific outcome
+for a consumer, and that incorporates and requires software to realize that outcome”
+[35]. The definition raises, however, the question of what a physical item is. From the
+digital technology perspective, every managed element needs an accessible/connectable
+computing entity, the mentioned “software to realize”.
+From the Enterprise Architecture community, this new standard is not well mapped
+to well-known enterprise reference architectures, as strategic technology decisions are
+taken at the business level without considering that a coordinated business-IT strategy is
+essential for achieving business goals. Other relevant standards addressing the modeling
+of IT-related aspects of an organization (e.g., ITIL, COBIT, TOGAF, and ARIS) are
+industry-supported initiatives, in some cases tough to map towards a unified abstract
+reference model [18].
+IT4IT shares common architectural elements with other enterprise architecture
+frameworks but focuses only on IT without providing methodological guidelines to
+map business to IT [18]. The next section proposes associating meta-data with busi-
+ness conceptual modeling elements aligned to model-driven developments guided by
+business process management (BPM) principles [11].
+The scientific research in [43] proposes four IT architectural stages to align the
+business to IT: i) the application silo architecture, considering individual applications
+architecture; ii) standardized technology architecture, considering enterprise with IT
+architectureadoptingstandardsandcentralizedcoordination;iii)rationalizeddataarchi-
+tecture, which comprises standardization of data and processes; and iv) modular archi-
+tecture, comprising an enterprise with global standards and loosely coupled applica-
+tions, data, and technology components, preserving unicity with diversity. However, the
+
+--- PAGE 6 ---
+A Business Technology Alignment Strategy 383
+authors recognize that this systematization is a complex endeavor from the management
+perspective.
+Our understanding of the need for alternative approaches, e.g., why TOGAF lacks
+to cope with a balanced and coordinated modeling of both business and technology
+view, can be understood by creating a new IT4IT standard. Nevertheless, establishing
+a coordinated model for business and IT at both enterprise and collaborative network
+levels is still an open research question.
+IT evolved fast over the last decades and lacked sound and formal models to help
+establish a reliable and vendor-agnostic technology landscape [22]. One example is
+cloud computing, a more and more consolidated model and strategy that has arisen
+with the trend to adopt the OPEX business model, moving the IT infrastructure and
+business application resources from on-premises to public cloud providers (also known
+as hyper-scalers and, in most cases offering third-party cloud services) [2].
+Nevertheless, the IT shift from on-premises infrastructures to a public cloud, guided
+bycostreductionandscalabilityneeds,hasdemonstratedlimitationsregardingintegrated
+and sustainable life cycle management of IT resources. Beyond that, organizations want
+“… to see shorter innovation cycles, less complexity, and access to expertise that is
+unavailable or cannot be built up within the company” [10]. This report also points out
+therisksassociatedwithhyper-scaleconcentration,whichjeopardizesintegratedservice
+delivery (ISD) in, for example, collaboration networks [50].
+The risks of unbalanced dependency on the public cloud providers make us reflect
+on the trade-off advantages of repositioning the center again on the organization. For
+example, the DYNAMO European Commission Terrestrial Ecosystems Research Initia-
+tive [34], has been reflecting on multi-vendor environments where supporting microser-
+vices for telecommunications infrastructures in smart cities and public mobility are
+deployed in given (proprietary) clouds. The proposal of adopting a monitoring system
+like Prometheus [13] incorporates heterogeneous implementation technologies, e.g.,
+NET, but scaling in a multi-vendor environment is challenging.
+In[49],theauthorssuggestthecalled‘ITplatformization’todecreasesociotechnical
+tensions and to offer better support to map business models against required technolo-
+gies. Nevertheless, no integration strategy is presented to more accurately cope with the
+complexity and dynamics of collaborative relationships.
+Another rising question is how each vendor’s responsibility relates to service offer-
+ings’failureconsideringthecomplexinterdependenciesamongtechnologyelementsthat
+underly (in this exemplified case) both smart-city and public transport cases. According
+to [1], microservices (system’s service elements) “… urge a system-centric perspective
+to better reason about the system evolution and its quality attributes”. For example,
+scalability is relatively simple for a stateless service. However, if the service holds state,
+scalability needs to cope with some distributed coordination strategy to guarantee the
+consistency of the configured replicas that offer an equivalent one of a single execution
+instance.
+Revisingscientificandtechnicalliteratureconsideringvariousresearchcommunities
+and practitioner discussions, we suggest identifying the need for reaching an enhanced
+consensus on business-IT mediation languages and modeling to establish a holistic
+
+--- PAGE 7 ---
+384 A. L. Osório et al.
+“digital stack” [24]. Towards this direction, we position the Business System of Sys-
+tems (BSoS) as a business-level framework that leads or maps to a technology-centered
+Informatics System of Systems (ISoS) framework [38].
+3 The Business System of Systems (BSoS) Related to ISoS
+The proposed Business System of Systems (BSoS) framework grounds on previous
+research,questioninghowcomputingandcyber-physicaltechnologyelementswouldbe
+structured in a multi-vendor/multi-supplier organization’s IT landscape.
+3.1 Model’s Rationale
+Thereisagrowingconsensusfortheneedtoformalizetheenterpriseitselfandtheenter-
+prise as a node of a CN towards managed, platform-agnostic, digital business ecosystem
+[41]. By managed, we mean a coordinated strategy based on meta-data models referenc-
+ingbusinessprocesses,data,andorganizationmodelsformanagingthelifecycleofbusi-
+ness expectations, namely mechanisms to evaluate goal’s fulfillment in both enterprise
+and CN contexts.
+Fulfillingbusinessgoalsconsidersthequalityofservicesbasedonperformanceindi-
+cators and sustainable costs, which requires integrated views and becomes even more
+complex when managing legacy monolithic application silos. With the more recent
+service-oriented approaches, technology barriers can be faded to establish a unified
+ecosystem. Towards reducing this complexity, we structure our model into two perspec-
+tives:i)theBusiness&Management;andii)theTechnology&Engineeringecosystems,
+following a similar approach to [29].
+The problem of mapping user interfaces and experience (UI/UX) interfaces based
+on models and meta-models into low-level web technology business logic with existing
+model-drivenproductsisdiscussedin[5].ThedifficultyinaligningbusinesswithIThas
+led business units to manage their technology resources using poor practices, known as
+shadowIT [7],e.g.,usingspreadsheetstosupportsystems-ITintegration,wherebusiness
+and IT responsibilities are blurred. In this context, our BSoS-ISoS model aims to con-
+tribute to overcoming the issues pointed out in [29]: i) uncoordinated decision processes
+are an obstacle to self-managed teams; ii) the lack of clear governance is an obstacle to
+on-time decisions; iii) the lack of precise alignment between functions and end-to-end
+leave responsibilities unclear; iv) a common urgency to adopt fashioning technologies
+(as artificial intelligence) without framing them into the business perspective; v) the
+adoption of new technologies without any vision in terms of global systems architec-
+ture, creating different data silos; and vi) the lack of an integrated strategy conducts to
+a waste of efforts to answer digital expectations.
+Following a well-succeeded experience of adopting the ISoS framework [38] in the
+PT2020 SITL-IoT project [14], we propose a similar approach to the business domain.
+The central idea is to establish both business (meta-models and models) and technology
+(meta-models, models, executive entities, and service elements) to manage better and
+integrate them within an agnostic strategy. For this, we extended the sociotechnical
+system (STS) analytical framework based on structure and people (on the social &
+
+--- PAGE 8 ---
+A Business Technology Alignment Strategy 385
+business system side), and on the technology and tasks (on the technical system side),
+connected by what in [49] is identified as interacting variable classes (Fig. 1).
+Fig. 1. Revisiting Interacting variable classes within a sociotechnical work system [49]
+The proposed framework considers conceptual modeling elements managed as con-
+ceptual sociotechnical work systems of systems to establish the business landscape. The
+framework accommodates, side by side, the social & business system and the technical
+system. Since the information system needs to map to the new proposed conceptual
+modeling elements, its concepts should balance (distribute) both sides.
+One main motivation for the business system (BSystem) as a composite of business
+service elements is, on the one hand, to establish clear (business) responsibility borders.
+On the other hand, to establish a mapping strategy for the technology counterpart. The
+ISoS IT modeling concepts formally establish technology (operational) responsibilities.
+TheproposedBusinessSystemofSystems(BSoS)isinspiredbytheinformationsys-
+tems community, particularly the business technology alignment question. The concept
+of business IT alignment is formulated in [30]. However, from the systems engineering
+perspective, the definition is too vague, evidencing the need for a more formal app-
+roach for both business and IT parts regarding the responsibility of offering sustainable,
+reliable, and resilient systems/services operations support [39].
+3.2 Basic Methodology
+Our research challenges the Enterprise Architecture (EA) community pushed by Open-
+Group with strategic standardization contributions in the virtual border, separating
+Business & Management from Technology & Engineering.
+To sustain our discussion, we selected the TOGAF EA methodology and frame-
+work (The Open Group Architecture Framework) and the related ArchiMate enterprise
+architecture modeling language as relevant examples of standards.
+While slightly shifted to the technology side, conceptual modeling is a central dis-
+course of both practitioners and science & technology researchers. Our research entails
+the more recent IT4IT standard that “… addresses a critical gap in the Digital Transfor-
+mation toolkit: the need for a unifying architectural model that describes and connects
+
+--- PAGE 9 ---
+386 A. L. Osório et al.
+the capabilities, value streams, functions, and operational data needed to manage a
+Digital Product Portfolio at scale”. This is additional evidence of the need for novel
+approaches for organizations in the digital world.
+While arguing for the need first to consolidate a strategy for the intra-organization
+business and IT formal modeling, a comprehensive digital transformation and related
+business integration should also embrace the company’s partnerships and suppliers so
+the CNs it is involved in. Therefore, one of the goals of this research is to extend our
+proposed approach to CN. For this case, we extend the enterprise collaboration network
+(ECoNet) framework [38] with the business system and services concepts.
+3.3 The Proposed Model
+The ISoS framework establishes that an IT of an organization is structured based on the
+ISystem responsibility boundaries. The informatics system concept relies on the system
+concept. According to the SOA concept [47], a system “…is a set of interacting parts,
+generallytoolargetobebuiltbyasingleperson,createdforsomeparticularpurpose…”.
+We add that dating back to Bertalanfy’s general system theory, “The whole is more than
+the sum of its parts” [15]. Furthermore, SOA refers to the architectural style adopted
+by ISoS since operating (executable) entities are the Service elements published in the
+ISystem0, whose role is to implement a service directory for the informatics systems
+of an organization. One advantage of adopting the system concept is the possibility of
+unifying the responsibility border, delimiting a suite of technology artifacts as interde-
+pendent parts, so hiding complex computational logic and resources as an alternative to
+monolithic software practices.
+Oneusualsystemmodelingstrategyistodefineasystemasacompositeofelements,
+nomattertheirinternalcomplexity,usedprogrammingparadigmandtechnology,granu-
+larity,orfunctionalroleorlevelwithintheglobalarchitecture.Eachpartcanbeasystem
+or a terminal element, usually called an undecomposable component or part. However,
+given the number of elements, the approach represents a very complex computing envi-
+ronment to model. To deal with this complexity, the ISoS adopted a simplified model of
+an informatics system (ISystem) by establishing a composition of Cooperation Enabled
+Services (CES) as a strategic grouping to organize Service elements in the computing
+domain, establishing the atomic or the terminal element of an informatics system. The
+Service element incorporates computational logic and required resources (e.g., config-
+uration files) but does not necessarily follow the microservice approach since a Service
+can be a large entity.
+Following a similar strategy, we propose adopting the system concept, but now
+applied to structuring business goals. Here there is a problem since our idea of the busi-
+ness system differs from some other definitions. More concretely, our approach does not
+share the vision of a type of business system grouping specific business characteristics
+[5]. Instead, our interest considers the variety of business systems that can delimit busi-
+ness responsibilities regarding enterprise business goals and the mechanisms to achieve
+them via IT.
+The definition of a business system as “… a sociotechnical whole covering the com-
+pany purpose, goals, organization, processes, people and technology” seems a good
+
+--- PAGE 10 ---
+A Business Technology Alignment Strategy 387
+working base, but it needs to be more clarified. Since we adopt the concept of infor-
+matics system as the technology abstraction and want a similar strategy to the business
+perspective, we need to restrict the business system to socio-organizational whole and
+goals, including people.
+We define a Business System (BSystem) as a socio-organizational whole covering
+organization’sgoals,structure,andprocesses.Thedefinitionreferstothebalancedinfor-
+mation system, as depicted in Fig. 1. While there is no global consensus about an infor-
+mation system, the sociotechnical terminology is recurrent. It has been linked to issues
+relatedtobettermatchingtechnologywithjobsatisfactionorpersonaldevelopment[44].
+Since the end of 80’s there have been questions about how strategic frameworks
+of composite information systems are suitable for strategic advantage (business value)
+[32]. In this line, Fig. 2 adapts the questioning of the need for a process to link strategic
+applications to both organizational and information system contexts and approaches
+elements to better found our Business System and the composite Business System of
+Systems (BSoS) framework concepts.
+Fig. 2. Linking Strategic Applications to Information Technology, adapted from [32]
+It is worth noting that we are looking for a formal entity that can be worked aligned
+withbusiness,sociological,andmanagementexpertiseandcaptureconceptualmodeling
+entities that can be “automatically” incorporated into informatics systems design and
+implementation.
+An organization that instantiates an ISystem0 realizes what is designated by the
+Informatics System of Systems (ISoS) since it abstracts one or more ISystems, making
+the computing-related technology artifacts part of the Service elements (Fig. 3).
+The ISoS model suggests that well-established Service borders delimit the software
+engineeringresponsibility.Aservicecanwrapalegacysystem,encapsulatingitas-it-isor
+adoptingastrategytoevolveforamorefine-grainedapproachclosertothemicroservice
+idea, hence organizing technical artifacts under the SOA model.
+We formalize business expectations based on the system concept for documenting
+andgeneratingbusinesslogicforthetechnologypart(mappingstotheISystemconcept),
+modeledasbusinesssystems(BSystem).Tosimplifytheapproachandmakethemapping
+to ISoS concepts easier, a BSystem is a composition of cooperation-enabled business
+services (CEBS). Like CES is a strategy to establish Service elements groups, the CEBS
+concept is a group of business services (BService).
+
+--- PAGE 11 ---
+388 A. L. Osório et al.
+Fig. 3. The Service’s primary structuring responsibility
+The BSoS business-level conceptual modeling strategy extends the Business Ser-
+vice [38]. Our proposed BSoS model further considers the meta-business system, the
+BSystem0, asamodelregistryandcoordinationresponsibilityofmaintainingtheconsis-
+tency among BSoS and ISoS models and implementations. The idea is to establish two
+coordinated co-responsibilities. The business responsibility (grant for business objec-
+tives) is to consider organizational, people, processes, and conceptual data models, set-
+ting what is expected by organization’s and business partner’s (CN level) stakeholders.
+The technology co-responsibility considers the complex technology decisions involved
+in a reliable execution of distributed Service elements. They are executed on a given
+node’s IT infrastructure (cloud-based or not), establishing a federated pool of shared
+(underRBAC-role-basedaccesscontrolconstraints)servicescalledVBEServicesFed-
+eration[40].PreviousresearchproposedanEnterpriseCollaborationNetwork(ECoNet)
+[37] as a computing responsibility for managing interactions with partners in Virtual
+organization Breeding Environment (VBE) [3] to serve as a preparedness-supporting
+platform for companies’ collaboration (Fig. 4).
+The proposed unified model establishes some rupture with current approaches, not
+hardly linked to model implementation. Still, we understand that legacy models and
+existing information systems (enterprise applications) can be wrapped with minimal
+changes to be incorporated into the proposed governed IT system of systems. As far as
+IsoS is concerned, the research project PT2020 SITL-IoT with the FORDESI company
+developed a validation of the ISoS with a reference implementation of an ISystem0 [14].
+Service elements incorporated legacy systems by wrapping their legacy code, allowing
+the enterprise systems to adopt the proposed service orientation. The wrapper concept
+suggests that a strategy to adapt a legacy system to the BSoS-ISoS frameworks differs
+from the most common connector or adaptor concept. We assume the wrapper is not
+definitive and only exists until the system fully complies with the BSoS or ISoS frame-
+work.Thispreliminaryvalidationmadeusadoptasimilarstrategytoformalizebusiness
+goals organized as BSystem/CEBS/BService constructors.
+InthecontextoftheBSoSframework,theBServiceisthecentralelement.ABService
+aims to model requirements at a conceptual level. While the relationship between a
+BService and a Service needs further research and validation, we believe the business
+(applications) architecture experts have a guideline with BSoS to structure business
+
+--- PAGE 12 ---
+A Business Technology Alignment Strategy 389
+Fig. 4. Unified BSoS and ISoS as prepared Collaborative Network nodes
+requirements in collaboration with technology experts for decisions on how to map
+BSystems to ISystems, as addressed in [6] and [9].
+Figure 5 shows the conceptual mapping where BService delimits abstract specifica-
+tions of data models, process models, and organizational structure with worker’s roles,
+e.g., RBAC for making effective security policies and QoS parameters (of business and
+technology systems/services).
+Fig. 5. The BService primary structuring responsibility
+The BSystem, CEBS, and BService associatethe required metadata withidentifying
+the modeler/developer team, version, and dates (creation, update), among other aspects
+of the modeling elements. The BSystem0, following the ISoS model, is a meta-business
+systemworkingasaregistryofthedifferentBSystem/CEBS/BServicepathstoBService
+terminal elements.
+In the case of a BService with one or more process definitions, the mapping gener-
+ates a Service responsible for the execution of process instances. The execution relies
+on embedding a business process execution engine and, for each process, solving the
+technology bindings involved in the calling of ISoS Service elements. Technological
+bindings are associated with activities that require embedded computing logic (a proxy
+
+--- PAGE 13 ---
+390 A. L. Osório et al.
+to call other Service elements of the same ISystem, or other ISystem accessible through
+the ISystem0).
+ThepositionoftheBSoS,whilemotivatedbytheneedforaunifiedapproachtobusi-
+ness applications/information systems development, raises challenging research ques-
+tions. An important one is mapping well-established concepts based on standards, e.g.,
+the OpenGroup TOGAF reference architecture, the related Archimate modeling lan-
+guage, and the TOGAF’s Architecture Development Methodology (ADM). A simple
+example the difficulties is the TOGAF definition of ‘application’. The application def-
+inition “… deployed and operational IT system that supports business functions and
+services; for example, a payroll” [45] raises the need for a consensus. Some questions
+are:WhatisanITsystem?WhatisdeployinganITsystem?Whatarebusinessfunctions?
+How are they operationalized? What is a business service?
+By positioning the BSoS concepts, we aim to answer the lack of rigorous definitions
+for concepts understood by experts both from business and technology domains.
+4 The Collaborative Network in a BSoS Context
+Anessentialmotivationforproposingaholisticsystemof“thinking”thesingleenterprise
+is the need to improve how to manage the digital at the CN level. The current trend to
+moveenterpriseinformationsystems(orinformaticssystemsasacompositeofservices,
+in our proposed terminology) to the cloud has the drawback of shifting the IT center to
+an external independent cloud provider whose main goal is to support the storing and
+execution of enterprise applications, but without any awareness of enterprises’ business
+and IT strategies.
+This trend restricts the freedom of the enterprise to lead an integration strategy with
+the participation of multiple vendors. Costs sustainability requires independence from
+a single product/services provider/supplier [36]. However, the “fragmentation” trend of
+service-oriented architectural strategy towards ‘everything as a service’ (XaaS) requires
+novelmanagedmodelsforIT,what[4]discussesassoftware-definedbusiness,following
+a similar concept adopted for IT infrastructures, e.g., software-defined infrastructure or
+software-defined storage systems [31].
+Moreover, integrating SaaS parts needs coordination with other components (other
+informaticssystems/services).Theintegrationstrategyofcurrentbusinessproductscon-
+siders offering adapters and APIs (e.g., “You can create an integration profile for the
+following SaaS applications”, found in a well-positioned SaaS provider’s website for
+integrating about thirty-five products1). Such proprietary integration profiles raise ques-
+tions about how to integrate with other competing products or even new ones with
+valuable advantages, but for which there is the need to develop an integration profile.
+The enterprise integration problem in the cloud context is not new, as demonstrated
+by a 2009’s research from a well-known IT technology supplier that states that “The
+risingadoptionofsoftware-as-a-service(SaaS)applicationsbyenterpriseorganizations
+has been driven by deep dissatisfaction with on-premises applications, which require
+organizations to purchase and deploy infrastructure, overstock on licenses, and pay
+1 ServiceNow, as of May 2023 (link).
+
+--- PAGE 14 ---
+A Business Technology Alignment Strategy 391
+for expensive resources for customizations, upgrades, and ongoing maintenance.” [16].
+However, after about fifteen years, despite the value brought by cloud computing, the
+organization’s IT integration problem remains [44].
+The research [21] discusses the concept of integration Platform as a Service (iPaaS)
+as a reliable and scalable integration management strategy as a successor of the classic
+enterprise application integration (EAI) and enterprise service bus (ESB) approaches.
+However, they used to be proprietary.
+To contribute to the integration problem, we adopt the BSoS and ISoS, which estab-
+lishes an enterprise-led integration strategy, as discussed above. Despite theoretical
+potential technology dependencies, our approach strongly relies on open standards and
+values legacy systems by wrapping them into the open standard BSoS-ISoS IT-managed
+strategy. The operations outsourcing of BSoS and ISoS meta-informatics systems by a
+third party under a platform-as-service (PaaS) model remains a possibility. This app-
+roach allows companies (including SMEs) to adopt OPEX and keep the decision power
+and IT sovereignty in their business-IT alignment strategy.
+The proposed paradigm shift considers the changes in the integration strategy from
+specific isolated products to an enterprise system of systems by adopting the proposed
+sociotechnical tandem system of systems BSoS-ISoS.
+In what CN is concerned, we propose a similar approach, adopting the collaborative
+enterprise network (ECoNet) framework [37]. With ECoNet, a specialized enterprise-
+collaborative network manager (ECoM) ISystem embeds the computational responsi-
+bility for managing interaction exchanges among enterprise organizations. The ECoM
+ISystem is the enterprise application specialized in managing collaboration contexts
+(CoC) for data and coordination exchanges in specific contexts, e.g., adopting standard
+dataexchangesbasedonbusinessprocessesreferencemodels,astheUniversalBusiness
+Language (UBL), as proposed in [27]. The ECoM further implements the virtual col-
+laboration contexts (VCC) as groups of enterprises that join shared secure collaboration
+spaces accessed through a simple programmatic interface [33].
+In our research, we go a bit further, proposing the conceptual modeling of the ECoM
+informatics system through what we designate as a business enterprise collaboration
+management(BECoM)asanexampleofaBSystem.TheBECoMsystemaimstoabstract
+the implemented CoC and VCC, establishing the conceptual models that will serve as
+open standards to be used by other business systems (business level) and informatics
+systems (technology level) to make collaboration cases documented and operational.
+Figure6depictsCNnodes,node.A,…,node.Nlogicallyandoperationallyconnected,
+establishing an Econet collaborative network.
+TheECoNetapproachmakestheCoCandVCCconceptsimplementedbytheECoM
+ISystem, which services (implemented interfaces, APIs) can be shared by the other
+ISystems of the enterprise. It means an ISystem can programmatically create or join a
+virtual collaboration context (VCC) to share data with other members of the same VCC.
+The data exchange or sharing is managed by collaboration context (CoC) services that
+implement specific data interchange protocols, e.g., EDI/EDIFACT standards.
+Following the proposed BSoS and ISoS dual enterprise responsibility IT levels, the
+idea is to establish business CoC (BCoC) and business VCC (BVCC) as conceptual
+modeling elements of the corresponding technology implementation CoC and VCC.
+
+--- PAGE 15 ---
+392 A. L. Osório et al.
+Fig. 6. The ECoNet CN framework extended to the business BSoS context.
+The approach makes it possible to define business processes to manage the virtual col-
+laboration contexts, e.g., accessing creation, joining, leave, and configuration changes
+services of EcoM Isystem.
+As a small example of the proposed strategy, consider Enterprise A agrees on a
+novel business (NB) with Enterprises B and C to offer product customization, delivery,
+and support. Enterprise B is responsible for product delivery, while Enterprise C offers
+customization and support services. The enterprises agree to develop an NB_Bsystem
+collaboratively, modeling each responsibility set’s concepts. Enterprise A defines a
+product customization process. The process starts and mediates interactions with the
+product management ISystem when a new product customization event arrives. The
+NB_BSystem at A incorporates this and other business processes and conceptual data
+models, later used to generate one or more informatics systems that operationalize
+the execution of the defined processes. In collaboration with Enterprise A, Enterprise
+C designs the product customization process in response to a customer’s need. The
+NB_BSystematCbeginsfromacustomer’sevent.NB_BSystemfurthermodelstheuser
+interface and programmatic interactions with Enterprise A to access product definition,
+including modeling available configuration options. Customers generate customized
+products through the user interface.
+Enterprise A adds to NB_BSystem a delivery process in coordination with Enter-
+prise C, but operationalized by Enterprise B. At Enterprise A, the process begins when
+a customized product is ready for delivery, an event originated in the manufacturing
+execution system (an ISystem). One important aspect of the proposed model is that the
+consistency of the BSystem or BSystems with the manufacturing execution ISystem
+is kept consistent. Current practices tend to manage changes in the operating systems
+without updating the models that originate them.
+ConsidernowtheNB_BSystematEnterpriseBholdingtheproductdeliveryprocess,
+whichbeginswhenaproductdeliveryeventisreceivedfromEnterpsiseA.Thecustomer
+ofacustomizedproductcanfollowuponproductstatusesacrossproductionanddelivery.
+It means that both Enperprises A and C collaborate with B to keep customers updated.
+NB_BSystem at Enterprise B is supposed to generate or update a delivery ISystem
+responsible for operationalizing delivering steps. The NB_BSystem at each Enterprise
+
+--- PAGE 16 ---
+A Business Technology Alignment Strategy 393
+further establishes a BCoC to model message and coordination exchanges and a BVCC
+(later mapped to a Virtual Collaboration Context (VCC) created by Enterprise A) to
+be joined by Enterprises B and C, hence establishing a secure Collaborative Network
+modeling the novel business virtual enterprise.
+The initial design of the ECoNet infrastructure concept relied on a central service
+at the domain econet-cno.org [37], where members needed to register. However, with
+the ISoS framework and the ISystem0 well-known endpoint address (e.g., isos.node-
+a.com:2058),anyotherenterprise’sinformaticssystemcanprogrammaticallyaccessthe
+ISystem0’s I0 interface available at this endpoint. Through the I0 interface, it is possible
+to access ECoM ISystem services and, for instance, access the join operation to apply
+for some VCC created by the called node. The current version of the ISystem0 reference
+implementation adopts a simple RESTful web service for realizing the I0 interface. The
+interactions through ISystem0’s I0 interface consider that restriction policies condition
+access to the public entry point (e.g., address isos.node-a.com:2058).
+The realization of the ECoNet concept is the responsibility of ECoM running as
+an ISystem in the enterprise ISoS IT infrastructure. The ECoM informatics system can
+be seen as implementing the ECoNet’s API. Since specifications are open, enterprises
+do not depend on any central entity. They must provide and maintain a conforming
+implementationwiththeECoMreferencemodel.ECoMistechnologyagnostic,making
+it easier to find competing products. ECoNet/ECoM providers contribute in this way to
+reduce technology dependencies.
+5 Conclusions and Further Research
+This paper has presented an approach to leverage a company’s IT independence and
+sovereigntystrategy,giventheincreasingriskscreatedbythetrendofmovingITsystems
+and infrastructures to hyper-scaler cloud providers.
+It does that by proposing a more consistent business and IT alignment, positioning
+the business system of systems (BSoS) framework aligned with the ISoS as a business
+modeling concept towards agnostic integrated IT architectures and strategy for both
+single companies and collaborative networks.
+Following a previous validation with a company in adopting the ISoS with an ini-
+tial ISystem0 reference implementation for the technology layer, a similar approach is
+adopted for the business layer, proposing a BSystem0 responsible for playing a reg-
+istry role for business systems (BSystems). The scheme establishes a rigorous mapping
+between business conceptual modeling and the association with operating technology
+artifacts, contributing to improve business-IT alignment.
+This research has questioned some IT current ‘mantras’ somehow determined by
+the own cloud providers as well as some limitations observed in Enterprise Architec-
+ture models in what IT sovereignty is concerned with this increasingly digital, fully
+connected, and cloud- & ecosystems-based business environments. On the other hand,
+we believe the BSoS can incorporate the TOGAF Architecture Development Method
+(ADM) [26] and its proven methods to help define conceptual models that satisfy the
+business needs of an organization.
+Dealing with all the issues involved in the envisaged paradigm shiftis very complex,
+embracing some challenging aspects. Therefore, this paper should be taken as a first
+
+--- PAGE 17 ---
+394 A. L. Osório et al.
+attempt towards a more integral vision of the Business-IT alignment strategy that can
+lead companies to be more independent from systems vendors and, at the same time,
+remain competitive and sustainable in their digital transformation pathway.
+Further research of this work includes the definition of how data models, business
+processes, user interfaces, and organization models as parts of a business service map
+to one or more service elements. Another aspect is the ModelingUI interface of the
+BSystem0. Like the administration interface of the ISystem0, an ISoS management tool
+isexpectedtoevolvetoincorporategovernancefeatures,includingcross-BSystemmodel
+management features. Finally, a reference implementation is needed to consolidate and
+validate the proposed BSoS concepts.
+Acknowledgments. This work is supported in part by the ANSR/SINCRO project and
+BP/HORUS(GIATSI/ISEL/IPLresearchgroup)aswellasbyCAPESBrazilianAgencyforHigher
+Education, project PrInt “Automation 4.0”.
+References
+1. Abdelfattah, A.S., Cerny, T.: Roadmap to reasoning in microservice systems: a rapid review.
+Appl. Sci. 13(3), 1838 (2023). https://doi.org/10.3390/app13031838
+2. ACM. Market Study Cloud services. Technical report ACM/INT/440323, Netherlands
+Authority for Consumers and Markets (2021). https://www.acm.nl/system/files/documents/
+market-study-def-public.pdf
+3. Afsarmanesh,H.,Camarinha-Matos,L.M.,Msanjila,S.S.:Virtualorganizationbreedingenvi-
+ronments: key results from ECOLEAD. IFAC Proc. 40(19), 199–206 (2007). https://doi.org/
+10.3182/20071002-mx-4-3906.00033
+4. Alt, R., et al.: Software-defined business. Bus. Inf. Syst. Eng. 62(6), 609–621 (2020). https://
+doi.org/10.1007/s12599-020-00669-6
+5. Bexiga, M., Garbatov, S., Seco, J.C.: Closing the gap between designers and developers in
+a low code ecosystem. In: Proceedings of the 23rd ACM/IEEE International Conference on
+Model Driven Engineering Languages and Systems: Companion Proceedings. ACM (2020).
+https://doi.org/10.1145/3417990.3420195
+6. Bezerra,R.O.,Cancian,M.H.,Rabelo,R.J.:EnhancingnetworkcollaborationinSOAservices
+composition via standard business processes catalogues. In: Camarinha-Matos, L.M., Afsar-
+manesh, H., Fornasiero, R. (eds.) PRO-VE 2017. IAICT, vol. 506, pp. 421–431. Springer,
+Cham (2017). https://doi.org/10.1007/978-3-319-65151-4_38
+7. Bianchi, I.S., Vaquina, A., Pereira, R., Sousa, R.D., Dávila, G.A.: A benefit dependency
+network for shadow information technology adoption based on practitioners’ viewpoints.
+Informatics 9(4), 95 (2022). https://doi.org/10.3390/informatics9040095
+8. Camarinha-Matos, L.M., Afsarmanesh, H., Oliveira, A.I., Ferrada, F.: Collaborative business
+services provision. In: Proceedings of the 15th International Conference on Enterprise Infor-
+mation Systems, vol. 2: ICEIS, pp. 380–390. INSTICC, SciTePress (2013). https://doi.org/
+10.5220/0004535803800390. ISBN 978-989-8565-60-0
+9. Souza, A.P., Rabelo, R.J.: A dynamic services discovery model for better leveraging BPM
+and SOA integration. Int. J. Inf. Syst. Serv. Sect. 7(1), 1–21 (2015). https://doi.org/10.4018/
+ijisss.2015010101
+10. Ditsche, J., Rohrhirsch, D., Grunow, S., Fritze, R.: The digital dilemma - Why
+companies struggle to master digital transformation. Technical report, Roland Berger
+(2022). https://content.rolandberger.com/hubfs/07_presse/Roland_Berger_Focus_Digital_D
+ilemma_N3XT_2022.pdf
+
+--- PAGE 18 ---
+A Business Technology Alignment Strategy 395
+11. Dumas, M., La Rosa, M., Mendling, J., Reijers, H.A.: Fundamentals of Business Process
+Management. Springer, Heidelberg (2018). https://doi.org/10.1007/978-3-662-56509-4
+12. Frantz, R.Z., Corchuelo, R., Basto-Fernandes, V., Rosa-Sequeira, F., Roos-Frantz, F., Arjona,
+J.L.:Acloud-basedintegrationplatformforenterpriseapplicationintegration:amodel-driven
+engineering approach. Softw. Pract. Exper. 51(4), 824–847 (2020). https://doi.org/10.1002/
+spe.2916
+13. Gascueña,J.M.,Fernández-Caballero,A.:PrometheusandINGENIASagentmethodologies:
+a complementary approach. In: Luck, M., Gomez-Sanz, J.J. (eds.) AOSE 2008. LNCS, vol.
+5386, pp. 131–144. Springer, Heidelberg (2009). https://doi.org/10.1007/978-3-642-01338-
+6_10
+14. Gonçalves, C., Osório, A.L., Camarinha-Matos, L.M., Dias, T., Tavares, J.: A collaborative
+cyber-physical microservices platform – the SITL-IoT case. In: Camarinha-Matos, L.M.,
+Boucher, X., Afsarmanesh, H. (eds.) PRO-VE 2021. IAICT, vol. 629, pp. 411–420. Springer,
+Cham (2021). https://doi.org/10.1007/978-3-030-85969-5_38
+15. Guberman, S., Altos, L.: Reflections on Ludwig von Bertalanfy’s “General System Theory:
+Foundations, Development, Applications” (2002)
+16. Hai, H., Sakoda, S.: SaaS and integration best practices. Fujitsu Sci. Tech. J. 45, 257–264
+(2009)
+17. Hanseth, O.: From systems and tools to networks and infrastructures-from design to cultiva-
+tion. In Industrial Informatics Design, Use and Innovation, pp. 122–156. IGI Global (2010).
+https://doi.org/10.4018/978-1-61520-692-6.ch011
+18. Hartmann,A.,Auth,G.:PositioningIT4ITinthefaceofclassicenterprisearchitectureframe-
+works.In:Reussner,R.H.,Koziolek,A.,Heinrich,R.(eds.)INFORMATIK2020,pp.183–195
+(2021). https://doi.org/10.18420/inf2020_17
+19. Hiekkanen, K., Helenius, M., Korhonen, J.J., Patricio, E.: Aligning alignment with strategic
+context: a literature review. In: Benghozi, P.J., Krob, D., Rowe, F. (eds.) Digital Enterprise
+Design and Management 2013. Advances in Intelligent Systems and Computing, vol. 205,
+pp. 81–98. Springer, Heidelberg (2013). https://doi.org/10.1007/978-3-642-37317-6_8
+20. Hydle,K.,Hanseth,O.,Aanestad,M.,Aas,T.H.:Digitaltransformationthroughcollaborative
+platformization: a study of incumbent-entrepreneur relations. In: Proceedings of the Annual
+Hawaii International Conference on System Sciences. Hawaii International Conference on
+System Sciences (2021). https://doi.org/10.24251/hicss.2021.707
+21. Hyrynsalmi, S.M.: The state-of-the-art of the integration platforms as a service research.
+In: Proceedings of the 5th International Workshop on Software-intensive Business: Towards
+Sustainable Software Business. ACM (2022). https://doi.org/10.1145/3524614.3528634
+22. Jansen, C., et al.: The vendor-agnostic EMPAIA platform for integrating AI applications into
+digital pathology infrastructures. Futur. Gener. Comput. Syst. 140, 209–224 (2023). https://
+doi.org/10.1016/j.future.2022.10.025
+23. Jonathan, G.M.: IT alignment: a management paradigm for digital transformation in public
+organisations.In:JointProceedingsoftheBIR2022WorkshopsandDoctoralConsortiumco-
+Locatedwith21stInternationalConferenceonPerspectivesinBusinessInformaticsResearch
+(BIR 2022), number 3223 in CEUR Workshop Proceedings, pp. 189–208. CEUR (2022).
+https://ceur-ws.org/Vol-3223/paper18.pdf
+24. Juttmann, J., Hovinga, F.: Driving digital process excellence, KPMG (2022)
+25. Kantrow, A.M.: Strategy-technology connection. Use in decision making. Harvard Bus. Rev.
+(United States) 58(4) (1980)
+26. Kornyshova, E., Barrios, J.: Process-oriented knowledge representation of the requirement
+management phase of TOGAF-ADM: an empirical evaluation. Procedia Comput. Sci. 192,
+2239–2248 (2021). https://doi.org/10.1016/j.procs.2021.08.237
+
+--- PAGE 19 ---
+396 A. L. Osório et al.
+27. Al Kukhun, D., Sèdes, F.: Interoperability in Pervasive enterprise information systems - a
+double-faced coin between security and accessability. In: Proceedings of the Ninth Interna-
+tional Conference on Enterprise Information Systems. SciTePress - Science and Technology
+Publications (2007). https://doi.org/10.5220/0002396502370242
+28. Lambropoulos, G., Mitropoulos, S., Douligeris, C.: A review on cloud computing services,
+concerns, and security risk awareness in the context of digital transformation. In: 2021 6th
+South-East Europe Design Automation, Computer Engineering, Computer Networks and
+Social Media Conference (SEEDA-CECNSM). IEEE (2021). https://doi.org/10.1109/seeda-
+cecnsm53056.2021.9566267
+29. Lemrabet, Y., Liu, H., Benkeltoum, N., Bigand, M., Bourey, J.-P.: Business-IT alignment
+and organization agility enabled by BPM and SOA approaches interplay. In: Proceedings
+13th International Conference on Enterprise Information Systems. SciTePress - Science and
+Technology Publications (2011). https://doi.org/10.5220/0003494802410246
+30. Luftman, J.: Assessing business-IT alignment maturity. Commun. Assoc. Inf. Syst. 4 (2000).
+https://doi.org/10.17705/1cais.00414
+31. Macedo, R., Paulo, J., Pereira, J.: A survey and classification of software-defined storage
+systems. ACM Comput. Surv. 53(3), 1–38 (2020). https://doi.org/10.1145/3385896
+32. Madnick, S.E., Wang, Y.R.: A framework of composite information systems for strategic
+advantage. In: Proceedings of the Twenty-First Annual Hawaii International Conference on
+System Sciences. Decision Support and Knowledge Based Systems Track, volume III. IEEE
+Computer Society Press (1988). https://doi.org/10.1109/hicss.1988.11886
+33. Méndez, J.D., Rabelo, R.J., Baldo, F., Cancian, M.H.: A plug and play integration model for
+virtual enterprises. In: Camarinha-Matos, L.M., Afsarmanesh, H., Rezgui, Y. (eds.) PRO-VE
+2018. IAICT, vol. 534, pp. 312–324. Springer, Cham (2018). https://doi.org/10.1007/978-3-
+319-99127-6_27
+34. Moeyersons, J., Kerkhove, S., Wauters, T., De Turck, F., Volckaert, B.: Towards cloud-based
+unobtrusive monitoring in remote multi-vendor environments. Softw. Pract. Exper. 52(2),
+427–442 (2021). https://doi.org/10.1002/spe.3029
+35. OpenGroup. The Open Group IT4IT Standard, Version 3.0 (2022)
+36. Osório, A.L., et al.: open multi-technology service oriented architectur for “its” business
+models: the ITSIBus Etoll services. In: Camarinha-Matos, L.M., Afsarmanesh, H., Ortiz, A.
+(eds.) PRO-VE 2005. ITIFIP, vol. 186, pp. 439–446. Springer, Boston, MA (2005). https://
+doi.org/10.1007/0-387-29360-4_46
+37. Osório, L.A., Camarinha-Matos, L.M., Afsarmanesh, H.: ECoNet platform for collaborative
+logistics and transport. In: Camarinha-Matos, L., Bénaben, F., Picard, W. (eds.) Risks and
+Resilience of Collaborative Networks. PRO-VE 2015. IFIP Advances in Information and
+Communication Technology, vol. 463, pp. 265–276. Springer, Cham (2015). https://doi.org/
+10.1007/978-3-319-24141-8_24
+38. Osório, A.L., Belloum, A., Afsarmanesh, H., Camarinha-Matos, L.M.: Agnostic informatics
+system of systems: the open ISoS services framework. In: Camarinha-Matos, L.M., Afsar-
+manesh, H., Fornasiero, R. (eds.) PRO-VE 2017. IAICT, vol. 506, pp. 407–420. Springer,
+Cham (2017). https://doi.org/10.1007/978-3-319-65151-4_37
+39. Osório, A.L., Camarinha-Matos, L.M., Afsarmanesh, H., Belloum, A.: On reliable collabora-
+tive mobility services. In: Camarinha-Matos, L., Afsarmanesh, H., Rezgui, Y. (eds.) Collab-
+orative Networks of Cognitive Systems. PRO-VE 2018. IFIP Advances in Information and
+Communication Technology, vol. 534, pp. 297–311. Springer, Cham (2018). https://doi.org/
+10.1007/978-3-319-99127-6_26
+40. Rabelo, R.J., Gusmeroli, S., Arana, C., Nagellen, T.: The Ecolead ICT infrastructure for
+collaborative networked organizations. In: Network-Centric Collaboration and Supporting
+Frameworks. PRO-VE 2006. IFIP International Federation for Information Processing, vol.
+224, pp. 451–460. Springer, Boston (2006). https://doi.org/10.1007/978-0-387-38269-2_47
+
+--- PAGE 20 ---
+A Business Technology Alignment Strategy 397
+41. Razavi, A.R., Krause, P.J., Strommen-Bakhtiar, A.: From business ecosystems towards dig-
+ital business ecosystems. In: 4th IEEE International Conference on Digital Ecosystems and
+Technologies. IEEE (2010). https://doi.org/10.1109/dest.2010.5610633
+42. Ross, J., Weill, P.: Six IT decisions your IT people shouldn’t make. Harvard Bus. Rev. 80,
+84–91 (2002)
+43. Ross, J.W.: Creating a strategic IT architecture competency: learning in stages. MIS Quart.
+Executive 2(1), 5 (2008)
+44. Sawyer, S., Hossein Jarrahi, M.: Sociotechnical approaches to the study of information
+systems. In: Computing Handbook, 3rd ed. (2014)
+45. TOGAF2022. The Open Group Architecture Framework, 10th Edition
+46. Waldo,J.:TheJINIarchitecturefornetwork-centriccomputing.Commun.ACM42(7),76–82
+(1999). https://doi.org/10.1145/306549.306582
+47. Waldo, J.: On system design. In: Proceedings of the 21st annual ACM SIGPLAN Confer-
+ence on Object-Oriented Programming Systems, Languages, and Applications. ACM (2006).
+https://doi.org/10.1145/1167473.1167513
+48. Westerlund, M.: Digitalization, internationalization and scaling of online SMEs. Technol.
+Innov. Manage. Rev. 10, 48–57 (2020). https://doi.org/10.22215/timreview/1346. https://tim
+review.ca/article/1346. ISSN 1927–0321
+49. Winter, S., Berente, N., Howison, J., Butler, B.: Beyond the organizational ’container’: con-
+ceptualizing21stcenturysociotechnicalwork.Inf.Organ.24(4),250–269(2014).https://doi.
+org/10.1016/j.infoandorg.2014.10.003
+50. Wouters, S., Janssen, M., Lember, V., Crompvoets, J.: Strategies to advance the dream of
+integrated digital public service delivery in inter-organizational collaboration networks. Gov.
+Inf. Quart. 40(1), 101779 (2023). https://doi.org/10.1016/j.giq.2022.101779

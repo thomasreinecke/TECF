@@ -1,0 +1,1299 @@
+--- PAGE 1 ---
+Journal of Systems Engineering and Electronics
+Vol. 31, No. 5, October 2020, pp.983–995
+A coevolutionary framework of business-IT alignment via
+the lens of enterprise architecture
+LIN Menglong1
+, YI Shuanghui2,*
+, ZHANG Mengmeng1,*
+, CHEN Tao1
+,
+CHEN Honghui1
+, and ZHANG Xiaoxue1
+1. Science and Technology on Information Systems Engineering Laboratory, National University of Defense Technology, Changsha
+410072, China; 2. National Key Laboratory for Complex System Simulation, Academy of Military Sciences, Beijing 100000, China
+Abstract: Due to the turbulent external business environment, the
+complexity of internal relations of the organization and the emer-
+gence of subversive IT roles, the business-IT alignment (BITA)
+has become increasingly difficult. The unsuccessful realization of
+BITA will lead to the waste of organizational resources, the reduc-
+tion of return on investment and eventually the loss of competitive
+advantage. In recent years, coevolution has received widespread
+attention due to its ability to describe the dynamic relationship
+between IT and business. Multiple principles such as quickening
+learning action loops and adopt suitable organizing principles for
+achieving business and IT coevolution (BITC) are obtained. How-
+ever, the continuous BITC is still hard to be achieved because of
+the lack of complete BITC management. This paper focuses on
+the management process of the BITC and how to perform it gradu-
+ally. A coevolution framework combines the enterprise architecture
+(EA) approach with the coevolution analysis is proposed, which
+contains the design of EA, the sensing and governance of the mis-
+alignment and the procedure of the EA misalignment prevention.
+The steps for the governance and prevention of misalignment are
+discussed in particular. Through comparison with the principles,
+characteristics and methods of coevolution in the literature, the
+proposed framework is evaluated. The results show that the pro-
+posed framework is effective for BITC implementation.
+Keywords: business-IT alignment (BITA), coevolution, misalign-
+ment governance, misalignment prevention, enterprise architec-
+ture.
+DOI: 10.23919/JSEE.2020.000073
+1. Introduction
+Business-IT alignment (BITA) is defined as the degree
+of how the enterprise’s business strategy and information
+technology fit for each other. In recent years, BITA has
+always been one of the most concerned issues for the en-
+terprises managers, which is a significant approach to in-
+crease the return on the IT investment and improve the en-
+terprise’s competitive advantages [1–3]. A great number
+Manuscript received December 18, 2019.
+*Corresponding author.
+of researches have been studied from multiple perspec-
+tives, such as BITA achievement [4–6], BITA measure-
+ment [7–10], BITA maintenance[11,12],and the relation-
+shipsbetweenBITA with firmperformances[13,14].How-
+ever, despite years of cumulative research, BITA is still
+considered as an unachieved objective [15–17].
+The most challenging features of BITA are currently
+represented as dynamic [18] and complex [19,20]. A com-
+pany can reposition itself by its varied corporate strategies
+and competitive strategies. For example, the business stra-
+tegy of the Li-Ning company in China has moved from an
+imitation strategy to a focus strategy and finally to a differ-
+entiationstrategyinthelast20years[21].Furthermore,the
+increasing connectedness, asymmetric relationships, and
+nonlinear dependencies between business elements (e.g.,
+structures, processes, actors) and IT elements (e.g., ser-
+vices, applications, actors) have made the alignment more
+difficult. “Ecosystem” or “complex adaptive system” is
+sometimes used to describe this complexity [19,22].
+Recently, the business and IT coevolution (BITC) has
+been advocated as a source of methods to address BITA
+[16,19,20,23,24]. This study employs Lewin’s definition
+of coevolution as “the joint outcome of managerial inten-
+tionality, institutional effects and environment” [25] that
+should face the dynamics and embrace the complexity of
+BITA. The literature analyzed BITC from multilevel, bidi-
+rectional, nonlinear, and positive feedback perspectives.
+Various definitions, features, and principles of BITC were
+previously discussed. These researches have provided sig-
+nificant implications for the exploration of BITC.
+The extant literature proposedseveral recommendations
+to achieve BITC, such as modular design [23,24], sharing
+domain knowledge [26], and tension [16,23,24].However,
+it is hard to manage BITC in an operative way, without a
+process to adopt these mechanisms.
+The enterprise architecture (EA) method is useful to in-
+tegrate the enterprsie’s strategy with its processes and re-
+
+--- PAGE 2 ---
+984 Journal of Systems Engineering and Electronics Vol. 31, No. 5, October 2020
+sources more effectively through various viewpoints and
+models. EA has proven its capabilities to deal with the tra-
+ditional BITA issues, but it is rarely used in the BITC field.
+In summary, realizing the BITA is vital to improve the
+organization’s competitiveness. Due to the dynamic and
+complex features of BITA, BITC is becoming popular to
+address the BITA issue. Though there exist several BITC
+recommendations, they are not systematically categorized
+and managed. In addition, the EA is rarely used when
+considering the BITC. Meanwhile, a practical framework
+of BITC, which helps to describe the structure and pro-
+cess of BITC, is lacking in the literature. Therefore, a
+process-oriented BITC management framework should be
+proposed to describe and manage BITC, and flexibly repo-
+sition organizations.
+To reach this objective, three basic arguments are con-
+sidered in this study, each of which helps to face the
+dynamics and embrace the complexity of BITA. First,
+BITC should reconcile both “rational designs” and “emer-
+gent processes” [16,23,24,27]. Second, BITC should in-
+volve short-term and long-term alignments simultaneously
+[26,28–30]. And third, the firm is a complex adaptive
+system and its internal relationships are hard to perceive
+[20,31]. In this study, the EA method and coevolutionary
+analysis are combined to meet the above three arguments.
+Specifically, EA acts as a rational BITA design approach
+and coevolutionary analysis seeks to govern the deviations
+and misalignments in each period of EA evolution. A co-
+evolutionaryframeworkthatisformed,containsfoursteps:
+EA design, sense of the misalignment, governance of the
+misalignment, and prevention of the misalignment. The
+main contributions of this study are as follows:
+(i) The recommendationprinciplesof BITC are summa-
+rized and are categorized as short-term governance princi-
+ples and long-term prevention principles.
+(ii) A coevolutionary framework combining EA design
+with coevolutionary sensing, misalignment governance
+andpreventionprinciplesis constructed,whichcouldassist
+the senior manager to take related governance measures.
+(iii) Demonstrate the proposed framework from several
+dimensionsincludingthe characteristics of BITC, the prin-
+ciples of BITC and the approaches of the BITC.
+Theremainderofthispaperisorganizedasfollows.Sec-
+tion 2 presents the relevant background of BITC, EA, and
+complex adaptive system. Section 3 introduces a coevo-
+lutionary framework combining EA design with coevolu-
+tionary sensing, misalignment governance and prevention
+principles. Section 4 evaluates the framework from differ-
+ent coevolutionary dimensions. Section 5 draws conclu-
+sions and presents directions for future research.
+2. Theoretical foundation
+2.1 BITC
+BITC is a new quest in the BITA research, aiming to im-
+prove a company’s dynamism and agility in reposition-
+ing itself continuously [19]. For analyzing the BITC re-
+search deeply, we select 12 representative papers, which
+are codied and discussed in Table 1. They are discussed
+from main focuses, motivations, contents, and approaches.
+Several conclusions can be deduced from Table 1. From
+the third column of Table 1, three motivations are driv-
+ing the multiple focuses on BITC. First, the external com-
+petitive environment of a company is becoming “dancing
+rugged” [19,22,32]. Tanriverdi [19] pointed out that a firm
+represents a “dancing rugged” competing landscape if its
+choice variables become dependent with those of other
+firms. Thus, the BITA should understand how the IS stra-
+tegy co-evolves with the competitive and corporate stra-
+tegy. A firm needs to be able to show sufficiently complex
+behavior to survive in this environment [32].
+Second, the internal relationships in a company are be-
+coming polyphyletic and complex [16,20,23,33–35]. The
+relationships of the business and IT are multifaceted in-
+cluding the strategy level, operational level and the tactical
+level [35]. To address the complex relationships in a com-
+pany, Fiss [31] proposed a qualitative comparative analy-
+sis method to discuss the company outcomes with discrete
+configurations. In brief, the relationships are multifaceted
+and multilevel, instead of representing simple determinis-
+tic logic. The organization is becoming a complex system
+on the edge of chaos.
+Third, the IT roles have changed from one of the func-
+tional head to the strategic partner [36,37]. Since infor-
+mation systems (IS) have evolved from the management
+support tools to the components of business structures,
+Hiekkanen [38] pointed out that the IS planning and stra-
+tegy discussion should go beyond the concept of align-
+ment. Instead of a functional-level strategy, it is time to
+rethink the role of the IT strategy as a fusion between IT
+and the business strategy [39]. Therefore, the business and
+IT are fused and their boundaries have been blurred.
+Facing the above challenges, dynamic BITC emerged
+beyond the traditional alignment. Multiple coevolution-
+ary problems are discussed with various models and ap-
+proaches as shown in column 4 and column 5 in Table 1.
+For example, Benbya and McKelvey [23] viewed align-
+ment as a continuous process of coevolution, which coor-
+dinated the “rational designs” and “emergent processes”.
+They proposed a coevolutionary model from the strategy
+level, the operational level, and the individual level. Signi-
+ficant implications have been harvested with these re-
+search.However,the majority of themstudied what the co-
+evolution is and how the business and IT coevolved, rather
+than provided ordered mechanisms for practical manage-
+ment [20]. In this paper, we aim to propose a management
+process on how to control and reposition the BITC within
+the evolution of a firm.
+
+--- PAGE 3 ---
+LIN Menglong et al.: A coevolutionary framework of business-IT alignment via the lens of enterprise architecture 985
+Table 1 Some representative papers on BITC
+Author Focus Why What How
+Agarwaland and
+Sambamurthy (2002)
+[40]
+Organizing IT func-
+tions
+Increasing IT roles
+Partner model
+Platform model
+Organize IT to foster coevolu-
+tion between business and IT
+functions
+Bendya and McK-
+elvey (2006) [23]
+A conceptual model
+of BITC
+Dancing rugged environment
+Complex internal relationships
+Strategic level
+Operational level
+Individual level
+Top-down rational design and
+bottom-up emergent process
+Tanriverdi, et al.
+(2010) [19]
+A new quest of BITC Dancing rugged environment Strategic alignment quest
+Improve the organization’s
+agility and dynamics in repo-
+sitioning itself
+El Sawy, et al. (2010)
+[22]
+The ecosystem of en-
+vironment, business,
+and IT systems
+Dancing rugged environment
+Complex internal relationships
+Increasingly IT roles
+Digital ecodynamics
+Environmental turbulence
+Business capabilities
+IT systems
+Configuration theory
+Nassim and Robert
+(2013) [24]
+Verifying coevolu-
+tionary principles
+Dancing rugged environment
+Complex internal relationships
+Adaptive tension
+Change rate
+Modular design
+Top-down rational design and
+bottom-up emergent process
+Vessey and Ward
+(2013) [27]
+A conceptual model
+of BITC
+Dancing rugged environment
+Complex internal relationships
+Adaptive IS management
+Enabling IS management
+Administrative IS mana-
+gement
+Top-down rational design and
+bottom-up emergent process
+Short-term and long-term align-
+ment
+Sandberg (2014) [41]
+A shift to digital busi-
+ness strategy
+Dancing rugged environment
+Increasing IT roles
+Digital business strategy
+Organizational performance
+Improving organizational per-
+formance through coevolution
+Peppard (2014, 2003)
+[16,42]
+A conceptual model
+of BITC
+Dancing rugged environment
+Complex internal relationships
+“Never go ahead” loop
+“More of the same” loop
+Glaserian form of grounded
+theory development
+Weeger and Haase
+(2016) [33]
+Transformation of
+BITA
+Complex internal relationships
+IT activity system
+Business activity system
+Activity theory
+Amarilli, et al. (2016)
+[20]
+A conceptual model
+of BITC and different
+approaches
+Dancing rugged environment
+Complex internal relationships
+Macro scale
+Micro scale
+Metaphors, functional comp
+lexity models, co-evolutionary
+models, and dynamic complexi-
+ty models
+Kahre, et al. (2017)
+[36]
+A shift to digital busi-
+ness strategy
+Dancing rugged environment
+Increasing IT roles
+Organizational conditions
+& changes
+Environmental conditions
+& changes
+Changes in the content of
+strategy
+Provide a structured clarifica-
+tion of the current digital busi-
+ness strategies knowledge base
+2.2 EA
+EA is considered as a useful approach to achieve and sus-
+tain BITA. According to the ISO/IEC 42010 [43], EA is
+defined as “the basic organization of the enterprise embo-
+diedin its components,the relationshipsbetweenthem and
+the environment, and the principles guiding their design
+and development”. EA is a useful method to describe a
+complex organization from different viewpoints. Niemann
+[44] argued that EA is a structured and aligned plan col-
+lection of integrated representations of the business and
+IT landscape of the organization’s states in the past, the
+current and the future. EA represents the basic organiza-
+tion of an enterprise, maybe as a whole, or together with
+its suppliers, customers and partners, and also contains the
+principles guiding its design and development [45]. Some
+organizations proposed EA frameworks to describe EA in
+a unified and compatible way. EA frameworkscontain var-
+ious viewpoints and models which could help the archi-
+tects to abstract the details of the design tasks and pro-
+duce several models relating to the architectural descrip-
+tions. Multiple kinds of EA frameworks have emerged
+in the literature, such as that of Zachman [46], Ministry
+of Denfence Architecture Framework (MoDAF) [47], De-
+partment of Denfense Architecture Framework (DoDAF)
+[48], and Open Group Architecture Framework (TOGAF)
+[49].
+EA is deemed as a discipline, and the target is to align
+the organization’s strategies together with their resources
+and processes more effectively [50]. Duffy [51] even ar-
+gued that the design of the organization’s business and IT
+systemalignmentisthefieldofEA.WinterandSchelp[52]
+thought EA merges “pure” business related artifacts expli-
+citly, hence providing an opportunity to align business
+and IT structures more effectively. Four main topics were
+
+--- PAGE 4 ---
+986 Journal of Systems Engineering and Electronics Vol. 31, No. 5, October 2020
+found in the literature to address BITA problems with EA
+methods,whicharetherelationshipofBITAandEA,BITA
+achievement with EA, BITA measurement with EA, and
+BITAgovernancewithEA.Theirdescriptionsandresearch
+examples are displayed in Table 2. EA has provenits capa-
+bilities to deal with the traditional BITA problems.
+Table 2 Research topics combining BITA with EA
+Topic Description Example
+The relationship between BITA and EA What are the correlations of BITA and EA? [13,14,53]
+BITA achievement with EA How can we achieve BITA with EA methods? [4,5,50]
+BITA measurement with EA How can we measure BITA with EA methods? [7–10]
+BITA governance with EA How can we maintain BITA with EA methods? [11,12,54]
+However, the questions of BITC are more severe than
+the traditional BITA on the basis of the challenges ex-
+plained in the last section. Rare papers considered EA in
+the region of BITC. We deem that EA still owns signifi-
+cant advantages in dealing with BITC problems.
+In this paper, we consider EA as a rational top-down
+BITC design method. Various contents and relationships
+among them in a company are organized and classified
+within EA design, which helps to build the BITA. For the
+changesin the process of EA evolution,we considera mis-
+alignment goverance method.
+2.3 Complex adaptive system
+The commonality across the complex adaptive systems is
+thatalargenumberofinteractingcomponentsoragentsare
+contained there [16]. According to the statement of several
+authors, a firm can be regarded as a complex adaptive sys-
+tem if exhibitinga numberof the followingcharacteristics:
+(i) Dynamic–Organization change over time, and dif-
+ferent components with different rates.
+(ii) Governed by feedback–Due to the tight coupling,
+actions will feed back on themselves. Every decision will
+have an impact on future decisions.
+(iii)Nonlinear–Theresultsarerarelyproportionaltothe
+cause. Small changes in one place may cause dispropor-
+tionate changes in other places.
+(iv) Adaptive–Through learning experience, the actor’s
+decision rules and actions often change over time. How-
+ever, learning may be detrimental to the overall perfor-
+mance of the organization.
+(v) Policy resistant–Solutions aimed at the obvious
+symptoms often get the opposite function.
+(vi) Trade-offs–Solutions that address obvious symp-
+toms rather than to find root causes will often lead to the
+initial improvement, followed by a long-term performance
+degradation.
+Multiple researches have studied the aforementioned
+theory. Benbya found that if the added complexity is not
+properly managed, IS fails [23]. Based on the complexi-
+ty theory, especially the self-organizingemergency behav-
+iorandstructure,McKelveyputforwarda viewofISalign-
+ment [23]. Based on the complexity characteristics of IS,
+Nassim constructed a process causal-loop model of the
+strategic alignment by using the empirical data [24]. Pep-
+pard [16] argued that symptom analysis methods are diffi-
+cult to find out the root causes, and may lead to the initial
+improvement followed by a long-term performance degra-
+dation, which makes the BITA situation worse.
+In this paper, we consider that the organizational IS is a
+complex adaptive system, and the simple symptoms cor-
+rection action is not enough to cure the misalignments.
+Thus, the organizational manager should sense the devi-
+ations and misalignments at a timely manner, and apply
+governanceprinciples to sustain the firm’s competitive ad-
+vantages in a dynamic environment. At the same time,
+the misalignment prevention principles should be applied
+through the long-term EA management process.
+3. A coevolutionary framework
+In order to describe and manage BITC, a coevolution-
+ary framework combining EA with coevolutionary ana-
+lysis is proposed in this section. The extant literature al-
+ways suggested that the coevolution should not only re-
+concile rational designs but also involve emergent pro-
+cesses of coherently and consciously interrelating all the
+relevant components of the organization [16,23,24,27]. In
+other words, the coevolution should combine both bottom-
+up adaptation and top-down control. Thus, BITC is al-
+ways regarded as multilevel which needs to be aligned
+bidirectionally [23,35,36]. Meanwhile, the literature also
+argued the coevolution should consider both short-term
+alignmentandlong-termalignmentwithrespectivemecha-
+nisms [26,28–30]. As a summary, for the sake of coevolv-
+ing business and IT more flexible and efficient, the coevo-
+lutionary framework should take into account the combi-
+nation of bottom-up adaptation and top-down design, the
+combination of long-term alignment and short-term align-
+ment, and the combinationof exploitationand exploration.
+We aim to express the coevolutionary issue more com-
+prehensively and practically in this paper. A coevolution-
+aryframeworkis displayedsketchilyinFig.1.TheDoDAF
+
+--- PAGE 5 ---
+LIN Menglong et al.: A coevolutionary framework of business-IT alignment via the lens of enterprise architecture 987
+is used to design and manage EA. Four parts exist in
+this figure: EA design, misalignment sensing, misalign-
+ment governance, and misalignment prevention. In the
+earlystageofdesign,theorganizationachievedbasicBITA
+through EA design. However, due to the complexity of the
+external environment and the deviations during the imple-
+mentation phase, the misalignment may exist between the
+business and IT strategies. The enterprise could realize a
+short-term alignment by sensing the deviations and taking
+goverance principles. In addition, it could also achieve a
+long-time alignment through taking prevention principles.
+The misalignment governance and prevention part will be
+mainly discussed in this paper. We will explain each part
+respectively.
+Fig. 1 Coevolutionary framework combining EA with coevolutionary analysis
+3.1 EA design
+EA is an expression of organization’s design decision-
+making results. The information contained in the EA in-
+cludes the organization’s strategic positioning, business
+process and IS capabilities [55]. The design content of the
+EA should include the strategic objects, business structure
+and processes, and IS components [56,57]. The different
+designconcepts,and theirrelationshipsare oftendiscussed
+in the literature [58,59]. In order to design EA, several EA
+frameworkssuch as Zachman,TOGAF, DoDAF have been
+published sequentially.
+DoDAF is adopted in this paper. As other frameworks,
+it contains an EA meta-model, multiple viewpoints, and
+dozens of models. The meta-model of DoDAF (Fig. 1) is
+composed of 12 main tuples and the relationships among
+them, which normalizes the modeling standard and data
+criterion. The meta-model is used to represent, store, and
+collect EA contents in different organizations, or differ-
+ent life phases. Further, DoDAF includes eight viewpoints,
+i.e., capability, operational, services, systems, standard,
+data and information, all and project, which are respon-
+sible for describing EA from different perspectives. Quan-
+
+--- PAGE 6 ---
+988 Journal of Systems Engineering and Electronics Vol. 31, No. 5, October 2020
+tity different models exist in each viewpoint, for example,
+projectviewpointincludes“projectportfoliorelationships”
+model, “project timelines” model, and “projectto capabili-
+ty mapping” model. DoDAF describes the internal rela-
+tionships in an organization among the eight viewpoints
+and their models.
+The meta-model based architecture development me-
+thod is a data-centric approach, which guides the EA de-
+sign by building a standardized meta-model, as shown in
+Fig. 2. The meta-model is the specification for organiz-
+ing and managing the architecture data, and it is also the
+foundation for supporting a variety of architecture model-
+ing methods and flexibly representing the architecture as
+required.
+Fig. 2 Meta-model based architecture development process
+Similar to the architecture development model (ADM)
+of TOGAF, DoDAF explains the design process of EA
+with six steps. Meanwhile, scholars also proposed design
+processes through different development sequences of ar-
+chitecture viewpoints and models. For example, Dam [60]
+studied how to design DoDAF with 16 specific steps; Zei-
+gler and Mittal [61] discussed the DoDAF development
+process with a discrete event system specification; IBM
+rhapsody defined the development sequence of DoDAF
+models with an embedded DoDAF package [62].
+Therefore, the BITA is suitably built in the EA design
+phase with a unified EA meta-model, the interdependent
+relationships among viewpoints and models, and a specific
+design process. Therefore, we deem the EA design as a
+rational top-down BITA design process.
+3.2 Misalignment sensing
+Organizations have made BITA achievements; they are
+
+--- PAGE 7 ---
+LIN Menglong et al.: A coevolutionary framework of business-IT alignment via the lens of enterprise architecture 989
+suffering from the misalignments at the same time [63].
+Sensing the deviations from the intended strategies is the
+first step to tame the misalignments. When the complexi-
+ty of the organizational structure and the external environ-
+ment is at a lower level, we can sense the misalignment
+through detecting the misalignment symptoms. However,
+with increasing complexity of the organization, misalign-
+ment may occur without exhibiting any of these potential
+symptoms. When we realize that misalignments exit be-
+tween the business strategy and the IT strategy, it is often
+too late to take governanceprocess. Therefore, it is critical
+to sense the deviations in a timely manner.
+As shown in Fig. 3, two kinds of deviations exist in the
+framework of the organizational architecture. The devia-
+tion between the business strategy intended and the busi-
+ness strategy realized is the first kind of deviation [64].
+The intended business strategy comes from the business
+executives at the EA design phase, which reflects the per-
+spective of the senior managers. Similarly, the intended IT
+strategy comes from the IT executives at the EA design
+phase. The business strategy and the IT strategy intended
+are basically aligned after the cogitative EA design phase.
+Due to variousunexpectedsituations, i.e., environmentdy-
+namism, employee support for the business strategy, the
+realized business strategy could exhibit a deviation com-
+pared to the intended business strategy.
+Fig. 3 Deviations in organizational architecture
+Similarly, the realized IT strategy could also exhibit a
+deviation compared to the intended IT strategy, which is
+the second kind of deviation [64]. Due to the aforemen-
+tioned two kinds of deviations, there may be a misalign-
+ment between the realized business strategy and the re-
+alized IT strategy. We could sense misalignment through
+assessing the degree to which the business mission, objec-
+tives and plans are supported by the information technolo-
+gy mission, objectives, and plans.
+3.3 Misalignment governance
+The research on misalignment governance is scarce in the
+literature. Once the deviations or the misalignments are
+recognized by the organization, several governing princi-
+ples should be taken to prevent the further drift of the or-
+ganizational strategy and sustain the performance of the
+firm in the dynamic competitive environment.
+The root causes of the misalignment are multitudinous
+andhardto trace. Forexample,dueto theabsence ofthe IT
+executives in the IT strategy design process, the business
+executives may not understand the emerging information
+technologies. Drastic changes in the external competitive
+environment could also make the realized IT strategy lag
+behind the organizational business development and fur-
+ther make the firm lose its competitive advantage.
+There are several verified governance principles which
+could be taken to correct the aforementioned misalign-
+ments as shown in Table 3. Firstly, companies need to de-
+tect and sense deviations of the intended plans (P1), and
+then conduct root-cause analyses (P2) to investigate the
+reasons behind the scene. To adjust these deviations and to
+avoidfurthermisalignment,companiesneedtoaddmecha-
+nisms and learn from environmental reactions (P3). These
+mechanisms are adjusting actions companies adopt, such
+as the dynamic resource allocation. Adapting with the re-
+actions, these deviations need to be “tamed” instead of
+“solved”. Besides, P4 suggests that the coevolution needs
+tobe ambidextrousandconsidersexplorationandexploita-
+tion as part of IT strategies. We can achieve value creation
+through exploring and developing IT strategies.
+With the importance of innovative technologies steadily
+increasing, enterprises should not regard the strategies of
+the IT/IS as subordinate or the business strategy anymore,
+but at equal status. According to Bharadwaj [39], it is time
+to rethink the role of the IT strategy, from a function-
+levelstrategytothestrategyreflectingtheintegrationofthe
+business strategyand the IT strategy.Being consistent with
+researchofdigitalbusinessstrategy,P5considersdigitalIT
+capabilitiesas intrinsic elementsof business strategic plan-
+ning.Additionally,organizationsneed to adopt suitable or-
+ganizing principles (P6), either centralized, decentralized,
+or federal, to manage business processes. Multilevel com-
+munication is vital to develop a shared understanding, so
+P7 suggeststhat organizationalmembersshouldcommuni-
+cate with each other and form a collaborating relationship.
+
+--- PAGE 8 ---
+990 Journal of Systems Engineering and Electronics Vol. 31, No. 5, October 2020
+Table 3 Misalignment governance and prevention principles
+Principle Name Description Supporting literature
+P1
+Detect and sense deviations from
+intended plans.
+Firms need to sense and respond to external
+or internal changes in a timely manner.
+Sandberg, 2014 [41]; Weeger and Haase,
+2016 [33]; Tanriverdi and Lim, 2017 [65].
+P2 Conduct root-cause analyses.
+Root causes should be identified on the basis
+of multiple symptoms.
+Benbya and McKelvey, 2006 [66]; Weeger
+and Haase, 2016 [33]; Tanriverdi and Lim,
+2017 [65].
+P3
+Add mechanisms and learn from
+environmental reaction.
+Mechanisms should be added to analyze its
+reactions to dynamic actions.
+Benbya and McKelvey, 2006 [23]; Tan-
+riverdi et al., 2010 [19]; Tanriverdi and Lim,
+2017 [65].
+P4
+Consider both exploration and ex-
+ploitation as part of IT strategies.
+Exploration concerns to discover new oppor-
+tunities, and exploitation increases the pro-
+ductivity of existing capabilities.
+Peppard and Karin, 2003 [42]; Zhang et al.,
+2011 [21]; Vessey and Ward, 2013 [27].
+P5
+Consider digital IT capabilities as
+inherent elements of planning busi-
+ness strategies.
+IT strategies are no longer subordinate to
+business strategies but shape them.
+Agarwal and Sambamurthy, 2002 [40];
+Sandberg, 2014 [41]; Tanriverdi, et al., 2010
+[19].
+P6
+Adopt suitable organizing princi-
+ples.
+An organization should balance the internal
+coordination and external partnering.
+Agarwal and Sambamurthy, 2002 [40];
+Amarilli et al., 2016 [20].
+P7
+Communicate frequently among
+agents.
+Agents should communicate with each other
+and form a collaborating relationship.
+Plazaola et al., 2006 [7]; Peppard and Camp-
+bell, 2014 [16]; Baker, 2019 [64].
+P8
+Own concrete, precise, and detailed
+intentions.
+The intended strategy must be specific and
+explicit.
+Baker, 2019 [64]; Benbya and McKelvey,
+2006 [23];
+P9 Adopt modular design.
+Modularity is the ability to easily reconfi-
+gure components by minimizing interdepen-
+dencies among modules.
+Benbya and McKelvey, 2006 [23]; Ben-
+bya and McKelvey, 2006 [66]; Nassim and
+Robert, 2010 [24].
+P10
+Design IS with sufficient up-front
+complexity.
+A system needs to generate the same degree
+ofinternal complexity as the external com-
+plexity it faces in its environment.
+Benbya and McKelvey, 2006 [23]; Tan-
+riverdi and Lim, 2017 [65].
+P11 Share domain knowledge.
+Agents build consensus as to the shared reali-
+ty of the organization.
+Plazaola et al., 2006 [7]; Peppard and Camp-
+bell, 2014 [16].
+P12 Quickened learning action loops.
+Speeding up the learning action loops can in-
+crease an organization’s competitive advan-
+tage.
+Benbya and McKelvey, 2006 [23]; Tan-
+riverdi and Lim, 2017 [65].
+P13
+Foster coevolution to improve IS
+alignment.
+The alignment is a dynamic processinvolv-
+ing continuous adjustments between busi-
+ness and IS.
+Benbya and McKelvey, 2006 [23]; Tan-
+riverdi and Lim, 2017 [65].
+P14
+Predict possible emergent situations
+in advance.
+Possible emergent situations should be exa-
+mined to speed up future change rates.
+Vessey and Ward, 2013 [27]; Amarilli et al.,
+2016 [20].
+3.4 EA management/misalignment prevention
+This part aims to consider appropriate principles, guide-
+lines and commonsense rules whose purposeis to prevent,
+rather than treat, the misalignment [9,10]. It belongs to the
+field of EA management.
+In order to cultivate the coevolutionand achieve sustain-
+able alignment, various principles have been discussed in
+the literature. As Table 3 shows, for a strategy to be imple-
+mented exactly as expected, the organization should have
+concrete, precise, and detailed intentions (P8). Existence
+of a clear and intentional IT strategy has a positive impact
+on the organization’s ability to communicate this strategy
+to its employees. Simon [67] argued that complex systems
+are hierarchicalbut consist of “almost decomposable”sub-
+units, and modulardesign is consideredto be a mechanism
+to increase system flexibility and comprehensibility, while
+allowing to shorten the system development time. There-
+fore, modular design has been considered as a conducive
+principle to manage the IT/IS complexity (P9).
+As Ashby’s “law of requisite variety” puts [68], in or-
+der to survive, a system needs to generate the same degree
+of internal complexity as the external complexity it faces
+in its environment. Only complexity can destroy complex-
+ity. In order to cope with the complex market conditions,
+the designed IS should possess sufficient upfrontcomplex-
+ity (P10). Benbya and McKelvey [23] argued that in or-
+der to develop shared domain knowledge and the abil-
+ity to coordinate alignment-related actions, a collaborative
+partnership should be established between business and
+IS managers at all levels (P11). In the absence of multi-
+departmental and all-level communication, leaders may
+find it is difficult to reach a common understanding with
+their managers and other employees, and clearly commu-
+
+--- PAGE 9 ---
+LIN Menglong et al.: A coevolutionary framework of business-IT alignment via the lens of enterprise architecture 991
+nicate their strategic plans.
+Because of the emergence of new knowledge and the
+processes of learningand innovation,the rate of adaptation
+cannot exceed the rate of available changes, and El Sawy
+[32]calledthis processas “quickenedactioncycles”(P12).
+The faster the action loopis established, the easier it is to
+gain a competitive advantage. In order to obtain the sus-
+tained market condition, firms should foster coevolutionto
+improve IS alignment (P13). Furthermore, with the intel-
+ligence capability, companies need to predict emergent si-
+tuations in advance (P14), in order to increase companies’
+internal complexity and to accelerate future change rate.
+All of these principles should be used in the phase of
+long-term EA management and short-term coevolutionary
+analysis, which helps to cultivate a sustainable BITA envi-
+ronment.
+With the above four parts, the BITC can be bet-
+ter described and managed. EA acts as a normative
+BITA achievement framework, and coevolutionary analy-
+sis treats each unbalanced EA state in the long run. The
+whole method aims to explore a practical coevolutionary
+framework. Though it is rather simple now, we argue that
+it is fascinating in the coevolutionary research. In the next
+section,thecoevolutionaryframeworkwillbevalidatedac-
+cording to the features and methods from several signifi-
+cant studies.
+4. Utility evaluation of the coevolution
+framework
+To demonstrate the utility of our proposed framework, we
+follow Hevneret al. [69], who proposed five evaluationap-
+proaches, one of which is adopted in this paper. We use
+the descriptive approach of framework evaluation by em-
+ploying the informed argument method using information
+from the knowledge base of our research domain to build
+convincingargumentsfor the framework’sutility. Our pro-
+posed framework provides a process-oriented approach to
+manage the BITC. This method cannot be directly com-
+pared with existing methods because of its different fo-
+cus on coevolution. According to the existing knowledge
+base, we evaluate the proposed framework from three di-
+mensions respectively: characteristics of BITC, principles
+of BITC, and approachesof BITC. We select one represen-
+tative literature for each dimension and determine whether
+our framework is accordant with the results of the litera-
+ture.
+4.1 Utility evaluation from characteristics of BITC
+The properties of the coevolution were always discussed
+by scholars, such as [16], [25] and [27]. Lewin et al.
+[25] identified properties of coevolutionary models of
+strategic management and organizational adaptation re-
+search, which are multi-levelness effects, multi-directional
+causalities, non-linearity, and positive feedback. These
+properties lay the foundation for the following research on
+coevolution.We aim to judge whetherourproposedframe-
+work meets the above four properties.
+(i) Multi-levelness effects
+The multi-levelness effects refer to the coevolutionary
+effects occur at multiple levels within the enterprises. In
+our framework, the misalignments may occur in one EA
+viewpoint,or between two differentEA viewpoints.Multi-
+levelness effects have been caused due to the emergenceof
+misalignments.
+(ii) Multi-directional causalities
+In a system with complex relationship, the change of
+one variable is caused by the change of other variables.
+In our framework, complex relationships exist among the
+multiple entities in the EA. Changes for one entity or rela-
+tionship may cause misalignments, and need other entities
+or relationships to be aligned with.
+(iii) Non-linearity
+The non-linearity means that we cannot deal with the
+effects of coevolutionary through simple linear logical re-
+lationships between independent and dependent variables.
+Like human bodies, we cannot say one disease is deter-
+minedly caused by the fixed symptoms. The symptoms for
+one disease may be volatile or can cause other diseases be-
+cause of the complex relationships in human bodies. The
+organization is a complex system and a black box [20] as
+the humanbody [9,10].It is hard to discoverall of the mis-
+alignment symptoms and the absolutely right cause-effect
+relationships in one organization. In our framework, we
+aim to seek for the root causes of the misalignment, dis-
+cover their cause-effect relationships, and provide govern-
+ingmechanisms,whichhelpstocontrolthecompanyinthe
+mist.
+(iv) Positive feedback
+The positive feedback refers to actions and interactions
+between enterprises and their environments are recursive
+and lead to interdependencies and circular causality. Ac-
+cording to the framework we propose, the external envi-
+ronment could cause misalignments for EA, and the EA
+could also shape the external competitive environment af-
+ter correcting the misalignments and executing manage-
+ments. The loop forms continuous positive feedbacks.
+4.2 Utility evaluation from the principles of BITC
+Part of the scholars conducted their studies on how we
+can cultivate and manage coevolution in an organization
+[23,24,27]. Multiple principles were introduced in these
+
+--- PAGE 10 ---
+992 Journal of Systems Engineering and Electronics Vol. 31, No. 5, October 2020
+studies. With the argument that the coevolution occurs in
+both bottom-up adaptation and top-down control, Vessey
+and Ward [27] proposed the adaptive IS management, ad-
+ministrative IS management and enabling IS management
+in his sustainable IS alignment framework, and introduced
+principles for each management. We tend to determine
+whether our proposed framework meets these principles.
+(i) Adaptive IS management principle
+Adaptive IS management focuses on emergence and
+self-organization, learning, and innovation [27]. Three
+principles are introduced for this management. The first is
+matching coevolutionary change rates. In our framework,
+suitable governance mechanisms are proposed according
+to the cause and effect relationships among symptoms.
+The realignment process can match the external changes.
+The second is optimizing self-organization, which states
+that autonomous agents in a complex system organize
+themselves in such a way that they may best address
+the complexity in their environment [27]. The conti-
+nuous misalignment sensing and governance help to
+achieve the self-organization in our framework. The third
+principle synchronizes exploitation and exploration. Ex-
+ploitation describes the activities that use or extend the
+enterprise’s existing resources. On the other hand, explo-
+ration describes the activities that lead to a new order
+[27]. In our framework, we realign the business and IT
+withexploitingexistingresourcesandcapabilities; alsoex-
+plore new capabilities and skills with the long-term learn-
+ing, which helps to acquire new symptoms and governing
+mechanisms.
+(ii) Administrative IS management principle
+This principle represents managementin the formal hie-
+rarchy that is responsible for planning and coordinating
+formally-sanctioned IS activities [27]. It is a rational de-
+sign process. The EA design process satisfies this principle
+in this paper.
+(iii) Enabling IS management principle
+This principle governs the links between the bottom-up
+adaptive management process and the top-down manage-
+ment process. The EA evolution correlates the rational EA
+design and emergent coevolutionary analysis in this paper,
+which reflects the applicability of this principle.
+4.3 Utility evaluation from the approaches of BITC
+Several researches explored different approaches to
+achieve the coevolution, such as perspectives of question-
+ing alignment and situated change [37], co-learning and
+collaboration [16], activity theory [33], conceptualization
+and degree of formalization [20]. Amarilli proposed two
+conceptual distinctions and four kinds of approaches in
+BITC [20]: (i) metaphors, which refer to use analogical
+reasoning to raise awareness or to influence the way of
+thinking; (ii) functional complexity models, which mean
+the relationships in a complex system can be expressed
+through mathematical models and formulated in the form
+of payoff functions; (iii) coevolutionary models, which
+study the evolution of a complex system based on the in-
+teraction of the constituting elements; (iv) complexity dy-
+namics models, which capture the dynamics of a complex
+system through mathematical descriptions, usually in the
+form of non-linear equations.
+Amarilli argued that the application of complexity dy-
+namics models is rather difficult, which requires reduc-
+tionism techniques to identify the limited number of re-
+levant variables and rules that may explain the behaviour
+of the system. Based on this, he pointed out that the
+mixed strategies of alignment combining different meth-
+ods can also help. For instance, a company may adopt a
+metaphor approach to improve social alignment and gen-
+erate the conditions for implementing other alignment ac-
+tions, apply coevolutionary models to pursue alignment
+on day-to-day basis, and monitor key properties through
+a functional complexity model [20]. This argument ac-
+cords with our framework, which involves the first three
+kinds of approaches. With regard to the perspective of the
+metaphor, our framework looks the complex organization
+as human bodies, and the misalignments in organizations
+as the diseases in human bodies. This metaphor makes the
+complexity in organizations more easily to understand.
+With regard to the perspective of the functional complex-
+ity model, our framework adopts a misalignment analysis
+methodto seek for a short-termgovernance.With regardto
+the perspective of the coevolution model, our framework
+considers applying multiple rules in day-to-day organiza-
+tional activities, which helps to seek a long-term manage-
+ment. With the advantages of the above three approaches,
+the BITC can be achieved in a process-oriented way.
+5. Conclusions, limitations and future work
+Following the research of BITC, this paper helps prac-
+titioners and researchers make sense of the coevolution
+achieve it, and manage it. Three basic arguments are
+mainly considered in this paper. First, the coevolution
+should reconcile both bottom-up “emergent processes”
+and top-down “rational designs”. Second, the coevolution
+should involve both short-term alignment and long-term
+alignment. Third, the organization is a complex adaptive
+system and its internal relationships are hard to perceive.
+On the basis of them, a coevolutionaryframeworkcombin-
+ing EA with the coevolutionary analysis is proposed. The
+
+--- PAGE 11 ---
+LIN Menglong et al.: A coevolutionary framework of business-IT alignment via the lens of enterprise architecture 993
+framework is composed of four main parts: EA design,
+sensingofmisalignment,governanceofmisalignment,and
+EA misalignment prevention.
+This work contributes in several ways. We conclude the
+three main motivations for the research on BITC. With re-
+gard to the proposed framework, we primarily discuss the
+cause and effect relationships among symptoms in mis-
+alignment correction. In addition, we evaluate the appli-
+cability and utility of the framework through three ways:
+characteristics of coevolution, principles of coevolution,
+and approaches of coevolution.
+The proposed framework and its evaluation methods
+have their limitations. On one hand, either EA or BITA
+is a discipline and owns extensive research. This paper
+mainly discusses their combination for addressing the co-
+evolutionary problem of business and IT, but not explains
+the research on EA in detail, neither the BITA research
+with EA methods. On the other hand, the cause and effect
+relationships among the multiple symptoms are used to re-
+align the business and IT. However, the internal relation-
+shipsin acomplexsystemarenon-linear,whichmeans,the
+outcome would not correspond to the constant input vari-
+ables. Therefore, the cause and effect relationships among
+symptomshelp to controlthe misalignment,while may not
+lead to an absolutely right correction scheme. Other com-
+plementary methods need to be considered here. Further-
+more, this work only selects one utility evaluation method
+(informed argument) from Hevner et al. [69]. Other meth-
+ods such as case study are also very useful. The adoption
+of multiple evaluation methods synchronouslymay help to
+verify the framework more thoroughly.
+The above limitations provide a starting point for future
+work.EA is always acknowledgedas a beneficial approach
+to deal with BITA problems. The complete EA compo-
+nentsandrelationshipsneedtobefurtherexplained.Mean-
+while, the extant research on EA management from as-is
+EA to to-be EA needs to be totally analyzed.
+A suitable case study should be introduced for the pro-
+posed framework. The case study ought to include the
+EA design process and the EA evolution process. Due to
+the combination of long-term management and short-term
+governance,the case studyshouldinvolvea long-termtime
+frame and be punctuated by multiple short-term phases.
+Finally, to control the coevolution directly, we plan to
+explore the complex dynamic models of BITC in an orga-
+nization. The positive and negative influence relationships
+among different organizational contents will be explored.
+The complex dynamic models are more easily to satisfy
+the non-linearity and positive feedback features of coevo-
+lution.
+References
+[1] CHANYE, REICHBH.ITalignment: what have welearned?
+Journal of Information Technology, 2007, 22(4): 297–315.
+[2] KAPPELMAN L A, MCLEON E, LUFTMAN J N, et al. Key
+issues of IT organizations and their leadership: the 2013 SIM
+IT trends study. MIS Quarterly Executive, 2013, 12(4): 227–
+240.
+[3] GEROW J E, GROVER V, THATCHER J, et al. Looking to-
+ward the future of IT-business strategic alignment through the
+past: a meta-analysis. MIS Quarterly, 2014, 38(4): 1059–
+1085.
+[4] WEGMANN A, REGEV G, LOISON B. Business and IT
+alignment with SEAM. Proc. of the 1st International Work-
+shop on Requirements Engineering for Business Need, and IT
+Alignment, 2005: 74–84.
+[5] ZARVIC N, WIERINGA R. An integrated enterprise architec-
+ture framework for business-IT alignment.Proc. of theDesign-
+ing Enterprise Architecture Frameworks: Integrating Business
+Processes with IT Infrastructure, 2014: 63–75.
+[6] IACOBM E, MEERTENS L O, JONKERSH, et al. From en-
+terprise architecture to business models and back. Software &
+Systems Modeling, 2014, 13(3): 1059–1083.
+[7] PLAZAOLA L, MOLINA E S, VARGAS N, et al. A meta-
+model for strategic business and IT alignment assessment.
+Proc. of the 4th Annual Conference on Systems Engineering
+Research, 2006, 187: 1–10.
+[8] PLAZAOLA L, FLORES J, SILVA E, et al. An approach to
+associate strategic business-IT alignment assessment to enter-
+prise architecture. Proc. of the 5th Conference on Systems En-
+gineering, 2007, 121: 1–10.
+[9] CARVALHO G L, SOUSA P. Using a medical sciences per-
+spective toharness business and information systems misalign-
+ment. Proc. of the 16th European Conference on Information
+System, 2008: 2496–2507.
+[10] CARVALHO G, SOUSA P. Business and information systems
+misalignment model: an holistic model leveraged on misalign-
+ment and medical sciences approaches. Proc. of the 3rd Inter-
+national Workshop on Business/IT Alignment and Inter Oper-
+ability, 2008: 104–119.
+[11] CHEN H M. Towards service engineering: service orientation
+and business-IT alignment. Proc. of the 41st Hawaii Interna-
+tional Conference on System Sciences, 2008: 1–10.
+[12] FISCHER R, AIER S, WINTER R. A federated approach
+to enterprise architecture model maintenance. Enterprise Mo-
+delling and Information Systems Architectures, 2015, 2(2):
+14–22.
+[13] BRADLEY R V, PRATT R M, BYRD T, et al. Enterprise
+architecture, IT effectiveness and the mediating role of IT
+alignment inUShospitals. Information Systems Journal, 2012,
+22(2): 97–127.
+[14] ALAEDDINI M, SALEKFARD S. Investigating the role of an
+enterprise architecture project in the business-IT alignment in
+Iran. Information Systems Frontiers, 2013, 15(1): 67–88.
+[15] PRESTON D, KARAHANNA E. Antecedents of IS strategic
+alignment: a nomological network. Information Systems Re-
+search, 2009, 20(2): 159–179.
+[16] PEPPARD J, CAMPBELL B. The co-evolution of busi-
+ness/information systems strategic alignment: an exploratory
+study. http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.
+1.1.599.3089&rep=rep1&type=pdf.
+[17] GEROW J E, THATCHER J B, GROVER V. Six types of IT-
+business strategic alignment: an investigation of the constructs
+and their measurement. European Journal of Information Sys-
+tems, 2015, 24(5): 465–491.
+
+--- PAGE 12 ---
+994 Journal of Systems Engineering and Electronics Vol. 31, No. 5, October 2020
+[18] ULLAH A, RICHARD L. Asystematic review of business and
+information technology alignment. ACM Trans. on Manage-
+ment Information Systems, 2013, 4(1): 4.
+[19] TANRIVERDI H, RAI A, VENKATRAMAN N. Research
+commentary-reframing the dominant quests of information
+systems strategy research for complex adaptive business sys-
+tems. Information Systems Research, 2010, 21(4): 822–834.
+[20] AMARILLI F, VAN VLIET M, VAN DEN H B. Business IT
+alignment through the lens of complexity science. Proc. of the
+International Conference of Information System, 2016: 1–10.
+[21] ZHANG N, YV Y, DONG X Y. A coevolutionary journey of
+strategic knowledge management alignment: a Chinese case.
+Proc. of the International Conference on Information System,
+2011: 1–19.
+[22] EL SAWY O A, MALHOTRA A, PARK Y, et al. Research
+commentary-seeking the configurations of digital ecodyna-
+mics: it takes three to tango. Information Systems Research,
+2010, 21(4): 835–848.
+[23] BENBYA H, MCKELVEY B. Using coevolutionary and com-
+plexity theories to improve IS alignment: a multi-level ap-
+proach. Journal of Information technology, 2006, 21(4): 284–
+298.
+[24] NASSIM B, ROBERT F. IS alignment improved withcoevolu-
+tionary principles: an open source approach. Proc. of the 43rd
+Hawaii International Conference on System Sciences, 2010:
+1–10.
+[25] LEWIN A Y, LONG C P, CAROLL T N. The coevolution of
+new organizational forms. Organization Science, 1999, 10(5):
+535–550.
+[26] REICH B H, BENBASAT I. Factors that influence the so-
+cial dimension of alignment between business and information
+technology objectives. MIS Quarterly, 2000, 24(1): 81–113.
+[27] VESSEY I, WARD K. The dynamics of sustainable IS align-
+ment: the case for IS adaptivity. Journal of the Association for
+Information Systems, 2013, 14(6): 283–311.
+[28] VOLBERDA H W, LEWIN A Y. Co-evolutionary dynamics
+within and between firms: from evolution to co-evolution.
+Journal of Management Studies, 2003, 40(8): 2111–2136.
+[29] HUGOSON M A, PESSI K. Operational and structural busi-
+ness IT alignment. Proc. of the International Conference on
+Business Information Systems, 2011: 196–207.
+[30] BALHARETH H, LIU K, MANWANI S. Aligning business
+and IT from multi-level learning perspectives. Proc. of the17th
+UK International Conference on Information Systems, 2012,
+36: 1–11.
+[31] FISS P C. Building better causal theories: a fuzzy set approach
+to typologies in organization research. Academy of Manage-
+ment Journal, 2011, 54(2): 393–420.
+[32] KANDJANI H, TAVANA M, BERNUS P, et al. Co-evolution
+path model (CePM): sustaining enterprises as complex sys-
+tems on the edge of chaos. Cybernetics and Systems, 2014,
+45(7): 547–567.
+[33] WEEGER A, HAASE U. How contradictions facilitate evo-
+lutionary transformation: an exploration into the dynamics
+of business-IT alignment from the perspective of activity the-
+ory. Proc. of the European Conference on Information System,
+2016, 173: 1–16.
+[34] WALENTOWITZ K, BEIMBORN D, SCHROIFF A, et al.
+The social network structure of alignment: a literature review.
+Proc. of the 44th Hawaii International Conference on System
+Sciences, 2011: 1–10.
+[35] GUTIERREZ A, LYCETT M. IS alignment factors: dynamic
+relationships at strategic, tactical and operational level. Proc.
+of the UK Academy for Information Systems Conference,
+2011: 11605–11616.
+[36] KAHRE C, HOFFMANN D, AHLEMANN F. Beyond
+business-IT alignment-digital business strategies as a paradig-
+matic shift: a review and research agenda. Proc. of the 50th
+Hawaii International Conference on System Sciences, 2017.
+DOI: 10.24251/HICSS.2017.574.
+[37] LEONARD J. What are we aligning? Implications of a dy-
+namic approach to alignment. Proc. of the Australasian Con-
+ference on Information System, 2008: 560–568.
+[38] HIEKKANEN K, HELENIUS M, KORHONEN J J, et al.
+Aligning alignment with strategic context: a literature review.
+Proc. of the Digital Enterprise Design and Management, 2013:
+81–98.
+[39] BHARADWAJ A, EL SAWY O A, PAVLOU P A, et al. Digi-
+tal business strategy: toward a next generation of insights. MIS
+Quarterly, 2013, 37(2): 471–482.
+[40] AGARWAL R, SAMBAMURTHY V. Principles and models
+for organizing theIT function. MIS Quarterly Executive, 2002,
+1(1): 1–16.
+[41] SANDBERG J. Digital capability: investigating coevolution
+of IT and business strategies. Umea, Sweden: Umea Univer-
+sity, 2014.
+[42] PEPPARD J, KARIN B. Beyond alignment: a coevolutionary
+view of the information systems strategy process. Proc. of the
+International Conference of Information System, 2003: 743–
+750.
+[43] International Standardization Organization/International Elec-
+trotechnical Committee. Systems and software engineer-
+ing–recommended practice for architectural description of
+software-intensive systems: ISO/IEC 42010: 2007. Geneva:
+ISO, 2007.
+[44] NIEMANN K D. From enterprise architecture to IT gover-
+nance (Vol. 1). Wiesbaden, Germany: Springer Fachmedien,
+2006.
+[45] MACRO V. Using ArchiMate and TOGAF to understand the
+enterprise architecture and ITIL relationship. Proc. of the Lec-
+ture Notes in Business Information, 2013, 148: 134–145.
+[46] KAPPELMAN L A. The SIM guide to enterprise architecture.
+New York, United States: CRC Press, 2009: 106–110.
+[47] BILL B. Ministry of defence architectural framework
+(MODAF). Proc. of the IEE Seminar on UML Systems En-
+gineering, 2005: 43–82.
+[48] DoD Architecture Framework Working Group. DoD Architec-
+ture Framework Version 2.0. Washington DC: Department of
+Defense, 2009.
+[49] HAREN V. TOGAF version 9.1. Amsterdam, Netherlands:
+Van Haren Publishing, 2011.
+[50] WEGMANN A. The systemic enterprise architecture
+methodology (SEAM). Business and IT Alignment for Com-
+petitiveness: LAMS-REPORT-2002-009, 2002.
+[51] DUFFY J. IT/business alignment: delivering result.
+http://www.cio.com/analyst/123101 idc.html.
+[52] WINTER R, SCHELP J. Enterprise architecture governance:
+theneedfor abusiness-to-IT approach. Proc. oftheACM Sym-
+posium on Applied Computing, 2008: 548–552.
+[53] PARCHAMI P. Enterprise architecture & alignment. Gothen-
+burg, Sweden: University of Gothenburg, 2011.
+[54] JENSEN C T, CHARTERS I, AMSDEN J, et al. Leveraging
+SOA, BPM and EA for strategic business and IT alignment.
+South Miami, United States: IBM Corporation, 2008.
+[55] AIER S, KURPJUWEIT S, SAAT J, et al. Enterprise architec-
+ture design as an engineering discipline. AIS Trans. on Enter-
+prise Systems, 2009, 1(1): 36–43.
+[56] IEEE. IEEE recommended practice for architectural descrip-
+
+--- PAGE 13 ---
+LIN Menglong et al.: A coevolutionary framework of business-IT alignment via the lens of enterprise architecture 995
+tion of software intensive systems: IEEE Std 14712000. New
+York: IEEE Computer Society, 2000.
+[57] WINTER R, FISCHER R. Essential layers, artifacts, and de-
+pendencies of enterprise architecture. Journal of Enterprise Ar-
+chitecture, 2007, 3(2): 7–18.
+[58] AIER S, KURPJUWEIT S, SCHMITZ O, et al. An engineer-
+ing approach to enterprise architecture design and its applica-
+tion at a financial service provider. Proc. of the Conference on
+Modeling Operational Information System, 2008: 115–130.
+[59] IYER B, GOTTLIEB R. The four-domain architecture: an ap-
+proach to support enterprise architecture design. IBM Systems
+Journal, 2004, 43(3): 587–597.
+[60] DAM S H. DoD architecture framework: a guide to applying
+system engineering to develop integrated, executable architec-
+tures. Washington DC: Create Space Independent Publishing
+Platform, 2015.
+[61] ZEIGLER B P, MITTAL S. Enhancing DoDAF with a DEVS-
+based system lifecycle development process. Proc. of the IEEE
+International Conference on Systems, Man and Cybernetics,
+2005, 4: 3244–3251.
+[62] ROTT J, WEIXLER J. Integrating hierarchical task analysis
+into model-based system design using Airbus XHTA and IBM
+rational rhapsody. Proc. of Industrial Engineering and Engi-
+neering Management, 2018: 1856–1860.
+[63] ORI D. Misalignment symptom analysis based on enterprise
+architecture model assessment. IADIS International Journal on
+Computer Science & Information Systems, 2014, 9(2): 146–
+158.
+[64] BAKER J. The roots of misalignment: insights from a sys-
+tems dynamics perspective. The Journal of Strategic Informa-
+tion System, 2019, 28(4): 1–19.
+[65] TANRIVERDI H, LIM S Y. How to survive and thrive in com-
+plex, hypercompetitive and disruptive ecosystems? The roles
+of IS-enabled capabilities. Proc. of the International Confer-
+ence on Information Systems, 2017: 1–21.
+[66] BENBYA H, MCKELVEY B. Toward a complexity theory of
+information systems development. Information Technology &
+People, 2006, 19(1): 12–34.
+[67] SIMON H A. The sciences of the artificial. Massachusetts:
+MIT Press, 1962.
+[68] RAADT J D. Ashby’s law of requisite variety: an empirical
+study. Cybernetics and Systems, 1987, 18(6), 517–536.
+[69] HEVNER A R, MARCH S T, PARK J, et al. Design science
+in information systems research. MIS Quarterly, 2004, 28(1):
+75–105.
+Biographies
+LIN Menglong was born in 1993. He received
+his M.S. degree in control science and technology
+from National University of Defense Technology
+(NUDT), Changsha, China, in 2018. He is pursu-
+ing his Ph.D. degree in the College of Systems En-
+gineering at NUDT. His research interests are in-
+formation system architecture design, analysis and
+validation.
+E-mail: mllin123@163.com
+YI Shuanghui was born in 1978. He received his
+M.S. degree in computer science and technology
+from National University of Defense Technology
+(NUDT), Changsha, China, in 2003. He is the
+deputy director of the Second Research Department
+of the National Key Laboratory for Complex Sys-
+tem Simulation. His research interests include dis-
+tributed computing, information system architecture
+design, and software testing.
+E-mail: flyysh@126.com
+ZHANG Mengmeng was born in 1990. He re-
+ceived his M.S. and Ph.D. degrees from National
+University of Defense Technology (NUDT). He is
+a lecturer in NUDT now. His current research inter-
+ests include information system architecture design,
+analysis and validation.
+E-mail: 186703816365@163.com
+CHEN Tao was born in 1983. He received his M.S.
+and Ph.D. degrees from National University of De-
+fense Technology (NUDT). He is an associate pro-
+fessor in NUDT now. His current research interests
+include requirement engineering, military informa-
+tion system, enterprise architecture design and ana-
+lysis.
+E-mail: kd chentao@163.com
+CHEN Honghui was born in 1969. He received his
+M.S. and Ph.D. degrees from National University
+of Defense Technology (NUDT). He is a professor
+and the executive vice director of Science and Tech-
+nology on Information Systems Engineering Labo-
+ratory in NUDT now. His current research interests
+include requirement engineering, military informa-
+tion system, enterprise architecture design and ana-
+lysis.
+E-mail: chh0808@gmail.com
+ZHANG Xiaoxue was born in 1986. She received
+her M.S. and Ph.D. degrees from National Univer-
+sity of Defense Technology (NUDT). She is a lec-
+turer in NUDT now. Her current research interests
+include requirement engineering, military informa-
+tion system, enterprise architecture design and ana-
+lysis.
+E-mail: snow1126@126.com

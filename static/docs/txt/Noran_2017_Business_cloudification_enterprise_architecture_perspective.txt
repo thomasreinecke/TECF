@@ -1,0 +1,790 @@
+--- PAGE 1 ---
+Business Cloudification
+An Enterprise Architecture Perspective
+Ovidiu Noran and Peter Bernus
+IIIS Centre for Enterprise ARchitecture Research and Management, Griffith University, Brisbane, Australia
+Keywords: Enterprise Architecture, System Properties, Cloud Computing, Cloudification.
+Abstract: Cloud computing is emerging as a promising enabler of some aspects of the ‘agile’ and ‘lean’ features that
+businesses need to display in today’s hyper-competitive and disruptive global economic ecosystem.
+However, it is increasingly obvious that there are essential prerequisites and caveats to cloudification that
+businesses need to be aware of in order to avoid pitfalls. This paper aims to present a novel, Enterprise
+Architecture-based approach towards analysing the cloudification endeavour, adopting a holistic paradigm
+that takes into account the mutual influences of the entities and artefacts involved, in the context of their life
+cycles. As shown in the paper, this approach enables a richer insight into the ‘readiness’ of a business
+considering embarking on a cloudification endeavour and therefore empowers management to evaluate
+consequences of- and take cognisant decisions on the cloudification extent, type, provider etc. based on
+prompt information of appropriate quality and detail. The paper also presents a brief practical example of
+this approach and illustrates, using the Enterprise Architecture viewpoint, the necessity of well-defined
+business architecture, policies and principles dictating solution selection and design and transition program
+as sine qua non preconditions towards successful cloudification.
+1 INTRODUCTION
+In today’s competitive and disruptive global
+economic ecosystem, businesses need more than
+ever to display agility, i.e. the capacity to quickly
+adapt to changes in their environment. This implies
+the capacity to promptly reconfigure and redesign
+themselves ‘on the fly’ to various extents.
+Importantly, an essential enabler of agility is the
+need to be ‘lean’, i.e. avoid excessive investment in
+areas that are likely to change and can be
+outsourced.
+Cloud computing, as an Internet-based paradigm
+model enabling on-demand access to configurable
+computing resources that can be promptly and easily
+enabled from the client side, holds the promise to
+answer some aspects of the two requirements
+described above. This is because typically cloud
+computing and storage solutions provide services
+such as Infrastructure (IaaS), Platform (PaaS),
+Software (SaaS) (see Fig. 1), while making use of
+shared resources in order to achieve coherence and
+economies of scale.
+For example, in the case of IaaS, cloud
+computing allows companies focus on their core
+businesses instead of spending resources on building
+and maintaining their own computer infrastructure.
+Cloud computing also promises to allow enterprises
+deploy and operate applications faster, reduce
+maintenance, improve manageability, thus directly
+supporting the said lean and agile requirements
+(Hirzalla, 2010; Sawas and Watfa, 2015).
+Figure 1: Typical Cloud Architecture – based on NIST
+Cloud Computing Reference Architecture (Liu et al,
+2011).
+Figure 1 presents a typical cloud architecture. While
+following the accepted NIST terminology (Liu et al.,
+2011), it does however consider the architecture
+from a functional point of view (i.e., leaving it open
+on how service, service management and other
+Noran, O. and Bernus, P.
+Business Cloudification - An Enterprise Architecture Perspective.
+DOI: 10.5220/0006248603530360
+In Proceedings of the 19th International Conference on Enterprise Information Systems (ICEIS 2017) - Volume 3, pages 353-360
+ISBN: 978-989-758-249-3
+Copyright © 2017 by SCITEPRESS – Science and Technology Publications, Lda. All rights reserved
+353
+
+--- PAGE 2 ---
+related functions are distributed among
+organisations). In addition, in Fig. 1 Information
+Services are singled out separately, given the various
+new forms of services that are based on various
+other information sources and repositories other than
+databases, such as streaming data, unstructured
+media sources, etc.
+Cloud computing may be deployed in various
+ways, such as private, public, community or hybrid
+(a combination thereof). Choosing the type of
+deployment must consider factors such as security,
+privacy, compliance, availability and reliability
+(Goyal, 2014; Jansen and Grance, 2011).
+This is especially true considering that cloud
+computing technology has not yet fully matured and
+as such it cannot always satisfy the above-mentioned
+criteria to the level required (Badger et al., 2014a;
+Zhang et al., 2010; Wang et al, 2008, Brian et al.,
+2008; Grossman, 2009). The recent years have seen
+the lowering of cost of services, computing and
+storage, and improvements in scalability and
+availability and network capacity. This situation, in
+the context of the emergence, increase in acceptance
+and subsequent adoption of models such as
+Information Technology (IT), virtualisation and
+service orientation by businesses have encouraged
+the perception that cloudification is an achievable
+target for most businesses. Gartner (2016) states that
+currently cloud vendors (and users) are still rushing
+to the market to gain a position in the growth
+market, with various service delivery models (IaaS,
+PaaS, SaaS, etc.) present at all levels of the hype
+cycle. It is however emphasized that only those
+businesses who filter out the hype and perform a
+realistic assessment and matching of the cloud
+capabilities “to the right scenarios, with the right
+management and governance” benefit from “[…]
+increased agility, elasticity, scalability, innovation,
+and in some cases, cost savings” [ibid.]. This
+supports the above-stated authors’ stance (detailed in
+Section 2) that there are important aspects that need
+to be observed in order to make the ‘cloudification
+journey’ a successful one. Identifying the aspects
+that need to be addressed and selecting the
+appropriate methods and models to prepare for
+cloudification can be a daunting task given the daily
+economic pressures and the ‘system-of-systems’
+complexity of today’s enterprises. This paper
+advocates the use of Enterprise Architecture (EA) as
+a holistic, life-cycle oriented approach towards
+assessing, creating or improving of what can be
+called ‘cloudification readiness’ of businesses.
+2 CLOUDIFICATION
+CHALLENGES
+As more businesses attempt the move to the cloud,
+an increasing number of problems are surfacing.
+This has much to do with the expected inherent
+complexity of- and turbulence created by any major
+change in doing business; however, in this case there
+are also present specific problems originating in the
+very nature of cloud computing and importantly, in
+the fact that the business, as well as the cloud
+computing business model and technology
+themselves are ‘moving targets’ that evolve during
+and after the ‘cloudification’ project(s).
+A first major hurdle that businesses face is the
+extent of cloudification. Thus, organizations must
+apply due diligence when selecting and moving
+functionality to the cloud, as cost and productivity
+advantages also bring potential drawbacks in risk
+and liability (Cayirci et al., 2016). For example,
+although government organizations may be
+discouraged to outsource services to a public cloud
+due to the sensitivity of the data handled, with
+appropriate risk mitigation a partial deployment in
+the cloud should still be possible (Jansen and
+Grance, 2011). However, a proper analysis
+determining which services and what proportion
+thereof to be outsourced requires that a common
+understanding of the AS-IS (present) state of the
+business is achieved by all stakeholders and in all
+aspects necessary for the change.
+A second important challenge increasing the
+complexity of the cloudification endeavour is
+service recursion, where services may call upon
+other services, such as e.g. in an ‘intercloud’
+architecture (Morrow et al., 2009). For example, an
+E-commerce site needs banking, fraud detection, etc.
+which are nowadays (also, or often only) offered as
+external services (Aulkemeier et al., 2016). This
+situation raises several important questions such as:
+Who is responsible for reliability if a service fails
+due to other services it depends on? Can a service be
+guaranteed if is integrated with / depends on others?
+If so, who is the responsible / guarantor entity?
+Therefore, it is important that the degree of recursion
+is properly understood and therefore, adequate
+queries are raised by the acquisition panel of the to-
+be-cloudified business to the cloud computing
+solution provider.
+A main driver for cloudification is the promise of
+lowered costs; therefore, realising if appropriate
+savings are indeed achieved in the long run is an
+important issue (considering also that business needs
+will change). Thus, the total cost of ownership
+ICEIS 2017 - 19th International Conference on Enterprise Information Systems
+354
+
+--- PAGE 3 ---
+(including initial migration and deployment to the
+cloud, operation, continual development and
+decommissioning / migration) can escalate if the
+cloud pricing model is not understood and
+strategically assured by the user. The use of cloud
+pricing frameworks (e.g. as proposed by Laatikainen
+(2013)) is useful in this regard so as to understand
+the options; however, this should not be the only
+factor and as previously stated, first of all it should
+be decided why cloudification is necessary or
+desirable, what is to be cloudified, and to what
+extent. In addition, cloud solution vendors are
+increasingly asking for long term contracts and to
+bundle applications in order to offer discounts;
+hence, an essential cloud solution incentive is in
+danger of not being materialised.
+A heterogeneous cloudification solution (using
+several providers) could be cheaper and a better fit
+for purpose as various providers offer different
+coverage of specific services and thus best prices
+may be negotiated for each application type. This
+option would require more varied in-house
+competencies compared to relying on a single cloud
+service provider; however, the latter option has
+drawbacks such as potential lock-in, or high exit cost
+should a migration be necessary.
+Zardari et al. (2012) argue that analysing Service
+Level Agreements (SLA) of cloud providers and
+matching them against the user requirements can
+reveal potential violations of important principles, or
+conflicts and risks; while the SLA approach is
+useful, in the authors’ opinion the above discussion
+has revealed that a much broader spectrum of
+cloudification challenges is in fact present. Due to
+their intertwined character, these challenges have to
+be addressed in a more holistic manner, based on the
+entire set of applicable quality of service
+requirements (also called ‘architecturally significant’
+or ‘non-functional’ requirements (Chen et al.,
+2013)). The ‘applicable’ qualifier used above raises
+the question as to which non-functional systemic
+requirements, or ‘ilities’ (de Weck, 2011), are
+affected by the various cloudification solutions, how
+(to the better or the worse) and to what extent. The
+following sub-section attempts to identify the most
+relevant ‘ilities’ in question.
+3 CLOUDIFICATION AND
+SYSTEMS ‘ILITIES’
+As de Weck (ibid.) explains, “[…] the ilities are
+desired properties of systems, […] (usually but not
+always ending in 'ility'), that often manifest
+themselves after a system has been put to its initial
+use. These properties […] typically concern wider
+system impacts with respect to time and stakeholders
+[…]”. He also provides a ranking of the ilities based
+on journal articles’ coverage and Google hits, and
+identifies and further describes four classic
+engineering ilities, i.e. safety, quality, usability and
+reliability. Willis and Dam (2011) provide a more
+complete list that includes what they call ‘the
+forgotten ilities’.
+In this paper, the authors will attempt to select
+the most relevant ilities from the point of view of
+cloudification and analyse how they are affected by
+various cloud service delivery models, and if
+possible, analyse the extent of impact.
+It is important to state some overall observations
+beforehand. For example, some ilities appear to
+subsume others, or at least overlaps are present. E.g.,
+quality is a very general ility that appears to be one
+of the most cited; in addition, quality can be
+evaluated from several points of view (see Table 1.),
+thus illustrating another general ility aspect.
+The discussion of ilities in the context of cloud
+computing presents two main aspects: i) cloud
+computing (in its various forms) promises to solve a
+number of business problems, by allowing the
+achievement of some systemic properties that
+otherwise may be out of reach, however, ii) adopting
+a cloud solution changes many existing systemic
+properties of the IT ecosystem, and therefore in a
+cloudification project (or more often than not a
+programme) it is not possible to simply concentrate
+on the desired additional benefits. This makes the
+cloudification attempt more complex than might
+initially have been assumed.
+As mentioned, the ilities are not a set of mutually
+independent systemic properties; in addition, some
+important ilities are in fact aggregations of others
+(see Table 1). Therefore, to reach an optimum (or at
+least an acceptable trade-off) one must employ
+multi-criteria decision making- and cost analysis
+techniques known from systems engineering to
+explore the ilities ‘trade space’ Boehm et al (2014).
+In general, the typical problems that cloud
+computing promises to solve are as follows:
+concerns about the total cost of ownership of
+information technology services, the scalability /
+elasticity of the IT solution, the rigidity of
+investment timing, and agility (e.g., quick time to
+market).
+However, security, privacy, trust, compliance
+with legislations, and a number of other strategically
+important architectural properties could substantially
+Business Cloudification - An Enterprise Architecture Perspective
+355
+
+--- PAGE 4 ---
+Table 1: Categories of ilities (Source: Boehm, 2014).
+Individual ilities
+ Quality of Service: Performance, Accuracy,
+Usability, Scalability, Versatility
+ Resource Utilization: Cost, Duration, Personnel,
+Scarce Quantities (size, weight, energy, …)
+ Protection: Safety, Security, Privacy
+ Robustness: Reliability, Availability,
+Maintainability
+ Flexibility: Modifiability, Tailorability /
+Extendability, Adaptability
+ Composability: Interoperability/Portability,
+Openness/Standards Compliance, Service-
+Orientation
+Composite ilities
+ Comprehensiveness/Suitability: all of the above
+ Dependability: Quality of Service, Protection,
+Robustness
+ Resilience: Protection, Robustness, Flexibility
+ Affordability: Quality of Service, Resource
+Utilization
+deteriorate or even be lost when adopting a cloud
+solution. Therefore, both governments and vendors
+are working very hard to guarantee that these
+limiting factors are removed from the pathway to
+adopt cloud solutions in order to reap its benefits.
+For example NIST (Badger et al, 2014a) define
+security, interoperability and portability to be the top
+priority ilities for government.
+Governments have been playing a pro-active role
+in laying the ground rules for the cloud computing
+market, and this has had a substantial benefit for all
+involved stakeholders e.g. by funding the research
+and standardisation work to establish a cohesive
+terminology and nomenclature (Liu et al., 2011)..
+Furthermore, some governments played a
+substantial role in organising the consensus
+definition of capability deficits that need research
+and development e.g., (Badger et al, 2014a) and
+defining accreditation of cloud products (IaaS, PaaS
+and SaaS) to create a cloud market and a service
+delivery and quality control framework, in regard to
+both organisational and technical aspects – called
+FedRamp in the USA (Federal Risk and
+Authorization Management Program) and IRAP in
+Australia (Information Security Registered
+Assessors Program) and the Australasian
+Information Security Evaluation Program (AISEP).
+Several other countries have similar arrangements.
+The above-mentioned efforts include reference
+models for Service Level Agreements (Aljoumah et
+al., 2015) and the definition of service metrics (de
+Vaulx, Simmon and Bohn, 2015) that can be used to
+decide required capability and capacity and to
+monitor the actual service performance.
+Large enterprises and governments are in a
+substantially different situation relative to small and
+medium sized businesses who could never afford to
+own and internally run a complete professional-
+quality IT service. Therefore the potential gain for
+the latter is to achieve ilities that were previously out
+of reach, as opposed to the large players mentioned
+who could take those for granted and now must be
+careful to be able to keep them.
+Thus, it appears that two main current problems
+in achieving a successful cloudification are (1)
+cloudification cannot be just done off the shelf - the
+business needs to transform to some extent (while
+still operating as it cannot afford to stop) so as to
+minimize turbulence and best take advantage of the
+service structure offered by the cloud and (2) even if
+(1) is accomplished, how can the end user avoid the
+bad side effects of moving to the cloud? The current
+lack of emphasis on the interactions between the
+various entities inhabiting the layers created by (1)
+and the interaction among the life cycle phases of
+these entities carries the risk of creating sub-standard
+‘solutions’ that suffer from multiple systemic
+aspects in unanticipated ways.
+A systematic treatment of moving to the cloud
+can be regarded as a specialised application of an
+Enterprise Architecture (EA) effort. It must be noted
+from the beginning that clearly, the limited view of
+EA as a ‘business – IT alignment’ exercise that is
+sometimes adopted e.g., COBIT (Isaca, 2012),
+TOGAF (Open Group, 2011) will not be sufficient,
+because the change will fundamentally affect the
+way business is done, will change the human
+organisation (including roles and responsibilities)
+and also alter legal, financial and contractual
+relationships (and the IT sub-system itself as well,
+where the IT architecture view of EA is applicable).
+In other words, such transformation requires a
+holistic approach that considers mission fulfilment
+(manufacturing, mining, banking, health care,
+transportation, logistics, etc. technology, processes
+and human (TPH) organisation) as well as
+management and control (command and control)
+TPH, the redesign of business relationships, carrying
+out ensuing organisational changes, human
+competency development, and the introduction of
+new governance constructs, to only name a few.
+The authors therefore propose the use of a
+framework that provides this broader view of
+enterprise architecture (ISO 15704) thus enabling a
+perspective that sees the embodiment of the
+enterprise as an evolving socio-technical system of
+systems. As a result of this framework adoption, the
+ICEIS 2017 - 19th International Conference on Enterprise Information Systems
+356
+
+--- PAGE 5 ---
+standard vocabulary of EA (as present in ISO
+15704) and Systems Engineering (as espoused by
+ISO 15288 will be used throughout the discussion in
+Section 4 that demonstrates through an example an
+approach that considers ‘moving to the cloud’ to be
+an EA endeavour.
+4 THE EA PERSPECTIVE ON
+CLOUDIFICATION
+The goal of adopting Enterprise Architecture
+practice in an enterprise is to ensure that strategy,
+human organisation, utilised technology and
+processes are all in alignment (Doucet at al., 2009).
+Alignment, however, is not a one-off transformation
+project, but rather part of the enterprise’s evolution
+This article assumes that the reader is familiar
+with the basic terminology of ISO 15704 / GERAM
+nevertheless a brief overview of the most important
+concepts is given below and illustrated in Fig. 2.
+The scope of the architecture is equivalent to the
+scope of the NIST Cloud Computing Reference
+Architecture (which is in ISO15704 terms an
+architectural level reference model of the IT system
+of the enterprise, also called a ‘Reference
+Architecture of type I’).
+Given the open nature of enterprises, when
+looking at the entities of interest in describing the
+enterprise, one cannot limit to organisational
+boundaries; rather, rather include other relevant
+entities, such as suppliers and customers, as well as
+supporting entities that provide services to sustain
+the enterprise’s operations and/or other entities that
+may be called upon to help any transformational
+tasks.
+This extended scope is justified as cloudification
+requires so-called ‘generative interactions’ among
+participating entities. (A generative interaction is
+defined as the operations of one entity performing or
+contributing to one or several life cycle phases of
+another (e.g. entity A develops or changes the
+business concept of entity B.).
+Figure 3 shows a life cycle diagram representing the
+life cycles of all typically involved entities. The
+model includes existing infrastructure as well as new
+cloud entities and a transformation programme
+(coordinating multiple projects). Interestingly, the
+decomposition of the system into a system of
+systems is not a uniform disaggregation: those
+systems whose subsystems will be expected to
+change in a similar fashion are not further
+decomposed, which controls the number of entities
+in the model (to the extent possible of course).
+The model can also be thought of as a first-cut
+structural decomposition of the enterprise into
+functionally-independent entities. This is necessary
+because cloudification typically implies that part of
+the IT Stack would be ‘carved out’ and moved. It
+therefore makes sense to first fence off parts of the
+IT stack that are candidates for cloudification
+(whether into a private, public or hybrid cloud).
+Essentially this is tantamount to re-organising the IT
+stack in a service-oriented way (Rabelo, Noran and
+Bernus, 2015).
+Various techniques are known to achieve the
+desired maximum functional independence among
+service entities (these are not discussed in detail in
+this article as they are out of scope); the necessary
+methods are available in the literature on Service
+Orientation (Keith, Demirkan and Goul, 2013)
+axiomatic design (Suh, 2001) and enterprise
+architecture complexity management (Kandjani,
+Bernus and Wen, 2014).
+Figure 2: Enterprise entities interact with each other in the context of their life cycles.
+Business Cloudification - An Enterprise Architecture Perspective
+357
+
+--- PAGE 6 ---
+Figure 3. Life cycle relationships among service entities and cloud service consumers.
+Using such a decomposition allows to separately
+consider several systemic properties and make
+independent decisions, namely:
+o) As part of a preliminary stage for
+cloudification we assume that Government and
+Industry bodies have defined policies, principles and
+laws regarding cloud services, including the roles
+and responsibilities of cloud service brokers and
+auditors (arrows marked 0 in Fig.3), and that these
+have been implemented and rolled out by respective
+organisations (arrow 0’ in Fig. 3).
+i) Decide the desired improvements that each
+service layer must undergo (for example, creating
+dynamically established ‘many-to-many’ (M:N)
+infrastructure-platform and application-platform
+relationships, in order to allow load sharing and
+elasticity, to achieve increased responsiveness and
+availability of IT support to the business), as layer
+by layer the business benefit may vary. Systems
+engineering methods and tools exist to support the
+cost optimisation of investment (Boehm et al.,
+2014), taking into account through-life support, total
+cost of ownership, as well as performing risk
+mitigation and probabilistic optimisation based on
+the analysis of possible future scenarios (arrow 1 in
+Fig. 3).
+ii) Decide the desired business, technological and
+organisational benefits of creating a cloud and
+balance it with the known limitations to cloud
+service security and trust, interoperability and
+portability (and also other important ilities discussed
+in Section 2.2). Note that these limitations are
+different between SaaS, PaaS and IaaS, as well as
+depend on the choice of Private-, Public- and Hybrid
+cloud. There are various systems engineering
+methods that help holistic decision making in this
+regard. For example, system thinking diagrams
+(Meadows, 2008) may reveal the cause and effect
+relationships among multiple change factors and are
+helpful in assisting management to avoid unexpected
+effects of the cloudification effort. Boehm et al.
+(2014, p28.) discuss known cross-relationships
+among ilities in the cloud. (arrow 1 in Fig.3)
+iii) Based on the above two decisions, determine
+the current, future and transition boundaries between
+services provided from inside the organisation and
+those from the outside. Some decisions may be
+conditional based on technology analysis / forecasts;
+however, management may decide to build
+preparedness for being able to make certain future
+cloudification decisions, even though current
+technology may not be deemed mature or
+appropriate (arrow 1 in Fig.3).
+iv) Determine a ‘rolling’ strategic roadmap with
+clearly defined benefits after each stage of the
+transition (rolling meaning that the roadmap is
+periodically reviewed in light of new information or
+developments in business, technology or
+organisation). (arrow 2 in Fig.3)
+v) Define the design activities performed by the
+cloudification project (including the external service
+provider’s possible participation in the project -
+arrows 4’…4’’’ in Fig. 3)
+vi) Describe the rollout of changes in the
+business (including contracting, see arrow 5’ in Fig.
+3) and the deployment of the SaaS service by the
+service provider (arrow 5’’ in Fig. 3)
+vii) Define the respective service provisions in
+operation (arrows 6’ and 6’’ in Fig. 3).
+Note that the SaaS entity has two parts: the actual
+service and the management of that service. The
+latter is supported by an Auditing Service to monitor
+performance and adherence to quality criteria
+against standards and SLAs (arrow 7 in Fig. 3).
+viii) Select the SaaS service – which may be
+performed by Corporate Management or by the
+Government /
+Industry
+Regulator
+Broker
+0’
+2
+3
+4’
+Corporate
+management
+1’
+5’
+SaaS
+4’’
+External Service
+Provider
+4’’’
+SBUs
+5’’
+6’
+6’’
+Cloudifica on
+Project
+1’’
+Auditor
+0’
+7
+7
+0
+0
+ICEIS 2017 - 19th International Conference on Enterprise Information Systems
+358
+
+--- PAGE 7 ---
+cloudification project (N.B. arrow 4’’’ shows the
+case where a cloud broker entity is engaged by the
+project).
+Note that in Fig. 1 the cloud carrier (such as
+telecommunication service providers) was omitted,
+but when intending to commit to using a cloud
+service, the availability, bandwidth and trust aspects
+need to be checked and brokering and auditing
+services need to be engaged, in the same way as they
+would be used in conjunction with the cloud service
+and its provider.
+It must be stressed that some entities represented
+in Fig. 3 are ‘representative’ rather than individual;
+e.g., ‘SaaS’ stands for multiple applications (bundles
+or suites), on the condition that organisationally
+speaking each bundle undergoes similar transition.
+The similarity is based on the governance
+relationship between a transition programme,
+transition projects, and such bundles. This greatly
+simplifies the management of transition projects,
+because they all share the same architecture
+principles and mostly similar strategic objectives.
+5 CONCLUSIONS AND
+FURTHER WORK
+This paper has presented an Enterprise Architecture-
+based approach towards the cloudification effort,
+involving the adoption of a holistic paradigm that
+models the mutual influences (generative
+interactions) of the entities and artefacts involved in
+the project, in the context of their life cycles. The
+authors have argued and demonstrated that this
+approach enables a richer insight into the current and
+planning of ‘cloudification readiness’ of a business.
+Using the EA-based approach, the findings are that
+firstly, cloudification requires the business to
+prepare ‘on-the-fly’ and the cloud services to be
+customised to achieve a useful match. Thus, moving
+to the cloud requires increasing and improving
+architecture competencies. Policies and principles
+dictating the design / select solution and the
+transition program must be put in place beforehand.
+Secondly, cloudification is not a ‘done-and-dusted’,
+one-off exercise; the solution has to be maintained
+as the business structure and its environment
+(including the cloud it now resides in) constantly
+evolve. There is a need for an increase in human
+resources prominently featuring architecture
+competencies. Thirdly, successful cloudification
+requires (a) a good understanding of the enterprises’
+needs driving the value that can be derived from
+cloud computing, (b) an architected design of the
+solution to be able to efficiently utilize cloud
+services (Dodani, 2009) and (c) the ability to grow
+the cloud capabilities and value delivered in time.
+The scope of this paper was limited to presenting
+cloudification on the example of the adoption of
+software as a service (such as expense management
+services). Further work should extend the present
+model by developing a reference model of a typical
+SaaS adoption roadmap, as well as expanding it into
+a more complex scenario demonstrating a
+combination of IaaS, PaaS, Information as a Service
+and SaaS in a hybrid cloud.
+ACKNOWLEDGEMENTS
+The authors would like to acknowledge the research
+grant (Strategic Advancement of Methodologies and
+Models for Enterprise Architecture) provided by
+Architecture Services Pty Ltd (ASPL Australia) in
+supporting this work.
+REFERENCES
+Aljoumah, E., Al-Mousawi, F., Ahmad, I., Al-Shammri
+M., and Al-Jady Z., (2015) SLA in Cloud Computing
+Architectures: A Comprehensive Study. Int J of Grid
+Distrib. Computing. 8(5):7-32.
+Aulkemeier, F., Paramartha, M. A., Iacob, M-E., van
+Hillegersberg, J. (2016) A pluggable service platform
+architecture for e-commerce, J. Inf Syst E-Bus
+Manage 14:469–489.
+Badger, L., Bohn, R., Chu, S., de Vaulx, F., Hogan, M.,
+Iorga, M., Kauffman, V., Liu, F., Mao, J., Messina, J.,
+Mills, K., Simmon, E., Sokol, A., Tong, J., Whiteside
+F., Leaf, D. (2014b) US Govt. Cloud Computing
+Technology Roadmap Volume II: Useful Information
+for Cloud Adopters. NIST SP 500-293.
+Badger, L., Bernstein, D., Bohn, R., de Vaulx, F., Hogan,
+M., Iorga, M., Mao, J. Messina, J., Mills, K., Simmon,
+E., Sokol, A., Tong, J., Whiteside, F., Leaf. D.
+(2014a). US Government Cloud Computing
+Technology Roadmap Volume I: High-Priority
+Requirements to Further USG Agency Cloud
+Computing Adoption. NIST SP 500-293.
+Boehm, B. (2014). Ilities Tradespace and Affordability
+Analysis. GSAW/INCOSE LA/SPIN (talk).
+Boehm, B. et al (2014). -ilities Tradespace and
+Affordability Project – Phase 3. Technical Report
+SERC-2014-TR-039-3. Hoboken, NJ: Stevens
+Institute of Technology, Systems Engineering
+Research Center.
+Brian, H., Brunschwiler, T., Dill, H., Christ, H., Falsafi,
+B., Fischer, M. and Zollinger, M.―Cloud computing,
+Communications of the ACM, 51(7), 9-11, 2008.
+Business Cloudification - An Enterprise Architecture Perspective
+359
+
+--- PAGE 8 ---
+Cayirci et al. (2016). A risk assessment model for
+selecting Cloud Service Providers. J. Cloud
+Computing, 2016.
+Chen, L., Ali Babar, M., Nuseibeh, B. (2013).
+"Characterizing Architecturally Significant
+Requirements". IEEE Software. 30 (2): 38–45.
+Cloud Service Providers. Journal of Cloud Computing:
+Advances, Systems and Applications 5:14.
+de Vaulx, F., Simmon, E., and Bohn, R. (Eds) (2015).
+Cloud Computing Service Metrics Description.
+Gaithersbourg, WA: NIST.
+De Weck, O. L. (2011) Life-Cycle Properties of
+Engineering Systems: The Ilities. In de Weck, O. L.,
+Roos, D. and Magee, C. L. (Eds.) Engineering
+Systems, pp. 65-96.
+Dodani, M. (2009) Cloud Architecture. Journal of Object
+Technology, 8 (7), pp 35-44 http://www.jot.fm/
+issues/issue_2009_11/column3/
+Doucet, G., Gøtze, J., Saha, P., Bernard, S. (Eds) (2009).
+Coherency Management – Architecting the Enterprise
+for Alignment, Agility and Assurance. Hershey, PA,
+USA: Idea Group Inc.
+Goyal, Sumit (2014) Public vs Private vs Hybrid vs
+Community - Cloud Computing: A Critical Review
+I.J. Comp. Network and Info. Security, 2014, 3, 20-29.
+Grossman, R.L. ―The case for cloud computing, IT
+professional, 11(2), 23-27, 2009.
+Hirzalla, M. (2010) Realizing Business Agility
+Requirements through SOA and Cloud Computing.
+18th
+IEEE International Requirements Engineering
+Conference pp. 379 - 380.
+I.J. Comp Network and Info Security, 2014, 3, 20-29.
+Isaca (2012). Cobit 5. Rolling Meadows, IL: Information
+Systems Audit and Control Association.
+ISO 15704 (2000; Amd 1: 2005) Requirements for
+enterprise-reference architectures and methodologies.
+Geneva: ISO.
+ISO/IEC/IEEE 15288 (2015). : Systems and software
+engineering–System life cycle processes. Geneva:
+ISO.
+Jansen, W., Grance, T. (2011) Guidelines on security and
+privacy in public cloud computing, ‖ NIST special
+publication 800-144.
+Johnston, S. (2009) Overview of cloud computing,
+https://commons.wikimedia.org/w/index.php?curid=60
+80417.
+Kandjani, H. and Bernus,P., Wen, L. (2014) Enterprises as
+Complex Systems: Extended Axiomatic Design
+Theory and its Application in Enterprise Architecture
+Practice. In Pallab Saha (Ed) A Systemic Perspective
+to Managing Complexity with Enterprise Architecture.
+Hershey, Pennsylvania: IGI Global. pp72-98.
+Keith, M., Demirkan, H., Goul, M. (2013). Service-
+Oriented Methodology for Systems Development.
+Journal of Management Information Systems.
+30(1):227-260.
+Laatikainen, G., Ojala, A., and Mazhelis, O. (2013). Cloud
+Services Pricing Models. In G. Herzwurm and T.
+Margaria (Eds.), Software Business. From Physical
+Products toSoftware Services and Solutions (pp. 117-
+129). Springer Berlin Heidelberg.
+Liu, F., Tong, J., Mao, J., Bohn, R. B., Messina, J. V.,
+Badger, M. L., Leaf, D. M. (2011). NIST Cloud
+Computing Reference Architecture. NIST SP 500-292.
+Gaithersburg, MD: NIST IT Laboratory.
+Meadows, D. (2008). Thinking in Systems: A Primer.
+White River Junction, VT: Chelsea Green Publishing.
+Morrow, M., Bernstein, D., Diamond, S., Sankar,K.,
+Ludvigson, E. (2009) "Blueprint for the Intercloud -
+Protocols and Formats for Cloud Computing
+Interoperability", International Conference on Internet
+and Web Applications and Services, pp. 328-336.
+Open Group (2011). TOGAF 9.1.Burlington, MA: The
+Open Group.
+Rabelo, J. R., Noran, O., Bernus, P. (2015). Towards the
+Next Generation Service Oriented Enterprise
+Architecture. In Proc. IEEE 19th Int. Enterprise
+Distributed Object Computing Workshop. pp91-100.
+Sawas, M. S. and Watfa, M. K. 2015, The impact of cloud
+computing on information systems agility,
+Australasian J of Info. Systems, vol. 19, pp. 97-112.
+Suh, N.P. (2001). Axiomatic Design: Advances and
+Applications. New York: Oxford University Press.
+Wang, L., Tao, J., Kunze, M., Castellanos, A.C, Kramer,
+D. and Karl, W. (2008) Scientific cloud computing:
+Early definition and experience, ‖ In: Proceedings of
+10th IEEE International Conference on High
+Performance Computing and Communications, (pp.
+825-830), September 2008.
+Willis, J. D. and Dam, S. (2011) The Forgotten Ilities,
+www.dtic.mil/ndia/2011system/13166_WillisWed.pdf.
+Zardari, S., Faniyi, F. and Bahsoon, R., (2012) Using
+obstacles for systematically modeling, analysing, and
+mitigating risks in cloud adoption. Aligning Enterprise
+System and Software Architectures, IGI Global, pages
+275-296.
+Zhang, Q., Cheng, L., Boutaba, R. (2010) Cloud
+computing: state-of-the-art and research challenges.‖nt
+J of Internet Services and Applications, 1(1), 7-18.
+ICEIS 2017 - 19th International Conference on Enterprise Information Systems
+360

@@ -1,0 +1,1599 @@
+--- PAGE 1 ---
+Communications of the Association for Information Systems Communications of the Association for Information Systems 
+Volume 28 Paper 
+3-2011 
+How Does Enterprise Architecture Add Value to Organisations? How Does Enterprise Architecture Add Value to Organisations? 
+Toomas Tamm 
+Department of Information Systems, The University of Melbourne, Australia, 
+toomas.tamm@deakin.edu.au 
+Peter B. Seddon 
+Department of Information Systems, The University of Melbourne, Australia 
+Graeme Shanks 
+Department of Information Systems, The University of Melbourne, Australia 
+Peter Reynolds 
+Center for Information Systems Research, Massachusetts Institute of Technology, USA 
+Follow this and additional works at: https://aisel.aisnet.org/cais 
+Recommended Citation Recommended Citation 
+Tamm, T., Seddon, P. B., Shanks, G., & Reynolds, P. (2011). How Does Enterprise Architecture Add Value to 
+Organisations?. Communications of the Association for Information Systems, 28, pp-pp. https://doi.org/
+10.17705/1CAIS.02810 
+This material is brought to you by the AIS Journals at AIS Electronic Library (AISeL). It has been accepted for 
+inclusion in Communications of the Association for Information Systems by an authorized administrator of AIS 
+Electronic Library (AISeL). For more information, please contact elibrary@aisnet.org. 
+
+--- PAGE 2 ---
+ 
+ 
+Volume 28 Article 10 
+How Does Enterprise Architecture Add Value to Organisations? 
+Toomas Tamm 
+Department of Information Systems, The University of Melbourne, Australia 
+t.tamm@pgrad.unimelb.edu.au 
+ 
+Peter B. Seddon 
+Department of Information Systems, The University of Melbourne, Australia 
+ 
+Graeme Shanks 
+Department of Information Systems, The University of Melbourne, Australia 
+ 
+Peter Reynolds 
+Center for Information Systems Research, Massachusetts Institute of Technology, USA 
+ 
+Enterprise architecture (EA) is the definition and representation of a high -level view of an enterprise‘s business 
+processes and IT systems, their interrelationships, and the extent to which these processes and systems are shared 
+by different parts of t he enterprise. EA aims to define a suitable operating platform to support an organisation‘s 
+future goals and the roadmap for moving towards this vision. Despite significant practitioner interest in the domain, 
+understanding the value of EA remains a challe nge. Although many studies make EA benefit claims, the 
+explanations of why and how EA leads to these benefits are fragmented, incomplete, and not grounded in theory. 
+This article aims to address this knowledge gap by focusing on the question: How does EA l ead to organisational 
+benefits? Through a careful review of EA literature, the paper consolidates the fragmented knowledge on EA 
+benefits and presents the EA Benefits Model (EABM). The EABM proposes that EA leads to organisational benefits 
+through its impa ct on four benefit enablers: Organisational Alignment, Information Availability, Resource Portfolio 
+Optimisation, and Resource Complementarity. The article concludes with a discussion of a number of potential 
+avenues for future research, which could build on the findings of this study. 
+ 
+Keywords: enterprise architecture, IT architecture, IT planning, strategic planning, IT infrastructure, performance 
+ 
+Volume 28, Article 10, pp. 141-168, March 2011 
+The manuscript was received 11/9/2009 and was with the authors 6 months for 1 revision. 
+
+--- PAGE 3 ---
+ 
+ 
+How Does Enterprise Architecture Add Value to Organisations? 
+How Does Enterprise Architecture Add Value to Organisations? 
+142 
+Volume 28 Article 10 
+I. INTRODUCTION 
+Enterprise architecture (EA) is the definition and representation of a high -level view of an enterprise‘s business 
+processes and IT systems, their interrelationships, and the  extent to which these processes and systems are shared 
+by different parts of the enterprise. The primary goal of EA is to define the desirable future state of the organisation‘s 
+business processes and IT systems (often referred to as the ―to -be‖ or target architecture) and to provide a roadmap 
+for achieving this target from the current state (―as -is‖ or baseline architecture) [Zachman, n.d.]. Two key 
+components of EA are the planning process (―definition‖), and the direct and tangible outputs of that plann ing 
+process (―representation‖), i.e., EA documentation (e.g., architecture diagrams, roadmaps, and other artefacts). 
+As an organisational role, EA is positioned between IT and business strategy formulation on the one hand, and 
+project-focused solution arch itecting (sometimes called system architecting ) on the other. The task of EA is to 
+translate the broader principles, capabilities, and goals defined in the strategies into systems and processes that 
+enable the enterprise to realise these goals. In this reg ard, EA is a step towards enacting strategy. In turn, EA 
+guides solution architectures that are defined prior to specific development or implementation projects and which 
+provide the finer specifications necessary for operationalising those systems. The ai m of EA is to guide the building 
+of the organisation‘s operating platform, i.e. , the IT systems and digitised business processes that support or 
+automate an organisation‘s core capabilities [Ross et al., 2006]. This mediating role means that EA is similar to 
+strategy, in that it aims to provide a long -term and organisation -wide vision of business processes and IT systems, 
+but it describes this vision in significantly greater detail. 
+Since the concept of EA first appeared in academic literature around the ea rly 1990s [Zachman, 1987; Richardson 
+et al., 1990] ,1 it has generated substantial practitioner interest. A recent survey by Infosys claims that around 90  
+percent of the respondent organisations have an EA function [Obitz and Babu K, 2009], various professi onal 
+organisations (e.g. CAEAP, GEAO, IFEAD, The Open Group, ZIFA, etc.) and government EA initiatives (e.g. , FEAF, 
+DoDAF, GEA, MoDAF, etc.) have been established, and most large global management consulting firms offer EA -
+related services.2 All of this su ggests that organisations around the world spend a considerable amount of time and 
+effort on EA. 
+At the same time, however, academic activity in the domain has remained comparatively modest. Much of the 
+research and highest-cited works in the field come fr om the practitioner community, not academe. In fact, only three 
+articles on EA have been published in the Senior Scholars‘ six top IS journals 3—one in the European Journal of 
+Information Systems [Peristeras and Tarabanis, 2000], one in the Journal of Management Information Systems [Boh 
+and Yellin, 2006], and one in MIS Quarterly [Richardson et al., 1990]. Additionally, only two of the top ten highest -
+cited works on EA 4 have been published in academic journals or conferences. Existing studies tend to focus o n the 
+applied aspects of EA, in particular how to plan and represent it. At the same time , more fundamental questions —
+Why is EA useful? How do organisations benefit from EA? —have been somewhat overlooked. Although there are 
+numerous benefit claims in the l iterature, these are often not explained nor supported by empirical evidence. 
+Organisations also struggle to justify their EA investments [Aziz and Obitz, 2007; Obitz and Babu K, 2009], which 
+again points to a lack of a clear understanding of EA benefits. 
+The significant practitioner and organisational interest in EA on the one hand, and the struggle to demonstrate value 
+on the other, raise interesting questions about the value proposition of EA. What are the potential benefits of EA? 
+What are the mechanism s through which EA leads to these benefits? What are the theoretical underpinnings, and 
+empirical evidence, that support these expectations? It is these and similar questions that provided the motivation for 
+this study. The question the study seeks to answer is: How does EA lead to organisational benefits? 
+                                                      
+1 Zachman‘s [1987] article on ―information systems architecture‖ is often regarded as the seminal work on EA. However, the term  ―enterprise 
+architecture‖ (introduced to emphasise the necessity for a more business-oriented planning approac h) appears to have been used in the 
+academic literature for the first time by Richardson et al. [1990]. 
+2 Examples include Accenture, BCG, Capgemini, Deloitte, Ernst & Young, Fujitsu, Gartner, IBM, and KPMG. 
+3 The statement by the AIS Senior Scholars Forum  suggests that the top IS journals are European Journal of Information Systems, Information 
+Systems Journal, Information Systems Research, Journal of Association for Information Systems, Journal of MIS, and MIS Quarterly [AIS, n.d.]. 
+4 Based on Google Scholar citation count as of September 17, 2008. 
+
+--- PAGE 4 ---
+ 
+ 
+Volume 28 Article 10 143 
+To address this question, the study synthesises the existing EA literature and draws on broader IS and management 
+theories to propose a synthesis of the EA benefit claims and an improved theoretical expla nation of the underlying 
+mechanisms. The paper begins with a description of the research method, followed by a discussion of the current 
+state of knowledge on EA benefits. Drawing on the findings of the literature review, the paper proposes the 
+Enterprise Architecture Benefits Model (EABM). It is hypothesised in the EABM that EA leads to organisational 
+benefits through its impact on four key benefit enablers: Organisational Alignment, Information Availability, Resource 
+Portfolio Optimisation, and Resource C omplementarity. The paper concludes with recommendations for further 
+research that could build on the EABM and other findings of this study. 
+II. RESEARCH APPROACH 
+To develop an overview of the existing literature on EA and its benefits, two search approach es were employed. 
+First, a systematic review approach was used to look for publications on EA benefits, as well as EA in general. 
+Average citation count per year was used as a proxy measure to identify highly cited and , therefore, probable core 
+publications. However, filtering based on citation count alone might have excluded some useful and highly relevant 
+works. Therefore, an exploratory approach was used in parallel to the systematic review to find additional insightful 
+publications on the questions of i nterest. This proved useful, as it led to the identification of some studies that would 
+otherwise have been overlooked (e.g. , some very recent academic studies [Kettinger et al., 2010; Salmans and 
+Kappelman, 2010], insightful practice -oriented EA surveys [ Aziz and Obitz, 2007; Obitz and Babu K, 2009], etc.). 
+The two review approaches, as well as the synthesis process followed to derive the EABM, are described below.  
+Systematic Review 
+The purpose of the systematic review was to ensure comprehensive coverage of the highly influential works in the 
+EA space, based on a relatively objective selection method to reduce potential biases, e.g. , the authors‘ familiarity 
+with a subset of literature or personal preferences. This selection method also enabled some conclu sions on the 
+primary research interests in the field to be made. 
+To identify the relevant literature, two online databases were used to search for the term ―enterprise architecture‖ —
+Scopus for its good coverage of academic journals, and Google Scholar for its extensive coverage of both journals 
+and books. The search yielded a total of 5,079 results (4,639 from Google Scholar and 440 from Scopus). After 
+merging and removing of duplicates, the sample (4,392) remained too extensive for an in -depth analysis. It was also 
+found to contain a large number of entries with low (or no) relevance. Therefore, only the more influential works with 
+EA as a key focus (in the case of books, the key focus in at least one chapter) were chosen for further analysis.  
+In order to d etermine the final set of publications for analysis, Google Scholar‘s citation count was used as a proxy 
+measure of relative importance of the works. The threshold for inclusion in the review was set to a minimum of 
+twenty-five citations in total, or an average of five citations per year. This limited the sample to 282 articles. Although 
+representing about 6.4  percent of the total number of articles, the total citation count for the selected articles forms 
+72 percent of that of the entire result pool. 
+The 282 publications were then filtered for relevance by analysing the abstracts and skimming the content, resulting 
+in fifty-three relevant (i.e. , EA-focused) publications. The full texts of fifty of these could be obtained, and they form 
+the basis for the sys tematic review. The first author then carefully examined all the fifty publications , searching for 
+discussion of EA benefits. As part of the analysis, the key themes of each publication were also identified to develop 
+a better understanding of the primary areas of interest in EA research, and to determine how many existing 
+publications have had a significant focus on EA benefits. These fifty studies are listed in Appendix 1, along with a 
+high-level analysis of the key topics discussed in each article. 
+For each publication, all EA benefit claims were summarised in a spreadsheet. The strength of evidence for each 
+benefit claim was also recorded as belonging to one of three categories: empirical evidence, references to prior 
+studies, or no evidence provided. In  all, this resulted in 213 recorded benefit claims, many of which were identical or 
+very close in meaning. After three cycles of comparing the different claims to identify similarities, overlaps, and 
+groupings, a total of twelve unique EA benefits were ide ntified. (These twelve EA benefits are listed shortly in the 
+first row of Table 2.) 
+Following the analysis of individual benefit claims, the focus turned to the primary question of interest in the study: 
+How does EA lead to these benefits? Despite the numerous benefit claims (forty one of the fifty studies mentioned at 
+least some EA benefits), the explanations were in most cases missing. Among the fifty studies reviewed, only five 
+
+--- PAGE 5 ---
+ 
+ 
+144 
+Volume 28 Article 10 
+[Bernard, 2005; Richardson et al., 1990; Ross et al ., 2006; Ross and Westerman, 2004; Spewak and Hill, 1992] 
+provided more than a passing discussion of these details.5 
+A challenge that we faced in conducting this literature review was that it was difficult to get a concise overview of the 
+explanations, as they were not always presented as a coherent whole in the publications. Instead, the supporting 
+explanations often emerged piecemeal throughout the publication. In an attempt to assist with understanding and 
+comparison, diagrams of the claims made in each of the five studies above were prepared. These diagrams are 
+included in Appendix 2 in the hope that they may provide useful summaries and reference for future studies.  
+Exploratory Review 
+The sole use of the systematic approach described above has two poten tial weaknesses. First, it can lead to the 
+exclusion of some highly relevant publications with modest citation counts. Second, some works on what is defined 
+here as enterprise architecture refer to it with a different name. Therefore, an exploratory approa ch was used in 
+parallel to identify highly relevant publications that would otherwise have been missed.  
+The primary criterion for including additional publications as part of the exploratory review was that they needed to 
+contribute insights or empirical e vidence beyond that of publications identified through the systematic review. As the 
+name suggests, the exploratory review did not follow a strictly systematic approach. The search approach primarily 
+involved trying various keywords using online search too ls such as Google and following up references cited by the 
+publications identified during the systematic review. The following terms were considered potentially relevant and 
+were treated as candidates for inclusion: IS/IT architecture, enterprise service -oriented architecture (enterprise 
+SOA), IS/IT platform, business architecture, strategic architecture, strategic capabilities architecture, business 
+platform, architecture framework, and enterprise integration architecture. Also, publications using the term  
+―enterprise architecture‖ which did not conform to the minimum citation count threshold for the systematic review, but 
+which were found to be highly relevant to the EA benefits question, were included as part of the exploratory 
+approach. In all, the explo ratory review added seventeen further publications to the literature pool that informed this 
+study, bringing the total number of reviewed publications to sixty-seven. 
+Synthesis and Theory Development 
+Although the existing explanations about how EA leads to  organisational benefits, when provided, appeared logical 
+and plausible, a general lack of empirical evidence and theoretical justification was of concern. Also, as can be seen 
+in the diagrams in Appendix 2, it was evident that the proposed benefits were o ften interrelated or overlapping. 
+Finally, some studies appeared to focus on the benefits derived directly from EA planning [e.g., Bernard 2005 ], 
+whereas others focused on the benefits from the enactment of the plans [e.g., Ross et al., 2006]. 
+The focus of  the analysis therefore turned to integrating these findings. We revisited both (1) the list of EA benefit 
+claims and (2) the studies that proposed explanations about the relationships between the different factors (primarily 
+those presented in Appendix 2) . The claimed resultant organisational benefits (e.g. , cost reduction, strategic agility, 
+operational excellence) were too distant from EA to clearly explain how these benefits can be achieved. Therefore, 
+we focused on identifying the underlying benefit enablers—factors which could be clearly seen as EA outcomes, and 
+that in turn are known to have the potential to deliver organisational benefits.  
+In order to identify these benefit enablers, the first author took the list of benefit claims and themes identif ied earlier 
+as part of the systematic and exploratory literature review and examined and regrouped the factors until a 
+classification was reached where all the major EA benefit claims could be explained by one, or a combination, of the 
+identified benefit e nablers. Also, the proposed EA outcomes and mechanisms through which they lead to 
+organisational benefits were required to map back to the identified benefit enablers.  
+The identification of the factors passed through four major iterations and numerous smal ler refinements. Diagrams 
+and tables were used in the course of the analysis to assist with the factor groupings and mappings. An example of 
+a table compiled to assist with the analysis is presented below ( Table 1). The first colu mn shows the benefit 
+enablers. The initial set of benefit enablers was derived based on a preliminary analysis of the benefit claims and 
+explanations, and then refined in subsequent iterations. The next step was to determine whether the other related 
+concepts (second column) as well as the outcomes and benefits (third column) could be mapped to the identified 
+benefit enablers. During the initial iterations, it was often found that gaps existed, which in turn led to revisions of the 
+list of benefit enablers (e.g., a factor from the second column became a candidate benefit enabler).  
+                                                      
+5 As shown in Appendix 1, nine studies had EA benefits among the primary themes. However, two of these studies only focused on a particular 
+aspect of EA —Perks and Beveridge [2003] discuss technical architecture and Kosanke et al. [1999] concentrate on integration and modelling. 
+Another two studies listed benefits, but did not describe the ―how‖ and ―why.‖ 
+
+--- PAGE 6 ---
+ 
+ 
+Volume 28 Article 10 145 
+Once a more stable classification was reached, two other co -authors discussed and challenged the benefit enablers 
+in order to identify potential gaps or overlaps. The aim was to en sure that the identified factors were both collectively 
+exhaustive and mutually exclusive, i.e. , that they collectively explained all the major benefit claims and that there 
+were no significant overlaps between the benefit enablers. A degree of overlap bet ween underlying drivers or 
+outcomes was considered to be acceptable if the related explanation of how a particular organisational benefit may 
+emerge was substantially different. For example, increased customer intimacy [Ross et al., 2006] can be explained 
+by (1) knowing the customer better due to the increase in information availability, and (2) by sharing a common 
+culture and approach of interacting with the customers achieved through increased organisational alignment. 
+Although the high-level outcome may appear similar, the pathways and their specific influence is different. 
+Table 1: Benefit Claim Mappings 
+Benefit Enabler Related Concepts Related Outcomes and Benefits 
+Organisational 
+Alignment 
+Integrated view of the enterprise; 
+common understanding; improved 
+communication [Bernard, 2005] 
+Bridge between the business and 
+technical domains; common goals and 
+performance measures [Pereira and 
+Sousa, 2004] 
+Business-IT alignment [Ross et al., 2006] 
+The link between organizational and IS 
+strategies is made stronger [Segars and 
+Grover, 1996] 
+Reduced rework [Bernard, 2005] 
+Identify and resolve conflicts; consensus 
+[Richardson et al., 1990] 
+Encourage cooperation rather than conflict 
+[Pereira and Sousa, 2004] 
+More customer intimacy [Ross et al., 2006] 
+Information 
+Availability 
+Standardised and shared reference 
+information; better access to information; 
+improved understanding of 
+resources/processes [Bernard, 2005] 
+Better access to customer data; shared 
+data; more manageable IT environment, 
+improved risk management; higher 
+system reliability [Ross et al., 2006] 
+Common data; more accurate, accessible 
+and timely data [Spewak and Hill, 1992] 
+Single sources of data; improve 
+information quality [Venkatesh et al., 
+2007] 
+Better and faster decisions [Bernard, 2005] 
+Improved information flow [Richardson et al., 
+1990] 
+More customer intimacy [Ross et al., 2006] 
+Prioritization of systems; business 
+reengineering [Segars and Grover, 1996] 
+Improved decision-making [Spewak and Hill, 
+1992] 
+Resource 
+Portfolio 
+Optimisation 
+Discovery and elimination of redundancy 
+[Pereira and Sousa, 2004] 
+Homogeneous architecture [Richardson 
+et al., 1990] 
+Standardisation; reduction of 
+technologies [Ross et al., 2006] 
+Fewer costly and complex interfaces; 
+common code [Spewak and Hill, 1992] 
+Standardizing IT applications and 
+business processes [Venkatesh et al., 
+2007] 
+Reduced resource duplication, fewer people in 
+a process; reduced costs [Bernard, 2005] 
+Reduced support costs, software portability 
+[Richardson et al., 1990] 
+Reduced skill variation; simplified 
+troubleshooting; lower IT costs; focus on core 
+competencies through selective outsourcing 
+[Ross and Westerman, 2004] 
+Higher ROI from IT; better operational 
+excellence [Ross et al., 2006] 
+Economies of scale [Venkatesh et al., 2007] 
+Resource 
+Complementarity 
+Improved resource integration [Bernard, 
+2005] 
+Componentisation; enhanced 
+interoperability [Ross et al., 2006] 
+Integrated systems [Segars and Grover, 
+1996] 
+Improved performance [Bernard, 2005] 
+Re-use of technology and expertise [Ross and 
+Westerman, 2004] 
+Increased IT responsiveness; strategic agility 
+[Ross et al., 2006] 
+The study also sought to provide a theoretical explanation for the identified concepts and relationships. Therefore, 
+an additional literature search was performed to ident ify key publications in IS and management theory that related 
+to the emerging benefit enablers. This led to further refinement of the concepts, and aided in the interpretation of 
+some benefit claims that had not been fully explained in EA literature. The r esult of this process is the Enterprise 
+Architecture Benefits Model (EABM), described in-depth in Section IV below. 
+
+--- PAGE 7 ---
+ 
+ 
+146 
+Volume 28 Article 10 
+III. LITERATURE REVIEW 
+As noted above, the extant literature on EA benefits is generally characterised by numerous benefit claims with littl e 
+supportive explanation and evidence. Table 2 shows a selection of these benefit claims from the literature review, 
+and compares it with a few influential practitioner -oriented sources. Of the fifty studies analysed as part of th e 
+systematic literature review, forty -one mentioned at least some EA benefits. It should be noted, however, that only 
+six of these studies provided empirical evidence (often limited) to support the benefit claims. Some of the most 
+commonly cited benefits ( listed in the first row of Table 2) were: (1) increased responsiveness and guidance to 
+change, (2) improved decision -making, (3) improved communication and collaboration, (4) reduced costs, and (5) 
+business-IT alignment. 
+Table 2: Organisational Benefits from EA Reported in Literature 
+Academic Studies 
+Systematic Literature 
+Review (50 studies) 
+(1) increased responsiveness and guidance to change; (2) improved decision-
+making; (3) improved communication & collaboration; (4) reduced (IT) costs; 
+(5) business-IT alignment; (6) improved business processes; (7) improved IT 
+systems; (8) re-use of resources; (9) improve integration; (10) reduce risk; 
+(11) regulatory compliance; (12) provides stability 
+SIM EA Survey, 2007 
+[Salmans and Kappelman, 
+2010] 
+(1) improves interoperability between information systems; (2) improves 
+utilisation of IT; (3) aligns business objectives with IT investments; (4) more 
+effective use of IT resources; (5) better situational awareness; (6) more 
+responsive to change; (7) improves organisational communications and 
+information sharing; (8) assists with organisational governance; (9) improves 
+ROI from IT spending; (10) less wasted time/money on projects which do not 
+support business goals/objective; (11) more effective at meeting business 
+goals; (12) improves IS security across the business; (13) better collaboration 
+within organisation; (14) improves communications between the organisation 
+and IT department; (15) reduces IT complexity; (16) reduces organisational 
+stovepipes; (17) faster development and implementation of new IS; (18) 
+standardises organisational performance measures; (19) improves 
+communications within organisation 
+Professional Studies 
+Infosys EA Survey, 2007 
+[Aziz and Obitz, 2007] 
+(1) reduced IT cost; (2) higher business and process flexibility; (3) improved 
+customer satisfaction; (4) enabling of business and process change; (5) better 
+business-IT alignment 
+Infosys EA Survey, 2009 
+[Obitz and Babu K, 2009] 
+(1) improved customer satisfaction; (2) reduced IT cost; (3) business process 
+improvement/ standardisation; (4) better business-IT alignment; (5) higher 
+business and process flexibility 
+TOGAF 9 
+[The Open Group, 2009] 
+more efficient IT operations; lower IT costs; maximum ROI from existing IT; 
+reduced risk for future IT investments; reduced IT complexity; faster, simpler, 
+and cheaper procurement 
+Zachman International 
+[Zachman, 2001] 
+(1) alignment enabler; (2) integration enabler; (3) change enabler; (4) reduced 
+time-to-market 
+The benefits from the literature review, Infosys, and SIM surveys are ranked based on how often they were 
+mentioned by authors/respondents. The benefits from Zachman [2001] are listed in the order presented by 
+the author, though it is not clear whether any ranking was implied. 
+The most recent academic study with a significant EA benefits component [Salmans and Kappelman, 2010] was 
+based on a survey of 377 practitioners. It presented respondents with a list of twenty potential EA benefits and 
+asked to rate th em on a 5 -point Likert scale. For nineteen out of the twenty benefits, at least 60 percent of the 
+respondents agreed or strongly agreed. These nineteen EA benefits are listed in the second row of Table 2. As 
+acknowledged by the au thors of the survey, this very high agreement rate may at least in part be attributed to the 
+fact that the respondents were asked to comment on potential benefits of EA (rather than benefits they have actually 
+observed) and that they were presented with a precompiled list of proposed benefits. The findings of the survey 
+may, therefore, need to be treated with care. 
+In addition, Table 2 summarises the benefit claims from three influential practitioner sources: Infosys, The Open 
+Group, and Zachman International. The annual Infosys EA survey [Aziz and Obitz, 2007; Obitz and Babu K, 2009],  
+
+--- PAGE 8 ---
+ 
+ 
+Volume 28 Article 10 147 
+is likely the largest regularly conducted survey focused on EA trends with publicly accessible reports .6 The Open 
+Group is among the largest professi onal EA communities and the author of possibly the widest -adopted EA 
+standard—The Open Group Architecture Framework (TOGAF) .7 Zachman International is an organisation founded 
+by John A. Zachman, who is often regarded as the founding author of EA and has wr itten some of the most 
+influential articles in the EA field.8 
+Comparison of the different claims reveals a high agreement between authors about the reduction of costs, 
+particularly of IT costs, as a tangible EA benefit. Increased capability to change, impr oved alignment between 
+business and IT, and business process improvements are also mentioned repeatedly by academic as well as 
+practitioner sources. 
+How Does EA Lead to Organisational Benefits? 
+Despite the numerous benefit claims, very few studies provide explanations about how EA leads to benefits. 
+Empirical evidence to back the explanations is even more scarce. As noted earlier, only five studies were identified 
+that devoted considerable attention to explaining EA‘s role in achieving organisational benefi ts [Bernard, 2005; 
+Richardson et al., 1990; Ross et al., 2006; Ross and Westerman, 2004; Spewak and Hill, 1992]. Their arguments 
+are summarised in the diagrams presented in Appendix 2. 
+The analysis of the explanations about how EA leads to organisational b enefits confirmed the need to distinguish 
+clearly between benefits flowing directly from EA, and the subsequent impact of EA on the real -world state of the 
+organisation [Zachman, 2010]. This distinction is often overlooked in existing research, but it lead s to two distinct 
+pathways from EA to organisational benefits. 
+Benefits from EA 
+In this study, EA is defined as the definition and representation of a high -level view of an enterprise‘s business 
+processes and IT systems, their interrelationships, and the e xtent to which these processes and systems are shared 
+by different parts of the enterprise. Here, ―definition‖ refers to the process of EA planning, and ―representation‖ to the 
+direct and tangible outputs of that planning process (i.e. , the EA artefacts, i ncluding architecture drawings, 
+roadmaps, and other documentation). It is necessary to consider both when discussing EA benefits, as not all 
+outcomes and benefits of the planning process may be reflected in the documentation. Additionally, it may not 
+always be possible or meaningful to distinguish between outcomes from the process and from the documentation —
+e.g., should the better understanding of business processes be attributed to the planning (during which the 
+knowledge was generated), or to the plans (i n which the knowledge is stored)? Therefore, it is useful to view both 
+the planning process and its outputs as an integral part of EA. 
+Some benefits may flow directly from EA. These benefits relate to the increased knowledge about the organisation 
+and its goals (e.g., a better understanding of the business processes or the organisation‘s current IT systems as a 
+result of the EA analysis) and may help decision-makers make better-informed decisions. This pathway has received 
+very little attention in existing research, possibly because of lower visibility and difficulties in measuring the benefits 
+from planning, as they tend to be less tangible. 
+Only one study that discussed benefits from EA planning was found [Bernard, 2005, see Figure A2.1 ]. Bernard 
+suggests that a standardised planning approach (i.e. , a common analysis and documentation methodology) applied 
+across business unit and departmental boundaries leads to integrated and improved information about the 
+organisation‘s resources. This, in turn, enables b etter communication and common understanding between different 
+stakeholders and helps to reduce re -work and duplicated efforts. Ultimately, Bernard [2005] claims, this leads to 
+better and faster decisions, reduced cycle times, improved (IT) performance, an d lower costs. 
+The underlying benefit driver here is a better understanding and increased access to information about the 
+organisation itself, emanating from the planning process and stored in the EA artefacts. Although at first glance the 
+reasoning may appear similar to other studies discussed below, the explanations behind the source and the nature 
+of the benefits presented by Bernard [2005] are in fact very different. This can be illustrated by comparing the 
+seemingly similar factors of ―better access to  information‖ [Bernard, 2005] and ―better access to customer data‖ 
+[Ross et al., 2006]. Whereas Ross et al. [2006, p.  2] focus on the shared access to customer data —implying that an 
+improved operating platform has been previously implemented —Bernard [2005,  p. 69] refers to information about 
+                                                      
+6 The survey had 315 responses in 2007 and 207 in 2008 (effective sample size 262 and 173 correspondingly). 
+7 TOGAF had the highest adoption rate among Infosys EA survey respondents (32 percent) [Obitz and Babu K, 2009]. 
+8 Zachman‘s three highest-cited works on EA have a total citation count of 1,879 (based on Google Scholar as of August 12, 2009). This is higher 
+than the combined citation count of the top twenty highest-cited works on ―enterprise architecture.‖ 
+
+--- PAGE 9 ---
+ 
+ 
+148 
+Volume 28 Article 10 
+the organisation itself, that is stored in the EA artefacts. The nature of the stored information in these two examples 
+(about customers in Ross et al. and the organisation itself in Bernard) —and even how and where it is  stored—is 
+very different. 
+Although Bernard‘s [2005] study proposes a clear link between EA and benefits, its weakness lies in the lack of 
+evidence to support those claims. Neither the research method nor the research sample are discussed. Nor are any 
+illustrative real-world examples presented to validate the claims. 
+Benefits from an EA-Guided Operating Platform 
+Most of the EA benefits discussed in the literature depend on the enactment of the EA plans. This is not surprising 
+since the key purpose of EA is to guide the building of an improved operating platform, i.e. , the IT systems and 
+digitised business processes that support or automate an organisation‘s core capabilities [ Ross et al., 2006, p. 4].9 
+It is important to note that the operating platform can exist and evolve regardless of EA. Every organisation has 
+processes and systems, but not all organisations engage in EA planning. Therefore, to demonstrate the value of EA 
+in relation to the benefits that are contingent on the implementation, it needs to b e shown that EA either enables the 
+organisation (a) to build an operating platform that would otherwise not have been possible, or (b) to improve the 
+delivery of the platform in some way (e.g., faster, cheaper, or with increased likelihood of success). 
+A number of studies discuss benefits from an EA -guided operating platform. A prevalent claim is that an EA -guided 
+operating platform is likely to have a higher level of standardisation and integration [e.g. , Bernard, 2005; Boh and 
+Yellin, 2006; Ross and Weste rman, 2004; Spewak and Hill, 1992]. However, apart from the themes of 
+standardisation and integration (which are not organisational benefits per se), the various studies tend to diverge in 
+the ultimate benefit claims and the discussion of related underlying mechanisms. 
+For example, in one of the earliest studies on EA, Richardson et al. [1990] (Figure A2.2) argue that it is through 
+building consensus and a homogenous (standardised) architecture that EA enables an enterprise to achieve 
+improved information f lows and reduced IT costs. In a book published two years later, Spewak and Hill [1992] 
+(Figure A2.5) claim that EA enables a firm to achieve well -planned and tightly integrated systems, leading to more 
+reliable systems and data and to increased reuse, whic h ultimately results in higher responsiveness, better 
+decisions, service improvements, reduced costs, and higher employee morale. More recently, Ross and Westerman 
+[2004] (Figure A2.3) claim that through standardisation, EA enables componentisation and inc reases the possibilities 
+for reuse and reduced duplication of technologies. According to the study, standardisation and componentisation 
+improve a company‘s chances of succeeding with outsourcing and lead to a number of other improvements, which 
+ultimately translate into lower IT costs, reduced time -to-market, and enable the organisation to focus on their core 
+activities. These ideas are developed further by Ross et al. [2006] (Figure A2.4) —again, standardisation, integration, 
+and componentisation appear to  be the primary benefit drivers according to the study, but ultimately, Ross et al. 
+claim, EA enables an organisation to improve operational excellence, customer intimacy, product leadership, and 
+strategic agility. Note that the ultimate benefit claims in these studies are different. 
+Further, although most of these studies attribute improvements in the operating platform to EA, the role that EA 
+plays in leading to these improvements is often not thoroughly discussed. For example, Ross et al.‘s [2006] 
+discussion of benefits is focused on the operating platform and the role of EA in building that platform receives only 
+limited attention. Although the authors state that EA is of key importance by allowing the organisation to map out 
+―important processes, data, and technology enabling desired levels of integration and standardisation‖ [Ross et al., 
+2006, p. 92], why this is the case and how this happens is left largely unexplained.  
+There are two key questions that need to be addressed to understand better the imp act of EA on the operating 
+platform and resultant benefits. First: How does EA help improve the operating platform and could these 
+improvements be achieved without the use of EA?  As will be shown in Section IV below, it appears that EA may 
+really have the potential to contribute to improvements of the operating platform that may otherwise not be possible 
+or very difficult to achieve. This is primarily due to looking across the various internal boundaries of the organisation, 
+and the close consideration of both business and technology. 
+Second: If EA does have a unique role in enabling improvements to the operating platform, are there any factors that 
+affect moving from the plans to execution?  It is hardly surprising that having an EA plan is far from a guaran tee of 
+implementation success [Boh and Yellin, 2006], which is dependent on a number of additional factors. As the 
+operating platform improvements proposed in the EA plans are implemented through a series of IT projects and 
+                                                      
+9 The definition of ―operating platform‖ has been adapted from Ross et al.‘s [2006] ―foundation for execution.‖ 
+
+--- PAGE 10 ---
+ 
+ 
+Volume 28 Article 10 149 
+business improvement projects, a ll the usual project success factors apply [e.g. , Finney and Corbett, 2007; Parr et 
+al., 1999]. Such factors include top management support, change management, and project management, among 
+many others. In addition to individual project successes, proper I T governance is of central importance to ensure 
+that the various projects follow the EA guidelines [Boh and Yellin, 2006; Ross et al., 2006; Weill and Ross, 2004]. 
+Also, due to the duration and cost, EA implementations are more likely to be subject to unex pected changes in 
+business priorities, emerging financial constraints, or loss of interest [Armour et al., 1999; Richardson et al., 1990; 
+Segars and Grover, 1996; Spewak and Hill, 1992]. Finally, due to its aim of enterprise -wide optimisation, which may 
+mean trade -offs in local optimisation and autonomy, EA implementations are also very likely to be hampered by 
+organisational politics [Janssen and Hjort-Madsen, 2007; Kettinger et al., 2010; Segars and Grover, 1996]. 
+Towards an Enhanced Explanation of EA Benefits 
+Three key conclusions can be drawn from the findings of the literature review presented above. First, it is important 
+to distinguish between benefits that can flow from EA directly and benefits that can be achieved only through the 
+implementation of the EA plans, i.e. , from an EA -guided operating platform. This distinction is important for two 
+reasons. First, it helps to better understand the extant literature by differentiating between seemingly similar, but 
+actually different sources of EA benefits (e.g., Bernard‘s [2005] ―better access to information‖ and Ross et al.‘s 
+[2006] ―better access to customer data‖ discussed in the ―Benefits from EA‖ section above). Second, due to the high 
+uncertainty in progressing from plans to implementation (see the pr evious paragraph) it seems likely that EA‘s 
+impact on benefits that are contingent on implementation is somewhat weaker than on benefits that can be derived 
+from the EA plans directly. 
+Second, a considerable amount of collective knowledge on the benefits of EA exists. It is evident from the discussion 
+above and from the diagrams presented in Appendix 2 that there are many common themes in the explanations of 
+how EA leads to benefits and what these benefits ultimately are. These include standardisation and i ntegration, cost 
+reduction, business-IT alignment, process improvement, etc. However, these benefit claims and related explanations 
+are fragmented. No single study presents a concise overview of this existing knowledge. Integrating this existing 
+knowledge can therefore provide a valuable step towards enhancing the understanding of how EA leads to 
+organisational benefits. 
+Third, in addition to conceptual work needed to integrate the existing knowledge on EA benefits, further empirical 
+enquiry is essential. N ot only do the existing claims need further empirical validation, but due to the lack of studies 
+focusing on a careful explanation of EA benefits, it seems likely that some benefits or explanations may have been 
+overlooked. 
+The following section takes a st ep towards enhancing knowledge on how EA leads to organisational benefits by 
+proposing the EA Benefits Model (EABM). The EABM integrates the existing explanations in the EA literature and 
+draws on relevant IS and management theory to enhance these explanat ions. It suggests that it is through its impact 
+on four key benefit enablers that EA delivers organisational benefits. While it does not address the third theme 
+discussed above, i.e. , the current study does not have an empirical component, the proposed mod el provides a 
+useful starting platform for future empirical studies of EA benefits. 10 
+IV. THE EA BENEFITS MODEL (EABM) 
+The EA Benefits Model (EABM) presented in  Figure 1 synthesises the findings from the literature review. The model 
+suggests that it is thro ugh the impact of EA on four key benefit enablers —Organisational Alignment, Information 
+Availability, Resource Portfolio Optimisation, and Resource Complementarity (P1a –P4a)—that EA leads to 
+organisational benefits (P1b –P4b). The term ―benefit enablers‖ em phasises that these outcomes from EA are not 
+benefits per se , but are factors which have been demonstrated in earlier research to have a high potential for 
+enabling organisational benefits. 
+Definitions of the EABM constructs are summarised in Table 3 and discussed in detail in the following sections. The 
+thickness of the arrows in P1a –P4a denotes the hypothesised strength of the relationship, based on how reliant a 
+given benefit enabler is on the enactment of the EA plans. This ack nowledges the high uncertainties involved in 
+progressing from EA to implementation discussed in section III above. The least strong (dotted) lines indicate that  
+Resource Portfolio Optimisation (P3a) and Resource Complementarity (P4a) are entirely dependent  on at least  
+partial enactment of EA plans. Information Availability (P2a) is partly contingent on enactment, and is presented as a 
+thin line. Finally, Organisational Alignment (P1a) may to a large extent be achieved through the EA planning 
+activities and resultant documentation per se, and is therefore represented as a thick line. 
+                                                      
+10 Some potential avenues for empirical work are described in further detail in Section V. 
+
+--- PAGE 11 ---
+ 
+ 
+150 
+Volume 28 Article 10 
+ 
+  
+Figure 1. EA Benefits Model (EABM) 
+ 
+Table 3: Definitions of the EABM Constructs11 
+Enterprise Architecture 
+Quality 
+EA is the definition and representation of a high-level view of an enterprise‘s 
+business processes and IT systems, their interrelationships, and the extent to 
+which these processes and systems are shared by different parts of the 
+enterprise. 
+A high-quality EA is one that provides a vision for the future operating platform 
+that is well-aligned with the organisation‘s strategic goals, complemented by an 
+optimal roadmap for moving towards that vision, based on an accurate 
+understanding of the current operating platform. 
+Organisational Benefits Outcomes that contribute directly to organisational performance, including lower 
+costs, increased revenue, competitive differentiation, more accurate decisions, 
+strategic agility, etc. 
+Benefit Enablers 
+Organisational Alignment The extent to which an organisation‘s subunits share a common understanding 
+of its strategic goals, and contribute towards achieving these goals 
+Information Availability The extent of useful, high-quality information accessible to organisational 
+decision makers 
+Resource Portfolio 
+Optimisation 
+The extent to which an organisation leverages its existing resources, invests in 
+resources that target performance gaps, and minimises unnecessary 
+investments in duplicated resources 
+Resource Complementarity The extent to which the organisation‘s resources synergistically support the 
+pursuit of its strategic goals 
+The following discussion of the EABM begins with an explanation of the independent variable, Enterprise 
+Architecture Quality. The four sections that follo w draw on both the review of EA literature as well as broader IS and 
+management theory to define the four benefit enablers, and explain how these relate to organisational benefits from 
+EA. For this explanation to be complete, it is necessary to consider fo r each benefit enabler (1) the connection 
+between EA and the benefit enabler (P1a –P4a) and (2) the connection between the benefit enabler and 
+organisational benefits (P1b–P4b). As the benefit enablers draw on existing IS and management research, the latter  
+relationships have usually been extensively explored in earlier studies. The primary contribution of this study lies in 
+the synthesis of EA literature to explain the proposed relationships between EA and the four benefit enablers (i.e ., 
+P1a–P4a), as well as in the identification of these four enablers. 
+                                                      
+11 These definitions are ours, though they have been adapted from the existing literature on the related concepts. 
+
+--- PAGE 12 ---
+ 
+ 
+Volume 28 Article 10 151 
+Enterprise Architecture Quality 
+A high -quality EA is one that provides a vision for the future operating platform that is well -aligned with the 
+organisation‘s strategic goals, complemented by an optimal road map for moving towards that vision, based on an 
+accurate understanding of the current operating platform. EA quality depends on the quality of the planning process 
+and is embedded in the resultant documentation. Therefore, there are two ways of assessing E A quality. First, it is 
+possible to directly evaluate the quality of the outputs, i.e. , EA documentation. Second, it is possible to use EA 
+planning process quality as a proxy measure of output quality. 
+Assessing the quality of EA documentation is likely to  provide a more accurate and objective measure of EA quality. 
+For example, the accuracy of EA in documenting the existing operating platform can be objectively assessed 
+through audits and system analysis. Although assessing the EA roadmap can be more diffi cult due to the potential 
+existence of equivalent alternatives, objective evaluation measures still exist, e.g. , the costs and business impact 
+involved in changing the processes and systems in a given sequence. However, the quality of the EA vision is very  
+difficult to measure objectively, as it depends on guesses about future strategic directions, which may easily change. 
+The best quality measure regarding the vision may, therefore, be a scenario analysis to test how easily the proposed 
+EA can accommodate plausible shifts in business strategy. 
+Table 4: Proxy Measures for Evaluating EA Quality 
+Appropriate scope-detail-cost balance [Spewak and 
+Hill, 1992, pp. 33, 34] 
+Appropriate CIO skills [Ross et al., 2006, pp. 113–115] 
+Compatible org. culture [Spewak and Hill, 1992, p. 34] 
+Clear and agreed-upon architecture principles 
+[Richardson et al., 1990, p. 399] 
+Documentation tools [Bernard, 2005; Spewak and Hill, 
+1992, p. 34] 
+Effective presentations [Spewak and Hill, 1992, p. 34] 
+Effective project management [Spewak and Hill, 1992, 
+p. 33] 
+Intermediate deliverables [Spewak and Hill, 1992, p. 
+34] 
+Skilled architecture team [Bernard, 2005; Spewak and 
+Hill, 1992, p. 34] 
+Sufficient (on-going) funding [Bernard, 2005; Spewak 
+and Hill, 1992, p. 21, 26] 
+Suitable management practices [Ross et al., 2006] 
+Stakeholder acceptance & involvement [Bernard, 
+2005; Spewak and Hill, 1992, p. 33] 
+Top management support and involvement [Ross et 
+al., 2006, p. 111; Spewak and Hill, 1992, p. 33] 
+Use of consultants [Spewak and Hill, 1992] 
+Possibly the greatest weakness of evaluating EA quality through a direct assessment of EA documentation relates to 
+practical considerations. Although the approaches discussed above provide potential avenues for directly measuring 
+EA quality, such assessments require a substantial effort and time. For organisations, these quality measures may 
+not be practicable due to the costs involved; for academic studies, both time, extent of required research access, 
+and expertise are likely to be prohibitive. 
+A more cost -efficient, though less accurate, approach to evaluating EA quality may be to assess the quality of the 
+EA planning process. This approximate evaluation can rely on assessing the extent to which a particular EA 
+planning effort addresse d key factors that have been found to be highly correlated with high -quality results. A 
+number of indicators of EA planning quality, which can in turn act as proxy quality measures of the resultant plans, 
+can be derived from EA literature. These are presen ted in Table 4. Reflecting on these measures leads to the 
+following three conclusions about how the quality of EA planning process can be evaluated.  
+First, it appears that the most important determinant of EA planning quality is t he availability of sufficient high-quality 
+resources during EA planning. The higher the quality of the available resources, the higher the likely quality of the 
+EA planning process and the resultant outputs. These resources include not only skilful and exp erienced enterprise 
+architects [Bernard, 2005; Spewak and Hill, 1992 ], but also the involvement of top management [Ross et al., 2006; 
+Spewak and Hill, 1992] and other key stakeholders [Bernard, 2005; Spewak and Hill, 1992], access to external 
+expertise whe n necessary [Spewak and Hill, 1992], and sufficient ongoing funding to guarantee the availability of 
+these resources for the duration of EA planning [Bernard, 2005; Spewak and Hill, 1992]. Whether or not the 
+necessary resources were available for EA planni ng can be relatively easily assessed by interviewing the planning 
+team members and reviewing attendee lists of key planning meetings. 
+Second, EA planning quality may also be measured by the quality of the methodologies and approaches used. For 
+example, eff ective project management [Spewak and Hill, 1992], effective presentations [Spewak and Hill, 1992], 
+and use of proper documentation tools [Bernard, 2005; Spewak and Hill, 1992] have been suggested to be related to 
+EA planning success. However, it could be argued that these are largely contingent on the quality of resources. A 
+
+--- PAGE 13 ---
+ 
+ 
+152 
+Volume 28 Article 10 
+skilled EA team that has access to sufficient on -going funding appears likely to make use of the best methodologies 
+and tools available. 
+Finally, it is important to note that a high -quality EA has to strike an appropriate balance among scope, detail, and 
+cost [Spewak and Hill, 1992]. After the scope and depth of planning reaches a certain threshold, investing more 
+resources and effort in the planning is likely to lead to diminishing ret urns. Eventually, the marginal improvements in 
+the accuracy and amount of information captured in the plans will no longer be able to offset the required 
+investments. 
+Organisational Alignment 
+Organisational Alignment is the extent to which an organisation‘ s subunits share a common understanding of its 
+strategic goals and contribute towards achieving these goals. The alignment between business and IT, an aspect of 
+Organisational Alignment, has received extensive attention in IS literature [Chan and Reich, 20 07a,b]. The 
+underlying claim of the business -IT alignment literature is that IT strategies and the resultant deliverables should be 
+closely informed by, and aligned with, business strategies and processes [Henderson and Venkatraman, 1993]. This 
+is to ensure that the IT systems in which an organisation invests provide the best possible support for the strategic 
+needs of the business. 
+However, it is not only alignment between business and IT that is a challenge in large, complex organisations. The 
+relationship between alignment and organisational performance is also an important topic of interest in the broader 
+management literature [e.g., Miller, 1986; Porter, 1996]. Alignment is not only a challenge across all functional areas 
+(e.g., between Sales and Market ing), sometimes referred to as horizontal alignment, but also between the corporate 
+level and various strategic business units (SBUs) [Reynolds et al., 2010]. 
+How Does EA Improve Organisational Alignment? 
+Both EA planning as well as related improvements in  the operating platform have the potential to improve 
+Organisational Alignment. The EA planning activity itself requires cross -organisational dialogue and input. As EA is 
+not only concerned with IT systems, but begins with an understanding of the business processes that these systems 
+need to support, it has the potential to bring IT in closer alignment with the business goals [Gregor et al., 2007; 
+Ross, 2003]. The objective of greater business -IT alignment is also among the top reasons why organisations inv est 
+in EA [Aziz and Obitz, 2007; Obitz and Babu K, 2009]. 
+However, because the business analysis that is undertaken during EA planning spans different departments and/or 
+business units, there is potential for EA to have a positive impact not only on busine ss and IT alignment, but also on 
+other dimensions of Organisational Alignment. The basis for this broader impact is the facilitation of dialogue and 
+identification of interdependencies between the various parts of the enterprise [Segars and Grover, 1996]. The 
+increased understanding of the process interdependencies and potential synergies provides a better basis for 
+identifying the stakeholders that may be affected by, and should be consulted about, a given process or technology 
+change [Bernard, 2005]. The relevant people can be involved early in the decision -making process, allowing for 
+potential conflicts to be identified and resolved early, which may have a positive impact on collaboration and 
+collective decision-making [Richardson et al., 1990]. The awar eness that EA creates about the dependencies may 
+also be used to ensure the alignment between performance measures of employees, which can further contribute to 
+collaboration [Pereira and Sousa, 2004]. The set of agreed -upon EA principles also provides obj ective decision -
+making criteria, which in turn can help to avoid costly, prolonged, or repeated arguments.  
+Therefore, EA reduces the subjectivity of the decision -making process [Johnson et al., 2007; Spewak and Hill, 1992] 
+and brings the business and IT in vestment decisions in closer alignment to the organisational goals, as opposed to 
+the personal agendas of individual key stakeholders: 
+P1a: A high-quality EA is likely to improve Organisational Alignment. 
+Organisational Benefits from Organisational Alignment 
+Extant research suggests that Organisational Alignment in general, as well as its sub -dimension of business -IT 
+alignment, are related to improved organisational performance [Chan et al., 2006; Kearns and Lederer, 2003; Miller, 
+1986; Porter, 1996; Sabher wal and Chan, 2001]. Firms with high Organisational Alignment may achieve a better 
+total return on investments through the reduction of incoherent or duplicated efforts, and achieve their strategic goals 
+with minimal overhead. Based on this literature, it is posited in EABM that firms with higher Organisational Alignment 
+are likely to achieve greater organisational benefits (P1b). 
+
+--- PAGE 14 ---
+ 
+ 
+Volume 28 Article 10 153 
+Information Availability 
+Information Availability is defined as the extent of useful, high -quality information accessible to org anisational 
+decision makers. Information quality does not only encompass accuracy, but also aspects such as relevance, 
+completeness, timeliness, interpretability, and accessibility [Lee et al., 2002; Wang and Strong, 1996]. These 
+dimensions suggest that in  order to improve Information Availability and quality, the purpose of the information 
+needs to be considered (e.g. , the measure of timeliness can be substantially different in strategic and operational 
+decision-making). 
+For the purposes of the discussion below, it is useful to consider that the information underpinning an organisation‘s 
+knowledgebase consists of ― what/who” (i.e., data about an organisation‘s clients, suppliers, and transactions) and 
+―how” (organisational processes) type of data. Informatio n systems normally focus on storing the ― what/who” 
+information. The ―how” information about processes is less often explicitly and systematically captured. To an extent, 
+it is embedded in the information systems that support these processes (through custom isation and integration) and 
+captured in the related configuration specification documents. However, these detailed technical descriptions are 
+interpretable only by technical specialists and, therefore, cannot be readily used by organisational decision-makers. 
+How Does EA Improve Information Availability? 
+EA has the potential to improve both the information about an organisation‘s processes, as well as data about its 
+clients, suppliers, and business transactions. The improved information about organisationa l processes primarily 
+flows directly from EA. Through the business and system analysis performed as part of the EA planning, previously 
+undocumented information about the organisation‘s processes may be captured [Bernard, 2005]. The whole -of-
+enterprise ana lysis approach may even reveal interdependencies or inefficiencies that were previously not only 
+undocumented, but also unknown. This information will be captured in the current state documentation of EA and 
+will help to enhance and retain organisational k nowledge about its processes. Even if the EA vision and roadmaps 
+are later not followed, this documentation in itself may prove valuable for informing organisational decision -making: 
+P2.1a: A high-quality EA is likely to improve Information Availability about the organisation‘s resources. 
+In contrast, improved availability of information about business transactions, customers, and vendors is primarily 
+contingent on the enactment of EA plans. This information is normally captured in an organisation‘s databas es. EA 
+can help to improve the availability of this information by guiding the building of an improved operating platform that, 
+in turn, provides better information to decision makers in the organisation. First, EA has been suggested to improve 
+the sharing  of information through more carefully planned integration between the organisation‘s information 
+systems [Boh and Yellin, 2006; Ross et al., 2006; Spewak and Hill, 1992]. In addition to identifying and helping to 
+standardise the interfaces and messaging b etween different applications, EA may also facilitate information sharing 
+by advocating common data definitions and structures [Boh and Yellin, 2006; Spewak and Hill, 1992]. Second, as 
+will be discussed in the following section, an EA -guided operating plat form is likely to have lower complexity and 
+fewer components, contributing to increased reliability of the operating platform [Pereira and Sousa, 2004; Ross et 
+al., 2006]. This has a positive impact on information accessibility. Finally, by identifying and  helping to reduce the 
+number of redundant data stores, EA may also have a positive impact on data accuracy [Venkatesh et al., 2007].  
+P2.2a: An operating platform guided by a high -quality EA is likely to improve Information Availability from the 
+organisation‘s transactional and analytic data stores. 
+Organisational Benefits from Information Availability 
+Information is widely recognised as a key organisational asset. Access to better information —when coupled with 
+enhanced capabilities to interpret that inform ation—may serve as an important source of competitive advantage 
+[Davenport and Harris, 2007; Davenport et al., 2010]. For example, improved information about the customers and 
+the marketplace enables better targeted product development, sales, and marketin g efforts [Davenport and Harris, 
+2007], leading in turn to increased revenues. Based on this literature, it is posited in EABM that firms with higher 
+Information Availability are likely to achieve greater organisational benefits (P2b).  
+Resource Portfolio Optimisation 
+Resource Portfolio Optimisation is defined as the extent to which an organisation leverages its existing resources, 
+invests in resources that target performance gaps, and minimises unnecessary investments in duplicated resources. 
+Resources can be defined as ―all assets, capabilities, organisational processes, firm attributes, information, 
+knowledge, etc. controlled by the firm‖ [Barney, 1991, p.  101]. In relation to EA, three types of resources are 
+primarily of interest: human resources, IT, and  organisational processes. Optimisation could , therefore, involve the 
+removal of duplicated or non -value-adding technology or human resources, and/or replacing them with resources 
+that are more efficient in assisting with the achievement of organisational goals. 
+
+--- PAGE 15 ---
+ 
+ 
+154 
+Volume 28 Article 10 
+How Does EA Help to Optimise the Resource Portfolio? 
+EA can help to identify areas where either resource gaps or overlaps occur and to provide recommendations on how 
+to improve on the existing state [Bernard, 2005; Pereira and Sousa, 2004]. While it  is likely that areas of 
+underinvestment make themselves known through the related business impact, areas of overinvestment may be 
+much less visible. If each business unit with similar needs invests in its own systems, the costs incurred are likely to 
+be significantly higher than when using a single, shared system. However, if the systems are working fine and the 
+costs are manageable, the organisation may remain unaware of the opportunity for cost cutting by leveraging 
+economies of scale. 
+EA planning involv es not only the definition of a future vision, but also an analysis of the current state. By looking 
+across the verticals and horizontals of an organisation, current resource overlaps will become apparent [Boh and 
+Yellin, 2006]. Existing studies suggest th at EA, therefore, contributes to building a more standardised IT platform 
+with fewer technologies, leading in turn to simplified interfaces, higher reliability through reduced operating platform 
+complexity, and lower maintenance and support costs [Boh and Yellin, 2006; Hjort-Madsen, 2006; Richardson et al., 
+1990; Ross et al., 2006; Spewak and Hill, 1992; Venkatesh et al., 2007]. 
+EA may also help to promote the decoupling of monolithic systems to smaller components, which facilitates both 
+reuse as well as fl exibility of reconfiguring or replacing the components as required [Janssen and Hjort -Madsen, 
+2007; Ross et al., 2006]. Componentisation helps in optimising the resource portfolio by reducing the overlaps 
+between individual components and simplifying the r eplacement of components that no longer meet business needs 
+or are more costly to maintain than newer alternatives. Also, the knowledge about the purpose and 
+interdependencies of the components captured in EA documentation makes the replacement process con siderably 
+easier and less risky [Iyer and Gottlieb, 2004]. Finally, the awareness about the components, the stage of their 
+lifecycle, and business impact can also help to better channel investments to resources with the highest value 
+potential in the case of financial constraints [Segars and Grover, 1996]. 
+Through the business analysis that precedes the evaluation of the IT systems, EA can also contribute to the 
+identification of suboptimal business processes and use of human resources [Bernard, 2005; Boh a nd Yellin, 2006; 
+Pereira and Sousa, 2004]. It has also been suggested that as a result of the enterprise -wide optimisation, the 
+organisation may be able to shift the focus of its business processes from a department - or business -unit centric 
+view to increa sed customer-focus, as it gains the ability to share a single view of its customers across the different 
+organisational units [Ross et al., 2006; Venkatesh et al., 2007]. 
+It is necessary to note that while EA plans may have a direct positive on the benefit  enablers discussed earlier 
+(Organisational Alignment and Information Availability), the benefits from Resource Portfolio Optimisation are 
+contingent on the implementation of these plans, or at least parts of it: 
+P3a: An operating platform guided by a high -quality EA is likely to have increased Resource Portfolio 
+Optimisation. 
+Organisational Benefits from Resource Portfolio Optimisation 
+The organisational benefits from Resource Portfolio Optimisation mainly relate to reduced costs and higher 
+efficiencies, which translate to a better return on investment from the organisation‘s resources. Process optimisation, 
+an aspect of Resource Portfolio Optimisation, has been found to have the potential to not only deliver substantial 
+cost savings, but also to improve qu ality and reliability of product and service delivery [Davenport and Short, 1990; 
+Hammer and Champy, 1994; Harrington, 1991]. Based on this literature, it is posited in EABM that firms with higher 
+Resource Portfolio Optimisation are likely to achieve greater organisational benefits (P3b). 
+Resource Complementarity 
+Resource Complementarity is defined as the extent to which the organisation‘s resources synergistically support the 
+pursuit of its strategic goals. The resource -based view (RBV), a well -established and widely accepted theoretical 
+perspective in strategic management, posits that the basis for a firm‘s sustained competitive advantage comes from 
+its control of a set of resources which are rare, valuable, inimitable, difficult to substitute, and relativ ely immobile 
+[Barney, 1991]. While it is very difficult to find individual resources that meet these criteria, once embedded in 
+organisational processes in unique combinations  with other resources , these desirable characteristics become 
+easier to achieve [ Brynjolfsson and Saunders, 2010; Grant, 1996]. A major difficulty in imitating complex resource 
+configurations stems from causal ambiguity, i.e. , it may not be clear which components or interactions underpin the 
+system‘s success [Lippman and Rumelt, 1982; Reed and DeFillippi, 1990]. 
+
+--- PAGE 16 ---
+ 
+ 
+Volume 28 Article 10 155 
+Therefore, the competitive advantage of organisations tends to rely not on individual resources but on unique 
+combinations of complementary resources. The mechanism which helps to make use of these combined resources 
+is sometimes referred to as capabilities —human-based skills and processes that enable an organisation to deploy 
+other resources in order to achieve desired goals [Amit and Schoemaker, 1993]. Capabilities are developed over 
+time through the creation, exchange , and retention of information, and are grounded in the skills, knowledge , and 
+processes of the organisation. Therefore , they cannot be readily sourced from the market [Amit and Schoemaker, 
+1993]. 
+There is a subtle but important difference between Organisational Al ignment and Resource Complementarity in the 
+EABM. Organisational Alignment (Porter‘s [1996] ―first -order fit‖) relates to shared understanding and simple 
+consistency between the activities of the organisational units and the corporate strategy. Resource Co mplementarity 
+(Porter‘s [1996] ―second -order fit‖) occurs when resources synergistically reinforce each other. These reinforcing 
+effects coupled by the difficulty in imitating such combinations, lead to different organisational benefits from the two 
+benefit enablers. 
+How Does EA Improve Resource Complementarity? 
+The primary mechanism through which EA helps an organisation to improve Resource Complementarity is through 
+the identification of the potential enterprise -wide synergies, and by providing recommenda tions on how to leverage 
+these synergies. In one of the most influential articles on RBV, Prahalad and Hamel [1990, p.  89] suggest that the 
+fragmentation of resources is inevitable if proper measures are not taken to ensure complementarity, and that the 
+key mechanism in ensuring complementarity is the development of ―a corporatewide strategic architecture that 
+establishes objectives for competence building. A strategic architecture is a road map of the future that identifies 
+which core competencies to build  and their constituent technologies.‖ The importance of EA in enabling increased 
+Resource Complementarity has also been later discussed by King [1995].  
+Many of the mechanisms through which EA may help to enhance Resource Complementarity are similar to thos e 
+discussed in relation to Resource Portfolio Optimisation. Both depend on the organisation -wide analysis and 
+identification of resources and their interdependencies. Both benefit from the reduction of overlaps between 
+resources achieved through componenti sation. However, while the primary focus of Resource Portfolio Optimisation  
+is on reducing redundancy related to resource duplication and overlaps and improving the quality of these 
+resources, Resource Complementarity focuses on leveraging synergies between the resources and combining them 
+in ways that enhance performance and are difficult for competitors to replicate. As noted by Henderson and Clark 
+[1990], improvements in a system can stem from either the introduction of superior components (component 
+innovation) or an enhanced reconfiguration of components (architectural innovation). Resource Portfolio 
+Optimisation focuses on the former, whereas Resource Complementarity focuses on the latter. Therefore, in 
+proposing the EABM, resource complementarity and optimisation are treated as two distinct benefit enablers. 
+Similarly to Resource Portfolio Optimisation, the achievement of Resource Complementarity is contingent on the 
+implementation of EA: 
+P4a: An operating platform guided by a high-quality EA is likely to have increased Resource Complementarity. 
+Organisational Benefits from Resource Complementarity 
+As discussed above, the major organisational benefit from Resource Complementarity is potential competitive 
+differentiation from achieving a mutually reinfor cing resource configuration that is difficult to replicate [Brynjolfsson 
+and Saunders, 2010]. The exact tangible benefits from Resource Complementarity are dependent on the 
+competitive strategy of the organisation, which determines the desirable resource c onfiguration to pursue. It has 
+been suggested that the three key ways in which organisations can compete are a focus on (1) operational 
+excellence (reliable, conveniently accessible, and low -cost products/services), (2) customer intimacy (highly 
+personalised products and services), or (3) product leadership (innovative, ―state -of-the-art‖ products/services) 
+[Treacy and Wiersema, 1993]. For a company pursuing operational excellence, the result of Resource 
+Complementarity could be a superior cost position, ac hieved through combining resources in a way which cuts 
+overheads to a minimum while retaining the desired product/service standards. On the other hand, a company 
+pursuing a customer -intimate strategy would want to make sure that its resources complement ea ch other in a way 
+that delivers a single view of the customer, helps to gather superior customer information and feedback, and 
+ensures consistency of customer service organisation -wide. Based on this literature, it is posited in EABM that firms 
+with higher Resource Complementarity are likely to achieve greater organisational benefits (P4b).  
+
+--- PAGE 17 ---
+ 
+ 
+156 
+Volume 28 Article 10 
+Contextual Factors and the Value Potential of EA 
+An important question related to understanding how EA leads to organisational benefits is whether all organisations 
+can expect to get similar value from EA, or whether benefits vary from organisation to organisation based on 
+contextual, i.e., internal or environmental, factors. Both an analysis of the four benefit enablers in EABM, as well as 
+existing EA research, suggest t hat some organisations under some circumstances are better positioned to benefit 
+from EA investment. 
+For example, it has been suggested that larger organisations with more complex IT environments may expect to 
+benefit more from EA than those whose operatin g platform is relatively simple and well -understood [Bernard, 2005]. 
+The benefit enablers discussed earlier appear to support this proposition. First, large and more complex 
+organisations are likely to have a more diverse resource portfolio. This means tha t they may be able to derive more 
+benefits from Resource Portfolio Optimisation. Second, large organisations with complex structures are more likely 
+to experience problems with alignment, increasing the potential impact of the Organisational Alignment bene fit 
+enabler. 
+The quality of the existing operating platform is another factor suggested in earlier research to affect the extent of 
+potential benefits from EA [Bernard, 2005]. For example, high redundancy or quality issues provide larger potential 
+gains fr om Resource Portfolio Optimisation. Also, the performance gaps may leave more opportunities for 
+improvements in Information Availability. 
+Another important contextual factor discussed by Ross et al. [2006] is the organisation‘s operating model. According 
+to Ross et al., a firm‘s operating model is determined by two independent choices —the level of desired 
+standardisation (commonality of processes and systems), and integration (sharing of data) across the organisation. 
+The authors mention that organisations with low levels of standardisation and integration can benefit from EA if they 
+choose to standardise or integrate certain aspects of their foundation [Ross et al., 2006, p p. 56–57]. It is implicit in 
+this argument that the higher the level of desired stand ardisation and/or integration, the higher the extent of potential 
+benefits that an organisation can expect from EA. In terms of the EABM, standardisation is closely related to 
+Resource Portfolio Optimisation, and integration to both Information Availabilit y and Organisational Alignment. 
+Spewak and Hill [1992] argue that the higher the rate of organisational change, the greater the benefits from EA. 
+This is probably based on the claim that EA can improve an organisation‘s flexibility and change capability. B oth 
+Resource Portfolio Optimisation and Information Availability help to explain why organisations undergoing larger 
+changes can benefit more from EA. Understanding of the interdependencies of processes and IT systems (an 
+aspect of Information Availability ) becomes more essential when an organisation needs to start making changes to 
+these components. Also, the fewer interdependencies and components there are (i.e. , the more optimised the 
+resource portfolio), the cheaper and less risky it is to make changes to the environment. 
+There are also environmental factors, which may affect the extent of potential benefits from EA. For example, the 
+legislation and regulations governing a particular industry can be an important factor. In some cases EA may simplify 
+compliance [Ross et al., 2006; Winter and Fischer, 2006], whereas in others it can even be mandatory (e.g. , Clinger-
+Cohen Act in the USA), making EA an ―organisational benefit‖ per se. The information intensity of a given industry 
+appears also likely to affect  the extent of potential benefits from EA. Specifically, Information Availability is more 
+critical for organisations that rely heavily on information in providing products or services to their customers or for 
+whom information is the key product or service they provide. 
+V. LIMITATIONS AND OPPORTUNITIES FOR RESEARCH 
+This study has taken a step towards improving the understanding of how EA leads to organisational benefits through 
+a careful review of the EA literature and by identifying relevant theoretical ex planations from established IS and 
+management theories. We hope that the Enterprise Architecture Benefits Model and related discussion provides 
+useful insights for both academics and practitioners interested in EA, and serves as a platform for future studi es on 
+EA benefits. Some suggested opportunities for future research are presented below, discussed in the light of the 
+EABM and other findings of this study. 
+Possibly the most important shortcoming in existing research on EA benefits is the lack of rigorou s empirical 
+validation of the benefit claims. For example, of the fifty studies analysed as part of the systematic review, forty -one 
+made EA benefit claims, while only six provided some empirical evidence to support the claims. The current study 
+has taken a step towards improving the theoretical explanation of the benefit claims. The next important step would 
+be to explore whether empirical evidence supports the nine propositions. Both qualitative studies that explore the 
+proposed relationships in -depth, as  well as quantitative studies to test the proposed relationships based on a 
+broader sample would be beneficial. A further line of enquiry would be to explore the interrelationships between the 
+
+--- PAGE 18 ---
+ 
+ 
+Volume 28 Article 10 157 
+benefit enablers. For example, could Resource Complementarity b e an outcome of Organisational Alignment and 
+Resource Portfolio Optimisation? Does Information Availability lead to Resource Portfolio Optimisation and 
+Organisational Alignment? 
+A challenge faced in this study arose from the interdependencies between facto rs. Therefore, another useful theme 
+for future study is the grouping of the different benefit enablers. Is the EABM complete? Are there factors beyond 
+those identified in the EABM that should be added to the benefit enablers? Are there better ways to group  the 
+benefit enablers? Although we performed a careful analysis, as explained in Section II, there is no theoretical basis 
+for concluding that the model is complete. While the EABM is in our opinion a considerable advance over the 
+existing explanations of how EA leads to organisational benefits, both further empirical and conceptual work could 
+undoubtedly help to improve on this first attempt. 
+An important question that has so far not been well -addressed is the impact of EA on the operating platform. An 
+empirical study focusing on this question, preferably quantitative or using a multi -case approach, may, therefore, be 
+another potential avenue for research. While it has been suggested that certain benefits flow directly from EA, 
+regardless of implementation, the very limited discussion of these benefits offers another interesting line of empirical 
+enquiry. A quantitative study looking at how often EA plans get implemented, and how often they get used in 
+organisational decision-making, even if not implemented, could provide useful insights on this question. 
+Another important and promising theme for future research is the question: What are the key factors that affect the 
+extent of potential benefits an organisation can expect from EA? Although a number of organ isational and 
+environmental factors that affect benefits have been suggested, no study appears to have systematically compared 
+the different factors. This leaves open the question of whether all of the mentioned factors are important, or whether 
+some have a higher impact than others. 
+Finally, while this study has proposed some potential approaches for the assessment of EA quality, further studies 
+could contribute by substantially enhancing and validating the quality measures. Comparing the accuracy of diffe rent 
+measures and measurement approaches, and identifying those that provide the best cost -accuracy balance would 
+not only benefit academic studies on EA, but may also provide useful insights for organisations in evaluating the 
+quality of their EA efforts. 
+From an academic perspective, finding answers to the questions above would help to explain why organisations find 
+EA to be useful, what kind of organisations may benefit the most from EA, and if and how EA is superior to 
+alternative, shorter-term or narro wer-scope planning approaches. From a practical perspective, the answers would 
+enable organisations to understand what benefits they might realistically expect from EA, to assess whether these 
+are relevant to them, and accordingly to make better -informed decisions on the appropriate level of investment in 
+EA. This may also give organisations an improved basis for justifying the EA investment choices —an issue with 
+which many organisations are currently struggling [Obitz and Babu K, 2009].  
+VI. CONCLUSION 
+Through a careful review of EA literature and related academic theory, this study has proposed an enhanced 
+explanation of how EA leads to organisational benefits. The EA Benefits Model posits that it is through 
+improvements in Organisational Alignment, Informa tion Availability, Resource Complementarity, and Resource 
+Portfolio Optimisation that EA leads to organisational benefits. These benefits may include lower costs, higher 
+strategic agility, and a more reliable operating platform. It appears that large organ isations with a complex IT 
+environment, whose business model favours high levels of organisation -wide standardisation and integration, can 
+expect to benefit the most from EA. 
+This study has also provided some recommended opportunities for future research t o improve the understanding of 
+the role and value of EA. In particular, empirical studies to test and enhance the proposed EABM, to develop a 
+better understanding of the role of EA in guiding the operating platform, to study the extent to which EA plans ar e 
+used in organisational decision -making, and to explore the contextual factors that affect the value of EA for different 
+organisations would help to enhance the current state of knowledge. Such studies would lead to better 
+understanding of the value poten tial of EA, and of how organisations can maximise the likelihood of deriving these 
+potential benefits. 
+ 
+
+--- PAGE 19 ---
+ 
+ 
+158 
+Volume 28 Article 10 
+REFERENCES 
+Editor’s Note : The following reference list contains hyperlinks to World Wide Web pages. Readers who have the 
+ability to access the Web direc tly from their word processor or are reading the article on the Web, can gain direct 
+access to these linked references. Readers are warned, however, that: 
+1. These links existed as of the date of publication but are not guaranteed to be working thereafter.  
+2. The contents of Web pages may change over time. Where version information is provided in the 
+References, different versions may not contain the information or the conclusions referenced.  
+3. The author(s) of the Web pages, not AIS, is (are) responsible for the accuracy of their content. 
+4. The author(s) of this article, not AIS, is (are) responsible for the accuracy of the URL and version 
+information. 
+ 
+Alhanasiadis, I.N. (2008) ―Towards a Virtual Enterprise Architecture for the Environmental Sector ‖ in Protogeros, N. 
+(ed.) Agent and Web Service Technologies in Virtual Enterprises , chapter XV , Hershey, PA: IGI Global, pp. 
+256–266. 
+Ambler, S.W., J. Nalbone, and M.J. Vizdos (2005) The Enterprise Unified Process: Extending the Rational Unified 
+Process, Upper Saddle River, NJ: Prentice Hall PTR, chapter 9. 
+Amit, R. and P.J. Schoemaker (1993) ― Strategic Assets and Organizational Rent‖, Strategic Management Journal  
+(14)1, pp. 33–46. 
+Armour, F.J., S. Kaisler, and S. Liu (1999) ―Building an Enterprise Architecture Step by Step ‖, IT Professional (1)4, 
+pp. 31–39. 
+Association for Information Systems (n.d.) ―Senior Scholars‘ Basket of Journals ‖, 
+http://home.aisnet.org/displaycommon.cfm?an=1&subarticlenbr=20346 (current August 18, 2009). 
+Aziz, S. and T. Obitz (2007) ―Enterprise Architecture Is Maturing. Infosys Enterprise Architecture Survey 2007 ‖, 
+Survey, Infosys , http://www.infosys.com/offerings/IT-services/architecture-services/ea-survey/Documents/ea-
+maturing.pdf (current August 18, 2009). 
+Barnett, W. et al.  (1994) ―An Architecture for the Virtual Enterprise ‖, 1994 IEEE Internationa l Conference on 
+Systems, Man, and Cybernetics, San Antonio, TX, (1), pp. 506–511. 
+Barney, J. (1991) ―Firm Resources and Sustained Competitive Advantage ‖, Journal of Management  17(1), pp. 99 –
+120. 
+Bernard, S.A. (2005) An Introduction to Enterprise Architecture, 2nd edition, Bloomington, IN: AuthorHouse. 
+Bernus, P. and L. Nemes (1996) ―A Framework to Define a Generic Enterprise Reference Architecture and 
+Methodology‖, Computer Integrated Manufacturing Systems (9)3, pp. 179–191. 
+Bernus, P., L. Nemes, and T.J. W illiams (eds.) (1996)  Architectures for Enterprise Integration , London, New York: 
+Chapman & Hall. 
+Bernus, P., L. Nemes, and G. Schmidt (eds.) (2003)  Handbook on Enterprise Architecture , Heidelberg, Germany: 
+Springer-Verlag. 
+Boh, W. and D. Yellin (2006) ―Us ing Enterprise Architecture Standards in Managing Information Technology ‖, 
+Journal of Management Information Systems (23)3, pp. 163–207. 
+Boster, M., S. Liu, and R. Thomas (2000) ―Getting the Most from Your Enterprise Architecture ‖, IT Professional  
+(July–August), pp. 43–50. 
+Braun, C. and R. Winter (2005) ―A Comprehensive Enterprise Architecture Metamodel and Its Implementation Using 
+a Metamodeling Platform ‖, Proceedings of the Workshop on Enterprise Modelling and Information Systems 
+Architectures, Verlag Ritter, Austria: Klagenfurt, 2005, pp. 64–79. 
+Brynjolfsson, E. and A. Saunders (2010) Wired for Innovation, Cambridge, MA: The MIT Press. 
+Carlock, P. and R. Fenton (2001) ―System of Systems (SoS) Enterprise Systems Engineering for Information -
+Intensive Organizations‖, Systems Engineering (4)4. 
+Chan, Y.E. and B.H. Reich (2007a) ―IT Alignment: What Have We Learned?‖ Journal of Information Technology  
+(22)4, pp. 297–315. 
+Chan, Y.E. and B.H. Reich (2007b) ―IT Alignment: An Annotated Bibliography‖, Journal of Inform ation Technology  
+(22)4, pp. 316–396. 
+
+--- PAGE 20 ---
+ 
+ 
+Volume 28 Article 10 159 
+Chan, Y.E., R. Sabherwal, and J.B. Thatcher (2006) ―Antecedents and Outcomes of Strategic IS Alignment: An 
+Empirical Investigation‖, IEEE Transactions on Engineering Management (51)3, pp. 27–47. 
+Chen, D., B. Vallespir, and G. Doumeingts (1997) ―GRAI Integrated Methodology and Its Mapping onto Generic 
+Enterprise Reference Architecture and Methodology‖, Computers in Industry (33)2–3, pp. 387–394. 
+Chen, D., G. Doumeingts, and F.B. Vernadat (2008) ―Architectures for Enterpri se Integration and Interoperability: 
+Past, Present and Future‖, Computers in Industry (59)7, pp. 647–659. 
+Cummins, F.A. (2002)  Enterprise Integration: An Architecture for Enterprise Application and Systems Integration , 
+Hoboken, NJ: John Wiley & Sons. 
+Davenport, T.H. and J.G. Harris (2007) Competing on Analytics: The New Science of Winning , Cambridge, MA: 
+Harvard Business School Press. 
+Davenport, T.H., J.G. Harris, and T. Morison (2010) Analytics at Work: Smarter Decisions, Better Results , 
+Cambridge, MA: Harvard Business Press. 
+Davenport, T.H. and J.E. Short (1990) ―The New Industrial Engineering: Information Technology and Business 
+Process Redesign‖, Sloan Management Review (31)4, pp.11–27. 
+El Sawy, O. A. et al. (1999) ―IT -Intensive Value Innovation in the El ectronic Economy: Insights from Marshall 
+Industries‖, MIS Quarterly (23)3, pp. 305–335. 
+Finney, S. and M. Corbett (2007) ―ERP Implementation: A Compilation and Analysis of Critical Success Factors‖, 
+Business Process Management Journal (13)3, pp. 329–347. 
+Gartner (2005) ―Gartner Survey of 1,300 CIOs Shows IT Budgets to Increase by 2.5 Percent in 2005 ‖, 
+http://www.gartner.com/it/page.jsp?id=492096 (current August 18, 2009). 
+Gartner (2006) ―Gartner Survey of 1,400 CIOs Shows Transformation of IT Organisation is Accelerating ‖, 
+http://www.gartner.com/it/page.jsp?id=492238 (current August 18, 2009). 
+Gartner (2007) ―Gartner EXP Survey of More than 1,400 CIOs Shows CIOs Must Create Leverage to Remain 
+Relevant to the Business‖, http://www.gartner.com/it/page.jsp?id=501189 (current August 18, 2009). 
+Gartner (2008) ―Gartner EXP Worldwid e Survey of 1,500 CIOs Shows 85 Percent of CIOs Expect ‗Significant 
+Change‘ Over Next Three Years‖, http://www.gartner.com/it/page.jsp?id=587309 (current August 18, 2009). 
+Gartner (2009) ―Gartne r EXP Worldwide Survey of More than 1,500 CIOs Shows IT Spending to Be Flat in 2009 ‖, 
+http://www.gartner.com/it/page.jsp?id=855612 (current August 18, 2009). 
+Grant, R.M. (1996) ―Toward a Knowled ge-Based Theory of the Firm ‖, Strategic Management Journal  (17)Winter 
+Special Issue, pp. 109–122. 
+Gregor, S., D. Hart, and N. Martin (2007) ―Enterprise Architectures: Enablers of Business Strategy and IS/IT 
+Alignment in Government‖, Information Technology & People (20)2, pp. 96–120. 
+Guijarro, L. (2007) ―Interoperability Frameworks and Enterprise Architectures in E -Government Initiatives in Europe 
+and the United States‖, Government Information Quarterly (24)1, pp. 89–101. 
+Hammer, M. and J. Champy (1994) Reengineering the Corporation: A Manifesto for Business Revolution , New York, 
+NY: HarperBusiness. 
+Harmon, P., M. Rosen, and M. Guttman (2001) Developing E -Business Systems and Architectures: A Manager's 
+Guide, Burlington, MA: Morgan Kaufmann, chapter 6, pp. 141–167. 
+Harrington, H.J. (1991) Business Process Improvement: The Breakthrough Strategy for Total Quality, Productivity, 
+and Competitiveness, New York, NY: McGraw-Hill Professional. 
+Hay, D.C. (2003)  Requirements Analysis: From Business Views to Architecture , Upper Saddle River, NJ:  Prentice 
+Hall PTR. 
+Henderson, J.C. and N. Venkatraman (1993) ―Strategic Alignment: Leveraging Information Technology for 
+Transforming Organisations‖, IBM Systems Journal (32)1, pp. 4–16. 
+Henderson, R.M. and K.B. Clark (1990) ―Arch itectural Innovation: The Reconfiguration of Existing Product 
+Technologies and the Failure of Established Firms‖, Administrative Science Quarterly (35)1, pp. 9–30. 
+Hoque, F. (2000) E-Enterprise: Business Models, Architecture, and Components , New York , NY : Cambridge 
+University Press, chapter 6, pp. 173–201. 
+
+--- PAGE 21 ---
+ 
+ 
+160 
+Volume 28 Article 10 
+Humphries, M., M.W. Hawkins, and M.C. Dy (1999) Data Warehousing: Architecture and Implementation , Upper 
+Saddle River, NJ: Prentice Hall PTR, chapter 1. 
+Iyer, B. and R. Gottlieb (2004) ―The Four -Domain Ar chitecture: An Approach to Support Enterprise Architecture 
+Design‖, IBM Systems Journal (43)3, pp. 587–597. 
+Janssen, M. and K. Hjort -Madsen (2007) ―Analyzing Enterprise Architecture in National Governments: The Cases of 
+Denmark and the Netherlands ‖, Proceedings of the 40th Hawaii International Conference on System 
+Sciences, p. 218a. 
+Johnson, P. and M. Ekstedt (2007)  Enterprise Architecture: Models and Analyses for Information Systems Decision 
+Making, Lund, Sweden: Studentlitteratur. 
+Johnson, P. et al. (2004 ) ―Using Enterprise Architecture for CIO Decision -Making: On the Importance of Theory ‖, 
+Proceedings of the 2nd Annual Conference on Systems Engineering Research (CSER) . 
+Johnson, P. et al. (2007) ―Enterprise Architecture Analysis with Extended Influence Dia grams‖, Information Systems 
+Frontiers (9)2–3, pp. 163–180. 
+Jonkers, H. et al. (2003) ―Towards a Language for Coherent Enterprise Architecture Descriptions ‖, Proceedings of 
+the 7th IEEE International Enterprise Distributed Object Computing Conference (EDOC) , pp. 28–37. 
+Jonkers, H. et al.  (2004) ―Concepts for Modeling Enterprise Architectures ‖, International Journal of Cooperative 
+Information Systems (13)3, pp. 257–287. 
+Kaisler, S., F.J. Armour, and M. Valivullah (2005) ―Enterprise Architecting: Critical Prob lems‖, Proceedings of the 
+38th Annual Hawaii International Conference on System Sciences, p. 224b. 
+Kappelman, L.A. (ed.) (2010) The SIM Guide to Enterprise Architecture, New York, NY: CRC Press. 
+Kearns, G.S. and A.L. Lederer (2003) ―A Resource -Based View of Strategic IT Alignment: How Knowledge Sharing 
+Creates Competitive Advantage‖, Decision Sciences (34)1, pp. 1–29. 
+Kettinger, W.J., D.A. Marchand, and J.M. Davis (2010) ―Designing Enterprise IT Architectures to Optimize Flexibility 
+and Standardization in Global Business―, MIS Quarterly Executive (9)2, pp. 95–113. 
+King, W.R. (1995) ―Creating a Strategic Capabilities Architecture‖, Information Systems Management (12)1. 
+Kosanke, K., F.B. Vernadat, and M. Zelm (1999) ―CIMOSA: Enterprise Engineering and Integrat ion‖, Computers in 
+Industry (40)2–3, pp. 83–97. 
+Lankhorst, M.M. (2005)  Enterprise Architecture at Work: Modelling, Communication, and Analysis , Heidelberg, 
+Germany: Springer-Verlag. 
+Lee, Y.W. et al.  (2002) ―AIMQ: A Methodology for Information Quality Assessment‖, Information & Management  
+(40)2, pp. 133–146. 
+Liles, D. and A. Presley (1996) ―Enterprise Modeling Within an Enterprise Engineering Framework ‖ in Charnes, J.M. 
+et al. (eds.) Proceedings of the 1996 Winter Simulation Conference, pp. 993–999. 
+Lindström, Å. et al. (2006) ―A Survey on CIO Concerns —Do Enterprise Architecture Frameworks Support Them?‖  
+Information Systems Frontiers (8)2, pp. 81–90. 
+Lippman, S.A. and R.P. Rumelt (1982) ―Uncertain Imitability: An Analysis of Interfirm Differences in Efficienc y Under 
+Competition‖, The Bell Journal of Economics (13)2, pp. 418–438. 
+McGovern, J. et al.  (2006) Enterprise Service Oriented Architectures: Concepts, Challenges, Recommendations , 
+New York, NY: Springer. 
+McGovern, J. et al. (2004) A Practical Guide to Enterprise Architecture, Upper Saddle River, NJ: Prentice Hall. 
+Miller, D. (1986) ―Configurations of Strategy and Structure: Towards a Synthesis‖, Strategic Management Journal  
+(7)3, pp. 233–249. 
+Obitz, T. and M. Babu K (2009) ―Enterprise Architecture Expands its Role in Strategic Business Transformation: 
+Infosys Enterprise Architecture Survey 2008/2009 ‖, Survey, Infosys , http://www.infosys.com/offerings/IT-
+services/architecture-services/ea-survey/Pages/index.aspx (current August 19, 2009). 
+O‘Rourke, C., N. Fishman, and W. Selkow (2003)  Enterprise Architecture Using the Zachman Framework , Boston, 
+MA: Thomson Course Technology. 
+Parr, A.N., G.G. Shanks, and  P. Darke (1999) ―Identification of Necessary Factors for Successful Implementation of 
+ERP Systems‖, Proceedings of the IFIP TC8 WG8.2, pp. 99–120 
+
+--- PAGE 22 ---
+ 
+ 
+Volume 28 Article 10 161 
+Pereira, C.M. and P. Sousa (2004) ―A Method to Define an Enterprise Architecture Using the Zachman Framework‖, 
+Proceedings of the 2004 ACM Symposium on Applied Computing, pp. 1366–1371. 
+Peristeras, V. and K. Tarabanis (2000) ―Towards an Enterprise Architecture for Public Administration Using a Top -
+Down Approach‖, European Journal of Information Systems (9)4, pp. 252–260. 
+Perks, C. and T. Beveridge (2003) Guide to Enterprise IT Architecture, New York, NY: Springer. 
+Porter, M.E. (1996) ―What Is a Strategy?‖ Harvard Business Review (74)6, pp. 61–78. 
+Prahalad, C. and G. Hamel (1990) ―The Core Competence of the Corpora tion‖, Harvard Business Review (68)3, pp. 
+79–91. 
+Pulkkinen, M. (2006) ―Systemic Management of Architectural Decisions in Enterprise Architecture Planning. Four 
+Dimensions and Three Abstraction Levels ‖, HICSS '06: Proceedings of the 39th Annual Hawaii Inter national 
+Conference on System Sciences, pp. 179a–179a. 
+Reed, R. and R.J. DeFillippi (1990) ―Causal Ambiguity, Barriers to Imitation, and Sustainable Competitive 
+Advantage‖, The Academy of Management Review (15)1, pp. 88–102. 
+Reynolds, P., A. Thorogood, and  P. Yetton (2010) "Allocation of IT Decision Rights in Multibusiness Organizations: 
+What Decisions, Who Makes Them, and When Are They Taken?" ICIS 2010 Proceedings, Paper 169. 
+Richardson, G., B. Jackson, and G. Dickson (1990) ―A Principles -Based Enterprise  Architecture: Lessons from 
+Texaco and Star Enterprise‖, MIS Quarterly (14)4, pp. 385–403. 
+Ross, J.W. (2003) ―Creating a Strategic IT Architecture Competency: Learning in Stages ‖, MIS Quarterly Executive  
+(2)1, pp. 31–43. 
+Ross, J.W. and G. Westerman (2004) ―Preparing for Utility Computing: The Role of IT Architecture and Relationship 
+Management‖, IBM Systems Journal (43)1, pp. 5–19. 
+Ross, J.W., P. Weill, and D.C. Robertson (2006)  Enterprise Architecture As Strategy: Creating a Foundation for 
+Business Execution, Boston, MA: Harvard Business School Press. 
+Ruh, W.A., F.X. Maginnis, and W.J. Brown (2001) Enterprise Application Integration: A Wiley Tech Brief , Hoboken, 
+NJ: John Wiley & Sons, chapter 7, pp. 131–151. 
+Sabherwal, R. and Y.E. Chan (2001) ―Alignment Bet ween Business and IS Strategies: A Study of Prospectors, 
+Analyzers, and Defenders‖, Information Systems Research (12)1, pp. 11–33. 
+Salmans, B. and L.A. Kappelman (2010) ―The State of EA: Progress, Not Perfection ‖ in Kappelman, L.A. (ed.) The 
+SIM Guide to Enterprise Architecture, pp. 165–217. 
+Schekkerman, J. (2006) How to Survive in the Jungle of Enterprise Architecture Frameworks: Creating or Choosing 
+an Enterprise Architecture Framework, 3rd edition, Bloomington, IN: Trafford. 
+Segars, A.H. and V. Grover (1 996) ―Designing Company-Wide Information Systems: Risk Factors and Coping 
+Strategies‖, Long Range Planning (29)3, pp. 381–392. 
+Sowa, J. and J.A. Zachman (1992) ―Extending and Formalizing the Framework for Information -Systems 
+Architecture‖, IBM Systems Journal (31)3, pp. 590–616. 
+Spewak, S.H. and S.C. Hill (1992)  Enterprise Architecture Planning: Developing a Blueprint for Data, Applications, 
+and Technology, Hoboken, NJ: John Wiley & Sons. 
+Tapscott, D. and A. Caston (1993)  Paradigm Shift: The New Promise of Information Technology , New York , NY: 
+McGraw-Hill. 
+The Open Group (2009) The Open Group Architecture Framework (TOGAF), Version 9. 
+Treacy, M. and F. Wiersema (1993) ―Customer Intimacy and Other Value Disciplines ‖, Harvard Business Review  
+(71), pp. 84–93. 
+Venkatesh, V. et al. (2007) ―Enterprise Architecture Maturity: The Story of the Veterans Health Administration ‖, MIS 
+Quarterly Executive (6)2, pp. 79–90. 
+Vernadat, F. (2007) ―Interoperable Enterprise Systems: Principles, Concepts, and Methods ‖, Annual Revie ws in 
+Control (31)1, pp. 137–145. 
+Wang, R.W. and D.M. Strong (1996) ―Beyond Accuracy: What Data Quality Means to Data Consumers‖, Journal of 
+Management Information Systems (12)4, pp. 5–34. 
+
+--- PAGE 23 ---
+ 
+ 
+162 
+Volume 28 Article 10 
+Wegmann, A. (2003) ―On the Systemic Enterprise Architecture Methodo logy (SEAM)‖, International Conference on 
+Enterprise Information Systems (ICEIS), pp. 483–490. 
+Weill, P. and J.W. Ross (2004) IT Governance: How Top Performers Manage IT Decision Rights for Superior 
+Results, Cambridge, MA: Harvard Business School Press. 
+Whitman, L., K. Ramachandran, and V. Ketkar (2001) ―A Taxonomy of a Living Model of the Enterprise ‖, 
+Proceedings of the 2001 Winter Simulation Conference, pp. 848–855. 
+Winter, R. and R. Fischer (2006) ―Essential Layers, Artifacts, and Dependencies of Enterpr ise Architecture ‖, 
+Proceedings of the 10th IEEE Conference on International Enterprise Distributed Object Computing 
+Workshops, p. 30. 
+Woods, D. and T. Mattern (2006) Enterprise SOA: Designing IT for Business Innovation, Cambridge, MA: O'Reilly. 
+Youngs, R. et al. (1999) ―A Standard for Architecture Description‖, IBM Systems Journal (38)1, pp. 32–50. 
+Zachman, J.A. (1987) ―A Framework for Information Systems Architecture ‖, IBM Systems Journal  (26)3, pp. 276 –
+292. 
+Zachman, J.A. (1997) ―Enterprise Architecture: The Issue of the Century‖, Database Programming and Design. 
+Zachman, J.A. (2001) ―You Can't ‗Cost -Justify‘ Architecture ‖, Zachman International , 
+http://www.aeablogs.org/eakd/files/You_Cant_Justify_Architecture.pdf (current August 24, 2009). 
+Zachman, J.A. (2010) ―Architecture Is Architecture Is Architecture ‖ in Kappelman, L.A. (ed.) The SIM Guide to 
+Enterprise Architecture, pp. 37–45. 
+Zachman, J.A. (n.d.) ―Enterprise Archite cture FAQs ‖, http://zachmaninternational.com/index.php/home-
+article/11#faq1 (current April 19, 2009). 
+
+--- PAGE 24 ---
+ 
+ 
+Volume 28 Article 10 163 
+APPENDIX 1: STUDIES ANALYSED IN THE SYSTEMATIC LITERATURE REVIEW 
+Table A1 presents a summary of the fifty studies that were analysed as part of the systematic literature review. The 
+table lists the publications, their total and average citation counts, and the key theme(s) covered. The last column 
+indicates whether or not EA benefit claims were presented in the study and if yes, whether empirical evidence (**), 
+or references (*) were provided to support these claims. 
+Table A1: Publications Analysed in the Systematic Literature Review 
+Study 
+Citation count Primary themes EA benefit 
+claims Total Avg. 
+annual 
+Planning Artefacts Benefits Success 
+factors 
+Alhanasiadis [2008] 6 6.0      
+Ambler et al. [2005] 28 7.0      
+Armour et al. [1999] 29 2.9      
+Barnett et al. [1994] 34 2.3      
+Bernard [2005] 32 8.0      
+Bernus and Nemes [1996] 56 4.3      
+Bernus et al. [1996] 92 7.1      
+Bernus et al. [2003] 50 8.3      
+Braun and Winter [2005] 23 5.8      
+Carlock and Fenton [2001] 30 3.8      
+Chen et al. [1997] 38 3.2      
+Chen et al. [2008] 5 5.0      
+Cummins [2002] 85 12.1      
+El Sawy et al. [1999] 103 10.3      
+Guijarro [2007] 23 11.5      
+Harmon et al. [2001] 35 4.4      
+Hay [2003] 36 5.1      
+Hoque [2000] 69 7.7      
+Humphries et al. [1999] 33 3.3      
+Iyer and Gottlieb [2004] 35 7.0      (*) Janssen and Hjort-Madsen [2007] 14 7.0      (**) Johnson et al. [2004] 29 5.8      
+Johnson et al. [2007] 23 11.5      
+Jonkers et al. [2003] 43 7.2      
+Jonkers et al. [2004] 47 9.4      
+Kaisler et al. [2005] 25 6.3      
+Kosanke et al. [1999]  104 10.4      (**) Lankhorst [2005] 125 31.3      
+Liles and Presley [1996]  31 2.4      
+Lindström et al. [2006] 18 6.0      (*) McGovern et al. [2004] 59 9.8      
+O'Rourke et al. [2003] 48 8.0      
+Pereira and Sousa [2004] 36 7.2      (*) Peristeras and Tarabanis [2000] 50 5.6      
+Perks and Beveridge [2003] 42 7.0      
+Pulkkinen [2006] 17 5.7      (**) Richardson et al. [1990] 44 2.3      (**) Ross and Westerman [2004] 46 9.2      (**) Ross et al. [2006] 59 19.7      (**) Ruh et al. [2001] 233 29.1      
+Schekkerman [2006] 108 21.6      
+Spewak and Hill [1992] 190 11.9      
+Tapscott and Caston [1993] 64 5.8      
+Vernadat [2007] 10 5.0      
+Wegmann [2003] 59 9.8      
+Whitman et al. [2001] 25 3.1      (*) Winter and Fischer [2006] 29 9.7      
+Woods and Mattern [2006] 39 13.0      
+Youngs et al. [1999] 35 3.5      
+Zachman [1997] 94 7.8      
+Total: 50 studies 2588  19 42 9 18 41 
+
+--- PAGE 25 ---
+ 
+ 
+164 
+Volume 28 Article 10 
+APPENDIX 2: HOW DOES EA DELIVER BENEFITS? 
+The five diagrams below present an overview of some of the existing explanations of how EA leads to organisational 
+benefits. It is important to note that in none of the five cases was a diagrammatic summary (e.g. , in the form of a 
+research model) presented by the original author(s). Figures A2.1 –2.5 rely on the analysis of the verbal discussion 
+and explanations, and may, therefore, not entirely accurately and/or completely capture the original authors‘ 
+thinking. However, we hav e aimed to provide as impartial and precise overview of the claims made in the original 
+five studies as possible. The purpose of these diagrams was to assist in obtaining a concise overview of the EA 
+benefit-related claims and proposed explanations about h ow EA leads to benefits. We believe that these diagrams 
+may provide useful summaries and reference for future studies and, therefore, have included them in this report. 
+The solid arrows in the diagrams represent explicitly stated associations and dotted ar rows represent associations 
+that were strongly implicit in the authors‘ arguments. 12 For example, Figure A2.4 is an attempt to summarise the EA 
+benefit claims from Ross et al. [2006]. It shows a process model consisting of twenty-three concepts (represented as 
+boxes) arranged in five columns. The left -most two columns in Figure A2.4 present Ross et al.‘s [2006] key 
+argument, which says that an organisation‘s operating model should determine its enterprise architecture, which, in 
+turn, should guide the buildi ng of its foundation for execution (i.e ., the operating platform). The middle column in 
+Figure A2.4 summarises Ross et al.‘s arguments, presented on pp.  94–99 of their book, that organisations with an 
+appropriate foundation for execution have higher levels  of componentisation and reuse, standardisation and 
+reduction of technologies, increase in shared IT services, and increased business -IT alignment. Moving right one 
+column, eight IT-related benefits are shown (e.g., increased IT responsiveness and reduced development time) that 
+Ross et al. claim on p . 2 and pp.  94–99 ultimately lead to greater senior management satisfaction with IT and 
+greater ROI from IT. Finally, at the far right are business benefits , such as strategic agility and better operational 
+excellence, that Ross et al. claim flow from EA, and which it is asserted on p . 2, ultimately lead to greater 
+profitability. Connections between these business benefits and IT benefits in the previous column are strongly 
+implicit in the discussion on p. 100 of Ross et al. [2006]. 
+ 
+Figure A2.1. Adapted from Bernard [2005] 
+ 
+                                                      
+12 Although these associations may vary in importance and strength, it is difficult to make fin er distinctions due to the lack of detailed 
+explanations. 
+
+--- PAGE 26 ---
+ 
+ 
+Volume 28 Article 10 165 
+ 
+Figure A2.2. Adapted from Richardson et al. [1990] 
+ 
+ 
+Figure A2.3. Adapted from Ross and Westerman [2004] 
+ 
+
+--- PAGE 27 ---
+ 
+ 
+166 
+Volume 28 Article 10 
+ 
+Figure A2.4. Adapted from Ross et al. [2006] 
+ 
+ 
+Figure A2.5. Adapted from Spewak and Hill [1992] 
+
+--- PAGE 28 ---
+ 
+ 
+Volume 28 Article 10 167 
+ABOUT THE AUTHORS 
+Toomas Tamm is a Ph.D. Candidate in the Department of Information Systems at the University of Melbourne. His 
+research interests include enterprise architecture and organisational design, IT strategy and managem ent, business 
+value from IT, and how to increase the likelihood of realising that value potential. His Ph .D. research focuses on 
+enterprise architecture, particularly on understanding if and how organisations can benefit from this planning 
+approach. Prior to commencing his Ph .D. studies, Toomas completed the Master of Information Systems degree at 
+the University of Melbourne. He has worked as sales consultant, web editor, and business systems project manager.  
+Peter B. Seddon  is a Professor in the Department  of Information Systems at the University of Melbourne. His 
+research interests include enterprise systems, IT management, IT outsourcing, business analytics, organisational 
+processes, evaluation and alignment, and accounting information systems. He has pub lished in many prominent 
+academic journals such as Information Systems Research, MIS Quarterly, Journal of Strategic Information Systems , 
+European Journal of Information Systems , and MISQ Executive . Peter has also served on the editorial board of 
+many leading academic journals, most recently as a Senior Editor for the MIS Quarterly. 
+Graeme Shanks is an Australian Professorial Fellow in the Department of Information Systems at the University of 
+Melbourne. His research interests focus on business analytics, t he implementation and impact of information 
+systems, data quality and conceptual modeling. Graeme has published in journals including MIS Quarterly, Journal 
+of Information Technology, Information Systems Journal , Information & Management , Journal of the A ssociation for 
+Information Systems , Electronic Commerce Research , Journal of Strategic Information Systems , Information 
+Systems, Behaviour and Information Technology , Communications of the A ssociation for Information Systems , 
+Communications of the ACM , and Requirements Engineering. He is a member of the editorial boards of six journals 
+and was recently a member of the Australian Research Council College of Experts. Prior to becoming an academic, 
+Graeme worked for a number of years as programmer, programmer -analyst, and project leader in several large 
+organisations. 
+Peter Reynolds  is a Research Scientist at MIT CISR and previously a Research Fellow in the Department of 
+Information Systems at the University of Melbourne. Supported by a strong academic backgroun d and experience 
+across a variety of industries including defence, manufacturing and financial services, Peter‘s research focuses on 
+how firms drive value from IT through business and IT strategy, organisational design, IT  based business 
+transformation, an d mergers in IT. He completed his Ph .D. studies in Strategy and Entrepreneurship at the 
+Australian Graduate School of Management (AGSM). Peter is on the editorial board of the Journal of Information 
+Technology. 
+
+--- PAGE 29 ---
+ 
+ 
+168 
+Volume 28 Article 10 
+Copyright © 2011 by the Association for Information Systems. Permission to make digital or hard copies of all or part 
+of this work for personal or classroom use is granted without fee provided that copies are not made or distributed for 
+profit or commercial advantage and that copies bear this notice  and full citation on the first page. Copyright for 
+components of this work owned by others than the Association for Information Systems must be honored. 
+Abstracting with credit is permitted. To copy otherwise, to republish, to post on servers, or to redis tribute to lists 
+requires prior specific permission and/or fee. Request permission to publish from: AIS Administrative Office, P.O. 
+Box 2712 Atlanta, GA, 30301-2712, Attn: Reprints; or via e-mail from ais@aisnet.org. 
+ 
+ 
+
+--- PAGE 30 ---
+ 
+ 
+Volume 28 Article 10  
+ . 
+  
+                                                                                                                                                     ISSN: 1529-3181 
+EDITOR-IN-CHIEF 
+Ilze Zigurs 
+University of Nebraska at Omaha 
+ 
+AIS SENIOR EDITORIAL BOARD 
+Guy Fitzgerald 
+Vice President Publications  
+Brunel University 
+Ilze Zigurs 
+Editor, CAIS  
+University of Nebraska at Omaha 
+Kalle Lyytinen 
+Editor, JAIS 
+Case Western Reserve University 
+Edward A. Stohr 
+Editor-at-Large 
+Stevens Institute of Technology 
+Blake Ives  
+Editor, Electronic Publications 
+University of Houston 
+Paul Gray 
+Founding Editor, CAIS 
+Claremont Graduate University 
+CAIS ADVISORY BOARD 
+Gordon Davis 
+University of Minnesota 
+Ken Kraemer 
+University of California at Irvine 
+M. Lynne Markus  
+Bentley University 
+Richard Mason 
+Southern Methodist University 
+Jay Nunamaker  
+University of Arizona 
+Henk Sol 
+University of Groningen 
+Ralph Sprague 
+University of Hawaii 
+Hugh J. Watson 
+University of Georgia  
+CAIS SENIOR EDITORS 
+Steve Alter 
+University of San Francisco 
+Jane Fedorowicz 
+Bentley University 
+Jerry Luftman 
+Stevens Institute of Technology 
+CAIS EDITORIAL BOARD 
+Monica Adya 
+Marquette University 
+Michel Avital 
+University of Amsterdam 
+Dinesh Batra 
+Florida International 
+University 
+Indranil Bose 
+University of Hong Kong 
+Thomas Case 
+Georgia Southern 
+University 
+Evan Duggan 
+University of the West 
+Indies 
+Mary Granger 
+George Washington 
+University 
+Åke Gronlund 
+University of Umea 
+Douglas Havelka 
+Miami University 
+K.D. Joshi 
+Washington State 
+University 
+Michel Kalika 
+University of Paris 
+Dauphine 
+Karlheinz Kautz 
+Copenhagen Business 
+School 
+Julie Kendall 
+Rutgers University 
+ 
+Nancy Lankton 
+Marshall University 
+Claudia Loebbecke 
+University of Cologne 
+Paul Benjamin Lowry 
+Brigham Young University 
+Sal March 
+Vanderbilt University 
+Don McCubbrey  
+University of Denver 
+Fred Niederman 
+St. Louis University 
+ 
+Shan Ling Pan 
+National University of 
+Singapore 
+Katia Passerini 
+New Jersey Institute of 
+Technology 
+Jan Recker 
+Queensland University of 
+Technology 
+Jackie Rees 
+Purdue University 
+Raj Sharman 
+State University of New 
+York at Buffalo 
+Mikko Siponen 
+University of Oulu 
+Thompson Teo 
+National University of 
+Singapore 
+Chelley Vician 
+University of St. Thomas 
+Padmal Vitharana 
+Syracuse University 
+Rolf Wigand  
+University of Arkansas, 
+Little Rock 
+Fons Wijnhoven 
+University of Twente 
+Vance Wilson 
+Worcester Polytechnic 
+Institute 
+Yajiong Xue 
+East Carolina University 
+ 
+DEPARTMENTS 
+Information Systems and Healthcare 
+Editor: Vance Wilson 
+Information Technology and Systems 
+Editors: Sal March and Dinesh Batra 
+Papers in French 
+Editor: Michel Kalika 
+ADMINISTRATIVE PERSONNEL 
+James P. Tinsley 
+AIS Executive Director 
+ 
+Vipin Arora 
+CAIS Managing Editor 
+University of Nebraska at Omaha 
+Sheri Hronek 
+CAIS Publications Editor 
+Hronek Associates, Inc. 
+Copyediting by  
+S4Carlisle Publishing 
+Services 
+ 

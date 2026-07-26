@@ -1,0 +1,736 @@
+--- PAGE 1 ---
+An Enterprise Architecture Planning Process for Industry 4.0
+Transformations
+Emmanuel Nowakowski1
+, Matthias Farwick2
+, Thomas Trojer2
+, Martin Häusler2
+, Johannes Kessler1
+and Ruth Breu1
+1Institute of Computer Science, University of Innsbruck, 6020 Innsbruck, Austria
+2Txture GmbH, 6020 Innsbruck, Austria
+Keywords: Enterprise Architecture Management, Enterprise Architecture Planning, Industry 4.0, Industrial Internet of
+Things, Transformation, Modeling, Process, Metamodel.
+Abstract: Industry 4.0 changes the manufacturing industry significantly. In order to stay competitive, companies need
+to develop new business capabilities and business models that are enabled by Industry 4.0 concepts. However,
+companies are currently struggling with expensive and risky IT transformation projects that are needed to
+implement such concepts. We observed a lack of research on the planning and modeling part of IT
+transformations towards Industry 4.0. Therefore, we conducted a series of expert interviews on the topic of
+enterprise architecture in the context of modeling and planning Industry 4.0 transformations. As a result, we
+were able to develop a metamodel that can be used as target model for planning endeavors and a planning
+process that helps as guideline for such planning projects.
+1 INTRODUCTION
+Industry 4.0 (I4.0) is substantially influencing the
+manufacturing industry (Stock and Seliger, 2016).
+Companies need to adapt theirbusinessprocesses and
+business models in order to be able to stay
+competitive (Kaidalova et al., 2017).
+Among the goals of the digital transformation is
+to optimize processes over the whole value chain. To
+achieve this, horizontal and vertical integration are
+essential. Hence, the concept of interoperability is of
+crucial importance, as it enables humans and
+organizations to connect and communicate via IoT
+and Cyber Physical Systems (CPS) (Xu et al., 2018).
+In order to gain benefit, corporations either have to
+introduce new connected IT systems (e.g. CPS), or
+legacy machines need to be upgraded so that they are
+able to communicate with other systems. This leads
+tonewchallengesduetothepervasivenessinalltypes
+of supply chains and organizations, which results in a
+newlevelofITcomplexitythatdemandsforaholistic
+management approach of the business, the IT, and the
+production IT (Nowakowski et al., 2018).
+Enterprise architecture (EA) gives a consolidated
+and broad view of an entire company (Aier and
+Gleichauf, 2010) and is used to capture the essentials
+of business, IT, and its evolution (Lankhorst, 2013).
+Enterprise architecture management (EAM) is an
+IT management discipline that uses the consolidated
+view of the EA to optimize IT support for business
+execution and reducing IT costs.
+According to TOGAF (The Open Group, 2011),
+EA planning is one of the core processes of EAM and
+it aims at planning IT transformations that are aligned
+with the overall strategy of an organization. Such
+transformation projects are usually conducted in
+multiple phases and aim at meeting the emerging and
+current requirements of the business (Luftman et al.,
+1993; Nowakowski et al., 2017). EA planning is
+executed by modeling different scenarios (to-be
+architectures) that represent the future steps in the
+transformation project, which transforms the current
+architecture(as-is)intoaspecifiedtargetarchitecture.
+Afterwards, the planned steps are documented,
+executed, and evaluated. The planning phase is of
+crucial importance to ensure that digital
+transformations are successful.
+In our research, we consider an EA planning
+methodology for digital transformations. Our past
+research on the topic of EA planning in the context of
+I4.0 transformations (Nowakowski et al., 2018)
+indicated that there is a need for a structured planning
+572
+Nowakowski, E., Farwick, M., Trojer, T., Häusler, M., Kessler, J. and Breu, R.
+An Enterprise Architecture Planning Process for Industry 4.0 Transformations.
+DOI: 10.5220/0007680005720579
+In Proceedings of the 21st International Conference on Enterprise Information Systems (ICEIS 2019), pages 572-579
+ISBN: 978-989-758-372-8
+Copyright c 2019 by SCITEPRESS – Science and Technology Publications, Lda. All rights reserved
+
+--- PAGE 2 ---
+process and a metamodel for I4.0. These two artifacts
+are able to guide companies in their planning
+endeavors. TheI4.0 metamodel proposes a target data
+model for the transformation project and the process
+helps to realize it by using an agile approach. Both of
+theseartifactsweredevelopedandevaluatedbasedon
+an interview series with industry experts and are
+presented in the paper at hand.
+The remainder of this paper is structured as
+follows: Section 2 describes our research method and
+researchquestions.Furthermore,inSection3relevant
+related work is presented. In Section 4, we describe
+our interview results consisting of the proposed I4.0
+metamodel and the I4.0 planning process in detail.
+Section 5 contains the discussion and future work.
+Finally, Section 6 concludes our paper.
+2 RESEARCH METHOD
+The research presented in this paper is based on
+Hevner’s three-cycle approach for design science
+research (DSR) that consists of a relevance, a design,
+and a rigor cycle (Hevner, 2007). The goal of DSR is
+to create IT artifacts that are able to solve
+organizational problems and to evaluate them
+rigorously (Hevner et al., 2004). Figure 1 depicts how
+we applied the DSR approach.
+The design cycle builds the core of the DSR
+approach. In this cycle, we developed a metamodel
+and a planning process for I4.0 transformation
+planning. The requirements for the artifacts and the
+acceptance criteria for their evaluation come from the
+relevance cycle. Considering the rigor cycle, the DSR
+artifacts areinfluenced by theresultsof the conducted
+literature review.
+Figure 1: DSR applied to our research project (based on
+(Hevner, 2007)).
+For analyzing the relevance of our research, we
+conducted an interview series consisting of nine
+experts in the field. From these interviews, we aimed
+to establish a deeper understanding of how I4.0
+planning is conducted. Additionally, we discussed
+relevant metamodel elements and the connections
+between them, and evaluated the developed
+metamodel.
+The following two research questions (RQ) build
+the core of this paper:
+ RQ1: What kind of information should be part
+of the documentation model so that EA
+planning in the context of I4.0 can be
+conducted?
+ RQ2: Which steps are needed to conduct I4.0
+transformation planning and how should the
+process be structured?
+3 RELATED WORK
+In this section, related work for I4.0 metamodels,
+frameworks, and transformation processes that are
+conducted with the help of EA is presented.
+Molano et al. (2018) developed a metamodel for
+the integration of the Internet of Things (IoT), social
+networks, the cloud and I4.0. However, their
+metamodel is mainly focused on communication
+flows from the various sensors and actuators to a
+specific IoT device.
+Furthermore, Bücker et al. (2016) created a
+framework, which is based on I4.0 design principles
+and an approach to structure an organization. For
+achieving this, they developed a metamodel of the
+proposed I4.0 transformation process, which focuses
+on change management of the organizational aspects.
+Goerzig and Bauernhansl (2018) developed a
+method which makes use of agile EA for digital
+transformations. Their approach is based on Scrum
+(Schwaber, 2004), hence, the EA evolution is done
+iteratively with the help of sprints and via user stories
+and a backlog.
+Additionally, reference architectures for smart
+industry, such as the “Industrial Value Chain
+Reference Architecture-Next” (IVRA Next)
+(Industrial Value Chain Initiative, 2018), the
+“Industrial Internet Reference Architecture” (IIRA)
+(Industrial Internet Consortium, 2017), and the
+“ReferenceArchitectureModelIndustrie4.0”(RAMI
+4.0) (Bitkom et al., 2016) were developed.
+Furthermore, there are efforts to align the proposed
+architectures of RAMI 4.0 and the IIRA (Plattform
+Industrie 4.0 and Industrial Internet Consortium,
+2018).
+Considering EAM, the most commonly used
+framework is TOGAF (The Open Group, 2011) with
+its architecture development method (ADM), which
+is a generic method intended to be used by a wide
+variety of different enterprises (The Open Group,
+2011). Furthermore, the modeling language
+An Enterprise Architecture Planning Process for Industry 4.0 Transformations
+573
+
+--- PAGE 3 ---
+ArchiMate (The Open Group, 2016) is considered as
+standard. ArchiMate introduced a physical layer in
+version3.0 (The Open Group,2016) thatwasinspired
+by the I4.0 development. Franck et al. (2017) found
+shortcomings of ArchiMate 3.0 while they worked on
+an EA solution for I4.0 and developed new concepts
+and modeling patterns to compensate for them.
+Furthermore, Rogers (2016) conducted research on
+I4.0 simulation-based information assets that is based
+on TOGAF.
+Zimmermann et al. focus on the transformation of
+EA for the IoT, architectural decision making for
+digital transformations, and the evolution of EAs
+(Zimmermann et al., 2016, 2015b, 2015a). However,
+the authors mainly discuss the improvement of
+decision-making and do not elaborate on techniques
+that help practitioners to model and plan target
+architectures in the context of IoT or I4.0.
+Finally, Kaidalova et al. (2017) discuss the
+challengesin integratingoperationaltechnology(OT)
+into EA, where OT consists of the IT systems and
+production machines that are located on the shop-
+floor of a company. The researchers concluded that
+traditional EA layers (business, application, and
+technology) are suitable but not optimal for
+structuring OT. They propose that refinement layers
+are needed, e.g. by identifying a “mixed zone”
+between OT and business IT that has a different
+structure and granularity (Kaidalova et al., 2017).
+4 INTERVIEW RESULTS
+With the help of the interviews we aimed to gain
+information about the process how I4.0
+transformation projects are conducted and about the
+required artifacts and resources. Furthermore, we
+investigated on which abstraction level the planning
+needs to be done and what is documented during this
+process.
+For this purpose, we interviewed professionals in
+the field of EAM who are working in the industry and
+have experience with digital transformation projects.
+The interviews were conducted in the timespan
+between October and November 2018. We were able
+to interview nine interviewees from four different
+industry sectors in Germany, Austria, and
+Switzerland (see Table 1).
+The interviewees were identified via Linked-In
+and XING – a business social network for German-
+speaking countries. Here, it was specifically searched
+for enterprise architects in industrial companies. We
+contacted 42 potential interview partners from which
+ten responded (~24%). Six of these and three of our
+former interview partners, from which two are
+consultants with I4.0 experience, agreed to
+participate. Hence, we conducted our interview series
+with nine participants in total that are all employed in
+different companies. Additionally, we were able to
+use a part of the interview results from our previous
+research (Nowakowski et al., 2018).
+Table 1 gives an overview of the interviewees’
+position in the company, the location, as well as the
+industry sector. The role of the participants is added
+to the abbreviation (see last row in Table 1).
+Table 1: Interviewee overview.
+Participant
+and Role
+Country Industry sector
+PE1 Austria Manufacturing
+PE2 Germany Manufacturing
+PE3 Germany Manufacturing
+PE4 Germany Manufacturing
+PE5 Germany Manufacturing
+PE6 Germany Chemical
+PE7 Germany Pharma
+PC8 Germany Consulting
+PC9 Switzerland Consulting
+E = enterprise architect, C = consultant
+The interviews were conducted in a semi-
+structured way, were based on a fixed set of open
+questions, and took in average about 45 min.
+Furthermore, they were recorded for later analysis.
+The interviews were transcribed and coded
+according to the procedure described by Mayring
+(2014). For this purpose, a completely data-driven
+coding frame in combination with successive
+summarizing, as proposed by Flick (2014), was used.
+The coding frame is the basis of the analysis
+methodology and consists of main and subcategories.
+Main categories are aspects for which more
+information are needed and subcategories specify
+what is said in respect to the main categories (Flick,
+2014). With the help of successive summarizing,
+relevant passages of the interviews were paraphrased
+and the superfluous aspects were deleted. After that,
+the categories and subcategories were built by
+summarizing similar paraphrases. The next step was
+to check if there exist similar subcategories and to
+collapse them. Two rounds of coding were conducted
+based on the coding frame. This was done by one
+coder at different points in time and the results were
+compared in order to ensure coding consistency. As
+proposed by Flick (2014), the transcripts were
+segmented in a way that each unit fits exactly one
+category or subcategory of the coding frame to ensure
+that each time the codes were applied to identical
+parts of the transcripts. For checking if our coding
+ICEIS 2019 - 21st International Conference on Enterprise Information Systems
+574
+
+--- PAGE 4 ---
+frame needs to be adapted, we applied this procedure
+to a subset of our transcripts before it was used for the
+analysis of all transcripts. Finally, as suggested by
+Flick (2014), the final coding of all transcripts and the
+preparation of the coding results for answering the
+research questions was conducted.
+From the interviews, we were able to extract the
+proposed I4.0 target metamodel, and the planning
+process for I4.0 transformations, which are described
+in detail in the following subsections.
+4.1 Metamodel for I4.0
+Based on the interview results we were able to
+enhance the proposed four-layer model from our
+previous work (Nowakowski et al., 2018), which
+builds the basis for our I4.0 target metamodel. The
+layered model, shown in Figure 2, adapts the classical
+three-layer approach of EAM (business layer,
+application layer, and technology layer) (The Open
+Group, 2011) and adds two new layers. The
+operational layer tackles the growing similarities of
+production machines and applications, as they now
+have the same security, update, and release
+management requirements. Hence, it is not possible
+to distinguish between technology and application
+layer anymore. Additionally, these automation assets
+now need to be part of the EA, while in the past OT
+and business IT were strictly separated from each
+other (Nowakowski et al., 2018). These assets are
+located in the operational layer and are connected to
+the business, application, and technology layers.
+Furthermore, the external interface layer is used for
+the horizontal integration of the business partners
+(e.g. suppliers) and customers, as they are now
+directly involved with the production processes.
+Figure 2: Five-layer approach for EAM.
+The proposed metamodel, shown in Figure 3,
+depicts a target EA model with incorporated I4.0
+concepts. In the following paragraphs, the metamodel
+layers and elements are described in detail.
+External Interface Layer. As depicted in Figure 2,
+the external interface layer connects to the business
+and to the operational layer. It normally consists of
+partner systems and the customer. These two
+information sources are important to achieve
+horizontal integration, which is one key aspect of I4.0
+(Xu et al., 2018). The production system is connected
+via an interface to the partner systems to be able to
+e.g. order parts automatically. On the other hand, the
+customer is directly involved in the production
+process and is therefore able to order highly
+customized products. The external interface layer is
+not included in the metamodel because it is not
+directly part of the EA. However, the business
+capability to manage this information needs to exist
+(PC9).
+Standard EA Layers. The business layer consists of
+business capabilities, business processes, and the
+specific product that is produced. Here, the new
+aspect is the connection to the operational layer. The
+application layer consists of the applications, the
+interfaces and data objects that are transferred with
+the help of these interfaces. In the case of I4.0, the
+interface is also connected to the operational layer,
+which makes it e.g. possible to analyze machine data.
+The technology layer consists of technology assets
+like servers and storage devices. According to the
+interviewees, these assets are needed in order to be
+able to conduct impact analysis and are modeled on a
+course-grained level. Additionally, as many
+companies are currently migrating their assets to the
+cloud, detailed technology modeling is not important
+anymore (PE3).
+Operational Layer. The difference to established
+EAM metamodels is that the business layer, the
+application layer, and the technology layer are now
+connected to the operational layer, which makes it
+possible that e.g. production machines and sensors
+can be associated to a business capability.
+Furthermore,itispossibleto drilldowndirectlyto the
+machines and sensors, which is according to the
+interviewees necessary in order to be able to plan I4.0
+transformations. According to PC8 and PC9, it is
+crucial to know the interdependencies between OT
+and business IT in order to be able to see how well it
+is integrated.
+As can be seen in Figure 3, the operational layer
+consists of production processes, I4.0 components
+and sensors. All of these elements can be connected
+to business capabilities that are needed for the
+execution of I4.0 business models. The I4.0
+components, as well as the products, may have
+sensors attached. This enables monitoring and
+analyzing production machines that are relevant for
+executing the production processes. Sensor data can
+be transferred via an interface and be analyzed with
+the help of an application to e.g. conduct predictive
+maintenance. Additionally, customers now have
+direct influence on the production process. Hence, it
+is necessary that the highly customized products can
+be individually produced by the factory. For this
+purpose, the I4.0 components need to be able to
+An Enterprise Architecture Planning Process for Industry 4.0 Transformations
+575
+
+--- PAGE 5 ---
+communicate with each other. Additionally, the
+sensors on the product enable the introduction of new
+services. With the help of detailed analysis of the
+sensor data and the actual usage of the product, it is
+possible to create new business models. Furthermore,
+it is important to know in which factory the I4.0
+components are located; therefore, the components
+are linked to the location.
+According to RAMI4.0 (Bitkom et al., 2016), an
+I4.0 component comprises one or moreobjects andan
+administration shell that consists of the functions of
+the technical functionality and the data for virtual
+representation.
+The production processes are modeled separately
+from the business processes. According to the
+interviewees the two kind of processes differ
+significantly.Productionprocessesaremodeledinthe
+OT department and are solely concerned with the
+production.
+Enterprisearchitectsmostlyworkwithaggregated
+data and in some situations want to be able to drill
+down to a sensor type. Hence, in the proposed
+metamodel the I4.0 components and the sensors are
+only modeled with the type information attached.
+Therefore, it is possible to distinguish between
+different types of sensors and machines without
+needing to know about the specific instances. This
+makes a drill down and impact analysis still possible.
+Additionally, the I4.0 component can be used as an
+interface to the operational department. In this case,
+the operational department models the low level OT
+architecture and is able to connect it to the EA via the
+operational layer, which enables to create holistic
+plans. This is especially important for digital
+transformation projects, as mentioned by PE1.
+Though, choosing the right scope and level of
+granularity for the planning is challenging.
+With the help of ArchiMates’ physical layer, the
+OT can be modeled in detail. However, the
+interviewees required an abstract view on the
+production machines and other I4.0 components that
+is based on type information. Hence, in our
+metamodel only abstract concepts are modeled.
+4.2 Transformation Planning for I4.0
+In this subsection, the proposed planning process (see
+Figure 4) is described in detail. The process was
+developed on the basis of our interview results and
+existing planning methods for EAM.
+According to our interviewees, a digital
+transformation has to be conducted in an agile way
+because waterfall methods are too rigid for this kind
+of project. We analyzed the results of our interviews
+and extracted the relevant planning steps that our
+interview partners mentioned and developed an agile
+I4.0 transformation planning process. This process is
+based on Goerzig and Bauernhansl (2018), which
+makes use of the agile Scrum method (Schwaber,
+2004). The process consists of several steps and is
+iterative. Goerzig and Bauernhansl (2018) divided
+their approach into two cycles, a micro and a macro
+cycle. The macro cycle defines the architecture of the
+Figure 3: EA metamodel considering Industry 4.0 concepts.
+ICEIS 2019 - 21st International Conference on Enterprise Information Systems
+576
+
+--- PAGE 6 ---
+entire company and the micro cycle is used for the
+implementation and testing of single functions. For
+our approach, we use a specification, a project and an
+implementation cycle. In the specification cycle, the
+whole architecture specification happens, while in the
+project cycle, the business stories are implemented
+and tested. Business stories are similar to user stories
+in the Scrum context and describe a business goal.
+Finally, the implementation cycle is needed for
+implementing the resulting IT projects.
+We used the digital business strategy as initial
+point of the approach, which contains basic decisions
+concerning scale, speed, and scope of the digital
+technology application in the enterprise (Goerzig and
+Bauernhansl, 2018). In our definition, it consists of
+scope, scale, and speed of the I4.0 transformation.
+Matt et al. (2015) concluded that it is necessary to
+derive the transformation strategy out of the digital
+business strategy. The transformation strategy
+consists of organizational and technological
+principles for the implementation of the
+transformation (Goerzig and Bauernhansl, 2018).
+Furthermore, the strategy influences the model of the
+target architecture.
+According to the interviewees, the first step in the
+specification cycle is to derive the business model
+from the digital business strategy. The business
+model contains information like customer segments,
+revenue stream, and value propositions (Goerzig and
+Bauernhansl, 2018).
+The next step is to derive the needed business
+capabilities from the new business model (PE2, PE3,
+and PE4). After that, the capabilities need to be
+analyzed and compared with the currently available
+capabilities to identify gaps. This analysis is mostly
+done with the help of capability maps.
+After the capability gaps are found, the required
+business processes are derived from the new
+capability. Again, the set of new business processes
+is compared to the currently available processes and
+the gaps are documented. This is done with the help
+of business process landscapes or maps.
+With the knowledge gained from the steps before,
+a target EA architecture can be developed. This
+architecture needs to close the found gaps in order to
+be able to introduce the new business model.
+Additionally, the target model is influenced by the
+transformation strategy, which dictates the
+technological and organizational principles of the
+transformation. Furthermore, the application and the
+technology landscape need to be analyzed to make
+sure that the new businessprocesses are appropriately
+supported. This is usually done with the help of
+landscape visualizations, which show the
+technologies or applications and their
+interdependencies. If there are gaps to the current
+architecture, they are documented again. According
+to the interviewees, for the planning of the target
+architecture multiple scenarios are developed, which
+are compared and the one that fits best is chosen to be
+implemented. The fit criteria depend on the
+transformation strategy. As last step, the gaps to the
+as-is architecture are formulated into business stories,
+which describe the users, the desired functionality,
+andthebenefitandareputin thearchitecturebacklog.
+Afterwards, the business stories are prioritized and
+ready to be implemented.
+When the best fitting target architecture is chosen,
+the first iteration of the specification cycle is finished
+and the project cycle begins with choosing the
+prioritized business stories from the backlog. The
+amount of the chosen business stories depends on the
+aimed speed of change of the company, which is
+defined in the transformation strategy.
+The next step is to implement the business story
+with the highest priority. For this purpose, the gaps
+that were found in the specification cycle are
+analyzed again and closed according to the specified
+target architecture.
+After that, it is checked if the architecture is now
+capable of depicting the new business story and if all
+identified gaps are closed. To evaluate the newly
+implemented business capability a proof of concept
+(PoC) with a pilot customer can be used. The newly
+needed IT artifacts are developed in the
+implementation cycle and tested again.
+In the review, the final step in the project cycle,
+the state of the business story is either marked as
+done, adaptations need to be implemented, or the
+overall impact on the architecture needs to be
+analyzed again. If it is marked as done, the teams start
+with the next business story. Otherwise, if there are
+still adaptations required, the project cycle starts
+again. Finally, if the changes generate findings that
+have an impact on the whole architecture, the
+specification cycle has to start again (Goerzig and
+Bauernhansl, 2018).
+According to Goerzig and Bauernhansl (2018),
+the architecture after the first iteration of the
+specification cycle is still very rough and more details
+are added with every run. Additionally, the
+specification cycle should always give enough space
+for decisions in the project and implementation cycle.
+However, the business critical core processes
+should still be planned with the help of a waterfall
+method (PE4 and PE5). Additionally, PE5 mentioned
+that they are using agile methods for planning the
+architecture and the introduction of new capabilities
+An Enterprise Architecture Planning Process for Industry 4.0 Transformations
+577
+
+--- PAGE 7 ---
+Figure 4: Agile EA planning for Industry 4.0 transformations (based on (Goerzig and Bauernhansl, 2018)).
+until the PoC phase. Afterwards, for the business
+wide release they are planning based on waterfall
+methods.
+5 FUTURE WORK
+Our future work will consider further evaluation of
+the proposed artifacts. Hence, we plan to conduct a
+new interview series in which the interviewees will
+use the planning process and the metamodel for
+modeling a small example transformation. For this
+purpose, a tool will be used that is outcome of our
+previous research on automated EA documentation
+(Trojer et al., 2015). Additionally, confirmatory
+interviews are planned to evaluate if the developed
+artifacts are useful in their current state. Furthermore,
+we will evaluate the metamodel and the planning
+process with the help of a case study to ensure their
+applicability and a better alignment between the two
+artifacts.
+The planning process needs further investigation,
+as details like team size and holistic EA planning via
+agile methods in general are still open research
+questions that are subject of current research on this
+topic.
+Finally, the proposed research artifacts can be
+used to extend the TOGAF ADM and therefore to
+introduce a holistic planning guideline for digital
+transformations into the framework.
+6 CONCLUSION
+This paper presented an EA planning approach for
+digital transformations that consists of a planning
+process and a metamodel that serves as a target data
+model. Both of these DSR artifacts were developed
+based on the results of a series of expert interviews.
+Furthermore, the interview results showed that
+OT needs to be part of the EA in order to be able to
+plan such transformations. This was materialized by
+introducing a new operational layer to the standard
+three-layer approach of EAM. This layer consists of
+I4.0 components, the production processes and
+sensors, where the I4.0 components are connected via
+an interface to the application layer. The I4.0
+components and the sensor may not be modeled in
+detail, but on an abstract basis only considering their
+types. The operational layer can also be used as a
+modeling interface to the detailed OT models and
+therefore connects both worlds.
+The proposed planning process is an agile
+approach that is based on the Scrum method. The
+process makes a detailed planning of the EA in
+several iterations possible. This is needed for the
+introduction of I4.0 concepts, as it is faster to conduct
+than planning based on a waterfall method.
+ACKNOWLEDGEMENTS
+This research was partially funded by the research
+project “txtureSA” (FWF-Project P 29022).
+REFERENCES
+Aier, S., Gleichauf, B., 2010. Towards a Systematic
+Approach for Capturing Dynamic Transformation in
+Enterprise Models, in: 43rd Hawaii International
+Conference on System Sciences. pp. 1–10.
+Bitkom, Vdma, Zvei, 2016. Implementation Strategy
+Industrie 4.0 [WWW Document]. URL
+https://www.zvei.org/fileadmin/user_upload/Presse_u
+nd_Medien/Publikationen/2016/januar/Implementatio
+n_Strategy_Industrie_4.0_-_Report_on_the_results_of
+_Industrie_4.0_Platform/Implementation-Strategy-
+Industrie-40-ENG.pdf (accessed 18.02.19).
+ICEIS 2019 - 21st International Conference on Enterprise Information Systems
+578
+
+--- PAGE 8 ---
+Bücker, I., Hermann, M., Pentek, T., Otto, B., 2016.
+Towards a Methodology for Industrie 4.0
+Transformation. Bus. Inf. Syst. 255, 209–221.
+Flick, U., 2014. The SAGE Handbook of Qualitative Data
+Analysis. SAGE Publications Ltd., London.
+Franck, T., Iacob, M.-E., Van Sinderen, M., Wombacher,
+A., 2017. Towards an Integrated Architecture Model of
+Smart Manufacturing Enterprises, in: Proceedings of
+the 7th International Symposium on Business Modeling
+and Software Design (BMSD 2017). pp. 112–133.
+Goerzig, D., Bauernhansl, T., 2018. Enterprise
+Architectures for the Digital Transformation in Small
+and Medium-sized Enterprises. Procedia CIRP 67,
+540–545.
+Hevner,A.R.,2007.AThreeCycleViewofDesignScience
+Research. Scand. J. Inf. Syst. 19, 87–92.
+Hevner, A.R., March, S.T., Park, J., Ram, S., 2004. Design
+Science in Information Systems Research. MIS Q. 28,
+75–105.
+Industrial Internet Consortium, 2017. The Industrial
+Internet of Things Volume G1: Reference Architecture.
+Industrial Value Chain Initiative, 2018. Strategic
+Implementation Framework of Industrial Value Chain
+for Connected Industries.
+Kaidalova, J., Sandkuhl, K., Seigerroth, U., 2017.
+Challenges in Integrating Product-IT into Enterprise
+Architecture – A Case Study. Procedia Comput. Sci.
+121, 525–533.
+Lankhorst, M., 2013. Enterprise Architecture at Work -
+Modelling, Communication and Analysis, 3rd ed.
+Springer-Verlag, Berlin, Heidelberg.
+Luftman, J.N., Lewis, P.R., Oldach, S.H., 1993.
+Transforming the Enterprise: The Alignment of
+Business and Information Technology Strategies. IBM
+Syst. J. 32, 198–221.
+Matt, C., Hess, T., Benlian, A., 2015. Digital
+TransformationStrategies.Bus.Inf.Syst.Eng.57,339–
+343.
+Mayring, P., 2014. Qualitative Content Analysis -
+TheoreticalFoundation, BasicProceduresandSoftware
+Solution.
+Molano, J.I.R., Lovelle, J.M.C., Montenegro, C.E.,
+Granados, J.J.R., Crespo, R.G., 2018. Metamodel for
+integration of Internet of Things, Social Networks, the
+Cloud and Industry 4.0. J. Ambient Intell. Humaniz.
+Comput. 9, 709–723.
+Nowakowski, E., Farwick, M., Trojer, T., Haeusler, M.,
+Kessler, J., Breu, R., 2018. Enterprise Architecture
+Planning in the Context of Industry 4.0
+Transformations, in: 22nd International Enterprise
+Distributed Object Computing Conference (EDOC).
+pp. 35–43.
+Nowakowski, E., Farwick, M., Trojer, T., Haeusler, M.,
+Kessler, J., Breu, R., 2017. Enterprise Architecture
+Planning: Analyses of Requirements from Practice and
+Research, in: 50th Hawaii International Conference on
+System Sciences.
+Plattform Industrie 4.0, Industrial Internet Consortium,
+2018. Architecture Alignment and Interoperability.
+Rogers, C., 2016. Proposed Enterprise Architecture
+Solutions for Industry 4.0 Manufacturing Simulation
+Information Assets Based on TOGAF.
+Schwaber, K., 2004. Agile Project Management With
+Scrum. Microsoft Press, Redmond, WA, USA.
+Stock, T., Seliger, G., 2016. Opportunities of Sustainable
+Manufacturing in Industry 4.0. Procedia CIRP 40, 536–
+541.
+The Open Group, 2016. ArchiMate 3.0 Specification. Van
+Haren Publishing.
+The Open Group, 2011. TOGAF Version 9.1, 10th ed. Van
+Haren Publishing.
+Trojer, T., Farwick, M., Haeusler, M., Breu, R., 2015.
+Living Modeling of IT Architectures: Challenges and
+Solutions, in: Software, Services, and Systems - Essays
+Dedicated to Martin Wirsing on the Occasion of His
+Retirement from the Chair of Programming and
+Software Engineering. pp. 458–474.
+Xu, L. Da, Xu, E.L., Li, L., 2018. Industry 4.0: State of the
+Art and Future Trends. Int. J. Prod. Res. 7543, 1–22.
+Zimmermann, A., Jugel, D., Sandkuhl, K., Schmidt, R.,
+Schweda, C.M., Möhring, M., 2016. Architectural
+Decision Management for Digital Transformation of
+Products and Services. Complex Syst. Informatics
+Model. Q. 31–53.
+Zimmermann, A., Schmidt, R., Jugel, D., Möhring, M.,
+2015a. Evolving Enterprise Architectures for Digital
+Transformations, in: Digital Enterprise Computing
+2015. pp. 183–194.
+Zimmermann, A., Schmidt, R., Sandkuhl, K., Wissotzki,
+M., Jugel, D., Mohring, M., 2015b. Digital Enterprise
+Architecture - Transformation for the Internet of
+Things, in: Enterprise Distributed Object Computing
+Workshop (EDOCW). pp. 130–138.
+An Enterprise Architecture Planning Process for Industry 4.0 Transformations
+579

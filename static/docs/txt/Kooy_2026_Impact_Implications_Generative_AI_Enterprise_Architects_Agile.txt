@@ -1,0 +1,893 @@
+--- PAGE 1 ---
+a c c e p t e d
+m
+a n u s c r i p t
+Impact and Implications of Generative AI for
+Enterprise Architects in Agile Environments: A
+Systematic Literature Review
+Stefan Julian Kooy , Jean Paul Sebastian Piest , and Rob Henk Bemthuis
+University of Twente, Drienerlolaan 5, 7522 NB, The Netherlands
+s.j.kooy@student.utwente.nl, {j.p.s.piest,r.h.bemthuis}@utwente.nl
+Abstract. Generative AI (GenAI) is reshaping enterprise architecture
+work in agile software organizations, yet evidence on its effects remains
+scattered. We report a systematic literature review (SLR), following es-
+tablished SLR protocols of Kitchenham and PRISMA, of 1,697 records,
+yielding 33 studies across enterprise, solution, domain, business, and IT
+architect roles. GenAI most consistently supports (i) design ideation and
+trade-off exploration; (ii) rapid creation and refinement of artifacts (e.g.,
+code, models, documentation); and (iii) architectural decision support
+and knowledge retrieval. Reported risks include opacity and bias, con-
+textually incorrect outputs leading to rework, privacy and compliance
+concerns, and social loafing. We also identify emerging skills and com-
+petencies, including prompt engineering, model evaluation, and profes-
+sional oversight, and organizational enablers around readiness and adap-
+tive governance. The review contributes with (1) a mapping of GenAI use
+cases and risks in agile architecting, (2) implications for capability build-
+ing and governance, and (3) an initial research agenda on human–AI col-
+laboration in architecture. Overall, the findings inform responsible adop-
+tion of GenAI that accelerates digital transformation while safeguarding
+architectural integrity.
+Keywords: Generative AI · Enterprise Architect · Agile · Scrum · Sys-
+tematic Literature Review
+1 Introduction
+Organizations face persistent challenges in developing and delivering digital
+products and services. Agile methods such as Scrum and frameworks like the
+Scaled Agile Framework (SAFe) have reshaped how teams conceive, build, and
+deploy solutions, emphasizing flexibility and rapid feedback to meet changing
+market needs [30]. In parallel, the adoption of generative artificial intelligence
+(GenAI) is accelerating across manufacturing, healthcare, finance, telecommuni-
+cations, and the public sector [13,17,39,47]. GenAI refers to the class of Artificial
+Intelligence (AI) models that emulate the structure and characteristics of input
+data to generate synthetic content, such as text, images, audio, or video, rather
+than merely classifying or predicting existing data [11]. GenAI is increasingly
+Cite:
+Kooy, S. J., Piest, J. P. S., & Bemthuis, R. H. (2026). Impact and implications of generative AI for enterprise architects in agile
+environments: A systematic literature review. In Enterprise design, operations, and computing. EDOC 2025 Workshops (pp. 53–69).
+Springer. https://doi.org/10.1007/978-3-032-16234-2_4
+
+--- PAGE 2 ---
+a c c e p t e d
+m
+a n u s c r i p t
+2 S.J. Kooy et al.
+used to streamline operations, support customer interaction, and enable new
+forms of innovation, making it a practical enabler for modernizing industrial
+practice.
+Enterprise Architecture (EA) offers guidance for aligning digital solutions,
+from cloud-native platforms to data, Internet of Things (IoT), and Artificial
+Intelligence (AI), with strategic objectives. In this paper, “architects” includes
+enterprise, solution, domain, business, and IT architects. Practitioners frequently
+rely on frameworks such as TOGAF or Zachman to support business–IT align-
+ment and strategic decision making. However, traditional approaches can fall
+short in agile settings due to “big design upfront” practices and slower feedback
+cycles [61]. Prior work indicates that AI can improve decision making within
+established architecture frameworks, a foundation for organizational agility [38],
+yet integrating AI into these frameworks remains challenging [6].
+This paper examines how GenAI affects the role, skills, and responsibilities
+of architects in large-scale agile software development. We conduct a systematic
+literature review (SLR) to assess how GenAI may address current challenges
+and to identify the capabilities relevant to architecture work (e.g., generating
+design alternatives, accelerating documentation, supporting architectural deci-
+sions). We also consider potential risks and trade-offs. Our goal is to clarify
+whether GenAI can contribute to architectural agility and operational efficiency,
+and under what conditions.
+The remainder of the paper is organized as follows. Section 2 outlines the
+background on EA, agile methodologies, and GenAI. Section 3 introduces the
+methodology. Section 4 presents the key results and findings of the SLR. Section 5
+discusses the implications of the results and findings, and Section 6 concludes
+with a summary, limitations, and directions for future research.
+2 Background
+This section defines key concepts: EA as the structure for aligning business and
+technology, common EA frameworks, agile methods for software delivery, and
+GenAI.
+2.1 Enterprise Architecture
+EA provides a structured approach to designing and governing systems, tech-
+nologies, and processes so they align with business objectives and operate effec-
+tively in dynamic environments [35,54]. EA spans multiple architectural view-
+points (enterprise, business, IT, domain, solution) that share key responsibilities:
+stakeholder communication, strategic alignment, risk management, and gover-
+nance [20]. As an organizational blueprint, EA helps ensure that technology
+investments support business goals, improve agility, and address regulatory and
+cybersecurity concerns while reducing complexity [20,37,54]. Standardized pro-
+cesses and consistent documentation also support digital transformation, includ-
+ing the adoption of AI-enabled capabilities [14,22].
+Cite:
+Kooy, S. J., Piest, J. P. S., & Bemthuis, R. H. (2026). Impact and implications of generative AI for enterprise architects in agile
+environments: A systematic literature review. In Enterprise design, operations, and computing. EDOC 2025 Workshops (pp. 53–69).
+Springer. https://doi.org/10.1007/978-3-032-16234-2_4
+
+--- PAGE 3 ---
+a c c e p t e d
+m
+a n u s c r i p t
+Impact and Implications of GenAI on Enterprise Architects 3
+2.2 Architecture Frameworks
+The Zachman Framework [63,64] and The Open Group Architecture Framework
+(TOGAF) [24] offer widely used approaches for implementing EA. Zachman
+organizes architectural artifacts across the “What, How, Where, Who, When,
+Why” perspectives and role-based rows to support comprehensive documen-
+tation and cross-functional collaboration. TOGAF’s Architecture Development
+Method (ADM) defines iterative phases for aligning business and IT, managing
+change, and governing execution. While effective for long-term planning, these
+phase-driven approaches can conflict with the fast feedback cycles and flexibility
+emphasized by agile methods [49].
+2.3 Agile Methodologies
+Agile methodologies, such as Scrum, and frameworks, such as SAFe, promote it-
+erative development, short feedback loops, and cross-functional collaboration [4,
+8,50]. Scrum is common in small teams that work in short sprints with frequent
+stakeholder input and incremental releases. SAFe scales agile practices across the
+enterprise via “Agile Release Trains” and formal architecture roles (enterprise,
+solution, and system) that help maintain strategic alignment and architectural
+integrity [46,51–53]. Despite these benefits, agile practices can strain traditional
+EA processes that rely on upfront design and rigid governance [49].
+2.4 Generative AI
+AI aims to build systems that perform tasks requiring human-level capabilities
+such as pattern recognition, language understanding, and decision making [62].
+Machine learning and deep learning learn from data rather than explicit rules.
+GenAI focuses on producing new content. Using models such as GANs, VAEs,
+Transformers, and latent diffusion models, GenAI can generate text, code, and
+images from learned distributions [7,16].
+GenAI may help bridge the structure of EA with the iterative nature of agile
+work. It can automate routine documentation and augment design ideation,
+potentially easing common bottlenecks. This review therefore studies GenAI’s
+impact on architectural roles and responsibilities in agile environments, with
+attention to implications for practice, decision making, and governance.
+3 Methodology
+We followed Kitchenham’s guidelines [32] and PRISMA [43] to plan, conduct,
+and report this SLR. The sections below describe how we defined the research
+questions (RQs), designed the search strategy, applied inclusion and exclusion
+criteria, extracted and synthesized data, and assured quality. The full protocol
+is available at [45].
+Cite:
+Kooy, S. J., Piest, J. P. S., & Bemthuis, R. H. (2026). Impact and implications of generative AI for enterprise architects in agile
+environments: A systematic literature review. In Enterprise design, operations, and computing. EDOC 2025 Workshops (pp. 53–69).
+Springer. https://doi.org/10.1007/978-3-032-16234-2_4
+
+--- PAGE 4 ---
+a c c e p t e d
+m
+a n u s c r i p t
+4 S.J. Kooy et al.
+3.1 Research Questions
+The study examines the impact of GenAI on EA in agile development contexts.
+Our main research question is: How does GenAI influence the evolving role,
+skills, and responsibilities of architects in large-scale agile software development
+environments?
+To operationalize the main RQ, we formulated five sub-questions:
+1. Which technical characteristics of GenAI create opportunities and challenges
+for architects in agile environments?
+2. Which current GenAI use cases influence architectural practices and decision
+making in agile organizations?
+3. How does GenAI affect traditional roles, tasks, and required skills of archi-
+tects in agile digital transformations?
+4. What organizational and technological factors influence the adoption trajec-
+tory of GenAI in architecture practices?
+5. What governance and capability adaptations are needed to integrate GenAI
+into architecture practices?
+3.2 Search Strategy
+The search was performed on 17th of February, 2025, in two electronic databases,
+IEEE Xplore and Scopus. These databases provide complementary coverage of
+computing research and practitioner-oriented literature. Guided by the RQs,
+we designed English-language queries addressing (1) GenAI characteristics, (2)
+architectural roles and skills, (3) agile architecture, and (4) AI governance and
+adoption.
+Four query sets (Table 1) returned 1,697 records. Title screening excluded
+1,529 irrelevant items. Abstract screening removed a further 96 records (includ-
+ing 16 duplicates). We assessed 72 full texts and selected 33 papers for data
+extraction (Figure 1).
+The mapping between RQs and query sets is many-to-many. Each query
+captures a facet of the topic, with intentional overlap (Table 3). For example, Q1
+targets GenAI characteristics (supporting RQ1); Q2–Q3 emphasize architectural
+roles, skills, and agile contexts (informing RQ2–RQ3); Q4 focuses on governance
+and maturity (supporting RQ4–RQ5). We synthesize insights across all queries
+to answer the five RQs.
+3.3 Inclusion and Exclusion Criteria
+We defined criteria based on topical relevance, publication type, year, and lan-
+guage (Table 2). To reflect the recent emergence of GenAI, we applied a stricter
+recency threshold to GenAI-specific work.
+3.4 Data Extraction and Synthesis
+We extracted data against the RQs (Table 3). We then performed mapping and
+thematic analysis to identify cross-study patterns and synthesize findings.
+Cite:
+Kooy, S. J., Piest, J. P. S., & Bemthuis, R. H. (2026). Impact and implications of generative AI for enterprise architects in agile
+environments: A systematic literature review. In Enterprise design, operations, and computing. EDOC 2025 Workshops (pp. 53–69).
+Springer. https://doi.org/10.1007/978-3-032-16234-2_4
+
+--- PAGE 5 ---
+a c c e p t e d
+m
+a n u s c r i p t
+Impact and Implications of GenAI on Enterprise Architects 5
+Table 1. Overview of search queries and results.
+Query Generic Search String, Specifics In [45] Total
+Found
+Selected
+Q1 "Generative AI" AND agile AND
+(characteristics OR capabilities OR
+features OR opportunities OR challenges)
+369 11
+Q2 ("enterprise architect" OR "domain
+architect" OR "solution architect" OR
+"business architect" OR "IT architect")
+AND (role OR task OR skill)
+871 15
+Q3 ("enterprise architect" OR "domain
+architect" OR "solution architect" OR
+"business architect" OR "IT architect")
+AND (agile OR Scrum OR SAFe OR DevOps)
+390 3
+Q4 (("Generative AI" OR "generative
+artificial intelligence") AND governance)
+OR ("AI" AND "maturity model")
+67 4
+Identification
+Records identified from
+databases (n = 1697)
+Records screened based on
+Title (n = 1697)
+Screening
+Records excluded (n =
+1529)
+Selection
+Reports screened based on
+Abstract (n = 168)
+Reports assessed full-text for
+eligibility (n = 72)
+Reports not retrieved (n =
+96, including 16 duplicates)
+Reports excluded (n = 39)
+Reports included in the review
+(n = 33)
+Fig.1. Screening and selection process, as adopted by [32,43].
+3.5 Quality Assurance
+We assessed methodological rigor, transparency, and potential biases [45]. Over-
+all, the included literature provides a basis for analysis. Many studies use struc-
+Cite:
+Kooy, S. J., Piest, J. P. S., & Bemthuis, R. H. (2026). Impact and implications of generative AI for enterprise architects in agile
+environments: A systematic literature review. In Enterprise design, operations, and computing. EDOC 2025 Workshops (pp. 53–69).
+Springer. https://doi.org/10.1007/978-3-032-16234-2_4
+
+--- PAGE 6 ---
+a c c e p t e d
+m
+a n u s c r i p t
+6 S.J. Kooy et al.
+Table 2. Inclusion and exclusion criteria.
+Inclusion Criteria Exclusion Criteria
+Studies addressing at least one of the RQs Studies focusing on non-GenAI (e.g.,
+rule-based systems, traditional ML,
+robotics)
+Subject areas: computer science, social sci-
+ences, engineering, decision science
+Studies from domains (e.g., medicine,
+agriculture) lacking relevant GenAI use
+cases for EA
+Publication types: journal articles, SLRs,
+meta-analyses, conference papers or books
+Articles published in languages other
+than English
+Published prior to 2015 only if founda-
+tional for EA or agile contexts
+—
+Published in 2015 or later (for studies re-
+lated to EA, agile methods, or architect
+roles)
+—
+Published in 2022 or later (for studies re-
+lated to GenAI)
+—
+tured methods (e.g., SLRs, case studies, empirical designs) with clear objectives
+and analytical frameworks. Rigor is strongest in work that follows established
+guidance (e.g., PRISMA), and data collection and analysis are generally well
+documented. Some papers exhibit partial outcome reporting or limited method-
+ological detail (e.g., [3,25,27]). Several conceptual papers provide fewer reflec-
+tions on assumptions and limitations (e.g., [20,26]).
+4 Results
+We report findings by the five RQs. In total, 33 studies were included. Study
+methods are summarized in Table 4.
+4.1 Opportunities and Challenges of GenAI for Architects
+This subsection addresses RQ1 by identifying the technical characteristics of
+GenAI that present opportunities and challenges for architects operating in agile
+software development environments. Table 5 summarizes the main opportunities
+and challenges.
+GenAI introduces capabilities that can reshape architecture work in agile
+settings. Key opportunities include content generation, design ideation, rapid
+prototyping, and targeted knowledge retrieval. These align with agile practices
+such as iterative delivery and frequent feedback. LLMs (e.g., ChatGPT) can
+accelerate the creation of architectural artifacts (documentation, diagrams, and
+code) and improve cross-role communication [1, 18, 27, 44]. This, in turn, al-
+lows enterprise and solution architects to complete tasks more quickly and align
+IT capabilities with evolving business strategies, while remaining responsive to
+Cite:
+Kooy, S. J., Piest, J. P. S., & Bemthuis, R. H. (2026). Impact and implications of generative AI for enterprise architects in agile
+environments: A systematic literature review. In Enterprise design, operations, and computing. EDOC 2025 Workshops (pp. 53–69).
+Springer. https://doi.org/10.1007/978-3-032-16234-2_4
+
+--- PAGE 7 ---
+a c c e p t e d
+m
+a n u s c r i p t
+Impact and Implications of GenAI on Enterprise Architects 7
+Table 3. Relevance of studies to research questions.
+ID RQ1 RQ2 RQ3 RQ4 RQ5 Ref.
+1 x x [60]
+2 x x [44]
+3 x x x [27]
+4 x [26]
+5 x x [23]
+6 x x x x [2]
+7 x x [18]
+8 x x [42]
+9 x [36]
+10 x x [28]
+11 x x [5]
+12 x x [55]
+13 x [31]
+14 x [10]
+15 x [59]
+16 x x [9]
+17 x x [33]
+18 x [15]
+19 x [48]
+20 x [29]
+21 x [34]
+22 x [19]
+23 x [56]
+24 x [12]
+25 x [20]
+26 x [21]
+27 x [58]
+28 x [57]
+29 x [25]
+30 x x x [1]
+31 x x [3]
+32 x x [40]
+33 x [41]
+stakeholder needs [3,33]. GenAI also supports architectural decision making by
+suggesting alternative solutions and enabling comparative evaluations [28,44].
+These gains come with risks. A prominent technical challenge is the opac-
+ity of GenAI systems; many function as “black boxes” whose internal reason-
+ing processes are inaccessible [60]. This can undermine the transparency, inter-
+pretability, and traceability required for sound architectural governance [2,26].
+Additionally, concerns exist around biased or low-quality outputs, data privacy
+risks when using sensitive inputs, and a low output reliability, often stemming
+from hallucinations, where the model generates plausible yet factually incorrect
+responses. These challenges raise substantial implications for regulatory compli-
+ance and architectural integrity [18,23,41,42].
+Cite:
+Kooy, S. J., Piest, J. P. S., & Bemthuis, R. H. (2026). Impact and implications of generative AI for enterprise architects in agile
+environments: A systematic literature review. In Enterprise design, operations, and computing. EDOC 2025 Workshops (pp. 53–69).
+Springer. https://doi.org/10.1007/978-3-032-16234-2_4
+
+--- PAGE 8 ---
+a c c e p t e d
+m
+a n u s c r i p t
+8 S.J. Kooy et al.
+Table 4. Study methods of included articles.
+Method Count (n) References
+Survey 3 [23,29,60]
+Literature review 5 [2,19,26,41,42]
+Systematic literature / mapping study 2 [1,25]
+Case study (single, multiple, or mixed-methods) 8 [9,10,12,15,56–59]
+Conceptual / Theoretical / Descriptive analysis 6 [21,28,31,44,48,55]
+Exploratory / Qualitative / Reflective study 6 [5,18,27,33,34,40]
+Quantitative (e.g., PLS-SEM) 1 [3]
+Data / Content analysis 2 [20,36]
+Table 5. Opportunities and challenges of GenAI for architects.
+Opportunities Challenges
+Automated generation of code, mod-
+els, and documentation accelerates deliv-
+ery [27,44]
+GenAI systems often function as
+“black boxes”, limiting transparency
+and traceability [2,26]
+Supports fast design ideation and explo-
+ration of alternative solutions [44]
+Risk of generating biased, inappropri-
+ate, or low-quality outputs [23,42]
+Enhances collaboration (e.g. during agile
+sprints) [27]
+Over-reliance on AI may impact archi-
+tects’ analytical judgment and design
+skills [33]
+Improves requirements analysis and speci-
+fication via NLP capabilities [42]
+Limited context windows reduce effec-
+tiveness in large-scale enterprise mod-
+eling [26]
+Enables architectural decision support
+through scenario simulation [5,28]
+Raises concerns about security, privacy,
+and regulatory compliance [23]
+Assists in retrieving and organizing archi-
+tectural and technical knowledge [18,26]
+Lack of standardization in GenAI out-
+puts complicates reuse and interoper-
+ability [18]
+Excessive dependence on GenAI can also erode critical thinking skills among
+architects, weakening their ability to recognize systemic trade-offs or perform
+nuanced risk assessments. Furthermore, many LLMs often exhibit limited effec-
+tiveness in large-scale enterprise contexts on input length and lack of embedded
+domain knowledge [5,41]. This limitation reduces their utility in end-to-end ar-
+chitectural reasoning [26,59,60].
+4.2 GenAI Use Cases for Architectural Decision Making
+This section is related to RQ2 and discusses GenAI use cases for decision making.
+Our findings suggest that GenAI proves particularly impactful during the
+early phases of agile development, including ideation, trade-off analysis, and
+requirements engineering. In these stages, GenAI can facilitate the exploration
+of alternative design paths, enabling architects to balance competing quality
+attributes, such as scalability, performance, and maintainability [44]. This can be
+Cite:
+Kooy, S. J., Piest, J. P. S., & Bemthuis, R. H. (2026). Impact and implications of generative AI for enterprise architects in agile
+environments: A systematic literature review. In Enterprise design, operations, and computing. EDOC 2025 Workshops (pp. 53–69).
+Springer. https://doi.org/10.1007/978-3-032-16234-2_4
+
+--- PAGE 9 ---
+a c c e p t e d
+m
+a n u s c r i p t
+Impact and Implications of GenAI on Enterprise Architects 9
+valuable in volatile and complex enterprise environments, where decision latency
+should be minimized [55].
+GenAI also improves team collaboration by simplifying complex technical
+concepts in accessible terms. By bridging gaps between diverse stakeholders,
+such as developers, product owners, and business analysts, it strengthens the
+architect’s integrative and coordination roles [9,27].
+Additional use cases involve classifying, prioritizing, and clustering stake-
+holder requirements, generating architectural diagrams (e.g., UML), and visu-
+alizing dependencies early in the design process [2, 42]. These functionalities
+contribute to faster and more informed architectural decision making.
+Nonetheless, human oversight remains key. Given the probabilistic nature
+of LLMs, their outputs are neither guaranteed to be optimal nor contextually
+precise, and studies highlight the importance of validating GenAI-derived sug-
+gestions before implementation [5,27,28].
+4.3 Evolving Role, Tasks, and Required Skills of the Architect
+Addressing RQ3, this subsection examines how GenAI can alter the roles, tasks,
+and competencies of enterprise architects in agile environments.
+The capabilities of GenAI influence the professional identity and skill compo-
+sition of architects in agile enterprises. As discussed in previous sections, GenAI
+can enable tasks such as natural language-based code generation, real-time feed-
+back, and architectural synthesis. These functionalities alleviate (parts of) the
+cognitive workload traditionally carried out by architects during design decision
+making, affecting the architect’s role [9]. Recent research on on-demand archi-
+tectural knowledge systems supports this view, showing how GenAI can deliver
+generated suggestions, structured knowledge, and reflective prompts to assist
+in complex architectural evaluations [48]. Consequently, architects increasingly
+operate as curators and validators of GenAI outputs, rather than primary cre-
+ators of design artifacts. This shift requires a reconfiguration of core architectural
+competencies.
+There are many different types of architects. While each type has its own re-
+sponsibilities, they share overlap in tasks and required competencies [20]. In ad-
+dition to foundational skills of architects such as technical expertise, stakeholder
+communication, strategic thinking, and governance oversight [21,34,55,59], ar-
+chitects increasingly require proficiency in prompt engineering, model gover-
+nance, professional judgement, and human oversight of AI-generated content.
+These emerging competencies are aligned with the need for fast validation,
+continuous iteration, and collaborative judgment in dynamic software environ-
+ments [25,31,57].
+In large-scale agile programs, architects are expected to engage more closely
+with development teams and operational workflows [19]. Prior research shows
+that architectural practices are increasingly defined by facilitation, negotiation,
+and design adjudication across multiple agile teams [56,58]. As GenAI capabil-
+ities integrate into these workflows, architects assume multi-faceted roles. De-
+pending on the context, they may act as strategic advisors, technical coaches,
+Cite:
+Kooy, S. J., Piest, J. P. S., & Bemthuis, R. H. (2026). Impact and implications of generative AI for enterprise architects in agile
+environments: A systematic literature review. In Enterprise design, operations, and computing. EDOC 2025 Workshops (pp. 53–69).
+Springer. https://doi.org/10.1007/978-3-032-16234-2_4
+
+--- PAGE 10 ---
+a c c e p t e d
+m
+a n u s c r i p t
+10 S.J. Kooy et al.
+reviewers, or even crisis managers [10,12,57]. This development expands the ar-
+chitectural role from one of high-level oversight to active participation in lower-
+level software delivery, which could address persistent communication gaps ex-
+perienced between higher and lower levels [15].
+While traditionally these roles required extensive experience in abstract mod-
+eling, stakeholder communication, and standardization across domains [33], these
+competencies are now augmented, rather than replaced, by AI-driven assistance.
+Rather than reducing the architect’s contribution, GenAI supports their role in
+contextualizing AI outputs, aligning them with enterprise objectives, and sup-
+porting collaborative decision making in agile environments.
+4.4 Factors Influencing GenAI Adoption Trajectory
+In response to RQ4, this subsection identifies the organizational and technolog-
+ical factors that affect GenAI adoption in architectural practices.
+Key enablers include targeted education programs, GenAI literacy, and or-
+ganizational culture. Absent sufficient investments in upskilling (particularly in
+areas such as prompt engineering, GenAI evaluation, and responsible AI use),
+organizations may struggle to realize the promised productivity gains [2, 18].
+These training efforts are especially important in agile contexts, where architects
+must adapt to fast feedback loops and evolving stakeholder needs. Additionally,
+two behavioral challenges are identified during human-AI collaboration: a steep
+learning curve for mastering GenAI tools, and social loafing, where individu-
+als may rely too much on AI and reduce their own effort [27]. These findings
+reinforce the importance of comprehensive education and awareness programs.
+Governance maturity also plays a key role. Organizations with formalized AI
+policies, ethical oversight, and traceability mechanisms are more likely to inte-
+grate GenAI into architecture workflows effectively [40]. A maturity model could
+range from “Initial” to “Optimizing”, where higher levels are characterized by
+continuous monitoring, defined responsibilities, and established safeguards [40].
+In contrast, underdeveloped governance frameworks lead to accountability gaps
+and undermine trust in AI-generated outputs, particularly in high-stakes archi-
+tectural decision making.
+Finally, organizational readiness is key. This encompasses resource avail-
+ability, technology proficiency, regulatory compatibility (e.g., GDPR compli-
+ance), strategic-operational alignment, and the overall coherence between strate-
+gic goals and GenAI deployment plans [1,29]. Readiness can be categorized into
+four domains: infrastructure and skilled personnel, data governance maturity,
+legal and system compatibility, and strategic alignment [1]. These collectively
+contribute to whether GenAI can effectively be integrated into architecture work.
+In relation to this, research suggests that organizations with greater awareness
+of agile principles tend to support more adaptive architecture practices, thereby
+creating more favorable conditions for GenAI integration [29].
+Cite:
+Kooy, S. J., Piest, J. P. S., & Bemthuis, R. H. (2026). Impact and implications of generative AI for enterprise architects in agile
+environments: A systematic literature review. In Enterprise design, operations, and computing. EDOC 2025 Workshops (pp. 53–69).
+Springer. https://doi.org/10.1007/978-3-032-16234-2_4
+
+--- PAGE 11 ---
+a c c e p t e d
+m
+a n u s c r i p t
+Impact and Implications of GenAI on Enterprise Architects 11
+4.5 Adaptations Required for GenAI Integration
+In response to RQ5, this subsection identifies governance and capability adap-
+tations required to support responsible and effective integration of GenAI in
+architectural work.
+To support GenAI’s potential while mitigating associated risks, organiza-
+tions should adopt dynamic governance frameworks that evolve with model
+performance and regulatory change [60]. Nakayama et al.’s governance lifecycle
+proposes an iterative approach that embeds principles such as fairness, trans-
+parency, and accountability into GenAI management practices [40]. Architects
+require well-defined policies for handling sensitive data, interpret model out-
+puts, and apply GenAI tools responsibly. Organizations should also revise data-
+handling protocols to comply with emerging AI standards and introduce privacy-
+preserving measures and audit trails to support legal compliance and system
+transparency [1,2,23].
+Building organizational capabilities remains a priority. Training programs on
+GenAI risks and best practices can reduce the likelihood of misuse and support
+cultural acceptance. Employees with strong data-governance awareness are more
+likely to use GenAI tools in an ethically responsible manner [3].
+Lastly, trust-building measures, such as open communication and responsible
+usage guidelines, are key to reducing public skepticism and supporting respon-
+sible GenAI adoption within architectural communities [36].
+5 Discussion
+This review indicates that GenAI is reshaping roles, workflows, and governance
+expectations for enterprise architects in agile settings. On the opportunity side,
+GenAI can support the generation, analysis, and communication of complex
+information, strengthening the architect’s integrative and decision-making func-
+tions within cross-functional teams. On the risk side, limited explainability, con-
+textual misalignment, reliability issues (e.g., hallucinations), and overreliance on
+automation raise concerns for governance and professional judgement.
+These dynamics suggest a shift from an “architect-as-creator” model to-
+ward an “architect-as-curator” role. New competencies, including prompt de-
+sign, model oversight, and ethical judgement, complement, rather than replace,
+existing skills. Adoption is not purely technical. Organizations need capability-
+building, structured evaluation, and support mechanisms, together with gover-
+nance maturity, ethical frameworks, and cross-team learning.
+A practical implication is tighter integration of GenAI into enterprise archi-
+tecture platforms to streamline modeling and artifact generation. Theoretically,
+the findings point to co-adaptive human–AI collaboration. Practically, they em-
+phasize disciplined experimentation, clear data-governance practices, and ex-
+plicit human–AI task allocation.
+The review remains exploratory. Rapid developments in GenAI limit gener-
+alizability. Nonetheless, the review offers guidance for enterprise architects to
+Cite:
+Kooy, S. J., Piest, J. P. S., & Bemthuis, R. H. (2026). Impact and implications of generative AI for enterprise architects in agile
+environments: A systematic literature review. In Enterprise design, operations, and computing. EDOC 2025 Workshops (pp. 53–69).
+Springer. https://doi.org/10.1007/978-3-032-16234-2_4
+
+--- PAGE 12 ---
+a c c e p t e d
+m
+a n u s c r i p t
+12 S.J. Kooy et al.
+understand and navigate the implications of GenAI for their evolving roles and
+practices.
+6 Conclusion
+Based on a structured synthesis of 33 peer-reviewed articles, this SLR concludes
+that GenAI is influencing the roles, skills, and work practices of architects in
+agile software development. It augments productivity in ideation, artifact gen-
+eration (code, diagrams, documentation), and architectural decision support,
+while introducing risks related to explainability, privacy, and potential erosion
+of professional judgement through overreliance. Addressing these issues requires
+targeted education, training, and robust governance.
+The contribution of this review is twofold: it organizes emerging evidence on
+how architectural roles are evolving with GenAI, and it outlines practical consid-
+erations for responsible, context-aware adoption. It also identifies organizational
+enablers and barriers that inform governance design and strategy for bringing
+GenAI into agile environments.
+Several limitations apply. Restricting searches to two databases may reduce
+coverage, although recurring themes across diverse sources suggest stability of
+the main insights. With many studies being conceptual or exploratory, the re-
+view structures early discussions rather than offering definitive causal claims.
+The term “architects” was used broadly (enterprise, domain, solution, business,
+IT), which may blur role-specific nuances. Transferability is uncertain and likely
+depends on enterprise size, maturity, and sector. Finally, the field of research is
+nascent and evolving, which constrains the strength of conclusions.
+Future work should pursue empirical studies on the longitudinal effects of
+GenAI on architectural roles, inter-team collaboration, and enterprise agility.
+Promising methods include multi-site case studies, ethnographic fieldwork, and
+controlled experiments. A concrete agenda is to develop principles and patterns
+that guide architects’ effective and responsible use of GenAI.
+Acknowledgments. The authors thank Martin van Capelleveen for the constructive
+discussions.
+Disclosure of Interests. The authors have no competing interests to declare that
+are relevant to the content of this article.
+References
+1. Al-Kfairy, M.: Strategic integration of generative ai in organizational settings: Ap-
+plications, challenges and adoption requirements. IEEE Engineering Management
+Review (2025). https://doi.org/10.1109/EMR.2025.3534034
+2. Alenezi, M., Akour, M.: Ai-driven innovations in software engineering: A review
+of current practices and future directions. Applied Sciences 15(3) (2025). https:
+//doi.org/10.3390/app15031344
+Cite:
+Kooy, S. J., Piest, J. P. S., & Bemthuis, R. H. (2026). Impact and implications of generative AI for enterprise architects in agile
+environments: A systematic literature review. In Enterprise design, operations, and computing. EDOC 2025 Workshops (pp. 53–69).
+Springer. https://doi.org/10.1007/978-3-032-16234-2_4
+
+--- PAGE 13 ---
+a c c e p t e d
+m
+a n u s c r i p t
+Impact and Implications of GenAI on Enterprise Architects 13
+3. Amendi, R., Halim, E., Hartono, H.: Exploring ethical implications: Unraveling
+factors influencing data governance awareness behavior in generative AI chatbot.
+In: 2024 2nd International Conference on Technology Innovation and Its Applica-
+tions (ICTIIA). IEEE, Jakarta, Indonesia (2024). https://doi.org/10.1109/IC
+TIIA61827.2024.10761290
+4. Andrei, B.A., Casu-Pop, A.C., Gheorghe, S.C., Boiangiu, C.A.: A study on using
+waterfall and agile methods in software project management. Journal of Informa-
+tion Systems & Operations Management pp. 125–135 (2019)
+5. Bahi, A., Gharib, J., Youssef, G., Belkadi, L.: Integrating generative AI for advanc-
+ing Agile software development and mitigating project management challenges. In-
+ternational Journal of Advanced Computer Science and Applications 15(3) (2024).
+https://doi.org/10.14569/IJACSA.2024.0150306
+6. Bakar, N.A.A., Suib, A.H., Othman, A., Amdan, A.A., Hassan, M.A.A., Hussein,
+S.S.: Artificial intelligence in enterprise architecture: Innovations, integration chal-
+lenges, and ethics. In: Proceedings of the International Conference on Innovation &
+Entrepreneurship in Computing, Engineering & Science Education (InvENT 2024).
+pp. 578–588 (2024). https://doi.org/10.2991/978-94-6463-589-8_54
+7. Banh, L., Strobel, G.: Generative artificial intelligence. Electronic Markets 33(1),
+63 (2023). https://doi.org/10.1007/s12525-023-00680-1
+8. Beck, K., Beedle, M., van Bennekum, A., Cockburn, A., Cunningham, W., Fowler,
+M., Grenning, J., Highsmith, J., Hunt, A., Jeffries, R., Kern, J., Marick, B., Martin,
+R.C., Mellor, S., Schwaber, K., Sutherland, J., Thomas, D.: Manifesto for Agile
+software development (2001), https://agilemanifesto.org/, accessed: 2025-03-
+24
+9. van den Berg, M., van Vliet, H.: The decision-making context influences the role of
+the enterprise architect. In: Proceedings of the IEEE 20th International Enterprise
+Distributed Object Computing Workshop (EDOCW). pp. 1–7 (2016). https://do
+i.org/10.1109/EDOCW.2016.7584389
+10. van den Berg, M., van Vliet, H.: Enterprise architects should play different roles.
+In: Proceedings of the IEEE International Conference on Enterprise Distributed
+Object Computing Workshop (EDOCW). pp. 1–7. IEEE (2016). https://doi.or
+g/10.1109/CBI.2016.56
+11. Booth, H., Souppaya, M., Vassilev, A., Ogata, M., Stanley, M., Scarfone, K.: Secure
+software development practices for generative AI and dual-use foundation models:
+An SSDF community profile. Tech. Rep. NIST Special Publication (SP) 800-218A,
+National Institute of Standards and Technology (2024). https://doi.org/10.602
+8/NIST.SP.800-218A
+12. Breithaupt, C., Vieracker, J., Chircu, A., Cox, S., Sultanow, E.: The enterprise
+architect as a crisis manager: Insights from Lufthansa. In: INFORMATIK 2020.
+Lecture Notes in Informatics (LNI), Gesellschaft für Informatik (2021). https:
+//doi.org/10.18420/inf2020_14
+13. Bright, J., Enock, F., Esnaashari, S., Francis, J., Hashem, Y., Morgan, D.: Gen-
+erative AI is already widespread in the public sector: Evidence from a survey of
+UK public sector professionals. Digital Government: Research and Practice 6(1)
+(2025). https://doi.org/10.1145/3700140
+14. Bughin, J.: What drives the corporate payoffs of using generative artificial intel-
+ligence? Structural Change and Economic Dynamics 71, 658–668 (2024). https:
+//doi.org/10.1016/j.strueco.2024.09.011
+15. Canat, M., Català, N.P., Jourkovski, A., Petrov, S., Wellme, M., Lagerström, R.:
+Enterprise architecture and agile development: Friends or foes? In: 2018 IEEE 22nd
+Cite:
+Kooy, S. J., Piest, J. P. S., & Bemthuis, R. H. (2026). Impact and implications of generative AI for enterprise architects in agile
+environments: A systematic literature review. In Enterprise design, operations, and computing. EDOC 2025 Workshops (pp. 53–69).
+Springer. https://doi.org/10.1007/978-3-032-16234-2_4
+
+--- PAGE 14 ---
+a c c e p t e d
+m
+a n u s c r i p t
+14 S.J. Kooy et al.
+International Enterprise Distributed Object Computing Workshop (EDOCW). pp.
+176–182. IEEE (2018). https://doi.org/10.1109/EDOCW.2018.00033
+16. Chahal, A., Gulia, P.: Machine learning and deep learning. International Journal
+of Innovative Technology and Exploring Engineering (IJITEE) 8(12), 4910–4914
+(2019). https://doi.org/10.35940/ijitee.L3550.1081219
+17. Chui, M., Yee, L., Hall, B., Singla, A., Sukharevsky, A.: The state of AI in 2023:
+Generative AI’s breakout year (2023), https://www.mckinsey.com/capabilitie
+s/quantumblack/our-insights/the-state-of-ai-in-2023-generative-ais-b
+reakout-year, accessed: 2025-03-24
+18. Di Rocco, J., Di Ruscio, D., Di Sipio, C., Nguyen, P.T., Rubei, R.: On the use of
+large language models in model-driven engineering. Software and Systems Modeling
+(2025). https://doi.org/10.1007/s10270-025-01263-8
+19. Gellweiler, C.: Collaboration of solution architects and project managers. Interna-
+tional Journal of Human Capital and Information Technology Professionals 10(4),
+1–15 (2019). https://doi.org/10.4018/IJHCITP.2019100101
+20. Gellweiler, C.: Types of IT architects: A content analysis on tasks and skills. Jour-
+nal of Theoretical and Applied Electronic Commerce Research 15, 15 – 37 (2020).
+https://doi.org/10.4067/S0718-18762020000200103
+21. Gellweiler, C.: IT architects and IT-business alignment: A theoretical review. Pro-
+cedia Computer Science 196, 13–20 (2022). https://doi.org/10.1016/j.procs.
+2021.11.067
+22. Georgiev, D., Antonova, A.: Enhancing knowledge sharing processes via automated
+software documentation management systems using Gen AI software tools. In:
+Proceedings of the IEEE Conference. IEEE (2024). https://doi.org/10.1109/MM
+A62616.2024.10817681
+23. Golda, A., Mekonen, K., Pandey, A., Singh, A., Hassija, V., Chamola, V., Sikdar,
+B.: Privacy and security concerns in generative ai: A comprehensive survey. IEEE
+Access 12, 48126–48149 (2024). https://doi.org/10.1109/ACCESS.2024.3381611
+24. Group, T.O.: Togaf 9.2 documentation (2025), https://pubs.opengroup.org/a
+rchitecture/togaf9-doc/arch/index.html
+25. Guo, H., Smite, D., Li, J., Gao, S.: Enterprise architecture and agility: A systematic
+mapping study. In: Business Modeling and Software Design (BMSD 2021), Lecture
+Notes in Business Information Processing. vol. 422, pp. 296–305. Springer (2021).
+https://doi.org/10.1007/978-3-030-79976-2_18
+26. Hagos, D.H., Battle, R., Rawat, D.B.: Recent advances in generative ai and large
+language models: Current status, challenges, and perspectives. IEEE Transactions
+on Artificial Intelligence 5(1) (2024). https://doi.org/10.1109/TAI.2024.34447
+42
+27. Hamza, M., Siemon, D., Akbar, M.A., Rahman, T.: Human-ai collaboration in
+software engineering: Lessons learned from a hands-on workshop. In: ACM/IEEE
+International Workshop on Software-intensive Business (2024). https://doi.org/
+10.1145/3643690.3648236
+28. Handler, A., Larsen, K.R., Hackathorn, R.: Large language models present new
+questions for decision support. International Journal of Information Management
+79 (2024). https://doi.org/10.1016/j.ijinfomgt.2024.102811
+29. Kaddoumi, T., Watfa, M.: A foundational framework for agile enterprise archi-
+tecture. International Journal of Lean Six Sigma 13(1), 136–155 (2022). https:
+//doi.org/10.1108/IJLSS-03-2021-0057
+30. Kalenda, M., Hyna, P., Rossi, B.: Scaling agile in large organizations: Practices,
+challenges, and success factors. Journal of Software: Evolution and Process 30(10),
+e1954 (2018). https://doi.org/10.1002/smr.1954
+Cite:
+Kooy, S. J., Piest, J. P. S., & Bemthuis, R. H. (2026). Impact and implications of generative AI for enterprise architects in agile
+environments: A systematic literature review. In Enterprise design, operations, and computing. EDOC 2025 Workshops (pp. 53–69).
+Springer. https://doi.org/10.1007/978-3-032-16234-2_4
+
+--- PAGE 15 ---
+a c c e p t e d
+m
+a n u s c r i p t
+Impact and Implications of GenAI on Enterprise Architects 15
+31. Kempegowda, S.M., Chaczko, Z.: Essential skill of enterprise architect practitioners
+for digital era. In: Proceedings of the International Conference on Electrical and
+Data Engineering. IEEE (2020). https://doi.org/10.1109/ICSENG.2018.863821
+0
+32. Kitchenham, B., Charters, S.: Guidelines for performing systematic literature re-
+views in software engineering (2007)
+33. Krishnamurthy, R.: Breezing my way as a solution architect: A retrospective on
+skill development and use. IEEE Software 34(3), 9–13 (2017), https://doi.org/
+10.1109/MS.2017.83
+34. Kurnia, S., Kotusev, S., Shanks, G., Dilnutt, R., Taylor, P., Milton, S.K.: Enter-
+prise architecture practice under a magnifying glass: Linking artifacts, activities,
+benefits, and blockers. Communications of the Association for Information Systems
+49, 668–698 (2021). https://doi.org/10.17705/1CAIS.04936
+35. Lankhorst, M.: Enterprise architecture at work: Modelling, communication and
+analysis. The Enterprise Engineering Series, Springer (2017). https://doi.org/
+10.1007/978-3-662-53933-0
+36. Mahmoud, A.B., Kumar, V., Spyropoulou, S.: Identifying the public’s beliefs about
+generative artificial intelligence: A big data approach. IEEE Transactions on En-
+gineering Management (2025). https://doi.org/10.1109/TEM.2025.3534088
+37. Mulder, J.: Modern enterprise architecture: Using DevSecOps and cloud-native in
+large enterprises. Apress (2023). https://doi.org/10.1007/978-1-4842-9066-8
+38. Nafei, W.: Organizational agility: The key to improve organizational performance.
+International Business Research 9(3), 97–104 (2016). https://doi.org/10.5539/
+ibr.v9n3p97
+39. Nah, F.F.H., Zheng, R., Cai, J., Siau, K., Chen, L.: Generative AI and Chat-
+GPT: Applications, challenges, and AI-human collaboration. Journal of Informa-
+tion Technology Case and Application Research 25(3), 277–304 (2023). https:
+//doi.org/10.1080/15228053.2023.2233814
+40. Nakayama, M., Wan, Y., Alvino, F.: Balancing potential and prudence: An on-
+going study on organizational policymaking for generative AI adoption. In: Pro-
+ceedings of the 2024 Artificial Intelligence for Business (AIxB). IEEE (2024).
+https://doi.org/10.1109/AIxB62249.2024.00014
+41. Nidhisree, C., Paul, A., Venunadh, A., Bhowmick, R.S.: Generative AI under
+scrutiny: Assessing the risks and challenges in diverse domains. In: 2024 IEEE
+6th International Conference on Cybernetics, Cognition and Machine Learning
+Applications (ICCCMLA). pp. 243–246. IEEE (2024). https://doi.org/10.110
+9/ICCCMLA63077.2024.10871350
+42. Norheim, J.J., Rebentisch, E., Xiao, D., Draeger, L., Kerbrat, A., de Weck, O.L.:
+Challenges in applying large language models to requirements engineering tasks.
+Design Science Journal 10 (2024). https://doi.org/10.1017/dsj.2024.8
+43. Page, M.J., McKenzie, J.E., Bossuyt, P.M., Boutron, I., Hoffmann, T.C., Mulrow,
+C.D., Shamseer, L., Tetzlaff, J.M., Akl, E.A., Brennan, S.E., Chou, R., Glanville, J.,
+Grimshaw, J.M., Hróbjartsson, A., Lalu, M.M., Li, T., Loder, E.W., Meerpohl, J.J.,
+Munn, S., McGuinness, L.A., Stewart, E.S., Thomas, J., Tricco, A.C., Barbour,
+V., Garner, P.C., Ioannidis, J.P., Moher, D.: The PRISMA 2020 statement: An
+updated guideline for reporting systematic reviews. BMJ 372, n71 (2021). https:
+//doi.org/10.1136/bmj.n71
+44. Paliwal, G., Donvir, A., Gujar, P., Panyam, S.: Accelerating time-to-market: The
+role of generative AI in product development (2024). https://doi.org/10.1109/
+COLCOM62950.2024.10720255, white paper or preprint
+Cite:
+Kooy, S. J., Piest, J. P. S., & Bemthuis, R. H. (2026). Impact and implications of generative AI for enterprise architects in agile
+environments: A systematic literature review. In Enterprise design, operations, and computing. EDOC 2025 Workshops (pp. 53–69).
+Springer. https://doi.org/10.1007/978-3-032-16234-2_4
+
+--- PAGE 16 ---
+a c c e p t e d
+m
+a n u s c r i p t
+16 S.J. Kooy et al.
+45. Piest, J.P.S., Kooy, S.J., Bemthuis, R.: Impact and implications of GenAI on en-
+terprise architects (2025). https://doi.org/10.17605/OSF.IO/DH2AS
+46. Putta, A., Paasivaara, M., Lassenius, C.: Adopting Scaled Agile Framework
+(SAFe): A multivocal literature review. In: XP ’18 Companion. ACM (2018).
+https://doi.org/10.1145/3234152.3234164
+47. Rashid, A.B., Kausik, A.K.: AI revolutionizing industries worldwide: A compre-
+hensive overview of its diverse applications. Hybrid Advances 7(100277), 100277–
+100277 (2024). https://doi.org/10.1016/j.hybadv.2024.100277
+48. Razavian, M., Paech, B., Tang, A.: The vision of on-demand architectural knowl-
+edge systems as a decision-making companion. Journal of Systems and Software
+198 (2023). https://doi.org/10.1016/j.jss.2022.111560
+49. Rouhani, B.D., Mahrin, M.N.M., Nikpay, F., Ahmad, R., Nikfard, P.: A systematic
+literature review on enterprise architecture implementation methodologies. Infor-
+mation and Software Technology 62, 1–20 (2015). https://doi.org/10.1016/j.
+infsof.2015.01.012
+50. Sassa, A.C., de Almeida, I.A., Fernandes Pereira, T.N., de Oliveira, M.S.: Scrum: A
+systematic literature review. International Journal of Advanced Computer Science
+and Applications 14(4), 173–184 (2023). https://doi.org/10.14569/IJACSA.20
+23.0140420
+51. Scaled Agile, Inc.: Enterprise architect (2023), https://scaledagileframework.c
+om/enterprise-architect/, accessed: 2025-03-24
+52. Scaled Agile, Inc.: Solution architect (2023), https://scaledagileframework.c
+om/solution-architect/, accessed: 2025-03-24
+53. Scaled Agile, Inc.: System architect/engineer (2023), https://scaledagileframe
+work.com/system-architect-engineer/, accessed: 2025-03-24
+54. Strano, C., Rehmani, Q.: The role of the enterprise architect. Information Systems
+and e-Business Management 5(4), 379–396 (2007). https://doi.org/10.1007/s1
+0257-007-0053-1
+55. Ullrich, A., Bertheau, C., Wiedmann, M., Sultanow, E., Körppen, T., Bente, S.:
+Roles, tasks and skills of the enterprise architect in the vuca world. In: 2021
+IEEE 25th International Enterprise Distributed Object Computing Workshop
+(EDOCW). pp. 261–270 (2021). https://doi.org/10.1109/EDOCW52865.202
+1.00057
+56. Ömer Uludağ, Kleehaus, M., Matthes, F., Schneider, J.: What to expect from
+enterprise architects in large-scale Agile development: A multiple-case study. In:
+Proceedings of the Americas Conference on Information Systems (AMCIS) (2019)
+57. Ömer Uludağ, Matthes, F.: Investigating the role of enterprise architects in sup-
+porting large-scale agile transformations: A multiple-case study. In: Proceedings of
+the Americas Conference on Information Systems (AMCIS). Salt Lake City, USA
+(2020), https://aisel.aisnet.org/amcis2020/digital_agility/digital_agi
+lity/2/
+58. Ömer Uludağ, Matthes, F.: Large-scale agile development patterns for enterprise
+and solution architects. In: Proceedings of the European Conference on Pattern
+Languages of Programs (EuroPLoP). ACM (2020). https://doi.org/10.1145/34
+24771.3424895
+59. Wagner, H.T., Moshtaf, J.: Individual it roles in business–it alignment and it gov-
+ernance. In: Proceedings of the 2016 European Conference on Information Systems
+(ECIS) (2016). https://doi.org/10.1109/HICSS.2016.610
+60. Wang, Y., Pan, Y., Yan, M., Su, Z., Luan, T.H.: A survey on ChatGPT:
+AI–generated contents, challenges, and solutions. IEEE Open Journal of the Com-
+puter Society (2023). https://doi.org/10.1109/OJCS.2023.3300321
+Cite:
+Kooy, S. J., Piest, J. P. S., & Bemthuis, R. H. (2026). Impact and implications of generative AI for enterprise architects in agile
+environments: A systematic literature review. In Enterprise design, operations, and computing. EDOC 2025 Workshops (pp. 53–69).
+Springer. https://doi.org/10.1007/978-3-032-16234-2_4
+
+--- PAGE 17 ---
+a c c e p t e d
+m
+a n u s c r i p t
+Impact and Implications of GenAI on Enterprise Architects 17
+61. Waterman, M., Noble, J., Allan, G.: How much up-front? A grounded theory of
+Agile architecture. In: IEEE Xplore (2015). https://doi.org/10.1109/ICSE.201
+5.54
+62. Williams, C.: A brief introduction to artificial intelligence. In: Proceedings
+OCEANS ’83. pp. 94–99 (1983). https://doi.org/10.1109/OCEANS.1983.11
+52096
+63. Zachman, J.A.: A framework for information systems architecture. IBM Systems
+Journal 26(3), 276–292 (1987). https://doi.org/10.1147/sj.263.0276
+64. Zachman, J.A.: The framework for enterprise architecture: Background, description
+and utility (2000), https://zachman-feac.com/the-framework-for-enterpris
+e-architecture-background-description-and-utility
+Cite:
+Kooy, S. J., Piest, J. P. S., & Bemthuis, R. H. (2026). Impact and implications of generative AI for enterprise architects in agile
+environments: A systematic literature review. In Enterprise design, operations, and computing. EDOC 2025 Workshops (pp. 53–69).
+Springer. https://doi.org/10.1007/978-3-032-16234-2_4

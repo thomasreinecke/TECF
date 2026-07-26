@@ -1,0 +1,1482 @@
+--- PAGE 1 ---
+Information Systems Journal, 2026; 36:95–109
+https://doi.org/10.1111/isj.70001
+95
+Information Systems Journal
+SPECIAL ISSUE ARTICLE OPEN ACCESS
+Navigating Flexibility and Standardisation in
+Low-­Code/No-­Code Development
+Altus Viljoen1 | Benedikt Stelzl2 | Maoying Yang3 | John Nguyen1 | Andreas Hein4 | Edona Elshan5 | Helmut Krcmar1
+1Technical University of Munich, Garching bei München, Germany | 2Enterprise Software Firm, Garching bei München, Germany | 3Semiconductor
+Manufacturing Firm, Neubiberg, Germany | 4University of St. Gallen, St.Gallen, Switzerland | 5Vrije Universiteit Amsterdam, Amsterdam, the Netherlands
+Correspondence: Altus Viljoen (altus.viljoen@tum.de)
+Received: 5 July 2024 | Revised: 17 May 2025 | Accepted: 2 June 2025
+Keywords: citizen development | flexibility | IT governance | low-­ code development platform | no-­ code | paradoxical tension | ServiceNow | standardisation
+ABSTRACT
+Low-­ code/no-­ code (LCNC) platforms, such as ServiceNow and Microsoft Power Platform, enable employees without formal
+IT training to build applications and automate workflows, thus driving agility and reducing dependence on traditional IT
+teams. However, LCNC platforms also pose a persistent challenge for organisations: while they offer flexibility and freedom by
+enabling decentralised development, they also require standardisation and control to manage risks that can be exacerbated by
+these platforms, such as shadow IT and technical debt. Striking the right balance is difficult—too much flexibility can compro-
+mise stability, while too much standardisation can stifle the autonomy and creativity that make LCNC platforms valuable in
+the first place. This study explores flexibility–standardisation tensions in LCNC development through an investigation of two
+multinational technology firms with differing LCNC maturity levels, both using ServiceNow. Drawing from 57 interviews,
+we identify three types of flexibility-­ standardisation tensions shaped by three key elements of LCNC development: the plat-
+form itself, the people using the platform and the organisational processes targeted for improvement. We derive six guidelines
+used to navigate flexibility–standardisation tensions and demonstrate how these are applied across different stages of LCNC
+maturity. Building on these insights, we provide concrete, context-­ sensitive recommendations to help organisations adapt the
+guidelines to their specific environments. We conclude with forward-­ looking reflections on how firms can dynamically make
+sense of these tensions as LCNC platforms and practices evolve. Overall, our findings show that effective LCNC governance
+requires a dynamic approach—one that balances flexibility and standardisation simultaneously rather than treating them as
+opposing choices.
+1   |   Introduction
+Low-­ code/no-­ code (LCNC) development platforms, such as
+ServiceNow,MicrosoftPowerPlatformandMendix,areincreas-
+inglyrecognisedasessentialtoolsforadvancingdigitaltransfor-
+mation,as80%ofcompaniesidentifyLCNCplatformsasrelevant
+for accelerating software development (Gonçalves et al. 2024).
+These platforms enable non-­ technical employees, often referred
+to as ‘citizen developers’ (Hoogsteen and Borgman 2022), to
+create applications or workflows independently through user-­
+friendly interfaces and pre-­ configured features (Bock and
+Frank 2021). By reducing reliance on traditional IT functions,
+LCNC platforms promise to streamline development processes
+and foster bottom-­ up innovation in organisations.
+However, the adoption of LCNC platforms in organisations
+presents an interesting tension: balancing the flexibility that
+drives LCNC platforms' value with the need for standardisa-
+tion and control to mitigate their associated risks. Flexibility
+empowers citizen developers to use LCNC platforms to build
+applications without having to involve IT as an intermediary
+and enables organisations to address diverse and evolving
+This is an open access article under the terms of the Creative Commons Attribution License, which permits use, distribution and reproduction in any medium,
+provided the original work is properly cited.
+© 2025 The Author(s). Information Systems Journal published by John Wiley & Sons Ltd.
+
+--- PAGE 2 ---
+96 Information Systems Journal, 2026
+business needs (Hoogsteen and Borgman 2022). Nonetheless,
+while this flexibility enhances innovative potential within
+organisations, it can also lead to issues such as poor code
+quality, shadow IT and technical debt, particularly, when
+non-­ technical employees take on development responsibilities
+(Elshan et al. 2023; Lethbridge 2021; Viljoen et al. 2024). To
+mitigate these risks, organisations implement standardised
+governance measures, such as quality assurance processes
+and oversight structures (Binzer et al. 2024; Prinz et al. 2024).
+Yet, excessive standardisation risks undermining LCNC plat-
+forms' core purpose—empowering users with autonomy and
+flexibility—creating a tension that organisations must care-
+fully navigate.
+While some contemporary research explicitly acknowledges
+these opposing demands—for example, Binzer et al. (2024,
+260) observe that ‘effective low-­ code/no-­ code governance ap-
+proaches often combine self-­ responsibility with formalized pro-
+cesses’—most studies address them only implicitly. Flexibility is
+regardedasakeyadvantageofLCNCdevelopment(Kandaurova
+et al. 2024), whereas standardisation is viewed as essential for
+mitigating LCNC-­ related risks (Viljoen et al. 2024) and enabling
+integration and interoperability across system components
+(Biedova et al. 2024). Thus, despite its recurring presence as
+an underlying theme, there is limited insight into the interplay
+between flexibility and standardisation, leaving organisations
+with little concrete guidance on how to manage this tension.
+Thisstudyaddressesthisgapbyexploringhoworganisationscan
+maximise flexibility in LCNC development while simultaneously
+establishing the standardisation needed to mitigate associated
+challenges.
+To explore this phenomenon, we examined how two large
+multinational technology organisations that have imple-
+mented ServiceNow—a leading LCNC platform (Matvitskyy
+et al. 2023)—have developed practices to navigate the tension
+between flexibility and standardisation. We conducted inter-
+views with 57 stakeholders, including IT professionals, citizen
+developers, managers and a variety of platform experts di-
+rectly involved in the platform's implementation. By analysing
+both shared and organisation-­ specific practices, we identified
+explicit strategies and implicit factors that shape how the or-
+ganisations manage flexibility and standardisation in LCNC
+development.
+Our study offers several contributions for organisations seeking
+to implement LCNC platforms and initiatives. First, we identify
+that flexibility–standardisation tensions manifest in multiple
+forms, shaped by three key elements: the LCNC platform, its
+users and the organisational processes targeted for improve-
+ment. We demonstrate how these tensions arise at the intersec-
+tions of these elements. Second, for each identified tension, we
+present guidelines derived from our case partners, illustrating
+how they address the dual demands of flexibility and standard-
+isation. Our analysis also highlights how the two organisations
+approach these challenges differently, based on their respec-
+tive LCNC maturity levels. Finally, we demonstrate how these
+guidelines can be adapted to varying organisational contexts and
+offer actionable recommendations to help practitioners more
+effectively navigate and manage flexibility–standardisation
+tensions. We conclude with forward-­ looking reflections on how
+organisations can dynamically make sense of these tensions as
+LCNC platforms and initiatives evolve.
+While flexibility–standardisation tensions may never be fully ‘re-
+solved’, our findings provide valuable insights into navigating this
+complexity and establishing a foundation for achieving the ‘sweet
+spot’ between these two competing sides of the LCNC spectrum.
+2   |   Background
+Asafoundation,weprovideanoverviewofkeyconceptsandter-
+minologies related to the LCNC domain: the tools, development
+approaches, platform stakeholders and outputs created with
+LCNC platforms. Next, based on contemporary LCNC research,
+we examine tensions between flexibility and standardisation
+in LCNC development and note their implications. Finally, we
+outline the underlying causes and potential responses to the
+tensions and we highlight that further research is needed to un-
+derstand how firms navigate them effectively.
+2.1   |   Related Concepts and Terminologies
+2.1.1   |   Tools
+LCNC development platforms are software tools that provide a
+graphical user interface for creating applications with minimal
+or no coding. It typically includes features such as drag-­ and-­
+drop or click-­ through components, templates, prebuilt inte-
+grations supporting business processes and data services and
+one-­ step deployments (Bock and Frank 2021; Richardson and
+Rymer 2014; Vincent et al. 2020). While platforms categorised
+as low-­code still require some level of coding, typically cus-
+tomising prebuilt components or templates, no-­code platforms
+strive to eliminate coding altogether. Prominent low-­ code de-
+velopment platforms1 include Mendix, OutSystems, Microsoft
+Power Platform and ServiceNow (Matvitskyy et al. 2023), while
+no-­ code development platforms include Airtable, Zapier and
+Bubble.Inpractice,thetermLCNCplatformsisacollectiveterm
+for these platforms (Kirvan and Pratt 2024).
+2.1.2   |   Users
+There are specific terminologies relating to the users of LCNC
+platforms; most prominently, citizen developers. While it is
+challenging to define the term ‘citizen developer’ definitively,
+it can be generally understood as follows: ‘An employee who
+creates application capabilities for consumption by themselves
+or others, using tools not actively forbidden by IT or business
+units. A citizen developer is a persona, not a title or targeted
+role. They report to a business unit or function other than IT’
+(Gartner 2024). The term business unit developer has also been
+used to describe this role (Li et al. 2022; Scharpf et al. 2024).
+In addition to citizen developers, LCNC development can also
+involve other stakeholders, for example, stakeholders from tra-
+ditional IT units (e.g., professional developers, platform archi-
+tects, etc.) who can use these platforms or be involved in their
+organisational implementation (Binzer et al. 2024, 2025; Bruhin
+et al. 2024; Viljoen et al. 2024).
+13652575, 2026, 1, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/isj.70001, Wiley Online Library on [07/07/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+--- PAGE 3 ---
+Information Systems Journal, 2026 97
+2.1.3   |   Development Approach
+While LCNC platforms refer to the technology itself, the terms
+low-­code and no-­code development refer to the simplified soft-
+ware development approach enabled by these platforms.2
+This approach aims to minimise or eliminate the need for
+traditional hand-­ coding, especially by using prebuilt modules
+and templates to create applications or workflows (Bock and
+Frank 2021). Additionally, the concept of citizen development
+is frequently associated with LCNC platforms. Compared
+to LCNC development, which refers to the ‘type’ of develop-
+ment done on LCNC platforms that require less/no code (i.e.,
+independent of the user's technical proficiency), citizen de-
+velopment refers rather to the ‘inclusion and empowerment’
+aspect that these platforms offer, that is, the practice of non-­
+professionals—often business users with no formal coding
+experience—creating applications and workflows (Hoogsteen
+andBorgman 2022).3 Goingforwardinthisstudy,weuseLCNC
+development as the collective term for the approach/practice of
+developing with LCNC platforms.4
+2.1.4   |   Software Outputs
+Finally, there are terminologies that describe the outputs
+generated on LCNC platforms, that is, what users build on
+these platforms. Due to the variance in generative capabil-
+ities of LCNC platforms, such outputs vary significantly in
+scope and complexity. For instance, platforms such as Mendix
+and OutSystems enable the creation of comprehensive,
+‘open-­ ended’ web or mobile applications, whereas platforms
+like Airtable, Zapier and Celonis are more focused on work-
+flow or robotic process automation. Some providers, such as
+ServiceNow and Microsoft Power Platform, offer a combi-
+nation of these functionalities. Nevertheless, the common
+denominator is that LCNC applications are not complex, com-
+prehensive software systems, but rather ‘scoped’ or targeted
+applications or workflows. Examples include a bottling com-
+pany using Microsoft's Power Platform to automate back-­ end
+processes for managing vending machines (Microsoft 2020)
+and a healthcare provider using ServiceNow's Now Platform
+to create an application that manages the administration of flu
+vaccines (ServiceNow 2024c).
+2.2   |   Flexibility Versus Standardisation in LCNC
+Development: A Paradoxical Tension
+This study explores tensions between flexibility and standardi-
+sation in LCNC development. Flexibility in LCNC development
+aligns strongly with LCNC platforms' overall goal: providing
+any tech-­ savvy user the ability to quickly adapt, innovate and
+create tailored software solutions that address their own spe-
+cific business needs without the need for traditional IT experts.
+In contrast, standardisation focuses on ensuring consistency,
+governance and alignment with the use of these platforms.
+However, while both flexibility and standardisation can deliver
+benefits, both aspects can also lead to challenges. Table 1 sum-
+marises the benefits and challenges of flexibility and standardi-
+sation in LCNC development.
+TABLE 1    |    Benefits and Challenges of Flexibility and Standardisation in LCNC Development.
+Flexibility Benefits Empowerment: LCNC development empowers non-­ technical users to actively
+participate in application development and to automate processes, reducing reliance on
+traditional IT experts (Biedova et al. 2024; Binzer et al. 2024; Viljoen et al. 2024).
+Experimentation: Development on LCNC platforms facilitates rapid prototyping, encourages
+experimentation with new ideas and concepts and promotes innovation and creativity in
+solution design (Binzer et al. 2024; Grashoff and Recker 2024; Kandaurova et al. 2024).
+Challenges Shadow IT: Non-­ IT employees independently developing applications means they can bypass
+established governance and protocols, making it difficult for the organisation to monitor
+software efforts and ensure quality (Davison et al. 2024; Elshan et al. 2023; Viljoen et al. 2024).
+Technical debt: Sub-­ par or fragmented applications developed by non-­ IT employees may
+require extensive and costly maintenance and optimization, undermining LCNC platforms'
+intention of reducing development overhead (Elshan et al. 2023; Viljoen et al. 2024).
+Standardisation Benefits Integration and Interoperability: Choosing LCNC platforms from established
+providers like Microsoft or Oracle simplifies integration and ensures interoperability
+across various company system components (Biedova et al. 2024).
+LCNC initiatives' scalability: LCNC applications and initiatives are easier
+to maintain and scale when developed according to predefined guidelines
+or guardrails (Binzer et al. 2024; Binzer and Winkler 2024).
+Challenges Need for traditional development: LCNC platforms that lack sufficient customization
+capabilities are unsuitable for addressing complex business processes, requiring
+organisations to still rely on traditional development (Elshan et al. 2023).
+Demotivation of citizen developers: Over-­ regulation and excessive control of citizen
+developers can demotivate these individuals, particularly, as citizen development is often
+voluntary and driven by intrinsic motivation (Biedova et al. 2024; Viljoen et al. 2023).
+13652575, 2026, 1, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/isj.70001, Wiley Online Library on [07/07/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+--- PAGE 4 ---
+98 Information Systems Journal, 2026
+As is visible from the above benefits and challenges, the rela-
+tionship between flexibility and standardisation in LCNC de-
+velopment inhibits paradoxical attributes. A paradox can be
+understood as a set of contradictory yet interdependent forces
+that coexist and persist over time, creating an ongoing tension
+between opposing sides (Lewis 2000; Smith and Lewis 2011).
+Managing a paradox requires continuously navigating the
+competing demands of both sides, as such a tension can never
+be fully 'resolved'. As noted, in the context of LCNC develop-
+ment, flexibility empowers users and fosters experimentation,
+but simultaneously creates risks like shadow IT and technical
+debt, requiring standardisation to mitigate these challenges.
+However, while standardisation ensures more seamless integra-
+tion and scalability of LCNC initiatives, it can limit the adapt-
+ability and creativity that flexibility enables. Accordingly, the
+opposing forces of flexibility and standardisation are persistent,
+contradictory—yet interdependent—and require ongoing navi-
+gation. Finding the ‘sweet spot’ is difficult, as Hoogsteen and
+Borgman (2022) noted: ‘Designing the [LCNC] guardrails is not
+an easy task, as a balance must be struck between autonomy
+and control.’
+2.3   |   Understanding and Navigating
+Flexibility-­Standardisation Tensions
+While flexibility-­ standardisation tensions in LCNC develop-
+ment have not been addressed in a dedicated manner, contem-
+porary studies on LCNC development provide a foundation
+for how it can be studied. Particularly, three overarching el-
+ements are considered when talking about the benefits, chal-
+lenges and opportunities of LCNC (Carroll et al. 2024): the
+people (citizen developers), the processes (company processes
+impacted by LCNC) and the technology (the LCNC platform).5
+As shown below, these three elements have implicitly or
+partially addressed flexibility and standardisation in LCNC
+development.
+First, concerning people, striking a balance between support-
+ing citizen developers and avoiding excessive oversight is cru-
+cial (Biedova et al. 2024). This involves legitimising the citizen
+developer role within organisations (Viljoen et al. 2024) and
+offering standardised education and training programmes
+(Elshan et al. 2025; Prinz et al. 2024). Such programmes range
+from platform-­ specific instruction to broader upskilling ini-
+tiatives that incorporate traditional software development
+principles (Binzer et al. 2024). Second, regarding processes,
+the tension between standardisation and flexibility becomes
+particularly evident when scaling LCNC applications. For in-
+stance, Biedova et al. (2024) describe how one company used
+LCNC to flexibly develop an insurance solution, but faced sig-
+nificant challenges scaling it due to siloed IT initiatives across
+departments. This lack of integration left system compatibility
+and process alignment as an ‘afterthought’. To address such
+challenges, a deeper understanding of processes and their
+alignment with LCNC platform capabilities has thus been
+identified as a key recommendation for successful platform
+implementation (Kandaurova et al. 2024). Third, the interplay
+between flexibility and standardisation is also evident at the
+platform level. Binzer et al. (2024) explore the trade-­ off be-
+tween single-­ platform strategies, which impose uniformity,
+and multi-­ platform approaches, which offer greater flex-
+ibility for teams across an organisation. Additionally, the
+standardisation of data structures and formats to align with
+platform requirements has been highlighted as a fundamen-
+tal prerequisite for effectively implementing LCNC platforms
+(Kandaurova et al. 2024).
+Accordingly, our study uses these three elements—people,
+processes and the LCNC platform—as the foundation to fur-
+ther investigate flexibility-­ standardisation tensions in LCNC
+development.
+3   |   Study Design and Case Partners
+3.1   |   Study Design
+We investigated how two large multinational technology or-
+ganisations with experience in LCNC development have de-
+veloped practices to navigate tensions between flexibility and
+standardisation. Both organisations (each with over 10000
+employees) use the same LCNC platform, ServiceNow, to op-
+timise internal processes and digital workflows. One organi-
+sation has a more mature LCNC landscape, characterised by a
+longerhistorywiththeplatformandabroaderimplementation
+of its offerings. The other is at a relatively earlier stage, with a
+narrower set of deployed functionalities, yet it has already es-
+tablished clear LCNC governance practices. Examining these
+two organisations together enabled us to explore how LCNC
+practices emerge under differing conditions of maturity and
+deployed functionalities. While the organisations share many
+practices, we observed notable differences in implementation
+and organisational routines that took shape based on their
+organisational contexts and what works in practice. In total,
+we conducted 57 interviews across the two organisations and
+derived six guidelines for practitioners that are both generaliz-
+able and actionable. Appendix A provides a detailed overview
+of the interviewees and data collection.
+3.2   |   ServiceNow
+Founded in 2004, ServiceNow (2025e) is a cloud-­ based
+LCNC platform designed to streamline organisational work-
+flows and optimise business processes. At its core is the Now
+Platform, a unified technology stack with a single architec-
+ture that integrates data across applications, departments
+and systems with the aim to automate and modernise work-
+flows. Initially focused on IT Service Management (ITSM),
+ServiceNow has expanded to offer solutions across various
+functions, including IT Operations Management (ITOM),
+Customer Service Management (CSM), HR Service Delivery
+(HRSD), Security Operations (SecOps), Governance, Risk
+and Compliance (GRC) and Finance and Supply Chain
+Management. These solutions support organisations in man-
+aging IT infrastructure, enhancing customer experiences,
+automating workflows and addressing compliance and se-
+curity challenges. By enabling organisations to digitise and
+standardise processes across diverse functions, ServiceNow
+facilitates improved operational efficiency, reduced complex-
+ity and enhanced busines-­ s-­ IT alignment. ServiceNow follows
+13652575, 2026, 1, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/isj.70001, Wiley Online Library on [07/07/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+--- PAGE 5 ---
+Information Systems Journal, 2026 99
+a biannual release cycle, introducing major software updates
+every 6months to enhance platform functionality and address
+evolving customer needs. These regular releases ensure that
+organisations can continuously leverage ServiceNow's latest
+features and further optimise their workflows and operations.
+3.3   |   Case Partner I (‘SoftCo’)
+Our first case partner is an organisation operating in over
+70 countries with a workforce of more than 10000 employ-
+ees. The company specialises in enterprise software solutions
+and provides a comprehensive suite of products that enable
+organisations to manage critical business functions such as
+finance and supply chain operations. To streamline its inter-
+nal processes across various ‘Lines-­ of-­ Business’, the organi-
+sation began using ServiceNow in 2018, initially focusing on
+ITSM and CSM. Over time, the organisation expanded its use
+of ServiceNow to include SecOps and ITOM. By the time of
+data collection, SoftCo had accumulated multiple years of ex-
+perience with ServiceNow and had implemented advanced
+structures and guidelines for governing development on the
+platform. Notably, SoftCo also operates a well-­ established
+Center of Excellence, involving over 250 employees actively en-
+gaged in advancing LCNC initiatives and ‘best practices’ for
+using ServiceNow.
+3.4   |   Case Partner II (‘TechCo’)
+Our second case partner is an organisation operating in over
+35 countries, also with a workforce exceeding 10000 employ-
+ees. The company specialises in electronics manufacturing,
+with a particular focus on the semiconductor industry. Like
+SoftCo, TechCo implemented ServiceNow to optimise inter-
+nal processes. However, unlike SoftCo, TechCo initially ad-
+opted ServiceNow to enhance its human resources functions
+by implementing the HRSD offering. This initiative—called
+‘EasyHR’—was launched in 2021 with the goal of stream-
+lining and automating HR processes. The EasyHR initiative
+spans six key HR functions: hiring, onboarding new employ-
+ees, internal transfers, employee exits, talent development
+and remote work management. While the EasyHR project was
+successfully implemented company-­ wide, some of TechCo's
+LCNC governance practices were still in the early stages,
+reflecting a contrasting maturity level compared to SoftCo's
+more advanced and established practices. TechCo aims to
+expand its use of ServiceNow to additional domains in the
+future.
+4   |   Types of Flexibility-­ Standardisation Tensions
+in LCNC Development
+At both SoftCo and TechCo, we identified multiple types of
+flexibility-­ standardisation tensions. We provide examples from
+our case partners, illustrating how the opposing forces of flex-
+ibility and standardisation in LCNC development contribute to
+these tensions. We categorise these tensions according to the
+three elements of LCNC development (platform, process and
+people).
+4.1   |   Platform-­ Process Tension
+This tension type addresses the relationship between the plat-
+form's functionalities and the organisation's processes and
+workflows that may be improved through LCNC development.
+The platform must offer enough versatility to address diverse
+and complex organisational processes, but must simultaneously
+promote efficiencies (i.e., standard functionalities) that can be
+scaled. A SoftCo product owner emphasised this ‘mismatch’ be-
+tween the platform's capabilities and the company's processes:
+‘We sometimes write a lot of code on the Now Platform because
+of our complex customer requirements. As we're a large orga-
+nization with intricate business processes, low-­ code solutions
+alone sometimes cannot fulfil our requirements’. A TechCo
+training and change manager also summarised this platform-­
+process tension: ‘The platform is quite extensive and offers
+many built-­ in functionalities that we could use out of the box.
+The downside, however, is that we often run up against the plat-
+form's limitations, where further improvement isn't possible’.
+4.2   |   People-­ Platform Tension
+This type of tension revolves around balancing user autonomy
+to build applications or improve workflows while ensuring there
+are technical safeguards in place. On the one hand, a great deal
+of the value of LCNC development lies in the empowerment as-
+pect of citizen developers, as one citizen developer at TechCo ex-
+plained: ‘Now I feel like I'm part of the magic—I can do a lot on
+myownwithoutneedingmuchscriptingknowledge.InEasyHR,
+I'm now able to do things that are quite similar to what my col-
+leagues in IT can do. It really feels like we're on the same level
+and can collaborate as equals’. However, a lack of guardrails for
+citizen developers can lead to issues such as poorly designed ap-
+plications, data breaches, or other inefficiencies. A SoftCo devel-
+oper noted: ‘If people with little or no programming experience
+start developing applications and have unrestricted access to
+company data—without fully understanding what they're doing
+or how the tools work—it can quickly become a serious problem.
+For example, sensitive data might be unintentionally exposed ex-
+ternally, which is obviously something you want to avoid’.
+4.3   |   Process-­ People Tension
+While this tension type is highly relevant to LCNC development,
+it also extends beyond LCNC development to the broader organ-
+isational domain, as it deals with the balancing act of providing
+autonomy to employees to customise and improve organisational
+workflows without excessive oversight. On the one hand, as do-
+main experts often know their workflows best, allowing them
+flexibility can provide both operational efficiencies and a sense
+of empowerment. One of TechCo's project managers noted: ‘We
+don't need programmers with deep coding expertise. What we
+needareprocessexpertswhounderstandthesystemwellenough
+to configure it effectively and ensure it serves its intended pur-
+pose. It's a fundamentally different approach from what we had
+in the past’. Nevertheless, this must be balanced with the need
+for standardised procedures that ensure consistency, compliance
+and interoperability across teams and departments, as a TechCo
+product owner highlighted: ‘The exchange between the Epics6
+13652575, 2026, 1, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/isj.70001, Wiley Online Library on [07/07/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+--- PAGE 6 ---
+100 Information Systems Journal, 2026
+themselves is something we sometimes lack, so we have to be
+careful not to fall into working in silos’.
+5   |   Guidelines for Navigating
+Flexibility-­ Standardisation Tensions in LCNC
+Development
+The interviewees from SoftCo and TechCo noted several prac-
+tices that their organisations employ to simultaneously navigate
+the flexibility and standardisation tensions between the LCNC
+platform,organisationalprocessesandpeopleusingtheplatform.
+Drawing from these practices, we derived three sets of guide-
+lines, each comprising two actionable measures to reinforce both
+flexibility and standardisation. While the six guidelines could be
+found in both SoftCo and TechCo, there were also notable differ-
+ences in the degree or extent of their implementation within each
+organisation. Figure 1 shows a synthesis of the six guidelines.
+5.1   |   Platform-­ Processes Guidelines: Aligning
+With the Platform Provider
+As development is centred on or around the LCNC platform, the
+functionalities the platform offers strongly impact its usefulness
+to the organisation. Accordingly, we found that organisations
+take measures to have a say over which functionalities would
+fit their internal processes while simultaneously adjusting their
+own processes to what the platform offers.
+5.1.1   |   Guideline I—Collaborate with the LCNC
+Platform Provider (Flexibility)
+Given ServiceNow's biannual release cycle, both SoftCo and
+TechCo interviewees noted how they align with the platform
+provider to ensure that new releases include features that fit the
+organisation'sneeds.Bothcompaniesemphasisedtheimportance
+of their frequent interactions with ServiceNow, highlighting their
+proactiveapproachtoprovidingfeedbacktotheplatformprovider
+to improve platform utility. For instance, the organisations lever-
+age ServiceNow's Idea Portal (ServiceNow 2024d) to submit, cu-
+rate and integrate valuable feedback based on their development
+experiences. As a SoftCo product owner explained, ‘ServiceNow
+generally accepts feedback through ideas submitted on its Idea
+Portal. If an idea receives enough votes, it may be implemented’.
+However, as the volume of submissions on the Idea Portal often
+exceeds what can realistically be addressed, interviewees also
+highlighted the importance of complementary mechanisms to
+participate in the platform's evolution. These particularly include
+ServiceNow's active user community (ServiceNow 2025d), where
+customers can exchange ideas, share enhancements and support
+one another in resolving platform-­ related challenges.
+Additionally, differences in the level of collaboration with
+ServiceNow were apparent between SoftCo and TechCo, primar-
+ily due to the varying maturity of their ServiceNow implementa-
+tions. Having utilised the LCNC platform for a longer period and
+deployed it across multiple organisational domains, SoftCo has
+established a ‘design partnership’ with ServiceNow. This partner-
+ship provides the company with greater flexibility in influencing
+platform features. Such collaborations often take place during
+‘preview sessions’, where the customer can provide feedback be-
+fore new functionalities are officially launched. As a SoftCo prod-
+uct manager explained, ‘We're part of a design partnership where
+we engage directly with ServiceNow product managers to raise
+questions and provide input. We have access to special, specific
+resourcesfromServiceNow,wholistenstoourchallengesandsup-
+ports us directly’.
+5.1.2   |   Guideline II—Align with the LCNC Platform
+Provider's Features (Standardisation)
+While Guideline I involves the organisation taking steps
+to influence the LCNC platform, Guideline II focuses on
+FIGURE 1    |    Guidelines for Navigating Flexibility–Tensions in LCNC Development.
+13652575, 2026, 1, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/isj.70001, Wiley Online Library on [07/07/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+--- PAGE 7 ---
+Information Systems Journal, 2026 101
+adapting internal development processes to align with the plat-
+form. Interestingly, this alignment can occur both proactively
+and retroactively. Proactive alignment entails deliberately con-
+sidering the features that the LCNC provider plans to include
+in future releases before investing resources in building custom
+solutions where the LCNC platform may currently fall short.
+As a SoftCo developer noted, ‘We can develop a solution our-
+selves, but often ServiceNow releases something similar. So, we
+always have to ask ourselves: Is it worth building now? Or will
+ServiceNow deliver it in the next release?’
+Conversely, retroactive alignment involves adjusting existing
+processes to ensure compatibility with the LCNC platform pro-
+vider's future capabilities and was especially emphasised by
+SoftCo due to their longer experience with the platform. This
+approach, often referred to as ‘going back to baseline’, allows
+the organisation to reduce complexity and enhance maintain-
+ability. A solution architect at SoftCo elaborated: ‘Over time,
+ServiceNow listened to our input and introduced new function-
+alities in response. As architects, our clear intention has become
+to return custom developments back to the platform baseline
+whenever possible. Doing so improves product alignment and
+supportability, making upgrades, maintenance, and issue reso-
+lution significantly easier’.
+5.2   |   Platform-­ People Guidelines: Taking
+Advantage of LCNC Platform Features
+The second set of guidelines addresses how the LCNC platform
+can both empower and constrain citizen developers, granting
+them the freedom to build applications and leverage the plat-
+form's powerful capabilities while ensuring that robust techni-
+cal safeguards remain in place.
+5.2.1   |   Guideline III—Utilise Controlled Development
+Environments (Flexibility)
+Both organisations emphasised the value of using the LCNC
+platform's controlled development environments to enable cit-
+izen developers to experiment freely and develop their tech-
+nical skills, while mitigating the risks associated with such
+developers making unauthorised or unwanted changes in live
+environments. A TechCo project owner remarked, ‘It's really
+impressive—and I think it's fundamentally changed how we
+work in HR—that we can now take ownership of what we build.
+We're able to develop technical knowledge and no longer feel
+hesitant to make changes. The sandbox environment plays a key
+role in this; it allows us to prototype, experiment and explore
+freely. That's something I didn't have with other tools’. Similarly,
+a SoftCo product manager highlighted the value of sandbox en-
+vironments for rapid experimentation and feature exploration:
+‘When I'm working in a dedicated sandbox environment, proof-­
+of-­ concepts are always developed really quickly. Even for sim-
+ple requests—like demonstrating what a Virtual Agent7 looks
+like—it's a very fast process’.
+Moreover, both organisations emphasised that ServiceNow's
+controlled environments, such as testing and production, play
+a vital role in supporting stages of the software development
+lifecycle that go well beyond initial prototyping in personal de-
+velopment instances. A TechCo project owner remarked: ‘We
+haveacomprehensive,controlledenvironmentsetup—sandbox,
+development, test, pre-­ production, and production. This struc-
+turehelpsensurequalityandpreventschangesfrombeingmade
+without fully understanding their impact or interdependencies,
+and has been a key factor in mitigating risk’.
+5.2.2   |   Guideline IV—Stay Out-­ of-­ the-­ Box
+(Standardisation)
+While organisations strongly advocate for freedom and flexibil-
+ity for citizen developers on the platform (Guideline III), they
+alsoemphasisetheimportanceofleveragingasmanyout-­of-­the-­
+box platform features as possible. This practice of staying ‘out-­
+of-­ the-­ box’ aligns with Guideline II (aligning with the platform's
+features), though the two differ in focus. Guideline II primarily
+involves ‘strategic’ considerations related to the platform's fu-
+ture releases, whereas Guideline IV has more operational impli-
+cations, centering on advocating for effective selection and use
+of features already available on the platform. A process lead at
+SoftCosharedhowstayingclosetotheout-­of-­the-­boxconfigura-
+tion enabled a quick resolution of an urgent issue: ‘It really paid
+off to stick as closely to the standard as possible: once, we had
+to implement a hotfix on a Sunday, but we were able to resolve
+it that same day. Everything went smoothly afterward, and the
+remaining issues were either fixed later or weren't critical’.
+Both SoftCo and TechCo have already established robust prac-
+tices to promote an out-­ of-­ the-­ box or ‘low-­ code first’ approach.
+For example, one SoftCo product owner explained: ‘We have
+our Developer Guidelines, which are the primary reference on
+how to implement something. They clearly state that we should
+use as little code as possible—no complex logic, just one or two
+lines in Business Rules—and always prioritise using the Flow
+Designer.8 Most implementation scenarios are covered by these
+guidelines’.
+5.3   |   Process-­ People Guidelines: Setting a
+Foundation for LCNC Initiatives
+Like the second set of guidelines, the final set also focuses on
+empoweringnon-­technicaldomainexpertstoimproveprocesses
+while ensuring their contributions are regulated. However, un-
+like Guidelines III and IV, Guidelines V and VI are not centred
+on or reliant upon the LCNC platform; instead, they emphasise
+organisational governance measures that can be implemented
+independently. Implementing these measures contributes to ef-
+fectively‘settingthefoundation’forsuccessfulLCNCinitiatives.
+5.3.1   |   Guideline V—Involve Multiple Partners
+(Flexibility)
+Both case partners highlighted the importance of avoiding the
+‘siloing’ of citizen developers from traditional IT functions.
+Instead, they advocated for establishing a symbiotic and co-
+operative development model where domain experts and IT
+professionals align and collaborate using the LCNC platform.
+13652575, 2026, 1, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/isj.70001, Wiley Online Library on [07/07/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+--- PAGE 8 ---
+102 Information Systems Journal, 2026
+For traditional IT, delegating or offloading development
+work brings clear advantages, as a SoftCo project manager
+explained, ‘By enabling Lines-­ of-­ Business to build solutions
+themselves, we can scale more effectively. The key question for
+us is always whether our size is sufficient or if additional de-
+velopers would increase delivery capacity, as we're constantly
+facing time constraints and an overwhelming demand for
+delivery’. For domain experts, collaboration with IT experts
+offers benefits such as proactive expectation management for
+LCNC initiatives, as a TechCo project manager noted, ‘That's
+why close collaboration between the domain experts and IT is
+so important. You want to understand what's technically pos-
+sible before designing a process—otherwise, you may end up
+having to redo steps’.
+Consequently, implementing LCNC development platforms
+within an organisation may not always align with the traditional
+notion of ‘citizen development’, where only non-­programmers
+build applications with LCNC platforms. Instead, it can reflect a
+moreflexibledevelopmentapproachinvolvingcontributionsfrom
+multiple stakeholders. As a SoftCo solution architect observed:
+‘In my experience, it's not called citizen development—it's called
+co-­development’. Moreover, at both organisations, interviewees
+notedthatthereisnotonlycollaborationbetweeninternalcitizen
+developers and IT experts, but that external consultants from IT
+consulting firms also assist with LCNC initiatives. A ServiceNow
+representative for SoftCo noted: ‘The Harmonized Customer
+Service Management program was set up together with the ex-
+ternal consultants in such a way that each stream is staffed with
+a senior architect—someone with several years of experience in
+ServiceNow development and architecture’.
+However, we observed a notable difference in maturity between
+the two case partners with respect to Guideline V—namely, the
+role of a centralised LCNC governance structure. At SoftCo, this
+function is fulfilled by a dedicated Center of Excellence compris-
+ing more than 250 employees, which serves as a central coordi-
+nating body for stakeholder engagement and collaboration. The
+Center of Excellence consists of a wide range of technical and
+non-­ technical stakeholders, such as platform, solution and enter-
+prise architects, developers, SCRUM masters, engagement and
+customer success managers as well as personnel responsible for
+testing and release management. It includes both internal staff
+and external experts, such as dedicated ServiceNow representa-
+tives and consultants with deep experience in LCNC platforms.
+Establishing a Center of Excellence has been widely recom-
+mended as a governance mechanism for LCNC development
+(Carroll and Maher 2023; Eggers et al. 2023; Viljoen et al. 2024).
+Importantly, the Center of Excellence at SoftCo does not di-
+rectly implement LCNC initiatives. Instead, it acts as a central
+reference point for Lines-­ of-­ Business, as these organisational
+units can approach the Center of Excellence when they require
+support with LCNC implementations. Depending on the type
+of support, the Center of Excellences can offer recommenda-
+tions for specific ServiceNow modules to be implemented, but
+can also promote ‘general’ LCNC best practices to ensure that
+LCNC solutions are implemented in a scalable, secure and ef-
+fective manner across the organisation. A member of the SoftCo
+CenterofExcellencesummarisedthissupportiveroleasfollows:
+'My role is situated within the ServiceNow Center of Excellence.
+While the teams don't report to me directly in terms of scope,
+planning, or delivery—since they are not formally under my su-
+pervision—we collaborate closely. Much of the work is coordi-
+nated through what we call ‘portfolio guidance’, which, as part
+of the development roadmap, ultimately comes across my desk.'
+5.3.2   |   Guideline VI—Harmonise Processes
+and Workflows (Standardisation)
+The final guideline focuses on ensuring that internal organi-
+sational processes and workflows are harmonised and aligned
+to maximise the utility of the LCNC platform. Given SoftCo's
+broader deployment of ServiceNow across more organisational
+domains compared to TechCo, this practice was particularly
+prevalent in SoftCo. SoftCo interviewees noted that the or-
+ganisation has implemented a so-­ called ‘Golden Standard’ for
+processes that all newly incorporated Lines-­ of-­ Business must
+adhere to. For example, SoftCo's foundation for ITSM is based
+on the Information Technology Infrastructure Library (ITIL), a
+framework of standardised best practices for ITSM that helps or-
+ganisationsaligntheirITserviceswithbusinessneeds(Susnjara
+and Smalley 2024). A SoftCo solution architect explained such
+LCNC-­ independent harmonisation, ‘The intention is to start
+harmonizing Lines-­ of-­ Business' work with our guidelines and
+overall strategies. At this stage, however, we're still not re-
+ally talking about low-­ code. We're operating at a much higher
+level—focused on defining the what. Once that is clarified, we
+deflect or reshape certain requirements and normalize them as
+much as possible through harmonization’.
+Table 2 presents a synthesis of the three paradoxical tension
+types in LCNC development, along with corresponding guide-
+lines that support either flexibility or standardisation. It also
+includes illustrative examples of how each guideline can be ap-
+plied in practice. Additionally, the table highlights differences
+betweenbasicandadvancedlevelsofimplementation,reflecting
+the varying maturity of LCNC development implementation at
+SoftCo and TechCo.
+6   |   Adapting Flexibility-­ Standardisation
+Guidelines to Organisations' Contexts
+While the six guidelines provide generalisable insights into how
+firms can manage paradoxical tensions between flexibility and
+standardisation in LCNC development, a range of factors must be
+considered to adapt them to an organisation's specific contextual
+needs. Depending on these factors, firms may at times lean more
+towards flexibility-­ oriented guidelines, in other cases towards
+standardisation and in some instances—aligning with the nature
+of paradoxical tensions—pursue both simultaneously. Below, we
+illustrate how different contextual considerations can impact the
+relevance and implementation of the proposed guidelines.
+6.1   |   Tailoring Platform–Process Guidelines to
+Organisational Contexts
+Thefirstsetofguidelines,collaboratingwiththeLCNCplatform
+provider (Guideline I) and aligning with its features (Guideline
+13652575, 2026, 1, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/isj.70001, Wiley Online Library on [07/07/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+--- PAGE 9 ---
+Information Systems Journal, 2026 103
+TABLE 2    |    Synthesis of guidelines to address flexibility-­ s tandardisation tensions in LCNC development.
+Paradoxical tension Guideline
+Basic implementation of guideline
+(TechCo and SoftCo)
+Advanced implementation
+of guideline (SoftCo)
+Platform-­
+process
+Ensure the LCNC platform
+offers functionalities that can
+be tailored to organisational
+processes, while also relying
+on standard platform features
+that enable rapid and scalable
+LCNC implementation
+Flexibility Guideline I.
+Collaborate with
+the LCNC platform
+provider
+• Align with the LCNC platform provider to
+request that the provider incorporate features
+that match the organisation's needs
+• Can be done through idea portals and user
+communities
+• Establish ‘design partnership’ with
+the platform provider to actively
+influence platform functionalities
+through regular, dedicated contact
+sessions
+Standardisation Guideline II.
+Align with the
+LCNC platform
+provider's features
+• Consider upcoming platform features before
+building custom solutions with the LCNC
+platform (proactive alignment)
+• Go ‘back-­ t o-­ b aseline,’ i.e., revert
+customizations to match the LCNC
+platform provider's out-­ o f-­ t he-­
+box offerings, thereby ensuring
+compatibility with the platform's
+future capabilities (retroactive
+alignment)
+Platform-­
+people
+Empower (non-­ t echnical)
+users to freely experiment,
+while ensuring technical
+safeguards and adherence to
+best practices are maintained
+Flexibility Guideline III.
+Utilise controlled
+development
+environments
+• Use sandbox environments to allow citizen
+developers to safely experiment with the
+LCNC platform
+• Use controlled development environments
+beyond personal development (e.g., testing,
+pre-­ p roduction, etc.)
+• No discernible difference
+Standardisation Guideline IV. Stay
+out- ­ o f- ­ t he- ­ b ox
+• Advocate for using out-­ o f-­ t he-­ b ox LCNC
+platform functionalities during development
+• Develop standard ‘Developer Guidelines’ as a
+point of reference for (most) implementation
+scenarios
+• No discernible difference
+Process-­
+people
+Provide autonomy to domain
+experts to improve their own
+processes and workflows
+while maintaining cross-­
+unit consistency, compliance
+and interoperability
+Flexibility Guideline V. Involve
+multiple partners
+• Establish a cooperative development model
+where domain experts (citizen developers)
+and IT professionals align and collaborate
+using the LCNC platform
+• Include external stakeholders such as IT
+consultants for quick(er) rollout of LCNC
+initiatives
+• Establish a formal Centre of
+Excellence to facilitate the
+cooperation between LCNC
+stakeholders
+Standardisation Guideline VI.
+Harmonise processes
+and workflows
+• Align processes and workflows across
+organisational units to ease LCNC adoption
+and increase its utility
+• Follow structured LCNC-­
+independent frameworks to
+harmonise processes (e.g.,
+Information Technology
+Infrastructure Library)
+13652575, 2026, 1, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/isj.70001, Wiley Online Library on [07/07/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+--- PAGE 10 ---
+104 Information Systems Journal, 2026
+II), offers valuable mechanisms for balancing flexibility and
+standardisation. However, the effectiveness and feasibility of
+these approaches depend strongly on two factors: the type of
+LCNC platform being implemented and the organisation's level
+of LCNC maturity.
+6.1.1   |   Type of LCNC Platform: Does the LCNC
+Platform Favour Standardisation or Customization?
+LCNC platforms differ widely in scope and configurability.
+Some platforms, like ServiceNow, are optimised for automat-
+ing standard enterprise-­ wide processes such as ITSM or HR
+workflows. These tools thus deliver the most value when organ-
+isationsadoptstandardisedworkflowsandrelyonprebuiltmod-
+ules, thus inherently favouring standardisation (Guideline II).
+In such cases, flexibility must be negotiated through proactive
+engagement with the platform vendor to shape future features
+(Guideline I). This is particularly relevant for firms with com-
+plex or specific process needs.
+By contrast, more open-­ ended platforms like Mendix,
+OutSystems or Power Apps are designed to support the develop-
+ment of open-­ ended, customised applications. These tools allow
+organisations to tailor LCNC platform offerings more freely to
+theirinternalneeds.Assuch,theneedforcollaborationwiththe
+platform provider becomes less relevant.
+Practical organizational implication: Before committing to a
+LCNC platform, organisations should carefully assess how well
+theplatform'sdesignphilosophyalignswiththeirprocessneeds.
+If extensive customization is required but the platform favours
+standardisation, organisations should be prepared to invest in
+vendor engagement or consider adopting a multi-­ platform strat-
+egy (Binzer et al. 2024) to balance diverse requirements across
+the company. Since not all organisations—particularly smaller
+firms or start-­ ups—would have the leverage to influence plat-
+form providers to incorporate the flexibility they require, it be-
+comes even more critical to evaluate the platform's suitability in
+advance.
+6.1.2   |   LCNC Maturity: Is the Organisation Early
+or Advanced in Its LCNC Journey?
+The maturity of an organisation's LCNC implementation also
+affects how platform–process tensions should be managed. In
+early adoption phases, most organisations would benefit from
+aligning closely with out-­ of-­ the-­ box features (Guideline II). This
+approach accelerates implementation, reduces complexity and
+helps build foundational competencies in LCNC development.
+At this stage, collaboration with the platform provider would be
+limited.
+However, as LCNC development initiatives scale across busi-
+ness units and become embedded in more complex, mission-­
+critical workflows, the limitations of standard platform features
+would become more apparent. At this point, collaboration with
+the platform provider (Guideline I) becomes increasingly im-
+portant. Thus, mature organisations can leverage their scale,
+user feedback and technical expertise to actively shape the pro-
+vider's roadmap through design partnerships or beta testing
+programmes. SoftCo's long-­ term collaboration with ServiceNow
+illustrates this progression: after building initial capabilities
+through standard implementations, the firm evolved into a stra-
+tegic partner able to proactively maintain alignment between
+organisational needs and platform capabilities.
+Practical organizational implication: LCNC governance should
+evolve alongside platform implementation. In the early stages,
+simplification and platform alignment should be the focus. As
+maturity increases, the organisation can invest in formalised
+vendor engagement strategies that allow it to influence platform
+development and reduce the burden of customization over time.
+6.2   |   Tailoring Platform–People Guidelines to
+Organisational Contexts
+The second set of guidelines, encouraging experimentation in
+controlled environments (Guideline III) and promoting out-­
+of-­ the-­ box feature usage (Guideline IV), helps firms empower
+non-­ technical developers while retaining technical oversight.
+However, their implementation is shaped by two key contextual
+factors: the LCNC platform's capabilities and the composition of
+the developer base.
+6.2.1   |   LCNC Platform Capabilities: What Governance
+Support Does the Tool Provide?
+LCNC platforms vary in their built-­ in capabilities for managing
+and governing development lifecycles. Enterprise-­ grade plat-
+forms such as ServiceNow, Mendix and OutSystems typically
+offer robust environment separation (e.g., sandbox, develop-
+ment, testing, production) and version control. These features
+enable structured experimentation and allow organisations
+to implement Guideline III without the need to build custom
+governance layers. Additionally, the combination of separated
+environments, visual programming standards, reusable compo-
+nents and template libraries makes it easier to encourage non-­
+technical users to adhere to default features (Guideline IV).
+In contrast, lightweight platforms such as Airtable, Power
+Automate or Zapier often lack such structured, separated en-
+vironments. While these tools support rapid automation, they
+offer limited capabilities for staged deployment or integrated
+testing.Thisincreasestheriskofuncoordinatedreleasesorlogic
+errors, particularly, when used by citizen developers.
+Practical organizational implication: Organisations must evalu-
+ate whether the chosen LCNC platform offers sufficient built-­ in
+safeguards. If not, firms must implement complementary gov-
+ernance mechanisms—such as development guidelines, access
+controls and review gates—to compensate for the platform's
+limitations and ensure safe experimentation.
+6.2.2   |   Developer Base: Who is building—Technical
+Staff or Non-­ Expert Business Users?
+Organisations may adopt LCNC platforms for various reasons:
+some aim to empower non-­ experts (citizen developers) to inde-
+pendently build and automate workflows, while others seek to
+scale their IT delivery capacity by equipping technically trained
+13652575, 2026, 1, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/isj.70001, Wiley Online Library on [07/07/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+--- PAGE 11 ---
+Information Systems Journal, 2026 105
+staff with LCNC tools. This distinction matters. When LCNC
+development is driven by citizen developers, organisations must
+manage risk more carefully and the use of controlled environ-
+ments (Guideline III) becomes essential to safeguard systems
+and provide safe spaces for learning. Likewise, adhering to
+platform defaults (Guideline IV) is critical to prevent the intro-
+duction of unmaintainable logic or the circumvention of best
+practices.
+In contrast, when LCNC users are technically trained or em-
+bedded within IT units, custom development may be feasible
+without compromising system stability. These users are better
+equipped to document, test and maintain customisations and
+can more reliably judge when deviations from default features
+are warranted.
+Practical organisational implication: Organisations must tailor
+governance to the user profile. Citizen developers require clear
+guardrails and simplified options to prevent the introduction
+of technical debt. More advanced developers can be granted
+greater autonomy, but should still operate within standardised
+frameworks to ensure interoperability and minimise ‘technical
+redundancy’ across the organisation.
+6.3   |   Tailoring Process–People Guidelines to
+Organisational Contexts
+The third set of guidelines, encouraging co-­ development across
+stakeholder groups (Guideline V) and harmonising organisa-
+tional processes (Guideline VI), is concerned with setting the
+foundation for LCNC initiatives and ensuring that LCNC devel-
+opmentcreatesvaluebeyondisolatedusecases.Theirsuccessful
+implementation depends on two contextual factors: the role of
+the IT unit and the nature of the processes targeted by LCNC
+development.
+6.3.1   |   Role of the IT Unit: What Role Does IT Play in
+LCNC Development?
+Citizen development is rarely effective when citizen developers
+operate in isolation (Bruhin et al. 2024). Our case findings and
+prior research (Binzer et al. 2025, Viljoen et al. 2024) show that
+co-­ development between business and IT is critical for scaling
+LCNC initiatives (Guideline V). However, the mode of collabo-
+ration depends on the organisation's structure and the role of the
+traditional IT unit (Binzer et al. 2024).
+Some firms may position IT in an advisory role, providing
+lightweight support, supervising citizen developers and help-
+ing them navigate technical and governance requirements. In
+more hands-­ on roles, IT may co-­ develop or even lead LCNC
+initiatives—particularly, when applications involve complex in-
+tegrations, must comply with enterprise standards, or demand
+technical expertise.
+Practical organisational implication: Organisations must decide
+early how the traditional IT unit should engage with LCNC ini-
+tiatives.Willitenable,oversee,oractivelyco-­develop?Thisdeci-
+sionwillhavedownstreamimplicationsforstaffing,governance
+and resource allocation and will shape how effectively LCNC
+initiatives can scale across business units.
+6.3.2   |   Nature of Targeted Processes: Is LCNC
+Supporting Isolated Tasks or Enterprise-­ Critical
+Functions?
+ThecomplexityandcriticalityoftheprocessestargetedbyLCNC
+developmentcaninfluencethedegreeofprocessstandardisation
+required (Guideline VI). For low-­ risk or individual-­ use cases—
+such as automating routine tasks like sending emails—there is
+greater room for flexibility and experimentation. In contrast,
+mission-­criticalorcross-­functionalprocesses(e.g.,organisation-­
+wide knowledge management or ticketing systems) require har-
+monised and consistent logic, data models and workflows to
+ensure interoperability and compliance.
+For instance, SoftCo's use of ITIL-­ based reference processes for
+ITSM enabled it to standardise across business units and align
+with ServiceNow's modular capabilities. In contrast, TechCo fo-
+cused only on HR automation, where certain process variations
+and discretion were more acceptable.
+Practicalorganizationalimplication:Governancerigidityshould
+be aligned with the criticality of the targeted process. Not every
+LCNC use case requires organisation-­ wide standardisation, but
+some do. LCNC initiatives should be segmented based on their
+risk and strategic relevance to determine when to enforce har-
+monisation, when to support local experimentation and when a
+combination of both is appropriate.
+Table 3 provides a summary of the contextual factors impacting
+the flexibility-­ standardisation guidelines.
+7   |   Concluding Reflections
+This study examined the tensions between flexibility and
+standardisation in LCNC development, focusing on how these
+tensions manifest across the LCNC platform, its users and the
+organisational processes targeted for improvement. Drawing
+on the experiences of two organisations using ServiceNow, we
+derived six practical and adaptable guidelines to support practi-
+tioners in navigating these tensions. While the guidelines ‘as-­ is’
+have broad relevance, we emphasised the importance of tailor-
+ing them to the specific needs and contexts of individual organi-
+sations. We conclude by offering forward-­ looking reflections on
+the broader implications of LCNC governance within the flexi-
+bility–standardisation dynamic.
+First, we re-­ emphasise that addressing the tension between
+flexibility and standardisation in LCNC development must not be
+seen as a ‘trade-­ off’ or an ‘either-­ or’ approach. As these tensions
+would never be fully resolved given their paradoxical nature,
+navigating them must instead be viewed as dynamic ‘both-­ and’
+or ‘more-­ than’ approaches, depending on the organisational
+context. We thus encourage organisations to consider LCNC
+governance not as a static framework, but as a dynamic capabil-
+ity that must evolve alongside organisational change and LCNC
+maturity.
+Second, we encourage that flexibility and standardisation in
+LCNC development must be considered as synergistic and mu-
+tually reinforcing. As noted, enabling LCNC users to flexibly
+take ownership of process improvements requires a certain
+13652575, 2026, 1, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/isj.70001, Wiley Online Library on [07/07/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+--- PAGE 12 ---
+106 Information Systems Journal, 2026
+degree of standardisation, such as having organisational pro-
+cesses that align with out-­ of-­ the-­ box platform features. When
+such alignment is lacking due to fragmented or outdated
+processes, the introduction of a LCNC platform can expose
+these gaps, prompting organisations to harmonise work-
+flows and modernise legacy systems to ensure compatibility
+(Kandaurova et al. 2024). The implication is that the pursuit
+of flexibility through LCNC can actively drive standardisa-
+tion, which in turn strengthens the foundation for sustained
+flexibility.
+Third—aligningwiththedynamicnatureofLCNCgovernance—
+we encourage organisational stakeholders to reflect on how per-
+ceptions of what constitutes ‘flexible’ versus ‘standard’ can evolve
+over time. As LCNC platform providers like ServiceNow regularly
+introduce new features based on user feedback, implementations
+viewed as ‘custom today’ may become embedded as ‘standard to-
+morrow’. Thus, as organisations advance in their LCNC maturity,
+the accompanying governance practices initially considered flex-
+ible may gradually become institutionalised as standard practice.
+Finally, as LCNC platforms like ServiceNow increasingly in-
+tegrate generative AI (GenAI) functionalities, it must be con-
+sidered how GenAI may influence LCNC governance within
+the flexibility–standardisation context. On the one hand,
+GenAI can enhance flexibility by enabling faster prototyp-
+ing and workflow generation, particularly for non-­ technical
+users. However, due to the ‘black box’ nature of GenAI out-
+puts, guardrails are needed to ensure the quality, compliance
+and maintainability of AI-­ generated artefacts. At the same
+time, GenAI can also support governance itself, for example
+by automatically reviewing code for adherence to standards,
+TABLE 3    |    Adapting LCNC governance guidelines to organisational contexts.
+Contextual
+factor Key question Implications for guideline application
+Platform–
+process
+Type of LCNC
+platform
+Does the LCNC platform
+favour standardisation
+or customization?
+• LCNC platforms that encourage standardisation (e.g.,
+ServiceNow) require alignment with built-­ in features
+(Guideline II), unlike ‘open-­ ended’ platforms (e.g.,
+Mendix)
+• If customization is needed, collaboration with the
+platform provider becomes essential (Guideline I)
+LCNC maturity Is the organisation early or
+advanced in its LCNC journey?
+• Early-­ stage: Adherence to platform standards should
+be emphasised to realize 'quick wins' and build
+foundational LCNC capabilities (Guideline II)
+• Advanced-­ stage: Organisations can shift towards
+proactive platform influence (Guideline I)
+Platform–
+people
+LCNC platform
+capabilities
+What governance support
+does the tool provide?
+• Enterprise-­ grade platforms (e.g., ServiceNow, Mendix)
+typically offer robust environment separation, unlike
+‘lightweight’ LCNC platforms like Airtable or Zapier
+• If the tools don't offer sufficient built-­ in safeguards
+(Guideline III), firms must implement complementary
+governance mechanisms
+Developer base Who is building – technical staff
+or non-­ expert business users?
+• Citizen developers need controlled sandboxes and
+guardrails (Guideline III) and guidance to adhere to best
+practices and standard features (Guideline IV)
+• Technical users can manage exceptions more safely
+but must still operate within standardised frameworks
+(Guideline IV)
+Process–
+people
+Role of the
+IT unit
+What role does IT play in
+LCNC development?
+• IT can act in an advisory role (supports, reviews and
+educates citizen developers) or in a steering one (leads
+LCNC development initiatives)
+• Organisations must decide early how the traditional IT
+unit should engage with LCNC initiatives (Guideline
+V), as it will affect staffing, governance and resource
+allocation
+Nature of
+targeted
+processes
+Is LCNC supporting
+isolated tasks or enterprise-­
+critical functions?
+• For individual or low-­ risk use cases, more
+experimentation and less standardisation may be
+permitted
+• For cross-­ functional, critical, or regulated processes,
+process harmonisation should be emphasised or
+mandated (Guideline VI)
+13652575, 2026, 1, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/isj.70001, Wiley Online Library on [07/07/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+--- PAGE 13 ---
+Information Systems Journal, 2026 107
+recommending reusable components or aligning solutions
+with established practices. The implication is that organisa-
+tions can embed ‘governance-­ in-­ the-­ loop’ mechanisms di-
+rectly into LCNC workflows, allowing GenAI to serve both as
+an enabler of flexibility and a tool for pushing users to adhere
+to standard governance practices.
+Data Availability Statement
+The data that support the findings of this study are available on request
+from the corresponding author. The data are not publicly available due
+to privacy or ethical restrictions.
+Endnotes
+1Low-­ code development platforms are also synonymously referred to
+as low-­code platforms or low-­ code application platforms (Bock and
+Frank 2021).
+2There have also been instances of LCNC development being done
+without LCNC platforms, for example, workers building workaround
+solutions with Excel (Davison et al. 2024). However, LCNC develop-
+ment is generally understood to take place on LCNC platforms.
+3There are strong conceptual similarities between citizen development
+and older research streams such as end-­ user development (EUD) and
+end-­ user computing (EUC) (Lieberman et al. 2006). However, there are
+two distinct differences. (1) EUD and EUC preceded the 'cloud-­ based
+platform era'” that enables integrated end-­ to-­ end software lifecycle
+management, which is a key differentiating aspect of LCNC platforms
+(Di Ruscio et al. 2022). (2) EUD and EUC have traditionally involved
+individual users creating, modifying, or extending specific software
+artefacts, while citizen development emphasises enabling groups of
+non-­ IT users to collaboratively build applications using LCNC plat-
+forms (Hoogsteen and Borgman 2022).
+4We use the term LCNC development for three reasons: (1) It captures
+the simplified development approach enabled by LCNC platforms,
+rather than the platforms themselves; (2) it allows us to refer to the
+development practice irrespective of user type or technical proficiency,
+thereby including both IT professionals and citizen developers; and
+(3) it provides a neutral term that encompasses both low-­ code and no-­
+code use cases, which are often intertwined in practice but not always
+distinguished in the literature.
+5This tripartite categorisation aligns conceptually with foundational
+frameworks in information systems research, such as Leavitt's (1958)
+diamond (task, structure, technology and actors), socio-­ technical
+systems thinking (Bostrom and Heinen 1977), and the Technology-­
+Organisation-­ Environment (TOE) framework (Baker 2012). Our cat-
+egorisation adapts and applies these conceptual insights to the context
+of LCNC development.
+6In ServiceNow, an Epic is a high-­ level entity used within the Agile
+Development or Scaled Agile Framework (SAFe) module to organise
+and manage large pieces of work that are too big to be completed in a
+single sprint or iteration. It represents a business objective or initiative
+that is broken down into smaller, manageable pieces called Features,
+Stories or Tasks, which can then be prioritised, assigned and tracked
+(ServiceNow 2024a).
+7A Virtual Agent in ServiceNow is a chatbot designed to assist users
+by automating common tasks, answering queries, and resolving issues
+within the platform. It integrates with ServiceNow workflows and ser-
+vices to provide conversational support (ServiceNow 2023).
+8Flow Designer is a core feature of ServiceNow that enables process
+automation within a unified design environment. It allows users to
+configure approvals, tasks, notifications and record operations using
+natural language (ServiceNow 2024b).
+Acknowledgments
+Open Access funding enabled and organized by Projekt DEAL.
+References
+Baker, J. 2012. “The Technology–Organization–Environment
+Framework.” In Information Systems Theory. Integrated Series in
+InformationSystems,editedbyY.Dwivedi,M.Wade,andS.Schneberger,
+vol. 28. Springer.
+Biedova, O., B. Ives, D. Male, and M. Moore. 2024. “Strategies for
+Managing Citizen Developers and No-­ Code Tools.” MIS Quarterly
+Executive 23, no. 2: 165–183.
+Binzer, B., and T. J. Winkler. 2024. “Die vier Phasen von Citizen
+Development-­ Initiativen: Treiber, Herausforderungen und
+Handlungsempfehlungen.” HMD Praxis der Wirtschaftsinformatik 61:
+1136–1158.
+Binzer, B., D. Fürstenau, and T. J. Winkler. 2025. “Bridging Business
+and IT Through Low-­ Code/No-­ Code: Insights into Business-­ IT
+Collaboration in Enterprise Citizen Developer Programs.” In Hawaii
+International Conference on System Sciences (HICSS). University of
+Hawaii at Manoa, Association for Information Systems IEEE Computer
+Society Press.
+Binzer, B., E. Elshan, D. Fürstenau, and T. J. Winkler. 2024.
+“Establishing a Low-­ Code/no-­ Code-­ Enabled Citizen Development
+Strategy.” MIS Quarterly Executive 23, no. 3: 253–273.
+Bock, A. C., and U. Frank. 2021. “Low-­ Code Platform.” Business &
+Information Systems Engineering 63, no. 6: 733–740.
+Bostrom, R. P., and J. S. Heinen. 1977. “MIS Problems and Failures: A
+Socio-­ Technical Perspective. Part I: The Causes.” MIS Quarterly 1, no.
+3: 17–32.
+Bruhin, O., P. Ebel, and E. Elshan. 2024. “Exploring the Paradoxical
+Relationship between Citizen and Professional Developers in Low Code
+Environments.” In International Conference on Information Systems
+(ICIS). Association for Information Systems (AIS).
+Carroll, N., and M. Maher. 2023. “How Shell Fueled Digital
+Transformation by Establishing DIY Software Development.” MIS
+Quarterly Executive 22, no. 2: 99–127.
+Carroll,N.,J.Holmström,andS.Matook.2024.“SpecialIssueEditorial:
+Transforming Business With Low-­ Code and No-­ Code.” MIS Quarterly
+Executive 23, no. 3: v–xiii.
+Davison, R. M., L. H. Wong, and S. Alter. 2024. “Combining Low-­ Code/
+No-­ Code With Noncompliant Workarounds to Overcome a Corporate
+System's Limitations.” MIS Quarterly Executive 23, no. 3: 291–304.
+Di Ruscio, D., D. Kolovos, J. De Lara, A. Pierantonio, M. Tisi, and
+M. Wimmer. 2022. “Low-­ Code Development and Model-­ Driven
+Engineering: Two Sides of the Same Coin?” Software and Systems
+Modeling 21: 437–446.
+Eggers, J., J. Wewerka, A. Viljoen, and H. Krcmar. 2023. “Supporting
+Subject Matter Experts as Developers: Towards a Framework for
+Decentralized Robotic Process Automation Development.” In Hawaii
+International Conference on System Sciences (HICSS). University of
+Hawaii at Manoa, Association for Information Systems IEEE Computer
+Society Press.
+Eisenhardt,K.M.1989.“BuildingTheoriesFromCaseStudyResearch.”
+Academy of Management Review 14, no. 4: 532–550.
+Eisenhardt, K. M., and M. E. Graebner. 2007. “Theory Building From
+Cases: Opportunities and Challenges.” Academy of Management
+Journal 50, no. 1: 25–32.
+13652575, 2026, 1, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/isj.70001, Wiley Online Library on [07/07/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+--- PAGE 14 ---
+108 Information Systems Journal, 2026
+Elshan, E., B. Binzer, and T. J. Winkler. 2025. “From Software Users
+to Software Creators: An Exploration of the Core Characteristics of the
+Citizen Developer Role and the Related Re-­and Upskilling Programs.”
+Business & Information Systems Engineering 67, no. 1: 31–53.
+Elshan, E., E. Dickhaut, and P. Ebel. 2023. “An Investigation of Why
+Low Code Platforms Provide Answers and New Challenges.” In Hawaii
+International Conference on System Sciences (HICSS). University of
+Hawaii at Manoa, Association for Information Systems IEEE Computer
+Society Press.
+Gartner. 2024. “Information Technology Glossary: Citizen Developer.”
+Accessed February 27, 2024. https://​www.​gartn​er.​com/​en/​infor​matio​
+n-­​techn​ology/​​gloss​ary/​citiz​en-­​devel​oper.
+Gioia,D.A.,K.G.Corley,andA.L.Hamilton.2013.“SeekingQualitative
+Rigor in Inductive Research: Notes on the Gioia Methodology.”
+Organizational Research Methods 16, no. 1: 15–31.
+Gonçalves, R. R., B. Soni, B. Magnússon, et al., eds. 2024. Low-­Code
+Adoption as a Driver of Digital Transformation: A Comprehensive
+Market Overview of EMA, the United States of America and Asia Pacific
+Regions From a Large-­ Scale Survey. KPMG. https://​kpmg.​com/​xx/​en/​
+home/​insig​hts/​2024/​02/​how-­​low-­​code-­​platf​orms-­​are-­​drivi​ng-­​digit​al-­​
+trans​forma​tion.​html.
+Grashoff, I., and J. Recker. 2024. “How GuideCom Used the Cognigy.
+AI LowCode Platform to Develop an AI-­ Based Smart Assistant.” MIS
+Quarterly Executive 23, no. 3: 325–344.
+Hoogsteen, D., and H. Borgman. 2022. “Empower the Workforce,
+Empower the Company? Citizen Development Adoption.” In Hawaii
+International Conference on System Sciences (HICSS). University of
+Hawaii at Manoa, Association for Information Systems IEEE Computer
+Society Press.
+Kandaurova, M., D. A. Skog, and P. M. Bosch-­ Sijtsema. 2024. “The
+PromiseandPerilsofLow-­CodeAIPlatforms.”MISQuarterlyExecutive
+23, no. 3: 275–289.
+Kirvan, P., and M. Pratt. 2024. “Low-­ Code and No-­ Code Development
+Platforms.” Accessed June 7, 2024. https://​www.​techt​arget.​com/​searc​
+hsoft​wareq​uality/​defin​ition/​​low-­​code-­​no-­​code-­​devel​opmen​t-­​platform.
+Leavitt, H. J. 1958. Managerial Psychology: An Introduction to
+Individuals, Pairs, and Groups in Organizations. University of Chicago
+Press.
+Lethbridge, T. C. 2021. “Low-­ Code Is Often High-­ Code, so we Must
+DesignLow-­CodePlatformstoEnableProperSoftwareEngineering.”In
+LeveragingApplicationsofFormalMethods,VerificationandValidation.
+ISoLA 2021. Lecture Notes in Computer Science, edited by T. Margaria,
+and B. Steffen, vol. 13036. Springer, Cham.
+Lewis, M. 2000. “Exploring Paradox: Toward a More Comprehensive
+Guide.” Academy of Management Review 25, no. 4: 760–776.
+Li, M. M., C. Peters, M. Poser, K. Eilers, and E. Elshan. 2022. “ICT-­
+Enabled Job Crafting: How Business Unit Developers Use Low-­ Code
+Development Platforms to Craft Jobs.” In International Conference on
+Information Systems (ICIS). Association for Information Systems (AIS).
+Lieberman, H., F. Paternò, M. Klann, and V. Wulf. 2006. “End-­ User
+Development: An Emerging Paradigm.” In End User Development, ed-
+ited by H. Lieberman, F. Paternò, and V. Wulf, 1–8. Springer.
+Matvitskyy, O., K. Iijima, M. West, K. Davis, A. Jain, and P. Vincent.
+2023. “Magic Quadrant for Enterprise Low-­ Code Application
+Platforms.” https://​www.​mendix.​com/​resou​rces/​gartn​er-­​magic​-­​quadr​
+ant-­​for-­​low-­​code-­​appli​catio​n-­​platf​orms/​.
+Microsoft. 2020. “Coca-­ Cola Bottling Company United Dispenses
+Streamlined Order Management With RPA in Microsoft Power
+Automate.” Accessed June 6. https://​custo​mers.​micro​soft.​com/​en-­​us/​
+story/​​84518​7-­​coca-­​cola-­​bottl​ing-­​compa​ny-­​unite​d-­​consu​mer-­​goods​-­​
+power​-­​automate.
+Prinz, N., M. Huber, J. Leonhardt, and C. Riedinger. 2024. “Unleash the
+Power of Citizen Development: Leveraging Organizational Capabilities
+for Successful Low-­ Code Development Platform Adoption.” In Hawaii
+International Conference on System Sciences (HICSS). University of
+Hawaii at Manoa, Association for Information Systems IEEE Computer
+Society Press.
+Richardson, C., and J. R. Rymer. 2014. New Development Platforms
+Emerge for Customer-­ Facing Applications. Forrester.
+Scharpf, D., A. Viljoen, A. Hein, and H. Krcmar. 2024. “Business Unit
+Development: Benefits and Challenges for Employees.” In HMD Praxis
+der Wirtschaftsinformatik, vol. 61, 1159–1179. Springer.
+ServiceNow. 2023. “Exploring Virtual Agent.” Accessed January 17,
+2025. https://​www.​servi​cenow.​com/​docs/​bundle/​vanco​uver-­​servi​
+cenow​-­​platf​orm/​page/​admin​ister/​​virtu​al-­​agent/​​conce​pt/​explo​ring-­​
+virtu​al-­​agent.​html.
+ServiceNow. 2024a. “Create an Epic in Agile Development 2.0.”
+Accessed January 17, 2025. https://​www.​servi​cenow.​com/​docs/​bun-
+dle/​xanad​u-­​it-­​busin​ess-­​manag​ement/​​page/​produ​ct/​agile​-­​devel​opment/​
+task/​creat​e-­​an-­​epic.​html.
+ServiceNow. 2024b. “Flow Designer.” Accessed January 17, 2025.
+https://​www.​servi​cenow.​com/​docs/​bundle/​xanad​u-­​appli​catio​n-­​devel​
+opment/​page/​build/​​profe​ssion​al-­​devel​oper-­​guide/​​conce​pt/​flow-­​desig​
+ner.​html.
+ServiceNow. 2024c. “Novant Health Unlocks the Limitless Potential
+of People.” Accessed January 17, 2025. https://​www.​servi​cenow.​com/​
+custo​mers/​novan​t-­​healt​h-­​citiz​en-­​devel​opment.​html.
+ServiceNow. 2024d. “ServiceNow Idea Portal on Now Support.”
+Accessed January 17, 2025. https://​suppo​rt.​servi​cenow.​com/​kb?​id=​kb_​
+artic​le_​view&​syspa​rm_​artic​le=​KB115​6757.
+ServiceNow. 2025d. “Welcome to the New ServiceNow Community.”
+Accessed January 17, 2025. https://​www.​servi​cenow.​com/​commu​nity/​.
+ServiceNow. 2025e. “What is ServiceNow?” Accessed January 17, 2025.
+https://​www.​servi​cenow.​com/​what-­​is-­​servi​cenow.​html.
+Smith, W. K., and M. W. Lewis. 2011. “Toward A Theory of Paradox: A
+Dynamic Equilibrium Model of Organizing.” Academy of Management
+Review 36, no. 2: 381–403.
+Susnjara, S., and I. Smalley. 2024. What Is the IT Infrastructure
+Library (ITIL)? IBM. https://​www.​ibm.​com/​think/​​topics/​it-­​infra​struc​
+ture-­​library.
+Viljoen, A., J. Nguyen, M. Kauschinger, and A. Hein. 2023. “Fostering
+Scalable Citizen Development in Organizations: Towards a Guiding
+Framework.”InAmericasConferencesonInformationSystems(AMCIS).
+Association for Information Systems (AIS).
+Viljoen, A., M. Radić, A. Hein, J. Nguyen, and H. Krcmar. 2024.
+“Governing Citizen Development to Address Low-­ Code Platform
+Challenges.” MIS Quarterly Executive 23, no. 3: 305–324.
+Vincent, P., Y. Natis, K. Iijima, et al. 2020. Gartner Magic Quadrant for
+Enterprise Low-­ Code Application Platforms. Gartner.
+Yin, R. K. 2018. Case Study Research and Applications. Sage.
+13652575, 2026, 1, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/isj.70001, Wiley Online Library on [07/07/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+--- PAGE 15 ---
+Information Systems Journal, 2026 109
+Appendix A
+Study Design and Research Methodology
+We adopted a multiple-­ case study approach (Eisenhardt and
+Graebner 2007; Yin 2018) to investigate how organisations address
+challenges in LCNC development projects, particularly focusing on the
+tension between flexibility and standardisation in LCNC development.
+This approach is, particularly, well-­ suited for exploring complex, un-
+derexamined phenomena, as it enables an in-­ depth understanding of
+context-­ specific dynamics and the identification of actionable insights
+(Eisenhardt 1989; Eisenhardt and Graebner 2007).
+We conducted 57 semi-­ structured interviews with various LCNC stake-
+holders across two organisations and in two rounds. First, we con-
+ducted 30 interviews at a multinational technology firm (‘SoftCo’) that
+implemented ServiceNow across various business units. Second, to tri-
+angulate our findings, we conducted another round of 27 interviews at
+another technology firm (‘TechCo’) that also implemented ServiceNow.
+The interview durations ranged from 32min to 2h, averaging 47min
+per interview. All interviews were recorded and transcribed.
+To ensure both comparability and variability between our sampled case
+partners, we considered several factors. First, we selected two organi-
+sations that use the same LCNC platform. Second, both organisations
+are multinational technology companies, each with more than 10000
+employees. We chose multinational companies under the assumption
+that such organisations are likely to have established LCNC governance
+measures and an active interest in company-­ wide standardisation—
+practices that smaller companies or start-­ ups may not necessarily pri-
+oritise. Third, to introduce variability, we selected organisations with
+differing levels of LCNC implementation maturity. This maturity was
+assessed based on two factors: the duration of each company's use of
+ServiceNow and the breadth of functionalities they currently utilise on
+the platform.
+Aftercollectingeachdataset,weconductedmultipleroundsofcoding—
+open coding, axial coding and selective coding—following established
+qualitative data analysis methodologies (Gioia et al. 2013). Initially,
+open and axial coding were applied to identify overarching challenges
+and best practices within both firms. As the flexibility-­ standardisation
+theme emerged in both cases, we conducted an additional round of se-
+lective coding to explore the causes and responses to this tension and to
+triangulate findings between the cases. Table A1 presents an overview
+of the interviewees from each case partner.
+TABLE A1    |    Overview of interviewees at case partners.
+SoftCo TechCo
+Role/designation in firm Number of interviews Role/designation in firm Number of interviews
+Citizen developer 4 Project owner 1
+Solution architect 3 HR subject expert 4
+Success architect 4 IT project sponsor 1
+Platform architect 2 IT architect (internal) 1
+Enterprise architect 1 IT project manager 4
+Product owners 4 Platform owner (internal) 1
+Business process lead 3 HR subject expert 1
+Platform vendor 2 HR project manager 4
+Project manager 1 HR product owner 1
+Domain expert 4 Citizen developer 1
+Programme lead 1 External IT architect 1
+Service expert 1 Developers (expert, external) 2
+Training & change manager 1
+HR customer 3
+SCRUM master 1
+Total 30 27
+13652575, 2026, 1, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/isj.70001, Wiley Online Library on [07/07/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License

@@ -1,0 +1,1410 @@
+--- PAGE 1 ---
+HAL Id: hal-05335175
+https://hal.science/hal-05335175v1
+Submitted on 28 Oct 2025
+HAL is a multi-disciplinary open access archive
+for the deposit and dissemination of scientific re-
+search documents, whether they arepublished or not.
+Thedocumentsmaycomefromteachingandresearch
+institutions in France or abroad, or from public or pri-
+vate research centers.
+L’archiveouvertepluridisciplinaireHAL,estdes-
+tinée au dépôt et à la diffusion de documents scien-
+tifiquesdeniveaurecherche, publiésounon, émanant
+des établissements d’enseignement et de recherche
+français ou étrangers, des laboratoires publics ou
+privés.
+Distributed under a Creative Commons CC BY 4.0 - Attribution - International License
+A Practical Approach to Evaluate Operational Business-IT
+Alignment
+Pascal Andre, Ali Benjilany, Hugo Bruneliere, Dalila Tamzalit
+To cite this version:
+Pascal Andre, Ali Benjilany, Hugo Bruneliere, Dalila Tamzalit. A Practical Approach to Evaluate Operational
+Business-IT Alignment. Enterprise Information Systems, 567, Springer, pp.376-408, 2025, Lecture Notes in
+Business Information Processing (LNBIP), ⟨10.1007/978-3-032-08573-3_17⟩. ⟨hal-05335175⟩
+
+--- PAGE 2 ---
+A Practical Approach to Evaluate Operational
+Business-IT Alignment
+Pascal André1[0000−0002−1112−2973]
+, Ali Benjilany1
+, Hugo
+Bruneliere2[0000−0002−5987−2175]
+, and Dalila Tamzalit1[0000−0002−0985−0226]
+1
+Nantes Université, École Centrale Nantes, CNRS, LS2N, UMR 6004, F-44000
+Nantes, France
+2
+IMT Atlantique, CNRS, LS2N, UMR 6004, F-44000 Nantes, France
+{Firstname.Lastname}@univ-nantes.fr, hugo.bruneliere@imt-atlantique.fr
+Abstract Business-IT Alignment (BITA) is an important mean of eval-
+uating the performance of IT systems operating within a business organ-
+isation. In this context, it remains challenging for software architects to
+represent, analyse and interpret the alignment situations, before trying
+to fix potential misalignments. Despite different initiatives in the last
+two decades, current solutions are too diverse and limited, making their
+generalisation difficult, if not impossible. We consider that more meth-
+odological guidelines are still needed to improve the support for BITA.
+In this chapter, we address practical tracks for Core Operational BITA
+(COBITA), a subset of BITA which targets the operational integration of
+business and application artefacts. To this end, we first propose a general
+framework, in the line of Enterprise Architecture, to establish a carto-
+graphy of the as-is state: business and application layer modelling and
+linking. We then propose to evaluate the alignment state using different
+evaluation means (metrics, consistency rules, anti-patterns). The object-
+ive is to provide indicators for domain experts and software architects to
+assess the quality of the alignment between the two layers. The practical
+aspects include principles, techniques and tooling: a partial version of
+the approach has been implemented in the Archi tool and experimented
+on the SoftSlate Open-Source Java Ecommerce Solution.
+Keywords: Information Systems · Enterprise Architecture · Core Op-
+erational Business-IT Alignment · Modelling · Assessment.
+This chapter is a revised and extended version of the ICEIS 2024 conference
+paper titled "Towards a link mapping and evaluation approach for Core Opera-
+tional Business-IT Alignment" [6].
+1 Introduction
+An Information System (IS) is a socio-technical system covering both social
+(i.e. organisation, business, enterprise) and information technology (IT) aspects.
+These aspects require to consider different paradigms. For example, concerning
+
+--- PAGE 3 ---
+2 André et al.
+the social aspects, an organisation needs to answer to the five W questions (Who
+- What - When- Where - Why) by describing its activities and processes. For the
+IT aspects, it mostly has to answer to the ’how’ question regarding the automated
+part of its information system. In this case, the focus is put on the collection,
+storage and processing of data. Generally, a main concern of IS architects is
+to design efficient IT solutions that match with the business activities of their
+organisations.
+In this context, Business-IT Alignment (BITA) is a mean to measure and
+evaluate the consistency between these complementary aspects. In the liter-
+ature, the term alignment refers to both the process of establishing the links
+(i.e. aligning or re-aligning) and the result of this process (i.e. fitting state).
+In other words, the first interpretation is "alignment as an action" while the
+second is "alignment as a state". When the alignment is not correct, it generally
+refers to quality issues related to integration (e.g. Business-IT gap, alignment
+problem [23], misalignment [40]). Alignment is a fractal concept since several
+viewpoints can be considered according to stakeholder concerns. For example,
+organisational alignment handle people, location, resources, etc. while strategic
+alignment focuses mainly on value and objectives. Given one viewpoint, the
+main questions are related to consistency and completeness. For instance, from
+the people perspective, consistency means that people have the skills to process
+the activities, and completeness means that all activities (related to people) have
+operators and that all people are busy.
+The Strategic Alignment Model (SAM) [21] is a reference model for BITA.
+It separates the strategic and operational levels for both the business and IT
+points of view. Still, it remains too informal to be applied in practice. Enterprise
+Architecture (EA) [26] provides a more convenient framework. It covers many
+stakeholder’s points of view, from business strategy to IT infrastructure. In EA,
+alignment is about connecting layers via concepts of their underlying models.
+A later work [20] reduced the scope to Operational BITA, i.e. the alignment of
+business requirements with business processes and software systems. This defini-
+tion is interesting to compare existing approaches. However, mixing requirements
+with processes in business models can be confusing, and no supporting frame-
+work has been provided up to know. Very recently, the scope has been narrowed
+down to Core Operational Business-IT Alignment (COBITA) as the operational
+integration of the business and application layers [1]. This is the actual core area
+where the business view meets the IT view.
+COBITA is a central preoccupation for IS architects (e.g., Enterprise Archi-
+tects, Solution Architects, Technical Architects) in charge of maintaining legacy
+applications. In practice, they use a combination of modelling and document-
+ation to analyse the alignment and recommend evolution scenarios. However,
+the existing BITA surveys [38,20,17,1] mention the lack of methodological and
+tooling support to assist these architects in feeding the models, discovering the
+alignment links, evaluating the obtained cartography, proposing evolution scen-
+arios and, ideally, carry out necessary alignment. Thus, in the COBITA context,
+several research questions have to be explored [1]. They concern (i) the impact
+
+--- PAGE 4 ---
+A Practical Approach to Evaluate Operational Business-IT Alignment 3
+of how the business and application layers are modelled; (ii) the variety of the
+stakeholder’s concerns, called dimensions; (iii) the tool support to perform the
+COBITA continuous process and (iv) case studies or benchmarks to compare
+existing approaches.
+The work presented in this chapter is a first step towards addressing these re-
+search questions. In particular, we cover the following COBITA steps: (1) Identify
+the concepts to be considered from the two layers, (2) Build the layer models, as a
+motherboard chipset for BITA; (3) Specify different types of links between these
+concepts, considering various dimensions; (4) Establish concrete links between
+elements from the two layers to obtain a cartography; (5) Evaluate this carto-
+graphy by applying various means (metrics, logical rules for consistency/com-
+pleteness, patterns or anti-patterns, etc.); (6) Contribute to the tool support by
+partially automating several steps of the process; (7) Propose an open case study
+for experimenting with our approach.
+The remainder of this chapter is organised as follows. Section 2 introduces the
+background on which we build our approach. Section 3 describes the concepts and
+techniques used to establish an alignment state (i.e. a cartography) for COBITA.
+Section 4 provides different means (metrics, consistency rules, anti-patterns) to
+explore the cartography and produce information to evaluate the quality of the
+COBITA. Section 5 presents the current tool support coming with our approach.
+Section 6 illustrates the practical application of our tooled approach on a case
+study. Section 7 discusses the related work, before Section 8 concludes and opens
+on future work.
+2 Background
+In this section, we introduce the main concepts and related definitions on which
+we built the work presented in this chapter.
+2.1 COBITA
+Figure1. BITA vs. COBITA
+As introduced in Section 1, BITA
+is about evaluating how IT systems
+fit with enterprise business activities.
+This is denoted by the ’full BITA’
+arrow in Figure 1, whose scope is
+wide especially when taking into ac-
+count the different EA abstraction
+layers and the viewpoints of the vari-
+ous stakeholders. For the sake of uni-
+formity, the layer colors are inspired
+from Archimate [35]. Full BITA re-
+quires to compare very distant, and
+consequently distinct, concepts. This
+is very complex to realize in practice.
+
+--- PAGE 5 ---
+4 André et al.
+Thus, we rather promote a step-by-step alignment between peer layers, denoted
+by the arrows between peer layers in Figure 1. Aligning vertical peer layers con-
+sists in connecting quite comparable concepts since they remain in the same
+domain (vertical arrows in Figure 1), concepts having an abstraction/refine-
+ment relation. On the one hand, Alignment SA is mainly concerned with stra-
+tegic alignment between business processes and goals/objectives. This topic has
+been largely studied since 1990 [2,36,38,40] and a corresponding maturity model
+has even been proposed (SAMM) [28]. On the other hand, alignments 1 and 2
+are more related to software abstraction and reverse engineering [3,29] and re-
+main an open field (for instance to discover architectural structures [1]). Aligning
+horizontal peer layers is more difficult because the concerned concepts belong to
+different domain (horizontal arrow in Figure 1), concepts having an mapping
+relation. As a solution, COBITA reduces the scope to aligning the business layer
+(mostly the business processes organising the enterprise activities) and the ap-
+plication layer (an architectural view of the IT systems). It focuses on the difficult
+part of BITA dealing with non-immediately comparable concepts.
+2.2 EA Layers and Links
+Figure 2 zooms on the COBITA perimeter. We consider two layers, namely
+business and application, represented by two distinct models. The geometric
+figures represent model elements which are instances of different concepts at
+the business process-level (activities, events, actors, business objects, etc.) and
+application-level (components, libraries, services, tasks, data object, etc.). These
+elements are connected by links3
+inside a given layer (intra-layer links) or
+between layers (inter-layer links). Intra-layer links can be, for instance, data
+flow or control flow in the business layer and association or inheritance in the
+application layer. Inter-layer links represents a correspondence, traceability, re-
+finement or dependency between concepts of the two layers. In the context of
+our work, a set of inter-layer links is called a mapping.
+2.3 Dimensions
+A dimension is a point of view on the alignment. In Figure 2, two dimensions
+are represented, and denoted by the dashed lines and the filled arrows (respect-
+ively). Such dimensions target the possible concerns of the different stakeholders,
+e.g. functions, data, urbanisation, actors, security or privacy. For example, in IS
+modelling, we usually make a distinction between the structure, the functional
+behavior and the dynamic behaviour (cf. the Function-Behaviour-Structure On-
+tology [18]). In this chapter, we consider only two dimensions (functions and
+data) which are the two most commonly studied ones in COBITA [1]. It is im-
+portant to note that the intra-layer links belong to the models of the business
+3
+In the ISO 42010 standard [22], a link is called a correspondence, defines a rela-
+tion between model elements called architecture description elements, and can be
+governed by correspondence rules.
+
+--- PAGE 6 ---
+A Practical Approach to Evaluate Operational Business-IT Alignment 5
+Figure2. COBITA links schematisation [6]
+and application layers (cf. Section 3.1), while the inter-layer links are defined by
+the enterprise architect when establishing the cartography (cf. Section 3.3).
+2.4 Alignment State Evaluation
+Both types of links can be considered when evaluating the COBITA, especially
+when detecting patterns or applying consistency rules (cf. Section 4). According
+to state-of-the-art [1], performing COBITA evaluation includes (i) checking the
+consistency and completeness of the alignment, (ii) calculating metrics and rates
+to evaluate the alignment, (iii) computing the coverage for different dimensions,
+(iv) analysing change impact for maintenance and evolution. In this chapter, we
+focus on defining the state of alignment and thus consider only the three first
+items. Modifying an existing alignment (i.e. the last item) is currently out of the
+scope of the presented work. To achieve our goals, we first propose metrics related
+to the implementation of business and application functions (cf. Section 4.1);
+then, we provide a set of consistency rules (cf. Section 4.2) and anti-pattern
+detection (cf. Section 4.3) in order to evaluate the quality of the established
+COBITA cartography.
+
+--- PAGE 7 ---
+6 André et al.
+3 Building an Alignment State
+Figure 2 is a schematic view of an alignment state that shows the elements we
+require. Notably, a model for each one of the two concerned layers and links
+between concepts of these two layers are needed.
+3.1 Defining COBITA Layers
+To be able to detect an alignment state, we first need to have a representation of
+the concepts of each layer, and thus of the layers themselves. Having such rep-
+resentations allows to handle these layers in terms of modelling and evaluation.
+There are several main standard modelling languages which are often considered
+in a COBITA context, including UML and BPMN 2.0 for instance [1]. However,
+for the presented work, we chose to rely on Archimate because (i) it includes
+the concept of layers and aspects (notably the business and application ones) to
+structure the models; (ii) it is generic enough to serve as a pivot language for
+future interoperability with other languages; (iii) it already offers several types
+of links between concepts (that can be used as a basis for COBITA links). Archi-
+mate also comes with a reference tool support (cf. Section 5). Finally, Archimate
+is possibly compatible with BMPN or UML via dedicated model transformations
+(cf. Section 5.2).
+We selected Archimate concepts that are particularly representative for COB-
+ITA. We summarized them in Table 1. In the context of our work, we considered
+the two usual dimensions that can be found in the literature [20,1], namely func-
+tional and data. The former refers to functionalities that implement business
+activities or IT processes, it belongs to the behavior in Archimate. The latter
+refers to the data and information existing in any IS, it belongs to the passive
+structure in Archimate. The business layer models are represented using yellow
+diagrams in Archimate, while the application layer models are represented using
+blue diagrams.
+Table 1. Selected Archimate concepts for COBITA [6]
+In Table 1, we mention only the main concepts that are involved in inter-layer
+links for the functional and data dimensions. In the next section, we define the
+inter-layer links and bind them to these two dimensions.
+
+--- PAGE 8 ---
+A Practical Approach to Evaluate Operational Business-IT Alignment 7
+3.2 Modelling COBITA Layers
+Once the modelling language is chosen, the modelling activity can start. An im-
+portant assumption in our work is that we start from legacy situations. This
+means that we do not align models implicitly by construction, like in BITA ap-
+proaches that implement business processes by service-oriented applications [24,34,39].
+In legacy cases, a main issue is adequacy, meaning that the models must
+reflect the reality. In practice, we observed that IS architects write manually
+their business and application models. However, inferring the models from exist-
+ing information could significantly increase the confidence in the resulting layer
+models.
+Business process models are usually designed by architects from informal
+specifications, and then later extended with goal/objective information for any
+strategic alignment (the alignment arrow labelled with "SA" in Figure 1). For
+example, ArchiMate, e3value and business model canvas (BMC) are combined
+in [10]. Consequently, few assistance is available to the architects. However, mod-
+els may exist but expressed in another modelling languages. In particular, BPMN
+is the most frequent language for business processes [1] and model transforma-
+tion are helpful facilities to automatically import such models (e.g. from BPMN
+to Archimate-Business, cf. Section 5.2).
+Inferring application models from legacy software by reverse engineering pro-
+grams (source code, deployed binaries, configuration files, etc.) is a well-known
+activity. Quite surprisingly, few existing BITA approaches deal with reverse en-
+gineering and provide a corresponding tool support [3,29].
+– Reverse engineering enables to extract the legacy code structure (the alig-
+ment arrow labelled with "1" in Figure 1).
+– Still, abstracting it to software architecture models requires the architects
+expertise (the aligment arrow labelled with "2" in Figure 1).
+In the experimentation stage, we modelled both layers by interpreting jointly
+the legacy source code and available documentation of the information system
+we studied (cf. Section 6).
+3.3 Defining Inter-layer Links
+In Section 2, we introduced the notions of inter-layer link, dimension and map-
+ping. The links are relations between layer model concepts. There are many
+ways to represent the links, and even more semantics associated to them. For
+example, UML provides three kinds of structural relations with variants: asso-
+ciation4
+(var: unidirectional association, aggregation, composition), inheritance
+(var: implementation) and dependency (var: instantiation). These relations can
+be customised by stereotypes. Archimate defines 11 relationships5
+divided into
+4
+Associations are bidirectional by default.
+5
+https://pubs.opengroup.org/architecture/archimate31-doc/chap05.html
+
+--- PAGE 9 ---
+8 André et al.
+four categories6
+. Most are variants of UML relations, except the two dynamic
+relationships (triggering, flow) which are used to model behavioral dependencies
+between elements. All these relationships can be used to represent intra-layer
+links (cf. Figure 2). Non-dynamic relationships can also be used to represent
+inter-layer links (cf. Figure 2). However, we face two problems to define inter-
+layer links: (i) Having too many variants to express one link leads to questioning,
+discussion, confusions and arguments between stakeholders7
+. According to the
+Occam principle, we proposed to reduce the variety and we applied the same
+strategy for the layer concepts in Table 1. (ii) Archimate uses dependencies or
+inheritance for inter-link, meaning that the layers are ordered in a refinement
+way (i.e. a dependency can be interpreted with a traceability semantics). This
+is correct when we stay in the same domain but is not true in COBITA when
+linking elements of different domains. As a consequence, we propose to use only
+bidirectional associations to represent the links, and to define only one variant
+per dimension.
+We define two types of inter-layer links between the concepts of Table 1: im-
+plementation links (related to the functional dimension) and representation links
+(related to the data dimension). These two links are generic and independent
+from any modelling language (e.g. BPMN, UML, Archimate). In the illustrating
+figures, they are both implemented as Associations, i.e. dependency relationships
+of Archimate. Note that we did not use other types of Archimate relationship
+(such as Serving or Realization) because they are too specific to functions and
+processes.
+Definition 1 (Implementation link). An implementation link expresses that
+a concept of the Business layer in the functional dimension is implemented by
+a concept of the Application layer in the functional dimension. It means that a
+A-funct concept is part of the implementation of the behaviour of a B-funct
+concept.
+Implementation links are illustrated on the left side of Figure 3: a business
+process bp-orderProcess is composed of three business processes: bp1, bp2,
+bp3. Each of them is implemented by one application function (respectively
+af1, af2, af3).
+Definition 2 (Representation link). A representation link expresses that a
+concept of the business layer in the data dimension (e.g. a B-data concept) is
+represented by a concept of the application layer in the data dimension (e.g. a
+A-data concept).
+Representation links are illustrated on the right side of Figure 3, where two
+Business objects, Order and Cart are represented by the Data Objects Order-
+DAO and CartDAO respectively. However, Whislist is not represented by any
+A-data concept.
+6
+It is surprising that inheritance is not considered as a structural relation while real-
+ization is.
+7
+The modelling methodology would have to explain precisely which kind of relation-
+ship to use and why.
+
+--- PAGE 10 ---
+A Practical Approach to Evaluate Operational Business-IT Alignment 9
+Figure3. Illustration of functional implementation (left) and data representation
+(right) custom links [6]
+We define a cartography as a collection of mappings that connect the
+business and application layers. Each mapping is associated to one particular
+dimension. Having several dimensions enables a customised evaluation of the
+alignment. We address the actual evaluation process in Section 4.
+3.4 Establishing Inter-layer Links
+Once the layers are modelled (cf. Section 3.2), the next step is to add the inter-
+layer links we defined in Section 3.3. To this end, any model element of the
+business layer model could be possibly linked to any model element of the ap-
+plication layer model (cartesian product), generating a large set of situations.
+To avoid a combinatorial explosion, we consider only the layer model concepts
+indicated in Table 1 and one type of link per dimension.
+Inferring the links is difficult because there are many ways to implement
+business concepts in applications:
+– A business process (or function) can be implemented by a set of services or
+methods. A Business object can be define by one or more database relations.
+– An application service or a method can be part of the implementation of
+several business processes or functions. Several business object can be merge
+in one database relation for efficiency reasons.
+– To avoid redundancy, only direct links are to be stored. For example, if a
+business function is part of a business process the application concepts that
+are mapped to the business function must not be explicitly defined as links
+(there are computed by transitivity).
+– Using lexical inference (name matching), may be useful if the software de-
+velopers started from business requirements and follow some strict naming
+
+--- PAGE 11 ---
+10 André et al.
+rule. Otherwise, name correspondence defined by regular expressions provide
+random candidates for one to one mapping.
+– Pattern matching (structured collection of business concepts mapped to a
+structured collection of application concepts) provides the best results but
+are the more difficult to define.
+Of course, the inter-layer link depends on the semantics of the linked concepts,
+but also on the used software development method. The knowledge of such in-
+formation enables different heuristics.
+– Establishing links separately on given dimensions enables to reduce the com-
+plexity (divide and conquer), despite the fact that the link analysis for align-
+ment evaluation may proceed on several dimensions and use the inter-layer
+links to detect patterns (cf. Section 4).
+– Semantically distant concepts can be brought closer via intermediate up-
+grades or transformations. For example, if the application layer information
+contains only software packages, the architect should explore the main func-
+tions, the API, and the control flows in order to detect application function
+or main services than can be linked to business functions or processes. If the
+application layer is already presented as a Service Oriented Architecture, the
+link establishment can benefit from lexical matching, gain for 1-to-1 corres-
+pondence.
+– When the software has been developed from requirements using a clear meth-
+odology, candidate patterns appear to build the link. For example, there are
+rules to define database schemes from conceptual data or business objects.
+– Configurations files or meta-information (XML structures) are valuable in-
+formation to detect concept mapping and establish the links.
+In the experimentation stage, we established the links by interpreting the
+business processes and functions we previously extracted from the legacy source
+code and available documentation of the information system we studied (cf. Sec-
+tion 6).
+4 Evaluating an Alignment State
+As mentioned before, COBITA evaluation usually relies on the knowledge of
+domain experts and architects. However, the more the studied information sys-
+tem is big, the more they will need support to detect potentially good or bad
+situations. Alignment and misalignment are the two sides of the same coin8
+.
+Thus, detecting eventual bad situations is almost as important as asserting an
+alignment level.
+In this work, we opted for a combination of various quantitative and qual-
+itative techniques in order to evaluate a COBITA state: metrics, logical rules,
+8
+Both keywords have to be taken into account for any systematic bibliography review,
+e.g. the review mentioned in this chapter [40].
+
+--- PAGE 12 ---
+A Practical Approach to Evaluate Operational Business-IT Alignment 11
+pattern matching, etc. The application of these techniques should be as auto-
+mated as possible to be relevant for the architects. In what follows, we define
+different metrics to quantify alignment, logical rules to evaluate the consistency,
+and anti-pattern to detect misalignment. Based on these, we consider both the
+functional and data dimensions, as well as the representation links defined in
+Section 3.3 and their implementation discussed in Section 5.
+4.1 Quantitative Evaluation Based on Metrics
+The set of metrics we defined and support includes 1. the degree of coverage
+of business concepts by application concepts, 2. the level of implementation of
+business concepts, and 3. the level of application concepts implementing business
+concepts. These metrics are inspired from a main reference for software quality
+measurements [12], and from a main reference for relationship fitness measure-
+ment in BITA [15]. For each metric, we provide both the computation logic and
+the interpretation of the obtained result.
+Metric 1 : Number of implementation links of a given Business func-
+tional concept. The objective is to calculate the number of implementation
+links, named M1, in which a business functional concept participates in. Three
+different cases require a particular attention:
+1. M1 = 0: The business functional concept is not implemented. Such a value
+is a warning for domain experts and software architects who have to decide
+whether this is actually indicating a misalignment situation or not.
+2. M1 = 1: The business functional concept is implemented once, corresponding
+to the ideal alignment situation. However, the architects still have to check
+if the linked implementation is correct or not.
+3. M1 ≻ 1: The business functional concept is implemented more than once.
+This is generally an indicator of bad alignment that the domain experts and
+software architects should consider. It is then up to them to decide whether
+the situation is really problematic or not. Such situation is not a problem
+if this choice has been done on purpose. In fact, in some cases, refining
+the implementation of a business functional concept by multiple application
+functions is required. However, we consider that the higher the number of
+implementation links is, the bigger is the risk of misalignment. Indeed, it
+could indicate occurrences of the "multiple functional implementation" anti-
+pattern [19].
+Metric 1 reveals situations of misalignment related to the implementation of one
+specific business functional concept. The following metrics exploit this metric
+in order to evaluate the implementation state by considering all the business
+functional concepts.
+Metric 2 : Rate of unimplemented business functional concepts. Apply-
+ing Metric 1 on all the business functional concepts allows to calculate the total
+
+--- PAGE 13 ---
+12 André et al.
+number of unimplemented ones. Given the total number of business functional
+concepts, we can calculate Metric 2 by Rate of unimplemented B-funct con-
+cepts = Number of unimplemented B-funct concepts/Total number of B-funct
+concepts. The result of Metric 2 is also a relevant indicator for the software
+architects. For instance, along with business domain experts and IT developers,
+they can set a threshold from which the rate of unimplemented B-funct con-
+cepts becomes a warning. Such threshold can be a contract between business
+and IT representatives, in which the architect plays the role of mediator.
+Metric 3: Critical implemented business functional concepts. Relying
+on Metric 1, it is possible to sort out the B-funct concepts from the most to
+the less implemented. This allows the architect to have a clear overview on the
+most demanding B-funct concepts in terms of implementation. Therefore, such
+an information allows to identify more easily the B-funct concepts to keep under
+control.
+Metric 4. Number of implementation links of an application functional
+concept. While Metrics 1-2-3 focus on the links where B-funct concepts are
+involved, Metric 4 focuses on the links where application functional concepts
+are involved. The objective is to calculate M4, the number of B-funct concepts
+implemented by one A-funct concept. Three different cases require a particular
+attention:
+1. M4 = 0: If an application functional concept A-funct does not have any
+related implementation link, it means that this A-funct concept is not im-
+plementing any B-funct concept, at least directly. In fact, an A-funct concept
+is sometimes called by another A-funct concept which is itself implementing
+a B-funct concept. However, this situation can produce inconsistencies, lead-
+ing to occurrences of the Pure technical integration BITA Antipattern [19].
+2. M4 = 1: The A-funct concept implements one Bus-Func concept, corres-
+ponding to the ideal alignment situation. However, this cannot automatically
+ensure the quality of the linked implementation.
+3. M4 ≻ 1: An A-funct concept implementing more than one B-func concepts
+should be alerting. Such a situation can notably occur in the context of
+legacy monolith applications. This corresponds to possible occurrences of
+the Monolith application BITA anti-pattern [19].
+Globally, the results of Metric 4 are useful to reveal situations of misalign-
+ment related to the number of implementations provided by a A-funct concept
+for B-funct concept(s). The next step is to exploit further this metric in order
+to evaluate the implementation state by considering all the A-funct concepts.
+Metric 5. Rate of application functions concepts not implementing
+business function concepts. By grouping the Metric 4 M4 results applied
+on all application function concepts, i.e. all A-func concepts, we can calculate
+
+--- PAGE 14 ---
+A Practical Approach to Evaluate Operational Business-IT Alignment 13
+the number of them that do not implement B-func concepts. In addition, given
+the total number of A-func concepts, we can calculate the resulting Metric
+5 by Rate of A-func concepts that are not implementing B-func concepts =
+number of A-func concepts that are not implementing A-func concepts / total
+number of A-func concepts. This metric gives a general overview of the degree
+of A-func concepts currently involved in the alignment mapping. For instance,
+supposing that more than half of the A-func concepts are not implementing at
+least one B-func concepts, this would be a questionable situation to deal with.
+Several reasons can be the cause of such a situation. It can be symptomatic
+of accumulated dead code (e.g. due to wrong architecture decisions). It can be
+simply due to code that does not conform to the designed architecture. It can also
+be caused by an evolution in the organization related to some legacy software.
+Metric 6. Application function concepts most implementing business
+function concepts. Based on the results of Metric 4, we can also identify the
+A-func concepts which are implementing B-func concepts the most.
+This metric can be an indicator about the global application functions concepts
+organisation and usage. For instance, having an A-func concept that implements
+the third of existing B-func concepts, while some others are not (directly) im-
+plementing any B-func concept, might reveal a too important dependency to
+(and workload for) this A-func concept.
+We proposed two metrics to calculate the number of implementation and
+representation links, two metrics to calculate rates of implemented versus non-
+implemented B-func concepts and A-func concepts implementing versus non-
+implementing B-func concepts and, finally, two metrics to calculate the most
+implemented B-func concepts and the most A-func implementing B-func con-
+cepts. These metrics represent a first evaluation mean of the cartography linking
+the business and application layers and following the functional and data dimen-
+sions. We now present a second and complementary mean of evaluation.
+4.2 Qualitative Evaluation Based on Consistency Rules
+While metrics can help to evaluate the alignment quantitatively, other means are
+needed in order to provide a more qualitative evaluation. To this end, we define
+and propose some logical rules that enable consistency verification involving
+different concepts of the two dimensions. Compared to the evaluation based
+on metrics, consistency rules allow to deal with more structural aspects. Thus,
+we try to identify patterns of links composed of 1) inter-layer links between
+concepts of a same dimension (but different layers) and 2) intra-layer links
+between concepts of a same layer (but different dimensions).
+Considering the following sets BfC=B-func concepts, BdC=B-data concepts,
+AfC=A-function concepts and AdC=A-data concepts, in addition to (bfc,bfd) ∈
+BfC × BdC and (afc,adc) ∈ AfC × AdC, we have the following propositions:
+– A : bfc accesses bdc
+– B : afc accesses adc
+
+--- PAGE 15 ---
+14 André et al.
+– C : bfc is implemented by afc
+– D : bdc represented by adc
+Based on these, we define the following consistency rules:
+(A ∧ B) ∧ C =⇒ D (1)
+(A ∧ B) ∧ D =⇒ C (2)
+(1) We verify for each pair (bfc,bdc) where bfc accesses bdc. If there is an
+afc implementing bfc then adc, that is accessed by afc, should represent bdc.
+For instance, in Figure 4, the pair (bfc,bdc) (Create a test customer account,
+Customer) shows that Create a test customer account accesses Customer. There
+is also the afc Register that implements the bfc Create a test customer account.
+The consistency rule will return true if the adc CustomerDAO represents the
+bdc Customer. It will return false if this is not the case, as illustrated in the left
+part of Figure 5.
+Figure4. Rules for consistency verification [6]
+Figure5. Non-verified Rule 1 & 2 [6]
+(2) We verify for each pair (bfc,bdc) where bfc accesses bdc. If there is an adc
+representing bdc then afc, that accesses adc, should implement bfc. For instance,
+in Figure 4, the pair of (bfc,bdc) (Create a test customer account, Customer)
+shows that Create a test customer account accesses Customer. There is also
+
+--- PAGE 16 ---
+A Practical Approach to Evaluate Operational Business-IT Alignment 15
+the adc CustomerDAO that represents the bdc Customer. The consistency rule
+will return true if the afc Register implements the bfc Create a test customer
+account. It will return false if this is not the case, as illustrated in in the right
+part of Figure 5.
+We currently propose two consistency rules in order to illustrate this kind of
+evaluation mean. However, we could envision many more. As a result, a library
+of consistency rules could be created and then progressively extended.
+4.3 Detection of Misalignment Anti-patterns
+Complementary to metrics, pattern matching contributes to the qualitative eval-
+uation of the alignment. Indeed, patterns can be used to detect good, bad or
+suspicious alignment situations. In the context of our work, we looked more spe-
+cifically for misalignment situations to be handled in a future evolution of the
+information system. A misalignment may simply come from a bad initial soft-
+ware design. However, in many cases, it is originated from adaptations made into
+legacy code and applications, evolving business processes, facing technical debt,
+etc. Patterns and anti-patterns refer to common best practices often emerging
+from practical experiences at both the business and application layers. We did
+not establish a reference style (i.e. a reference model) to comply to because the
+legacy systems we target can follow various software architectural styles [30].
+Still, we followed base foundations for modular system design which are loose
+coupling and strong consistency.
+Like anti-patterns in software engineering, corresponding to common soft-
+ware design errors [8], BITA anti-patterns illustrate recurring alignment errors.
+In a base work on such alignment anti-patterns [19], these errors were identi-
+fied and then classified from studies (audits) concerning about thirty different
+information systems. A four-layer Enterprise Architecture (business processes,
+business functions, software, hardware) was considered, that is slightly different
+from our COBITA context (cf. Figure 1): (i) the COBITA business layer is split
+into two levels (process, functions) and the hardware layer merely correspond to
+the implementation layer in Figure 1, that is outside COBITA; (ii) they focus
+on the "function" dimension only (cf. Section 2.3), because their reference archi-
+tectural style is micro-service architectures, while we target several dimensions
+with no particular software architectural style in mind. Consequently, the links
+between the layers 1 and 2 in this base work correspond to intra-layer links in our
+approach. Similarly to this base work, we also deal with the links between the
+layers 2 and 3. 14 BITA anti-patterns were identified in the considered informa-
+tion systems, each corresponding to a recurring bad scenario. Four of them were
+presented with more details and formalized via identity cards including: Label
+- Definition - Visualization - Causes - Consequences - Effects on evolution, on
+use, ease and recovery time. Finally, no actual detection techniques nor related
+tools were proposed. We propose to adapt this base work to our context, and to
+consider anti-patterns as additional COBITA evaluation means.
+For each of the supported anti-patterns, we provide a general definition. We
+also detail one example of an associated algorithm to detect the occurrences of
+
+--- PAGE 17 ---
+16 André et al.
+such an anti-pattern (for AP2). This algorithm, as well as all the others (for
+the three other supported anti-patterns), are presented on the dedicated Web
+appendix 9
+. The proposed algorithms are then implemented with the scripting
+language jArchi to be executed in the modeling environment Archi (cf. Sec-
+tion 5.1). Their application in the context of the SoftSlate case study is de-
+scribed in Section 6.3. Complementary details can also be found from a past
+publication (in French only) [5].
+Anti-pattern AP1. Pure technical integration
+Definition 3. This anti-pattern occurs when different software applications call
+each other either directly or through other software, without corresponding links
+appearing at the business layer level.
+Examples of such a missing traceability are numerous in practice. This is
+notably the case when the software architecture has been designed from soft-
+ware requirements without a business process reference. Thus, the execution
+control flow follows the application structure instead of the user experience. The
+associated algorithm is available from the Web appendix9
+.
+Anti-pattern AP2. Functional SILO
+Definition 4. This anti-pattern refers to the existence of a block isolated from
+the rest of the information system. A block is characterized by a succession of
+business tasks linked to a corresponding succession of application functions.
+Instances of this pattern can occur in large information systems covering
+several business activities that share common applications or internal (hidden)
+software components. As an illustration, Listing 1.1 shows the algorithm for de-
+tecting the Anti-Pattern AP2. It starts by creating a collection bfuncConcepts of
+the concepts from the business layer to be possibly aligned. Then, it checks for
+each business concept the absence of a link (a flow or a composition) to other
+business concepts (direct or indirect implementation). In case of absence, and
+if the concept is implemented (presence of implementation links) by applica-
+tion concepts that are targets of these links and connected to other application
+concepts of type application−function, then these application concepts must not be
+the implementation of other business concepts. Otherwise, an alert is raised to
+indicate the presence of AP2 related to the considered business concept.
+Listing 1.1. Algorithm for detecting AP2
+// STEP 1 : Collect a l l B func concepts
+busprocess = GetElement("business - process ")
+busfunction = GetElement("business - function ")
+businteraction = GetElement("business - interaction ")
+bfuncConcepts = Concat( busprocess , Concat( busfunction , businteraction ) )
+collection = GetElement( bfuncConcepts )
+ForEach concept in collection
+9
+https://uncloud.univ-nantes.fr/index.php/s/5ZrjSnbdb3neBTP
+
+--- PAGE 18 ---
+A Practical Approach to Evaluate Operational Business-IT Alignment 17
+i = 0
+Output(’----- next concept -------’ , concept )
+j = 0
+ForEach bprel in GetRels( concept )
+// STEP2: Verify i f there is intra business layer link
+If j is 0
+If bprel . type is ’flow - relationship ’ or bprel . type is ’composition -
+relationship ’
+j++
+writeln (’OK − > CHECK NEXT BP ’)
+Else
+If bprel . specialization is ’Implementation link ’
+ForEach a f r e l in GetRels( bprel . target )
+//STEP3: Verify i f there is intra application layer link
+If a f r e l . target . type is ’application - function ’ and a f r e l . type is
+’triggering - relationship ’
+i++
+End If
+End ForEach
+End If
+End If
+End If
+End ForEach
+If j is 0 and i is 0
+writeln (’WARNING : Anti pattern 2 DETECTED on ’ , concept )
+End If
+End ForEach
+Anti-pattern AP3. Monolithic Application
+Definition 5. This anti-pattern occurs when a single application concept imple-
+ments several distinct business functions.
+The algorithm to identify AP3 creates a collection of all the concepts that
+we consider in the application layer. For each concept, we filter, in the collection
+of association links, the direct or indirect implementation links to the business
+layer. If none are detected, an error is raised. If several are found, this is a
+potential case of AP3 anti-pattern. The associated algorithm is available from
+the Web appendix9
+.
+Anti-pattern AP4. Functional Multiple Implementations
+Definition 6. This anti-pattern refers to the implementation of a single busi-
+ness layer concept by multiple application layer concepts. The main identified
+reason is the lack of understanding of business models, and their functional part
+in particular.
+Examples are multiple copies of same functions with light modifications (or
+not) thus leading to redundant and often separately evolving pieces of software.
+When different implementations of one business function exist, they must be
+linked in the application layer. For instance, paying an invoice with credit card,
+check or cash. The associated algorithm is available from the Web appendix9
+.
+In Section 4, we provided an overview of several techniques to evaluate an align-
+ment state. In particular, we presented three complementary means to evaluate
+
+--- PAGE 19 ---
+18 André et al.
+the alignment between the two layers and according to the two dimensions: six
+metrics on pairs of concepts from the Business and Application layers, two con-
+sistency rules and four anti-patterns. These means provide relevant indicators to
+domain experts and software architects about the current state of the alignment
+of their systems. However, their list is not exhaustive and could be complemen-
+ted in the future. In the next section, we propose some tool support for them in
+order to assist the enterprise architects.
+5 Automating User Assistance
+Establishing the links and evaluating the alignment are complex and tedious
+activities, especially for large information systems frequently evolving over time.
+Indeed, COBITA activities need to the repeated periodically in order to pre-
+serve a good alignment. Thus, to be applicable in practice, the evaluation means
+presented in Section 4 must be implemented and supported by a tool for en-
+terprise Architects. There are several requirements to fulfil related to: (1) layer
+models, (2) link cartography, (3) metrics and rule statements. These are not
+separated concerns and must share a common technical environment (cf. Sec-
+tion 5.1). Still, each context specific to a given case study requires a customised
+tool support (cf. Section 5.2).
+5.1 Tool Support Background
+General purpose case tools for modelling can be used, especially those including
+reverse engineering facilities for automatically abstracting models from source
+code (e.g. Modelio10
+).
+There are various existing EA tools such as VisualParadigm, SmartEA, En-
+terprise Architect or Modelio BA. To implement the tool support associated
+to our proposed approach, we decided to rely on the open source Archimate
+modelling tool named Archi11
+for different reasons: (i) Archi is an Enterprise
+Architecture solution fully implementing the Archimate standard language that
+allows to properly model the two layers and related concepts we target in the
+context of COBITA (cf. Section 3.1); (ii) Archi is an open source solution that
+can be freely reused and/or refined according to our needs, for instance to rep-
+resent and handle the COBITA links as extensions of standard Archimate links
+(cf. Section 3.3); (iii) Archi comes with an ecosystem and community offering
+several additional plugins, including notably jArchi12
+that allows to navigate
+and query Archimate models for evaluating the alignment (cf. Section 4).
+As a result, the current version of the provided base tool support is structured
+as follows:
+10
+https://www.modelio.org/
+11
+https://www.archimatetool.com/
+12
+https://www.Archimatetool.com/blog/2018/07/02/jArchi/
+
+--- PAGE 20 ---
+A Practical Approach to Evaluate Operational Business-IT Alignment 19
+– Base Archi to model the business and application layers. For layers mod-
+elling, we directly rely on the Archimate modelling features provided by the
+Archi tool. This includes a graphical model editor covering the Archimate
+standard language. We customised Archimate aspects in order to implement
+the COBITA dimensions.
+– Extended Archi to support the COBITA links. Archi allows defining new
+types of relationships by specialising these base types. In the present work,
+we specified the proposed new types of COBITA links by specialising the
+Association relationship offered by Archimate (cf. Figure 6). Note that the
+interface provided by default in Archi also gives the number of occurrences
+of each one of the newly specified types of links.
+Figure6. Specialisation Manager of Archi for specifying the COBITA links [6]
+– jArchi for exploiting the models and links to evaluate the alignment. jArchi
+is a scripting plugin provided by the developers of Archi but not integrated
+by default. Thus, we had to deploy and build it ourselves so that it can
+then be used within our Archi workbench. Thanks to jArchi, the Archimate
+models are handled, including the alignment links, to collect the information
+needed to compute the proposed metrics. We also used jArchi to navigate
+these models with the objective to check the proposed consistency rules.
+In what follows, we provide concrete examples of script implementations.
+Note that we removed some of the comments and modified the indentation, for
+the sake of readability and length.
+Example of Metric Script Implementation Listing 1.2 shows the imple-
+mentation in jArchi of a script for calculating Metric 2 (cf. Section 4.1). The
+result of the running of the script/metric is the list of all unimplemented BPs in
+the model, and the total number of unimplemented BPs.
+Listing 1.2. Script in jArchi implementing Metric 2
+console.log(’The unimplemented business functional concepts are : \n’);
+// Collect all elements of type business process
+var collection = $("element");
+var busprocess= collection.filter(’business -process’)
+var busobject= collection.filter(’business -object’)
+var busfunction = collection.filter(’business -function’)
+
+--- PAGE 21 ---
+20 André et al.
+var businteraction = collection.filter(’business -interaction’)
+var bfuncConcepts = busprocess.concat(busfunction).concat(businteraction)
+//Set a counter
+var count=0
+//Loop on all business functional co
+bfuncConcepts.forEach(function(obj) {
+if($(obj).rels(’association -relationship’).length ===0)
+{console.log(obj.name);
+count++}
+})
+console.log(’\n There are’, count , ’unimplemented business functional
+concepts among’, bfuncConcepts.length ,’. Which gives a rate of’, count/
+bfuncConcepts.length*100 ,’%’)
+Example of Consistency Rule Implementation Listing 1.3 shows the code
+in jArchi to verify the consistency rule CR1 (cf. Section 4.2). The preparatory
+phase consists in collecting the BFC concepts in a collection, then collecting the
+AFCs in another collection. The algorithm starts by retrieving - for each BFC
+- the target BDC(s) of the intra-layer link(s), here access-relationship (STEP
+1). This is the verification of the proposition A. Then, the algorithm retrieves -
+for each BFC - the target AFC concept of the implementation link (STEP 2).
+This is the verification of the proposition C. After that, the algorithm checks
+that the proposition B is true (STEP 3), i.e. there is at least one intra-layer link
+connecting the AFC concept to an ADC concept. If this is the case then the
+last step (STEP 4) consists in checking, for each ADC concept, that each of its
+inter-layer links connects it with the same BDC concept identified in STEP 1
+and currently iterating. This is the verification of the proposition D. Finally, if
+the algorithm reaches this stage and D is true, the consistency rule is verified
+and a message is returned to indicate it.
+Listing 1.3. Script in jArchi implementing CR1
+console.log("New Archi Script for CR 1");
+//Collect all b func concepts
+var busprocess= $("business -process")
+var busobject= $("business -object")
+var busfunction = $("business -function")
+var businteraction = $("business -interaction")
+var bfuncConcepts = busprocess.concat(busfunction).concat(businteraction)
+//Collect all a func concepts
+var appfunction= $("application -function")
+var dataobject= $("data-object")
+var appprocess = $("application -process")
+var appinteraction = $("application -interaction")
+var afuncConcepts = appprocess.concat(appfunction).concat(appinteraction)
+//Algo CR1
+//Step 1 : For each B-func Concept, get the B-data Concept target of the
+access relationship : OK === Proposition A
+bfuncConcepts.forEach(function(bfc){
+$(bfc).rels(’access -relationship’).forEach(function(rel){
+console.log(bfc, ’accesses to’ ,rel.target , ’----’);
+
+--- PAGE 22 ---
+A Practical Approach to Evaluate Operational Business-IT Alignment 21
+//Step 2 : For each B-func Concept - get the A-func Concept target of the
+COBITA Link === Proposition C
+$(bfc).rels(’association -relationship’).forEach(function(imp){
+if(imp.specialization===(’Implementation link’))
+console.log(bfc, ’is implemented by’ , imp.target , ’--------’);
+//Step 3 : For each "afc=asso.target", si afc accessed by adc (Proposition
+B) , then adc should represent bdc= rel.target (Proposition D)
+$(imp.target).rels(’access -relationship’).forEach(function(acc){
+console.log(’xxxxx’ , imp.target , ’accesses to’ , acc.target , ’xxxxx’);
+//Step 4 : then for each adc i.e target of acc relationship with afc, check
+that every COBITA link wich adc is source/target, is linked to bdc has an
+access relation to bfc implemented by afc
+$(acc.target).rels(’association -relationship’).forEach(function(data){
+if (data.specialization ===(’Data link’) && data.source.id === rel.target.
+id)
+console.log (’xxxxxxxxxxx’, acc.target , ’is represented by’ , data.source ,
+’which is the same than the’, rel.target ,’accessed by’,bfc,’---------
+-> CR1 VERIFIED !!! xxxxxxxxxxx \n’);
+}) }) }) }) })
+Example of Anti-Pattern Detection Script Listing 1.4 shows the imple-
+mentation in jArchi of a script for detecting the AP2 Anti-Pattern (cf. Sec-
+tion 4.3). The result of the running of the script/metric is the list of potential
+issues of missing business elements.
+Listing 1.4. Script in jArchi implementing AP2
+console.log("Archi Script for identifying anti pattern 2 : FUNCTIONAL SILO");
+// Collect all b func concepts : OK
+var busprocess= $("business -process")
+var busobject= $("business -object")
+var busfunction = $("business -function")
+var businteraction = $("business -interaction")
+var bfuncConcepts = busprocess.concat(busfunction).concat(businteraction);
+bfuncConcepts.forEach(function(concept){
+i=0; // incremented when the target AF is linked by a triggering link.
+console.log(’----- next concept -------’ , concept)
+// Step 2 : get the BP links, including composition
+j=0; // incremented by the BP triggering intra-links
+$(concept).rels().forEach(function(bprel){
+if (j==0) {
+if (bprel.type === (’flow-relationship’)|| bprel.type===(’composition
+-relationship’)) {j++; console.log(’OK -> CHECK NEXT BP’)} //
+console.log(’Detected’ , bprel, concept, ’ OK -> CHECK NEXT BP \n
+’)
+// Step 3 : check the AF target of implementation links
+else{ if (bprel.specialization===(’Implementation link’))
+$(bprel.target).rels().forEach(function(afrel){
+if ((afrel.target.type===(’application -function’) && afrel.
+type === (’triggering -relationship’))) {i++}
+})
+} } })
+if (j==0&&i==0) console.log(’WARNING : Anti pattern 2 DETECTED on’ , concept)
+})
+
+--- PAGE 23 ---
+22 André et al.
+The source code of the implemented components, as well as the complete
+models we used in the context of our experiments on our illustrative system
+(cf. Section 6), are all available online13
+.
+5.2 Customised Tool Support
+Additional tool support notably include import/export facilities. For example,
+we developed in ATL14
+a model-to-model transformation to transform BPMN
+models into corresponding Archimate (Business) models. Figure 7 gives an over-
+view of the conceptual mapping realised in this transformation. After the ex-
+ecution of such a transformation, we loose some information since BPMN is a
+richer business process modeling language than Archimate (Business). However,
+this is not an issue since this loss of information relates to elements which are
+not directly pertinent in our COBITA context.
+Figure7. From BPMN to Archimate
+As mentioned in Section 3.4, customised tool support can be needed to take
+into account the particular characteristics of each enterprise or case study (e.g.
+when the software development processes and associated practices or guidelines
+vary). Transformational or generative approaches usually provide implicit links
+(in up to 66 % of the cases [1]) but this often corresponds to best case situations
+where the software architecture complies to the business architecture [24,32,33,34,37,39].
+For instance, a prior work already focused on an automatic semantic process
+aimed at discovering the services that can be used to implement the business
+processes [33]. Another work proposed a solution based on metamodels & trans-
+formation rules to automatically discover a data model from business process
+models (BPMN + UML activities) [7]. Overall, the goal of these approaches is
+to implement business processes (alignment by construction) while this chapter
+rather addresses the problem of better aligning legacy Information Systems.
+13
+https://tinyurl.com/y6rd5v9z
+14
+https://eclipse.dev/atl/
+
+--- PAGE 24 ---
+A Practical Approach to Evaluate Operational Business-IT Alignment 23
+6 Experimenting on a Case Study
+We illustrate our solution in practice on the SoftSlate Commerce Java shopping
+cart system that powers dozens of E-commerce websites. This is a suitable can-
+didate for performing the experiments for different reasons: (i) We did not find
+available benchmarks or models in the literature or on the Web. (ii) A concrete
+implementation of this system, the SoftSlate web application15
+, is directly avail-
+able online including its complete source code and documentation. (iii) Some
+business processes have already been built from this implementation by using
+reverse engineering techniques based on user interactions with the web applica-
+tion [14]. Thus, it is an interesting starting point for the modelling of the business
+layer. (iv) SoftSlate is reasonably complex in terms of structure and relatively
+large in terms of number of lines of code.
+Figure8. Excerpt of the SoftSlate’s cartography of COBITA alignement [6]
+6.1 Modelling the COBITA layers
+In this section, we report our experience on building models for the business and
+application layers.
+Business Layer of SoftSlate Different business processes have already been
+automatically extracted from the SoftSlate Web application [14]. They describe
+the main actions that customers can do with the system, namely “Login”, “Re-
+gister”, and “SaveCartItem”. To complement this initial set of business processes,
+15
+https://www.softslate.com/category/archivedDocs
+
+--- PAGE 25 ---
+24 André et al.
+we also studied the provided user guide16
+. In particular, we identified additional
+business processes related to the system administrators in charge of managing
+products, orders, etc. In what follows, we focus on two of these newly identified
+business processes BPs which are also modelled in yellow in the full cartography
+from Figure 8: (1) BP1: Add a product to the list of products & Order that
+product (cf. Figure 9); (2) BP2: Configure shipping costs (cf. Figure 10).
+Figure9. Order Process of SoftSlate
+Figure10. Shipping Configuration Process of SoftSlate
+Application Layer of SoftSlate As explained before, no software architec-
+ture was directly available. To overcome this, we used Modelio17
+to get a first
+abstraction (the alignment arrow labelled with "1" in Figure 1) by reverse en-
+gineering the legacy code structure. Then, we complemented the modelling of
+the application artifacts by directly looking into the source code of the available
+16
+http://www.softslate.com/documentation/userGuide2x.pdf
+17
+https://www.modelio.org/
+
+--- PAGE 26 ---
+A Practical Approach to Evaluate Operational Business-IT Alignment 25
+implementation of SoftSlate, in addition to the provided user documentation. It
+is a Web application developed in Java with the J2EE framework, and composed
+of five main packages: Customer, Administration, Business Objects, DAO, In-
+staller. The Customer package and the Administrator package provide the
+core features of the system. The Business Object package and DAO package
+are also important because they are directly used by the Administrator pack-
+age. Such an implementation facilitates the mapping for the Data dimension.
+However, these five main packages contain a large number of sub-packages
+(46 in total), each one of them containing a significant number of classes. Thus,
+in the context of the current experiments, we focused on the Administrator
+package. The Administrator package contains a set of Java classes of differ-
+ent types by following the Model–View–Controller (MVC) software design pat-
+tern. Servlet classes implement the "Controller" part, JSP classes implement the
+"View" part, while Bean, Processor and DAO classes implement the "Model"
+part. Moreover, the Administrator package is responsible for implementing the
+previously mentioned business processes BP1 and BP2.
+Following a similar approach, we modelled six Application Components, namely
+"Account Management", "Cart Management", "Product", "Payment", and "Ship-
+ping". For example, the application component OrderProcessing has been mod-
+elled by studying the Order sub-package from the Administrator package. This
+sub-package contains interrelated Java classes we represent as application func-
+tions AFs (Add Order, Delete Order,Edit Order). Finally, the Order sub-package
+also contains DataAccessObject (DAO) classes we represent as a single DataOb-
+ject (OrderDAO).
+Figure11. Excerpt of the Application model of SoftSlate
+As a result, the complete application model we built is shown in Figure 11
+and also in blue in the full cartography from Figure 8.
+Based on the previously described models of the business and application lay-
+
+--- PAGE 27 ---
+26 André et al.
+ers, we can move on to the next step and work on establishing alignment links
+between the models of these two layers.
+6.2 Establishing the Inter-layer links
+As introduced before, Figure 8 displays the two business processes of the business
+layer in yellow, and the application components of the business layer in blue. We
+established manually multiple COBITA links between model elements from these
+two layers. These links are of various types (cf. Section 3.3) which are graphically
+represented by different colors. Red links correspond to implementation links
+(functional dimension), while the blue links correspond to representation links
+(data dimension). Such a cartography is already useful to get an overview of
+the situation in terms of alignment. However, it is not sufficient to evaluate the
+actual quality of this alignment. A deeper analysis of the models and COBITA
+links is thus needed.
+6.3 Evaluating the Alignment State
+In this section we apply the evaluation means presented in Section 4. For the sake
+of readability and length, we only describe illustrative parts of the application
+of these evaluation means.
+A) Quantitative Evaluation Based on Metrics
+In what follows, we apply different metrics we proposed in Section 4 and
+illustrate our work with three of them (note that the related conference paper [6]
+illustrated six metrics).
+Metric 2. Figure 12 shows the output, in the jArchi console, of the script
+that lists all the unimplemented BPs. The number of unimplemented BPs is
+10, among 24 BPs in the whole model (i.e. 41,6 % of unimplemented BPs). At
+first look, this number can be considered as too high. However, such a conclu-
+sion can be mitigated when analysing the unimplemented BPs. For instance, BPs
+such as Order Process and Shipping Order do not have implementation links to
+AFs. Instead, these BPs contains other BPs that are themselves implemented by
+AFs. Thus, Metric 2 could be further refined in order not to integrate composite
+BPs into the computation.
+Metric 4. Figure 13 shows the output, in the jArchi console, of the script that
+enables to verify if a given AF is implementing any BP and, if this is the case, also
+provides the number of implementation links related to that AF. The selected
+AF is "Log in", and has one implementation link Impl_Link_1.
+Metric 5. Figure 14 shows the output of the jArchi script that lists all the AFs
+that are not directly implementing BPs. The number of these AFs is 14, among
+26 AFs in the whole model (i.e. 53,8 % of the AFs). Similarly to the result of
+Metric 2, this number can be considered as too high. However, once again, such
+
+--- PAGE 28 ---
+A Practical Approach to Evaluate Operational Business-IT Alignment 27
+Figure12. Result of Metric 2 on SoftSlate [6]
+Figure13. Result of Metric 4 on SoftSlate [6]
+a conclusion can be mitigated when analysing the non-implementing AFs. For
+instance, Update Password is not directly implementing any BP. Instead, this
+AF is related to a BP that is not modeled yet, i.e. a BP that allows a user to
+change its password. Thus, the actual coverage is likely to be better than what
+is currently visible in our cartography.
+We briefly described the result of the execution of some metrics to evaluate
+quantitative aspects (e.g. completeness ratios). However, more relevant indicat-
+ors can be built on a hierarchic aggregation of individual metrics (along with
+other complementary evaluation means).
+B) Qualitative Evaluation Based on Consistency Rules
+We illustrate the evaluation of the consistency rules defined in Section 4.2
+with the consistency rule CR1 that we implemented in jArchi (cf. Section 5.1).
+Figure 15 shows the output of the jArchi script checking that the business objects
+handled by given business functions or processes are link to application data
+by the applications functions or components that are linked to these business
+functions or processes. The execution of the rule returns "VERIFIED" in this
+case.
+
+--- PAGE 29 ---
+28 André et al.
+Figure14. Result of Metric 5 on SoftSlate [6]
+Figure15. Result of rule CR1 on SoftSlate
+C) Detect Misalignment with Anti-patterns
+The execution of the implemented scripts raised an alert only for AP3, (cf.
+Figure 16). A "WARNING" alert is displayed because the application concept
+Add Shipping Rate has 3 implementation links to 3 different business concepts. The
+
+--- PAGE 30 ---
+A Practical Approach to Evaluate Operational Business-IT Alignment 29
+other situations not detecting AP3 are ignored. However, we still compute the
+number of links for each of the application concepts browsed.
+Figure16. AP3 detection on SoftSlate
+The existence of a single occurrence of an implementation link can be inter-
+preted as an indicator of a relatively good alignment of the system. However, it
+should be related to the other means (metrics, consistency rules) to evaluate the
+quality of the link mapping (completeness, coherence). Two aspects can also im-
+pact the result of our experiments: (i) Quality of the modeling. The SoftSlate
+model is incomplete (only two business processes) and not domain-validated (our
+model is not controlled by actual business teams and development teams). Fur-
+thermore, we may have made errors of interpretation on our side. (ii) Quality of
+detection algorithms. The detection algorithms that we propose may not detect
+alignment errors present in the system (false negatives) or detect errors that, in
+reality, are not errors (false positives).
+Figure17. A SoftSlate mutant
+To overcome the potential lack of efficiency of the algorithms, we were in-
+spired by mutation techniques in software testing to create different situations
+of misalignment to test the algorithms. For instance, Figure 17 shows a subset
+of a mutant model in the context of SoftSlate. Considering such an example,
+Figure 18 displays the result of the execution of AP2 for which we provided the
+
+--- PAGE 31 ---
+30 André et al.
+detection script presented in Listing 1.4. We can see a "WARNING" alert noti-
+fying of a possible alignment error relating to the business concept Login as seller .
+The other business concepts, however, are not concerned.
+Figure18. AP2 detection on a SoftSlate mutant
+All the implementation resources related to these experiments on our illus-
+trative information system are available online13
+.
+7 Related Work
+We studied the related work contributing to inter-layers links, as well as align-
+ment evaluation and the associated tooling support. In each case, we discuss lay-
+ers modelling, mapping links, evaluation means, available tooling and practical
+experiments. A general and more detailed comparison of COBITA approaches
+can be found in a previous study [1].
+Aversano et al. proposed a BITA framework with tool support [3], in wich
+they use UML diagrams for layers modelling. The inter-layer links are mater-
+ialised as ’functions’ from business entities (activities) to software components
+(operations, artifact classes). The alignment evaluation considers two quality
+attributes (Technological Coverage and Technological Adequacy) on activities,
+actors, artefacts and transitions. The obtained results are then aggregated by
+summing the values of the computed metrics in order to calculate a degree of
+alignment that covers a wider scope than COBITA, including notably strategy.
+The overall approach is a major reference because it provides mapping links and
+tool support with metrics to suggest evolution actions. Unfortunately, both the
+tool and the SantaClaus case study are not publicly available up to our cur-
+rent knowledge. They also propose a semantic analysis based on identifiers and
+lexical information. This becomes pertinent only if the IS provider use strict
+development rules including traceability information, which is rarely the case in
+practice. Moreover, the alignment evaluation is based mainly on the functional
+dimension and come with a limited analysis. We are convinced that considering
+multiple dimensions increases the power of alignment evaluation (consistency
+verification, alignment metrics). This way, we can possibly detect occurrences of
+more complex alignment patterns (combining data and functions for example).
+The work of Etien et al. [15] is based on ontologies. In their approach, align-
+ment is called ’fitness’ because it is centered on metrics. The authors define
+
+--- PAGE 32 ---
+A Practical Approach to Evaluate Operational Business-IT Alignment 31
+two types of links: maps is an inter-layer link, and represents is an abstraction
+of inter-layer link at the concept level of the ontologies. The evaluation part
+leans on ten different metrics. These metrics represent four factors (intentional
+- informational - functional - dynamic) which are inspired by a reference soft-
+ware quality measurement framework [12]. Experiments are led on a Renault/-
+DIAC case study which is unfortunately not publicly available. This work is a
+reference in terms of metrics but is limited regarding other aspects: (i) Onto-
+logies are not common notations for EA architects and thus require to develop
+tools for managing import/export in different formats. (ii) Like other BITA ap-
+proaches [11,33], it is inspired from Ontology alignment [16] that aims to match
+’similar’ concepts. However, business and application layers may have very differ-
+ent concepts. This is more particularly the case in legacy systems where software
+components and application may be defined while service and functions may not.
+(iii) There is no tool support at all stages of the proposed approach. We intend
+to overcome these limitations by relying on a standard EA modeling language for
+modeling the layers, offering different kinds of evaluation means, and providing
+a corresponding tooling support.
+The work of Pepin et al. covers the full range of activities related to COB-
+ITA [29]. In their approach, three layers are involved: business (BPM), applic-
+ation (App) and functional (Fun). Fun denotes an urbanisation concern with
+blocks and functionalities, and corresponds to EA practice in French compan-
+ies [27]. A link metamodel is provided that distinguishes data and functions.
+The alignment is implemented by model weaving to remain non-intrusive on the
+layer models, thus enabling OCL-like requests on the full model. Is is evalu-
+ated through consistency rules, completeness metrics and clustering techniques
+that provide an alignment dashboard. The provided tooling focuses on reverse-
+engineering source code to feed the App models, a plug-in of the EMF Facet
+project to define and query the inter-layer links, and OCL queries to evaluate
+alignment. Experiments were performed on three legacy cases provided by three
+French insurance companies, but they are not publicly available unfortunately.
+This work is closer to our context because it focuses on COBITA in practice and
+provides both guidelines and tools. However, ad-hoc layer models is a weakness
+to pervasive EA practice. We rather advocate for relying on standard model-
+ing languages and notations. Also, having three layers to align instead of two
+is not an usual COBITA practice. If the dimensions cover the three layers, it
+really becomes challenging to capture and express the mapping links. In our
+approach, the dimension paradigm enables to filter the various stakeholder con-
+cerns. Similarly, the detection of anti-patterns is made easier using two layers
+with dimensions rather than three layers (or more).
+Other existing works provide a variety of inter-layer links playing the role
+of mapping layer between the model layers. These approaches are interesting
+in terms of alignment tuning and evolution. In particular, a past work accepts
+several models for each layer which can be interesting in some cases [25]. An-
+other work uses links as transformation operators, thus proposing an operational
+vision of COBITA to implement business process and align legacy code [9]. In a
+
+--- PAGE 33 ---
+32 André et al.
+third work [23], alignment applies between business layers (BP2BP), IT-Layers
+(IT2IT) and between Business-IT layers (BP2IT). The BT2IT alignment con-
+siders allocation and alignment models. However, providing general rules for
+alignment is very confusing for the EA analysts because there exist at least two
+different semantics of alignment. The problem of such rich inter-layer links is
+that they require much work for alignment. Unfortunately, the alignment eval-
+uation and tool support is less reusable in other contexts. Compared to these
+works, our approach provides more explicit links with a clearer representation
+and semantics, thus easier to compute into EA layer models. This enables further
+alignment evaluation and exploitation which are main concerns for information
+systems practice. Moreover, we focus on evaluating alignments with operational
+means. On the contrary, other approaches focus on change impact and evolution
+that we currently consider as a future step of our work.
+In another past work [31], COBITA has been also partially tackled in the
+context of Archimate, UML and BPMN. To this end, the Archimate metamodel
+was extended with UML elements (operation, activity, object state) for allowing
+a fine-grained description. However, the focus was set on the "function" dimen-
+sion, the proposed solution was dealing specifically with consistency (rather than
+alignment) for a particular type of legacy applications, and practical guidelines
+were missing. Related to mappings, an interesting baseline has been provided in
+order to identify or compare them [39]. Provided clustering algorithms enable
+to analyse dependencies among data and tasks captured in business processes,
+and to group the strongly dependent tasks and data into a software compon-
+ent. Nevertheless, a tool support is missing and the approach is limited by the
+selected input formats.
+Finally, other case studies could be considered in order to enrich our experi-
+ments and to consolidate the evaluation of our proposed approach. A reference
+example is ArchiMetal Case Study that is provided by the Open Group to il-
+lustrate Archimate [4]. In such a case, all the models are already provided and
+fully conform to the Archimate standard. However, it is quite different from
+Softslate since the modelled application is already aligned by construction via
+transformation from the business layer. Thus, using such a case study for align-
+ment evaluation purposes does not appear to be relevant. The lack of publicly
+available case study is an actual problem that we intend to partially address by
+proposing in open source the complete COBITA resources related to Softslate.
+8 Conclusion and Perspectives
+In this chapter, we proposed an approach for establishing Core Business-IT
+Alignment (COBITA) links and using them in order to evaluate the quality of
+the alignment. We first selected the concepts from the Business and Application
+layers which are relevant for COBITA. Then, we defined two kinds of inter-layer
+links, one for the functional dimension and the other for the functional dimen-
+sion. Based on these links, we proposed three different kinds of evaluation means
+(metrics, consistency rules and anti-patterns) to evaluate the alignment state.
+
+--- PAGE 34 ---
+A Practical Approach to Evaluate Operational Business-IT Alignment 33
+We implemented the models and links in Archi, the reference Archimate tool,
+and the evaluation means with jArchi, a script language provided as an ex-
+tension of the Archi tool. The results of our initial experiments show that the
+proposed approach is applicable in the context of a realistic information sys-
+tem like SoftSlate. This case study could also be reused by the community as a
+common benchmark for COBITA experiments.
+With this chapter we reached a first milestone, similarly to a first sprint cov-
+ering the whole alignment process in an Agile vision. However, there is still room
+for improvement concerning several aspects of the approach. Firstly, we worked
+on very general links while, in Archimate (for example), different relationships
+can be used to provide a more precise semantics. Indeed, a more elaborated tax-
+onomy of possible COBITA links could be proposed to further improve the qual-
+ity of the cartography in terms of alignment links. Considering additional tools
+like Design Structure Matrix (DSM) could also be helpful to represent large set of
+mapping links [29]. Secondly, more work is needed in order to enrich the provided
+library of metrics, consistency rules and anti-patterns. Having different means
+to evaluate the alignment state raise the question of their consistency. To this
+end, we currently work on their aggregation as adequate indicators via different
+weights to be inserted into dashboards. Thirdly, we proposed a set of alignment
+activities but the associated methodology remains implicit and could be formal-
+ised. The overall objective is to better support the architects in detecting issues
+or asserting a quality level. To this end, having a more formalised methodology
+and COBITA process is needed. Fourthly, we manually built the models and fed
+the cartography with links up to now. However, assistance is crucially requested
+by the architects in order to perform such tasks, e.g. concerning the application
+layer [3,29] or the links [33]. For example, a recommendation component could
+automatically propose potential COBITA links to the system architects based on
+pre-defined patterns. Finally, and as already mentioned before in this chapter,
+we currently focus on establishing a cartography and evaluating the alignment.
+To complement our approach, we also plan to address in future work the next
+COBITA steps, including notably change impact and evolution [3,13,33].
+References
+1. André, P., Bruneliere, H., Tamzalit, D., Benjilany, A.: Core Operational Business-
+IT Alignment: Current Trends and Open Challenges, pp. 41–62. Springer Nature
+Switzerland, Cham (2024)
+2. Aversano, L., Grasso, C., Tortorella, M.: A literature review of Business/IT align-
+ment strategies. In: Enterprise Information Systems, pp. 471–488. No. 141 in
+LNBIP, Springer (2013)
+3. Aversano, L., Grasso, C., Tortorella, M.: Managing the alignment between business
+processes and software systems. Inf. Softw. Technol. 72, 171–188 (2016)
+4. Band, I., Bjeković, M., Else, S., Kroese, R., Lankhorst, M.: ArchiMetal Case Study.
+The Open Group (2016), https://publications.opengroup.org/, version 2
+5. Benjilany, A., André, P., Bruneliere, H., Tamzalit, D.: Détection d’anti-patrons
+d’alignement dans les SI : Vers une approche automatisée. In: Chevalier, M., Benali,
+
+--- PAGE 35 ---
+34 André et al.
+K. (eds.) Actes du 42ème Congrès INFORSID, Nancy, France, May 28-31, 2024.
+pp. 37–52 (2024)
+6. Benjilany, A., André, P., Tamzalit, D., Bruneliere, H.: Towards a link mapping
+and evaluation approach for core operational business-it alignment. In: Filipe, J.,
+Smialek, M., Brodsky, A., Hammoudi, S. (eds.) Proceedings of the 26th Interna-
+tional Conference on Enterprise Information Systems, ICEIS 2024, Angers, France,
+April 28-30, 2024, Volume 2. pp. 557–568. SCITEPRESS (2024)
+7. Brdjanin, D., Banjac, D., Banjac, G., Maric, S.: Automated two-phase business
+model-driven synthesis of conceptual database models. Comput. Sci. Inf. Syst.
+16(2), 657–688 (2019)
+8. Brown, W.H., Malveau, R.C., McCormick, H.W.S., Mowbray, T.J.: AntiPatterns:
+Refactoring Software, Architectures, and Projects in Crisis. John Wiley & Sons,
+Inc., USA, 1st edn. (1998)
+9. Buchwald, S., Bauer, T., Reichert, M.: Bridging the gap between business process
+models and service composition specifications. In: Service Life Cycle Tools and
+Technologies: Methods, Trends and Advances, pp. 124–153. IGI Global (2012)
+10. Caetano, A., Antunes, G., Pombinho, J., Bakhshandeh, M., Granjo, J., Borbinha,
+J., da Silva, M.M.: Representation and analysis of enterprise models with semantic
+techniques: an application to archimate, e3value and business model canvas. Know-
+ledge and Information Systems 50(1), 315–346 (Mar 2016)
+11. Castellanos, C., Correal, D.: A framework for alignment of data and processes
+architectures applied in a government institution. J. Data Semant. 2(2-3), 61–74
+(2013)
+12. Cavano, J.P., McCall, J.A.: A framework for the measurement of software quality.
+In: Proceedings of the Software Quality Assurance Workshop on Functional and
+Performance Issues. p. 133–139. Association for Computing Machinery, New York,
+NY, USA (1978)
+13. Dahman, K., Charoy, F., Godart, C.: Alignment and change propagation between
+business processes and service-oriented architectures. In: IEEE SCC 2013, Santa
+Clara, CA, USA. pp. 168–175. IEEE Computer Society (2013)
+14. Di Francescomarino, C., Marchetto, A., Tonella, P.: Reverse engineering of business
+processes exposed as web applications. In: 2009 13th European Conference on
+Software Maintenance and Reengineering. pp. 139–148. IEEE (2009)
+15. Etien, A., Rolland, C.: Measuring the fitness relationship. Requirements Engineer-
+ing 10(3), 184–197 (Aug 2005)
+16. Euzenat, J., Mocan, A., Scharffe, F.: Ontology Alignments, pp. 177–206. Springer
+US, Boston, MA (2008)
+17. Gellweiler, C.: IT architects and it-business alignment: a theoretical review. In:
+CENTERIS 2021 - ProjMAN 2021 - HCist 2021, Braga, Portugal. vol. 196, pp.
+13–20. Elsevier (2021)
+18. Gero, J.S., Kannengiesser, U.: The Function-Behaviour-Structure Ontology of
+Design, pp. 263–283. Springer London, London (2014)
+19. Gouigoux, J.P., Tamzalit, D.: Business-IT alignment anti-patterns: a thought from
+an empirical point of view. In: ISD 2021, Valencia, Spain (2021)
+20. Habba, M., Fredj, M., Benabdellah Chaouni, S.: Alignment between business re-
+quirement, business process, and software system: a systematic literature review.
+Journal of Engineering 2019 (2019)
+21. Henderson, J.C., Venkatraman, H.: Strategic alignment: Leveraging information
+technology for transforming organizations. IBM Systems 38(2.3), 472–484 (1999)
+
+--- PAGE 36 ---
+A Practical Approach to Evaluate Operational Business-IT Alignment 35
+22. ISO/IEC/IEEE: Systems and software engineering – architecture description.
+ISO/IEC/IEEE 42010:2011(E) pp. 1 –46 (1 2011). https://doi.org/10.1109/
+IEEESTD.2011.6129467
+23. Kassahun, A., Tekinerdogan, B.: Bita*: Business-it alignment framework of mul-
+tiple collaborating organisations. Information and Software Technology 127,
+106345 (2020)
+24. Koehler, J., Hauser, R., Küster, J.M., Ryndina, K., Vanhatalo, J., Wahler, M.: The
+role of visual modeling and model transformations in business-driven development.
+Electron. Notes Theor. Comput. Sci. 211, 5–15 (2008)
+25. Küster, J.M., Völzer, H., Favre, C., Branco, M.C., Czarnecki, K.: Supporting dif-
+ferent process views through a shared process model. Softw. Syst. Model. 15(4),
+1207–1233 (2016)
+26. Lankhorst, M.M.: Enterprise Architecture at Work - Modelling, Communication
+and Analysis (3. ed.). The Enterprise Engineering Series, Springer (2013)
+27. Longépé, C.: The enterprise architecture IT project: the urbanisation paradigm.
+Elsevier (2003)
+28. Luftman, J.: Assessing business-it allignment maturity. In: Strategies for informa-
+tion technology governance, pp. 99–128. Igi Global (2004)
+29. Pepin, J., André, P., Attiogbé, J.C., Breton, E.: A method for business-it alignment
+of legacy systems. In: Hammoudi, S., Maciaszek, L.A., Teniente, E. (eds.) ICEIS
+2015, Barcelona, Spain. pp. 229–237. SciTePress (2015)
+30. Pressman, R.: Software Engineering: A Practitioner’s Approach. McGraw-Hill
+higher education, McGraw-Hill Education (2015)
+31. Repa, V., Svatos, O.: Alignment of business and application layers of archimate.
+In: BIR 2018, Stockholm, Sweden. vol. 2218, pp. 57–69. CEUR-WS.org (2018)
+32. Rhazali, Y., Hadi, Y., Mouloudi, A.: A methodology for transforming cim to pim
+through uml: From business view to information system view. In: WCCS 2015.
+pp. 1–6. IEEE (2015)
+33. Sánchez, E.S., Clemente, P.J., Conejero, J.M., Prieto, A.E.: Business process exe-
+cution from the alignment between business processes and web services: A semantic
+and model-driven modernization process. IEEE Access 8, 93346–93368 (2020)
+34. Shishkov, B.: Designing Enterprise Information Systems - Merging Enterprise Mod-
+eling and Software Specification. Springer (2020)
+35. The Open Group: Archimate 2.1 Specification. Van Haren Pub (2013)
+36. Ullah, A., Lai, R.: A systematic review of business and information technology
+alignment. ACM Trans. Manage. Inf. Syst. 4(1), 4:1–4:30 (2013)
+37. Yao, Q., Zhang, J., Wang, H.: Business process-oriented software architecture for
+supporting business process change. In: Yu, F., Luo, Q., Chen, Y., Chen, Z. (eds.)
+ISECS 2008, Guangzhou, China. pp. 690–694. IEEE Computer Society (2008)
+38. Zhang, M., Chen, H., Luo, A.: A systematic review of business-it alignment research
+with enterprise architecture. IEEE Access 6, 18933–18944 (2018)
+39. Zhao, X., Zou, Y.: A business process-driven approach for generating software
+modules. Softw. Pract. Exp. 41(10), 1049–1071 (2011)
+40. Őri, D., Szabó, Z.: A systematic literature review on business-it misalignment
+research. Information Systems and e-Business Management (2024), ISSN 1617-
+9854

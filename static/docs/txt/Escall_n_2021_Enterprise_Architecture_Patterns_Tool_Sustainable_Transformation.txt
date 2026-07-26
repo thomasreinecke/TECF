@@ -1,0 +1,969 @@
+--- PAGE 1 ---
+On Enterprise Architecture Patterns:
+A Tool for Sustainable Transformation
+Roberto Garcı́a-Escallón(B)
+, Adina Aldea, and Marten van Sinderen
+University of Twente, Enschede, The Netherlands
+Abstract. Organizations across the world today face similar problems,
+thus, solutions to these problems could also be re-used across many orga-
+nizations. Climate change is one such common problem to organizations,
+where any solution implemented by one could be re-used by many others.
+These re-usable solutions could be Enterprise Architecture Patterns, but
+there is a lack of guidance on how to use them in practice. This study
+proposes an extension to the commonly used TOGAF, to better lever-
+age these reusable solutions. Thus, this enables organizations using this
+framework to enhance it with Enterprise Architecture Patterns. As part
+of the proposed methodology, re-usable patterns supporting sustainable
+characteristics are built. The resulting methodology is validated with an
+expert panel, gathering positive comments.
+Keywords: Enterprise Architecture · Enterprise Architecture
+Patterns · Sustainability
+1 Introduction
+Today, climate change calls for a widespread transformation. A transformation
+for a sustainable society that is being demanded by millions around the globe
+[20]. Many projects are underway to make said change a reality, but time is
+running out, as the looming deadline of 2030 for reducing carbon emissions by
+45% worldwide, to avoid warming higher than 1.5◦
+C, nears [2]. Although, the
+kind of changes required is similar for all organizations. For example, all organi-
+zations can reduce their CO2 footprint by avoiding using paper in their internal
+processes, something that can be solved in a reusable manner with technology.
+Because some of the changes needed to diminish emissions are common through-
+out organizations, solutions developed for one organization may apply to others.
+For these common challenges and repeatable solutions, the concept of patterns
+is of great value [1].
+As Enterprise Architecture (EA) practitioners aim to steer changes in organi-
+zations, they are pushed to do so at an increasing pace. Besides climate change,
+the pace of technological change and the threat of being disrupted is driving
+organizations to change faster. To enable EA practitioners to bring about these
+transformations in organizations, this study proposes a methodology for the
+speciﬁcation of EA for sustainable organizations using patterns. This study is a
+c  Springer Nature Switzerland AG 2021
+J. Filipe et al. (Eds.): ICEIS 2020, LNBIP 417, pp. 858–882, 2021.
+https://doi.org/10.1007/978-3-030-75418-1_39
+
+--- PAGE 2 ---
+On Enterprise Architecture Patterns: A Tool for Sustainable Transformation 859
+followup of [7], and [6], and is organized as follows: First, a description of the
+background is provided; second, the research methodology is described; third, the
+results of a systematic literature review are reported; fourth, the methodology
+is proposed; ﬁfth, a validation of the methodology is shown; ﬁnally, conclusions
+are drawn.
+2 Background
+Enterprise Architecture (EA) is a relatively new ﬁeld of research that aims to
+steer the change in an organization [13]. For example, by aligning the goals of
+diﬀerent layers of an organization. As a ﬁeld, it has developed multiple tools to
+help practitioners in their activities, and as a result, there are many frameworks
+and methods. Such methods include the Zachman framework and The Open
+Group Framework (TOGAF), among others [21,27]. Most methods and frame-
+works depend on descriptions of the organization, both of how it is working at
+the moment and how it should be working in the future [12]. The methods and
+frameworks deﬁne the tools to design the desired future version of the organiza-
+tion, as a result, EA has been applied to drive change in organizations.
+2.1 Patterns
+The organizations’ EA is applied in, as well as all other organizations, have
+similarities in their structure and behaviour with other organizations, similarities
+that could be also called patterns. In the words of Alexander [1], the authors of
+the book A Pattern Language, “Each pattern describes a problem which occurs
+over and over again in our environment, and then describes the core of the
+solution to that problem, in such a way that you can use this solution a million
+times over, without ever doing it the same way twice” [1]. From this deﬁnition
+we can extract four key attributes, ﬁrst, patterns are a solution to a recurring
+problem. Second, the pattern is the core of the solution, meaning the solution
+has a scope and does not aim to describe anything that is not needed to solve
+the problem. Third, the pattern should be usable as many times as needed. And
+fourth, each speciﬁc use of the pattern might look diﬀerent than the last. Thus,
+patterns provide reusable solutions to problems that occur repeatedly.
+Patterns have been used in other ﬁelds, most famously in Computer Science,
+where patterns describe solutions to common problems when developing soft-
+ware [5]. These patterns helped to hasten the development of software, as they
+oﬀered ready to use solutions to some common problems. Thus, similar eﬀects
+are expected in EA by applying the concept of patterns, helping drive change
+faster.
+2.2 Sustainability
+In the global context, Sustainability has become the goal to many, ranging from
+individuals to the United Nations as a response to climate change and other
+
+--- PAGE 3 ---
+860 R. Garcı́a-Escallón et al.
+obstacles [23]. The eﬀects of climate change are clear: climate change, impacts
+to human health, mass extinction of species, among others [3,4,19].
+Climate change calls for a transformation, one that is widespread and towards
+sustainability, which is being demanded by millions around the globe [20]. The
+rate at which needs to increase, as the looming deadline of 2030 for reducing car-
+bon emissions by 45% worldwide, to avoid a warming higher than 1.5◦
+C, draws
+closer [2]. Although, the kind of changes required are similar for all organizations.
+For example, all organizations can reduce their CO2 footprint by avoiding using
+paper in their internal processes, something that can be solved in a reusable
+manner with technology.
+3 Research Methodology
+The approach followed throughout this study is Design Science Methodology
+[25]. As a methodology, Design Science describes the designing and investigating
+of an artifact and its interaction with its context. These activities correspond
+with the research problems in design science, they are either Design Problems or
+Knowledge Questions. The former focuses on designing a solution that will act
+within a problem context, the latter focuses on knowledge without the inﬂuence
+of the context [25].
+The implementation of this methodology is based on a cycle, the engineering
+cycle. It is composed of four steps, the investigation of the problem, the design
+of the solution, its validation and ﬁnally its implementation. Within the scope
+of this study, the solution in question was not implemented [25].
+To achieve the study’s goal, these steps are followed, starting with the deﬁni-
+tion of the design problem: the need for an increased pace of EA change projects,
+and the diﬃculty practitioners face when treating sustainability concerns in orga-
+nizations. To solve the problem, an artifact designed to enable practitioners
+to prepare an EA speciﬁcation for sustainable organizations using patterns is
+prepared.
+In order to design this artifact, ﬁrst, an investigation on the problem is per-
+formed, to which two knowledge questions were identiﬁed, what EAPs are there
+in literature? and what characterizes a sustainable organization?. These two
+questions are answered using the Systematic Literature Review (SLR) method-
+ology shown below, and their results are shown in Sect.4.
+After gathering the required knowledge during the problem investigation step
+the artifact is designed. This design is described in Sect.5. Finally, The artifact
+is then validated, using a case study and interviews with experts as shown in
+Sect.6. A more detailed description of this step can be found in [7].
+3.1 Systematic Literature Review
+In order to answer the knowledge questions, two separate SLR are performed.
+The SLRs follow the methodology of Rouhani et al. [18], as it is a very thorough
+work in the EA ﬁeld. This method outlines three stages to a SLR: a planning
+
+--- PAGE 4 ---
+On Enterprise Architecture Patterns: A Tool for Sustainable Transformation 861
+phase, an execution phase and a result analysis phase. In order to enhance this
+method and arrive at a richer set of literature, the backwards and forwards cita-
+tion techniques will be included, to include additional articles that might be
+relevant but were not present in the results of the initial query [26]. In order
+to execute this last step, Google Scholar was used, which shows both, backward
+and forward citations, easily. For all other steps leverage Scopus, ACM Digital
+Library, IEEE Xplore, Science Direct - Elsevier, Springer Link, Taylor and Fran-
+cis and Web of Science. The process is shown in Fig.1. For the ﬁrst knowledge
+question, the keywords used “enterprise architecture” AND “Pattern”. While
+for the second knowledge question the steps were more relaxed as the time con-
+straints on the study drew nearer. As such, the backward and forward citation
+techniques were not performed. Finally, the keywords used for the second review
+were “characteristics of sustainability” or “characteristics of circular economy”
+or “characteristics of sustainable business” or “sustainability characteristics” or
+“circular economy characteristics” or “sustainable business characteristics”.
+Fig.1. Overall process of the SLR - adapted from [6].
+4 Systematic Literature Reviews
+In this section, the two SLR executed are described, ﬁrst on EAPs in literature,
+second on Characteristics of sustainable organizations. The results of the former
+SLR was ﬁrst published in [6], but the main ﬁndings are included here. The
+results of the latter SLR can be found in [7], but the results are included below.
+4.1 EAPs in Literature
+During the overall execution of the SLR, it was noticed that the concept of
+patterns has been used by all ﬁelds in the sample with diﬀerent periods. The
+latest one being the studies on BMI, particularly in the Sustainable Business
+Development ﬁeld. The recent surge of the BMI ﬁeld’s eﬀort on documenting
+the patterns has been welcomed with open arms by the academic community, as
+seen by the citation count mentioned in earlier sections. Such interest extends
+to the sub-ﬁeld of SBMs, that expands the Business Model Patterns. P2 which
+expands upon the Repository and adds more Business Model Patterns. Contrary
+to all other studies in this sample, all the studies related to BMI, SBM and Cir-
+cular Economy are based around the framework proposed by [16]. Although the
+
+--- PAGE 5 ---
+862 R. Garcı́a-Escallón et al.
+representation of the patterns may diﬀer, their basic constructs are the same,
+which would make it possible to translate these patterns into an EA represen-
+tation of them, based on the work of [10]. This method would pave the way to
+take these Business Model Patterns repositories into EAPs.
+Being able to relate the patterns extracted from SBMs, and translating them
+to EA, is aligned with the overall interest of society to a more sustainable world.
+With the call for sustainability, as seen by the Sustainable Development Goals
+of the UN [23], it means that organizations will need to develop new functions
+or transform their current ones. This change could be supported by EA, and,
+being a generalized need, would beneﬁt from having a repository of patterns to
+draw from.
+State of the Literature on Enterprise Architecture Patterns. Each of
+the 24 studies reviewed in this SLR have described patterns, however, not all
+of them seem to be written in a way that can be used by future works. For
+example in the conference proceedings and journal articles, where the authors
+report mostly on how they arrived at the patterns (P3, P17), or describes how
+one could extract and write patterns (P16, P22), but do very little in actually
+documenting them. This lack of information may be related to space limitations
+when submitting studies for publication in conferences or journals. Which is
+aligned with our ﬁndings that the most detailed and complete patterns are found
+in books, technical reports and online databases.
+With space being such a valuable resource in journal articles and conference
+papers it raises the question of what is the best way to gather patterns in a
+way that is usable for future research as well as practitioners. Within this SLR,
+books and technical reports focused more on the patterns themselves, while jour-
+nal articles and conference proceedings focused more on methods or presented
+sample patterns. Although P24 fused the two, by publishing each new kind of
+pattern in journal articles while at the same time keeping the online repository
+updated they were able to present a high amount of information on their work
+while avoiding the space limitations scientiﬁc publishing implies.
+Based on the initial deﬁnition, patterns solve a repeating problem. In the
+case of EAPs then, the problem is a deﬁcit in the organization as perceived by
+the stakeholders. Thus, EA practitioners would be in the best position to detect
+both the problems that repeat themselves, as well as the solutions that could be
+reused to meet them. This line of thinking means that researchers must be in
+contact with practitioners far and wide to expand patterns, or that researchers
+must be practitioners as well. This poses a limitation, or it could be taken as an
+opportunity to include practitioners in future works on patterns.
+Fields Researching Patterns. On Fig.2 we have classiﬁed the four main
+types of patterns found through the SLR in terms of the four main layers of
+the Archimate Language [13]. Based on [10] and the Archimate constructs they
+use to describe a Business Model [16] it can be concluded that Business Model
+Patterns are conﬁned to the Strategy and Business layers. While the Business
+
+--- PAGE 6 ---
+On Enterprise Architecture Patterns: A Tool for Sustainable Transformation 863
+Process Patterns was mapped to the Business Layer due to its’ scope, Business
+Processes, which is enclosed in this layer.
+Fig.2. Classiﬁcation of ﬁelds - adapted from [6].
+Enterprise Architecture Management Patterns are omitted from this graph.
+This is due to their focus on the practice of EA itself, the methods enterprise
+architects use to gather information, as well as how they present it to stakehold-
+ers. As such these patterns are more akin to an EA framework and methodology.
+Thus, although the focus of the EAM patterns is the EA practice itself, this is
+diﬀerent to the EAPs, which is the enterprise.
+Methodologies for Pattern Extraction. A Challenge faced by all the ﬁelds
+in this SLR was the gathering of the patterns. While the Business Model Patterns
+can be extracted from an organization through literature reviews and research-
+ing real-world organizations. On the other hand, the patterns presented by the
+EA ﬁeld are based on the authors’ experience. For example P14 mentioning that
+the source of these patterns is the day to day experience of the practitioner
+and detecting a repeating problem. This mention of a repeating problem is also
+present in other works on patterns [1]. Another avenue seen is presenting a frame-
+work that is built with discreet choices of concepts and then building patterns
+exhausting all possible combinations. This method is used by P2, P11, P12, and
+in a more limited way P24 which strives for an exhaustive work but do not
+explicitly show all possible combinations. Finally, P22 took current standards
+and made them into patterns.
+The 50% of studies in the sample-based the patterns from the author’s expe-
+rience. When reviewing the deﬁnitions by [1] the source of patterns is an experi-
+enced professional experiencing the same problem again and again, so this would
+explain this method’s commonality. What is missing, however, is the argumen-
+tation on the existence of the problem, one that fosters the need for a pattern in
+the ﬁrst place. With most of the studies in the sample were missing a framing
+of the problem they’re set to solve.
+The second most common method of extracting patterns is the literature
+review (25%), which extracts patterns from current literature. Determining what
+method is used in the sources of these literature reviews is outside the scope of
+this SLR. These sources apply their own methods.
+
+--- PAGE 7 ---
+864 R. Garcı́a-Escallón et al.
+The studies that deviate from the literature review and author’s experience
+are P5 and P17 which base their patterns on standard practices. In the case of P5,
+it’s the ITIL library, which dictates practices on how to operate the IT function
+of an enterprise. With P17 it’s a framework of their own which extends upon
+ITIL, Cobit, CMMI and other standards, that models the entire IT function
+as an enterprise by its’ own worth. This approach could be expanded upon to
+include other standards that detail how organizations should act.
+In order to give the patterns validity, their deﬁnition must come accompanied
+by some kind of argument supporting that using the pattern indeed solves the
+problem [1]. In the sample, this came from identifying organizations that worked
+under patterns in question (P20, P1, P9, P11, P14, P16, P21), from personally
+applying the patterns (P18), from having practitioners apply the pattern (P8),
+from building business cases (P5), or from having other researchers validate the
+patterns found (P1, P24). However, the majority of the works in the sample
+describe no manner of validation (P2, P3, P4, P6, P7, P8, P10, P12, P13, P15,
+P17, P19, P22, P23), a majority of the sample.
+4.2 Characteristics of Sustainable Organizations
+In this section, the results of an SLR performed to ﬁnd the characteristics of
+sustainability is described. First, a classiﬁcation of the characteristics found is
+oﬀered. The resulting classes are then compared to concepts of the Archimate
+language, in order to identify how feasible it is for an architect to express the
+characteristics of sustainability. From this comparison, the ﬁnal set of classes, as
+well as their descriptions and constraints, is produced.
+Classification of Characteristics. To better analyze, and apply, the set of
+characteristics shown above, they are classiﬁed. To do so, the classiﬁcation used
+by S2 is taken as a basis, which uses an extended version of the BMC. The
+changes introduced in S2 are two new components: Take-back systems and
+Adoption factors. Where the former describes the mechanisms needed for some
+sustainable organizations that need to recall products, e.g. for maintenance or
+replacement. The latter describes factors that can not be attributed to any of the
+other components, mostly related to the capabilities of the organization. These,
+and all other classes, are explained in further detail below. In Tables1 and 2 this
+classiﬁcation is shown.
+The new building block, take-back systems, is in it is core a combination
+of Customer Channels and Customer Relations but in a reverse direction. It
+describes, for example, how an organization manages the end of life of their
+products. In order to maintain the BMC succinct, the take-back building block
+will be fused together with Customer Channel and Customer Relations.
+4.3 Description
+In Fig.3 each class and the total amount of characteristics found to belong to
+it are shown. Also shown is whether the classiﬁcation comes from the source
+
+--- PAGE 8 ---
+On Enterprise Architecture Patterns: A Tool for Sustainable Transformation 865
+or the author. It must be mentioned that the ratio of characteristics classiﬁed
+under the classes mentioned above by the source, when compared to the ones
+classiﬁed by the author, are 58:151. Where the classiﬁcation of adoption factors
+Fig.3. Characteristics classiﬁed.
+Table 1. Classiﬁcation of characteristics.
+Building block Description of characteristics classiﬁed to this block
+Customer segments In this SLR there are few characteristics found that are attributed to this
+class, one is environmentally aware customers for example. It could be argued
+that environmentally aware customers is a segment made of innovators and
+early adopter, the ﬁrst two segments to adopt new services [17]
+Customer relationships Co-creation of the value proposition, community relationships
+Channels In this SLR the characteristics found to belong to this class all focus on the
+relationship between the organization and their customer. Among them some
+are focusing on the co-creation of the value proposition, this could be
+including customers in the product design phases for example (C31, C32,
+C77). Some others focus on broadening the concept to include relationships
+with the community (C8, C110, C111, C112), which reﬂects one of the pillars
+of sustainability, the society the organization embeds itself in (P21) [9]. Also
+in this block are the characteristics related to take-back systems (C27,C49)
+Value proposition Those that focus mainly on digital communications (C3, C28, C29, C30).
+And, as mentioned before the building block focusing on how the organization
+manages the reverse channels (C47, C48)
+Key activities Varied, those focusing on the implementation of agile practices, process
+re-engineering (C194, C41, C65, C124, C147, among others). Another example
+is the automation of tasks using Information Systems (C117, C104, C105,
+C42). Many others describe activities related directly to sustainability, e.g.
+harvesting rainwater, conserving natural resources, and avoiding using slave
+labour (C126, C128, C131, C204, C152, C151)
+Key Resources Varied, some refer to the IT systems for communication, Business Process
+Management, multimedia, among other uses (C120, C121, C122, C199...).
+Others refer to the sustainability of the inputs of the organization, using
+bio-materials and waste (C200, C15). In a similar vein, some characteristics
+refer to the use of better-insulated spaces, using natural light, using
+water-eﬃcient appliances, using solar panels, among others; all to diminish
+energy consumption (C55, C127, C206, C207, C205, C208, C209)
+(continued)
+
+--- PAGE 9 ---
+866 R. Garcı́a-Escallón et al.
+Table 1. (continued)
+Building block Description of characteristics classiﬁed to this block
+Key partnerships Characteristics that focus on coordination along the supply chain and
+adopting Supply Chain Management practices (C72, C114, C116, C119, C130,
+C192, C138, C85, C16). Others focus on the selection of these partners,
+describing that organizations must choose suppliers and partners that are
+eﬃcient, that would reduce waste in the entire chain, that ensure digniﬁed
+working conditions for their employees (C133, C134, C54, C58, C66, C72)
+Revenue stream Those that deﬁne new ways of generating revenue stream, or that aﬀect the
+stream in some way. For the former, examples include the revenue generated
+from providing a product as if it were a service, engaging in the circular
+economy, and achieving funding from other actors (C33, C34, C35, C67). The
+latter includes characteristics describing reducing time to market, avoiding
+waste, optimizing the supply chain, etc. (C18, C20, C17, C19)
+and cost structures have 33% of all characteristics, most assigned by the author.
+This is due to many of the other studies referring to some of the following
+ideas: management participating in activities, or having capabilities, that would
+catalyze the adoption of sustainable practices; management including the needs
+of stakeholders beyond the customer; business ﬂexibility, or the ability to change.
+On the cost class, many sources describe the organizations wastewater, physical
+waste, emissions, and end of life of products of organizations.
+Table 2. Classiﬁcation of characteristics cont’d.
+Building block Description of characteristics classiﬁed to this block
+Cost structure Divided into two. The ﬁrst are those that focus on the costs of
+production and sourcing green materials (C21, C22, C46, C86,
+C87, C88). The second are those that focus on the wastes of the
+organization, e.g. the emissions it generates and physical wastes,
+like paper or (C95, C155, C156, C53, C68, C69). The latter also
+includes characteristics describing the use of triple bottom line
+practices, where the accounting of the organization also includes
+environmental and social costs (C196, C175, C178)
+Adoption factors An example are the characteristics focusing on learning at an
+organizational level, as well as educating the community it is
+embedded in (C52, C74, C75, C107, C136, C189). Another
+example are the characteristics describing the awareness of the
+organization, the knowledge the organization already has on
+sustainability (C144, C76, C71, C50). Lastly, there are
+characteristics describing the organization’s management and
+how they conduct business, e.g. the ﬂexibility of the organization
+to change how they operate and implement any of the
+characteristics; and explicitly including sustainability in business
+models (C193, C188, C189, C190, C146, C149, C153, C154,
+C123, C125, C84, C106, C70, C62, C63, C64)
+
+--- PAGE 10 ---
+On Enterprise Architecture Patterns: A Tool for Sustainable Transformation 867
+4.4 Applicable Characteristics
+The following section relates the characteristics with Archimate concepts, mainly
+through the use of their assigned classes. Previous research is identiﬁed and
+expanded.
+Previous research has analyzed the BMC meta-model and mapped it into
+Archimate concepts [10]. They found that, as the BMC represents an entire
+organization in the most abstract terms, that the Archimate concepts each
+building block relates to are concentrated in the Strategy and Business layers.
+Although, thanks to the ﬂexibility of the language, one can specify the Strategy
+layer’s resource into the lower layer’s concepts, e.g. an application component.
+In Table3 the BMC building blocks, including the two extensions mentioned
+above, are shown. With an X the relationship studied by [10] is shown and with
+a C the relationship proposed after reviewing the Sustainability Characteristics.
+The reasoning behind each assignment is explored below.
+Table 3. Relation between extended BMC and Archimate. X means relationship is
+deﬁned by [10], C means it is proposed by this study.
+Class/Layer Motivation Strategy Business Application
+Adoption factors C
+Cost structure X
+Customer channels X X C
+Customer relations C X X
+Customer segment X
+Key activities C X C
+Key partners C X C
+Key resources C X X X
+Revenue stream X
+Value proposition C X X C
+The adoption factors building block, as it’s a new concept being introduced in
+S2, is not present in the previous studies [10]. As such these characteristics have
+not been related to Archimate concepts before and had to be analyzed to ﬁnd
+which layer’s concepts relate. As most of these relate to intangible things, e.g.
+leadership creating strategies for reducing waste (C62, C63, C64), that describe
+how the organization should act then it is closely to with the Motivation layer
+concepts. In this layer, the architect can represent the drivers of multiple stake-
+holders, as well as deﬁne constraints, goals, and value. With these concepts the
+characteristics found in this class can be built. However, it calls for a wide imple-
+mentation of the motivation concepts to the more traditional layers (Business,
+Application and Technology).
+
+--- PAGE 11 ---
+868 R. Garcı́a-Escallón et al.
+The cost structure is found to be problematic within the concepts of Archi-
+mate, as no concept ties directly to it. The language speciﬁcation mentions that
+object attributes could be used for costs [22]. [10] also faced diﬃculties when
+deﬁning cost, they decided on using negative value. These obstacles are main-
+tained in this study, as the concept is expanded to include environmental and
+social costs as part of the triple bottom line approach described by some char-
+acteristics (C175, C177, C178). A solution
+As the Key Partnerships building block refers to the actors, organizations,
+and other parties the business has to partner with; then it had to be extended
+beyond previous studies [10]. For this study, in order to avoid overloading the
+other building blocks, the characteristics assigned to Key partnerships goes
+beyond external parties. This extension is seen in the addition of the motivation
+and application layers.
+Along the verticals, it can be seen that two layers are added to multiple
+building blocks: Motivation and Application. The former reﬂects the character-
+istics that call for activities, or resources, to be included with a sustainability
+goal or constraint in mind, e.g. avoid using slave labour in the business processes
+(C152). The latter reﬂects the characteristics that call for virtualization (C28,
+C42, C37, C25), digitalization or the implementation of IT in some way (C29,
+C3, C30, C6, C7, C117, C104, C105, C120, C121, C122, C199, C90).
+The need to include motivation concepts is interesting in its own right, as
+it shows the limitation of the Archimate language to show the impacts or con-
+sequences of the objects. This may be simple to assume under normal circum-
+stances, the basic goals and constraints of what an organization does is to gener-
+ate revenue and will generate a cost. While in sustainability the costs go beyond
+monetary and have to include every impact the organization produces on the
+environment and society. This change may call for an extension of the language,
+or for EAPs to be written in a way that they include sustainability characteristics
+explicitly.
+5 Methodology for the Specification of EA Using
+Patterns
+Although the ﬁrst two knowledge questions posed above were answered, there
+were still a few building blocks missing before a methodology could be designed.
+First, from the sample of EAPs gathered, a small subset of them were described
+using a common language. Second, besides the BMI patterns, no EAPs were
+focusing on sustainability. Third, any methodology would depend on the com-
+bination of multiple EAPs, alas no studies in the sample mentioned ways to
+do so. Thus, the following subsection focuses on these design problems and the
+solutions proposed.
+
+--- PAGE 12 ---
+On Enterprise Architecture Patterns: A Tool for Sustainable Transformation 869
+5.1 Designing the Building Blocks
+Translating the Subset of Patterns to Archimate. The EAPs found in
+the SLR were described in multiple ways, written and with diagrams, some
+were described using Archimate, while some others were already described using
+other modeling languages. A subset of the latter were translated by the author
+concentrating on being as aligned with the source as possible. All other patterns
+translated had to be drawn based on their description, this was done by the
+author at the best of his abilities. The resulting diagrams can be accessed in the
+Appendix. There, both the source ﬁle and extracted images are present.
+Proposing New Patterns. After performing the translation, some gaps were
+identiﬁed and in some of the EAPs, i.e. the applications are deployed to nodes
+in the internal facilities of the organization. However, as is found in the Charac-
+teristics found in the second knowledge question, sharing and virtualization is a
+characteristic of sustainable businesses, and currently, a popular representation
+of this are Cloud Services.
+With this gap in mind, three new EAPs are proposed: NewPattern001, New-
+Pattern002, and NewPattern003. Representing the use of a SaaS, PaaS, and IaaS
+service respectively. These were built using the guidelines established by [15]. In
+Fig.4 the NewPattern001 is shown, the other two follow the same structure.
+Under the Appendix, the diagrams and source ﬁles of these EAPs can be found.
+Fig.4. NewPattern001.
+Proposing Sustainable Patterns. Following this gap, the need arises for
+another set of patterns. Patterns that describe the characteristics of sustainabil-
+ity that an organization wants to implement.
+In order to be applicable in a large range of settings, an approach similar
+to P12 is taken. Here the diﬀerent characteristics, as they were compared to
+Archimate concepts in Table3 are used as a basis. In terms of Archimate, the
+scope of these patterns is limited to the Business and Application layers of the
+
+--- PAGE 13 ---
+870 R. Garcı́a-Escallón et al.
+organization for this exercise. In terms of sustainability, the scope is deﬁned
+by the characteristics that can apply to the layers mentioned: Customer chan-
+nels, Customer relations, Key activities, Key resources, Key partners, and value
+proposition. From these building blocks, and within the scope, some sustainable
+patterns are proposed. These were cataloged in the Appendix.
+The resulting patterns use Archimate concepts, except for Key partners which
+does not include application layer concepts. Instead, the characteristics describe
+business concepts with certain requirements, however, it’s arguably impossible to
+fulﬁl the requirements and constraints of the characteristics without application
+support.
+After developing the patterns it was clear that within the scope of some of
+the building blocks there were separate groups of objects. The building blocks
+where this is seen are Customer channels, Key activities, and Key resources. All
+other blocks were able to be described as one coherent pattern. These groupings
+are explained as follows.
+The patterns describing customer channels may be divided into two: one
+focusing on the customer as the buyer of the value proposition; and another
+focusing on the relationship with other stakeholders like government.
+The patterns describing Key activities may be split into six groups. First,
+a group detailing the requirements the waste management process must fol-
+low. Second, the requirements related to the implementation of new capabilities.
+Third, activities and requirements related to product design and production
+activities. Fourth, a group that applies to any activity. Fifth, the goal of being a
+sustainable organization and the principles that go with it. Sixth, requirements
+related to IT systems.
+The patterns describing Key resources can be split into three. First, a group
+describing service centres. Second, a group describing IT resources. Third, a
+group describing production processes and buildings.
+Beyond divisions within each building block, there were commonalities
+observed across the diﬀerent building blocks. There were mainly two found, the
+product, its design and production; and IT aspects of the organization.
+One of these sustainable patterns can be seen in Fig.5, where the character-
+istics for key activities focusing on products are implemented. These patterns
+can be reduced, i.e. some of the requirements and goals can be removed, when
+needed by architects. They serve organizations as they need to explicitly present
+their sustainability requirements for the future.
+Fig.5. Key activities - product.
+
+--- PAGE 14 ---
+On Enterprise Architecture Patterns: A Tool for Sustainable Transformation 871
+Requirements. As part of the preliminary phases the requirements of the
+guiding pattern and the patterns added to the subset have to be found. This
+can be achieved using Archimate diagrams, as shown in Fig.6. By describing
+the patterns that are derived from pattern X and the patterns Y that fulﬁl it.
+It is possible to document all the requirements that each pattern introduces,
+which would make the creation of the subset a matter of choosing the guiding
+pattern. The guiding pattern would have its’ requirements previously deﬁned,
+as well as those of all other patterns. Thus, creating the subset based on the
+relationships between patterns documented previously would be automated.
+Fig.6. Requirements and patterns & patterns combined.
+Combining Patterns. As previously stated in the speciﬁcation phases, pat-
+terns have to be combined to form a ﬁnal EA speciﬁcation. During this study,
+ﬁve ways of combining patterns were found. The ﬁrst is a parallel combination,
+in which there is no relationship between the patterns.
+The second way of combining patterns is shown between pattern X and Y in
+Fig.6. Here, a description of two patterns that are related to an association is
+shown. This is the most complex form of combination as it revolves around the
+contents in common between the patterns. These commonalities may be present
+in one or many objects, where the higher the overlap the more complex it is to
+combine them. An example would be combining patterns of supply chain and
+production, as they are closely related concepts.
+The third way of combining patterns is shown in Fig.6 between pattern I
+and J. This combination happens mainly when pattern J is focused on a lower
+layer than pattern I. For example, a pattern showing how a business process is
+supported by applications. In this form of combination, P12 deﬁnes exhaustively
+the ways concepts of the Business and Application layers can be combined with
+each other. However, such patterns do not exist between the application and
+technology layers. Between the business and the motivation and strategy layers,
+there is also a noticeable lack of patterns describing how one layer may serve the
+next.
+
+--- PAGE 15 ---
+872 R. Garcı́a-Escallón et al.
+The fourth way of combining patterns is through the aggregation relationship.
+This case is shown in Fig.6, between pattern A and pattern B. Here pattern B
+provides a narrower focus and higher level of detail to the ideas presented in
+pattern A. An example would be adding individual Business Functions to a
+more abstract pattern like a Business Model Pattern.
+A ﬁnal aspect of the combination of patterns is their decomposition. As
+shown in Fig.6. In some cases, EAPs describe multiple layers of EA, Business,
+Application, and even Technology. However, due to the ways patterns can be
+combined with each other, and especially the way this happens between layers,
+an architect may decompose a pattern in its’ layers. This would then give the
+architect freedom of building the lower layers as they please. This is shown in
+Fig.6, where Pattern Q is decomposed in its layers, and its sub-patterns for
+application and technology layers are exchanged for Pattern R. An example of
+this is Pattern173, which describes concepts from the Business, Application and
+Technology layers. In this pattern, an architect may take only the concepts of
+the business layer and the application needs, and replace the two lower layers
+(Fig.7).
+Fig.7. Patterns decomposed.
+Following the ways of representing patterns, and their relationships, one may
+model the speciﬁcation in terms of the patterns and their relationships. This
+would oﬀer a high abstraction view of the organization as deﬁned by the solutions
+being re-used.
+To avoid falling into the Yet Another Model trap, the proposed methodology
+is based on the ADM. Focusing on the ﬁrst phases: Preliminary phase, Phase
+A Architecture Vision, Phase B Business Architecture, Phase C Application
+Architecture, and Phase B Technology Architecture. During an EA speciﬁcation
+project, each of these phases will be executed in sequence by a team of architects,
+where phases B, C and D focus on the description of the organization’s future
+(or old) state. It is during these phases, that the use of the Archimate language
+is concentrated.
+
+--- PAGE 16 ---
+On Enterprise Architecture Patterns: A Tool for Sustainable Transformation 873
+5.2 Preparatory Phases
+The proposed methodology assumes that the architect wishes to describe a future
+state of the organization that is sustainable. As such, the method starts with the
+preliminary Phase and Architecture Vision phases. During these phases the focus
+will be on deﬁning the main constraints of the EA. With the most important
+one being that the resulting organization must be sustainable. This constraint
+will frame all other tasks in the methodology.
+In the same preliminary phase, a second constraint will be added, a guiding
+Pattern. In this method, the guiding pattern will serve as a general abstraction
+of the target’s organization. Within the ﬁndings of this thesis, the authors ﬁnd
+that an acceptable guiding pattern is a Business Model pattern in combination
+with an operational model pattern (as deﬁned by P11).
+Next is Phase A Architecture Vision, in which a subset of EAPs is selected.
+The constraints resulting from the previous phase introduce problems and ques-
+tions as is natural from their level of abstraction. E.g. a Business Model Pattern
+that calls for interactions with customers will introduce questions like How will
+the customers be contacted? Who will do it? And so on. These questions and
+problems will feed a search for EAPs that may solve them. At this phase, the
+search is performed only to form a subset of EAPs with all possible solutions to
+problems, the constraint, and guiding pattern pose. This is similar to the Palette
+artists have at hand while they’re developing their works.
+The detailed process of ﬁnding the problems and questions is similar to that
+of requirement elicitation. The precise nature of how these should be is outside
+the scope of this study and is left to the experience of each architect when fol-
+lowing the proposed method. However, it is an iterative process in two aspects.
+First, as the selection of EAPs introduce problems and questions of their own
+solutions for these, in turn, have to be included. Second, by nature of the layered
+approach of ADM, the architect must add patterns that solve the problems in
+the lower layers of each solution, i.e. in a manner of supporting pillars, Business
+Layer patterns will need Application Layer patterns to stand upon.
+In Fig.8 a view into such a phase is given. This was taken from a case
+study performed using the methodology. In the ﬁgure, the guiding pattern can
+be found at the top left, from which a series of business layer requirements are
+detected and listed using the before mentioned notation. On the right side of the
+ﬁgure, the patterns found to fulﬁl the requirements are gathered. These patterns
+are linked using the Realization relationship as proposed in the notation above.
+Similar diagrams are prepared for each layer, Application and Technology.
+
+--- PAGE 17 ---
+874 R. Garcı́a-Escallón et al.
+Fig.8. Preliminary phase example.
+5.3 Specification Phases
+Following on comes the speciﬁcation of the EA, through phases B, C, and D.
+These phases each focus on a diﬀerent layer, on the Business Layer, the Appli-
+cation Layer, and ﬁnally, the Technology Layer. These layers will be built using
+the patterns in the selected subset, by selecting and combining them, thus pro-
+ducing the EA speciﬁcation. The selection of each pattern will be based on its’
+compliance to the constraints deﬁned in the previous Phase and each other,
+e.g. when presented with diﬀerent EAPs in the subset that can solve a speciﬁc
+requirement, the one that can arguably support a more sustainable organization
+will be chosen. Multiple patterns can be selected to solve the same problem, in
+the same way that organizations may have their own retail stores and sell their
+goods in other stores at the same time.
+In Fig.9 the result of these phases can be seen. Using the proposed nota-
+tion and methodology in a case study, a speciﬁcation of EA was built [7]. With
+this single view, practitioners could have a simple way to communicate how
+an entire organization functions, by leveraging a shared understanding of the
+solutions being reused.
+
+--- PAGE 18 ---
+On Enterprise Architecture Patterns: A Tool for Sustainable Transformation 875
+Fig.9. EA speciﬁcation using patterns.
+6 Validation of the Methodology
+Following the Design Science methodology, after developing a solution it must
+then be validated, prior to its implementation [25]. In order to do so, a panel of
+experts is assembled and shown the method. These same experts are then asked
+to partake in a questionnaire based on the Uniﬁed Theory of Acceptance and
+Use of Technology (UTAUT). This theory is selected as it has been proven to be
+eﬀective in predicting the adoption of Information Systems, with an r-squared of
+0.5 [24]. However, the sample size of this study means that the results are valid
+for qualitative analysis only. This questionnaire is present in the Appendix.
+6.1 Expert Panel
+The ﬁve experts that agreed to take part in the validation process are ﬁve:
+1. A professor for EA in a dutch technical university, with more than 10years
+experience (expert A)
+2. An architect from an important bank in the UK, with 8years experience as
+an architect (expert B)
+
+--- PAGE 19 ---
+876 R. Garcı́a-Escallón et al.
+3. An architect from a major cloud provider, with 2years experience as an archi-
+tect (expert C)
+4. An architect working with a large consulting ﬁrm, mainly dealing with ﬁnan-
+cial sector customers, with 8years of experience as an architect (expert D)
+5. An architect working with a large consulting ﬁrm, mainly dealing with ﬁnan-
+cial sector customers, with 6years of experience as an architect (expert E)
+For each expert, the methodology was explained using a set of powerpoint slides.
+The overall developing process was explained as well as the methodology itself.
+Afterwards, an unstructured discussion session took place. Finally, they were
+asked to complete the questionnaire. It is important to note that expert D and
+E were interviewed together.
+6.2 Experts Opinion
+Overall the experts’ opinions were positive. A commonality across the experts
+was their re-use of solutions in their day-to-day practice. This was a positive
+ﬁnding as it shows that today the application of patterns happen informally.
+Aligned with previously mentioned limitations, the patterns and solutions the
+experts mentioned they have applied are not present in the sample. This means
+that in the gathering of the solutions present in the ﬁeld could be a valuable
+future project.
+The patterns themselves generated diﬀerent reactions among the experts. For
+expert B, standardizing all solutions to problems could arguably stiﬂe innovation.
+As all organizations would be simply a combination of publicly known solutions.
+However, they also mention that what would make them diﬀerent is how they
+implement them. For expert C, patterns should easily communicate their value
+and applicability, otherwise any architect would rather use either a diﬀerent
+pattern or design their own solution. For expert A, translating patterns from
+diﬀerent ﬁelds was of interest, mainly the method chosen to do so.
+As for the sustainability focus of the methodology, experts C, D, and E made
+mention of it. For experts D and E, this could be due to their own experiences,
+where they have seen sustainability being used as a criterion in one of their
+customers. As for expert C, this could be their relation to commercial teams
+made them think of a pattern-based approach to present a highly customized
+sustainable transformation project to an organization. By using publicly avail-
+able reports of a speciﬁc organization as a starting point and then applying the
+pattern-based methodology for a hastened EA speciﬁcation of a future sustain-
+able state.
+The focus on implementation was something common for experts B and
+C. Both thought of it as a central diﬀerentiating aspect of organizations, as
+assuming that all organizations use patterns then what makes them diﬀerent
+is how they implement them. Expert B even went as far as proposing that a
+possible next step to this study is the identiﬁcation of implementation patterns
+that organizations could use depending on their own capabilities.
+However, exceptions were experts D and E that mentioned their worry on
+
+--- PAGE 20 ---
+On Enterprise Architecture Patterns: A Tool for Sustainable Transformation 877
+the sustainability concepts were introduced to EA. This is reﬂected in earlier
+chapters of this study, where the concepts of sustainability are hard to relate
+but are ﬁnally described using Motivation layer concepts. Experts D and E also
+mentioned that they have not seen such concepts used in their practice. They
+also commented on their confusion regarding the relationship between ADM and
+the proposed methodology. This speciﬁc question was also asked by expert C,
+which means that further improvements to the methodology’s description are
+necessary to make this relationship more clear.
+6.3 Questionnaire Results
+Table 4. Questionnaire results - constructs.
+Construct Average St. dev. Min. Max.
+Performance expectancy (PE) 3.9375 2.205107707 1 7
+Eﬀort expectancy (EE) 5 1.673320053 1 7
+Attitude toward using technology (ATUT) 4.125 1.821171784 1 6
+Social inﬂuence (SI) 2.875 1.962141687 1 5
+Facilitating conditions (FC) 3.5 2.033060091 1 7
+Self eﬃcacy (SE) 4.4375 1.412739655 2 7
+Anxiety (ANX) 1.375 0.6191391874 1 3
+Behavioral intention (BI) 3.75 2.050498831 1 7
+Overall the results of the questionnaire are positive. With the highest score being
+EE, which is aligned with the contribution goal of this study, helping architects
+drive change faster. There is an exception to be made for Experts D and E, as
+their evaluation of the method was negative (Table4).
+As can be seen in the main results, the EE and SE constructs are the highest
+ones at and also have a low standard deviation. With this result for EE, the
+experts evaluated that the methodology would be clear or easy to use and that
+they perceive that mastery at using the methodology is easy to obtain. This
+corresponds with their comments on the methodology, that they re-use previous
+solutions in their day-to-day activities. And, with this result in SE, the experts
+evaluated that they were capable of using the methodology. Inversely, the ANX
+construct has the lowest score and the lowest deviation. This means that experts
+evaluated that using the methodology produces no fear or intimidation. This
+reﬂects the high degree of experience all the experts approached have, they have
+conﬁdence in their capabilities.
+The results in the PE construct are positive, except for the evaluation of
+expert D and E. This means that experts evaluated the methodology as being
+useful and increasing their productivity. The ATUT construct had a similarly
+
+--- PAGE 21 ---
+878 R. Garcı́a-Escallón et al.
+positive result meaning that experts perceive the methodology interesting, fun,
+or a good idea.
+The BI and SI constructs had a split score, half of the experts evaluated
+them positively and half as negative. For the former, representing that they are
+not certain they will use the methodology in the future. For the latter, it may be
+because this method was not shown to any of their superiors, as all items relate
+to external social inﬂuences.
+7 Conclusions
+The result of this study is a methodology for the speciﬁcation of EA for sus-
+tainable organizations using patterns. In preparation for its design, there was
+a need for the characteristics of sustainability to be described explicitly in the
+Archimate language. This was due to the lack of sustainability concerns in the
+EAPs found, beyond the sustainability business model patterns. The methodol-
+ogy was designed extending the ADM, building upon its same phases to make
+its adoption simpler to organizations already using the TOGAF. As part of the
+methodology, a notation is proposed for describing the relationships between
+patterns implemented in an organization. This speciﬁc artifact could also be
+of use in organizations that are implementing recommendations from multiple
+standards, e.g. ISO certiﬁcation-related aspects.
+First, an SLR was performed to gather the state of the literature for EAPs.
+The patterns found were heterogeneous in multiple ways, like the ﬁeld of research
+they originated from, their scope, the way they’re represented, and how they’re
+extracted. However, the sources used were scientiﬁc literature, which meant prac-
+titioner sources were excluded. For example, industry standards and best prac-
+tices were not included in the set of patterns. This meant that for some of the
+studies in the sample the space limitations of journals and conferences were an
+obstacle. As these are usually limited to a relatively short number of pages, it
+is diﬃcult to present all the information that may be necessary when describing
+patterns. This obstacle is missing in the books in the sample, where the authors
+could elaborate on the details of the patterns, making them more valuable.
+Second, an SLR was performed to gather a set of characteristics of sustain-
+able organizations present in literature, classiﬁed based on the BMC building
+blocks. All of the characteristics were relevant, but by using the Archimate lan-
+guage components a way was found to include them into EA artifacts for each
+building block. This set is likely incomplete, as the literature on sustainability
+is increasingly wide and complex. For example, there are more than 100 diﬀer-
+ent deﬁnitions on Circular Economy alone [8,11]. This makes the selection of
+characteristics diﬃcult, as just the choice of the word “characteristic” already
+ﬁlters concepts and requirements from this study. A more comprehensive and
+exhaustive study may result in a more valuable set of characteristics.
+Among the characteristics of sustainability found there were commonalities
+in the concepts. E.g. a common concept across many characteristics was the use
+of digital tools. Applying text mining techniques might produce clusters of char-
+acteristics, which could then be used to propose more abstract characteristics.
+
+--- PAGE 22 ---
+On Enterprise Architecture Patterns: A Tool for Sustainable Transformation 879
+In the ﬁeld of EA, the use of sustainability concepts is not common, and
+including them in the practice was not straightforward. This diﬃculty to express
+sustainability concepts using EA artifacts may be because of, or causes, the
+absence of sustainability aspects in EA practice. In this study, the obstacle of
+expressing these concepts was surmounted by using the motivation layer con-
+cepts of Archimate. With them, it was possible to describe the requirements
+sustainability imposes on the operation of an organization, e.g. select suppliers
+that are not using slave labour. However, a step further would be to design struc-
+tural and behavioural components in an organization that implicitly implements
+the requirements used in this study. These newly designed components could
+then become patterns to be adopted widely.
+7.1 Contributions
+The contributions to academia are multiple. First, a systematic literature review
+producing an extensive set of EAPs. By applying an exhaustive approach, the
+resulting review has expanded the existing deﬁnitions of EAP beyond just the
+ﬁeld of EA, including ﬁelds like BMI and BPM. Second, a systematic literature
+review producing a set of characteristics of sustainability and circular economy.
+Extending the knowledge of the aspects organizations need to be sustainable, as
+today there are many deﬁnitions of sustainability, having an aggregated list of
+such characteristics is needed. Third, extending the EA ﬁeld, a novel notation
+based on the Archimate language is proposed to describe the ways architects may
+combine patterns, as well as a categorization of the ways they may be combined
+with each other.
+As for practitioners, the methodology proposed can be applied together with
+the patterns found in scientiﬁc literature and industry standards, simplifying EA
+projects by using it as a common language describing solutions proven to work
+in other organizations. Second, the set of sustainability characteristics classiﬁed
+in terms of the building blocks of the BMC oﬀer organizations today a classiﬁed
+list, based on scientiﬁc literature, of characteristics they can implement to be
+more sustainable. Third, a notation was proposed to describe the relationships
+of patterns used in an organization. This allows for organizations to describe
+the patterns (best practices, standards, and other re-usable solutions) they are
+implementing in their current and future states, resulting in a clear abstraction
+useful.
+7.2 Limitations
+The main limitation is the language used, where the concept of the pattern may
+not be used commonly, especially in other ﬁelds of research. An example is the
+Human Resource (HR) Architectures proposed by [14], which show patterns in
+HR management. This is present also with the sustainability keywords, where
+a more in-depth exploration of the terms used in the ﬁeld may have gleaned
+more characteristics. However, the main limitation of the methodology, which is
+conﬁrmed by the panel of experts, is the lack of a real-world case study. Until this
+
+--- PAGE 23 ---
+880 R. Garcı́a-Escallón et al.
+methodology is applied, in a real organization looking into changing towards a
+more sustainable future version, then its’ true weaknesses will not be perceived.
+7.3 Future Work
+For the academic community possible future work continuing with this study
+could be its’ application in a real-world organization that is looking for a sus-
+tainable transformation. This would reveal the weaknesses of the methodology
+if any.
+Another avenue of research is to deﬁne a way in which patterns can be
+extracted from organizations, either through literature or with the help of its
+members. This is similarly to the approach taken by P20, which compiled a
+classiﬁcation of Business Models, and oﬀered a base by which both academics
+and practitioners can study and compare organizations. Another way to extract
+them would be to focus on architects. How they re-use their previous solutions,
+including those found in literature or those their peers propose. This would oﬀer
+more understanding of how to better serve these architects with more patterns
+than those they can already access.
+Finally, the implementation of this methodology into a traditional EA project
+using TOGAF is needed. Through its real-world usage, a more thorough valida-
+tion would be achieved, allowing its improvement into a more valuable tool for
+the ﬁeld.
+Appendix
+Under the git repository https://github.com/robertorgarcia/EAPatterns the
+appendices to this study can be found. Speciﬁcally the following:
+– The study samples used in the SLRs
+– The results of the SLRs (EAPs and Characteristics)
+– The intermediary classiﬁcations of the results
+– A subset of EAPs translated to Archimate
+– A set of proposed EAPs
+– A case study built using EAPs
+References
+1. Alexander, C., Ishikawa, S., Silverstein, M.: A Pattern Language: Towns, Buildings,
+Construction. Oxford University Press, New York (1977)
+2. Allen, M., et al.: Technical summary: global warming of 1.5 c. An IPCC Special
+Report on the impacts of global warming of 1 (2019)
+3. Braungart, M., McDonough, W., Bollinger, A.: Cradle-to-cradle design: creat-
+ing healthy emissions - a strategy for eco-eﬀective product and system design.
+J. Cleaner Prod. 15(13–14), 1337–1348 (2007). https://doi.org/10.1016/j.jclepro.
+2006.08.003
+
+--- PAGE 24 ---
+On Enterprise Architecture Patterns: A Tool for Sustainable Transformation 881
+4. Ceballos, G., Ehrlich, P.R., Dirzo, R.: Biological annihilation via the ongoing
+sixth mass extinction signaled by vertebrate population losses and declines. Proc.
+Natl. Acad. Sci. 114(30), E6089–E6096 (2017). https://doi.org/10.1073/pnas.
+1704949114
+5. Gamma, E., et al.: Design Patterns - Elements of Object Oriented Software Archi-
+tecture (1995)
+6. Garcı́a-Escallón, R., Aldea, A.: On enterprise architecture patterns: a systematic
+literature review. In: Proceedings of the 22nd International Conference on Enter-
+prise Information Systems, pp. 666–678. SCITEPRESS - Science and Technology
+Publications (2020). https://doi.org/10.5220/0009392306660678
+7. Garcia-Escallon, R.: Enterprise architecture patterns: Supporting sustainable
+development. Ph.D. thesis, University of Twente, Enschede, The Netherlands
+(2020)
+8. Geissdoerfer, M., Savaget, P., Bocken, N.M., Hultink, E.J.: The circular economy
+- a new sustainability paradigm? J. Cleaner Prod. 143, 757–768 (2017). https://
+doi.org/10.1016/j.jclepro.2016.12.048
+9. Geissdoerfer, M., Vladimirova, D., Evans, S.: Sustainable business model innova-
+tion: a review. J. Cleaner Prod. 198, 401–416 (2018). https://doi.org/10.1016/j.
+jclepro.2018.06.240
+10. Iacob, M.E., Meertens, L.O., Jonkers, H., Quartel, D.A.C., Nieuwenhuis, L.J.M.,
+van Sinderen, M.J.: From enterprise architecture to business models and back.
+Softw. Syst. Model. 13(3), 1059–1083 (2012). https://doi.org/10.1007/s10270-012-
+0304-6
+11. Kirchherr, J., Reike, D., Hekkert, M.: Conceptualizing the circular economy: an
+analysis of 114 deﬁnitions. Resour. Conserv. Recycl. 127(September), 221–232
+(2017). https://doi.org/10.1016/j.resconrec.2017.09.005
+12. Lankhorst, M.M., Proper, H.A., Jonkers, H.: The architecture of the archimate
+language. In: Halpin, T., Krogstie, J., Nurcan, S., Proper, E., Schmidt, R., Sof-
+fer, P., Ukor, R. (eds.) BPMDS/EMMSAD -2009. LNBIP, vol. 29, pp. 367–380.
+Springer, Heidelberg (2009). https://doi.org/10.1007/978-3-642-01862-6 30
+13. Lankhorst, M.: Enterprise Architecture at Work. The Enterprise Engineering
+Series, 3rd edn. Springer, Heidelberg (2017). https://doi.org/10.1007/978-3-662-
+53933-0
+14. Lepak, D.P., Snell, S.A.: Examining the human resource architecture: the relation-
+ships among human capital, employment, and human resource conﬁgurations. J.
+Manag. 28(4), 517–543 (2002). https://doi.org/10.1177/014920630202800403
+15. Nardi, J.C., et al.: Service commitments and capabilities across the archimate archi-
+tectural layers. In: 2016 IEEE 20th International Enterprise Distributed Object
+Computing Workshop (EDOCW), vol. 2016-Septe, pp. 1–10. IEEE (2016). https://
+doi.org/10.1109/EDOCW.2016.7584386
+16. Osterwalder, A., Pigneur, Y.: Business Model Generation: A Handbook for Vision-
+aries, Game Changers, and Challengers. John Wiley & Sons, Inc., Hoboken (2010)
+17. Rogers, E.M.: Diﬀusion of Innovations, 5th edn. Free Press, New York (2003)
+18. Rouhani, B.D., Mahrin, M.N., Nikpay, F., Ahmad, R.B., Nikfard, P.: A system-
+atic literature review on enterprise architecture implementation methodologies. Inf.
+Softw. Technol 62, 1–20 (2015). https://doi.org/10.1016/j.infsof.2015.01.012
+19. Stahel, W.R.: Circular economy. Nature 531, 435–438 (2016)
+20. Taylor, M., Watts, J., Bartlett, J.: Climate crisis: 6 million people join latest wave
+of global protests (2019). https://www.theguardian.com/environment/2019/sep/
+27/climate-crisis-6-million-people-join-latest-wave-of-worldwide-protests
+
+--- PAGE 25 ---
+882 R. Garcı́a-Escallón et al.
+21. The Open Group: The TOGAF R  Standard, Version 9.2 (2018). https://www.
+vanharen.net/the-togaf-standard-version-9-2/
+22. The Open Group: ArchiMate R  3.1 Speciﬁcation: Chapter 3 Language Structure
+(2019). https://pubs.opengroup.org/architecture/archimate3-doc/chap03.html
+23. United Nations: Transforming Our World: The 2030 Agenda for Sustainable Devel-
+opment. Technical report, United Nations Publishing, New York, New York, USA
+(2015). https://sustainabledevelopment.un.org/?menu=1300
+24. Venkatesh, V., Morris, M.G., Davis, G.B., Davis, F.D.: User acceptance of informa-
+tion technology: toward a uniﬁed view. MIS Q. Manag. Inf. Syst. (2003). https://
+doi.org/10.2307/30036540
+25. Wieringa, R.J.: Design Science Methodology: For Information Systems and Soft-
+ware engineering. Springer, Heidelberg (2014). https://doi.org/10.1007/978-3-662-
+43839-8
+26. Wolfswinkel, J.F., Furtmueller, E., Wilderom, C.P.M.: Using grounded theory as a
+method for rigorously reviewing literature. Eur. J. Inf. Syst. 22(1), 45–55 (2013).
+https://doi.org/10.1057/ejis.2011.51
+27. Zachman, J.A.: A framework for information systems architecture. IBM Syst. J.
+26(3), 276–292 (1987)
