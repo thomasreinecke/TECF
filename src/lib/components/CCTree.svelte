@@ -44,7 +44,7 @@
 				class="w-full bg-gray-50 dark:bg-gray-800 text-xs text-gray-900 dark:text-gray-100 placeholder-gray-400 pl-9 pr-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 focus:outline-none focus:border-blue-500"
 			/>
 		</div>
-		<span class="text-xs font-mono text-gray-500 dark:text-gray-400">Total: {canonicalConditions.length || 60} Canonical Conditions</span>
+		<span class="text-xs font-mono text-gray-500 dark:text-gray-400">Total: {canonicalConditions.length} Canonical Conditions</span>
 	</div>
 
 	<!-- Cards Grid -->

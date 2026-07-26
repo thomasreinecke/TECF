@@ -130,12 +130,12 @@
 					Canonical Condition Relationships
 				</h2>
 				<p class="mt-1 max-w-3xl text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
-					Pairwise directional and structural relationship propositions evaluated across confirmed capability constructs and strategic condition domains.
+					Directional relationship propositions between the retained capability constructs. The unit is the <em>direction</em>: each pair is judged twice, A→B and B→A, so one pair can carry one or two retained propositions. Each row below is a pair; the arrows show which of its directions were retained.
 				</p>
 			</div>
 			<div class="flex flex-wrap gap-2 items-center">
 				<span class="rounded-lg border border-emerald-200 bg-emerald-50 px-3.5 py-2 text-sm font-bold text-emerald-800 dark:border-emerald-900/50 dark:bg-emerald-950/25 dark:text-emerald-200">
-					{allPairs.length} grounded edges
+					{stats.retainedDirectedPropositions ?? '—'} propositions across {allPairs.length} pairs
 				</span>
 			</div>
 		</div>
@@ -145,7 +145,7 @@
 		<div class="rounded-xl border border-amber-200 bg-amber-50/70 dark:border-amber-900/50 dark:bg-amber-950/30 p-4 flex items-center gap-3 text-sm text-amber-900 dark:text-amber-200">
 			<div class="h-2 w-2 rounded-full bg-amber-500 animate-pulse shrink-0"></div>
 			<div>
-				<span class="font-bold">Synthesis Run In Progress:</span> Dual-model classification & reconciliation is actively running ({stats.reconciledPairsCount || 412} of {stats.totalEvaluatedPairs || 1770} pairs evaluated). Displaying {allPairs.length} evidence-grounded edges identified so far.
+				<span class="font-bold">Synthesis Run In Progress:</span> Dual-model classification & reconciliation is actively running ({stats.reconciledPairsCount ?? '—'} of {stats.totalEvaluatedPairs ?? '—'} pairs evaluated). Displaying {stats.retainedDirectedPropositions ?? '—'} retained propositions across {allPairs.length} pairs identified so far.
 			</div>
 		</div>
 	{/if}

@@ -3,7 +3,7 @@
 	import FilterInput from '$lib/components/FilterInput.svelte';
 	import DataTable from '$lib/components/DataTable.svelte';
 	import RecordBadge from '$lib/components/RecordBadge.svelte';
-	import { conditionFindings } from '$lib/dataStore.js';
+	import { conditionFindings, metadata } from '$lib/dataStore.js';
 	import { FileText } from 'lucide-svelte';
 
 	let findingsFilter = $state('');
@@ -24,7 +24,8 @@
 
 	function formatLabel(val) {
 		if (!val) return '—';
-		if (val === 'source_attributed') return 'Paper Argument';
+		if (val === 'source_attributed') return 'Source Attributed';
+		if (val === 'paper_argument') return 'Paper Argument';
 		if (val === 'empirical_case') return 'Empirical Case';
 		return val.charAt(0).toUpperCase() + val.slice(1).replace(/_/g, ' ');
 	}
@@ -111,12 +112,12 @@
 					Condition Findings Inventory
 				</h2>
 				<p class="mt-1 max-w-3xl text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
-					Source-traceable empirical evidence statements extracted from confirmed SLR literature papers, classified by evidence role, condition assignment, and provenance.
+					The final evidence base of the framework: every Condition Finding carried by one of the 60 retained constructs, classified by evidence role, condition assignment, and provenance. Each is traceable to a paper and an exact source passage.
 				</p>
 			</div>
 			<div class="flex flex-wrap gap-2 items-center">
 				<span class="rounded-lg border border-emerald-200 bg-emerald-50 px-3.5 py-2 text-sm font-bold text-emerald-800 dark:border-emerald-900/50 dark:bg-emerald-950/25 dark:text-emerald-200">
-					{allFindings.length} confirmed findings
+					{allFindings.length} findings in the evidence base
 				</span>
 			</div>
 		</div>
@@ -125,7 +126,7 @@
 	<!-- Search & Controls -->
 	<div class="flex flex-wrap items-center justify-between gap-4 pt-3">
 		<div class="max-w-3xl text-sm text-gray-500 dark:text-gray-400">
-			Source-attributed empirical evidence statements extracted across the SLR corpus.
+			{$metadata?.stats?.extractedFindingsCount ?? '599'} findings were extracted and source-audited; the {allFindings.length} shown here are those carried by a retained framework construct. The remainder sit on constructs the construct-validity review classified as diagnostic or deprecated and therefore support no framework claim.
 		</div>
 		<div class="shrink-0">
 			<FilterInput

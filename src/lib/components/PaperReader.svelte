@@ -203,10 +203,10 @@
 									<div class="bg-white dark:bg-gray-900 p-4 rounded-xl border border-gray-200 dark:border-gray-800 space-y-2">
 										<div class="flex items-center justify-between gap-2">
 											<span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300">
-												CF #{cf.cf_id} • Type: {cf.contribution_type || 'P'}
+												CF #{cf.cf_id} • {cf.evidence_role ?? 'role n/a'}
 											</span>
 											<span class="text-[10px] font-mono text-amber-700 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/60 px-2 py-0.5 rounded">
-												Canonical: {cf.canonical_code || 'CC'}
+												Canonical: {cf.canonical_code ?? '—'}
 											</span>
 										</div>
 										<div class="font-bold text-sm text-gray-900 dark:text-white">
