@@ -39,7 +39,7 @@
 					</span>
 				</div>
 				<p class="text-xs text-slate-400 font-medium hidden sm:block">
-					Technology-Enabled Capability Framework
+					Transformation-Enabling Conditions Framework
 				</p>
 			</div>
 		</div>
@@ -53,7 +53,7 @@
 					bind:value={searchQuery}
 					on:focus={() => isSearchFocused = true}
 					on:blur={() => setTimeout(() => isSearchFocused = false, 200)}
-					placeholder="Search 150+ papers, 1,300+ findings, CCs, or CDs..."
+					placeholder="Search 209 papers, 586 findings, CCs, or CDs..."
 					class="w-full bg-slate-900/90 text-sm text-slate-100 placeholder-slate-400 pl-9 pr-4 py-2 rounded-lg border border-slate-800 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition"
 				/>
 			</div>
@@ -65,17 +65,17 @@
 			<div class="hidden lg:flex items-center gap-3 text-xs text-slate-300 bg-slate-900/60 px-3 py-1.5 rounded-lg border border-slate-800">
 				<div class="flex items-center gap-1.5">
 					<BookOpen class="w-3.5 h-3.5 text-indigo-400" />
-					<span class="font-semibold text-white">{stats.includedPapers || 156}</span> Papers
+					<span class="font-semibold text-white">{stats.includedPapers ?? ''}</span> Papers
 				</div>
 				<div class="h-3 w-px bg-slate-700"></div>
 				<div class="flex items-center gap-1.5">
 					<FileText class="w-3.5 h-3.5 text-amber-400" />
-					<span class="font-semibold text-white">{stats.conditionFindingsCount || 1324}</span> CFs
+					<span class="font-semibold text-white">{stats.conditionFindingsCount ?? ''}</span> CFs
 				</div>
 				<div class="h-3 w-px bg-slate-700"></div>
 				<div class="flex items-center gap-1.5">
 					<Layers class="w-3.5 h-3.5 text-emerald-400" />
-					<span class="font-semibold text-white">9</span> CDs / <span class="font-semibold text-white">60</span> CCs
+					<span class="font-semibold text-white">{stats.conditionDomainsCount ?? 9}</span> CDs / <span class="font-semibold text-white">{stats.canonicalConditionsCount ?? 60}</span> CCs
 				</div>
 			</div>
 

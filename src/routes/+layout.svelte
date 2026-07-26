@@ -2,7 +2,7 @@
 	import './layout.css';
 	import { page } from '$app/stores';
 	import { base } from '$app/paths';
-	import { Sun, Moon } from 'lucide-svelte';
+	import { Sun, Moon, Home } from 'lucide-svelte';
 	import { onMount } from 'svelte';
 	import Breadcrumb from '$lib/components/Breadcrumb.svelte';
 	import { loadStaticData } from '$lib/dataStore.js';
@@ -48,7 +48,7 @@
 </script>
 
 <svelte:head>
-	<title>TECF - Technology-Enabled Capability Framework</title>
+	<title>TECF - Transformation-Enabling Conditions Framework</title>
 </svelte:head>
 
 <div class="min-h-screen flex flex-col bg-slate-50 dark:bg-gray-950 text-slate-800 dark:text-gray-100 antialiased font-sans transition-colors duration-200">
@@ -59,7 +59,7 @@
 			<!-- Logo Box & Title -->
 			<a href="{base}/" class="flex items-center gap-3.5 hover:opacity-90 transition-opacity shrink-0">
 				<div class="flex flex-col">
-					<span class="font-bold text-xl tracking-tight dark:text-white leading-none">Technology-Enabled Capability Framework</span>
+					<span class="font-bold text-xl tracking-tight dark:text-white leading-none">Transformation-Enabling Conditions Framework</span>
 					<span class="text-[11px] text-gray-500 dark:text-gray-400 font-medium mt-1">An evidence-based synthesis for strategic agility, enterprise architecture, and digital transformation success</span>
 				</div>
 			</a>
@@ -67,6 +67,14 @@
 			<!-- Navigation Tabs -->
 			<div class="flex items-center gap-6 shrink-0 overflow-x-auto">
 				<nav class="flex items-center text-sm font-medium h-full shrink-0">
+					<a 
+						href="{base}/" 
+						class="relative px-3 py-5 border-b-2 flex items-center transition-colors {currentPath === `${base}/` || currentPath === base ? 'border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400 font-semibold' : 'border-transparent text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200'}"
+						title="Home"
+						aria-label="Home"
+					>
+						<Home class="w-4 h-4" />
+					</a>
 					<a 
 						href="{base}/papers" 
 						class="relative px-3 py-5 border-b-2 transition-colors {currentPath.includes('/papers') ? 'border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400 font-semibold' : 'border-transparent text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200'}"
@@ -108,7 +116,7 @@
 				<!-- Theme Toggle -->
 				<button
 					on:click={toggleTheme}
-					class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-500 dark:text-gray-400 transition-colors border border-gray-200 dark:border-gray-700"
+					class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-500 dark:text-gray-400 transition-colors"
 					title="Toggle theme"
 					aria-label="Toggle theme"
 				>
@@ -124,18 +132,16 @@
 	</header>
 
 	<!-- Main Body Container -->
-	<main class="flex-1 flex flex-col min-h-0 max-w-screen-2xl mx-auto w-full px-4 py-6 gap-4">
+	<main class="flex-1 flex flex-col min-h-0 w-full">
 		{#if currentPath !== `${base}/` && currentPath !== `${base}`}
-			<Breadcrumb crumbs={breadcrumbs} />
+			<div class="max-w-screen-2xl mx-auto w-full px-4 pt-6 pb-2">
+				<Breadcrumb crumbs={breadcrumbs} />
+			</div>
+			<div class="max-w-screen-2xl mx-auto w-full px-4 pb-6 flex-1 flex flex-col gap-4">
+				<slot />
+			</div>
+		{:else}
+			<slot />
 		{/if}
-		<slot />
 	</main>
-
-	<!-- Footer -->
-	<footer class="bg-white dark:bg-gray-900 border-t border-slate-200/80 dark:border-gray-800 mt-auto transition-colors py-4">
-		<div class="max-w-screen-2xl mx-auto px-4 text-center flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
-			<span>Transformation-Enabling Conditions Framework (TECF)</span>
-			<span>Static Data Review Snapshot</span>
-		</div>
-	</footer>
 </div>

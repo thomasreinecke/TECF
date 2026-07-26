@@ -38,7 +38,7 @@
 								<span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300">Confirmed</span>
 							</div>
 							<div class="font-bold text-sm text-gray-900 dark:text-white">{tension.title}</div>
-							<p class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">{tension.body}</p>
+							<p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">{tension.body}</p>
 						</div>
 					{/each}
 				</div>
@@ -58,7 +58,7 @@
 								<span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300">Confirmed</span>
 							</div>
 							<div class="font-bold text-sm text-gray-900 dark:text-white">{ap.title}</div>
-							<p class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">{ap.body}</p>
+							<p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">{ap.body}</p>
 						</div>
 					{/each}
 				</div>

@@ -1,5 +1,6 @@
 <script>
 	import { base } from '$app/paths';
+	import { goto } from '$app/navigation';
 	import FilterInput from '$lib/components/FilterInput.svelte';
 	import DataTable from '$lib/components/DataTable.svelte';
 	import RecordBadge from '$lib/components/RecordBadge.svelte';
@@ -19,11 +20,11 @@
 	let totalPapersCount = $derived(new Set(allFindings.map((f) => f.corpus_id)).size);
 
 	const columns = [
-		{ key: 'code', title: 'ID', sortable: true, width: '6%' },
-		{ key: 'label', title: 'Condition', sortable: true, width: '35%', overflow: 'wrap' },
-		{ key: 'framework_role', title: 'Role', sortable: true, width: '12%' },
-		{ key: 'finding_count', title: 'Findings', sortable: true, width: '12%' },
-		{ key: 'definition', title: 'Definition', sortable: false, width: '35%', overflow: 'wrap' }
+		{ key: 'code', title: 'ID', sortable: true, width: '7%' },
+		{ key: 'label', title: 'Condition', sortable: true, width: '25%', overflow: 'wrap' },
+		{ key: 'framework_role', title: 'Role', sortable: true, width: '9%' },
+		{ key: 'finding_count', title: 'Findings', sortable: true, width: '9%' },
+		{ key: 'definition', title: 'Definition', sortable: false, width: '50%', overflow: 'wrap' }
 	];
 
 	/** @param {string} role */
@@ -109,32 +110,32 @@
 	</div>
 
 	<!-- DataTable -->
-	<DataTable items={filteredConditions} {columns} {sortKey} {sortDirection} onSort={toggleSort}>
+	<DataTable items={filteredConditions} {columns} {sortKey} {sortDirection} onSort={toggleSort} rowClick={(item) => goto(`${base}/conditions/${item.code}`)}>
 		{#snippet cell(item, col)}
 			{#if col.key === 'code'}
-				<RecordBadge id={item.code} variant="condition" />
+				<a href="{base}/conditions/{item.code}" class="inline-block hover:opacity-80 transition-opacity">
+					<RecordBadge id={item.code} variant="condition" />
+				</a>
 
 			{:else if col.key === 'label'}
-				<a href="{base}/findings?q={item.code}" class="block font-medium text-blue-600 hover:underline dark:text-blue-400 text-sm leading-snug break-words whitespace-normal" title="View findings for {item.code}">
+				<a href="{base}/conditions/{item.code}" class="block font-semibold text-blue-600 hover:underline dark:text-blue-400 text-[15px] leading-snug break-words whitespace-normal" title="Inspect condition detail for {item.code}">
 					{item.label}
 				</a>
 
-
-
 			{:else if col.key === 'framework_role'}
 				{#if item.framework_role}
-					<span class="rounded-full border px-2 py-0.5 text-xs font-semibold capitalize whitespace-nowrap {roleClass(item.framework_role)}">{item.framework_role}</span>
+					<span class="rounded-full border px-2.5 py-0.5 text-[13px] font-semibold capitalize whitespace-nowrap {roleClass(item.framework_role)}">{item.framework_role}</span>
 				{:else}
-					<span class="text-xs text-gray-400">—</span>
+					<span class="text-sm text-gray-400">—</span>
 				{/if}
 
 			{:else if col.key === 'finding_count'}
-				<a href="{base}/findings?q={item.code}" class="inline-flex items-center rounded-full bg-gray-100 dark:bg-gray-800 px-2.5 py-0.5 text-xs font-mono font-semibold text-gray-700 dark:text-gray-300 hover:bg-blue-100 hover:text-blue-700 dark:hover:bg-blue-950 dark:hover:text-blue-300 transition-colors">
+				<a href="{base}/findings?q={item.code}" class="inline-flex items-center rounded-full bg-gray-100 dark:bg-gray-800 px-2.5 py-0.5 text-[13px] font-mono font-bold text-gray-700 dark:text-gray-300 hover:bg-blue-100 hover:text-blue-700 dark:hover:bg-blue-950 dark:hover:text-blue-300 transition-colors">
 					{item.finding_count ?? 0}
 				</a>
 
 			{:else if col.key === 'definition'}
-				<span class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed block break-words whitespace-normal">{item.definition || '—'}</span>
+				<span class="text-[14px] text-slate-600 dark:text-slate-300 leading-relaxed block break-words whitespace-normal">{item.definition || '—'}</span>
 
 			{:else}
 				{item[col.key] ?? '—'}

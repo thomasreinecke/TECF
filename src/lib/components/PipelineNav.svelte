@@ -16,12 +16,12 @@
 
 	const steps = [
 		{ id: 'streams', label: '1. Streams & Search', icon: Search, badge: '4 Streams' },
-		{ id: 'screening', label: '2. PRISMA Screening', icon: Filter, badge: '2,758 Hits' },
-		{ id: 'paper-reader', label: '3. Full-Text Reader', icon: BookOpen, badge: '156 Papers' },
-		{ id: 'cf-findings', label: '4. Condition Findings', icon: FileText, badge: '1,324 CFs' },
+		{ id: 'screening', label: '2. PRISMA Screening', icon: Filter, badge: '1,316 Hits' },
+		{ id: 'paper-reader', label: '3. Full-Text Reader', icon: BookOpen, badge: '209 Papers' },
+		{ id: 'cf-findings', label: '4. Condition Findings', icon: FileText, badge: '586 CFs' },
 		{ id: 'cc-tree', label: '5. Canonical Conditions', icon: Tags, badge: '60 CCs' },
 		{ id: 'cd-matrix', label: '6. Condition Domains', icon: Layers, badge: '9 CDs' },
-		{ id: 'relationships', label: '7. Relationships', icon: GitMerge, badge: '256 Links' },
+		{ id: 'relationships', label: '7. Relationships', icon: GitMerge, badge: 'In Progress' },
 		{ id: 'framework', label: '8. Synthesis Framework', icon: Grid, badge: 'RQ1 Matrix' }
 	];
 </script>

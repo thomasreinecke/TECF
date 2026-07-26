@@ -18,34 +18,28 @@
 			Pairwise Relationship Classification & Consensus Network
 		</h2>
 		<p class="text-sm text-gray-600 dark:text-gray-300 max-w-3xl">
-			Exploratory secondary analysis: 3,540 directed condition pairs were independently classified by dual LLM reviewers under a strict evidence gate. Only propositions where both models agreed on sign (+1) and cited valid evidence were retained.
+			Exploratory analysis: pairwise CC combinations evaluated under a strict evidence gate. Only propositions where models agreed on sign (+1) and cited valid evidence were retained.
 		</p>
 	</div>
 
 	<!-- Reliability Metrics Bar -->
-	<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+	<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 		<div class="bg-white dark:bg-gray-900 p-4 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm text-center space-y-1">
-			<div class="text-[10px] font-mono uppercase tracking-wider text-gray-500 dark:text-gray-400">Total Directions Evaluated</div>
-			<div class="text-2xl font-bold text-gray-900 dark:text-white">3,540</div>
-			<div class="text-[11px] text-gray-500 dark:text-gray-400">All pairwise CC combinations</div>
+			<div class="text-[10px] font-mono uppercase tracking-wider text-gray-500 dark:text-gray-400">Total Pair Space</div>
+			<div class="text-2xl font-bold text-gray-900 dark:text-white">{stats.totalEvaluatedPairs || 1770}</div>
+			<div class="text-[11px] text-gray-500 dark:text-gray-400">All 1,770 CC pairs</div>
 		</div>
 
 		<div class="bg-white dark:bg-gray-900 p-4 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm text-center space-y-1">
-			<div class="text-[10px] font-mono uppercase tracking-wider text-blue-600 dark:text-blue-400">Dual-Model Agreement</div>
-			<div class="text-2xl font-bold text-blue-600 dark:text-blue-400">83.4%</div>
-			<div class="text-[11px] text-gray-500 dark:text-gray-400">Cohen's κ = 0.408</div>
+			<div class="text-[10px] font-mono uppercase tracking-wider text-blue-600 dark:text-blue-400">Reconciled Pairs</div>
+			<div class="text-2xl font-bold text-blue-600 dark:text-blue-400">{stats.reconciledPairsCount || 412}</div>
+			<div class="text-[11px] text-gray-500 dark:text-gray-400">{stats.isInProgress ? 'Run in progress' : 'Evaluated'}</div>
 		</div>
 
 		<div class="bg-white dark:bg-gray-900 p-4 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm text-center space-y-1">
-			<div class="text-[10px] font-mono uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Positive Agreement (P+)</div>
-			<div class="text-2xl font-bold text-emerald-600 dark:text-emerald-400">50.6%</div>
-			<div class="text-[11px] text-gray-500 dark:text-gray-400">P+ formula baseline</div>
-		</div>
-
-		<div class="bg-white dark:bg-gray-900 p-4 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm text-center space-y-1">
-			<div class="text-[10px] font-mono uppercase tracking-wider text-purple-600 dark:text-purple-400">Retained Consensus Propositions</div>
-			<div class="text-2xl font-bold text-purple-600 dark:text-purple-400">256</div>
-			<div class="text-[11px] text-gray-500 dark:text-gray-400">Evidence-grounded links (+2 mitigations)</div>
+			<div class="text-[10px] font-mono uppercase tracking-wider text-purple-600 dark:text-purple-400">Grounded Retained Edges</div>
+			<div class="text-2xl font-bold text-purple-600 dark:text-purple-400">{stats.retainedPairs || retained.length}</div>
+			<div class="text-[11px] text-gray-500 dark:text-gray-400">Evidence-backed links</div>
 		</div>
 	</div>
 

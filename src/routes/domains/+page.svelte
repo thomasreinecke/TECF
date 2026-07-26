@@ -305,26 +305,28 @@
 								>
 									<div class="min-w-0 flex-1">
 										<div class="flex flex-wrap items-center gap-2">
-											<RecordBadge id={`${domain.domain_code}-${condition.code}`} />
-											<span class="font-bold text-gray-900 dark:text-white text-sm">
+											<a href="{base}/conditions/{condition.code}" onclick={(e) => e.stopPropagation()} class="hover:opacity-80 transition-opacity">
+												<RecordBadge id={`${domain.domain_code}-${condition.code}`} />
+											</a>
+											<a href="{base}/conditions/{condition.code}" onclick={(e) => e.stopPropagation()} class="font-bold text-gray-900 hover:text-blue-600 dark:text-white dark:hover:text-blue-400 text-base hover:underline">
 												{condition.label}
-											</span>
+											</a>
 											{#if condition.framework_role}
-												<span class="rounded border px-1.5 py-0.5 text-[10px] font-semibold capitalize {roleClass(condition.framework_role)}">
+												<span class="rounded border px-2 py-0.5 text-[11px] font-semibold capitalize {roleClass(condition.framework_role)}">
 													{condition.framework_role}
 												</span>
 											{/if}
 										</div>
 										{#if condition.definition}
-											<p class="mt-1 text-xs text-gray-500 dark:text-gray-400 leading-relaxed max-w-4xl">
+											<p class="mt-1.5 text-[14px] text-slate-600 dark:text-slate-300 leading-relaxed max-w-4xl">
 												{condition.definition}
 											</p>
 										{/if}
 									</div>
 
-									<div class="flex items-center gap-3 shrink-0 text-xs text-gray-400 pt-0.5">
+									<div class="flex items-center gap-3 shrink-0 text-[13px] text-slate-600 dark:text-slate-300 pt-0.5">
 										<span>{condition.paperCount} papers · {condition.findingCount} findings</span>
-										<span class="font-bold text-sm leading-none text-gray-400">{isCondExpanded ? '−' : '+'}</span>
+										<span class="font-bold text-base leading-none text-slate-400">{isCondExpanded ? '−' : '+'}</span>
 									</div>
 								</button>
 

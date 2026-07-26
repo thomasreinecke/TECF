@@ -32,7 +32,7 @@
 						{domain.label}
 					</h3>
 
-					<p class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
+					<p class="text-[14px] text-gray-700 dark:text-gray-300 leading-relaxed">
 						{domain.definition}
 					</p>
 

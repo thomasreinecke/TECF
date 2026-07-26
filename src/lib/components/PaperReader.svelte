@@ -68,7 +68,7 @@
 			Corpus Paper Reader & Full-Text Document Inspector
 		</h2>
 		<p class="text-sm text-gray-600 dark:text-gray-300 max-w-3xl">
-			Browse the 156 included SLR papers, view their full text representation, and trace extracted Condition Findings (CF) back to source text quotes.
+			Browse the confirmed included SLR papers, view their full text representation, and trace extracted Condition Findings (CF) back to source text quotes.
 		</p>
 	</div>
 

@@ -17,7 +17,7 @@
 </script>
 
 <span
-	class="inline-flex items-center justify-center rounded-md border border-slate-200/90 bg-slate-100 px-2 py-0.5 font-mono text-xs font-semibold tracking-tight text-slate-800 shadow-2xs transition-colors shrink-0 dark:border-slate-700/80 dark:bg-slate-800 dark:text-slate-100 {className}"
+	class="inline-flex items-center justify-center rounded-md border border-slate-200/90 bg-slate-100 px-2 py-0.5 font-mono text-[13px] font-bold tracking-tight text-slate-800 shadow-2xs transition-colors shrink-0 dark:border-slate-700/80 dark:bg-slate-800 dark:text-slate-100 {className}"
 >
 	{#if children}
 		{@render children()}

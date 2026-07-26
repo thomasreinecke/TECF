@@ -33,11 +33,10 @@
 	let stats = $derived(relData.stats || {});
 
 	const columns = [
-		{ key: 'key', title: 'Relationship Key', sortable: true, width: '14%' },
-		{ key: 'condition_a', title: 'Condition A (Source)', sortable: true, width: '34%', overflow: 'wrap' },
+		{ key: 'key', title: 'Relationship Key', sortable: true, width: '16%' },
+		{ key: 'condition_a', title: 'Condition A (Source)', sortable: true, width: '36%', overflow: 'wrap' },
 		{ key: 'scope', title: 'Scope', sortable: true, width: '12%' },
-		{ key: 'condition_b', title: 'Condition B (Target)', sortable: true, width: '34%', overflow: 'wrap' },
-		{ key: 'status', title: 'Status', sortable: true, width: '6%' }
+		{ key: 'condition_b', title: 'Condition B (Target)', sortable: true, width: '36%', overflow: 'wrap' }
 	];
 
 	let filteredItems = $derived((() => {
@@ -136,11 +135,20 @@
 			</div>
 			<div class="flex flex-wrap gap-2 items-center">
 				<span class="rounded-lg border border-emerald-200 bg-emerald-50 px-3.5 py-2 text-sm font-bold text-emerald-800 dark:border-emerald-900/50 dark:bg-emerald-950/25 dark:text-emerald-200">
-					{(allPairs.length || 1770).toLocaleString()} evaluated pairs
+					{allPairs.length} grounded edges
 				</span>
 			</div>
 		</div>
 	</div>
+
+	{#if stats.isInProgress}
+		<div class="rounded-xl border border-amber-200 bg-amber-50/70 dark:border-amber-900/50 dark:bg-amber-950/30 p-4 flex items-center gap-3 text-sm text-amber-900 dark:text-amber-200">
+			<div class="h-2 w-2 rounded-full bg-amber-500 animate-pulse shrink-0"></div>
+			<div>
+				<span class="font-bold">Synthesis Run In Progress:</span> Dual-model classification & reconciliation is actively running ({stats.reconciledPairsCount || 412} of {stats.totalEvaluatedPairs || 1770} pairs evaluated). Displaying {allPairs.length} evidence-grounded edges identified so far.
+			</div>
+		</div>
+	{/if}
 
 	<!-- Controls & Filters -->
 	<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 pt-3">
@@ -189,31 +197,30 @@
 
 			{:else if col.key === 'condition_a'}
 				<div class="flex items-center gap-2">
-					<RecordBadge id={item.domain_a ? `${item.domain_a}-${item.code_a}` : item.code_a} />
-					<a href="{base}/findings?q={item.code_a}" class="font-medium text-blue-600 hover:underline dark:text-blue-400 text-sm leading-snug break-words whitespace-normal">
+					<a href="{base}/conditions/{item.code_a}" class="hover:opacity-80 transition-opacity shrink-0">
+						<RecordBadge id={item.domain_a ? `${item.domain_a}-${item.code_a}` : item.code_a} />
+					</a>
+					<a href="{base}/conditions/{item.code_a}" class="font-semibold text-blue-600 hover:underline dark:text-blue-400 text-[15px] leading-snug break-words whitespace-normal" title="Inspect {item.code_a} condition detail">
 						{item.label_a}
 					</a>
 				</div>
 
 			{:else if col.key === 'scope'}
 				{#if item.scope === 'in_domain'}
-					<span class="rounded-full border border-sky-200 bg-sky-50 px-2.5 py-0.5 text-xs font-semibold text-sky-700 dark:border-sky-900/50 dark:bg-sky-950/25 dark:text-sky-300 whitespace-nowrap">In-Domain</span>
+					<span class="rounded-full border border-sky-200 bg-sky-50 px-2.5 py-0.5 text-[13px] font-semibold text-sky-700 dark:border-sky-900/50 dark:bg-sky-950/25 dark:text-sky-300 whitespace-nowrap">In-Domain</span>
 				{:else}
-					<span class="rounded-full border border-purple-200 bg-purple-50 px-2.5 py-0.5 text-xs font-semibold text-purple-700 dark:border-purple-900/50 dark:bg-purple-950/25 dark:text-purple-300 whitespace-nowrap">Cross-Domain</span>
+					<span class="rounded-full border border-purple-200 bg-purple-50 px-2.5 py-0.5 text-[13px] font-semibold text-purple-700 dark:border-purple-900/50 dark:bg-purple-950/25 dark:text-purple-300 whitespace-nowrap">Cross-Domain</span>
 				{/if}
 
 			{:else if col.key === 'condition_b'}
 				<div class="flex items-center gap-2">
-					<RecordBadge id={item.domain_b ? `${item.domain_b}-${item.code_b}` : item.code_b} />
-					<a href="{base}/findings?q={item.code_b}" class="font-medium text-blue-600 hover:underline dark:text-blue-400 text-sm leading-snug break-words whitespace-normal">
+					<a href="{base}/conditions/{item.code_b}" class="hover:opacity-80 transition-opacity shrink-0">
+						<RecordBadge id={item.domain_b ? `${item.domain_b}-${item.code_b}` : item.code_b} />
+					</a>
+					<a href="{base}/conditions/{item.code_b}" class="font-semibold text-blue-600 hover:underline dark:text-blue-400 text-[15px] leading-snug break-words whitespace-normal" title="Inspect {item.code_b} condition detail">
 						{item.label_b}
 					</a>
 				</div>
-
-			{:else if col.key === 'status'}
-				<span class="inline-block rounded-full border border-gray-200 bg-gray-50 px-2.5 py-0.5 text-xs font-semibold text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300 capitalize whitespace-nowrap">
-					{item.final_status || 'pending'}
-				</span>
 
 			{:else}
 				{item[col.key] ?? '—'}

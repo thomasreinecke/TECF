@@ -144,36 +144,38 @@
 				<RecordBadge id={`CF${item.cf_id || item.contribution_id}`} variant="finding" />
 
 			{:else if col.key === 'raw_condition_label'}
-				<a href="{base}/papers/{item.corpus_id}?cf={item.cf_id || item.contribution_id}" class="block font-medium text-blue-600 hover:underline dark:text-blue-400 text-sm leading-snug break-words whitespace-normal" title={item.raw_condition_label}>
+				<a href="{base}/papers/{item.corpus_id}?cf={item.cf_id || item.contribution_id}" class="block font-semibold text-blue-600 hover:underline dark:text-blue-400 text-[15px] leading-snug break-words whitespace-normal" title={item.raw_condition_label}>
 					{item.raw_condition_label}
 				</a>
 				{#if item.cf_reconciliation_status === 'reconciled'}
-					<span class="mt-1 inline-flex rounded-full border border-emerald-200 bg-emerald-50 px-1.5 py-0.5 text-[10px] font-semibold text-emerald-700 dark:border-emerald-900/50 dark:bg-emerald-950/25 dark:text-emerald-300">
-						reconciled
-					</span>
+					<div class="mt-1 flex flex-wrap items-center gap-1.5">
+						<span class="inline-flex rounded-full border border-emerald-200 bg-emerald-50 px-2 py-0.5 text-[11px] font-semibold text-emerald-700 dark:border-emerald-900/50 dark:bg-emerald-950/25 dark:text-emerald-300">
+							reconciled
+						</span>
+					</div>
 				{/if}
 
 			{:else if col.key === 'paper'}
-				<a href="{base}/papers/{item.corpus_id}" class="block font-medium text-blue-600 hover:underline dark:text-blue-400 text-sm leading-snug" title={item.paper_title || item.title}>
+				<a href="{base}/papers/{item.corpus_id}" class="block font-semibold text-blue-600 hover:underline dark:text-blue-400 text-[15px] leading-snug" title={item.paper_title || item.title}>
 					{item.paper_title || item.title}
 				</a>
-				<div class="mt-0.5 text-xs text-gray-500 dark:text-gray-400">{item.paper_authors || item.authors} ({item.paper_year || item.year})</div>
+				<div class="mt-0.5 text-sm text-slate-600 dark:text-slate-300 font-normal">{item.paper_authors || item.authors} ({item.paper_year || item.year})</div>
 
 			{:else if col.key === 'stream'}
-				<span class="rounded-full border px-2 py-0.5 text-xs font-semibold whitespace-nowrap {streamClass(item.stream)}">{item.stream || '—'}</span>
+				<span class="rounded-full border px-2.5 py-0.5 text-[13px] font-semibold whitespace-nowrap {streamClass(item.stream)}">{item.stream || '—'}</span>
 
 			{:else if col.key === 'evidence_role'}
 				{#if item.evidence_role}
-					<span class="rounded-full border px-2 py-0.5 text-xs font-semibold capitalize whitespace-nowrap {roleClass(item.evidence_role)}">{formatLabel(item.evidence_role)}</span>
+					<span class="rounded-full border px-2.5 py-0.5 text-[13px] font-semibold capitalize whitespace-nowrap {roleClass(item.evidence_role)}">{formatLabel(item.evidence_role)}</span>
 				{:else}
-					<span class="text-xs text-gray-400">—</span>
+					<span class="text-sm text-gray-400">—</span>
 				{/if}
 
 			{:else if col.key === 'claim_provenance'}
 				{#if item.claim_provenance}
-					<span class="rounded-full border px-2 py-0.5 text-xs font-semibold whitespace-nowrap {provenanceClass()}">{formatLabel(item.claim_provenance)}</span>
+					<span class="rounded-full border px-2.5 py-0.5 text-[13px] font-semibold whitespace-nowrap {provenanceClass()}">{formatLabel(item.claim_provenance)}</span>
 				{:else}
-					<span class="text-xs text-gray-400">—</span>
+					<span class="text-sm text-gray-400">—</span>
 				{/if}
 
 			{:else}

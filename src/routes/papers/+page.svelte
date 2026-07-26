@@ -157,39 +157,39 @@
 				<RecordBadge id={`P${item.id}`} variant="paper" />
 
 			{:else if col.key === 'item_type'}
-				<span class="text-gray-600 dark:text-gray-400 text-sm">
+				<span class="text-gray-700 dark:text-gray-300 text-sm font-medium">
 					{item.typeLabel || item.item_type || 'Journal'}
 				</span>
 
 			{:else if col.key === 'title'}
 				<a
 					href="{base}/papers/{item.id}"
-					class="font-medium text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 hover:underline underline-offset-2 break-words text-sm"
+					class="font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 hover:underline underline-offset-2 break-words text-[15px] leading-snug"
 					title={item.title}
 				>
 					{item.title}
 				</a>
 
 			{:else if col.key === 'authors'}
-				<div class="text-gray-500 dark:text-gray-400 line-clamp-2 text-sm" title={item.authors}>
+				<div class="text-slate-600 dark:text-slate-300 line-clamp-2 text-sm leading-snug" title={item.authors}>
 					{item.authors || '-'}
 				</div>
 
 			{:else if col.key === 'year'}
-				<span class="text-gray-500 dark:text-gray-400 text-sm">{item.year || '-'}</span>
+				<span class="text-gray-700 dark:text-gray-300 font-medium text-sm">{item.year || '-'}</span>
 
 			{:else if col.key === 'citation_count'}
-				<span class="font-mono text-sm {item.cites != null && item.cites !== 0 ? 'text-slate-700 dark:text-gray-300' : 'text-slate-300 dark:text-gray-700'}">
+				<span class="font-mono text-sm font-semibold {item.cites != null && item.cites !== 0 ? 'text-slate-800 dark:text-gray-200' : 'text-slate-400 dark:text-gray-600'}">
 					{item.cites != null && item.cites !== 0 ? item.cites : '–'}
 				</span>
 
 			{:else if col.key === 'reference_count'}
-				<span class="font-mono text-sm text-slate-700 dark:text-gray-300">
+				<span class="font-mono text-sm font-semibold text-slate-800 dark:text-gray-200">
 					{item.refs != null && item.refs !== 0 ? item.refs.toLocaleString() : '–'}
 				</span>
 
 			{:else if col.key === 'page_count'}
-				<span class="font-mono text-sm text-slate-700 dark:text-gray-300">
+				<span class="font-mono text-sm font-semibold text-slate-800 dark:text-gray-200">
 					{item.pages != null && item.pages !== 0 ? item.pages : '–'}
 				</span>
 

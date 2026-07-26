@@ -55,11 +55,11 @@
 <div class={noFrame ? "w-full" : "bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 overflow-hidden transition-all duration-300"}>
 	<div class="overflow-x-auto">
 		<table class="w-full table-fixed divide-y divide-gray-200 dark:divide-gray-800">
-			<thead class="bg-gray-50/75 dark:bg-gray-950/80">
+			<thead class="bg-gray-50/90 dark:bg-gray-950">
 				<tr>
 					{#each columns as col}
 						<th
-							class="px-4 py-3.5 text-left text-xs font-semibold text-gray-500 dark:text-gray-400 tracking-wider {capitalizeHeaders ? 'uppercase' : ''}"
+							class="px-4 py-3.5 text-left text-[13px] font-bold text-gray-700 dark:text-gray-200 tracking-wider {capitalizeHeaders ? 'uppercase' : ''}"
 							style="width: {col.width || 'auto'}"
 						>
 							{#if col.sortable}
@@ -79,7 +79,7 @@
 					{/each}
 					{#if canManage}
 						<th
-							class="px-4 py-3.5 text-left text-xs font-semibold text-gray-500 dark:text-gray-400 tracking-wider {capitalizeHeaders ? 'uppercase' : ''}"
+							class="px-4 py-3.5 text-left text-[13px] font-bold text-gray-700 dark:text-gray-200 tracking-wider {capitalizeHeaders ? 'uppercase' : ''}"
 							style="width: {actionsWidth}"
 						>
 							Actions
@@ -92,7 +92,7 @@
 					<tr class="group hover:bg-gray-50/50 dark:hover:bg-gray-800/50 cursor-pointer transition-colors {rowClass(item)}" onclick={() => rowClick(item)}>
 						{#each columns as col}
 							<td
-								class="px-4 py-3 text-sm text-gray-600 dark:text-gray-300 align-middle {col.overflow === 'wrap' ? '' : 'max-w-0'}"
+								class="px-4 py-3.5 text-[15px] text-gray-800 dark:text-gray-200 leading-normal align-middle {col.overflow === 'wrap' ? '' : 'max-w-0'}"
 								style="{col.overflow === 'wrap' ? 'word-break: break-word;' : ''}"
 							>
 								<div

@@ -68,7 +68,7 @@
 					LinkedIn / Social Media Share Snippet
 				</label>
 				<div class="bg-slate-950 p-3 rounded-xl border border-slate-800 text-xs text-slate-300 font-mono space-y-2 leading-relaxed">
-					<p>"Presenting TECF: Technology-Enabled Capability Framework — an interactive SLR transparency platform analyzing 156 papers, 1,300+ findings, 60 Canonical Conditions, and 9 Condition Domains."</p>
+					<p>"Presenting TECF: Transformation-Enabling Conditions Framework — an interactive SLR transparency platform analyzing 209 papers, 586 findings, 60 Canonical Conditions, and 9 Condition Domains."</p>
 					<div class="text-indigo-400 font-bold">{currentUrl}</div>
 				</div>
 			</div>

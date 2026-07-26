@@ -1,229 +1,122 @@
 <script>
 	import { base } from '$app/paths';
 	import { 
-		Library, 
 		BookOpen, 
 		FileText, 
 		Tags, 
 		Layers, 
 		GitMerge, 
 		Grid, 
-		Filter,
-		ShieldCheck,
-		ArrowRight
+		ArrowRight,
+		Sparkles
 	} from 'lucide-svelte';
 	import { corpus, conditionFindings, canonicalConditions, conditionDomains, relationships } from '$lib/dataStore.js';
 
-	$: paperCount = $corpus.length || 156;
-	$: cfCount = $conditionFindings.length || 1324;
-	$: ccCount = $canonicalConditions.length || 60;
-	$: cdCount = $conditionDomains.length || 9;
-	$: relCount = ($relationships.retainedPropositions || []).length || 256;
+	let paperCount = $derived(($corpus || []).length);
+	let cfCount = $derived(($conditionFindings || []).length);
+	let ccCount = $derived(($canonicalConditions || []).length);
+	let cdCount = $derived(($conditionDomains || []).length);
+	let relCount = $derived((($relationships || {}).retainedPropositions || []).length);
+
+	const navigationCards = $derived([
+		{
+			title: 'Included SLR Papers',
+			href: `${base}/papers`,
+			count: `${paperCount} Papers`,
+			description: 'Full catalog of confirmed SLR literature papers, citation metadata, and full-text extractions.',
+			icon: BookOpen,
+			badgeColor: 'bg-indigo-50 text-indigo-700 border-indigo-200 dark:bg-indigo-950/40 dark:text-indigo-300 dark:border-indigo-800'
+		},
+		{
+			title: 'Empirical Findings',
+			href: `${base}/findings`,
+			count: `${cfCount} Findings`,
+			description: 'Source-attributed empirical evidence statements extracted from SLR corpus literature.',
+			icon: FileText,
+			badgeColor: 'bg-amber-50 text-amber-700 border-amber-200 dark:bg-amber-950/40 dark:text-amber-300 dark:border-amber-800'
+		},
+		{
+			title: 'Canonical Conditions',
+			href: `${base}/conditions`,
+			count: `${ccCount} Constructs`,
+			description: '60 author-confirmed capability constructs (CC01–CC67) with authoritative synthesis definitions and roles.',
+			icon: Tags,
+			badgeColor: 'bg-blue-50 text-blue-700 border-blue-200 dark:bg-blue-950/40 dark:text-blue-300 dark:border-blue-800'
+		},
+		{
+			title: 'Condition Domains',
+			href: `${base}/domains`,
+			count: `${cdCount} Domains`,
+			description: 'Strategic domain groupings (CD1–CD9) organizing all canonical conditions into core capability areas.',
+			icon: Layers,
+			badgeColor: 'bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-950/40 dark:text-emerald-300 dark:border-emerald-800'
+		},
+		{
+			title: 'Grounded Relationships',
+			href: `${base}/relationships`,
+			count: `${relCount} Edges`,
+			description: 'Pairwise relationship network detailing direct grounding influences and structural scopes.',
+			icon: GitMerge,
+			badgeColor: 'bg-cyan-50 text-cyan-700 border-cyan-200 dark:bg-cyan-950/40 dark:text-cyan-300 dark:border-cyan-800'
+		},
+		{
+			title: 'Synthesis Framework',
+			href: `${base}/framework`,
+			count: 'RQ1 Matrix',
+			description: 'High-level synthesis matrix detailing strategic condition domains, tension registers, and constructs.',
+			icon: Grid,
+			badgeColor: 'bg-purple-50 text-purple-700 border-purple-200 dark:bg-purple-950/40 dark:text-purple-300 dark:border-purple-800'
+		}
+	]);
 </script>
 
-<div class="space-y-8">
+<div class="space-y-8 pb-8">
 	
-	<!-- Header / Welcome Section -->
-	<div class="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800 p-6 md:p-8 space-y-4">
-		<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
-			<div>
-				<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 text-xs font-semibold border border-blue-200 dark:border-blue-800 mb-2">
-					<ShieldCheck class="w-3.5 h-3.5" />
-					Master Thesis Literature Review Transparency Platform
-				</div>
-				<h1 class="text-3xl font-bold text-gray-900 dark:text-white tracking-tight">
-					Technology-Enabled Capability Framework (TECF)
-				</h1>
-				<p class="text-base text-gray-600 dark:text-gray-300 mt-2 max-w-4xl leading-relaxed">
-					This interactive application provides 100% methodology transparency and data traceability for the Master Thesis. Explore the systematic literature review process from literature streams and PRISMA screening down to full-text quote extractions, 60 Canonical Conditions, and the 9 Condition Domains.
-				</p>
-			</div>
+	<!-- 100% Full Width Leadspace with Gradient directly connected to Header -->
+	<div class="w-full bg-gradient-to-r from-slate-900 via-indigo-950 to-blue-950 px-4 sm:px-6 lg:px-8 py-10 sm:py-14 text-white shadow-lg border-b border-indigo-900/50 relative overflow-hidden">
+		<!-- Decorative subtle glow accents -->
+		<div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-blue-500/10 blur-3xl pointer-events-none"></div>
+		<div class="absolute -bottom-24 -left-24 w-96 h-96 rounded-full bg-indigo-500/10 blur-3xl pointer-events-none"></div>
 
-			<!-- Quick Status Pill -->
-			<div class="shrink-0 bg-gray-50 dark:bg-gray-800/80 p-4 rounded-xl border border-gray-200 dark:border-gray-700 text-center">
-				<div class="text-xs text-gray-500 dark:text-gray-400 font-mono">RQ1 Core Answer</div>
-				<div class="text-lg font-bold text-blue-600 dark:text-blue-400 font-sans mt-0.5">9 Condition Domains</div>
-				<div class="text-[11px] text-gray-500 dark:text-gray-400 font-mono">60 Canonical Conditions</div>
-			</div>
+		<div class="relative z-10 max-w-screen-2xl mx-auto space-y-3">
+			<h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
+				Transformation-Enabling Conditions Framework <span class="bg-gradient-to-r from-blue-400 to-indigo-300 bg-clip-text text-transparent">(TECF)</span>
+			</h1>
+			<p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-4xl">
+				Welcome to the evidence exploration platform for the Master Thesis. Browse canonical capability constructs, empirical literature findings, pairwise relationship networks, and strategic condition domains.
+			</p>
 		</div>
 	</div>
 
-	<!-- Dashboard High-Level Metrics (matching _app card UX) -->
-	<div class="space-y-3">
-		<h2 class="text-lg font-bold text-gray-900 dark:text-white tracking-tight flex items-center gap-2">
-			<Library class="w-5 h-5 text-blue-600 dark:text-blue-400" />
-			Key Review Metrics & Data Scope
-		</h2>
+	<!-- Simple Navigation Cards Grid in Normal App Width -->
+	<div class="max-w-screen-2xl mx-auto px-4 w-full">
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+			{#each navigationCards as card}
+				<a 
+					href={card.href}
+					class="group relative flex flex-col justify-between rounded-xl border border-slate-200 bg-white p-6 sm:p-7 dark:border-slate-800 dark:bg-slate-900 shadow-xs hover:border-slate-300 dark:hover:border-slate-700 hover:shadow-md transition-all duration-200"
+				>
+					<div class="space-y-3">
+						<div class="flex items-start justify-between gap-3">
+							<h2 class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors leading-tight">
+								{card.title}
+							</h2>
+							<span class="shrink-0 px-3 py-1 rounded-full border text-xs sm:text-sm font-mono font-bold {card.badgeColor}">
+								{card.count}
+							</span>
+						</div>
 
-		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-			
-			<!-- Included Papers -->
-			<a href="{base}/papers" class="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800 p-6 flex flex-col justify-between hover:border-blue-300 dark:hover:border-blue-800 transition-colors group">
-				<div>
-					<p class="text-xs font-mono font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400">Included SLR Corpus</p>
-					<p class="text-3xl font-bold text-gray-900 dark:text-white mt-2">{paperCount}</p>
-					<p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Full-text read & extracted papers</p>
-				</div>
-				<div class="mt-4 flex items-center justify-between pt-3 border-t border-gray-100 dark:border-gray-800 text-xs font-medium text-blue-600 dark:text-blue-400 group-hover:underline">
-					<span>Browse Full Text Reader</span>
-					<div class="h-8 w-8 rounded-lg bg-blue-50 dark:bg-blue-950/50 flex items-center justify-center">
-						<BookOpen class="w-4 h-4" />
+						<p class="text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+							{card.description}
+						</p>
 					</div>
-				</div>
-			</a>
 
-			<!-- Condition Findings -->
-			<a href="{base}/findings" class="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800 p-6 flex flex-col justify-between hover:border-amber-300 dark:hover:border-amber-800 transition-colors group">
-				<div>
-					<p class="text-xs font-mono font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400">Condition Findings (CF)</p>
-					<p class="text-3xl font-bold text-gray-900 dark:text-white mt-2">{cfCount}</p>
-					<p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Extracted empirical findings & quotes</p>
-				</div>
-				<div class="mt-4 flex items-center justify-between pt-3 border-t border-gray-100 dark:border-gray-800 text-xs font-medium text-amber-600 dark:text-amber-400 group-hover:underline">
-					<span>View Condition Findings</span>
-					<div class="h-8 w-8 rounded-lg bg-amber-50 dark:bg-amber-950/50 flex items-center justify-center">
-						<FileText class="w-4 h-4" />
+					<div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-sm font-semibold text-blue-600 dark:text-blue-400">
+						<span>Explore {card.title}</span>
+						<ArrowRight class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
 					</div>
-				</div>
-			</a>
-
-			<!-- Canonical Conditions -->
-			<a href="{base}/conditions" class="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800 p-6 flex flex-col justify-between hover:border-purple-300 dark:hover:border-purple-800 transition-colors group">
-				<div>
-					<p class="text-xs font-mono font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400">Canonical Conditions (CC)</p>
-					<p class="text-3xl font-bold text-gray-900 dark:text-white mt-2">{ccCount}</p>
-					<p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Distilled capability constructs (CC01–CC60)</p>
-				</div>
-				<div class="mt-4 flex items-center justify-between pt-3 border-t border-gray-100 dark:border-gray-800 text-xs font-medium text-purple-600 dark:text-purple-400 group-hover:underline">
-					<span>Inspect 60 Constructs</span>
-					<div class="h-8 w-8 rounded-lg bg-purple-50 dark:bg-purple-950/50 flex items-center justify-center">
-						<Tags class="w-4 h-4" />
-					</div>
-				</div>
-			</a>
-
-			<!-- Condition Domains Framework -->
-			<a href="{base}/framework" class="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800 p-6 flex flex-col justify-between hover:border-emerald-300 dark:hover:border-emerald-800 transition-colors group">
-				<div>
-					<p class="text-xs font-mono font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400">Condition Domains (CD)</p>
-					<p class="text-3xl font-bold text-gray-900 dark:text-white mt-2">{cdCount} Domains</p>
-					<p class="text-xs text-gray-500 dark:text-gray-400 mt-1">9 Condition Domains CD1–CD9</p>
-				</div>
-				<div class="mt-4 flex items-center justify-between pt-3 border-t border-gray-100 dark:border-gray-800 text-xs font-medium text-emerald-600 dark:text-emerald-400 group-hover:underline">
-					<span>View RQ1 Framework Matrix</span>
-					<div class="h-8 w-8 rounded-lg bg-emerald-50 dark:bg-emerald-950/50 flex items-center justify-center">
-						<Grid class="w-4 h-4" />
-					</div>
-				</div>
-			</a>
-
-			<!-- Included Papers -->
-			<a href="{base}/papers" class="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800 p-6 flex flex-col justify-between hover:border-indigo-300 dark:hover:border-indigo-800 transition-colors group">
-				<div>
-					<p class="text-xs font-mono font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400">Included Papers</p>
-					<p class="text-3xl font-bold text-gray-900 dark:text-white mt-2">{paperCount}</p>
-					<p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Confirmed SLR papers</p>
-				</div>
-				<div class="mt-4 flex items-center justify-between pt-3 border-t border-gray-100 dark:border-gray-800 text-xs font-medium text-indigo-600 dark:text-indigo-400 group-hover:underline">
-					<span>View Included Papers</span>
-					<div class="h-8 w-8 rounded-lg bg-indigo-50 dark:bg-indigo-950/50 flex items-center justify-center">
-						<Filter class="w-4 h-4" />
-					</div>
-				</div>
-			</a>
-
-			<!-- Pairwise Relationships -->
-			<a href="{base}/relationships" class="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800 p-6 flex flex-col justify-between hover:border-cyan-300 dark:hover:border-cyan-800 transition-colors group">
-				<div>
-					<p class="text-xs font-mono font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400">Pairwise Relationships</p>
-					<p class="text-3xl font-bold text-gray-900 dark:text-white mt-2">{relCount} Links</p>
-					<p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Dual-model consensus (κ = 0.408)</p>
-				</div>
-				<div class="mt-4 flex items-center justify-between pt-3 border-t border-gray-100 dark:border-gray-800 text-xs font-medium text-cyan-600 dark:text-cyan-400 group-hover:underline">
-					<span>Inspect Network & Gate</span>
-					<div class="h-8 w-8 rounded-lg bg-cyan-50 dark:bg-cyan-950/50 flex items-center justify-center">
-						<GitMerge class="w-4 h-4" />
-					</div>
-				</div>
-			</a>
-
-		</div>
-	</div>
-
-	<!-- High Level Orientation Guide -->
-	<div class="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-200 dark:border-gray-800 p-6 space-y-6">
-		<h2 class="text-lg font-bold text-gray-900 dark:text-white tracking-tight flex items-center gap-2">
-			<Layers class="w-5 h-5 text-blue-600 dark:text-blue-400" />
-			Methodological Navigation & Thesis Verification Guide
-		</h2>
-
-		<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-			
-			<div class="p-5 rounded-xl bg-gray-50 dark:bg-gray-800/60 border border-gray-200 dark:border-gray-700/80 space-y-2">
-				<div class="flex items-center gap-2">
-					<span class="px-2 py-0.5 rounded text-xs font-mono font-bold bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">1. Papers</span>
-					<h3 class="font-bold text-gray-900 dark:text-white text-sm">Confirmed Included SLR Papers</h3>
-				</div>
-				<p class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
-					Table view of all 227 confirmed SLR papers with type filters, metrics (cites, refs, pages, words), and quick filtering.
-				</p>
-				<a href="{base}/papers" class="inline-flex items-center gap-1 text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline pt-1">
-					Go to Papers <ArrowRight class="w-3.5 h-3.5" />
 				</a>
-			</div>
-
-			<div class="p-5 rounded-xl bg-gray-50 dark:bg-gray-800/60 border border-gray-200 dark:border-gray-700/80 space-y-2">
-				<div class="flex items-center gap-2">
-					<span class="px-2 py-0.5 rounded text-xs font-mono font-bold bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">2. Extraction</span>
-					<h3 class="font-bold text-gray-900 dark:text-white text-sm">Corpus Catalog & Text Document Reader</h3>
-				</div>
-				<p class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
-					Provides access to all 156 included SLR papers and their full-text text representation, alongside inline extracted findings and quote locators.
-				</p>
-				<a href="{base}/extraction" class="inline-flex items-center gap-1 text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline pt-1">
-					Go to Extraction <ArrowRight class="w-3.5 h-3.5" />
-				</a>
-			</div>
-
-			<div class="p-5 rounded-xl bg-gray-50 dark:bg-gray-800/60 border border-gray-200 dark:border-gray-700/80 space-y-2">
-				<div class="flex items-center gap-2">
-					<span class="px-2 py-0.5 rounded text-xs font-mono font-bold bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">3. Conditions</span>
-					<h3 class="font-bold text-gray-900 dark:text-white text-sm">60 Canonical Conditions (CC01–CC60)</h3>
-				</div>
-				<p class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
-					Table view of all 60 capability constructs, their definitions, finding frequencies, and domain cluster assignments.
-				</p>
-				<a href="{base}/conditions" class="inline-flex items-center gap-1 text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline pt-1">
-					Go to Conditions <ArrowRight class="w-3.5 h-3.5" />
-				</a>
-			</div>
-
-			<div class="p-5 rounded-xl bg-gray-50 dark:bg-gray-800/60 border border-gray-200 dark:border-gray-700/80 space-y-2">
-				<div class="flex items-center gap-2">
-					<span class="px-2 py-0.5 rounded text-xs font-mono font-bold bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">4. Domains</span>
-					<h3 class="font-bold text-gray-900 dark:text-white text-sm">9 Condition Domains (CD1–CD9)</h3>
-				</div>
-				<p class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
-					Domain inventory view grouping all 60 capability constructs into 9 strategic domains with expandable condition findings drawers.
-				</p>
-				<a href="{base}/domains" class="inline-flex items-center gap-1 text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline pt-1">
-					Go to Domains <ArrowRight class="w-3.5 h-3.5" />
-				</a>
-			</div>
-
-			<div class="p-5 rounded-xl bg-gray-50 dark:bg-gray-800/60 border border-gray-200 dark:border-gray-700/80 space-y-2">
-				<div class="flex items-center gap-2">
-					<span class="px-2 py-0.5 rounded text-xs font-mono font-bold bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">5. Framework</span>
-					<h3 class="font-bold text-gray-900 dark:text-white text-sm">9 Condition Domains & Tension Registers</h3>
-				</div>
-				<p class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
-					Presents the primary RQ1 framework matrix across 9 Strategic Condition Domains (CD1–CD9), together with tension and antipattern registers.
-				</p>
-				<a href="{base}/framework" class="inline-flex items-center gap-1 text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline pt-1">
-					Go to Framework <ArrowRight class="w-3.5 h-3.5" />
-				</a>
-			</div>
-
+			{/each}
 		</div>
 	</div>
 
