@@ -2,6 +2,7 @@
 	import { base } from '$app/paths';
 	import DataTable from '$lib/components/DataTable.svelte';
 	import FilterInput from '$lib/components/FilterInput.svelte';
+	import RecordBadge from '$lib/components/RecordBadge.svelte';
 	import { corpus } from '$lib/dataStore.js';
 	import { FileText } from 'lucide-svelte';
 
@@ -153,7 +154,7 @@
 	>
 		{#snippet cell(item, col)}
 			{#if col.key === 'id'}
-				<span class="font-mono text-gray-400 dark:text-gray-500 text-sm">P{item.id}</span>
+				<RecordBadge id={`P${item.id}`} variant="paper" />
 
 			{:else if col.key === 'item_type'}
 				<span class="text-gray-600 dark:text-gray-400 text-sm">

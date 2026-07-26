@@ -2,6 +2,7 @@
 	import { base } from '$app/paths';
 	import FilterInput from '$lib/components/FilterInput.svelte';
 	import DataTable from '$lib/components/DataTable.svelte';
+	import RecordBadge from '$lib/components/RecordBadge.svelte';
 	import { canonicalConditions, conditionFindings } from '$lib/dataStore.js';
 	import { Layers } from 'lucide-svelte';
 
@@ -111,7 +112,7 @@
 	<DataTable items={filteredConditions} {columns} {sortKey} {sortDirection} onSort={toggleSort}>
 		{#snippet cell(item, col)}
 			{#if col.key === 'code'}
-				<span class="font-mono text-gray-400 dark:text-gray-500 text-sm">{item.code}</span>
+				<RecordBadge id={item.code} variant="condition" />
 
 			{:else if col.key === 'label'}
 				<a href="{base}/findings?q={item.code}" class="block font-medium text-blue-600 hover:underline dark:text-blue-400 text-sm leading-snug break-words whitespace-normal" title="View findings for {item.code}">

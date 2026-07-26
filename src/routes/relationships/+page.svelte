@@ -3,6 +3,7 @@
 	import { base } from '$app/paths';
 	import FilterInput from '$lib/components/FilterInput.svelte';
 	import DataTable from '$lib/components/DataTable.svelte';
+	import RecordBadge from '$lib/components/RecordBadge.svelte';
 	import { relationships } from '$lib/dataStore.js';
 	import { GitMerge } from 'lucide-svelte';
 
@@ -69,17 +70,33 @@
 
 		const dir = sortDirection === 'asc' ? 1 : -1;
 		return [...list].sort((a, b) => {
-			let valA = a.relationship_key;
-			let valB = b.relationship_key;
-			if (sortKey === 'condition_a') valA = a.code_a || '';
-			else if (sortKey === 'condition_b') valB = b.code_b || '';
-			else if (sortKey === 'scope') valA = a.scope || '';
-			else if (sortKey === 'status') valA = a.final_status || '';
-
-			if (sortKey === 'condition_a') valB = b.code_a || '';
-			if (sortKey === 'condition_b') valB = b.code_b || '';
-			if (sortKey === 'scope') valB = b.scope || '';
-			if (sortKey === 'status') valB = b.final_status || '';
+			let valA = '';
+			let valB = '';
+			if (sortKey === 'key') {
+				valA = a.relationship_key || '';
+				valB = b.relationship_key || '';
+			} else if (sortKey === 'condition_a') {
+				valA = a.code_a || '';
+				valB = b.code_a || '';
+			} else if (sortKey === 'condition_b') {
+				valA = a.code_b || '';
+				valB = b.code_b || '';
+			} else if (sortKey === 'domain_a') {
+				valA = a.domain_a || '';
+				valB = b.domain_a || '';
+			} else if (sortKey === 'domain_b') {
+				valA = a.domain_b || '';
+				valB = b.domain_b || '';
+			} else if (sortKey === 'scope') {
+				valA = a.scope || '';
+				valB = b.scope || '';
+			} else if (sortKey === 'status') {
+				valA = a.final_status || '';
+				valB = b.final_status || '';
+			} else {
+				valA = a[sortKey] ?? '';
+				valB = b[sortKey] ?? '';
+			}
 
 			if (valA == null) return 1;
 			if (valB == null) return -1;
@@ -168,39 +185,33 @@
 	<DataTable items={filteredItems} {columns} {sortKey} {sortDirection} onSort={handleSort}>
 		{#snippet cell(item, col)}
 			{#if col.key === 'key'}
-				<span class="font-mono text-gray-400 dark:text-gray-500 text-sm">{item.relationship_key}</span>
+				<RecordBadge id={item.relationship_key} />
 
 			{:else if col.key === 'condition_a'}
 				<div class="flex items-center gap-2">
-					<span class="font-mono text-gray-400 dark:text-gray-500 text-sm shrink-0">{item.code_a}</span>
+					<RecordBadge id={item.domain_a ? `${item.domain_a}-${item.code_a}` : item.code_a} />
 					<a href="{base}/findings?q={item.code_a}" class="font-medium text-blue-600 hover:underline dark:text-blue-400 text-sm leading-snug break-words whitespace-normal">
 						{item.label_a}
 					</a>
-					{#if item.domain_a}
-						<span class="font-mono text-xs text-gray-400 dark:text-gray-500 bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded shrink-0">{item.domain_a}</span>
-					{/if}
 				</div>
 
 			{:else if col.key === 'scope'}
 				{#if item.scope === 'in_domain'}
-					<span class="rounded-full border border-sky-200 bg-sky-50 px-2 py-0.5 text-xs font-semibold text-sky-700 dark:border-sky-900/50 dark:bg-sky-950/25 dark:text-sky-300">In-Domain</span>
+					<span class="rounded-full border border-sky-200 bg-sky-50 px-2.5 py-0.5 text-xs font-semibold text-sky-700 dark:border-sky-900/50 dark:bg-sky-950/25 dark:text-sky-300 whitespace-nowrap">In-Domain</span>
 				{:else}
-					<span class="rounded-full border border-purple-200 bg-purple-50 px-2 py-0.5 text-xs font-semibold text-purple-700 dark:border-purple-900/50 dark:bg-purple-950/25 dark:text-purple-300">Cross-Domain</span>
+					<span class="rounded-full border border-purple-200 bg-purple-50 px-2.5 py-0.5 text-xs font-semibold text-purple-700 dark:border-purple-900/50 dark:bg-purple-950/25 dark:text-purple-300 whitespace-nowrap">Cross-Domain</span>
 				{/if}
 
 			{:else if col.key === 'condition_b'}
 				<div class="flex items-center gap-2">
-					<span class="font-mono text-gray-400 dark:text-gray-500 text-sm shrink-0">{item.code_b}</span>
+					<RecordBadge id={item.domain_b ? `${item.domain_b}-${item.code_b}` : item.code_b} />
 					<a href="{base}/findings?q={item.code_b}" class="font-medium text-blue-600 hover:underline dark:text-blue-400 text-sm leading-snug break-words whitespace-normal">
 						{item.label_b}
 					</a>
-					{#if item.domain_b}
-						<span class="font-mono text-xs text-gray-400 dark:text-gray-500 bg-gray-100 dark:bg-gray-800 px-1.5 py-0.5 rounded shrink-0">{item.domain_b}</span>
-					{/if}
 				</div>
 
 			{:else if col.key === 'status'}
-				<span class="rounded-full border border-gray-200 bg-gray-50 px-2 py-0.5 text-xs font-semibold text-gray-600 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300 capitalize">
+				<span class="inline-block rounded-full border border-gray-200 bg-gray-50 px-2.5 py-0.5 text-xs font-semibold text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300 capitalize whitespace-nowrap">
 					{item.final_status || 'pending'}
 				</span>
 

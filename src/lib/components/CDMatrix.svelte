@@ -1,5 +1,6 @@
 <script>
 	import { CheckCircle2 } from 'lucide-svelte';
+	import RecordBadge from './RecordBadge.svelte';
 
 	export let conditionDomains = [];
 </script>
@@ -24,9 +25,7 @@
 			<div class="bg-white dark:bg-gray-900 p-6 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm hover:border-blue-400 dark:hover:border-blue-600 transition flex flex-col justify-between space-y-4">
 				<div class="space-y-3">
 					<div class="flex items-center justify-between gap-2">
-						<span class="px-2.5 py-1 rounded-lg text-xs font-mono font-bold bg-blue-50 text-blue-800 dark:bg-blue-950 dark:text-blue-300 border border-blue-200 dark:border-blue-800">
-							Domain {domain.code}
-						</span>
+						<RecordBadge id={`Domain ${domain.code}`} variant="domain" />
 					</div>
 
 					<h3 class="font-bold text-lg text-gray-900 dark:text-white leading-snug">
@@ -47,9 +46,7 @@
 
 							<div class="flex flex-wrap gap-1.5">
 								{#each domain.canonicalConditions.slice(0, 6) as cc}
-									<span class="text-[11px] font-mono px-2 py-0.5 rounded bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700">
-										{cc.code || cc.label}
-									</span>
+									<RecordBadge id={cc.code || cc.label} variant="condition" class="text-[11px]" />
 								{/each}
 							</div>
 						</div>

@@ -4,6 +4,7 @@
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
 	import { corpus, conditionFindings } from '$lib/dataStore.js';
+	import RecordBadge from '$lib/components/RecordBadge.svelte';
 	import { FileText, Maximize, Minimize, ExternalLink } from 'lucide-svelte';
 
 	let paperId = $derived(Number($page.params.id));
@@ -212,6 +213,7 @@
 		<div class="flex flex-wrap items-start justify-between gap-4">
 			<div class="min-w-0 flex-1">
 				<div class="flex flex-wrap items-center gap-3">
+					<RecordBadge id={`P${paper.id || paperId}`} variant="paper" />
 					<h1 class="text-3xl font-bold text-gray-800 dark:text-white leading-tight">{paper.title}</h1>
 					{#if paper.stream}
 						<span class="rounded-full border px-2.5 py-0.5 text-xs font-semibold {streamClass(paper.stream)}">

@@ -1,6 +1,7 @@
 <script>
 	import { base } from '$app/paths';
 	import FilterInput from '$lib/components/FilterInput.svelte';
+	import RecordBadge from '$lib/components/RecordBadge.svelte';
 	import { canonicalConditions, conditionFindings, conditionDomains } from '$lib/dataStore.js';
 	import { Layers, ExternalLink } from 'lucide-svelte';
 
@@ -279,9 +280,7 @@
 					class="flex w-full items-center justify-between gap-3 border-b border-gray-100 bg-gray-50/80 px-5 py-3 text-left transition-colors hover:bg-gray-100/80 dark:border-gray-800 dark:bg-gray-950/40 dark:hover:bg-gray-950/60"
 				>
 					<span class="flex items-center gap-3">
-						<span class="font-mono text-xs font-bold text-gray-500 dark:text-gray-400 px-2 py-0.5 rounded bg-gray-200/60 dark:bg-gray-800">
-							{domain.domain_code}
-						</span>
+						<RecordBadge id={domain.domain_code} variant="domain" />
 						<span class="font-bold text-gray-900 dark:text-white text-sm">
 							{domain.domain_label}
 						</span>
@@ -306,7 +305,7 @@
 								>
 									<div class="min-w-0 flex-1">
 										<div class="flex flex-wrap items-center gap-2">
-											<span class="font-mono text-gray-400 dark:text-gray-500 text-sm font-semibold">{condition.code}</span>
+											<RecordBadge id={`${domain.domain_code}-${condition.code}`} />
 											<span class="font-bold text-gray-900 dark:text-white text-sm">
 												{condition.label}
 											</span>
@@ -352,7 +351,7 @@
 													<li class="rounded-lg border border-gray-200 bg-white p-3 text-xs dark:border-gray-800 dark:bg-gray-900 shadow-2xs space-y-1.5">
 														<div class="flex flex-wrap items-center justify-between gap-2">
 															<div class="flex flex-wrap items-center gap-2">
-																<span class="font-mono text-gray-400 dark:text-gray-500 font-semibold">CF{finding.cf_id || finding.contribution_id}</span>
+																<RecordBadge id={`CF${finding.cf_id || finding.contribution_id}`} variant="finding" />
 																{#if finding.stream}
 																	<span class="rounded-full border px-2 py-0.5 text-[10px] font-semibold {streamClass(finding.stream)}">
 																		{finding.stream}
@@ -368,7 +367,7 @@
 																href="{base}/papers/{finding.corpus_id}?cf={finding.cf_id || finding.contribution_id}"
 																class="font-medium text-blue-600 hover:underline dark:text-blue-400 text-xs flex items-center gap-1"
 															>
-																{finding.paper_authors || finding.authors || 'Author'} ({finding.paper_year || finding.year}) · P{finding.corpus_id}
+																{finding.paper_authors || finding.authors || 'Author'} ({finding.paper_year || finding.year}) · <RecordBadge id={`P${finding.corpus_id}`} variant="paper" />
 																<ExternalLink size={10} />
 															</a>
 														</div>

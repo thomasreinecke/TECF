@@ -2,6 +2,7 @@
 	import { base } from '$app/paths';
 	import FilterInput from '$lib/components/FilterInput.svelte';
 	import DataTable from '$lib/components/DataTable.svelte';
+	import RecordBadge from '$lib/components/RecordBadge.svelte';
 	import { conditionFindings } from '$lib/dataStore.js';
 	import { FileText } from 'lucide-svelte';
 
@@ -140,7 +141,7 @@
 	<DataTable items={filteredFindings} {columns} {sortKey} {sortDirection} onSort={toggleSort}>
 		{#snippet cell(item, col)}
 			{#if col.key === 'id'}
-				<span class="font-mono text-gray-400 dark:text-gray-500 text-sm">CF{item.cf_id || item.contribution_id}</span>
+				<RecordBadge id={`CF${item.cf_id || item.contribution_id}`} variant="finding" />
 
 			{:else if col.key === 'raw_condition_label'}
 				<a href="{base}/papers/{item.corpus_id}?cf={item.cf_id || item.contribution_id}" class="block font-medium text-blue-600 hover:underline dark:text-blue-400 text-sm leading-snug break-words whitespace-normal" title={item.raw_condition_label}>
