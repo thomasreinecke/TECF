@@ -134,7 +134,7 @@
 	<!-- Footer -->
 	<footer class="bg-white dark:bg-gray-900 border-t border-slate-200/80 dark:border-gray-800 mt-auto transition-colors py-4">
 		<div class="max-w-screen-2xl mx-auto px-4 text-center flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
-			<span>Master Thesis Literature Review Platform — TECF (Technology-Enabled Capability Framework)</span>
+			<span>Transformation-Enabling Conditions Framework (TECF)</span>
 			<span>Static Data Review Snapshot</span>
 		</div>
 	</footer>
