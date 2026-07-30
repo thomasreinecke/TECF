@@ -68,8 +68,11 @@
 		<div class="absolute -bottom-24 -left-24 w-96 h-96 rounded-full bg-indigo-500/10 blur-3xl pointer-events-none"></div>
 
 		<div class="relative z-10 max-w-screen-2xl mx-auto space-y-3">
-			<h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
-				Transformation-Enabling Conditions Framework <span class="bg-gradient-to-r from-blue-400 to-indigo-300 bg-clip-text text-transparent">(TECF)</span>
+			<h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight flex flex-wrap items-center gap-3">
+				<span>Transformation-Enabling Conditions Framework</span>
+				<span class="inline-flex items-center px-3 py-1 rounded-xl bg-blue-600 text-white font-extrabold text-2xl sm:text-3xl tracking-wide shadow-md shrink-0">
+					TECF
+				</span>
 			</h1>
 			<p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-4xl">
 				Welcome to the evidence exploration platform for the Master Thesis. Browse canonical capability constructs, source-traceable literature findings, and strategic condition domains.
