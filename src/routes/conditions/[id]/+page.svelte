@@ -4,8 +4,8 @@
 	import RecordBadge from '$lib/components/RecordBadge.svelte';
 	import FilterInput from '$lib/components/FilterInput.svelte';
 	import DataTable from '$lib/components/DataTable.svelte';
-	import { canonicalConditions, conditionDomains, conditionFindings, relationships } from '$lib/dataStore.js';
-	import { ArrowLeft, FileText, Layers, GitMerge, ShieldCheck, Sparkles } from 'lucide-svelte';
+	import { canonicalConditions, conditionDomains, conditionFindings } from '$lib/dataStore.js';
+	import { ArrowLeft, FileText, Layers, ShieldCheck, Sparkles } from 'lucide-svelte';
 
 	let ccId = $derived(($page.params.id || '').toUpperCase());
 
@@ -23,12 +23,6 @@
 	})());
 
 	let papersCount = $derived(new Set(findings.map(f => f.corpus_id)).size);
-
-	let relatedEdges = $derived((() => {
-		if (!condition) return [];
-		const props = $relationships.retainedPropositions || [];
-		return props.filter(p => p.code_a === condition.code || p.code_b === condition.code);
-	})());
 
 	function roleClass(role) {
 		if (role === 'support') return 'border-sky-200 bg-sky-50 text-sky-700 dark:border-sky-900/50 dark:bg-sky-950/25 dark:text-sky-300';
@@ -51,72 +45,6 @@
 		if (stream === 'Enterprise Architecture' || stream === 'EA') return 'border-indigo-200 bg-indigo-50 text-indigo-800 dark:border-indigo-900/50 dark:bg-indigo-950/30 dark:text-indigo-300';
 		if (stream === 'Digital Transformation' || stream === 'DT') return 'border-emerald-200 bg-emerald-50 text-emerald-800 dark:border-emerald-900/50 dark:bg-emerald-950/30 dark:text-emerald-300';
 		return 'border-amber-200 bg-amber-50 text-amber-800 dark:border-amber-900/50 dark:bg-amber-950/30 dark:text-amber-300';
-	}
-
-	// ---- Relationships Table State & Filtering ----
-	let edgesFilter = $state('');
-	let edgesSortKey = $state('target');
-	let edgesSortDirection = $state('asc');
-
-	const edgeColumns = [
-		{ key: 'target', title: 'Target Condition', sortable: true, width: '45%' },
-		{ key: 'direction', title: 'Relationship Role', sortable: true, width: '35%' },
-		{ key: 'scope', title: 'Scope', sortable: true, width: '20%' }
-	];
-
-	let filteredEdges = $derived((() => {
-		const query = edgesFilter.trim().toLowerCase();
-		let rows = relatedEdges.map(edge => {
-			const isSource = edge.code_a === condition?.code;
-			const targetCode = isSource ? edge.code_b : edge.code_a;
-			const targetLabel = isSource ? edge.label_b : edge.label_a;
-			const targetDomain = isSource ? edge.domain_b : edge.domain_a;
-			const dirText = isSource
-				? `${condition?.code} directly influences / grounds ${targetCode}`
-				: `${targetCode} directly influences / grounds ${condition?.code}`;
-			return {
-				...edge,
-				isSource,
-				targetCode,
-				targetLabel,
-				targetDomain,
-				dirText
-			};
-		});
-
-		if (query) {
-			rows = rows.filter(r =>
-				[r.targetCode, r.targetLabel, r.scope, r.dirText, r.notes]
-					.filter(Boolean)
-					.join(' ')
-					.toLowerCase()
-					.includes(query)
-			);
-		}
-
-		const dir = edgesSortDirection === 'asc' ? 1 : -1;
-		return [...rows].sort((a, b) => {
-			let aVal = a[edgesSortKey];
-			let bVal = b[edgesSortKey];
-			if (edgesSortKey === 'target') {
-				aVal = a.targetCode;
-				bVal = b.targetCode;
-			} else if (edgesSortKey === 'direction') {
-				aVal = a.dirText;
-				bVal = b.dirText;
-			}
-			if (aVal == null) return 1;
-			if (bVal == null) return -1;
-			return String(aVal).localeCompare(String(bVal), undefined, { numeric: true }) * dir;
-		});
-	})());
-
-	function toggleEdgesSort(key) {
-		if (edgesSortKey === key) edgesSortDirection = edgesSortDirection === 'asc' ? 'desc' : 'asc';
-		else {
-			edgesSortKey = key;
-			edgesSortDirection = 'asc';
-		}
 	}
 
 	// ---- Findings Table State & Filtering ----
@@ -205,9 +133,6 @@
 					<span class="rounded-lg border border-emerald-200 bg-emerald-50 px-3.5 py-2 text-sm font-bold text-emerald-800 dark:border-emerald-900/50 dark:bg-emerald-950/25 dark:text-emerald-200">
 						Findings: {findings.length}
 					</span>
-					<span class="rounded-lg border border-blue-200 bg-blue-50 px-3.5 py-2 text-sm font-bold text-blue-800 dark:border-blue-900/50 dark:bg-blue-950/25 dark:text-blue-200">
-						Relationships: {relatedEdges.length}
-					</span>
 				</div>
 			</div>
 		</div>
@@ -226,7 +151,7 @@
 		{/if}
 
 		<!-- Key Review Metrics Grid -->
-		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 			<div class="rounded-xl border border-slate-200 bg-white p-4 shadow-xs dark:border-slate-800 dark:bg-slate-900 space-y-1">
 				<div class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Condition Domain</div>
 				{#if domain}
@@ -259,92 +184,16 @@
 				<div class="text-xs text-slate-500 dark:text-slate-400">Ground-truth Extractions</div>
 			</div>
 
-			<div class="rounded-xl border border-slate-200 bg-white p-4 shadow-xs dark:border-slate-800 dark:bg-slate-900 space-y-1">
-				<div class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Grounded Network Edges</div>
-				<div class="text-lg font-bold text-slate-900 dark:text-white leading-snug">
-					{relatedEdges.length} Grounded Edges
-				</div>
-				<div class="text-xs text-slate-500 dark:text-slate-400">Pairwise Relationships</div>
-			</div>
 		</div>
 
 		<hr class="border-slate-200 dark:border-slate-800 my-6" />
 
-		<!-- Grounded Network Edges (Relationships) DataTable -->
-		<div class="space-y-4">
-			<div class="flex flex-wrap items-center justify-between gap-4">
-				<h3 class="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2.5">
-					<span>Grounded Relationships Network</span>
-					<span class="inline-flex items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-2.5 py-0.5 text-xs font-semibold text-slate-600 dark:text-slate-400 font-mono">
-						{filteredEdges.length}
-					</span>
-				</h3>
-				<div class="shrink-0">
-					<FilterInput
-						bind:value={edgesFilter}
-						placeholder="Filter relationships..."
-						class="w-64"
-					/>
-				</div>
-			</div>
-
-			<DataTable
-				items={filteredEdges}
-				columns={edgeColumns}
-				sortKey={edgesSortKey}
-				sortDirection={edgesSortDirection}
-				onSort={toggleEdgesSort}
-			>
-				{#snippet cell(item, col)}
-					{#if col.key === 'target'}
-						<div class="flex items-center gap-2">
-							<a href="{base}/conditions/{item.targetCode}" class="hover:opacity-80 transition-opacity shrink-0">
-								<RecordBadge id={item.targetDomain ? `${item.targetDomain}-${item.targetCode}` : item.targetCode} variant="condition" />
-							</a>
-							<a
-								href="{base}/conditions/{item.targetCode}"
-								class="font-semibold text-blue-600 hover:underline dark:text-blue-400 text-[15px] leading-snug break-words whitespace-normal"
-								title="Inspect {item.targetCode} condition detail"
-							>
-								{item.targetLabel}
-							</a>
-						</div>
-
-					{:else if col.key === 'direction'}
-						<div class="text-sm text-slate-700 dark:text-slate-300">
-							{#if item.isSource}
-								<span class="font-bold text-slate-700 dark:text-slate-300">{condition.code}</span> directly grounds <a href="{base}/conditions/{item.targetCode}" class="font-bold text-blue-600 hover:underline dark:text-blue-400">{item.targetCode}</a>
-							{:else}
-								<a href="{base}/conditions/{item.targetCode}" class="font-bold text-blue-600 hover:underline dark:text-blue-400">{item.targetCode}</a> directly grounds <span class="font-bold text-slate-700 dark:text-slate-300">{condition.code}</span>
-							{/if}
-						</div>
-
-					{:else if col.key === 'scope'}
-						{#if item.scope === 'in_domain'}
-							<span class="rounded-full border border-sky-200 bg-sky-50 px-2.5 py-0.5 text-[13px] font-semibold text-sky-700 dark:border-sky-900/50 dark:bg-sky-950/25 dark:text-sky-300 whitespace-nowrap">
-								In-Domain
-							</span>
-						{:else}
-							<span class="rounded-full border border-purple-200 bg-purple-50 px-2.5 py-0.5 text-[13px] font-semibold text-purple-700 dark:border-purple-900/50 dark:bg-purple-950/25 dark:text-purple-300 whitespace-nowrap">
-								Cross-Domain
-							</span>
-						{/if}
-
-					{:else}
-						{item[col.key] ?? '—'}
-					{/if}
-				{/snippet}
-			</DataTable>
-		</div>
-
-		<hr class="border-slate-200 dark:border-slate-800 my-6" />
-
-		<!-- Extracted Empirical Findings DataTable -->
+		<!-- Retained condition findings DataTable -->
 		<div class="space-y-4">
 			<div class="flex flex-wrap items-center justify-between gap-4">
 				<div>
 					<h3 class="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2.5">
-						<span>Extracted Empirical Findings</span>
+						<span>Condition Findings</span>
 						<span class="inline-flex items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 px-2.5 py-0.5 text-xs font-semibold text-slate-600 dark:text-slate-400 font-mono">
 							{filteredFindings.length}
 						</span>

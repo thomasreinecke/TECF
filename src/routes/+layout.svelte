@@ -39,7 +39,6 @@
 			else if (section === 'extraction') name = 'Extraction';
 			else if (section === 'conditions') name = 'Conditions';
 			else if (section === 'domains') name = 'Domains';
-			else if (section === 'relationships') name = 'Relationships';
 			else if (section === 'framework') name = 'Framework';
 			crumbs.push({ name, href: `${base}/${section}` });
 		}
@@ -56,12 +55,14 @@
 	<header class="bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 shadow-sm sticky top-0 z-50 transition-colors">
 		<div class="max-w-screen-2xl mx-auto px-4 min-h-16 flex items-center justify-between gap-4">
 			
-			<!-- Logo Box & Title -->
-			<a href="{base}/" class="flex items-center gap-3.5 hover:opacity-90 transition-opacity shrink-0">
-				<div class="flex flex-col">
-					<span class="font-bold text-xl tracking-tight dark:text-white leading-none">Transformation-Enabling Conditions Framework</span>
-					<span class="text-[11px] text-gray-500 dark:text-gray-400 font-medium mt-1">An evidence-based synthesis for strategic agility, enterprise architecture, and digital transformation success</span>
+			<!-- Logo Box & Subtitle -->
+			<a href="{base}/" class="flex items-center gap-3 hover:opacity-90 transition-opacity shrink-0" title="TECF Home">
+				<div class="h-8 px-2.5 rounded-lg bg-blue-600 text-white font-extrabold text-sm tracking-wide flex items-center justify-center shadow-xs shrink-0">
+					TECF
 				</div>
+				<span class="text-xs text-gray-500 dark:text-gray-400 font-medium hidden sm:inline">
+					An evidence-based synthesis for strategic agility, enterprise architecture, and digital transformation success
+				</span>
 			</a>
 
 			<!-- Navigation Tabs -->
@@ -98,12 +99,6 @@
 						class="relative px-3 py-5 border-b-2 transition-colors {currentPath.includes('/domains') ? 'border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400 font-semibold' : 'border-transparent text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200'}"
 					>
 						Domains
-					</a>
-					<a 
-						href="{base}/relationships" 
-						class="relative px-3 py-5 border-b-2 transition-colors {currentPath.includes('/relationships') ? 'border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400 font-semibold' : 'border-transparent text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200'}"
-					>
-						Relationships
 					</a>
 					<a 
 						href="{base}/framework" 

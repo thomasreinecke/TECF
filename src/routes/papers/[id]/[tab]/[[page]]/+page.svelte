@@ -430,9 +430,9 @@
 													{formatLabel(finding.evidence_role)} · {formatLabel(finding.claim_provenance)}
 												</p>
 
-												{#if finding.readiness_statement || finding.synthesis_note}
+												{#if finding.readiness_statement}
 													<p class="mt-2 text-xs leading-relaxed text-gray-600 dark:text-gray-300">
-														{finding.readiness_statement || finding.synthesis_note}
+														{finding.readiness_statement}
 													</p>
 												{/if}
 

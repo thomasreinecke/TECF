@@ -217,9 +217,11 @@
 												"{cf.quote_text}"
 											</blockquote>
 										{/if}
-										<div class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
-											{cf.synthesis_note || cf.mechanism}
-										</div>
+										{#if cf.mechanism}
+											<div class="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">
+												{cf.mechanism}
+											</div>
+										{/if}
 									</div>
 								{/each}
 							{/if}

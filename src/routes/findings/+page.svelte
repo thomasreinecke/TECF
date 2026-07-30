@@ -62,7 +62,6 @@
 					row.paper_authors || row.authors,
 					row.readiness_statement,
 					row.mechanism,
-					row.synthesis_note,
 					row.stream,
 					row.canonical_code || row.cluster_code,
 					row.canonical_label || row.cluster_label,

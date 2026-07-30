@@ -5,18 +5,15 @@
 		FileText, 
 		Tags, 
 		Layers, 
-		GitMerge, 
 		Grid, 
-		ArrowRight,
-		Sparkles
+		ArrowRight
 	} from 'lucide-svelte';
-	import { corpus, conditionFindings, canonicalConditions, conditionDomains, relationships } from '$lib/dataStore.js';
+	import { corpus, conditionFindings, canonicalConditions, conditionDomains } from '$lib/dataStore.js';
 
 	let paperCount = $derived(($corpus || []).length);
 	let cfCount = $derived(($conditionFindings || []).length);
 	let ccCount = $derived(($canonicalConditions || []).length);
 	let cdCount = $derived(($conditionDomains || []).length);
-	let relCount = $derived((($relationships || {}).retainedPropositions || []).length);
 
 	const navigationCards = $derived([
 		{
@@ -28,10 +25,10 @@
 			badgeColor: 'bg-indigo-50 text-indigo-700 border-indigo-200 dark:bg-indigo-950/40 dark:text-indigo-300 dark:border-indigo-800'
 		},
 		{
-			title: 'Empirical Findings',
+			title: 'Condition Findings',
 			href: `${base}/findings`,
 			count: `${cfCount} Findings`,
-			description: 'Source-attributed empirical evidence statements extracted from SLR corpus literature.',
+			description: 'Source-traceable literature findings retained from the systematic review corpus.',
 			icon: FileText,
 			badgeColor: 'bg-amber-50 text-amber-700 border-amber-200 dark:bg-amber-950/40 dark:text-amber-300 dark:border-amber-800'
 		},
@@ -50,14 +47,6 @@
 			description: 'Strategic domain groupings (CD1–CD9) organizing all canonical conditions into core capability areas.',
 			icon: Layers,
 			badgeColor: 'bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-950/40 dark:text-emerald-300 dark:border-emerald-800'
-		},
-		{
-			title: 'Grounded Relationships',
-			href: `${base}/relationships`,
-			count: `${relCount} Edges`,
-			description: 'Pairwise relationship network detailing direct grounding influences and structural scopes.',
-			icon: GitMerge,
-			badgeColor: 'bg-cyan-50 text-cyan-700 border-cyan-200 dark:bg-cyan-950/40 dark:text-cyan-300 dark:border-cyan-800'
 		},
 		{
 			title: 'Synthesis Framework',
@@ -83,7 +72,7 @@
 				Transformation-Enabling Conditions Framework <span class="bg-gradient-to-r from-blue-400 to-indigo-300 bg-clip-text text-transparent">(TECF)</span>
 			</h1>
 			<p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-4xl">
-				Welcome to the evidence exploration platform for the Master Thesis. Browse canonical capability constructs, empirical literature findings, pairwise relationship networks, and strategic condition domains.
+				Welcome to the evidence exploration platform for the Master Thesis. Browse canonical capability constructs, source-traceable literature findings, and strategic condition domains.
 			</p>
 		</div>
 	</div>

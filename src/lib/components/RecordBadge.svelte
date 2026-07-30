@@ -2,7 +2,7 @@
 	/**
 	 * @typedef {Object} Props
 	 * @property {string} [id] - The record ID or code to display
-	 * @property {'default' | 'paper' | 'condition' | 'domain' | 'finding' | 'relationship'} [variant] - Optional semantic variant
+	 * @property {'default' | 'paper' | 'condition' | 'domain' | 'finding'} [variant] - Optional semantic variant
 	 * @property {string} [class] - Additional CSS classes
 	 * @property {import('svelte').Snippet} [children] - Optional slot content
 	 */

@@ -5,7 +5,6 @@
 		FileText, 
 		Tags, 
 		Layers, 
-		GitMerge, 
 		Grid, 
 		BookOpen,
 		CheckCircle2
@@ -21,8 +20,7 @@
 		{ id: 'cf-findings', label: '4. Condition Findings', icon: FileText, badge: '586 CFs' },
 		{ id: 'cc-tree', label: '5. Canonical Conditions', icon: Tags, badge: '60 CCs' },
 		{ id: 'cd-matrix', label: '6. Condition Domains', icon: Layers, badge: '9 CDs' },
-		{ id: 'relationships', label: '7. Relationships', icon: GitMerge, badge: 'In Progress' },
-		{ id: 'framework', label: '8. Synthesis Framework', icon: Grid, badge: 'RQ1 Matrix' }
+		{ id: 'framework', label: '7. Synthesis Framework', icon: Grid, badge: 'RQ1 Matrix' }
 	];
 </script>
 

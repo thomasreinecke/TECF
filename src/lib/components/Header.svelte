@@ -26,22 +26,12 @@
 		
 		<!-- Brand & Logo -->
 		<div class="flex items-center gap-3">
-			<div class="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center shadow-lg shadow-indigo-500/20 ring-1 ring-white/20">
-				<Layers class="w-5 h-5 text-white" />
+			<div class="h-8 px-2.5 rounded-lg bg-blue-600 text-white font-extrabold text-sm tracking-wide flex items-center justify-center shadow-xs shrink-0">
+				TECF
 			</div>
-			<div>
-				<div class="flex items-center gap-2">
-					<span class="font-heading font-extrabold text-xl tracking-tight bg-gradient-to-r from-white via-slate-200 to-indigo-200 bg-clip-text text-transparent">
-						TECF
-					</span>
-					<span class="text-[10px] uppercase font-bold tracking-widest px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
-						SLR Transparency
-					</span>
-				</div>
-				<p class="text-xs text-slate-400 font-medium hidden sm:block">
-					Transformation-Enabling Conditions Framework
-				</p>
-			</div>
+			<span class="text-xs text-slate-400 font-medium hidden sm:block">
+				An evidence-based synthesis for strategic agility, enterprise architecture, and digital transformation success
+			</span>
 		</div>
 
 		<!-- Quick Search Input -->
