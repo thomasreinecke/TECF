@@ -5,7 +5,8 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
-		"build": "vite build",
+		"verify:evidence": "node scripts/verify-evidence-navigation.mjs",
+		"build": "npm run verify:evidence && vite build",
 		"preview": "vite preview",
 		"deploy": "npm run build && gh-pages -d build",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json"

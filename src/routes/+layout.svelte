@@ -26,6 +26,7 @@
 	}
 
 	$: currentPath = $page.url.pathname;
+	$: isPreviewPage = currentPath.includes('/preview');
 
 	$: breadcrumbs = (() => {
 		const crumbs = [{ name: "Home", href: `${base}/` }];
@@ -50,7 +51,7 @@
 	<title>TECF - Transformation-Enabling Conditions Framework</title>
 </svelte:head>
 
-<div class="min-h-screen flex flex-col bg-slate-50 dark:bg-gray-950 text-slate-800 dark:text-gray-100 antialiased font-sans transition-colors duration-200">
+<div class="flex flex-col bg-slate-50 dark:bg-gray-950 text-slate-800 dark:text-gray-100 antialiased font-sans transition-colors duration-200 {isPreviewPage ? 'h-screen max-h-screen overflow-hidden' : 'min-h-screen'}">
 	<!-- Header matching _app -->
 	<header class="bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 shadow-sm sticky top-0 z-50 transition-colors">
 		<div class="max-w-screen-2xl mx-auto px-4 min-h-16 flex items-center justify-between gap-4">
@@ -129,10 +130,10 @@
 	<!-- Main Body Container -->
 	<main class="flex-1 flex flex-col min-h-0 w-full">
 		{#if currentPath !== `${base}/` && currentPath !== `${base}`}
-			<div class="max-w-screen-2xl mx-auto w-full px-4 pt-6 pb-2">
+			<div class="max-w-screen-2xl mx-auto w-full px-4 pt-6 pb-2 shrink-0">
 				<Breadcrumb crumbs={breadcrumbs} />
 			</div>
-			<div class="max-w-screen-2xl mx-auto w-full px-4 pb-6 flex-1 flex flex-col gap-4">
+			<div class="max-w-screen-2xl mx-auto w-full px-4 pb-6 flex-1 flex flex-col min-h-0 gap-4">
 				<slot />
 			</div>
 		{:else}

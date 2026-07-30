@@ -5,6 +5,7 @@
 	import DataTable from '$lib/components/DataTable.svelte';
 	import RecordBadge from '$lib/components/RecordBadge.svelte';
 	import { canonicalConditions, conditionFindings } from '$lib/dataStore.js';
+	import { roleLabel } from '$lib/roles.js';
 	import { Layers } from 'lucide-svelte';
 
 	let conditionsFilter = $state('');
@@ -43,7 +44,7 @@
 					row.code,
 					row.label,
 					row.definition,
-					row.framework_role
+					roleLabel(row.framework_role)
 				]
 					.filter(Boolean)
 					.join(' ')
@@ -79,7 +80,7 @@
 		<div class="flex flex-wrap items-start justify-between gap-4">
 			<div>
 				<h2 class="text-2xl font-bold text-gray-900 dark:text-white">
-					Canonical Conditions Table
+					Canonical Conditions
 				</h2>
 				<p class="mt-1 max-w-3xl text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
 					Confirmed capability constructs synthesized across the SLR corpus, detailing strategic domain assignments, roles, and finding evidence counts.
@@ -124,7 +125,7 @@
 
 			{:else if col.key === 'framework_role'}
 				{#if item.framework_role}
-					<span class="rounded-full border px-2.5 py-0.5 text-[13px] font-semibold capitalize whitespace-nowrap {roleClass(item.framework_role)}">{item.framework_role}</span>
+					<span class="rounded-full border px-2.5 py-0.5 text-[13px] font-semibold capitalize whitespace-nowrap {roleClass(item.framework_role)}">{roleLabel(item.framework_role)}</span>
 				{:else}
 					<span class="text-sm text-gray-400">—</span>
 				{/if}

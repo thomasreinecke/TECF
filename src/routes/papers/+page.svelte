@@ -154,7 +154,9 @@
 	>
 		{#snippet cell(item, col)}
 			{#if col.key === 'id'}
-				<RecordBadge id={`P${item.id}`} variant="paper" />
+				<a href="{base}/papers/{item.id}/overview" class="inline-block hover:opacity-80 transition-opacity">
+					<RecordBadge id={`P${item.id}`} variant="paper" />
+				</a>
 
 			{:else if col.key === 'item_type'}
 				<span class="text-gray-700 dark:text-gray-300 text-sm font-medium">
@@ -163,7 +165,7 @@
 
 			{:else if col.key === 'title'}
 				<a
-					href="{base}/papers/{item.id}"
+					href="{base}/papers/{item.id}/overview"
 					class="font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 hover:underline underline-offset-2 break-words text-[15px] leading-snug"
 					title={item.title}
 				>

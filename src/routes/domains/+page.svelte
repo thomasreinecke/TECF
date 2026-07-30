@@ -3,6 +3,7 @@
 	import FilterInput from '$lib/components/FilterInput.svelte';
 	import RecordBadge from '$lib/components/RecordBadge.svelte';
 	import { canonicalConditions, conditionFindings, conditionDomains } from '$lib/dataStore.js';
+	import { roleLabel } from '$lib/roles.js';
 	import { Layers, ExternalLink } from 'lucide-svelte';
 
 	let filterQuery = $state('');
@@ -10,19 +11,6 @@
 	let allConditions = $derived($canonicalConditions || []);
 	let allFindings = $derived($conditionFindings || []);
 	let rawDomains = $derived($conditionDomains || []);
-
-	// ---- Domain Definitions ----
-	const DOMAIN_DEFINITIONS = [
-		{ code: 'CD1', label: 'Strategy, Alignment & Value Logic' },
-		{ code: 'CD2', label: 'Governance, Decision Rights & Accountability' },
-		{ code: 'CD3', label: 'Enterprise Architecture Practice & Foundation' },
-		{ code: 'CD4', label: 'Data, Technology & Platform Readiness' },
-		{ code: 'CD5', label: 'Dynamic Capabilities & Organizational Agility' },
-		{ code: 'CD6', label: 'Leadership, People & Collaboration' },
-		{ code: 'CD7', label: 'Culture & Change Readiness' },
-		{ code: 'CD8', label: 'Measurement, Maturity & Readiness Assessment' },
-		{ code: 'CD9', label: 'Context, Ecosystem & Constraints' }
-	];
 
 	// ---- Map findings to conditions ----
 	let findingsByCC = $derived((() => {
@@ -40,8 +28,9 @@
 
 	// ---- Group conditions into domains ----
 	let domainsData = $derived((() => {
-		const source = rawDomains.length > 0 ? rawDomains : DOMAIN_DEFINITIONS;
-		return source.map((dom) => {
+		// Domain codes, labels and definitions come from condition_domains.json,
+		// which the exporter reads from the closed Step 8 run. No local copy.
+		return rawDomains.map((dom) => {
 			const ccs = dom.canonicalConditions || [];
 			const conditionsWithFindings = ccs.map((c) => {
 				const cFindings = findingsByCC[c.code] || [];
@@ -103,7 +92,7 @@
 			condition.code + ' ' +
 			condition.label + ' ' +
 			(condition.definition || '') + ' ' +
-			(condition.framework_role || '')
+			roleLabel(condition.framework_role)
 		).toLowerCase();
 
 		if (condText.includes(q)) return true;
@@ -225,7 +214,7 @@
 		<div class="flex flex-wrap items-start justify-between gap-4">
 			<div>
 				<h2 class="text-2xl font-bold text-gray-900 dark:text-white">
-					Condition Domains Inventory
+					Condition Domains
 				</h2>
 				<p class="mt-1 max-w-3xl text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
 					The evidence-facing canonical layer — confirmed capability constructs grouped into strategic Condition Domains, with each construct's re-homed empirical findings.
@@ -313,7 +302,7 @@
 											</a>
 											{#if condition.framework_role}
 												<span class="rounded border px-2 py-0.5 text-[11px] font-semibold capitalize {roleClass(condition.framework_role)}">
-													{condition.framework_role}
+													{roleLabel(condition.framework_role)}
 												</span>
 											{/if}
 										</div>

@@ -42,18 +42,63 @@
 		}
 	});
 
-	// Select first finding or target URL cf param
+	$effect(() => {
+		if (activeTab === 'preview') {
+			document.body.style.overflow = 'hidden';
+			return () => {
+				document.body.style.overflow = '';
+			};
+		}
+		document.body.style.overflow = '';
+	});
+
+	let lastHandledCfKey = $state('');
+
+	// Select first finding or target URL cf & line params
 	$effect(() => {
 		const targetCfParam = $page.url.searchParams.get('cf');
+		const targetLineParam = $page.url.searchParams.get('line');
+		const currentCfKey = `${targetCfParam || ''}:${targetLineParam || ''}`;
+
 		if (targetCfParam) {
-			selectedCfId = Number(targetCfParam);
-		} else if (paperFindings.length && !selectedCfId) {
-			selectedCfId = paperFindings[0].cf_id || paperFindings[0].contribution_id;
+			const parsed = Number(targetCfParam);
+			selectedCfId = isNaN(parsed) ? targetCfParam : parsed;
+		} else {
+			selectedCfId = null;
+		}
+
+		if (textScrollContainer && !loadingTxt && txtContent) {
+			if (lastHandledCfKey !== currentCfKey) {
+				lastHandledCfKey = currentCfKey;
+				const lineToScroll = targetLineParam
+					? Number(targetLineParam)
+					: (targetCfParam ? selectedFinding?.spans?.[0]?.source_line_start : null);
+				if (lineToScroll) {
+					scrollToLine(lineToScroll);
+					if (pages.length) {
+						const foundPage = pages.find(p => p.lines.some(l => l.number === lineToScroll));
+						if (foundPage && foundPage.pageNum !== currentPage) {
+							const searchParams = $page.url.searchParams.toString();
+							const query = searchParams ? `?${searchParams}` : '';
+							goto(`${base}/papers/${paperId}/${activeTab}/${foundPage.pageNum}${query}`, { replaceState: true, noScroll: true, keepFocus: true });
+						}
+					}
+				} else if (currentPage > 1) {
+					const pageBlock = document.getElementById(`page-block-${currentPage}`);
+					if (pageBlock && textScrollContainer) {
+						isProgrammaticScrolling = true;
+						textScrollContainer.scrollTo({ top: pageBlock.offsetTop, behavior: 'auto' });
+						setTimeout(() => { isProgrammaticScrolling = false; }, 50);
+					}
+				}
+			}
 		}
 	});
 
 	let selectedFinding = $derived(
-		paperFindings.find(f => (f.cf_id || f.contribution_id) === selectedCfId) || paperFindings[0] || null
+		selectedCfId != null
+			? (paperFindings.find(f => String(f.cf_id || f.contribution_id) === String(selectedCfId)) || null)
+			: null
 	);
 
 	let pages = $derived((() => {
@@ -76,13 +121,17 @@
 		return parsedPages;
 	})());
 
-	/** @param {number} lineNum */
+	/**
+	 * Only the union of the audited spans counts as evidence. Never fall back to
+	 * "first start to last end": for a multi-span finding that range also covers
+	 * everything in between, which the audit did not mark as evidence.
+	 * @param {number} lineNum
+	 */
 	function isEvidenceLine(lineNum) {
-		if (!selectedFinding) return false;
-		const start = selectedFinding.first_span_line_start;
-		const end = selectedFinding.first_span_line_end || start;
-		if (!start) return false;
-		return lineNum >= start && lineNum <= end;
+		if (!selectedFinding?.spans?.length) return false;
+		return selectedFinding.spans.some((/** @type {any} */ span) =>
+			lineNum >= span.source_line_start && lineNum <= span.source_line_end
+		);
 	}
 
 	/** @param {number} lineNumber */
@@ -91,8 +140,8 @@
 		const el = document.getElementById(`txt-line-${lineNumber}`);
 		if (el) {
 			isProgrammaticScrolling = true;
-			const top = el.offsetTop - (el.clientHeight * 2);
-			textScrollContainer.scrollTo({ top, behavior: 'auto' });
+			const top = el.offsetTop - textScrollContainer.offsetTop - 72;
+			textScrollContainer.scrollTo({ top: Math.max(0, top), behavior: 'auto' });
 			setTimeout(() => { isProgrammaticScrolling = false; }, 50);
 		}
 	}
@@ -102,14 +151,38 @@
 	 * @param {number|null} targetLine 
 	 */
 	function selectFinding(finding, targetLine = null) {
-		selectedCfId = finding.cf_id || finding.contribution_id;
-		const lineToScroll = targetLine || finding.first_span_line_start;
+		const newCfId = finding.cf_id || finding.contribution_id;
+		selectedCfId = newCfId;
+		const lineToScroll = targetLine || finding.spans?.[0]?.source_line_start;
+
+		let targetPageNum = currentPage;
+		if (lineToScroll && pages.length) {
+			const foundPage = pages.find(p => p.lines.some(l => l.number === lineToScroll));
+			if (foundPage) {
+				targetPageNum = foundPage.pageNum;
+			}
+		}
+
+		const searchParams = new URLSearchParams($page.url.searchParams);
+		searchParams.set('cf', String(newCfId));
+		if (targetLine) {
+			searchParams.set('line', String(targetLine));
+		} else {
+			searchParams.delete('line');
+		}
+
+		const newCfKey = `${newCfId}:${targetLine || ''}`;
+		lastHandledCfKey = newCfKey;
+
+		const newPath = `${base}/papers/${paperId}/${activeTab}/${targetPageNum}?${searchParams.toString()}`;
+		goto(newPath, { replaceState: true, noScroll: true, keepFocus: true });
+
 		if (lineToScroll) {
-			setTimeout(() => scrollToLine(lineToScroll), 100);
+			scrollToLine(lineToScroll);
 		}
 	}
 
-	/** @param {Event & { target: HTMLInputElement }} e */
+	/** @param {any} e */
 	function handleSliderInput(e) {
 		const val = Number(e.target.value);
 		const searchParams = $page.url.searchParams.toString();
@@ -207,28 +280,20 @@
 	}
 </script>
 
-<div class="space-y-4">
+<div class="flex-1 flex flex-col min-h-0 gap-4">
 	{#if paper}
 		<!-- Paper Header -->
-		<div class="flex flex-wrap items-start justify-between gap-4">
+		<div class="shrink-0 flex flex-wrap items-start justify-between gap-4">
 			<div class="min-w-0 flex-1">
-				<div class="flex flex-wrap items-center gap-3">
-					<RecordBadge id={`P${paper.id || paperId}`} variant="paper" />
-					<h1 class="text-3xl font-bold text-gray-800 dark:text-white leading-tight">{paper.title}</h1>
-					{#if paper.stream}
-						<span class="rounded-full border px-2.5 py-0.5 text-xs font-semibold {streamClass(paper.stream)}">
-							{paper.stream}
-						</span>
-					{/if}
-				</div>
+				<h1 class="text-3xl font-bold text-gray-800 dark:text-white leading-tight">{paper.title}</h1>
 				<p class="mt-2 text-sm text-gray-500 dark:text-gray-400">
-					{[paper.authors, paper.year, typeLabel(paper.item_type)].filter(Boolean).join(' — ')}
+					{paper.authors}
 				</p>
 			</div>
 		</div>
 
 		<!-- Sub-navigation Tabs -->
-		<div class="border-b border-gray-200 dark:border-gray-800">
+		<div class="shrink-0 border-b border-gray-200 dark:border-gray-800">
 			<nav class="-mb-px flex space-x-8" aria-label="Document tabs">
 				<a
 					href="{base}/papers/{paperId}/overview"
@@ -240,7 +305,7 @@
 					href="{base}/papers/{paperId}/preview/1"
 					class="inline-flex items-center gap-2 whitespace-nowrap py-3 px-1 border-b-2 font-medium text-sm transition-colors {activeTab === 'preview' ? 'border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400 font-semibold' : 'border-transparent text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'}"
 				>
-					Preview
+					Preview and Findings
 					{#if paperFindings.length}
 						<span class="rounded-full bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 px-2 py-0.5 text-xs font-bold">
 							{paperFindings.length}
@@ -252,8 +317,8 @@
 
 		<!-- Tab Content Container -->
 		<div
-			class="overflow-hidden flex flex-col {isFullscreen && activeTab === 'preview' ? 'fixed inset-0 z-50 bg-white dark:bg-gray-900 p-4' : 'w-full'}"
-			style={isFullscreen && activeTab === 'preview' ? 'height: 100vh; width: 100vw;' : activeTab === 'preview' ? 'height: calc(100vh - 14rem); min-height: 560px;' : 'height: auto;'}
+			class="flex-1 min-h-0 w-full overflow-hidden flex flex-col {isFullscreen && activeTab === 'preview' ? 'fixed inset-0 z-50 bg-white dark:bg-gray-900 p-4' : ''}"
+			style={isFullscreen && activeTab === 'preview' ? 'height: 100vh; width: 100vw;' : activeTab === 'preview' ? 'min-height: 440px;' : 'height: auto;'}
 		>
 			{#if activeTab === 'overview'}
 				<!-- Overview Tab -->
@@ -267,6 +332,16 @@
 								<dt class="text-xs font-semibold text-gray-400">ID</dt>
 								<dd class="mt-1 font-mono text-sm text-gray-900 dark:text-white">P{paper.id}</dd>
 							</div>
+							{#if paper.stream}
+								<div>
+									<dt class="text-xs font-semibold text-gray-400">Stream</dt>
+									<dd class="mt-1 flex items-center">
+										<span class="rounded-full border px-2.5 py-0.5 text-xs font-semibold {streamClass(paper.stream)}">
+											{paper.stream}
+										</span>
+									</dd>
+								</div>
+							{/if}
 							<div>
 								<dt class="text-xs font-semibold text-gray-400">Item Type</dt>
 								<dd class="mt-1 text-sm text-gray-900 dark:text-white">{typeLabel(paper.item_type)}</dd>
@@ -417,7 +492,7 @@
 													</span>
 													{#if finding.audit_outcome}
 														<span class="text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded border border-emerald-200 bg-emerald-50 text-emerald-700 dark:border-emerald-900/50 dark:bg-emerald-950/25 dark:text-emerald-300">
-															{formatLabel(finding.audit_outcome)}
+															{finding.audit_outcome.toUpperCase()}
 														</span>
 													{/if}
 												</div>
@@ -430,22 +505,33 @@
 													{formatLabel(finding.evidence_role)} · {formatLabel(finding.claim_provenance)}
 												</p>
 
-												{#if finding.readiness_statement}
+												{#if finding.rationale || finding.readiness_statement}
 													<p class="mt-2 text-xs leading-relaxed text-gray-600 dark:text-gray-300">
-														{finding.readiness_statement}
+														{finding.rationale || finding.readiness_statement}
 													</p>
 												{/if}
 
-												{#if finding.first_span_line_start}
-													<div class="mt-3">
-														<button
-															type="button"
-															onclick={(e) => { e.stopPropagation(); selectFinding(finding, finding.first_span_line_start); }}
-															class="inline-flex items-center gap-1 rounded px-2 py-0.5 font-mono text-xs font-bold {auditColor(finding.cf_id || finding.contribution_id).marker} hover:opacity-80 transition-opacity"
-														>
-															Lines {finding.first_span_line_start}–{finding.first_span_line_end || finding.first_span_line_start}
-														</button>
+												{#if finding.spans && finding.spans.length}
+													<div class="mt-3 flex flex-wrap gap-1.5">
+														{#each finding.spans as span}
+															<button
+																type="button"
+																onclick={(e) => { e.stopPropagation(); selectFinding(finding, span.source_line_start); }}
+																class="inline-flex items-center gap-1 rounded px-2.5 py-1 font-mono text-xs font-semibold transition-opacity hover:opacity-75 {auditColor(finding.cf_id || finding.contribution_id).marker}"
+																title={`Jump to TXT lines ${span.source_line_start}–${span.source_line_end}`}
+															>
+																Lines {span.source_line_start}–{span.source_line_end}
+															</button>
+														{/each}
 													</div>
+													{@const locators = finding.spans.map((/** @type {any} */ s) => s.source_locator).filter(Boolean)}
+													{#if locators.length}
+														<p class="mt-1.5 text-xs text-gray-500 dark:text-gray-400">{locators.join(' · ')}</p>
+													{/if}
+												{:else}
+													<p class="mt-3 text-xs italic text-gray-500 dark:text-gray-400">
+														No exact TXT span is available for this finding.
+													</p>
 												{/if}
 											</div>
 										{/each}

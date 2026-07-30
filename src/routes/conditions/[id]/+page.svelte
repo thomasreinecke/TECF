@@ -5,6 +5,7 @@
 	import FilterInput from '$lib/components/FilterInput.svelte';
 	import DataTable from '$lib/components/DataTable.svelte';
 	import { canonicalConditions, conditionDomains, conditionFindings } from '$lib/dataStore.js';
+	import { roleLabel } from '$lib/roles.js';
 	import { ArrowLeft, FileText, Layers, ShieldCheck, Sparkles } from 'lucide-svelte';
 
 	let ccId = $derived(($page.params.id || '').toUpperCase());
@@ -171,7 +172,7 @@
 			<div class="rounded-xl border border-slate-200 bg-white p-4 shadow-xs dark:border-slate-800 dark:bg-slate-900 space-y-1">
 				<div class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Synthesis Role</div>
 				<div class="text-lg font-bold text-slate-900 dark:text-white capitalize leading-snug">
-					{condition.framework_role || 'Core'} Construct
+					{roleLabel(condition.framework_role) || 'core'} Construct
 				</div>
 				<div class="text-xs text-slate-500 dark:text-slate-400">Construct Role Tier</div>
 			</div>

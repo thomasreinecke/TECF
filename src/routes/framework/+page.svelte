@@ -2,6 +2,7 @@
 	import { base } from '$app/paths';
 	import PageHeader from '$lib/components/PageHeader.svelte';
 	import { canonicalConditions, conditionDomains, conditionFindings, metadata } from '$lib/dataStore.js';
+	import { roleLabel } from '$lib/roles.js';
 	import { ArrowRight, BookOpen, ChevronDown, Layers3, Library, ShieldCheck } from 'lucide-svelte';
 
 	let expanded = $state(new Set());
@@ -18,47 +19,38 @@
 		CD9: '#607D8B'
 	};
 
-	const FRAMEWORK_DOMAIN_LOGIC = {
-		CD1: 'Align strategic intent, value logic and investment over time.',
-		CD2: 'Make authority, accountability and transformation trade-offs explicit.',
-		CD3: 'Make dependencies visible and practise EA in ways that deliver value.',
-		CD4: 'Provide data and platform foundations that can evolve.',
-		CD5: 'Sense, seize and transform through orchestrated, adaptive capability.',
-		CD6: 'Mobilize sponsorship, skills and cross-organizational collaboration.',
-		CD7: 'Build a culture with collective capacity for change.',
-		CD8: 'Turn valid, multidimensional assessment into action and reassessment.',
-		CD9: 'Read the scale, resource, sectoral, regional and institutional context that delimits application.'
-	};
-
+	// Which domains carry which enabling function is the synthesis reading; the
+	// domain names themselves are canonical data and are resolved at render time,
+	// so a renamed domain cannot leave a stale name behind in this table.
 	const FUNCTIONS = [
 		{
 			name: 'Coherent',
-			domains: 'CD1 · Strategic Direction & Value Alignment',
+			codes: ['CD1'],
 			question: 'Does transformation retain an explicit purpose, value logic, and continuous connection to execution?'
 		},
 		{
 			name: 'Governable',
-			domains: 'CD2 · Governance & Accountability',
+			codes: ['CD2'],
 			question: 'Are authority, ownership, priorities, incentives, and trade-off mechanisms explicit?'
 		},
 		{
 			name: 'Grounded',
-			domains: 'CD3 · Enterprise Architecture + CD4 · Data & Technology Foundations',
+			codes: ['CD3', 'CD4'],
 			question: 'Are decisions grounded in visible dependencies, usable architecture, reliable data, and feasible platforms?'
 		},
 		{
 			name: 'Executable and adaptable',
-			domains: 'CD5 · Organizational Adaptability + CD6 · Leadership, People & Collaboration + CD7 · Culture & Change',
+			codes: ['CD5', 'CD6', 'CD7'],
 			question: 'Can the organization mobilize people, sense and seize opportunities, transform, learn, and reconfigure?'
 		},
 		{
 			name: 'Correctable',
-			domains: 'CD8 · Assessment & Feedback',
+			codes: ['CD8'],
 			question: 'Can the state of the enabling system be assessed credibly and converted into action and reassessment?'
 		},
 		{
 			name: 'Calibrated to context',
-			domains: 'CD9 · External Context & Constraints',
+			codes: ['CD9'],
 			question: 'How do enterprise scale and sectoral, regional, regulatory, and institutional conditions change what is feasible?'
 		}
 	];
@@ -70,8 +62,11 @@
 		contingency: 'border-amber-200 bg-amber-50 text-amber-700 dark:border-amber-900/60 dark:bg-amber-950/30 dark:text-amber-300'
 	};
 
-	function roleLabel(role) {
-		return role === 'contingency' ? 'contextual' : role;
+	/** Name the domains a function is carried by, using their canonical labels. */
+	function carriedBy(codes) {
+		return codes
+			.map((code) => `${code} · ${domains.find((d) => d.code === code)?.label ?? code}`)
+			.join(' + ');
 	}
 
 	function toggleCondition(code) {
@@ -128,8 +123,8 @@
 			return {
 				code: dom.code,
 				label: dom.label,
-				kind: dom.code === 'CD9' ? 'external' : 'internal',
-				logic: FRAMEWORK_DOMAIN_LOGIC[dom.code] || '',
+				kind: dom.kind || (dom.code === 'CD9' ? 'external' : 'internal'),
+				logic: dom.definition || '',
 				conditionCount: conditions.length,
 				coreCount: conditions.filter(c => (c.role || c.framework_role) === 'core').length,
 				conditions
@@ -171,22 +166,25 @@
 	{:else}
 		<section class="flex flex-col items-stretch gap-2 xl:flex-row xl:items-center" aria-label="Evidence distilled into the RQ1 framework">
 			{#each [
-				{ label: 'Contributing publications', value: stats.papers, icon: ShieldCheck },
-				{ label: 'Framework findings', value: stats.findings, icon: BookOpen },
-				{ label: 'Retained constructs', value: stats.confirmed, icon: Layers3 },
-				{ label: 'Condition Domains', value: domains.length, icon: Library }
+				{ label: 'Contributing publications', value: stats.papers, icon: ShieldCheck, href: `${base}/papers` },
+				{ label: 'Framework findings', value: stats.findings, icon: BookOpen, href: `${base}/findings` },
+				{ label: 'Retained constructs', value: stats.confirmed, icon: Layers3, href: `${base}/conditions` },
+				{ label: 'Condition Domains', value: domains.length, icon: Library, href: `${base}/domains` }
 			] as metric, index}
-				<div class="min-w-0 flex-1 rounded-xl border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-800 dark:bg-gray-900">
+				<a
+					href={metric.href}
+					class="group min-w-0 flex-1 rounded-xl border border-gray-200 bg-white p-4 shadow-xs transition-all hover:border-blue-300 hover:shadow-md dark:border-gray-800 dark:bg-gray-900 dark:hover:border-blue-700 cursor-pointer"
+				>
 					<div class="flex items-center justify-between gap-3">
 						<div>
-							<div class="text-2xl font-bold text-gray-900 dark:text-white">{metric.value || 0}</div>
-							<div class="mt-1 text-xs font-medium text-gray-500 dark:text-gray-400">{metric.label}</div>
+							<div class="text-2xl font-bold text-gray-900 transition-colors group-hover:text-blue-600 dark:text-white dark:group-hover:text-blue-400">{metric.value || 0}</div>
+							<div class="mt-1 text-xs font-medium text-gray-500 transition-colors group-hover:text-blue-600 dark:text-gray-400 dark:group-hover:text-blue-400">{metric.label}</div>
 						</div>
-						<div class="rounded-lg bg-blue-50 p-2 text-blue-600 dark:bg-blue-950/40 dark:text-blue-300">
+						<div class="rounded-lg bg-blue-50 p-2 text-blue-600 transition-colors group-hover:bg-blue-100 dark:bg-blue-950/40 dark:text-blue-300 dark:group-hover:bg-blue-900/60">
 							<metric.icon size={18} />
 						</div>
 					</div>
-				</div>
+				</a>
 				{#if index < 3}
 					<div class="flex shrink-0 items-center justify-center px-2 py-1 text-blue-500 dark:text-blue-400" aria-hidden="true">
 						<ArrowRight size={22} strokeWidth={2.25} class="rotate-90 xl:rotate-0" />
@@ -229,7 +227,7 @@
 						{#each FUNCTIONS as item}
 							<tr class="border-t border-gray-100 align-top dark:border-gray-800">
 								<td class="px-4 py-3 font-bold text-gray-900 dark:text-white">{item.name}</td>
-								<td class="px-4 py-3 text-gray-600 dark:text-gray-300">{item.domains}</td>
+								<td class="px-4 py-3 text-gray-600 dark:text-gray-300">{carriedBy(item.codes)}</td>
 								<td class="px-4 py-3 leading-6 text-gray-600 dark:text-gray-400">{item.question}</td>
 							</tr>
 						{/each}

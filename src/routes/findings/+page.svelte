@@ -108,7 +108,7 @@
 		<div class="flex flex-wrap items-start justify-between gap-4">
 			<div>
 				<h2 class="text-2xl font-bold text-gray-900 dark:text-white">
-					Condition Findings Inventory
+					Condition Findings
 				</h2>
 				<p class="mt-1 max-w-3xl text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
 					The final evidence base of the framework: every Condition Finding carried by one of the 60 retained constructs, classified by evidence role, condition assignment, and provenance. Each is traceable to a paper and an exact source passage.
@@ -141,10 +141,12 @@
 	<DataTable items={filteredFindings} {columns} {sortKey} {sortDirection} onSort={toggleSort}>
 		{#snippet cell(item, col)}
 			{#if col.key === 'id'}
-				<RecordBadge id={`CF${item.cf_id || item.contribution_id}`} variant="finding" />
+				<a href="{base}/papers/{item.corpus_id}/preview/1?cf={item.cf_id || item.contribution_id}" class="inline-block hover:opacity-80 transition-opacity">
+					<RecordBadge id={`CF${item.cf_id || item.contribution_id}`} variant="finding" />
+				</a>
 
 			{:else if col.key === 'raw_condition_label'}
-				<a href="{base}/papers/{item.corpus_id}?cf={item.cf_id || item.contribution_id}" class="block font-semibold text-blue-600 hover:underline dark:text-blue-400 text-[15px] leading-snug break-words whitespace-normal" title={item.raw_condition_label}>
+				<a href="{base}/papers/{item.corpus_id}/preview/1?cf={item.cf_id || item.contribution_id}" class="block font-semibold text-blue-600 hover:underline dark:text-blue-400 text-[15px] leading-snug break-words whitespace-normal" title={item.raw_condition_label}>
 					{item.raw_condition_label}
 				</a>
 				{#if item.cf_reconciliation_status === 'reconciled'}
@@ -156,7 +158,7 @@
 				{/if}
 
 			{:else if col.key === 'paper'}
-				<a href="{base}/papers/{item.corpus_id}" class="block font-semibold text-blue-600 hover:underline dark:text-blue-400 text-[15px] leading-snug" title={item.paper_title || item.title}>
+				<a href="{base}/papers/{item.corpus_id}/overview" class="block font-semibold text-blue-600 hover:underline dark:text-blue-400 text-[15px] leading-snug" title={item.paper_title || item.title}>
 					{item.paper_title || item.title}
 				</a>
 				<div class="mt-0.5 text-sm text-slate-600 dark:text-slate-300 font-normal">{item.paper_authors || item.authors} ({item.paper_year || item.year})</div>
