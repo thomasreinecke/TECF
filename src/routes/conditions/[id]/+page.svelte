@@ -161,9 +161,9 @@
 			<div class="rounded-xl border border-slate-200 bg-white p-4 shadow-xs dark:border-slate-800 dark:bg-slate-900 space-y-1">
 				<div class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Synthesis Role</div>
 				<div class="text-lg font-bold text-slate-900 dark:text-white capitalize leading-snug">
-					{roleLabel(condition.framework_role) || 'core'} Construct
+					{roleLabel(condition.framework_role) || 'core'} Condition
 				</div>
-				<div class="text-xs text-slate-500 dark:text-slate-400">Construct Role Tier</div>
+				<div class="text-xs text-slate-500 dark:text-slate-400">Condition Role Tier</div>
 			</div>
 
 			<div class="rounded-xl border border-slate-200 bg-white p-4 shadow-xs dark:border-slate-800 dark:bg-slate-900 space-y-1">
@@ -206,7 +206,7 @@
 								>{/each}<span class="text-indigo-900/60 dark:text-indigo-300/60">{').'}</span>{/if}{/each}
 				</p>
 				<p class="mt-4 text-xs italic text-indigo-900/70 dark:text-indigo-300/70 leading-relaxed">
-					Synthesized from this construct's Condition Findings below — adds no evidence beyond them and asserts no causal relations.
+					Synthesized from this condition's Condition Findings below — adds no evidence beyond them and asserts no causal relations.
 				</p>
 			</div>
 		{/if}
@@ -216,7 +216,7 @@
 			<div class="rounded-2xl border border-emerald-200/80 bg-emerald-50/40 p-5 shadow-xs dark:border-emerald-900/40 dark:bg-emerald-950/20 space-y-1.5">
 				<div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-800 dark:text-emerald-300">
 					<Sparkles class="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-					Positively-Worded Enabling Statement (Framework Construct)
+					Positively-Worded Enabling Statement (Canonical Condition)
 				</div>
 				<p class="text-base sm:text-lg leading-relaxed text-slate-900 dark:text-slate-100 font-normal">
 					{condition.enabling_statement}

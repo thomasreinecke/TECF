@@ -217,7 +217,7 @@
 					Condition Domains
 				</h2>
 				<p class="mt-1 max-w-3xl text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
-					The evidence-facing canonical layer — confirmed capability constructs grouped into strategic Condition Domains, with each construct's re-homed empirical findings.
+					The evidence-facing canonical layer — confirmed canonical conditions grouped into strategic Condition Domains, with each condition's re-homed empirical findings.
 				</p>
 			</div>
 			<div class="flex flex-wrap gap-2 items-center">

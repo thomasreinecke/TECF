@@ -209,8 +209,13 @@
 												Canonical: {cf.canonical_code ?? '—'}
 											</span>
 										</div>
-										<div class="font-bold text-sm text-gray-900 dark:text-white">
-											{cf.raw_condition_label || cf.readiness_statement}
+										<div class="font-bold text-sm">
+											<a
+												href="{base}/findings/CF{cf.cf_id || cf.contribution_id}"
+												class="text-gray-900 hover:text-blue-600 hover:underline dark:text-white dark:hover:text-blue-400"
+											>
+												{cf.raw_condition_label || cf.readiness_statement}
+											</a>
 										</div>
 										{#if cf.quote_text}
 											<blockquote class="border-l-2 border-blue-500 pl-3 italic text-xs text-gray-700 dark:text-gray-300 py-1 bg-blue-50/50 dark:bg-blue-950/30 rounded-r">

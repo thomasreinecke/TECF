@@ -83,7 +83,7 @@
 					Canonical Conditions
 				</h2>
 				<p class="mt-1 max-w-3xl text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
-					Confirmed capability constructs synthesized across the SLR corpus, detailing strategic domain assignments, roles, and finding evidence counts.
+					Confirmed canonical conditions synthesized across the SLR corpus, detailing strategic domain assignments, roles, and finding evidence counts.
 				</p>
 			</div>
 			<div class="flex flex-wrap gap-2 items-center">
@@ -97,7 +97,7 @@
 	<!-- Controls & Search -->
 	<div class="flex flex-wrap items-center justify-between gap-4 pt-3">
 		<div class="max-w-3xl text-sm text-gray-500 dark:text-gray-400">
-			Showing all 60 author-confirmed capability constructs.
+			Showing all 60 author-confirmed canonical conditions.
 		</div>
 		<div class="shrink-0">
 			<FilterInput

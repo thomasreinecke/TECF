@@ -111,7 +111,7 @@
 					Condition Findings
 				</h2>
 				<p class="mt-1 max-w-3xl text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
-					The final evidence base of the framework: every Condition Finding carried by one of the 60 retained constructs, classified by evidence role, condition assignment, and provenance. Each is traceable to a paper and an exact source passage.
+					The final evidence base of the framework: every Condition Finding carried by one of the 60 retained canonical conditions, classified by evidence role, condition assignment, and provenance. Each is traceable to a paper and an exact source passage.
 				</p>
 			</div>
 			<div class="flex flex-wrap gap-2 items-center">
@@ -125,7 +125,7 @@
 	<!-- Search & Controls -->
 	<div class="flex flex-wrap items-center justify-between gap-4 pt-3">
 		<div class="max-w-3xl text-sm text-gray-500 dark:text-gray-400">
-			{$metadata?.stats?.extractedFindingsCount ?? '599'} findings were extracted and source-audited; the {allFindings.length} shown here are those carried by a retained framework construct. The remainder sit on constructs the construct-validity review classified as diagnostic or deprecated and therefore support no framework claim.
+			{$metadata?.stats?.extractedFindingsCount ?? '599'} findings were extracted and source-audited; the {allFindings.length} shown here are those carried by a retained canonical condition. The remainder sit on conditions the condition-validity review classified as diagnostic or deprecated and therefore support no framework claim.
 		</div>
 		<div class="shrink-0">
 			<FilterInput
@@ -141,12 +141,12 @@
 	<DataTable items={filteredFindings} {columns} {sortKey} {sortDirection} onSort={toggleSort}>
 		{#snippet cell(item, col)}
 			{#if col.key === 'id'}
-				<a href="{base}/papers/{item.corpus_id}/preview/1?cf={item.cf_id || item.contribution_id}" class="inline-block hover:opacity-80 transition-opacity">
+				<a href="{base}/findings/CF{item.cf_id || item.contribution_id}" class="inline-block hover:opacity-80 transition-opacity">
 					<RecordBadge id={`CF${item.cf_id || item.contribution_id}`} variant="finding" />
 				</a>
 
 			{:else if col.key === 'raw_condition_label'}
-				<a href="{base}/papers/{item.corpus_id}/preview/1?cf={item.cf_id || item.contribution_id}" class="block font-semibold text-blue-600 hover:underline dark:text-blue-400 text-[15px] leading-snug break-words whitespace-normal" title={item.raw_condition_label}>
+				<a href="{base}/findings/CF{item.cf_id || item.contribution_id}" class="block font-semibold text-blue-600 hover:underline dark:text-blue-400 text-[15px] leading-snug break-words whitespace-normal" title={item.raw_condition_label}>
 					{item.raw_condition_label}
 				</a>
 				{#if item.cf_reconciliation_status === 'reconciled'}

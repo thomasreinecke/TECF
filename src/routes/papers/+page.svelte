@@ -154,7 +154,7 @@
 	>
 		{#snippet cell(item, col)}
 			{#if col.key === 'id'}
-				<a href="{base}/papers/{item.id}/overview" class="inline-block hover:opacity-80 transition-opacity">
+				<a href="{base}/papers/{item.id}" class="inline-block hover:opacity-80 transition-opacity">
 					<RecordBadge id={`P${item.id}`} variant="paper" />
 				</a>
 
@@ -165,7 +165,7 @@
 
 			{:else if col.key === 'title'}
 				<a
-					href="{base}/papers/{item.id}/overview"
+					href="{base}/papers/{item.id}"
 					class="font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 hover:underline underline-offset-2 break-words text-[15px] leading-snug"
 					title={item.title}
 				>
