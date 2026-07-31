@@ -4,6 +4,7 @@
 		canonicalConditions,
 		conditionDomains,
 		conditionFindings,
+		framework,
 		metadata,
 	} from "$lib/dataStore.js";
 	import { roleLabel } from "$lib/roles.js";
@@ -14,9 +15,10 @@
 		Layers,
 		Library,
 		ShieldCheck,
-		HelpCircle,
 		CheckCircle2,
 		AlertCircle,
+		Scale,
+		ShieldAlert,
 	} from "lucide-svelte";
 
 	let expanded = $state(new Set());
@@ -33,45 +35,6 @@
 		CD9: "#607D8B",
 	};
 
-	const FUNCTIONS = [
-		{
-			name: "Coherent",
-			codes: ["CD1"],
-			question:
-				"Does transformation retain an explicit purpose, value logic, and continuous connection to execution?",
-		},
-		{
-			name: "Governable",
-			codes: ["CD2"],
-			question:
-				"Are authority, ownership, priorities, incentives, and trade-off mechanisms explicit?",
-		},
-		{
-			name: "Grounded",
-			codes: ["CD3", "CD4"],
-			question:
-				"Are decisions grounded in visible dependencies, usable architecture, reliable data, and feasible platforms?",
-		},
-		{
-			name: "Executable and Adaptable",
-			codes: ["CD5", "CD6", "CD7"],
-			question:
-				"Can the organization mobilize people, sense and seize opportunities, transform, learn, and reconfigure?",
-		},
-		{
-			name: "Correctable",
-			codes: ["CD8"],
-			question:
-				"Can the state of the enabling system be assessed credibly and converted into action and reassessment?",
-		},
-		{
-			name: "Calibrated to Context",
-			codes: ["CD9"],
-			question:
-				"How do enterprise scale and sectoral, regional, regulatory, and institutional conditions change what is feasible?",
-		},
-	];
-
 	const ROLE_STYLE = {
 		core: "border-blue-200 bg-blue-50 text-blue-700 dark:border-blue-900/60 dark:bg-blue-950/30 dark:text-blue-300",
 		supporting:
@@ -81,13 +44,6 @@
 		contingency:
 			"border-amber-200 bg-amber-50 text-amber-700 dark:border-amber-900/60 dark:bg-amber-950/30 dark:text-amber-300",
 	};
-
-	function carriedBy(codes) {
-		return codes.map((code) => {
-			const dom = domains.find((d) => d.code === code);
-			return { code, label: dom?.label ?? code };
-		});
-	}
 
 	function toggleCondition(code) {
 		const next = new Set(expanded);
@@ -196,6 +152,30 @@
 		})(),
 	);
 
+	/** @param {any} entry */
+	function withRelatedCodes(entry) {
+		return {
+			...entry,
+			relatedCodes: String(entry.related_cluster_codes || "")
+				.split(",")
+				.map((code) => code.trim())
+				.filter(Boolean),
+		};
+	}
+
+	/** @type {any[]} */
+	let registerEntries = $derived($framework?.registers || []);
+	let tensions = $derived(
+		registerEntries
+			.filter((entry) => entry.register_type === "tension")
+			.map(withRelatedCodes),
+	);
+	let antipatterns = $derived(
+		registerEntries
+			.filter((entry) => entry.register_type === "antipattern")
+			.map(withRelatedCodes),
+	);
+
 	let ready = $derived(
 		($canonicalConditions || []).length > 0 ||
 			($conditionDomains || []).length > 0,
@@ -288,108 +268,6 @@
 					evidence-traceable framework for architecture-led,
 					technology-driven enterprise transformation.
 				</p>
-			</section>
-
-			<!-- Enabling Functions Section (Redesigned as Consumable Function Cards) -->
-			<section class="space-y-6">
-				<div class="space-y-2">
-					<h2
-						class="text-3xl font-extrabold text-slate-900 dark:text-white flex items-center gap-2"
-					>
-						<span>One System, Five Functions</span>
-					</h2>
-					<p
-						class="max-w-4xl text-lg leading-relaxed text-slate-600 dark:text-slate-400"
-					>
-						The nine domains form the taxonomy. The six enabling
-						functions below represent a reader-facing synthesis of
-						author-confirmed domain meanings, bridging the framework
-						knowledge base to practical operationalization.
-					</p>
-				</div>
-
-				<!-- Consumable Grid of Function Cards -->
-				<div
-					class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"
-				>
-					{#each FUNCTIONS as item}
-						<div
-							class="rounded-2xl border border-slate-200 bg-white p-6 shadow-xs dark:border-slate-800 dark:bg-slate-900 flex flex-col justify-between space-y-4 hover:border-slate-300 dark:hover:border-slate-700 transition-all"
-						>
-							<div class="space-y-3">
-								<div
-									class="flex flex-wrap items-center justify-between gap-2"
-								>
-									<h3
-										class="text-2xl font-extrabold text-slate-900 dark:text-white"
-									>
-										{item.name}
-									</h3>
-								</div>
-
-								<!-- Carried By Domain Pills -->
-								<div class="flex flex-wrap gap-2 pt-1.5">
-									{#each carriedBy(item.codes) as dom}
-										<a
-											href="{base}/domains"
-											class="inline-flex items-center gap-2 rounded-lg px-3.5 py-2 text-base font-semibold text-white transition-opacity hover:opacity-90 shadow-sm"
-											style={`background:${DOMAIN_ACCENT[dom.code] || "#3b82f6"}`}
-										>
-											<span class="font-mono font-bold"
-												>{dom.code}</span
-											>
-											<span class="opacity-90"
-												>· {dom.label}</span
-											>
-										</a>
-									{/each}
-								</div>
-							</div>
-
-							<!-- Practical Question -->
-							<div
-								class="rounded-xl border border-slate-100 bg-slate-50/80 p-3.5 dark:border-slate-800/80 dark:bg-slate-950/40"
-							>
-								<div
-									class="text-sm font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1.5 flex items-center gap-1.5"
-								>
-									<HelpCircle class="w-4 h-4 text-blue-500" />
-									Practical Question
-								</div>
-								<p
-									class="text-base leading-relaxed text-slate-700 dark:text-slate-300 italic"
-								>
-									"{item.question}"
-								</p>
-							</div>
-						</div>
-					{/each}
-				</div>
-
-				<div
-					class="rounded-xl border border-slate-200 bg-slate-100/70 p-4.5 text-center dark:border-slate-800 dark:bg-slate-900/50"
-				>
-					<p
-						class="text-lg font-bold text-slate-900 dark:text-white leading-relaxed"
-					>
-						💡 Are the conditions present for transformation to
-						remain <span class="text-blue-600 dark:text-blue-400"
-							>coherent</span
-						>,
-						<span class="text-blue-600 dark:text-blue-400"
-							>governable</span
-						>,
-						<span class="text-blue-600 dark:text-blue-400"
-							>grounded</span
-						>,
-						<span class="text-blue-600 dark:text-blue-400"
-							>executable and adaptable</span
-						>, and
-						<span class="text-blue-600 dark:text-blue-400"
-							>correctable</span
-						> in this context?
-					</p>
-				</div>
 			</section>
 
 			<!-- Nine Condition Domains Grid Section -->
@@ -574,6 +452,100 @@
 							</article>
 						</div>
 					{/each}
+				</div>
+			</section>
+
+			<!-- Design Tensions & Anti-Patterns Section -->
+			<section class="space-y-6 pt-4">
+				<div>
+					<h2
+						class="text-3xl font-extrabold text-slate-900 dark:text-white"
+					>
+						Design Tensions &amp; Anti-Patterns
+					</h2>
+					<p
+						class="mt-1.5 max-w-4xl text-lg leading-relaxed text-slate-600 dark:text-slate-400"
+					>
+						Author-confirmed boundary material, not additional framework
+						constructs. Tensions record pairs of evidence-backed but
+						competing prescriptions that require a context-specific
+						design choice, not a universal answer. Anti-patterns record
+						recurring failure modes the evidence documents when a
+						condition is ignored or misapplied.
+					</p>
+				</div>
+
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+					<div
+						class="rounded-2xl border border-slate-200 bg-white p-6 shadow-xs dark:border-slate-800 dark:bg-slate-900"
+					>
+						<h3
+							class="flex items-center gap-2 text-xl font-bold text-slate-900 dark:text-white"
+						>
+							<Scale class="w-5 h-5 text-amber-500" /> Tensions ({tensions.length})
+						</h3>
+						<div class="mt-4 space-y-3">
+							{#each tensions as entry (entry.id)}
+								<div
+									class="rounded-xl border border-slate-100 bg-slate-50/60 p-4 dark:border-slate-800 dark:bg-slate-950/30"
+								>
+									<div class="font-bold text-slate-900 dark:text-white">
+										{entry.entry_code} — {entry.title}
+									</div>
+									<p
+										class="mt-1.5 text-base leading-relaxed text-slate-600 dark:text-slate-300"
+									>
+										{entry.body}
+									</p>
+									<div class="mt-2.5 flex flex-wrap gap-1.5">
+										{#each entry.relatedCodes as code}
+											<a
+												href={`${base}/conditions/${code}`}
+												class="rounded-md border border-slate-200 bg-white px-2 py-0.5 font-mono text-xs font-semibold text-slate-600 hover:border-blue-300 hover:text-blue-600 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"
+											>
+												{code}
+											</a>
+										{/each}
+									</div>
+								</div>
+							{/each}
+						</div>
+					</div>
+					<div
+						class="rounded-2xl border border-slate-200 bg-white p-6 shadow-xs dark:border-slate-800 dark:bg-slate-900"
+					>
+						<h3
+							class="flex items-center gap-2 text-xl font-bold text-slate-900 dark:text-white"
+						>
+							<ShieldAlert class="w-5 h-5 text-rose-500" /> Anti-Patterns ({antipatterns.length})
+						</h3>
+						<div class="mt-4 space-y-3">
+							{#each antipatterns as entry (entry.id)}
+								<div
+									class="rounded-xl border border-slate-100 bg-slate-50/60 p-4 dark:border-slate-800 dark:bg-slate-950/30"
+								>
+									<div class="font-bold text-slate-900 dark:text-white">
+										{entry.entry_code} — {entry.title}
+									</div>
+									<p
+										class="mt-1.5 text-base leading-relaxed text-slate-600 dark:text-slate-300"
+									>
+										{entry.body}
+									</p>
+									<div class="mt-2.5 flex flex-wrap gap-1.5">
+										{#each entry.relatedCodes as code}
+											<a
+												href={`${base}/conditions/${code}`}
+												class="rounded-md border border-slate-200 bg-white px-2 py-0.5 font-mono text-xs font-semibold text-slate-600 hover:border-blue-300 hover:text-blue-600 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300"
+											>
+												{code}
+											</a>
+										{/each}
+									</div>
+								</div>
+							{/each}
+						</div>
+					</div>
 				</div>
 			</section>
 
