@@ -11,9 +11,9 @@ export function load({ params, url }) {
 	// only ever runs in the browser; the guard keeps it safe if SSR is turned on.
 	const query = building ? '' : url.search;
 	if (query.includes('cf=')) {
-		redirect(308, `/papers/${params.id}/preview/1${query}`);
+		throw redirect(308, `/papers/${params.id}/preview/1${query}`);
 	}
-	redirect(308, `/papers/${params.id}/overview${query}`);
+	throw redirect(308, `/papers/${params.id}/overview${query}`);
 }
 
 /** @type {import('./$types').EntryGenerator} */

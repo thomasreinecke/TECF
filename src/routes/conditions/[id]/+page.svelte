@@ -48,6 +48,8 @@
 		return 'border-amber-200 bg-amber-50 text-amber-800 dark:border-amber-900/50 dark:bg-amber-950/30 dark:text-amber-300';
 	}
 
+	let showCitations = $state(true);
+
 	// ---- Findings Table State & Filtering ----
 	let findingsFilter = $state('');
 	let findingsSortKey = $state('id');
@@ -121,12 +123,12 @@
 		<!-- Header Panel -->
 		<div class="rounded-xl border border-gray-200 bg-white p-5 dark:border-gray-800 dark:bg-gray-900 shadow-xs">
 			<div class="flex flex-wrap items-start justify-between gap-4">
-				<div>
+				<div class="flex-1 min-w-0">
 					<h1 class="text-2xl font-bold text-gray-900 dark:text-white flex flex-wrap items-center gap-3">
 						<RecordBadge id={condition.code} variant="condition" class="text-sm px-2.5 py-1" />
 						<span>{condition.label}</span>
 					</h1>
-					<p class="mt-1 max-w-3xl text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+					<p class="mt-1 w-full text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
 						{condition.definition || 'No explicit definition recorded.'}
 					</p>
 				</div>
@@ -137,19 +139,6 @@
 				</div>
 			</div>
 		</div>
-
-		<!-- Positively-Worded Enabling Statement Callout Box (if present) -->
-		{#if condition.enabling_statement}
-			<div class="rounded-2xl border border-emerald-200/80 bg-emerald-50/40 p-5 shadow-xs dark:border-emerald-900/40 dark:bg-emerald-950/20 space-y-1.5">
-				<div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-800 dark:text-emerald-300">
-					<Sparkles class="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-					Positively-Worded Enabling Statement (Framework Construct)
-				</div>
-				<p class="text-base sm:text-lg leading-relaxed text-slate-900 dark:text-slate-100 font-normal">
-					{condition.enabling_statement}
-				</p>
-			</div>
-		{/if}
 
 		<!-- Key Review Metrics Grid -->
 		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -184,8 +173,56 @@
 				</div>
 				<div class="text-xs text-slate-500 dark:text-slate-400">Ground-truth Extractions</div>
 			</div>
-
 		</div>
+
+		<!-- Narrative Section (if present) -->
+		{#if condition.narrative && condition.narrative.sentences && condition.narrative.sentences.length > 0}
+			<div class="rounded-2xl border border-indigo-200/80 bg-indigo-50/60 p-6 shadow-sm dark:border-indigo-900/40 dark:bg-indigo-950/30">
+				<div class="mb-4 flex flex-wrap items-center justify-between gap-3">
+					<div class="text-xs font-bold uppercase tracking-wider text-indigo-900 dark:text-indigo-300">
+						Narrative
+					</div>
+					<button
+						type="button"
+						onclick={() => (showCitations = !showCitations)}
+						class="rounded-lg border border-indigo-200/80 bg-white/80 px-2.5 py-1 text-xs font-semibold text-indigo-800 transition-colors hover:bg-white dark:border-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200 dark:hover:bg-indigo-900/60"
+					>
+						{showCitations ? 'Hide citations' : 'Show citations'}
+					</button>
+				</div>
+
+				<!-- Punctuation and spacing go through expressions: Svelte trims literal
+				     whitespace around tags, which would glue citations onto the sentence. -->
+				<p class="text-base sm:text-[17px] leading-8 text-slate-900 dark:text-slate-100">
+					{#each condition.narrative.sentences as sentence, index}{index > 0 ? ' ' : ''}{showCitations && sentence.cites.length > 0
+							? sentence.text.replace(/\.$/, '')
+							: sentence.text}{#if showCitations && sentence.cites.length > 0}<span
+								class="text-indigo-900/60 dark:text-indigo-300/60">{' ('}</span
+							>{#each sentence.cites as cite, position}<span class="text-indigo-900/60 dark:text-indigo-300/60"
+									>{position > 0 ? '; ' : ''}</span
+								><a
+									href="{base}/papers/{cite.corpus_id}"
+									class="text-blue-600 hover:underline dark:text-blue-400 font-semibold">{cite.label}</a
+								>{/each}<span class="text-indigo-900/60 dark:text-indigo-300/60">{').'}</span>{/if}{/each}
+				</p>
+				<p class="mt-4 text-xs italic text-indigo-900/70 dark:text-indigo-300/70 leading-relaxed">
+					Synthesized from this construct's Condition Findings below — adds no evidence beyond them and asserts no causal relations.
+				</p>
+			</div>
+		{/if}
+
+		<!-- Positively-Worded Enabling Statement Callout Box (if present) -->
+		{#if condition.enabling_statement}
+			<div class="rounded-2xl border border-emerald-200/80 bg-emerald-50/40 p-5 shadow-xs dark:border-emerald-900/40 dark:bg-emerald-950/20 space-y-1.5">
+				<div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-800 dark:text-emerald-300">
+					<Sparkles class="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+					Positively-Worded Enabling Statement (Framework Construct)
+				</div>
+				<p class="text-base sm:text-lg leading-relaxed text-slate-900 dark:text-slate-100 font-normal">
+					{condition.enabling_statement}
+				</p>
+			</div>
+		{/if}
 
 		<hr class="border-slate-200 dark:border-slate-800 my-6" />
 
