@@ -258,16 +258,31 @@
 </svelte:head>
 
 {#if paper}
-	<div class="max-w-screen-2xl mx-auto px-4 w-full space-y-6 pb-12 pt-2">
-		<!-- Plain Header Area (matches /findings and /conditions model) -->
-		<div class="space-y-2 border-b border-slate-200/80 dark:border-slate-800 pb-6">
-			<h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
-				{paper.title}
-			</h1>
-			<p class="text-base text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
-				Published in <span class="font-semibold text-slate-900 dark:text-white">{paper.journal || 'Journal / Source'}</span>
-				<span class="text-slate-500 dark:text-slate-400">| {paper.authors}{#if paper.year} ({paper.year}){/if}</span>
-			</p>
+	<div class="space-y-6 pb-12 pt-2">
+		<!-- Plain Header Area (matches /findings/<id> layout: flex row with action button right) -->
+		<div class="flex flex-wrap items-start justify-between gap-4 pt-0.5 pb-6 border-b border-slate-200/80 dark:border-slate-800">
+			<div class="min-w-0 flex-1 space-y-1.5">
+				<h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
+					{paper.title}
+				</h1>
+				<p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
+					Published in <span class="font-semibold text-slate-900 dark:text-white">{paper.journal || 'Journal / Source'}</span>
+					<span class="text-slate-500 dark:text-slate-400">| {paper.authors}{#if paper.year} ({paper.year}){/if}</span>
+				</p>
+			</div>
+			{#if paper.doi}
+				<div class="shrink-0 pt-1">
+					<a
+						href="https://doi.org/{paper.doi}"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-blue-700 transition-colors"
+					>
+						<ExternalLink class="w-4 h-4" />
+						View on DOI
+					</a>
+				</div>
+			{/if}
 		</div>
 
 		<!-- 3-Column High-Impact Provenance & Bibliographic Cards -->
@@ -275,7 +290,7 @@
 			<!-- Card 1: Research Stream & Item Type -->
 			<div class="rounded-xl border border-slate-200 bg-white p-4 shadow-xs dark:border-slate-800 dark:bg-slate-900 space-y-2 flex flex-col justify-between">
 				<div>
-					<div class="text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+					<div class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
 						Research Stream & Type
 					</div>
 					<div class="flex flex-wrap items-center gap-2 mt-2">
@@ -289,7 +304,7 @@
 						</span>
 					</div>
 				</div>
-				<div class="text-xs text-slate-400 dark:text-slate-500 pt-1">
+				<div class="text-sm text-slate-400 dark:text-slate-500 pt-1">
 					Classified literature stream in systematic review
 				</div>
 			</div>
@@ -297,19 +312,19 @@
 			<!-- Card 2: Corpus Evidence (Condition Findings Count) -->
 			<div class="rounded-xl border border-slate-200 bg-white p-4 shadow-xs dark:border-slate-800 dark:bg-slate-900 space-y-2 flex flex-col justify-between">
 				<div>
-					<div class="text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+					<div class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
 						Corpus Evidence
 					</div>
 					<div class="flex items-center gap-2 mt-1.5">
 						<span class="inline-flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900/50 border border-blue-200 dark:border-blue-800 px-2.5 py-0.5 text-xs font-bold text-blue-700 dark:text-blue-300 font-mono">
 							{paperFindings.length}
 						</span>
-						<span class="text-sm font-bold text-slate-900 dark:text-white">
+						<span class="text-base font-bold text-slate-900 dark:text-white">
 							Condition Findings Extracted
 						</span>
 					</div>
 				</div>
-				<div class="text-xs text-slate-400 dark:text-slate-500 pt-1">
+				<div class="text-sm text-slate-400 dark:text-slate-500 pt-1">
 					Source-traceable findings mapped to TECF
 				</div>
 			</div>
@@ -317,10 +332,10 @@
 			<!-- Card 3: Bibliographic Metrics & DOI -->
 			<div class="rounded-xl border border-slate-200 bg-white p-4 shadow-xs dark:border-slate-800 dark:bg-slate-900 space-y-2 flex flex-col justify-between">
 				<div>
-					<div class="text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+					<div class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
 						Bibliographic Metrics
 					</div>
-					<div class="text-xs text-slate-700 dark:text-slate-300 mt-1.5 space-y-1 font-medium">
+					<div class="text-sm text-slate-700 dark:text-slate-300 mt-1.5 space-y-1 font-medium">
 						<div>Words: <span class="font-mono font-semibold text-slate-900 dark:text-white">{paper.words ? paper.words.toLocaleString() : '—'}</span> · Pages: <span class="font-mono font-semibold text-slate-900 dark:text-white">{paper.pages ?? '—'}</span></div>
 						<div>References: <span class="font-mono font-semibold text-slate-900 dark:text-white">{paper.refs ?? '—'}</span></div>
 					</div>
@@ -344,10 +359,10 @@
 		<!-- Abstract Card (Dedicated elevated presentation) -->
 		{#if paper.abstract}
 			<div class="rounded-xl border border-slate-200 bg-white p-6 shadow-xs dark:border-slate-800 dark:bg-slate-900 space-y-2">
-				<div class="text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+				<div class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
 					Abstract
 				</div>
-				<p class="text-sm sm:text-base text-slate-800 dark:text-slate-200 leading-relaxed font-normal whitespace-pre-wrap">
+				<p class="text-base sm:text-lg text-slate-800 dark:text-slate-200 leading-relaxed font-normal whitespace-pre-wrap">
 					{paper.abstract}
 				</p>
 			</div>
@@ -543,7 +558,7 @@
 		</div>
 	</div>
 {:else}
-	<div class="max-w-screen-2xl mx-auto px-4 py-16 text-center space-y-4">
+	<div class="py-16 text-center space-y-4">
 		<h1 class="text-2xl font-bold text-slate-900 dark:text-white">Publication Not Found</h1>
 		<p class="text-sm text-slate-500 dark:text-slate-400">
 			The publication record P{paperId} could not be located in the TECF literature corpus.

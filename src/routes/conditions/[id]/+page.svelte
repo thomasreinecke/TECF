@@ -124,11 +124,11 @@
 		<div class="rounded-xl border border-gray-200 bg-white p-5 dark:border-gray-800 dark:bg-gray-900 shadow-xs">
 			<div class="flex flex-wrap items-start justify-between gap-4">
 				<div class="flex-1 min-w-0">
-					<h1 class="text-2xl font-bold text-gray-900 dark:text-white flex flex-wrap items-center gap-3">
+					<h1 class="text-3xl font-extrabold text-gray-900 dark:text-white flex flex-wrap items-center gap-3">
 						<RecordBadge id={condition.code} variant="condition" class="text-sm px-2.5 py-1" />
 						<span>{condition.label}</span>
 					</h1>
-					<p class="mt-1 w-full text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+					<p class="mt-1.5 w-full text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
 						{condition.definition || 'No explicit definition recorded.'}
 					</p>
 				</div>
@@ -143,35 +143,35 @@
 		<!-- Key Review Metrics Grid -->
 		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 			<div class="rounded-xl border border-slate-200 bg-white p-4 shadow-xs dark:border-slate-800 dark:bg-slate-900 space-y-1">
-				<div class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Condition Domain</div>
+				<div class="text-xs font-mono font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Condition Domain</div>
 				{#if domain}
 					<a
 						href="{base}/domains"
-						class="text-lg font-bold text-blue-600 hover:underline dark:text-blue-400 block leading-snug"
+						class="text-xl font-bold text-blue-600 hover:underline dark:text-blue-400 block leading-snug"
 						title="View domain in Domains list"
 					>
 						{domain.code} {domain.label}
 					</a>
 				{:else}
-					<div class="text-lg font-bold text-slate-900 dark:text-white leading-snug">Domain Unassigned</div>
+					<div class="text-xl font-bold text-slate-900 dark:text-white leading-snug">Domain Unassigned</div>
 				{/if}
-				<div class="text-xs text-slate-500 dark:text-slate-400">RQ1 Domain Scope</div>
+				<div class="text-sm text-slate-500 dark:text-slate-400">RQ1 Domain Scope</div>
 			</div>
 
 			<div class="rounded-xl border border-slate-200 bg-white p-4 shadow-xs dark:border-slate-800 dark:bg-slate-900 space-y-1">
-				<div class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Synthesis Role</div>
-				<div class="text-lg font-bold text-slate-900 dark:text-white capitalize leading-snug">
+				<div class="text-xs font-mono font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Synthesis Role</div>
+				<div class="text-xl font-bold text-slate-900 dark:text-white capitalize leading-snug">
 					{roleLabel(condition.framework_role) || 'core'} Condition
 				</div>
-				<div class="text-xs text-slate-500 dark:text-slate-400">Condition Role Tier</div>
+				<div class="text-sm text-slate-500 dark:text-slate-400">Condition Role Tier</div>
 			</div>
 
 			<div class="rounded-xl border border-slate-200 bg-white p-4 shadow-xs dark:border-slate-800 dark:bg-slate-900 space-y-1">
-				<div class="text-[11px] font-mono font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Evidence Base</div>
-				<div class="text-lg font-bold text-slate-900 dark:text-white leading-snug">
+				<div class="text-xs font-mono font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Evidence Base</div>
+				<div class="text-xl font-bold text-slate-900 dark:text-white leading-snug">
 					{findings.length} Findings / {papersCount} Papers
 				</div>
-				<div class="text-xs text-slate-500 dark:text-slate-400">Ground-truth Extractions</div>
+				<div class="text-sm text-slate-500 dark:text-slate-400">Ground-truth Extractions</div>
 			</div>
 		</div>
 

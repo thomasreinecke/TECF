@@ -213,16 +213,16 @@
 	<div class="rounded-xl border border-gray-200 bg-white p-5 dark:border-gray-800 dark:bg-gray-900 shadow-xs">
 		<div class="flex flex-wrap items-start justify-between gap-4">
 			<div>
-				<h2 class="text-2xl font-bold text-gray-900 dark:text-white">
-					Condition Domains
+				<h2 class="text-3xl font-extrabold text-gray-900 dark:text-white">
+					Domains
 				</h2>
-				<p class="mt-1 max-w-3xl text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
-					The evidence-facing canonical layer — confirmed canonical conditions grouped into strategic Condition Domains, with each condition's re-homed empirical findings.
+				<p class="mt-1.5 max-w-3xl text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+					The evidence-facing canonical layer — confirmed conditions grouped into strategic domains, with each condition's empirical findings.
 				</p>
 			</div>
 			<div class="flex flex-wrap gap-2 items-center">
 				<span class="rounded-lg border border-emerald-200 bg-emerald-50 px-3.5 py-2 text-sm font-bold text-emerald-800 dark:border-emerald-900/50 dark:bg-emerald-950/25 dark:text-emerald-200">
-					{domainsData.length} condition domains
+					{domainsData.length} domains
 				</span>
 			</div>
 		</div>
@@ -230,18 +230,18 @@
 
 	<!-- Controls Toolbar -->
 	<div class="flex flex-wrap items-center justify-between gap-4 pt-3">
-		<div class="inline-flex rounded-md shadow-xs shrink-0">
+		<div class="inline-flex rounded-md shadow-sm shrink-0">
 			<button
 				type="button"
 				onclick={expandAll}
-				class="rounded-l-md border border-gray-300 bg-white px-3 py-1.5 text-xs font-medium text-gray-700 hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:bg-gray-800"
+				class="rounded-l-md border border-r-0 border-gray-300 dark:border-gray-800 bg-white dark:bg-gray-900 px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors"
 			>
 				Expand All
 			</button>
 			<button
 				type="button"
 				onclick={collapseAll}
-				class="rounded-r-md border border-l-0 border-gray-300 bg-white px-3 py-1.5 text-xs font-medium text-gray-700 hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 dark:hover:bg-gray-800"
+				class="rounded-r-md border border-gray-300 dark:border-gray-800 bg-white dark:bg-gray-900 px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors"
 			>
 				Collapse All
 			</button>
@@ -251,7 +251,7 @@
 			bind:value={filterQuery}
 			totalCount={allConditions.length}
 			filteredCount={filteredConditionsCount}
-			placeholder="Search CD, CC, or CF..."
+			placeholder="Search..."
 			class="w-full sm:w-72"
 		/>
 	</div>
@@ -270,11 +270,11 @@
 				>
 					<span class="flex items-center gap-3">
 						<RecordBadge id={domain.domain_code} variant="domain" />
-						<span class="font-bold text-gray-900 dark:text-white text-sm">
+						<span class="font-bold text-gray-900 dark:text-white text-lg">
 							{domain.domain_label}
 						</span>
 					</span>
-					<span class="flex items-center gap-3 text-xs text-gray-500 dark:text-gray-400">
+					<span class="flex items-center gap-3 text-sm text-gray-500 dark:text-gray-400">
 						<span>{domain.papersCount} papers · {domain.findingsCount} findings · {domain.conditions.length} conditions</span>
 						<span class="font-bold text-base leading-none text-gray-400">{isDomExpanded ? '−' : '+'}</span>
 					</span>
@@ -295,9 +295,9 @@
 									<div class="min-w-0 flex-1">
 										<div class="flex flex-wrap items-center gap-2">
 											<a href="{base}/conditions/{condition.code}" onclick={(e) => e.stopPropagation()} class="hover:opacity-80 transition-opacity">
-												<RecordBadge id={`${domain.domain_code}-${condition.code}`} />
+												<RecordBadge id={condition.code} />
 											</a>
-											<a href="{base}/conditions/{condition.code}" onclick={(e) => e.stopPropagation()} class="font-bold text-gray-900 hover:text-blue-600 dark:text-white dark:hover:text-blue-400 text-base hover:underline">
+											<a href="{base}/conditions/{condition.code}" onclick={(e) => e.stopPropagation()} class="font-bold text-gray-900 hover:text-blue-600 dark:text-white dark:hover:text-blue-400 text-lg hover:underline">
 												{condition.label}
 											</a>
 											{#if condition.framework_role}
@@ -307,13 +307,13 @@
 											{/if}
 										</div>
 										{#if condition.definition}
-											<p class="mt-1.5 text-[14px] text-slate-600 dark:text-slate-300 leading-relaxed max-w-4xl">
+											<p class="mt-1.5 text-[15px] text-slate-600 dark:text-slate-300 leading-relaxed max-w-4xl">
 												{condition.definition}
 											</p>
 										{/if}
 									</div>
 
-									<div class="flex items-center gap-3 shrink-0 text-[13px] text-slate-600 dark:text-slate-300 pt-0.5">
+									<div class="flex items-center gap-3 shrink-0 text-sm text-slate-600 dark:text-slate-300 pt-0.5">
 										<span>{condition.paperCount} papers · {condition.findingCount} findings</span>
 										<span class="font-bold text-base leading-none text-slate-400">{isCondExpanded ? '−' : '+'}</span>
 									</div>
@@ -339,7 +339,7 @@
 										{:else}
 											<ul class="space-y-2">
 												{#each condition.findings as finding (finding.cf_id || finding.contribution_id)}
-													<li class="rounded-lg border border-gray-200 bg-white p-3 text-xs dark:border-gray-800 dark:bg-gray-900 shadow-2xs space-y-1.5">
+													<li class="rounded-lg border border-gray-200 bg-white p-3 text-sm dark:border-gray-800 dark:bg-gray-900 shadow-2xs space-y-1.5">
 														<div class="flex flex-wrap items-center justify-between gap-2">
 															<div class="flex flex-wrap items-center gap-2">
 																<RecordBadge id={`CF${finding.cf_id || finding.contribution_id}`} variant="finding" />
@@ -356,13 +356,13 @@
 															</div>
 															<a
 																href="{base}/papers/{finding.corpus_id}?cf={finding.cf_id || finding.contribution_id}"
-																class="font-medium text-blue-600 hover:underline dark:text-blue-400 text-xs flex items-center gap-1"
+																class="font-medium text-blue-600 hover:underline dark:text-blue-400 text-sm flex items-center gap-1"
 															>
 																{finding.paper_authors || finding.authors || 'Author'} ({finding.paper_year || finding.year}) · <RecordBadge id={`P${finding.corpus_id}`} variant="paper" />
 																<ExternalLink size={10} />
 															</a>
 														</div>
-														<p class="text-gray-800 dark:text-gray-200 font-medium leading-snug">
+														<p class="text-gray-800 dark:text-gray-200 font-medium leading-relaxed text-[15px]">
 															{finding.readiness_statement || finding.raw_condition_label}
 														</p>
 													</li>

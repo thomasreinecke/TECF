@@ -294,12 +294,12 @@
 			<section class="space-y-6">
 				<div class="space-y-2">
 					<h2
-						class="text-2xl font-extrabold text-slate-900 dark:text-white flex items-center gap-2"
+						class="text-3xl font-extrabold text-slate-900 dark:text-white flex items-center gap-2"
 					>
 						<span>One System, Five Functions</span>
 					</h2>
 					<p
-						class="max-w-4xl text-sm leading-relaxed text-slate-600 dark:text-slate-400"
+						class="max-w-4xl text-lg leading-relaxed text-slate-600 dark:text-slate-400"
 					>
 						The nine domains form the taxonomy. The six enabling
 						functions below represent a reader-facing synthesis of
@@ -321,18 +321,18 @@
 									class="flex flex-wrap items-center justify-between gap-2"
 								>
 									<h3
-										class="text-lg font-extrabold text-slate-900 dark:text-white"
+										class="text-2xl font-extrabold text-slate-900 dark:text-white"
 									>
 										{item.name}
 									</h3>
 								</div>
 
 								<!-- Carried By Domain Pills -->
-								<div class="flex flex-wrap gap-1.5 pt-1">
+								<div class="flex flex-wrap gap-2 pt-1.5">
 									{#each carriedBy(item.codes) as dom}
 										<a
 											href="{base}/domains"
-											class="inline-flex items-center gap-1 rounded-md px-2.5 py-1 text-xs font-semibold text-white transition-opacity hover:opacity-90 shadow-xs"
+											class="inline-flex items-center gap-2 rounded-lg px-3.5 py-2 text-base font-semibold text-white transition-opacity hover:opacity-90 shadow-sm"
 											style={`background:${DOMAIN_ACCENT[dom.code] || "#3b82f6"}`}
 										>
 											<span class="font-mono font-bold"
@@ -351,13 +351,13 @@
 								class="rounded-xl border border-slate-100 bg-slate-50/80 p-3.5 dark:border-slate-800/80 dark:bg-slate-950/40"
 							>
 								<div
-									class="text-[10px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-1 flex items-center gap-1"
+									class="text-sm font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-1.5 flex items-center gap-1.5"
 								>
-									<HelpCircle class="w-3 h-3 text-blue-500" />
+									<HelpCircle class="w-4 h-4 text-blue-500" />
 									Practical Question
 								</div>
 								<p
-									class="text-xs leading-relaxed text-slate-700 dark:text-slate-300 italic"
+									class="text-base leading-relaxed text-slate-700 dark:text-slate-300 italic"
 								>
 									"{item.question}"
 								</p>
@@ -367,10 +367,10 @@
 				</div>
 
 				<div
-					class="rounded-xl border border-slate-200 bg-slate-100/70 p-4 text-center dark:border-slate-800 dark:bg-slate-900/50"
+					class="rounded-xl border border-slate-200 bg-slate-100/70 p-4.5 text-center dark:border-slate-800 dark:bg-slate-900/50"
 				>
 					<p
-						class="text-sm font-bold text-slate-800 dark:text-slate-200"
+						class="text-lg font-bold text-slate-900 dark:text-white leading-relaxed"
 					>
 						💡 Are the conditions present for transformation to
 						remain <span class="text-blue-600 dark:text-blue-400"
@@ -399,34 +399,34 @@
 				>
 					<div>
 						<h2
-							class="text-2xl font-extrabold text-slate-900 dark:text-white"
+							class="text-3xl font-extrabold text-slate-900 dark:text-white"
 						>
 							Nine Condition Domains
 						</h2>
 						<p
-							class="mt-1 text-sm text-slate-500 dark:text-slate-400"
+							class="mt-1.5 text-lg text-slate-600 dark:text-slate-400"
 						>
 							Eight internal domains describe what an enterprise
 							can build or enact; CD9 calibrates application.
 						</p>
 					</div>
 					<div
-						class="flex flex-wrap items-center gap-2 text-xs font-semibold"
+						class="flex flex-wrap items-center gap-2.5 text-sm font-semibold"
 					>
 						<span
-							class="rounded-md border border-blue-200 bg-blue-50 px-2 py-1 text-blue-700 dark:border-blue-900/60 dark:bg-blue-950/40 dark:text-blue-300"
+							class="rounded-md border border-blue-200 bg-blue-50 px-2.5 py-1 text-blue-700 dark:border-blue-900/60 dark:bg-blue-950/40 dark:text-blue-300"
 							>{stats.core} Core</span
 						>
 						<span
-							class="rounded-md border border-slate-200 bg-slate-50 px-2 py-1 text-slate-600 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300"
+							class="rounded-md border border-slate-200 bg-slate-50 px-2.5 py-1 text-slate-600 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300"
 							>{stats.supporting} Supporting</span
 						>
 						<span
-							class="rounded-md border border-emerald-200 bg-emerald-50 px-2 py-1 text-emerald-700 dark:border-emerald-900/60 dark:bg-emerald-950/40 dark:text-emerald-300"
+							class="rounded-md border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-emerald-700 dark:border-emerald-900/60 dark:bg-emerald-950/40 dark:text-emerald-300"
 							>{stats.operationalizing} Operationalizing</span
 						>
 						<span
-							class="rounded-md border border-amber-200 bg-amber-50 px-2 py-1 text-amber-700 dark:border-amber-900/60 dark:bg-amber-950/40 dark:text-amber-300"
+							class="rounded-md border border-amber-200 bg-amber-50 px-2.5 py-1 text-amber-700 dark:border-amber-900/60 dark:bg-amber-950/40 dark:text-amber-300"
 							>{stats.contingency} Contextual</span
 						>
 					</div>
@@ -452,13 +452,13 @@
 												class="flex flex-wrap items-center gap-2"
 											>
 												<span
-													class="rounded-lg px-2.5 py-1 text-xs font-mono font-bold text-white shadow-xs"
+													class="rounded-lg px-2.5 py-1 text-sm font-mono font-bold text-white shadow-xs"
 													style={`background:${DOMAIN_ACCENT[domain.code]}`}
 												>
 													{domain.code}
 												</span>
 												<h3
-													class="text-base font-bold text-slate-900 dark:text-white"
+													class="text-xl font-bold text-slate-900 dark:text-white"
 												>
 													{domain.label}
 												</h3>
@@ -471,7 +471,7 @@
 												{/if}
 											</div>
 											<p
-												class="mt-1.5 text-xs text-slate-600 dark:text-slate-400 leading-normal"
+												class="mt-2 text-base text-slate-600 dark:text-slate-400 leading-relaxed"
 											>
 												{domain.logic}
 											</p>
@@ -501,10 +501,10 @@
 											>
 												<a
 													href={`${base}/conditions/${condition.code}`}
-													class="flex min-w-0 flex-1 items-center gap-2.5 text-sm font-semibold text-slate-900 hover:text-blue-600 dark:text-white dark:hover:text-blue-400"
+													class="flex min-w-0 flex-1 items-center gap-2.5 text-base font-semibold text-slate-900 hover:text-blue-600 dark:text-white dark:hover:text-blue-400"
 												>
 													<span
-														class="shrink-0 rounded-md border border-slate-200 bg-slate-100 px-2 py-0.5 font-mono text-xs font-bold text-slate-700 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300"
+														class="shrink-0 rounded-md border border-slate-200 bg-slate-100 px-2 py-0.5 font-mono text-sm font-bold text-slate-700 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300"
 													>
 														{condition.code}
 													</span>
@@ -563,7 +563,7 @@
 
 											{#if expanded.has(condition.code)}
 												<div
-													class="border-t border-slate-100 px-5 py-3 text-xs leading-relaxed text-slate-700 dark:border-slate-800 dark:text-slate-300 bg-slate-50/50 dark:bg-slate-950/30"
+													class="border-t border-slate-100 px-5 py-3 text-[15px] leading-relaxed text-slate-700 dark:border-slate-800 dark:text-slate-300 bg-slate-50/50 dark:bg-slate-950/30"
 												>
 													{condition.definition}
 												</div>
@@ -585,10 +585,10 @@
 					class="flex items-center gap-2 text-slate-900 dark:text-white font-bold"
 				>
 					<AlertCircle class="w-4 h-4 text-amber-500" />
-					<h2 class="text-base">Framework Claim Boundary</h2>
+					<h2 class="text-xl font-bold">Framework Claim Boundary</h2>
 				</div>
 				<ul
-					class="list-disc space-y-1.5 pl-5 text-xs sm:text-sm leading-relaxed text-slate-600 dark:text-slate-400"
+					class="list-disc space-y-1.5 pl-5 text-base sm:text-lg leading-relaxed text-slate-700 dark:text-slate-300"
 				>
 					<li>
 						The domains are evidence-informed synthesis categories,

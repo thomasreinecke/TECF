@@ -142,14 +142,14 @@
 		<!-- Plain Record Header -->
 		<div class="flex flex-wrap items-start justify-between gap-4 pt-0.5 pb-2">
 			<div class="min-w-0 flex-1 space-y-1.5">
-				<h1 class="text-3xl font-bold text-slate-900 dark:text-white leading-snug">
+				<h1 class="text-3xl font-extrabold text-slate-900 dark:text-white leading-snug">
 					{finding.raw_condition_label}
 				</h1>
-				<p class="text-sm text-slate-500 dark:text-slate-400">
+				<p class="text-base text-slate-650 dark:text-slate-400">
 					Extracted from
 					<a
 						href="{base}/papers/{finding.corpus_id}"
-						class="font-medium text-blue-600 hover:underline dark:text-blue-400"
+						class="font-semibold text-blue-600 hover:underline dark:text-blue-400 text-base"
 					>
 						{finding.paper_title || finding.title}</a> | {finding.paper_authors || finding.authors} ({finding.paper_year || finding.year})
 				</p>
@@ -174,10 +174,10 @@
 				class="group rounded-xl border border-slate-200 bg-white p-4 shadow-xs transition-all hover:border-blue-500 hover:shadow-md dark:border-slate-800 dark:bg-slate-900 dark:hover:border-blue-500 space-y-2 flex flex-col justify-between"
 			>
 				<div>
-					<div class="text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 group-hover:text-blue-600 dark:group-hover:text-blue-400">
+					<div class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 group-hover:text-blue-600 dark:group-hover:text-blue-400">
 						Source Location
 					</div>
-					<div class="text-sm font-semibold text-slate-900 group-hover:text-blue-600 dark:text-white dark:group-hover:text-blue-400 leading-snug mt-1.5 line-clamp-2">
+					<div class="text-base font-semibold text-slate-900 group-hover:text-blue-600 dark:text-white dark:group-hover:text-blue-400 leading-snug mt-1.5 line-clamp-2">
 						{finding.page_or_section || 'Findings Section'}
 					</div>
 				</div>
@@ -192,12 +192,12 @@
 				class="group rounded-xl border border-slate-200 bg-white p-4 shadow-xs transition-all hover:border-blue-500 hover:shadow-md dark:border-slate-800 dark:bg-slate-900 dark:hover:border-blue-500 space-y-2 flex flex-col justify-between"
 			>
 				<div>
-					<div class="text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 group-hover:text-blue-600 dark:group-hover:text-blue-400">
+					<div class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 group-hover:text-blue-600 dark:group-hover:text-blue-400">
 						Canonical Condition
 					</div>
 					<div class="flex items-center gap-2 mt-1.5">
 						<RecordBadge id={finding.canonical_code || finding.cluster_code} variant="condition" class="text-xs px-2 py-0.5 shrink-0" />
-						<span class="text-sm font-bold text-slate-900 group-hover:text-blue-600 dark:text-white dark:group-hover:text-blue-400 leading-snug line-clamp-2">
+						<span class="text-base font-bold text-slate-900 group-hover:text-blue-600 dark:text-white dark:group-hover:text-blue-400 leading-snug line-clamp-2">
 							{finding.canonical_label || finding.cluster_label}
 						</span>
 					</div>
@@ -213,7 +213,7 @@
 				class="group rounded-xl border border-slate-200 bg-white p-4 shadow-xs transition-all hover:border-blue-500 hover:shadow-md dark:border-slate-800 dark:bg-slate-900 dark:hover:border-blue-500 space-y-2 flex flex-col justify-between"
 			>
 				<div>
-					<div class="text-[11px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 group-hover:text-blue-600 dark:group-hover:text-blue-400">
+					<div class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 group-hover:text-blue-600 dark:group-hover:text-blue-400">
 						Condition Domain
 					</div>
 					<div class="flex items-center gap-2 mt-1.5">
@@ -222,7 +222,7 @@
 								{parentCc.framework_axis}
 							</span>
 						{/if}
-						<span class="text-sm font-bold text-slate-900 group-hover:text-blue-600 dark:text-white dark:group-hover:text-blue-400 leading-snug line-clamp-2">
+						<span class="text-base font-bold text-slate-900 group-hover:text-blue-600 dark:text-white dark:group-hover:text-blue-400 leading-snug line-clamp-2">
 							{parentDomain ? parentDomain.label : (parentCc?.framework_axis || 'Condition Domain')}
 						</span>
 					</div>
@@ -236,10 +236,10 @@
 		<!-- Section: Classifications -->
 		<div class="space-y-4 pt-2">
 			<div>
-				<h3 class="text-xl font-bold text-slate-900 dark:text-white">
+				<h3 class="text-2xl font-extrabold text-slate-900 dark:text-white">
 					Classifications
 				</h3>
-				<p class="mt-0.5 text-xs text-slate-500 dark:text-slate-400">
+				<p class="mt-1 text-sm text-slate-500 dark:text-slate-400">
 					Synthesis readiness statement, underlying transformation mechanism, and operationalization guidelines.
 				</p>
 			</div>
@@ -249,10 +249,10 @@
 				<!-- Column 1: Readiness Statement (Pastel Sky/Blue) -->
 				<div class="rounded-xl border border-sky-200/80 bg-sky-50/70 p-4 shadow-xs dark:border-sky-900/50 dark:bg-sky-950/20 space-y-2 flex flex-col justify-between">
 					<div>
-						<div class="text-[11px] font-bold uppercase tracking-wider text-sky-800 dark:text-sky-300">
+						<div class="text-xs font-bold uppercase tracking-wider text-sky-800 dark:text-sky-300">
 							Readiness Statement
 						</div>
-						<p class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 leading-relaxed font-normal mt-1.5">
+						<p class="text-sm sm:text-base text-slate-800 dark:text-slate-200 leading-relaxed font-normal mt-1.5">
 							{finding.readiness_statement || 'No explicit readiness statement defined.'}
 						</p>
 					</div>
@@ -261,10 +261,10 @@
 				<!-- Column 2: Underlying Mechanism (Pastel Violet/Purple) -->
 				<div class="rounded-xl border border-violet-200/80 bg-violet-50/70 p-4 shadow-xs dark:border-violet-900/50 dark:bg-violet-950/20 space-y-2 flex flex-col justify-between">
 					<div>
-						<div class="text-[11px] font-bold uppercase tracking-wider text-violet-800 dark:text-violet-300">
+						<div class="text-xs font-bold uppercase tracking-wider text-violet-800 dark:text-violet-300">
 							Underlying Mechanism
 						</div>
-						<p class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 leading-relaxed font-normal mt-1.5">
+						<p class="text-sm sm:text-base text-slate-800 dark:text-slate-200 leading-relaxed font-normal mt-1.5">
 							{finding.mechanism || 'No underlying mechanism specified.'}
 						</p>
 					</div>
@@ -273,10 +273,10 @@
 				<!-- Column 3: Operationalization & Measurement Hint (Pastel Emerald/Teal) -->
 				<div class="rounded-xl border border-emerald-200/80 bg-emerald-50/70 p-4 shadow-xs dark:border-emerald-900/50 dark:bg-emerald-950/20 space-y-2 flex flex-col justify-between">
 					<div>
-						<div class="text-[11px] font-bold uppercase tracking-wider text-emerald-800 dark:text-emerald-300">
+						<div class="text-xs font-bold uppercase tracking-wider text-emerald-800 dark:text-emerald-300">
 							Operationalization & Measurement Hint
 						</div>
-						<p class="text-xs sm:text-sm text-slate-800 dark:text-slate-200 leading-relaxed font-normal mt-1.5">
+						<p class="text-sm sm:text-base text-slate-800 dark:text-slate-200 leading-relaxed font-normal mt-1.5">
 							{finding.operationalization_hint || 'No operationalization hint provided.'}
 						</p>
 					</div>

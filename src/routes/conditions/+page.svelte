@@ -11,6 +11,21 @@
 	let conditionsFilter = $state('');
 	let sortKey = $state('code');
 	let sortDirection = $state('asc');
+	let roleFilter = $state('all');
+
+	const roleOptions = [
+		{ id: 'all', label: 'All Roles' },
+		{ id: 'core', label: 'Core' },
+		{ id: 'supporting', label: 'Supporting' },
+		{ id: 'operationalizing', label: 'Operationalizing' },
+		{ id: 'contingency', label: 'Contextual' },
+	];
+
+	function activeBtn(active) {
+		return active
+			? 'bg-blue-600 text-white border-blue-600 z-10'
+			: 'bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800/50';
+	}
 
 	let allConditions = $derived($canonicalConditions || []);
 	let allFindings = $derived($conditionFindings || []);
@@ -23,9 +38,9 @@
 	const columns = [
 		{ key: 'code', title: 'ID', sortable: true, width: '7%' },
 		{ key: 'label', title: 'Condition', sortable: true, width: '25%', overflow: 'wrap' },
-		{ key: 'framework_role', title: 'Role', sortable: true, width: '9%' },
-		{ key: 'finding_count', title: 'Findings', sortable: true, width: '9%' },
-		{ key: 'definition', title: 'Definition', sortable: false, width: '50%', overflow: 'wrap' }
+		{ key: 'framework_role', title: 'Role', sortable: true, width: '14%' },
+		{ key: 'finding_count', title: 'Findings', sortable: true, width: '6%' },
+		{ key: 'definition', title: 'Definition', sortable: false, width: '48%', overflow: 'wrap' }
 	];
 
 	/** @param {string} role */
@@ -38,6 +53,7 @@
 	let filteredConditions = $derived((() => {
 		const query = conditionsFilter.trim().toLowerCase();
 		let rows = allConditions;
+		if (roleFilter !== 'all') rows = rows.filter((r) => r.framework_role === roleFilter);
 		if (query) {
 			rows = rows.filter((row) =>
 				[
@@ -79,10 +95,10 @@
 	<div class="rounded-xl border border-gray-200 bg-white p-5 dark:border-gray-800 dark:bg-gray-900 shadow-xs">
 		<div class="flex flex-wrap items-start justify-between gap-4">
 			<div>
-				<h2 class="text-2xl font-bold text-gray-900 dark:text-white">
-					Canonical Conditions
+				<h2 class="text-3xl font-extrabold text-gray-900 dark:text-white">
+					Conditions
 				</h2>
-				<p class="mt-1 max-w-3xl text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+				<p class="mt-1.5 max-w-3xl text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
 					Confirmed canonical conditions synthesized across the SLR corpus, detailing strategic domain assignments, roles, and finding evidence counts.
 				</p>
 			</div>
@@ -94,19 +110,35 @@
 		</div>
 	</div>
 
-	<!-- Controls & Search -->
-	<div class="flex flex-wrap items-center justify-between gap-4 pt-3">
-		<div class="max-w-3xl text-sm text-gray-500 dark:text-gray-400">
-			Showing all 60 author-confirmed canonical conditions.
+	<!-- Filters & Search -->
+	<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 pt-3">
+		<div class="flex items-center gap-3 flex-wrap">
+			<div class="inline-flex rounded-md shadow-sm">
+				{#each roleOptions as opt, i}
+					<button
+						type="button"
+						onclick={() => roleFilter = opt.id}
+						class="px-3 py-2 text-sm font-medium border transition-colors
+							{i === 0 ? 'rounded-l-md' : ''}
+							{i === roleOptions.length - 1 ? 'rounded-r-md border-r' : 'border-r-0'}
+							border-gray-300 dark:border-gray-800
+							{activeBtn(roleFilter === opt.id)}"
+					>
+						{opt.label}
+					</button>
+				{/each}
+			</div>
 		</div>
-		<div class="shrink-0">
-			<FilterInput
-				bind:value={conditionsFilter}
-				totalCount={allConditions.length}
-				filteredCount={filteredConditions.length}
-				placeholder="Search conditions..."
-				class="w-72"
-			/>
+		<div class="flex items-center gap-3 w-full sm:w-auto justify-end">
+			<div class="relative shrink-0">
+				<FilterInput
+					bind:value={conditionsFilter}
+					totalCount={allConditions.length}
+					filteredCount={filteredConditions.length}
+					placeholder="Search..."
+					class="w-72"
+				/>
+			</div>
 		</div>
 	</div>
 
@@ -119,7 +151,7 @@
 				</a>
 
 			{:else if col.key === 'label'}
-				<a href="{base}/conditions/{item.code}" class="block font-semibold text-blue-600 hover:underline dark:text-blue-400 text-[15px] leading-snug break-words whitespace-normal" title="Inspect condition detail for {item.code}">
+				<a href="{base}/conditions/{item.code}" class="block font-semibold text-blue-600 hover:underline dark:text-blue-400 text-base leading-snug break-words whitespace-normal" title="Inspect condition detail for {item.code}">
 					{item.label}
 				</a>
 
@@ -136,7 +168,7 @@
 				</a>
 
 			{:else if col.key === 'definition'}
-				<span class="text-[14px] text-slate-600 dark:text-slate-300 leading-relaxed block break-words whitespace-normal">{item.definition || '—'}</span>
+				<span class="text-[15px] text-slate-600 dark:text-slate-300 leading-relaxed block break-words whitespace-normal">{item.definition || '—'}</span>
 
 			{:else}
 				{item[col.key] ?? '—'}

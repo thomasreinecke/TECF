@@ -27,7 +27,7 @@
 	];
 
 	let typeFilters = $derived([
-		{ id: 'all', label: 'All' },
+		{ id: 'all', label: 'All Types' },
 		...[...new Set((papers || []).map((item) => item.typeLabel || item.item_type).filter(Boolean))]
 			.sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }))
 			.map((type) => ({ id: type, label: type }))
@@ -97,11 +97,11 @@
 	<div class="rounded-xl border border-gray-200 bg-white p-5 dark:border-gray-800 dark:bg-gray-900 shadow-xs">
 		<div class="flex flex-wrap items-start justify-between gap-4">
 			<div>
-				<h2 class="text-2xl font-bold text-gray-900 dark:text-white">
+				<h2 class="text-3xl font-extrabold text-gray-900 dark:text-white">
 					Confirmed Included SLR Papers
 				</h2>
-				<p class="mt-1 max-w-3xl text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
-					Confirmed SLR literature review papers with citation and reference metrics, page and word length statistics, and item type filters.
+				<p class="mt-1.5 max-w-3xl text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+					Confirmed Systematic Literature Review papers with citation and reference metrics, page and word length statistics, and item type filters.
 				</p>
 			</div>
 			<div class="flex flex-wrap gap-2 items-center">
@@ -137,7 +137,7 @@
 					bind:value={searchInput}
 					totalCount={papers.length}
 					filteredCount={filteredItems.length}
-					placeholder="Search included papers..."
+					placeholder="Search..."
 					class="w-72"
 				/>
 			</div>
@@ -166,19 +166,19 @@
 			{:else if col.key === 'title'}
 				<a
 					href="{base}/papers/{item.id}"
-					class="font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 hover:underline underline-offset-2 break-words text-[15px] leading-snug"
+					class="font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 hover:underline underline-offset-2 break-words text-base leading-snug"
 					title={item.title}
 				>
 					{item.title}
 				</a>
 
 			{:else if col.key === 'authors'}
-				<div class="text-slate-600 dark:text-slate-300 line-clamp-2 text-sm leading-snug" title={item.authors}>
+				<div class="text-slate-600 dark:text-slate-300 line-clamp-2 text-[15px] leading-snug" title={item.authors}>
 					{item.authors || '-'}
 				</div>
 
 			{:else if col.key === 'year'}
-				<span class="text-gray-700 dark:text-gray-300 font-medium text-sm">{item.year || '-'}</span>
+				<span class="text-gray-700 dark:text-gray-300 font-medium text-[15px]">{item.year || '-'}</span>
 
 			{:else if col.key === 'citation_count'}
 				<span class="font-mono text-sm font-semibold {item.cites != null && item.cites !== 0 ? 'text-slate-800 dark:text-gray-200' : 'text-slate-400 dark:text-gray-600'}">

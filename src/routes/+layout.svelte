@@ -147,7 +147,7 @@
 					Transformation-Enabling Conditions Framework
 				</h1>
 				<p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-4xl">
-					An evidence-based synthesis of 60 transformation-enabling Conditions organized across nine Domains and grounded in 586 SLR literature findings extracted from 209 confirmed publications
+					An evidence-based synthesis of 60 transformation-enabling Conditions across nine Domains
 				</p>
 			</div>
 		</div>
