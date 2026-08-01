@@ -128,8 +128,7 @@
 			const metaStats = $metadata?.stats || {};
 
 			return {
-				confirmed:
-					ccs.length || metaStats.retainedConditionsCount || 60,
+				confirmed: ccs.length || metaStats.retainedConditionsCount,
 				core: ccs.filter((c) => (c.framework_role || c.role) === "core")
 					.length,
 				supporting: ccs.filter(
@@ -143,11 +142,15 @@
 				).length,
 				internal: domains.filter((d) => d.kind === "internal").length,
 				external: domains.filter((d) => d.kind === "external").length,
+				// No numeric literals as fallbacks: a stale constant that silently
+				// replaces a missing value is indistinguishable from a correct one.
+				// Both figures come from metadata.json, which the exporter writes
+				// from SQLite and guards against count drift; the finding count
+				// falls back only to the payload actually loaded on this page.
 				findings:
-					metaStats.frameworkFindingsCount ||
-					($conditionFindings || []).length ||
-					586,
-				papers: metaStats.includedPapers || 209,
+					metaStats.frameworkFindingsCount ??
+					($conditionFindings || []).length,
+				papers: metaStats.includedPapers ?? null,
 			};
 		})(),
 	);
