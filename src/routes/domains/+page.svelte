@@ -193,8 +193,7 @@
 	function streamClass(stream) {
 		if (stream === 'DT') return 'border-blue-200 bg-blue-50 text-blue-700 dark:border-blue-900/50 dark:bg-blue-950/25 dark:text-blue-300';
 		if (stream === 'EA') return 'border-purple-200 bg-purple-50 text-purple-700 dark:border-purple-900/50 dark:bg-purple-950/25 dark:text-purple-300';
-		if (stream === 'BT') return 'border-emerald-200 bg-emerald-50 text-emerald-700 dark:border-emerald-900/50 dark:bg-emerald-950/25 dark:text-emerald-300';
-		if (stream === 'DC') return 'border-amber-200 bg-amber-50 text-amber-700 dark:border-amber-900/50 dark:bg-amber-950/25 dark:text-amber-300';
+		if (stream === 'ITG') return 'border-teal-200 bg-teal-50 text-teal-700 dark:border-teal-900/50 dark:bg-teal-950/25 dark:text-teal-300';
 		return 'border-gray-200 bg-gray-50 text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300';
 	}
 
@@ -297,7 +296,7 @@
 											<a href="{base}/conditions/{condition.code}" onclick={(e) => e.stopPropagation()} class="hover:opacity-80 transition-opacity">
 												<RecordBadge id={condition.code} />
 											</a>
-											<a href="{base}/conditions/{condition.code}" onclick={(e) => e.stopPropagation()} class="font-bold text-gray-900 hover:text-blue-600 dark:text-white dark:hover:text-blue-400 text-lg hover:underline">
+											<a href="{base}/conditions/{condition.code}" onclick={(e) => e.stopPropagation()} class="font-bold text-gray-900 hover:text-blue-600 dark:text-white dark:hover:text-blue-400 text-lg">
 												{condition.label}
 											</a>
 											{#if condition.framework_role}
@@ -328,7 +327,7 @@
 											</span>
 											<a
 												href="{base}/findings?q={condition.code}"
-												class="inline-flex items-center gap-1 text-xs font-semibold text-blue-600 hover:underline dark:text-blue-400"
+												class="inline-flex items-center gap-1 text-xs font-semibold text-blue-600 dark:text-blue-400"
 											>
 												Open in Findings table <ExternalLink size={12} />
 											</a>
@@ -356,7 +355,7 @@
 															</div>
 															<a
 																href="{base}/papers/{finding.corpus_id}?cf={finding.cf_id || finding.contribution_id}"
-																class="font-medium text-blue-600 hover:underline dark:text-blue-400 text-sm flex items-center gap-1"
+																class="font-medium text-blue-600 dark:text-blue-400 text-sm flex items-center gap-1"
 															>
 																{finding.paper_authors || finding.authors || 'Author'} ({finding.paper_year || finding.year}) · <RecordBadge id={`P${finding.corpus_id}`} variant="paper" />
 																<ExternalLink size={10} />

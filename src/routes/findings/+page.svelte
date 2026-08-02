@@ -26,15 +26,22 @@
 
 	let allFindings = $derived($conditionFindings || []);
 
-	// Proportional column widths (sum = 100%) with Condition Finding restricted to 28%
+	// Proportional column widths (sum = 100%) with Condition Finding allocated 34%
 	const columns = [
-		{ key: "id", title: "ID", sortable: true, width: "6%" },
+		{
+			key: "id",
+			title: "ID",
+			sortable: true,
+			width: "70px",
+			cellClass: "bg-purple-50/50 group-hover:bg-purple-100/60 dark:bg-purple-950/25 dark:group-hover:bg-purple-900/35",
+		},
 		{
 			key: "raw_condition_label",
 			title: "Finding",
 			sortable: true,
-			width: "28%",
+			width: "32%",
 			overflow: "wrap",
+			cellClass: "bg-purple-50/50 group-hover:bg-purple-100/60 dark:bg-purple-950/25 dark:group-hover:bg-purple-900/35",
 		},
 		{
 			key: "paper",
@@ -71,11 +78,16 @@
 			return "border-blue-200 bg-blue-50 text-blue-700 dark:border-blue-900/50 dark:bg-blue-950/25 dark:text-blue-300";
 		if (stream === "EA")
 			return "border-purple-200 bg-purple-50 text-purple-700 dark:border-purple-900/50 dark:bg-purple-950/25 dark:text-purple-300";
-		if (stream === "BT")
-			return "border-emerald-200 bg-emerald-50 text-emerald-700 dark:border-emerald-900/50 dark:bg-emerald-950/25 dark:text-emerald-300";
-		if (stream === "DC")
-			return "border-amber-200 bg-amber-50 text-amber-700 dark:border-amber-900/50 dark:bg-amber-950/25 dark:text-amber-300";
+		if (stream === "ITG")
+			return "border-teal-200 bg-teal-50 text-teal-700 dark:border-teal-900/50 dark:bg-teal-950/25 dark:text-teal-300";
 		return "border-gray-200 bg-gray-50 text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300";
+	}
+
+	function splitText(text) {
+		const str = (text || '').trim();
+		const lastSpace = str.lastIndexOf(' ');
+		if (lastSpace === -1) return { main: str, last: '' };
+		return { main: str.slice(0, lastSpace + 1), last: str.slice(lastSpace + 1) };
 	}
 
 	function roleClass(role) {
@@ -234,12 +246,12 @@
 						variant="finding"
 					/>
 				</a>
+
 			{:else if col.key === "raw_condition_label"}
 				<a
 					href="{base}/findings/CF{item.cf_id ||
 						item.contribution_id}"
-					class="block font-semibold text-blue-600 hover:underline dark:text-blue-400 text-base leading-snug break-words whitespace-normal"
-					title={item.raw_condition_label}
+					class="font-semibold text-blue-600 dark:text-blue-400 text-base leading-snug break-words"
 				>
 					{item.raw_condition_label}
 				</a>
@@ -255,8 +267,7 @@
 			{:else if col.key === "paper"}
 				<a
 					href="{base}/papers/{item.corpus_id}/overview"
-					class="block font-semibold text-blue-600 hover:underline dark:text-blue-400 text-base leading-snug"
-					title={item.paper_title || item.title}
+					class="block font-semibold text-blue-600 dark:text-blue-400 text-base leading-snug"
 				>
 					{item.paper_title || item.title}
 				</a>

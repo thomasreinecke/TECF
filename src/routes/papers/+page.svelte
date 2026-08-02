@@ -13,11 +13,12 @@
 
 	let papers = $derived($corpus || []);
 
-	// Exactly the 9 specified columns: ID, Type, Title, Authors, Year, Cites, Refs, Pages, Words
+	// Columns: ID, Paper, Stream, Type, Authors, Year, Cites, Refs, Pages, Words
 	const columns = [
-		{ key: 'id', title: 'ID', width: '70px', sortable: true },
+		{ key: 'id', title: 'ID', width: '70px', sortable: true, cellClass: 'bg-purple-50/50 group-hover:bg-purple-100/60 dark:bg-purple-950/25 dark:group-hover:bg-purple-900/35' },
+		{ key: 'title', title: 'Paper', width: 'auto', sortable: true, overflow: 'wrap', cellClass: 'bg-purple-50/50 group-hover:bg-purple-100/60 dark:bg-purple-950/25 dark:group-hover:bg-purple-900/35' },
+		{ key: 'stream', title: 'Stream', width: '80px', sortable: true },
 		{ key: 'item_type', title: 'Type', width: '92px', sortable: true },
-		{ key: 'title', title: 'Title', width: 'auto', sortable: true, overflow: 'wrap' },
 		{ key: 'authors', title: 'Authors', width: '220px', sortable: true, overflow: 'wrap' },
 		{ key: 'year', title: 'Year', width: '76px', sortable: true },
 		{ key: 'citation_count', title: 'Cites', width: '86px', sortable: true },
@@ -25,6 +26,23 @@
 		{ key: 'page_count', title: 'Pages', width: '86px', sortable: true },
 		{ key: 'word_count', title: 'Words', width: '96px', sortable: true }
 	];
+
+	function streamClass(stream) {
+		if (stream === 'DT')
+			return 'border-blue-200 bg-blue-50 text-blue-700 dark:border-blue-900/50 dark:bg-blue-950/25 dark:text-blue-300';
+		if (stream === 'EA')
+			return 'border-purple-200 bg-purple-50 text-purple-700 dark:border-purple-900/50 dark:bg-purple-950/25 dark:text-purple-300';
+		if (stream === 'ITG')
+			return 'border-teal-200 bg-teal-50 text-teal-700 dark:border-teal-900/50 dark:bg-teal-950/25 dark:text-teal-300';
+		return 'border-gray-200 bg-gray-50 text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300';
+	}
+
+	function splitTitle(text) {
+		const str = (text || '').trim();
+		const lastSpace = str.lastIndexOf(' ');
+		if (lastSpace === -1) return { main: str, last: '' };
+		return { main: str.slice(0, lastSpace + 1), last: str.slice(lastSpace + 1) };
+	}
 
 	let typeFilters = $derived([
 		{ id: 'all', label: 'All Types' },
@@ -50,6 +68,7 @@
 
 	function sortValue(item, key) {
 		if (key === 'id') return item.id;
+		if (key === 'stream') return item.stream || '';
 		if (key === 'item_type') return item.typeLabel || item.item_type || '';
 		if (key === 'citation_count') return item.cites ?? -1;
 		if (key === 'reference_count') return item.refs ?? -1;
@@ -66,6 +85,7 @@
 				const haystack = [
 					`p${item.id}`,
 					item.id,
+					item.stream,
 					item.typeLabel,
 					item.item_type,
 					item.title,
@@ -144,7 +164,7 @@
 		</div>
 	</div>
 
-	<!-- DataTable matching _app 1:1 with exact requested 9 columns -->
+	<!-- DataTable -->
 	<DataTable
 		items={filteredItems}
 		{columns}
@@ -158,22 +178,16 @@
 					<RecordBadge id={`P${item.id}`} variant="paper" />
 				</a>
 
-			{:else if col.key === 'item_type'}
-				<span class="text-gray-700 dark:text-gray-300 text-sm font-medium">
-					{item.typeLabel || item.item_type || 'Journal'}
-				</span>
-
 			{:else if col.key === 'title'}
 				<a
 					href="{base}/papers/{item.id}"
-					class="font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 hover:underline underline-offset-2 break-words text-base leading-snug"
-					title={item.title}
+					class="font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 text-base leading-snug break-words"
 				>
 					{item.title}
 				</a>
 
 			{:else if col.key === 'authors'}
-				<div class="text-slate-600 dark:text-slate-300 line-clamp-2 text-[15px] leading-snug" title={item.authors}>
+				<div class="text-slate-600 dark:text-slate-300 line-clamp-2 text-[15px] leading-snug">
 					{item.authors || '-'}
 				</div>
 

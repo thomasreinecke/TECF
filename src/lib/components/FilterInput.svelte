@@ -32,7 +32,6 @@
 			type="button"
 			onclick={clear}
 			class="absolute inset-y-0 right-0 flex items-center pr-2.5 text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 focus:outline-none"
-			title="Clear filter"
 		>
 			<X size={16} />
 		</button>

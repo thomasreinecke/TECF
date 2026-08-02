@@ -36,12 +36,19 @@
 	let totalPapersCount = $derived(new Set(allFindings.map((f) => f.corpus_id)).size);
 
 	const columns = [
-		{ key: 'code', title: 'ID', sortable: true, width: '7%' },
-		{ key: 'label', title: 'Condition', sortable: true, width: '25%', overflow: 'wrap' },
+		{ key: 'code', title: 'ID', sortable: true, width: '80px', cellClass: 'bg-purple-50/50 group-hover:bg-purple-100/60 dark:bg-purple-950/25 dark:group-hover:bg-purple-900/35' },
+		{ key: 'label', title: 'Condition', sortable: true, width: '30%', overflow: 'wrap', cellClass: 'bg-purple-50/50 group-hover:bg-purple-100/60 dark:bg-purple-950/25 dark:group-hover:bg-purple-900/35' },
 		{ key: 'framework_role', title: 'Role', sortable: true, width: '14%' },
 		{ key: 'finding_count', title: 'Findings', sortable: true, width: '6%' },
 		{ key: 'definition', title: 'Definition', sortable: false, width: '48%', overflow: 'wrap' }
 	];
+
+	function splitText(text) {
+		const str = (text || '').trim();
+		const lastSpace = str.lastIndexOf(' ');
+		if (lastSpace === -1) return { main: str, last: '' };
+		return { main: str.slice(0, lastSpace + 1), last: str.slice(lastSpace + 1) };
+	}
 
 	/** @param {string} role */
 	function roleClass(role) {
@@ -151,7 +158,7 @@
 				</a>
 
 			{:else if col.key === 'label'}
-				<a href="{base}/conditions/{item.code}" class="block font-semibold text-blue-600 hover:underline dark:text-blue-400 text-base leading-snug break-words whitespace-normal" title="Inspect condition detail for {item.code}">
+				<a href="{base}/conditions/{item.code}" class="font-semibold text-blue-600 dark:text-blue-400 text-base leading-snug break-words">
 					{item.label}
 				</a>
 

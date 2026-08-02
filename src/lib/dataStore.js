@@ -14,6 +14,15 @@ export const canonicalConditions = writable([]);
 export const conditionDomains = writable([]);
 export const framework = writable({ registers: [], saturation: [] });
 
+const PRIMARY_STREAMS = new Set(['DT', 'EA', 'ITG']);
+
+function assertPrimaryStreams(items, label) {
+	const invalid = [...new Set(items.map((item) => item.stream).filter((stream) => !PRIMARY_STREAMS.has(stream)))];
+	if (invalid.length) {
+		throw new Error(`${label} contains invalid primary literature stream(s): ${invalid.join(', ')}`);
+	}
+}
+
 export async function loadStaticData() {
 	try {
 		const [
@@ -33,8 +42,16 @@ export async function loadStaticData() {
 		]);
 
 		if (metaRes.ok) metadata.set(await metaRes.json());
-		if (corpusRes.ok) corpus.set(await corpusRes.json());
-		if (cfRes.ok) conditionFindings.set(await cfRes.json());
+		if (corpusRes.ok) {
+			const corpusData = await corpusRes.json();
+			assertPrimaryStreams(corpusData, 'corpus.json');
+			corpus.set(corpusData);
+		}
+		if (cfRes.ok) {
+			const findingData = await cfRes.json();
+			assertPrimaryStreams(findingData, 'condition_findings.json');
+			conditionFindings.set(findingData);
+		}
 		if (ccRes.ok) canonicalConditions.set(await ccRes.json());
 		if (cdRes.ok) {
 			const cdData = await cdRes.json();

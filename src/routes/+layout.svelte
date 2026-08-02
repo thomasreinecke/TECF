@@ -69,7 +69,7 @@
 		<!-- Navigation Row -->
 		<div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 min-h-16 flex items-center justify-between gap-4 relative z-10">
 			<!-- Logo Box -->
-			<a href="{base}/framework" class="flex items-center gap-3 hover:opacity-90 transition-opacity shrink-0" title="TECF Framework">
+			<a href="{base}/framework" class="flex items-center gap-3 hover:opacity-90 transition-opacity shrink-0">
 				<div class="h-8 px-2.5 rounded-lg bg-blue-600 text-white font-extrabold text-sm tracking-wide flex items-center justify-center shadow-xs shrink-0">
 					TECF
 				</div>

@@ -48,6 +48,13 @@
 		return 'border-amber-200 bg-amber-50 text-amber-800 dark:border-amber-900/50 dark:bg-amber-950/30 dark:text-amber-300';
 	}
 
+	function splitText(text) {
+		const str = (text || '').trim();
+		const lastSpace = str.lastIndexOf(' ');
+		if (lastSpace === -1) return { main: str, last: '' };
+		return { main: str.slice(0, lastSpace + 1), last: str.slice(lastSpace + 1) };
+	}
+
 	let showCitations = $state(true);
 
 	// ---- Findings Table State & Filtering ----
@@ -56,8 +63,8 @@
 	let findingsSortDirection = $state('asc');
 
 	const findingColumns = [
-		{ key: 'id', title: 'ID', sortable: true, width: '6%' },
-		{ key: 'raw_condition_label', title: 'Extracted Condition / Empirical Finding', sortable: true, width: '36%', overflow: 'wrap' },
+		{ key: 'id', title: 'ID', sortable: true, width: '70px', cellClass: 'bg-purple-50/50 group-hover:bg-purple-100/60 dark:bg-purple-950/25 dark:group-hover:bg-purple-900/35' },
+		{ key: 'raw_condition_label', title: 'Extracted Condition / Empirical Finding', sortable: true, width: '40%', overflow: 'wrap', cellClass: 'bg-purple-50/50 group-hover:bg-purple-100/60 dark:bg-purple-950/25 dark:group-hover:bg-purple-900/35' },
 		{ key: 'paper', title: 'Paper', sortable: true, width: '26%', overflow: 'wrap' },
 		{ key: 'stream', title: 'Stream', sortable: true, width: '8%' },
 		{ key: 'evidence_role', title: 'Evidence Role', sortable: true, width: '11%' },
@@ -147,8 +154,7 @@
 				{#if domain}
 					<a
 						href="{base}/domains"
-						class="text-xl font-bold text-blue-600 hover:underline dark:text-blue-400 block leading-snug"
-						title="View domain in Domains list"
+						class="text-xl font-bold text-blue-600 dark:text-blue-400 block leading-snug"
 					>
 						{domain.code} {domain.label}
 					</a>
@@ -202,7 +208,7 @@
 									>{position > 0 ? '; ' : ''}</span
 								><a
 									href="{base}/papers/{cite.corpus_id}"
-									class="text-blue-600 hover:underline dark:text-blue-400 font-semibold">{cite.label}</a
+									class="text-blue-600 dark:text-blue-400 font-semibold">{cite.label}</a
 								>{/each}<span class="text-indigo-900/60 dark:text-indigo-300/60">{').'}</span>{/if}{/each}
 				</p>
 				<p class="mt-4 text-xs italic text-indigo-900/70 dark:text-indigo-300/70 leading-relaxed">
@@ -255,13 +261,17 @@
 			>
 				{#snippet cell(item, col)}
 					{#if col.key === 'id'}
-						<RecordBadge id={`CF${item.cf_id || item.contribution_id}`} variant="finding" />
+						<a
+							href="{base}/papers/{item.corpus_id}?cf={item.cf_id || item.contribution_id}"
+							class="inline-block hover:opacity-80 transition-opacity"
+						>
+							<RecordBadge id={`CF${item.cf_id || item.contribution_id}`} variant="finding" />
+						</a>
 
 					{:else if col.key === 'raw_condition_label'}
 						<a
 							href="{base}/papers/{item.corpus_id}?cf={item.cf_id || item.contribution_id}"
-							class="block font-semibold text-blue-600 hover:underline dark:text-blue-400 text-[15px] leading-snug break-words whitespace-normal"
-							title={item.raw_condition_label}
+							class="font-semibold text-blue-600 dark:text-blue-400 text-[15px] leading-snug break-words"
 						>
 							{item.raw_condition_label}
 						</a>
@@ -274,8 +284,7 @@
 					{:else if col.key === 'paper'}
 						<a
 							href="{base}/papers/{item.corpus_id}"
-							class="block font-semibold text-blue-600 hover:underline dark:text-blue-400 text-[15px] leading-snug"
-							title={item.paper_title || item.title}
+							class="block font-semibold text-blue-600 dark:text-blue-400 text-[15px] leading-snug"
 						>
 							{item.paper_title || item.title}
 						</a>

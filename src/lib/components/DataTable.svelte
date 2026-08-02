@@ -59,7 +59,7 @@
 				<tr>
 					{#each columns as col}
 						<th
-							class="px-4 py-3.5 text-left text-[13px] font-bold text-gray-700 dark:text-gray-200 tracking-wider {capitalizeHeaders ? 'uppercase' : ''}"
+							class="px-4 py-3.5 text-left text-[13px] font-bold text-gray-700 dark:text-gray-200 tracking-wider {capitalizeHeaders ? 'uppercase' : ''} {col.headerClass || ''}"
 							style="width: {col.width || 'auto'}"
 						>
 							{#if col.sortable}
@@ -92,7 +92,7 @@
 					<tr class="group hover:bg-gray-50/50 dark:hover:bg-gray-800/50 cursor-pointer transition-colors {rowClass(item)}" onclick={() => rowClick(item)}>
 						{#each columns as col}
 							<td
-								class="px-4 py-3.5 text-[15px] text-gray-800 dark:text-gray-200 leading-normal align-middle {col.overflow === 'wrap' ? '' : 'max-w-0'}"
+								class="px-4 py-3.5 text-[15px] text-gray-800 dark:text-gray-200 leading-normal align-middle {col.overflow === 'wrap' ? '' : 'max-w-0'} {col.cellClass || ''}"
 								style="{col.overflow === 'wrap' ? 'word-break: break-word;' : ''}"
 							>
 								<div
@@ -118,7 +118,6 @@
 											<button
 												onclick={(event) => handleAction(action.name, item, event)}
 												class="transition-all focus:outline-none cursor-pointer {action.class || 'text-gray-400 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400'}"
-												title={action.title || ''}
 											>
 												<action.icon size={16} />
 											</button>

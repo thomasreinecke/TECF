@@ -74,10 +74,8 @@
 			return 'border-blue-200 bg-blue-50 text-blue-700 dark:border-blue-900/50 dark:bg-blue-950/25 dark:text-blue-300';
 		if (stream === 'EA')
 			return 'border-purple-200 bg-purple-50 text-purple-700 dark:border-purple-900/50 dark:bg-purple-950/25 dark:text-purple-300';
-		if (stream === 'BT')
-			return 'border-emerald-200 bg-emerald-50 text-emerald-700 dark:border-emerald-900/50 dark:bg-emerald-950/25 dark:text-emerald-300';
-		if (stream === 'DC')
-			return 'border-amber-200 bg-amber-50 text-amber-700 dark:border-amber-900/50 dark:bg-amber-950/25 dark:text-amber-300';
+		if (stream === 'ITG')
+			return 'border-teal-200 bg-teal-50 text-teal-700 dark:border-teal-900/50 dark:bg-teal-950/25 dark:text-teal-300';
 		return 'border-gray-200 bg-gray-50 text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300';
 	}
 
@@ -145,11 +143,11 @@
 				<h1 class="text-3xl font-extrabold text-slate-900 dark:text-white leading-snug">
 					{finding.raw_condition_label}
 				</h1>
-				<p class="text-base text-slate-650 dark:text-slate-400">
+				<p class="text-base text-slate-655 dark:text-slate-400">
 					Extracted from
 					<a
 						href="{base}/papers/{finding.corpus_id}"
-						class="font-semibold text-blue-600 hover:underline dark:text-blue-400 text-base"
+						class="font-semibold text-blue-600 dark:text-blue-400 text-base"
 					>
 						{finding.paper_title || finding.title}</a> | {finding.paper_authors || finding.authors} ({finding.paper_year || finding.year})
 				</p>
@@ -181,7 +179,7 @@
 						{finding.page_or_section || 'Findings Section'}
 					</div>
 				</div>
-				<div class="text-xs font-semibold text-blue-600 dark:text-blue-400 group-hover:underline pt-1">
+				<div class="text-xs font-semibold text-blue-600 dark:text-blue-400 pt-1">
 					View in Paper Reader →
 				</div>
 			</a>
@@ -202,7 +200,7 @@
 						</span>
 					</div>
 				</div>
-				<div class="text-xs font-semibold text-blue-600 dark:text-blue-400 group-hover:underline pt-1">
+				<div class="text-xs font-semibold text-blue-600 dark:text-blue-400 pt-1">
 					View Condition Detail Page →
 				</div>
 			</a>
@@ -227,7 +225,7 @@
 						</span>
 					</div>
 				</div>
-				<div class="text-xs font-semibold text-blue-600 dark:text-blue-400 group-hover:underline pt-1">
+				<div class="text-xs font-semibold text-blue-600 dark:text-blue-400 pt-1">
 					View Domains Page →
 				</div>
 			</a>
@@ -301,7 +299,7 @@
 				{#if finding.spans && finding.spans.length > 0}
 					<a
 						href="{base}/papers/{finding.corpus_id}?cf={finding.cf_id || finding.contribution_id}"
-						class="text-xs font-semibold text-blue-600 hover:underline dark:text-blue-400 inline-flex items-center gap-1"
+						class="text-xs font-semibold text-blue-600 dark:text-blue-400 inline-flex items-center gap-1"
 					>
 						Highlight all passages in full paper reader →
 					</a>
@@ -330,7 +328,7 @@
 										</span>
 										<a
 											href="{base}/papers/{finding.corpus_id}?cf={finding.cf_id || finding.contribution_id}&line={span.source_line_start}"
-											class="text-xs font-semibold text-blue-600 hover:underline dark:text-blue-400 inline-flex items-center gap-1"
+											class="text-xs font-semibold text-blue-600 dark:text-blue-400 inline-flex items-center gap-1"
 										>
 											Jump to line →
 										</a>
@@ -369,7 +367,7 @@
 						<span>Sibling Findings in Condition</span>
 						<a
 							href="{base}/conditions/{finding.canonical_code || finding.cluster_code}"
-							class="text-blue-600 hover:underline dark:text-blue-400"
+							class="text-blue-600 dark:text-blue-400"
 						>
 							{finding.canonical_code || finding.cluster_code}
 						</a>
@@ -392,8 +390,7 @@
 						{:else if col.key === 'raw_condition_label'}
 							<a
 								href="{base}/findings/{item.cf_id || item.contribution_id}"
-								class="block font-semibold text-blue-600 hover:underline dark:text-blue-400 text-[15px] leading-snug break-words whitespace-normal"
-								title={item.raw_condition_label}
+								class="block font-semibold text-blue-600 dark:text-blue-400 text-[15px] leading-snug break-words whitespace-normal"
 							>
 								{item.raw_condition_label}
 							</a>
@@ -406,8 +403,7 @@
 						{:else if col.key === 'paper'}
 							<a
 								href="{base}/papers/{item.corpus_id}"
-								class="block font-semibold text-blue-600 hover:underline dark:text-blue-400 text-[15px] leading-snug"
-								title={item.paper_title || item.title}
+								class="block font-semibold text-blue-600 dark:text-blue-400 text-[15px] leading-snug"
 							>
 								{item.paper_title || item.title}
 							</a>

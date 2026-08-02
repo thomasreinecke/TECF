@@ -210,10 +210,8 @@
 			return 'border-blue-200 bg-blue-50 text-blue-700 dark:border-blue-900/50 dark:bg-blue-950/25 dark:text-blue-300';
 		if (stream === 'EA')
 			return 'border-purple-200 bg-purple-50 text-purple-700 dark:border-purple-900/50 dark:bg-purple-950/25 dark:text-purple-300';
-		if (stream === 'BT')
-			return 'border-emerald-200 bg-emerald-50 text-emerald-700 dark:border-emerald-900/50 dark:bg-emerald-950/25 dark:text-emerald-300';
-		if (stream === 'DC')
-			return 'border-amber-200 bg-amber-50 text-amber-700 dark:border-amber-900/50 dark:bg-amber-950/25 dark:text-amber-300';
+		if (stream === 'ITG')
+			return 'border-teal-200 bg-teal-50 text-teal-700 dark:border-teal-900/50 dark:bg-teal-950/25 dark:text-teal-300';
 		return 'border-gray-200 bg-gray-50 text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300';
 	}
 
@@ -346,7 +344,7 @@
 							href="https://doi.org/{paper.doi}"
 							target="_blank"
 							rel="noopener noreferrer"
-							class="text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline inline-flex items-center gap-1"
+							class="text-xs font-semibold text-blue-600 dark:text-blue-400 inline-flex items-center gap-1"
 						>
 							DOI: {paper.doi}
 							<ExternalLink class="w-3 h-3" />
@@ -490,7 +488,7 @@
 												<a
 													href="{base}/findings/CF{finding.cf_id || finding.contribution_id}"
 													onclick={(e) => e.stopPropagation()}
-													class="rounded px-1.5 py-0.5 font-mono text-xs font-bold hover:underline {auditColor(finding.cf_id || finding.contribution_id).marker}"
+													class="rounded px-1.5 py-0.5 font-mono text-xs font-bold {auditColor(finding.cf_id || finding.contribution_id).marker}"
 												>
 													CF{finding.cf_id || finding.contribution_id}
 												</a>
@@ -505,7 +503,7 @@
 												<a
 													href="{base}/findings/CF{finding.cf_id || finding.contribution_id}"
 													onclick={(e) => e.stopPropagation()}
-													class="text-slate-900 hover:text-blue-600 hover:underline dark:text-slate-100 dark:hover:text-blue-400"
+													class="text-slate-900 hover:text-blue-600 dark:text-slate-100 dark:hover:text-blue-400"
 												>
 													{finding.raw_condition_label}
 												</a>
@@ -528,7 +526,6 @@
 															type="button"
 															onclick={(e) => { e.stopPropagation(); selectFinding(finding, span.source_line_start); }}
 															class="inline-flex items-center gap-1 rounded px-2.5 py-1 font-mono text-xs font-semibold transition-opacity hover:opacity-75 {auditColor(finding.cf_id || finding.contribution_id).marker}"
-															title={`Jump to TXT lines ${span.source_line_start}–${span.source_line_end}`}
 														>
 															Lines {span.source_line_start}–{span.source_line_end}
 														</button>
