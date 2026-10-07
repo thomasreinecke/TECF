@@ -16,7 +16,7 @@ The application presents the framework that the thesis synthesises from a system
 - **Framework:** the 60 Conditions arranged across nine Condition Domains (`CD1`–`CD9`).
 - **Domains:** each Condition Domain with its Conditions and their findings.
 - **Conditions:** each Condition with its definition, enabling statement, synthesis narrative, and Condition Findings.
-- **Findings:** each Condition Finding with its readiness statement, mechanism, operationalisation hint, Evidence Role, and the core quotations of its audited source passages with section and line locators.
+- **Findings:** each Condition Finding with its readiness statement, mechanism, operationalisation hint, and the core quotations of its audited source passages with section and line locators.
 - **Sources:** the Scopus search queries that built the corpus and the bibliography of the 209 publications that contribute Condition Findings, each with a DOI link where available.
 
 ## Third-party content

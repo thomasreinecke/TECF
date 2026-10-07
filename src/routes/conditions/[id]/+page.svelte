@@ -24,20 +24,6 @@
 
 	let papersCount = $derived(new Set(findings.map(f => f.corpus_id)).size);
 
-	function roleClass(role) {
-		if (role === 'support') return 'border-sky-200 bg-sky-50 text-sky-700 dark:border-sky-900/50 dark:bg-sky-950/25 dark:text-sky-300';
-		if (role === 'operationalization') return 'border-violet-200 bg-violet-50 text-violet-700 dark:border-violet-900/50 dark:bg-violet-950/25 dark:text-violet-300';
-		if (role === 'boundary') return 'border-slate-200 bg-slate-100 text-slate-700 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300';
-		return 'border-slate-200 bg-slate-50 text-slate-700 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300';
-	}
-
-	function formatLabel(val) {
-		if (!val) return '—';
-		if (val === 'source_attributed') return 'Paper Argument';
-		if (val === 'empirical_case') return 'Empirical Case';
-		return val.charAt(0).toUpperCase() + val.slice(1).replace(/_/g, ' ');
-	}
-
 	function streamClass(stream) {
 		if (stream === 'Strategic Agility' || stream === 'SA') return 'border-sky-200 bg-sky-50 text-sky-800 dark:border-sky-900/50 dark:bg-sky-950/30 dark:text-sky-300';
 		if (stream === 'Enterprise Architecture' || stream === 'EA') return 'border-indigo-200 bg-indigo-50 text-indigo-800 dark:border-indigo-900/50 dark:bg-indigo-950/30 dark:text-indigo-300';
@@ -54,11 +40,9 @@
 
 	const findingColumns = [
 		{ key: 'id', title: 'ID', sortable: true, width: '70px', cellClass: 'bg-purple-50/50 group-hover:bg-purple-100/60 dark:bg-purple-950/25 dark:group-hover:bg-purple-900/35' },
-		{ key: 'raw_condition_label', title: 'Extracted Condition / Empirical Finding', sortable: true, width: '40%', overflow: 'wrap', cellClass: 'bg-purple-50/50 group-hover:bg-purple-100/60 dark:bg-purple-950/25 dark:group-hover:bg-purple-900/35' },
-		{ key: 'paper', title: 'Paper', sortable: true, width: '26%', overflow: 'wrap' },
-		{ key: 'stream', title: 'Stream', sortable: true, width: '8%' },
-		{ key: 'evidence_role', title: 'Evidence Role', sortable: true, width: '11%' },
-		{ key: 'claim_provenance', title: 'Provenance', sortable: true, width: '13%' }
+		{ key: 'raw_condition_label', title: 'Extracted Condition / Empirical Finding', sortable: true, width: '52%', overflow: 'wrap', cellClass: 'bg-purple-50/50 group-hover:bg-purple-100/60 dark:bg-purple-950/25 dark:group-hover:bg-purple-900/35' },
+		{ key: 'paper', title: 'Paper', sortable: true, width: '38%', overflow: 'wrap' },
+		{ key: 'stream', title: 'Stream', sortable: true, width: '10%' }
 	];
 
 	let filteredFindings = $derived((() => {
@@ -72,9 +56,7 @@
 					r.readiness_statement,
 					r.paper_title || r.title,
 					r.paper_authors || r.authors,
-					r.stream,
-					r.evidence_role,
-					r.claim_provenance
+					r.stream
 				]
 					.filter(Boolean)
 					.join(' ')
@@ -278,24 +260,6 @@
 						{#if item.stream}
 							<span class="rounded-full border px-2.5 py-0.5 text-[13px] font-semibold whitespace-nowrap {streamClass(item.stream)}">
 								{item.stream}
-							</span>
-						{:else}
-							<span class="text-sm text-slate-400">—</span>
-						{/if}
-
-					{:else if col.key === 'evidence_role'}
-						{#if item.evidence_role}
-							<span class="rounded-full border px-2.5 py-0.5 text-[13px] font-semibold capitalize whitespace-nowrap {roleClass(item.evidence_role)}">
-								{formatLabel(item.evidence_role)}
-							</span>
-						{:else}
-							<span class="text-sm text-slate-400">—</span>
-						{/if}
-
-					{:else if col.key === 'claim_provenance'}
-						{#if item.claim_provenance}
-							<span class="rounded-full border border-slate-200 bg-slate-50 px-2.5 py-0.5 text-[13px] font-semibold text-slate-700 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300 whitespace-nowrap">
-								{formatLabel(item.claim_provenance)}
 							</span>
 						{:else}
 							<span class="text-sm text-slate-400">—</span>

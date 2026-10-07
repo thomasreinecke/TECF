@@ -27,7 +27,8 @@ const CORPUS_FIELDS = new Set(['id', 'title', 'authors', 'year', 'journal', 'doi
 // The corpus whitelist covers the count fields. The deep scan looks for text and file
 // fields in every data file ("cites" stays allowed there, as the citation list of a
 // synthesis sentence).
-const FORBIDDEN_KEYS = ['abstract', 'full_text', 'txt_path', 'pdf_path', 'txtFileName', 'has_pdf', 'pdf_status', 'human_decision'];
+// Evidence Role and claim provenance are not part of the reported framework.
+const FORBIDDEN_KEYS = ['abstract', 'full_text', 'txt_path', 'pdf_path', 'txtFileName', 'has_pdf', 'pdf_status', 'human_decision', 'evidence_role', 'claim_provenance'];
 
 // Both fixtures are findings whose locators were corrected in the audit repair.
 const REGRESSION_CASES = [

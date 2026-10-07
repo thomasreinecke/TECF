@@ -59,14 +59,6 @@
 		})()
 	);
 
-	function formatLabel(val) {
-		if (!val) return '—';
-		if (val === 'source_attributed') return 'Source Attributed';
-		if (val === 'paper_argument') return 'Paper Argument';
-		if (val === 'empirical_case') return 'Empirical Case';
-		return val.charAt(0).toUpperCase() + val.slice(1).replace(/_/g, ' ');
-	}
-
 	function streamClass(stream) {
 		if (stream === 'DT')
 			return 'border-blue-200 bg-blue-50 text-blue-700 dark:border-blue-900/50 dark:bg-blue-950/25 dark:text-blue-300';
@@ -77,22 +69,11 @@
 		return 'border-gray-200 bg-gray-50 text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300';
 	}
 
-	function roleClass(role) {
-		if (role === 'support')
-			return 'border-sky-200 bg-sky-50 text-sky-700 dark:border-sky-900/50 dark:bg-sky-950/25 dark:text-sky-300';
-		if (role === 'operationalization')
-			return 'border-violet-200 bg-violet-50 text-violet-700 dark:border-violet-900/50 dark:bg-violet-950/25 dark:text-violet-300';
-		if (role === 'boundary')
-			return 'border-slate-200 bg-slate-100 text-slate-700 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300';
-		return 'border-gray-200 bg-gray-50 text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300';
-	}
-
 	const siblingColumns = [
 		{ key: 'id', title: 'ID', sortable: true, width: '8%' },
-		{ key: 'raw_condition_label', title: 'Condition Finding', sortable: true, width: '32%', overflow: 'wrap' },
-		{ key: 'paper', title: 'Paper', sortable: true, width: '36%', overflow: 'wrap' },
-		{ key: 'stream', title: 'Stream', sortable: true, width: '10%' },
-		{ key: 'evidence_role', title: 'Role', sortable: true, width: '14%' }
+		{ key: 'raw_condition_label', title: 'Condition Finding', sortable: true, width: '40%', overflow: 'wrap' },
+		{ key: 'paper', title: 'Paper', sortable: true, width: '42%', overflow: 'wrap' },
+		{ key: 'stream', title: 'Stream', sortable: true, width: '10%' }
 	];
 
 	let siblingSortKey = $state('id');
@@ -401,15 +382,6 @@
 							<span class="rounded-full border px-2.5 py-0.5 text-xs font-semibold whitespace-nowrap {streamClass(item.stream)}">
 								{item.stream || '—'}
 							</span>
-
-						{:else if col.key === 'evidence_role'}
-							{#if item.evidence_role}
-								<span class="rounded-full border px-2 py-0.5 text-xs font-semibold capitalize whitespace-nowrap {roleClass(item.evidence_role)}">
-									{formatLabel(item.evidence_role)}
-								</span>
-							{:else}
-								<span class="text-xs text-slate-400">—</span>
-							{/if}
 
 						{:else}
 							{item[col.key] ?? '—'}

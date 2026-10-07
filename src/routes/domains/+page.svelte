@@ -69,8 +69,6 @@
 			(f.paper_authors || f.authors || '') + ' ' +
 			(f.paper_year || f.year || '') + ' ' +
 			(f.stream || '') + ' ' +
-			(f.evidence_role || '') + ' ' +
-			(f.claim_provenance || '') + ' ' +
 			`p${f.corpus_id}` + ' ' +
 			`cf${f.cf_id || f.contribution_id}`
 		).toLowerCase().includes(q);
@@ -183,13 +181,6 @@
 		return 'border-gray-200 bg-gray-50 text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300';
 	}
 
-	/** @param {string} role */
-	function evidenceClass(role) {
-		if (role === 'support') return 'border-sky-200 bg-sky-50 text-sky-700 dark:border-sky-900/50 dark:bg-sky-950/25 dark:text-sky-300';
-		if (role === 'operationalization') return 'border-violet-200 bg-violet-50 text-violet-700 dark:border-violet-900/50 dark:bg-violet-950/25 dark:text-violet-300';
-		if (role === 'boundary') return 'border-slate-200 bg-slate-100 text-slate-700 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300';
-		return 'border-gray-200 bg-gray-50 text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300';
-	}
 </script>
 
 <div class="space-y-6">
@@ -326,11 +317,6 @@
 																{#if finding.stream}
 																	<span class="rounded-full border px-2 py-0.5 text-[10px] font-semibold {streamClass(finding.stream)}">
 																		{finding.stream}
-																	</span>
-																{/if}
-																{#if finding.evidence_role}
-																	<span class="rounded-full border px-2 py-0.5 text-[10px] font-semibold capitalize {evidenceClass(finding.evidence_role)}">
-																		{finding.evidence_role}
 																	</span>
 																{/if}
 															</div>

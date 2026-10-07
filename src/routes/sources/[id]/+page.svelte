@@ -39,15 +39,6 @@
 		return 'border-gray-200 bg-gray-50 text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300';
 	}
 
-	function roleClass(role) {
-		if (role === 'support')
-			return 'border-sky-200 bg-sky-50 text-sky-700 dark:border-sky-900/50 dark:bg-sky-950/25 dark:text-sky-300';
-		if (role === 'operationalization')
-			return 'border-violet-200 bg-violet-50 text-violet-700 dark:border-violet-900/50 dark:bg-violet-950/25 dark:text-violet-300';
-		if (role === 'boundary')
-			return 'border-slate-200 bg-slate-100 text-slate-700 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300';
-		return 'border-gray-200 bg-gray-50 text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300';
-	}
 </script>
 
 <svelte:head>
@@ -156,11 +147,6 @@
 								<a href="{base}/conditions/{finding.canonical_code || finding.cluster_code}" class="hover:opacity-80 transition-opacity">
 									<RecordBadge id={finding.canonical_code || finding.cluster_code} variant="condition" class="text-xs px-2 py-0.5" />
 								</a>
-							{/if}
-							{#if finding.evidence_role}
-								<span class="rounded-full border px-2 py-0.5 text-xs font-semibold capitalize whitespace-nowrap {roleClass(finding.evidence_role)}">
-									{finding.evidence_role}
-								</span>
 							{/if}
 						</div>
 					</div>
