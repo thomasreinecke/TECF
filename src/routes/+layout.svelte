@@ -169,18 +169,14 @@
 
 	{#if !isPreviewPage}
 		<footer class="border-t border-slate-200 bg-white text-xs text-slate-500 dark:border-gray-800 dark:bg-gray-900 dark:text-slate-400 shrink-0">
-			<div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-4 space-y-1 leading-relaxed">
+			<div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-4 space-y-1 leading-relaxed text-center">
+				<p>TECF accompanies the master thesis <em>Enterprise Transformation Readiness</em> by Thomas Reinecke (2026).</p>
 				<p>
-					TECF accompanies the master thesis <em>Enterprise Transformation Readiness</em> by Thomas Reinecke (2026).
 					The framework, the Condition Findings, and the synthesis texts are licensed under
 					<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-600 dark:text-blue-400">CC BY-NC 4.0</a>.
 					Commercial use requires the author's prior written consent.
 				</p>
-				<p>
-					Quotations from cited publications and their bibliographic details are not covered by this licence and remain with their authors and publishers.
-					TECF publishes no full texts or abstracts. The underlying RQ1 records are archived in the
-					<a href="https://github.com/thomasreinecke/master-thesis-digital-annex" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-600 dark:text-blue-400">digital annex</a>.
-				</p>
+				<p>Quotations from cited publications and their bibliographic details are not covered by this licence and remain with their authors and publishers.</p>
 			</div>
 		</footer>
 	{/if}
