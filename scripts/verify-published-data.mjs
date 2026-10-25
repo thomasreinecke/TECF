@@ -28,7 +28,9 @@ const CORPUS_FIELDS = new Set(['id', 'title', 'authors', 'year', 'journal', 'doi
 // fields in every data file ("cites" stays allowed there, as the citation list of a
 // synthesis sentence).
 // Evidence Role and claim provenance are not part of the reported framework.
-const FORBIDDEN_KEYS = ['abstract', 'full_text', 'txt_path', 'pdf_path', 'txtFileName', 'has_pdf', 'pdf_status', 'human_decision', 'evidence_role', 'claim_provenance'];
+// Internal process fields (audit identifiers, run, proposer, decision metadata, notes)
+// stay in the research record.
+const FORBIDDEN_KEYS = ['abstract', 'full_text', 'txt_path', 'pdf_path', 'txtFileName', 'has_pdf', 'pdf_status', 'human_decision', 'evidence_role', 'claim_provenance', 'audit_review_id', 'run_id', 'created_by', 'decided_by', 'decided_at', 'notes', 'related_contribution_ids'];
 
 // Both fixtures are findings whose locators were corrected in the audit repair.
 const REGRESSION_CASES = [

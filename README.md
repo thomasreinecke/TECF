@@ -27,7 +27,12 @@ Quotations inside finding statements follow the rule of the digital annex and ar
 Each quotation carries the section and line locator of its passage, and the publication is linked through its DOI.
 The build verifies these limits before every release (`scripts/verify-published-data.mjs`).
 
-The underlying RQ1 records, including the screening record and the source locators of all Condition Findings, are archived in the digital annex of the thesis: <https://github.com/thomasreinecke/master-thesis-digital-annex>.
+The underlying RQ1 records, including the screening record and the source locators of all Condition Findings, are archived in the digital annex of the thesis: <https://doi.org/10.5281/zenodo.23642132>.
+
+## Provenance of the texts
+
+The Condition Findings, definitions, enabling statements, and narratives were drafted with AI support and confirmed by the author, as described in Chapter 3 of the thesis.
+The audit rationale shown with each finding was written by the model of the source-fidelity audit and did not receive item-level review by the author.
 
 ## Data
 
@@ -42,6 +47,11 @@ npm run build     # verify the published data, then build the static site
 ```
 
 The site is built with SvelteKit, Tailwind CSS, and Lucide icons, and deployed as a static site on GitHub Pages.
+
+## Citation
+
+Citation metadata for TECF are in [`CITATION.cff`](CITATION.cff).
+Cite the archived Zenodo release, not the moving branch.
 
 ## Licence
 
